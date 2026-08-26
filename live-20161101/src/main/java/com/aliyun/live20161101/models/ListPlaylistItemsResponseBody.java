@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPlaylistItemsResponseBody extends TeaModel {
     /**
-     * <p>The episodes.</p>
+     * <p>The list of playlist items.</p>
      */
     @NameInMap("ProgramItems")
     public java.util.List<ListPlaylistItemsResponseBodyProgramItems> programItems;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5c6a2a0d-f228-4a64-af62-20e91b9****</p>
@@ -20,7 +20,7 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of episodes.</p>
+     * <p>The number of playlist items.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
 
     public static class ListPlaylistItemsResponseBodyProgramItems extends TeaModel {
         /**
-         * <p>The sequence number of the episode in the query result.</p>
+         * <p>The orchestration index.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -68,7 +68,7 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
         public Integer index;
 
         /**
-         * <p>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to edit the episode list, delete the episode list, query the information about the episode list, start the episode list, or stop the episode list.</p>
+         * <p>The ID of the playlist. You can use this ID as a request parameter when you edit, delete, query, start, or stop the playlist.</p>
          * 
          * <strong>example:</strong>
          * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
@@ -77,7 +77,7 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
         public String programId;
 
         /**
-         * <p>The ID of the episode.</p>
+         * <p>The ID of the playlist item.</p>
          * 
          * <strong>example:</strong>
          * <p>c10f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
@@ -86,7 +86,7 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
         public String programItemId;
 
         /**
-         * <p>The name of the episode.</p>
+         * <p>The name of the playlist item.</p>
          * 
          * <strong>example:</strong>
          * <p>playlistItem1</p>
@@ -95,7 +95,7 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
         public String programItemName;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>vod</p>
@@ -104,7 +104,7 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>asdfasdf8as9df8sa9df89****</p>

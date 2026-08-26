@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMessageTokenRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive Messages application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetMessageTokenRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the device. Each device has a unique ID. You can specify a custom ID. The ID can be up to 64 characters in length and can contain lowercase letters, digits, underscores (_), and hyphen (-). You can specify multiple device IDs. We recommend that you obtain the IDs from the devices and pass the IDs to the server.</p>
+     * <p>Terminal device ID, uniquely representing a user terminal device, user-defined. It consists of lowercase letters, numbers, underscores (_), and hyphens (-), with a maximum length of 64 characters. Different terminal devices need to use different DeviceIds. We recommend obtaining it from the terminal device and passing it to the server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,12 +25,16 @@ public class GetMessageTokenRequest extends TeaModel {
     public String deviceId;
 
     /**
-     * <p>The type of the device. Valid values:</p>
+     * <p>Terminal device type. Valid values:</p>
      * <ul>
-     * <li>ios</li>
-     * <li>android</li>
-     * <li>web</li>
-     * <li>pc</li>
+     * <li><p>ios</p>
+     * </li>
+     * <li><p>android</p>
+     * </li>
+     * <li><p>web</p>
+     * </li>
+     * <li><p>pc</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +45,7 @@ public class GetMessageTokenRequest extends TeaModel {
     public String deviceType;
 
     /**
-     * <p>The ID of the user. Each user has a unique ID in the application. The ID can be up to 32 characters in length and can contain lowercase letters, digits, underscores (_), and periods (.). You can specify multiple user IDs.</p>
+     * <p>User UserId, user-defined, unique within the AppId. It consists of lowercase letters, numbers, underscores (_), and periods (.), with a maximum length of 32 characters. Different users need to use different UserIds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

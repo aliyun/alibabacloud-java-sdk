@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataRequest extends TeaModel {
     /**
-     * <p>The billable region. Valid values:</p>
+     * <p>The region code. Valid values:</p>
      * <ul>
-     * <li><strong>CN</strong>: Chinese mainland</li>
-     * <li><strong>OverSeas</strong>: outside the Chinese mainland</li>
-     * <li><strong>AP1</strong>: Asia Pacific 1</li>
-     * <li><strong>AP2</strong>: Asia Pacific 2</li>
-     * <li><strong>AP3</strong>: Asia Pacific 3</li>
-     * <li><strong>NA</strong>: North America</li>
-     * <li><strong>SA</strong>: South America</li>
-     * <li><strong>EU</strong>: Europe</li>
-     * <li><strong>MEAA</strong>: Middle East and Africa</li>
-     * <li><strong>all</strong>: all regions</li>
+     * <li><strong>CN</strong>: the Chinese mainland.</li>
+     * <li><strong>OverSeas</strong>: outside the Chinese mainland.</li>
+     * <li><strong>AP1</strong>: Asia-Pacific 1.</li>
+     * <li><strong>AP2</strong>: Asia-Pacific 2.</li>
+     * <li><strong>AP3</strong>: Asia-Pacific 3.</li>
+     * <li><strong>NA</strong>: North America.</li>
+     * <li><strong>SA</strong>: South America.</li>
+     * <li><strong>EU</strong>: Europe.</li>
+     * <li><strong>MEAA</strong>: Middle East and Africa.</li>
+     * <li><strong>all</strong>: all regions.</li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the default value CN is used. Alibaba Cloud supports the following countries and regions outside the Chinese mainland: - Asia Pacific 1: Hong Kong (China), Macao (China), Taiwan (China), Japan, and Southeast Asia excluding Vietnam and Indonesia. - Asia Pacific 2: Indonesia, South Korea, and Vietnam. - Asia Pacific 3: Australia and New Zealand. - North America: US and Canada. - South America: Brazil. Europe: Ukraine, UK, France, Netherlands, Spain, Italy, Sweden, and Germany. - Middle East and Africa: South Africa, Oman, UAE, and Kuwait.</p>
+     * <p>If this parameter is not specified, the default value is the Chinese mainland. Regions outside the Chinese mainland: - Asia-Pacific 1: Hong Kong (China), Macao (China), Taiwan (China), Japan, and Southeast Asian countries except Vietnam and Indonesia. - Asia-Pacific 2: Indonesia, South Korea, and Vietnam. - Asia-Pacific 3: Australia and New Zealand. North America: the United States and Canada. - South America: Brazil. - Europe: Ukraine, the United Kingdom, France, the Netherlands, Spain, Italy, Sweden, and Germany. - Middle East and Africa: South Africa, Oman, the United Arab Emirates, and Kuwait.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,12 +29,16 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     public String area;
 
     /**
-     * <p>The protocol of the data to query. Valid values:</p>
+     * <p>The protocol of the data to retrieve. Valid values:</p>
      * <ul>
-     * <li><strong>http</strong>: HTTP</li>
-     * <li><strong>https</strong>: HTTPS</li>
-     * <li><strong>quic</strong>: QUIC</li>
-     * <li><strong>all</strong> (default): HTTP, HTTPS, and QUIC</li>
+     * <li><p><strong>http</strong>: HTTP.</p>
+     * </li>
+     * <li><p><strong>https</strong>: HTTPS.</p>
+     * </li>
+     * <li><p><strong>quic</strong>: QUIC.</p>
+     * </li>
+     * <li><p><strong>all</strong> (default): all of the preceding protocols.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,10 +48,12 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     public String dataProtocol;
 
     /**
-     * <p>The domain name.</p>
+     * <p>The streaming domain.</p>
      * <ul>
-     * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
-     * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+     * <li><p>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</p>
+     * </li>
+     * <li><p>If this parameter is empty, the merged data of all streaming domains is returned by default.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,8 +63,8 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
-     * <p>The end time must be later than the start time. The maximum time range that you can specify is <strong>31</strong> days.</p>
+     * <p>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <p>The end time must be later than the start time, and the difference between the end time and the start time cannot exceed <strong>31</strong> days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,12 +74,16 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The category of the resource usage data to query. Valid values:</p>
+     * <p>The data type of the usage data to query. Valid values:</p>
      * <ul>
-     * <li><strong>bps</strong>: streaming bandwidth</li>
-     * <li><strong>traf</strong>: streaming traffic</li>
-     * <li><strong>req_traf</strong>: stream ingest traffic if you set Type to push, or stream relay traffic if you set Type to push_proxy</li>
-     * <li><strong>req_bps</strong>: stream ingest bandwidth if you set Type to push, or stream relay bandwidth if you set Type to push_proxy</li>
+     * <li><p><strong>bps</strong>: playback bandwidth.</p>
+     * </li>
+     * <li><p><strong>traf</strong>: traffic.</p>
+     * </li>
+     * <li><p><strong>req_traf</strong>: when Type is set to push, this indicates stream ingest traffic. When Type is set to push_proxy, this indicates relay traffic.</p>
+     * </li>
+     * <li><p><strong>req_bps</strong>: when Type is set to push, this indicates stream ingest bandwidth. When Type is set to push_proxy, this indicates relay bandwidth.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -84,7 +94,7 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     public String field;
 
     /**
-     * <p>The time interval between the data entries to return. Unit: seconds. Valid values: <strong>300</strong> (5 minutes), <strong>3600</strong> (1 hour), and <strong>86400</strong> (1 day).</p>
+     * <p>Forces retrieval of data at the specified time granularity, in seconds. Valid values: <strong>300</strong> (5 minutes), <strong>3600</strong> (1 hour), and <strong>86400</strong> (1 day).</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -95,11 +105,17 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,17 +125,16 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The type of the resource usage data to query.</p>
-     * <p>Valid values if you set <strong>Field</strong> to <strong>bps</strong> or <strong>traf</strong>:</p>
+     * <p>The type of usage data to retrieve.</p>
+     * <p>When <strong>Field</strong> is set to <strong>bps</strong> or <strong>traf</strong>, valid values:</p>
      * <ul>
-     * <li><strong>rts</strong>: bandwidth or traffic for Real-Time Streaming (RTS)</li>
-     * <li><strong>quic</strong>: bandwidth or traffic for QUIC</li>
-     * <li><strong>all</strong>: all bandwidth or traffic</li>
+     * <li><strong>rts</strong>: RTS bandwidth or traffic.</li>
+     * <li><strong>quic</strong>: QUIC bandwidth or traffic.</li>
      * </ul>
-     * <p>Valid values if you set <strong>Field</strong> to <strong>req_traf</strong> or <strong>req_bps</strong>:</p>
+     * <p>When <strong>Field</strong> is set to <strong>req_traf</strong> or <strong>req_bps</strong>, valid values:</p>
      * <ul>
-     * <li><strong>push</strong>: stream ingest bandwidth or traffic</li>
-     * <li><strong>push_proxy</strong>: stream relay bandwidth or traffic</li>
+     * <li><strong>push</strong>: stream ingest bandwidth or traffic.</li>
+     * <li><strong>push_proxy</strong>: relay bandwidth or traffic.</li>
      * </ul>
      * 
      * <strong>example:</strong>

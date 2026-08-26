@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveStreamWatermarkRuleRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,20 +46,31 @@ public class AddLiveStreamWatermarkRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream. The following rules apply:</p>
+     * <p>The stream name. The following rules apply:</p>
      * <ul>
-     * <li>A stream name can be exactly matched. Example: liveStreamA.</li>
-     * <li>Fuzzy match is also supported. The use of an asterisk (<code>*</code>) allows all approximate matches to be found.</li>
-     * <li>You can place the asterisk before or after an approximate string.</li>
+     * <li><p>To match a specific stream, enter the full stream name. For example, liveStreamA.</p>
+     * </li>
+     * <li><p>You can use a wildcard match. The asterisk (<code>*</code>) matches all streams.</p>
+     * </li>
+     * <li><p>You can perform prefix and suffix matching.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Fuzzy match: Only one asterisk (<code>*</code>) before or after an approximate string is allowed. The approximate string must be enclosed in <code>()</code>. Separate multiple strings with vertical bars (<code>|</code>).</li>
-     * <li>For example, <code>*(t1|t2)</code> matches all streams whose name has the <code>t1</code> or <code>t2</code> suffix, and <code>(abc|123)*</code> matches all streams whose name has the <code>abc</code> or <code>123</code> prefix.</li>
+     * <li><p>You can use only one asterisk (<code>*</code>). The asterisk must be at the beginning or end of the string. The matching items must be enclosed in parentheses (<code>()</code>) and separated by a vertical bar (<code>|</code>).</p>
+     * </li>
+     * <li><p>For example, <code>*(t1|t2)</code> matches all streams that end with <code>t1</code> or <code>t2</code>. <code>(abc|123)*</code> matches all streams that start with <code>abc</code> or <code>123</code>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -73,7 +84,7 @@ public class AddLiveStreamWatermarkRuleRequest extends TeaModel {
     /**
      * <p>The ID of the watermark template.</p>
      * <blockquote>
-     * <p> You can obtain the template ID by checking the value of the TemplateId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/410759.html">AddLiveStreamWatermark</a> operation.</p>
+     * <p>Get the template ID from the response of the <a href="https://help.aliyun.com/document_detail/2848096.html">AddLiveStreamWatermark</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

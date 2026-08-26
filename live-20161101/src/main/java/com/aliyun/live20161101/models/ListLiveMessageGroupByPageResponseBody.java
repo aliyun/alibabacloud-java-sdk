@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLiveMessageGroupByPageResponseBody extends TeaModel {
     /**
-     * <p>The list of groups.</p>
+     * <p>The group list.</p>
      */
     @NameInMap("GroupList")
     public java.util.List<ListLiveMessageGroupByPageResponseBodyGroupList> groupList;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number of the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListLiveMessageGroupByPageResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListLiveMessageGroupByPageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B5D95365-5A46-1A6A-BBF5-C7B6BDED****</p>
@@ -38,7 +38,7 @@ public class ListLiveMessageGroupByPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -93,13 +93,13 @@ public class ListLiveMessageGroupByPageResponseBody extends TeaModel {
 
     public static class ListLiveMessageGroupByPageResponseBodyGroupList extends TeaModel {
         /**
-         * <p>The list of administrators.</p>
+         * <p>The list of administrator user IDs.</p>
          */
         @NameInMap("AdminList")
         public java.util.List<String> adminList;
 
         /**
-         * <p>The time when the group was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The creation time, expressed as a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1698299727</p>
@@ -108,7 +108,7 @@ public class ListLiveMessageGroupByPageResponseBody extends TeaModel {
         public Long createtime;
 
         /**
-         * <p>The ID of the user who created the group.</p>
+         * <p>The creator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_77</p>
@@ -126,7 +126,7 @@ public class ListLiveMessageGroupByPageResponseBody extends TeaModel {
         public Boolean delete;
 
         /**
-         * <p>The ID of the interactive messaging group.</p>
+         * <p>The group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cU9MeBqf****</p>
@@ -135,7 +135,7 @@ public class ListLiveMessageGroupByPageResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The additional information about the group.</p>
+         * <p>The extended information of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>testgroupinfo</p>
@@ -144,7 +144,7 @@ public class ListLiveMessageGroupByPageResponseBody extends TeaModel {
         public String groupInfo;
 
         /**
-         * <p>The name of the group.</p>
+         * <p>The group name.</p>
          * 
          * <strong>example:</strong>
          * <p>mytestgroup</p>

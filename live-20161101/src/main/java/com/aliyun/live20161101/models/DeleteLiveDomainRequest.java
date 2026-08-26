@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveDomainRequest extends TeaModel {
     /**
-     * <p>The ingest domain or streaming domain that you want to delete.</p>
+     * <p>The ingest or streaming domain to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

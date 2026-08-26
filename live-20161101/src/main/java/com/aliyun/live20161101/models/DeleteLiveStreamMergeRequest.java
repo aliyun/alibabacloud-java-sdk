@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveStreamMergeRequest extends TeaModel {
     /**
-     * <p>The name of the application that generates the output stream. You can view the application name on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Secondary Stream Mixing</a> page of the ApsaraVideo Live console.</p>
+     * <p>The AppName for the merged stream. View the AppName on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Secondary Stream Mixing Settings</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,17 @@ public class DeleteLiveStreamMergeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the output stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Secondary Stream Mixing</a> page of the ApsaraVideo Live console.</p>
+     * <p>The StreamName for the merged stream. View the StreamName on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Secondary Stream Mixing Settings</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

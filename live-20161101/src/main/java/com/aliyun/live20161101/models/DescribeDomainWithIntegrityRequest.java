@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainWithIntegrityRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard. The time must be in UTC.</p>
+     * <p>The end time must be later than the start time. The date format follows the ISO 8601 standard. Use UTC time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDomainWithIntegrityRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The integrity.</p>
+     * <p>The integrity value for verification.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,17 @@ public class DescribeDomainWithIntegrityRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard. The time must be in UTC.</p>
+     * <p>The start time to query data. The date format follows the ISO 8601 standard. Use UTC time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

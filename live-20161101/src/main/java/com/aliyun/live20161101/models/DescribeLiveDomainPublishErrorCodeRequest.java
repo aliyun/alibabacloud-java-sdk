@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPublishErrorCodeRequest extends TeaModel {
     /**
-     * <p>The application name. The data is aggregated based on the application. If you specify this parameter, the DomainName parameter is required.</p>
+     * <p>Filters and aggregates data by AppName. If you specify AppName, you must set DomainName to a specific ingest domain.</p>
      * 
      * <strong>example:</strong>
      * <p>AppName</p>
@@ -14,21 +14,21 @@ public class DescribeLiveDomainPublishErrorCodeRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ingest domain. If you want to specify multiple ingest domains, separate them with commas (,).</p>
+     * <p>The ingest domain. You can specify multiple ingest domains. Separate multiple domain names with commas (,).</p>
      * <blockquote>
-     * <p> This parameter is required.</p>
+     * <p>This parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>example.com,example.aliyundoc.com</p>
+     * <p>example1.aliyundoc.com,example2.aliyundoc.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <blockquote>
-     * <p> If you do not configure StartTime, the data within the previous hour is queried.</p>
+     * <p>If you do not set this parameter, data from the last hour is queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,13 +40,19 @@ public class DescribeLiveDomainPublishErrorCodeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <blockquote>
-     * <p> If you do not configure StartTime, the data within the previous hour is queried.</p>
+     * <p>If you do not set this parameter, data from the last hour is queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

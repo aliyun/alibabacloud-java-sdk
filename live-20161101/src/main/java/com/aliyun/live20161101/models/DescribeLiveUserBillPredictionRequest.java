@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveUserBillPredictionRequest extends TeaModel {
     /**
-     * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time. The time must be in UTC and follow the yyyy-MM-ddTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-01T05:45:00Z</p>
@@ -16,11 +16,17 @@ public class DescribeLiveUserBillPredictionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd**THH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <p>The start time. The time must be in UTC and follow the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-01T05:40:00Z</p>

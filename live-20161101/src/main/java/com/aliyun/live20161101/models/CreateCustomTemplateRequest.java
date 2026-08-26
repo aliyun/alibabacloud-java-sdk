@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateCustomTemplateRequest extends TeaModel {
     /**
-     * <p>The configuration of the template. The value is in the following JSON format: {height:xxx,scale:xxx,gop:xxx,bframes:xxx,cdesc:xxx}. All fields are required. If any field is left empty, the call fails.</p>
+     * <p>The template configuration in JSON format. The value must be in the following format: {height:xxx,scale:xxx,gop:xxx,bframes:xxx,cdesc:xxx}. All fields are required. The call fails if any field is missing.</p>
      * <blockquote>
-     * <p> For more information, see <strong>Fields of the CustomTemplate parameter</strong>.</p>
+     * <p>For more information about the parameters, see the <strong>CustomTemplate details</strong> table below.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{height:1080,scale:[16:9],gop:60,bframes:30,cdesc:h264}</p>
+     * <p>{&quot;height&quot;:&quot;1060&quot;,&quot;scale&quot;:&quot;[16:9]&quot;,&quot;gop&quot;:&quot;60&quot;,&quot;bframes&quot;:&quot;30&quot;,&quot;cdesc&quot;:&quot;h264&quot;}</p>
      */
     @NameInMap("CustomTemplate")
     public String customTemplate;
@@ -20,13 +20,19 @@ public class CreateCustomTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The name of the template to add.</p>
      * <blockquote>
-     * <p>Record the template name. The template name is required if you want to use, query, or delete the template.</p>
+     * <p>Record the template name after you create it. The name is required for subsequent operations, such as using, querying, and deleting the template.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

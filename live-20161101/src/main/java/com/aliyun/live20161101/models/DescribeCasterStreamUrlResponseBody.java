@@ -20,13 +20,13 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E6******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of streams that were returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

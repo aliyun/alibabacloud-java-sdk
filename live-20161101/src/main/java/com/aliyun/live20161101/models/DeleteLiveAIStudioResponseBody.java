@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveAIStudioResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>40A4F36D-A7CC-473A-88E7-154F92242566</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRTCWhipStreamAddressResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>58E7<strong>D4-xxxx-xxxx-xxxx-6B5</strong>6Cxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateRTCWhipStreamAddressResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The WHIP protocol URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxx.media-sh.xxxxx.com/xxxxxxxxxxxx/3723a3xxxxxxxxx223c606b***5f7a2bc7c56ea5cdd0xxxxe?auth_key=17495xxxxx-xxxx-0-f013003067c78c4053f9cd0xxxxxxx&qqzr=H4sIAAAAAAAC_6pWSlayUkrOMxxxxxxrPyCxQ0lFKQTCLlKyUjM2Nj**NDQ1TEy2Mjc3xxxxxxxxxxqRYAAAD__xxxxx__xxxxxxxx">https://xxxxxx.media-sh.xxxxx.com/xxxxxxxxxxxx/3723a3xxxxxxxxx223c606b***5f7a2bc7c56ea5cdd0xxxxe?auth_key=17495xxxxx-xxxx-0-f013003067c78c4053f9cd0xxxxxxx&amp;qqzr=H4sIAAAAAAAC_6pWSlayUkrOMxxxxxxrPyCxQ0lFKQTCLlKyUjM2Nj**NDQ1TEy2Mjc3xxxxxxxxxxqRYAAAD__xxxxx__xxxxxxxx</a></p>
      */

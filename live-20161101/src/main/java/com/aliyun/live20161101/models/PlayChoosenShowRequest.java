@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class PlayChoosenShowRequest extends TeaModel {
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId parameter in the response.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, navigate to <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> to view the production studio name.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <ul>
+     * <li>The production studio name in the production studio list on the Cloud Production Studio page is the production studio ID.</li>
+     * <li>The production studio must be in the running (Status=1) state. Otherwise, the IncorrectCasterStatus error is returned. For a production studio in the idle state, call StartCaster to start the production studio first.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,7 +30,7 @@ public class PlayChoosenShowRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -34,9 +39,9 @@ public class PlayChoosenShowRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the episode that you want to switch to.</p>
+     * <p>The ID of the show to switch to.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2848051.html">AddShowIntoShowList</a> or <a href="https://help.aliyun.com/document_detail/2848054.html">DescribeShowList</a> operation and check the value of the response parameter ShowId to obtain the ID.</p>
+     * <p>You can obtain the ShowId value from the response parameters of the <a href="https://help.aliyun.com/document_detail/2848051.html">AddShowIntoShowList</a> or <a href="https://help.aliyun.com/document_detail/2848054.html">DescribeShowList</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -14,7 +14,7 @@ public class CreateLiveAIStudioResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the virtual studio template.</p>
+     * <p>The studio template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>369ced1f-c33a-49e5-91da-bdaae3d6c1c2</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSnapshotFilesRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteSnapshotFilesRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The timestamps when the snapshots that you want to delete were captured.</p>
+     * <p>A list of timestamps of the snapshots to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteSnapshotFilesRequest extends TeaModel {
     public java.util.List<Long> createTimestampList;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,17 +37,25 @@ public class DeleteSnapshotFilesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to also delete the corresponding file in Object Storage Service (OSS) at the same time. Value values:</p>
+     * <p>Specifies whether to also delete the snapshot files from OSS. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: deletes the corresponding file in OSS.</li>
-     * <li><strong>false</strong>: does not delete the corresponding file in OSS.</li>
+     * <li><p><strong>true</strong>: Deletes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Does not delete.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> To delete the corresponding file in OSS, you must have the permissions on the OSS bucket.</p>
+     * <p>To delete files from OSS, you must have the required permissions for OSS file operations.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -58,7 +66,7 @@ public class DeleteSnapshotFilesRequest extends TeaModel {
     public Boolean removeFile;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

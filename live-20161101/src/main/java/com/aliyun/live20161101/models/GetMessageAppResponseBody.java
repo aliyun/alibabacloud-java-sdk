@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMessageAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class GetMessageAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The result of the request.</p>
      */
     @NameInMap("Result")
     public GetMessageAppResponseBodyResult result;
@@ -42,13 +42,13 @@ public class GetMessageAppResponseBody extends TeaModel {
 
     public static class GetMessageAppResponseBodyResult extends TeaModel {
         /**
-         * <p>The configurations of the application.</p>
+         * <p>The application configuration.</p>
          */
         @NameInMap("AppConfig")
         public java.util.Map<String, String> appConfig;
 
         /**
-         * <p>The ID of the interactive messaging application.</p>
+         * <p>The ID of the interactive message application.</p>
          * 
          * <strong>example:</strong>
          * <p>VKL3***</p>
@@ -57,7 +57,7 @@ public class GetMessageAppResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the interactive messaging application.</p>
+         * <p>The name of the interactive message application.</p>
          * 
          * <strong>example:</strong>
          * <p>testApp</p>
@@ -66,7 +66,7 @@ public class GetMessageAppResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The time when the interactive messaging application was created. The time is displayed in UTC.</p>
+         * <p>The UTC timestamp when the application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>502280113</p>
@@ -81,7 +81,7 @@ public class GetMessageAppResponseBody extends TeaModel {
         public java.util.Map<String, String> extension;
 
         /**
-         * <p>The status of the interactive message application. A value of 1 indicates that the application is normal.</p>
+         * <p>The status of the interactive message application. A value of 1 indicates that the application is in a normal state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

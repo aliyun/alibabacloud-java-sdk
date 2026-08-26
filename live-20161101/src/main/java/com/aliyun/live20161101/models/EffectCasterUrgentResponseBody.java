@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EffectCasterUrgentResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CF60DB6A-7FD6-426E-9288-122CC1A52FA7</p>

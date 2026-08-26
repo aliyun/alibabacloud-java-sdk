@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveRecordVodConfigsRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,7 +14,7 @@ public class DescribeLiveRecordVodConfigsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,11 +44,17 @@ public class DescribeLiveRecordVodConfigsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The stream name.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>

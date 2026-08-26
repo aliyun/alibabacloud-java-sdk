@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetLiveStreamPreloadTasksResponseBody extends TeaModel {
     /**
-     * <p>The number of URLs for which the prefetch task configuration failed.</p>
+     * <p>The number of URLs for which the prefetch task failed.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -17,7 +17,7 @@ public class SetLiveStreamPreloadTasksResponseBody extends TeaModel {
     public SetLiveStreamPreloadTasksResponseBodyPreloadTasksMessages preloadTasksMessages;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36E0E523-E0C6-5D95-A465-A8EA2DCBA2A5</p>
@@ -26,13 +26,13 @@ public class SetLiveStreamPreloadTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the prefetch task. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>Success</li>
-     * <li>Failed</li>
+     * <li>Success: successful.</li>
+     * <li>Failed: failed.</li>
      * </ul>
      * <blockquote>
-     * <p> Success is returned only if the prefetch task is configured for all specified streaming URLs.</p>
+     * <p>The status is Failed if any task fails to be created.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class SetLiveStreamPreloadTasksResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The number of URLs for which the prefetch task is successfully configured.</p>
+     * <p>The number of URLs for which the prefetch task succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class SetLiveStreamPreloadTasksResponseBody extends TeaModel {
     public Integer successURL;
 
     /**
-     * <p>The total number of URLs.</p>
+     * <p>The total number of URLs in the prefetch task.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

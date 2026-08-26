@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMixStreamRequest extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The name of the app.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,7 +14,7 @@ public class DeleteMixStreamRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The domain name of the output stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DeleteMixStreamRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the stream mixing task. If the task was created by calling the <a href="https://help.aliyun.com/document_detail/2848087.html">CreateMixStream</a> operation, check the value of the response parameter MixStreamId to obtain the ID.</p>
+     * <p>The ID of the stream mixing task. Obtain this ID from the MixStreamId parameter returned by the <a href="https://help.aliyun.com/document_detail/2848087.html">CreateMixStream</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +36,12 @@ public class DeleteMixStreamRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

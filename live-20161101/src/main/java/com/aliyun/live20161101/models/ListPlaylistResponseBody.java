@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPlaylistResponseBody extends TeaModel {
     /**
-     * <p>The episode lists.</p>
+     * <p>The list of playlists.</p>
      */
     @NameInMap("ProgramList")
     public java.util.List<ListPlaylistResponseBodyProgramList> programList;
@@ -20,7 +20,7 @@ public class ListPlaylistResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of episode lists returned.</p>
+     * <p>The total number of playlists.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class ListPlaylistResponseBody extends TeaModel {
 
     public static class ListPlaylistResponseBodyProgramList extends TeaModel {
         /**
-         * <p>The ID of the production studio to which the episode list belongs. You can use the ID as a request parameter in the API operation that is used to add a layout to the virtual studio, delete a layout in the virtual studio, modify a layout of the virtual studio, or query layouts of the virtual studio.</p>
+         * <p>The ID of the production studio to which the playlist belongs. Use this ID as a request parameter to add, delete, modify, or query the layout of a virtual studio.</p>
          * 
          * <strong>example:</strong>
          * <p>casdfasdfasfdasdflkasjdflaj****</p>
@@ -68,7 +68,7 @@ public class ListPlaylistResponseBody extends TeaModel {
         public String casterId;
 
         /**
-         * <p>The main streaming domain.</p>
+         * <p>The streaming domain.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -77,7 +77,7 @@ public class ListPlaylistResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The ID of the episode list.</p>
+         * <p>The ID of the playlist.</p>
          * 
          * <strong>example:</strong>
          * <p>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
@@ -86,7 +86,7 @@ public class ListPlaylistResponseBody extends TeaModel {
         public String programId;
 
         /**
-         * <p>The name of the episode list.</p>
+         * <p>The name of the playlist.</p>
          * 
          * <strong>example:</strong>
          * <p>playlist1</p>
@@ -95,11 +95,14 @@ public class ListPlaylistResponseBody extends TeaModel {
         public String programName;
 
         /**
-         * <p>The number of playbacks after the first playback is complete. Valid values:</p>
+         * <p>The number of times the playlist repeats after the first playback. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (default): specifies that the episode list is played only once.</li>
-         * <li><strong>-1</strong>: specifies that the episode list is played in loop mode.</li>
-         * <li>Positive integer: specifies the number of times the episode list repeats after the first playback is complete.</li>
+         * <li><p><strong>0</strong> (default): The playlist does not repeat.</p>
+         * </li>
+         * <li><p><strong>-1</strong>: The playlist plays in a loop.</p>
+         * </li>
+         * <li><p>Other positive integers: The number of times the playlist repeats.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,10 +112,12 @@ public class ListPlaylistResponseBody extends TeaModel {
         public Integer repeatNumber;
 
         /**
-         * <p>The status of the episode list. Valid values:</p>
+         * <p>The status of the playlist. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: stopped</li>
-         * <li><strong>1</strong>: running</li>
+         * <li><p><strong>0</strong>: stopped.</p>
+         * </li>
+         * <li><p><strong>1</strong>: running.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

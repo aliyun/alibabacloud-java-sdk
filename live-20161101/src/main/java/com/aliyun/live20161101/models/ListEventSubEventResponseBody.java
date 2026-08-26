@@ -14,7 +14,7 @@ public class ListEventSubEventResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>Indicates whether the current page is followed by a page.</p>
+     * <p>Indicates whether there is a next page.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -76,7 +76,7 @@ public class ListEventSubEventResponseBody extends TeaModel {
 
     public static class ListEventSubEventResponseBodyLogs extends TeaModel {
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the subscribed application.</p>
          * 
          * <strong>example:</strong>
          * <p>9qb1****</p>
@@ -85,7 +85,7 @@ public class ListEventSubEventResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The HTTP status code. A value of 200 indicates that the callback was successful.</p>
+         * <p>The error code. A value of 200 indicates a successful callback.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -103,7 +103,7 @@ public class ListEventSubEventResponseBody extends TeaModel {
         public Integer cost;
 
         /**
-         * <p>The details about the callback.</p>
+         * <p>The callback content details.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;MsgId\&quot;:\&quot;875d5266cbabb1834cc84a105cf68454\&quot;,\&quot;MsgTimestamp\&quot;:1697545591,\&quot;SubscribeId\&quot;:\&quot;09be0d2254cb5a89f4cbd86403ec5343\&quot;,\&quot;AppId\&quot;:\&quot;xxx\&quot;,\&quot;ChannelId\&quot;:\&quot;9099\&quot;,\&quot;Contents\&quot;:[{\&quot;Event\&quot;:\&quot;UserEvent\&quot;,\&quot;UserEvent\&quot;:{\&quot;UserId\&quot;:\&quot;linux_test\&quot;,\&quot;EventTag\&quot;:\&quot;Leave\&quot;,\&quot;SessionId\&quot;:\&quot;je7y2sBZJZQ0VBJZrh4LnBkxvGH2WyVs\&quot;,\&quot;Timestamp\&quot;:1697545591,\&quot;ChannelProfile\&quot;:\&quot;interactive_live\&quot;,\&quot;US\&quot;:5068748604047364,\&quot;Reason\&quot;:1,\&quot;Role\&quot;:1,\&quot;TerminalType\&quot;:6,\&quot;UserType\&quot;:2}}]}</p>
@@ -112,7 +112,7 @@ public class ListEventSubEventResponseBody extends TeaModel {
         public String data;
 
         /**
-         * <p>The ID of the callback record.</p>
+         * <p>The callback record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>875d5266cbabb1834cc84a105cf6****</p>
@@ -121,7 +121,7 @@ public class ListEventSubEventResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>The subscription ID.</p>
+         * <p>The subscription event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ad53276431c****</p>
@@ -130,7 +130,7 @@ public class ListEventSubEventResponseBody extends TeaModel {
         public String subId;
 
         /**
-         * <p>The time when the callback was generated.</p>
+         * <p>The time when the callback record was generated. The time is in the UTC+8 time zone. Format: yyyy-MM-dd hh:mm:ss.SSS.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-17 20:26:31.988</p>

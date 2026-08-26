@@ -15,7 +15,7 @@ public class SetLiveDomainMultiStreamOptimalModeRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The primary streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class SetLiveDomainMultiStreamOptimalModeRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>Specifies whether to enable the auto mode of dual-stream disaster recovery. Valid values:</p>
+     * <p>The automatic mode switch. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enables the auto mode.</li>
-     * <li><strong>off</strong>: disables the auto mode.</li>
+     * <li><strong>on</strong>: enabled</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +42,7 @@ public class SetLiveDomainMultiStreamOptimalModeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The live stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

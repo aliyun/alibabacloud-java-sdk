@@ -7,11 +7,17 @@ public class GetCustomTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the custom template that you want to query. The value is a string.</p>
+     * <p>The name of the custom template that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

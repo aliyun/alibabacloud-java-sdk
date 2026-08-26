@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7BF95F2A-3B24-4CDE-9346-7F6FA86697A1</p>

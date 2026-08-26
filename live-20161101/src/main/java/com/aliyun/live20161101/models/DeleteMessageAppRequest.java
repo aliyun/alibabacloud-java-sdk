@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMessageAppRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application that you want to delete. You can specify only one ID.</p>
+     * <p>The ID of the interactive message application to be deleted. Only one application ID can be specified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ListMuteGroupUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public ListMuteGroupUserResponseBodyResult result;
@@ -67,10 +67,10 @@ public class ListMuteGroupUserResponseBody extends TeaModel {
 
     public static class ListMuteGroupUserResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+         * <p>Indicates whether there is a next page. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: There is a next page.</li>
+         * <li>false: There is no next page.</li>
          * </ul>
          * 
          * <strong>example:</strong>

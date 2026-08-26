@@ -8,7 +8,7 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
     public DescribeLiveProducerUsageDataResponseBodyBillProducerData billProducerData;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The end time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-09-30T16:00:00Z</p>
@@ -17,7 +17,7 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
@@ -26,7 +26,7 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start of the time range for which the data was queried.</p>
+     * <p>The start time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-10-31T15:59:59Z</p>

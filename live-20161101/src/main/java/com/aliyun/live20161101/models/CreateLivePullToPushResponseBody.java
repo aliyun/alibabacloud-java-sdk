@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLivePullToPushResponseBody extends TeaModel {
     /**
-     * <p>The description of the custom rule.</p>
+     * <p>Error description.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class CreateLivePullToPushResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68*****</p>
@@ -23,15 +23,13 @@ public class CreateLivePullToPushResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The code that is returned for the request.</p>
+     * <p>Return code.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>0 is returned if the request is normal.</p>
-     * </li>
-     * <li><p>For information about codes that are returned when exceptions occur, see the following Error codes table.</p>
-     * </li>
+     * <li>&quot;0&quot; is returned under normal conditions.</li>
+     * <li>For abnormal conditions, refer to the error code list below.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -40,7 +38,7 @@ public class CreateLivePullToPushResponseBody extends TeaModel {
     public Integer retCode;
 
     /**
-     * <p>The task ID.</p>
+     * <p>Task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>fd245384-4067-4f91-9d75-9666a6bc9****</p>

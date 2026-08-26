@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveAIProduceRulesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5c6a2a0df228-4a64- af62-20e91b96****</p>

@@ -17,7 +17,7 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
     public DescribeLiveStreamWatermarkRulesResponseBodyRuleInfoList ruleInfoList;
 
     /**
-     * <p>The total number of entries that meet the specified conditions.</p>
+     * <p>The total number of matching entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveRealtimeLogAuthorizedResponseBody extends TeaModel {
     /**
-     * <p>The authorization status. <strong>true</strong>: authorized <strong>false</strong>: not authorized</p>
+     * <p>The authorization status. Valid values:</p>
+     * <p><strong>true****false</strong></p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

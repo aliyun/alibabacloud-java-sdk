@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDetectPornDataRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application to which the stream belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,10 +14,12 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The main streaming domain to query.</p>
+     * <p>The streaming domain to query.</p>
      * <ul>
-     * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
-     * <li>If you do not specify this parameter, the data of all domain names within your Alibaba Cloud account is returned.</li>
+     * <li><p>You can query one or more domain names. To query multiple domain names, separate them with commas (,).</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the service returns the merged data for all streaming domains.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T09:00:00Z</p>
@@ -36,10 +38,12 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether a quota of free image scanning is available. Valid values:</p>
+     * <p>You have a daily free quota for image scans. Valid values:</p>
      * <ul>
-     * <li><strong>free</strong>: specifies that a quota of free image scanning is available.</li>
-     * <li><strong>charge</strong>: specifies that a quota of free image scanning is not available and fees are charged.</li>
+     * <li><p><strong>free</strong></p>
+     * </li>
+     * <li><p><strong>charge</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +56,7 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the domain name resides.</p>
+     * <p>The region where the domain name is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -60,17 +64,28 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The moderation scenario. Valid values:</p>
+     * <p>The detection scenario. Valid values:</p>
      * <ul>
-     * <li><strong>porn</strong>: pornography detection. This is the default value.</li>
-     * <li><strong>terrorism</strong>: terrorism detection</li>
-     * <li><strong>ad</strong>: ad violation detection</li>
-     * <li><strong>live</strong>: undesirable scene detection</li>
-     * <li><strong>logo</strong>: logo detection</li>
+     * <li><p><strong>porn</strong> (default): pornography detection.</p>
+     * </li>
+     * <li><p><strong>terrorism</strong>: terrorism and political content detection.</p>
+     * </li>
+     * <li><p><strong>ad</strong>: ad and text violation detection.</p>
+     * </li>
+     * <li><p><strong>live</strong>: undesirable live streaming scenario detection.</p>
+     * </li>
+     * <li><p><strong>logo</strong>: logo detection.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,9 +95,9 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
     public String scene;
 
     /**
-     * <p>The fields based on which data is grouped. Separate multiple fields with commas (,).</p>
+     * <p>The list of grouping fields. Separate multiple fields with commas (,).</p>
      * <blockquote>
-     * <p>If you leave the <strong>SplitBy</strong> parameter empty, only the <strong>TimeStamp</strong> and <strong>Count</strong> parameters are returned.</p>
+     * <p>If you leave this parameter empty, the service returns only TimeStamp and Count.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,14 +107,14 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
     public String splitBy;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <blockquote>
+     * <ul>
+     * <li>You can query data from the last 90 days.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>You can query data in the last 90 days.</p>
-     * </li>
-     * <li><p>The minimum data granularity is 5 minutes. If you do not specify this parameter, data in the last 24 hours is queried.</p>
-     * </li>
+     * <li>The minimum data granularity is 5 minutes. If you leave this parameter empty, the service queries data from the last 24 hours by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +124,7 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The stream name.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>

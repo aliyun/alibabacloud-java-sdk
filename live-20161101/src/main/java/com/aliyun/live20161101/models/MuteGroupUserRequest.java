@@ -15,11 +15,14 @@ public class MuteGroupUserRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The mode in which system messages are broadcasted. Valid values:</p>
+     * <p>The system message broadcast type. Valid values:</p>
      * <ul>
-     * <li>0: specifies that system messages are not broadcasted. This is the default value.</li>
-     * <li>1: specifies that system messages are broadcasted to specified users.</li>
-     * <li>2: specifies that system messages are broadcasted to the message group.</li>
+     * <li><p>0: no broadcast.</p>
+     * </li>
+     * <li><p>1: broadcast to specified users.</p>
+     * </li>
+     * <li><p>2: broadcast to the group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +32,7 @@ public class MuteGroupUserRequest extends TeaModel {
     public Integer broadCastType;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>The message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,9 +42,9 @@ public class MuteGroupUserRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The duration of the mute. Unit: seconds.</p>
+     * <p>The mute duration. Unit: seconds.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter or set the value to 0, the default duration of 86,400 seconds is used.</p>
+     * <p>If this parameter is not specified or is set to 0, the default mute duration (86400 seconds) is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,14 +54,17 @@ public class MuteGroupUserRequest extends TeaModel {
     public Integer muteTime;
 
     /**
-     * <p>Details about the mute.</p>
+     * <p>The mute details.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MuteUserList")
     public java.util.List<String> muteUserList;
 
     /**
-     * <p>The ID of the user who performs the operation.</p>
+     * <p>The user ID of the operator.</p>
+     * <blockquote>
+     * <p>This parameter is required, and the user must be the creator of the group.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>de1**a0</p>

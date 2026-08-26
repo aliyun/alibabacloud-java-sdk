@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveStreamRecordIndexFilesRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteLiveStreamRecordIndexFilesRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The name of the main streaming domain.</p>
+     * <p>The main streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DeleteLiveStreamRecordIndexFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The index file IDs.</p>
+     * <p>The array of index file IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,14 +37,22 @@ public class DeleteLiveStreamRecordIndexFilesRequest extends TeaModel {
     @NameInMap("RecordId")
     public java.util.List<String> recordId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to delete the corresponding file in Object Storage Service (OSS) synchronously. Valid values:</p>
+     * <p>Specifies whether to delete the associated OSS objects at the same time. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The corresponding file in OSS is deleted.</li>
-     * <li><strong>false</strong>: The corresponding file in OSS is not deleted.</li>
+     * <li><p><strong>true</strong>: Deletes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Does not delete.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -55,7 +63,7 @@ public class DeleteLiveStreamRecordIndexFilesRequest extends TeaModel {
     public String removeFile;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

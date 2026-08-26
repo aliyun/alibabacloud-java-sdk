@@ -23,15 +23,13 @@ public class DeleteLivePullToPushResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The code that is returned for the request.</p>
+     * <p>The return code.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>0 is returned if the request is normal.</p>
-     * </li>
-     * <li><p>For information about codes that are returned when exceptions occur, see the following Error codes table.</p>
-     * </li>
+     * <li>&quot;0&quot; is returned in normal cases.</li>
+     * <li>For exceptions, refer to the error codes listed below.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>

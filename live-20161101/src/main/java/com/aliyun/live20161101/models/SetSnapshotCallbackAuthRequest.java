@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetSnapshotCallbackAuthRequest extends TeaModel {
     /**
-     * <p>The custom key that is used for callback authentication.</p>
+     * <p>The authentication key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,8 +17,10 @@ public class SetSnapshotCallbackAuthRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable callback authentication. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: enables callback authentication.</li>
-     * <li><strong>no</strong>: disables callback authentication.</li>
+     * <li><p><strong>yes</strong>: enables</p>
+     * </li>
+     * <li><p><strong>no</strong>: disables</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,6 +43,12 @@ public class SetSnapshotCallbackAuthRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

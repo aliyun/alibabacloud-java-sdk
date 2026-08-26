@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveUpVideoAudioInfoResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>

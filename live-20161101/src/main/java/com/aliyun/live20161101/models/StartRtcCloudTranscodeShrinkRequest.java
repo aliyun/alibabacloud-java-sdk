@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartRtcCloudTranscodeShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the application to which the channel belongs. The ID can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-). The maximum length is 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartRtcCloudTranscodeShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the channel to which the user to be transcoded belongs. The ID can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-). The maximum length is 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,15 @@ public class StartRtcCloudTranscodeShrinkRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The parameters for the input stream subscription.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InputParam")
     public String inputParamShrink;
 
     /**
+     * <p>The idle timeout period in seconds. If a task cannot subscribe to the specified streamer\&quot;s stream and remains idle for longer than this period, the task automatically stops. The value must be an integer from 10 to 14,400. The default value is 300.</p>
+     * 
      * <strong>example:</strong>
      * <p>600</p>
      */
@@ -36,6 +41,7 @@ public class StartRtcCloudTranscodeShrinkRequest extends TeaModel {
     public Long maxIdleTime;
 
     /**
+     * <p>The parameters for the transcoded output.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OutputParams")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
     /**
-     * <p>The total audio-only duration. Audio-only is a basic specification. Unit: minutes.</p>
+     * <p>The total audio-only duration at the basic specification. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
     public Long audioSummaryDuration;
 
     /**
-     * <p>The usage statistics for each time granularity.</p>
+     * <p>The usage statistics information.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeMeterLiveBypassDurationResponseBodyData> data;
@@ -29,7 +29,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total single-stream relay duration for audio. Unit: minutes.</p>
+     * <p>The total single-stream relay audio duration. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
     public Long singleAudioSummaryDuration;
 
     /**
-     * <p>The total single-stream relay duration for video. Unit: minutes.</p>
+     * <p>The total single-stream relay video duration. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -56,7 +56,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
     public Long totalSummaryDuration;
 
     /**
-     * <p>The total Full HD duration. The video resolution is 1920 × 1080 or lower. Unit: minutes.</p>
+     * <p>The total full high definition duration, with a video resolution of 1920 × 1080 or lower. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -65,7 +65,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
     public Long v1080SummaryDuration;
 
     /**
-     * <p>The total standard definition (SD) duration. The video resolution is 640 × 480 or lower. Unit: minutes.</p>
+     * <p>The total standard definition duration, with a video resolution of 640 × 480 or lower. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -74,7 +74,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
     public Long v480SummaryDuration;
 
     /**
-     * <p>The total high definition (HD) duration. The video resolution is 1280 × 720 or lower. Unit: minutes.</p>
+     * <p>The total high definition duration, with a video resolution of 1280 × 720 or lower. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -161,7 +161,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
 
     public static class DescribeMeterLiveBypassDurationResponseBodyData extends TeaModel {
         /**
-         * <p>The audio-only duration. Audio-only is a basic specification. Unit: minutes.</p>
+         * <p>The audio-only duration at the basic specification. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -170,7 +170,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
         public Long audioDuration;
 
         /**
-         * <p>The single-stream relay duration for audio. Unit: minutes.</p>
+         * <p>The single-stream relay audio duration. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -179,7 +179,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
         public Long singleAudio;
 
         /**
-         * <p>The single-stream relay duration for video. Unit: minutes.</p>
+         * <p>The single-stream relay video duration. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -188,7 +188,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
         public Long singleVideo;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The start time of the time segment. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC+0.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-10T20:00:00Z</p>
@@ -197,7 +197,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
         public String timestamp;
 
         /**
-         * <p>The duration. Unit: minutes.</p>
+         * <p>The total duration. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>150</p>
@@ -206,7 +206,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
         public Long totalDuration;
 
         /**
-         * <p>The Full HD duration. The video resolution is 1920 × 1080 or lower. Unit: minutes.</p>
+         * <p>The full high definition duration, with a video resolution of 1920 × 1080 or lower. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -215,7 +215,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
         public Long v1080Duration;
 
         /**
-         * <p>The SD duration. The video resolution is 640 × 480 or lower. Unit: minutes.</p>
+         * <p>The standard definition duration, with a video resolution of 640 × 480 or lower. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -224,7 +224,7 @@ public class DescribeMeterLiveBypassDurationResponseBody extends TeaModel {
         public Long v480Duration;
 
         /**
-         * <p>The HD duration. The video resolution is 1280 × 720 or lower. Unit: minutes.</p>
+         * <p>The high definition duration, with a video resolution of 1280 × 720 or lower. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>

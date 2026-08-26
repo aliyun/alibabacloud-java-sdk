@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomTemplateResponseBody extends TeaModel {
     /**
-     * <p>The configurations of the template.</p>
+     * <p>The template configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{height:1080,scale:[16:9],gop:60,bframes:30,cdesc:h264}</p>
@@ -23,7 +23,7 @@ public class GetCustomTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The template name.</p>
      * 
      * <strong>example:</strong>
      * <p>TestTemplate</p>

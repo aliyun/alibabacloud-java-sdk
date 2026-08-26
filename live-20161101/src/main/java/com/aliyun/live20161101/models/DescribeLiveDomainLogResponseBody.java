@@ -17,7 +17,7 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>

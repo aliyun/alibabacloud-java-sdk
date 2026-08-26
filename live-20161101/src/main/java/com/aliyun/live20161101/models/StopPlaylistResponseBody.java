@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopPlaylistResponseBody extends TeaModel {
     /**
-     * <p>The ID of the episode list.</p>
+     * <p>The playlist ID.</p>
      * 
      * <strong>example:</strong>
      * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>

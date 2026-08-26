@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMessageGroupUserRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive Messages application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListMessageGroupUserRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>Message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListMessageGroupUserRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>Page number. Default value: 1.</p>
      * <p>Valid values: 1 to 100000.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ListMessageGroupUserRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of members to return on each page. Default value: 20.</p>
+     * <p>Number of message group members to display per page. Default value: 20.</p>
      * <p>Valid values: 1 to 50.</p>
      * 
      * <strong>example:</strong>
@@ -45,10 +45,10 @@ public class ListMessageGroupUserRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>Sorting method. Valid values:</p>
      * <ul>
-     * <li>0: ascending order by time</li>
-     * <li>1: descending order by time</li>
+     * <li>0: Ascending order by time.</li>
+     * <li>1: Descending order by time.</li>
      * </ul>
      * 
      * <strong>example:</strong>

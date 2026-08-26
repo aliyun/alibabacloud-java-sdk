@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartLiveMPUTaskRequest extends TeaModel {
     /**
-     * <p>The application ID. You can specify only one application ID. The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The application ID. Only one ID is supported. It can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-). The maximum length is 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The channel ID. You can specify only one channel ID. The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The channel ID. Only one ID is supported. It can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-). The maximum length is 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class StartLiveMPUTaskRequest extends TeaModel {
     public String channelId;
 
     /**
-     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: [10,86400].</p>
+     * <p>The idle timeout period. Unit: seconds. The value must be in the range of [10, 86400].</p>
      * <blockquote>
-     * <p> If the task is idle for a period of time longer than the duration specified by the MaxIdleTime parameter, the task is automatically stopped. If the parameter is not specified, the task is stopped after the channel is closed.</p>
+     * <p>If you set this parameter, the task is automatically stopped when it has been idle for a period longer than MaxIdleTime. If you do not set this parameter, the task is stopped immediately after the channel is closed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,8 +39,10 @@ public class StartLiveMPUTaskRequest extends TeaModel {
     /**
      * <p>The stream mixing mode. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: the single-stream relay mode. In this mode, the service only relays the original single stream, but does not transcode mixed streams. You do not need to set parameters for mixed-stream transcoding.</li>
-     * <li><strong>1</strong> (default): the mixed-stream relay mode.</li>
+     * <li><p><strong>0</strong>: Single-stream ingest. The original single stream is ingested without stream mixing or transcoding. You do not need to configure stream mixing and transcoding parameters.</p>
+     * </li>
+     * <li><p><strong>1</strong> (default): Stream mixing and transcoding.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,20 +53,23 @@ public class StartLiveMPUTaskRequest extends TeaModel {
     public String mixMode;
 
     /**
-     * <p>The multiple ingest URLs to relay. This parameter allows you to specify multiple ingest URLs.</p>
+     * <p>The parameters for ingesting to multiple URLs. You can specify multiple live ingest URLs.</p>
      * <blockquote>
-     * <p> The StreamURL and MultiStreamURL parameters are mutually exclusive. You must specify one of the two parameters.</p>
+     * <p>When you set the ingest URL for a task, you must configure either the StreamURL parameter or the MultiStreamURL parameter, but not both.</p>
      * </blockquote>
      */
     @NameInMap("MultiStreamURL")
     public java.util.List<StartLiveMPUTaskRequestMultiStreamURL> multiStreamURL;
 
     /**
-     * <p>The region in which the streams are mixed. Valid values:</p>
+     * <p>The region where the stream mixing service is located. Valid values:</p>
      * <ul>
-     * <li><strong>CN-Shanghai</strong></li>
-     * <li><strong>AP-Singapore</strong> (default)</li>
-     * <li><strong>EMAA-Saudi</strong></li>
+     * <li><p><strong>CN-Shanghai&lt;props=&quot;china&quot;&gt;(default)</strong>: Shanghai.</p>
+     * </li>
+     * <li><p><strong>AP-Singapore&lt;props=&quot;intl&quot;&gt;(default)</strong>: Singapore.</p>
+     * </li>
+     * <li><p><strong>EMAA-Saudi</strong>: Saudi Arabia.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,25 +79,29 @@ public class StartLiveMPUTaskRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The supplemental enhancement information (SEI) parameters.</p>
+     * <p>The SEI configuration parameters.</p>
      */
     @NameInMap("SeiParams")
     public StartLiveMPUTaskRequestSeiParams seiParams;
 
     /**
-     * <p>The single-stream relay parameters. These parameters are required if you set MixMode to 0. Leave these parameters empty in the mixed-stream relay mode.</p>
+     * <p>The parameters for single-stream ingest. This parameter is required when MixMode is set to 0. Do not set this parameter for stream mixing and transcoding.</p>
      */
     @NameInMap("SingleSubParams")
     public StartLiveMPUTaskRequestSingleSubParams singleSubParams;
 
     /**
-     * <p>The ingest URL. You can specify only one ingest URL in the Real-Time Messaging Protocol (RTMP) format. The URL can be up to 2,048 characters in length. For information about the generation rules of ingest URLs, see <a href="https://help.aliyun.com/document_detail/199339.html">Ingest and streaming URLs</a>.</p>
+     * <p>The live ingest URL. Only the RTMP protocol is supported. Only one URL is supported. The maximum length is 2048 characters. For information about how to generate the URL, see <a href="https://help.aliyun.com/document_detail/199339.html">Ingest URLs and playback URLs</a>.</p>
      * <blockquote>
+     * <ul>
+     * <li>For domain names with hotlink protection enabled, the ingest URL must include an access token.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>If the ingest URL is under a domain name for which hotlink protection is enabled, you must include an access token in the URL.</li>
-     * <li>You cannot use the same ingest URL in different tasks.</li>
-     * <li>You cannot use the same ingest URL within 10 seconds after a task is stopped.</li>
+     * <li><p>Do not use the same StreamURL in different tasks at the same time.</p>
+     * </li>
+     * <li><p>Do not use the same StreamURL within 10 seconds after a task stops.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +111,8 @@ public class StartLiveMPUTaskRequest extends TeaModel {
     public String streamURL;
 
     /**
-     * <p>The task ID. You can specify only one task ID. The ID can be up to 55 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The ID must be unique.</p>
+     * <p>The task ID. Only one ID is supported. It can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-). The maximum length is 55 characters. This ID is the unique identifier for the bypass ingest task.
+     * If a task with the same ID still exists and has not been cleared when you start a new task, \<code>InvalidParam\\</code> is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +122,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The mixed-stream relay parameters. These parameters are required if you set MixMode to 1. Leave these parameters empty if you use the single-stream relay mode.</p>
+     * <p>The parameters for stream mixing and transcoding. This parameter is required when MixMode is set to 1. Do not set this parameter for single-stream ingest.</p>
      */
     @NameInMap("TranscodeParams")
     public StartLiveMPUTaskRequestTranscodeParams transcodeParams;
@@ -212,13 +222,15 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestMultiStreamURL extends TeaModel {
         /**
-         * <p>Specifies whether to perform stream relay by using Alibaba Cloud CDN. Valid values:</p>
+         * <p>Specifies whether to ingest the stream to Alibaba Cloud CDN.</p>
          * <ul>
-         * <li>false: performs stream relay by using a CDN service that is not Alibaba Cloud CDN.</li>
-         * <li>true: performs stream relay by using Alibaba Cloud CDN.</li>
+         * <li><p>false: Ingest to a non-Alibaba Cloud CDN.</p>
+         * </li>
+         * <li><p>true: Ingest to Alibaba Cloud CDN.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The default value of this parameter is false.</p>
+         * <p>The default value is false.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -228,7 +240,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public Boolean isAliCdn;
 
         /**
-         * <p>The ingest URL. Only the RTMP format is supported. The URL can be up to 2,048 characters in length. For information about the generation rules of ingest URLs, see <a href="https://help.aliyun.com/document_detail/199339.html">Ingest and streaming URLs</a>.</p>
+         * <p>The live ingest URL. Only the RTMP protocol is supported. The maximum length is 2048 characters. For information about how to generate the URL, see <a href="https://help.aliyun.com/document_detail/199339.html">Ingest URLs and playback URLs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://example.com/live/stream****</p>
@@ -261,10 +273,12 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestSeiParamsLayoutVolume extends TeaModel {
         /**
-         * <p>Specifies whether to include the SEI in an Instantaneous Decoder Refresh (IDR) frame. Valid values:</p>
+         * <p>Specifies whether to ensure that SEI is carried when sending an IDR keyframe. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: does not include the SEI.</li>
-         * <li><strong>1</strong>: includes the SEI.</li>
+         * <li><p><strong>0</strong>: Does not ensure SEI is carried.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Ensures SEI is carried.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,7 +288,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String followIdr;
 
         /**
-         * <p>The interval at which the SEI is sent. Valid values: [1000,5000]. Unit: milliseconds.</p>
+         * <p>The SEI sending interval. Unit: milliseconds. The value must be in the range of [1000, 5000].</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -307,10 +321,12 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestSeiParamsPassThrough extends TeaModel {
         /**
-         * <p>Specifies whether to include the SEI in an IDR frame. Valid values:</p>
+         * <p>Specifies whether to ensure that SEI is carried when sending an IDR keyframe. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: does not include the SEI.</li>
-         * <li><strong>1</strong>: includes the SEI.</li>
+         * <li><p><strong>0</strong>: Does not ensure SEI is carried.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Ensures SEI is carried.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -320,7 +336,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String followIdr;
 
         /**
-         * <p>The interval at which the SEI is sent. Valid values: [1000,5000]. Unit: milliseconds.</p>
+         * <p>The SEI sending interval. Unit: milliseconds. The value must be in the range of [1000, 5000].</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -329,7 +345,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String interval;
 
         /**
-         * <p>The payload content of the SEI.</p>
+         * <p>The payload content of the pass-through SEI.</p>
          * 
          * <strong>example:</strong>
          * <p>yourPayloadContent</p>
@@ -338,7 +354,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String payloadContent;
 
         /**
-         * <p>The key of the payload content of the SEI. If you do not specify this parameter, the default value udd is used.</p>
+         * <p>The key corresponding to the payload content of the pass-through SEI. If not set, the default key is \<code>udd\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>yourPayloadContentKey</p>
@@ -387,19 +403,19 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestSeiParams extends TeaModel {
         /**
-         * <p>The layout and volume SEI. If you leave this parameter empty, the default layout and volume SEI is used.</p>
+         * <p>The layout and volume SEI. The content of this parameter can be empty, which means the default layout and volume SEI is carried.</p>
          */
         @NameInMap("LayoutVolume")
         public StartLiveMPUTaskRequestSeiParamsLayoutVolume layoutVolume;
 
         /**
-         * <p>Specifies whether to pass through the SEI.</p>
+         * <p>The pass-through SEI.</p>
          */
         @NameInMap("PassThrough")
         public StartLiveMPUTaskRequestSeiParamsPassThrough passThrough;
 
         /**
-         * <p>The custom payload_type of the SEI. Valid values: 100 to 254. If you do not specify this parameter, the default value 5 is used.</p>
+         * <p>The custom payload_type of the SEI message. The value must be in the range of 100-254. If not set, the default payload_type is 5.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -440,10 +456,12 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestSingleSubParams extends TeaModel {
         /**
-         * <p>The type of the video source. This parameter is valid only when you set StreamType to 2. Valid values:</p>
+         * <p>The type of video input stream in single-stream ingest mode. This parameter is valid only for video streams (StreamType=2). Valid values:</p>
          * <ul>
-         * <li><strong>camera</strong> (default)</li>
-         * <li><strong>shareScreen</strong></li>
+         * <li><p><strong>camera</strong> (default): Camera stream.</p>
+         * </li>
+         * <li><p><strong>shareScreen</strong>: Screen sharing stream.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -453,11 +471,14 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The type of the stream that you want to relay. Valid values:</p>
+         * <p>The type of stream to ingest in single-stream ingest mode. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (default): original stream</li>
-         * <li><strong>1</strong>: only the audio track</li>
-         * <li><strong>2</strong>: only the video track</li>
+         * <li><p><strong>0</strong> (default): Ingest the original stream.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Ingest only the audio stream.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Ingest only the video stream.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -467,7 +488,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String streamType;
 
         /**
-         * <p>The user ID. In the single-stream relay mode, you can relay only one stream in a request.</p>
+         * <p>The ID of the user whose stream is ingested. Only one stream can be ingested at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -509,10 +530,12 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestTranscodeParamsBackground extends TeaModel {
         /**
-         * <p>The display mode of the global background image. Valid values:</p>
+         * <p>The display mode of the output video. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: scales the background image proportionally to fit the view, with black bars displayed.</li>
-         * <li><strong>1</strong> (default): crops the background image to fit the view.</li>
+         * <li><p><strong>0</strong>: Scale and display a black background.</p>
+         * </li>
+         * <li><p><strong>1</strong> (default): Clip.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -522,7 +545,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String renderMode;
 
         /**
-         * <p>The URL of the global background image. The URL can be up to 2,048 characters in length.</p>
+         * <p>The URL of the global background image. The maximum length is 2048 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>yourImageUrl</p>
@@ -555,7 +578,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestTranscodeParamsEncodeParams extends TeaModel {
         /**
-         * <p>The bitrate of the audio. Valid values: [8,500]. Unit: Kbit/s.</p>
+         * <p>The audio bitrate. Unit: kbps. The value must be in the range of [8, 500].</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -564,7 +587,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String audioBitrate;
 
         /**
-         * <p>The number of sound channels. Valid values: 1 and 2.</p>
+         * <p>The number of audio channels. Valid values: 1, 2.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -573,10 +596,12 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String audioChannels;
 
         /**
-         * <p>Specifies whether the output stream is an audio-only stream. Valid values:</p>
+         * <p>Specifies whether the stream is audio-only. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The output stream is an audio-only stream. If you set this parameter to true, you need to configure only audio-related parameters under EncodeParams.</li>
-         * <li><strong>false</strong> (default): The output stream is not an audio-only stream. If you set this parameter to false, you need to configure all parameters under EncodeParams, except the VideoCodec and EnhancedParam parameters.</li>
+         * <li><p><strong>true</strong>: Audio-only. You only need to set audio-related parameters.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): Not audio-only. All parameters except VideoCodec and EnhancedParam must be specified.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -586,7 +611,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String audioOnly;
 
         /**
-         * <p>The audio sampling rate. Valid values: 8000, 16000, 32000, 44100, and 48000. Unit: Hz.</p>
+         * <p>The audio sampling rate. Unit: Hz. Valid values: 8000, 16000, 32000, 44100, 48000.</p>
          * 
          * <strong>example:</strong>
          * <p>44100</p>
@@ -595,13 +620,15 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String audioSampleRate;
 
         /**
-         * <p>The parameter used for encoding enhancement, which is a JSON string. The parameter includes the optional profile and preset fields.</p>
+         * <p>The enhanced encoding parameters. This is a JSON string. The supported optional configurations include \<code>profile\\</code> and \<code>preset\\</code>.</p>
          * <ul>
-         * <li>profile: the encoding level. If the video codec is H.264, the valid values of this field are baseline, main, and high. If the video codec is H.265, the valid value of this field is main.</li>
-         * <li>preset: adjusts the trade-off between encoding speed and video quality. The valid values of this field are ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, and placebo. Each value specifies a level of trade-off between encoding speed and video quality. For example, the ultrafast preset has the fastest encoding speed but the lowest video quality, while the placebo preset sacrifices the encoding speed for the best video quality.</li>
+         * <li><p>\<code>profile\\</code>: The encoding profile. If the video encoding format is H.264, valid values for \<code>profile\\</code> include &quot;baseline&quot;, &quot;main&quot;, and &quot;high&quot;. If the video encoding format is H.265, the valid value for \<code>profile\\</code> is &quot;main&quot;.</p>
+         * </li>
+         * <li><p>\<code>preset\\</code>: Balances encoding speed and quality. Valid values for \<code>preset\\</code> include &quot;ultrafast&quot;, &quot;superfast&quot;, &quot;veryfast&quot;, &quot;faster&quot;, &quot;fast&quot;, &quot;medium&quot;, &quot;slow&quot;, &quot;slower&quot;, &quot;veryslow&quot;, and &quot;placebo&quot;. Each value represents a strategy for balancing encoding speed and output video quality, from &quot;ultrafast&quot; (fastest encoding speed) to &quot;placebo&quot; (highest quality, slowest encoding speed).</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> A value of superfast for the preset field is suitable for real-time communication scenarios. We recommend that you not set the field if you are not a professional encoding engineer.</p>
+         * <p>For example, &quot;superfast&quot; is mainly used for real-time communication. If you are not an expert in encoders, do not set this option.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -611,7 +638,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String enhancedParam;
 
         /**
-         * <p>The bitrate of the video. Valid values: [1,10000]. Unit: Kbit/s.</p>
+         * <p>The video bitrate. Unit: kbps. The value must be in the range of [1, 10000].</p>
          * 
          * <strong>example:</strong>
          * <p>3500</p>
@@ -620,10 +647,12 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String videoBitrate;
 
         /**
-         * <p>The video codec. Valid values:</p>
+         * <p>The video encoding format. Valid values:</p>
          * <ul>
-         * <li>H.264 (default)</li>
-         * <li>H.265</li>
+         * <li><p>H.264 (default).</p>
+         * </li>
+         * <li><p>H.265.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -633,7 +662,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String videoCodec;
 
         /**
-         * <p>The frame rate of the video. Valid values: [1,60]. Unit: frames per second (FPS).</p>
+         * <p>The video frame rate. Unit: fps. The value must be in the range of [1, 60].</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -642,7 +671,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String videoFramerate;
 
         /**
-         * <p>The group of pictures (GOP) size of the video. Valid values: [1,60].</p>
+         * <p>The video GOP size. The value must be in the range of [1, 60].</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -651,7 +680,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String videoGop;
 
         /**
-         * <p>The height of the video. Valid values: [0,1920]. Unit: pixels.</p>
+         * <p>The video height. Unit: pixels. The value must be in the range of [0, 1920].</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -660,7 +689,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String videoHeight;
 
         /**
-         * <p>The width of the video. Valid values: [0,1920]. Unit: pixels.</p>
+         * <p>The video width. Unit: pixels. The value must be in the range of [0, 1920].</p>
          * 
          * <strong>example:</strong>
          * <p>1920</p>
@@ -765,7 +794,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestTranscodeParamsLayoutUserPanesUserInfo extends TeaModel {
         /**
-         * <p>The ID of the channel where the user is. If the user is in the same channel, you can leave this parameter empty. We recommend that you specify this parameter when you perform stream mixing across channels.</p>
+         * <p>The ID of the channel where the user is located. You do not need to set this parameter for users in the same channel. For cross-channel stream mixing, set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>yourChannelId</p>
@@ -774,10 +803,12 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String channelId;
 
         /**
-         * <p>The type of the video source. This parameter is valid only when you set StreamType to 2. Valid values:</p>
+         * <p>The type of video input stream in stream mixing and transcoding mode. This parameter is valid only for video streams (StreamType=2). Valid values:</p>
          * <ul>
-         * <li><strong>camera</strong> (default)</li>
-         * <li><strong>shareScreen</strong></li>
+         * <li><p><strong>camera</strong> (default): Camera stream.</p>
+         * </li>
+         * <li><p><strong>shareScreen</strong>: Screen sharing stream.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -828,7 +859,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestTranscodeParamsLayoutUserPanes extends TeaModel {
         /**
-         * <p>The URL of the background image of the pane. The URL can be up to 2,048 characters in length. This image is displayed if the user turns off the camera or is not present in the channel.</p>
+         * <p>The URL of the background image for the video pane. The maximum length is 2048 characters. When a user turns off their camera or has not joined the channel, this image is displayed in their layout position.</p>
          * 
          * <strong>example:</strong>
          * <p>yourImageUrl</p>
@@ -837,7 +868,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String backgroundImageUrl;
 
         /**
-         * <p>The height of the pane. The value is normalized.</p>
+         * <p>The height of the pane, as a normalized percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2632</p>
@@ -846,10 +877,12 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String height;
 
         /**
-         * <p>The display mode of the pane. Valid values:</p>
+         * <p>The display mode of the output video pane. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: scales the video proportionally to fit the view, with black bars displayed.</li>
-         * <li><strong>1 (default)</strong>: crops the video to fit the view.</li>
+         * <li><p><strong>0</strong>: Scale and display a black background.</p>
+         * </li>
+         * <li><p><strong>1</strong> (default): Clip.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -859,21 +892,21 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String renderMode;
 
         /**
-         * <p>The information about the user whose stream is played in the pane. If you leave this parameter empty, the system automatically sets this parameter based on the order in which streamers join the channel.</p>
+         * <p>The information about the user corresponding to this pane. If you do not set this parameter, the system automatically fills it based on the order in which streamers join the channel.</p>
          * <blockquote>
+         * <ul>
+         * <li>If you specify user information, that user must already be configured in the \<code>TranscodeParams.UserInfos\\</code> parameter.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li><p>If you specify the information about a user by using this parameter, the information about the user must also be specified by using the TranscodeParams.UserInfos parameter.</p>
-         * </li>
-         * <li><p>This parameter is valid only when you set StreamType to 0 or 2.</p>
-         * </li>
+         * <li>This parameter is valid only for original streams and video streams.</li>
          * </ul>
          */
         @NameInMap("UserInfo")
         public StartLiveMPUTaskRequestTranscodeParamsLayoutUserPanesUserInfo userInfo;
 
         /**
-         * <p>The width of the pane. The value is normalized.</p>
+         * <p>The width of the pane, as a normalized percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.3564</p>
@@ -882,7 +915,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String width;
 
         /**
-         * <p>The x-coordinate of the pane. The value is normalized.</p>
+         * <p>The X-coordinate, as a normalized percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2456</p>
@@ -891,7 +924,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String x;
 
         /**
-         * <p>The y-coordinate of the pane. The value is normalized.</p>
+         * <p>The Y-coordinate, as a normalized percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.3789</p>
@@ -900,7 +933,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String y;
 
         /**
-         * <p>The layer in which the pane resides. A value of 0 indicates the bottom layer. Each increment of the value by 1 indicates the next upper layer.</p>
+         * <p>The stacking order. 0 is the bottom layer. Layer 1 is on top of layer 0, and so on.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -981,7 +1014,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestTranscodeParamsLayout extends TeaModel {
         /**
-         * <p>The information about the panes.</p>
+         * <p>The information about user panes in the mixed stream.</p>
          */
         @NameInMap("UserPanes")
         public java.util.List<StartLiveMPUTaskRequestTranscodeParamsLayoutUserPanes> userPanes;
@@ -1003,7 +1036,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestTranscodeParamsUserInfos extends TeaModel {
         /**
-         * <p>The ID of the channel where the subscribed user is. If the user is in the same channel, you can leave this parameter empty. We recommend that you specify this parameter when you perform stream mixing across channels.</p>
+         * <p>The ID of the channel where the subscribed user is located. You do not need to set this parameter for users in the same channel. For cross-channel stream mixing, set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>yourChannelId</p>
@@ -1012,10 +1045,12 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String channelId;
 
         /**
-         * <p>The type of the video source that is subscribed to. This parameter is valid only when you set StreamType to 2. Valid values:</p>
+         * <p>The type of video input stream to subscribe to for stream mixing. This parameter is valid only for video streams (StreamType=2). Valid values:</p>
          * <ul>
-         * <li><strong>camera</strong> (default)</li>
-         * <li><strong>shareScreen</strong></li>
+         * <li><p><strong>camera</strong> (default): Camera stream.</p>
+         * </li>
+         * <li><p><strong>shareScreen</strong>: Screen sharing stream.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1025,11 +1060,14 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The type of the relayed stream that is subscribed to. Valid values:</p>
+         * <p>The type of stream to subscribe to for stream mixing. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (default): original stream</li>
-         * <li><strong>1</strong>: only the audio track</li>
-         * <li><strong>2</strong>: only the video track</li>
+         * <li><p><strong>0</strong> (default): Ingest the original stream.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Ingest only the audio stream.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Ingest only the video stream.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1039,7 +1077,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         public String streamType;
 
         /**
-         * <p>The ID of the subscribed user.</p>
+         * <p>The ID of the user to subscribe to for stream mixing.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1089,7 +1127,7 @@ public class StartLiveMPUTaskRequest extends TeaModel {
 
     public static class StartLiveMPUTaskRequestTranscodeParams extends TeaModel {
         /**
-         * <p>The global background image.</p>
+         * <p>The global background image for the mixed stream.</p>
          */
         @NameInMap("Background")
         public StartLiveMPUTaskRequestTranscodeParamsBackground background;
@@ -1103,14 +1141,14 @@ public class StartLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The video layout information.</p>
          * <blockquote>
-         * <p> If video transcoding is required, you must specify the video layout information, including the x-coordinate and y-coordinate, the width and height, and the layer. For audio-only transcoding, leave the video layout information empty.</p>
+         * <p>For video transcoding, you must specify the video layout information, including coordinates (X, Y), pane dimensions (Width, Height), and stacking order (ZOrder). For audio-only transcoding, do not specify video layout information.</p>
          * </blockquote>
          */
         @NameInMap("Layout")
         public StartLiveMPUTaskRequestTranscodeParamsLayout layout;
 
         /**
-         * <p>The information about the users whose streams are subscribed to. If you leave this parameter empty, streams from all users are mixed.</p>
+         * <p>The information about the users to subscribe to for stream mixing. If you do not specify users, all users are included in the mixed stream.</p>
          */
         @NameInMap("UserInfos")
         public java.util.List<StartLiveMPUTaskRequestTranscodeParamsUserInfos> userInfos;

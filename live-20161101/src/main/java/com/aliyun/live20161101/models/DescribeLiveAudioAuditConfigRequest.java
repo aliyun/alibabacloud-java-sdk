@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveAudioAuditConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -26,11 +26,17 @@ public class DescribeLiveAudioAuditConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The name of the stream.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>

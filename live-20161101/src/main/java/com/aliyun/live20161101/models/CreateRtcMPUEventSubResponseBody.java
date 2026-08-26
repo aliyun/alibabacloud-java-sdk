@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRtcMPUEventSubResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
@@ -14,7 +14,7 @@ public class CreateRtcMPUEventSubResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the subscription.</p>
+     * <p>The subscription ID.</p>
      * 
      * <strong>example:</strong>
      * <p>Sub-<strong><strong><strong>9799B2C4500</strong></strong></strong></p>

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeLiveDomainFrameRateAndBitRateDataRequest extends TeaModel {
     /**
      * <p>The ingest domain.</p>
+     * <blockquote>
+     * <p>Make sure that the domain name added to ApsaraVideo Live and that you have the permissions to manage the domain name.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +21,7 @@ public class DescribeLiveDomainFrameRateAndBitRateDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The point of time to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The time to query. The time is in UTC. Format: <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +30,12 @@ public class DescribeLiveDomainFrameRateAndBitRateDataRequest extends TeaModel {
     @NameInMap("QueryTime")
     public String queryTime;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

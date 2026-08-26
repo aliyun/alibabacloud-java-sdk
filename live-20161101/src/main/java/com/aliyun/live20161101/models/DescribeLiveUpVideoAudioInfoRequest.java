@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveUpVideoAudioInfoRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time. The format is \<code>yyyy-MM-ddTHH:mm:ssZ\\</code> in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T15:10:00Z</p>
@@ -16,11 +16,17 @@ public class DescribeLiveUpVideoAudioInfoRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the stream that you want to query. Specify this parameter in the following format: <code>rtmp://Ingest domain/Application name/Stream name</code>.</p>
+     * <p>The start time. The format is \<code>yyyy-MM-ddTHH:mm:ssZ\\</code> in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T15:00:00Z</p>
@@ -29,7 +35,7 @@ public class DescribeLiveUpVideoAudioInfoRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>DescribeLiveUpVideoAudioInfo</strong>.</p>
+     * <p>The full name of the stream to query. The format is <code>rtmp://&lt;ingest domain&gt;/&lt;AppName&gt;/&lt;StreamName&gt;</code></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

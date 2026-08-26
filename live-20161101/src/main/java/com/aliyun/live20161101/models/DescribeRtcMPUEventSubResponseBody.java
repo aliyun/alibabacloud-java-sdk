@@ -14,7 +14,7 @@ public class DescribeRtcMPUEventSubResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the subscription.</p>
+     * <p>The event callback information.</p>
      */
     @NameInMap("SubInfo")
     public DescribeRtcMPUEventSubResponseBodySubInfo subInfo;
@@ -42,7 +42,7 @@ public class DescribeRtcMPUEventSubResponseBody extends TeaModel {
 
     public static class DescribeRtcMPUEventSubResponseBodySubInfo extends TeaModel {
         /**
-         * <p>The application ID. You can specify only one application ID.</p>
+         * <p>The ID of the subscribed application.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAppId</p>
@@ -60,7 +60,7 @@ public class DescribeRtcMPUEventSubResponseBody extends TeaModel {
         public String callbackUrl;
 
         /**
-         * <p>The ID of the channel to which mixed-stream relay event callbacks are sent. Multiple channel IDs are separated by commas (,). If this parameter is not returned, mixed-stream relay event callbacks are sent to all channels.</p>
+         * <p>The channel IDs of stream mixing tasks that receive callbacks, separated by commas (,). If this field is empty, all channels receive callbacks.</p>
          * 
          * <strong>example:</strong>
          * <p>yourCh1,yourCh2</p>
@@ -69,7 +69,7 @@ public class DescribeRtcMPUEventSubResponseBody extends TeaModel {
         public String channelIds;
 
         /**
-         * <p>The time when the event callback was fired. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The creation time of the event callback, in the format of yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-09 18:00:00Z</p>
@@ -78,7 +78,7 @@ public class DescribeRtcMPUEventSubResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the subscription.</p>
+         * <p>The event callback ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Sub-<strong><strong><strong>9799B2C4500</strong></strong></strong></p>

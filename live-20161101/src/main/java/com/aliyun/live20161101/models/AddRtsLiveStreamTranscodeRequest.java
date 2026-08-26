@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. Value requirements:</p>
+     * <p>The AppName of the live stream. Requirements:</p>
      * <ul>
-     * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
-     * <li>We recommend that you specify a name that is more than three characters in length. The name must start with a letter or digit.</li>
+     * <li><p>Supports letters, digits, underscores (_), and hyphens (-).</p>
+     * </li>
+     * <li><p>Must start with a letter or a digit. A name longer than three characters is recommended.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,10 +21,11 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The bitrate of the output audio. Unit: Kbit/s. Valid values: <strong>1</strong> to <strong>1000</strong>.</p>
+     * <p>The output audio bitrate. Unit: kbps. Valid values: 1 to <strong>1000</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required if you set the TemplateType parameter to audio.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>Required if you set TemplateType to audio.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -31,10 +34,12 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public Integer audioBitrate;
 
     /**
-     * <p>The number of sound channels. Valid values:</p>
+     * <p>The number of audio channels. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: mono</li>
-     * <li><strong>2</strong>: stereo</li>
+     * <li><p><strong>1</strong>: mono.</p>
+     * </li>
+     * <li><p><strong>2</strong>: stereo.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,13 +49,15 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public Integer audioChannelNum;
 
     /**
-     * <p>The audio encoder. Valid values:</p>
+     * <p>The audio codec. Valid values:</p>
      * <ul>
-     * <li><strong>aac</strong></li>
-     * <li><strong>mp3</strong></li>
+     * <li><p><strong>aac</strong></p>
+     * </li>
+     * <li><p><strong>mp3</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you want to use the Opus encoding format, set the Opus parameter to true.</p>
+     * <p>To use the Opus codec, set the Opus parameter to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,10 +69,14 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     /**
      * <p>The audio codec profile. Valid values:</p>
      * <ul>
-     * <li><strong>aac_low</strong></li>
-     * <li><strong>aac_he</strong></li>
-     * <li><strong>aac_he_v2</strong></li>
-     * <li><strong>aac_ld</strong></li>
+     * <li><p><strong>aac_low</strong></p>
+     * </li>
+     * <li><p><strong>aac_he</strong></p>
+     * </li>
+     * <li><p><strong>aac_he_v2</strong></p>
+     * </li>
+     * <li><p><strong>aac_ld</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,9 +86,9 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public String audioProfile;
 
     /**
-     * <p>The audio sampling rate. Valid values: <strong>22050 to 96000</strong>. The value 44100 is commonly used. Unit: Hz.</p>
+     * <p>The audio sample rate. Valid values: <strong>22050</strong> to <strong>96000</strong>. Recommended: 44100. Unit: Hz.</p>
      * <blockquote>
-     * <p>If you set the AudioProfile parameter to aac_ld, the audio sampling rate cannot exceed 44,100 Hz.</p>
+     * <p>If AudioProfile is set to aac_ld, the sample rate cannot exceed 44100.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,17 +98,17 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public Integer audioRate;
 
     /**
-     * <p>Specifies whether to remove B-frames during transcoding. Valid values:</p>
+     * <p>Controls whether to remove B-frames from the transcoded output video. Valid values:</p>
      * <blockquote>
-     * <p> This parameter is required if you set the TemplateType parameter to h264, h264-nbhd, or h264-origin.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>Required if you set TemplateType to h264, h264-nbhd, or h264-origin.</p>
      * <ul>
-     * <li><strong>true</strong>: removes B-frames.</li>
-     * <li><strong>false</strong>: retains B-frames. This is the default value.</li>
+     * <li><p><strong>true</strong>: The transcoded video has no B-frames.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The transcoded video contains B-frames. This is the default value.</p>
+     * </li>
      * </ul>
-     * <blockquote>
-     * <p>If you do not specify this parameter, the default value <strong>false</strong> is used.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -106,7 +117,7 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public Boolean deleteBframes;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -116,10 +127,11 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The frame rate of the output video. Unit: FPS. Valid values: <strong>1</strong> to <strong>60</strong>.</p>
+     * <p>The frame rate of the output video. Unit: frames per second (FPS). Valid values: 1 to <strong>60</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required if you set the TemplateType parameter to h264, h264-nbhd, or h264-origin.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>Required if you set TemplateType to h264, h264-nbhd, or h264-origin.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -128,7 +140,7 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public Integer FPS;
 
     /**
-     * <p>The group of pictures (GOP) size of the output video. This parameter is used to specify the keyframe interval. Unit: seconds. Valid values: <strong>1</strong> to <strong>3</strong>.</p>
+     * <p>The Group of Pictures (GOP) size, which specifies the keyframe interval. Unit: seconds. Valid values: <strong>1</strong> to <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -137,19 +149,23 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public String gop;
 
     /**
-     * <p>The height of the output video. Unit: pixels.</p>
+     * <p>Output video height in pixels.</p>
      * <blockquote>
-     * <p> This parameter is required if you set the TemplateType parameter to h264, h264-nbhd, or h264-origin.</p>
+     * <p>Notice: </p>
      * </blockquote>
-     * <p>The value must comply with the following rules:****</p>
+     * <p>Required if you set TemplateType to h264, h264-nbhd, or h264-origin.</p>
+     * <p>Requirements:</p>
      * <ul>
-     * <li><strong>Height ≥ 100</strong>: The height of the video is no less than 100 pixels.</li>
-     * <li><strong>max(Height,Width) ≤ 2560</strong>: The width or height of the video, whichever is greater, cannot exceed 2,560 pixels.</li>
-     * <li><strong>min(Height,Width) ≤ 1440</strong>: The width or height of the video, whichever is smaller, cannot exceed 1,440 pixels.</li>
+     * <li><p><strong>Height ≥ 100</strong></p>
+     * </li>
+     * <li><p><strong>max(Height, Width) ≤ 2560</strong></p>
+     * </li>
+     * <li><p><strong>min(Height, Width) ≤ 1440</strong></p>
+     * </li>
      * </ul>
-     * <p>For example, a resolution of 1560 × 1560 pixels is invalid.</p>
+     * <p>For example, a resolution of 1560 × 1560 (a square video) is invalid.</p>
      * <blockquote>
-     * <p>An original quality template needs to retain the source information. Therefore, the video resolution cannot exceed 4K.</p>
+     * <p>For h264-origin templates, the resolution can be up to 4K to retain the information of the source stream.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -159,10 +175,12 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public Integer height;
 
     /**
-     * <p>Specifies whether to trigger transcoding only when a stream is pulled. Valid values:</p>
+     * <p>Specifies whether to enable on-demand transcoding. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: triggers transcoding only when a stream is pulled.</li>
-     * <li><strong>no</strong>: triggers transcoding whenever a stream is ingested, no matter whether the stream is pulled.</li>
+     * <li><p><strong>yes</strong>: Transcoding only starts when the first viewer requests this transcoded stream.</p>
+     * </li>
+     * <li><p><strong>no</strong>: Transcoding starts immediately after the stream is published.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -172,14 +190,13 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public String lazy;
 
     /**
-     * <p>Specifies whether to transcode audio to the Opus format to be compatible with native WebRTC. Valid values:</p>
+     * <p>Specifies whether to use the Opus codec for audio transcoding. This is mainly for compatibility with native WebRTC. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: transcodes audio to the Opus format.</li>
-     * <li><strong>false</strong>: does not transcode audio to the Opus format.</li>
+     * <li><p><strong>true</strong>: Transcodes the audio to the Opus format.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Does not use the Opus format for transcoding. This is the default value.</p>
+     * </li>
      * </ul>
-     * <blockquote>
-     * <p>If you do not specify this parameter, the default value <strong>false</strong> is used.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -191,11 +208,14 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The codec profile. The video codec profile determines how ApsaraVideo Live performs codec on the video. In normal cases, a greater value indicates a higher image quality and requires more codec resources. Valid values:</p>
+     * <p>The video codec profile. A larger value indicates better video quality and higher resource consumption for encoding and decoding. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: baseline, which is suitable for mobile devices.</li>
-     * <li><strong>2</strong>: main, which is suitable for standard-definition devices.</li>
-     * <li><strong>3</strong>: high, which is suitable for high-definition devices.</li>
+     * <li><p><strong>1</strong>: baseline (for mobile devices).</p>
+     * </li>
+     * <li><p><strong>2</strong>: main (for SD devices).</p>
+     * </li>
+     * <li><p><strong>3</strong>: high (for HD devices).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -204,17 +224,25 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     @NameInMap("Profile")
     public Integer profile;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the transcoding template. Value requirements:</p>
+     * <p>The name of the custom transcoding template. Requirements:</p>
      * <ul>
-     * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
-     * <li>We recommend that you specify a name that is more than three characters in length. The name must start with a letter or digit.</li>
+     * <li><p>Supports letters, digits, underscores (_), and hyphens (-).</p>
+     * </li>
+     * <li><p>Must start with a letter or a digit. A name longer than three characters is recommended.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>The name cannot be the same as that of a default transcoding template.</p>
+     * <p>The name cannot be the same as that of a standard transcoding template.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -225,14 +253,20 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public String template;
 
     /**
-     * <p>The type of the transcoding template.</p>
-     * <p>If you set this parameter to h264, h264-nbhd, or h264-origin, you must also specify the Height, Width, FPS, VideoBitrate, and DeleteBframes parameters. Valid values:</p>
+     * <p>The type of the custom transcoding template. Valid values:</p>
      * <ul>
-     * <li><strong>h264</strong>: H.264 standard transcoding template.</li>
-     * <li><strong>h264-nbhd</strong>: H.264 Narrowband HD™ transcoding template.</li>
-     * <li><strong>h264-origin</strong>: H.264 original quality template. If you use this type of template, the same transcoding parameters of the video source are retained by default.</li>
-     * <li><strong>audio</strong>: audio-only transcoding template. If you use this type of template, images are removed from the video source and an audio-only stream is generated. In addition, you must also specify the AudioBitrate parameter.</li>
+     * <li><p><strong>h264</strong>: custom H.264 standard transcoding.</p>
+     * </li>
+     * <li><p><strong>h264-nbhd</strong>: custom H.264 Narrowband HD™ transcoding.</p>
+     * </li>
+     * <li><p><strong>h264-origin</strong>: original quality H.264 standard transcoding. It preserves the parameters of the source video as closely as possible.</p>
+     * </li>
+     * <li><p><strong>audio</strong>: audio-only transcoding. The output file contains only audio. If you set this parameter to audio, you must set AudioBitrate.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>For video types, Height, Width, FPS, VideoBitrate, and DeleteBframe are required.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -242,12 +276,13 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public String templateType;
 
     /**
-     * <p>The bitrate of the output video. Unit: Kbit/s. Valid values: <strong>1</strong> to <strong>6000</strong>.</p>
+     * <p>The output video bitrate. Unit: kbps. Valid values: 1 to <strong>6000</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required if you set the TemplateType parameter to h264, h264-nbhd, or h264-origin.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>Required if you set TemplateType to h264, h264-nbhd, or h264-origin.</p>
      * <blockquote>
-     * <p>The bitrate of the output video is as close to the value that you specify as possible, but not exactly the same as the value, especially when the value is excessively large or small.</p>
+     * <p>The system tries to transcode the video at the specified bitrate. However, the actual bitrate may not be the same as the specified value, especially when the specified value is too high or too low.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -257,19 +292,23 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public Integer videoBitrate;
 
     /**
-     * <p>The width of the output video. Unit: pixels.</p>
+     * <p>Output video width in pixels.</p>
      * <blockquote>
-     * <p> This parameter is required if you set the TemplateType parameter to h264, h264-nbhd, or h264-origin.</p>
+     * <p>Notice: </p>
      * </blockquote>
-     * <p>The value must comply with the following rules:</p>
+     * <p>Required if you set TemplateType to h264, h264-nbhd, or h264-origin.</p>
+     * <p>Requirements:</p>
      * <ul>
-     * <li><strong>Width ≥ 100</strong>: The width of the video is no less than 100 pixels.</li>
-     * <li><strong>max(Height,Width) ≤ 2560</strong>: The width or height of the video, whichever is greater, cannot exceed 2,560 pixels.</li>
-     * <li><strong>min(Height,Width) ≤ 1440</strong>: The width or height of the video, whichever is smaller, cannot exceed 1,440 pixels.</li>
+     * <li><p><strong>Width ≥ 100</strong></p>
+     * </li>
+     * <li><p><strong>max(Height, Width) ≤ 2560</strong></p>
+     * </li>
+     * <li><p><strong>min(Height, Width) ≤ 1440</strong></p>
+     * </li>
      * </ul>
-     * <p>For example, a resolution of 1560 × 1560 pixels is invalid.</p>
+     * <p>For example, a resolution of 1560 × 1560 (a square video) is invalid.</p>
      * <blockquote>
-     * <p>An original quality template needs to retain the source information. Therefore, the video resolution cannot exceed 4K.</p>
+     * <p>For h264-origin templates, the resolution can be up to 4K to retain the information of the source stream.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

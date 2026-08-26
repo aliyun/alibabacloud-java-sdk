@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateMessageAppShrinkRequest extends TeaModel {
     /**
-     * <p>The configurations of the application.</p>
+     * <p>Application configuration.</p>
      */
     @NameInMap("AppConfig")
     public String appConfigShrink;
 
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive message application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UpdateMessageAppShrinkRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of the interactive messaging application.</p>
+     * <p>Interactive message application name.</p>
      * 
      * <strong>example:</strong>
      * <p>testApp</p>
@@ -30,7 +30,7 @@ public class UpdateMessageAppShrinkRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The extended field.</p>
+     * <p>Extension field.</p>
      */
     @NameInMap("Extension")
     public String extensionShrink;

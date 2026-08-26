@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveDomainRequest extends TeaModel {
     /**
-     * <p>The URL that is used for health checks.</p>
+     * <p>The health check URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://demo.aliyundoc.com/status.html">http://demo.aliyundoc.com/status.html</a></p>
@@ -14,7 +14,7 @@ public class AddLiveDomainRequest extends TeaModel {
     public String checkUrl;
 
     /**
-     * <p>The ingest domain or streaming domain that you want to add. Wildcard domain names that start with a period (.) are supported.</p>
+     * <p>The ingest domain or streaming domain to be connected to ApsaraVideo Live. Wildcard domain names are supported and must start with a period (.).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class AddLiveDomainRequest extends TeaModel {
     /**
      * <p>The type of the domain name. Valid values:</p>
      * <ul>
-     * <li><strong>liveVideo</strong>: streaming domain. This value is required if you set the DomainName parameter to a streaming domain.</li>
-     * <li><strong>liveEdge</strong>: ingest domain. This value is required if you set the DomainName parameter to an ingest domain.</li>
+     * <li><strong>liveVideo</strong>: streaming domain. If you set DomainName (the domain name to be connected to ApsaraVideo Live) to a streaming domain, you must set this parameter to liveVideo.</li>
+     * <li><strong>liveEdge</strong>: edge ingest domain. If you set DomainName (the domain name to be connected to ApsaraVideo Live) to an ingest domain, you must set this parameter to liveEdge.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,19 +44,19 @@ public class AddLiveDomainRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region in which the domain name resides. Valid values:</p>
+     * <p>The unit information of the live streaming domain name. Valid values:</p>
      * <ul>
-     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
-     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
-     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
-     * <li><strong>cn-qingdao</strong>: China (Qingdao)</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore</li>
-     * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>ap-northeast-1</strong>: Japan (Tokyo)</li>
-     * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
+     * <li><strong>cn-beijing</strong>: Beijing.</li>
+     * <li><strong>cn-shanghai</strong>: Shanghai.</li>
+     * <li><strong>cn-shenzhen</strong>: Shenzhen.</li>
+     * <li><strong>cn-qingdao</strong>: Qingdao.</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore.</li>
+     * <li><strong>eu-central-1</strong>: Germany.</li>
+     * <li><strong>ap-northeast-1</strong>: Tokyo.</li>
+     * <li><strong>ap-southeast-5</strong>: Jakarta.</li>
      * </ul>
      * <blockquote>
-     * <p> Make sure that the settings of the Region and Scope parameters do not conflict with each other.</p>
+     * <p>Region (unit information of the live streaming domain name) and Scope (acceleration region) do not restrict each other.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -67,7 +67,7 @@ public class AddLiveDomainRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The ID of the resource group. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">Resource groups</a>.</p>
+     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzw******</p>
@@ -76,11 +76,11 @@ public class AddLiveDomainRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The edge group. This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:</p>
+     * <p>The acceleration region. This parameter takes effect for international users and China site users at L3 or above. Valid values:</p>
      * <ul>
-     * <li><strong>domestic</strong>: mainland China. This is the default value.</li>
-     * <li><strong>overseas</strong>: outside mainland China.</li>
-     * <li><strong>global</strong>: regions in and outside mainland China.</li>
+     * <li><strong>domestic</strong> (default): the Chinese mainland.</li>
+     * <li><strong>overseas</strong>: outside the Chinese mainland, including Hong Kong (China), Macao (China), and Taiwan (China).</li>
+     * <li><strong>global</strong>: global acceleration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,13 +93,13 @@ public class AddLiveDomainRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<AddLiveDomainRequestTag> tag;
 
     /**
-     * <p>The top-level domain name.</p>
+     * <p>The top-level domain name for access.</p>
      * 
      * <strong>example:</strong>
      * <p>learn.aliyundoc.com</p>
@@ -202,7 +202,7 @@ public class AddLiveDomainRequest extends TeaModel {
 
     public static class AddLiveDomainRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -211,7 +211,7 @@ public class AddLiveDomainRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

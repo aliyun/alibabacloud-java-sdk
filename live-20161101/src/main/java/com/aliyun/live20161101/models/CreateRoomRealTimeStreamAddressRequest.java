@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRoomRealTimeStreamAddressRequest extends TeaModel {
     /**
-     * <p>The ID of the ARTC application. You can specify only one application ID. The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The ID of the ApsaraVideo Real-time Communication application. Only a single ID is supported. The value can contain uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters. You can view your application IDs by navigating to <strong>ApsaraVideo Live &gt; Live+ &gt; Real-time Communication &gt; Application Management</strong>. If no application exists, create one by clicking <strong>Create Application</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateRoomRealTimeStreamAddressRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the channel. You can specify only one ID. The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The ID of the channel to join. Only a single ID is supported. The value can contain uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateRoomRealTimeStreamAddressRequest extends TeaModel {
     public String channelId;
 
     /**
-     * <p>The name of the RTMP stream. The name can be up to 40 characters in length.</p>
+     * <p>The display name of the RTMP stream in the channel. Maximum length: 40 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateRoomRealTimeStreamAddressRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The validity period of the RTMP URL. Unit: seconds. The default value is 36,000 seconds, which is 10 hours.</p>
+     * <p>The validity period of the RTMP URL. Unit: seconds. Default value: 36000 (10 hours).</p>
      * 
      * <strong>example:</strong>
      * <p>43200</p>
@@ -44,7 +44,7 @@ public class CreateRoomRealTimeStreamAddressRequest extends TeaModel {
     public Integer expireTime;
 
     /**
-     * <p>The ID of the user who ingests the stream over RTMP. The user ID must be different from IDs of other users in the channel. The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The user ID for the RTMP stream ingest. This value must not duplicate any other user ID in the channel. The value can contain uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

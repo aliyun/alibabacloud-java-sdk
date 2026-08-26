@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class JoinMessageGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class JoinMessageGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>Return result.</p>
      */
     @NameInMap("Result")
     public JoinMessageGroupResponseBodyResult result;
@@ -42,10 +42,10 @@ public class JoinMessageGroupResponseBody extends TeaModel {
 
     public static class JoinMessageGroupResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the users successfully joined the message group. Valid values:</p>
+         * <p>Indicates whether joining the message group was successful. Valid values:</p>
          * <ul>
-         * <li>true: The users successfully joined the message group.</li>
-         * <li>false: The users failed to join the message group.</li>
+         * <li>true: Successful.</li>
+         * <li>false: Unsuccessful.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the stream belongs, and it cannot be modified.</p>
+     * <p>The AppName of the live stream. This parameter cannot be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>Audio transcoding bitrate. Unit: kbps, value range: 1 to 1000.</p>
+     * <p>The output audio bitrate. Unit: kbps. Valid values: 1 to <strong>1000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>512</p>
@@ -24,10 +24,12 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public Integer audioBitrate;
 
     /**
-     * <p>Number of audio channels. Values: </p>
+     * <p>The number of audio channels. Valid values:</p>
      * <ul>
-     * <li>1: Mono. </li>
-     * <li>2: Stereo.</li>
+     * <li><p>1: mono.</p>
+     * </li>
+     * <li><p>2: stereo.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,10 +39,12 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public Integer audioChannelNum;
 
     /**
-     * <p>Audio encoding format. Values: </p>
+     * <p>The audio codec. Valid values:</p>
      * <ul>
-     * <li>aac </li>
-     * <li>mp3</li>
+     * <li><p>aac</p>
+     * </li>
+     * <li><p>mp3</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,12 +54,16 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public String audioCodec;
 
     /**
-     * <p>Audio encoding. Values: </p>
+     * <p>The audio profile. Valid values:</p>
      * <ul>
-     * <li>aac_low</li>
-     * <li>aac_he</li>
-     * <li>aac_he_v2 </li>
-     * <li>aac_ld</li>
+     * <li><p>aac_low</p>
+     * </li>
+     * <li><p>aac_he</p>
+     * </li>
+     * <li><p>aac_he_v2</p>
+     * </li>
+     * <li><p>aac_ld</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,9 +73,9 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public String audioProfile;
 
     /**
-     * <p>Audio sampling rate. Values: 22050, 32000, 44100, 48000, 96000. Unit: Hz.</p>
+     * <p>The audio sample rate. Valid values: 22050, 32000, 44100, 48000, and 96000. Unit: Hz.</p>
      * <blockquote>
-     * <p>If <strong>AudioProfile</strong> is set to <strong>aac_ld</strong>, the sampling rate must not exceed 44100.</p>
+     * <p>If you set <strong>AudioProfile</strong> to <strong>aac_ld</strong>, the sample rate cannot exceed 44100.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,24 +85,36 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public Integer audioRate;
 
     /**
-     * <p>The source-based bitrate settings. This parameter takes precedence over other bitrate settings. The following fields must be included:</p>
+     * <p>The adaptive bitrate settings. If specified, it overrides the VideoBitrate parameter. Fields:</p>
      * <ul>
-     * <li><strong>UpLimit</strong>: the maximum bitrate. Set this field to an integer from 128 to 10000. The value must be greater than the minimum bitrate.</li>
-     * <li><strong>LowerLimit</strong>: the minimum bitrate. Set this field to an integer from 128 to 10000. The value must be smaller than the maximum bitrate.</li>
-     * <li><strong>Factor</strong>: the ratio of the output bitrate to the source bitrate. Valid values: 0.1 to 1. The value is accurate to one decimal place. A value of 1 indicates that the output video has the same bitrate as the source video.</li>
+     * <li><p><strong>UpLimit (integer):</strong> Required. The upper limit of the bitrate. This must be an integer from 128 to 10000 and greater than the lower limit.</p>
+     * </li>
+     * <li><p><strong>LowerLimit (integer):</strong> Required. The lower limit of the bitrate. This must be an integer from 128 to 10000 and less than the upper limit.</p>
+     * </li>
+     * <li><p><strong>Factor (float):</strong> Required: The factor by which the source bitrate is multiplied to calculate the output bitrate. Valid values: 0.1 to 1. The value can be accurate to one decimal place. A value of 1 indicates that the output bitrate is the same as the source bitrate.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;UpLimit\&quot;:2500,\&quot;LowerLimit\&quot;:800,\&quot;Factor\&quot;:1}</p>
+     * <p>{&quot;UpLimit&quot;:2500,&quot;LowerLimit&quot;:800,&quot;Factor&quot;:1}</p>
      */
     @NameInMap("BitrateWithSource")
     public String bitrateWithSource;
 
+    /**
+     * <p>Specifies whether to automatically detect and remove interlacing during transcoding. Deinterlacing converts interlaced video into progressive video.</p>
+     * <ul>
+     * <li><p>true: enables deinterlacing.</p>
+     * </li>
+     * <li><p>false: keeps the source format. This is the default value.</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("DeInterlaced")
     public Boolean deInterlaced;
 
     /**
-     * <p>Streamer domain name, unmodifiable.</p>
+     * <p>The streaming domain. This parameter cannot be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,15 +124,18 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>Encryption configuration. JSON format, with the following fields: </p>
+     * <p>The encryption settings, formatted as a JSON string.</p>
      * <ul>
-     * <li>EncryptType: Type of encryption. Fixed value is aliyun.</li>
-     * <li>KmsKeyID: User\&quot;s KMS master key ID. </li>
-     * <li>KmsKeyExpireInterval: Key rotation period. Value range: 60~3600, unit: seconds.<blockquote>
-     * <p>When using DRM encryption, KmsKeyID cannot be modified.</p>
-     * </blockquote>
+     * <li><p><strong>EncryptType</strong>: The encryption type. Set the value to aliyun.</p>
+     * </li>
+     * <li><p><strong>KmsKeyID</strong>: The ID of the customer master key (CMK) in Key Management Service (KMS).</p>
+     * </li>
+     * <li><p><strong>KmsKeyExpireInterval</strong>: The key rotation period. Unit: seconds. Valid values: <strong>60 to 3600.</strong></p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>When you use Digital Rights Management (DRM) encryption, you cannot modify KmsKeyID.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{&quot;EncryptType&quot;: &quot;aliyun&quot;, &quot;KmsKeyID&quot;:&quot;afce5722-81d2-43c3-9930-7601da11****&quot;,&quot;KmsKeyExpireInterval&quot;:&quot;3600&quot;}</p>
@@ -121,21 +144,24 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public String encryptParameters;
 
     /**
-     * <p>Other source-based settings. The following fields are included:</p>
+     * <p>Other adaptive settings that align the transcoded stream with the source stream. Fields:</p>
      * <ul>
-     * <li><strong>KeyFrameOpen</strong>: Valid values: yes and no.</li>
-     * <li><strong>Copyts</strong>: Valid values: yes and no.</li>
-     * <li><strong>SeiMode</strong>: Valid values: 0, 1, and 2. 0 specifies that no supplemental enhancement information (SEI) messages are passed through, 1 specifies that part of SEI messages are passed through, and 2 specifies that all SEI messages are passed through.</li>
+     * <li><p><strong>KeyFrameOpen</strong>: Specifies whether to align keyframes with the source stream. Valid values: yes and no.</p>
+     * </li>
+     * <li><p><strong>Copyts (string)</strong>: Specifies whether to align the presentation timestamp (PTS) with the source stream. Valid values: yes and no.</p>
+     * </li>
+     * <li><p><strong>SeiMode</strong>: The pass-through mode for Supplemental Enhancement Information (SEI). Valid values: 0 (disabled), 1 (pass through partial parameters), and 2 (pass through all).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;KeyFrameOpen\&quot;:\&quot;yes\&quot;,\&quot;Copyts\&quot;:\&quot;yes\&quot;,\&quot;SeiMode\&quot;:1}</p>
+     * <p>{&quot;KeyFrameOpen&quot;:&quot;yes&quot;,&quot;Copyts&quot;:&quot;yes&quot;,&quot;SeiMode&quot;:1}</p>
      */
     @NameInMap("ExtWithSource")
     public String extWithSource;
 
     /**
-     * <p>Transcode video frame rate. Unit: FPS, value range: 1 to 60.</p>
+     * <p>The frame rate of the output video. Unit: frames per second (FPS). Valid values: 1 to <strong>60</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -144,23 +170,27 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public Integer FPS;
 
     /**
-     * <p>The source-based frame rate settings. This parameter takes precedence over other frame rate settings. The following fields must be included:</p>
+     * <p>Adapts the output frame rate based on the source\&quot;s frame rate, while keeping it within a specified range. If specified, it overrides the FPS parameter. Fields:</p>
      * <ul>
-     * <li><strong>UpLimit</strong>: the maximum frame rate. Set this field to an integer from 1 to 60. The value must be greater than the minimum frame rate.</li>
-     * <li><strong>LowerLimit</strong>: the minimum frame rate. Set this field to an integer from 1 to 60. The value must be smaller than the maximum frame rate.</li>
+     * <li><p><strong>UpLimit (integer):</strong> Required. The upper limit of the frame rate. This must be an integer from 1 to 60 and greater than the lower limit.</p>
+     * </li>
+     * <li><p><strong>LowerLimit (integer):</strong> Required. The lower limit of the frame rate. This must be an integer from 1 to 60 and less than the upper limit.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;UpLimit\&quot;:60,\&quot;LowerLimit\&quot;:1}</p>
+     * <p>{&quot;UpLimit&quot;:60,&quot;LowerLimit&quot;:1}</p>
      */
     @NameInMap("FpsWithSource")
     public String fpsWithSource;
 
     /**
-     * <p>Video GOP (Group of Pictures), supports units in frames or seconds. When the unit is frames, the value should be {number}; when the unit is seconds, the value should be {number}s. </p>
+     * <p>The Group of Pictures (GOP) size. The unit can be frame or second. Valid values:</p>
      * <ul>
-     * <li>For frames, the range is 1 to 3000. </li>
-     * <li>For seconds, the range is 1 to 20s.</li>
+     * <li><p>By frames: 1 to 3000.</p>
+     * </li>
+     * <li><p>By seconds: 1s to 20s.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,15 +200,18 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public String gop;
 
     /**
-     * <p>Video transcoding height. Unit: pixels. The value must meet the following three conditions:</p>
+     * <p>Output video height in pixels. Requirements:</p>
      * <ul>
-     * <li>Height ≥ 100: The height of the video must be no less than 100 pixels.</li>
-     * <li>max(Height, Width) ≤ 2560: The larger of the video\&quot;s width and height cannot exceed 2560.</li>
-     * <li>min(Height, Width) ≤ 1440: The smaller of the video\&quot;s width and height cannot exceed 1440.<blockquote>
-     * <p>For 265 narrowband HD templates, the maximum resolution is 1280×720.</p>
-     * </blockquote>
+     * <li><p><strong>Height ≥ 100</strong></p>
+     * </li>
+     * <li><p><strong>max(Height, Width) ≤ 2560</strong></p>
+     * </li>
+     * <li><p><strong>min(Height, Width) ≤ 1440</strong></p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>For h265-nbhd templates, it cannot exceed 720.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>720</p>
@@ -187,10 +220,12 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public Integer height;
 
     /**
-     * <p>Specifies whether to enable triggered transcoding. Valid values:</p>
+     * <p>Specifies whether to enable on-demand transcoding. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: enables triggered transcoding.</li>
-     * <li><strong>no</strong>: disables triggered transcoding.</li>
+     * <li><p><strong>yes</strong>: Transcoding only starts when the first viewer requests this transcoded stream.</p>
+     * </li>
+     * <li><p><strong>no</strong>: Transcoding starts immediately after the stream is published.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -203,11 +238,14 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Encoding level. A set of specific encoding features supported by the video, generally, the higher the value, the better the picture quality, but also the higher the resources consumed for encoding and decoding. Values: </p>
+     * <p>The video codec profile. A larger value indicates better video quality and higher resource consumption for encoding and decoding. Valid values:</p>
      * <ul>
-     * <li>1: baseline (suitable for mobile devices).</li>
-     * <li>2: main (suitable for standard resolution devices). </li>
-     * <li>3: high (suitable for high-resolution devices).</li>
+     * <li><p><strong>1</strong>: baseline (for mobile devices).</p>
+     * </li>
+     * <li><p><strong>2</strong>: main (for SD devices).</p>
+     * </li>
+     * <li><p><strong>3</strong>: high (for HD devices).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -216,31 +254,48 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     @NameInMap("Profile")
     public Integer profile;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The source-based resolution settings. This parameter takes precedence over other resolution settings. The following fields must be included:</p>
+     * <p>The adaptive resolution settings. If specified, it overrides the Height and Width parameters. Fieds:</p>
      * <ul>
-     * <li><p><strong>Type</strong>: You can set this field to short, long, or screen. short specifies that the resolution of the output video is adapted to the shorter side, long specifies that the resolution of the output video is adapted to the longer side, and screen specifies that the output video has an adaptive resolution.</p>
+     * <li><p><strong>Type (string):</strong> Required. Valid values:</p>
+     * <ul>
+     * <li><p><strong>short</strong>: sets the shorter edge of the video to the specified value and scales the other edge to maintain the original aspect ratio.</p>
      * </li>
-     * <li><p><strong>Value</strong>:</p>
+     * <li><p><strong>long</strong>: sets the longer edge of the video to the specified value and scales the other edge to maintain the original aspect ratio.</p>
+     * </li>
+     * <li><p><strong>screen</strong>: Matches the output to a standard resolution, automatically flipping the dimensions based on the source\&quot;s orientation.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p><strong>Value (string):</strong> Required. Valid values:</p>
      * <ul>
-     * <li>Set this field to 360, 480, 540, 720, or 1080 if the Type field is set to short.</li>
-     * <li>Set this field to 640, 848, 960, 1280, or 1920 if the Type field is set to long.</li>
-     * <li>Set this field to 640\*360, 848\*480, 960\*540, 1280\*720, or 1920\*1080 if the Type field is set to screen.</li>
+     * <li><p>For short: 360, 480, 540, 720, and 1080.</p>
+     * </li>
+     * <li><p>For long: 640, 848, 960, 1280, and 1920.</p>
+     * </li>
+     * <li><p>For screen: 640×360, 848×480, 960×540, 1280×720, and 1920×1080.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;Type\&quot;:\&quot;short\&quot;,\&quot;Value\&quot;:\&quot;1080\&quot;}</p>
+     * <p>{&quot;Type&quot;:&quot;short&quot;,&quot;Value&quot;:&quot;1080&quot;}</p>
      */
     @NameInMap("ResWithSource")
     public String resWithSource;
 
     /**
-     * <p>Custom name of the transcoding template, not modifiable.</p>
+     * <p>The custom name of the transcoding template. This parameter cannot be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -250,7 +305,7 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public String template;
 
     /**
-     * <p>Custom transcoding template type, unmodifiable.</p>
+     * <p>The type of the custom transcoding template. This parameter cannot be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -260,9 +315,9 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public String templateType;
 
     /**
-     * <p>Video transcoding bitrate. Unit: kbps, value range: 1 to 6000.</p>
+     * <p>The output video bitrate. Unit: kbps. Valid values: 1 to <strong>6000</strong>.</p>
      * <blockquote>
-     * <p>The actual bitrate of the transcoded video will try to be as close as possible to the one you set, but it cannot be guaranteed to be exactly the same, especially when the set bitrate is too high or too low.</p>
+     * <p>The system tries to transcode the video at the specified bitrate. However, the actual bitrate may not be the same as the specified value, especially when the specified value is too high or too low.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -272,15 +327,19 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     public Integer videoBitrate;
 
     /**
-     * <p>Video transcoding width. Unit: pixels. The value must meet the following three conditions: </p>
+     * <p>Output video width in pixels.</p>
+     * <p>Requirements:</p>
      * <ul>
-     * <li>Width ≥ 100: The video width must be no less than 100 pixels. </li>
-     * <li>max(Height, Width) ≤ 2560: The larger of the video\&quot;s height and width cannot exceed 2560. </li>
-     * <li>min(Height, Width) ≤ 1440: The smaller of the video\&quot;s height and width cannot exceed 1440.<blockquote>
-     * <p>For 265 narrowband HD templates, the maximum resolution is 1280×720.</p>
-     * </blockquote>
+     * <li><p><strong>Width ≥ 100</strong></p>
+     * </li>
+     * <li><p><strong>max(Height, Width) ≤ 2560</strong></p>
+     * </li>
+     * <li><p><strong>min(Height, Width) ≤ 1440</strong></p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>For h265-nbhd templates, it cannot exceed 1280.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>576</p>

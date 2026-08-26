@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveInteractionMetricDataRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The ARTC application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeLiveInteractionMetricDataRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The start time of the query, specified as a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,11 +24,17 @@ public class DescribeLiveInteractionMetricDataRequest extends TeaModel {
     @NameInMap("BeginTs")
     public Long beginTs;
 
+    /**
+     * <p>The channel ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>770513</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end time of the query, specified as a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,12 +44,16 @@ public class DescribeLiveInteractionMetricDataRequest extends TeaModel {
     public Long endTs;
 
     /**
-     * <p>The metric. Valid values:</p>
+     * <p>The metric type. Valid values:</p>
      * <ul>
-     * <li>JoinChannelSucRate: the success rate of joining a channel within 5 seconds.</li>
-     * <li>VideoStuckRate: the video stuttering rate.</li>
-     * <li>AudioStuckRate: the audio stuttering rate.</li>
-     * <li>FirstFrameCost: the time to first frame.</li>
+     * <li><p><code>JoinChannelSucRate</code>: the success rate of joining a channel within 5 seconds.</p>
+     * </li>
+     * <li><p><code>VideoStuckRate</code>: the video stuttering rate.</p>
+     * </li>
+     * <li><p><code>AudioStuckRate</code>: the audio stuttering rate.</p>
+     * </li>
+     * <li><p><code>FirstFrameCost</code>: the time to first frame.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -54,7 +64,7 @@ public class DescribeLiveInteractionMetricDataRequest extends TeaModel {
     public String metricType;
 
     /**
-     * <p>The operating system. Valid values: iOS and Android.</p>
+     * <p>The operating system. Valid values: <code>iOS</code> and <code>Android</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Android</p>
@@ -63,7 +73,7 @@ public class DescribeLiveInteractionMetricDataRequest extends TeaModel {
     public String os;
 
     /**
-     * <p>The terminal type. Valid values: web and mobile.</p>
+     * <p>The terminal type. Valid values: <code>web</code> and <code>mobile</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>mobile</p>

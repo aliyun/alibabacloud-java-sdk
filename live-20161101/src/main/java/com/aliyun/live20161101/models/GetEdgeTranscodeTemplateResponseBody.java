@@ -14,7 +14,7 @@ public class GetEdgeTranscodeTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the edge transcoding template.</p>
+     * <p>The edge transcoding template.</p>
      */
     @NameInMap("Template")
     public GetEdgeTranscodeTemplateResponseBodyTemplate template;
@@ -42,7 +42,7 @@ public class GetEdgeTranscodeTemplateResponseBody extends TeaModel {
 
     public static class GetEdgeTranscodeTemplateResponseBodyTemplate extends TeaModel {
         /**
-         * <p>The bitrate. If a numeric value is returned, a fixed bitrate is configured for the output stream. If ws is returned, the output stream maintains the same bitrate as the input stream.</p>
+         * <p>The bitrate configuration. Valid values: a fixed bitrate value or ws (follow source).</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -53,8 +53,8 @@ public class GetEdgeTranscodeTemplateResponseBody extends TeaModel {
         /**
          * <p>The video encoding format. Valid values:</p>
          * <ul>
-         * <li>H.264</li>
-         * <li>H.265</li>
+         * <li>H.264.</li>
+         * <li>H.265.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class GetEdgeTranscodeTemplateResponseBody extends TeaModel {
         public String codec;
 
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The time when the template was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-25T02:48:58Z</p>
@@ -73,7 +73,7 @@ public class GetEdgeTranscodeTemplateResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The frame rate. If a numeric value is returned, a fixed frame rate is configured for the output stream. If ws is returned, the output stream maintains the same frame rate as the input stream.</p>
+         * <p>The frame rate configuration. Valid values: a fixed frame rate value or ws (follow source).</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -82,7 +82,7 @@ public class GetEdgeTranscodeTemplateResponseBody extends TeaModel {
         public String fps;
 
         /**
-         * <p>The group of pictures (GOP) size. The GOP size can be defined by the number of frames or the time interval between I-frames. If ws is returned, the output stream maintains the same GOP size as the input stream.</p>
+         * <p>The keyframe configuration. Valid values: frame-based, second-based, or ws (follow source).</p>
          * 
          * <strong>example:</strong>
          * <p>2s</p>
@@ -100,9 +100,9 @@ public class GetEdgeTranscodeTemplateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The resolution. If width and height values are returned, a fixed resolution is configured for the output stream. If ws is returned, the output stream maintains the same resolution as the input stream.</p>
+         * <p>The resolution configuration. Valid values: a fixed resolution value or ws (follow source).</p>
          * <blockquote>
-         * <p> If the width value is -1, the width of the output stream is adapted to the height. If the height value is -2, the height of the output stream is adapted to the width.</p>
+         * <p>When a fixed resolution is used and width or height is set to -1 or -2, the width or height is adaptive.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class GetEdgeTranscodeTemplateResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The type of edge transcoding.</p>
+         * <p>The edge transcoding type.</p>
          * 
          * <strong>example:</strong>
          * <p>common</p>

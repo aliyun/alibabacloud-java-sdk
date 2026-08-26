@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartPlaylistRequest extends TeaModel {
     /**
-     * <p>The offset of the position where the system starts the playback. This parameter takes effect only if the input source is a video file. Unit: milliseconds.</p>
-     * <p>A value greater than 0 indicates an offset from the first frame.</p>
+     * <p>The start offset for the video file. This parameter is valid only for video files. Unit: milliseconds.</p>
+     * <p>A value greater than 0 specifies the start time relative to the first frame.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -18,7 +18,7 @@ public class StartPlaylistRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the episode list. If the episode list was created by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, check the value of the response parameter ProgramId to obtain the ID.</p>
+     * <p>The ID of the playlist. If you add items to the playlist by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, use the value of the ProgramId parameter that is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,15 +27,24 @@ public class StartPlaylistRequest extends TeaModel {
     @NameInMap("ProgramId")
     public String programId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The method to resume the playback of the episode list. Valid values:</p>
+     * <p>The restart mode. Valid values:</p>
      * <ul>
-     * <li><strong>Restart</strong>: resumes the playback from the beginning.</li>
-     * <li><strong>Continue</strong>: resumes the playback from the position where the previous playback stops. The <strong>StartItemId</strong> parameter is required only if you set <strong>ResumeMode</strong> to <strong>Custom</strong>.</li>
-     * <li><strong>Custom</strong>: resumes the playback from a custom position.</li>
+     * <li><p><strong>Restart</strong>: Starts from the beginning.</p>
+     * </li>
+     * <li><p><strong>Continue</strong>: Resumes playback from where it was stopped. The <strong>StartItemId</strong> parameter is required only when you set the <strong>ResumeMode</strong> parameter to <strong>Custom</strong>.</p>
+     * </li>
+     * <li><p><strong>Custom</strong>: Custom start point.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +54,11 @@ public class StartPlaylistRequest extends TeaModel {
     public String resumeMode;
 
     /**
-     * <p>The ID of the first episode to play. This episode is the first to play in carousel playback.</p>
+     * <p>The ID of the item to play first. When the carousel starts, this item is played.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set ResumeMode to Custom.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is required only when you set <strong>ResumeMode</strong> to <strong>Custom</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>asdfasdfasdf****</p>

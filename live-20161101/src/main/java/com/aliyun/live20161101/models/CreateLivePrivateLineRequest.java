@@ -17,8 +17,8 @@ public class CreateLivePrivateLineRequest extends TeaModel {
     /**
      * <p>The acceleration type. Valid values:</p>
      * <ul>
-     * <li>play: streaming acceleration</li>
-     * <li>publish: stream ingest acceleration</li>
+     * <li>play: streaming acceleration.</li>
+     * <li>publish: stream ingest acceleration.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class CreateLivePrivateLineRequest extends TeaModel {
     public String accelerationType;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateLivePrivateLineRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streamer streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class CreateLivePrivateLineRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The acceleration channel that you want to reuse. This parameter is required if Reuse is set to yes.</p>
+     * <p>The ID of the acceleration channel to reuse. This parameter is required when Reuse is set to yes.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp1iovsdpf01ym9su****</p>
@@ -58,7 +58,7 @@ public class CreateLivePrivateLineRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The accelerated bandwidth. Unit: Mbit/s. This parameter is required if Reuse is set to no.</p>
+     * <p>The acceleration bandwidth. Unit: Mbit/s. This parameter is required when Reuse is set to no.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -69,14 +69,20 @@ public class CreateLivePrivateLineRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to reuse an existing acceleration channel. Valid values:</p>
      * <ul>
-     * <li>yes: reuses an existing acceleration channel.</li>
-     * <li>no: creates a new acceleration channel.</li>
+     * <li>yes: Reuse an existing acceleration channel.</li>
+     * <li>no: Create a new acceleration channel.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -87,7 +93,7 @@ public class CreateLivePrivateLineRequest extends TeaModel {
     public String reuse;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The live stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,7 +103,7 @@ public class CreateLivePrivateLineRequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The live center. Valid values: cn-beijing, cn-shanghai, cn-shenzhen, cn-qingdao, ap-northeast-1, ap-southeast-5, eu-central-1, and ap-southeast-1, which indicate China (Beijing), China (Shanghai), China (Shenzhen), China (Qingdao), Japan (Tokyo), Indonesia (Jakarta), Germany (Frankfurt), and Singapore, respectively.</p>
+     * <p>The live center. Valid values: cn-beijing, cn-shanghai, cn-shenzhen, cn-qingdao, ap-northeast-1, ap-southeast-5, eu-central-1, ap-southeast-1, and ap-south-1, which represent the live centers in Beijing, Shanghai, Shenzhen, Qingdao, Japan, Indonesia, Germany, and Singapore respectively.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

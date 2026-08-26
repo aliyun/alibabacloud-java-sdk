@@ -8,7 +8,7 @@ public class DescribeLiveAIStudioRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The current page number. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeLiveAIStudioRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 50.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Valid values: 1 to 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -25,11 +25,17 @@ public class DescribeLiveAIStudioRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the virtual studio template that you want to query. This parameter is optional.</p>
+     * <p>The ID of the template to filter. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>dbe61b87-db9a-448f-8757-a875edb3f944</p>

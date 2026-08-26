@@ -27,6 +27,12 @@ public class AddLiveDomainPlayMappingRequest extends TeaModel {
     @NameInMap("PullDomain")
     public String pullDomain;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

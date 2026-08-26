@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveEdgeTransferRequest extends TeaModel {
     /**
-     * <p>The ingest domain. You can set only one stream relay configuration for an ingest domain.</p>
+     * <p>The ingest domain. Each domain name has only one live stream relay configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +17,12 @@ public class DeleteLiveEdgeTransferRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

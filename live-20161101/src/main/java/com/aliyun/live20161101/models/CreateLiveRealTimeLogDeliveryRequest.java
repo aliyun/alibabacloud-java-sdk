@@ -15,7 +15,7 @@ public class CreateLiveRealTimeLogDeliveryRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The name of the Logstore to which log entries are delivered.</p>
+     * <p>The LogStoreName for real-time log delivery to SLS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateLiveRealTimeLogDeliveryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+     * <p>The ProjectName for real-time log delivery to SLS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreateLiveRealTimeLogDeliveryRequest extends TeaModel {
     public String project;
 
     /**
-     * <p>The ID of the region where the Log Service project is deployed.</p>
+     * <p>The Region for real-time log delivery to SLS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +47,12 @@ public class CreateLiveRealTimeLogDeliveryRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

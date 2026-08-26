@@ -6,7 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeLiveDomainRealTimeHttpCodeDataRequest extends TeaModel {
     /**
      * <p>The streaming domain.</p>
-     * <p>Separate multiple domain names with commas (,).</p>
+     * <blockquote>
+     * <ul>
+     * <li>When you specify DomainName, make sure that the domain name is a live streaming domain and that the caller has the required permissions on the domain name.</li>
+     * <li>Separate multiple domain names with commas (,).</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +21,9 @@ public class DescribeLiveDomainRealTimeHttpCodeDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <blockquote>
-     * <p> If you specify neither the StartTime parameter nor the EndTime parameter, the data of the last <strong>1</strong> hour is returned.</p>
+     * <p>If both StartTime and EndTime are left empty, data within the last <strong>1</strong> hour from the current time is returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,8 +33,8 @@ public class DescribeLiveDomainRealTimeHttpCodeDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The name of the Internet service provider (ISP).</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448109.html">DescribeCdnRegionAndIsp</a> operation to query a list of available ISPs.</p>
+     * <p>The name of the Internet service provider (ISP) in English.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448109.html">DescribeCdnRegionAndIsp</a> operation to obtain the ISP name.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba</p>
@@ -38,8 +43,8 @@ public class DescribeLiveDomainRealTimeHttpCodeDataRequest extends TeaModel {
     public String ispNameEn;
 
     /**
-     * <p>The name of the region.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448109.html">DescribeCdnRegionAndIsp</a> operation to query a list of available regions.</p>
+     * <p>The name of the region in English.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448109.html">DescribeCdnRegionAndIsp</a> operation to obtain the region name.</p>
      * 
      * <strong>example:</strong>
      * <p>tianjin</p>
@@ -50,13 +55,19 @@ public class DescribeLiveDomainRealTimeHttpCodeDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <blockquote>
-     * <p> If you specify neither the StartTime parameter nor the EndTime parameter, the data of the last <strong>1</strong> hour is returned.</p>
+     * <p>If both StartTime and EndTime are left empty, data within the last <strong>1</strong> hour from the current time is returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

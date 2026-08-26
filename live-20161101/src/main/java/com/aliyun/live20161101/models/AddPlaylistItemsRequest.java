@@ -5,17 +5,19 @@ import com.aliyun.tea.*;
 
 public class AddPlaylistItemsRequest extends TeaModel {
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster operation</a>, check the CasterId parameter value returned by the CreateCaster operation.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, navigate to <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studios</strong> &gt; <strong>Cloud Production Studio</strong> to view the production studio name.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The production studio name in the production studio list on the Cloud Production Studio page of the ApsaraVideo Live console is the production studio ID.</p>
      * </blockquote>
-     * <p>The production studio must use the following configurations:</p>
+     * <p>The production studio must meet the following configurations:</p>
      * <ul>
-     * <li><strong>NormType</strong>: 3****. You need to call the <strong>CreateCaster</strong> operation to create a production studio for lightweight carousel playback in advance.</li>
+     * <li><strong>NormType</strong>: <strong>3</strong>. Create a lightweight carousel production studio in advance. You can call the <strong>CreateCaster</strong> operation to create a production studio.</li>
      * <li><strong>CasterTemplate</strong>: lp_noTranscode.</li>
      * <li><strong>channelEnable</strong>: 0.</li>
      * <li><strong>programEffect</strong>: 1.</li>
@@ -32,7 +34,7 @@ public class AddPlaylistItemsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The configurations of the episode list. If the episode list is added to the production studio for the first time, specify this parameter to pass in the initial configurations. For more information, see the <strong>ProgramConfig</strong> section of this topic.</p>
+     * <p>The playlist item configuration. If this is the first time you add a playlist item, specify this parameter for initialization. For more information, see <strong>ProgramConfig</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;RepeatNumber&quot;:&quot;0&quot;,&quot;ProgramName&quot;:&quot;my program&quot;}]</p>
@@ -41,7 +43,7 @@ public class AddPlaylistItemsRequest extends TeaModel {
     public String programConfig;
 
     /**
-     * <p>The ID of the episode list. If you do not specify this parameter, an episode list is created by default.</p>
+     * <p>The playlist ID. If the production studio already has a playlist, you must specify the corresponding ProgramId. If no playlist has been created, you can leave this parameter empty, and the system performs automatic creation.</p>
      * 
      * <strong>example:</strong>
      * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
@@ -50,7 +52,7 @@ public class AddPlaylistItemsRequest extends TeaModel {
     public String programId;
 
     /**
-     * <p>The episodes that you want to add to the production studio. The value is a JSON string. For more information, see the <strong>InputProgramItem</strong> section of this topic.</p>
+     * <p>The list of playlist item inputs. The value is a JSON string. For more information, see <strong>InputProgramItem</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +61,12 @@ public class AddPlaylistItemsRequest extends TeaModel {
     @NameInMap("ProgramItems")
     public String programItems;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -14,7 +14,7 @@ public class BatchGetOnlineUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The returned result</p>
      */
     @NameInMap("Result")
     public BatchGetOnlineUsersResponseBodyResult result;
@@ -42,7 +42,7 @@ public class BatchGetOnlineUsersResponseBody extends TeaModel {
 
     public static class BatchGetOnlineUsersResponseBodyResultOnlineUsers extends TeaModel {
         /**
-         * <p>The time when the user joined the group. The value is a UTC timestamp. Unit: milliseconds.</p>
+         * <p>The UTC timestamp when the user joined the message group. Unit: milliseconds</p>
          * 
          * <strong>example:</strong>
          * <p>12**45</p>
@@ -53,8 +53,10 @@ public class BatchGetOnlineUsersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the user is online. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The user is online.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The user is offline.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,7 +66,7 @@ public class BatchGetOnlineUsersResponseBody extends TeaModel {
         public Boolean online;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>de1**a0</p>
@@ -105,7 +107,7 @@ public class BatchGetOnlineUsersResponseBody extends TeaModel {
 
     public static class BatchGetOnlineUsersResponseBodyResult extends TeaModel {
         /**
-         * <p>The information about users.</p>
+         * <p>The array of objects</p>
          */
         @NameInMap("OnlineUsers")
         public java.util.List<BatchGetOnlineUsersResponseBodyResultOnlineUsers> onlineUsers;

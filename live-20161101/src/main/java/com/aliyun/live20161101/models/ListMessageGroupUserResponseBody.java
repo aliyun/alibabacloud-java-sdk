@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMessageGroupUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class ListMessageGroupUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>Return results.</p>
      */
     @NameInMap("Result")
     public ListMessageGroupUserResponseBodyResult result;
@@ -42,7 +42,7 @@ public class ListMessageGroupUserResponseBody extends TeaModel {
 
     public static class ListMessageGroupUserResponseBodyResultUserList extends TeaModel {
         /**
-         * <p>The time when the user joined the message group. The value is a UTC timestamp.</p>
+         * <p>UTC timestamp when the user joined the message group.</p>
          * 
          * <strong>example:</strong>
          * <p>12**45</p>
@@ -51,7 +51,7 @@ public class ListMessageGroupUserResponseBody extends TeaModel {
         public Long joinTime;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>User ID.</p>
          * 
          * <strong>example:</strong>
          * <p>de1<strong>a0,hu</strong>9</p>
@@ -84,10 +84,10 @@ public class ListMessageGroupUserResponseBody extends TeaModel {
 
     public static class ListMessageGroupUserResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+         * <p>Indicates whether there is a next page. Valid values:</p>
          * <ul>
-         * <li>true: The current page is followed by another page.</li>
-         * <li>false: The current page is not followed by another page.</li>
+         * <li>true: There is a next page.</li>
+         * <li>false: There is no next page.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class ListMessageGroupUserResponseBody extends TeaModel {
         public Boolean hasMore;
 
         /**
-         * <p>The total number of users in the message group.</p>
+         * <p>Total number of message group users.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -106,7 +106,7 @@ public class ListMessageGroupUserResponseBody extends TeaModel {
         public Integer total;
 
         /**
-         * <p>Details about the users.</p>
+         * <p>User list.</p>
          */
         @NameInMap("UserList")
         public java.util.List<ListMessageGroupUserResponseBodyResultUserList> userList;

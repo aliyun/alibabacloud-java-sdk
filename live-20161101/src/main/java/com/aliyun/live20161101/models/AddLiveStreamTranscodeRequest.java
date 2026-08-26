@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class AddLiveStreamTranscodeRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application to which the stream belongs.</p>
      * <ul>
-     * <li>The transcoding template takes effect only if the value of this parameter is the same as the application name that is specified in the ingest URL. The name can be up to 256 characters in length and can contain digits, letters, hyphens (-), and underscores (_).</li>
-     * <li>You can also set this parameter to an asterisk (\<em>). Asterisks (\</em>) can match any string, including an empty string.</li>
+     * <li><p>The value of App must be the same as the AppName in the ingest URL for the transcoding template to take effect. The value can be up to 256 characters in length and can contain digits, letters, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>App also supports a single asterisk (\*) as the value, which matches any string including an empty string.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you configure a transcoding template for which App is set to an asterisk (\*), the transcoding template is used only if no transcoding template for which App is set to the same value as AppName in the ingest URL exists.</p>
+     * <p>If a transcoding template with App set to a single asterisk (\<em>) is configured: when a user pulls a transcoded stream, the system first matches the transcoding template whose App value is the same as the AppName in the ingest URL. If no such template exists, the system matches the transcoding template with App set to a single asterisk (\</em>).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,7 +24,7 @@ public class AddLiveStreamTranscodeRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The name of the main streaming domain.</p>
+     * <p>The streaming domain of the streamer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,11 +34,11 @@ public class AddLiveStreamTranscodeRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The encryption configuration. The value is a JSON string. The following fields are included in the syntax:</p>
+     * <p>The encryption configuration. JSON format. The fields are described as follows:</p>
      * <ul>
-     * <li>EncryptType: the type of the encryption. Set the value to <strong>aliyun</strong>.</li>
-     * <li>KmsKeyID: the ID of the CMK in KMS.</li>
-     * <li>KmsKeyExpireInterval: the validity period of the CMK. Valid values: <strong>60 to 3600</strong>. Unit: seconds.</li>
+     * <li>EncryptType: the encryption type. Set the value to <strong>aliyun</strong>.</li>
+     * <li>KmsKeyID: the user KMS master key ID.</li>
+     * <li>KmsKeyExpireInterval: the key rotation interval. Valid values: <strong>60 to 3600</strong>. Unit: seconds.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +48,11 @@ public class AddLiveStreamTranscodeRequest extends TeaModel {
     public String encryptParameters;
 
     /**
-     * <p>Specifies whether to use the load-on-demand mechanism for transcoding. Default value: <strong>yes</strong>.</p>
+     * <p>Specifies whether to enable on-demand transcoding. Valid values:</p>
+     * <ul>
+     * <li><strong>yes</strong>: enables on-demand transcoding.</li>
+     * <li><strong>no</strong>: disables on-demand transcoding.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>yes</p>
@@ -57,26 +63,40 @@ public class AddLiveStreamTranscodeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID. When using SDK 2.0, set this parameter to the region ID that corresponds to the service registration endpoint. When using SDK 1.0, ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The transcoding template. Valid values:</p>
      * <ul>
-     * <li><p>Standard transcoding template:</p>
+     * <li><p>Standard quality templates:</p>
      * <ul>
-     * <li><strong>lld</strong>: low definition</li>
-     * <li><strong>lsd</strong>: standard definition</li>
-     * <li><strong>lhd</strong>: high definition</li>
-     * <li><strong>lud</strong>: ultra-high definition</li>
+     * <li><p><strong>lld</strong>: low definition.</p>
+     * </li>
+     * <li><p><strong>lsd</strong>: standard definition.</p>
+     * </li>
+     * <li><p><strong>lhd</strong>: high definition.</p>
+     * </li>
+     * <li><p><strong>lud</strong>: ultra-high definition.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>Narrowband HD™ transcoding template:</p>
+     * <li><p>Narrowband HD™ transcoding templates:</p>
      * <ul>
-     * <li><strong>ld</strong>: low definition</li>
-     * <li><strong>sd</strong>: standard definition</li>
-     * <li><strong>hd</strong>: high definition</li>
-     * <li><strong>ud</strong>: ultra-high definition</li>
+     * <li><p><strong>ld</strong>: low definition.</p>
+     * </li>
+     * <li><p><strong>sd</strong>: standard definition.</p>
+     * </li>
+     * <li><p><strong>hd</strong>: high definition.</p>
+     * </li>
+     * <li><p><strong>ud</strong>: ultra-high definition.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>

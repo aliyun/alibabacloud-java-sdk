@@ -7,7 +7,7 @@ public class DeleteLiveStreamMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the monitoring session.</p>
      * <blockquote>
-     * <p> You can obtain the monitoring session ID from the response parameter <strong>MonitorId</strong> of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation.</p>
+     * <p>The <strong>MonitorId</strong> is returned in the response of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,6 +20,12 @@ public class DeleteLiveStreamMonitorRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

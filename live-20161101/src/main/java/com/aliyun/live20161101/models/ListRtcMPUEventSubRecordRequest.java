@@ -5,9 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListRtcMPUEventSubRecordRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The ID of the subscribed application. You can view your application IDs by navigating to <strong>ApsaraVideo Live &gt; Live+ &gt; ApsaraVideo Real-time Communication &gt; Application Management</strong>.</p>
      * <blockquote>
-     * <p> The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <ul>
+     * <li>The application ID consists of uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</li>
+     * <li>You must first call CreateRtcMPUEventSub to create a stream mixing and forwarding event subscription for this application ID.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +21,8 @@ public class ListRtcMPUEventSubRecordRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The end time of the query.
+     * Format: yyyy-MM-ddTHH:mm:ssZ (UTC). The value cannot be later than the current time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +42,7 @@ public class ListRtcMPUEventSubRecordRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of records per page. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +52,8 @@ public class ListRtcMPUEventSubRecordRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The start time of the query.
+     * Format: yyyy-MM-ddTHH:mm:ssZ (UTC). The value cannot be earlier than seven days before the current time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +63,7 @@ public class ListRtcMPUEventSubRecordRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the subscription.</p>
+     * <p>The callback ID of the subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>yourSubId</p>

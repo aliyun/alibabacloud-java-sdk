@@ -16,9 +16,9 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
     /**
      * <p>The certificate type. Valid values:</p>
      * <ul>
-     * <li><strong>upload</strong>: a custom certificate</li>
-     * <li><strong>cas</strong>: a certificate that is purchased from Certificate Management Service</li>
-     * <li><strong>free</strong>: a free certificate (for testing)</li>
+     * <li><strong>upload</strong>: an uploaded certificate.</li>
+     * <li><strong>cas</strong>: a certificate from SSL Certificates Service.</li>
+     * <li><strong>free</strong>: a personal test certificate (Free Edition).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>The domain name that is secured by the certificate. The domain name uses <code>HTTPS</code>-based acceleration.</p>
+     * <p>The accelerated domain name to which the certificate belongs. The domain name is of the <code>https</code> acceleration type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,18 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether to check the certificate name for duplicates. A value of 1 indicates that the system does not perform the check and overwrites the information about the certificate that has the same name. Set the value to <strong>1</strong>.</p>
+     * <p>Specifies whether to perform only a dry run, without actually executing the operation. Valid values:</p>
+     * <ul>
+     * <li>true: sends a dry run request. If the request passes the check, the operation is not actually executed.</li>
+     * <li>false (default): sends a normal request. If the request passes the check, the operation is actually executed.</li>
+     * </ul>
+     * <p>The dry run checks parameter validity, RAM permissions, and resource status. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the operation is not actually executed.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>Ignores the check for duplicate certificate names and overwrites the existing certificate information with the same name. Fixed value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,9 +61,9 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The private key.</p>
+     * <p>The private key content.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set the SSLProtocol parameter to on.</p>
+     * <p>This parameter is required only when SSLProtocol is set to on.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,10 +73,10 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
     public String SSLPri;
 
     /**
-     * <p>Specifies whether to enable the HTTPS certificate. Valid values:</p>
+     * <p>Specifies whether to enable the HTTPS certificate. Valid values: </p>
      * <ul>
-     * <li><strong>on</strong>. If you set this parameter to <strong>on</strong>, you must also specify the SSLPub and SSLPri parameters.</li>
-     * <li><strong>off</strong>. This is the default value.</li>
+     * <li><strong>on</strong>: enabled. If the value is <strong>on</strong>, you must also set the SSLPub and SSLPri request parameters.</li>
+     * <li><strong>off</strong> (default): disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -76,9 +87,9 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
     public String SSLProtocol;
 
     /**
-     * <p>The public key.</p>
+     * <p>The public key content.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set the SSLProtocol parameter to on.</p>
+     * <p>This parameter is required only when SSLProtocol is set to on.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -117,6 +128,14 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public SetLiveDomainCertificateRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public SetLiveDomainCertificateRequest setForceSet(String forceSet) {

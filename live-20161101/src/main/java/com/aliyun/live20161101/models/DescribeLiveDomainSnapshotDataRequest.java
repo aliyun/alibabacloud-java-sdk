@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainSnapshotDataRequest extends TeaModel {
     /**
-     * <p>The main streaming domain to query.</p>
+     * <p>The ingest domain name to query.</p>
      * <ul>
-     * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
-     * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+     * <li>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</li>
+     * <li>If this parameter is left empty, the merged data of all live streaming domain names is returned by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>example.com</p>
+     * <p>example.aliyundoc.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +30,19 @@ public class DescribeLiveDomainSnapshotDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
      * <blockquote>
-     * <p> You can query data in the last <strong>90</strong> days.</p>
+     * <p>You can query data from the last <strong>90</strong> days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

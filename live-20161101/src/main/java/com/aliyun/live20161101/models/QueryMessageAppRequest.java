@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMessageAppRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive message application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>VKL3***</p>
@@ -14,7 +14,7 @@ public class QueryMessageAppRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of the interactive messaging application.</p>
+     * <p>Interactive message application name.</p>
      * 
      * <strong>example:</strong>
      * <p>testApp</p>
@@ -23,7 +23,7 @@ public class QueryMessageAppRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The number of the page to return. Default value: 1. Valid values: 1 to 100000.</p>
+     * <p>Page number. Default value: 1. Valid values: 1 to 100000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class QueryMessageAppRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of applications to return on each page. Default value: 20. Valid values: 1 to 50.</p>
+     * <p>Number of applications displayed per page. Default value: 20. Valid values: 1 to 50.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,10 +41,10 @@ public class QueryMessageAppRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>Sorting method. Valid values:</p>
      * <ul>
-     * <li>0: ascending order by time</li>
-     * <li>1: descending order by time</li>
+     * <li>0: Ascending order by time.</li>
+     * <li>1: Descending order by time.</li>
      * </ul>
      * 
      * <strong>example:</strong>

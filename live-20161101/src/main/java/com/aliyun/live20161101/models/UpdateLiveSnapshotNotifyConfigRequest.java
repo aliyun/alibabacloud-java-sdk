@@ -15,25 +15,27 @@ public class UpdateLiveSnapshotNotifyConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The callback authentication key. The key can be 16 to 32 characters in length and can contain only letters and digits.</p>
+     * <p>The callback authentication key. The key must be 16 to 32 characters in length and can contain letters and digits.</p>
      * <blockquote>
-     * <p> This parameter is required if you set the NotifyReqAuth parameter to <strong>yes</strong>.</p>
+     * <p>This parameter is required when NotifyReqAuth is set to <strong>yes</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>yourkey</p>
+     * <p>testkeyyourkey12</p>
      */
     @NameInMap("NotifyAuthKey")
     public String notifyAuthKey;
 
     /**
-     * <p>Specifies whether to enable callback authentication. Valid values:</p>
+     * <p>Specifies whether to enable authentication for callback notifications. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: enables callback authentication</li>
-     * <li><strong>no</strong>: disables callback authentication</li>
+     * <li><p><strong>yes</strong>: Enables</p>
+     * </li>
+     * <li><p><strong>no</strong>: Disables</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Default value: <strong>no</strong>. If you set this parameter to <strong>yes</strong>, the NotifyAuthKey parameter is required.</p>
+     * <p>The default value is <strong>no</strong>. If you set this parameter to <strong>yes</strong>, NotifyAuthKey is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,7 +45,7 @@ public class UpdateLiveSnapshotNotifyConfigRequest extends TeaModel {
     public String notifyReqAuth;
 
     /**
-     * <p>The callback URL. Specify a valid URL that is up to 500 characters in length.</p>
+     * <p>The callback URL. The URL must be valid and cannot exceed 500 characters.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://callback.yourdomain***.com">http://callback.yourdomain***.com</a></p>
@@ -54,6 +56,12 @@ public class UpdateLiveSnapshotNotifyConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

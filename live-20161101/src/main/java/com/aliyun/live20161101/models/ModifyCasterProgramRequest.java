@@ -7,11 +7,13 @@ public class ModifyCasterProgramRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you create a production studio by calling the <a href="">CreateCaster</a> operation, use the value of the CasterId parameter that is returned in the response.</p>
+     * </li>
+     * <li><p>If you create a production studio in the ApsaraVideo Live console, go to the <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> page to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,7 +24,7 @@ public class ModifyCasterProgramRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The episodes.</p>
+     * <p>The program information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Episode")
@@ -31,6 +33,12 @@ public class ModifyCasterProgramRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -73,10 +81,12 @@ public class ModifyCasterProgramRequest extends TeaModel {
 
     public static class ModifyCasterProgramRequestEpisode extends TeaModel {
         /**
-         * <p>The components. Components in the production studio are listed from the bottom to the top in an array. When the production studio switches to another video resource, the components are also switched.</p>
+         * <p>The list of component IDs. The components are layered from bottom to top in the order they are listed. The components are switched in sync with the video source.</p>
          * <ul>
-         * <li>This parameter is required and available only when EpisodeType is set to <strong>Component</strong>.</li>
-         * <li>This parameter is optional when EpisodeType is set to <strong>Resource</strong>. This indicates that the components are bound to and switched together with video resources.</li>
+         * <li><p>This parameter is required and takes effect only when the node type is <strong>Component</strong>.</p>
+         * </li>
+         * <li><p>If the node type is <strong>Resource</strong>, the components are attached to the video source and switched in sync.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -86,7 +96,7 @@ public class ModifyCasterProgramRequest extends TeaModel {
         public java.util.List<String> componentId;
 
         /**
-         * <p>The end time of the episode. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The end time. The time is in UTC. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-06-29T10:04:00Z</p>
@@ -95,7 +105,7 @@ public class ModifyCasterProgramRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the episode. If the episode was added by calling the <a href="https://help.aliyun.com/document_detail/2848068.html">AddCasterEpisode</a> operation, check the value of the response parameter EpisodeId to obtain the ID.</p>
+         * <p>The program ID. If you add a program for the production studio by calling the <a href="">AddCasterEpisode</a> operation, use the value of the EpisodeId parameter that is returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>a2b8e671-2fe5-4642-a2ec-bf938887****</p>
@@ -104,7 +114,7 @@ public class ModifyCasterProgramRequest extends TeaModel {
         public String episodeId;
 
         /**
-         * <p>The name of the episode.</p>
+         * <p>The program name.</p>
          * 
          * <strong>example:</strong>
          * <p>program_name_2</p>
@@ -113,10 +123,12 @@ public class ModifyCasterProgramRequest extends TeaModel {
         public String episodeName;
 
         /**
-         * <p>The type of the episode. Valid values:</p>
+         * <p>The program type. Valid values:</p>
          * <ul>
-         * <li><strong>Resource</strong>: a video resource</li>
-         * <li><strong>Component</strong>: a component</li>
+         * <li><p><strong>Resource</strong>: video source.</p>
+         * </li>
+         * <li><p><strong>Component</strong>: component.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -126,7 +138,7 @@ public class ModifyCasterProgramRequest extends TeaModel {
         public String episodeType;
 
         /**
-         * <p>The ID of the video resource. If the video resource was added by calling the <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a> operation, check the value of the response parameter ResourceId to obtain the ID.</p>
+         * <p>The ID of the video source. If you add a video source for the production studio by calling the <a href="">AddCasterVideoResource</a> operation, use the value of the ResourceId parameter that is returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>a2b8e671-2fe5-4642-a2ec-bf938887****</p>
@@ -135,7 +147,7 @@ public class ModifyCasterProgramRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The start time of the episode. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The start time. The time is in UTC. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-06-29T09:02:00Z</p>
@@ -144,10 +156,12 @@ public class ModifyCasterProgramRequest extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The policy for switching episodes. This parameter takes effect only when EpisodeType is set to <strong>Resource</strong>. Valid values:</p>
+         * <p>The switch policy. This parameter is valid only when the node type is <strong>Resource</strong>.</p>
          * <ul>
-         * <li><strong>TimeFirst</strong>: The episode starts when the previous episode ends and ends when the next episode starts. If no next episode exists, the episode keeps repeating until a new episode is added or the production studio stops. This value is required for live video resources.</li>
-         * <li><strong>ContentFirst</strong>: The episode starts and ends as scheduled.</li>
+         * <li><p><strong>TimeFirst</strong>: time-first. This is the only valid policy for live stream video sources.</p>
+         * </li>
+         * <li><p><strong>ContentFirst</strong>: content-first.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

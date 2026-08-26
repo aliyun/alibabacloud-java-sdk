@@ -11,17 +11,13 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>The normalized value of the width of the video layer image.</p>
-     * <ul>
-     * <li>If the FillMode parameter of the video layer is set to none, the height of the video image is scaled based on this parameter. The default value is <strong>0</strong>, which indicates that the video image is displayed in the original size.</li>
-     * <li>If the FillMode parameter of the video layer is set to fit, the value of the parameter is greater than <strong>0</strong>.</li>
-     * </ul>
+     * <p>3be7ade8-d907-483c-b24a-0dad45****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

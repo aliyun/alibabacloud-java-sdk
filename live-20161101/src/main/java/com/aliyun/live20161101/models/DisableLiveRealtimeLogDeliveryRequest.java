@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableLiveRealtimeLogDeliveryRequest extends TeaModel {
     /**
-     * <p>The streaming domain for which you want to suspend real-time log delivery. Separate multiple streaming domains with commas (,).</p>
+     * <p>The streaming domain for which to pause real-time log delivery. To specify multiple domain names, separate them with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +17,12 @@ public class DisableLiveRealtimeLogDeliveryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

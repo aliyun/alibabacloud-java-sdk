@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopLiveDomainRequest extends TeaModel {
     /**
-     * <p>The streaming domain or ingest domain.</p>
+     * <p>The ingest domain or streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

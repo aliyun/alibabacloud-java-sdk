@@ -14,19 +14,27 @@ public class CreateCasterRequest extends TeaModel {
     public String casterName;
 
     /**
-     * <p>The preset resolution of the production studio. If the subscription billing method is used, this parameter supports the following valid values:</p>
+     * <p>The preset resolution of the production studio. This parameter is available only for the subscription billing method. Valid values:</p>
      * <ul>
-     * <li><strong>lp_ld</strong>: low definition</li>
-     * <li><strong>lp_sd</strong>: standard definition</li>
-     * <li><strong>lp_hd</strong>: high definition</li>
-     * <li><strong>lp_ud</strong>: ultra high definition</li>
-     * <li><strong>lp_ld_v</strong>: low definition (portrait mode)</li>
-     * <li><strong>lp_sd_v</strong>: standard definition (portrait mode)</li>
-     * <li><strong>lp_hd_v</strong>: high definition (portrait mode)</li>
-     * <li><strong>lp_ud_v</strong>: ultra high definition (portrait mode)</li>
+     * <li><p><strong>lp_ld</strong>: low definition.</p>
+     * </li>
+     * <li><p><strong>lp_sd</strong>: standard definition.</p>
+     * </li>
+     * <li><p><strong>lp_hd</strong>: high definition.</p>
+     * </li>
+     * <li><p><strong>lp_ud</strong>: ultra-high definition.</p>
+     * </li>
+     * <li><p><strong>lp_ld_v</strong>: vertical low definition.</p>
+     * </li>
+     * <li><p><strong>lp_sd_v</strong>: vertical standard definition.</p>
+     * </li>
+     * <li><p><strong>lp_hd_v</strong>: vertical high definition.</p>
+     * </li>
+     * <li><p><strong>lp_ud_v</strong>: vertical ultra-high definition.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If the pay-as-you-go billing method is used, you must call the <a href="https://help.aliyun.com/document_detail/60271.html">SetCasterConfig</a> operation to specify the resolution.</p>
+     * <p>If you use the pay-as-you-go billing method, call the <a href="https://help.aliyun.com/document_detail/60271.html">SetCasterConfig</a> operation to set the resolution.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,10 +44,12 @@ public class CreateCasterRequest extends TeaModel {
     public String casterTemplate;
 
     /**
-     * <p>The billing method. Only the pay-as-you-go billing method is supported.**** Valid values:</p>
+     * <p>The billing method. Only <strong>PostPaid</strong> is supported. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription. This billing method is not yet supported.</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * <li><p><strong>PrePaid</strong>: subscription (not supported).</p>
+     * </li>
+     * <li><p><strong>PostPaid</strong>: pay-as-you-go.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,7 +61,7 @@ public class CreateCasterRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can specify a custom value for this parameter, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Generate a token on your client and ensure that the token is unique among different requests. The token can be up to 64 ASCII characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,9 +71,9 @@ public class CreateCasterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The expiration time of the production studio. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The expiration time of the production studio. The time is in the \<code>yyyy-MM-ddTHH:mm:ssZ\\</code> format and is displayed in UTC.</p>
      * <blockquote>
-     * <p> This parameter is valid only if you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is available only if you set <strong>ChargeType</strong> to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,9 +84,23 @@ public class CreateCasterRequest extends TeaModel {
 
     /**
      * <p>The type of the production studio. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><strong>1</strong>: general mode</li>
-     * <li><strong>6</strong>: playlist mode (for carousel playback)</li>
+     * <li><p><strong>1</strong>: Standard.</p>
+     * </li>
+     * <li><p><strong>3</strong>: Lightweight Carousel.</p>
+     * </li>
+     * <li><p><strong>4</strong>: Virtual Studio.</p>
+     * </li>
+     * <li><p><strong>6</strong>: Carousel (New Playlist).</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li><p><strong>1</strong>: Standard.</p>
+     * </li>
+     * <li><p><strong>6</strong>: Carousel (New Playlist).</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -90,9 +114,9 @@ public class CreateCasterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The time when the production studio was purchased. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The purchase time of the production studio. The time is in the \<code>yyyy-MM-ddTHH:mm:ssZ\\</code> format and is displayed in UTC.</p>
      * <blockquote>
-     * <p> This parameter is valid only if you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is available only if you set <strong>ChargeType</strong> to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,11 +125,17 @@ public class CreateCasterRequest extends TeaModel {
     @NameInMap("PurchaseTime")
     public String purchaseTime;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">Resource groups</a>.</p>
+     * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzw******</p>
@@ -214,7 +244,7 @@ public class CreateCasterRequest extends TeaModel {
 
     public static class CreateCasterRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -223,7 +253,7 @@ public class CreateCasterRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

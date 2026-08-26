@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCasterEpisodeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the production studio. You can specify the ID as a parameter in the request to modify the episode in the production studio.</p>
+     * <p>The production studio ID. You can use this ID as a request parameter to modify the episode.</p>
      * 
      * <strong>example:</strong>
      * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
@@ -14,7 +14,7 @@ public class DeleteCasterEpisodeResponseBody extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the episode. You can specify the ID as a parameter in the request to modify the episode in the production studio.</p>
+     * <p>The episode ID. You can use this ID as a request parameter to modify the episode.</p>
      * 
      * <strong>example:</strong>
      * <p>a2b8e671-2fe5-4642-a2ec-bf932738****</p>

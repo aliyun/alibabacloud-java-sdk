@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMessageAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -42,7 +42,7 @@ public class CreateMessageAppResponseBody extends TeaModel {
 
     public static class CreateMessageAppResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the interactive messaging application.</p>
+         * <p>The ID of the interactive message application.</p>
          * 
          * <strong>example:</strong>
          * <p>VKL3***</p>

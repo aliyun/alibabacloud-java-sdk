@@ -27,8 +27,10 @@ public class UpdateLiveMPUTaskShrinkRequest extends TeaModel {
     /**
      * <p>The stream mixing mode. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: the single-stream relay mode. In this mode, the service only relays the original single stream, but does not transcode mixed streams. You do not need to set parameters for mixed-stream transcoding.</li>
-     * <li><strong>1</strong> (default): the mixed-stream relay mode.</li>
+     * <li><p><strong>0</strong>: the single-stream relay mode. In this mode, the service only relays the original single stream, but does not transcode mixed streams. You do not need to set parameters for mixed-stream transcoding.</p>
+     * </li>
+     * <li><p><strong>1</strong> (default): the mixed-stream relay mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,9 +62,12 @@ public class UpdateLiveMPUTaskShrinkRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li>If the ingest URL is under a domain name for which hotlink protection is enabled, you must include an access token in the URL.</li>
-     * <li>You cannot use the same ingest URL in different tasks.</li>
-     * <li>You cannot use the same ingest URL within 10 seconds after a task is stopped.</li>
+     * <li><p>If the ingest URL is under a domain name for which hotlink protection is enabled, you must include an access token in the URL.</p>
+     * </li>
+     * <li><p>You cannot use the same ingest URL in different tasks.</p>
+     * </li>
+     * <li><p>You cannot use the same ingest URL within 10 seconds after a task is stopped.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

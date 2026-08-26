@@ -15,9 +15,9 @@ public class AddLiveSnapshotNotifyConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The callback authentication key. The key must be 16 to 32 characters in length and can contain only letters and digits.</p>
+     * <p>The authentication key for the callback. The key must be 16 to 32 characters in length and contain only letters and digits.</p>
      * <blockquote>
-     * <p>This parameter is required if you set the NotifyReqAuth parameter to <strong>yes</strong>.</p>
+     * <p>This parameter is required if you set NotifyReqAuth to <strong>yes</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,11 +29,13 @@ public class AddLiveSnapshotNotifyConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable callback authentication. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong></li>
-     * <li><strong>no</strong> (default)</li>
+     * <li><p><strong>yes</strong>: Enables</p>
+     * </li>
+     * <li><p><strong>no</strong> (Default): Disables</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if you set the NotifyAuthKey parameter to yes.</p>
+     * <p>If you set this parameter to yes, NotifyAuthKey is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,7 +45,7 @@ public class AddLiveSnapshotNotifyConfigRequest extends TeaModel {
     public String notifyReqAuth;
 
     /**
-     * <p>The callback URL. Specify a valid URL that is up to 500 characters in length.</p>
+     * <p>The callback URL. The URL must be valid, with a maximum length of 500 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +57,12 @@ public class AddLiveSnapshotNotifyConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

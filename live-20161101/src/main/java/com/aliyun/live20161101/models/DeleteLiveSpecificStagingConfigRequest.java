@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveSpecificStagingConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the configuration that you want to delete. If you want to specify multiple IDs, separate them with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/297374.html">DescribeLiveDomainStagingConfig</a> operation to obtain the configuration ID.</p>
+     * <p>The configuration ID. To specify multiple IDs, separate them with commas (,). To obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2848231.html">DescribeLiveDomainStagingConfig</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

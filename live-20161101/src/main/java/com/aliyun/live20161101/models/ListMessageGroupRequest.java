@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListMessageGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive Messages application ID.</p>
+     * <blockquote>
+     * <p>You must correctly fill in this parameter to perform a normal query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>VKL3***</p>
@@ -14,7 +17,7 @@ public class ListMessageGroupRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The number of the page to return. Default value: 1. Valid values: 1 to 100000.</p>
+     * <p>Page number. Default value: 1. Valid values: 1 to 100000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +27,7 @@ public class ListMessageGroupRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of message groups to return on each page. Default value: 20.</p>
+     * <p>Number of message groups to display per page. Default value: 20.</p>
      * <p>Valid values: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
@@ -35,10 +38,10 @@ public class ListMessageGroupRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>Sorting method. Valid values:</p>
      * <ul>
-     * <li>0: ascending order by time</li>
-     * <li>1: descending order by time</li>
+     * <li>0: Ascending order by time.</li>
+     * <li>1: Descending order by time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +51,10 @@ public class ListMessageGroupRequest extends TeaModel {
     public Integer sortType;
 
     /**
-     * <p>The ID of the user. Each user has a unique ID in the application. You can specify multiple user IDs.</p>
+     * <p>User ID, which is customized by the user and must be unique within an AppId. Different users must use different UserIds.</p>
+     * <blockquote>
+     * <p>You must correctly fill in this parameter to perform a normal query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>de1**a0</p>

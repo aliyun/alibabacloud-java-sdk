@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBody extends TeaModel {
     /**
-     * <p>The audio and video frame rates and bitrates at each time granularity.</p>
+     * <p>The detailed audio and video frame rate and bitrate data for each time interval.</p>
      */
     @NameInMap("FrameRateAndBitRateInfos")
     public java.util.List<DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfos> frameRateAndBitRateInfos;
@@ -42,7 +42,7 @@ public class DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBody extends
 
     public static class DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfos extends TeaModel {
         /**
-         * <p>The audio bitrate of the live stream. Unit: bit/s.</p>
+         * <p>The audio bitrate of the live stream. Unit: Bps.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -60,7 +60,7 @@ public class DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBody extends
         public Float audioFrameRate;
 
         /**
-         * <p>The bitrate of the live stream. Unit: bit/s.</p>
+         * <p>The bitrate of the live stream. Unit: Bps.</p>
          * 
          * <strong>example:</strong>
          * <p>1420</p>
@@ -78,7 +78,7 @@ public class DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBody extends
         public String streamUrl;
 
         /**
-         * <p>The time when the data was collected. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The statistical time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2016-09-13T16:04:00Z</p>
@@ -87,7 +87,7 @@ public class DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBody extends
         public String time;
 
         /**
-         * <p>The video bitrate of the live stream. Unit: bit/s.</p>
+         * <p>The video bitrate of the live stream. Unit: Bps.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -96,7 +96,7 @@ public class DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBody extends
         public Float videoBitRate;
 
         /**
-         * <p>The video frame rate of the live stream. Unit: frames per second (FPS).</p>
+         * <p>The video frame rate of the live stream. Unit: FPS.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

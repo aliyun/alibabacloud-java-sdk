@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchSetLiveDomainConfigsRequest extends TeaModel {
     /**
-     * <p>The domain names that you want to batch configure. Supported domain names include ingest domains, main streaming domains, and sub-streaming domains. Separate multiple domain names with commas (,).</p>
+     * <p>The domain names that you want to configure in batches. Valid values: ingest domain names, primary streaming domain names, and secondary streaming domain names. Separate multiple domain names with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,9 +14,12 @@ public class BatchSetLiveDomainConfigsRequest extends TeaModel {
     @NameInMap("DomainNames")
     public String domainNames;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The list of features.</p>
-     * <p>Some features, such as <code>filetype_based_ttl_set</code>, support multiple configuration records. To update one of the configuration records, use <code>configId</code> to identify the record. For more information, see <strong>Format of the Functions parameter</strong> and <strong>Features specified by the Functions parameter</strong>.</p>
+     * <p>Some features, such as <code>filetype_based_ttl_set</code>, allow you to set multiple records. If you want to update a specific record, you can specify the record by its <code>configId</code>. For more information, refer to <strong>Functions format description</strong> and <strong>Functions feature description</strong> below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +48,14 @@ public class BatchSetLiveDomainConfigsRequest extends TeaModel {
     }
     public String getDomainNames() {
         return this.domainNames;
+    }
+
+    public BatchSetLiveDomainConfigsRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public BatchSetLiveDomainConfigsRequest setFunctions(String functions) {

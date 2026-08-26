@@ -15,9 +15,9 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The latency of FLV-based playback. Unit: seconds.</p>
+     * <p>The FLV playback latency. Unit: seconds.</p>
      * <blockquote>
-     * <p> If this parameter is left empty, the latency is set to a value corresponding to the FlvLevel parameter.</p>
+     * <p>If this parameter is left empty, the latency is set based on the value of FlvLevel.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,15 +27,18 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
     public Integer flvDelay;
 
     /**
-     * <p>The latency level of FLV-based playback. Ignore this parameter if the FlvDelay parameter is configured.</p>
+     * <p>The FLV latency level. This parameter is ignored if FlvDelay is set.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>short</strong> (default): The latency is 4 seconds.</li>
-     * <li><strong>medium</strong>: The latency is 8 seconds.</li>
-     * <li><strong>long</strong>: The latency is 16 seconds.</li>
+     * <li><p><strong>short</strong> (default): 2 seconds.</p>
+     * </li>
+     * <li><p><strong>medium</strong>: 4 seconds.</p>
+     * </li>
+     * <li><p><strong>long</strong>: more than 4 seconds.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If both the FlvDelay and FlvLevel parameters are left empty, FlvLevel is set to <strong>short</strong> by default.</p>
+     * <p>If both FlvDelay and FlvLevel are left empty, the default value <strong>short</strong> is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,9 +48,9 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
     public String flvLevel;
 
     /**
-     * <p>The latency of HLS-based playback. Unit: seconds.</p>
+     * <p>The HLS playback latency. Unit: seconds.</p>
      * <blockquote>
-     * <p> If this parameter is left empty, the latency is set to a value corresponding to the HlsLevel parameter.</p>
+     * <p>If this parameter is left empty, the latency is set based on the value of HlsLevel.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,15 +60,18 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
     public Integer hlsDelay;
 
     /**
-     * <p>The latency level of HLS-based playback. Ignore this parameter if the HlsDelay parameter is configured.</p>
+     * <p>The HLS latency level. This parameter is ignored if HlsDelay is set.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>short</strong>: The latency is 3 seconds. This is the default value.</li>
-     * <li><strong>medium</strong>: The latency is 6 seconds.</li>
-     * <li><strong>long</strong>: The latency is 15 seconds.</li>
+     * <li><p><strong>short</strong> (default): 3 seconds.</p>
+     * </li>
+     * <li><p><strong>medium</strong>: 6 seconds.</p>
+     * </li>
+     * <li><p><strong>long</strong>: 15 seconds.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If both the HlsDelay and HlsLevel parameters are left empty, HlsLevel is set to <strong>short</strong> by default.</p>
+     * <p>If both HlsDelay and HlsLevel are left empty, the default value <strong>short</strong> is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,13 +83,19 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The latency of RTMP-based playback. Unit: seconds.</p>
+     * <p>The RTMP playback latency. Unit: seconds.</p>
      * <blockquote>
-     * <p> If this parameter is left empty, the latency is set to a value corresponding to the RtmpLevel parameter.</p>
+     * <p>If this parameter is left empty, the latency is set based on the value of RtmpLevel.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,15 +105,18 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
     public Integer rtmpDelay;
 
     /**
-     * <p>The latency level of RTMP-based playback. Ignore this parameter if the RtmpDelay parameter is configured.</p>
+     * <p>The RTMP latency level. This parameter is ignored if RtmpDelay is set.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>short</strong> (default): The latency is 4 seconds.</li>
-     * <li><strong>medium</strong>: The latency is 8 seconds.</li>
-     * <li><strong>long</strong>: The latency is 16 seconds.</li>
+     * <li><p><strong>short</strong> (default): 2 seconds.</p>
+     * </li>
+     * <li><p><strong>medium</strong>: 4 seconds.</p>
+     * </li>
+     * <li><p><strong>long</strong>: more than 4 seconds.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If both the RtmpDelay and RtmpLevel parameters are left empty, RtmpLevel is set to <strong>short</strong> by default.</p>
+     * <p>If both RtmpDelay and RtmpLevel are left empty, the default value <strong>short</strong> is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

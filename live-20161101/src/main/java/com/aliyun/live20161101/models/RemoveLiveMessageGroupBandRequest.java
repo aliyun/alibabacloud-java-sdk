@@ -15,9 +15,9 @@ public class RemoveLiveMessageGroupBandRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application.</p>
+     * <p>The data center. This must be the same data center that you specified when you called <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>.</p>
      * <blockquote>
-     * <p> Valid values: cn-shanghai and ap-southeast-1 (Singapore).</p>
+     * <p>Valid values: \<code>cn-shanghai\\</code> (Shanghai) and \<code>ap-southeast-1\\</code> (Singapore).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class RemoveLiveMessageGroupBandRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The users whom you want to unmute.</p>
+     * <p>The list of users to unmute. You can specify up to 30 users. Separate multiple user IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UnbannedUsers")

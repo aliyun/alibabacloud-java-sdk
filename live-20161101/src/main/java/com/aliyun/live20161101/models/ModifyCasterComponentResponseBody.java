@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCasterComponentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the component. You can use the ID as a request parameter in the API operation that is called to query components in a production studio.</p>
+     * <p>The component ID. You can use this ID as a request parameter to query the components of the production studio.</p>
      * 
      * <strong>example:</strong>
      * <p>05ab713c-676e-49c0-96ce-cc408da1****</p>

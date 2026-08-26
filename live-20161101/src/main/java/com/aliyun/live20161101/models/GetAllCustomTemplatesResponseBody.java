@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAllCustomTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The template names and template configurations returned.</p>
+     * <p>A list of template names and template configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;templateConfig&quot;: &quot;{\&quot;cdesc\&quot;:\&quot;H264\&quot;,\&quot;scale\&quot;:\&quot;[3:4]\&quot;,\&quot;gop\&quot;:\&quot;1\&quot;,\&quot;bframes\&quot;:\&quot;1\&quot;,\&quot;height\&quot;:\&quot;1080\&quot;}&quot;,&quot;templateName&quot;: &quot;custom1&quot;},{&quot;templateConfig&quot;: &quot;{\&quot;ar\&quot;:\&quot;44100\&quot;,\&quot;cdesc\&quot;:\&quot;H264\&quot;,\&quot;scale\&quot;:\&quot;[3:4]\&quot;,\&quot;gop\&quot;:\&quot;1\&quot;,\&quot;bframes\&quot;:\&quot;1\&quot;,\&quot;height\&quot;:\&quot;1080\&quot;}&quot;,&quot;templateName&quot;: &quot;cus&quot;}]</p>

@@ -4,12 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHlsLiveStreamRealTimeBpsDataRequest extends TeaModel {
-    /**
-     * <p>The domain names to query. Separate them with commas (,). A domain name cannot contain double-byte characters.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>live.aiyun.com</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -20,11 +14,7 @@ public class DescribeHlsLiveStreamRealTimeBpsDataRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The timestamp.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2018-08-08T00:00:00Z</p>
      */
     @NameInMap("Time")
     public String time;

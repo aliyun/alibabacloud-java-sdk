@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLiveTagResourcesRequest extends TeaModel {
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>q2j8bLtBdhONLRkgaPBa6A==</p>
      */
@@ -15,16 +17,22 @@ public class ListLiveTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of resource IDs. ResourceId and Tag cannot both be empty.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,10 +41,15 @@ public class ListLiveTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The list of tags. ResourceId and Tag cannot both be empty.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListLiveTagResourcesRequestTag> tag;
 
     /**
+     * <p>The Bid of the tag owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>26842</p>
      */
@@ -44,6 +57,8 @@ public class ListLiveTagResourcesRequest extends TeaModel {
     public String tagOwnerBid;
 
     /**
+     * <p>The Alibaba Cloud account ID to which the tag belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx1234xxx</p>
      */
@@ -121,6 +136,8 @@ public class ListLiveTagResourcesRequest extends TeaModel {
 
     public static class ListLiveTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The tag key of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>env</p>
          */
@@ -128,6 +145,8 @@ public class ListLiveTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value that corresponds to the tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The accelerated domain name queried.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -14,7 +14,7 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The end time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T21:00:00Z</p>
@@ -23,7 +23,7 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The token that determines the start point of the next query. This parameter is returned if more data results are available.</p>
+     * <p>The starting index for the next query. This value is returned when the queried data has not been fully retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>UjsM9x3aVcJi9a0-ArwJUTTC67C***37C0=</p>
@@ -32,7 +32,7 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>The number of rows returned.</p>
+     * <p>The number of returned data rows.</p>
      * 
      * <strong>example:</strong>
      * <p>5000</p>
@@ -41,7 +41,7 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
@@ -50,7 +50,7 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The start time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T20:00:00Z</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveUserStreamMetricDataRequest extends TeaModel {
     /**
+     * <p>The application name. Specify the application name to query stream-level data for the corresponding application. If <code>StreamName</code> is specified, <code>AppName</code> must also be specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>app</p>
      */
@@ -12,6 +14,11 @@ public class DescribeLiveUserStreamMetricDataRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The streaming domain to query.</p>
+     * <blockquote>
+     * <p>Only a single domain name is supported. An error is returned if multiple domain names are specified. If the domain name is empty, aggregate data for all streaming domains under the user is queried. If <code>AppName</code> and <code>StreamName</code> are not specified, stream-level data for all streams under the domain is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>test.com</p>
      */
@@ -19,6 +26,7 @@ public class DescribeLiveUserStreamMetricDataRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The end of the time range to query. The end time must be later than the start time and the difference cannot exceed 1 day. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +36,7 @@ public class DescribeLiveUserStreamMetricDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +46,7 @@ public class DescribeLiveUserStreamMetricDataRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Maximum value: 5000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +56,14 @@ public class DescribeLiveUserStreamMetricDataRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The stream protocol name. Specify the protocol name to query data for the corresponding protocol. Supported protocols: <code>flv</code>, <code>hls</code>, <code>rtmp</code>, <code>rts</code>, <code>p2p</code>. You can query data for multiple protocols by separating them with commas (,). Data for multiple protocols is not aggregated and is output at the stream level.</p>
+     * <blockquote>
+     * <p>The <strong>rts</strong> option queries Real-Time Streaming (RTS) streams using the ARTC protocol.</p>
+     * <ul>
+     * <li>When using rts, you may need to additionally count the xxx_AliRTS-opus transcoding stream. This is because when playing an RTS stream on the web, a transcoding stream with the _AliRTS-opus suffix appended to the stream name is automatically generated, producing transcoding stream data. For more information, see <a href="https://help.aliyun.com/document_detail/2948703.html">RTS sub-second latency automatic transcoding</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>flv</p>
      */
@@ -53,6 +71,7 @@ public class DescribeLiveUserStreamMetricDataRequest extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +81,8 @@ public class DescribeLiveUserStreamMetricDataRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The stream name. If <code>StreamName</code> is specified, stream-level data for the specified <code>StreamName</code> under the specified <code>AppName</code> is returned. If <code>StreamName</code> is specified, <code>AppName</code> must also be specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.flv</p>
      */

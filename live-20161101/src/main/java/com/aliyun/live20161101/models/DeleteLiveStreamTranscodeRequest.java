@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveStreamTranscodeRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,18 +35,26 @@ public class DeleteLiveStreamTranscodeRequest extends TeaModel {
      * <ul>
      * <li><p>Standard transcoding:</p>
      * <ul>
-     * <li>lld: low definition</li>
-     * <li>lsd: standard definition</li>
-     * <li>lhd: high definition</li>
-     * <li>lud : ultra-high definition</li>
+     * <li><p>lld: low definition</p>
+     * </li>
+     * <li><p>lsd: standard definition</p>
+     * </li>
+     * <li><p>lhd: high definition</p>
+     * </li>
+     * <li><p>lud : ultra-high definition</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>Narrowband HD™ transcoding:</p>
      * <ul>
-     * <li>ld: low definition</li>
-     * <li>sd: standard definition</li>
-     * <li>hd: high definition</li>
-     * <li>ud: ultra-high definition</li>
+     * <li><p>ld: low definition</p>
+     * </li>
+     * <li><p>sd: standard definition</p>
+     * </li>
+     * <li><p>hd: high definition</p>
+     * </li>
+     * <li><p>ud: ultra-high definition</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>Custom transcoding: a custom ID</p>

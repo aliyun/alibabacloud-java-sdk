@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetLiveStreamBlockRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the application to which the live stream belongs. You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,11 @@ public class SetLiveStreamBlockRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The blocking type. Valid values: blacklist and whitelist.</p>
+     * <p>The blocking mode. Valid values:</p>
+     * <ul>
+     * <li>blacklist: blacklist.</li>
+     * <li>whitelist: whitelist.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +39,7 @@ public class SetLiveStreamBlockRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The blocked region. If you specify multiple regions, such as CN and AS, separate them with commas (,).</p>
+     * <p>The blocked regions, such as CN and AS. Separate multiple regions with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,11 +51,17 @@ public class SetLiveStreamBlockRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The time when the blocking ends. The time must be in UTC. If you do not specify this parameter, the blocking is valid for 7 days by default.</p>
+     * <p>The end time of the blocking period in UTC. If this parameter is not specified, the blocking lasts for 7 days by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-29T19:00:00Z</p>
@@ -60,7 +70,7 @@ public class SetLiveStreamBlockRequest extends TeaModel {
     public String releaseTime;
 
     /**
-     * <p>The name of the live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the live stream. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

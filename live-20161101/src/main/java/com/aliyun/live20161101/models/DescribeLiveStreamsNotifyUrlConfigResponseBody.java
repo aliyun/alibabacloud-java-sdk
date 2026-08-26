@@ -51,7 +51,7 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>Exception event callback URL.</p>
+         * <p>The callback URL for receiving notifications about exception events.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://4a7e5f08.r37.cpolar.top/live/Record/call-back/streamException">https://4a7e5f08.r37.cpolar.top/live/Record/call-back/streamException</a></p>
@@ -69,10 +69,12 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
         public String notifyAuthKey;
 
         /**
-         * <p>Indicates whether callback authentication is enabled. Valid values:</p>
+         * <p>Indicates whether authentication is enabled. Valid values:</p>
          * <ul>
-         * <li>yes</li>
-         * <li>no</li>
+         * <li><p><strong>yes</strong></p>
+         * </li>
+         * <li><p><strong>no</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +84,7 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
         public String notifyReqAuth;
 
         /**
-         * <p>The callback URL.</p>
+         * <p>The callback URL for receiving live stream information.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
     /**
-     * <p>The parameters that you configured when you called the StartLiveMPUTask operation to create the tasks.</p>
+     * <p>The task parameter details. The parameter format is the same as the parameter format used when you call the operation to create a stream mixing task.</p>
      */
     @NameInMap("MPUTasks")
     public java.util.List<ListRtcMPUTaskDetailResponseBodyMPUTasks> MPUTasks;
@@ -42,10 +42,10 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksMultiStreamURL extends TeaModel {
         /**
-         * <p>Indicates whether stream relay is performed by using Alibaba Cloud CDN. Valid values:</p>
+         * <p>Indicates whether the stream is relayed to Content Delivery Network (CDN). Valid values:</p>
          * <ul>
-         * <li>false: Stream relay is performed by using a CDN service that is not Alibaba Cloud CDN.</li>
-         * <li>true: Stream relay is performed by using Alibaba Cloud CDN.</li>
+         * <li>false: The stream is relayed to a non-Alibaba Cloud CDN.</li>
+         * <li>true: The stream is relayed to Content Delivery Network (CDN).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public Boolean isAliCdn;
 
         /**
-         * <p>The ingest URL.</p>
+         * <p>The live stream ingest URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://example.com/live/stream****</p>
@@ -88,10 +88,10 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksSeiParamsLayoutVolume extends TeaModel {
         /**
-         * <p>Indicates whether to add SEI messages to Instantaneous Decoder Refresh (IDR) frames. Valid values:</p>
+         * <p>Specifies whether to ensure that SEI is carried when sending IDR keyframes. Valid values:</p>
          * <ul>
-         * <li>0: does not add SEI messages.</li>
-         * <li>1: adds SEI messages.</li>
+         * <li>0: does not ensure SEI is carried.</li>
+         * <li>1: ensures SEI is carried.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String followIdr;
 
         /**
-         * <p>The interval at which the SEI messages are added. Unit: milliseconds.</p>
+         * <p>The SEI sending interval. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -134,10 +134,10 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksSeiParamsPassThrough extends TeaModel {
         /**
-         * <p>Indicates whether to add SEI messages to Instantaneous Decoder Refresh (IDR) frames. Valid values:</p>
+         * <p>Specifies whether to ensure that SEI is carried when sending IDR keyframes. Valid values:</p>
          * <ul>
-         * <li>0: does not add SEI messages.</li>
-         * <li>1: adds SEI messages.</li>
+         * <li>0: does not ensure SEI is carried.</li>
+         * <li>1: ensures SEI is carried.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String followIdr;
 
         /**
-         * <p>The interval at which the SEI messages are added. Unit: milliseconds.</p>
+         * <p>The SEI sending interval. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -156,7 +156,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String interval;
 
         /**
-         * <p>The payload content of the custom SEI.</p>
+         * <p>The payload content of the pass-through SEI.</p>
          * 
          * <strong>example:</strong>
          * <p>yourPayloadContent</p>
@@ -165,7 +165,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String payloadContent;
 
         /**
-         * <p>The key of the payload content. Default value: udd.</p>
+         * <p>The key value corresponding to the payload content of the pass-through SEI. If not set, the key defaults to udd.</p>
          * 
          * <strong>example:</strong>
          * <p>yourPayloadContentKey</p>
@@ -214,19 +214,19 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksSeiParams extends TeaModel {
         /**
-         * <p>The layout and volume SEI. If the return value is an empty string, the default layout and volume SEI is used.</p>
+         * <p>The layout and volume SEI. If this parameter is empty, the default layout and volume SEI is carried.</p>
          */
         @NameInMap("LayoutVolume")
         public ListRtcMPUTaskDetailResponseBodyMPUTasksSeiParamsLayoutVolume layoutVolume;
 
         /**
-         * <p>The custom SEI.</p>
+         * <p>The pass-through SEI.</p>
          */
         @NameInMap("PassThrough")
         public ListRtcMPUTaskDetailResponseBodyMPUTasksSeiParamsPassThrough passThrough;
 
         /**
-         * <p>The custom payload type. Valid values: 100 to 254. Default value: 5.</p>
+         * <p>The custom payload_type of the SEI message. Valid values: 100 to 254. If not set, the SEI payload_type defaults to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -267,10 +267,10 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksSingleSubParams extends TeaModel {
         /**
-         * <p>The source of the video. This parameter is valid only if you set StreamType to 2. Valid values:</p>
+         * <p>The video input stream type in single-stream relaying mode. This parameter is valid only when the stream type is video (StreamType=2). Valid values:</p>
          * <ul>
-         * <li>camera (default): captures the video by using a camera.</li>
-         * <li>shareScreen: captures the content displayed on a screen.</li>
+         * <li>camera (default): camera.</li>
+         * <li>shareScreen: screen sharing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,11 +280,11 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The type of the stream that is relayed. Valid values:</p>
+         * <p>The stream type for relaying in single-stream relaying mode. Valid values:</p>
          * <ul>
-         * <li>0 (default): the original stream.</li>
-         * <li>1: the audio-only stream.</li>
-         * <li>2: the video-only stream.</li>
+         * <li>0 (default): relay the original stream.</li>
+         * <li>1: relay only the audio stream.</li>
+         * <li>2: relay only the video stream.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,7 +294,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String streamType;
 
         /**
-         * <p>The ID of the user whose stream is relayed. In single-stream relay mode, you can relay only one stream in a request.</p>
+         * <p>The user ID for relaying. Only one stream can be relayed at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>yourSubUserId</p>
@@ -335,10 +335,10 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsBackground extends TeaModel {
         /**
-         * <p>The display mode. Valid values:</p>
+         * <p>The display mode for the sub-image output. Valid values:</p>
          * <ul>
-         * <li>0: proportionally scales the video or background image to fit the pane. Black bars are added to fill the extra space.</li>
-         * <li>1 (default): crops the video or background image to fit the pane.</li>
+         * <li>0: scales the image and displays a black background.</li>
+         * <li>1 (default): crops the image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -381,7 +381,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsEncodeParams extends TeaModel {
         /**
-         * <p>The bitrate of the audio. Unit: Kbit/s.</p>
+         * <p>The audio bitrate. Unit: kbps.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -390,7 +390,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String audioBitrate;
 
         /**
-         * <p>The number of audio channels. Valid values: 1 and 2.</p>
+         * <p>The number of audio channels. Valid values: 1, 2.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -399,10 +399,10 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String audioChannels;
 
         /**
-         * <p>Indicates whether the output stream is an audio-only stream. Valid values:</p>
+         * <p>Specifies whether the output is audio-only. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li>true: audio-only.</li>
+         * <li>false (default): not audio-only.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -412,7 +412,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String audioOnly;
 
         /**
-         * <p>The audio sampling rate. Unit: Hz.</p>
+         * <p>The audio sample rate. Unit: Hz.</p>
          * 
          * <strong>example:</strong>
          * <p>44100</p>
@@ -421,10 +421,10 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String audioSampleRate;
 
         /**
-         * <p>The parameter for advanced video encoding. The value is a JSON string. Optional fields:</p>
+         * <p>The enhanced encoding parameters in JSON string format. The supported optional configurations include profile and preset.</p>
          * <ul>
-         * <li>profile: the encoding level. If the video encoding format is set to H.264, the valid values of this field are baseline, main, and high.</li>
-         * <li>preset: adjusts the trade-off between encoding speed and video quality. Valid values: ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, and placebo. Each value specifies a level of trade-off between encoding speed and video quality. For example, the ultrafast preset has the fastest encoding speed but the lowest video quality, while the placebo preset sacrifices the encoding speed for the best video quality.</li>
+         * <li>profile: the encoding level. When the video encoding format is H.264, the supported values for profile include: &quot;baseline&quot;, &quot;main&quot;, &quot;high&quot;.</li>
+         * <li>preset: adjusts the balance between encoding speed and quality. The supported values for preset include: &quot;ultrafast&quot;, &quot;superfast&quot;, &quot;veryfast&quot;, &quot;faster&quot;, &quot;fast&quot;, &quot;medium&quot;, &quot;slow&quot;, &quot;slower&quot;, &quot;veryslow&quot;, &quot;placebo&quot;. Each value represents a strategy for encoding speed versus output video quality, ranging from &quot;ultrafast&quot; (extremely fast, encoding speed prioritized) to &quot;placebo&quot; (pursuing ultimate quality, extremely slow encoding).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String enhancedParam;
 
         /**
-         * <p>The bitrate of the video. Unit: Kbit/s.</p>
+         * <p>The video bitrate. Unit: kbps.</p>
          * 
          * <strong>example:</strong>
          * <p>3500</p>
@@ -452,7 +452,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String videoCodec;
 
         /**
-         * <p>The frame rate of the video. Unit: frames per second (FPS).</p>
+         * <p>The video frame rate. Unit: fps.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -461,7 +461,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String videoFramerate;
 
         /**
-         * <p>The group of pictures (GOP) size of the video.</p>
+         * <p>The video GOP.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -470,7 +470,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String videoGop;
 
         /**
-         * <p>The height of the video. Unit: pixels.</p>
+         * <p>The video height. Unit: px.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -479,7 +479,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String videoHeight;
 
         /**
-         * <p>The width of the video. Unit: pixels.</p>
+         * <p>The video width. Unit: px.</p>
          * 
          * <strong>example:</strong>
          * <p>1920</p>
@@ -584,7 +584,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsLayoutUserPanesUserInfo extends TeaModel {
         /**
-         * <p>The ID of the channel where the user is.</p>
+         * <p>The channel ID where the stream mixing user resides.</p>
          * 
          * <strong>example:</strong>
          * <p>yourChannelId</p>
@@ -593,10 +593,10 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String channelId;
 
         /**
-         * <p>The source of the video. This parameter is valid only if you set StreamType to 2. Valid values:</p>
+         * <p>The video input stream type in stream mixing and transcoding mode. This parameter is valid only for video streams (StreamType=2). Valid values:</p>
          * <ul>
-         * <li>camera (default): captures the video by using a camera.</li>
-         * <li>shareScreen: captures the content displayed on a screen.</li>
+         * <li>camera (default): camera.</li>
+         * <li>shareScreen: screen sharing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -606,7 +606,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The stream mixing user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>yourSubUserId</p>
@@ -647,7 +647,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsLayoutUserPanes extends TeaModel {
         /**
-         * <p>The URL of the background image of the pane. This image is displayed if the user turns off the camera or is not present in the channel.</p>
+         * <p>The background image URL of the sub-image. When the user turns off the camera or has not entered the channel, this image fills the layout position.</p>
          * 
          * <strong>example:</strong>
          * <p>yourImageUrl</p>
@@ -656,7 +656,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String backgroundImageUrl;
 
         /**
-         * <p>The height of the pane. The value is normalized.</p>
+         * <p>The pane height, as a normalized percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2632</p>
@@ -665,10 +665,10 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String height;
 
         /**
-         * <p>The display mode. Valid values:</p>
+         * <p>The display mode for the sub-image output. Valid values:</p>
          * <ul>
-         * <li>0: proportionally scales the video or background image to fit the pane. Black bars are added to fill the extra space.</li>
-         * <li>1 (default): crops the video or background image to fit the pane.</li>
+         * <li>0: scales the image and displays a black background.</li>
+         * <li>1 (default): crops the image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -678,13 +678,13 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String renderMode;
 
         /**
-         * <p>The information about the user whose stream is played in the pane.</p>
+         * <p>The stream mixing user information.</p>
          */
         @NameInMap("UserInfo")
         public ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsLayoutUserPanesUserInfo userInfo;
 
         /**
-         * <p>The width of the pane. The value is normalized.</p>
+         * <p>The pane width, as a normalized percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.3564</p>
@@ -693,7 +693,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String width;
 
         /**
-         * <p>The x-coordinate of the pane. The value is normalized.</p>
+         * <p>The X coordinate, as a normalized percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2456</p>
@@ -702,7 +702,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String x;
 
         /**
-         * <p>The y-coordinate of the pane. The value is normalized.</p>
+         * <p>The Y coordinate, as a normalized percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.3789</p>
@@ -711,7 +711,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String y;
 
         /**
-         * <p>The layer of the pane. A value of 0 indicates that the pane is placed at the bottom layer. A larger value indicates a higher layer.</p>
+         * <p>The stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -792,7 +792,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsLayout extends TeaModel {
         /**
-         * <p>The information about the panes.</p>
+         * <p>The stream mixing user pane information.</p>
          */
         @NameInMap("UserPanes")
         public java.util.List<ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsLayoutUserPanes> userPanes;
@@ -814,7 +814,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsUserInfos extends TeaModel {
         /**
-         * <p>The ID of the channel where the user is.</p>
+         * <p>The channel ID where the stream mixing user resides.</p>
          * 
          * <strong>example:</strong>
          * <p>yourChannelId</p>
@@ -823,10 +823,10 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String channelId;
 
         /**
-         * <p>The source of the video. This parameter is valid only if you set StreamType to 2. Valid values:</p>
+         * <p>The video input stream type in stream mixing and transcoding mode. This parameter is valid only for video streams (StreamType=2). Valid values:</p>
          * <ul>
-         * <li>camera (default): captures the video by using a camera.</li>
-         * <li>shareScreen: captures the content displayed on a screen.</li>
+         * <li>camera (default): camera.</li>
+         * <li>shareScreen: screen sharing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -836,11 +836,11 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The type of the stream that is relayed. Valid values:</p>
+         * <p>The stream type for relaying in stream mixing and transcoding mode. Valid values:</p>
          * <ul>
-         * <li>0 (default): the original stream.</li>
-         * <li>1: the audio-only stream.</li>
-         * <li>2: the video-only stream.</li>
+         * <li>0 (default): relay the original stream.</li>
+         * <li>1: relay only the audio stream.</li>
+         * <li>2: relay only the video stream.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -850,7 +850,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String streamType;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The stream mixing user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>yourSubUserId</p>
@@ -899,13 +899,13 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParams extends TeaModel {
         /**
-         * <p>The global background image.</p>
+         * <p>The global background image for stream mixing.</p>
          */
         @NameInMap("Background")
         public ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsBackground background;
 
         /**
-         * <p>The encoding parameters of the output stream.</p>
+         * <p>The encoding parameters for the relayed output.</p>
          */
         @NameInMap("EncodeParams")
         public ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsEncodeParams encodeParams;
@@ -913,14 +913,14 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         /**
          * <p>The video layout information.</p>
          * <blockquote>
-         * <p> The video layout information includes the x-coordinate, y-coordinate, width, height, and layer of the pane. For audio-only transcoding, no video layout information is returned.</p>
+         * <p>For video transcoding, the video layout information includes layout coordinates (X, Y), layout pane dimensions (Width, Height), and stacking order (ZOrder). For audio-only transcoding, no video layout information is included.</p>
          * </blockquote>
          */
         @NameInMap("Layout")
         public ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsLayout layout;
 
         /**
-         * <p>The information about the user whose stream is mixed. If an empty value is returned, streams from all users are mixed.</p>
+         * <p>The stream mixing user information. If no user is specified, all users are mixed.</p>
          */
         @NameInMap("UserInfos")
         public java.util.List<ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParamsUserInfos> userInfos;
@@ -966,7 +966,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
 
     public static class ListRtcMPUTaskDetailResponseBodyMPUTasks extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAppId</p>
@@ -975,7 +975,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The ID of the channel.</p>
+         * <p>The channel ID.</p>
          * 
          * <strong>example:</strong>
          * <p>yourChannelId</p>
@@ -984,9 +984,9 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String channelId;
 
         /**
-         * <p>The timeout period of an idle connection. Unit: seconds.</p>
+         * <p>The idle timeout period. Unit: seconds.</p>
          * <blockquote>
-         * <p> If the task is idle for a period of time longer than the duration specified by the MaxIdleTime parameter, the task is automatically stopped. If the parameter is not specified, the task is stopped after the channel is closed.</p>
+         * <p>If this parameter is set, the task is automatically stopped when the task has been idle for a period longer than MaxIdleTime. If this parameter is not set, the task is stopped immediately after the channel is closed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -998,8 +998,8 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         /**
          * <p>The stream mixing mode. Valid values:</p>
          * <ul>
-         * <li>0: relays the original single stream without mixing streams. If the value of this parameter is 0, the TranscodeParams parameter is empty.</li>
-         * <li>1 (default): mixes multiple streams into a single stream and relays the mixed stream.</li>
+         * <li>0: single-stream relaying without stream mixing or transcoding. Only the original single stream is relayed. You do not need to configure stream mixing and transcoding parameters.</li>
+         * <li>1 (default): stream mixing, transcoding, and relaying.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1009,17 +1009,17 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String mixMode;
 
         /**
-         * <p>The multiple ingest URLs relayed.</p>
+         * <p>The multi-address relaying parameters.</p>
          */
         @NameInMap("MultiStreamURL")
         public java.util.List<ListRtcMPUTaskDetailResponseBodyMPUTasksMultiStreamURL> multiStreamURL;
 
         /**
-         * <p>The region in which the streams are mixed. Valid values:</p>
+         * <p>The region where the requested stream mixing service resides. Valid values:</p>
          * <ul>
-         * <li><strong>CN-shanghai</strong></li>
-         * <li><strong>AP-Singapore (default)</strong></li>
-         * <li><strong>EMAA-Saudi</strong></li>
+         * <li><strong>CN-Shanghai&lt;props=&quot;china&quot;&gt;<ph> (default)</ph></strong>: Shanghai.</li>
+         * <li><strong>AP-Singapore&lt;props=&quot;intl&quot;&gt;<ph> (default)</ph></strong>: Singapore.</li>
+         * <li><strong>EMAA-Saudi</strong>: Saudi Arabia.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1029,19 +1029,19 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The supplemental enhancement information (SEI) parameters.</p>
+         * <p>The SEI configuration parameters.</p>
          */
         @NameInMap("SeiParams")
         public ListRtcMPUTaskDetailResponseBodyMPUTasksSeiParams seiParams;
 
         /**
-         * <p>The parameters of the single-stream relay task.</p>
+         * <p>The single-stream relaying parameters.</p>
          */
         @NameInMap("SingleSubParams")
         public ListRtcMPUTaskDetailResponseBodyMPUTasksSingleSubParams singleSubParams;
 
         /**
-         * <p>The ingest URL.</p>
+         * <p>The live stream ingest URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://example.com/live/stream****</p>
@@ -1050,7 +1050,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String streamURL;
 
         /**
-         * <p>The ID of the stream relay task.</p>
+         * <p>The task ID. This ID is the identifier of the stream mixing and relaying task.</p>
          * 
          * <strong>example:</strong>
          * <p>yourTaskId</p>
@@ -1059,7 +1059,7 @@ public class ListRtcMPUTaskDetailResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The mixed-stream relay parameters.</p>
+         * <p>The stream mixing, transcoding, and relaying parameters.</p>
          */
         @NameInMap("TranscodeParams")
         public ListRtcMPUTaskDetailResponseBodyMPUTasksTranscodeParams transcodeParams;

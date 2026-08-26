@@ -26,7 +26,7 @@ public class DeleteSnapshotFilesResponseBody extends TeaModel {
     public DeleteSnapshotFilesResponseBodySnapshotDeleteInfoList snapshotDeleteInfoList;
 
     /**
-     * <p>The number of successful screenshot deletions.</p>
+     * <p>The number of snapshots that were deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

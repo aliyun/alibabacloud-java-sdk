@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendLikeRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive Messages application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class SendLikeRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The mode in which system messages are broadcasted. Valid values:</p>
+     * <p>System message diffusion type. Valid values:</p>
      * <ul>
-     * <li>0: specifies that system messages are not broadcasted. This is the default value.</li>
-     * <li>1: specifies that system messages are broadcasted to specified users.</li>
-     * <li>2: specifies that system messages are broadcasted to the message group.</li>
+     * <li>0: No diffusion.</li>
+     * <li>1: Diffusion to specified users.</li>
+     * <li>2: Diffusion to a group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class SendLikeRequest extends TeaModel {
     public Integer broadCastType;
 
     /**
-     * <p>The number of likes.</p>
+     * <p>Number of likes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class SendLikeRequest extends TeaModel {
     public String count;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>Message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class SendLikeRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the user who performs the operation.</p>
+     * <p>Operator user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>de1**a0</p>

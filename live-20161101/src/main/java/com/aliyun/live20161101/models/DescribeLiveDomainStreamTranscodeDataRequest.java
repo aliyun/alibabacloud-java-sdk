@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainStreamTranscodeDataRequest extends TeaModel {
     /**
-     * <p>The main streaming domain to query.</p>
+     * <p>The streaming domain of the streamer to query.</p>
      * <ul>
-     * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
-     * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+     * <li>You can query a single domain name or multiple domain names at a time. Separate multiple domain names with commas (,).</li>
+     * <li>If this parameter is left empty, the merged data of all live streaming domain names is returned by default.</li>
+     * <li>When you specify DomainName, make sure that the specified domain name is a live streaming domain name and that the user calling this operation has the permissions to operate on the specified domain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +19,7 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,11 +31,11 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends TeaModel {
     /**
      * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li><strong>3600</strong>: 1 hour</li>
-     * <li><strong>86400</strong>: 1 day</li>
+     * <li><strong>3600</strong>: by hour.</li>
+     * <li><strong>86400</strong>: by day.</li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the time granularity of 1 hour is used by default.</p>
+     * <p>If this parameter is left empty, the default granularity is by hour.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,20 +60,26 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends TeaModel {
     @NameInMap("Precision")
     public String precision;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The key that is used to group data. Valid values:</p>
+     * <p>The grouping key. Valid values:</p>
      * <ul>
-     * <li><strong>domain</strong>: The DomainName parameter is available in the response only if Split is set to domain.</li>
-     * <li><strong>region</strong>: The Region parameter is available in the response only if Split is set to region.</li>
-     * <li><strong>transcode_type</strong>: The TanscodeType parameter is available in the response only if Split is set to transcode_type.</li>
-     * <li><strong>resolution</strong>: The Resolution parameter is available in the response only if Split is set to resolution.</li>
-     * <li><strong>fps</strong>: The Fps parameter is available in the response only if Split is set to fps.</li>
+     * <li><strong>domain</strong>: domain name. If the Split (grouping key) parameter is set to domain, the Domain response parameter takes effect.</li>
+     * <li><strong>region</strong>: live center region. If the Split (grouping key) parameter is set to region, the Region response parameter takes effect.</li>
+     * <li><strong>transcode_type</strong>: transcoding type. If the Split (grouping key) parameter is set to transcode_type, the TanscodeType response parameter takes effect.</li>
+     * <li><strong>resolution</strong>: resolution. If the Split (grouping key) parameter is set to resolution, the Resolution response parameter takes effect.</li>
+     * <li><strong>fps</strong>: frame rate. If the Split (grouping key) parameter is set to fps, the Fps response parameter takes effect.</li>
      * </ul>
-     * <p>You can specify one or more keys. If you specify multiple keys, separate them with commas (,).</p>
-     * <p>Default value: <code>domain,region,transcode_type,resolution,fps</code>.</p>
+     * <p>You can specify one or more values. Separate multiple values with commas (,).</p>
+     * <p>Default value: <code>domain,region,transcode_type,resolution,fps</code>, which means all grouping keys are applied.</p>
      * 
      * <strong>example:</strong>
      * <p>domain</p>
@@ -81,10 +88,10 @@ public class DescribeLiveDomainStreamTranscodeDataRequest extends TeaModel {
     public String split;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
      * <ul>
-     * <li>The minimum query interval is 1 hour.</li>
-     * <li>If you do not set this parameter, the transcoding length for the last 24 hours is returned.</li>
+     * <li>The minimum data time granularity is 1 hour.</li>
+     * <li>If this parameter is left empty, data from the last 24 hours is read by default.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

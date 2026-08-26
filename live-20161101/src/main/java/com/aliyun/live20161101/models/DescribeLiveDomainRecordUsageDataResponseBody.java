@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The end time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-10T21:00:00Z</p>
@@ -26,7 +26,7 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-10T20:00:00Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsTotalCountRequest extends TeaModel {
     /**
-     * <p>The ingest domain or streaming domain. This parameter is required if you want to query data based on domain names. You can specify up to 10 domain names. Separate multiple domain names with commas (,).</p>
+     * <p>The ingest domain or streaming domain. This parameter is required when you query domain-level data. You can specify up to 10 domain names in a batch query. Separate multiple domain names with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class DescribeLiveStreamsTotalCountRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * <blockquote>
-     * <p> The maximum time range for a query is 15 days. The end time must be earlier than the current time. Data of the current day can be queried on the next day.</p>
+     * <p>The interval between StartTime and EndTime must be within 15 days, and EndTime cannot be later than the current time. Data for the current day can be queried only on the next day.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,13 +30,19 @@ public class DescribeLiveStreamsTotalCountRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * <blockquote>
-     * <p> You can query data in the last 18 months.</p>
+     * <p>The maximum query range is the last 1.5 years.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -47,7 +53,7 @@ public class DescribeLiveStreamsTotalCountRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The type of data that you want to query. If you leave this parameter empty, data is returned by domain name. If you want to query data by UID, specify the UID for this parameter.</p>
+     * <p>If you leave this parameter empty, domain-level data is queried by default. Set this parameter to aliuid to query UID-level data.</p>
      * 
      * <strong>example:</strong>
      * <p>aliuid</p>

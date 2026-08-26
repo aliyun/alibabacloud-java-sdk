@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveAIProduceRulesRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. The name can be up to 256 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must be the same as the application name in the ingest URL. Otherwise, the rule does not take effect.</p>
+     * <p>The name of the live streaming application. The name can be up to 256 characters long and can contain digits, uppercase and lowercase letters, hyphens (-), and underscores (_). The AppName must match the AppName in the ingest URL for the template to take effect.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddLiveAIProduceRulesRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The description of the subtitle rule. The description can be up to 128 characters in length and can contain letters, digits, and special characters.</p>
+     * <p>The description of the subtitle rule. The description can contain Chinese and English characters, digits, and special characters. It can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>live AI subtitle template</p>
@@ -24,7 +24,7 @@ public class AddLiveAIProduceRulesRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +34,12 @@ public class AddLiveAIProduceRulesRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>Specifies whether to trigger the subtitle rule when stream pulling starts. Valid values:</p>
+     * <p>Specifies whether the rule is triggered by stream pulling. Valid values:</p>
      * <ul>
-     * <li>true: generates live subtitles when stream pulling starts and stops generating live subtitles when no stream is pulled for 5 minutes. When stream pulling restarts, live subtitles are generated again.</li>
-     * <li>false: generates live subtitles when stream ingest starts, regardless of whether stream pulling starts.</li>
+     * <li><p>true: Subtitles are generated when stream pulling starts. If no stream is pulled for 5 minutes, subtitle generation stops. Subtitle generation resumes when stream pulling starts again.</p>
+     * </li>
+     * <li><p>false: Subtitles are generated when stream ingest starts, regardless of whether a stream is being pulled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,16 +49,24 @@ public class AddLiveAIProduceRulesRequest extends TeaModel {
     public Boolean isLazy;
 
     /**
-     * <p>The specification of the output subtitles. Valid values:</p>
+     * <p>The specifications of the output subtitles. Valid values:</p>
      * <ul>
-     * <li><code>lp_ld</code>: landscape low definition 360p (640×360)</li>
-     * <li><code>lp_ld_v</code>: portrait low definition 360p (360×640)</li>
-     * <li><code>lp_sd</code>: landscape standard definition 480p (854×480)</li>
-     * <li><code>lp_sd_v</code>: portrait standard definition 480p (480×854)</li>
-     * <li><code>lp_hd</code>: landscape high definition 720p (1280×720)</li>
-     * <li><code>lp_hd_v</code>: portrait high definition 720p (720×1280)</li>
-     * <li><code>lp_ud</code>: landscape ultra-high definition 1080p (1920×1080)</li>
-     * <li><code>lp_ud_v</code>: portrait ultra-high definition 1080p (1080×1920)</li>
+     * <li><p>Landscape low definition 360p (640 × 360): <code>lp_ld</code></p>
+     * </li>
+     * <li><p>Portrait low definition 360p (360 × 640): <code>lp_ld_v</code></p>
+     * </li>
+     * <li><p>Landscape standard definition 480p (854 × 480): <code>lp_sd</code></p>
+     * </li>
+     * <li><p>Portrait standard definition 480p (480 × 854): <code>lp_sd_v</code></p>
+     * </li>
+     * <li><p>Landscape high definition 720p (1280 × 720): <code>lp_hd</code></p>
+     * </li>
+     * <li><p>Portrait high definition 720p (720 × 1280): <code>lp_hd_v</code></p>
+     * </li>
+     * <li><p>Landscape ultra high definition 1080p (1920 × 1080): <code>lp_ud</code></p>
+     * </li>
+     * <li><p>Portrait ultra high definition 1080p (1080 × 1920): <code>lp_ud_v</code></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -69,6 +79,12 @@ public class AddLiveAIProduceRulesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
     /**
-     * <p>The total number of domain names in your account.</p>
+     * <p>The total number of domain names under the account.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
     public Long domainCount;
 
     /**
-     * <p>The total number of domain names that are in the Enabled state in your account.</p>
+     * <p>The total number of running domain names under the account.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
     public Long domainOnlineCount;
 
     /**
-     * <p>The end of the time range for which data was queried.</p>
+     * <p>The end time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-03-20T16:00:00Z</p>
@@ -41,7 +41,7 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range for which data was queried.</p>
+     * <p>The start time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-03-17T16:00:00Z</p>

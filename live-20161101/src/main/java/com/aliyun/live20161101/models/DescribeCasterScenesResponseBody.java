@@ -8,7 +8,7 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>The ID of the scene.</p>
+     * <p>CF60DB6A-7FD6-426E-9288-122CC1*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -17,7 +17,7 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
     public DescribeCasterScenesResponseBodySceneList sceneList;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

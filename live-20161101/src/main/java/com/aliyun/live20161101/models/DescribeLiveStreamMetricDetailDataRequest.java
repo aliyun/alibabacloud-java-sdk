@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamMetricDetailDataRequest extends TeaModel {
     /**
-     * <p>The name of the application for which you want to query the monitoring data of streams.</p>
+     * <p>The application name. Specify this parameter to query stream-level data for a specific application.</p>
      * <blockquote>
-     * <p> If you specify the StreamName parameter, you must also specify the AppName parameter.</p>
+     * <p>If you specify StreamName, you must also specify AppName.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class DescribeLiveStreamMetricDetailDataRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>The accelerated domain name. You can specify only one domain name. If you specify multiple domain names, an error occurs.</li>
-     * <li>If you do not specify the AppName and StreamName parameters, monitoring data of all streams for the domain name is returned.</li>
-     * <li>If you leave this parameter empty, monitoring data of streams under all domain names is returned.</li>
-     * <li>If you specify the DomainName parameter and set both the AppName and StreamName parameters to all, monitoring data of all streams in all applications under the specified domain name is returned.</li>
-     * <li>When you specify the DomainName parameter, make sure that the domain name is a domain name used for live streaming and that you have the permissions on the domain name.</li>
+     * <li>The accelerated domain name to query. Only a single domain name can be queried at a time. An error is returned if multiple domain names are specified.</li>
+     * <li>If AppName and StreamName are not specified, stream-level data for all streams under the domain name is returned.</li>
+     * <li>If the domain name is left empty, aggregate data for all accelerated domain names under the account is returned.</li>
+     * <li>If DomainName is specified and both AppName and StreamName are set to all, aggregate data for the specified accelerated domain name is returned.</li>
+     * <li>When you specify DomainName, make sure the domain name is a live streaming domain and the user calling this operation has the required permissions on the domain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeLiveStreamMetricDetailDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time, and the maximum time range that can be specified is one day. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time, and the difference cannot exceed 1 day. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeLiveStreamMetricDetailDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The token used to query data by page. Up to 5,000 rows of data can be returned per query. If the number of rows exceeds 5,000, a token that determines the start point of the next query is provided in the response. If you specify this parameter, data continues to be obtained from the end of the previous query.</p>
+     * <p>The paged query token. A maximum of 5,000 rows of data can be returned per query. If the data to query exceeds 5,000 rows, the response includes the starting index for the next paging request. Pass this token in the request to continue querying data from where the previous query ended.</p>
      * 
      * <strong>example:</strong>
      * <p>UjsM9x3aVcJi9a0-ArwJUTTC67CIBKLw*****</p>
@@ -54,8 +54,14 @@ public class DescribeLiveStreamMetricDetailDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The streaming protocol. Valid values: <strong>flv</strong>, <strong>hls</strong>, <strong>rtmp</strong>, <strong>rts</strong>, and <strong>p2p</strong>.</p>
-     * <p>You can specify multiple protocols. Separate multiple protocols with commas (,). However, data over multiple protocols is not aggregated and is returned based on the stream.</p>
+     * <p>The stream protocol. Valid values: <strong>flv</strong>, <strong>hls</strong>, <strong>rtmp</strong>, <strong>rts</strong>, and <strong>p2p</strong>.</p>
+     * <p>You can query data for multiple protocols by separating them with commas (,). Data for multiple protocols is not aggregated and is output at the stream level.</p>
+     * <blockquote>
+     * <p>The <strong>rts</strong> option queries Real-Time Streaming (RTS) streams that use the ARTC protocol.</p>
+     * <ul>
+     * <li>When using rts, you may need to additionally collect statistics for the xxx_AliRTS-opus transcoding stream. This is because when playing an RTS stream on the web, a transcoding stream with the _AliRTS-opus suffix appended to the stream name is automatically generated. For more information, see <a href="https://help.aliyun.com/document_detail/2948703.html">RTS sub-second latency automatic transcoding</a>.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>flv</p>
@@ -63,11 +69,17 @@ public class DescribeLiveStreamMetricDetailDataRequest extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,9 +89,9 @@ public class DescribeLiveStreamMetricDetailDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the stream. The stream must belong to the application that is specified by the AppName parameter.</p>
+     * <p>The stream name. Specify this parameter together with AppName to return stream-level data.</p>
      * <blockquote>
-     * <p> If you specify the StreamName parameter, you must also specify the AppName parameter.</p>
+     * <p>If you specify StreamName, you must also specify AppName.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveRealtimeLogDeliveryRequest extends TeaModel {
     /**
-     * <p>The streaming domain.</p>
-     * <p>Separate multiple streaming domains with commas (,).</p>
+     * <p>The streaming domain name.</p>
+     * <p>To specify multiple domain names, separate them with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class DeleteLiveRealtimeLogDeliveryRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The name of the Logstore to which log entries are delivered.</p>
+     * <p>The name of the SLS Logstore to which logs are delivered in real time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DeleteLiveRealtimeLogDeliveryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+     * <p>The name of the Simple Log Service (SLS) project to which logs are delivered in real time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DeleteLiveRealtimeLogDeliveryRequest extends TeaModel {
     public String project;
 
     /**
-     * <p>The ID of the region where the Log Service project is deployed.</p>
+     * <p>The region where the SLS project is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +48,12 @@ public class DeleteLiveRealtimeLogDeliveryRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

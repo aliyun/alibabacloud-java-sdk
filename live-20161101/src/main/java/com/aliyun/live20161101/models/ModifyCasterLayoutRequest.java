@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyCasterLayoutRequest extends TeaModel {
     /**
-     * <p>The audio layers.</p>
+     * <p>The audio information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AudioLayer")
     public java.util.List<ModifyCasterLayoutRequestAudioLayer> audioLayer;
 
     /**
-     * <p>The location IDs of the video layers, which are in the same order as the video layers.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a>.</p>
+     * <p>The location ID (LocationId) of the video resource element.</p>
+     * <p>For the LocationId, see <a href="https://help.aliyun.com/document_detail/2848020.html">Add a video source</a>. The elements correspond to the VideoLayers elements in order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,13 +23,15 @@ public class ModifyCasterLayoutRequest extends TeaModel {
     public java.util.List<String> blendList;
 
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster operation</a>, check the CasterId parameter returned by the CreateCaster operation.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, go to <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The production studio name in the production studio list on the Cloud Production Studio page of the ApsaraVideo Live console is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +42,7 @@ public class ModifyCasterLayoutRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the layout. If the layout was added by calling the <a href="https://help.aliyun.com/document_detail/2848025.html">AddCasterLayout</a> operation, check the value of the response parameter LayoutId to obtain the ID.</p>
+     * <p>The layout ID. If you added the production studio layout by calling the <a href="https://help.aliyun.com/document_detail/2848025.html">AddCasterLayout operation</a>, check the LayoutId parameter returned by the AddCasterLayout operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,8 +52,8 @@ public class ModifyCasterLayoutRequest extends TeaModel {
     public String layoutId;
 
     /**
-     * <p>The location IDs of the audio layers, which are in the same order as the audio layers.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a>.</p>
+     * <p>The location ID (LocationId) of the audio resource element.</p>
+     * <p>For the LocationId, see <a href="https://help.aliyun.com/document_detail/2848020.html">Add a video source</a>. The elements correspond to the AudioLayers elements in order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,11 +65,17 @@ public class ModifyCasterLayoutRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The video layers.</p>
+     * <p>The video information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VideoLayer")
@@ -144,7 +152,7 @@ public class ModifyCasterLayoutRequest extends TeaModel {
 
     public static class ModifyCasterLayoutRequestAudioLayer extends TeaModel {
         /**
-         * <p>The fixed delay of the audio layer. This parameter is used to synchronize the audio with subtitles. Unit: milliseconds. Default value: <strong>0</strong>. Valid values: <strong>0 to 5000</strong>.</p>
+         * <p>The fixed delay for the audio. This can be used for subtitle synchronization. Unit: milliseconds. Default value: <strong>0</strong>. Valid values: <strong>0 to 5000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -153,11 +161,11 @@ public class ModifyCasterLayoutRequest extends TeaModel {
         public Integer fixedDelayDuration;
 
         /**
-         * <p>The sound channels that are used for volume input in the audio layer. Valid values:</p>
+         * <p>The audio channels that can be used as volume input. Valid values:</p>
          * <ul>
-         * <li><strong>leftChannel</strong>: the left channel</li>
-         * <li><strong>rightChannel</strong>: the right channel</li>
-         * <li><strong>all</strong> (default): both the left and right channels</li>
+         * <li><strong>leftChannel</strong>: left channel.</li>
+         * <li><strong>rightChannel</strong>: right channel.</li>
+         * <li><strong>all</strong> (default): both channels.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,8 +175,8 @@ public class ModifyCasterLayoutRequest extends TeaModel {
         public String validChannel;
 
         /**
-         * <p>The normalized value of the height of the audio layer. The width of the audio layer is proportionally scaled based on this parameter.</p>
-         * <p>The default value is <strong>0</strong>, which indicates that the audio layer is not scaled.</p>
+         * <p>The normalized height ratio of the Layer element. The width of the element is proportionally scaled based on this height. </p>
+         * <p>Default value: <strong>0</strong>, which indicates that the element is displayed at its original size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -209,10 +217,10 @@ public class ModifyCasterLayoutRequest extends TeaModel {
 
     public static class ModifyCasterLayoutRequestVideoLayer extends TeaModel {
         /**
-         * <p>The scaling mode of the video layer. Valid values:</p>
+         * <p>The element fill mode. </p>
          * <ul>
-         * <li><strong>none</strong> (default): indicates that the video layer is not scaled. The video layer is displayed based on its original size.</li>
-         * <li><strong>fit</strong>: indicates that the video layer is adapted to the fill area. In this case, the video layer is scaled proportionally, with its original aspect ratio retained. The video layer is placed in the center, with its longer sides aligned with the fill area. If the aspect ratio of the video layer is different from that of the fill area, the content of the lower layer is displayed alongside the shorter sides. If there is no lower layer, black bars are displayed instead.</li>
+         * <li><strong>none</strong> (default): no fill. The Layer settings are configured with the image as the target.</li>
+         * <li><strong>fit</strong>: adaptive. The Layer settings are configured with the fill area (box) as the target. The image is scaled based on the original aspect ratio and centered within the fill area (box) using a long-edge alignment method. If the aspect ratio of the fill area does not match the image, the short edges are not filled (the lower Layer image is displayed. If no lower Layer is configured, the default black background is displayed).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +230,7 @@ public class ModifyCasterLayoutRequest extends TeaModel {
         public String fillMode;
 
         /**
-         * <p>The fixed delay of the video layer. This parameter is used to synchronize the video with subtitles. Unit: milliseconds. Default value: <strong>0</strong>. Valid values: <strong>0 to 5000</strong>.</p>
+         * <p>The fixed delay for the video. This can be used for subtitle synchronization. Unit: milliseconds. Default value: <strong>0</strong>. Valid values: <strong>0 to 5000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -231,10 +239,10 @@ public class ModifyCasterLayoutRequest extends TeaModel {
         public Integer fixedDelayDuration;
 
         /**
-         * <p>The normalized value of the height of the video layer.</p>
+         * <p>The normalized height ratio of the Layer element. </p>
          * <ul>
-         * <li>If the FillMode parameter of the video layer is set to none, the width of the video layer is proportionally scaled based on this parameter. The default value is <strong>0</strong>, which indicates that the video layer is not scaled.</li>
-         * <li>If the FillMode parameter of the video layer is set to fit, the value of this parameter is greater than <strong>0</strong>.</li>
+         * <li>If the no-fill mode is used, the width of the element is proportionally scaled based on this height. Default value: <strong>0</strong>, which indicates that the image is displayed at its original size.</li>
+         * <li>If the adaptive mode is used, this field is required and must be greater than <strong>0</strong>. It specifies the normalized height ratio of the fill area (box).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,9 +252,9 @@ public class ModifyCasterLayoutRequest extends TeaModel {
         public Float heightNormalized;
 
         /**
-         * <p>The normalized value of the position of the video layer, in the format of <code>[x,y]</code>. Default value: <code>[0,0]</code>.</p>
+         * <p>The normalized position values <code>[x,y]</code> of the Layer element. Default value: <code>[0,0]</code>.</p>
          * <blockquote>
-         * <p> The values of x and y are normalized.</p>
+         * <p>Note: The x and y values must be normalized.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -256,17 +264,17 @@ public class ModifyCasterLayoutRequest extends TeaModel {
         public java.util.List<Float> positionNormalized;
 
         /**
-         * <p>The reference coordinates of the video layer. Valid values:</p>
+         * <p>The reference coordinate for the position of the element. Valid values:</p>
          * <ul>
-         * <li><strong>topLeft</strong> (default): the upper-left corner</li>
-         * <li><strong>topRight</strong>: the upper-right corner</li>
-         * <li><strong>bottomLeft</strong>: the lower-left corner</li>
-         * <li><strong>bottomRight</strong>: the lower-right corner</li>
-         * <li><strong>center</strong>: the center</li>
-         * <li><strong>topCenter</strong>: the upper center</li>
-         * <li><strong>bottomCenter</strong>: the lower center</li>
-         * <li><strong>leftCenter</strong>: the left center</li>
-         * <li><strong>rightCenter</strong>: the right center</li>
+         * <li><strong>topLeft</strong> (default): top-left.</li>
+         * <li><strong>topRight</strong>: top-right.</li>
+         * <li><strong>bottomLeft</strong>: bottom-left.</li>
+         * <li><strong>bottomRight</strong>: bottom-right.</li>
+         * <li><strong>center</strong>: center.</li>
+         * <li><strong>topCenter</strong>: top-center.</li>
+         * <li><strong>bottomCenter</strong>: bottom-center.</li>
+         * <li><strong>leftCenter</strong>: left-center.</li>
+         * <li><strong>rightCenter</strong>: right-center.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,10 +284,10 @@ public class ModifyCasterLayoutRequest extends TeaModel {
         public String positionRefer;
 
         /**
-         * <p>The normalized value of the width of the video layer.</p>
+         * <p>The normalized width ratio of the Layer element. </p>
          * <ul>
-         * <li>If the FillMode parameter of the video layer is set to none, the height of the video layer is proportionally scaled based on this parameter. The default value is <strong>0</strong>, which indicates that the video layer is not scaled.</li>
-         * <li>If the FillMode parameter of the video layer is set to fit, the value of this parameter is greater than <strong>0</strong>.</li>
+         * <li>If the no-fill mode is used, the height of the element is proportionally scaled based on this width. Default value: <strong>0</strong>, which indicates that the image is displayed at its original size.</li>
+         * <li>If the adaptive mode is used, this field is required and must be greater than <strong>0</strong>. It specifies the normalized width ratio of the fill area (box).</li>
          * </ul>
          * 
          * <strong>example:</strong>

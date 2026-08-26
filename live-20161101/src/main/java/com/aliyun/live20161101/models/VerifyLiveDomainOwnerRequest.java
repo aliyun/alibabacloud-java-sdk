@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyLiveDomainOwnerRequest extends TeaModel {
     /**
-     * <p>The domain name for which you want to verify the ownership. You can specify only one domain name in each request.</p>
+     * <p>The domain name to verify. Only one domain name can be verified at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,14 +17,22 @@ public class VerifyLiveDomainOwnerRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The verification method. Valid values:</p>
      * <ul>
-     * <li>dnsCheck: DNS record verification</li>
-     * <li>fileCheck: file verification</li>
+     * <li><p>dnsCheck: DNS record verification</p>
+     * </li>
+     * <li><p>fileCheck: file verification</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

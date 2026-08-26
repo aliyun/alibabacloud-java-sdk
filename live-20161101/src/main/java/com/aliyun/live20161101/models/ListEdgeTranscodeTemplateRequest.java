@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEdgeTranscodeTemplateRequest extends TeaModel {
     /**
-     * <p>The ID of the data center.</p>
+     * <p>The data center ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class ListEdgeTranscodeTemplateRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The keyword of the query.</p>
+     * <p>The search keyword. Valid values:</p>
      * <ul>
-     * <li>You can specify a template ID for an exact match.</li>
-     * <li>You can also specify a template name for a fuzzy match.</li>
+     * <li>Template ID. Exact match is supported.</li>
+     * <li>Template name. Fuzzy match is supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class ListEdgeTranscodeTemplateRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -48,11 +48,17 @@ public class ListEdgeTranscodeTemplateRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The sorting order of the templates by creation time. Default value: desc. Valid values:</p>
+     * <p>The sorting rule. Templates are sorted by creation time (CreateTime). Default value: desc. Valid values:</p>
      * <ul>
      * <li>desc: descending order.</li>
      * <li>asc: ascending order.</li>
@@ -65,14 +71,14 @@ public class ListEdgeTranscodeTemplateRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The type of edge transcoding. Valid values:</p>
+     * <p>The edge transcoding type. Valid values:</p>
      * <ul>
-     * <li><strong>common</strong>: standard transcoding and Narrowband HD™ 1.0 transcoding.</li>
-     * <li><strong>nbhd-2</strong>: Narrowband HD™ 2.0 transcoding.</li>
-     * <li><strong>ultra-hd</strong>: ultra-high definition transcoding.</li>
+     * <li><strong>common</strong>: default transcoding (standard + Narrowband HD 1.0).</li>
+     * <li><strong>nbhd-2</strong>: Narrowband HD 2.0.</li>
+     * <li><strong>ultra-hd</strong>: ultra-high definition.</li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the query result is filtered based on the type of edge transcoding on which you are granted permissions.</p>
+     * <p>If this parameter is not specified, the system displays transcoding templates for the transcoding types that the user has permissions to access.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,11 +90,11 @@ public class ListEdgeTranscodeTemplateRequest extends TeaModel {
     /**
      * <p>The video encoding format. Valid values:</p>
      * <ul>
-     * <li>H.264</li>
-     * <li>H.265</li>
+     * <li>H.264.</li>
+     * <li>H.265.</li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the query result is filtered based on the video encoding format on which you are granted permissions.</p>
+     * <p>If this parameter is not specified, the system displays transcoding templates for the video encoding formats that the user has permissions to access.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

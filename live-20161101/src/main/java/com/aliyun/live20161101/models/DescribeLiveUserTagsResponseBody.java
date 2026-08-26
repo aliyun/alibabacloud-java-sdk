@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveUserTagsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6B0256B6-2442-5BEF-B8D6-A0C28A801DFC</p>
@@ -42,7 +42,7 @@ public class DescribeLiveUserTagsResponseBody extends TeaModel {
 
     public static class DescribeLiveUserTagsResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -51,7 +51,7 @@ public class DescribeLiveUserTagsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeToutiaoLivePlayRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application to which the stream belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,11 +25,11 @@ public class DescribeToutiaoLivePlayRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time span cannot be greater than 10 hours. If you do not configure StartTime and EndTime, the data within the previous hour is queried. Specify the time in the ISO 8601 standard. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time, and the time span cannot exceed 10 hours. If you do not specify StartTime and EndTime, data for the last hour is queried by default. Specify the time in the ISO 8601 standard. Use UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2017-10-10T20:00:00Z</p>
+     * <p>2017-10-10T21:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -37,11 +37,17 @@ public class DescribeToutiaoLivePlayRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard. The time must be in UTC.</p>
+     * <p>The start of the time range to query. Specify the time in the ISO 8601 standard. Use UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +57,7 @@ public class DescribeToutiaoLivePlayRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

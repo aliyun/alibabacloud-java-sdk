@@ -11,7 +11,7 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>A3136B58-5876-4168-83CA-B562781981A0</p>
+     * <p>A3136B58-5876-4168-83CA-B562********</p>
      */
     @NameInMap("RequestId")
     public String requestId;

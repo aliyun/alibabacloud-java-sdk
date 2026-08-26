@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelMuteAllGroupUserRequest extends TeaModel {
     /**
-     * <p>Interactive message application ID.</p>
+     * <p>Interactive Messages application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class CancelMuteAllGroupUserRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>系统消息扩散类型，取值：</p>
+     * <p>System message diffusion type. Valid values:</p>
      * <ul>
-     * <li><p>0：不扩散。</p>
+     * <li><p>0: No diffusion.</p>
      * </li>
-     * <li><p>1：扩散到指定人。</p>
+     * <li><p>1: Diffusion to specified users.</p>
      * </li>
-     * <li><p>2：扩散到群组。</p>
+     * <li><p>2: Diffusion to the group.</p>
      * </li>
      * </ul>
      * 
@@ -32,7 +32,7 @@ public class CancelMuteAllGroupUserRequest extends TeaModel {
     public Integer broadCastType;
 
     /**
-     * <p>Message group ID.</p>
+     * <p>Group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,10 @@ public class CancelMuteAllGroupUserRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>Operator\&quot;s UserId. &gt; This parameter is required and the user must be the creator of the group.</p>
+     * <p>User ID of the operator.</p>
+     * <blockquote>
+     * <p>This parameter is required. The user must be the creator of the group.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>de1**a0</p>

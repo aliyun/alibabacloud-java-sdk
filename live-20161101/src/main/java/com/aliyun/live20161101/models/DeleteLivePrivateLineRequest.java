@@ -7,8 +7,8 @@ public class DeleteLivePrivateLineRequest extends TeaModel {
     /**
      * <p>The acceleration type. Valid values:</p>
      * <ul>
-     * <li>play: streaming acceleration</li>
-     * <li>publish: stream ingest acceleration</li>
+     * <li>play: streaming acceleration.</li>
+     * <li>publish: stream ingest acceleration.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class DeleteLivePrivateLineRequest extends TeaModel {
     public String accelerationType;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,11 +41,17 @@ public class DeleteLivePrivateLineRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The live stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

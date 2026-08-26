@@ -7,11 +7,17 @@ public class QueryRtcAsrTasksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the task that you want to query. If you do not specify this parameter, all running tasks under your UID are queried.</p>
+     * <p>The ID of the task to query. If you do not specify this parameter, all running tasks under your user ID are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>asr-a6ac15e0-9118-4b4c-9e64-306163a0****</p>

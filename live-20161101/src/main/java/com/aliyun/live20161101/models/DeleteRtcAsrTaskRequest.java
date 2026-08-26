@@ -7,11 +7,17 @@ public class DeleteRtcAsrTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The task ID. You can obtain the ID from the response to the <a href="https://help.aliyun.com/document_detail/2848217.html">CreateRtcAsrTask</a> operation.</p>
+     * <p>The ID of the task. Call the <a href="https://help.aliyun.com/document_detail/2848217.html">CreateRtcAsrTask</a> operation to obtain the task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

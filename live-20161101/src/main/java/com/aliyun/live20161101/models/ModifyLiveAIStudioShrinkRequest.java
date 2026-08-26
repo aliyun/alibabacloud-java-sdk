@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the background material in ApsaraVideo VOD. You can obtain the ID from the ApsaraVideo VOD console.</p>
+     * <p>VOD resource ID of the background material, obtained from the VOD console.</p>
      * 
      * <strong>example:</strong>
      * <p>d0eb493192c771efba644531858c0102</p>
@@ -14,7 +14,7 @@ public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     public String backgroundResourceId;
 
     /**
-     * <p>The URL of the background material.</p>
+     * <p>Resource access URL of the background material.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxx.com/2.mp4">https://xxx.com/2.mp4</a></p>
@@ -23,11 +23,11 @@ public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     public String backgroundResourceUrl;
 
     /**
-     * <p>The type of the background material. Valid values:</p>
+     * <p>Background material type:</p>
      * <ul>
-     * <li>VOD: a video in ApsaraVideo VOD</li>
-     * <li>PIC: an image</li>
-     * <li>LIVE: a live stream</li>
+     * <li>VOD: Video on demand</li>
+     * <li>PIC: Image</li>
+     * <li>LIVE: Live stream</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     public String backgroundType;
 
     /**
-     * <p>The custom description.</p>
+     * <p>Custom description.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>
@@ -46,17 +46,17 @@ public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The preview height. Unit: pixels.</p>
-     * <p>The following preview specifications (width × height) are supported:</p>
+     * <p>Preview screen height, unit: px.</p>
+     * <p>The preview screen width x height only supports the following specifications:</p>
      * <ul>
-     * <li>Landscape low definition 360p (640×360)</li>
-     * <li>Portrait low definition 360p (360×640)</li>
-     * <li>Landscape standard definition 480p (854×480)</li>
-     * <li>Portrait standard definition 480p (480×854)</li>
-     * <li>Landscape high definition 720p (1280×720)</li>
-     * <li>Portrait high definition 720p (720×1280)</li>
-     * <li>Landscape ultra-high definition 1080p (1920×1080)</li>
-     * <li>Portrait ultra-high definition 1080p (1080×1920)</li>
+     * <li>Landscape Smooth 360P 640x360</li>
+     * <li>Portrait Smooth 360P 360x640</li>
+     * <li>Landscape Standard Definition 480P 854x480</li>
+     * <li>Portrait Standard Definition 480P 480x854</li>
+     * <li>Landscape HD 720P 1280x720</li>
+     * <li>Portrait HD 720P 720x1280</li>
+     * <li>Landscape Full HD 1080P 1920x1080</li>
+     * <li>Portrait Full HD 1080P 1080x1920</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,18 +66,18 @@ public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     public Integer height;
 
     /**
-     * <p>The layout information of the chroma-keyed material.</p>
+     * <p>Layout position information of the source stream after matting.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MattingLayout")
     public String mattingLayoutShrink;
 
     /**
-     * <p>The type of chroma key. Valid values:</p>
+     * <p>Matting type:</p>
      * <ul>
-     * <li>green: green-screen chroma key</li>
-     * <li>blue: blue-screen chroma key</li>
-     * <li>complex: background replacement</li>
+     * <li>green: Green screen matting</li>
+     * <li>blue: Blue screen matting</li>
+     * <li>complex: Real-scene matting</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -88,13 +88,13 @@ public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     public String mattingType;
 
     /**
-     * <p>The layout information of the multimedia material.</p>
+     * <p>Layout position information of the multimedia material.</p>
      */
     @NameInMap("MediaLayout")
     public String mediaLayoutShrink;
 
     /**
-     * <p>The ID of the multimedia material in ApsaraVideo VOD. You can obtain the ID from the ApsaraVideo VOD console.</p>
+     * <p>VOD resource ID of the multimedia material, obtained from the VOD console.</p>
      * 
      * <strong>example:</strong>
      * <p>d0eb493192c771efba644531858c01102</p>
@@ -103,7 +103,7 @@ public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     public String mediaResourceId;
 
     /**
-     * <p>The URL of the multimedia material. Specify either this parameter or the MediaResourceId parameter.</p>
+     * <p>Resource access URL of the multimedia material. Either this or the resource ID should be provided.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxx.com/1.mp4">https://xxx.com/1.mp4</a></p>
@@ -112,11 +112,11 @@ public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     public String mediaResourceUrl;
 
     /**
-     * <p>The type of the multimedia material. Valid values:</p>
+     * <p>Multimedia material type:</p>
      * <ul>
-     * <li>VOD: a video in ApsaraVideo VOD</li>
-     * <li>PIC: an image</li>
-     * <li>LIVE: a live stream</li>
+     * <li>VOD: Video on demand</li>
+     * <li>PIC: Image</li>
+     * <li>LIVE: Live stream</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,11 +128,17 @@ public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the virtual studio template. The name is the same as the value of the StudioName parameter that was specified when you called the CreateLiveAIStudio operation to create the virtual studio template.</p>
+     * <p>Virtual studio template name, same as the StudioName parameter in the create API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -142,7 +148,7 @@ public class ModifyLiveAIStudioShrinkRequest extends TeaModel {
     public String studioName;
 
     /**
-     * <p>The preview width. Unit: pixels.</p>
+     * <p>Preview screen width, unit: px.</p>
      * 
      * <strong>example:</strong>
      * <p>1920</p>

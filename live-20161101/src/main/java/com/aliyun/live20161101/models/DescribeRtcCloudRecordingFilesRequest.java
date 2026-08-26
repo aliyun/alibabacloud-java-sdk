@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcCloudRecordingFilesRequest extends TeaModel {
     /**
+     * <p>The task ID. This ID is returned by StartRtcCloudRecording. Only tasks created within the last 3 days can be queried.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsTotalCountResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>String	FCFFE4A4-F34F-4EEF-B401-36A01689AFBC</p>

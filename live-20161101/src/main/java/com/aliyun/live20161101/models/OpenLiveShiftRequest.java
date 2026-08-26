@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenLiveShiftRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can specify an asterisk (\*) as the value to match all applications under the domain name. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the application. The wildcard character (\<em>) is supported. An asterisk (\</em>) represents all applications under the specified domain name. For more information, see <a href="https://help.aliyun.com/document_detail/197397.html">Stream management</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,7 +14,7 @@ public class OpenLiveShiftRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The streaming domain.</p>
+     * <p>The streaming domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class OpenLiveShiftRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The length of a TS segment for HTTP Live Streaming (HLS). Unit: seconds.</p>
+     * <p>The duration of an HTTP Live Streaming (HLS) transport stream (TS) segment. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -33,10 +33,12 @@ public class OpenLiveShiftRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>Specifies whether to disable time shifting for the transcoded stream. Valid values:</p>
+     * <p>Specifies whether to enable time shifting for transcoded streams. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: disables time shifting for the transcoded stream.</li>
-     * <li><strong>false</strong>: enables time shifting for the transcoded stream.</li>
+     * <li><p><strong>true</strong>: Time shifting is disabled for transcoded streams.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Time shifting is enabled for transcoded streams.</p>
+     * </li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -49,11 +51,17 @@ public class OpenLiveShiftRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream. You can specify an asterisk (\*) as the value to match all streams in the application. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the stream. The wildcard character (\<em>) is supported. An asterisk (\</em>) represents all streams under the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/197397.html">Stream management</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>
@@ -62,7 +70,7 @@ public class OpenLiveShiftRequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The duration for which data is retained. Default value: 7. Unit: day.</p>
+     * <p>The data retention period. The default value is 7. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

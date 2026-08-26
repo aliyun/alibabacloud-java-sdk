@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEdgeTranscodeJobResponseBody extends TeaModel {
     /**
-     * <p>The details of the edge transcoding task.</p>
+     * <p>The edge transcoding job.</p>
      */
     @NameInMap("Job")
     public GetEdgeTranscodeJobResponseBodyJob job;
@@ -42,7 +42,7 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
 
     public static class GetEdgeTranscodeJobResponseBodyJob extends TeaModel {
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The time when the job was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-24T16:44:55Z</p>
@@ -51,7 +51,7 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -60,7 +60,7 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The time when the task was last started.</p>
+         * <p>The time when the job was last started.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-25T02:48:58Z</p>
@@ -69,7 +69,7 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
         public String lastStartAt;
 
         /**
-         * <p>The time when the task was last stopped.</p>
+         * <p>The time when the job was last stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-25T05:48:58Z</p>
@@ -78,7 +78,7 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
         public String lastStopAt;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
          * <p>my_job</p>
@@ -87,10 +87,12 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The status of the transcoding job. Valid values:</p>
          * <ul>
-         * <li>0: not started</li>
-         * <li>1: in progress</li>
+         * <li><p>0: The job is not started.</p>
+         * </li>
+         * <li><p>1: The job is running.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The URL of the input stream.</p>
+         * <p>The input stream URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://mydomain/app/stream1</p>
@@ -109,7 +111,7 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
         public String streamInput;
 
         /**
-         * <p>The URL of the output stream.</p>
+         * <p>The output stream URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://testdomain/app/stream2</p>
@@ -118,7 +120,7 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
         public String streamOutput;
 
         /**
-         * <p>The ID of the edge transcoding template used by the task.</p>
+         * <p>The ID of the edge transcoding template used by the job.</p>
          * 
          * <strong>example:</strong>
          * <p>9b1571b513cb44f7a1ba6ae561ff****</p>
@@ -127,7 +129,7 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The name of the edge transcoding template used by the task.</p>
+         * <p>The name of the edge transcoding template used by the job.</p>
          * 
          * <strong>example:</strong>
          * <p>my_template</p>
@@ -138,9 +140,12 @@ public class GetEdgeTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The type of edge transcoding. Valid values:</p>
          * <ul>
-         * <li>common: standard transcoding and Narrowband HD™ 1.0 transcoding</li>
-         * <li>nbhd-2: Narrowband HD™ 2.0 transcoding</li>
-         * <li>ultra-hd: ultra-high definition transcoding</li>
+         * <li><p>common: standard transcoding and Narrowband HD 1.0.</p>
+         * </li>
+         * <li><p>nbhd-2: Narrowband HD 2.0.</p>
+         * </li>
+         * <li><p>ultra-hd: ultra-high definition.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

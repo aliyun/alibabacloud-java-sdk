@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEdgeTranscodeJobRequest extends TeaModel {
     /**
-     * <p>The ID of the data center.</p>
+     * <p>The data center ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateEdgeTranscodeJobRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the edge transcoding task.</p>
+     * <p>The ID of the edge transcoding job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateEdgeTranscodeJobRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The task name.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
      * <p>task1</p>
@@ -36,11 +36,17 @@ public class UpdateEdgeTranscodeJobRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The URL of the input stream.</p>
+     * <p>The input stream URL.</p>
      * 
      * <strong>example:</strong>
      * <p>rtmp://mydomain/app/stream1</p>
@@ -49,7 +55,7 @@ public class UpdateEdgeTranscodeJobRequest extends TeaModel {
     public String streamInput;
 
     /**
-     * <p>The URL of the output stream.</p>
+     * <p>The output stream URL.</p>
      * 
      * <strong>example:</strong>
      * <p>rtmp://testdomain/app/stream2</p>

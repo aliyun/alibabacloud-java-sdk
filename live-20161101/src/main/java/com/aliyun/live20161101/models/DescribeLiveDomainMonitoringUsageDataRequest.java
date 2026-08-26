@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainMonitoringUsageDataRequest extends TeaModel {
     /**
-     * <p>The main streaming domain to query.</p>
+     * <p>The streaming domain to query.</p>
      * <ul>
-     * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
-     * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+     * <li>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</li>
+     * <li>If this parameter is left empty, the merged data of all live streaming domain names is returned by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeLiveDomainMonitoringUsageDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-10T22:00:00Z</p>
@@ -27,7 +27,7 @@ public class DescribeLiveDomainMonitoringUsageDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the monitoring session. If you leave this parameter empty, data of all monitoring sessions is queried by default. Separate multiple session IDs with commas (,).</p>
+     * <p>The monitoring session ID. If this parameter is left empty, the merged data of all monitoring sessions is returned by default. You can specify multiple IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>e62af24d-a354-3b0c-9f1f-da592c4b****</p>
@@ -36,7 +36,7 @@ public class DescribeLiveDomainMonitoringUsageDataRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The time granularity. Valid values: <strong>3600</strong> and <strong>86400</strong>. 3600 specifies that data is queried by hour and 86400 specifies that data is queried by day.</p>
+     * <p>The time granularity for the query. Valid values: <strong>3600</strong> (hour) and <strong>86400</strong> (day).</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -48,7 +48,7 @@ public class DescribeLiveDomainMonitoringUsageDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region of the live center. If you leave this parameter empty, data of all regions is queried by default. Separate multiple regions with commas (,).</p>
+     * <p>The live center region. If this parameter is left empty, the merged data of all regions is returned by default. You can specify multiple regions. Separate multiple regions with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -56,11 +56,17 @@ public class DescribeLiveDomainMonitoringUsageDataRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The key that is used to group data. Valid values: <strong>domain</strong>, <strong>region</strong>, <strong>instance</strong>, and <strong>resolution</strong>. Default value: <strong>resolution</strong>. resolution specifies that data is grouped by resolution. Separate multiple values with commas (,).</p>
+     * <p>The grouping key. Default value: <strong>resolution</strong>, which indicates grouping by resolution. Valid values: <strong>domain</strong>, <strong>region</strong>, <strong>instance</strong>, and <strong>resolution</strong>. You can specify multiple values. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>resolution</p>
@@ -69,11 +75,10 @@ public class DescribeLiveDomainMonitoringUsageDataRequest extends TeaModel {
     public String splitBy;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * <p>The start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
      * <ul>
-     * <li>The time must be in UTC.</li>
      * <li>The minimum data granularity is 1 hour.</li>
-     * <li>If you leave this parameter empty, data in the previous 24 hours is queried.</li>
+     * <li>If this parameter is not specified, data of the last 24 hours is returned by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>

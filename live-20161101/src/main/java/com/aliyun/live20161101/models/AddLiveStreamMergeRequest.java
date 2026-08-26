@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveStreamMergeRequest extends TeaModel {
     /**
-     * <p>The name of the application that generates the output stream. The value must be the same as the application name in the ingest URL of the output stream. Otherwise, the configuration does not take effect. You cannot set the value to an asterisk (\*).</p>
+     * <p>The AppName of the output stream. For the configuration to take effect, this AppName must match the one in the ingest URL. Wildcards (<code>*</code>) are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end time of the stream mixing.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the stream merge.</p>
+     * <p>The time must be in UTC and specified in the ISO 8601 standard format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
      * <blockquote>
-     * <p> The interval between the start time and the end time must be within 7 days.</p>
+     * <p>The interval between <code>StartTime</code> and <code>EndTime</code> cannot exceed 7 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The name of the application that generates the input primary stream. The value must be the same as the application name that is specified in the ingest URL of the primary stream. Otherwise, the configuration does not take effect.</p>
+     * <p>The AppName of the primary input stream. This value must match the AppName in the ingest URL for the primary stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     public String inAppName1;
 
     /**
-     * <p>The name of the application that generates the input secondary stream. The value must be the same as the application name that is specified in the ingest URL of the secondary stream. Otherwise, the configuration does not take effect.</p>
+     * <p>The AppName of the backup input stream. This value must match the AppName in the ingest URL for the backup stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     public String inAppName2;
 
     /**
-     * <p>The name of the input primary stream. The value must be the same as the stream name that is specified in the ingest URL of the primary stream. Otherwise, the configuration does not take effect.</p>
+     * <p>The StreamName of the primary input stream. This value must match the StreamName in the ingest URL for the primary stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     public String inStreamName1;
 
     /**
-     * <p>The name of the input secondary stream. The value must be the same as the stream name that is specified in the ingest URL of the secondary stream. Otherwise, the configuration does not take effect.</p>
+     * <p>The StreamName of the backup input stream. This value must match the StreamName in the ingest URL for the backup stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,9 +78,42 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     @NameInMap("InStreamName2")
     public String inStreamName2;
 
+    /**
+     * <p>The engine to use for stream merging.</p>
+     * <ul>
+     * <li><p><code>on</code>: The new liveswitch engine.</p>
+     * </li>
+     * <li><p><code>off</code>: A legacy engine (such as rtmpr). This is the default.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("LiveMerger")
     public String liveMerger;
 
+    /**
+     * <p>Parameters that define the failover conditions. A failover is triggered when one of the following conditions is met:</p>
+     * <ol>
+     * <li><p>An explicit stream disconnection occurs, such as an end-of-file (EOF) or network error.</p>
+     * </li>
+     * <li><p>The stutter rate exceeds 60% in the last 5 seconds.</p>
+     * </li>
+     * <li><p>A stream pulling timeout occurs if no frame data is received for 2 consecutive seconds.</p>
+     * </li>
+     * <li><p>The average frame rate over the period specified by <code>ali_max_no_frame_timeout</code> drops below <code>ali_low_frame_rate_threshold</code>. This condition applies even if there is no stream disconnection or stuttering. If you set <code>ali_max_no_frame_timeout</code>, the timeout for Condition 3 is also updated to this value.</p>
+     * </li>
+     * <li><p>If <code>block_all_jitter</code> is set to <code>1</code>, Conditions 2, 3, and 4 do not apply.</p>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li><code>ali_max_no_frame_timeout</code>: an integer from 2 to 10.<br><code>ali_low_frame_rate_threshold</code>: an integer from 1 to 200.<br><code>block_all_jitter</code>: <code>0</code> or <code>1</code>.<br><br></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ali_low_frame_rate_threshold=10&amp;ali_max_no_frame_timeout=5&amp;block_all_jitter=0</p>
+     */
     @NameInMap("MergeParameters")
     public String mergeParameters;
 
@@ -88,10 +121,12 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The streaming protocol. Valid values:</p>
+     * <p>The live stream protocol for the input streams. Valid values:</p>
      * <ul>
-     * <li><strong>rtmp</strong>: This is the default value.</li>
-     * <li><strong>rtc</strong></li>
+     * <li><p><strong>rtmp</strong> (Default)</p>
+     * </li>
+     * <li><p><strong>rtc</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,6 +135,12 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -110,8 +151,8 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     public String selectStreamName;
 
     /**
-     * <p>The start time of the stream mixing.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time of the stream merge.</p>
+     * <p>The time must be in UTC and specified in the ISO 8601 standard format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,7 +162,7 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the output stream. The value must be the same as the stream name in the ingest URL of the output stream. Otherwise, the configuration does not take effect. You cannot set the value to an asterisk (\*).</p>
+     * <p>The StreamName of the output stream. For the configuration to take effect, this StreamName must match the one in the ingest URL. Wildcards (<code>*</code>) are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

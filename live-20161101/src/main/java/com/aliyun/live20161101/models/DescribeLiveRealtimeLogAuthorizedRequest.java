@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveRealtimeLogAuthorizedRequest extends TeaModel {
     /**
-     * <p>This parameter has no practical significance.</p>
+     * <p>This parameter is not used.</p>
      * 
      * <strong>example:</strong>
-     * <p>none</p>
+     * <p>无</p>
      */
     @NameInMap("LiveOpenapiReserve")
     public String liveOpenapiReserve;
@@ -16,6 +16,12 @@ public class DescribeLiveRealtimeLogAuthorizedRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

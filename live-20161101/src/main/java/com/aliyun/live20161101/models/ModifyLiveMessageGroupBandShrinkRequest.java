@@ -15,7 +15,7 @@ public class ModifyLiveMessageGroupBandShrinkRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Specifies whether to mute all users.</p>
+     * <p>Specifies whether to mute all users in the group.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,13 +24,13 @@ public class ModifyLiveMessageGroupBandShrinkRequest extends TeaModel {
     public Boolean bannedAll;
 
     /**
-     * <p>The ID of the user whom you want to mute. Separate multiple user IDs with commas (,). You can specify up to 30 users IDs.</p>
+     * <p>The list of users to mute. You can specify up to 30 users. Separate multiple user IDs with a comma (,).</p>
      */
     @NameInMap("BannnedUsers")
     public String bannnedUsersShrink;
 
     /**
-     * <p>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</p>
+     * <p>The data center. This must be the same data center specified in the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> call. Valid values: \<code>cn-shanghai\\</code> (Shanghai) and \<code>ap-southeast-1\\</code> (Singapore).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -39,7 +39,7 @@ public class ModifyLiveMessageGroupBandShrinkRequest extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The ID of the user whom you do not want to mute when you set the BannedAll parameter to true. Separate multiple user IDs with commas (,). You can specify up to 30 users IDs.</p>
+     * <p>The list of users who are not muted when all users in the group are muted. You can specify up to 30 users. Separate multiple user IDs with a comma (,).</p>
      */
     @NameInMap("ExceptUsers")
     public String exceptUsersShrink;

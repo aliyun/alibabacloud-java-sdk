@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeToutiaoLivePublishResponseBody extends TeaModel {
     /**
-     * <p>The stream ingest details.</p>
+     * <p>The details of the stream ingest information.</p>
      */
     @NameInMap("Content")
     public java.util.List<DescribeToutiaoLivePublishResponseBodyContent> content;
@@ -59,7 +59,7 @@ public class DescribeToutiaoLivePublishResponseBody extends TeaModel {
 
     public static class DescribeToutiaoLivePublishResponseBodyContent extends TeaModel {
         /**
-         * <p>The name of the application to which the live stream belongs.</p>
+         * <p>The name of the application to which the stream belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>liveApp****</p>
@@ -68,7 +68,7 @@ public class DescribeToutiaoLivePublishResponseBody extends TeaModel {
         public String app;
 
         /**
-         * <p>The bitrate. Unit: bit/s.</p>
+         * <p>The bitrate in bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>261587</p>
@@ -86,7 +86,7 @@ public class DescribeToutiaoLivePublishResponseBody extends TeaModel {
         public Float bwDiff;
 
         /**
-         * <p>The name of the content delivery network (CDN) service.</p>
+         * <p>The CDN name.</p>
          * 
          * <strong>example:</strong>
          * <p>ali</p>
@@ -122,7 +122,7 @@ public class DescribeToutiaoLivePublishResponseBody extends TeaModel {
         public Float fps;
 
         /**
-         * <p>The name of the ingested stream.</p>
+         * <p>The stream name.</p>
          * 
          * <strong>example:</strong>
          * <p>liveStream****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMeterLiveBypassDurationRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can view the application ID on the <a href="https://help.aliyun.com/document_detail/2355593.html">Applications</a> page in the ApsaraVideo Real-time Communication (ARTC) section of the ApsaraVideo Live console.</p>
+     * <p>The application ID. You can view the application ID on the <a href="https://help.aliyun.com/document_detail/2355593.html">Application Management</a> page of ApsaraVideo Real-time Communication.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeMeterLiveBypassDurationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The end time must be later than the start time. The time range that can be specified is greater than or equal to 5 minutes and less than or equal to 31 days.</p>
+     * <p>The end time of the query. The end time must be later than the start time. The query granularity must be ≥ 5 minutes and ≤ 31 days. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +25,13 @@ public class DescribeMeterLiveBypassDurationRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+     * <p>The time granularity for querying data. Unit: seconds. Valid values:</p>
      * <ul>
      * <li>300</li>
      * <li>3600</li>
      * <li>86400</li>
      * </ul>
-     * <p>If you specify an invalid value or do not specify this parameter, the default value 3600 is used.</p>
+     * <p>If this parameter is not specified or set to an unsupported value, the default value 3600 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>86400</p>
@@ -40,7 +40,7 @@ public class DescribeMeterLiveBypassDurationRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

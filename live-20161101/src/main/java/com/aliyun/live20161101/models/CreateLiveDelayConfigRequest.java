@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLiveDelayConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can specify an asterisk (\*) as the value to match all applications that belong to the domain name.</p>
+     * <p>The AppName of the live stream. You can specify an asterisk (\*) to match all AppNames under the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateLiveDelayConfigRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The duration for which the playback of the live stream is delayed. The value must be an integer. Valid values: 16 to 3600. Unit: seconds.</p>
+     * <p>The duration for which the playback is delayed. The value must be an integer. Valid values: 16 to 3600. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,11 +37,17 @@ public class CreateLiveDelayConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream. You can use the wildcard (\*) to specify all streams of the application.</p>
+     * <p>The name of the live stream. You can use the wildcard (\*) to specify all StreamNames under the AppName.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,9 +59,12 @@ public class CreateLiveDelayConfigRequest extends TeaModel {
     /**
      * <p>The trigger mode. Valid values:</p>
      * <ul>
-     * <li><strong>PUBLISH_ONLY</strong>: Stream delay can be triggered only by specifying the stream delay parameter in the ingest URL.</li>
-     * <li><strong>CONFIG_ONLY</strong>: Stream delay can be triggered only by the stream delay configuration.</li>
-     * <li><strong>PUBLISH_CONFIG</strong>: Stream delay can be triggered by the stream delay parameter in the ingest URL or the stream delay configuration. The stream delay parameter takes precedence over the stream delay configuration.</li>
+     * <li><p><strong>PUBLISH_ONLY</strong>: Stream delay is triggered only by relevant parameters in the ingest URL.</p>
+     * </li>
+     * <li><p><strong>CONFIG_ONLY</strong>: Stream delay is triggered only by the configuration. Parameters in the ingest URL are ignored.</p>
+     * </li>
+     * <li><p><strong>PUBLISH_CONFIG</strong>: Stream delay is triggered by both the configuration and parameters in the ingest URL. Parameters in the ingest URL have a higher priority than the configuration.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

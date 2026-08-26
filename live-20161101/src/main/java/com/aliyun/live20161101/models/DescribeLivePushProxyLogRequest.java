@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLivePushProxyLogRequest extends TeaModel {
     /**
-     * <p>The ingest domain. You can specify only one domain in each request.</p>
+     * <p>The ingest domain. Multi-domain queries are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class DescribeLivePushProxyLogRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Get the log end time.
-     * Date format follows the ISO8601 representation and uses UTC+0 time, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end of the time range to query logs.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-09-20T09:00:00Z</p>
@@ -28,7 +28,7 @@ public class DescribeLivePushProxyLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. Default value: 1. Valid values: [1, 9223372036854775807].</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -37,7 +37,7 @@ public class DescribeLivePushProxyLogRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: [1,1000]. Default value: 300.</p>
+     * <p>The page size. Valid values: [1, 1000\]. Default value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -45,11 +45,18 @@ public class DescribeLivePushProxyLogRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Get the log start time in ISO8601 format with UTC+0 timezone, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The beginning of the time range to query logs.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-09-20T08:00:00Z</p>

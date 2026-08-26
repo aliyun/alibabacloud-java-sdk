@@ -15,7 +15,7 @@ public class SetLiveStreamsNotifyUrlConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Exception event callback URL.</p>
+     * <p>The callback URL for exception events.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://4a7e5f08.r37.cpolar.top/live/Rsssd/call-back/streamStart">https://4a7e5f08.r37.cpolar.top/live/Rsssd/call-back/streamStart</a></p>
@@ -26,12 +26,14 @@ public class SetLiveStreamsNotifyUrlConfigRequest extends TeaModel {
     /**
      * <p>The authentication key.</p>
      * <blockquote>
-     * <p> This parameter is required if you set the NotifyReqAuth parameter to <strong>yes</strong>.</p>
+     * <p>This parameter is required when the NotifyReqAuth request parameter is set to <strong>yes</strong>.</p>
      * </blockquote>
      * <p>Value requirements:</p>
      * <ul>
-     * <li>The key must be 16 to 64 characters in length.</li>
-     * <li>The key can contain letters and digits.</li>
+     * <li><p>16 to 64 characters in length.</p>
+     * </li>
+     * <li><p>Supports uppercase letters, lowercase letters, and digits.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,15 +43,15 @@ public class SetLiveStreamsNotifyUrlConfigRequest extends TeaModel {
     public String notifyAuthKey;
 
     /**
-     * <p>Specifies whether to enable callback authentication. Valid values:</p>
+     * <p>Specifies whether to enable authentication. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: enables callback authentication. If you set this parameter to <strong>yes</strong>, you must also specify the NotifyAuthKey parameter.</li>
-     * <li><strong>no</strong>: disables callback authentication.</li>
+     * <li><strong>yes</strong>: Enabled. If you set this parameter to <strong>yes</strong>, you must also set the NotifyAuthKey request parameter.</li>
+     * <li><strong>no</strong>: Disabled.</li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the default value <strong>no</strong> is used.</p>
+     * <p>If this parameter is not specified, the default value is <strong>no</strong>.</p>
      * </blockquote>
-     * <p>For information about the authentication logic, see <strong>Authentication for stream ingest callbacks</strong>.</p>
+     * <p>For the authentication logic, see <strong>Stream ingest callback authentication description</strong> below.</p>
      * 
      * <strong>example:</strong>
      * <p>yes</p>
@@ -58,7 +60,7 @@ public class SetLiveStreamsNotifyUrlConfigRequest extends TeaModel {
     public String notifyReqAuth;
 
     /**
-     * <p>The URL to which the stream ingest callbacks are sent.</p>
+     * <p>The URL to which live stream information is pushed.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></p>
@@ -69,6 +71,12 @@ public class SetLiveStreamsNotifyUrlConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The callback URL for stream switching information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://guide.aliyundoc.com/switchnotify">http://guide.aliyundoc.com/switchnotify</a></p>
+     */
     @NameInMap("SwitchNotifyUrl")
     public String switchNotifyUrl;
 

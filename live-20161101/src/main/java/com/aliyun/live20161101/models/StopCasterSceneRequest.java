@@ -6,11 +6,14 @@ import com.aliyun.tea.*;
 public class StopCasterSceneRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
-     * <p>If you create a production studio through the <a href="~~69338#doc-api-live-CreateCaster~~" title="Creates a production studio.">CreateCaster</a> interface, check the value of the CasterId parameter in the response.</p>
-     * <p>If you create a production studio through the ApsaraVideo Live Console, log in to the console, then check the ID of the production studio through the following path:</p>
-     * <p>Production Studios &gt; Production Studio Management</p>
+     * <ul>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value that is returned in the response.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, go to the <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> page to view the ID.</p>
+     * </li>
+     * </ul>
      * <blockquote>
-     * <p> The CasterId is reflected in the Name column on the Production Studio Management page.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +37,7 @@ public class StopCasterSceneRequest extends TeaModel {
 
     /**
      * <p>The ID of the scene.</p>
-     * <p>This operation is available only when the scene is a preview scene. For more information about the scene types, see <a href="https://help.aliyun.com/document_detail/60262.html">Query the scenes of production studios</a>.</p>
+     * <p>This operation is available only for preview (PVW) scenes. For more information about scene types, see <a href="https://help.aliyun.com/document_detail/2848102.html">Query production studio scenes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

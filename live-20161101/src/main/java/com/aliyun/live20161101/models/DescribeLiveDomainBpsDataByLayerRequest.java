@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainBpsDataByLayerRequest extends TeaModel {
     /**
-     * <p>The streaming domain. You can specify multiple domain names by separating them with commas (,). If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</p>
+     * <p>The streaming domain. You can specify multiple domain names separated by commas (,). If this parameter is left empty, the aggregated data of all domain names is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>pull.aliyundoc.com</p>
@@ -14,7 +14,7 @@ public class DescribeLiveDomainBpsDataByLayerRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be displayed in UTC.</p>
+     * <p>The end of the time range to query, in the format of <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC). The end time must be later than the start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-16T16:59:59Z</p>
@@ -23,22 +23,21 @@ public class DescribeLiveDomainBpsDataByLayerRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+     * <p>The time granularity of the data to query. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li><strong>300</strong></li>
-     * <li><strong>3600</strong></li>
-     * <li><strong>86400</strong></li>
-     * </ul>
+     * <li><p><strong>300</strong></p>
+     * </li>
+     * <li><p><strong>3600</strong></p>
+     * </li>
+     * <li><p><strong>86400</strong></p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If the time range specified by the StartTime and EndTime parameters is smaller than or equal to 3 days, the supported time granularities include 300, 3,600, and 86,400 seconds.</p>
-     * </li>
-     * <li><p>If the time range is larger than 3 days but smaller than or equal to 31 days, the supported time granularities include 3,600 and 86,400 seconds.</p>
-     * </li>
-     * <li><p>If the time range is larger than 31 days, the supported time granularity is 86,400 seconds.</p>
-     * </li>
-     * <li><p>If you specify an invalid value or do not specify this parameter, the default time granularity of 300 seconds is used.</p>
+     * <li>Time range ≤ 3 days: Valid data timestamp granularity values are 300, 3600, and 86400.</li>
+     * <li>3 days &lt; time range ≤ 31 days: Valid data timestamp granularity values are 3600 and 86400.</li>
+     * <li>Time range &gt; 31 days: The only valid value is 86400.</li>
+     * <li>If this parameter is not specified or the specified value is not supported, the default value 300 is used.</li>
+     * </ul>
+     * </blockquote>
      * </li>
      * </ul>
      * 
@@ -49,9 +48,9 @@ public class DescribeLiveDomainBpsDataByLayerRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The name of the Internet service provider (ISP). If you do not specify this parameter, the data of all ISPs is returned.</p>
+     * <p>The name of the Internet service provider (ISP) in English. If this parameter is not specified, data for all ISPs is returned.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeLiveRegionAndIsp</a> operation to query available regions and ISPs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeLiveRegionAndIsp</a> operation to query the English names of regions and ISPs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,12 +60,16 @@ public class DescribeLiveDomainBpsDataByLayerRequest extends TeaModel {
     public String ispNameEn;
 
     /**
-     * <p>The layer at which you want to query the data. Valid values:</p>
+     * <p>The query dimension. Valid values:</p>
      * <ul>
-     * <li>IPv4 and IPv6 (network layer)</li>
-     * <li>http, https, and quic (application layer)</li>
-     * <li>all (default)</li>
+     * <li><p>Network layer (IPv4, IPv6)</p>
+     * </li>
+     * <li><p>Application layer (http, https, quic)</p>
+     * </li>
+     * <li><p>all (default)</p>
+     * </li>
      * </ul>
+     * <p>Valid values: all | IPv4 | IPv6 | http | https | quic (case-sensitive).</p>
      * 
      * <strong>example:</strong>
      * <p>all</p>
@@ -75,9 +78,9 @@ public class DescribeLiveDomainBpsDataByLayerRequest extends TeaModel {
     public String layer;
 
     /**
-     * <p>The name of the region. If you do not specify this parameter, the data of all regions is returned.</p>
+     * <p>The name of the region in English. If this parameter is not specified, data for all regions is returned.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeLiveRegionAndIsp</a> operation to query available regions and ISPs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeLiveRegionAndIsp</a> operation to query the English names of regions and ISPs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -89,13 +92,19 @@ public class DescribeLiveDomainBpsDataByLayerRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be displayed in UTC.</p>
+     * <p>The beginning of the time range to query, in the format of <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC).</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the data of the last 24 hours is returned by default. The minimum time granularity is 5 minutes.</p>
+     * <p>If this parameter is not specified, data for the last 24 hours is returned by default. The minimum data granularity is 5 minutes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -8,10 +8,12 @@ public class DescribeLivePackageConfigResponseBody extends TeaModel {
     public DescribeLivePackageConfigResponseBodyLivePackageConfigList livePackageConfigList;
 
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong> (default): ascending order</li>
-     * <li><strong>desc</strong>: descending order</li>
+     * <li><p><strong>asc</strong> (default): ascending order.</p>
+     * </li>
+     * <li><p><strong>desc</strong>: descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class DescribeLivePackageConfigResponseBody extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +32,7 @@ public class DescribeLivePackageConfigResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,7 +50,7 @@ public class DescribeLivePackageConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of live stream encapsulation configurations.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

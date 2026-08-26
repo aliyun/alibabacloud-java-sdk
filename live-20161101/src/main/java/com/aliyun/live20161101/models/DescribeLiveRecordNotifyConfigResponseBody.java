@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
     /**
-     * <p>The configuration of callbacks for live stream recording.</p>
+     * <p>The recording callback configuration for the domain name.</p>
      */
     @NameInMap("LiveRecordNotifyConfig")
     public DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig liveRecordNotifyConfig;
@@ -42,7 +42,7 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
 
     public static class DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig extends TeaModel {
         /**
-         * <p>The main streaming domain.</p>
+         * <p>The streaming domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -51,10 +51,12 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>Indicates whether recording status callbacks are enabled. Valid values:</p>
+         * <p>Specifies whether to receive callbacks for the status of recording tasks. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: Yes.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): No.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -63,14 +65,32 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
         @NameInMap("NeedStatusNotify")
         public Boolean needStatusNotify;
 
+        /**
+         * <p>The authentication key for the callback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KbT8mN2pQ9rS4vX7wZ1aB3cE5fG6hJ8kL</p>
+         */
         @NameInMap("NotifyAuthKey")
         public String notifyAuthKey;
 
+        /**
+         * <p>Specifies whether to enable callback authentication. Valid values:</p>
+         * <ul>
+         * <li><p><strong>yes</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>no</strong>: disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>no</p>
+         */
         @NameInMap("NotifyReqAuth")
         public Boolean notifyReqAuth;
 
         /**
-         * <p>The recording callback URL.</p>
+         * <p>The webhook address for recording callbacks.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://learn.aliyundoc.com/examplecallback.action">http://learn.aliyundoc.com/examplecallback.action</a></p>

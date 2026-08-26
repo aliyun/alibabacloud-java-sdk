@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveSnapshotDetectPornConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name in the ingest URL. Otherwise, the configuration does not take effect. The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (<em>). The name cannot start with a hyphen (-) or underscore (</em>). You can also specify an asterisk (\*) as the value to match all applications.</p>
+     * <p>The name of the application to which the stream belongs. The AppName value must match the AppName in the ingest URL for the template to take effect. The value can be up to 255 characters in length and can contain digits, uppercase and lowercase letters, hyphens (-), and underscores (_). Hyphens and underscores cannot be the first character. The value can also be a single asterisk (*) to match all AppName values.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateLiveSnapshotDetectPornConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain of the streamer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateLiveSnapshotDetectPornConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The interval at which snapshots are captured from the live stream. Valid values: <strong>5 to 3600</strong>. Unit: seconds.</p>
+     * <p>The sampling interval. Valid values: <strong>5 to 3600</strong>. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -43,7 +43,7 @@ public class UpdateLiveSnapshotDetectPornConfigRequest extends TeaModel {
     public String ossBucket;
 
     /**
-     * <p>The endpoint of the Object Storage Service (OSS) bucket.</p>
+     * <p>The endpoint of the OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-oss-****.aliyuncs.com</p>
@@ -52,7 +52,7 @@ public class UpdateLiveSnapshotDetectPornConfigRequest extends TeaModel {
     public String ossEndpoint;
 
     /**
-     * <p>The name of the snapshot that stores violations such as pornographic content and politically sensitive content.</p>
+     * <p>The name of the stored image that contains violations such as pornography or politically sensitive content.</p>
      * 
      * <strong>example:</strong>
      * <p>{liveApp****}/{liveStream****}/{Date}/{Hour}/{Minute}_{Second}.jpg</p>
@@ -64,7 +64,7 @@ public class UpdateLiveSnapshotDetectPornConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The moderation scenario array.</p>
+     * <p>The array of detection scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>porn</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLivePackageConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>72ABAD7B-B14C-52DE-B6C6-C639FECAF5AD</p>

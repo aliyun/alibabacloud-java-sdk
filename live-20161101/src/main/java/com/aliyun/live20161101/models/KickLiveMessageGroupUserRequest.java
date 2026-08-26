@@ -9,7 +9,7 @@ public class KickLiveMessageGroupUserRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>coims-****</p>
+     * <p>demo</p>
      */
     @NameInMap("AppId")
     public String appId;

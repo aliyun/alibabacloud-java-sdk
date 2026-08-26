@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMessageAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class QueryMessageAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>Return result.</p>
      */
     @NameInMap("Result")
     public java.util.List<QueryMessageAppResponseBodyResult> result;
@@ -42,13 +42,13 @@ public class QueryMessageAppResponseBody extends TeaModel {
 
     public static class QueryMessageAppResponseBodyResultAppList extends TeaModel {
         /**
-         * <p>The configurations of the application.</p>
+         * <p>Application configuration.</p>
          */
         @NameInMap("AppConfig")
         public java.util.Map<String, String> appConfig;
 
         /**
-         * <p>The ID of the interactive messaging application.</p>
+         * <p>Interactive Messages application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>VKL3***</p>
@@ -57,7 +57,7 @@ public class QueryMessageAppResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the interactive messaging application.</p>
+         * <p>Interactive Messages application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -66,7 +66,7 @@ public class QueryMessageAppResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The time when the interactive messaging application was created. The time is displayed in UTC.</p>
+         * <p>UTC timestamp when the application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>502280113</p>
@@ -75,13 +75,13 @@ public class QueryMessageAppResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The extended field.</p>
+         * <p>Extension field.</p>
          */
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
         /**
-         * <p>The status of the interactive message application. A value of <strong>1</strong> indicates that the application is normal.</p>
+         * <p>Interactive Messages application status. A value of <strong>1</strong> indicates that the application status is Normal.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -146,16 +146,16 @@ public class QueryMessageAppResponseBody extends TeaModel {
 
     public static class QueryMessageAppResponseBodyResult extends TeaModel {
         /**
-         * <p>Details about the interactive messaging applications.</p>
+         * <p>Interactive Messages application list.</p>
          */
         @NameInMap("AppList")
         public java.util.List<QueryMessageAppResponseBodyResultAppList> appList;
 
         /**
-         * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+         * <p>Indicates whether there is a next page. Valid values:</p>
          * <ul>
-         * <li>true: The current page is followed by another page.</li>
-         * <li>false: The current page is not followed by another page.</li>
+         * <li>true: There is a next page.</li>
+         * <li>false: There is no next page.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class QueryMessageAppResponseBody extends TeaModel {
         public Boolean hasMore;
 
         /**
-         * <p>The total number of applications returned.</p>
+         * <p>Total number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

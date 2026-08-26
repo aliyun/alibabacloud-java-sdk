@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLivePushProxyUsageDataResponseBody extends TeaModel {
     /**
-     * <p>The end time.</p>
+     * <p>The end time. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-10-10T21:00:00Z</p>
@@ -26,7 +26,7 @@ public class DescribeLivePushProxyUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-10-10T20:00:00Z</p>

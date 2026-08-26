@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamTranscodeStreamNumResponseBody extends TeaModel {
     /**
-     * <p>The number of streams for which transcoding is triggered by stream pulling.</p>
+     * <p>The number of streams that triggered transcoding.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeLiveStreamTranscodeStreamNumResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of streams.</p>
+     * <p>The total number of transcoding streams.</p>
      * 
      * <strong>example:</strong>
      * <p>57</p>
@@ -32,13 +32,13 @@ public class DescribeLiveStreamTranscodeStreamNumResponseBody extends TeaModel {
     public Long total;
 
     /**
-     * <p>The details about the transcoding templates.</p>
+     * <p>The transcoding template data.</p>
      */
     @NameInMap("TranscodeStreamCountDetails")
     public java.util.List<DescribeLiveStreamTranscodeStreamNumResponseBodyTranscodeStreamCountDetails> transcodeStreamCountDetails;
 
     /**
-     * <p>The number of streams that are transcoded.</p>
+     * <p>The number of transcoded streams.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -110,7 +110,7 @@ public class DescribeLiveStreamTranscodeStreamNumResponseBody extends TeaModel {
 
     public static class DescribeLiveStreamTranscodeStreamNumResponseBodyTranscodeStreamCountDetails extends TeaModel {
         /**
-         * <p>The number of streams that use the transcoding template.</p>
+         * <p>The number of streams for the transcoding template.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

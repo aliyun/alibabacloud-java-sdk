@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopRtcCloudRecordingResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>58-5876-</strong></strong>-83CA-B56278</strong>****</p>
      */
@@ -12,6 +14,8 @@ public class StopRtcCloudRecordingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>73-8501-</strong></strong>-8ac1-72295a</strong>****</p>
      */

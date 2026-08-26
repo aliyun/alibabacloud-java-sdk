@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeStudioLayoutsRequest extends TeaModel {
     /**
-     * <p>The ID of the production studio instance.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If you call the <a href="https://help.aliyun.com/document_detail/69338.html">CreateCaster</a> operation to create a production studio instance, you can obtain the instance ID from the CasterId parameter in the response.</li>
-     * <li>If you create a production studio instance in the ApsaraVideo Live console, perform the following operations to obtain the instance ID: Log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane. Then, view the instance ID on the <strong>Production Studio Management</strong> page.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId parameter value returned by the CreateCaster operation.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, go to <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value displayed in the Name column for an instance on the Production Studio Management page is the ID of the instance.</p>
+     * <ul>
+     * <li>The production studio name in the production studio list on the Cloud Production Studio page is the production studio ID.</li>
+     * <li>Only virtual studio production studios (NormType=4) are supported. If you pass in a production studio ID of another type, InvalidCaster.NotFound is returned. Call DescribeCasters and filter by NormType=4 to obtain the virtual studio production studio ID.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,9 +27,9 @@ public class DescribeStudioLayoutsRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the layout.</p>
-     * <p>You can specify multiple layout IDs and separate them with commas (,). If you leave this parameter empty, all layouts of the production studio are returned.</p>
-     * <p>If you call the <a href="https://help.aliyun.com/document_detail/215388.html">AddStudioLayout</a> operation to configure a layout for a virtual studio, you can obtain the ID of the layout from the LayoutId parameter in the response.</p>
+     * <p>The layout ID.
+     * Separate multiple layout IDs with commas (,). If this parameter is not specified, all layouts under the production studio are returned.</p>
+     * <p>If you added virtual studio layout settings by calling the <a href="https://help.aliyun.com/document_detail/2848062.html">AddStudioLayout</a> operation, check the LayoutId parameter value returned by the AddStudioLayout operation.</p>
      * 
      * <strong>example:</strong>
      * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
@@ -35,6 +40,12 @@ public class DescribeStudioLayoutsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

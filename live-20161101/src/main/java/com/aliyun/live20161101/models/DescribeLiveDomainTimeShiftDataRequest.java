@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainTimeShiftDataRequest extends TeaModel {
     /**
-     * <p>The main streaming domain to query.</p>
+     * <p>The streaming domain to query.</p>
+     * <blockquote>
      * <ul>
-     * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
-     * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+     * <li>When you specify DomainName, make sure that the specified domain is a live streaming domain and that the user calling this operation has permissions on the specified domain.</li>
+     * <li>You can specify a single domain or multiple domains. Separate multiple domains with commas (,).</li>
+     * <li>If this parameter is left empty, the merged data of all live streaming domains is returned by default.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -18,7 +21,7 @@ public class DescribeLiveDomainTimeShiftDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-03-03T02:00:00Z</p>
@@ -27,13 +30,22 @@ public class DescribeLiveDomainTimeShiftDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+     * <p>The time granularity of the queried data. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li>300</li>
-     * <li>3600</li>
-     * <li>86400</li>
+     * <li><ol start="300">
+     * <li></li>
+     * </ol>
+     * </li>
+     * <li><ol start="3600">
+     * <li></li>
+     * </ol>
+     * </li>
+     * <li><ol start="86400">
+     * <li></li>
+     * </ol>
+     * </li>
      * </ul>
-     * <p>If you do not specify this parameter or specify an invalid value, the default value 300 is used.</p>
+     * <p>If you do not specify this parameter or specify an unsupported value, the default value 300 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -44,19 +56,23 @@ public class DescribeLiveDomainTimeShiftDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The minimum data granularity is 5 minutes.</p>
-     * </li>
-     * <li><p>If you leave this parameter empty, data in the last 24 hours is queried.</p>
-     * </li>
+     * <li>The minimum data granularity is 5 minutes.</li>
+     * <li>If you do not specify this parameter, data of the last 24 hours is returned by default.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2021-03-03T00:00:00Z</p>

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</p>
+     * <p><strong><strong>41F1-04A5-496F-8C8D-634BDBE6</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The tags of the resource.</p>
+     * <p>A list of resources and their associated tags.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<DescribeLiveTagResourcesResponseBodyTagResources> tagResources;
@@ -42,7 +42,7 @@ public class DescribeLiveTagResourcesResponseBody extends TeaModel {
 
     public static class DescribeLiveTagResourcesResponseBodyTagResourcesTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -51,7 +51,7 @@ public class DescribeLiveTagResourcesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>
@@ -84,7 +84,7 @@ public class DescribeLiveTagResourcesResponseBody extends TeaModel {
 
     public static class DescribeLiveTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -93,7 +93,7 @@ public class DescribeLiveTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The key-value pair of the tag.</p>
+         * <p>The tags bound to the resource.</p>
          */
         @NameInMap("Tag")
         public java.util.List<DescribeLiveTagResourcesResponseBodyTagResourcesTag> tag;

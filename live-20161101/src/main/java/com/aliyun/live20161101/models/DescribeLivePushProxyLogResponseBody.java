@@ -8,7 +8,7 @@ public class DescribeLivePushProxyLogResponseBody extends TeaModel {
     public DescribeLivePushProxyLogResponseBodyDomainLogDetails domainLogDetails;
 
     /**
-     * <p>Push domain.</p>
+     * <p>The ingest domain.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -17,7 +17,7 @@ public class DescribeLivePushProxyLogResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CF60DB6A-7FD6-426E-9288-122CC1A52FA7</p>

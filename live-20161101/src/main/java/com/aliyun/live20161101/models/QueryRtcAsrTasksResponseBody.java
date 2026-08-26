@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryRtcAsrTasksResponseBody extends TeaModel {
     /**
-     * <p>The result of the request. If success is returned, the request was successful. If an error message is returned, the request failed.</p>
+     * <p>The description of the result. A value of \<code>success\\</code> indicates that the call is successful. If the call fails, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class QueryRtcAsrTasksResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D8ADAB55-1BB8-5C01-8434-C45D353BB1FD</p>
@@ -23,7 +23,7 @@ public class QueryRtcAsrTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code. HTTP status code 2000 indicates that the request was successful. Other HTTP status codes indicate that the request failed.</p>
+     * <p>The status code. A value of 2000 indicates that the call is successful. Other values indicate that an error occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -32,7 +32,7 @@ public class QueryRtcAsrTasksResponseBody extends TeaModel {
     public Long retCode;
 
     /**
-     * <p>The results returned for the tasks.</p>
+     * <p>The result set of tasks.</p>
      */
     @NameInMap("Tasks")
     public java.util.Map<String, ?> tasks;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeLiveStreamRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can specify an asterisk (\*) as the value to match all applications. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the application to which the ingest stream belongs. You can set this parameter to * to indicate all AppName values (no restriction on AppName). You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ResumeLiveStreamRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether the live stream is ingested by a streamer or played by a client. Set the value to <strong>publisher</strong>, which specifies that the live stream is ingested by a streamer.</p>
+     * <p>Specifies whether the stream is a streamer ingest stream or a client playback stream. Currently supported value: <strong>publisher</strong> (streamer ingest).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ResumeLiveStreamRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the ingested stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the ingest stream. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class DeleteLiveMessageUserMessageRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The data center where the interactive messaging application is deployed. Set this parameter to the value of DataCenter that you specified when you called the <a href="https://help.aliyun.com/document_detail/2593195.html">CreateLiveMessageApp</a> operation. Valid values: cn-shanghai (Shanghai) and ap-southeast-1 (Singapore).</p>
+     * <p>The data center, which must be the same as the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Currently, Shanghai (cn-shanghai) and Singapore (ap-southeast-1) are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -24,7 +24,7 @@ public class DeleteLiveMessageUserMessageRequest extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The ID of the user who performs the deletion operation. The ID can contain only letters and digits and can be up to 64 bytes in length.</p>
+     * <p>The ID of the user who initiates the message deletion. The value consists of uppercase and lowercase letters and digits, and cannot exceed 64 bytes in length. This parameter is required in practice. If not specified, InputInvalid is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>169830****</p>
@@ -33,7 +33,7 @@ public class DeleteLiveMessageUserMessageRequest extends TeaModel {
     public String deleterId;
 
     /**
-     * <p>The additional information about the user who performs the deletion operation. The value can be up to 512 bytes in length.</p>
+     * <p>The extended information of the user who initiates the message deletion. The value cannot exceed 512 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>username</p>
@@ -42,7 +42,7 @@ public class DeleteLiveMessageUserMessageRequest extends TeaModel {
     public String deleterInfo;
 
     /**
-     * <p>The ID of the message that you want to delete. Set this parameter to the value of MsgTid that you specified when you called the SendLiveMessageUser operation. The ID can contain only letters and digits and can be up to 64 bytes in length.</p>
+     * <p>The ID of the message to be deleted, which corresponds to the MsgTid in the send message operation. The value consists of uppercase and lowercase letters and digits, and cannot exceed 64 bytes in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DeleteLiveMessageUserMessageRequest extends TeaModel {
     public String messageId;
 
     /**
-     * <p>The ID of the user who received the message to delete. The ID can contain only letters and digits and can be up to 64 bytes in length.</p>
+     * <p>The ID of the user who receives the delete message notification. The value consists of uppercase and lowercase letters and digits, and cannot exceed 64 bytes in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

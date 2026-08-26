@@ -14,7 +14,7 @@ public class DescribeLiveStreamTranscodeMetricDataResponseBody extends TeaModel 
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-11T02:46:40Z</p>
@@ -23,8 +23,8 @@ public class DescribeLiveStreamTranscodeMetricDataResponseBody extends TeaModel 
     public String endTime;
 
     /**
-     * <p>A pagination token. When you call this operation, up to 5,000 rows of data can be returned per query. If the number of rows exceeds 5,000, the response includes a pagination token that is used in the next request to retrieve a new page of results.</p>
-     * <p>When you specify the token in the next query, data continues to be obtained from the end of the previous query.</p>
+     * <p>The paged query token. Each query returns a maximum of 5,000 rows of data. If the data to be queried exceeds 5,000 rows, the response provides the start index for the next query.</p>
+     * <p>Pass this token in the request to continue querying data from the row after the last row returned in the previous query. This token is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>UjsM9x3aVcJi9a0-ArwJUTTC67C***37C0=</p>
@@ -33,7 +33,7 @@ public class DescribeLiveStreamTranscodeMetricDataResponseBody extends TeaModel 
     public String nextPageToken;
 
     /**
-     * <p>The number of rows returned.</p>
+     * <p>The number of returned data rows.</p>
      * 
      * <strong>example:</strong>
      * <p>5000</p>
@@ -42,7 +42,7 @@ public class DescribeLiveStreamTranscodeMetricDataResponseBody extends TeaModel 
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
@@ -51,7 +51,7 @@ public class DescribeLiveStreamTranscodeMetricDataResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-11T03:46:40Z</p>

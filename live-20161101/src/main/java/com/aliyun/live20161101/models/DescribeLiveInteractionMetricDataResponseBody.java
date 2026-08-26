@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveInteractionMetricDataResponseBody extends TeaModel {
     /**
-     * <p>The node data.</p>
+     * <p>An array of data points.</p>
      */
     @NameInMap("Nodes")
     public java.util.List<DescribeLiveInteractionMetricDataResponseBodyNodes> nodes;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A01C98C5-25AE-124A-83FE-514DF5C5BE36</p>
@@ -20,7 +20,7 @@ public class DescribeLiveInteractionMetricDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The summary data.</p>
+     * <p>The summarized data for the query time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -59,7 +59,7 @@ public class DescribeLiveInteractionMetricDataResponseBody extends TeaModel {
 
     public static class DescribeLiveInteractionMetricDataResponseBodyNodes extends TeaModel {
         /**
-         * <p>The time when the metric was queried. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The timestamp of the data point, specified as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1548670257000</p>

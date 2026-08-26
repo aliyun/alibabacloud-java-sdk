@@ -17,7 +17,7 @@ public class DescribeLiveHttpsDomainListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: <strong>1 to 10000</strong>.</p>
+     * <p>The page number to return. Valid values: <strong>[1,10000]</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -34,6 +34,12 @@ public class DescribeLiveHttpsDomainListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

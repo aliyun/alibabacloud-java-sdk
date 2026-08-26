@@ -20,7 +20,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The prompt message.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -56,7 +56,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that meet the specified conditions.</p>
+     * <p>The total number of entries that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -144,7 +144,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
 
     public static class DescribeLiveRecordNotifyRecordsResponseBodyCallbackList extends TeaModel {
         /**
-         * <p>The name of the application to which the live stream belongs.</p>
+         * <p>The name of the application to which the stream belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>liveApp****</p>
@@ -153,7 +153,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The description of the result. A value of success indicates that the request is successful. If the request fails, an error message is returned.</p>
+         * <p>The result description. The value is success if the callback was successful. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -162,7 +162,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The main streaming domain.</p>
+         * <p>The streamer\&quot;s streaming domain.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -171,25 +171,41 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The callback content.</p>
+         * <p>The specific content of the callback.</p>
          * 
          * <strong>example:</strong>
-         * <p>July 26,  16:14{&quot;domain&quot;:&quot;al.xxxx.com&quot;,&quot;stream&quot;:&quot;livestream01&quot;,&quot;pull _stream_result&quot;:true,&quot;cdn&quot;:&quot;al&quot;}</p>
+         * <p>7月26日 16:14{&quot;domain&quot;:&quot;al.xxxx.com&quot;,&quot;stream&quot;:&quot;livestream01&quot;,&quot;pull _stream_result&quot;:true,&quot;cdn&quot;:&quot;al&quot;}</p>
          */
         @NameInMap("NotifyContent")
         public String notifyContent;
 
+        /**
+         * <p>The callback request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;Content-Type&quot;: [
+         *     &quot;application/json; charset=utf-8&quot;
+         *   ]
+         * }</p>
+         */
         @NameInMap("NotifyHeader")
         public String notifyHeader;
 
+        /**
+         * <p>The response returned by the user after receiving the callback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Code&quot;:0,&quot;Msg&quot;:&quot;Success&quot;}</p>
+         */
         @NameInMap("NotifyResponse")
         public String notifyResponse;
 
         /**
          * <p>The callback result. Valid values:</p>
          * <ul>
-         * <li>success</li>
-         * <li>failed</li>
+         * <li>success: The callback was successful.</li>
+         * <li>failed: The callback failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +215,7 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         public String notifyResult;
 
         /**
-         * <p>The time when the callback was returned. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The callback time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-19T19:09:28Z</p>
@@ -210,13 +226,13 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         /**
          * <p>The callback type. Valid values:</p>
          * <ul>
-         * <li>file_created: The recording file is created.</li>
-         * <li>record_error: A recording error occurs.</li>
-         * <li>record_started: Recording is started.</li>
-         * <li>record_paused: Recording is paused.</li>
-         * <li>record_resumed: Recording is resumed.</li>
-         * <li>record_force_transcode_fail: The recording task fails to trigger transcoding.</li>
-         * <li>transformat_error: An error occurs when the live stream is parsed.</li>
+         * <li>file_created: The recording was created.</li>
+         * <li>record_error: A recording error occurred.</li>
+         * <li>record_started: The recording started.</li>
+         * <li>record_paused: The recording was paused.</li>
+         * <li>record_resumed: The recording was resumed.</li>
+         * <li>record_force_transcode_fail: The recording task failed to trigger transcoding.</li>
+         * <li>transformat_error: An error occurred while parsing the live stream content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,11 +250,22 @@ public class DescribeLiveRecordNotifyRecordsResponseBody extends TeaModel {
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 
+        /**
+         * <p>The recording storage type. Valid values:</p>
+         * <ul>
+         * <li>oss: recorded to OSS</li>
+         * <li>vod: recorded to ApsaraVideo VOD</li>
+         * <li>all: all storage types</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
-         * <p>The name of the live stream.</p>
+         * <p>The stream name.</p>
          * 
          * <strong>example:</strong>
          * <p>liveStream****</p>

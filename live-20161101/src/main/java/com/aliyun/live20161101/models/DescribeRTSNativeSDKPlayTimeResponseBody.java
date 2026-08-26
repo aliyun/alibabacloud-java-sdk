@@ -14,7 +14,7 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The end of the time range for which the data was queried.</p>
+     * <p>The end time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-10T21:00:00Z</p>
@@ -23,13 +23,13 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The average playback duration and average stuttering duration at each interval. Unit: milliseconds.</p>
+     * <p>The average playback duration and average stall duration for each time interval. Unit: milliseconds.</p>
      */
     @NameInMap("PlayTimeData")
     public java.util.List<DescribeRTSNativeSDKPlayTimeResponseBodyPlayTimeData> playTimeData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id</p>
      * 
      * <strong>example:</strong>
      * <p>7BF95F2A-3B24-4CDE-9346-7F6FA86697A1</p>
@@ -38,7 +38,7 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range for which the data was queried.</p>
+     * <p>The start time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-10T20:00:00Z</p>
@@ -93,7 +93,7 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
 
     public static class DescribeRTSNativeSDKPlayTimeResponseBodyPlayTimeData extends TeaModel {
         /**
-         * <p>The average playback duration within the period of time.</p>
+         * <p>The average playback duration during the time interval. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -102,7 +102,7 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
         public String playTime;
 
         /**
-         * <p>The average stuttering duration within the period of time.</p>
+         * <p>The average stall duration during the time interval. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -111,7 +111,7 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
         public String stallTime;
 
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The start time of the time interval. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-10T20:00:00Z</p>

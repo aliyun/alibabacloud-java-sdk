@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeLiveStreamResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16BFE188-B193-4C3C-ADC5-79A7E31486EA</p>

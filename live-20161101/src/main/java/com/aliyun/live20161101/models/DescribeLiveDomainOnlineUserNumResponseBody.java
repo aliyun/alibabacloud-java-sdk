@@ -26,7 +26,7 @@ public class DescribeLiveDomainOnlineUserNumResponseBody extends TeaModel {
     public Integer streamCount;
 
     /**
-     * <p>The total number of online users at the specified point in time for all the live streams under the main streaming domain.</p>
+     * <p>The total number of online users at the specified point in time on the specified domain.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

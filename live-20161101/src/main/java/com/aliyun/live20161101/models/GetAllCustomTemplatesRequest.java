@@ -7,11 +7,17 @@ public class GetAllCustomTemplatesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the user.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25346073170691****</p>

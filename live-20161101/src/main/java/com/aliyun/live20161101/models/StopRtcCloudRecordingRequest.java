@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopRtcCloudRecordingRequest extends TeaModel {
     /**
+     * <p>The ID of the task that is returned when you start an RTC cloud recording.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

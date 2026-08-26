@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEventSubRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The ID of the application to subscribe to. You can view your application IDs by navigating to <strong>ApsaraVideo Live &gt; Live+ &gt; ApsaraVideo Real-time Communication &gt; Application Management</strong>. If no application exists, create one by clicking [Create Application].</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateEventSubRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The callback URL. For more information about the content of the messages that are sent to the callback URL, see the Callback section in this topic.</p>
+     * <p>The callback URL. For the callback content, see the callback content examples below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,17 +25,14 @@ public class CreateEventSubRequest extends TeaModel {
     public String callbackUrl;
 
     /**
-     * <p>The channel ID. You can call the <a href="https://help.aliyun.com/document_detail/2628135.html">ListEventSub</a> operation to query the channel ID.</p>
+     * <p>The ID of the channel to subscribe to. You can call the <a href="https://help.aliyun.com/document_detail/2848210.html">ListEventSub</a> operation to query the subscribed channel IDs.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter is required if you specify the Users.N parameter.</p>
-     * </li>
-     * <li><p>If you set this parameter to \* or do not specify this parameter, all channels are subscribed to.</p>
-     * </li>
-     * <li><p>Each application ID allows only one all-channel subscription.</p>
-     * </li>
+     * <li>If the Users.N parameter is not empty, this parameter is required.</li>
+     * <li>If ChannelId is set to \* or left empty, all channels are subscribed. Each AppId allows only one all-channel subscription.</li>
+     * <li>Each AppId allows a maximum of 20 subscriptions at the same time.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123333</p>
@@ -44,14 +41,14 @@ public class CreateEventSubRequest extends TeaModel {
     public String channelId;
 
     /**
-     * <p>Subscribe to events.</p>
+     * <p>The subscription events.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Events")
     public java.util.List<String> events;
 
     /**
-     * <p>The user whose events you want to subscribe to. If you leave this parameter empty, the events of all users in the channel are subscribed to, including the events of the streamer and viewers. Specify this parameter in the following format:</p>
+     * <p>The users whose messages you want to subscribe to. If this parameter is empty, all users in the channel (including streamers and viewers) are subscribed. Format:</p>
      * <pre><code>Users.1=****
      * Users.2=****
      * ......

@@ -8,7 +8,7 @@ public class ModifyLiveMessageAppDisableResponseBody extends TeaModel {
      * <p>The ID of the interactive messaging application.</p>
      * 
      * <strong>example:</strong>
-     * <p>ab6b5740****</p>
+     * <p>demo</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -17,7 +17,7 @@ public class ModifyLiveMessageAppDisableResponseBody extends TeaModel {
      * <p>The signature of the interactive messaging application. It is required by the interactive messaging SDK.</p>
      * 
      * <strong>example:</strong>
-     * <p>H4sIAAAAAAAE/wBwAI//zguHB+lYCilkv7diSkk4GhHQAvMXs5tWyI+I09+uEBiB5sqa28ycJSJFmsd50Mhz8nDrvvqmti+fVaNLC5CMgLvNIy48v1aV9x74LRNFN0+Dxd2Al51xuDNkEIDaEwjqfyxscTXjSr0iQjHu2WgkpQAAAP//AQAA//+yR5XCc****</p>
+     * <hr>
      */
     @NameInMap("AppSign")
     public String appSign;
@@ -35,7 +35,7 @@ public class ModifyLiveMessageAppDisableResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>6AA1AE11-EA78-1FD4-A966-6BA843073F6D</p>
+     * <p>6AA1AE11-EA78-1FD4-A966-6BA84307****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

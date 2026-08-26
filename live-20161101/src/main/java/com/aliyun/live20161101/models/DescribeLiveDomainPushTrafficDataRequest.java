@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPushTrafficDataRequest extends TeaModel {
     /**
-     * <p>The ingest domain. You can specify multiple ingest domains and separate them with commas (,). If you do not specify this parameter, the merged data of all your ingest domains is returned.</p>
+     * <p>The ingest domain.
+     * Batch domain name queries are supported. Separate multiple domain names with commas (,).
+     * If this parameter is left empty, the merged data of all ingest domains is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>demo.aliyundoc.com</p>
@@ -14,7 +16,7 @@ public class DescribeLiveDomainPushTrafficDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T21:00:00Z</p>
@@ -23,13 +25,13 @@ public class DescribeLiveDomainPushTrafficDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+     * <p>The time granularity of the queried data. Unit: seconds. Valid values:</p>
      * <ul>
      * <li><strong>300</strong></li>
      * <li><strong>3600</strong></li>
      * <li><strong>86400</strong></li>
      * </ul>
-     * <p>The default value is 300. If you specify an invalid value or do not specify this parameter, the default value is used.</p>
+     * <p>If you do not specify this parameter or the specified value is not supported, the default value 300 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -38,7 +40,8 @@ public class DescribeLiveDomainPushTrafficDataRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The name of the Internet service provider (ISP). You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query a list of available ISPs. If you do not specify this parameter, the data of all ISPs is returned.</p>
+     * <p>The name of the Internet service provider (ISP) in English.
+     * You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to obtain ISP names. If you do not specify this parameter, data of all ISPs is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba</p>
@@ -47,7 +50,8 @@ public class DescribeLiveDomainPushTrafficDataRequest extends TeaModel {
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query a list of available regions. If you do not specify this parameter, the data of all regions is returned.</p>
+     * <p>The name of the region in English.
+     * You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to obtain region names. If you do not specify this parameter, data of all regions is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>tianjin</p>
@@ -58,11 +62,18 @@ public class DescribeLiveDomainPushTrafficDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. If you do not specify this parameter, the data of the last 24 hours is returned.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).
+     * If you do not specify this parameter, data of the last 24 hours is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T20:00:00Z</p>

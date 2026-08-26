@@ -13,10 +13,15 @@ public class ListRTCLiveRoomsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of active channels.</p>
+     */
     @NameInMap("Rooms")
     public java.util.List<String> rooms;
 
     /**
+     * <p>The total number of query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

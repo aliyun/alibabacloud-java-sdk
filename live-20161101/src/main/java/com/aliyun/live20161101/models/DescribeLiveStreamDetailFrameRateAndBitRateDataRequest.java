@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamDetailFrameRateAndBitRateDataRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the application to which the live stream belongs. You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeLiveStreamDetailFrameRateAndBitRateDataRequest extends TeaM
     public String appName;
 
     /**
-     * <p>The ingest domain or streaming domain.</p>
+     * <p>The ingest domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class DescribeLiveStreamDetailFrameRateAndBitRateDataRequest extends TeaM
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC+8).</p>
      * <blockquote>
-     * <p> If the StartTime and EndTime parameters are invalid, or if the StartTime and EndTime parameters are not specified, data in the last hour is queried by default.</p>
+     * <p>If StartTime and EndTime are invalid or not specified, data from the last 1 hour is returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,11 +39,17 @@ public class DescribeLiveStreamDetailFrameRateAndBitRateDataRequest extends TeaM
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC+8).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-21T08:00:00Z</p>
@@ -52,7 +58,7 @@ public class DescribeLiveStreamDetailFrameRateAndBitRateDataRequest extends TeaM
     public String startTime;
 
     /**
-     * <p>The name of the live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the live stream. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

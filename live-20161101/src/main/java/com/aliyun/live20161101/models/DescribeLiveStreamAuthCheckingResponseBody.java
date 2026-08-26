@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamAuthCheckingResponseBody extends TeaModel {
     /**
-     * <p>The error message for failed authentication.</p>
+     * <p>The error message returned if authentication failed.</p>
      * 
      * <strong>example:</strong>
      * <p>INVALID AUTH_KEY</p>
@@ -23,10 +23,12 @@ public class DescribeLiveStreamAuthCheckingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the signed URL is valid. Valid values:</p>
+     * <p>Indicates whether the authentication is passed.</p>
      * <ul>
-     * <li>pass: valid.</li>
-     * <li>false: invalid.</li>
+     * <li><p>pass: The authentication is passed.</p>
+     * </li>
+     * <li><p>false: The authentication failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

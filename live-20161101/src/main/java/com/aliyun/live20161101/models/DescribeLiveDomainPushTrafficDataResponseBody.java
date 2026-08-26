@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
     /**
-     * <p>The time granularity.</p>
+     * <p>The data time granularity.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -23,7 +23,7 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range during which the data was queried.</p>
+     * <p>The end time. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T21:00:00Z</p>
@@ -41,7 +41,7 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which the data was queried.</p>
+     * <p>The start time. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T20:00:00Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveMessageGroupMessagesRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application to query.</p>
+     * <p>The ID of the interactive message application to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListLiveMessageGroupMessagesRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you leave this parameter empty, the earliest available time is used.</p>
+     * <p>The query start time, expressed as a UNIX timestamp. Unit: seconds. If this parameter is left empty, the earliest time is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1697783235</p>
@@ -24,7 +24,7 @@ public class ListLiveMessageGroupMessagesRequest extends TeaModel {
     public Long beginTime;
 
     /**
-     * <p>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</p>
+     * <p>The data center. This value must be consistent with the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Currently supported data centers are Shanghai (cn-shanghai) and Singapore (ap-southeast-1).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -33,7 +33,7 @@ public class ListLiveMessageGroupMessagesRequest extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you leave this parameter empty, the latest available time is used.</p>
+     * <p>The query end time, expressed as a UNIX timestamp. Unit: seconds. If this parameter is left empty, the latest time is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1698301635</p>
@@ -42,7 +42,7 @@ public class ListLiveMessageGroupMessagesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the group to query.</p>
+     * <p>The group ID of the group to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ListLiveMessageGroupMessagesRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The type of messages that you want to query. If you leave this parameter empty, all types of messages are queried.</p>
+     * <p>The message type to query. If this parameter is left empty, all message types are returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,7 +61,7 @@ public class ListLiveMessageGroupMessagesRequest extends TeaModel {
     public Long msgType;
 
     /**
-     * <p>The starting page number for the query. If you leave this parameter empty, the query starts from the first page.</p>
+     * <p>The start position of the query page. If this parameter is left empty, the first page is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -70,7 +70,7 @@ public class ListLiveMessageGroupMessagesRequest extends TeaModel {
     public Long nextPageToken;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>10 to 50</strong>.</p>
+     * <p>The number of messages to display at a time. Valid values: <strong>[10,50]</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,10 +80,12 @@ public class ListLiveMessageGroupMessagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort order based on the time when the messages were sent. Valid values:</p>
+     * <p>The sort type. Messages are sorted by the time they were sent. Valid values:</p>
      * <ul>
-     * <li>1: ascending order</li>
-     * <li>2: descending order</li>
+     * <li><p>1: ascending order</p>
+     * </li>
+     * <li><p>2: descending order</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -7,11 +7,13 @@ public class AddCasterEpisodeRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the CasterId parameter that is returned.</p>
+     * </li>
+     * <li><p>If you create a production studio in the LIVE console, go to the <strong>LIVE Console</strong>&gt; <strong>Production Studio</strong> &gt; <strong>Production Studio</strong> page to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the production studio list serves as the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,14 +24,16 @@ public class AddCasterEpisodeRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The components. Components in the production studio are listed from the bottom to the top in an array.</p>
-     * <p>If a component was added by calling the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation, check the value of the response parameter ComponentId to obtain the component ID.</p>
+     * <p>A list of component IDs. The components are layered from bottom to top in the specified order.</p>
+     * <p>If you add a component by calling the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation, check the value of the ComponentId parameter that is returned.</p>
      * <ul>
-     * <li>This parameter takes effect and is required when the EpisodeType parameter is set to <strong>Component</strong>.</li>
-     * <li>This parameter is optional when the EpisodeType parameter is set to <strong>Resource</strong>. In this case, if this parameter is specified, the components are bound to and switched together with video resources.</li>
+     * <li><p>This parameter is required and applies only when the resource type is <strong>Component</strong>.</p>
+     * </li>
+     * <li><p>This parameter is optional when the resource type is <strong>Resource</strong>. If you specify this parameter, the component is attached to the video source and they are switched synchronously.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The variable N specifies the sequence number of the component. For example, <strong>ComponentId.1</strong> specifies the ID of the first component and <strong>ComponentId.2</strong> specifies the ID of the second component.</p>
+     * <p>N specifies the sequence number of a component ID. For example, <strong>ComponentId.1</strong> specifies the first component ID and <strong>ComponentId.2</strong> specifies the second component ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,7 +43,7 @@ public class AddCasterEpisodeRequest extends TeaModel {
     public java.util.List<String> componentId;
 
     /**
-     * <p>The time when the episode ends. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,10 +62,12 @@ public class AddCasterEpisodeRequest extends TeaModel {
     public String episodeName;
 
     /**
-     * <p>The type of the episode. Valid values:</p>
+     * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><strong>Resource</strong>: a video resource.</li>
-     * <li><strong>Component</strong>: a component.</li>
+     * <li><p><strong>Resource</strong>: A video source. If you set this parameter to Resource, you must also specify the ResourceId and SwitchType parameters.</p>
+     * </li>
+     * <li><p><strong>Component</strong>: A component.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -74,16 +80,22 @@ public class AddCasterEpisodeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the video resource.</p>
+     * <p>The ID of the video source.</p>
      * <blockquote>
-     * <p> This parameter takes effect and is required when the EpisodeType parameter is set to Resource.</p>
+     * <p>Notice: </p>
      * </blockquote>
-     * <p>\
-     * If the video resource was added by calling the <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a> operation, check the value of the response parameter ResourceId to obtain the ID.</p>
+     * <p>This parameter is required and applies only when EpisodeType is set to Resource.</p>
+     * <p>If you add a video source by calling the <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a> operation, check the value of the ResourceId parameter that is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
@@ -92,7 +104,7 @@ public class AddCasterEpisodeRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The time when the episode starts. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,14 +114,19 @@ public class AddCasterEpisodeRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The policy for switching episodes. Valid values:</p>
-     * <ul>
-     * <li><strong>TimeFirst</strong>: The episode starts when the preceding episode ends and ends when the next episode starts. If no next episode exists, the episode keeps repeating until a new episode is added or the production studio stops.</li>
-     * <li><strong>ContentFirst</strong>: The episode starts and ends as scheduled.</li>
-     * </ul>
-     * <p>This parameter takes effect only when the EpisodeType parameter is set to Resource.</p>
+     * <p>The switch policy. Valid values:</p>
      * <blockquote>
-     * <p> This parameter must be set to TimeFirst when the video resource is a live stream.</p>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter applies only when EpisodeType is set to Resource.</p>
+     * <ul>
+     * <li><p><strong>TimeFirst</strong>: Time first.</p>
+     * </li>
+     * <li><p><strong>ContentFirst</strong>: Content first.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>For more information about video sources, see <a href="https://help.aliyun.com/document_detail/66094.html">Add a video source</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

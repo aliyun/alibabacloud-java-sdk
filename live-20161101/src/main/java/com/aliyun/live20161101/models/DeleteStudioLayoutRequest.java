@@ -7,11 +7,13 @@ public class DeleteStudioLayoutRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value returned in the response.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, choose <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list is its ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,7 +24,7 @@ public class DeleteStudioLayoutRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the layout. If the layout was added by calling the <a href="https://help.aliyun.com/document_detail/2848062.html">AddStudioLayout</a> operation, check the value of the response parameter LayoutId to obtain the ID.</p>
+     * <p>The layout ID. If you added the layout to the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848062.html">AddStudioLayout</a> operation, use the LayoutId value returned in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +36,12 @@ public class DeleteStudioLayoutRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

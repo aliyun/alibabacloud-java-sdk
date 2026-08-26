@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLiveDomainSchdmByPropertyRequest extends TeaModel {
     /**
-     * <p>The domain name for which you want to modify the acceleration region.</p>
+     * <p>The live streaming domain for which you want to modify the acceleration region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,14 @@ public class ModifyLiveDomainSchdmByPropertyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The acceleration region that you want to set. {&quot;coverage&quot;:&quot;overseas&quot;} specifies regions outside the Chinese mainland. Valid values of coverage:</p>
+     * <p>The acceleration region. A value of {&quot;coverage&quot;:&quot;overseas&quot;} specifies that the configuration is for regions outside mainland China. The following list describes the valid values for coverage:</p>
      * <ul>
-     * <li>domestic: regions in the Chinese mainland.</li>
-     * <li>overseas: regions outside the Chinese mainland.</li>
-     * <li>global: regions in and outside the Chinese mainland.</li>
+     * <li><p>domestic: mainland China.</p>
+     * </li>
+     * <li><p>overseas: regions outside mainland China.</p>
+     * </li>
+     * <li><p>global: regions in and outside mainland China.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,6 +35,12 @@ public class ModifyLiveDomainSchdmByPropertyRequest extends TeaModel {
     @NameInMap("Property")
     public String property;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

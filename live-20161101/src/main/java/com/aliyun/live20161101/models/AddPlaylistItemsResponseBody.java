@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddPlaylistItemsResponseBody extends TeaModel {
     /**
-     * <p>The information about the episodes.</p>
+     * <p>The list of added playlist items.</p>
      */
     @NameInMap("Items")
     public AddPlaylistItemsResponseBodyItems items;
 
     /**
-     * <p>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to remove episodes, query episodes, edit an episode list, delete an episode list, query the information about an episode list, start playing an episode list, or stop playing an episode list.</p>
+     * <p>The playlist ID. This value can be used as a request parameter for deleting playlist items, querying playlist items, editing playlists, deleting playlists, querying playlists, starting playlists, and stopping playlists.</p>
      * 
      * <strong>example:</strong>
      * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
@@ -59,7 +59,7 @@ public class AddPlaylistItemsResponseBody extends TeaModel {
 
     public static class AddPlaylistItemsResponseBodyItemsFailedItems extends TeaModel {
         /**
-         * <p>The ID of the episode.</p>
+         * <p>The playlist item ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
@@ -68,7 +68,7 @@ public class AddPlaylistItemsResponseBody extends TeaModel {
         public String itemId;
 
         /**
-         * <p>The name of the episode.</p>
+         * <p>The playlist item name.</p>
          * 
          * <strong>example:</strong>
          * <p>item1</p>
@@ -101,7 +101,7 @@ public class AddPlaylistItemsResponseBody extends TeaModel {
 
     public static class AddPlaylistItemsResponseBodyItemsSuccessItems extends TeaModel {
         /**
-         * <p>The ID of the episode.</p>
+         * <p>The playlist item ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
@@ -110,7 +110,7 @@ public class AddPlaylistItemsResponseBody extends TeaModel {
         public String itemId;
 
         /**
-         * <p>The name of the episode.</p>
+         * <p>The playlist item name.</p>
          * 
          * <strong>example:</strong>
          * <p>item2</p>
@@ -143,13 +143,13 @@ public class AddPlaylistItemsResponseBody extends TeaModel {
 
     public static class AddPlaylistItemsResponseBodyItems extends TeaModel {
         /**
-         * <p>The episodes that failed to be added.</p>
+         * <p>The list of playlist items that failed to be added.</p>
          */
         @NameInMap("FailedItems")
         public java.util.List<AddPlaylistItemsResponseBodyItemsFailedItems> failedItems;
 
         /**
-         * <p>The episodes that were added.</p>
+         * <p>The list of playlist items that were successfully added.</p>
          */
         @NameInMap("SuccessItems")
         public java.util.List<AddPlaylistItemsResponseBodyItemsSuccessItems> successItems;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcCloudTranscodeRequest extends TeaModel {
     /**
+     * <p>The application ID. The value can contain uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeRtcCloudTranscodeRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The cloud transcoding task ID. The value can contain uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

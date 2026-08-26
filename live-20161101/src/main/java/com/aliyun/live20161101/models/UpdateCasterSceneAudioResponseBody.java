@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCasterSceneAudioResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveMessageAppsRequest extends TeaModel {
     /**
-     * <p>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</p>
+     * <p>The data center. The value must be the same as the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Valid values: cn-shanghai (China (Shanghai)) and ap-southeast-1 (Singapore).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -14,7 +14,7 @@ public class ListLiveMessageAppsRequest extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The starting page number for the query. If you leave this parameter empty or set this parameter to -1, the query starts from the first page.</p>
+     * <p>The starting position of the query page. If this parameter is left empty or set to -1, the first page is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
@@ -23,10 +23,10 @@ public class ListLiveMessageAppsRequest extends TeaModel {
     public Long nextPageToken;
 
     /**
-     * <p>The sort order based on the creation time. Valid values:</p>
+     * <p>The sort type by creation time. Valid values:</p>
      * <ul>
-     * <li>1: ascending order</li>
-     * <li>2: descending order</li>
+     * <li>1: ascending order.</li>
+     * <li>2: descending order.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

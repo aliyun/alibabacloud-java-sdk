@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveCenterTransferRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name for the live stream that you want to relay. Otherwise, the configuration does not take effect. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the application. The value must be the same as that of the live stream that you want to relay. View AppName on the <a href="t2019924.xdita#">Stream Management</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,11 +36,17 @@ public class DeleteLiveCenterTransferRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the live stream. View StreamName on the <a href="t2019924.xdita#">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamWatermarkRulesRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * 
      * <strong>example:</strong>
      * <p>live.yourdomain.com</p>
@@ -17,7 +17,7 @@ public class DescribeLiveStreamWatermarkRulesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. If you do not specify this parameter, the default value 1 is used.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeLiveStreamWatermarkRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. If you do not specify this parameter, the default value 100 is used.</p>
+     * <p>The number of entries to return on each page. The default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -34,6 +34,12 @@ public class DescribeLiveStreamWatermarkRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

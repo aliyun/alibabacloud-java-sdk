@@ -7,11 +7,17 @@ public class DescribeLiveTagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The N resources. The resources are domain names in this operation. Valid values of N: <strong>1 to 50</strong>.</p>
+     * <p>The resource IDs. The resources are domain names for live streaming. You can query up to 50 resource IDs at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +27,7 @@ public class DescribeLiveTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resources. Set the value to <strong>DOMAIN</strong>.</p>
+     * <p>The type of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +37,7 @@ public class DescribeLiveTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The N tags.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeLiveTagResourcesRequestTag> tag;
@@ -83,7 +89,7 @@ public class DescribeLiveTagResourcesRequest extends TeaModel {
 
     public static class DescribeLiveTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. Valid values of N: <strong>1 to 20</strong>.</p>
+         * <p>The tag key. You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -92,7 +98,7 @@ public class DescribeLiveTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. Valid values of N: <strong>1 to 20</strong>.</p>
+         * <p>The tag value. You can specify up to 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

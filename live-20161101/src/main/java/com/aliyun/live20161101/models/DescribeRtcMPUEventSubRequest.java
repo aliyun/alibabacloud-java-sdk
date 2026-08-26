@@ -5,9 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcMPUEventSubRequest extends TeaModel {
     /**
-     * <p>The ID of your application.</p>
+     * <p>The ID of the subscribed application. You can view your application IDs by navigating to <strong>ApsaraVideo Live &gt; Live+ &gt; ApsaraVideo Real-time Communication &gt; Application Management</strong>.</p>
      * <blockquote>
-     * <p>The ID can be up to 64 characters in length and can contain letters, digits, underscores, and hyphens (-).</p>
+     * <ul>
+     * <li>The application ID consists of uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</li>
+     * <li>You must first call CreateRtcMPUEventSub to create a stream mixing and forwarding event subscription for this application ID.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

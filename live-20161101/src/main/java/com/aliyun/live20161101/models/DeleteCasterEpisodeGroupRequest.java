@@ -8,7 +8,7 @@ public class DeleteCasterEpisodeGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the episode list. If the episode list was added by calling the <a href="https://help.aliyun.com/document_detail/2848071.html">AddCasterEpisodeGroup</a> operation, check the value of the response parameter ProgramId to obtain the ID.</p>
+     * <p>The ID of the episode list. To obtain the ID, call the <a href="https://help.aliyun.com/document_detail/2848071.html">AddCasterEpisodeGroup</a> operation and find the value of the ProgramId parameter in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +17,12 @@ public class DeleteCasterEpisodeGroupRequest extends TeaModel {
     @NameInMap("ProgramId")
     public String programId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

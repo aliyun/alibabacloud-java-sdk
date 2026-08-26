@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application to which the stream belongs. You can view AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,7 +14,12 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ingest domain or main streaming domain.</p>
+     * <p>The ingest domain or streamer streaming domain.</p>
+     * <blockquote>
+     * <ul>
+     * <li>When you specify DomainName, make sure that the domain name is a live streaming domain name and that the user calling this operation has the permissions to operate on the specified domain name.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +29,8 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The time range specified by the StartTime and EndTime parameters cannot exceed 30 days.</p>
-     * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. The interval between EndTime and StartTime cannot exceed 30 days.</p>
+     * <p>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,10 +42,10 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     /**
      * <p>The sorting method. Valid values:</p>
      * <ul>
-     * <li><strong>stream_name_desc</strong>: sorts the entries in descending order by stream name.</li>
-     * <li><strong>stream_name_asc</strong>: sorts the entries in ascending order by stream name.</li>
-     * <li><strong>publish_time_desc</strong>: sorts the entries in descending order by stream ingest time.</li>
-     * <li><strong>publish_time_asc</strong> (default): sorts the entries in ascending order by stream ingest time.</li>
+     * <li><strong>stream_name_desc</strong>: sorts by live stream name in descending order.</li>
+     * <li><strong>stream_name_asc</strong>: sorts by live stream name in ascending order.</li>
+     * <li><strong>publish_time_desc</strong>: sorts by stream ingest time in descending order.</li>
+     * <li><strong>publish_time_asc</strong> (default): sorts by stream ingest time in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +67,7 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 3000</strong>. Default value: <strong>2000</strong>.</p>
+     * <p>The page size. Valid values: <strong>1 to 3000</strong>. Default value: <strong>2000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1500</p>
@@ -71,10 +76,10 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The mode in which stream names are matched. Valid values:</p>
+     * <p>Specifies whether to use fuzzy match for the stream name. Valid values:</p>
      * <ul>
-     * <li><strong>fuzzy</strong> (default): fuzzy match</li>
-     * <li><strong>strict</strong>: exact match</li>
+     * <li><strong>fuzzy</strong> (default): fuzzy match.</li>
+     * <li><strong>strict</strong>: exact match.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,12 +88,18 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     @NameInMap("QueryType")
     public String queryType;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
-     * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of stream ingest.</p>
+     * <p>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +109,7 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The stream name. You can view StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>
@@ -107,11 +118,11 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The type of the streams to query. Valid values:</p>
+     * <p>The stream type. Valid values:</p>
      * <ul>
-     * <li>An empty value****: source streams</li>
-     * <li><strong>all</strong>: all streams</li>
-     * <li><strong>trans</strong>: transcoded streams</li>
+     * <li><strong>Not specified</strong>: queries raw streams.</li>
+     * <li><strong>all</strong>: queries all streams.</li>
+     * <li><strong>trans</strong>: queries transcoded streams.</li>
      * </ul>
      * 
      * <strong>example:</strong>

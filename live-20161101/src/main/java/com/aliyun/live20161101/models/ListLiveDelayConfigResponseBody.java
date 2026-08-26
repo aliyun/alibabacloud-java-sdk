@@ -17,7 +17,7 @@ public class ListLiveDelayConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of stream delay configurations.</p>
+     * <p>The total number of stream delay configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

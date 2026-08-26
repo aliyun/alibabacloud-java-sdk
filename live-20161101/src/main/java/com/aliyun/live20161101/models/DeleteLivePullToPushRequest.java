@@ -10,10 +10,10 @@ public class DeleteLivePullToPushRequest extends TeaModel {
     /**
      * <p>The region where the task is started. Valid values:</p>
      * <ul>
-     * <li>ap-southeast-1: Singapore</li>
-     * <li>ap-southeast-5: Indonesia (Jakarta)</li>
-     * <li>cn-beijing: China (Beijing)</li>
-     * <li>cn-shanghai: China (Shanghai)</li>
+     * <li>ap-southeast-1 (Singapore)</li>
+     * <li>ap-southeast-5 (Indonesia)</li>
+     * <li>cn-beijing (Beijing)</li>
+     * <li>cn-shanghai (Shanghai).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,6 +23,12 @@ public class DeleteLivePullToPushRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

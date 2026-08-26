@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDelayConfigResponseBody extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,7 +14,7 @@ public class DescribeLiveDelayConfigResponseBody extends TeaModel {
     public String app;
 
     /**
-     * <p>The duration for which the playback of the live stream is delayed.</p>
+     * <p>The playback latency of the stream.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -23,7 +23,7 @@ public class DescribeLiveDelayConfigResponseBody extends TeaModel {
     public String delayTime;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -41,7 +41,7 @@ public class DescribeLiveDelayConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The stream name.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>
@@ -50,11 +50,11 @@ public class DescribeLiveDelayConfigResponseBody extends TeaModel {
     public String stream;
 
     /**
-     * <p>The trigger mode. Valid values:</p>
+     * <p>The trigger mode for the task. Valid values:</p>
      * <ul>
-     * <li><strong>PUBLISH_ONLY</strong>: Stream delay can be triggered only by specifying the stream delay parameter in the ingest URL.</li>
-     * <li><strong>CONFIG_ONLY</strong>: Stream delay can be triggered only by the stream delay configuration.</li>
-     * <li><strong>PUBLISH_CONFIG</strong>: Stream delay can be triggered by the stream delay parameter in the ingest URL or the stream delay configuration. The stream delay parameter takes precedence over the stream delay configuration.</li>
+     * <li><strong>PUBLISH_ONLY</strong>: The task is triggered only when stream ingest parameters for delayed playback are specified.</li>
+     * <li><strong>CONFIG_ONLY</strong>: The task is triggered only by the configuration. Stream ingest parameters are ignored.</li>
+     * <li><strong>PUBLISH_CONFIG</strong>: The task can be triggered by both stream ingest parameters and the configuration. Stream ingest parameters have a higher priority than the configuration.</li>
      * </ul>
      * 
      * <strong>example:</strong>

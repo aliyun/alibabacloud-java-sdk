@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRTCLiveRoomsRequest extends TeaModel {
     /**
+     * <p>The application ID. You can view your application IDs by navigating to <strong>ApsaraVideo Live &gt; Live+ &gt; ApsaraVideo Real-time Communication &gt; Application Management</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListRTCLiveRoomsRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The current page number, starting from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListRTCLiveRoomsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The page size. Valid values: 10 to 100. Default value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */

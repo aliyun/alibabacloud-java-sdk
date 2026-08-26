@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>58-5876-</strong></strong>-83CA-B56278</strong>****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task information.</p>
+     */
     @NameInMap("TaskInfo")
     public DescribeRtcCloudRecordingFilesResponseBodyTaskInfo taskInfo;
 
@@ -36,12 +41,37 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList extends TeaModel {
+        /**
+         * <p>The array of media resource IDs generated during recording.</p>
+         */
         @NameInMap("MediaIds")
         public java.util.List<String> mediaIds;
 
+        /**
+         * <p>The array of automatically merged media resource IDs generated after recording ends.</p>
+         */
         @NameInMap("MergedIds")
         public java.util.List<String> mergedIds;
 
+        /**
+         * <p>The subscribed stream.</p>
+         * <ul>
+         * <li>For stream mixing recording, the value is always Mix.</li>
+         * <li>For single-stream recording, the value is Single::{UserId}::{Suffix}.<ul>
+         * <li>UserId is the UserId corresponding to this stream.</li>
+         * <li>Suffix depends on the StreamType and SourceType specified during subscription.<ul>
+         * <li>When StreamType is 0: if SourceType is 0, Suffix is AV::C. If SourceType is 1, Suffix is AV::S.</li>
+         * <li>When StreamType is 1: Suffix can only be A.</li>
+         * <li>When StreamType is 2 (not supported for single-stream recording): if SourceType is 0, Suffix is V::C. If SourceType is 1, Suffix is V::S.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Single::UserA::AV::C</p>
+         */
         @NameInMap("Stream")
         public String stream;
 
@@ -77,15 +107,27 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileList extends TeaModel {
+        /**
+         * <p>The array of HLS recording file names.</p>
+         */
         @NameInMap("HlsFileList")
         public java.util.List<String> hlsFileList;
 
+        /**
+         * <p>The array of MP3 recording file names.</p>
+         */
         @NameInMap("Mp3FileList")
         public java.util.List<String> mp3FileList;
 
+        /**
+         * <p>The array of MP4 recording file names.</p>
+         */
         @NameInMap("Mp4FileList")
         public java.util.List<String> mp4FileList;
 
+        /**
+         * <p>The array of VOD media resources. When recording to VOD, this is the collection of recording files for each subscribed stream, where each item corresponds to a subscribed stream.</p>
+         */
         @NameInMap("VodMediaList")
         public java.util.List<DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList> vodMediaList;
 
@@ -129,10 +171,21 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcCloudRecordingFilesResponseBodyTaskInfo extends TeaModel {
+        /**
+         * <p>The list of recording files.</p>
+         */
         @NameInMap("RecordFileList")
         public DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileList recordFileList;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>RUNNING</li>
+         * <li>RECOVERING</li>
+         * <li>STOPPING</li>
+         * <li>STOPPED.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -140,6 +193,8 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID passed in the request.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>73-8501-</strong></strong>-8ac1-72295a</strong>****</p>
          */

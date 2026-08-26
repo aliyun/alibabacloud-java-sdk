@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLiveRealtimeLogDeliveryRequest extends TeaModel {
     /**
-     * <p>The main streaming domain for which you want to modify the configuration of real-time log delivery.</p>
+     * <p>The primary streaming domain for which you want to change the real-time log delivery configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyLiveRealtimeLogDeliveryRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The name of the Logstore to which log entries are delivered.</p>
+     * <p>The name of the Logstore in SLS to which logs are delivered.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ModifyLiveRealtimeLogDeliveryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+     * <p>The name of the Simple Log Service (SLS) project to which logs are delivered.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ModifyLiveRealtimeLogDeliveryRequest extends TeaModel {
     public String project;
 
     /**
-     * <p>The ID of the region where the Log Service project is deployed.</p>
+     * <p>The region where the SLS project is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +47,12 @@ public class ModifyLiveRealtimeLogDeliveryRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

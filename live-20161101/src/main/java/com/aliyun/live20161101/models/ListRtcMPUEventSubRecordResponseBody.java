@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRtcMPUEventSubRecordResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The total number of callback records returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListRtcMPUEventSubRecordResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>Indicates whether the current page is followed by a page.</p>
+     * <p>Indicates whether there is a next page.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -29,7 +29,7 @@ public class ListRtcMPUEventSubRecordResponseBody extends TeaModel {
     public java.util.List<ListRtcMPUEventSubRecordResponseBodyLogs> logs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
@@ -76,7 +76,7 @@ public class ListRtcMPUEventSubRecordResponseBody extends TeaModel {
 
     public static class ListRtcMPUEventSubRecordResponseBodyLogs extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The ID of the subscribed application.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAppId</p>
@@ -103,7 +103,7 @@ public class ListRtcMPUEventSubRecordResponseBody extends TeaModel {
         public Long cost;
 
         /**
-         * <p>For more information about the callback, see <a href="https://help.aliyun.com/document_detail/2804583.html">CreateRtcMPUEventSub</a>.</p>
+         * <p>The callback content. For more information, see <a href="https://help.aliyun.com/document_detail/2804583.html">Create a stream mixing and forwarding event callback</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;EventType\&quot;:1,\&quot;MsgId\&quot;:\&quot;42bba8b5-94ab-468c-9dae-9b501dd6c***\&quot;,\&quot;AppId\&quot;:\&quot;rtcdev\&quot;,\&quot;SubId\&quot;:\&quot;Sub-9799B2C45009799B2C4***\&quot;,\&quot;TaskId\&quot;:\&quot;mpucallbacktest\&quot;,\&quot;CallbackTs\&quot;:1712656430***,\&quot;Payload\&quot;:{\&quot;DstUrl\&quot;:\&quot;rtmp://domain/app/stream?auth\&quot;,\&quot;EventTs\&quot;:1712656430***,\&quot;EventCode\&quot;:1,\&quot;ErrorCode\&quot;:0,\&quot;ErrorMessage\&quot;:\&quot;\&quot;}}</p>
@@ -112,7 +112,7 @@ public class ListRtcMPUEventSubRecordResponseBody extends TeaModel {
         public String data;
 
         /**
-         * <p>The HTTP status code. 200 indicates that the callback is successful.</p>
+         * <p>The error code. A value of 200 indicates that the callback was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -121,7 +121,7 @@ public class ListRtcMPUEventSubRecordResponseBody extends TeaModel {
         public String HTTPCode;
 
         /**
-         * <p>The ID of the callback record.</p>
+         * <p>The callback record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>42bba8b5-********-9b501dd6cb6e</p>
@@ -130,7 +130,7 @@ public class ListRtcMPUEventSubRecordResponseBody extends TeaModel {
         public String msgId;
 
         /**
-         * <p>The ID of the subscription.</p>
+         * <p>The event callback ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Sub-<strong><strong><strong>9799B2C4500</strong></strong></strong></p>
@@ -139,7 +139,8 @@ public class ListRtcMPUEventSubRecordResponseBody extends TeaModel {
         public String subId;
 
         /**
-         * <p>The time when the callback was invoked. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the callback was invoked.
+         * Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>1970-01-01T00:00:00Z</p>

@@ -17,10 +17,12 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
     public DescribeCasterProgramResponseBodyEpisodes episodes;
 
     /**
-     * <p>Indicates whether carousel playback is enabled.</p>
+     * <p>Indicates whether the program list is enabled.</p>
      * <ul>
-     * <li><strong>0</strong>: Carousel playback is disabled.</li>
-     * <li><strong>1</strong>: Carousel playback is enabled.</li>
+     * <li><p><strong>0</strong>: disabled</p>
+     * </li>
+     * <li><p><strong>1</strong>: enabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +32,7 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
     public Integer programEffect;
 
     /**
-     * <p>The name of the episode list.</p>
+     * <p>The name of the program list.</p>
      * 
      * <strong>example:</strong>
      * <p>programs_name</p>
@@ -48,7 +50,7 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

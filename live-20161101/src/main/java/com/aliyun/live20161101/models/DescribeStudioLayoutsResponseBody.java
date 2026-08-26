@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStudioLayoutsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5c6a2a0d-f228-4a64-af62-20e91b9676b3</p>
@@ -20,7 +20,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
     public java.util.List<DescribeStudioLayoutsResponseBodyStudioLayouts> studioLayouts;
 
     /**
-     * <p>The total number of layouts.</p>
+     * <p>The number of layouts.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayoutsBgImageConfig extends TeaModel {
         /**
-         * <p>The unique ID of the material.</p>
+         * <p>The unique ID of the background material.</p>
          * 
          * <strong>example:</strong>
          * <p>k12kj31****</p>
@@ -77,7 +77,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The position ID.</p>
+         * <p>The location ID.</p>
          * 
          * <strong>example:</strong>
          * <p>RV01</p>
@@ -86,7 +86,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String locationId;
 
         /**
-         * <p>The ID of the material in ApsaraVideo VOD.</p>
+         * <p>The video-on-demand material ID.</p>
          * 
          * <strong>example:</strong>
          * <p>asdfas9df89asd8f9****</p>
@@ -135,7 +135,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayoutsCommonConfig extends TeaModel {
         /**
-         * <p>The ID of the channel that is bound to the video resource.</p>
+         * <p>The channel location ID to which the video resource is bound.</p>
          * 
          * <strong>example:</strong>
          * <p>RV01</p>
@@ -144,7 +144,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String channelId;
 
         /**
-         * <p>The ID of the video resource.</p>
+         * <p>The video resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>asdfasdfasdfasdfa****</p>
@@ -186,10 +186,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The type of the resource configuration. Valid values:</p>
          * <ul>
-         * <li><strong>background</strong>: background material</li>
-         * <li><strong>media</strong>: multimedia material</li>
+         * <li><strong>background</strong>: background material.</li>
+         * <li><strong>media</strong>: multimedia material.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayoutsMediaInputConfigList extends TeaModel {
         /**
-         * <p>The ID of the channel that is bound to the video resource.</p>
+         * <p>The channel location ID to which the video resource is bound.</p>
          * 
          * <strong>example:</strong>
          * <p>RV01</p>
@@ -241,7 +241,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String fillMode;
 
         /**
-         * <p>The normalized value of the material height. The value indicates the ratio of the material height to the height of the background. Valid values: <strong>0 to 1</strong>.</p>
+         * <p>The normalized height of the material. This is the height ratio of the material to the background. Valid values: <strong>0 to 1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0.4</p>
@@ -259,7 +259,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the image in ApsaraVideo VOD.</p>
+         * <p>The video-on-demand image material ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lkajsdfsa8fd89asd8****</p>
@@ -268,7 +268,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String imageMaterialId;
 
         /**
-         * <p>The sequence number of the multimedia material. This parameter is displayed on the frontend but not used in the operation logic.</p>
+         * <p>The multimedia material number. Used for frontend display only and has no logical function.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -277,13 +277,13 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public Integer index;
 
         /**
-         * <p>The normalized value of the position of the material, in the format of [unk][x,y][unk]. Valid values of x and y: <strong>0 to 1</strong>. For example, [unk][0.1,0.2][unk] indicates that the material is horizontally offset by 10% and vertically offset by 20% towards the upper-left corner.</p>
+         * <p>The normalized position of the material fill area [x,y]. The values of x and y range from <strong>0 to 1</strong>. For example, [0.1,0.2] indicates a horizontal offset of 10% and a vertical offset of 20% from the upper-left corner.</p>
          */
         @NameInMap("PositionNormalized")
         public java.util.List<Float> positionNormalized;
 
         /**
-         * <p>The coordinate origin for the material. Default value: topLeft. topLeft indicates that the upper-left corner is used as the coordinate origin.</p>
+         * <p>The position reference coordinate of the material. Default value: topLeft, which indicates that the position is set based on the upper-left corner.</p>
          * 
          * <strong>example:</strong>
          * <p>topLeft</p>
@@ -292,7 +292,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String positionRefer;
 
         /**
-         * <p>The ID of the video resource.</p>
+         * <p>The video resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>asdfasdfasdfasdfa****</p>
@@ -301,7 +301,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String videoResourceId;
 
         /**
-         * <p>The normalized value of the material width. The value indicates the ratio of the material width to the width of the background. Valid values: <strong>0 to 1</strong>.</p>
+         * <p>The normalized width of the material. This is the width ratio of the material to the background. Valid values: <strong>0 to 1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0.4</p>
@@ -440,13 +440,13 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayoutsScreenInputConfigList extends TeaModel {
         /**
-         * <p>The audio configurations.</p>
+         * <p>The audio configuration information.</p>
          */
         @NameInMap("AudioConfig")
         public DescribeStudioLayoutsResponseBodyStudioLayoutsScreenInputConfigListAudioConfig audioConfig;
 
         /**
-         * <p>The ID of the channel that is bound to the video resource.</p>
+         * <p>The channel location ID to which the video resource is bound.</p>
          * 
          * <strong>example:</strong>
          * <p>RV01</p>
@@ -455,12 +455,12 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String channelId;
 
         /**
-         * <p>The color gamut for chroma key. Valid values:</p>
+         * <p>The chroma key color gamut. Valid values:</p>
          * <ul>
-         * <li><strong>blue</strong></li>
-         * <li><strong>green</strong></li>
-         * <li><strong>auto</strong>: automatic recognition</li>
-         * <li><strong>complex</strong>: background replacement</li>
+         * <li><strong>blue</strong>: blue screen background.</li>
+         * <li><strong>green</strong>: green screen background.</li>
+         * <li><strong>auto</strong>: automatic detection.</li>
+         * <li><strong>complex</strong>: real-scene chroma keying.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -470,7 +470,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String color;
 
         /**
-         * <p>The normalized value of the height. The value indicates the ratio of the height of the keyed portrait to the height of the background. Valid values: <strong>0 to 1</strong>.</p>
+         * <p>The normalized height. This is the height ratio of the extracted portrait to the background. Valid values: <strong>0 to 1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0.4</p>
@@ -479,7 +479,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public Float heightNormalized;
 
         /**
-         * <p>The unique ID of the chroma key source.</p>
+         * <p>The unique ID of the chroma key source material.</p>
          * 
          * <strong>example:</strong>
          * <p>k12kj31****</p>
@@ -488,7 +488,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The sequence number of the chroma key source. This parameter is displayed on the frontend but not used in the operation logic.</p>
+         * <p>The chroma key source number. Used for frontend display only and has no logical function.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -497,7 +497,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public Integer index;
 
         /**
-         * <p>Indicates whether only audio exists.</p>
+         * <p>Indicates whether only audio is used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -508,8 +508,8 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         /**
          * <p>The portrait type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: half body</li>
-         * <li><strong>1</strong>: full body</li>
+         * <li><strong>0</strong>: half-body.</li>
+         * <li><strong>1</strong>: full-body.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -519,7 +519,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public Integer portraitType;
 
         /**
-         * <p>The x-coordinate of the material. Valid values: <strong>0 to 1</strong>. The upper-left corner is used as the coordinate origin for the material.</p>
+         * <p>The position parameter, x coordinate. Valid values: <strong>0 to 1</strong>. The material position is based on the upper-left corner.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -528,7 +528,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String positionX;
 
         /**
-         * <p>The y-coordinate of the material. Valid values: <strong>0 to 1</strong>. The upper-left corner is used as the coordinate origin for the material.</p>
+         * <p>The position parameter, y coordinate. Valid values: <strong>0 to 1</strong>. The material position is based on the upper-left corner.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -537,7 +537,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String positionY;
 
         /**
-         * <p>The ID of the video resource.</p>
+         * <p>The video resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>asdfasdfasdfasdfa****</p>
@@ -642,25 +642,25 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayouts extends TeaModel {
         /**
-         * <p>The background material configurations.</p>
+         * <p>The background resource configuration.</p>
          */
         @NameInMap("BgImageConfig")
         public DescribeStudioLayoutsResponseBodyStudioLayoutsBgImageConfig bgImageConfig;
 
         /**
-         * <p>The common layout configurations. This parameter is returned only for a common layout.</p>
+         * <p>The common layout information. This field is returned when the layout is a common layout.</p>
          */
         @NameInMap("CommonConfig")
         public DescribeStudioLayoutsResponseBodyStudioLayoutsCommonConfig commonConfig;
 
         /**
-         * <p>The layer sorting configurations.</p>
+         * <p>The layer order configuration.</p>
          */
         @NameInMap("LayerOrderConfigList")
         public java.util.List<DescribeStudioLayoutsResponseBodyStudioLayoutsLayerOrderConfigList> layerOrderConfigList;
 
         /**
-         * <p>The ID of the layout.</p>
+         * <p>The studio layout ID.</p>
          * 
          * <strong>example:</strong>
          * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
@@ -669,7 +669,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String layoutId;
 
         /**
-         * <p>The name of the layout.</p>
+         * <p>The studio layout name.</p>
          * 
          * <strong>example:</strong>
          * <p>测试布局</p>
@@ -678,10 +678,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String layoutName;
 
         /**
-         * <p>The type of the layout. Valid values:</p>
+         * <p>The studio layout type. Valid values:</p>
          * <ul>
-         * <li><strong>common</strong></li>
-         * <li><strong>studio</strong></li>
+         * <li><strong>common</strong>: common layout.</li>
+         * <li><strong>studio</strong>: studio layout.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -691,13 +691,13 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         public String layoutType;
 
         /**
-         * <p>The multimedia input configurations.</p>
+         * <p>The multimedia input resource configuration.</p>
          */
         @NameInMap("MediaInputConfigList")
         public java.util.List<DescribeStudioLayoutsResponseBodyStudioLayoutsMediaInputConfigList> mediaInputConfigList;
 
         /**
-         * <p>The input configurations for chroma key.</p>
+         * <p>The chroma key input configuration.</p>
          */
         @NameInMap("ScreenInputConfigList")
         public java.util.List<DescribeStudioLayoutsResponseBodyStudioLayoutsScreenInputConfigList> screenInputConfigList;

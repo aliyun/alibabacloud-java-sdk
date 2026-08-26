@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLiveMessageAppResponseBody extends TeaModel {
     /**
-     * <p>The application ID. The ID is used in subsequent operations, such as joining a group.</p>
+     * <p>The application ID, which is used for subsequent operations such as joining groups.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>
@@ -14,7 +14,7 @@ public class CreateLiveMessageAppResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The AppKey for authentication of this application.</p>
+     * <p>The AppKey, which is used to generate authentication for various operations related to the AppId.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -23,7 +23,7 @@ public class CreateLiveMessageAppResponseBody extends TeaModel {
     public String appKey;
 
     /**
-     * <p>The application signature. The signature is required when you use the interactive messaging SDK.</p>
+     * <p>The application signature. The interactive messaging service SDK requires this information.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -32,7 +32,7 @@ public class CreateLiveMessageAppResponseBody extends TeaModel {
     public String appSign;
 
     /**
-     * <p>The data center in which the interactive messaging application was created.</p>
+     * <p>The data center.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

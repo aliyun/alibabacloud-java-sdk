@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddCasterVideoResourceRequest extends TeaModel {
     /**
-     * <p>The offset of the position where the system starts to read the video source. Unit: milliseconds.</p>
-     * <p>**</p>
-     * <p><strong>Important</strong> This parameter takes effect only if the video source is a file.</p>
+     * <p>The start offset of the video file. Unit: milliseconds.</p>
      * <blockquote>
-     * <p>A value greater than <strong>0</strong> specifies an offset from the first frame.</p>
+     * <p>Notice: This parameter takes effect only when the video source type is file video.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>A value greater than <strong>0</strong> indicates that reading starts from the offset time relative to the first frame.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,13 +20,15 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     public Integer beginOffset;
 
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/69338.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId parameter value returned by the CreateCaster operation.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, navigate to <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studios</strong> &gt; <strong>Cloud Production Studio</strong> to view the production studio name.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>You can find the ID of the production studio in the Instance Name column.</p>
+     * <p>The production studio name in the production studio list on the Cloud Production Studio page of the ApsaraVideo Live console is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,12 +39,13 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The offset of the position where the system stops reading the video source. Unit: milliseconds.</p>
-     * <p>**</p>
-     * <p><strong>Important</strong> This parameter takes effect only if the video source is a file.</p>
+     * <p>The end offset of the video file. Unit: milliseconds.</p>
+     * <blockquote>
+     * <p>Notice: This parameter takes effect only when the video source type is file video.</p>
+     * </blockquote>
      * <ul>
-     * <li>A value greater than <strong>0</strong> specifies an offset from the first frame.</li>
-     * <li>A value less than <strong>0</strong> specifies an offset from the last frame.</li>
+     * <li>A value greater than <strong>0</strong>: reading ends at the offset time relative to the first frame.</li>
+     * <li>A value less than <strong>0</strong>: reading ends at the offset time relative to the last frame.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +55,7 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     public Integer endOffset;
 
     /**
-     * <p>The fixed delay of the video layer. This parameter is used to synchronize the video with subtitles. Unit: milliseconds. Default value: 0. Valid values: <code>0 to 5000</code>.</p>
+     * <p>The fixed delay for the video, which can be used for subtitle synchronization. Unit: ms. Default value: 0. Value range: <code>[0-5000]</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -60,9 +64,9 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     public Integer fixedDelayDuration;
 
     /**
-     * <p>ID of the media library image material. </p>
+     * <p>The media asset library image material ID.</p>
      * <blockquote>
-     * <p>This parameter is only available and must be provided when the video source type is an image.</p>
+     * <p>This parameter is available and required only when the video source type is image.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,9 +76,9 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>Image material URL. </p>
+     * <p>The image material URL.</p>
      * <blockquote>
-     * <p>This parameter is available only when the video source type is an image and the image file has not been imported into the material library. Supports uploading images in jpg, png formats, with a maximum file size of 10MB.</p>
+     * <p>This parameter is available only when the video source type is image and the image file has not been imported to the media asset library. JPG and PNG formats are supported. The maximum file size is 10 MB.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,12 +88,16 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The streaming URL.</p>
-     * <p>**</p>
-     * <p><strong>Important</strong> This parameter is required if the video source is a live stream.</p>
+     * <p>The ApsaraVideo Live streaming URL.</p>
      * <blockquote>
-     * <p>Do not specify this parameter in the request if the video source is not a live stream.</p>
+     * <p>Notice:  </p>
      * </blockquote>
+     * <ul>
+     * <li><p>This parameter is required when the video source type is live stream.</p>
+     * </li>
+     * <li><p>Do not include this parameter in the request when the video source type is not live stream.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>rtmp://guide.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</p>
@@ -98,8 +106,8 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     public String liveStreamUrl;
 
     /**
-     * <p>The ID that is used to identify the position of the video source.</p>
-     * <p>Define the reference numbers in the layout. Each reference number is associated with only one resource. The value of this parameter must be in the RV[Number] format, where Number is <code>01 to 99</code>.</p>
+     * <p>The location identifier of the video source. This parameter is required. </p>
+     * <p>Defines the reference number of a scene in the layout. Each location can be associated with at most one resource. The format must match &quot;RV01<del>RV12&quot;, which is RV + a number in the range of `[01</del>99]`.</p>
      * 
      * <strong>example:</strong>
      * <p>RV01</p>
@@ -108,12 +116,13 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     public String locationId;
 
     /**
-     * <p>The ID of the material from the media library.</p>
-     * <p>**</p>
-     * <p><strong>Important</strong> This parameter takes effect and is required only if the video source is a material.</p>
-     * <p>If you query the configurations of the production studio by calling the <a href="https://help.aliyun.com/document_detail/60259.html">DescribeCasterConfig</a> operation, obtain the value of the response parameter UrgentMaterialId.</p>
+     * <p>The media asset library material ID.</p>
      * <blockquote>
-     * <p>The value of the UrgentMaterialId parameter is the ID of the material from the media library.</p>
+     * <p>Notice: This parameter is available and required only when the video source type is material.</p>
+     * </blockquote>
+     * <p>If you call the <a href="https://help.aliyun.com/document_detail/2848011.html">DescribeCasterConfig</a> operation to query the production studio configuration, check the UrgentMaterialId parameter value returned by the DescribeCasterConfig operation.</p>
+     * <blockquote>
+     * <p>The UrgentMaterialId value is the media asset library material ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -126,7 +135,7 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The interval between presentation timestamp (PTS) callbacks. Unit: milliseconds.</p>
+     * <p>The PTS callback interval. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -134,16 +143,23 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     @NameInMap("PtsCallbackInterval")
     public Integer ptsCallbackInterval;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The number of playbacks after the first playback is complete. Valid values:</p>
-     * <p>**</p>
-     * <p><strong>Important</strong> This parameter takes effect only if the video source is a file.</p>
+     * <p>The number of times the video repeats after playback completes. Valid values:</p>
+     * <blockquote>
+     * <p>Notice: This parameter takes effect only when the video source type is file video.</p>
+     * </blockquote>
      * <ul>
-     * <li><strong>0</strong>: specifies that the video source is played only once. This is the default value.</li>
-     * <li><strong>-1</strong>: specifies that the video source is played in loop mode.</li>
+     * <li><strong>0</strong> (default): no repeat.</li>
+     * <li><strong>-1</strong>: loops indefinitely.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -163,11 +179,12 @@ public class AddCasterVideoResourceRequest extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>The URL of the VOD file.</p>
-     * <p>**</p>
-     * <p><strong>Important</strong> This parameter takes effect only if the video source is a file that is not from the media library.</p>
+     * <p>The video-on-demand file URL.</p>
      * <blockquote>
-     * <p>The VOD file must be in the MP4, FLV, or TS format.</p>
+     * <p>Notice: This parameter is available only when the video source type is file video and the video file has not been imported to the media asset library.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>Video-on-demand files are limited to MP4, FLV, and TS formats.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

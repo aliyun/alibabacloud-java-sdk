@@ -15,7 +15,7 @@ public class SetLiveDomainStagingConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The list of features. You must specify the ConfigId field when you want to modify the configurations. For more information, see <strong>Features specified by the Functions parameter</strong>.</p>
+     * <p>The list of features. Specify ConfigId only when you modify a configuration. For more information, see <strong>Functions format description</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,12 @@ public class SetLiveDomainStagingConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

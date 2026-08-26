@@ -23,7 +23,7 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +44,7 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
     public DescribeLiveStreamsBlockListResponseBodyStreamUrls streamUrls;
 
     /**
-     * <p>The total number of live stream URLs that meet the specified conditions.</p>
+     * <p>The total number of entries that meet the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>
@@ -53,7 +53,7 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
     public Integer totalNum;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

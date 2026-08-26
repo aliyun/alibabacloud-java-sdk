@@ -23,7 +23,7 @@ public class DescribeLiveEdgeTransferResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The HTTPDNS API that is used to obtain the destination URLs.</p>
+     * <p>The URL of the HTTPDNS service used to resolve the addresses of the target domains.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://developer.aliyundoc.com/">http://developer.aliyundoc.com/</a>****</p>
@@ -41,7 +41,7 @@ public class DescribeLiveEdgeTransferResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the ingested stream.</p>
+     * <p>The name of the ingested live stream.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>
@@ -50,7 +50,7 @@ public class DescribeLiveEdgeTransferResponseBody extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The destination domain names to which the ingested stream is relayed. Multiple domain names are separated by commas (,).</p>
+     * <p>A comma-separated list of the target domains where the stream is forwarded.</p>
      * 
      * <strong>example:</strong>
      * <p>learn.aliyundoc.com,guide.aliyundoc.com</p>
@@ -59,10 +59,12 @@ public class DescribeLiveEdgeTransferResponseBody extends TeaModel {
     public String targetDomainList;
 
     /**
-     * <p>Indicates whether stream ingest parameters are passed through. Valid values:</p>
+     * <p>Indicates whether the query parameters from the original ingest URL are passed through to the target URL.</p>
      * <ul>
-     * <li><strong>yes</strong>: Stream ingest parameters are passed through.</li>
-     * <li><strong>no</strong>: Stream ingest parameters are not passed through.</li>
+     * <li><p><strong>yes</strong>: The parameters are passed through.</p>
+     * </li>
+     * <li><p><strong>no</strong>: The parameters are not passed through.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

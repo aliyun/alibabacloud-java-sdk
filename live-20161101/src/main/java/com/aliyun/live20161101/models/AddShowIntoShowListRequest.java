@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class AddShowIntoShowListRequest extends TeaModel {
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId value returned by the CreateCaster operation.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, navigate to <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studios</strong> &gt; <strong>Cloud Production Studio</strong> to view the production studio name.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The production studio name in the production studio list on the Cloud Production Studio page of the ApsaraVideo Live console is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,9 +24,12 @@ public class AddShowIntoShowListRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The duration of the episode. Unit: seconds.</p>
+     * <p>The playback duration of a single show. Unit: seconds.</p>
      * <blockquote>
-     * <p>You can specify only one of the <strong>RepeatTimes</strong> and <strong>Duration</strong> parameters.</p>
+     * <ul>
+     * <li>You can set only one of <strong>RepeatTimes</strong> and <strong>Duration</strong>.</li>
+     * <li>This parameter is required when ResourceType is set to live.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,7 +39,7 @@ public class AddShowIntoShowListRequest extends TeaModel {
     public Long duration;
 
     /**
-     * <p>The custom type label.</p>
+     * <p>The custom type tag.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,16 +50,22 @@ public class AddShowIntoShowListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The number of times the episode repeats after the first playback is complete. The default value is 0.</p>
+     * <p>The number of times a single show is repeated. Default value: 0.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>You can specify only one of the <strong>RepeatTimes</strong> and <strong>Duration</strong> parameters. - The RepeatTimes parameter specifies the number of repetitions. For example, if you set the value to -1, the episode is to be played for infinite times. If you set the value to 0, the episode is to be played once. If you set the value to 1, the episode is to be played twice.</li>
+     * <li>You can set only one of <strong>RepeatTimes</strong> and <strong>Duration</strong>.- RepeatTimes specifies the number of repetitions. For example, -1 means infinite repetition, 0 means the show is repeated 0 times (played once), 1 means the show is repeated 1 time (played twice), and so on.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -63,7 +74,7 @@ public class AddShowIntoShowListRequest extends TeaModel {
     public Integer repeatTimes;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The VOD file ID.</p>
      * 
      * <strong>example:</strong>
      * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
@@ -74,14 +85,19 @@ public class AddShowIntoShowListRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>live: live stream</li>
-     * <li>vod: on-demand video</li>
-     * <li>pic: image</li>
+     * <li>live: live streaming resource.</li>
+     * <li>vod: video-on-demand resource.</li>
+     * <li>pic: image resource.</li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>When using video-on-demand (VOD) resources, use managed Bucket resources first. Resources in your own Bucket may expire. If you use resources in your own Bucket, check the resource validity period.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>When you select media resources from ApsaraVideo VOD, we recommend that you select resources that are stored in hosted OSS buckets. Resources stored in non-hosted OSS buckets have a validity period. Pay attention to the validity if you select resources that are stored in non-hosted OSS buckets. - You can add a live stream from ApsaraVideo Live or by using a third-party URL. - You can add an on-demand video from ApsaraVideo VOD or by using a third-party URL, or add an on-demand image.</li>
+     * <li>Live files support live streaming resources and third-party URLs.</li>
+     * <li>VOD files support video-on-demand resources, image resources, and third-party URLs.</li>
+     * <li>When using live streaming resources, you must also specify the Duration parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,13 +107,13 @@ public class AddShowIntoShowListRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The URL of the resource.</p>
+     * <p>The URL of the playback file.</p>
      */
     @NameInMap("ResourceUrl")
     public String resourceUrl;
 
     /**
-     * <p>The name of the episode.</p>
+     * <p>The show name.</p>
      * 
      * <strong>example:</strong>
      * <p>liveShow****</p>
@@ -106,7 +122,7 @@ public class AddShowIntoShowListRequest extends TeaModel {
     public String showName;
 
     /**
-     * <p>The position of the episode in the episode list. Position indexes start from 0. By default, the episode is added to the end of the episode list.</p>
+     * <p>The position in the playlist where the show is inserted. Positions start from 0. By default, the show is added to the end of the current playlist.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -115,13 +131,15 @@ public class AddShowIntoShowListRequest extends TeaModel {
     public Integer spot;
 
     /**
-     * <p>Specifies whether to add multiple episodes to the episode list at a time. Valid values:</p>
+     * <p>Specifies whether to add shows to the playlist in batch. Valid values:</p>
      * <ul>
-     * <li>true: adds multiple episodes to the episode list at a time.</li>
-     * <li>false: adds a single episode to the episode list.</li>
+     * <li><p>true: Batch addition.</p>
+     * </li>
+     * <li><p>false: Single addition.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter or this parameter is left empty, a single episode is to be added to the episode list.</p>
+     * <p>If this parameter is not specified or left empty, single addition is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,7 +149,7 @@ public class AddShowIntoShowListRequest extends TeaModel {
     public Boolean isBatchMode;
 
     /**
-     * <p>The episodes that you want to add to the episode list. Each episode has a unique name and resource URL.</p>
+     * <p>The list of show resources to add. Each resource has independent parameters such as showName and resourceUrl.</p>
      */
     @NameInMap("showList")
     public java.util.List<AddShowIntoShowListRequestShowList> showList;
@@ -247,9 +265,12 @@ public class AddShowIntoShowListRequest extends TeaModel {
 
     public static class AddShowIntoShowListRequestShowList extends TeaModel {
         /**
-         * <p>The duration of the episode. Unit: seconds.</p>
+         * <p>The playback duration of a single show. Unit: seconds.</p>
          * <blockquote>
-         * <p> You can specify only one of the <strong>RepeatTimes</strong> and <strong>Duration</strong> parameters.</p>
+         * <ul>
+         * <li>You can set only one of <strong>repeatTimes</strong> and <strong>duration</strong>.</li>
+         * <li>This parameter is required when resourceType is set to live.</li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -259,7 +280,7 @@ public class AddShowIntoShowListRequest extends TeaModel {
         public Long duration;
 
         /**
-         * <p>The custom type label.</p>
+         * <p>The custom type tag.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -268,14 +289,14 @@ public class AddShowIntoShowListRequest extends TeaModel {
         public Integer liveInputType;
 
         /**
-         * <p>The number of times the episode repeats after the first playback is complete. Default value: 0.</p>
+         * <p>The number of times a single show is repeated. Default value: 0.</p>
          * <blockquote>
+         * <ul>
+         * <li>You can set only one of <strong>repeatTimes</strong> and <strong>duration</strong>.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li><p>You can specify only one of the <strong>RepeatTimes</strong> and <strong>Duration</strong> parameters.</p>
-         * </li>
-         * <li><p>The RepeatTimes parameter specifies the number of repetitions. For example, if you set the value to 0, the episode is to be played once. If you set the value to 1, the episode is to be played twice.</p>
-         * </li>
+         * <li>repeatTimes specifies the number of repetitions. For example, 0 means the show is repeated 0 times (played once), 1 means the show is repeated 1 time (played twice), and so on.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +306,7 @@ public class AddShowIntoShowListRequest extends TeaModel {
         public Integer repeatTimes;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The VOD file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
@@ -296,19 +317,22 @@ public class AddShowIntoShowListRequest extends TeaModel {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>live: live stream</li>
-         * <li>vod: on-demand video</li>
-         * <li>pic: image</li>
+         * <li><p>live: live streaming resource.</p>
+         * </li>
+         * <li><p>vod: video-on-demand resource.</p>
+         * </li>
+         * <li><p>pic: image resource.</p>
+         * </li>
          * </ul>
          * <blockquote>
+         * <ul>
+         * <li>When using video-on-demand (VOD) resources, use managed Bucket resources first. Resources in your own Bucket may expire. If you use resources in your own Bucket, check the resource validity period.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li><p>When you select media resources from ApsaraVideo VOD, we recommend that you select resources that are stored in hosted OSS buckets. Resources stored in non-hosted OSS buckets have a validity period. Pay attention to the validity if you select resources that are stored in non-hosted OSS buckets.</p>
-         * </li>
-         * <li><p>You can add a live stream from ApsaraVideo Live or by using a third-party URL.</p>
-         * </li>
-         * <li><p>You can add an on-demand video from ApsaraVideo VOD or by using a third-party URL, or add an on-demand image.</p>
-         * </li>
+         * <li>Live files support live streaming resources and third-party URLs.</li>
+         * <li>VOD files support video-on-demand resources, image resources, and third-party URLs.</li>
+         * <li>When using live streaming resources, you must also specify the duration parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -318,13 +342,13 @@ public class AddShowIntoShowListRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The URL of the resource.</p>
+         * <p>The URL of the playback file.</p>
          */
         @NameInMap("resourceUrl")
         public String resourceUrl;
 
         /**
-         * <p>The name of the episode.</p>
+         * <p>The show name.</p>
          * 
          * <strong>example:</strong>
          * <p>liveShow****</p>

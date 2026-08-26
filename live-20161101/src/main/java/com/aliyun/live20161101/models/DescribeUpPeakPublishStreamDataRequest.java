@@ -14,10 +14,10 @@ public class DescribeUpPeakPublishStreamDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether to collect statistics at the domain name level. Valid values:</p>
+     * <p>The domain name statistics switch. Valid values:</p>
      * <ul>
-     * <li>on: collects statistics at the domain name level.</li>
-     * <li>off (default): collects statistics at the user level.</li>
+     * <li>on: enables domain name-level statistics.</li>
+     * <li>off: user-level data. User-level data is collected by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,11 @@ public class DescribeUpPeakPublishStreamDataRequest extends TeaModel {
     public String domainSwitch;
 
     /**
-     * <p>The end time of stream pulling. The time must be in UTC. The end time must be later than the start time. The maximum time range that can be specified by StartTime and EndTime is 30 days.</p>
+     * <p>The end time of stream pulling in UTC. The interval between StartTime and EndTime must be within 30 days, and EndTime must be later than the current time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2017-10-10T21:00:00Z</p>
+     * <p>2017-10-10T22:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -39,11 +39,17 @@ public class DescribeUpPeakPublishStreamDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The start time of stream pulling. The time must be in UTC. The maximum time range that can be specified by StartTime and EndTime is 30 days.</p>
+     * <p>The start time of stream pulling in UTC. The interval between StartTime and EndTime must be within 30 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

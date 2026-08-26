@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class EnableLiveRealtimeLogDeliveryRequest extends TeaModel {
     /**
      * <p>The streaming domain for which you want to enable real-time log delivery.</p>
-     * <p>Separate multiple streaming domains with commas (,).</p>
+     * <p>Separate multiple domain names with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,6 +18,12 @@ public class EnableLiveRealtimeLogDeliveryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

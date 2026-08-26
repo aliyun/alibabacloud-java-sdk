@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class InitializeAutoShowListTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <blockquote>
-     * <p> The value of this parameter can be used as the value of a request parameter to query the streaming URL of the production studio, start the production studio, add video resources to the production studio, add a production studio layout, query production studio layouts, add a production studio component, and add a production studio playlist.</p>
+     * <p>This ID can be used as a request parameter for querying production studio stream URLs, starting the production studio, adding video resources to the production studio, adding layouts to the production studio, querying the layout list of the production studio, adding components to the production studio, and adding programs to the production studio.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,11 +26,14 @@ public class InitializeAutoShowListTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of output video streams.</p>
+     * <p>The list of output addresses of the production studio.</p>
      * <ul>
-     * <li>videoFormat: the format of the streaming URL.</li>
-     * <li>outputStreamUrl: the source URL.</li>
-     * <li>transcodeConfig: the output resolution specified for video transcoding of the source URL.</li>
+     * <li><p>videoFormat: the streaming URL format.</p>
+     * </li>
+     * <li><p>outputStreamUrl: the stream pulling URL.</p>
+     * </li>
+     * <li><p>transcodeConfig: the transcoding resolution description of the stream pulling URL.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

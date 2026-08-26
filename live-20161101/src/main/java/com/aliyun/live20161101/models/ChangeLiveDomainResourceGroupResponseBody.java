@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeLiveDomainResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>8F-F82F-10E2-BAE1-A036FD</strong></strong></strong></p>

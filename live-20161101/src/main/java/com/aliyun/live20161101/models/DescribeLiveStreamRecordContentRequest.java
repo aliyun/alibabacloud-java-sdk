@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamRecordContentRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The AppName of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeLiveStreamRecordContentRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>DescribeLiveStreamRecordContent</strong>.</p>
+     * <p>The main streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeLiveStreamRecordContentRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The beginning of the time range to query. You can only query the recordings in the last 6 months. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time for the query. The time range between StartTime and EndTime cannot exceed 4 days. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeLiveStreamRecordContentRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The start time for the query. You can query records from the last 6 months. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DescribeLiveStreamRecordContentRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

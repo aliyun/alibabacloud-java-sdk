@@ -8,7 +8,7 @@ public class DescribeLiveIpInfoResponseBody extends TeaModel {
      * <p>The Chinese name of the ISP.</p>
      * 
      * <strong>example:</strong>
-     * <p>ChinaTelecom</p>
+     * <p>电信</p>
      */
     @NameInMap("ISP")
     public String ISP;
@@ -23,16 +23,16 @@ public class DescribeLiveIpInfoResponseBody extends TeaModel {
     public String ispEname;
 
     /**
-     * <p>The Chinese name of the region.</p>
+     * <p>The Chinese name of the IP region.</p>
      * 
      * <strong>example:</strong>
-     * <p>China-Guizhou-guiyang</p>
+     * <p>中国-贵州省-贵阳市</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The English name of the region.</p>
+     * <p>The English name of the IP region.</p>
      * 
      * <strong>example:</strong>
      * <p>China-Guizhou-guiyang</p>
@@ -41,7 +41,7 @@ public class DescribeLiveIpInfoResponseBody extends TeaModel {
     public String regionEname;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1B1D0EE7-9559-489D-BC4E-279495EB8FB8</p>

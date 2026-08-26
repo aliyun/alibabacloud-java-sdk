@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLivePrivateLineAreasRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain for ingest.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +17,12 @@ public class DescribeLivePrivateLineAreasRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

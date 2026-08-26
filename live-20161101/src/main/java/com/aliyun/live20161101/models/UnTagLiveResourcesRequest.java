@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class UnTagLiveResourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to delete all tags. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -14,10 +21,17 @@ public class UnTagLiveResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The resource ID. The live streaming domain name. Valid values of N: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +41,7 @@ public class UnTagLiveResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type. Enumeration type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +51,8 @@ public class UnTagLiveResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The tag key. Valid values of N: <strong>1 to 20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>env</p>
      */

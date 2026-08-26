@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCasterLayoutResponseBody extends TeaModel {
     /**
-     * <p>The ID of the layout.</p>
-     * <p>Record the ID as it can be used to manage the layout being created.</p>
+     * <p>The ID of the layout. You can use this ID as a request parameter when you call operations to manage layouts, such as deleting, modifying, or querying layouts for a production studio or a virtual studio.</p>
      * 
      * <strong>example:</strong>
      * <p>21926b36-7dd2-4fde-ae25-51b5bc8e****</p>
@@ -15,7 +14,7 @@ public class AddCasterLayoutResponseBody extends TeaModel {
     public String layoutId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>

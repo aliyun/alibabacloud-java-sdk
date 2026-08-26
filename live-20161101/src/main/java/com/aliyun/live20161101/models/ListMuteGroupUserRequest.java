@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMuteGroupUserRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>The ID of the interactive message application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListMuteGroupUserRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the messaging group.</p>
+     * <p>The ID of the message group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListMuteGroupUserRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the user who performs the operation.</p>
+     * <p>The user ID of the operator. This user must be the creator of the group.</p>
      * 
      * <strong>example:</strong>
      * <p>de1**a0</p>
@@ -44,7 +44,7 @@ public class ListMuteGroupUserRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 50.</p>
+     * <p>The number of users to display on each page. Default value: 20. Valid values: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

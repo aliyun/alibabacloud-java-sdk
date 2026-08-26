@@ -14,7 +14,7 @@ public class CreateEventSubResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The subscription ID.</p>
+     * <p>The ID of the created subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>ad53276431c****</p>

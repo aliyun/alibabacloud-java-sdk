@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLiveMessageAppsResponseBody extends TeaModel {
     /**
-     * <p>The interactive messaging applications.</p>
+     * <p>The list of interactive messaging applications.</p>
      */
     @NameInMap("AppList")
     public java.util.List<ListLiveMessageAppsResponseBodyAppList> appList;
 
     /**
-     * <p>Indicates whether the current page is followed by a page.</p>
+     * <p>Indicates whether there is a next page.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,7 +20,7 @@ public class ListLiveMessageAppsResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>The starting page number for the next query. This parameter is returned only if the value of HasMore is true.</p>
+     * <p>The starting position of the next page. This parameter is returned only when HasMore is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListLiveMessageAppsResponseBody extends TeaModel {
     public Long nextPageToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B8EB4994-1368-1458-B9F3-5B88D76D734C</p>
@@ -76,7 +76,7 @@ public class ListLiveMessageAppsResponseBody extends TeaModel {
 
     public static class ListLiveMessageAppsResponseBodyAppList extends TeaModel {
         /**
-         * <p>The ID of the interactive messaging application queried.</p>
+         * <p>The ID of the interactive messaging application.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -85,7 +85,7 @@ public class ListLiveMessageAppsResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The AppKey of the interactive messaging application. It is used to authorize operations related to the application ID.</p>
+         * <p>The AppKey of the interactive messaging application. This value is required for authentication of related operations on this application.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -94,7 +94,7 @@ public class ListLiveMessageAppsResponseBody extends TeaModel {
         public String appKey;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>testApp</p>
@@ -103,7 +103,7 @@ public class ListLiveMessageAppsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The signature of the interactive messaging application. It is required by the interactive messaging SDK.</p>
+         * <p>The signature of the interactive messaging application. This value is required by the interactive messaging SDK.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -112,7 +112,7 @@ public class ListLiveMessageAppsResponseBody extends TeaModel {
         public String appSign;
 
         /**
-         * <p>The time when the application was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The creation time, represented as a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1698305471</p>
@@ -121,7 +121,7 @@ public class ListLiveMessageAppsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The live center.</p>
+         * <p>The data center.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -139,7 +139,7 @@ public class ListLiveMessageAppsResponseBody extends TeaModel {
         public String disable;
 
         /**
-         * <p>The time when the application was last modified. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The modification time, represented as a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1698305471</p>
@@ -148,11 +148,11 @@ public class ListLiveMessageAppsResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The retention period of group messages in the application. Valid values:</p>
+         * <p>The storage duration tier for group messages within the application. Valid values:</p>
          * <ul>
-         * <li>0 (default): 30 days</li>
-         * <li>1: 90 days</li>
-         * <li>2: 180 days</li>
+         * <li>0: Default value. Messages are stored for 30 days.</li>
+         * <li>1: Messages are stored for 90 days.</li>
+         * <li>2: Messages are stored for 180 days.</li>
          * </ul>
          * 
          * <strong>example:</strong>

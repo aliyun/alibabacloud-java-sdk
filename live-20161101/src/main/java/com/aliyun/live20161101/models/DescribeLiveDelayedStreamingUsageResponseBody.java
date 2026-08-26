@@ -8,7 +8,7 @@ public class DescribeLiveDelayedStreamingUsageResponseBody extends TeaModel {
     public DescribeLiveDelayedStreamingUsageResponseBodyDelayData delayData;
 
     /**
-     * <p>The end of the time range during which the data was queried.</p>
+     * <p>The end time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-10-10T21:00:00Z</p>
@@ -20,13 +20,13 @@ public class DescribeLiveDelayedStreamingUsageResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>4B460F8B-993C-4F48-B98A-910811DEBFEB</p>
+     * <p>4B460F8B-993C-4F48-B98A-91081******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which the data was queried.</p>
+     * <p>The start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-10-10T20:00:00Z</p>

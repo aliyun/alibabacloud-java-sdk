@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveAIProduceRulesRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application to which the stream belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>AppName</p>
@@ -14,7 +14,7 @@ public class DescribeLiveAIProduceRulesRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The primary playback domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>demo.aliyundoc.com</p>
@@ -26,7 +26,7 @@ public class DescribeLiveAIProduceRulesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: [1,100].</p>
+     * <p>The page number. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeLiveAIProduceRulesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: [1,100].</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -43,11 +43,17 @@ public class DescribeLiveAIProduceRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the subtitle rule.</p>
+     * <p>The ID of the caption rule.</p>
      * 
      * <strong>example:</strong>
      * <p>445409ec-7eaa-461d-8f29-4bec****</p>
@@ -56,9 +62,9 @@ public class DescribeLiveAIProduceRulesRequest extends TeaModel {
     public String rulesId;
 
     /**
-     * <p>The suffix of the subtitle rule.</p>
+     * <p>The caption suffix.</p>
      * <blockquote>
-     * <p>Set the value to the name of the subtitle template.</p>
+     * <p>Set this parameter to the value of SubtitleName that is specified for the caption template.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMessageGroupUserByIdResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>Return result.</p>
      */
     @NameInMap("Result")
     public ListMessageGroupUserByIdResponseBodyResult result;
@@ -44,8 +44,10 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the user is muted. Valid values:</p>
          * <ul>
-         * <li>true: The user is muted.</li>
-         * <li>false: The user is not muted.</li>
+         * <li><p>true: Muted.</p>
+         * </li>
+         * <li><p>false: Not muted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,17 +57,19 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         public Boolean isMute;
 
         /**
-         * <p>The type of the mute. Valid values:</p>
+         * <p>Mute type. Valid values:</p>
          * <ul>
-         * <li>group: All members in the message group are muted.</li>
-         * <li>user: Specific members in the message group are muted.</li>
+         * <li><p>group: All members in the message group are muted.</p>
+         * </li>
+         * <li><p>user: Individual user is muted.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("MuteBy")
         public java.util.List<String> muteBy;
 
         /**
-         * <p>The URL of the profile picture of the user.</p>
+         * <p>Profile picture URL.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;<a href="http://www.aliyundoc.com/xxyy.png">http://www.aliyundoc.com/xxyy.png</a>&quot;</p>
@@ -74,7 +78,7 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         public String userAvatar;
 
         /**
-         * <p>The custom information about the user.</p>
+         * <p>Custom user information content.</p>
          * 
          * <strong>example:</strong>
          * <p>12e</p>
@@ -83,7 +87,7 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         public String userExtension;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>User ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ad***</p>
@@ -92,7 +96,7 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The nickname of the user.</p>
+         * <p>User nickname.</p>
          * 
          * <strong>example:</strong>
          * <p>xxyy</p>
@@ -157,10 +161,12 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
 
     public static class ListMessageGroupUserByIdResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+         * <p>Indicates whether there is a next page. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: There is a next page.</p>
+         * </li>
+         * <li><p>false: There is no next page.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +176,7 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         public Boolean hasMore;
 
         /**
-         * <p>The total number of users returned.</p>
+         * <p>Total number of users queried.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -179,7 +185,7 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         public Integer total;
 
         /**
-         * <p>The list of users.</p>
+         * <p>User list information.</p>
          */
         @NameInMap("UserList")
         public java.util.List<ListMessageGroupUserByIdResponseBodyResultUserList> userList;

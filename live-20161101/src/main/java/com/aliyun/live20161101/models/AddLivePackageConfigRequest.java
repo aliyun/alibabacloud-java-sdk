@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLivePackageConfigRequest extends TeaModel {
     /**
-     * <p>The application name. The value of this parameter must be the same as the application name that is specified in the ingest URL. Otherwise, the configuration does not take effect. The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (<em>). The name cannot start with a hyphen (-) or underscore (</em>). You can also specify an asterisk (\*) as the value to match all applications.</p>
+     * <p>The AppName must match the AppName in the ingest URL for the template to take effect. The AppName can be up to 255 characters in length and can contain digits, uppercase letters, lowercase letters, hyphens (-), and underscores (_). A hyphen or an underscore cannot be the first character. You can also set this parameter to a single asterisk (\*) to match all AppNames.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddLivePackageConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The live streaming domain name. This is the primary playback domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,12 @@ public class AddLivePackageConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether to ignore the transcoded stream. Valid values:</p>
+     * <p>Specifies whether to ignore transcoded streams. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default)</li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong> (default): Ignore transcoded streams.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Do not ignore transcoded streams.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,11 +43,14 @@ public class AddLivePackageConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The part length. Unit: milliseconds.</p>
+     * <p>The length of the part segment, in milliseconds.</p>
      * <ul>
-     * <li>If the value of SegmentDuration is 1, the valid values of this parameter are 100 to 500 and the default value of this parameter is 350.</li>
-     * <li>If the value of SegmentDuration is 2, the valid values of this parameter are 100 to 1000 and the default value of this parameter is 700.</li>
-     * <li>This parameter takes effect only if Protocol is set to LLHLS_TS or LLHLS_CMAF.</li>
+     * <li><p>If SegmentDuration is 1 s, the valid values are 100 to 500. The default value is 350.</p>
+     * </li>
+     * <li><p>If SegmentDuration is 2 s, the valid values are 100 to 1000. The default value is 700.</p>
+     * </li>
+     * <li><p>This parameter is valid only when you set Protocol to LLHLS_\*.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,13 +60,19 @@ public class AddLivePackageConfigRequest extends TeaModel {
     public Integer partDuration;
 
     /**
-     * <p>The streaming protocol and encapsulation format. Valid values:</p>
+     * <p>The live streaming protocol and container format. Valid values:</p>
      * <ul>
-     * <li><strong>HLS_CMAF</strong></li>
-     * <li><strong>LLHLS_TS</strong> (low latency)</li>
-     * <li><strong>LLHLS_CMAF</strong> (low latency)</li>
-     * <li><strong>DASH_CMAF</strong></li>
-     * <li><strong>HLSDASH_CMAF</strong></li>
+     * <li><p><strong>HLS_CMAF</strong></p>
+     * </li>
+     * <li><p><strong>LLHLS_TS</strong>
+     * (low latency)</p>
+     * </li>
+     * <li><p><strong>LLHLS_CMAF</strong> (low latency)</p>
+     * </li>
+     * <li><p><strong>DASH_CMAF</strong></p>
+     * </li>
+     * <li><p><strong>HLSDASH_CMAF</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,14 +82,22 @@ public class AddLivePackageConfigRequest extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The segment length. Unit: seconds.</p>
+     * <p>The segment length, in seconds.</p>
      * <ul>
-     * <li>If Protocol is set to HLS_CMAF: Valid values: 1 to 10. Default value: 5.</li>
-     * <li>If Protocol is set to LLHLS_TS or LLHLS_CMAF: Valid values: 1 to 2. Default value: 1.</li>
+     * <li><p>If you set Protocol to HLS_CMAF, the valid values are 1 to 10. The default value is 5.</p>
+     * </li>
+     * <li><p>If you set Protocol to LLHLS_\*, the valid values are 1 to 2. The default value is 1.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,10 +107,12 @@ public class AddLivePackageConfigRequest extends TeaModel {
     public Integer segmentDuration;
 
     /**
-     * <p>The number of segments.</p>
+     * <p>The number of M3U8 segments for live streaming.</p>
      * <ul>
-     * <li>Valid values: 3 to 10.</li>
-     * <li>Default value: 3.</li>
+     * <li><p>Valid values: 3 to 10.</p>
+     * </li>
+     * <li><p>Default value: 3.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +122,7 @@ public class AddLivePackageConfigRequest extends TeaModel {
     public Integer segmentNum;
 
     /**
-     * <p>The stream name. The value of this parameter must be the same as the stream name that is specified in the ingest URL. Otherwise, the configuration does not take effect. The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (<em>). The name cannot start with a hyphen (-) or underscore (</em>). You can also specify an asterisk (\*) as the value to match all streams.</p>
+     * <p>The StreamName must match the StreamName in the ingest URL for the template to take effect. The StreamName can be up to 255 characters in length and can contain digits, uppercase letters, lowercase letters, hyphens (-), and underscores (_). A hyphen or an underscore cannot be the first character. You can also set this parameter to a single asterisk (\*) to match all StreamNames.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

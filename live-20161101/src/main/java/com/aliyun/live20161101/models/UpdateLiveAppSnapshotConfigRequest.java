@@ -54,10 +54,14 @@ public class UpdateLiveAppSnapshotConfigRequest extends TeaModel {
     /**
      * <p>The naming format of snapshots that are stored in the overwrite mode, which means that a new snapshot overwrites the previous snapshot.</p>
      * <ul>
-     * <li>The name must be less than 256 bytes in length.</li>
-     * <li>Only JPG images are supported.</li>
-     * <li>The name can contain variables such as {AppName} and {StreamName}.</li>
-     * <li>A value of hyphen (-) indicates that this parameter is deleted.</li>
+     * <li><p>The name must be less than 256 bytes in length.</p>
+     * </li>
+     * <li><p>Only JPG images are supported.</p>
+     * </li>
+     * <li><p>The name can contain variables such as {AppName} and {StreamName}.</p>
+     * </li>
+     * <li><p>A value of hyphen (-) indicates that this parameter is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,10 +79,14 @@ public class UpdateLiveAppSnapshotConfigRequest extends TeaModel {
     /**
      * <p>The naming format of snapshots that are stored in sequence, which means that a new snapshot does not overwrite the previous snapshot. You can call the <a href="https://help.aliyun.com/document_detail/2847902.html">DescribeLiveStreamSnapshotInfo</a> operation to query the snapshots that were captured within a specific time period.</p>
      * <ul>
-     * <li>The name must be less than 256 bytes in length.</li>
-     * <li>Only JPG images are supported.</li>
-     * <li>The name can contain variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}. The name must contain at least one of the {UnixTimestamp} and {Sequence} variables.</li>
-     * <li>A value of hyphen (-) indicates that this parameter is deleted.</li>
+     * <li><p>The name must be less than 256 bytes in length.</p>
+     * </li>
+     * <li><p>Only JPG images are supported.</p>
+     * </li>
+     * <li><p>The name can contain variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}. The name must contain at least one of the {UnixTimestamp} and {Sequence} variables.</p>
+     * </li>
+     * <li><p>A value of hyphen (-) indicates that this parameter is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

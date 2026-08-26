@@ -7,11 +7,13 @@ public class DescribeCasterProgramRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value that is returned in the response.</p>
+     * </li>
+     * <li><p>If you create a production studio in the LIVE console, find the ID on the Cloud Production Studio page. To go to this page, choose <strong>LIVE</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is its ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,7 +24,7 @@ public class DescribeCasterProgramRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. The time must be in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-29T10:00:00Z</p>
@@ -31,7 +33,7 @@ public class DescribeCasterProgramRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the episode.</p>
+     * <p>The ID of the program.</p>
      * 
      * <strong>example:</strong>
      * <p>1872639A-F203-4EC5-8E43-CB92E68F****</p>
@@ -40,10 +42,12 @@ public class DescribeCasterProgramRequest extends TeaModel {
     public String episodeId;
 
     /**
-     * <p>The type of the episode. Valid values:</p>
+     * <p>The type of the node. Valid values:</p>
      * <ul>
-     * <li><strong>Resource</strong>: a video resource</li>
-     * <li><strong>Component</strong>: a component</li>
+     * <li><p><strong>Resource</strong>: video source.</p>
+     * </li>
+     * <li><p><strong>Component</strong>: component.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +69,7 @@ public class DescribeCasterProgramRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of programs on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -73,11 +77,17 @@ public class DescribeCasterProgramRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. The time must be in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-29T09:00:00Z</p>
@@ -86,11 +96,14 @@ public class DescribeCasterProgramRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the episode. Valid values:</p>
+     * <p>The status of the program. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The episode is not played.</li>
-     * <li><strong>1</strong>: The episode is being played.</li>
-     * <li><strong>2</strong>: The playback of the episode is complete.</li>
+     * <li><p><strong>0</strong>: not started</p>
+     * </li>
+     * <li><p><strong>1</strong>: playing</p>
+     * </li>
+     * <li><p><strong>2</strong>: finished</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

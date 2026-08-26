@@ -7,11 +7,17 @@ public class DeleteLiveAISubtitleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the subtitle template.</p>
+     * <p>The ID of the caption template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +27,7 @@ public class DeleteLiveAISubtitleRequest extends TeaModel {
     public String subtitleId;
 
     /**
-     * <p>The name of the subtitle template. The name can contain only digits, letters, and hyphens (-). The name cannot start with a hyphen.</p>
+     * <p>The name of the caption template. The name can contain only digits, letters, and hyphens (-). A hyphen cannot be the first character.</p>
      * 
      * <strong>example:</strong>
      * <p>sub01</p>

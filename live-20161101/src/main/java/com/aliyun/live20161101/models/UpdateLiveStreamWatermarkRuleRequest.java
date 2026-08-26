@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveStreamWatermarkRuleRequest extends TeaModel {
     /**
-     * <p>The description of the custom rule.</p>
+     * <p>The custom description of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>my rule</p>
@@ -14,7 +14,7 @@ public class UpdateLiveStreamWatermarkRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the custom rule.</p>
+     * <p>The custom name of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>WatermarkRule****</p>
@@ -25,13 +25,19 @@ public class UpdateLiveStreamWatermarkRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the watermark rule.</p>
      * <blockquote>
-     * <p> You can obtain the rule ID by checking the value of the RuleId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/2848100.html">AddLiveStreamWatermarkRule</a> operation.</p>
+     * <p>Get the rule ID from the response of the <a href="https://help.aliyun.com/document_detail/2848100.html">AddLiveStreamWatermarkRule</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +50,7 @@ public class UpdateLiveStreamWatermarkRuleRequest extends TeaModel {
     /**
      * <p>The ID of the watermark template.</p>
      * <blockquote>
-     * <p> You can obtain the template ID by checking the value of the TemplateId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/2848096.html">AddLiveStreamWatermark</a> operation.</p>
+     * <p>Get the template ID from the response of the <a href="https://help.aliyun.com/document_detail/2848096.html">AddLiveStreamWatermark</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

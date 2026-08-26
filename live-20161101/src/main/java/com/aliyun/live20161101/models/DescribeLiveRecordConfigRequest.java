@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveRecordConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application to which the stream belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,7 +14,7 @@ public class DescribeLiveRecordConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The name of the main streaming domain.</p>
+     * <p>The streamer\&quot;s streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,10 @@ public class DescribeLiveRecordConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The order in which the entries are sorted based on creation time. Valid values:</p>
+     * <p>The order in which entries are sorted by creation time. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong> (default): ascending order</li>
-     * <li><strong>desc</strong>: descending order</li>
+     * <li><strong>asc</strong> (default): ascending order.</li>
+     * <li><strong>desc</strong>: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeLiveRecordConfigRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>5 to 30</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>5 to 30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -61,7 +61,7 @@ public class DescribeLiveRecordConfigRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The stream name.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>

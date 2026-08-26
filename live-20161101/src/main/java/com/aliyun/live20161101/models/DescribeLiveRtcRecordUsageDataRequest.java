@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveRtcRecordUsageDataRequest extends TeaModel {
     /**
+     * <p>The ID of the ApsaraVideo Real-time Communication application. You can view the ID in <a href="https://help.aliyun.com/document_detail/2355593.html">ApsaraVideo Real-time Communication application management</a>. Navigate to <strong>ApsaraVideo Live &gt; Live+ &gt; Real-time Communication &gt; Application Management</strong> to view your application IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeLiveRtcRecordUsageDataRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The end time for the query. The query granularity must be ≥ 5 minutes and ≤ 31 days. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,16 @@ public class DescribeLiveRtcRecordUsageDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The time granularity for the query data. Unit: seconds. Valid values:</p>
+     * <ul>
+     * <li><p>3600 (default).</p>
+     * </li>
+     * <li><ol start="86400">
+     * <li></li>
+     * </ol>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -30,6 +42,13 @@ public class DescribeLiveRtcRecordUsageDataRequest extends TeaModel {
     public String interval;
 
     /**
+     * <p>The recording mode. Valid values:</p>
+     * <ul>
+     * <li><p>0: single-stream recording mode.</p>
+     * </li>
+     * <li><p>1: stream mixing recording mode.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +58,7 @@ public class DescribeLiveRtcRecordUsageDataRequest extends TeaModel {
     public String recordMode;
 
     /**
+     * <p>The start time for the query. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

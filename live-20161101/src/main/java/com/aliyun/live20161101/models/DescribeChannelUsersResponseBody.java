@@ -54,7 +54,7 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>AD86847D-1F36-18C8-A995-5EEA340B3202</p>
+     * <p>AD86847D-1F36-18C8-A995-5EEA34******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

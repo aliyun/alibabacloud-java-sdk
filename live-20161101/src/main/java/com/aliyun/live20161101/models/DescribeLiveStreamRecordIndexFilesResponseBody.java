@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamRecordIndexFilesResponseBody extends TeaModel {
     /**
-     * <p>The sort order.</p>
+     * <p>The sorting order.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>

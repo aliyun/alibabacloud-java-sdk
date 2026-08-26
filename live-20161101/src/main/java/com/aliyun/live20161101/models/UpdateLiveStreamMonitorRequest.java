@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveStreamMonitorRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the output stream of the monitoring session belongs. You can specify a name. If you do not specify a name, the system uses <strong>monitor</strong> as the name of the application.</p>
+     * <p>The application name for the output stream of the monitoring session. You can specify a custom name. If you do not specify this parameter, <strong>monitor</strong> is used as the AppName.</p>
      * 
      * <strong>example:</strong>
      * <p>monitor****</p>
@@ -14,7 +14,7 @@ public class UpdateLiveStreamMonitorRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The callback URL. Supported formats include HTTP and HTTPS.</p>
+     * <p>The webhook address. HTTP and HTTPS are supported.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></p>
@@ -23,9 +23,9 @@ public class UpdateLiveStreamMonitorRequest extends TeaModel {
     public String callbackUrl;
 
     /**
-     * <p>The URL of the DingTalk chatbot. Specify a DingTalk chatbot that you have configured, and you can receive live monitoring alerts from the chatbot. For more information, see <a href="https://open.dingtalk.com/document/robots/custom-robot-access">Configure a custom chatbot</a>.</p>
+     * <p>The webhook URL of the DingTalk chatbot. Monitoring alerts are sent to a DingTalk group using a chatbot. Set up a chatbot and enter its webhook URL, which must be an HTTP or HTTPS address. For more information, see <a href="https://open.dingtalk.com/document/robots/custom-robot-access">Custom robot access</a>.</p>
      * <blockquote>
-     * <p> Specify &quot;Alert&quot; as the custom keyword of the DingTalk chatbot. Otherwise, you cannot receive messages.</p>
+     * <p>Set the custom keyword of the DingTalk chatbot to &quot;Alerting&quot;. Otherwise, messages cannot be received.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpdateLiveStreamMonitorRequest extends TeaModel {
     public String dingTalkWebHookUrl;
 
     /**
-     * <p>The domain name.</p>
+     * <p>The output domain name for the monitoring session.</p>
      * 
      * <strong>example:</strong>
      * <p>demo.aliyundoc.com</p>
@@ -44,7 +44,7 @@ public class UpdateLiveStreamMonitorRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The list of input streams to monitor. For more information, see the following <strong>InputConfig</strong> table.</p>
+     * <p>The list of input streams to monitor. For more information, see the <strong>InputConfig</strong> table below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class UpdateLiveStreamMonitorRequest extends TeaModel {
     public String inputList;
 
     /**
-     * <p>The monitoring alert thresholds. The value is a JSON string. For more information, see the following MonitorConfig table.</p>
+     * <p>The settings for alert thresholds. The value is a JSON string. For more information, see the MonitorConfig table below.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;{\&quot;fpsLowThres\&quot;: 0.6,\&quot;brLowThres\&quot;: 1.1,\&quot;eofDurationThresSec\&quot;: 10}&quot;</p>
@@ -65,7 +65,7 @@ public class UpdateLiveStreamMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the monitoring session.</p>
      * <blockquote>
-     * <p> You can obtain the monitoring session ID from the response of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation.</p>
+     * <p>Obtain the MonitorId value from the response parameters of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -85,12 +85,16 @@ public class UpdateLiveStreamMonitorRequest extends TeaModel {
     public String monitorName;
 
     /**
-     * <p>The output template of the monitoring session. Valid values:</p>
+     * <p>The output template for the monitoring session. Valid values:</p>
      * <ul>
-     * <li><strong>lp_ld</strong>: low definition</li>
-     * <li><strong>lp_sd</strong>: standard definition</li>
-     * <li><strong>lp_hd</strong>: high definition</li>
-     * <li><strong>lp_ud</strong>: ultra-high definition</li>
+     * <li><p><strong>lp_ld</strong>: low definition.</p>
+     * </li>
+     * <li><p><strong>lp_sd</strong>: standard definition.</p>
+     * </li>
+     * <li><p><strong>lp_hd</strong>: high definition.</p>
+     * </li>
+     * <li><p><strong>lp_ud</strong>: ultra-high definition.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,11 +106,17 @@ public class UpdateLiveStreamMonitorRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the output stream of the monitoring session.</p>
+     * <p>The name of the output stream for the monitoring session.</p>
      * 
      * <strong>example:</strong>
      * <p>monitorStream****</p>

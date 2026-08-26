@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLiveMessageGroupRequest extends TeaModel {
     /**
-     * <p>The list of administrators after your change.</p>
+     * <p>The updated list of administrators. Separate multiple administrators with commas (,). You can specify up to three administrators.</p>
      */
     @NameInMap("AdminList")
     public java.util.List<String> adminList;
@@ -21,7 +21,7 @@ public class ModifyLiveMessageGroupRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</p>
+     * <p>The data center. It must be the same as the data center specified in the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> call. Valid values: cn-shanghai (Shanghai) and ap-southeast-1 (Singapore).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -40,7 +40,7 @@ public class ModifyLiveMessageGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The additional information about the group after the modification. The value can be up to 32 KB in length.</p>
+     * <p>The updated extended information of the group. The information can be up to 32 KB in length.</p>
      * 
      * <strong>example:</strong>
      * <p>newmeta</p>
@@ -49,7 +49,7 @@ public class ModifyLiveMessageGroupRequest extends TeaModel {
     public String groupInfo;
 
     /**
-     * <p>Specifies whether to change the group administrators.</p>
+     * <p>Specifies whether to modify the group administrators.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -58,7 +58,7 @@ public class ModifyLiveMessageGroupRequest extends TeaModel {
     public Boolean modifyAdmin;
 
     /**
-     * <p>Specifies whether to modify the additional information about the group.</p>
+     * <p>Specifies whether to modify the extended information of the group.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

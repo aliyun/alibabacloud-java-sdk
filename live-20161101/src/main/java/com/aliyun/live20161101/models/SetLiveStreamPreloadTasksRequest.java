@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetLiveStreamPreloadTasksRequest extends TeaModel {
     /**
-     * <p>The acceleration region where you want to prefetch the live content. Valid values:</p>
+     * <p>The prefetch area. Valid values:</p>
      * <ul>
-     * <li>domestic: regions in the Chinese mainland.</li>
-     * <li>overseas: regions outside the Chinese mainland.</li>
-     * <li>global: regions in and outside the Chinese mainland.</li>
+     * <li>domestic: the Chinese mainland.</li>
+     * <li>overseas: outside the Chinese mainland, including Hong Kong (China), Macao (China), and Taiwan (China).</li>
+     * <li>global: global acceleration.</li>
      * </ul>
-     * <p>If you do not specify this parameter, the acceleration region configured for the domain name is used.</p>
+     * <p>If you do not specify this parameter, the default prefetch area is the acceleration region configured for your domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>domestic</p>
@@ -20,7 +20,7 @@ public class SetLiveStreamPreloadTasksRequest extends TeaModel {
     public String area;
 
     /**
-     * <p>The streaming domain name.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,14 +33,14 @@ public class SetLiveStreamPreloadTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The streaming URL. You can specify up to 100 streaming URLs in a request. Separate multiple streaming URLs with commas (,).</p>
+     * <p>The live stream URLs. You can specify multiple URLs separated by commas (,). A maximum of 100 URLs can be specified.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PlayUrl")
     public String playUrl;
 
     /**
-     * <p>The end time of the prefetch task. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-06-30T19:00:00Z. The interval between the start time and end time cannot exceed 6 hours.</p>
+     * <p>The end time of the prefetch task in UTC. Example: 2016-06-30T19:00:00Z. The interval between EndTime and StartTime cannot exceed 6 hours.</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-30T19:00:00Z</p>
@@ -49,7 +49,7 @@ public class SetLiveStreamPreloadTasksRequest extends TeaModel {
     public String preloadedEndTime;
 
     /**
-     * <p>The start time of the prefetch task. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-06-29T19:00:00Z. If you do not specify this parameter, the prefetch task runs for 1 hour by default.</p>
+     * <p>The start time of the prefetch task in UTC. Example: 2016-06-29T19:00:00Z. If you do not specify this parameter, the default prefetch duration is 1 hour.</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-29T19:00:00Z</p>
@@ -57,6 +57,12 @@ public class SetLiveStreamPreloadTasksRequest extends TeaModel {
     @NameInMap("PreloadedStartTime")
     public String preloadedStartTime;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

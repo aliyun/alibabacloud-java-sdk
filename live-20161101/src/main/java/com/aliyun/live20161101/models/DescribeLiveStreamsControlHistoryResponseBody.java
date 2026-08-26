@@ -8,7 +8,7 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
     public DescribeLiveStreamsControlHistoryResponseBodyControlInfo controlInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9C31856F-386D-4DB3-BE79-A0AA493D702A</p>

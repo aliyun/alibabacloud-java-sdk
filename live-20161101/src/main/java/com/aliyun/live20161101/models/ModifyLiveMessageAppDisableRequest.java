@@ -9,7 +9,7 @@ public class ModifyLiveMessageAppDisableRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ab6b5740****</p>
+     * <p>demo</p>
      */
     @NameInMap("AppId")
     public String appId;

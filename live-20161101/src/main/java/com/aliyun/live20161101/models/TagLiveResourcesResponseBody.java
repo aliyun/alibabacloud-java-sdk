@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TagLiveResourcesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</p>
      */

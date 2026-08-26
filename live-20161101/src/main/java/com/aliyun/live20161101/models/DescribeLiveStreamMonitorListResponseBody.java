@@ -20,7 +20,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of monitoring sessions.</p>
+     * <p>The total number of monitoring sessions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
 
     public static class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListLayoutConfig extends TeaModel {
         /**
-         * <p>The fill type. Set this value to none.</p>
+         * <p>The fill mode. For frontend development, set this parameter to none.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -68,18 +68,22 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public String fillMode;
 
         /**
-         * <p>The position of the layer, in the format of [unk][x,y][unk]. The values of x and y need to be normalized.</p>
+         * <p>The normalized coordinates of the element\&quot;s position, in the format of [x,y]. The default value is [0,0]. The values of x and y must be normalized.</p>
          */
         @NameInMap("PositionNormalized")
         public java.util.List<Float> positionNormalized;
 
         /**
-         * <p>The reference position of the element. Valid values:</p>
+         * <p>The reference point for the element\&quot;s position. Valid values:</p>
          * <ul>
-         * <li>topLeft</li>
-         * <li>topRight</li>
-         * <li>bottomLeft</li>
-         * <li>bottomRight</li>
+         * <li><p>topLeft</p>
+         * </li>
+         * <li><p>topRight</p>
+         * </li>
+         * <li><p>bottomLeft</p>
+         * </li>
+         * <li><p>bottomRight</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +93,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public String positionRefer;
 
         /**
-         * <p>The size of the layer. Unit: bytes.</p>
+         * <p>The normalized size of the element\&quot;s fill area, in the format of [w,h].</p>
          */
         @NameInMap("SizeNormalized")
         public java.util.List<Float> sizeNormalized;
@@ -135,7 +139,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
 
     public static class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListPlayConfig extends TeaModel {
         /**
-         * <p>The volume. Valid values: 0 to 1. The value is rounded to two decimal places.</p>
+         * <p>The volume. The value must be between 0 and 1, inclusive, with up to two decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>0.50</p>
@@ -160,7 +164,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
 
     public static class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputList extends TeaModel {
         /**
-         * <p>The index.</p>
+         * <p>The index. This parameter is used by the frontend.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +188,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListLayoutConfig layoutConfig;
 
         /**
-         * <p>The layout ID, which must start from 1.</p>
+         * <p>The layout ID. The value must start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -193,13 +197,13 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public Integer layoutId;
 
         /**
-         * <p>The playback configurations.</p>
+         * <p>The playback configuration.</p>
          */
         @NameInMap("PlayConfig")
         public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListPlayConfig playConfig;
 
         /**
-         * <p>The display name of the monitored stream.</p>
+         * <p>The display name of the stream for monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p>monitorStream****</p>
@@ -264,7 +268,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
 
     public static class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListOutputUrls extends TeaModel {
         /**
-         * <p>The output URL in the Flash Video (FLV) format.</p>
+         * <p>The output URL in FLV format.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://demo.aliyundoc.com/monitor/445409ec-7eaa-461d-8f29-4bec2eb9****.flv">http://demo.aliyundoc.com/monitor/445409ec-7eaa-461d-8f29-4bec2eb9****.flv</a></p>
@@ -273,7 +277,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public String flvUrl;
 
         /**
-         * <p>The output URL in the Real-Time Messaging Protocol (RTMP) format.</p>
+         * <p>The output URL in RTMP format.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://demo.aliyundoc.com/monitor/445409ec-7eaa-461d-8f29-4bec2eb9****</p>
@@ -315,7 +319,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public Integer audioFrom;
 
         /**
-         * <p>The callback URL that sends monitoring alerts.</p>
+         * <p>The webhook address for monitoring alert notifications.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></p>
@@ -333,7 +337,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public String dingTalkWebHookUrl;
 
         /**
-         * <p>The domain name.</p>
+         * <p>The output domain name for monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p>demo.aliyundoc.com</p>
@@ -342,17 +346,20 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The list of monitored input streams.</p>
+         * <p>The list of input streams for monitoring.</p>
          */
         @NameInMap("InputList")
         public java.util.List<DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputList> inputList;
 
         /**
-         * <p>The monitoring alert thresholds. The following fields are included:</p>
+         * <p>The settings for monitoring alert thresholds. The value is a JSON string that includes the following fields:</p>
          * <ul>
-         * <li>fpsLowThres: the video frame rate alert threshold. The value is a floating-point number.</li>
-         * <li>brHighThres: the audio/video bitrate alert threshold. The value is a floating-point number.</li>
-         * <li>eofDurationThresSec: the interruption duration alert threshold. The value is a floating-point number.</li>
+         * <li><p>fpsLowThres: the alert threshold for the video frame rate. This is a float.</p>
+         * </li>
+         * <li><p>brHighThres: the alert threshold for the audio and video bitrate. This is a float.</p>
+         * </li>
+         * <li><p>eofDurationThresSec: the alert threshold for the stream interruption duration. This is a float.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -380,12 +387,16 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public String monitorName;
 
         /**
-         * <p>The output resolution template. Valid values:</p>
+         * <p>The template for the output resolution. Valid values:</p>
          * <ul>
-         * <li><strong>lp_ld</strong>: low definition</li>
-         * <li><strong>lp_sd</strong>: standard definition</li>
-         * <li><strong>lp_hd</strong>: high definition</li>
-         * <li><strong>lp_ud</strong>: ultra-high definition</li>
+         * <li><p><strong>lp_ld</strong>: low definition</p>
+         * </li>
+         * <li><p><strong>lp_sd</strong>: standard definition</p>
+         * </li>
+         * <li><p><strong>lp_hd</strong>: high definition</p>
+         * </li>
+         * <li><p><strong>lp_ud</strong>: ultra-high definition</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -395,17 +406,20 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public String outputTemplate;
 
         /**
-         * <p>The output URLs.</p>
+         * <p>The output URLs for monitoring.</p>
          */
         @NameInMap("OutputUrls")
         public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListOutputUrls outputUrls;
 
         /**
-         * <p>The ID of the region. Valid values:</p>
+         * <p>The region. Valid values:</p>
          * <ul>
-         * <li>cn-shanghai: China (Shanghai)</li>
-         * <li>cn-beijing: China (Beijing)</li>
-         * <li>ap-southeast-1: Singapore</li>
+         * <li><p>cn-shanghai: China (Shanghai)</p>
+         * </li>
+         * <li><p>cn-beijing: China (Beijing)</p>
+         * </li>
+         * <li><p>ap-southeast-1: Singapore</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -415,7 +429,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The start time of live monitoring. The time is displayed in UTC.</p>
+         * <p>The time when monitoring starts. The time is in UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -426,8 +440,10 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         /**
          * <p>The status of the monitoring session. Valid values:</p>
          * <ul>
-         * <li>1: Monitoring</li>
-         * <li>0: Unmonitored</li>
+         * <li><p>1: The session is being monitored.</p>
+         * </li>
+         * <li><p>0: The session is not being monitored.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -437,7 +453,7 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The end time of live monitoring. The time is displayed in UTC.</p>
+         * <p>The time when monitoring stops. The time is in UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>

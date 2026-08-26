@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEdgeTranscodeJobRequest extends TeaModel {
     /**
-     * <p>The ID of the data center.</p>
+     * <p>The data center ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class ListEdgeTranscodeJobRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The keyword of the query.</p>
+     * <p>The search keyword. Valid values:</p>
      * <ul>
-     * <li>You can specify a task ID for an exact match.</li>
-     * <li>You can specify a task name for a fuzzy match.</li>
+     * <li>Task ID. Exact match is supported.</li>
+     * <li>Task name. Fuzzy match is supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,14 +48,20 @@ public class ListEdgeTranscodeJobRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The sort order of the tasks by creation time. Default value: desc. Valid values:</p>
+     * <p>The collation based on CreateTime. Default value: desc. Valid values:</p>
      * <ul>
-     * <li>desc: descending order</li>
-     * <li>asc: ascending order</li>
+     * <li>desc: descending sorting.</li>
+     * <li>asc: ascending sorting.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,10 +71,10 @@ public class ListEdgeTranscodeJobRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The task status. Valid values:</p>
+     * <p>The edge transcoding task status. Valid values:</p>
      * <ul>
-     * <li>0: not started</li>
-     * <li>1: running</li>
+     * <li>0: not started.</li>
+     * <li>1: running.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,14 +84,14 @@ public class ListEdgeTranscodeJobRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The type of edge transcoding. Valid values:</p>
+     * <p>The edge transcoding type. Valid values:</p>
      * <ul>
-     * <li>common: standard transcoding and Narrowband HD™ 1.0 transcoding.</li>
-     * <li>nbhd-2: Narrowband HD™ 2.0 transcoding</li>
-     * <li>ultra-hd: ultra-high definition transcoding</li>
+     * <li>common: default transcoding (standard + Narrowband HD 1.0).</li>
+     * <li>nbhd-2: Narrowband HD 2.0.</li>
+     * <li>ultra-hd: ultra-high definition.</li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the query results are filtered based on the types of edge transcoding on which you are granted permissions.</p>
+     * <p>If this parameter is not specified, transcoding templates for which the user has the corresponding transcoding type permissions are displayed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

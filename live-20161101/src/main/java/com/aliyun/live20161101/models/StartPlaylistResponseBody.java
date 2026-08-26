@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartPlaylistResponseBody extends TeaModel {
     /**
-     * <p>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to stop playing the episode list.</p>
+     * <p>The ID of the playlist. You can use this ID as a request parameter to stop the playlist.</p>
      * 
      * <strong>example:</strong>
      * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
@@ -23,7 +23,7 @@ public class StartPlaylistResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the live stream.</p>
+     * <p>The information about the stream.</p>
      */
     @NameInMap("StreamInfo")
     public StartPlaylistResponseBodyStreamInfo streamInfo;
@@ -130,7 +130,7 @@ public class StartPlaylistResponseBody extends TeaModel {
 
     public static class StartPlaylistResponseBodyStreamInfo extends TeaModel {
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>liveApp****</p>
@@ -139,7 +139,7 @@ public class StartPlaylistResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The main streaming domain.</p>
+         * <p>The streaming domain.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -148,7 +148,7 @@ public class StartPlaylistResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The name of the live stream.</p>
+         * <p>The stream name.</p>
          * 
          * <strong>example:</strong>
          * <p>liveStream****</p>

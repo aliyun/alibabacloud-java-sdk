@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveAIProduceRulesRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the live stream application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteLiveAIProduceRulesRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The primary streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,17 @@ public class DeleteLiveAIProduceRulesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the subtitle rule.</p>
+     * <p>The subtitle rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>445409ec-7eaa-461d -8f29-4bec2eb9****</p>
@@ -40,9 +46,9 @@ public class DeleteLiveAIProduceRulesRequest extends TeaModel {
     public String rulesId;
 
     /**
-     * <p>The suffix of the subtitle rule.</p>
+     * <p>The subtitle suffix. This parameter is required. Otherwise, the InvalidParameter error is returned.</p>
      * <blockquote>
-     * <p> Set the value to the name of the subtitle template.</p>
+     * <p>Set this parameter to the value of SubtitleName that is specified in the subtitle template.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

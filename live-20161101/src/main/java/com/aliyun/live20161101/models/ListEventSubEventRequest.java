@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventSubEventRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The ID of the subscribed application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListEventSubEventRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time, expressed as a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListEventSubEventRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number. Valid values: 1 and greater.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ListEventSubEventRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of callback records to return on each page. Valid values: 1 to 100.</p>
+     * <p>The number of records per page. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListEventSubEventRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time, expressed as a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ListEventSubEventRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The subscription ID. You can obtain the ID from the response to the <a href="https://help.aliyun.com/document_detail/2848209.html">CreateEventSub</a> operation.</p>
+     * <p>The subscribe ID. You can obtain the subscribe ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/2848209.html">CreateEventSub</a> operation by using a parameter query.</p>
      * 
      * <strong>example:</strong>
      * <p>ad53276431c****</p>

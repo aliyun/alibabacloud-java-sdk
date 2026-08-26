@@ -7,11 +7,18 @@ public class TagLiveResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The type of the resources. Set the value to <strong>DOMAIN</strong>.</p>
+     * <p>The resource ID. Set this parameter to a live streaming domain name.
+     * Valid values of N: <strong>1 to 50</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class TagLiveResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type. Set this parameter to <strong>DOMAIN</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,7 @@ public class TagLiveResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The list of labels.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -82,6 +91,7 @@ public class TagLiveResourcesRequest extends TeaModel {
 
     public static class TagLiveResourcesRequestTag extends TeaModel {
         /**
+         * <p>The label key. Valid values of N: <strong>1 to 20</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +101,8 @@ public class TagLiveResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The label value. Valid values of N: <strong>1 to 20</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>product</p>
          */

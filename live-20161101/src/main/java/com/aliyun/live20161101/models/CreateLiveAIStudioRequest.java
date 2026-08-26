@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLiveAIStudioRequest extends TeaModel {
     /**
-     * <p>The ID of the background material in ApsaraVideo VOD. You can obtain the ID from the ApsaraVideo VOD console.</p>
+     * <p>The video-on-demand resource ID of the background material. Obtain this value from the ApsaraVideo VOD console.</p>
      * 
      * <strong>example:</strong>
      * <p>d0eb493192c771efba644531858c0102</p>
@@ -14,7 +14,7 @@ public class CreateLiveAIStudioRequest extends TeaModel {
     public String backgroundResourceId;
 
     /**
-     * <p>The URL of the background material. Specify either this parameter or the BackgroundResourceId parameter.</p>
+     * <p>The access URL of the background material. Specify either this parameter or the resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxx.com/1.mp4">https://xxx.com/1.mp4</a></p>
@@ -25,9 +25,9 @@ public class CreateLiveAIStudioRequest extends TeaModel {
     /**
      * <p>The type of the background material. Valid values:</p>
      * <ul>
-     * <li>VOD: a video in ApsaraVideo VOD</li>
-     * <li>PIC: an image</li>
-     * <li>LIVE: a live stream</li>
+     * <li>VOD: video-on-demand video.</li>
+     * <li>PIC: image.</li>
+     * <li>LIVE: live stream.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,17 +46,17 @@ public class CreateLiveAIStudioRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The preview height. Unit: pixels.</p>
-     * <p>The following preview specifications (width × height) are supported:</p>
+     * <p>The height of the preview screen. Unit: px.</p>
+     * <p>The width × height of the preview screen supports only the following specifications:</p>
      * <ul>
-     * <li>Landscape low definition 360p (640×360)</li>
-     * <li>Portrait low definition 360p (360×640)</li>
-     * <li>Landscape standard definition 480p (854×480)</li>
-     * <li>Portrait standard definition 480p (480×854)</li>
-     * <li>Landscape high definition 720p (1280×720)</li>
-     * <li>Portrait high definition 720p (720×1280)</li>
-     * <li>Landscape ultra-high definition 1080p (1920×1080)</li>
-     * <li>Portrait ultra-high definition 1080p (1080×1920)</li>
+     * <li>Landscape low definition 360P: 640 × 360</li>
+     * <li>Portrait low definition 360P: 360 × 640</li>
+     * <li>Landscape standard definition 480P: 854 × 480</li>
+     * <li>Portrait standard definition 480P: 480 × 854</li>
+     * <li>Landscape high definition 720P: 1280 × 720</li>
+     * <li>Portrait high definition 720P: 720 × 1280</li>
+     * <li>Landscape ultra-high definition 1080P: 1920 × 1080</li>
+     * <li>Portrait ultra-high definition 1080P: 1080 × 1920.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,18 +66,18 @@ public class CreateLiveAIStudioRequest extends TeaModel {
     public Integer height;
 
     /**
-     * <p>The layout information of the chroma-keyed material.</p>
+     * <p>The layout position information of the source stream after image matting.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MattingLayout")
     public CreateLiveAIStudioRequestMattingLayout mattingLayout;
 
     /**
-     * <p>The type of chroma key. Valid values:</p>
+     * <p>The image matting type. Valid values:</p>
      * <ul>
-     * <li>green: green-screen chroma key</li>
-     * <li>blue: blue-screen chroma key</li>
-     * <li>complex: background replacement</li>
+     * <li>green: green screen matting.</li>
+     * <li>blue: blue screen matting.</li>
+     * <li>complex: real-scene matting.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -88,13 +88,13 @@ public class CreateLiveAIStudioRequest extends TeaModel {
     public String mattingType;
 
     /**
-     * <p>The layout information of the multimedia material.</p>
+     * <p>The layout position information of the multimedia material.</p>
      */
     @NameInMap("MediaLayout")
     public CreateLiveAIStudioRequestMediaLayout mediaLayout;
 
     /**
-     * <p>The ID of the multimedia material in ApsaraVideo VOD. You can obtain the ID from the ApsaraVideo VOD console.</p>
+     * <p>The video-on-demand resource ID of the multimedia material. Obtain this value from the ApsaraVideo VOD console.</p>
      * 
      * <strong>example:</strong>
      * <p>d0eb493192c771efba644531858c0102</p>
@@ -103,7 +103,7 @@ public class CreateLiveAIStudioRequest extends TeaModel {
     public String mediaResourceId;
 
     /**
-     * <p>The URL of the multimedia material. Specify either this parameter or the MediaResourceId parameter.</p>
+     * <p>The access URL of the multimedia material. Specify either this parameter or the resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxx.com/2.mp4">https://xxx.com/2.mp4</a></p>
@@ -114,9 +114,9 @@ public class CreateLiveAIStudioRequest extends TeaModel {
     /**
      * <p>The type of the multimedia material. Valid values:</p>
      * <ul>
-     * <li>VOD: a video in ApsaraVideo VOD</li>
-     * <li>PIC: an image</li>
-     * <li>LIVE: a live stream</li>
+     * <li>VOD: video-on-demand video.</li>
+     * <li>PIC: image.</li>
+     * <li>LIVE: live stream.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,6 +128,12 @@ public class CreateLiveAIStudioRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -142,7 +148,7 @@ public class CreateLiveAIStudioRequest extends TeaModel {
     public String studioName;
 
     /**
-     * <p>The preview width. Unit: pixels.</p>
+     * <p>The width of the preview screen. Unit: px.</p>
      * 
      * <strong>example:</strong>
      * <p>1920</p>
@@ -277,7 +283,7 @@ public class CreateLiveAIStudioRequest extends TeaModel {
 
     public static class CreateLiveAIStudioRequestMattingLayout extends TeaModel {
         /**
-         * <p>The normalized value of the material height. The value indicates the ratio of the material height to the height of the background. Valid values: <strong>0 to 1</strong>.</p>
+         * <p>The normalized height of the material, which is the ratio of the material height to the background height. Valid values: <strong>0 to 1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -286,7 +292,7 @@ public class CreateLiveAIStudioRequest extends TeaModel {
         public Float heightNormalized;
 
         /**
-         * <p>The x-coordinate of the material. Valid values: <strong>0 to 1</strong>. The upper-left corner is used as the coordinate origin for the material.</p>
+         * <p>The x-coordinate of the position. Valid values: <strong>0 to 1</strong>. The position of the material is based on the upper-left corner as the reference point.</p>
          * 
          * <strong>example:</strong>
          * <p>0.3</p>
@@ -295,7 +301,7 @@ public class CreateLiveAIStudioRequest extends TeaModel {
         public Float positionX;
 
         /**
-         * <p>The y-coordinate of the material. Valid values: <strong>0 to 1</strong>. The upper-left corner is used as the coordinate origin for the material.</p>
+         * <p>The y-coordinate of the position. Valid values: <strong>0 to 1</strong>. The position of the material is based on the upper-left corner as the reference point.</p>
          * 
          * <strong>example:</strong>
          * <p>0.3</p>
@@ -336,7 +342,7 @@ public class CreateLiveAIStudioRequest extends TeaModel {
 
     public static class CreateLiveAIStudioRequestMediaLayout extends TeaModel {
         /**
-         * <p>The normalized value of the material height. The value indicates the ratio of the material height to the height of the background. Valid values: <strong>0 to 1</strong>.</p>
+         * <p>The normalized height of the material, which is the ratio of the material height to the background height. Valid values: <strong>0 to 1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -345,7 +351,7 @@ public class CreateLiveAIStudioRequest extends TeaModel {
         public Float heightNormalized;
 
         /**
-         * <p>The x-coordinate of the material. Valid values: <strong>0 to 1</strong>. The upper-left corner is used as the coordinate origin for the material.</p>
+         * <p>The x-coordinate of the position. Valid values: <strong>0 to 1</strong>. The position of the material is based on the upper-left corner as the reference point.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -354,7 +360,7 @@ public class CreateLiveAIStudioRequest extends TeaModel {
         public Float positionX;
 
         /**
-         * <p>The y-coordinate of the material. Valid values: <strong>0 to 1</strong>. The upper-left corner is used as the coordinate origin for the material.</p>
+         * <p>The y-coordinate of the position. Valid values: <strong>0 to 1</strong>. The position of the material is based on the upper-left corner as the reference point.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

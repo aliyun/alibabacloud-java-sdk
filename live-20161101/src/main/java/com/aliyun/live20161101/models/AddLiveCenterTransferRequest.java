@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveCenterTransferRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name for the live stream that you want to relay. Otherwise, the configuration does not take effect. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the live stream application. The AppName you enter must be the same as the AppName of the live stream to be relayed for the configuration to take effect. You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class AddLiveCenterTransferRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The third-party URL to which the live stream is relayed. You can add only one URL.</p>
+     * <p>The third-party live streaming address for relay. You can add up to one address.</p>
      * <blockquote>
-     * <p> The protocol that the URL uses must be the same as the protocol of the live stream. Only URLs over RTMP and SRT are supported.</p>
+     * <p>The protocol of the destination address must be the same as the protocol of the live stream to be relayed. Only RTMP and SRT relay addresses are supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -38,9 +38,9 @@ public class AddLiveCenterTransferRequest extends TeaModel {
     public String dstUrl;
 
     /**
-     * <p>The end time of stream relay. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the relay. The date format follows the ISO 8601 notation and uses UTC+0 time. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time.</p>
+     * <p>The end time must be later than the start time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,11 +52,17 @@ public class AddLiveCenterTransferRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The start time of stream relay. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time of the relay. The date format follows the ISO 8601 notation and uses UTC+0 time. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-21T10:00:00Z</p>
@@ -65,7 +71,7 @@ public class AddLiveCenterTransferRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the live stream. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,13 +81,15 @@ public class AddLiveCenterTransferRequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The validity period of stream relay. Valid values:</p>
+     * <p>The validity period of the relay. Valid values:</p>
      * <ul>
-     * <li><strong>always</strong>: The stream can always be relayed.</li>
-     * <li><strong>time</strong>: The stream can be relayed in a specified time period.</li>
+     * <li><p><strong>always</strong>: permanently effective.</p>
+     * </li>
+     * <li><p><strong>time</strong>: effective within the specified time period.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set this parameter to <strong>time</strong>, <strong>StartTime</strong> and <strong>EndTime</strong> are required.</p>
+     * <p>If the value is <strong>time</strong>, <strong>StartTime</strong> and <strong>EndTime</strong> are required.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

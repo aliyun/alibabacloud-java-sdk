@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMessageGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class GetMessageGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>Return result.</p>
      */
     @NameInMap("Result")
     public GetMessageGroupResponseBodyResult result;
@@ -42,7 +42,7 @@ public class GetMessageGroupResponseBody extends TeaModel {
 
     public static class GetMessageGroupResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the message group was created. The time is displayed in UTC.</p>
+         * <p>UTC timestamp when the message group was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1502280113</p>
@@ -51,7 +51,7 @@ public class GetMessageGroupResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the creator.</p>
+         * <p>Creator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>as****hs</p>
@@ -60,7 +60,7 @@ public class GetMessageGroupResponseBody extends TeaModel {
         public String creatorId;
 
         /**
-         * <p>The extended field.</p>
+         * <p>Extension field.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -69,7 +69,7 @@ public class GetMessageGroupResponseBody extends TeaModel {
         public java.util.Map<String, ?> extension;
 
         /**
-         * <p>The ID of the message group.</p>
+         * <p>Message group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AE35-****-T95F</p>
@@ -78,10 +78,10 @@ public class GetMessageGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>Indicates whether the message group is muted.</p>
+         * <p>Indicates whether all members in this message group are muted.</p>
          * <ul>
-         * <li>true: The message group is muted.</li>
-         * <li>false: The message group is not muted.</li>
+         * <li>true: All members are muted.</li>
+         * <li>false: All members are not muted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class GetMessageGroupResponseBody extends TeaModel {
         public Boolean isMuteAll;
 
         /**
-         * <p>The status of the message group. The default value is <strong>1</strong>, which indicates that the message group is normal.</p>
+         * <p>Message group status. The default value is <strong>1</strong>, which indicates that the message group status is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveStreamRecordIndexFilesResponseBody extends TeaModel {
     /**
-     * <p>The status code. A return value of 500 indicates an error. For details, see the Error codes section of this topic.</p>
+     * <p>The status code. If an error occurs, see the error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class DeleteLiveStreamRecordIndexFilesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The status description. A return value of 500 indicates an error. For details, see the Error codes section of this topic.</p>
+     * <p>The status message. If an error occurs, see the error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -26,7 +26,7 @@ public class DeleteLiveStreamRecordIndexFilesResponseBody extends TeaModel {
     public DeleteLiveStreamRecordIndexFilesResponseBodyRecordDeleteInfoList recordDeleteInfoList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>939D19EE-59A0-18E9-B458-*****</p>

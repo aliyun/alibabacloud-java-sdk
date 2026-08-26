@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoShowListTasksResponseBody extends TeaModel {
     /**
-     * <p>The information about the scheduled tasks. The following fields are included:</p>
+     * <p>The list of scheduled tasks. The list contains the following parameters:</p>
      * <ul>
-     * <li>Status: the status of the scheduled task. Valid values: 0 and 1. A value of 0 indicates that the scheduled task is paused. A value of 1 indicates that the scheduled task is started.</li>
-     * <li>LiveTemplate: the transcoding templates.</li>
-     * <li>TranscodeConfig: the transcoding configuration for the source URL.</li>
-     * <li>CasterId: the ID of the production studio.</li>
+     * <li><p>Status: The status of the task. A value of 0 indicates that the task is paused. A value of 1 indicates that the task is started.</p>
+     * </li>
+     * <li><p>LiveTemplate: The list of transcoding configurations.</p>
+     * </li>
+     * <li><p>TranscodeConfig: The resolution for transcoding the pulled stream.</p>
+     * </li>
+     * <li><p>CasterId: The ID of the production studio.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

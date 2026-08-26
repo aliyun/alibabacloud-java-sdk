@@ -14,7 +14,7 @@ public class AddLiveAISubtitleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the subtitle template.</p>
+     * <p>The subtitle template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>

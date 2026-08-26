@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamPreloadTasksRequest extends TeaModel {
     /**
-     * <p>The streaming domain name.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeLiveStreamPreloadTasksRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-06-30T19:00:00Z. The interval between the start time and end time cannot exceed three days.</p>
+     * <p>The end time in ISO 8601 format in UTC. Format: yyyy-MM-ddTHH:mm:ssZ. The interval between EndTime and StartTime cannot exceed 3 days.</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-30T19:00:00Z</p>
@@ -27,7 +27,7 @@ public class DescribeLiveStreamPreloadTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeLiveStreamPreloadTasksRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. Maximum value: 100. Valid values: any integer from 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,16 +45,22 @@ public class DescribeLiveStreamPreloadTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The streaming URL. You can specify up to 100 streaming URLs in a request. Separate multiple streaming URLs with commas (,).</p>
+     * <p>The live streaming URL. You can specify multiple URLs separated by commas (,), up to 100.</p>
      */
     @NameInMap("PlayUrl")
     public String playUrl;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-06-29T19:00:00Z. You can query only data in the previous three days.</p>
+     * <p>The start time in ISO 8601 format in UTC. Format: yyyy-MM-ddTHH:mm:ssZ. The start time must be within the last 3 days.</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-29T19:00:00Z</p>
@@ -63,12 +69,12 @@ public class DescribeLiveStreamPreloadTasksRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the prefetch task. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>complete</li>
-     * <li>pending</li>
-     * <li>preloading</li>
-     * <li>failed</li>
+     * <li>complete: completed.</li>
+     * <li>pending: waiting for preload.</li>
+     * <li>preloading: preloading in progress.</li>
+     * <li>failed: preload failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +84,7 @@ public class DescribeLiveStreamPreloadTasksRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the prefetch task. The task ID is returned when you call the <a href="https://help.aliyun.com/document_detail/2519938.html">SetLiveStreamPreloadTasks</a> operation to configure the prefetch task.</p>
+     * <p>The task ID. You can obtain the preload task ID by calling the <a href="https://help.aliyun.com/document_detail/2519938.html">SetLiveStreamPreloadTasks</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>yourTaskId</p>

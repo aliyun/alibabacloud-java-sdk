@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveAudioAuditNotifyConfigRequest extends TeaModel {
     /**
-     * <p>The callback URL. This URL is used to receive callback notifications about violations in audio.</p>
+     * <p>The URL used to receive callbacks for audio that contains problematic content.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://demo.aliyundoc.com/callback">https://demo.aliyundoc.com/callback</a></p>
@@ -14,13 +14,18 @@ public class AddLiveAudioAuditNotifyConfigRequest extends TeaModel {
     public String callback;
 
     /**
-     * <p>The callback template. Valid values:</p>
+     * <p>The callback template for automated reviews. The value is a JSON string that can contain the following variables:</p>
      * <ul>
-     * <li><strong>{DomainName}</strong>: the streaming domain.</li>
-     * <li><strong>{AppName}</strong>: the name of the application to which the live stream belongs.</li>
-     * <li><strong>{StreamName}</strong>: the name of the live stream.</li>
-     * <li><strong>{Timestamp}</strong>: the time when the callback is returned. The value of this field is a UNIX timestamp. Unit: seconds.</li>
-     * <li><strong>{Result}</strong>: the moderation results.</li>
+     * <li><p><strong>{DomainName}</strong>: The streaming domain.</p>
+     * </li>
+     * <li><p><strong>{AppName}</strong>: The AppName of the live stream.</p>
+     * </li>
+     * <li><p><strong>{StreamName}</strong>: The stream name.</p>
+     * </li>
+     * <li><p><strong>{Timestamp}</strong>: The UNIX timestamp of the callback. Unit: seconds.</p>
+     * </li>
+     * <li><p><strong>{Result}</strong>: The review result.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,6 +47,12 @@ public class AddLiveAudioAuditNotifyConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMessageGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive Messages application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetMessageGroupRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>Message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamMergeRequest extends TeaModel {
     /**
-     * <p>The name of the application that generates the output stream. You can view the application name on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Secondary Stream Mixing Settings</a> page of the ApsaraVideo Live console.</p>
+     * <p>Merged output App name. You can view this on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Backup Stream Merge Configuration</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>app</p>
@@ -14,7 +14,7 @@ public class DescribeLiveStreamMergeRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The streaming domain.</p>
+     * <p>Streaming domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,12 @@ public class DescribeLiveStreamMergeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The streaming protocol. Valid values:</p>
+     * <p>Streaming protocol. Valid values:</p>
      * <ul>
-     * <li><strong>rtmp</strong>: This is the default value.</li>
-     * <li><strong>rtc</strong></li>
+     * <li><p><strong>rtmp</strong> (default)</p>
+     * </li>
+     * <li><p><strong>rtc</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,11 +41,17 @@ public class DescribeLiveStreamMergeRequest extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>Region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the output stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Secondary Stream Mixing Settings</a> page of the ApsaraVideo Live console.</p>
+     * <p>Merged output Stream name. You can view this on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Backup Stream Merge Configuration</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>StreamName</p>

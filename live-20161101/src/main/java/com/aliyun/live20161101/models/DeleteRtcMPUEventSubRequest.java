@@ -7,7 +7,7 @@ public class DeleteRtcMPUEventSubRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
      * <blockquote>
-     * <p> The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

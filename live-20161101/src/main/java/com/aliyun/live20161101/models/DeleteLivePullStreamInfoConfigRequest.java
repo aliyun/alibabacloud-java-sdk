@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLivePullStreamInfoConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can call <a href="https://help.aliyun.com/document_detail/2847818.htmll">DescribeLivePullStreamConfig</a> operation to query the application name.</p>
+     * <p>The name of the application to which the live stream belongs. Call <a href="https://help.aliyun.com/document_detail/2847818.html">DescribeLivePullStreamConfig</a> to query the application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteLivePullStreamInfoConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,17 @@ public class DeleteLivePullStreamInfoConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream. You can call <a href="https://help.aliyun.com/document_detail/2847818.htmll">DescribeLivePullStreamConfig</a> operation to query the stream name.</p>
+     * <p>The name of the stream. Call <a href="https://help.aliyun.com/document_detail/2847818.html">DescribeLivePullStreamConfig</a> to query the stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

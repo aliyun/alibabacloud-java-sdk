@@ -8,7 +8,7 @@ public class DescribeLiveDomainByCertificateResponseBody extends TeaModel {
     public DescribeLiveDomainByCertificateResponseBodyCertInfos certInfos;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ASAF2FDS-12SADSA-DDSAE3D-DSADCD4C-CDADS2D</p>

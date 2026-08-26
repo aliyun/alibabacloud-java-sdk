@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainLimitRequest extends TeaModel {
     /**
-     * <p>The name of the main streaming domain.</p>
+     * <p>The main streaming domain</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +17,12 @@ public class DescribeLiveDomainLimitRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

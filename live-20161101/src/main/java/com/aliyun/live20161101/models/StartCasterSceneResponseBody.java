@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartCasterSceneResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CF60DB6A-7FD6-426E-9288-122CC1A52FA7</p>
@@ -14,7 +14,7 @@ public class StartCasterSceneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The streaming URL of the scene. It is used for playback, but not for stream relay.</p>
+     * <p>The output stream URL of the current scene. This URL is used for playback in the production studio and is not a bypass output.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://live/caster/example.org">http://live/caster/example.org</a></p>

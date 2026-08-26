@@ -17,7 +17,7 @@ public class DescribeCasterChannelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of channels.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -14,7 +14,7 @@ public class DescribeLiveSnapshotConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class DescribeLiveSnapshotConfigRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong> (default): ascending order</li>
-     * <li><strong>desc</strong>: descending order</li>
+     * <li><strong>asc</strong> (default): ascending order.</li>
+     * <li><strong>desc</strong>: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>

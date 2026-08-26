@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveAIProduceRulesRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the live stream application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateLiveAIProduceRulesRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The description of the subtitle rule. The description can be up to 128 characters in length and can contain letters, digits, and special characters.</p>
+     * <p>The description of the subtitle rule. The description can contain letters, digits, Chinese characters, and special characters, and can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>live AI subtitle template</p>
@@ -24,7 +24,7 @@ public class UpdateLiveAIProduceRulesRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The primary streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +34,10 @@ public class UpdateLiveAIProduceRulesRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>Specifies whether to generate live subtitles when stream pulling starts. Valid values:</p>
+     * <p>Specifies whether subtitles are triggered by stream pulling. Valid values:</p>
      * <ul>
-     * <li>true: generates live subtitles when stream pulling starts and stops generating live subtitles when no streams are pulled for 5 minutes. When stream pulling restarts, live subtitles are generated again.</li>
-     * <li>false: generates live subtitles when stream ingest starts.</li>
+     * <li>true: Subtitles start when a stream is pulled. If no stream is pulled within 5 minutes, the subtitles stop. Subtitles restart when a stream is pulled again.</li>
+     * <li>false: Subtitles start as long as stream ingest is active, regardless of whether a stream is being pulled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,16 +47,16 @@ public class UpdateLiveAIProduceRulesRequest extends TeaModel {
     public Boolean isLazy;
 
     /**
-     * <p>The specification of the output subtitles. Valid values:</p>
+     * <p>The output specification of the subtitle. Valid values:</p>
      * <ul>
-     * <li><code>lp_ld</code>: 360p (640 × 360)</li>
-     * <li><code>lp_ld_v</code>: 360p (360 × 640)</li>
-     * <li><code>lp_sd</code>: 480p (854 × 480)</li>
-     * <li><code>lp_sd_v</code>: 480p (480 × 854)</li>
-     * <li><code>lp_hd</code>: 720p (1280 × 720)</li>
-     * <li><code>lp_hd_v</code>: 720p (720 × 1280)</li>
-     * <li><code>lp_ud</code>: 1080p (1920 × 1080)</li>
-     * <li><code>lp_ud_v</code>: 1080p (1080 × 1920)</li>
+     * <li>Landscape low definition 360P 640 × 360: <code>lp_ld</code></li>
+     * <li>Portrait low definition 360P 360 × 640: <code>lp_ld_v</code></li>
+     * <li>Landscape standard definition 480P 854 × 480: <code>lp_sd</code></li>
+     * <li>Portrait standard definition 480P 480 × 854: <code>lp_sd_v</code></li>
+     * <li>Landscape high definition 720P 1280 × 720: <code>lp_hd</code></li>
+     * <li>Portrait high definition 720P 720 × 1280: <code>lp_hd_v</code></li>
+     * <li>Landscape ultra-high definition 1080P 1920 × 1080: <code>lp_ud</code></li>
+     * <li>Portrait ultra-high definition 1080P 1080 × 1920: <code>lp_ud_v</code></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,6 +68,12 @@ public class UpdateLiveAIProduceRulesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -81,7 +87,7 @@ public class UpdateLiveAIProduceRulesRequest extends TeaModel {
     public String rulesId;
 
     /**
-     * <p>The name of the virtual background template.</p>
+     * <p>The name of the virtual background template. You must specify at least one of SubtitleName and StudioName. Otherwise, a MissingParameter error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>sub02</p>
@@ -99,7 +105,7 @@ public class UpdateLiveAIProduceRulesRequest extends TeaModel {
     public String subtitleId;
 
     /**
-     * <p>The name of the subtitle template.</p>
+     * <p>The name of the subtitle template. You must specify at least one of SubtitleName and StudioName. Otherwise, a MissingParameter error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>sub01</p>
@@ -108,7 +114,7 @@ public class UpdateLiveAIProduceRulesRequest extends TeaModel {
     public String subtitleName;
 
     /**
-     * <p>The suffix to match.</p>
+     * <p>The suffix match.</p>
      * 
      * <strong>example:</strong>
      * <p>test01</p>

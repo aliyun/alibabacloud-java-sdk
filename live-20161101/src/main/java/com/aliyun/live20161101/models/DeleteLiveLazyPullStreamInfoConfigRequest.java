@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application.</p>
      * <blockquote>
-     * <p> If you want to delete configurations of triggered stream pulling for all applications, set the value to <strong>ali_all_app</strong>.</p>
+     * <p>To delete configurations of triggered stream pulling for all applications, set it to <strong>ali_all_app</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,6 +30,12 @@ public class DeleteLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLiveMessageAppAuditRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application whose content moderation settings you want to modify.</p>
+     * <p>The ID of the interactive messaging application to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class ModifyLiveMessageAppAuditRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The content moderation method. Valid values:</p>
+     * <p>The security audit method. Valid values:</p>
      * <ul>
-     * <li>0: disables content moderation.</li>
-     * <li>1: uses built-in content moderation.</li>
-     * <li>2: uses custom content moderation.</li>
+     * <li>0: No security audit.</li>
+     * <li>1: Built-in security audit.</li>
+     * <li>2: Custom security audit.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class ModifyLiveMessageAppAuditRequest extends TeaModel {
     public Integer auditType;
 
     /**
-     * <p>The URL for content moderation. This parameter is required if you set AuditType to 2. The URL must start with http:// or https:// and cannot contain a private IP address or a port number.</p>
+     * <p>The security audit URL required when custom security audit is used (AuditType=2). The URL must start with http:// or https://, must not contain private IP addresses, and must not include port numbers.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://example.aliyundoc.com/exampleaudit">http://example.aliyundoc.com/exampleaudit</a></p>
@@ -38,7 +38,7 @@ public class ModifyLiveMessageAppAuditRequest extends TeaModel {
     public String auditUrl;
 
     /**
-     * <p>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</p>
+     * <p>The data center. This value must be the same as the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Valid values: cn-shanghai (Shanghai) and ap-southeast-1 (Singapore).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

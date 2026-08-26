@@ -4,11 +4,22 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddLiveStreamMergeResponseBody extends TeaModel {
+    /**
+     * <ul>
+     * <li><p>A message that indicates the result of the request. If the request fails, this message helps the caller identify the issue.</p>
+     * </li>
+     * <li><p>Valid values: OK, config invalid, degrade to no livemerger.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>

@@ -7,11 +7,13 @@ public class ModifyShowListRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value returned in the response.</p>
+     * </li>
+     * <li><p>If you created the production studio in the LIVE console, find the production studio name on the Cloud Production Studio page. To go to the page, choose <strong>LIVE Console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,9 +24,9 @@ public class ModifyShowListRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The episode of the highest priority.</p>
+     * <p>The highest-priority show.</p>
      * <blockquote>
-     * <p> You can configure this parameter only before the playback of the episode list starts.</p>
+     * <p>This parameter can be configured only before the playlist starts.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,10 +36,10 @@ public class ModifyShowListRequest extends TeaModel {
     public String highPriorityShowId;
 
     /**
-     * <p>The time at which the episode of the highest priority is played. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.</p>
+     * <p>The time to play the highest-priority show. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.</p>
      * <blockquote>
-     * <p> You can configure this parameter only before the episode list starts playing.\
-     * After you configure this parameter, when the specified point in time is reached, any episode that is playing stops and the episode of the highest priority in the episode list starts to play.</p>
+     * <p>This parameter can be configured only before the playlist starts.<br>
+     * After this parameter is configured, the system switches from the currently playing show to the highest-priority show at the specified time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,19 +51,25 @@ public class ModifyShowListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The number of additional times the episode list is played.</p>
+     * <p>The number of times the playlist loops.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The RepeatTimes parameter specifies the number of repetitions. For example, if you set the value to <strong>0</strong>, the episode list is played <strong>once</strong>. If you set the value to <strong>1</strong>, the episode list is played <strong>twice</strong>.********</p>
+     * <li><p>RepeatTimes specifies the number of repetitions. For example, a value of <strong>0</strong> means the playlist is played once without repetition. A value of <strong>1</strong> means the playlist is played twice (one initial playback and one repetition).</p>
      * </li>
-     * <li><p>If you set the value to -1, the episode list is repeated indefinitely.</p>
+     * <li><p>A value of -1 indicates that the playlist loops indefinitely.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -70,9 +78,9 @@ public class ModifyShowListRequest extends TeaModel {
     public Integer repeatTimes;
 
     /**
-     * <p>The ID of the episode for which you want to change the position in the playlist.</p>
+     * <p>The ID of the show whose position in the playlist you want to modify.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2848051.html">AddShowIntoShowList</a> or <a href="https://help.aliyun.com/document_detail/2848054.html">DescribeShowList</a> operation and check the value of the response parameter ShowId to obtain the ID.</p>
+     * <p>Obtain the ShowId value from the response of the <a href="https://help.aliyun.com/document_detail/2848051.html">AddShowIntoShowList</a> or <a href="https://help.aliyun.com/document_detail/2848054.html">DescribeShowList</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,9 +90,9 @@ public class ModifyShowListRequest extends TeaModel {
     public String showId;
 
     /**
-     * <p>The position of the episode in the episode list. If you want to change the position of an episode in a playlist, place the ID of the episode in <strong>Spot</strong>.</p>
+     * <p>The new position of the show in the playlist. The show specified by ShowId is moved to the position specified by <strong>Spot</strong>.</p>
      * <blockquote>
-     * <p> The value must be greater than or equal to 0 and less than or equal to the total number of episodes in the playlist.</p>
+     * <p>The value must be greater than or equal to 0 and less than or equal to the total number of shows in the playlist.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

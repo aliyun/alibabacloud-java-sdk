@@ -6,6 +6,11 @@ import com.aliyun.tea.*;
 public class DescribeLiveDomainPvUvDataRequest extends TeaModel {
     /**
      * <p>The streaming domain.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Make sure that the specified domain name is a streaming domain and that you have the required permissions to operate on it.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +20,7 @@ public class DescribeLiveDomainPvUvDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <p>The end time. The time must be later than the start time. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2018-03-20T16:00:00Z</p>
@@ -26,11 +31,17 @@ public class DescribeLiveDomainPvUvDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <p>The start time. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2018-03-17T16:00:00Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopLiveMPUTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0F72851F-5DC1-1979-9B2C-450040316C3E</p>

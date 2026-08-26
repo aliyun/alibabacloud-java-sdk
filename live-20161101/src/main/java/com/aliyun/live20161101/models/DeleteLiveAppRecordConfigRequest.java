@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveAppRecordConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveAudioAuditConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name in the ingest URL. Otherwise, the configuration does not take effect. The application name is case-sensitive.</p>
+     * <p>The AppName of the live stream. The AppName must match that in the ingest URL for the template to take effect. The value is case-sensitive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddLiveAudioAuditConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The business type. You can specify a model. The default value is the domain name.</p>
+     * <p>The business type. This parameter can be used to select a model. The default value is the domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.edu</p>
@@ -34,7 +34,7 @@ public class AddLiveAudioAuditConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The name of the OSS bucket in which the recording is stored.</p>
+     * <p>The name of the OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>liveBucket****</p>
@@ -43,7 +43,7 @@ public class AddLiveAudioAuditConfigRequest extends TeaModel {
     public String ossBucket;
 
     /**
-     * <p>The endpoint of OSS.</p>
+     * <p>The endpoint of the OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-oss-****.aliyuncs.com</p>
@@ -52,7 +52,7 @@ public class AddLiveAudioAuditConfigRequest extends TeaModel {
     public String ossEndpoint;
 
     /**
-     * <p>The name of the recording stored in OSS.</p>
+     * <p>The name of the recording file stored in OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>liveObject****</p>
@@ -63,11 +63,17 @@ public class AddLiveAudioAuditConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream. The value of this parameter must be the same as the stream name in the ingest URL. Otherwise, the configuration does not take effect. The stream name is case-sensitive.</p>
+     * <p>The name of the live stream. The StreamName must match that in the ingest URL for the template to take effect. The value is case-sensitive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class CreateEdgeTranscodeJobRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The task name. The name can contain letters, digits, hyphens (-), and underscores (_). The name must be 255 characters in length.</p>
+     * <p>The job name. The name can contain Chinese characters, letters, digits, hyphens (-), and underscores (_). The name can be up to 255 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,12 @@ public class CreateEdgeTranscodeJobRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

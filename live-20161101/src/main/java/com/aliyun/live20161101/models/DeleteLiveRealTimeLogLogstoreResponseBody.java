@@ -8,7 +8,7 @@ public class DeleteLiveRealTimeLogLogstoreResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
+     * <p>9732E117-8A37-49FD-A36F-ABBB*******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

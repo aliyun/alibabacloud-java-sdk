@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetLiveDomainMultiStreamConfigRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The primary streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class SetLiveDomainMultiStreamConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to enable the dual-stream disaster recovery feature. Valid values:</p>
+     * <p>The feature switch. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enables the feature.</li>
-     * <li><strong>off</strong>: disables the feature.</li>
+     * <li><strong>on</strong>: enabled</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

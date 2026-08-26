@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEdgeTranscodeJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the edge transcoding task.</p>
+     * <p>The ID of the edge transcoding job.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>

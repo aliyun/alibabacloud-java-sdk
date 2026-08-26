@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainStagingConfigResponseBody extends TeaModel {
     /**
-     * <p>The feature configurations of the accelerated domain name.</p>
+     * <p>The domain name configurations.</p>
      */
     @NameInMap("DomainConfigs")
     public java.util.List<DescribeLiveDomainStagingConfigResponseBodyDomainConfigs> domainConfigs;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C80705BF-0F76-41FA-BAD1-5B59296A4E59</p>
@@ -42,7 +42,7 @@ public class DescribeLiveDomainStagingConfigResponseBody extends TeaModel {
 
     public static class DescribeLiveDomainStagingConfigResponseBodyDomainConfigsFunctionArgs extends TeaModel {
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The name of the configuration parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>auth_type</p>
@@ -51,7 +51,7 @@ public class DescribeLiveDomainStagingConfigResponseBody extends TeaModel {
         public String argName;
 
         /**
-         * <p>The configured value.</p>
+         * <p>The value of the configuration parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>req_auth</p>
@@ -84,7 +84,7 @@ public class DescribeLiveDomainStagingConfigResponseBody extends TeaModel {
 
     public static class DescribeLiveDomainStagingConfigResponseBodyDomainConfigs extends TeaModel {
         /**
-         * <p>The configuration ID.</p>
+         * <p>The ID of the configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>6295</p>
@@ -108,12 +108,16 @@ public class DescribeLiveDomainStagingConfigResponseBody extends TeaModel {
         public String functionName;
 
         /**
-         * <p>The configuration status. Valid values:</p>
+         * <p>The status of the configuration. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>testing</strong></li>
-         * <li><strong>failed</strong></li>
-         * <li><strong>configuring</strong></li>
+         * <li><p><strong>success</strong>: Successful.</p>
+         * </li>
+         * <li><p><strong>testing</strong>: The configuration is being verified.</p>
+         * </li>
+         * <li><p><strong>failed</strong>: Failed.</p>
+         * </li>
+         * <li><p><strong>configuring</strong>: The configuration is in progress.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

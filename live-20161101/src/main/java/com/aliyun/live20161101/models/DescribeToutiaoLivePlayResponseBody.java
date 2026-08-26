@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
     /**
-     * <p>The information about the live stream.</p>
+     * <p>The details of the stream information.</p>
      */
     @NameInMap("Content")
     public java.util.List<DescribeToutiaoLivePlayResponseBodyContent> content;
@@ -59,7 +59,7 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
 
     public static class DescribeToutiaoLivePlayResponseBodyContent extends TeaModel {
         /**
-         * <p>The name of the application to which the live stream belongs.</p>
+         * <p>The name of the application to which the stream belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>liveApp****</p>
@@ -77,7 +77,7 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
         public Float bandwidth;
 
         /**
-         * <p>The Content Delivery Network (CDN) name.</p>
+         * <p>The CDN name.</p>
          * 
          * <strong>example:</strong>
          * <p>ali</p>
@@ -104,7 +104,7 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
         public Long playNum;
 
         /**
-         * <p>The name of the live stream.</p>
+         * <p>The stream name.</p>
          * 
          * <strong>example:</strong>
          * <p>liveStream****</p>

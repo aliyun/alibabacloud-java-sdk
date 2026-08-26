@@ -15,7 +15,7 @@ public class DescribeLiveDomainStagingConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The feature that you want to query. Separate multiple features with commas (,).</p>
+     * <p>The names of the features. Separate multiple feature names with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,12 @@ public class DescribeLiveDomainStagingConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLiveStreamMonitorRequest extends TeaModel {
     /**
-     * <p>The name of the application that plays the output streams of the monitoring session.</p>
-     * <p>You can specify a name. If you do not specify a name, the system uses <strong>monitor</strong> as the name of the application.</p>
+     * <p>The application name for the output stream of the monitoring session. You can specify a custom name. If you do not specify this parameter, <strong>monitor</strong> is used as the application name.</p>
      * 
      * <strong>example:</strong>
      * <p>monitor****</p>
@@ -15,7 +14,7 @@ public class CreateLiveStreamMonitorRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>Supports input of callback addresses in HTTP(S) format.</p>
+     * <p>The webhook address. HTTP and HTTPS are supported.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></p>
@@ -24,9 +23,9 @@ public class CreateLiveStreamMonitorRequest extends TeaModel {
     public String callbackUrl;
 
     /**
-     * <p>DingTalk alert monitoring sends alert notifications through a DingTalk group robot. Please set up the DingTalk group robot first and enter the HTTP(S) address of the robot here. For more details, see <a href="https://open.dingtalk.com/document/robots/custom-robot-access">Custom Robot Access</a>.</p>
+     * <p>The webhook URL of the DingTalk chatbot. To receive alert notifications, configure a DingTalk chatbot and enter its webhook URL, which can be in HTTP or HTTPS format. For more information, see <a href="https://open.dingtalk.com/document/robots/custom-robot-access">Custom robot access</a>.</p>
      * <blockquote>
-     * <p>Configure the custom keyword for the DingTalk group robot as \&quot;alert\&quot;, otherwise, messages will not be received.</p>
+     * <p>Set the custom keyword for the DingTalk chatbot to &quot;Alerting&quot;. Otherwise, you cannot receive messages.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +35,7 @@ public class CreateLiveStreamMonitorRequest extends TeaModel {
     public String dingTalkWebHookUrl;
 
     /**
-     * <p>The endpoint of the monitoring session.</p>
+     * <p>The domain name to monitor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +45,7 @@ public class CreateLiveStreamMonitorRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The list of input streams to monitor. For more information, see the following <strong>InputConfig</strong> table.</p>
+     * <p>The list of input streams to monitor. For more information, see the <strong>InputConfig</strong> table below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +55,7 @@ public class CreateLiveStreamMonitorRequest extends TeaModel {
     public String inputList;
 
     /**
-     * <p>Alarm threshold setting for monitoring, in JSON format. For more details, please refer to the table below for MonitorConfig.</p>
+     * <p>The alert threshold settings for monitoring. The value must be a JSON string. For more information, see the MonitorConfig table below.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;{\&quot;fpsLowThres\&quot;: 0.6,\&quot;brLowThres\&quot;: 1.1,\&quot;eofDurationThresSec\&quot;: 10}&quot;</p>
@@ -75,12 +74,16 @@ public class CreateLiveStreamMonitorRequest extends TeaModel {
     public String monitorName;
 
     /**
-     * <p>The output template of the monitoring session. Valid values:</p>
+     * <p>The output template for the monitoring session. Valid values:</p>
      * <ul>
-     * <li><strong>lp_ld</strong>: low definition.</li>
-     * <li><strong>lp_sd</strong>: standard definition.</li>
-     * <li><strong>lp_hd</strong>: high definition.</li>
-     * <li><strong>lp_ud</strong>: ultra high definition.</li>
+     * <li><p><strong>lp_ld</strong>: low definition.</p>
+     * </li>
+     * <li><p><strong>lp_sd</strong>: standard definition.</p>
+     * </li>
+     * <li><p><strong>lp_hd</strong>: high definition.</p>
+     * </li>
+     * <li><p><strong>lp_ud</strong>: ultra-high definition.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -93,11 +96,17 @@ public class CreateLiveStreamMonitorRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the output stream of the monitoring session. If you do not specify a name, the system generates a name at random.</p>
+     * <p>The name of the output stream for the monitoring session. If you do not specify this parameter, the system generates a random name.</p>
      * 
      * <strong>example:</strong>
      * <p>monitorStream****</p>

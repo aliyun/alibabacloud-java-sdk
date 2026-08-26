@@ -17,23 +17,24 @@ public class DescribeLiveStreamTranscodeStreamNumRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The grouping method.</p>
+     * <p>The grouping type. Valid values:</p>
      * <ul>
-     * <li>Domain name (default)</li>
-     * <li>Template</li>
-     * </ul>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>domain</li>
-     * <li>template</li>
+     * <li>domain (default)</li>
+     * <li>template.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>domain</p>
+     * <p>template</p>
      */
     @NameInMap("SplitType")
     public String splitType;

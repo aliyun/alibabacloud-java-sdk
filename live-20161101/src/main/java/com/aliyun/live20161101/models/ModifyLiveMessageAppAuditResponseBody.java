@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLiveMessageAppAuditResponseBody extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>The ID of the interactive messaging application to modify.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>
@@ -14,7 +14,7 @@ public class ModifyLiveMessageAppAuditResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The signature of the interactive messaging application. It is required by the interactive messaging SDK.</p>
+     * <p>The signature of the interactive messaging application. This information is required by the interactive messaging service SDK.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -23,7 +23,7 @@ public class ModifyLiveMessageAppAuditResponseBody extends TeaModel {
     public String appSign;
 
     /**
-     * <p>Indicates whether authentication is enabled. If custom content moderation is used, the value of this parameter is true by default.</p>
+     * <p>Indicates whether call authentication is enabled. If custom security audit is used, this parameter is set to true by default to enable call authentication.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class ModifyLiveMessageAppAuditResponseBody extends TeaModel {
     public Boolean auditNeedAuthentication;
 
     /**
-     * <p>The content moderation method.</p>
+     * <p>The security audit method.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class ModifyLiveMessageAppAuditResponseBody extends TeaModel {
     public Integer auditType;
 
     /**
-     * <p>The URL for content moderation. This parameter is returned when the value of AuditType is 2.</p>
+     * <p>The security audit URL provided when AuditType is set to 2.</p>
      * 
      * <strong>example:</strong>
      * <p>http: //example.aliyundoc.com/exampleaudit</p>

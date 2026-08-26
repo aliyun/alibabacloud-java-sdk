@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainMappingRequest extends TeaModel {
     /**
-     * <p>The domain name for which you want to query the mappings. The following types of domain names are supported:</p>
+     * <p>The domain that you want to query. Valid types:</p>
      * <ul>
-     * <li>Ingest domain</li>
-     * <li>Main streaming domain</li>
-     * <li>Sub-streaming domain</li>
+     * <li><p>Ingest domain</p>
+     * </li>
+     * <li><p>Main streaming domain</p>
+     * </li>
+     * <li><p>Sub-streaming domain</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -22,6 +25,12 @@ public class DescribeLiveDomainMappingRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

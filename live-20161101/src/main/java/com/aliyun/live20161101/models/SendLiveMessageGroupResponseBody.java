@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendLiveMessageGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the message, which is a unique identifier that can be used to delete the message. The ID can be up to 64 bytes in length and can contain letters and digits.</p>
+     * <p>The unique identifier of the message, which can be used to delete the message. The ID can contain only letters and digits and can be up to 64 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>169830****</p>
@@ -14,7 +14,7 @@ public class SendLiveMessageGroupResponseBody extends TeaModel {
     public String msgTid;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E4C1245F-597B-1BD1-B9BB-9D220E99****</p>

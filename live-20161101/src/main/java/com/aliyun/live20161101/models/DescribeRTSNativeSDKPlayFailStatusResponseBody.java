@@ -14,7 +14,7 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The end of the time range for which the data was queried.</p>
+     * <p>The end time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-10T21:00:00Z</p>
@@ -23,13 +23,13 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The number of error status codes at each interval.</p>
+     * <p>The total number of error status codes for each time interval.</p>
      */
     @NameInMap("PlayFailStatus")
     public java.util.List<DescribeRTSNativeSDKPlayFailStatusResponseBodyPlayFailStatus> playFailStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
@@ -38,7 +38,7 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range for which the data was queried.</p>
+     * <p>The start time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-10T20:00:00Z</p>
@@ -93,7 +93,7 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
 
     public static class DescribeRTSNativeSDKPlayFailStatusResponseBodyPlayFailStatus extends TeaModel {
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The beginning of the time interval. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-10T20:00:00Z</p>
@@ -102,7 +102,7 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
-         * <p>The status code that indicates failed DNS resolution.</p>
+         * <p>DNS resolution failure.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -111,7 +111,7 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
         public String v20001;
 
         /**
-         * <p>The status code that indicates failed authentication.</p>
+         * <p>Authentication failure.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -120,7 +120,7 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
         public String v20002;
 
         /**
-         * <p>The status code that indicates a connection signaling timeout.</p>
+         * <p>Connection signaling timeout.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -129,7 +129,7 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
         public String v20011;
 
         /**
-         * <p>The status code that indicates a subscription signaling error.</p>
+         * <p>Subscription signaling error.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -138,7 +138,7 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
         public String v20012;
 
         /**
-         * <p>The status code indicating that the stream to subscribe to does not exist.</p>
+         * <p>Subscribed stream does not exist.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -147,7 +147,7 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
         public String v20013;
 
         /**
-         * <p>The status code that indicates a media packet collection timeout.</p>
+         * <p>Media packet receiving timeout.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

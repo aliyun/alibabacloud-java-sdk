@@ -8,7 +8,7 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
     public DescribeLiveRecordConfigResponseBodyLiveAppRecordList liveAppRecordList;
 
     /**
-     * <p>The sorting order of recording configurations by creation time.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -44,7 +44,7 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of recording configurations that meet the specified conditions.</p>
+     * <p>The total number of entries that meet the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveAppRecordConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The interruption duration for merge. If the stream interruption duration exceeds the specified duration, a new recording is generated. The value of this parameter ranges from 15 to 21600 seconds.</p>
+     * <p>The window in seconds for merging fragmented recording after an interruption. If a stream disconnects and reconnects within this window, the recording will continue in the same file. Valid values: 15 to 21600.</p>
      * 
      * <strong>example:</strong>
      * <p>180</p>
@@ -34,9 +34,9 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The recording end time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The recording end time. Format: <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z (UTC time).</p>
      * <blockquote>
-     * <p> The time range that is specified by the EndTime and StartTime parameters must be less than or equal to seven days. If the value exceeds seven days, ApsaraVideo Live considers seven days as the time range. This parameter takes effect only for the live stream specified by the StreamName parameter. If the StreamName parameter is not specified, this parameter does not take effect.</p>
+     * <p>This parameter is only effective for stream-level recordings. The interval between EndTime and StartTime cannot exceed 7 days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,15 +46,19 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to enable on-demand recording. Valid values:</p>
+     * <p>Specifies the recording mode. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: disables on-demand recording.</li>
-     * <li><strong>1</strong>: enables on-demand recording by using the HTTP callback method.</li>
-     * <li><strong>2</strong>: enables on-demand recording by parsing the stream ingest parameters.</li>
-     * <li><strong>7</strong>: By default, ApsaraVideo Live does not automatically record live streams. You can call the <a href="https://help.aliyun.com/document_detail/2847882.html">RealTimeRecordCommand</a> operation to manually start or stop recording.</li>
+     * <li><p><strong>0</strong>: disables on-demand recording.</p>
+     * </li>
+     * <li><p><strong>1</strong>: On-demand recording via HTTP callback.</p>
+     * </li>
+     * <li><p><strong>2</strong>: On-demand recording by parsing parameters in the ingest URL.</p>
+     * </li>
+     * <li><p><strong>7</strong>: Manual recording. You can call the <a href="https://help.aliyun.com/document_detail/2847882.html">RealTimeRecordCommand</a> API to manually start or stop recording.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set the OnDemand parameter to <strong>1</strong>, you need to call the <a href="https://help.aliyun.com/document_detail/2847891.html">AddLiveRecordNotifyConfig</a> operation to configure the OnDemandUrl parameter. Otherwise, ApsaraVideo Live does not perform on-demand recording.</p>
+     * <p>If you set OnDemand to <strong>1</strong>, you need to call the <a href="https://help.aliyun.com/document_detail/2847891.html">AddLiveRecordNotifyConfig</a> API to configure the OnDemandUrl parameter. Otherwise, ApsaraVideo Live does not perform on-demand recording.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,8 +68,7 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
     public Integer onDemand;
 
     /**
-     * <p>The endpoint of the Object Storage Service (OSS) bucket.</p>
-     * <p>To store live stream recordings in OSS, you need to create an OSS bucket in advance. For more information, see <a href="https://help.aliyun.com/document_detail/84932.html">Configure OSS</a>.</p>
+     * <p>The endpoint for OSS storage. You must create an OSS bucket before using this feature. See <a href="https://help.aliyun.com/document_detail/84932.html">Configure OSS</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,9 +90,9 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The recording start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The recording start time. Format: <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z (UTC time).</p>
      * <blockquote>
-     * <p> The start time must be within seven days after the stream ingest starts. This parameter takes effect only for the live stream specified by the StreamName parameter. If the StreamName parameter is not specified, this parameter does not take effect.</p>
+     * <p>This parameter is only effective for stream-level recordings (i.e., when <code>StreamName</code> is specified). The time must be within 7 days of the actual stream start time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -108,7 +111,7 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The transcoded stream recording details.</p>
+     * <p>The transcoded stream recording configuration.</p>
      */
     @NameInMap("TranscodeRecordFormat")
     public java.util.List<UpdateLiveAppRecordConfigRequestTranscodeRecordFormat> transcodeRecordFormat;
@@ -230,15 +233,10 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
 
     public static class UpdateLiveAppRecordConfigRequestRecordFormat extends TeaModel {
         /**
-         * <p>The recording cycle. Unit: seconds If you do not specify this parameter, the default value 6 hours is used.</p>
+         * <p>The duration of a single recording cycle in seconds. If not specified, the default value is 6 hours</p>
          * <blockquote>
+         * <p>If a live stream is interrupted during a recording cycle but resumes normal streaming within the merge window, recording will continue in the same file. A recording file is generated only when a live stream is interrupted for longer than the merge window.</p>
          * </blockquote>
-         * <ul>
-         * <li><p>If a live stream is interrupted during a recording cycle but is resumed within the interruption duration threshold, the stream is recorded in the same recording before and after the interruption.</p>
-         * </li>
-         * <li><p>If a live stream is interrupted for longer than the interruption duration threshold, a new recording is generated.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -247,15 +245,20 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
         public Integer cycleDuration;
 
         /**
-         * <p>The recording format. Supported formats include M3U8, Flash Video (FLV), MP4, and Common Media Application Format (CMAF). Valid values:</p>
+         * <p>The recording format. Valid values:</p>
          * <blockquote>
-         * <p> You need to specify at lease one of the RecordFormat and TranscodeRecordFormat parameters. If you set this parameter to m3u8 or cmaf, you must also specify the RecordFormat.N.SliceOssObjectPrefix and RecordFormat.N.SliceDuration parameters.</p>
+         * <p>Notice: </p>
          * </blockquote>
+         * <p>If you choose m3u8 or cmaf, you must also set SliceOssObjectPrefix and SliceDuration. At least one of RecordFormat or TranscodeRecordFormat must be specified.</p>
          * <ul>
-         * <li>m3u8</li>
-         * <li>flv</li>
-         * <li>mp4</li>
-         * <li>cmaf</li>
+         * <li><p>m3u8</p>
+         * </li>
+         * <li><p>flv</p>
+         * </li>
+         * <li><p>mp4</p>
+         * </li>
+         * <li><p>cmaf</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,7 +270,7 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
         /**
          * <p>The duration of a single segment. Unit: seconds</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set the RecordFormat.N.Format parameter to m3u8 or cmaf.</p>
+         * <p>This parameter takes effect only if you set the RecordFormat.N.Format parameter to m3u8 or cmaf.</p>
          * </blockquote>
          * <p>If you do not specify this parameter, the default value 30 seconds is used. Valid values: 5 to 30.</p>
          * 
@@ -310,7 +313,7 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
 
     public static class UpdateLiveAppRecordConfigRequestTranscodeRecordFormat extends TeaModel {
         /**
-         * <p>The transcoded stream recording cycle. Unit: seconds If you do not specify this parameter, the default value 6 hours is used.</p>
+         * <p>The transcoded stream recording cycle. Unit: seconds. If you do not specify this parameter, the default value 6 hours is used.</p>
          * 
          * <strong>example:</strong>
          * <p>21600</p>
@@ -319,15 +322,19 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
         public Integer cycleDuration;
 
         /**
-         * <p>The format of the transcoded stream recording. Supported formats include M3U8, FLV, MP4, and CMAF. Valid values:</p>
+         * <p>The format of the transcoded stream recording. Valid values:</p>
          * <blockquote>
-         * <p> If you set this parameter to m3u8 or cmaf, you must also specify the TranscodeRecordFormat.N.SliceOssObjectPrefix and TranscodeRecordFormat.N.SliceDuration parameters.</p>
+         * <p>If you choose m3u8 or cmaf, you must specify the TranscodeRecordFormat.N.SliceOssObjectPrefix and TranscodeRecordFormat.N.SliceDuration parameters.</p>
          * </blockquote>
          * <ul>
-         * <li>m3u8</li>
-         * <li>flv</li>
-         * <li>mp4</li>
-         * <li>cmaf</li>
+         * <li><p>m3u8</p>
+         * </li>
+         * <li><p>flv</p>
+         * </li>
+         * <li><p>mp4</p>
+         * </li>
+         * <li><p>cmaf</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -337,9 +344,9 @@ public class UpdateLiveAppRecordConfigRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The duration of a single segment in the transcoded stream recording. Unit: seconds.</p>
+         * <p>The duration of a single segment for transcoded stream recording. Unit: seconds.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set the TranscodeRecordFormat.N.Format parameter to m3u8 or cmaf.</p>
+         * <p>This parameter takes effect only if you set the TranscodeRecordFormat.N.Format parameter to m3u8 or cmaf.</p>
          * </blockquote>
          * <p>If you do not specify this parameter, the default value 30 seconds is used. Valid values: 5 to 30.</p>
          * 

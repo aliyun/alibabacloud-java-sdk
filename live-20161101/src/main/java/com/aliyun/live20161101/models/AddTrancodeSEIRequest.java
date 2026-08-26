@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddTrancodeSEIRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The AppName of the live stream. View AppNames on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddTrancodeSEIRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The time period after which the SEI is inserted after the request is received. Unit: milliseconds.</p>
+     * <p>The delay in milliseconds before the SEI is inserted after the command is received.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,10 +38,12 @@ public class AddTrancodeSEIRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to append the SEI to each keyframe or frame. Valid values:</p>
+     * <p>Specifies the insertion pattern for the SEI.</p>
      * <ul>
-     * <li><strong>keyframe</strong></li>
-     * <li><strong>frame</strong></li>
+     * <li><p><strong>keyframe</strong>: Inserts at every keyframe.</p>
+     * </li>
+     * <li><p><strong>frame</strong>: Inserts at every single frame.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,11 +53,17 @@ public class AddTrancodeSEIRequest extends TeaModel {
     @NameInMap("Pattern")
     public String pattern;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The number of times that the SEI is repeatedly inserted. A value of -1 specifies infinite times.</p>
+     * <p>The number of times to repeat the insertion. A value of -1 means infinite repetitions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +75,7 @@ public class AddTrancodeSEIRequest extends TeaModel {
     /**
      * <p>The name of the live stream.</p>
      * <blockquote>
-     * <p> The value of this parameter must be the name of the source stream. This way, the SEI is inserted to all the transcoded streams.</p>
+     * <p>It must be the name of the source stream. This ensures that SEI is inserted into all transcoded streams.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -78,7 +86,7 @@ public class AddTrancodeSEIRequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The SEI text. It can be up to 4,000 bytes in length.</p>
+     * <p>The SEI text. Length limit: 4000 bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

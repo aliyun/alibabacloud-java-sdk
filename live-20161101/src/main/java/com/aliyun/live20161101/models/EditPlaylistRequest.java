@@ -8,7 +8,7 @@ public class EditPlaylistRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The configurations of the episode list. For more information, see the <strong>ProgramConfig</strong> section of this topic.</p>
+     * <p>The playlist configuration. For more information, see <strong>ProgramConfig</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;RepeatNumber&quot;:&quot;0&quot;,&quot;ProgramName&quot;:&quot;my program&quot;}]</p>
@@ -17,7 +17,7 @@ public class EditPlaylistRequest extends TeaModel {
     public String programConfig;
 
     /**
-     * <p>The ID of the episode list. If the episode list was created by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, check the value of the response parameter ProgramId to obtain the ID.</p>
+     * <p>The playlist ID. If you add playlist items by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, use the ProgramId value returned by the call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class EditPlaylistRequest extends TeaModel {
     public String programId;
 
     /**
-     * <p>The episodes that you want to add to the production studio. The value is a JSON string. For more information, see the <strong>InputProgramItem</strong> section of this topic.</p>
+     * <p>The list of playlist items. This is a JSON string. For more information, see <strong>InputProgramItem</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +36,12 @@ public class EditPlaylistRequest extends TeaModel {
     @NameInMap("ProgramItems")
     public String programItems;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

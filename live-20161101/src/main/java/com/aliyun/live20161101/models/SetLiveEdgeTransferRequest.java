@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetLiveEdgeTransferRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. Regular expressions are supported, with a few limits. For more information, see the <strong>Description about the AppName and StreamName parameters</strong> section. For example, a value of <strong>liveApp\<em>\</em>\<em>\</em>[1,2,3]</strong> specifies that stream relay is configured for three applications: liveApp\<em>\</em>\<em>\<em>1, liveApp\</em>\</em>\<em>\<em>2, and liveApp\</em>\</em>\<em>\<em>3.</em></em>**</p>
+     * <p>The application name to which the live stream belongs. Regular expressions are supported for configuration with exceptions. For more information, see <strong>AppName and StreamName Parameter Configuration Instructions</strong> below. For example: liveApp****[1,2,3] indicates that the three apps liveApp<strong><strong>1, liveApp</strong></strong>2, and liveApp****3 are allowed for stream relay.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect for only destination domain names that are specified by the TargetDomainList parameter.</p>
-     * </li>
-     * <li><p>You cannot use a caret (^) or a dollar sign ($) in a regular expression to configure the <code>AppName</code> parameter. Otherwise, stream relay fails.</p>
-     * </li>
+     * <li>This parameter only takes effect for the TargetDomainList in the request parameters.</li>
+     * <li>When configuring the <code>AppName</code> parameter value using regular expressions, the ^ or $ characters cannot be used, otherwise stream relay will fail.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -22,7 +20,7 @@ public class SetLiveEdgeTransferRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ingest domain. Stream relay is configured based on the ingest domain. Only one stream relay configuration can be set for an ingest domain.</p>
+     * <p>The ingest domain name. Live stream relay is configured at the granularity of the ingest DomainName. Each domain can have only one live stream relay configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,11 +30,11 @@ public class SetLiveEdgeTransferRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The HTTPDNS API that is used to obtain the destination URLs. The request must contain the <code>TargetDomainList</code> parameter or the <code>HttpDns</code> parameter. The two parameters are mutually exclusive.</p>
+     * <p>The HTTPDNS interface for obtaining the stream relay target address. The request must contain one of the <code>TargetDomainList</code> and <code>HttpDns</code> parameters, and the two are mutually exclusive.</p>
      * <blockquote>
-     * <p> If the <code>HttpDns</code> parameter is configured, you cannot configure the <code>TargetDomainList</code> parameter, and the <code>AppName</code> and <code>StreamName</code> parameters do not take effect.</p>
+     * <p>If <code>HttpDns</code> is set in the request parameters, the <code>TargetDomainList</code> parameter cannot be set, and the <code>AppName</code> and <code>StreamName</code> restrictions do not take effect.</p>
      * </blockquote>
-     * <p>For information about the requirements on the structure of messages that are returned by the HTTPDNS API, see the <strong>Description about the HTTPDNS API</strong> section.</p>
+     * <p>Live stream relay has requirements for the message structure returned by the HTTPDNS interface. For more information, see <strong>HTTPDNS Instructions</strong> below.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://developer.aliyundoc.com">http://developer.aliyundoc.com</a></p>
@@ -47,19 +45,23 @@ public class SetLiveEdgeTransferRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the ingested stream. Regular expressions are supported, with a few limits. For more information, see the <strong>Description about the AppName and StreamName parameters</strong> section. For example, a value of <strong>liveStream\<em>\</em>\<em>\</em>[1,2,3]</strong> specifies that stream relay is configured for three streams: liveStream\<em>\</em>\<em>\<em>1, liveStream\</em>\</em>\<em>\<em>2, and liveStream\</em>\</em>\<em>\<em>3.</em></em>**</p>
+     * <p>The stream name. Regular expressions are supported for configuration with exceptions. For more information, see <strong>AppName and StreamName Parameter Configuration Instructions</strong> below. For example: liveStream****[1,2,3] indicates that the three streams liveStream<strong><strong>1, liveStream</strong></strong>2, and liveStream****3 are allowed for stream relay.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect for only destination domain names that are specified by the TargetDomainList parameter.</p>
-     * </li>
-     * <li><p>You cannot use a caret (^) or a dollar sign ($) in a regular expression to configure the <code>StreamName</code> parameter. Otherwise, stream relay fails.</p>
-     * </li>
+     * <li>This parameter only takes effect for the TargetDomainList in the request parameters.</li>
+     * <li>When configuring the <code>StreamName</code> parameter value using regular expressions, the ^ or $ characters cannot be used, otherwise stream relay will fail.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>
@@ -68,15 +70,13 @@ public class SetLiveEdgeTransferRequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The destination domain names to which you want to relay the ingested stream. Separate multiple domain names with commas (,). The request must contain the <code>TargetDomainList</code> parameter or the <code>HttpDns</code> parameter. The two parameters are mutually exclusive.</p>
+     * <p>The list of target domains specified by the user for stream relay. Multiple domains are separated by commas (,). The request must contain one of the <code>TargetDomainList</code> and <code>HttpDns</code> parameters, and the two are mutually exclusive.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The <code>AppName</code> and <code>StreamName</code> parameters take effect only when the <code>TargetDomainList</code> parameter is configured.</p>
-     * </li>
-     * <li><p>If the <code>TargetDomainList</code> parameter is configured, you cannot configure the <code>HttpDns</code> parameter.</p>
-     * </li>
+     * <li>When <code>TargetDomainList</code> is set in the request parameters, the <code>AppName</code> and <code>StreamName</code> parameters take effect.</li>
+     * <li>When <code>TargetDomainList</code> is set in the request parameters, the <code>HttpDns</code> parameter cannot be set.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>learn.aliyundoc.com,guide.aliyundoc.com</p>
@@ -85,10 +85,10 @@ public class SetLiveEdgeTransferRequest extends TeaModel {
     public String targetDomainList;
 
     /**
-     * <p>Specifies whether to pass through stream ingest parameters. Valid values:</p>
+     * <p>Specifies whether to pass through ingest parameters. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: passes through stream ingest parameters.</li>
-     * <li><strong>no</strong>: does not pass through stream ingest parameters.</li>
+     * <li><strong>yes</strong>: Ingest parameters are passed through.</li>
+     * <li><strong>no</strong> (default): Ingest parameters are not passed through.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
     /**
-     * <p>The verification information.</p>
+     * <p>The verification content.</p>
      */
     @NameInMap("Content")
     public java.util.List<DescribeDomainWithIntegrityResponseBodyContent> content;
@@ -57,7 +57,7 @@ public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The subpoints.</p>
+         * <p>The data points.</p>
          */
         @NameInMap("Points")
         public java.util.List<String> points;

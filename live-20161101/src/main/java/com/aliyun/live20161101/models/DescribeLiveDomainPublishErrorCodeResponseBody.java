@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPublishErrorCodeResponseBody extends TeaModel {
     /**
-     * <p>The time granularity of the query. Unit: seconds. Default value: 60.</p>
+     * <p>The time granularity of the queried data. Unit: seconds. Default value: 60.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -17,13 +17,13 @@ public class DescribeLiveDomainPublishErrorCodeResponseBody extends TeaModel {
      * <p>The ingest domain.</p>
      * 
      * <strong>example:</strong>
-     * <p>example.com,example.aliyundoc.com</p>
+     * <p>example1.aliyundoc.com,example2.aliyundoc.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-29T09:10:00Z</p>
@@ -32,7 +32,7 @@ public class DescribeLiveDomainPublishErrorCodeResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The proportions of error codes at each time interval.</p>
+     * <p>The status code distribution data for each time interval.</p>
      */
     @NameInMap("RealTimeCodeData")
     public java.util.List<DescribeLiveDomainPublishErrorCodeResponseBodyRealTimeCodeData> realTimeCodeData;
@@ -41,13 +41,13 @@ public class DescribeLiveDomainPublishErrorCodeResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>
+     * <p>BC858082-736F-4A25-867B-E5B67C******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The start time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-29T09:00:00Z</p>
@@ -112,15 +112,15 @@ public class DescribeLiveDomainPublishErrorCodeResponseBody extends TeaModel {
         /**
          * <p>The response code. Valid values:</p>
          * <ul>
-         * <li>3: The data read timed out.</li>
-         * <li>4: A data write error occurred.</li>
-         * <li>6: The data write timed out.</li>
-         * <li>200: The request is successful.</li>
-         * <li>500: An unknown internal error occurred.</li>
-         * <li>501: The stream ingest failed.</li>
-         * <li>502: The signaling operation timed out.</li>
-         * <li>401: A stream ingest parameter is invalid.</li>
-         * <li>403: The stream ingest authentication failed.</li>
+         * <li>3: read data timeout.</li>
+         * <li>4: write data error.</li>
+         * <li>6: write data timeout.</li>
+         * <li>200: success.</li>
+         * <li>500: internal system unknown error.</li>
+         * <li>501: stream ingest exception.</li>
+         * <li>502: signaling took too long.</li>
+         * <li>401: stream ingest parameter exception.</li>
+         * <li>403: stream ingest authentication failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class DescribeLiveDomainPublishErrorCodeResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The number of times the HTTP status code was returned.</p>
+         * <p>The number of responses.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -139,7 +139,7 @@ public class DescribeLiveDomainPublishErrorCodeResponseBody extends TeaModel {
         public String count;
 
         /**
-         * <p>The proportion of the HTTP status code.</p>
+         * <p>The proportion of responses.</p>
          * 
          * <strong>example:</strong>
          * <p>66.04</p>
@@ -180,13 +180,13 @@ public class DescribeLiveDomainPublishErrorCodeResponseBody extends TeaModel {
 
     public static class DescribeLiveDomainPublishErrorCodeResponseBodyRealTimeCodeData extends TeaModel {
         /**
-         * <p>The proportions of error codes.</p>
+         * <p>The list of status code distribution data.</p>
          */
         @NameInMap("CodeData")
         public java.util.List<DescribeLiveDomainPublishErrorCodeResponseBodyRealTimeCodeDataCodeData> codeData;
 
         /**
-         * <p>The timestamp of the data returned.</p>
+         * <p>The start time of the time interval. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2016-06-29T09:01:00Z</p>

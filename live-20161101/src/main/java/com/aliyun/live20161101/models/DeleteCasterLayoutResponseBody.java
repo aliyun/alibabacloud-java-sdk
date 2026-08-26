@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCasterLayoutResponseBody extends TeaModel {
     /**
-     * <p>The ID of the production studio. You can use the ID as a request parameter in the API operation that is used to modify a layout in the production studio, query layouts in the production studio, add a component in the production studio, or query components in the production studio.</p>
+     * <p>The ID of the production studio. Use this ID to modify a layout, query layouts, add a component, or query components.</p>
      * 
      * <strong>example:</strong>
      * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
@@ -14,7 +14,7 @@ public class DeleteCasterLayoutResponseBody extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the layout. You can use the ID as a request parameter in the API operation that is used to query layouts in the production studio.</p>
+     * <p>The layout ID. Use this ID to query the list of layouts for the production studio.</p>
      * 
      * <strong>example:</strong>
      * <p>21926b36-7dd2-4fde-ae25-51b5bc8e****</p>

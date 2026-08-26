@@ -4,8 +4,11 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterConfigResponseBody extends TeaModel {
+    @NameInMap("AudioMixerMode")
+    public String audioMixerMode;
+
     /**
-     * <p>The configuration for automatic switchover to the standby resource. The <code>eofThres</code> field specifies the duration after which the production studio automatically switches to the standby resource if a stream interruption occurs. Unit: seconds.</p>
+     * <p>The automatic standby video switching configuration. <code>eofThres</code>: specifies the duration of stream interruption before automatically switching to the standby video. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;eofThres&quot;:3}</p>
@@ -14,10 +17,10 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String autoSwitchUrgentConfig;
 
     /**
-     * <p>Indicates whether the production studio automatically switches to the standby resource in case of a stream interruption.</p>
+     * <p>Indicates whether automatic switchover to the standby video upon stream interruption is enabled.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Shutdown.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +30,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String autoSwitchUrgentOn;
 
     /**
-     * <p>The callback URL.</p>
+     * <p>The user callback URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://learn.aliyundoc.com/callBackLive">http://learn.aliyundoc.com/callBackLive</a></p>
@@ -36,7 +39,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String callbackUrl;
 
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * 
      * <strong>example:</strong>
      * <p>LIVEPRODUCER_POST-cn-0pp1czt****</p>
@@ -45,7 +48,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The name of the production studio.</p>
+     * <p>The production studio name.</p>
      * 
      * <strong>example:</strong>
      * <p>coco-caster10</p>
@@ -54,10 +57,10 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String casterName;
 
     /**
-     * <p>Indicates whether channels are enabled for the production studio. Valid values:</p>
+     * <p>Indicates whether Channel is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Channels are disabled.</li>
-     * <li><strong>1</strong>: Channels are enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,10 +70,10 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public Integer channelEnable;
 
     /**
-     * <p>Indicates whether stream delay is enabled. Unit: seconds.</p>
+     * <p>The stream delay. Unit: seconds. </p>
      * <ul>
      * <li><strong>0</strong>: Stream delay is disabled.</li>
-     * <li><strong>A value greater than 0</strong>: Stream delay is enabled.</li>
+     * <li>Greater than <strong>0</strong>: Stream delay is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +83,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public Float delay;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The primary streaming domain.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -89,10 +92,10 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Indicates whether the carousel playback feature is enabled. Valid values:</p>
+     * <p>The playlist effective flag. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The carousel playback feature is disabled.</li>
-     * <li><strong>1</strong>: The carousel playback feature is enabled.</li>
+     * <li><strong>0</strong>: Not effective.</li>
+     * <li><strong>1</strong>: Effective.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +105,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public Integer programEffect;
 
     /**
-     * <p>The name of the playlist for carousel playback.</p>
+     * <p>The playlist name.</p>
      * 
      * <strong>example:</strong>
      * <p>program_name</p>
@@ -111,13 +114,13 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String programName;
 
     /**
-     * <p>The recording configuration. If this parameter is empty, the recording feature is disabled.</p>
+     * <p>The recording configuration. If this parameter is empty, the recording feature is not enabled.</p>
      */
     @NameInMap("RecordConfig")
     public DescribeCasterConfigResponseBodyRecordConfig recordConfig;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>97df6b7f-3490-47d2-ac50-8833e1b64597</p>
@@ -126,7 +129,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The custom stream redirect URL.</p>
+     * <p>The custom side output URL of the production studio.</p>
      * 
      * <strong>example:</strong>
      * <p>rtmp://sophon-developer.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</p>
@@ -135,10 +138,10 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String sideOutputUrl;
 
     /**
-     * <p>The list of custom stream redirect URLs.</p>
+     * <p>The list of custom side output URLs of the production studio.</p>
      * 
      * <strong>example:</strong>
-     * <p>rtmp://sophon-developer.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</p>
+     * <p>[&quot;rtmp://domain/app1/stream1&quot;,&quot;rtmp://domain/app2/stream2&quot;]</p>
      */
     @NameInMap("SideOutputUrlList")
     public String sideOutputUrlList;
@@ -153,7 +156,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public DescribeCasterConfigResponseBodyTranscodeConfig transcodeConfig;
 
     /**
-     * <p>Prepared broadcast image media asset ID.</p>
+     * <p>The media library asset ID of the standby image.</p>
      * 
      * <strong>example:</strong>
      * <p>a089175eb5f4427684fc0715159a****</p>
@@ -162,7 +165,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String urgentImageId;
 
     /**
-     * <p>URL of the standby image material.</p>
+     * <p>The URL of the standby image.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://learn.aliyundoc.com/AppName/image.jpg">http://learn.aliyundoc.com/AppName/image.jpg</a></p>
@@ -180,7 +183,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public String urgentLiveStreamUrl;
 
     /**
-     * <p>The ID of the material that is used as the standby video from the media library.</p>
+     * <p>The media library asset ID of the standby video.</p>
      * 
      * <strong>example:</strong>
      * <p>98646538-bcf9-4aef-bd4a-e6bb76588****</p>
@@ -191,6 +194,14 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     public static DescribeCasterConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterConfigResponseBody self = new DescribeCasterConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCasterConfigResponseBody setAudioMixerMode(String audioMixerMode) {
+        this.audioMixerMode = audioMixerMode;
+        return this;
+    }
+    public String getAudioMixerMode() {
+        return this.audioMixerMode;
     }
 
     public DescribeCasterConfigResponseBody setAutoSwitchUrgentConfig(String autoSwitchUrgentConfig) {
@@ -426,12 +437,16 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
 
     public static class DescribeCasterConfigResponseBodyRecordConfig extends TeaModel {
         /**
-         * <p>On-demand recording. Values:</p>
+         * <p>The on-demand recording mode. Valid values:</p>
          * <ul>
-         * <li>0: Off. </li>
-         * <li>1: Via HTTP callback. </li>
-         * <li>2: Parse streaming parameters for on-demand recording. </li>
-         * <li>7: Default to not record.</li>
+         * <li><p>0: Disabled.</p>
+         * </li>
+         * <li><p>1: HTTP callback-based.</p>
+         * </li>
+         * <li><p>2: On-demand recording by parsing stream ingest parameters.</p>
+         * </li>
+         * <li><p>7: Not recorded by default.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,7 +456,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         public Integer onDemand;
 
         /**
-         * <p>The OSS bucket for storage.</p>
+         * <p>The storage location.</p>
          * 
          * <strong>example:</strong>
          * <p>liveBucket****</p>
@@ -450,7 +465,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         public String ossBucket;
 
         /**
-         * <p>The Object Storage Service (OSS) endpoint.</p>
+         * <p>The OSS endpoint of the storage location.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai.aliyundoc.com</p>
@@ -599,7 +614,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         public Integer fps;
 
         /**
-         * <p>The video height. Unit: pixels.</p>
+         * <p>The video height. Unit: pixels (px).</p>
          * 
          * <strong>example:</strong>
          * <p>720</p>
@@ -608,7 +623,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The video width. Unit: pixels.</p>
+         * <p>The video width. Unit: pixels (px).</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>
@@ -698,16 +713,16 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
 
     public static class DescribeCasterConfigResponseBodyTranscodeConfig extends TeaModel {
         /**
-         * <p>The transcoding template of the production studio. Valid values:</p>
+         * <p>The production studio transcoding template. Valid values:</p>
          * <ul>
-         * <li><strong>lp_ld</strong>: low definition</li>
-         * <li><strong>lp_sd</strong>: standard definition</li>
-         * <li><strong>lp_hd</strong>: high definition</li>
-         * <li><strong>lp_ud</strong>: ultra high definition</li>
-         * <li><strong>lp_ld_v</strong>: low definition (portrait mode)</li>
-         * <li><strong>lp_sd_v</strong>: standard definition (portrait mode)</li>
-         * <li><strong>lp_hd_v</strong>: high definition (portrait mode)</li>
-         * <li><strong>lp_ud_v</strong>: ultra high definition (portrait mode)</li>
+         * <li><strong>lp_ld</strong>: low definition.</li>
+         * <li><strong>lp_sd</strong>: standard definition.</li>
+         * <li><strong>lp_hd</strong>: high definition.</li>
+         * <li><strong>lp_ud</strong>: ultra-high definition.</li>
+         * <li><strong>lp_ld_v</strong>: portrait low definition.</li>
+         * <li><strong>lp_sd_v</strong>: portrait standard definition.</li>
+         * <li><strong>lp_hd_v</strong>: portrait high definition.</li>
+         * <li><strong>lp_ud_v</strong>: portrait ultra-high definition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -717,7 +732,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         public String casterTemplate;
 
         /**
-         * <p>The custom settings.</p>
+         * <p>The custom configuration.</p>
          */
         @NameInMap("CustomParams")
         public DescribeCasterConfigResponseBodyTranscodeConfigCustomParams customParams;

@@ -8,7 +8,7 @@ public class DescribeLiveDomainBpsDataByLayerResponseBody extends TeaModel {
     public DescribeLiveDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval;
 
     /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <p>The time interval between data entries. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>

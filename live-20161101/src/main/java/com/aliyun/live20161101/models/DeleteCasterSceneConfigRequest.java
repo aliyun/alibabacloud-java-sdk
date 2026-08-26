@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteCasterSceneConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/69338.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId parameter value returned by the CreateCaster operation.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, go to <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studios</strong> &gt; <strong>China Cloud-based China Production Studio</strong> to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the production studio list on the China Cloud-based Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,11 +26,17 @@ public class DeleteCasterSceneConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the scene.</p>
+     * <p>The scene ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,11 +46,11 @@ public class DeleteCasterSceneConfigRequest extends TeaModel {
     public String sceneId;
 
     /**
-     * <p>The type of the setting that you want to delete. Valid values:</p>
+     * <p>The scene configuration type. Valid values:</p>
      * <ul>
-     * <li><strong>Component</strong>: component setting</li>
-     * <li><strong>Layout</strong>: layout setting</li>
-     * <li><strong>All</strong>: component and layout settings</li>
+     * <li><strong>Component</strong>: component configuration.</li>
+     * <li><strong>Layout</strong>: layout configuration.</li>
+     * <li><strong>All</strong>: component and layout configuration.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

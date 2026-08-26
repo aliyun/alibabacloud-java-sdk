@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCasterLayoutResponseBody extends TeaModel {
     /**
-     * <p>The ID of the layout. You can use this ID to query information about the layout.</p>
+     * <p>The layout ID. This can be used as a request parameter to query the list of production studio layouts.</p>
      * 
      * <strong>example:</strong>
      * <p>21926b36-7dd2-4fde-ae25-51b5bc8e****</p>

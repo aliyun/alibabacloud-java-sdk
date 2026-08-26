@@ -7,7 +7,7 @@ public class DescribeLiveStreamMonitorListRequest extends TeaModel {
     /**
      * <p>The ID of the monitoring session.</p>
      * <blockquote>
-     * <p> You can obtain the monitoring session ID from the response parameter MonitorId of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation. If you leave this parameter empty, the data of all monitoring sessions is returned.</p>
+     * <p>Obtain the MonitorId value from the response parameters of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation. If you leave this parameter empty, the data of all monitoring sessions is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,11 +17,14 @@ public class DescribeLiveStreamMonitorListRequest extends TeaModel {
     public String monitorId;
 
     /**
-     * <p>The sorting order of monitoring sessions. Valid values:</p>
+     * <p>The order in which to sort the monitoring sessions. Valid values:</p>
      * <ul>
-     * <li>0: Monitoring sessions are sorted by status.</li>
-     * <li>1: Monitoring sessions are sorted by start time in descending order.</li>
-     * <li>2: Monitoring sessions are sorted by start time in ascending order.</li>
+     * <li><p>0: Default. The monitoring sessions are sorted by monitoring status in descending order (active sessions are listed first). The start time is not used for sorting.</p>
+     * </li>
+     * <li><p>1: The monitoring sessions are sorted by start time in descending order.</p>
+     * </li>
+     * <li><p>2: The monitoring sessions are sorted by start time in ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +46,7 @@ public class DescribeLiveStreamMonitorListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of monitoring sessions to return per page.</p>
+     * <p>The number of monitoring sessions to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,14 +54,22 @@ public class DescribeLiveStreamMonitorListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The status of the monitoring session. Valid values:</p>
      * <ul>
-     * <li>1: Monitoring</li>
-     * <li>0: Unmonitored</li>
+     * <li><p>1: The session is being monitored.</p>
+     * </li>
+     * <li><p>0: The session is not being monitored.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

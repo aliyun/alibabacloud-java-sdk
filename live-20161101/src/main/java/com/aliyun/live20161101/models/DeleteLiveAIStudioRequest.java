@@ -7,11 +7,17 @@ public class DeleteLiveAIStudioRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the template. You can obtain the ID from the response to the CreateLiveAIStudio operation.</p>
+     * <p>The ID of the template. The ID is returned by the CreateLiveAIStudio operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

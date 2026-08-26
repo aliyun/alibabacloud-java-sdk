@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStreamLocationBlockRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,10 +14,12 @@ public class DescribeStreamLocationBlockRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The blocking type. Valid values:</p>
+     * <p>The blocking method. Valid values:</p>
      * <ul>
-     * <li>blacklist</li>
-     * <li>whitelist</li>
+     * <li><p>blacklist</p>
+     * </li>
+     * <li><p>whitelist</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +42,7 @@ public class DescribeStreamLocationBlockRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The number of the page to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,7 +51,7 @@ public class DescribeStreamLocationBlockRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page. Valid values: integers from 1 to 100.</p>
+     * <p>The number of entries to return on each page. Valid values: integers from 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -57,6 +59,12 @@ public class DescribeStreamLocationBlockRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

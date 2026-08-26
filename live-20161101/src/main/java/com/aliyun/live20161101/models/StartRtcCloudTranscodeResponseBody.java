@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartRtcCloudTranscodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class StartRtcCloudTranscodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the cloud transcoding job.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>73-8501-</strong></strong>-8ac1-72295a</strong>****</p>
      */

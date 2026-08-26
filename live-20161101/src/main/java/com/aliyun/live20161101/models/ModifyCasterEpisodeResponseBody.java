@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCasterEpisodeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the production studio. You can use the ID as a request parameter in the API operation that is used to copy the configurations of a scene, update the configurations of a scene, query the scenes of a production studio, query the audio configurations of a scene, start a scene in the production studio, or stop a scene in the production studio.</p>
+     * <p>The ID of the production studio. You can use this ID to perform operations on the scenario. These operations include copying, updating, querying, starting, and stopping the scenario. You can also use the ID to query the audio configuration of the scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>LIVEPRODUCER_POST-cn-0pp1czt****</p>
@@ -14,7 +14,7 @@ public class ModifyCasterEpisodeResponseBody extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the episode. You can use the ID as a request parameter in the API operation that is used to delete an episode list from a production studio, add episodes to an episode list, remove episodes from an episode list, query the information about episodes in an episode list, update episodes in an episode list, delete an episode list, query the information about an episode list, start an episode list, or stop an episode list.</p>
+     * <p>The ID of the episode. You can use this ID to manage the episode list and its items. For the episode list, you can perform operations such as query, edit, delete, start, and stop. For episode items, you can perform operations such as create, add, delete, and query.</p>
      * 
      * <strong>example:</strong>
      * <p>a2b8e671-2fe5-4642-a2ec-bf938623****</p>
@@ -23,7 +23,7 @@ public class ModifyCasterEpisodeResponseBody extends TeaModel {
     public String episodeId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>

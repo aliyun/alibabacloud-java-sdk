@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMessageAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class UpdateMessageAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>Return result.</p>
      */
     @NameInMap("Result")
     public UpdateMessageAppResponseBodyResult result;
@@ -44,8 +44,8 @@ public class UpdateMessageAppResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the update is successful. Valid values:</p>
          * <ul>
-         * <li>true: The update is successful.</li>
-         * <li>false: The update failed.</li>
+         * <li>true: successful.</li>
+         * <li>false: unsuccessful.</li>
          * </ul>
          * 
          * <strong>example:</strong>

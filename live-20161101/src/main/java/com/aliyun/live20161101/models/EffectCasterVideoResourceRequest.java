@@ -7,11 +7,13 @@ public class EffectCasterVideoResourceRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you create a production studio using the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value from the response.</p>
+     * </li>
+     * <li><p>If you create a production studio in the ApsaraVideo Live console, find the ID on the <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> page.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list is the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,11 +26,17 @@ public class EffectCasterVideoResourceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource ID. If you call the <a href="https://help.aliyun.com/document_detail/2848046.html">DescribeCasterChannels</a> operation to query the channels of the production studio, you can obtain the ID of the resource in a specific channel from the ResourceId parameter in the response.</p>
+     * <p>The ID of the resource. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2848046.html">DescribeCasterChannels</a> operation and check the ResourceId value in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +46,7 @@ public class EffectCasterVideoResourceRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The ID of the scene. You can call the <a href="~~60262#doc-api-live-DescribeCasterScenes~~" title="Queries information about the scenes of a production studio.">DescribeCasterScenes</a> operation to get the ID.</p>
+     * <p>The ID of the scenario.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

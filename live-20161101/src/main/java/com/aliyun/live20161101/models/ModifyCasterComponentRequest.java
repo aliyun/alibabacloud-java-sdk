@@ -5,22 +5,34 @@ import com.aliyun.tea.*;
 
 public class ModifyCasterComponentRequest extends TeaModel {
     /**
-     * <p>The information about the subtitle component. The value must be a JSON string. This parameter contains the following fields:</p>
+     * <p>The properties of the caption layer. The value is a JSON string. The following properties are supported:</p>
      * <blockquote>
-     * <p> This parameter is required if you set ComponentType to caption.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is required if you set ComponentType to caption.</p>
      * <ul>
-     * <li><strong>SizeNormalized</strong>: the normalized value of the font size. The value of this field equals the font size divided by the output height. Valid values: <code>0 to 1</code>. The maximum font size is 1,024, even if the font size calculated based on this field is greater than 1,024.</li>
-     * <li><strong>BorderWidthNormalized</strong>: the normalized value of the border width. The value of this field equals the border width divided by the font size. Valid values: <code>0 to 1</code>. Default value: 0. The maximum border width is 16, even if the border width calculated based on this field is greater than 16.</li>
-     * <li><strong>FontName</strong>: the font name. Default value: KaiTi. For more information about the valid values, see <strong>Fonts used in a production studio</strong>.</li>
-     * <li><strong>BorderColor</strong>: the color of the text border. Valid values: 0x000000 to 0xffffff. By default, this parameter is left empty. In this case, the color of the text border is transparent.</li>
-     * <li><strong>LocationId</strong>: the channel ID of the source subtitles.</li>
-     * <li><strong>SourceLan</strong>: the source language of the subtitles in the video. Valid values: en (English), cn (Chinese), es (Spanish), and ru (Russian). Default value: cn.</li>
-     * <li><strong>TargetLan</strong>: the target language of the subtitles in the video. If you do not specify this field, speech recognition is used. If you specify this field, translation is used. Valid values: en (English), cn (Chinese), es (Spanish), and ru (Russian).</li>
-     * <li><strong>ShowSourceLan</strong>: specifies whether to display the source language. A value of true specifies that the source language is displayed. A value of false specifies that the source language is not displayed. Default value: false.</li>
-     * <li><strong>Truncation</strong>: specifies whether to allow subtitle truncation. A value of true specifies that the subtitles can be truncated. A value of false specifies that the subtitles cannot be truncated. Default value: false.</li>
-     * <li><strong>SourceLanPerLineWordCount</strong>: the number of words displayed in each line of the source language. This field takes effect only if you set Truncation to true. Default value: 20.</li>
-     * <li><strong>TargetLanPerLineWordCount</strong>: the number of words displayed in each line of the target language. This field takes effect only if you set Truncation to true. Default value: 20.</li>
+     * <li><p><strong>SizeNormalized</strong>: The normalized font size. The font size is calculated using the formula: font_size/output_height. The value must be in the range of <code>[0,1]</code>. If the calculated font size is greater than 1024, the value 1024 is used.</p>
+     * </li>
+     * <li><p><strong>BorderWidthNormalized</strong>: The normalized width of the text border. The normalized width is calculated based on the font size using the formula: BorderWidth/FontSize. The value must be in the range of <code>[0,1]</code>. If the calculated value is greater than 16, the value 16 is used. Default value: 0.</p>
+     * </li>
+     * <li><p><strong>FontName</strong>: The font name. For more information about valid values, see <strong>Production studio fonts</strong>. Default value: KaiTi.</p>
+     * </li>
+     * <li><p><strong>BorderColor</strong>: The color of the text border. Valid values are from 0x000000 to 0xffffff. The default value is an empty string, which indicates that this parameter is not used.</p>
+     * </li>
+     * <li><p><strong>LocationId</strong>: The channel ID of the translation source.</p>
+     * </li>
+     * <li><p><strong>SourceLan</strong>: The source language of the audio in the video source. Valid values are en (English), cn (Chinese), es (Spanish), and ru (Russian). Default value: cn.</p>
+     * </li>
+     * <li><p><strong>TargetLan</strong>: The target language for translation. If you do not set this parameter, only speech recognition is performed. If you set this parameter, translation is also performed. Valid values are en (English), cn (Chinese), es (Spanish), and ru (Russian).</p>
+     * </li>
+     * <li><p><strong>ShowSourceLan</strong>: Specifies whether to display the source language. Valid values are true (display) and false (do not display). Default value: false.</p>
+     * </li>
+     * <li><p><strong>Truncation</strong>: Specifies whether to truncate the caption. Valid values are true (truncate) and false (do not truncate). Default value: false.</p>
+     * </li>
+     * <li><p><strong>SourceLanPerLineWordCount</strong>: The number of words per line for the source language. This parameter takes effect only if Truncation is set to true. Default value: 20.</p>
+     * </li>
+     * <li><p><strong>TargetLanPerLineWordCount</strong>: The number of words per line for the target language. This parameter takes effect only if Truncation is set to true. Default value: 20.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,11 +44,13 @@ public class ModifyCasterComponentRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>The ID is returned after you call the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation.</p>
+     * </li>
+     * <li><p>If you create a production studio in the LIVE console, go to the <strong>LIVE</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> page to find the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -47,7 +61,7 @@ public class ModifyCasterComponentRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the component. If the component was added by calling the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation, check the value of the response parameter ComponentId to obtain the ID.</p>
+     * <p>The component ID. The ID is returned after you call the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,12 +71,16 @@ public class ModifyCasterComponentRequest extends TeaModel {
     public String componentId;
 
     /**
-     * <p>The information about the component layer, such as the size and layout, The value must be a JSON string. This parameter contains the following fields:</p>
+     * <p>The size and layout of the layer. The value is a JSON string. The following properties are supported:</p>
      * <ul>
-     * <li><strong>HeightNormalized</strong>: the normalized value of the height of the component layer.</li>
-     * <li><strong>WidthNormalized</strong>: the normalized value of the width of the component layer.</li>
-     * <li><strong>PositionNormalized</strong>: the normalized value of the position of the component layer.</li>
-     * <li><strong>PositionRefer</strong>: the reference coordinates of the component layer.</li>
+     * <li><p><strong>HeightNormalized</strong>: The normalized height.</p>
+     * </li>
+     * <li><p><strong>WidthNormalized</strong>: The normalized width.</p>
+     * </li>
+     * <li><p><strong>PositionNormalized</strong>: The normalized position of the layer.</p>
+     * </li>
+     * <li><p><strong>PositionRefer</strong>: The reference point for the position of the layer.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +90,7 @@ public class ModifyCasterComponentRequest extends TeaModel {
     public String componentLayer;
 
     /**
-     * <p>The name of the component. By default, the name is the ID of the component.</p>
+     * <p>The name of the component. The default value is the component ID.</p>
      * 
      * <strong>example:</strong>
      * <p>text01</p>
@@ -83,9 +101,12 @@ public class ModifyCasterComponentRequest extends TeaModel {
     /**
      * <p>The type of the component. Valid values:</p>
      * <ul>
-     * <li><strong>text</strong>: text component. The TextLayerContent parameter is required if you set ComponentType to text.</li>
-     * <li><strong>image</strong>: image component. The ImageLayerContent parameter is required if you set ComponentType to image.</li>
-     * <li><strong>caption</strong>: subtitle component. The CaptionLayerContent parameter is required if you set ComponentType to caption.</li>
+     * <li><p><strong>text</strong>: A text component. The TextLayerContent parameter is required only if you set ComponentType to text.</p>
+     * </li>
+     * <li><p><strong>image</strong>: An image component. The ImageLayerContent parameter is required only if you set ComponentType to image.</p>
+     * </li>
+     * <li><p><strong>caption</strong>: A translation caption component. The CaptionLayerContent parameter is required only if you set ComponentType to caption.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,11 +116,14 @@ public class ModifyCasterComponentRequest extends TeaModel {
     public String componentType;
 
     /**
-     * <p>The display effect for the component. Valid values:</p>
+     * <p>The display effect of the component. Valid values:</p>
      * <ul>
-     * <li><strong>none</strong> (default)</li>
-     * <li><strong>animateH</strong>: horizontal scrolling</li>
-     * <li><strong>animateV</strong>: vertical scrolling</li>
+     * <li><p><strong>none</strong> (default): no effect.</p>
+     * </li>
+     * <li><p><strong>animateH</strong>: horizontal scroll.</p>
+     * </li>
+     * <li><p><strong>animateV</strong>: vertical scroll.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,11 +133,12 @@ public class ModifyCasterComponentRequest extends TeaModel {
     public String effect;
 
     /**
-     * <p>The information about the image component. The value must be a JSON string.</p>
+     * <p>The properties of the image layer. The value is a JSON string.</p>
      * <blockquote>
-     * <p> This parameter is required if you set ComponentType to image.</p>
+     * <p>Notice: </p>
      * </blockquote>
-     * <p>The MaterialId field specifies the ID of the material from the media asset library.</p>
+     * <p>This parameter is required if you set ComponentType to image.</p>
+     * <p>MaterialId is the ID of the material in the media asset library.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;MaterialId&quot;:&quot;6cf724c6ebfd4a59b5b3cec6f10d5ecf&quot;}</p>
@@ -124,21 +149,34 @@ public class ModifyCasterComponentRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The information about the text component. The value must be a JSON string. This parameter contains the following fields:</p>
+     * <p>The properties of the text layer. The value is a JSON string. The following properties are supported:</p>
      * <blockquote>
-     * <p> This parameter is required if you set ComponentType to text.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is required if you set ComponentType to text.</p>
      * <ul>
-     * <li><strong>SizeNormalized</strong>: the normalized value of the font size. The value of this field equals the font size divided by the output height. Valid values: <code>0 to 1</code>. The maximum font size is 1,024, even if the font size calculated based on this field is greater than 1,024.</li>
-     * <li><strong>BorderWidthNormalized</strong>: the normalized value of the border width. The value of this field equals the border width divided by the font size. Valid values: <code>0 to 1</code>. Default value: 0. The maximum border width is 16, even if the border width calculated based on this field is greater than 16.</li>
-     * <li><strong>FontName</strong>: the font name. Default value: KaiTi. For more information about the valid values, see <strong>Fonts used in a production studio</strong>.</li>
-     * <li><strong>BorderColor</strong>: the color of the text border. Valid values: 0x000000 to 0xffffff. By default, this parameter is left empty. In this case, the color of the text border is transparent.</li>
-     * <li><strong>Text</strong>: the content of the text. By default, this parameter is left empty. In this case, the text contains no content.</li>
-     * <li><strong>Color</strong>: the color of the text. The default value is 0xff0000, which indicates that the text is in red.</li>
+     * <li><p><strong>SizeNormalized</strong>: The normalized font size. The font size is calculated using the formula: font_size/output_height. The value must be in the range of <code>[0,1]</code>. If the calculated font size is greater than 1024, the value 1024 is used.</p>
+     * </li>
+     * <li><p><strong>BorderWidthNormalized</strong>: The normalized width of the text border. The normalized width is calculated based on the font size using the formula: BorderWidth/FontSize. The value must be in the range of <code>[0,1]</code>. If the calculated value is greater than 16, the value 16 is used. Default value: 0.</p>
+     * </li>
+     * <li><p><strong>FontName</strong>: The font name. For more information about valid values, see <strong>Production studio fonts</strong>. Default value: KaiTi.</p>
+     * </li>
+     * <li><p><strong>BorderColor</strong>: The color of the text border. Valid values are from 0x000000 to 0xffffff. The default value is an empty string, which indicates that this parameter is not used.</p>
+     * </li>
+     * <li><p><strong>Text</strong>: The text content. The default value is an empty string.</p>
+     * </li>
+     * <li><p><strong>Color</strong>: The color of the text. Default value: 0xff0000, which is red.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

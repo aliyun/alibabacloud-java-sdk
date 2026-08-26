@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLivePackageConfigRequest extends TeaModel {
     /**
-     * <p>The application name. If you leave this parameter empty, all applications are matched.</p>
+     * <p>The app name. Leave empty to match all names.</p>
      * 
      * <strong>example:</strong>
      * <p>AppName</p>
@@ -14,7 +14,7 @@ public class DescribeLivePackageConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The live streaming domain (primary playback domain).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,12 @@ public class DescribeLivePackageConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong> (default): ascending order</li>
-     * <li><strong>desc</strong>: descending order</li>
+     * <li><p><strong>asc</strong> (default): ascending order.</p>
+     * </li>
+     * <li><p><strong>desc</strong>: descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +42,7 @@ public class DescribeLivePackageConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,7 +51,7 @@ public class DescribeLivePackageConfigRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page. Valid values: 5 to 30. Default value: 10.</p>
+     * <p>The page size. Default value: 10. Valid values: 5 to 30.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,11 +59,17 @@ public class DescribeLivePackageConfigRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The stream name. If you leave this parameter empty, all streams are matched.</p>
+     * <p>The live stream name. Leave empty to match all stream names.</p>
      * 
      * <strong>example:</strong>
      * <p>StreamName</p>

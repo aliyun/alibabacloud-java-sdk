@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveCenterTransferRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name for the live stream that you want to relay. Otherwise, the configuration does not take effect. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the live stream application. The AppName you enter must match the AppName of the live stream to be relayed for the configuration to take effect. You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>testapp</p>
@@ -24,7 +24,7 @@ public class DescribeLiveCenterTransferRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The third-party URL to which the live stream is relayed.</p>
+     * <p>The third-party live streaming URL to which the stream is relayed.</p>
      * 
      * <strong>example:</strong>
      * <p>rtmp://push.example2.aliyunlive.com/testapp1/teststream2</p>
@@ -35,11 +35,17 @@ public class DescribeLiveCenterTransferRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the live stream. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>teststream</p>

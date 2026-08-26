@@ -14,7 +14,7 @@ public class DescribeLivePrivateLineAvailGARequest extends TeaModel {
     public String accelerationArea;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>live</p>
@@ -23,7 +23,7 @@ public class DescribeLivePrivateLineAvailGARequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streamer\&quot;s streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,10 +33,10 @@ public class DescribeLivePrivateLineAvailGARequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether to query Global Accelerator (GA) instances. Valid values:</p>
+     * <p>Specifies whether to query the Alibaba Cloud Global Accelerator (GA) instance. Valid values:</p>
      * <ul>
-     * <li>yes: queries the status of GA instances.</li>
-     * <li>no: queries the binding information between GA instances and acceleration circuits.</li>
+     * <li>yes: Queries the GA instance status.</li>
+     * <li>no: Queries the attachment details between the GA instance and the live streaming link.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,11 +49,17 @@ public class DescribeLivePrivateLineAvailGARequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The live stream name.</p>
      * 
      * <strong>example:</strong>
      * <p>testStream</p>
@@ -62,7 +68,7 @@ public class DescribeLivePrivateLineAvailGARequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The live center. Valid values: cn-beijing, cn-shanghai, cn-shenzhen, cn-qingdao, ap-northeast-1, ap-southeast-5, eu-central-1, ap-southeast-1, and ap-south-1. cn-beijing indicates China (Beijing). cn-shanghai indicates China (Shanghai). cn-shenzhen indicates China (Shenzhen). cn-qingdao indicates China (Qingdao). ap-northeast-1 indicates Japan (Tokyo). ap-southeast-5 indicates Indonesia (Jakarta). eu-central-1 indicates Germany (Frankfurt). ap-southeast-1 indicates Singapore.</p>
+     * <p>The live center. Valid values: cn-beijing, cn-shanghai, cn-shenzhen, cn-qingdao, ap-northeast-1, ap-southeast-5, eu-central-1, and ap-southeast-1, ap-south-1, which represent the live centers located in Beijing, Shanghai, Shenzhen, Qingdao, Japan, Indonesia, Germany, and Singapore.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

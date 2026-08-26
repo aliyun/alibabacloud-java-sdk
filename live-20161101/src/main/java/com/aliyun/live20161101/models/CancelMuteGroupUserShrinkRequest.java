@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelMuteGroupUserShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive Messages application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class CancelMuteGroupUserShrinkRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The mode in which system messages are broadcasted. Valid values:</p>
+     * <p>System message diffusion type, values:</p>
      * <ul>
-     * <li>0: specifies that system messages are not broadcasted. This is the default value.</li>
-     * <li>1: specifies that system messages are broadcasted to specified users.</li>
-     * <li>2: specifies that system messages are broadcasted to the message group.</li>
+     * <li>0 (default): No diffusion.</li>
+     * <li>1: Diffusion to specified users.</li>
+     * <li>2: Diffusion to the group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,14 +29,14 @@ public class CancelMuteGroupUserShrinkRequest extends TeaModel {
     public Integer broadCastType;
 
     /**
-     * <p>The IDs of the users.</p>
+     * <p>User ID group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CancelMuteUserList")
     public String cancelMuteUserListShrink;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>Message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,10 @@ public class CancelMuteGroupUserShrinkRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the user who performs the operation.</p>
+     * <p>Operator\&quot;s user ID.</p>
+     * <blockquote>
+     * <p>This parameter must be filled and the user must be the creator of the group.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>de1**a0</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendLiveMessageGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application in which the message is received.</p>
+     * <p>The ID of the interactive messaging application that is used to receive the message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SendLiveMessageGroupRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The message body. The body can be up to 15 KB in length.</p>
+     * <p>The message body. It can be up to 15 KB in length.</p>
      * 
      * <strong>example:</strong>
      * <p>hello,group</p>
@@ -24,7 +24,11 @@ public class SendLiveMessageGroupRequest extends TeaModel {
     public String body;
 
     /**
-     * <p>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</p>
+     * <p>The data center, which must be the same as the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Valid values:</p>
+     * <ul>
+     * <li>cn-shanghai: Shanghai</li>
+     * <li>ap-southeast-1: Singapore</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -35,7 +39,7 @@ public class SendLiveMessageGroupRequest extends TeaModel {
     /**
      * <p>The ID of the group that receives the message.</p>
      * <blockquote>
-     * <p> Make sure that the specified group ID exists. Otherwise, a ResourceNotExist error is returned.</p>
+     * <p>Make sure that the specified GroupId is available. Otherwise, a ResourceNotExist error is returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +50,7 @@ public class SendLiveMessageGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the message, which is a unique identifier that can be used to delete the message. The ID can be up to 64 bytes in length and can contain letters and digits.</p>
+     * <p>The unique identifier of the message. This parameter is used to delete the message. The ID can contain only letters and digits and can be up to 64 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>169830****</p>
@@ -55,7 +59,7 @@ public class SendLiveMessageGroupRequest extends TeaModel {
     public String msgTid;
 
     /**
-     * <p>The message type.</p>
+     * <p>The message type. The total number of message types sent within a single group cannot exceed 30.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,7 +68,7 @@ public class SendLiveMessageGroupRequest extends TeaModel {
     public Long msgType;
 
     /**
-     * <p>Specifies whether to disable message caching. Valid values: true and false. Default value: false, which specifies that the message is cached to the recent message list of the group.</p>
+     * <p>Specifies whether to disable message caching to the list of the latest messages in the group. Valid values: true and false. Default value: false, which indicates that the message is cached.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -73,7 +77,7 @@ public class SendLiveMessageGroupRequest extends TeaModel {
     public Boolean noCache;
 
     /**
-     * <p>Specifies whether to disable message storage. Valid values: true and false. Default value: false, which specifies that the message is stored for a validity period of 30 days. You can find the message in the response of the ListLiveMessageGroupMessages operation. If you do not want to store the message, set this parameter to true.</p>
+     * <p>Specifies whether to disable message storage. Valid values: true and false. Default value: false, which indicates that the message is stored for a validity period of 30 days. You can find the message in the response of the ListLiveMessageGroupMessages operation. If you do not need to store the message, set this parameter to true.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -110,7 +114,12 @@ public class SendLiveMessageGroupRequest extends TeaModel {
     public Long staticsIncrease;
 
     /**
-     * <p>The weight of the message. Default value: 1. A greater value indicates a higher priority. For a message of the highest priority, you can set the weight to 1000000.</p>
+     * <p>The weight of the message. Default value: 1.</p>
+     * <ul>
+     * <li>For low-priority messages such as likes, you can set the weight to 1.</li>
+     * <li>For regular text messages such as bullet comments, you can set the weight to 5.</li>
+     * <li>For high-priority messages such as red envelopes and gifts, you can set the weight to 1000000.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>

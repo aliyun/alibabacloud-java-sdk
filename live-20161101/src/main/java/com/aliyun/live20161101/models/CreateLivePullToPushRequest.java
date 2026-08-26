@@ -4,18 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CreateLivePullToPushRequest extends TeaModel {
+    @NameInMap("AuthKey")
+    public String authKey;
+
     /**
-     * <p>The HTTP callback URL. By default, this parameter is left empty.</p>
+     * <p>HTTP callback URL. Default value: empty.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The URL is used to receive callbacks related to the task.</p>
-     * </li>
-     * <li><p>The URL can be up to 2,000 characters in length.</p>
-     * </li>
-     * <li><p>If you do not specify this parameter, no callbacks are returned for events related to the task.</p>
-     * </li>
+     * <li>The URL that receives task-related callbacks.</li>
+     * <li>Maximum length is 2000 characters.</li>
+     * <li>If this parameter is not specified, no task event callbacks will be sent.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p><a href="https://callback*****.com">https://callback*****.com</a></p>
@@ -24,15 +24,13 @@ public class CreateLivePullToPushRequest extends TeaModel {
     public String callbackUrl;
 
     /**
-     * <p>The destination URL to which the stream is relayed.</p>
+     * <p>Destination URL address for pushing the stream.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The supported protocol for the URL is RTMP.</p>
-     * </li>
-     * <li><p>The URL can be up to 2,000 characters in length.</p>
-     * </li>
+     * <li>The rtmp protocol is supported.</li>
+     * <li>Maximum length is 2000 characters.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,19 +40,14 @@ public class CreateLivePullToPushRequest extends TeaModel {
     public String dstUrl;
 
     /**
-     * <p>The end time of the task.</p>
+     * <p>Task end time.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
-     * </li>
-     * <li><p>The time range specified by the StartTime and EndTime parameters cannot exceed seven days.</p>
-     * </li>
-     * <li><p>The end time must be later than the start time.</p>
-     * </li>
-     * <li><p>The end time must be later than the current time.</p>
-     * </li>
+     * <li>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</li>
+     * <li>EndTime must be later than StartTime.</li>
+     * <li>EndTime must be later than the current time.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +57,7 @@ public class CreateLivePullToPushRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The file index, which specifies the sequence of the file where the playback starts.</p>
+     * <p>File index. Starts playback from the nth file.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -72,16 +65,17 @@ public class CreateLivePullToPushRequest extends TeaModel {
     @NameInMap("FileIndex")
     public Integer fileIndex;
 
+    @NameInMap("NotifyItemSwitch")
+    public String notifyItemSwitch;
+
     /**
-     * <p>The offset of the position where the system starts to read the video resource. Unit: seconds. Valid values: positive numbers.</p>
+     * <p>Start offset. The offset value from the beginning of the video file. Unit: seconds. Valid values: greater than 0.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter indicates an offset from the first frame of the first video resource in the list.</p>
-     * </li>
-     * <li><p>This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</p>
-     * </li>
+     * <li>Indicates the position to start reading from, relative to the first frame (applies to the first video).</li>
+     * <li>This parameter applies only to VOD or third-party video streams.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -93,12 +87,13 @@ public class CreateLivePullToPushRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the task is started. Valid values:</p>
+     * <p>Specifies the region where the task is launched. Valid values:</p>
      * <ul>
-     * <li>ap-southeast-1: Singapore</li>
-     * <li>ap-southeast-5: Indonesia (Jakarta)</li>
-     * <li>cn-beijing: China (Beijing)</li>
-     * <li>cn-shanghai: China (Shanghai)</li>
+     * <li>ap-southeast-1 (Singapore)</li>
+     * <li>ap-southeast-5 (Indonesia)</li>
+     * <li>cn-beijing (Beijing)</li>
+     * <li>cn-shanghai (Shanghai)</li>
+     * <li>cn-shenzhen (Shenzhen)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -108,18 +103,24 @@ public class CreateLivePullToPushRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>Region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The number of playbacks after the first playback is complete. Valid values:</p>
+     * <p>Number of times to repeat playback after the initial playback is complete. Valid values:</p>
      * <ul>
-     * <li>0 (default): specifies that the video list is played only once.</li>
-     * <li>\-1: specifies that the video list is played in loop mode.</li>
-     * <li>Positive integer: specifies the number of times the video list repeats after the first playback is complete.</li>
+     * <li>0 (default): no repeat playback.</li>
+     * <li>-1: loop indefinitely.</li>
+     * <li>Other positive integers: number of times to repeat playback after the initial playback is complete.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</p>
+     * <p>This parameter applies only to VOD or third-party video streams.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -128,8 +129,11 @@ public class CreateLivePullToPushRequest extends TeaModel {
     @NameInMap("RepeatNumber")
     public Integer repeatNumber;
 
+    @NameInMap("ReqAuth")
+    public String reqAuth;
+
     /**
-     * <p>The number of retries allowed. Default value: 3.</p>
+     * <p>Number of retries. Default value: 3.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -138,7 +142,7 @@ public class CreateLivePullToPushRequest extends TeaModel {
     public Integer retryCount;
 
     /**
-     * <p>The retry interval. Unit: seconds. Valid values: [60,300]. Default value: 60.</p>
+     * <p>Retry interval, in seconds. Valid values: [60, 300]. Default value: 60 seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -147,18 +151,17 @@ public class CreateLivePullToPushRequest extends TeaModel {
     public Integer retryInterval;
 
     /**
-     * <p>The protocol of the source stream.</p>
+     * <p>Source stream protocol name.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>rtmp</li>
-     * <li>rtsp</li>
      * <li>srt</li>
      * <li>http-flv</li>
-     * <li>flv</li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter is required if you set the <strong>SourceType</strong> parameter to live, but does not take effect if you set the SourceType parameter to vod or url.</p>
+     * <li>hls<blockquote>
+     * <p>This parameter is <strong>required only when the SourceType parameter is set to live</strong>, and is invalid when the value is vod or url.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>rtmp</p>
@@ -167,11 +170,11 @@ public class CreateLivePullToPushRequest extends TeaModel {
     public String sourceProtocol;
 
     /**
-     * <p>The type of the source stream. Valid values:</p>
+     * <p>Source stream type. Valid values:</p>
      * <ul>
-     * <li>live: a live stream</li>
-     * <li>vod: a list of ApsaraVideo VOD resources</li>
-     * <li>url: a list of video resources from a third party</li>
+     * <li>live: live stream.</li>
+     * <li>vod: ApsaraVideo VOD resource.</li>
+     * <li>url: third-party video file resource.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -182,39 +185,28 @@ public class CreateLivePullToPushRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The source URLs.</p>
+     * <p>List of source stream URL addresses.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If SourceType is set to live, you can specify only one streaming URL.</p>
-     * </li>
-     * <li><p>If SourceType is set to vod or url, you can specify up to 30 IDs or URLs.</p>
-     * </li>
-     * <li><p>If SourceType is set to live, the supported protocols for URLs are Real-Time Messaging Protocol (RTMP), Real-Time Streaming Protocol (RTSP), Secure Reliable Transport Protocol (SRT), and HTTP-FLV.</p>
-     * </li>
-     * <li><p>If SourceType is set to vod, specify the IDs of media assets from ApsaraVideo VOD.</p>
-     * </li>
-     * <li><p>If SourceType is set to url, the supported protocols for URLs are MP4 and HTTP-FLV.</p>
-     * </li>
+     * <li>For the live type, only one complete live playback URL is supported.</li>
+     * <li>For the vod and url types, a maximum of 30 URLs can be specified.</li>
+     * <li>The live type supports: rtmp, srt, and http-flv protocols.</li>
+     * <li>For the vod type, specify ApsaraVideo VOD media asset IDs.</li>
+     * <li>The url type supports: mp4 and http-flv protocols.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>testurls</p>
      */
     @NameInMap("SourceUrls")
     public java.util.List<String> sourceUrls;
 
     /**
-     * <p>The start time of the task.</p>
+     * <p>Task start time.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
-     * </li>
-     * <li><p>The time range specified by the StartTime and EndTime parameters cannot exceed seven days.</p>
-     * </li>
+     * <li>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -224,7 +216,7 @@ public class CreateLivePullToPushRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the task. Default value: &quot;&quot;. Fuzzy search for task names is supported.</p>
+     * <p>Task name, used to support fuzzy query. Default value: &quot;&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -235,6 +227,14 @@ public class CreateLivePullToPushRequest extends TeaModel {
     public static CreateLivePullToPushRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLivePullToPushRequest self = new CreateLivePullToPushRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLivePullToPushRequest setAuthKey(String authKey) {
+        this.authKey = authKey;
+        return this;
+    }
+    public String getAuthKey() {
+        return this.authKey;
     }
 
     public CreateLivePullToPushRequest setCallbackUrl(String callbackUrl) {
@@ -267,6 +267,14 @@ public class CreateLivePullToPushRequest extends TeaModel {
     }
     public Integer getFileIndex() {
         return this.fileIndex;
+    }
+
+    public CreateLivePullToPushRequest setNotifyItemSwitch(String notifyItemSwitch) {
+        this.notifyItemSwitch = notifyItemSwitch;
+        return this;
+    }
+    public String getNotifyItemSwitch() {
+        return this.notifyItemSwitch;
     }
 
     public CreateLivePullToPushRequest setOffset(Integer offset) {
@@ -307,6 +315,14 @@ public class CreateLivePullToPushRequest extends TeaModel {
     }
     public Integer getRepeatNumber() {
         return this.repeatNumber;
+    }
+
+    public CreateLivePullToPushRequest setReqAuth(String reqAuth) {
+        this.reqAuth = reqAuth;
+        return this;
+    }
+    public String getReqAuth() {
+        return this.reqAuth;
     }
 
     public CreateLivePullToPushRequest setRetryCount(Integer retryCount) {

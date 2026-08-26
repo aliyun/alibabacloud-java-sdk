@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HotLiveRtcStreamRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The application name of the live stream to prefetch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class HotLiveRtcStreamRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The audio MSID.</p>
+     * <p>The audio Msid.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class HotLiveRtcStreamRequest extends TeaModel {
     public String audioMsid;
 
     /**
-     * <p>The duration for which the prefetch connection is maintained. Unit: milliseconds. Default value: 0, which specifies that the prefetch connection is always maintained.</p>
+     * <p>The duration to maintain the prefetch connection. Unit: milliseconds. The default value, 0, means the connection is always maintained.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -44,7 +44,7 @@ public class HotLiveRtcStreamRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The custom period after which a timeout event is triggered. Unit: milliseconds.</p>
+     * <p>The custom timeout period for a timeout event. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -56,9 +56,12 @@ public class HotLiveRtcStreamRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The code of the region in which the live stream is prefetched. For more information, see the following tables that list available region codes.</p>
+     * <p>The prefetch area. For more information, see the RegionCode lookup table.</p>
      * <blockquote>
-     * <p> Region codes include provincial codes for China and country codes for all countries.</p>
+     * <p>For regions within China, specify the corresponding code from the &quot;Region codes for China&quot; table. For all other regions, specify the country code.</p>
+     * <ul>
+     * <li>If the CodeRegionHasNoNode error is returned after you specify a RegionCode, the corresponding area is not covered by L1 nodes and cannot be prefetched. In this case, specify a different RegionCode.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -68,11 +71,17 @@ public class HotLiveRtcStreamRequest extends TeaModel {
     @NameInMap("RegionCode")
     public String regionCode;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream that you want to prefetch.</p>
+     * <p>The name of the live stream to prefetch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +91,7 @@ public class HotLiveRtcStreamRequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The video MSID.</p>
+     * <p>The video Msid.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

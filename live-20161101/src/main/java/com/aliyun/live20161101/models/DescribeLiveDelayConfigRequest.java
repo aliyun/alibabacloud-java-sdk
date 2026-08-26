@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDelayConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can specify an asterisk (\*) as the value to match all applications under the domain name.</p>
+     * <p>The application name. You can use a wildcard character (\*) to represent all applications under the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeLiveDelayConfigRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,17 @@ public class DescribeLiveDelayConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream. You can specify an asterisk (\*) as the value to match all streams in the application.</p>
+     * <p>The stream name. You can use a wildcard character (\*) to represent all streams under the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

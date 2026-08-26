@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMessageGroupUserByIdRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive message application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListMessageGroupUserByIdRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>Message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListMessageGroupUserByIdRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The list of users.</p>
+     * <p>User list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserIdList")

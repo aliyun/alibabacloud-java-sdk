@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamBitRateDataRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the application to which the stream belongs. You can view AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +16,12 @@ public class DescribeLiveStreamBitRateDataRequest extends TeaModel {
 
     /**
      * <p>The ingest domain.</p>
+     * <blockquote>
+     * <ul>
+     * <li>When you specify DomainName, make sure that the domain name is a live streaming domain name and that the user calling this operation has the required permissions on the domain name.</li>
+     * <li>You can call the DescribeLiveUserDomains operation to query available domain names.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +31,12 @@ public class DescribeLiveStreamBitRateDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <blockquote>
+     * <ul>
+     * <li>EndTime must be later than StartTime, and the interval between EndTime and StartTime cannot exceed 30 days.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2017-12-22T08:00:00Z</p>
@@ -40,7 +51,7 @@ public class DescribeLiveStreamBitRateDataRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-21T08:00:00Z</p>
@@ -49,7 +60,7 @@ public class DescribeLiveStreamBitRateDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the stream. You can view StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

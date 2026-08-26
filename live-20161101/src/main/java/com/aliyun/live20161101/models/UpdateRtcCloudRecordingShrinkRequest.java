@@ -4,16 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateRtcCloudRecordingShrinkRequest extends TeaModel {
+    /**
+     * <p>The updated layout parameters. Leave this parameter empty in single-stream recording mode. This parameter is required in stream mixing recording mode when the transcoding output is not audio-only.</p>
+     */
     @NameInMap("MixLayoutParams")
     public String mixLayoutParamsShrink;
 
     /**
+     * <p>The updated subscription parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SubscribeParams")
     public String subscribeParamsShrink;
 
     /**
+     * <p>The task ID. This ID is returned by StartRtcCloudRecording. Only tasks in the running or abnormal state can be updated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

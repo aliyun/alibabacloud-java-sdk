@@ -14,7 +14,7 @@ public class PlayChoosenShowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the episode.</p>
+     * <p>The show ID.</p>
      * 
      * <strong>example:</strong>
      * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>

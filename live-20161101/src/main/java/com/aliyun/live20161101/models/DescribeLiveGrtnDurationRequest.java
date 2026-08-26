@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveGrtnDurationRequest extends TeaModel {
     /**
-     * <p>The ID of the application. Separate multiple application IDs with commas (,). You can specify up to 30 application IDs. By default, the aggregated data of all applications is returned.</p>
+     * <p>Application ID. You can query multiple application IDs separated by commas (half-width). A maximum of 30 IDs can be queried. By default, aggregated data for all applications is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>4346289a-a790-4869-9e23-22766d5e****</p>
@@ -14,19 +14,19 @@ public class DescribeLiveGrtnDurationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the billable region. Valid values:</p>
+     * <p>The area code. Valid values:</p>
      * <ul>
-     * <li>CN: Chinese mainland</li>
-     * <li>OverSeas: countries and regions outside the Chinese mainland</li>
-     * <li>AP1: Asia Pacific 1, including Hong Kong (China), Macao (China), Taiwan (China), Japan, and other Southeast Asia countries and regions except Vietnam and Indonesia</li>
-     * <li>AP2: Asia Pacific 2, including Indonesia, South Korea, and Vietnam</li>
-     * <li>AP3: Asia Pacific 3, including Australia and New Zealand</li>
-     * <li>NA: North America, including US and Canada</li>
-     * <li>SA: South America, specifically meaning Brazil</li>
-     * <li>EU: Europe, including Ukraine, UK, France, Netherlands, Spain, Italy, Sweden, and Germany</li>
-     * <li>MEAA: Middle East and Africa, including South Africa, Oman, UAE, and Kuwait</li>
+     * <li>CN: Chinese mainland.</li>
+     * <li>OverSeas: Overseas regions.</li>
+     * <li>AP1: Asia Pacific 1, including Hong Kong (China), Macao (China), Taiwan (China), Japan, and Southeast Asian countries except Vietnam and Indonesia.</li>
+     * <li>AP2: Asia Pacific 2, including Indonesia, South Korea, and Vietnam.</li>
+     * <li>AP3: Asia Pacific 3, including Australia and New Zealand.</li>
+     * <li>NA: North America, including the United States and Canada.</li>
+     * <li>SA: South America, specifically Brazil.</li>
+     * <li>EU: Europe, including Ukraine, the United Kingdom, France, the Netherlands, Spain, Italy, Sweden, and Germany.</li>
+     * <li>MEAA: Middle East and Africa, including South Africa, Oman, the United Arab Emirates, and Kuwait.</li>
      * </ul>
-     * <p>If you do not specify this parameter, data of all regions is aggregated and returned by default.</p>
+     * <p>If not specified, aggregated data for all areas is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>CN</p>
@@ -35,7 +35,7 @@ public class DescribeLiveGrtnDurationRequest extends TeaModel {
     public String area;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The end time must be later than the start time. The time range that can be specified is greater than or equal to 5 minutes and less than or equal to 31 days.</p>
+     * <p>The end time must be later than the start time. The query granularity must be ≥ 5 minutes and ≤ 31 days. The date format follows the ISO 8601 notation and uses UTC time in the format: YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,13 +45,13 @@ public class DescribeLiveGrtnDurationRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+     * <p>The time granularity for querying data. Unit: seconds. Valid values:</p>
      * <ul>
      * <li>300</li>
      * <li>3600</li>
      * <li>86400</li>
      * </ul>
-     * <p>If you specify an invalid value or do not specify this parameter, the default value 3600 is used.</p>
+     * <p>If not specified or an unsupported value is passed, the default value of 3600 seconds is used.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -62,11 +62,17 @@ public class DescribeLiveGrtnDurationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time for data retrieval. The date format follows the ISO 8601 notation and uses UTC time in the format: YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class EditShowAndReplaceResponseBody extends TeaModel {
     /**
-     * <p>The information about the editing task. The following fields are included:</p>
+     * <p>The task information, which contains:</p>
      * <ul>
-     * <li><strong>vodId</strong>: the ID of the VOD file.</li>
-     * <li><strong>mediaid</strong>: the ID of the media file.</li>
-     * <li><strong>jobId</strong>: the ID of the editing task.</li>
+     * <li><p><strong>vodId</strong>: the video-on-demand file ID.</p>
+     * </li>
+     * <li><p><strong>mediaid</strong>: the media file ID.</p>
+     * </li>
+     * <li><p><strong>jobId</strong>: the task ID.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +22,7 @@ public class EditShowAndReplaceResponseBody extends TeaModel {
     public String jobInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>

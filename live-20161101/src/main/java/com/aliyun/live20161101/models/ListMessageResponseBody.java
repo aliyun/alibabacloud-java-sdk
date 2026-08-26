@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMessageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class ListMessageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public ListMessageResponseBodyResult result;
@@ -42,7 +42,7 @@ public class ListMessageResponseBody extends TeaModel {
 
     public static class ListMessageResponseBodyResultMessageList extends TeaModel {
         /**
-         * <p>The message body. The value is a JSON string.</p>
+         * <p>The message body, in JSONString format.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -51,7 +51,7 @@ public class ListMessageResponseBody extends TeaModel {
         public String data;
 
         /**
-         * <p>The ID of the message group.</p>
+         * <p>The message group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AE35-****-T95F</p>
@@ -60,7 +60,7 @@ public class ListMessageResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The ID of the message.</p>
+         * <p>The message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>qt***</p>
@@ -69,7 +69,7 @@ public class ListMessageResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>The ID of the user who sent the message.</p>
+         * <p>The message sender ID.</p>
          * 
          * <strong>example:</strong>
          * <p>yi***</p>
@@ -78,7 +78,7 @@ public class ListMessageResponseBody extends TeaModel {
         public String senderId;
 
         /**
-         * <p>The type of the message.</p>
+         * <p>The message type.</p>
          * 
          * <strong>example:</strong>
          * <p>10002</p>
@@ -135,10 +135,12 @@ public class ListMessageResponseBody extends TeaModel {
 
     public static class ListMessageResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+         * <p>Indicates whether there is a next page. Valid values:</p>
          * <ul>
-         * <li>true: The current page is followed by another page.</li>
-         * <li>false: The current page is not followed by another page.</li>
+         * <li><p>true: There is a next page.</p>
+         * </li>
+         * <li><p>false: There is no next page.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +150,7 @@ public class ListMessageResponseBody extends TeaModel {
         public Boolean hasMore;
 
         /**
-         * <p>Details about the messages.</p>
+         * <p>The message list.</p>
          */
         @NameInMap("MessageList")
         public java.util.List<ListMessageResponseBodyResultMessageList> messageList;

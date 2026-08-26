@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRtcAsrTaskResponseBody extends TeaModel {
     /**
-     * <p>The result of the request. If success is returned, the request is successful. If an error message is returned, the request failed.</p>
+     * <p>The description of the result. If the value is \<code>success\\</code>, the operation is successful. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -17,13 +17,13 @@ public class DeleteRtcAsrTaskResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>85F94125-B695-1FB8-A7E7-3BE7CE07EF31</p>
+     * <p>85F94125-B695-1FB8-A7E7-3BE7CE******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned HTTP status code. HTTP status code 2000 indicates that the request is successful. If another HTTP status code is returned, the request failed.</p>
+     * <p>The status code. A value of \<code>2000\\</code> indicates that the operation is successful. Other values indicate that an error occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>

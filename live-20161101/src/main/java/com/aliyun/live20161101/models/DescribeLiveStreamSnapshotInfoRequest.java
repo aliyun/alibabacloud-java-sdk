@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application to which the stream belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,12 @@ public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain of the streamer.</p>
+     * <blockquote>
+     * <ul>
+     * <li>When you specify DomainName, make sure that the domain name is a live streaming domain name and that the user who calls this operation has the permissions to operate on the specified domain name.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +30,7 @@ public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The time range specified by the EndTime and StartTime parameters cannot exceed <strong>one</strong> day. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. The interval between EndTime and StartTime cannot exceed <strong>1</strong> day. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +40,7 @@ public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The number of snapshots to return per call. Valid values: <strong>1 to 100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return in a single call. Valid values: <strong>1 to 100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -46,8 +51,8 @@ public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong> (default): ascending order</li>
-     * <li><strong>desc</strong>: descending order</li>
+     * <li><strong>asc</strong> (default): ascending order.</li>
+     * <li><strong>desc</strong>: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +68,7 @@ public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +78,7 @@ public class DescribeLiveStreamSnapshotInfoRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The name of the stream. Make sure that the specified stream name exists within the query time range.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

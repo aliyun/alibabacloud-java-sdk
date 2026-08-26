@@ -7,11 +7,13 @@ public class DescribeCasterSceneAudioRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/69338.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, obtain the value of CasterId from the response.</p>
+     * </li>
+     * <li><p>If you create a production studio in the ApsaraVideo Live console, view the ID on the <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> page.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance Name column.</p>
+     * <p>The name of a production studio in the list on the Cloud Production Studio page is the ID of the production studio.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,11 +26,17 @@ public class DescribeCasterSceneAudioRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the scene.</p>
+     * <p>The ID of the scenario.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

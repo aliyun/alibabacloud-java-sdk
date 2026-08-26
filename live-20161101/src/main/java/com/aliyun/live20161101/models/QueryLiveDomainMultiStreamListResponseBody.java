@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
     /**
-     * <p>The online streams returned.</p>
+     * <p>The number of online records.</p>
      */
     @NameInMap("OnlineStreams")
     public java.util.List<QueryLiveDomainMultiStreamListResponseBodyOnlineStreams> onlineStreams;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>19</p>
@@ -93,11 +93,11 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
 
     public static class QueryLiveDomainMultiStreamListResponseBodyOnlineStreamsChangeLogs extends TeaModel {
         /**
-         * <p>The reason for the switchover.</p>
+         * <p>The reason for stream switching.</p>
          * <ul>
-         * <li>merge cut manually: You proactively switched the stream.</li>
-         * <li>master stream no data: No data is available in the active stream.</li>
-         * <li>master stream low quality: The quality of the active stream deteriorated.</li>
+         * <li>merge cut manually: The user manually switched the stream.</li>
+         * <li>master stream no data: The primary stream has no data.</li>
+         * <li>master stream low quality: The primary stream quality degraded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
         public String changeReason;
 
         /**
-         * <p>The switchover time.</p>
+         * <p>The stream switching time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC+0).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-13T09:20:47Z</p>
@@ -116,7 +116,7 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
         public String changeTime;
 
         /**
-         * <p>The stream used after the switchover.</p>
+         * <p>The stream that is actually used after the switch.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://118.178.168.35:1936/wwMultitest/pull.livetest2.aliyunlive.com_wwMultitest428_AliRewrite_2?vhost=pull.livetest2.aliyunlive.com&amp;live_rtmp_test=on</p>
@@ -125,7 +125,7 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
         public String masterUpstream;
 
         /**
-         * <p>The IP address used after the switchover.</p>
+         * <p>The IP address used after the stream switch.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -134,7 +134,7 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
         public String upstreamIp;
 
         /**
-         * <p>The identifier of the stream after the switchover.</p>
+         * <p>The stream identifier after the switch.</p>
          * 
          * <strong>example:</strong>
          * <p>***test_AliRewrite_2</p>
@@ -191,15 +191,10 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
 
     public static class QueryLiveDomainMultiStreamListResponseBodyOnlineStreamsUpstreamList extends TeaModel {
         /**
-         * <p>The active/standby tag.</p>
+         * <p>The primary/secondary flag.</p>
          * <blockquote>
-         * <p> This parameter indicates whether the active or standby stream is being distributed.</p>
+         * <p>Indicates which stream is currently being used for merged distribution.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -208,7 +203,7 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
         public Boolean masterFlag;
 
         /**
-         * <p>The IP address of the stream ingest client.</p>
+         * <p>The IP address of the ingest client.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -217,7 +212,7 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
         public String upstreamIp;
 
         /**
-         * <p>The unique identifier of the stream ingest.</p>
+         * <p>The unique identifier of the ingest stream.</p>
          * 
          * <strong>example:</strong>
          * <p>***test_Alirewrite1</p>
@@ -226,7 +221,7 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
         public String upstreamSequence;
 
         /**
-         * <p>The stream ingest time.</p>
+         * <p>The stream ingest time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC+0).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-13T09:20:47Z</p>
@@ -275,7 +270,7 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
 
     public static class QueryLiveDomainMultiStreamListResponseBodyOnlineStreams extends TeaModel {
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>apptest</p>
@@ -284,13 +279,13 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The switchover records.</p>
+         * <p>The stream switching records.</p>
          */
         @NameInMap("ChangeLogs")
         public java.util.List<QueryLiveDomainMultiStreamListResponseBodyOnlineStreamsChangeLogs> changeLogs;
 
         /**
-         * <p>The main streaming domain.</p>
+         * <p>The streaming domain of the streamer.</p>
          * 
          * <strong>example:</strong>
          * <p>play.***.com</p>
@@ -299,10 +294,10 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>Indicates whether the dual-stream disaster recovery feature is enabled. Valid values:</p>
+         * <p>The feature switch. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enabled</li>
-         * <li><strong>off</strong>: disabled</li>
+         * <li><strong>on</strong>: enabled.</li>
+         * <li><strong>off</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -321,7 +316,7 @@ public class QueryLiveDomainMultiStreamListResponseBody extends TeaModel {
         public String streamName;
 
         /**
-         * <p>The standby streams.</p>
+         * <p>The list of all candidate streams.</p>
          */
         @NameInMap("UpstreamList")
         public java.util.List<QueryLiveDomainMultiStreamListResponseBodyOnlineStreamsUpstreamList> upstreamList;

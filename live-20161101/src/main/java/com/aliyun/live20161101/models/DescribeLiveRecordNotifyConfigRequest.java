@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveRecordNotifyConfigRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

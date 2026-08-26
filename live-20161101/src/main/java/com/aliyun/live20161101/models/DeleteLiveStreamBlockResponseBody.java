@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveStreamBlockResponseBody extends TeaModel {
     /**
-     * <p>The result description. If the request was successful, ok is returned. If the request failed, the failure detail is returned.</p>
+     * <p>The description of the request. A value of ok indicates that the request was successful. An error message is returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -23,13 +23,15 @@ public class DeleteLiveStreamBlockResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status. Valid values:</p>
+     * <p>The status of the operation. Valid values:</p>
      * <ul>
-     * <li>ok: The request was successful.</li>
-     * <li>fail: The request failed.</li>
+     * <li><p>ok: Success.</p>
+     * </li>
+     * <li><p>fail: Failure.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If any parameter failed to be configured, the request failed.</p>
+     * <p>The status is ok only if all tasks succeeded.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

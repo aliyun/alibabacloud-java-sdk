@@ -14,13 +14,15 @@ public class InitializeAutoShowListTaskRequest extends TeaModel {
     public String callBackUrl;
 
     /**
-     * <p>The configurations of the production studio. The following configurations are involved:</p>
+     * <p>The production studio configuration. This includes:</p>
      * <ul>
-     * <li>CasterTemplate: required. The output resolution.</li>
-     * <li>LiveTemplate: optional. The templates to be used for transcoding.</li>
+     * <li><p>(Required) CasterTemplate: the output resolution of the production studio.</p>
+     * </li>
+     * <li><p>(Optional) LiveTemplate: the list of output transcoding tasks.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Set the value to a JSON string. Use upper camel case for fields of the string.</p>
+     * <p>A JSON-formatted string. Use upper camel case (PascalCase) for the field names within the struct.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -53,16 +55,23 @@ public class InitializeAutoShowListTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of on-demand media asset files in the playlist. Only on-demand video files are supported. You can specify up to three video files in the playlist. The video files in the playlist are automatically played in sequence. The playback stops at the point in time specified by the EndTime parameter.</p>
+     * <p>The list of video-on-demand media asset file IDs in the playlist. Currently, only MP4 video files from the video-on-demand platform are supported.</p>
+     * <p>A maximum of three programs are supported. Each program is played in the order of the list until EndTime, at which point playback automatically ends. This parameter is required. If it is missing, a MissingParameter error is returned.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>You can obtain the ID of a video file in the ApsaraVideo Live console or by calling an API operation. For more information, see <a href="https://help.aliyun.com/document_detail/86057.html">Media asset management</a> or <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a>. - If the video files are all played before the time specified by EndTime, the final frame of the final video file is played until the time specified by EndTime arrives.</li>
+     * <li>You can obtain the video file ID from the console or from the response parameters of an API operation. For more information, see <a href="https://help.aliyun.com/document_detail/86057.html">Media asset management</a> or <a href="https://help.aliyun.com/document_detail/55407.html">Obtain the upload URL and credential for audio and video files</a>.- If all programs finish playing before EndTime, the last frame of the last program is displayed until the scheduled end time.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>[&quot;89e02xxxxfb349axxxxa0c350d****  &quot;,&quot;6ae0xxxxxb349axxxxa0c350a****&quot;]</p>

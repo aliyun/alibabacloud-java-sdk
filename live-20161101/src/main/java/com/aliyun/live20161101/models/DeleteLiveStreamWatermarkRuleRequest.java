@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveStreamWatermarkRuleRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,7 +14,7 @@ public class DeleteLiveStreamWatermarkRuleRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>The streaming domain.</p>
+     * <p>The main streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,13 +26,19 @@ public class DeleteLiveStreamWatermarkRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the watermark rule.</p>
      * <blockquote>
-     * <p> You can obtain the rule ID by checking the value of the RuleId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/2848100.html">AddLiveStreamWatermarkRule</a> operation.</p>
+     * <p>Get this ID from the response of the <a href="https://help.aliyun.com/document_detail/2848100.html">AddLiveStreamWatermarkRule</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,20 +48,23 @@ public class DeleteLiveStreamWatermarkRuleRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The name of the stream. The following matching rules apply:</p>
+     * <p>The stream name. The following rules apply:</p>
      * <ul>
-     * <li>A stream name can be exactly matched, Example: liveStreamA.</li>
-     * <li>Fuzzy match is also supported. The use of an asterisk (<code>*</code>) allows all approximate matches to be found.</li>
-     * <li>You can place the asterisk before or after an approximate string.</li>
+     * <li><p>To match a specific stream, enter the full stream name. Example: liveStreamA.</p>
+     * </li>
+     * <li><p>Use a wildcard for matching. The asterisk (\*) matches all streams.</p>
+     * </li>
+     * <li><p>You can match by prefix or suffix.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Fuzzy match: Only one asterisk (<code>*</code>) before or after an approximate string is allowed. The approximate string must be enclosed in <code>()</code>. Separate multiple strings with vertical bars (<code>|</code>).</p>
+     * <li><p>For wildcard matching, use only one asterisk (\*) at the beginning or end of the string. Enclose matching items in parentheses. Separate multiple matching items with a vertical bar (|).</p>
      * </li>
-     * <li><p>For example, <code>*(t1|t2)</code> matches all streams whose name has the <code>t1</code> or <code>t2</code> suffix, and <code>(abc|123)*</code> matches all streams whose name has the <code>abc</code> or <code>123</code> prefix.</p>
+     * <li><p>Example: <code>*(t1|t2)</code> matches all streams ending with <code>t1</code> or <code>t2</code>. <code>(abc|123)*</code> matches all streams starting with <code>abc</code> or <code>123</code>.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>liveStreamA</p>

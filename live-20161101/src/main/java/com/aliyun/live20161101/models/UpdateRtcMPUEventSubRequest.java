@@ -7,7 +7,7 @@ public class UpdateRtcMPUEventSubRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
      * <blockquote>
-     * <p> The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class UpdateRtcMPUEventSubRequest extends TeaModel {
     /**
      * <p>The callback URL.</p>
      * <blockquote>
-     * <p> You can use headers such as HTTP and HTTPS in callback URLs. The URL can be up to 2,083 characters and contain letters, digits, and the following special characters: - _ ? % = # . / +</p>
+     * <p>You can use headers such as HTTP and HTTPS in callback URLs. The URL can be up to 2,083 characters and contain letters, digits, and the following special characters: - _ ? % = # . / +</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

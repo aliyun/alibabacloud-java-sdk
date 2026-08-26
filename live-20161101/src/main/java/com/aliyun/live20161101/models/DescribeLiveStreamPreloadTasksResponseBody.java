@@ -26,7 +26,7 @@ public class DescribeLiveStreamPreloadTasksResponseBody extends TeaModel {
     public DescribeLiveStreamPreloadTasksResponseBodyPreloadTasks preloadTasks;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E1564CBC-DCFE-5E1B-8B78-8DED9A39F334</p>
@@ -35,7 +35,7 @@ public class DescribeLiveStreamPreloadTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that match the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

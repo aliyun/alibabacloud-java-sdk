@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainDetailResponseBody extends TeaModel {
     /**
-     * <p>The configuration details of the domain name.</p>
+     * <p>The details of the domain configuration.</p>
      */
     @NameInMap("DomainDetail")
     public DescribeLiveDomainDetailResponseBodyDomainDetail domainDetail;
@@ -51,9 +51,9 @@ public class DescribeLiveDomainDetailResponseBody extends TeaModel {
         public String certName;
 
         /**
-         * <p>The CNAME that is assigned to the domain name. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name to the CNAME.</p>
+         * <p>The canonical name (CNAME). A CNAME is generated for the live streaming domain. You must add a CNAME record at your DNS provider to map the live streaming domain to this CNAME.</p>
          * <blockquote>
-         * <p> A time-to-live (TTL) value is specified in the CNAME record of a domain name to indicate how long the CNAME record can be cached on the DNS resolver. If you modify the CNAME record of the domain name, the new settings take effect after the cache expires, which takes about 10 minutes. For more information, see <a href="https://help.aliyun.com/document_detail/362010.html">CNAME resolution</a>.</p>
+         * <p>Local DNS records are cached. After you add the CNAME record, it may take up to 10 minutes to take effect. For more information, see <a href="https://help.aliyun.com/document_detail/362010.html">FAQ about CNAME records</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DescribeLiveDomainDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The streaming domain or ingest domain.</p>
+         * <p>The ingest domain or streaming domain.</p>
          * 
          * <strong>example:</strong>
          * <p>demo.aliyundoc.com</p>
@@ -81,11 +81,14 @@ public class DescribeLiveDomainDetailResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The status of the domain name. Valid values:</p>
+         * <p>The status of the domain. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: The domain name is enabled.</li>
-         * <li><strong>offline</strong>: The domain name is disabled.</li>
-         * <li><strong>configuring</strong>: The domain is being configured.</li>
+         * <li><p><strong>online</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>offline</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>configuring</strong>: being configured.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +98,7 @@ public class DescribeLiveDomainDetailResponseBody extends TeaModel {
         public String domainStatus;
 
         /**
-         * <p>The time when the domain name was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the domain was added. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-27T06:51:25Z</p>
@@ -104,7 +107,7 @@ public class DescribeLiveDomainDetailResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The time when the domain name was last modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the domain was last modified. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-08-07T06:51Z</p>
@@ -115,8 +118,10 @@ public class DescribeLiveDomainDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the domain name. Valid values:</p>
          * <ul>
-         * <li><strong>liveVideo</strong>: streaming domain</li>
-         * <li><strong>liveEdge</strong>: ingest domain</li>
+         * <li><p><strong>liveVideo</strong>: streaming domain.</p>
+         * </li>
+         * <li><p><strong>liveEdge</strong>: ingest domain.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -126,7 +131,7 @@ public class DescribeLiveDomainDetailResponseBody extends TeaModel {
         public String liveDomainType;
 
         /**
-         * <p>The ID of the region where the domain name resides.</p>
+         * <p>The region where the domain name is added.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -138,16 +143,18 @@ public class DescribeLiveDomainDetailResponseBody extends TeaModel {
          * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aek2ogvt4nwmi7i</p>
+         * <p>rg-<strong>k3bpq2yjw22</strong></p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether the SSL certificate is enabled. Valid values:</p>
+         * <p>Indicates whether SSL is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><p><strong>on</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>off</strong>: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,9 +175,12 @@ public class DescribeLiveDomainDetailResponseBody extends TeaModel {
         /**
          * <p>The acceleration region. Valid values:</p>
          * <ul>
-         * <li><strong>domestic</strong>: regions in the Chinese mainland.</li>
-         * <li><strong>overseas</strong>: regions outside the Chinese mainland.</li>
-         * <li><strong>global</strong>: regions in and outside the Chinese mainland.</li>
+         * <li><p><strong>domestic</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>overseas</strong>: regions outside the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>global</strong>: global.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

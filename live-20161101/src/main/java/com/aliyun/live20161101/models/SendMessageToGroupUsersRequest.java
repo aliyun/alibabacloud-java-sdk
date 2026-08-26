@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendMessageToGroupUsersRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive Messages application</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SendMessageToGroupUsersRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The message body. The value is a JSON string.</p>
+     * <p>Message body in JSONString format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class SendMessageToGroupUsersRequest extends TeaModel {
     public String data;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>Message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class SendMessageToGroupUsersRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the user who performs the operation.</p>
+     * <p>Operator user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,16 +45,16 @@ public class SendMessageToGroupUsersRequest extends TeaModel {
     public String operatorUserId;
 
     /**
-     * <p>The list of users to receive the message.</p>
+     * <p>User list.</p>
      */
     @NameInMap("ReceiverIdList")
     public java.util.List<String> receiverIdList;
 
     /**
-     * <p>Specifies whether the message requires Alibaba Cloud content moderation. Valid values:</p>
+     * <p>Specifies whether the current message content requires Content Moderation by Alibaba Cloud. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: does not require content moderation.</li>
-     * <li><strong>false</strong>: requires content moderation. This is the default value.</li>
+     * <li><strong>true</strong>: Content Moderation is not required.</li>
+     * <li><strong>false</strong> (default): Content Moderation is required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class SendMessageToGroupUsersRequest extends TeaModel {
     public Boolean skipAudit;
 
     /**
-     * <p>The type of the message. A value that is less than or equal to 10000 specifies a system message. A value that is greater than 10000 specifies a custom message.</p>
+     * <p>Message type. When the type field value is less than or equal to 10000, it indicates a system message. When the value is greater than 10000, it indicates a custom message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

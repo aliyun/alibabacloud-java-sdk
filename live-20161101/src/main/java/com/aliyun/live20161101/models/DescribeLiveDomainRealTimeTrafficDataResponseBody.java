@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the entries returned. Unit: seconds</p>
+     * <p>The time interval between data points. Unit: second.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -14,7 +14,7 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
     public String dataInterval;
 
     /**
-     * <p>The streaming domain.</p>
+     * <p>The streaming domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com,example.aliyundoc.com</p>
@@ -23,7 +23,7 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
     public String domainName;
 
     /**
-     * <p>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T15:01:00Z</p>
@@ -44,7 +44,7 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The start of the time range. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T15:00:00Z</p>

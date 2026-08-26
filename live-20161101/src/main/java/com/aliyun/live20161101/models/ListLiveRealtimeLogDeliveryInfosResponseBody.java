@@ -8,7 +8,7 @@ public class ListLiveRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     public ListLiveRealtimeLogDeliveryInfosResponseBodyContent content;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>95D5B69F-8AEC-419B-8F3A-612B35032B0D</p>

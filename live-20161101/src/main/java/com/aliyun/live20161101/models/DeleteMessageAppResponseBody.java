@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMessageAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class DeleteMessageAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public DeleteMessageAppResponseBodyResult result;
@@ -42,10 +42,10 @@ public class DeleteMessageAppResponseBody extends TeaModel {
 
     public static class DeleteMessageAppResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the application was deleted. Valid values:</p>
+         * <p>Indicates whether the deletion was successful. Valid values:</p>
          * <ul>
-         * <li>true: The application was deleted.</li>
-         * <li>false: The application failed to be deleted.</li>
+         * <li>true: The deletion was successful.</li>
+         * <li>false: The deletion failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -14,10 +14,12 @@ public class DescribeLiveStreamStateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the stream. Valid values:</p>
+     * <p>The state of the stream. Valid values:</p>
      * <ul>
-     * <li>online: The stream is being ingested.</li>
-     * <li>offline: The stream is offline. This may be caused by failed or completed stream ingest. For the specific reason, check the stream ingest callback. This operation does not provide detailed information.</li>
+     * <li><p>online: The stream is active.</p>
+     * </li>
+     * <li><p>offline: The stream is offline. This may mean the stream ingest has failed or ended. For specific details, use the data returned by the stream ingest callback. This operation does not provide a detailed breakdown of the offline status.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class DescribeLiveStreamStateResponseBody extends TeaModel {
     public String streamState;
 
     /**
-     * <p>The mode of the stream. Valid values:</p>
+     * <p>The stream ingest method. Valid values:</p>
      * <ul>
-     * <li>push: stream ingest</li>
-     * <li>pull: triggered stream pulling</li>
+     * <li><p>push</p>
+     * </li>
+     * <li><p>pull</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -7,8 +7,8 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends TeaModel {
     /**
      * <p>The streaming domain.</p>
      * <ul>
-     * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
-     * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+     * <li>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</li>
+     * <li>If this parameter is not specified, the merged data of all live streaming domain names is returned by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
-     * <p>The end time must be later than the start time. The maximum time range that can be specified is one year.</p>
+     * <p>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <p>The end time must be later than the start time. The interval between the start time and end time cannot exceed one year.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T21:05:00Z</p>
@@ -28,13 +28,13 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+     * <p>The time granularity of the queried data. Unit: seconds. Valid values:</p>
      * <ul>
      * <li><strong>300</strong></li>
      * <li><strong>3600</strong></li>
      * <li><strong>86400</strong></li>
      * </ul>
-     * <p>If you specify an invalid value or do not specify this parameter, the default value is used. If the specified time range is no more than three days, the default value is 300. If the specified time range is more than three days and no more than 30 days, the default value is 3600. If the specified time range is more than 30 days, the default value is 86400.</p>
+     * <p>If this parameter is not specified or the specified value is not supported, the default value is 300 seconds when the time span does not exceed 3 days, 3600 seconds when the time span exceeds 3 days, and 86400 seconds when the time span exceeds 30 days.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -43,7 +43,7 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The name of the Logstore to which log entries are delivered. If you leave this parameter empty, the data of all Logstores is returned.</p>
+     * <p>The Logstore for real-time log delivery. If this parameter is not specified, the merged data of all Logstores is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>logstore_example</p>
@@ -55,7 +55,7 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the Log Service project that is used for real-time log delivery. If you leave this parameter empty, the data of all Log Service projects is returned.</p>
+     * <p>The Project for real-time log delivery. If this parameter is not specified, the merged data of all Projects is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>project_example</p>
@@ -63,11 +63,17 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends TeaModel {
     @NameInMap("Project")
     public String project;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T20:00:00Z</p>

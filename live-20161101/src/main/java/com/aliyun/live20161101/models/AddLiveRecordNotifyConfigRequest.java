@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveRecordNotifyConfigRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streamer streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class AddLiveRecordNotifyConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether to enable callbacks for recording status. Valid values:</p>
+     * <p>Specifies whether recording task status callbacks are required. Valid values:</p>
      * <ul>
-     * <li>true: enables callbacks for recording status. If you set this parameter to <strong>true</strong>, an example of recording status callback is returned.</li>
-     * <li>false (default): disables callbacks for recording status.</li>
+     * <li>true: Required. If NeedStatusNotify is set to <strong>true</strong>, the response includes a recording status callback example.</li>
+     * <li>false (default): Not required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,16 +27,40 @@ public class AddLiveRecordNotifyConfigRequest extends TeaModel {
     @NameInMap("NeedStatusNotify")
     public Boolean needStatusNotify;
 
+    /**
+     * <p>The callback authentication key. The key must be 16 to 32 characters in length and can contain only letters and digits.</p>
+     * <blockquote>
+     * <p>This parameter is required when the NotifyReqAuth parameter is set to true.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>chenhuanxin249088</p>
+     */
     @NameInMap("NotifyAuthKey")
     public String notifyAuthKey;
 
+    /**
+     * <p>Specifies whether to enable callback authentication. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enabled.</p>
+     * </li>
+     * <li><p>false (default): Disabled.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>When this parameter is set to true, the NotifyAuthKey parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NotifyReqAuth")
     public Boolean notifyReqAuth;
 
     /**
-     * <p>The callback URL that is used to receive notifications about recording events and status.</p>
+     * <p>The callback URL for recording events and status callbacks.</p>
      * <blockquote>
-     * <p> The URL must start with <code>http://</code> or <code>https://</code>. For more information, see <a href="https://help.aliyun.com/document_detail/55016.html">Callbacks for live stream recording</a>.</p>
+     * <p>The URL must start with <code>http://</code> or <code>https://</code>. For more information, see <a href="https://help.aliyun.com/document_detail/55016.html">Recording event callback</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -47,9 +71,9 @@ public class AddLiveRecordNotifyConfigRequest extends TeaModel {
     public String notifyUrl;
 
     /**
-     * <p>The callback URL for on-demand recordings.</p>
+     * <p>The callback URL for on-demand recording.</p>
      * <blockquote>
-     * <p> The URL must start with <code>http://</code> or <code>https://</code>. For more information, see <a href="https://help.aliyun.com/document_detail/85910.html">On-demand recording</a>.</p>
+     * <p>The URL must start with <code>http://</code> or <code>https://</code>. For more information, see <a href="https://help.aliyun.com/document_detail/85910.html">On-demand recording callback</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRecordUsageDataRequest extends TeaModel {
     /**
-     * <p>The main streaming domain to query.</p>
+     * <p>The streaming domain name to query.</p>
      * <ul>
-     * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
-     * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+     * <li>Supports single or batch domain queries. Separate multiple domain names with commas (,).</li>
+     * <li>If this parameter is left empty, the merged data of all live streaming domain names is returned by default.</li>
+     * <li>When you specify DomainName, make sure that the specified domain name is a live streaming domain name and that the caller has the required permissions on the domain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +19,10 @@ public class DescribeLiveDomainRecordUsageDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. Value requirements:</p>
+     * <p>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC. Requirements:</p>
      * <ul>
-     * <li>The end time is later than the start time.</li>
-     * <li>The time range between the start time and end time is up to 31 days. If the time range is more than 31 days, the request fails and an error is reported.</li>
+     * <li>The end time must be later than the start time (StartTime).</li>
+     * <li>The maximum time span between the end time and the start time is 31 days. Requests that exceed 31 days fail and return an error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,15 +32,27 @@ public class DescribeLiveDomainRecordUsageDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+     * <p>The time granularity of the queried data. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li>60</li>
-     * <li>300</li>
-     * <li>3600</li>
-     * <li>86400</li>
+     * <li><ol start="60">
+     * <li></li>
+     * </ol>
+     * </li>
+     * <li><ol start="300">
+     * <li></li>
+     * </ol>
+     * </li>
+     * <li><ol start="3600">
+     * <li></li>
+     * </ol>
+     * </li>
+     * <li><ol start="86400">
+     * <li></li>
+     * </ol>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter or specify an invalid value: The time granularity of the query for a time range that is less than or equal to 31 days is 300 seconds by default. The time granularity of the query for a time range that is more than 31 days is 86400 seconds by default.</p>
+     * <p>If this parameter is not specified or an unsupported value is specified, the default time granularity is 300 seconds for query spans within 31 days and 86400 seconds for query spans longer than 31 days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,16 +65,24 @@ public class DescribeLiveDomainRecordUsageDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. Valid values:</p>
+     * <p>The region. Valid values:</p>
      * <ul>
-     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
-     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
-     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
-     * <li><strong>cn-qingdao</strong>: China (Qingdao)</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore</li>
-     * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>ap-northeast-1</strong>: Japan (Tokyo)</li>
-     * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
+     * <li><p><strong>cn-beijing</strong>: Beijing.</p>
+     * </li>
+     * <li><p><strong>cn-shanghai</strong>: Shanghai.</p>
+     * </li>
+     * <li><p><strong>cn-shenzhen</strong>: Shenzhen.</p>
+     * </li>
+     * <li><p><strong>cn-qingdao</strong>: Qingdao.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: Singapore.</p>
+     * </li>
+     * <li><p><strong>eu-central-1</strong>: Germany.</p>
+     * </li>
+     * <li><p><strong>ap-northeast-1</strong>: Tokyo.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-5</strong>: Jakarta.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,17 +91,23 @@ public class DescribeLiveDomainRecordUsageDataRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The key that is used to group data. Valid values:</p>
+     * <p>The grouping key. Valid values:</p>
      * <ul>
-     * <li><strong>domain</strong>: groups results by domain name.</li>
-     * <li><strong>record_fmt</strong>: groups results by recording type.</li>
+     * <li><strong>domain</strong>: groups query results by domain name.</li>
+     * <li><strong>record_fmt</strong>: groups query results by recording type.</li>
      * </ul>
      * <blockquote>
-     * <p> You can select one option or both. If you want to select both options, separate them with a comma (,). The default value is <code>domain,record_fmt</code>. If you leave this parameter empty or set the value to <code>null</code>, this parameter is ignored.</p>
+     * <p>You can specify one or more values. Separate multiple values with commas (,). Default value: <code>domain,record_fmt</code>. If this parameter is set to empty or <code>null</code>, the results are not grouped by the preceding keys.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,13 +117,13 @@ public class DescribeLiveDomainRecordUsageDataRequest extends TeaModel {
     public String splitBy;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
      * <ul>
      * <li>The minimum data granularity is 5 minutes.</li>
-     * <li>If you do not specify this parameter, the data in the last 24 hours is returned.</li>
+     * <li>If this parameter is not specified, data of the last 24 hours is returned by default.</li>
      * </ul>
      * <blockquote>
-     * <p>The earliest start time that you can specify is 90 days back from the current time, accurate to seconds.</p>
+     * <p>The start time can be set to a point in time within the last 90 days from the current time, accurate to the second.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

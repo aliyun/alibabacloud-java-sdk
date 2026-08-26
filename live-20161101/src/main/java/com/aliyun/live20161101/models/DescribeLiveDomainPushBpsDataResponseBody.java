@@ -8,7 +8,7 @@ public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
     public DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
     /**
-     * <p>The time granularity of the query.</p>
+     * <p>The time granularity of the queried data.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -17,7 +17,7 @@ public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The ingest domain.</p>
+     * <p>The ingest domain that was queried.</p>
      * 
      * <strong>example:</strong>
      * <p>demo.aliyundoc.com</p>
@@ -26,7 +26,7 @@ public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range during which the data was queried.</p>
+     * <p>The end of the time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T21:00:00Z</p>
@@ -44,7 +44,7 @@ public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which the data was queried.</p>
+     * <p>The beginning of the time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T20:00:00Z</p>

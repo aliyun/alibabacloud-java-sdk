@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeLiveDomainResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ingest domain or streaming domain.</p>
+     * <p>The ingest or streaming domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ChangeLiveDomainResourceGroupRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the resource group to which the domain name is moved.</p>
+     * <p>The ID of the destination resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,12 @@ public class ChangeLiveDomainResourceGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveRecordNotifyRecordsRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application to which the stream belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,7 +14,7 @@ public class DescribeLiveRecordNotifyRecordsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streamer\&quot;s streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeLiveRecordNotifyRecordsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeLiveRecordNotifyRecordsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 500. Default value: 20.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,13 +56,19 @@ public class DescribeLiveRecordNotifyRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * <blockquote>
-     * <p> You can query data within the last seven days.</p>
+     * <p>You can query data within the last 7 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -73,10 +79,10 @@ public class DescribeLiveRecordNotifyRecordsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>Specifies whether the callback is successful. Valid values:</p>
+     * <p>Specifies whether the callback was successful. Valid values:</p>
      * <ul>
-     * <li>success</li>
-     * <li>failed</li>
+     * <li>success: The callback was successful.</li>
+     * <li>failed: The callback failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,11 +91,25 @@ public class DescribeLiveRecordNotifyRecordsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The storage type of the recording for which to query callback records. Valid values:</p>
+     * <ul>
+     * <li><p>oss: recorded to OSS</p>
+     * </li>
+     * <li><p>vod: recorded to ApsaraVideo VOD</p>
+     * </li>
+     * <li><p>all: queries callback records for all storage types</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The stream name.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>

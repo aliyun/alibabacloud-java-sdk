@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMixStreamRequest extends TeaModel {
     /**
-     * <p>The callback URL. The value is a JSON array. If a callback event is triggered, ApsaraVideo Live sends an HTTP POST request to the URL. The content is included in the HTTP request body.</p>
+     * <p>The webhook address. This is a JSON array. When an event occurs, the live service sends an HTTP POST request to this address. The request body contains the event details.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;CallbackUrl&quot;:&quot;<a href="http://aliyundoc.com%22%7D">http://aliyundoc.com&quot;}</a></p>
@@ -14,10 +14,13 @@ public class CreateMixStreamRequest extends TeaModel {
     public String callbackConfig;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The primary streaming domain.</p>
      * <blockquote>
-     * <p> Only domain names that reside in the China (Shanghai) and China (Beijing) regions are supported.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>Currently, only domain names in the China (Shanghai) and China (Beijing) regions are supported.</p>
+     * </notice>
+     * 
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,8 +30,8 @@ public class CreateMixStreamRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The input streams. The value is a JSON array.</p>
-     * <p>For more information, see <strong>InputStreamConfig</strong>.</p>
+     * <p>The list of input streams. This is a JSON array.</p>
+     * <p>For more information, see <strong>InputStreamConfig</strong> below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +41,7 @@ public class CreateMixStreamRequest extends TeaModel {
     public String inputStreamList;
 
     /**
-     * <p>The ID of the layout. Valid values:</p>
+     * <p>The layout ID. Valid values:</p>
      * <ul>
      * <li><strong>MixStreamLayout-1-1</strong></li>
      * <li><strong>MixStreamLayout-2-1</strong></li>
@@ -47,10 +50,10 @@ public class CreateMixStreamRequest extends TeaModel {
      * <li><strong>MixStreamLayout-3-1</strong></li>
      * <li><strong>MixStreamLayout-3-2</strong></li>
      * <li><strong>MixStreamLayout-4-1</strong></li>
-     * <li><strong>USERDEFINED</strong>: If you do not use a preset layout, set this parameter to <strong>USERDEFINED</strong>.</li>
+     * <li><strong>USERDEFINED</strong> (If you do not use a preset layout, set this parameter to <strong>USERDEFINED</strong>.)</li>
      * </ul>
      * <blockquote>
-     * <p> For more information, see <a href="https://help.aliyun.com/document_detail/199361.html">Preset layouts for stream mixing</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/199359.html">Preset stream mix layouts</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -61,8 +64,8 @@ public class CreateMixStreamRequest extends TeaModel {
     public String layoutId;
 
     /**
-     * <p>The configuration of the output stream. The value is a JSON string.</p>
-     * <p>For more information, see <strong>OutputConfig</strong>.</p>
+     * <p>The output configuration. This is a JSON string.</p>
+     * <p>For more information, see <strong>OutputConfig</strong> below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +77,12 @@ public class CreateMixStreamRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMessageGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>The interactive message application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class UpdateMessageGroupRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The extended field.</p>
+     * <p>The extension field.</p>
      */
     @NameInMap("Extension")
     public java.util.Map<String, String> extension;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>The message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

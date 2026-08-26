@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCasterVideoResourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the production studio. This parameter is used in the requests of the following operations: DescribeCasterVideoResources, AddCasterLayout, and DescribeCasterLayouts.</p>
+     * <p>The ID of the production studio. You can use this ID to query video sources, add layouts, or query layout lists for the production studio.</p>
      * 
      * <strong>example:</strong>
      * <p>LIVEPRODUCER_POST-cn-0pp1czt****</p>
@@ -14,7 +14,7 @@ public class ModifyCasterVideoResourceResponseBody extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CF60DB6A-7FD6-426E-9288-122CC1A52FA7</p>
@@ -23,7 +23,7 @@ public class ModifyCasterVideoResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p>98461064-1c94-4dc1-85ce-94098764****</p>

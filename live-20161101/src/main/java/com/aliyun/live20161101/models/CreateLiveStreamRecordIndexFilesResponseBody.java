@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateLiveStreamRecordIndexFilesResponseBody extends TeaModel {
     /**
-     * <p>The recording configuration.</p>
+     * <p>The recording configuration information.</p>
      */
     @NameInMap("RecordInfo")
     public CreateLiveStreamRecordIndexFilesResponseBodyRecordInfo recordInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>550439A3-F8EC-4CA2-BB62-B9DB43EEEF30</p>
@@ -42,7 +42,7 @@ public class CreateLiveStreamRecordIndexFilesResponseBody extends TeaModel {
 
     public static class CreateLiveStreamRecordIndexFilesResponseBodyRecordInfo extends TeaModel {
         /**
-         * <p>The name of the application to which the live stream belongs.</p>
+         * <p>The name of the application to which the stream belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>liveApp****</p>
@@ -51,7 +51,7 @@ public class CreateLiveStreamRecordIndexFilesResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The time when the index file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2016-05-27T09:40:56Z</p>
@@ -60,7 +60,7 @@ public class CreateLiveStreamRecordIndexFilesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The main streaming domain.</p>
+         * <p>The streamer streaming domain.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -78,7 +78,7 @@ public class CreateLiveStreamRecordIndexFilesResponseBody extends TeaModel {
         public Float duration;
 
         /**
-         * <p>The end time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The end time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2015-12-01T07:40:00Z</p>
@@ -87,7 +87,7 @@ public class CreateLiveStreamRecordIndexFilesResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The height of the video.</p>
+         * <p>The video height.</p>
          * 
          * <strong>example:</strong>
          * <p>480</p>
@@ -114,7 +114,7 @@ public class CreateLiveStreamRecordIndexFilesResponseBody extends TeaModel {
         public String ossEndpoint;
 
         /**
-         * <p>The name of the recording that is stored in OSS.</p>
+         * <p>The name of the recording file stored in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>liveObject****.m3u8</p>
@@ -132,13 +132,13 @@ public class CreateLiveStreamRecordIndexFilesResponseBody extends TeaModel {
         public String recordId;
 
         /**
-         * <p>The URL of the M3U8 index file.</p>
+         * <p>The URL of the index file.</p>
          */
         @NameInMap("RecordUrl")
         public String recordUrl;
 
         /**
-         * <p>The start time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The start time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2015-12-01T07:36:00Z</p>
@@ -147,7 +147,7 @@ public class CreateLiveStreamRecordIndexFilesResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The name of the live stream.</p>
+         * <p>The stream name.</p>
          * 
          * <strong>example:</strong>
          * <p>liveStream****</p>
@@ -156,7 +156,7 @@ public class CreateLiveStreamRecordIndexFilesResponseBody extends TeaModel {
         public String streamName;
 
         /**
-         * <p>The width of the video.</p>
+         * <p>The video width.</p>
          * 
          * <strong>example:</strong>
          * <p>640</p>

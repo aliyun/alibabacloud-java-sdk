@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeToutiaoLivePublishRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application to which the stream belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeToutiaoLivePublishRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The end time must be later than the start time. The maximum time range that can be specified is 10 hours. If you specify neither StartTime nor EndTime, the data of the last hour is queried by default.</p>
+     * <p>The end of the time range to query. The date is in ISO 8601 format and uses UTC. The end time must be later than the start time, and the time span cannot exceed 10 hours. If you do not specify StartTime and EndTime, data from the last hour is queried by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,11 +37,17 @@ public class DescribeToutiaoLivePublishRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start of the time range to query. The date is in ISO 8601 format and uses UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +57,7 @@ public class DescribeToutiaoLivePublishRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the ingested stream.</p>
+     * <p>The stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

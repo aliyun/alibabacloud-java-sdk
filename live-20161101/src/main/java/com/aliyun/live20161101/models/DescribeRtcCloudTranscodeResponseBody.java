@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the cloud transcoding task.</p>
+     */
     @NameInMap("TaskInfo")
     public DescribeRtcCloudTranscodeResponseBodyTaskInfo taskInfo;
 
@@ -37,6 +42,8 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
 
     public static class DescribeRtcCloudTranscodeResponseBodyTaskInfoInputParamSingleSubUserParam extends TeaModel {
         /**
+         * <p>The video input stream type of the subscription.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
         public Long sourceType;
 
         /**
+         * <p>The media type of the subscribed user.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +60,8 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
         public Long streamType;
 
         /**
+         * <p>The user ID of the subscribed user.</p>
+         * 
          * <strong>example:</strong>
          * <p>userA</p>
          */
@@ -89,6 +100,9 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcCloudTranscodeResponseBodyTaskInfoInputParam extends TeaModel {
+        /**
+         * <p>The single-stream subscription input parameters.</p>
+         */
         @NameInMap("SingleSubUserParam")
         public DescribeRtcCloudTranscodeResponseBodyTaskInfoInputParamSingleSubUserParam singleSubUserParam;
 
@@ -109,6 +123,8 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
 
     public static class DescribeRtcCloudTranscodeResponseBodyTaskInfoOutputParams extends TeaModel {
         /**
+         * <p>The channel ID to which the transcoded stream is relayed.</p>
+         * 
          * <strong>example:</strong>
          * <p>myChannel</p>
          */
@@ -116,6 +132,8 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The transcoding template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>lhd</p>
          */
@@ -123,6 +141,8 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
         public String transcodeTemplate;
 
         /**
+         * <p>The user ID in the channel to which the transcoded stream is relayed.</p>
+         * 
          * <strong>example:</strong>
          * <p>userA_360p</p>
          */
@@ -130,6 +150,8 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The user token required to relay the transcoded stream to the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJhcHBpZCI********</p>
          */
@@ -177,6 +199,8 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
 
     public static class DescribeRtcCloudTranscodeResponseBodyTaskInfo extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>********-7074-<strong><strong>-9ef5-85c19a4</strong></strong>*</p>
          */
@@ -184,26 +208,44 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>myChannel</p>
          */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <p>The subscription input parameters.</p>
+         */
         @NameInMap("InputParam")
         public DescribeRtcCloudTranscodeResponseBodyTaskInfoInputParam inputParam;
 
         /**
+         * <p>The idle timeout period. If the task remains idle for longer than the MaxIdleTime value, the task is automatically stopped. Unit: seconds. Valid values: 10 to 14400 (maximum of 4 hours). Default value: 300.</p>
+         * 
          * <strong>example:</strong>
          * <p>600</p>
          */
         @NameInMap("MaxIdleTime")
         public Long maxIdleTime;
 
+        /**
+         * <p>The transcoding output parameters.</p>
+         */
         @NameInMap("OutputParams")
         public java.util.List<DescribeRtcCloudTranscodeResponseBodyTaskInfoOutputParams> outputParams;
 
         /**
+         * <p>The status of the cloud transcoding task. Valid values:</p>
+         * <ul>
+         * <li>STARTING</li>
+         * <li>RUNNING</li>
+         * <li>RECOVERING</li>
+         * <li>STOPPED.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -211,6 +253,8 @@ public class DescribeRtcCloudTranscodeResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The cloud transcoding task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>73-8501-</strong></strong>-8ac1-72295a</strong>****</p>
          */

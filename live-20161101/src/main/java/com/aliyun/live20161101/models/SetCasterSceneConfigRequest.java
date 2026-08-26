@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetCasterSceneConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/69338.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId parameter returned by the CreateCaster operation.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, go to <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studios</strong> &gt; <strong>China Cloud Production Studio</strong> to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the production studio list on the China Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,11 +24,9 @@ public class SetCasterSceneConfigRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The IDs of the components. Components in the scene are listed from the bottom to the top in an array.</p>
+     * <p>The list of component IDs. The components are arranged in bottom-to-top order within the array.</p>
      * <blockquote>
-     * <p> N indicates a sequence number. Examples:\
-     * ComponentId.1 indicates the ID of the first component.\
-     * ComponentId.2 indicates the ID of the second component.</p>
+     * <p>N indicates the sequence number. For example:<br>ComponentId.1 indicates the first component ID.<br>ComponentId.2 indicates the second component ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class SetCasterSceneConfigRequest extends TeaModel {
     public java.util.List<String> componentId;
 
     /**
-     * <p>The ID of the layout. If you call the <a href="https://help.aliyun.com/document_detail/60260.html">DescribeCasterLayouts</a> operation to query the layouts of the production studio, check the value of the response parameter LayoutId to obtain the ID.</p>
+     * <p>The layout ID. If you call the <a href="https://help.aliyun.com/document_detail/2848028.html">DescribeCasterLayouts</a> operation to query the layout list of a production studio, check the LayoutId parameter returned by the DescribeCasterLayouts operation.</p>
      * 
      * <strong>example:</strong>
      * <p>0c6da077-f037-49e8-8440-3be13393****</p>
@@ -47,11 +47,17 @@ public class SetCasterSceneConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the scene.</p>
+     * <p>The scene ID. The scene must have been started by calling StartCasterScene. Otherwise, the IncorrectSceneStatus error is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

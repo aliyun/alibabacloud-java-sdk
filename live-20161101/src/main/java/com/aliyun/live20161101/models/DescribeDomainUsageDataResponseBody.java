@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataResponseBody extends TeaModel {
     /**
-     * <p>The billable region where the resource usage data was generated.</p>
+     * <p>The usage region.</p>
      * 
      * <strong>example:</strong>
      * <p>CN</p>
@@ -14,7 +14,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     public String area;
 
     /**
-     * <p>The time interval between the returned entries. Unit: seconds.</p>
+     * <p>The time interval of each record. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -23,7 +23,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The domain name.</p>
+     * <p>The streaming domain.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -32,7 +32,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range for which the resource usage data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T21:00Z</p>
@@ -41,7 +41,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
@@ -50,7 +50,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range for which the resource usage data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T20:00Z</p>
@@ -59,7 +59,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The type of the resource usage data.</p>
+     * <p>The usage type.</p>
      * 
      * <strong>example:</strong>
      * <p>all</p>

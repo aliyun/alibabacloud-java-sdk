@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the entries returned. Unit: seconds. Default value: 3600.</p>
+     * <p>The time interval for each record. Unit: seconds. The value is fixed at 3600.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -23,7 +23,7 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+     * <p>The end time. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2018-03-20T16:00:00Z</p>
@@ -44,7 +44,7 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+     * <p>The start time. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2018-03-17T16:00:00Z</p>

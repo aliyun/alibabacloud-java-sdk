@@ -14,7 +14,7 @@ public class DescribeLiveDomainMonitoringUsageDataResponseBody extends TeaModel 
     public String domainName;
 
     /**
-     * <p>The end of the time range.</p>
+     * <p>The end time of the query. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-10T22:00:00Z</p>
@@ -23,7 +23,7 @@ public class DescribeLiveDomainMonitoringUsageDataResponseBody extends TeaModel 
     public String endTime;
 
     /**
-     * <p>The ID of the monitoring session.</p>
+     * <p>The monitoring session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e62af24d-a354-3b0c-9f1f-da592c4b****</p>
@@ -35,7 +35,7 @@ public class DescribeLiveDomainMonitoringUsageDataResponseBody extends TeaModel 
     public DescribeLiveDomainMonitoringUsageDataResponseBodyMonitoringData monitoringData;
 
     /**
-     * <p>The region of the live center.</p>
+     * <p>The live center region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -47,13 +47,13 @@ public class DescribeLiveDomainMonitoringUsageDataResponseBody extends TeaModel 
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
+     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range.</p>
+     * <p>The start time of the query. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-10T20:00:00Z</p>

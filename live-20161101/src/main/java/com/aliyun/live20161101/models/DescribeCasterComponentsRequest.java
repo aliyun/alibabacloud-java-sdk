@@ -7,11 +7,13 @@ public class DescribeCasterComponentsRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, obtain the ID from the CasterId parameter in the response.</p>
+     * </li>
+     * <li><p>If you created the production studio in the LIVE console, go to the Cloud Production Studio page by choosing <strong>LIVE Console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,7 +24,7 @@ public class DescribeCasterComponentsRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The component ID. If the component was added by calling the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation, check the value of the response parameter ComponentId to obtain the ID.</p>
+     * <p>The component ID. If you added the component by calling the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation, obtain the ID from the ComponentId parameter in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>21926b36-7dd2-4fde-ae25-51b5bc8e****</p>
@@ -33,6 +35,12 @@ public class DescribeCasterComponentsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

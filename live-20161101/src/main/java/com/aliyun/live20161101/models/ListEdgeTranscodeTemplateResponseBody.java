@@ -17,7 +17,7 @@ public class ListEdgeTranscodeTemplateResponseBody extends TeaModel {
     public ListEdgeTranscodeTemplateResponseBodyTemplateList templateList;
 
     /**
-     * <p>The total number of templates returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

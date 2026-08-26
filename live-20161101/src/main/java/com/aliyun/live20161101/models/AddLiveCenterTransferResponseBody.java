@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveCenterTransferResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7908F2FF-44F8-120F-9FD6-85AE4B6C19EC</p>

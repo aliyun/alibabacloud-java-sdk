@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendLikeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class SendLikeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>Return result.</p>
      */
     @NameInMap("Result")
     public SendLikeResponseBodyResult result;
@@ -42,7 +42,7 @@ public class SendLikeResponseBody extends TeaModel {
 
     public static class SendLikeResponseBodyResult extends TeaModel {
         /**
-         * <p>The number of likes.</p>
+         * <p>Number of likes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

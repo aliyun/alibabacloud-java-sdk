@@ -14,7 +14,7 @@ public class DescribeLiveStreamsPublishListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeLiveStreamsPublishListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that meet the specified conditions.</p>
+     * <p>The total number of entries that match the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>

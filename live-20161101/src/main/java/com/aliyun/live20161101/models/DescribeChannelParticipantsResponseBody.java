@@ -8,7 +8,7 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
+     * <p>6159ba01-6687-4fb2-a831-f0cd8d1******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

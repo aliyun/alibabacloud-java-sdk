@@ -15,7 +15,7 @@ public class BatchGetOnlineUsersRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>The message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class BatchGetOnlineUsersRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The list of user IDs. Separate multiple user IDs with commas (,). You can specify a maximum of 20 user IDs.</p>
+     * <p>The list of user IDs. Separate multiple user IDs with commas (,). You can specify up to 20 user IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

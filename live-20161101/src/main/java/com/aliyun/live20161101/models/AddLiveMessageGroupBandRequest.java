@@ -15,16 +15,16 @@ public class AddLiveMessageGroupBandRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The users whom you want to mute.</p>
+     * <p>A list of users to mute. Separate multiple user IDs with a comma (,). You can specify a maximum of 30 users.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BannedUsers")
     public java.util.List<String> bannedUsers;
 
     /**
-     * <p>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application.</p>
+     * <p>The data center. This must be the same data center that you specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation.</p>
      * <blockquote>
-     * <p> Valid values: cn-shanghai and ap-southeast-1 (Singapore).</p>
+     * <p>Currently, this operation is supported in Shanghai (value: cn-shanghai) and Singapore (value: ap-southeast-1).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

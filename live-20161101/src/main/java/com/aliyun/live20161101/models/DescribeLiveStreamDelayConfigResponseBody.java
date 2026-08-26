@@ -81,9 +81,12 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
         /**
          * <p>The latency level. Valid values:</p>
          * <ul>
-         * <li><strong>short</strong>: The latency is less than or equal to 4 seconds.</li>
-         * <li><strong>medium</strong>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</li>
-         * <li><strong>long</strong>: The latency is greater than 8 seconds.</li>
+         * <li><p><strong>short</strong>: The latency is 2 seconds or less.</p>
+         * </li>
+         * <li><p><strong>medium</strong>: The latency is greater than 2 seconds and 4 seconds or less.</p>
+         * </li>
+         * <li><p><strong>long</strong>: The latency is greater than 4 seconds.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,9 +131,12 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
         /**
          * <p>The latency level. Valid values:</p>
          * <ul>
-         * <li><strong>short</strong>: The latency is less than or equal to 4 seconds.</li>
-         * <li><strong>medium</strong>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</li>
-         * <li><strong>long</strong>: The latency is greater than 8 seconds.</li>
+         * <li><p><strong>short</strong>: The latency is 2 seconds or less.</p>
+         * </li>
+         * <li><p><strong>medium</strong>: The latency is greater than 2 seconds and 4 seconds or less.</p>
+         * </li>
+         * <li><p><strong>long</strong>: The latency is greater than 4 seconds.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,9 +181,12 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
         /**
          * <p>The latency level. Valid values:</p>
          * <ul>
-         * <li><strong>short</strong>: The latency is less than or equal to 4 seconds.</li>
-         * <li><strong>medium</strong>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</li>
-         * <li><strong>long</strong>: The latency is greater than 8 seconds.</li>
+         * <li><p><strong>short</strong>: The latency is 2 seconds or less.</p>
+         * </li>
+         * <li><p><strong>medium</strong>: The latency is greater than 2 seconds and 4 seconds or less.</p>
+         * </li>
+         * <li><p><strong>long</strong>: The latency is greater than 4 seconds.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

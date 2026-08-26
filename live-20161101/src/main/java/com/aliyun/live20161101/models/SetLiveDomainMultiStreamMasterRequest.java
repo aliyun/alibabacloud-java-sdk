@@ -38,7 +38,7 @@ public class SetLiveDomainMultiStreamMasterRequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The unique identifier of the stream ingest.</p>
+     * <p>The unique identifier of the stream ingest. You can obtain this identifier by calling the <a href="https://help.aliyun.com/document_detail/2871872.html">QueryLiveDomainMultiStreamList</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

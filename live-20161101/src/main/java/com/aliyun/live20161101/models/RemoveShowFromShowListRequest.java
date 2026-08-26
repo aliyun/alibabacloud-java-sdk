@@ -7,11 +7,13 @@ public class RemoveShowFromShowListRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/69338.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value that is returned in the response.</p>
+     * </li>
+     * <li><p>If you created the production studio in the LIVE console, find the production studio name in the LIVE console by choosing <strong>LIVE Console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,13 +26,19 @@ public class RemoveShowFromShowListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the episode.</p>
+     * <p>The show ID.</p>
      * <blockquote>
-     * <p> You can obtain the ID by checking the value of the response parameter ShowId of the <a href="https://help.aliyun.com/document_detail/370861.html">AddShowIntoShowList</a> operation.</p>
+     * <p>Obtain the ShowId from the response of the <a href="https://help.aliyun.com/document_detail/2848051.html">AddShowIntoShowList</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,13 +48,15 @@ public class RemoveShowFromShowListRequest extends TeaModel {
     public String showId;
 
     /**
-     * <p>Specifies whether to remove multiple episodes at a time. Valid values:</p>
+     * <p>Specifies whether to delete shows in a batch. Valid values:</p>
      * <ul>
-     * <li>true: removes multiple episodes at a time.</li>
-     * <li>false: removes a single episode.</li>
+     * <li><p>true: Deletes shows in a batch.</p>
+     * </li>
+     * <li><p>false: Deletes a single show.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not configure this parameter or this parameter is left empty, a single episode is to be removed.</p>
+     * <p>If you do not specify this parameter or leave it empty, a single show is deleted.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,7 +66,7 @@ public class RemoveShowFromShowListRequest extends TeaModel {
     public Boolean isBatchMode;
 
     /**
-     * <p>The IDs of episodes that you want to remove.</p>
+     * <p>The IDs of the shows to delete.</p>
      */
     @NameInMap("showIdList")
     public java.util.List<String> showIdList;

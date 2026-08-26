@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainOnlineUserNumRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeLiveDomainOnlineUserNumRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The point of time to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The point of time to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-12-27T13:09:21Z</p>
@@ -26,6 +26,12 @@ public class DescribeLiveDomainOnlineUserNumRequest extends TeaModel {
     @NameInMap("QueryTime")
     public String queryTime;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

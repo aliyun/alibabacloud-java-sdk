@@ -15,7 +15,12 @@ public class UpdateLivePullStreamInfoConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The domain name used for stream pulling. It is the main streaming domain.</p>
+     * <p>The streaming domain used as the streamer\&quot;s stream domain.</p>
+     * <blockquote>
+     * <ul>
+     * <li>When you specify DomainName, make sure that the domain is a live streaming domain and that the user calling this operation has the permission to operate on the specified domain.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,8 +30,8 @@ public class UpdateLivePullStreamInfoConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The time when stream pulling ends.</p>
-     * <p>The time range specified by the StartTime and EndTime parameters cannot exceed seven days. The time specified by the EndTime parameter must be later than the current time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of stream pulling.</p>
+     * <p>The interval between StartTime and EndTime must be within 7 days, and EndTime must be later than the current time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,19 +43,25 @@ public class UpdateLivePullStreamInfoConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The complete URL of the origin server of the live stream. You can specify multiple URLs by separating them with semicolons (;).</p>
+     * <p>The full URL of the origin server where the live stream resides. You can specify multiple origin URLs separated by semicolons (;).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceUrl")
     public String sourceUrl;
 
     /**
-     * <p>The time when stream pulling starts.</p>
-     * <p>The time range specified by the StartTime and EndTime parameters cannot exceed seven days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of stream pulling.</p>
+     * <p>The interval between StartTime and EndTime must be within 7 days. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

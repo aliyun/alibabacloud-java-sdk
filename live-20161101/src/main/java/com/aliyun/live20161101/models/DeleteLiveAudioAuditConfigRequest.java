@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveAudioAuditConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * <blockquote>
-     * <p> A value of asterisk (\*) specifies all applications under the domain name.</p>
+     * <p>Set AppName to an asterisk (\*) to match all AppNames under the domain.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,13 +30,19 @@ public class DeleteLiveAudioAuditConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The stream name.</p>
      * <blockquote>
-     * <p> A value of asterisk (\*) specifies all live streams in the application.</p>
+     * <p>Set StreamName to an asterisk (\*) to match all streams in the AppName.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     /**
-     * <p>The background color of the subtitles. Color format: RGBA.</p>
+     * <p>The background color of the subtitle. The value is in RGBA format.</p>
      * 
      * <strong>example:</strong>
      * <p>0xFF0000</p>
@@ -14,7 +14,7 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public String bgColor;
 
     /**
-     * <p>The size of the background box. Valid values: [0,1].</p>
+     * <p>The background size of the subtitle. Valid values: [0, 1].</p>
      * 
      * <strong>example:</strong>
      * <p>0.09</p>
@@ -23,7 +23,7 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public Float bgWidthNormalized;
 
     /**
-     * <p>The font weight. Valid values: [0,1].</p>
+     * <p>The font weight. Valid values: [0, 1].</p>
      * 
      * <strong>example:</strong>
      * <p>0.05</p>
@@ -32,7 +32,7 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public Float borderWidthNormalized;
 
     /**
-     * <p>The description of the subtitle template. The description can be up to 128 characters in length and can contain letters, digits, and special characters.</p>
+     * <p>The custom description of the subtitle. The description can contain Chinese characters, letters, digits, and special characters, and cannot exceed 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>live AI subtitle template</p>
@@ -41,12 +41,12 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The target language. Valid values:</p>
+     * <p>The target language for translation. Valid values:</p>
      * <ul>
      * <li>en-US: English</li>
      * <li>zh-CN: Chinese</li>
      * <li>es-ES: Spanish</li>
-     * <li>ru-RU: Russian</li>
+     * <li>ru-RU: Russian.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public String dstLanguage;
 
     /**
-     * <p>The font color. Color format: RGBA.</p>
+     * <p>The font color. The value is in RGBA format.</p>
      * 
      * <strong>example:</strong>
      * <p>0xFFFFFF</p>
@@ -67,13 +67,13 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     /**
      * <p>The font. Valid values:</p>
      * <ul>
-     * <li>KaiTi (default)</li>
-     * <li>AlibabaPuHuiTi-Regular</li>
-     * <li>AlibabaPuHuiTi-Bold</li>
-     * <li>AlibabaPuHuiTi-Light</li>
-     * <li>NotoSansHans-Regular</li>
-     * <li>NotoSansHans-Bold</li>
-     * <li>NotoSansHans-Light</li>
+     * <li>KaiTi: KaiTi (default)</li>
+     * <li>AlibabaPuHuiTi-Regular: Alibaba PuHuiTi Regular</li>
+     * <li>AlibabaPuHuiTi-Bold: Alibaba PuHuiTi Bold</li>
+     * <li>AlibabaPuHuiTi-Light: Alibaba PuHuiTi Light</li>
+     * <li>NotoSansHans-Regular: Noto Sans Hans Regular</li>
+     * <li>NotoSansHans-Bold: Noto Sans Hans Bold</li>
+     * <li>NotoSansHans-Light: Noto Sans Hans Light.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public String fontName;
 
     /**
-     * <p>The font size. Valid values: [0,1].</p>
+     * <p>The font size. Valid values: [0, 1].</p>
      * 
      * <strong>example:</strong>
      * <p>0.037</p>
@@ -92,17 +92,17 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public Float fontSizeNormalized;
 
     /**
-     * <p>The height of the preview. Unit: pixels.</p>
-     * <p>The following preview specifications (width x height) are supported:</p>
+     * <p>The height of the preview screen. Unit: px.</p>
+     * <p>The width × height of the preview screen supports only the following specifications:</p>
      * <ul>
-     * <li>360p (640 x 360)</li>
-     * <li>360p (360 x 640)</li>
-     * <li>480p (854 x 480)</li>
-     * <li>480p (480 x 854)</li>
-     * <li>720p (1280 x 720)</li>
-     * <li>720p (720 x 1280)</li>
-     * <li>1080p (1920 x 1080)</li>
-     * <li>1080p (1080 x 1920)</li>
+     * <li>Landscape low definition 360P: 640×360</li>
+     * <li>Portrait low definition 360P: 360×640</li>
+     * <li>Landscape standard definition 480P: 854×480</li>
+     * <li>Portrait standard definition 480P: 480×854</li>
+     * <li>Landscape high definition 720P: 1280×720</li>
+     * <li>Portrait high definition 720P: 720×1280</li>
+     * <li>Landscape ultra-high definition 1080P: 1920×1080</li>
+     * <li>Portrait ultra-high definition 1080P: 1080×1920.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public String height;
 
     /**
-     * <p>The number of displayed lines.</p>
+     * <p>The number of lines to display.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -124,16 +124,25 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The position of the subtitles relative to the lower-left corner of the screen. The value is a pair of coordinates.</p>
+     * <p>The position of the subtitle, specified as x and y coordinates with the bottom-left corner of the screen as the origin.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[0.32,0.27]</p>
      */
     @NameInMap("PositionNormalized")
     public String positionNormalizedShrink;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to display the source language. Valid values: true and false. Default value: false.</p>
+     * <p>Specifies whether to display the source language. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -146,7 +155,7 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
      * <ul>
      * <li>en-US: English</li>
      * <li>zh-CN: Chinese</li>
-     * <li>ru-RU: Russian</li>
+     * <li>ru-RU: Russian.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,7 +175,7 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public String subtitleId;
 
     /**
-     * <p>The name of the subtitle template. The name can contain digits, letters, and hyphens (-) but cannot start with a hyphen (-).</p>
+     * <p>The name of the subtitle template. The name can contain only digits, letters, and hyphens (-). The name cannot start with a hyphen.</p>
      * 
      * <strong>example:</strong>
      * <p>live AI subtitle template</p>
@@ -175,7 +184,7 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public String subtitleName;
 
     /**
-     * <p>The width of the preview. Unit: pixels.</p>
+     * <p>The width of the preview screen. Unit: px.</p>
      * 
      * <strong>example:</strong>
      * <p>1280</p>
@@ -184,7 +193,7 @@ public class UpdateLiveAISubtitleShrinkRequest extends TeaModel {
     public String width;
 
     /**
-     * <p>The number of characters per line. Valid values: 1 to 500.</p>
+     * <p>The number of characters per line. Valid values: integers in the range of [1, 500].</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

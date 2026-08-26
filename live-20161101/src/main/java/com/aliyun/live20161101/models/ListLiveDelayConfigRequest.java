@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveDelayConfigRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListLiveDelayConfigRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page. Valid values: 5 to 30. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Valid values: 5 to 30. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,6 +35,12 @@ public class ListLiveDelayConfigRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

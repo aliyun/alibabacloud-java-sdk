@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsNotifyRecordsRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the application to which the live stream belongs. You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>app</p>
@@ -24,7 +24,7 @@ public class DescribeLiveStreamsNotifyRecordsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DescribeLiveStreamsNotifyRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 500. Valid values: integers from 1 to 500.</p>
+     * <p>The page size. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,13 +54,19 @@ public class DescribeLiveStreamsNotifyRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * <blockquote>
-     * <p> The start time must be in the last seven days.</p>
+     * <p>The start time must be within the last 7 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -71,10 +77,10 @@ public class DescribeLiveStreamsNotifyRecordsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>Specifies whether to return the records of successful or failed callbacks. Valid values:</p>
+     * <p>Specifies whether the callback is successful. Valid values:</p>
      * <ul>
-     * <li>success</li>
-     * <li>failed</li>
+     * <li>success: Successful.</li>
+     * <li>failed: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +90,7 @@ public class DescribeLiveStreamsNotifyRecordsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The name of the live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the live stream. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>stream</p>

@@ -8,17 +8,26 @@ public class DescribeLiveUserBillPredictionResponseBody extends TeaModel {
     public DescribeLiveUserBillPredictionResponseBodyBillPredictionData billPredictionData;
 
     /**
-     * <p>The metering method. Valid values:</p>
+     * <p>The billing method. The following billing methods are supported:</p>
      * <ul>
-     * <li>hour_flow: pay by hourly data transfer</li>
-     * <li>day_bandwidth: pay by daily bandwidth</li>
-     * <li>month_95: pay by monthly 95th percentile bandwidth</li>
-     * <li>month_avg_day_bandwidth: pay by average daily peak bandwidth per month</li>
-     * <li>month_4th_day_bandwidth: pay by 4th peak bandwidth per month</li>
-     * <li>month_avg_day_95: pay by average daily 95th percentile bandwidth per month</li>
-     * <li>month_95_night_half: pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00</li>
-     * <li>hour_vas: pay by value-added services per hour</li>
-     * <li>day_count: pay by daily requests</li>
+     * <li><p>hour_flow: Pay-by-traffic on an hourly basis.</p>
+     * </li>
+     * <li><p>day_bandwidth: Pay-by-bandwidth on a daily basis.</p>
+     * </li>
+     * <li><p>month_95: Pay-by-monthly 95th percentile peak bandwidth.</p>
+     * </li>
+     * <li><p>month_avg_day_bandwidth: Pay-by-monthly average of daily peak bandwidth.</p>
+     * </li>
+     * <li><p>month_4th_day_bandwidth: Pay-by-monthly 4th peak bandwidth.</p>
+     * </li>
+     * <li><p>month_avg_day_95: Pay-by-monthly average of daily 95th percentile peak bandwidth.</p>
+     * </li>
+     * <li><p>month_95_night_half: Pay-by-nightly 95th percentile peak bandwidth with a 50% discount.</p>
+     * </li>
+     * <li><p>hour_vas: Pay-for-value-added services on an hourly basis.</p>
+     * </li>
+     * <li><p>day_count: Pay-by-daily request count.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +37,8 @@ public class DescribeLiveUserBillPredictionResponseBody extends TeaModel {
     public String billType;
 
     /**
-     * <p>The end time. If you do not specify the request parameter EndTime, the end time is the current time by default. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The end time of the query. The time is in UTC and follows the ISO 8601 standard.
+     * Format: YYYY-MM-DDThh:mm:ssZ. The default value is the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-10-25T10:00:00Z</p>
@@ -46,7 +56,8 @@ public class DescribeLiveUserBillPredictionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time. If you do not specify the request parameter StartTime, the start time is 00:00 on the first day of the month by default. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The start time of the query. The time is in UTC and follows the ISO 8601 standard.
+     * Format: YYYY-MM-DDThh:mm:ssZ. The default value is 00:00 on the first day of the month.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-09-30T16:00:00Z</p>

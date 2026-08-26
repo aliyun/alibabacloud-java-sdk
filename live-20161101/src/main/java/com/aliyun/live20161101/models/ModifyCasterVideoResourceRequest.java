@@ -5,10 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyCasterVideoResourceRequest extends TeaModel {
     /**
-     * <p>The offset of the position where the system starts to read the video resource.</p>
-     * <p>This parameter takes effect only when the video resource is a video file. Unit: milliseconds.</p>
+     * <p>The start offset of the video file. Unit: milliseconds.</p>
      * <blockquote>
-     * <p> A value greater than 0 indicates an offset from the first frame.</p>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is valid only if the video source is a video file.</p>
+     * <blockquote>
+     * <p>A value greater than 0 specifies the start time to read the file. The time is an offset from the first frame.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,11 +22,14 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
 
     /**
      * <p>The ID of the production studio.</p>
-     * <p>If you create a production studio through the <a href="~~69338#doc-api-live-CreateCaster~~" title="Creates a production studio.">CreateCaster</a> interface, check the value of the CasterId parameter in the response.</p>
-     * <p>If you create a production studio through the ApsaraVideo Live Console, log in to the console, then check the ID of the production studio through the following path:</p>
-     * <p>Production Studios &gt; Production Studio Management</p>
+     * <ul>
+     * <li><p>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId returned in the response.</p>
+     * </li>
+     * <li><p>If you create a production studio in the console, find the ID on the <strong>Cloud Production Studio</strong> page. To go to this page, choose <strong>LIVE Console</strong> &gt; <strong>Production Studio</strong>.</p>
+     * </li>
+     * </ul>
      * <blockquote>
-     * <p> The CasterId is reflected in the Name column on the Production Studio Management page.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is its ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -34,10 +40,12 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>This parameter takes effect only when the video resource is a video file. Unit: milliseconds.</p>
+     * <p>This parameter is valid only for video files. Unit: milliseconds.</p>
      * <ul>
-     * <li>A value greater than <strong>0</strong> indicates an offset from the first frame.</li>
-     * <li>A value smaller than <strong>0</strong> indicates an offset from the last frame.</li>
+     * <li><p>If the value is greater than <strong>0</strong>, it specifies the end time to read the file. The time is an offset from the first frame.</p>
+     * </li>
+     * <li><p>If the value is less than <strong>0</strong>, it specifies the end time to read the file. The time is an offset from the last frame.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,9 +55,9 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     public Integer endOffset;
 
     /**
-     * <p>ID of the media library image material.</p>
+     * <p>The ID of the image material in the media asset library.</p>
      * <blockquote>
-     * <p>This parameter is only available and must be provided when the video source type is an image.</p>
+     * <p>This parameter is required only if the video source is an image.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,9 +67,9 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>Image material URL. </p>
+     * <p>The URL of the image material.</p>
      * <blockquote>
-     * <p>This parameter is only available when the video source type is an image and the image file has not been imported into the material library. Supports uploading images in jpg, png formats, with a maximum file size of 10MB.</p>
+     * <p>This parameter is available only if the video source is an image that has not been imported to the material library. The image must be in JPG or PNG format, and its size cannot exceed 10 MB.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +80,10 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
 
     /**
      * <p>The URL of the live stream.</p>
-     * <p>This parameter takes effect and is required only when the video resource is a live stream.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is required only if the video source is a live stream.</p>
      * 
      * <strong>example:</strong>
      * <p>rtmp://guide.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</p>
@@ -81,7 +92,7 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     public String liveStreamUrl;
 
     /**
-     * <p>The ID of the material.</p>
+     * <p>The material ID.</p>
      * 
      * <strong>example:</strong>
      * <p>f080575eb5f4427684fc0715159a****</p>
@@ -93,7 +104,7 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The interval between presentation timestamp (PTS) callbacks. Unit: milliseconds. This parameter takes effect only when the video resource is a VOD file.</p>
+     * <p>The Presentation Time Stamp (PTS) callback interval. Unit: milliseconds. This parameter is valid only for VOD materials.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -101,14 +112,22 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     @NameInMap("PtsCallbackInterval")
     public Integer ptsCallbackInterval;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The number of playback times after the first playback is complete. This parameter takes effect only when the video resource is a file. Valid values:</p>
+     * <p>This parameter is valid only for video files. It specifies the number of times to loop the video after playback is complete.</p>
      * <ul>
-     * <li><strong>0</strong>: indicates that the video is played only once. This is the default value.</li>
-     * <li><strong>-1</strong>: indicates that the video is played in loop mode.</li>
+     * <li><p><strong>0</strong> (default): The video does not loop.</p>
+     * </li>
+     * <li><p><strong>-1</strong>: The video loops indefinitely.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +137,7 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     public Integer repeatNum;
 
     /**
-     * <p>The ID of the video resource. It is reflected in the ResourceId parameter when you call the <a href="~~60250#doc-api-live-AddCasterVideoResource~~" title="Adds a video resource to a production studio.">AddCasterVideoResource</a> operation.</p>
+     * <p>The resource ID. If you add a video source to the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a> operation, use the ResourceId returned in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,7 +147,7 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The name of the video resource.</p>
+     * <p>The name of the video source.</p>
      * 
      * <strong>example:</strong>
      * <p>test001</p>
@@ -137,9 +156,13 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>The URL of the video-on-demand (VOD) file. This parameter takes effect only when the video resource is a video file that is not from the media library.</p>
+     * <p>The URL of the video on demand (VOD) file.</p>
      * <blockquote>
-     * <p> The VOD file must be in the MP4, FLV, or TS format.</p>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is available only if the video source is a video file that has not been imported to the material library.</p>
+     * <blockquote>
+     * <p>VOD files must be in MP4, FLV, or TS format.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

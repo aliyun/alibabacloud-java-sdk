@@ -8,7 +8,7 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
     public DescribeCasterSceneAudioResponseBodyAudioLayers audioLayers;
 
     /**
-     * <p>The ID of the production studio. You can specify the ID in a request to start a scene in the production studio.</p>
+     * <p>The ID of the production studio. This ID can be used as a request parameter to start the production studio scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>97df6b7f-3490-47d2-ac50-88338765****</p>
@@ -17,10 +17,12 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The audio mode. By default, the audio follows video (AFV) mode is used. Valid values:</p>
+     * <p>Specifies whether to enable audio follow. By default, audio follow is enabled.</p>
      * <ul>
-     * <li><strong>0</strong>: the audio mixing mode</li>
-     * <li><strong>1</strong>: the AFV mode</li>
+     * <li><p><strong>0</strong>: mix mode.</p>
+     * </li>
+     * <li><p><strong>1</strong>: audio-follows-video mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

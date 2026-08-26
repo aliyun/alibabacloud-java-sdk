@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveMessageGroupByPageRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListLiveMessageGroupByPageRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</p>
+     * <p>The data center. This value must be the same as the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Currently supported data centers are Shanghai (cn-shanghai) and Singapore (ap-southeast-1).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -24,11 +24,11 @@ public class ListLiveMessageGroupByPageRequest extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The status of the groups to query. Default value: 0. Valid values:</p>
+     * <p>The group status. Default value: 0. Valid values:</p>
      * <ul>
-     * <li>0: all groups</li>
-     * <li>1: existing groups</li>
-     * <li>2: deleted groups</li>
+     * <li>0: Queries all groups.</li>
+     * <li>1: Queries groups that are not deleted.</li>
+     * <li>2: Queries deleted groups.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListLiveMessageGroupByPageRequest extends TeaModel {
     public Integer groupStatus;
 
     /**
-     * <p>The page number. Valid values: [1,10000].</p>
+     * <p>The page number. Valid values: [1,10000\].</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ListLiveMessageGroupByPageRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:[1,50].</p>
+     * <p>The page size. Valid values: [1,50\].</p>
      * <p>Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -58,10 +58,10 @@ public class ListLiveMessageGroupByPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort order based on the time when the groups were created. Valid values:</p>
+     * <p>The sort order, based on group creation time. Valid values:</p>
      * <ul>
-     * <li>1: ascending order</li>
-     * <li>2: descending order</li>
+     * <li>1: Ascending order.</li>
+     * <li>2: Descending order.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

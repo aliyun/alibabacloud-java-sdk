@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5c6a2a0df228-4a64- af62-20e91b9676b3</p>
@@ -14,7 +14,7 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of watermark templates that meet the specified conditions.</p>
+     * <p>The total number of matching entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

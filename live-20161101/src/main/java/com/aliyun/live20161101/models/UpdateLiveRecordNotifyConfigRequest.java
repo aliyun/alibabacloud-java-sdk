@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain of the streamer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether to enable callbacks for recording status. Valid values:</p>
+     * <p>Specifies whether recording task status callbacks are required. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: Recording task status callbacks are required.</li>
+     * <li><strong>false</strong> (default): Recording task status callbacks are not required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,22 +27,44 @@ public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
     @NameInMap("NeedStatusNotify")
     public Boolean needStatusNotify;
 
+    /**
+     * <p>The callback authentication key. The key is 16 to 32 characters in length and can contain only letters and digits.</p>
+     * <blockquote>
+     * <p>This parameter is required when the NotifyReqAuth parameter is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testkeyyourkey12</p>
+     */
     @NameInMap("NotifyAuthKey")
     public String notifyAuthKey;
 
+    /**
+     * <p>Specifies whether to enable callback authentication. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disabled.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Default value: <strong>false</strong>. If this parameter is set to <strong>true</strong>, the NotifyAuthKey parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("NotifyReqAuth")
     public Boolean notifyReqAuth;
 
     /**
-     * <p>The callback URL that is used to receive notifications about recording events and status.</p>
+     * <p>The callback URL for recording events, including event callbacks and status callbacks.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The URL must start with <code>http://</code> or <code>https://</code>.</p>
-     * </li>
-     * <li><p>You must use URLEncoder for encoding. This way, the system can identify Chinese characters, spaces, and special characters.</p>
-     * </li>
+     * <li>The URL must start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>To properly identify Chinese characters, spaces, and other special characters in the input, perform URL encoding.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,15 +74,13 @@ public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
     public String notifyUrl;
 
     /**
-     * <p>The callback URL for on-demand recordings.</p>
+     * <p>The on-demand recording callback URL.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The URL must start with <code>http://</code> or <code>https://</code>.</p>
-     * </li>
-     * <li><p>You must use URLEncoder for encoding. This way, the system can identify Chinese characters, spaces, and special characters.</p>
-     * </li>
+     * <li>The URL must start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>To properly identify Chinese characters, spaces, and other special characters in the input, perform URL encoding.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p><a href="http://guide.aliyundoc.com/ondemandcallback.action">http://guide.aliyundoc.com/ondemandcallback.action</a></p>

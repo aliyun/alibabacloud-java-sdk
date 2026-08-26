@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ForbidLiveStreamRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the application to which the ingest stream belongs. You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ForbidLiveStreamRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether the live stream is ingested by a streamer or played by a viewer. Set the value to <strong>publisher</strong>.</p>
+     * <p>Specifies whether to disable stream ingest or streaming. Currently, only disabling stream ingest is supported: <strong>publisher</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,13 +35,15 @@ public class ForbidLiveStreamRequest extends TeaModel {
     public String liveStreamType;
 
     /**
-     * <p>Specifies whether to only interrupt the live stream without adding the ingest URL of the live stream to the blacklist. Valid values:</p>
+     * <p>Specifies whether to only interrupt the stream without adding it to the blacklist. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: interrupts the live stream but does not add the ingest URL of the live stream to the blacklist. This value is available only when the live stream is ingested or played in the upstream.</li>
-     * <li><strong>no</strong>: disables the live stream and adds the ingest URL of the live stream to the blacklist.</li>
+     * <li><p><strong>yes</strong>: Only interrupts the stream without adding it to the blacklist (supports upstream ingest or upstream streaming).</p>
+     * </li>
+     * <li><p><strong>no</strong>: Interrupts the stream and adds it to the blacklist.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the default value no is used.</p>
+     * <p>Default value: no.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,19 +55,23 @@ public class ForbidLiveStreamRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The time when the live stream is resumed. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The time to resume the stream. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you set the <strong>Oneshot</strong> parameter to <strong>no</strong> and do not specify this parameter, the live stream is disabled for six months by default.</p>
-     * </li>
-     * <li><p>If you specify this parameter, the live stream is resumed at the specified point in time.</p>
-     * </li>
+     * <li>If the <strong>Oneshot</strong> parameter is set to <strong>no</strong> and ResumeTime is not specified, the live stream is disabled for 6 months by default.</li>
+     * <li>If a value is specified, the restriction is lifted at the time specified by ResumeTime and the live stream is resumed.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2015-12-01T10:37:00Z</p>
@@ -74,7 +80,7 @@ public class ForbidLiveStreamRequest extends TeaModel {
     public String resumeTime;
 
     /**
-     * <p>The name of the ingested stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the ingest stream. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

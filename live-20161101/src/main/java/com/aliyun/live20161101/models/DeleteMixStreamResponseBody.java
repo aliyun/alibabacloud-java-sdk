@@ -14,7 +14,7 @@ public class DeleteMixStreamResponseBody extends TeaModel {
     public String mixStreamId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BE9407FF-F897-4DBD-338D-98A750AD805F</p>

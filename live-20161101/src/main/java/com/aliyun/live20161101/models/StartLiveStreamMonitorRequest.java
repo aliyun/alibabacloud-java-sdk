@@ -7,7 +7,7 @@ public class StartLiveStreamMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the monitoring session.</p>
      * <blockquote>
-     * <p> You can obtain the monitoring session ID from the response of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation.</p>
+     * <p>Obtain the MonitorId value from the response of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,6 +20,12 @@ public class StartLiveStreamMonitorRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

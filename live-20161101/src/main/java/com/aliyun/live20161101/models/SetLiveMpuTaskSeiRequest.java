@@ -7,12 +7,12 @@ public class SetLiveMpuTaskSeiRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
      * <blockquote>
-     * <p> The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>VKL3***</p>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -20,12 +20,12 @@ public class SetLiveMpuTaskSeiRequest extends TeaModel {
     /**
      * <p>The custom SEI.</p>
      * <blockquote>
-     * <p> The value is a JSON string that can be up to 4,096 characters in length.</p>
+     * <p>The value is a JSON string that can be up to 4,096 characters in length.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;name&quot;:&quot;myroom&quot;}</p>
+     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
      */
     @NameInMap("CustomSei")
     public String customSei;
@@ -33,12 +33,12 @@ public class SetLiveMpuTaskSeiRequest extends TeaModel {
     /**
      * <p>The task ID.</p>
      * <blockquote>
-     * <p> The ID can be up to 55 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The ID can be up to 55 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>AL-4bce036dd90277c50705b0599wgfffc7</p>
+     * <p>yourTaskId</p>
      */
     @NameInMap("TaskId")
     public String taskId;

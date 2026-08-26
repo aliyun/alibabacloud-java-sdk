@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
     /**
-     * <p>The information about the index file.</p>
+     * <p>Recording configuration.</p>
      */
     @NameInMap("RecordIndexInfo")
     public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo recordIndexInfo;
@@ -42,7 +42,7 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
 
     public static class DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo extends TeaModel {
         /**
-         * <p>The name of the application to which the live stream belongs.</p>
+         * <p>The AppName of the live stream.</p>
          * 
          * <strong>example:</strong>
          * <p>liveApp****</p>
@@ -51,7 +51,7 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The time when the index file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2016-05-27T09:40:56Z</p>
@@ -69,7 +69,7 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The recording length. Unit: seconds.</p>
+         * <p>The recording duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>588.849</p>
@@ -78,7 +78,7 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         public Float duration;
 
         /**
-         * <p>The end time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The end time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2016-05-25T05:47:11Z</p>
@@ -105,7 +105,7 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The name of the Object Storage Service (OSS) bucket.</p>
+         * <p>The name of the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>liveBucket****</p>
@@ -132,7 +132,7 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         public String ossObject;
 
         /**
-         * <p>The ID of the index file.</p>
+         * <p>The manifest ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c4d7f0a4-b506-43f9-8de3-07732c3f****</p>
@@ -141,13 +141,13 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         public String recordId;
 
         /**
-         * <p>The URL of the index file.</p>
+         * <p>The URL of the manifest.</p>
          */
         @NameInMap("RecordUrl")
         public String recordUrl;
 
         /**
-         * <p>The start time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2015-12-01T05:36:00Z</p>

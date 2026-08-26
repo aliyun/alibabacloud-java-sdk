@@ -14,7 +14,7 @@ public class DescribeLiveSnapshotNotifyConfigResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The callback authentication key.</p>
+     * <p>The authentication key for the callback.</p>
      * 
      * <strong>example:</strong>
      * <p>yourkey</p>
@@ -25,8 +25,10 @@ public class DescribeLiveSnapshotNotifyConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether callback authentication is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: Callback authentication is enabled.</li>
-     * <li><strong>no</strong>: Callback authentication is disabled.</li>
+     * <li><p><strong>yes</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>no</strong>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +47,7 @@ public class DescribeLiveSnapshotNotifyConfigResponseBody extends TeaModel {
     public String notifyUrl;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5056369B-D337-499E-B8B7-B761BD37B08A</p>

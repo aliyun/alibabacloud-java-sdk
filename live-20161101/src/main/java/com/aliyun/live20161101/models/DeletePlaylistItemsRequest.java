@@ -8,7 +8,7 @@ public class DeletePlaylistItemsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the episode list. If the episode list was created by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, check the value of the response parameter ProgramId to obtain the ID.</p>
+     * <p>The ID of the playlist. If you add items to the playlist by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, you can obtain this ID from the ProgramId parameter in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeletePlaylistItemsRequest extends TeaModel {
     public String programId;
 
     /**
-     * <p>The IDs of the episodes that you want to remove.</p>
+     * <p>A list of playlist item IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,12 @@ public class DeletePlaylistItemsRequest extends TeaModel {
     @NameInMap("ProgramItemIds")
     public String programItemIds;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

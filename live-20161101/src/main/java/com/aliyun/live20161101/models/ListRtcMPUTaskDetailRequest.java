@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListRtcMPUTaskDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <blockquote>
-     * <p> The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The application ID consists of uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -19,6 +19,9 @@ public class ListRtcMPUTaskDetailRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * <blockquote>
+     * <p>If you do not specify a task ID, you must specify the PageSize and PageNo parameters. In this case, the paged query results of all stream mixing and relaying tasks under the specified application ID are returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -27,9 +30,9 @@ public class ListRtcMPUTaskDetailRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of records per page. Valid values: 1 to 100.</p>
      * <blockquote>
-     * <p> If you do not specify TaskId, you must specify PageSize and PageNo. Then, the parameters of all stream relay tasks for the specified application are returned in pages.</p>
+     * <p>If you do not specify a task ID, you must specify the PageSize and PageNo parameters. In this case, the paged query results of all stream mixing and relaying tasks under the specified application ID are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +44,12 @@ public class ListRtcMPUTaskDetailRequest extends TeaModel {
     /**
      * <p>The task ID.</p>
      * <blockquote>
+     * <ul>
+     * <li>The task ID consists of uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 55 characters.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>The ID can be up to 55 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
-     * </li>
-     * <li><p>If you specify TaskId, the parameters of the specified tasks are returned.</p>
-     * </li>
+     * <li>If you specify a task ID, the query is performed based on the task ID first, and the result contains the parameter details of the stream mixing and relaying task with the specified task ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>

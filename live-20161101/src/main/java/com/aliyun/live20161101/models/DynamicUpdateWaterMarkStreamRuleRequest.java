@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DynamicUpdateWaterMarkStreamRuleRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The AppName of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,17 @@ public class DynamicUpdateWaterMarkStreamRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the stream that contains the watermark.</p>
+     * <p>The name of the watermarked stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,9 +47,9 @@ public class DynamicUpdateWaterMarkStreamRuleRequest extends TeaModel {
     public String stream;
 
     /**
-     * <p>The watermark template ID. You can call the <a href="https://help.aliyun.com/document_detail/2848102.html">DescribeLiveStreamWatermarks</a> operation to obtain available watermark template IDs.</p>
+     * <p>The ID of the watermark template. Call the <a href="https://help.aliyun.com/document_detail/2848102.html">DescribeLiveStreamWatermarks</a> operation to get the IDs of available watermark templates.</p>
      * <blockquote>
-     * <p> The TemplateId parameter is used to replace the watermark template ID during live streaming.</p>
+     * <p>The TemplateId parameter is used to replace the watermark template ID during a live stream.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

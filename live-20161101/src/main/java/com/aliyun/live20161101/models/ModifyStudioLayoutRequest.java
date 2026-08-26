@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyStudioLayoutRequest extends TeaModel {
     /**
-     * <p>The background material configurations. The value is a JSON string. For more information, see <strong>BgImageConfig</strong>.</p>
+     * <p>The configuration of the background resource. This parameter is a JSON string. For more information, see <strong>BgImageConfig</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set LayoutType to studio.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is required only when LayoutType is set to studio.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;Id&quot;:&quot;k12kj31****&quot;, &quot;MaterialId&quot;:&quot;f080575eb5f4427684fc0715159a****&quot; }</p>
@@ -17,16 +18,15 @@ public class ModifyStudioLayoutRequest extends TeaModel {
     public String bgImageConfig;
 
     /**
-     * <p>The ID of the production studio.</p>
-     * <blockquote>
-     * <p> The production studio must be a virtual studio that you create in advance.</p>
-     * </blockquote>
+     * <p>The ID of the production studio. &gt;Notice: The production studio must be created in advance and must be of the virtual studio type.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value returned in the response.</p>
+     * </li>
+     * <li><p>If you create a production studio in the ApsaraVideo Live console, go to the <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> page to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,10 +37,7 @@ public class ModifyStudioLayoutRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The common layout configurations. The value is a JSON string. For more information, see <strong>CommonConfig</strong>.</p>
-     * <blockquote>
-     * <p> This parameter is required only if you set LayoutType to common.</p>
-     * </blockquote>
+     * <p>The configuration of the common layout. This parameter is a JSON string. For more information, see <strong>CommonConfig</strong>. &gt;Notice: This parameter is required only when LayoutType is set to common.</p>
      * 
      * <strong>example:</strong>
      * <p>{  &quot;ChannelId&quot;:&quot;RV01&quot; }</p>
@@ -49,7 +46,7 @@ public class ModifyStudioLayoutRequest extends TeaModel {
     public String commonConfig;
 
     /**
-     * <p>The layer sorting configurations. The value is a JSON string. For more information, see <strong>layerOrderConfig</strong>. You can sort layers of background and multimedia materials. The chroma key layer cannot be sorted. A layer that is in the front of the code is placed behind other layers in the layout.</p>
+     * <p>The layer order settings. This parameter is a JSON string. For more information, see <strong>layerOrderConfig</strong>. You can sort background and multimedia materials. Chroma keying layers are not supported. The earlier an item appears in the list, the lower its layer.</p>
      * 
      * <strong>example:</strong>
      * <p>[ { &quot;Type&quot;:&quot;media&quot;, &quot;Id&quot;:&quot;k12kj31****&quot; }, { &quot;Type&quot;:&quot;media&quot;, &quot;Id&quot;:&quot;k12kj31****&quot; } ]</p>
@@ -58,7 +55,7 @@ public class ModifyStudioLayoutRequest extends TeaModel {
     public String layerOrderConfigList;
 
     /**
-     * <p>The ID of the layout. If the layout was added by calling the <a href="https://help.aliyun.com/document_detail/2848062.html">AddStudioLayout</a> operation, check the value of the response parameter LayoutId to obtain the ID.</p>
+     * <p>The ID of the layout. If you add a layout for a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848062.html">AddStudioLayout</a> operation, use the LayoutId value returned in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,19 +65,20 @@ public class ModifyStudioLayoutRequest extends TeaModel {
     public String layoutId;
 
     /**
-     * <p>The name of the layout.</p>
+     * <p>The name of the production studio layout.</p>
      * 
      * <strong>example:</strong>
-     * <p>The name of the layout.</p>
+     * <p>Test layout</p>
      */
     @NameInMap("LayoutName")
     public String layoutName;
 
     /**
-     * <p>The multimedia input configurations. The value is a JSON string. For more information, see <strong>MediaInputConfig</strong>.</p>
+     * <p>The settings for the multimedia input resource. This parameter is a JSON string. For more information, see <strong>MediaInputConfig</strong>.</p>
      * <blockquote>
-     * <p> This parameter is optional and takes effect only if you set LayoutType to studio.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is valid and optional only when LayoutType is set to studio.</p>
      * 
      * <strong>example:</strong>
      * <p>[ { &quot;Id&quot;:&quot;k12kj31****&quot;, &quot;Index&quot;:&quot;1&quot;, &quot;ChannelId&quot;:&quot;RV01&quot;, &quot;FillMode&quot;:&quot;none&quot;, &quot;PositionRefer&quot;:&quot;topLeft&quot;, &quot;WidthNormalized&quot;:&quot;0.4&quot;, &quot;HeightNormalized&quot;:&quot;0.4&quot;, &quot;PositionNormalized&quot;:&quot;[0.1, 0.2]&quot; }, { &quot;Id&quot;:&quot;k12kj31****&quot;, &quot;Index&quot;:&quot;2&quot;, &quot;ImageMaterialId&quot;:&quot;lkajsdfsa8fd89asd8****&quot;, &quot;FillMode&quot;:&quot;none&quot;, &quot;PositionRefer&quot;:&quot;topLeft&quot;, &quot;WidthNormalized&quot;:&quot;0.6&quot;, &quot;HeightNormalized&quot;:&quot;0.4&quot;, &quot;PositionNormalized&quot;:&quot;[0.1, 0.2]&quot; } ]</p>
@@ -91,14 +89,21 @@ public class ModifyStudioLayoutRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The input configurations for chroma key. The value is a JSON string. For more information, see <strong>ScreenInputConfig</strong>.</p>
+     * <p>The settings for the chroma keying input. This parameter is a JSON string. For more information, see <strong>ScreenInputConfig</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set LayoutType to studio.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is required only when LayoutType is set to studio.</p>
      * 
      * <strong>example:</strong>
      * <p>[ { &quot;Index&quot;:&quot;1&quot;, &quot;ChannelId&quot;:&quot;RV01&quot;, &quot;Color&quot;:&quot;green&quot;, &quot;PositionX&quot;:&quot;0.1&quot;, &quot;PositionY&quot;:&quot;0.2&quot;, &quot;HeightNormalized&quot;:&quot;0.4&quot; } ]</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopRtcCloudTranscodeRequest extends TeaModel {
     /**
+     * <p>The application ID. The ID can be up to 64 characters long and can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StopRtcCloudTranscodeRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the cloud transcoding job. The ID can be up to 64 characters long and can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

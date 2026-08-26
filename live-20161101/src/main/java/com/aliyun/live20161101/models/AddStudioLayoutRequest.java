@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class AddStudioLayoutRequest extends TeaModel {
     /**
-     * <p>The background material configurations. The value is a JSON string. For more information, see <strong>BgImageConfig</strong>.</p>
+     * <p>The configuration of the background resource. The value is a JSON string. For more information, see <strong>BgImageConfig</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set LayoutType to studio.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is required only when you set LayoutType to studio.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;Id&quot;:&quot;k12kj31****&quot;, &quot;MaterialId&quot;:&quot;f080575eb5f4427684fc0715159a****&quot; }</p>
@@ -19,14 +20,17 @@ public class AddStudioLayoutRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <blockquote>
-     * <p> The production studio must be a virtual studio that you create in advance. You can use the ApsaraVideo Live console or call the CreateCaster operation to create a virtual studio.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>Create a virtual production studio in advance. You can create a production studio in the console or by calling the <a href="https://help.aliyun.com/document_detail/69338.html">CreateCaster</a> API operation. The production studio must be a virtual production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you call the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> API operation to create a production studio, use the returned CasterId value.</p>
+     * </li>
+     * <li><p>If you create a production studio in the ApsaraVideo Live console, go to the <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> page. The name of the production studio in the list is its ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,10 +41,11 @@ public class AddStudioLayoutRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The common layout configurations. The value is a JSON string. For more information, see <strong>CommonConfig</strong>.</p>
+     * <p>The configuration of the common layout. The value is a JSON string. For more information, see <strong>CommonConfig</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set LayoutType to common.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is required only when you set LayoutType to common.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ChannelId&quot;:&quot;RV01&quot; }</p>
@@ -49,7 +54,7 @@ public class AddStudioLayoutRequest extends TeaModel {
     public String commonConfig;
 
     /**
-     * <p>The layer sorting configurations. The value is a JSON string. For more information, see <strong>layerOrderConfig</strong>. You can sort layers of background and multimedia materials. The chroma key layer cannot be sorted. A layer that is in the front of the code is placed behind other layers in the layout.</p>
+     * <p>The layer order settings. The value is a JSON string. For more information, see <strong>LayerOrderConfig</strong>. You can sort background materials and multimedia materials. Chroma keying layers are not supported. The earlier a material appears in the list, the lower its layer.</p>
      * 
      * <strong>example:</strong>
      * <p>[ 	{ 	&quot;Type&quot;:&quot;media&quot;, 	&quot;Id&quot;:&quot;k12kj31****&quot; 	}, 	{ 	&quot;Type&quot;:&quot;media&quot;, 	&quot;Id&quot;:&quot;k12kj31****&quot; 	} ]</p>
@@ -58,7 +63,7 @@ public class AddStudioLayoutRequest extends TeaModel {
     public String layerOrderConfigList;
 
     /**
-     * <p>The name of the layout.</p>
+     * <p>The name of the studio layout.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,10 +73,12 @@ public class AddStudioLayoutRequest extends TeaModel {
     public String layoutName;
 
     /**
-     * <p>The type of the layout. Valid values:</p>
+     * <p>The type of the studio layout. Valid values:</p>
      * <ul>
-     * <li><strong>common</strong>: If you set this parameter to common, you must specify the CommonConfig parameter.</li>
-     * <li><strong>studio</strong>: If you set this parameter to studio, you must specify the BgImageConfig and ScreenInputConfigList parameters. The MediaInputConfigList parameter is optional.</li>
+     * <li><p><strong>common</strong>: A common layout. If you set LayoutType to common, you must also specify CommonConfig.</p>
+     * </li>
+     * <li><p><strong>studio</strong>: A studio layout. If you set LayoutType to studio, you must also specify BgImageConfig and ScreenInputConfigList. The MediaInputConfigList parameter is optional.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -82,10 +89,11 @@ public class AddStudioLayoutRequest extends TeaModel {
     public String layoutType;
 
     /**
-     * <p>The multimedia input configurations. The value is a JSON string. For more information, see <strong>MediaInputConfig</strong>.</p>
+     * <p>The settings for the multimedia input resource. The value is a JSON string. For more information, see <strong>MediaInputConfig</strong>.</p>
      * <blockquote>
-     * <p> This parameter is optional and is valid only if you set LayoutType to studio.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is valid and optional only when you set LayoutType to studio.</p>
      * 
      * <strong>example:</strong>
      * <p>[ 	{ 	&quot;Id&quot;:&quot;k12kj31****&quot;, 	&quot;Index&quot;:&quot;1&quot;, 	&quot;ChannelId&quot;:&quot;RV01&quot;, 	&quot;FillMode&quot;:&quot;none&quot;, 	&quot;PositionRefer&quot;:&quot;topLeft&quot;, 	&quot;WidthNormalized&quot;:&quot;0.4&quot;, 	&quot;HeightNormalized&quot;:&quot;0.4&quot;, 	&quot;PositionNormalized&quot;:&quot;[0.1, 0.2]&quot; 	},   { 	&quot;Id&quot;:&quot;k12kj31****&quot;, 	&quot;Index&quot;:&quot;2&quot;, 	&quot;ImageMaterialId&quot;:&quot;lkajsdfsa8fd89asd8****&quot;, 	&quot;FillMode&quot;:&quot;none&quot;, 	&quot;PositionRefer&quot;:&quot;topLeft&quot;, 	&quot;WidthNormalized&quot;:&quot;0.6&quot;, 	&quot;HeightNormalized&quot;:&quot;0.4&quot;, 	&quot;PositionNormalized&quot;:&quot;[0.1, 0.2]&quot; 	} ]</p>
@@ -96,14 +104,21 @@ public class AddStudioLayoutRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The input configurations for chroma key. The value is a JSON string. For more information, see <strong>ScreenInputConfig</strong>.</p>
+     * <p>The settings for the chroma keying input. The value is a JSON string. For more information, see <strong>ScreenInputConfig</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set LayoutType to studio.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is required only when you set LayoutType to studio.</p>
      * 
      * <strong>example:</strong>
      * <p>[ 	{ 	&quot;Index&quot;:&quot;1&quot;, 	&quot;ChannelId&quot;:&quot;RV01&quot;, 	&quot;Color&quot;:&quot;green&quot;, 	&quot;PositionX&quot;:&quot;0.1&quot;, 	&quot;PositionY&quot;:&quot;0.2&quot;, 	&quot;HeightNormalized&quot;:&quot;0.4&quot; 	} ]</p>

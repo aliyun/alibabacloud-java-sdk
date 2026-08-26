@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMixStreamListResponseBody extends TeaModel {
     /**
-     * <p>Details about the stream mixing tasks.</p>
+     * <p>The list of stream mixing tasks.</p>
      */
     @NameInMap("MixStreamList")
     public java.util.List<DescribeMixStreamListResponseBodyMixStreamList> mixStreamList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BC1E78D3-FA8B-4457-DEE2-6093E1232254</p>
@@ -59,7 +59,7 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
 
     public static class DescribeMixStreamListResponseBodyMixStreamList extends TeaModel {
         /**
-         * <p>The name of the application.</p>
+         * <p>The app name.</p>
          * 
          * <strong>example:</strong>
          * <p>liveApp****</p>
@@ -68,7 +68,7 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The main streaming domain.</p>
+         * <p>The streaming domain.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -77,7 +77,7 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The time when the stream mixing task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the stream mixing task was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-17T08:39:14Z</p>
@@ -86,7 +86,7 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the stream mixing task was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the stream mixing task was last modified. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-17T08:39:15Z</p>
@@ -95,7 +95,7 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The number of input streams.</p>
+         * <p>The number of input sources.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -104,7 +104,7 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
         public Integer inputStreamNumber;
 
         /**
-         * <p>The ID of the layout.</p>
+         * <p>The layout ID.</p>
          * 
          * <strong>example:</strong>
          * <p>USERDEFINED</p>
@@ -122,7 +122,7 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
         public String mixStreamTemplate;
 
         /**
-         * <p>The ID of the stream mixing task. You can specify this parameter in a request to delete the steam mixing task.</p>
+         * <p>The ID of the stream mixing task. You can use this ID to delete the task.</p>
          * 
          * <strong>example:</strong>
          * <p>aaf9a50f-c460-3a9b-f180-38dd8f05****</p>
@@ -131,7 +131,7 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
         public String mixstreamId;
 
         /**
-         * <p>The name of the output stream.</p>
+         * <p>The stream name of the stream mixing task.</p>
          * 
          * <strong>example:</strong>
          * <p>liveStream****</p>

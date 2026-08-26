@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRealTimeBpsDataResponseBody extends TeaModel {
     /**
-     * <p>The interval at which data was queried.</p>
+     * <p>The time granularity of the queried data.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -14,16 +14,16 @@ public class DescribeLiveDomainRealTimeBpsDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The streaming domain name or names that was queried.</p>
+     * <p>The streaming domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p>example.com,example.aliyundoc.com</p>
+     * <p>example1.aliyundoc.com,example2.aliyundoc.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2015-11-30T05:40:00Z</p>
@@ -35,16 +35,16 @@ public class DescribeLiveDomainRealTimeBpsDataResponseBody extends TeaModel {
     public DescribeLiveDomainRealTimeBpsDataResponseBodyRealTimeBpsDataPerInterval realTimeBpsDataPerInterval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>
+     * <p>BC858082-736F-4A25-867B-E5B6******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The start of the time range. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2015-11-30T05:33:00Z</p>

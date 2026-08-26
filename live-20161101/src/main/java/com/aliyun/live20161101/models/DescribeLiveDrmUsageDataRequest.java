@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDrmUsageDataRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The live streaming domain name.</p>
      * <ul>
-     * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
-     * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+     * <li>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</li>
+     * <li>If this parameter is left empty, the merged data of all live streaming domain names is returned by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,13 +28,13 @@ public class DescribeLiveDrmUsageDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+     * <p>The time granularity of the queried data. Unit: seconds. Valid values:</p>
      * <ul>
      * <li>300</li>
      * <li>3600</li>
      * <li>86400</li>
      * </ul>
-     * <p>Default value: 3600.</p>
+     * <p>If you do not set this parameter or set it to an unsupported value, the default value 3600 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -45,11 +45,17 @@ public class DescribeLiveDrmUsageDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The key that is used to group data. The following keys are supported: domain, region, and drm_type. If you want to specify multiple keys, separate them with commas (,). Default value: domain,region,drm_type. If you leave this parameter empty or set it to null, the returned data is not grouped.</p>
+     * <p>The grouping key. Default value: domain,region,drm_type. You can specify one or more of the following values: domain, region, and drm_type. Separate multiple values with commas (,). Set this parameter to an empty string or null to disable grouping by these keys.</p>
      * 
      * <strong>example:</strong>
      * <p>domain,region,drm_type</p>
@@ -58,7 +64,7 @@ public class DescribeLiveDrmUsageDataRequest extends TeaModel {
     public String splitBy;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The minimum time granularity is 5 minutes.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC. The minimum data granularity is 5 minutes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

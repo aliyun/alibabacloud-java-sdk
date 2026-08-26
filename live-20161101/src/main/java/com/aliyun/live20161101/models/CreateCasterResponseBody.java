@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCasterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the production studio. You can specify the ID in a request to query the streaming URLs of the production studio, start the production studio, add a video resource, a layout, a component, or a playlist to the production studio, or query layouts of the production studio.</p>
+     * <p>The ID of the production studio. You can use this ID as a request parameter to query stream URLs, start the production studio, add video resources, add layouts, query the layout list, add components, and add playlists.</p>
      * 
      * <strong>example:</strong>
      * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>

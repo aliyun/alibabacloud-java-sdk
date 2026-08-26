@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamTranscodeMetricDataRequest extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>app</p>
@@ -14,7 +14,7 @@ public class DescribeLiveStreamTranscodeMetricDataRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The domain name. You can specify only one domain name in each request.</p>
+     * <p>The domain name. Only a single domain name can be queried at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeLiveStreamTranscodeMetricDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,8 +34,8 @@ public class DescribeLiveStreamTranscodeMetricDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>A pagination token. When you call this operation, up to 5,000 rows of data can be returned per query. If the number of rows exceeds 5,000, the response includes a pagination token that is used in the next request to retrieve a new page of results.</p>
-     * <p>When you specify the token in the next query, data continues to be obtained from the end of the previous query.</p>
+     * <p>The paged query token. Each query returns a maximum of 5,000 rows of data. If the data to be queried exceeds 5,000 rows, the response provides the start index for the next query.</p>
+     * <p>Pass this token in the request to continue querying data from the row after the last row returned in the previous query. This token is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>UjsM9x3aVcJi9a0-ArwJUTTC67C***37C0=</p>
@@ -46,11 +46,17 @@ public class DescribeLiveStreamTranscodeMetricDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +66,7 @@ public class DescribeLiveStreamTranscodeMetricDataRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the stream.</p>
+     * <p>The stream name.</p>
      * 
      * <strong>example:</strong>
      * <p>stream</p>

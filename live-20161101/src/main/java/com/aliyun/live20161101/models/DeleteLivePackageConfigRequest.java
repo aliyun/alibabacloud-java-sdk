@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLivePackageConfigRequest extends TeaModel {
     /**
-     * <p>App name, <code>*</code> matches all names.</p>
+     * <p>The AppName of all live streams. An asterisk (\*) matches all AppNames.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteLivePackageConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>Live streaming domain (primary playback domain).</p>
+     * <p>The main streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,17 @@ public class DeleteLivePackageConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Live stream name, <code>*</code> matches all streams under AppName.</p>
+     * <p>The stream name. An asterisk (\*) matches all streams under the specified AppName.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

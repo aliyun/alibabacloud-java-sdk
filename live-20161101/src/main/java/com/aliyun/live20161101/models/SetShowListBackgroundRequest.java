@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetShowListBackgroundRequest extends TeaModel {
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId value returned by the CreateCaster operation.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, navigate to <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studios</strong> &gt; <strong>Cloud Production Studio</strong> to view the production studio name.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The production studio name in the production studio list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,9 +24,9 @@ public class SetShowListBackgroundRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the material in ApsaraVideo VOD.</p>
+     * <p>The video-on-demand material ID.</p>
      * <blockquote>
-     * <p> Specify either this parameter or the ResourceUrl parameter.</p>
+     * <p>Specify either this parameter or ResourceUrl.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,18 +38,27 @@ public class SetShowListBackgroundRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>The material type. Valid values:</p>
      * <ul>
-     * <li>LIVE: live stream. You can add a live stream from ApsaraVideo Live or by using a third-party URL.</li>
-     * <li>VOD: on-demand video. You can add an on-demand video from ApsaraVideo VOD or by using a third-party URL.</li>
-     * <li>PIC: image. You can add an image from ApsaraVideo VOD or by using a third-party URL.</li>
+     * <li><p>LIVE: live streaming material. Supports live streaming materials and third-party URLs.</p>
+     * </li>
+     * <li><p>VOD: video-on-demand material. Supports video-on-demand materials and third-party URLs.</p>
+     * </li>
+     * <li><p>PIC: image material. Supports video-on-demand materials and third-party URLs.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Set this parameter to one of the preceding values, or leave this parameter empty.</p>
+     * <p>Specify one of the three values or leave this parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +68,7 @@ public class SetShowListBackgroundRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The URL of the third-party material.</p>
+     * <p>The URL of the external material.</p>
      */
     @NameInMap("ResourceUrl")
     public String resourceUrl;

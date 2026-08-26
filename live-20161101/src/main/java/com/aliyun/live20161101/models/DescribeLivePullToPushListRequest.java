@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLivePullToPushListRequest extends TeaModel {
     /**
-     * <p>The destination URL. Fuzzy search is performed based on the destination URL.</p>
+     * <p>The destination ingest URL. Fuzzy search is performed based on the destination ingest URL.</p>
      * 
      * <strong>example:</strong>
      * <p>rtmp://qd</p>
@@ -19,7 +19,7 @@ public class DescribeLivePullToPushListRequest extends TeaModel {
     /**
      * <p>The page number.</p>
      * <blockquote>
-     * <p> The value must be greater than 0 and not greater than the maximum value of the Integer data type. Default value: 1.</p>
+     * <p>The value of this parameter must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: 1.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class DescribeLivePullToPushListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page.</p>
      * <blockquote>
-     * <p> Valid values: [1,100]. Default value: 10.</p>
+     * <p>Default value: 10. Valid values: 1 to 100.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,12 @@ public class DescribeLivePullToPushListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region of the live center. Valid values:</p>
+     * <p>The live center to query. Valid values:</p>
      * <ul>
-     * <li>ap-southeast-1: Singapore</li>
-     * <li>ap-southeast-5: Indonesia (Jakarta)</li>
-     * <li>cn-beijing: China (Beijing)</li>
-     * <li>cn-shanghai: China (Shanghai)</li>
+     * <li>ap-southeast-1 (Singapore)</li>
+     * <li>ap-southeast-5 (Indonesia)</li>
+     * <li>cn-beijing (Beijing)</li>
+     * <li>cn-shanghai (Shanghai)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,13 +56,19 @@ public class DescribeLivePullToPushListRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The task ID. Fuzzy search is performed based on the task ID.</p>
      * <blockquote>
-     * <p> The ID can be up to 55 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The task ID consists of uppercase and lowercase letters, digits, underscores (_), and hyphens (-), with a maximum of 55 characters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

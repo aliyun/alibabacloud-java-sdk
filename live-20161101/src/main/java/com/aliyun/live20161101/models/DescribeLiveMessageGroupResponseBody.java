@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveMessageGroupResponseBody extends TeaModel {
     /**
-     * <p>The list of the group administrators.</p>
+     * <p>The list of administrators.</p>
      */
     @NameInMap("AdminList")
     public java.util.List<String> adminList;
 
     /**
-     * <p>The time when the group was created. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The creation time. This value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1698305471</p>
@@ -20,7 +20,7 @@ public class DescribeLiveMessageGroupResponseBody extends TeaModel {
     public Long createtime;
 
     /**
-     * <p>The ID of the group creator.</p>
+     * <p>The creator ID.</p>
      * 
      * <strong>example:</strong>
      * <p>uid1</p>
@@ -29,7 +29,7 @@ public class DescribeLiveMessageGroupResponseBody extends TeaModel {
     public String creatorId;
 
     /**
-     * <p>The time when the group was deleted. This parameter is returned only if the group was deleted.</p>
+     * <p>The deletion time. This parameter is returned only when the group has been deleted. This value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1698299827</p>
@@ -38,7 +38,7 @@ public class DescribeLiveMessageGroupResponseBody extends TeaModel {
     public Long deletatime;
 
     /**
-     * <p>Indicates whether the group was deleted.</p>
+     * <p>Indicates whether the group has been deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -47,7 +47,7 @@ public class DescribeLiveMessageGroupResponseBody extends TeaModel {
     public Boolean delete;
 
     /**
-     * <p>The ID of the user who deleted the group. This parameter is returned only if the group was deleted.</p>
+     * <p>The user who deleted the group. This parameter is returned only when the group has been deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>uid1</p>
@@ -59,13 +59,13 @@ public class DescribeLiveMessageGroupResponseBody extends TeaModel {
      * <p>The group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>grouptest1</p>
+     * <p>grouptest</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>Additional information about the group.</p>
+     * <p>The extended information of the group.</p>
      * 
      * <strong>example:</strong>
      * <p>testgroupinfo</p>
@@ -74,7 +74,7 @@ public class DescribeLiveMessageGroupResponseBody extends TeaModel {
     public String groupInfo;
 
     /**
-     * <p>The name of the group.</p>
+     * <p>The group name.</p>
      * 
      * <strong>example:</strong>
      * <p>mytestgroup</p>
@@ -83,13 +83,13 @@ public class DescribeLiveMessageGroupResponseBody extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The categorized message statistics. This parameter is returned only if the group exists.</p>
+     * <p>The message count statistics by category. This parameter is returned only when the group exists.</p>
      */
     @NameInMap("MsgAmount")
     public java.util.Map<String, Long> msgAmount;
 
     /**
-     * <p>The number of online users in the group. This parameter is returned only if the group exists.</p>
+     * <p>The number of online users in the group. This parameter is returned only when the group exists.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -101,16 +101,16 @@ public class DescribeLiveMessageGroupResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>1815A27D-BAE2-10E6-89FD-D477951C67C7</p>
+     * <p>1815A27D-BAE2-10E6-89FD-D477951C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the group is a super group. Valid values:</p>
+     * <p>Indicates whether the group is a super large group. Valid values:</p>
      * <ul>
-     * <li>True</li>
-     * <li>False</li>
+     * <li>True: The group is a super large group.</li>
+     * <li>False: The group is not a super large group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeLiveMessageGroupResponseBody extends TeaModel {
     public Boolean superLargeGroup;
 
     /**
-     * <p>The total number of sessions. This parameter is returned only if the group exists.</p>
+     * <p>The total number of sessions. This parameter is returned only when the group exists.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

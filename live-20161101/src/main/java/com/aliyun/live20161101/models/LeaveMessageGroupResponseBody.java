@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LeaveMessageGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -14,7 +14,7 @@ public class LeaveMessageGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>Return result.</p>
      */
     @NameInMap("Result")
     public LeaveMessageGroupResponseBodyResult result;
@@ -42,10 +42,10 @@ public class LeaveMessageGroupResponseBody extends TeaModel {
 
     public static class LeaveMessageGroupResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the user left the message group. Valid values:</p>
+         * <p>Indicates whether the user successfully left the message group. Valid values:</p>
          * <ul>
-         * <li>true: The user left the message group.</li>
-         * <li>false: The user failed to leave the message group.</li>
+         * <li>true: Successful.</li>
+         * <li>false: Unsuccessful.</li>
          * </ul>
          * 
          * <strong>example:</strong>

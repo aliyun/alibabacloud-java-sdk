@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The name of the application.</p>
      * <blockquote>
-     * <p> If you want to configure triggered stream pulling for all applications, set the value to <strong>ali_all_app</strong>.</p>
+     * <p>To trigger origin fetch for all applications, set this parameter to <strong>ali_all_app</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,9 +31,9 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the application for back-to-origin stream pulling.</p>
+     * <p>The source application name.</p>
      * <blockquote>
-     * <p> If you want to use the application specified in the streaming URL, leave this parameter empty.</p>
+     * <p>Leave this parameter empty to use the application name from the playback URL of the source stream.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     public String pullAppName;
 
     /**
-     * <p>The origin server address of the live stream. Separate multiple addresses with semicolons (;).</p>
+     * <p>The origin server that hosts the live stream. To specify multiple origin servers, separate them with semicolons (;).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,11 +53,14 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     public String pullDomainName;
 
     /**
-     * <p>The protocol for back-to-origin stream pulling. Valid values:</p>
+     * <p>The protocol to use for pulling the stream from the source. Valid values:</p>
      * <ul>
-     * <li><strong>rtmp</strong></li>
-     * <li><strong>httpflv</strong></li>
-     * <li><strong>hls</strong></li>
+     * <li><p><strong>rtmp</strong></p>
+     * </li>
+     * <li><p><strong>httpflv</strong></p>
+     * </li>
+     * <li><p><strong>hls</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -67,14 +70,22 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     @NameInMap("PullProtocol")
     public String pullProtocol;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to trigger stream pulling when the transcoded stream is played. The default value is <strong>no</strong>. Valid values:</p>
+     * <p>Specifies whether to trigger stream pulling when a request for a transcoded stream is made. Default value: <strong>no</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong></li>
-     * <li><strong>no</strong></li>
+     * <li><p><strong>yes</strong></p>
+     * </li>
+     * <li><p><strong>no</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

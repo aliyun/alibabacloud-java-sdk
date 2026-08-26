@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStreamLocationBlockResponseBody extends TeaModel {
     /**
-     * <p>The total number of entries that meet the specified conditions.</p>
+     * <p>The total number of entries that meet the specified criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class DescribeStreamLocationBlockResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -44,7 +44,7 @@ public class DescribeStreamLocationBlockResponseBody extends TeaModel {
     public DescribeStreamLocationBlockResponseBodyStreamBlockList streamBlockList;
 
     /**
-     * <p>The total number of pages.</p>
+     * <p>The total number of pages returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

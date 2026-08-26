@@ -7,11 +7,13 @@ public class DescribeCasterLayoutsRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value returned in the response.</p>
+     * </li>
+     * <li><p>If you created the production studio in the LIVE console, find the ID on the <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> page.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,8 +24,8 @@ public class DescribeCasterLayoutsRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the layout.</p>
-     * <p>If you do not specify a layout ID, all layouts of the production studio are queried.</p>
+     * <p>The layout ID.</p>
+     * <p>If you do not provide a value for LayoutId, all layouts of the production studio are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>72d2ec7a-4cd7-4a01-974b-7cd53947****</p>
@@ -34,6 +36,12 @@ public class DescribeCasterLayoutsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -14,7 +14,7 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The end of the time range for which the data was queried.</p>
+     * <p>The end time. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-10T21:00:00Z</p>
@@ -23,13 +23,13 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The average latency of first frames at each interval. Unit: milliseconds.</p>
+     * <p>The average first frame delay for each time interval. Unit: milliseconds.</p>
      */
     @NameInMap("FrameDelayData")
     public java.util.List<DescribeRTSNativeSDKFirstFrameDelayResponseBodyFrameDelayData> frameDelayData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
@@ -38,7 +38,7 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range for which the data was queried.</p>
+     * <p>The start time. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-10T20:00:00Z</p>
@@ -93,7 +93,7 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
 
     public static class DescribeRTSNativeSDKFirstFrameDelayResponseBodyFrameDelayData extends TeaModel {
         /**
-         * <p>The average latency of first frames within the period of time.</p>
+         * <p>The average first frame delay during the time interval.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -102,7 +102,7 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
         public String frameDelay;
 
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The beginning of the time interval. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-10T20:00:00Z</p>

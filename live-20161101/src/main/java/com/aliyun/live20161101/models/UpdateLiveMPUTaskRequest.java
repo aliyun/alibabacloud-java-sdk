@@ -27,8 +27,10 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
     /**
      * <p>The stream mixing mode. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: the single-stream relay mode. In this mode, the service only relays the original single stream, but does not transcode mixed streams. You do not need to set parameters for mixed-stream transcoding.</li>
-     * <li><strong>1</strong> (default): the mixed-stream relay mode.</li>
+     * <li><p><strong>0</strong>: the single-stream relay mode. In this mode, the service only relays the original single stream, but does not transcode mixed streams. You do not need to set parameters for mixed-stream transcoding.</p>
+     * </li>
+     * <li><p><strong>1</strong> (default): the mixed-stream relay mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,9 +62,12 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li>If the ingest URL is under a domain name for which hotlink protection is enabled, you must include an access token in the URL.</li>
-     * <li>You cannot use the same ingest URL in different tasks.</li>
-     * <li>You cannot use the same ingest URL within 10 seconds after a task is stopped.</li>
+     * <li><p>If the ingest URL is under a domain name for which hotlink protection is enabled, you must include an access token in the URL.</p>
+     * </li>
+     * <li><p>You cannot use the same ingest URL in different tasks.</p>
+     * </li>
+     * <li><p>You cannot use the same ingest URL within 10 seconds after a task is stopped.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -168,11 +173,13 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>Specifies whether to perform stream relay by using Alibaba Cloud CDN. Valid values:</p>
          * <ul>
-         * <li>false: performs stream relay by using a CDN service that is not Alibaba Cloud CDN.</li>
-         * <li>true: performs stream relay by using Alibaba Cloud CDN.</li>
+         * <li><p>false: performs stream relay by using a CDN service that is not Alibaba Cloud CDN.</p>
+         * </li>
+         * <li><p>true: performs stream relay by using Alibaba Cloud CDN.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The default value of this parameter is false.</p>
+         * <p>The default value of this parameter is false.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -217,8 +224,10 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>Specifies whether to include the SEI in an Instantaneous Decoder Refresh (IDR) frame. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: does not include the SEI.</li>
-         * <li><strong>1</strong>: includes the SEI.</li>
+         * <li><p><strong>0</strong>: does not include the SEI.</p>
+         * </li>
+         * <li><p><strong>1</strong>: includes the SEI.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,8 +272,10 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>Specifies whether to include the SEI in an IDR frame. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: does not include the SEI.</li>
-         * <li><strong>1</strong>: includes the SEI.</li>
+         * <li><p><strong>0</strong>: does not include the SEI.</p>
+         * </li>
+         * <li><p><strong>1</strong>: includes the SEI.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -379,8 +390,10 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The type of the video source. This parameter is valid only when you set StreamType to 2. Valid values:</p>
          * <ul>
-         * <li><strong>camera</strong> (default)</li>
-         * <li><strong>shareScreen</strong></li>
+         * <li><p><strong>camera</strong> (default)</p>
+         * </li>
+         * <li><p><strong>shareScreen</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,9 +405,12 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The type of the stream that you want to relay. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (default): original stream</li>
-         * <li><strong>1</strong>: only the audio track</li>
-         * <li><strong>2</strong>: only the video track</li>
+         * <li><p><strong>0</strong> (default): original stream</p>
+         * </li>
+         * <li><p><strong>1</strong>: only the audio track</p>
+         * </li>
+         * <li><p><strong>2</strong>: only the video track</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -448,8 +464,10 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The display mode of the global background image.</p>
          * <ul>
-         * <li><strong>0</strong>: scales the background image proportionally to fit the view, with black bars displayed.</li>
-         * <li><strong>1</strong> (default): crops the background image to fit the view.</li>
+         * <li><p><strong>0</strong>: scales the background image proportionally to fit the view, with black bars displayed.</p>
+         * </li>
+         * <li><p><strong>1</strong> (default): crops the background image to fit the view.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -512,8 +530,10 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>Specifies whether the output stream is an audio-only stream. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The output stream is an audio-only stream. If you set this parameter to true, you need to configure only audio-related parameters under EncodeParams.</li>
-         * <li><strong>false</strong> (default): The output stream is not an audio-only stream. If you set this parameter to false, you need to configure all parameters under EncodeParams, except the VideoCodec and EnhancedParam parameters.</li>
+         * <li><p><strong>true</strong>: The output stream is an audio-only stream. If you set this parameter to true, you need to configure only audio-related parameters under EncodeParams.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): The output stream is not an audio-only stream. If you set this parameter to false, you need to configure all parameters under EncodeParams, except the VideoCodec and EnhancedParam parameters.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -534,11 +554,13 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The parameter used for encoding enhancement, which is a JSON string. The parameter includes the optional profile and preset fields.</p>
          * <ul>
-         * <li>profile: the encoding level. If the video codec is H.264, the valid values of this field are baseline, main, and high. If the video codec is H.265, the valid value of this field is main.</li>
-         * <li>preset: adjusts the trade-off between encoding speed and video quality. The valid values of this field are ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, and placebo. Each value specifies a level of trade-off between encoding speed and video quality. For example, the ultrafast preset has the fastest encoding speed but the lowest video quality, while the placebo preset sacrifices the encoding speed for the best video quality.</li>
+         * <li><p>profile: the encoding level. If the video codec is H.264, the valid values of this field are baseline, main, and high. If the video codec is H.265, the valid value of this field is main.</p>
+         * </li>
+         * <li><p>preset: adjusts the trade-off between encoding speed and video quality. The valid values of this field are ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, and placebo. Each value specifies a level of trade-off between encoding speed and video quality. For example, the ultrafast preset has the fastest encoding speed but the lowest video quality, while the placebo preset sacrifices the encoding speed for the best video quality.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> A value of superfast for the preset field is suitable for real-time communication scenarios. We recommend that you not set the field if you are not a professional encoding engineer.</p>
+         * <p>A value of superfast for the preset field is suitable for real-time communication scenarios. We recommend that you not set the field if you are not a professional encoding engineer.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -559,8 +581,10 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The video codec. Valid values:</p>
          * <ul>
-         * <li>H.264 (default)</li>
-         * <li>H.265</li>
+         * <li><p>H.264 (default)</p>
+         * </li>
+         * <li><p>H.265</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -713,8 +737,10 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The type of the video source. This parameter is valid only when you set StreamType to 2. Valid values:</p>
          * <ul>
-         * <li><strong>camera</strong> (default)</li>
-         * <li><strong>shareScreen</strong></li>
+         * <li><p><strong>camera</strong> (default)</p>
+         * </li>
+         * <li><p><strong>shareScreen</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -785,8 +811,10 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The display mode of the pane. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: scales the video proportionally to fit the view, with black bars displayed.</li>
-         * <li><strong>1 (default)</strong>: crops the video to fit the view.</li>
+         * <li><p><strong>0</strong>: scales the video proportionally to fit the view, with black bars displayed.</p>
+         * </li>
+         * <li><p><strong>1 (default)</strong>: crops the video to fit the view.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -951,8 +979,10 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The type of the video source that is subscribed to. This parameter is valid only when you set StreamType to 2. Valid values:</p>
          * <ul>
-         * <li><strong>camera</strong> (default)</li>
-         * <li><strong>shareScreen</strong></li>
+         * <li><p><strong>camera</strong> (default)</p>
+         * </li>
+         * <li><p><strong>shareScreen</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -964,9 +994,12 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The type of the relayed stream that is subscribed to. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (default): original stream</li>
-         * <li><strong>1</strong>: only the audio track</li>
-         * <li><strong>2</strong>: only the video track</li>
+         * <li><p><strong>0</strong> (default): original stream</p>
+         * </li>
+         * <li><p><strong>1</strong>: only the audio track</p>
+         * </li>
+         * <li><p><strong>2</strong>: only the video track</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1040,7 +1073,7 @@ public class UpdateLiveMPUTaskRequest extends TeaModel {
         /**
          * <p>The video layout information.</p>
          * <blockquote>
-         * <p> If video transcoding is required, you must specify the video layout information, including the x-coordinate and y-coordinate, the width and height, and the layer. For audio-only transcoding, leave the video layout information empty.</p>
+         * <p>If video transcoding is required, you must specify the video layout information, including the x-coordinate and y-coordinate, the width and height, and the layer. For audio-only transcoding, leave the video layout information empty.</p>
          * </blockquote>
          */
         @NameInMap("Layout")

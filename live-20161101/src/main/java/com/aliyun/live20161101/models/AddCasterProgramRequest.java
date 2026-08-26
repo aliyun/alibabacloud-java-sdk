@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class AddCasterProgramRequest extends TeaModel {
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster operation</a>, check the CasterId value returned by the CreateCaster operation.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, navigate to <strong>ApsaraVideo Live console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> to view the production studio name.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The production studio name in the production studio list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,7 +24,7 @@ public class AddCasterProgramRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The information about episodes in the episode list.</p>
+     * <p>The program list information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Episode")
@@ -31,6 +33,12 @@ public class AddCasterProgramRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -73,11 +81,11 @@ public class AddCasterProgramRequest extends TeaModel {
 
     public static class AddCasterProgramRequestEpisode extends TeaModel {
         /**
-         * <p>The components. Components in the production studio are listed from the bottom to the top in an array.</p>
+         * <p>The component list. Elements are arranged from bottom to top in order.</p>
          * <blockquote>
-         * <p> This parameter is required and takes effect when the Episode.N.EpisodeType parameter is set to Component.</p>
+         * <p>Notice: This parameter is valid and required when Episode.N.EpisodeType is set to <strong>Component</strong>.</p>
          * </blockquote>
-         * <p>This parameter is optional when the Episode.N.EpisodeType parameter is set to <strong>Resource</strong>. In this case, if this parameter is specified, the components are bound to and switched together with video resources.</p>
+         * <p> When the node type is <strong>Resource</strong>, this indicates that the component is bound to the video source and switches synchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>[ &quot;a2b8e671-2fe5-4642-a2ec-bf931826****&quot;,  &quot;a2b8e671-2fe5-4642-a2ec-28374657****&quot;]</p>
@@ -86,7 +94,7 @@ public class AddCasterProgramRequest extends TeaModel {
         public java.util.List<String> componentId;
 
         /**
-         * <p>The end time of the episode. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC). This parameter is required. If not specified, MissingParameter is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-06-29T10:02:00Z</p>
@@ -95,7 +103,7 @@ public class AddCasterProgramRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The name of the episode.</p>
+         * <p>The program name.</p>
          * 
          * <strong>example:</strong>
          * <p>program_name_1</p>
@@ -104,11 +112,16 @@ public class AddCasterProgramRequest extends TeaModel {
         public String episodeName;
 
         /**
-         * <p>The type of the episode.</p>
+         * <p>The node type. Valid values: </p>
          * <ul>
-         * <li><strong>Resource</strong>: a video resource If you set this parameter to Resource, you must specify the Episode.N.ResourceId and Episode.N.SwitchType parameters.</li>
-         * <li><strong>Component</strong>: a component If you set this parameter to Component, you must specify the Episode.N.ComponentId.N parameter.</li>
+         * <li><strong>Resource</strong>: video source. If you select Resource, you must also set the request parameters Episode.N.ResourceId and Episode.N.SwitchType.</li>
+         * <li><strong>Component</strong>: component. If you select Component, you must also set the request parameter Episode.N.ComponentId.N.</li>
          * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>When Resource is selected and the referenced resource contains a VodUrl (video-on-demand file), EndTime - StartTime cannot exceed the actual playback duration (in seconds) of the VOD file. Otherwise, InvalidParameter.EndTime is returned.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Resource</p>
@@ -117,13 +130,12 @@ public class AddCasterProgramRequest extends TeaModel {
         public String episodeType;
 
         /**
-         * <p>The ID of the video resource.</p>
+         * <p>The video source ID.</p>
          * <blockquote>
-         * <p> This parameter takes effect and is required when the Episode.N.EpisodeType parameter is set to Resource.</p>
+         * <p>Notice: This parameter is valid and required when Episode.N.EpisodeType is set to <strong>Resource</strong>.</p>
          * </blockquote>
-         * <p>\
-         * This parameter is invalid if you set the Episode.N.EpisodeType parameter to <strong>Component</strong>.</p>
-         * <p>If the video resource was added by calling the <a href="https://help.aliyun.com/document_detail/60250.html">AddCasterVideoResource</a> operation, check the value of the response parameter ResourceId to obtain the ID.</p>
+         * <p> This parameter is not applicable when Episode.N.EpisodeType is set to <strong>Component</strong>.</p>
+         * <p>If you added the video source by calling the <a href="https://help.aliyun.com/document_detail/60250.html">AddCasterVideoResource operation</a>, check the ResourceId value returned by the AddCasterVideoResource operation.</p>
          * 
          * <strong>example:</strong>
          * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
@@ -132,7 +144,7 @@ public class AddCasterProgramRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The start time of the episode. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC). This parameter is required. If not specified, MissingParameter is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-06-29T09:00:00Z</p>
@@ -141,13 +153,13 @@ public class AddCasterProgramRequest extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The policy for switching episodes. Valid values:</p>
+         * <p>The switch policy. Valid values:</p>
          * <blockquote>
-         * <p> This parameter takes effect only when the Episode.N.EpisodeType parameter is set to Resource.</p>
+         * <p>Notice: This parameter is valid only when Episode.N.EpisodeType is set to <strong>Resource</strong>.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>TimeFirst</strong>: The episode starts when the previous episode ends and ends when the next episode starts. If no next episode exists, the episode keeps repeating until a new episode is added or the production studio stops. This value is required for live video resources.</li>
-         * <li><strong>ContentFirst</strong>: The episode starts and ends as scheduled.</li>
+         * <li><strong>TimeFirst</strong>: time first. Live video sources can only use the time first policy. </li>
+         * <li><strong>ContentFirst</strong>: content first.</li>
          * </ul>
          * 
          * <strong>example:</strong>

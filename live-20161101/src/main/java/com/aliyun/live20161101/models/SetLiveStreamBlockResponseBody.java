@@ -7,8 +7,8 @@ public class SetLiveStreamBlockResponseBody extends TeaModel {
     /**
      * <p>The result description.</p>
      * <ul>
-     * <li>If the request was successful, ok is returned.</li>
-     * <li>If the request failed, the failure detail is returned.</li>
+     * <li>Success: ok.</li>
+     * <li>Failure: failure details.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +27,13 @@ public class SetLiveStreamBlockResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>ok: The request was successful.</li>
-     * <li>fail: The request failed.</li>
+     * <li>ok: succeeded.</li>
+     * <li>fail: failed.</li>
      * </ul>
      * <blockquote>
-     * <p> If any parameter failed to be configured, the request failed.</p>
+     * <p>The task is considered failed if any single subtask fails to be created.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The name of the application to which the stream belongs. You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>liveApp****</p>
@@ -14,7 +14,12 @@ public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain of the streamer.</p>
+     * <blockquote>
+     * <ul>
+     * <li>When you specify DomainName, make sure that the domain name is a live streaming domain name and that you have the permissions to manage the domain name.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +29,12 @@ public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether to return only specific parameters. Valid values:</p>
+     * <p>Specifies whether to return only specified fields. Valid values:  </p>
      * <ul>
-     * <li><strong>yes</strong>: returns only the DomainName, AppName, StreamName, and PublishTime parameters.</li>
-     * <li><strong>no</strong>: returns all parameters. This is the default value.</li>
+     * <li><p><strong>yes</strong>: Only the DomainName, AppName, StreamName, and PublishTime fields are returned.  </p>
+     * </li>
+     * <li><p><strong>no</strong> (default): All fields are returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +65,12 @@ public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The mode in which stream names are matched. Valid values:</p>
+     * <p>Specifies whether to use fuzzy match for the stream name. Valid values:</p>
      * <ul>
-     * <li><strong>fuzzy</strong> (default): fuzzy match</li>
-     * <li><strong>strict</strong>: exact match</li>
+     * <li><p><strong>fuzzy</strong> (default): fuzzy match.</p>
+     * </li>
+     * <li><p><strong>strict</strong>: exact match.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,11 +79,17 @@ public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
     @NameInMap("QueryType")
     public String queryType;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the live stream. You can specify only one live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+     * <p>The stream name. Only a single StreamName can be specified. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>
@@ -83,11 +98,14 @@ public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
     public String streamName;
 
     /**
-     * <p>The type of the streams to query. Valid values:</p>
+     * <p>The stream type. Valid values:  </p>
      * <ul>
-     * <li><strong>all</strong> (default): all streams</li>
-     * <li><strong>raw</strong>: source streams</li>
-     * <li><strong>trans</strong>: transcoded streams</li>
+     * <li><p><strong>all</strong> (default): all streams.</p>
+     * </li>
+     * <li><p><strong>raw</strong>: raw streams.</p>
+     * </li>
+     * <li><p><strong>trans</strong>: transcoded streams.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

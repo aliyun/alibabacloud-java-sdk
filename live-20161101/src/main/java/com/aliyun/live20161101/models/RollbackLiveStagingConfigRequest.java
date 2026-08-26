@@ -15,7 +15,7 @@ public class RollbackLiveStagingConfigRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The name of the feature. For more information about how to obtain the feature name, see <a href="https://help.aliyun.com/document_detail/297374.html">DescribeLiveDomainStagingConfig</a>.</p>
+     * <p>The name of the feature. To obtain the feature name, call the <a href="https://help.aliyun.com/document_detail/297374.html">DescribeLiveDomainStagingConfig</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,12 @@ public class RollbackLiveStagingConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

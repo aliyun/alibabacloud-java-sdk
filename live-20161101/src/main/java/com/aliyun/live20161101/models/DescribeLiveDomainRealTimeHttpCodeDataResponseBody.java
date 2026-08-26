@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the entries returned. Unit: seconds Default value: 60.</p>
+     * <p>The time interval between consecutive data entries. Unit: seconds. Default value: 60.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -23,7 +23,7 @@ public class DescribeLiveDomainRealTimeHttpCodeDataResponseBody extends TeaModel
     public String domainName;
 
     /**
-     * <p>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2015-11-30T05:40:00Z</p>
@@ -44,7 +44,7 @@ public class DescribeLiveDomainRealTimeHttpCodeDataResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The start time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2015-11-30T05:33:00Z</p>

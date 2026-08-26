@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveStreamWatermarkRequest extends TeaModel {
     /**
-     * <p>The description of the watermark.</p>
+     * <p>A custom description for the watermark.</p>
      * 
      * <strong>example:</strong>
      * <p>my watermark</p>
@@ -23,7 +23,7 @@ public class AddLiveStreamWatermarkRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The height of the watermark. Unit: pixels. The height of the watermark is scaled in proportion to the height of the background video.</p>
+     * <p>The height of the watermark image, in pixels. This value is relative to <code>RefHeight</code> and will be scaled proportionally with the actual video resolution.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class AddLiveStreamWatermarkRequest extends TeaModel {
     public Integer height;
 
     /**
-     * <p>The name of the watermark.</p>
+     * <p>The name of the watermark template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,12 +43,16 @@ public class AddLiveStreamWatermarkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The location of the watermark. Valid values:</p>
+     * <p>The anchor point for the watermark\&quot;s position. Valid values:</p>
      * <ul>
-     * <li>TopLeft: the upper-left corner.</li>
-     * <li>TopRight: the upper-right corner.</li>
-     * <li>BottomLeft: the lower-left corner.</li>
-     * <li>BottomRight: the lower-right corner.</li>
+     * <li><p>TopLeft</p>
+     * </li>
+     * <li><p>TopRight</p>
+     * </li>
+     * <li><p>BottomLeft</p>
+     * </li>
+     * <li><p>BottomRight</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -72,7 +76,7 @@ public class AddLiveStreamWatermarkRequest extends TeaModel {
     public String pictureUrl;
 
     /**
-     * <p>The height of the background video. Unit: pixels.</p>
+     * <p>The reference height of the video background, in pixels.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +86,7 @@ public class AddLiveStreamWatermarkRequest extends TeaModel {
     public Integer refHeight;
 
     /**
-     * <p>The width of the background video. Unit: pixels.</p>
+     * <p>The reference width of the video background, in pixels.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,11 +95,17 @@ public class AddLiveStreamWatermarkRequest extends TeaModel {
     @NameInMap("RefWidth")
     public Integer refWidth;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The transparency of the watermark. A smaller value indicates a more transparent watermark. Valid values: 0 to 255.</p>
+     * <p>The opacity of the watermark. Value range: <code>0</code> (fully transparent) to <code>255</code> (fully opaque).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,10 +115,9 @@ public class AddLiveStreamWatermarkRequest extends TeaModel {
     public Integer transparency;
 
     /**
-     * <p>The type of the watermark. Valid values:</p>
+     * <p>The type of the watermark. Valid value:</p>
      * <ul>
      * <li><strong>0</strong>: image.</li>
-     * <li><strong>1</strong>: text. Only image watermarks are supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -119,9 +128,9 @@ public class AddLiveStreamWatermarkRequest extends TeaModel {
     public Integer type;
 
     /**
-     * <p>The offset of the watermark along the x-axis. Unit: pixels.</p>
+     * <p>The X-axis offset of the watermark, in pixels.</p>
      * <blockquote>
-     * <p> In this case, the value of the RefWidth parameter is used as the reference. If the OffsetCorner parameter is set to TopLeft, the value of the XOffset parameter indicates the x-axis offset of the upper-left corner of the watermark relative to that of the background video. The directions from the coordinate axes to the center of the background video are positive. In other words, the x-axis is positive toward the right.</p>
+     * <p>Relative to RefWidth. If OffsetCorner is TopLeft, XOffset is the horizontal distance between the top‑left corner of the watermark and the top‑left corner of the background video. Positive X points to the right.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -132,9 +141,9 @@ public class AddLiveStreamWatermarkRequest extends TeaModel {
     public Float XOffset;
 
     /**
-     * <p>The offset of the watermark along the y-axis. Unit: pixels.</p>
+     * <p>The Y-axis offset of the watermark, in pixels.</p>
      * <blockquote>
-     * <p> In this case, the value of the RefHeight parameter is used as the reference. If the OffsetCorner parameter is set to TopLeft, the value of the YOffset parameter indicates the y-axis offset of the upper-left corner of the watermark relative to that of the background video. The directions from the coordinate axes to the center of the background video are positive. In other words, the y-axis is positive downward.</p>
+     * <p>Relative to RefHeight. If OffsetCorner is TopLeft, YOffset is the vertical distance between the top‑left corner of the watermark and the top‑left corner of the background video. Positive Y points downward.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

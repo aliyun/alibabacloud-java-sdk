@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEdgeTranscodeJobRequest extends TeaModel {
     /**
-     * <p>The ID of the data center.</p>
+     * <p>The data center ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteEdgeTranscodeJobRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the edge transcoding task.</p>
+     * <p>The ID of the edge transcoding job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,12 @@ public class DeleteEdgeTranscodeJobRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

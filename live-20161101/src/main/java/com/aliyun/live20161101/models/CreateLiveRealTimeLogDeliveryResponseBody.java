@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateLiveRealTimeLogDeliveryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>
+     * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

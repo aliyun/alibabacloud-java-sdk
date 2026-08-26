@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRealTimeBpsDataRequest extends TeaModel {
     /**
-     * <p>The streaming domain name or names.</p>
+     * <p>The streaming domain.</p>
      * <p>Separate multiple domain names with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>example.com,example.aliyundoc.com</p>
+     * <p>example1.aliyundoc.com,example2.aliyundoc.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. It must be later than the start time. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z (UTC).</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the data of the hour following the specified start time is returned.</p>
+     * <p>If you do not specify this parameter, data within one hour of the start time is queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,8 +28,8 @@ public class DescribeLiveDomainRealTimeBpsDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The name of the Internet service provider (ISP).</p>
-     * <p>To query ISPs, call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation.</p>
+     * <p>The English name of the carrier.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba</p>
@@ -38,8 +38,8 @@ public class DescribeLiveDomainRealTimeBpsDataRequest extends TeaModel {
     public String ispNameEn;
 
     /**
-     * <p>The name of the region in which you want to query data.</p>
-     * <p>To query regions, call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation.</p>
+     * <p>The English name of the region.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>tianjin</p>
@@ -50,11 +50,17 @@ public class DescribeLiveDomainRealTimeBpsDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2015-11-30T05:39:00Z</p>

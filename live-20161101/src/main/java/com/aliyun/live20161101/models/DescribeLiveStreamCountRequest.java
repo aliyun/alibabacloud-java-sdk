@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamCountRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
+     * <blockquote>
+     * <p>Make sure that the domain name is added to ApsaraVideo Live and that you have the permissions to operate on it.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +20,12 @@ public class DescribeLiveStreamCountRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

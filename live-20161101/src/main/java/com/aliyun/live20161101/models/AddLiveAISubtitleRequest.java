@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddLiveAISubtitleRequest extends TeaModel {
     /**
-     * <p>The background color of the subtitles, which is an RGBA value.</p>
+     * <p>The background color of the subtitle. Specify the value in RGBA format.</p>
      * 
      * <strong>example:</strong>
      * <p>0xFF0000</p>
@@ -14,7 +14,7 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public String bgColor;
 
     /**
-     * <p>The background size of the subtitles. Valid values: [0,1].</p>
+     * <p>The background size of the subtitle. Valid values: [0, 1].</p>
      * 
      * <strong>example:</strong>
      * <p>0.09</p>
@@ -23,7 +23,7 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public Float bgWidthNormalized;
 
     /**
-     * <p>The font weight. Valid values: [0,1].</p>
+     * <p>The font weight. Valid values: [0, 1].</p>
      * 
      * <strong>example:</strong>
      * <p>0.05</p>
@@ -32,7 +32,7 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public Float borderWidthNormalized;
 
     /**
-     * <p>The subtitle template that you copy. Set the value to the name of the subtitle template.</p>
+     * <p>The subtitle template to copy from. Set this parameter to the value of SubtitleName.</p>
      * 
      * <strong>example:</strong>
      * <p>sub01</p>
@@ -41,7 +41,7 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public String copyFrom;
 
     /**
-     * <p>The custom description of the subtitle template. The description can be up to 128 characters in length and can contain letters, digits, and special characters.</p>
+     * <p>The custom description of the subtitle. The description can contain Chinese characters, letters, digits, and special characters, and can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>live AI subtitle template</p>
@@ -50,12 +50,12 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The target language. Valid values:</p>
+     * <p>The target language for translation. Valid values:</p>
      * <ul>
-     * <li>en-US: English </li>
-     * <li>zh-CN: Chinese </li>
-     * <li>es-ES: Spanish </li>
-     * <li>ru-RU: Russian</li>
+     * <li>English: en-US</li>
+     * <li>Chinese: zh-CN</li>
+     * <li>Spanish: es-ES</li>
+     * <li>Russian: ru-RU.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public String dstLanguage;
 
     /**
-     * <p>The font color, which is an RGBA value.</p>
+     * <p>The font color. Specify the value in RGBA format.</p>
      * 
      * <strong>example:</strong>
      * <p>0xFFFFFF</p>
@@ -76,13 +76,13 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     /**
      * <p>The font. Valid values:</p>
      * <ul>
-     * <li>KaiTi (default)</li>
-     * <li>AlibabaPuHuiTi-Regular</li>
-     * <li>AlibabaPuHuiTi-Bold</li>
-     * <li>AlibabaPuHuiTi-Light</li>
-     * <li>NotoSansHans-Regular</li>
-     * <li>NotoSansHans-Bold</li>
-     * <li>NotoSansHans-Light</li>
+     * <li>KaiTi: KaiTi (default)</li>
+     * <li>AlibabaPuHuiTi-Regular: Alibaba PuHuiTi Regular</li>
+     * <li>AlibabaPuHuiTi-Bold: Alibaba PuHuiTi Bold</li>
+     * <li>AlibabaPuHuiTi-Light: Alibaba PuHuiTi Light</li>
+     * <li>NotoSansHans-Regular: Noto Sans SC Regular</li>
+     * <li>NotoSansHans-Bold: Noto Sans SC Bold</li>
+     * <li>NotoSansHans-Light: Noto Sans SC Light.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public String fontName;
 
     /**
-     * <p>The font size. Valid values: [0,1].</p>
+     * <p>The font size. Valid values: [0, 1].</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,17 +102,17 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public Float fontSizeNormalized;
 
     /**
-     * <p>The preview height. Unit: pixels.
-     * The following specifications of preview width × preview height are supported: </p>
+     * <p>The height of the preview screen. Unit: px.</p>
+     * <p>The width × height of the preview screen supports only the following specifications:          </p>
      * <ul>
-     * <li>Landscape low definition 360p (640×360) </li>
-     * <li>Portrait low definition 360p (360×640)</li>
-     * <li>Landscape standard definition 480p (854×480)</li>
-     * <li>Portrait standard definition 480p (480×854)</li>
-     * <li>Landscape high definition 720p (1280×720)</li>
-     * <li>Portrait high definition 720p (720×1280)</li>
-     * <li>Landscape ultra-high definition 1080p (1920×1080)</li>
-     * <li>Portrait ultra-high definition 1080p (1080×1920)</li>
+     * <li>Landscape low definition 360P: 640 × 360 </li>
+     * <li>Portrait low definition 360P: 360 × 640</li>
+     * <li>Landscape standard definition 480P: 854 × 480</li>
+     * <li>Portrait standard definition 480P: 480 × 854</li>
+     * <li>Landscape high definition 720P: 1280 × 720</li>
+     * <li>Portrait high definition 720P: 720 × 1280</li>
+     * <li>Landscape ultra-high definition 1080P: 1920 × 1080</li>
+     * <li>Portrait ultra-high definition 1080P: 1080 × 1920.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public String height;
 
     /**
-     * <p>The number of displayed lines.</p>
+     * <p>The number of lines to display.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -134,12 +134,24 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The position of the subtitles. The value is a pair of coordinates for which the origin of the x and y axes is the lower-left corner of the screen.</p>
+     * <p>The position of the subtitle. The value is the x,y coordinates with the bottom-left corner of the screen as the origin.</p>
+     * <blockquote>
+     * <p>The x and y values must be normalized. The actual values are multiplied by the video height. For example, if the video height is 720p and PositionNormalized is set to [0.1, 0.5], the actual position of the subtitle is x = 72 and y = 360.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[0.32,0.27]</p>
      */
     @NameInMap("PositionNormalized")
     public java.util.List<Float> positionNormalized;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -155,9 +167,9 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     /**
      * <p>The source language. Valid values:</p>
      * <ul>
-     * <li>en-US: English </li>
-     * <li>zh-CN: Chinese </li>
-     * <li>ru-RU: Russian</li>
+     * <li>English: en-US</li>
+     * <li>Chinese: zh-CN</li>
+     * <li>Russian: ru-RU.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -178,7 +190,7 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public String subtitleName;
 
     /**
-     * <p>The preview width. Unit: pixels.</p>
+     * <p>The width of the preview screen. Unit: px.</p>
      * 
      * <strong>example:</strong>
      * <p>1280</p>
@@ -187,7 +199,7 @@ public class AddLiveAISubtitleRequest extends TeaModel {
     public String width;
 
     /**
-     * <p>The number of words displayed per line. Valid values: integers from 1 to 500.</p>
+     * <p>The number of characters per line. Valid values: integers in the range of [1, 500].</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

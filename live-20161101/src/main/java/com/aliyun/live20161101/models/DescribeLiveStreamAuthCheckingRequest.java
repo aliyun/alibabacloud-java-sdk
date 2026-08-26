@@ -17,11 +17,17 @@ public class DescribeLiveStreamAuthCheckingRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The complete ingest URL or streaming URL. You can use the <a href="https://help.aliyun.com/document_detail/197400.html">URL generator</a> to generate a URL.</p>
+     * <p>The complete ingest or streaming URL. You can use the <a href="https://help.aliyun.com/document_detail/197400.html">URL generator</a> to generate a URL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

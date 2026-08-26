@@ -8,7 +8,7 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
     public DescribeLiveStreamsOnlineListResponseBodyOnlineInfo onlineInfo;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5c6a2a0df228-4a64- af62-20e91b9676b3</p>
@@ -35,7 +35,7 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of streams that meet the specified conditions.</p>
+     * <p>The total number of entries that meet the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>
@@ -44,7 +44,7 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
     public Integer totalNum;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainBpsDataRequest extends TeaModel {
     /**
-     * <p>The streaming domain. You can query one or more domain names. If you specify multiple domain names, separate them with commas (,). If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</p>
+     * <p>The streaming domain. You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).
+     * If this parameter is left empty, the merged data of all live streaming domains is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -14,7 +15,7 @@ public class DescribeLiveDomainBpsDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T09:00:00Z</p>
@@ -23,21 +24,20 @@ public class DescribeLiveDomainBpsDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+     * <p>The time granularity of the queried data. Unit: seconds. Valid values:</p>
      * <ul>
      * <li><strong>300</strong> (default)</li>
      * <li><strong>3600</strong></li>
      * <li><strong>86400</strong></li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>If this parameter is not specified or set to an unsupported value, the default value <strong>300</strong> is used.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>If you specify an invalid value or do not specify this parameter, the default value <strong>300</strong> is used.</p>
-     * </li>
-     * <li><p>When the time granularity is <strong>300</strong> seconds, the returned bandwidth is the average bandwidth within the 300 seconds.</p>
-     * </li>
-     * <li><p>When the time granularity is <strong>3600</strong> or <strong>86400</strong> seconds, the returned bandwidth is the peak value of all average bandwidths within each 300-second period.</p>
-     * </li>
+     * <li>When the time granularity is <strong>300</strong>, the returned bps value is the average number of bits transmitted per second within the 300-second interval.</li>
+     * <li>When the time granularity is <strong>3600</strong> or <strong>86400</strong>, the returned bps value is the peak value among all 300-second data points within the query period.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeLiveDomainBpsDataRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The name of the Internet service provider (ISP). You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query a list of available ISPs.</p>
+     * <p>The name of the Internet service provider (ISP) in English. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to obtain the ISP name.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba</p>
@@ -56,7 +56,7 @@ public class DescribeLiveDomainBpsDataRequest extends TeaModel {
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query a list of available regions.</p>
+     * <p>The name of the region in English. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to obtain the region name.</p>
      * 
      * <strong>example:</strong>
      * <p>tianjin</p>
@@ -67,11 +67,17 @@ public class DescribeLiveDomainBpsDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T08:00:00Z</p>

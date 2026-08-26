@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDelayedStreamingUsageRequest extends TeaModel {
     /**
-     * <p>The main streaming domain to query.</p>
+     * <p>The streaming domain name to query.</p>
      * <ul>
-     * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
-     * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+     * <li>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</li>
+     * <li>If this parameter is left empty, the aggregated data of all live streaming domain names is returned by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeLiveDelayedStreamingUsageRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The end time must be later than the start time. We recommend that you specify a time range that is less than or equal to 10 hours.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. The time span cannot exceed 10 hours. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-10-10T21:00:00Z</p>
@@ -27,13 +27,13 @@ public class DescribeLiveDelayedStreamingUsageRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+     * <p>The time granularity of the queried data. Unit: seconds. Valid values:</p>
      * <ul>
      * <li>300</li>
      * <li>3600</li>
      * <li>86400</li>
      * </ul>
-     * <p>If you specify an invalid value or do not specify this parameter, the default value 3600 is used.</p>
+     * <p>If this parameter is left empty or set to an unsupported value, the default value 3600 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -45,18 +45,18 @@ public class DescribeLiveDelayedStreamingUsageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. Separate multiple region IDs with commas (,). Valid values:</p>
+     * <p>The live center to query. You can specify multiple regions. Separate multiple regions with commas (,). Valid values:</p>
      * <ul>
-     * <li>cn-beijing: China (Beijing)</li>
-     * <li>cn-shanghai: China (Shanghai)</li>
-     * <li>cn-shenzhen: China (Shenzhen)</li>
-     * <li>cn-qingdao: China (Qingdao)</li>
+     * <li>cn-beijing: Beijing</li>
+     * <li>cn-shanghai: Shanghai</li>
+     * <li>cn-shenzhen: Shenzhen</li>
+     * <li>cn-qingdao: Qingdao</li>
      * <li>ap-southeast-1: Singapore</li>
-     * <li>eu-central-1: Germany (Frankfurt)</li>
-     * <li>ap-northeast-1: Japan (Tokyo)</li>
-     * <li>ap-southeast-5: Indonesia (Jakarta)</li>
+     * <li>eu-central-1: Germany</li>
+     * <li>ap-northeast-1: Tokyo</li>
+     * <li>ap-southeast-5: Jakarta</li>
      * </ul>
-     * <p>If you leave this parameter empty, data of all regions is aggregated and returned by default.</p>
+     * <p>If this parameter is left empty, the aggregated data of all regions is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -64,18 +64,24 @@ public class DescribeLiveDelayedStreamingUsageRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The key that is used to group data. If you leave this parameter empty, data is aggregated and returned. Valid values:</p>
+     * <p>The grouping key. If this parameter is left empty, user data is aggregated. Valid values:</p>
      * <ul>
-     * <li>domain: The DomainName parameter in the response takes effect only if SplitBy is set to domain.</li>
-     * <li>region: The Region parameter in the response takes effect only if SplitBy is set to region.</li>
-     * <li>stream: The StreamName parameter in the response takes effect only if SplitBy is set to stream.</li>
+     * <li>domain: domain name. If the SplitBy (grouping key) parameter is set to domain, the Domain response parameter takes effect.</li>
+     * <li>region: live center region. If the SplitBy (grouping key) parameter is set to region, the Region response parameter takes effect.</li>
+     * <li>stream: stream name. If the SplitBy (grouping key) parameter is set to stream, the stream response parameter takes effect.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect only if the parameter corresponding to the value of this parameter is not left empty. Otherwise, an error is returned. For example, you cannot set this parameter to domain if the DomainName parameter is left empty.</p>
+     * <p>You can query data only when the parameter corresponding to the grouping key is not empty. Otherwise, an error is returned. For example, when DomainName is empty, you cannot specify domain as the grouping key.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,7 +91,7 @@ public class DescribeLiveDelayedStreamingUsageRequest extends TeaModel {
     public String splitBy;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. By default, data in the last seven days is returned.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC. By default, data of the last seven days is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-10-10T20:00:00Z</p>
@@ -94,7 +100,7 @@ public class DescribeLiveDelayedStreamingUsageRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the stream. Separate multiple stream names with commas (,). By default, data of all streams is aggregated and returned.</p>
+     * <p>The stream name. Separate multiple stream names with commas (,). By default, the data of all stream names is aggregated.</p>
      * 
      * <strong>example:</strong>
      * <p>liveStream****</p>

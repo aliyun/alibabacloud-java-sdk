@@ -8,7 +8,7 @@ public class AddCasterEpisodeGroupContentResponseBody extends TeaModel {
     public AddCasterEpisodeGroupContentResponseBodyItemIds itemIds;
 
     /**
-     * <p>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to create or add episodes, remove episodes, query episodes, edit an episode list, delete an episode list, query the information about an episode list, start playing an episode list, or stop playing an episode list.</p>
+     * <p>The program ID. You can use this ID as a request parameter when you create, add, delete, or query program items. You can also use this ID to edit, delete, query, start, or stop a program.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68X****</p>
@@ -20,7 +20,7 @@ public class AddCasterEpisodeGroupContentResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

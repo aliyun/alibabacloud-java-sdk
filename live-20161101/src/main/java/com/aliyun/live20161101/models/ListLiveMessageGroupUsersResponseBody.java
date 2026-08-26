@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveMessageGroupUsersResponseBody extends TeaModel {
     /**
-     * <p>The ID of the group queried.</p>
+     * <p>The group ID of the group to query.</p>
      * 
      * <strong>example:</strong>
      * <p>grouptest</p>
@@ -14,7 +14,7 @@ public class ListLiveMessageGroupUsersResponseBody extends TeaModel {
     public String groupId;
 
     /**
-     * <p>Indicates whether the current page is followed by another page.</p>
+     * <p>Indicates whether there is a next page.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,7 +23,7 @@ public class ListLiveMessageGroupUsersResponseBody extends TeaModel {
     public Boolean hasmore;
 
     /**
-     * <p>The starting page number for the next query. A value of 0 indicates that no further pages can be queried.</p>
+     * <p>The start position of the next page. A value of 0 indicates that there is no next page.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -41,7 +41,7 @@ public class ListLiveMessageGroupUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about the users.</p>
+     * <p>The array of objects.</p>
      */
     @NameInMap("UserList")
     public java.util.List<ListLiveMessageGroupUsersResponseBodyUserList> userList;
@@ -93,7 +93,7 @@ public class ListLiveMessageGroupUsersResponseBody extends TeaModel {
 
     public static class ListLiveMessageGroupUsersResponseBodyUserList extends TeaModel {
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>uid1</p>
@@ -102,7 +102,7 @@ public class ListLiveMessageGroupUsersResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The additional information about the user.</p>
+         * <p>The extended information of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>info1</p>

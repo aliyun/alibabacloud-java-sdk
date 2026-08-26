@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
     /**
+     * <p>The ID of the ApsaraVideo Real-time Communication application that was queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>7fd341b3-c6fa-43e1-96b8-7295a1dd****</p>
      */
@@ -12,16 +14,29 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
     public String appId;
 
     /**
+     * <p>The audio-only summary duration. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("AudioSummaryDuration")
     public Double audioSummaryDuration;
 
+    /**
+     * <p>The usage statistics information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeLiveRtcRecordUsageDataResponseBodyData> data;
 
     /**
+     * <p>The recording mode. Valid values:</p>
+     * <ul>
+     * <li><p>0: single-stream recording mode.</p>
+     * </li>
+     * <li><p>1: stream mixing recording mode.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -38,6 +53,8 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total summary duration. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>150</p>
      */
@@ -45,6 +62,8 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
     public Double totalSummaryDuration;
 
     /**
+     * <p>The summary duration of video above 720p (including 1080p). Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +71,8 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
     public Double v1080SummaryDuration;
 
     /**
+     * <p>The summary duration of video at 480p or lower. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -59,6 +80,8 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
     public Double v480SummaryDuration;
 
     /**
+     * <p>The summary duration of video at 720p or lower. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -144,6 +167,8 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
 
     public static class DescribeLiveRtcRecordUsageDataResponseBodyData extends TeaModel {
         /**
+         * <p>The audio-only duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -151,6 +176,8 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
         public Double audioDuration;
 
         /**
+         * <p>The timestamp of the data point. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-10T20:00:00Z</p>
          */
@@ -158,6 +185,8 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
         public String timestamp;
 
         /**
+         * <p>The total duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>150</p>
          */
@@ -165,6 +194,8 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
         public Double totalDuration;
 
         /**
+         * <p>The duration of video above 720p. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -172,6 +203,8 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
         public Double v1080Duration;
 
         /**
+         * <p>The duration of video at 480p or lower. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -179,6 +212,8 @@ public class DescribeLiveRtcRecordUsageDataResponseBody extends TeaModel {
         public Double v480Duration;
 
         /**
+         * <p>The duration of video at 720p or lower. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */

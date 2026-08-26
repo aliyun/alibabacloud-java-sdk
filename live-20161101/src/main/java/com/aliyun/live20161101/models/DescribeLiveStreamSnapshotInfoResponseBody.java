@@ -8,9 +8,9 @@ public class DescribeLiveStreamSnapshotInfoResponseBody extends TeaModel {
     public DescribeLiveStreamSnapshotInfoResponseBodyLiveStreamSnapshotInfoList liveStreamSnapshotInfoList;
 
     /**
-     * <p>The time when the next call occurred. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The next start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <blockquote>
-     * <p> If the number of snapshots that were captured within the specified time period exceeds the value of the Limit parameter, this parameter is returned. It indicates the time when the DescribeLiveStreamSnapshotInfo operation was called again. If this parameter is not returned, the number of snapshots that are captured within the specified time period does not exceed the specified limit.</p>
+     * <p>If the content within this time range exceeds the value of Limit, this parameter is returned as the creation time of the next file. You can use this time as the StartTime value and call this operation again to retrieve the next set of content. If this parameter is not returned, the content does not exceed the Limit value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

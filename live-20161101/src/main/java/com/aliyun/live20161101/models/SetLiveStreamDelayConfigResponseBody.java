@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetLiveStreamDelayConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4C747C97-7ECD-4C61-8A92-67AD806331FF</p>

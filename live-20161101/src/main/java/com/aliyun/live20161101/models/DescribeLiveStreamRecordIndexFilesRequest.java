@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveStreamRecordIndexFilesRequest extends TeaModel {
     /**
-     * <p>System-defined parameter. Value: <strong>DescribeLiveStreamRecordIndexFiles</strong>.</p>
+     * <p>The name of the application to which the live stream belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,7 @@ public class DescribeLiveStreamRecordIndexFilesRequest extends TeaModel {
     public String appName;
 
     /**
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <ul>
-     * <li>ApsaraVideo Live stores the information about an M3U8 index file for six months. You can query only the information of index files created in the previous six months.</li>
-     * <li>M3U8 index files are stored in Object Storage Service (OSS) buckets. The retention period is determined by the storage configuration of the OSS buckets.</li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
-     * <p>You can call this operation up to 15 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limits</a>.</p>
+     * <p>The streaming domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +25,7 @@ public class DescribeLiveStreamRecordIndexFilesRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The name of the live stream.</p>
+     * <p>The end time. The interval between EndTime and StartTime cannot exceed 4 days. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,10 +35,10 @@ public class DescribeLiveStreamRecordIndexFilesRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The order in which the entries are sorted based on creation time. Valid values:</p>
+     * <p>The order in which entries are sorted by creation time. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong> (default): ascending order</li>
-     * <li><strong>desc</strong>: descending order</li>
+     * <li><strong>asc</strong> (default): ascending order.</li>
+     * <li><strong>desc</strong>: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +72,7 @@ public class DescribeLiveStreamRecordIndexFilesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +82,7 @@ public class DescribeLiveStreamRecordIndexFilesRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

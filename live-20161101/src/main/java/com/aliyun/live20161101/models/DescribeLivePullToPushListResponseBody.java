@@ -14,7 +14,7 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tasks.</p>
+     * <p>The list of task information.</p>
      */
     @NameInMap("TaskList")
     public java.util.List<DescribeLivePullToPushListResponseBodyTaskList> taskList;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -92,6 +92,9 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePullToPushListResponseBodyTaskListTaskInfo extends TeaModel {
+        @NameInMap("AuthKey")
+        public String authKey;
+
         /**
          * <p>The HTTP callback URL.</p>
          * 
@@ -102,7 +105,7 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public String callbackURL;
 
         /**
-         * <p>The destination URL to which the stream is relayed.</p>
+         * <p>The destination ingest URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://qd.push.lgg.alivecdn.com/testhsc/streamhsc?live_rtmp_*******</p>
@@ -111,7 +114,7 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public String dstUrl;
 
         /**
-         * <p>The end time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The task end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-30T14:30:00Z</p>
@@ -120,7 +123,7 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The file index, which indicates the sequence of the file where the playback starts.</p>
+         * <p>The file index. Playback starts from the nth file.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -128,16 +131,17 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         @NameInMap("FileIndex")
         public Integer fileIndex;
 
+        @NameInMap("NotifyItemSwitch")
+        public String notifyItemSwitch;
+
         /**
-         * <p>The offset of the position where the system starts to read the video resource. Unit: seconds. Valid values: positive numbers.</p>
+         * <p>The start offset, which is the start offset value of the video file. Unit: seconds. The value must be greater than 0.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter indicates an offset from the first frame.</p>
-         * </li>
-         * <li><p>This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</p>
-         * </li>
+         * <li>Indicates the position to start reading from, relative to the first frame.</li>
+         * <li>Valid only for video-on-demand resources or video files.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -146,14 +150,14 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public Integer offset;
 
         /**
-         * <p>The number of playbacks after the first playback is complete. Valid values:</p>
+         * <p>The number of times to repeat playback after the playlist finishes. Valid values:</p>
          * <ul>
-         * <li>0 (default): specifies that the video list is played only once.</li>
-         * <li>\-1: specifies that the video list is played in loop mode.</li>
-         * <li>Positive integer: specifies the number of times the video list repeats after the first playback is complete.</li>
+         * <li>0 (default): Do not repeat.</li>
+         * <li>-1: Loop indefinitely.</li>
+         * <li>Other positive integers: The number of times to repeat playback after the playlist finishes.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</p>
+         * <p>This parameter applies only to video-on-demand or third-party video streams.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -162,8 +166,11 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         @NameInMap("RepeatNumber")
         public Integer repeatNumber;
 
+        @NameInMap("ReqAuth")
+        public String reqAuth;
+
         /**
-         * <p>The number of retries allowed.</p>
+         * <p>The number of retries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -181,7 +188,7 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public Integer retryInterval;
 
         /**
-         * <p>The protocol of the source stream.</p>
+         * <p>The source stream protocol name.</p>
          * 
          * <strong>example:</strong>
          * <p>flv</p>
@@ -190,11 +197,11 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public String sourceProtocol;
 
         /**
-         * <p>The type of the source stream. Valid values:</p>
+         * <p>The source stream type. Valid values:</p>
          * <ul>
-         * <li>live: a live stream</li>
-         * <li>vod: a list of ApsaraVideo VOD resources</li>
-         * <li>url: a list of video resources from a third party</li>
+         * <li>live: live stream.</li>
+         * <li>vod: ApsaraVideo VOD resource.</li>
+         * <li>url: third-party video file resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,13 +211,13 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The source URLs.</p>
+         * <p>The source stream URL addresses.</p>
          */
         @NameInMap("SourceUrls")
         public java.util.List<String> sourceUrls;
 
         /**
-         * <p>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The task start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-04T09:16:00Z</p>
@@ -239,6 +246,14 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public static DescribeLivePullToPushListResponseBodyTaskListTaskInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLivePullToPushListResponseBodyTaskListTaskInfo self = new DescribeLivePullToPushListResponseBodyTaskListTaskInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLivePullToPushListResponseBodyTaskListTaskInfo setAuthKey(String authKey) {
+            this.authKey = authKey;
+            return this;
+        }
+        public String getAuthKey() {
+            return this.authKey;
         }
 
         public DescribeLivePullToPushListResponseBodyTaskListTaskInfo setCallbackURL(String callbackURL) {
@@ -273,6 +288,14 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
             return this.fileIndex;
         }
 
+        public DescribeLivePullToPushListResponseBodyTaskListTaskInfo setNotifyItemSwitch(String notifyItemSwitch) {
+            this.notifyItemSwitch = notifyItemSwitch;
+            return this;
+        }
+        public String getNotifyItemSwitch() {
+            return this.notifyItemSwitch;
+        }
+
         public DescribeLivePullToPushListResponseBodyTaskListTaskInfo setOffset(Integer offset) {
             this.offset = offset;
             return this;
@@ -287,6 +310,14 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         }
         public Integer getRepeatNumber() {
             return this.repeatNumber;
+        }
+
+        public DescribeLivePullToPushListResponseBodyTaskListTaskInfo setReqAuth(String reqAuth) {
+            this.reqAuth = reqAuth;
+            return this;
+        }
+        public String getReqAuth() {
+            return this.reqAuth;
         }
 
         public DescribeLivePullToPushListResponseBodyTaskListTaskInfo setRetryCount(Integer retryCount) {
@@ -357,7 +388,7 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
 
     public static class DescribeLivePullToPushListResponseBodyTaskList extends TeaModel {
         /**
-         * <p>The current file index.</p>
+         * <p>The currently effective playlist sequence offset.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -366,7 +397,7 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public Integer currentFileIndex;
 
         /**
-         * <p>The current offset for video playback.</p>
+         * <p>The currently effective video playback offset.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -375,13 +406,13 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public Integer currentOffset;
 
         /**
-         * <p>The reason why the task was exited. Valid values:</p>
+         * <p>The reason why the task exited. Valid values:</p>
          * <ul>
-         * <li>TriggerByUser: You proactively ended the task.</li>
-         * <li>OverEndTime: The specified end time was exceeded.</li>
+         * <li>TriggerByUser: Actively ended by the user.</li>
+         * <li>OverEndTime: Exceeded the preset end time.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only if the task status is exited.</p>
+         * <p>Returned only when the task is in the exited state.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -391,9 +422,9 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public String taskExitReason;
 
         /**
-         * <p>The time when the task was exited. The value is a Unix timestamp in seconds.</p>
+         * <p>The task exit time, in Unix seconds timestamp.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the task status is exited.</p>
+         * <p>Returned only when the task is in the exited state.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -412,20 +443,20 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The information about the task.</p>
+         * <p>The task information.</p>
          */
         @NameInMap("TaskInfo")
         public DescribeLivePullToPushListResponseBodyTaskListTaskInfo taskInfo;
 
         /**
-         * <p>The reason why the task was stopped.</p>
+         * <p>The reason why the task stopped running. Valid values:</p>
          * <ul>
-         * <li>PullStreamFailed: An exception occurred while pulling the source stream. A retry is in progress.</li>
-         * <li>PushStreamFailed: An exception occurred while ingesting the stream. A retry is in progress.</li>
-         * <li>UnknownError: An unknown exception occurred.</li>
+         * <li>PullStreamFailed: Source stream pulling exception. Retrying.</li>
+         * <li>PushStreamFailed: Destination stream pushing exception. Retrying.</li>
+         * <li>UnknownError: Unknown exception.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only if the task status is stopped.</p>
+         * <p>Returned only when the task is in the stopped state.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -435,13 +466,13 @@ public class DescribeLivePullToPushListResponseBody extends TeaModel {
         public String taskInvalidReason;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The current task status. Valid values:</p>
          * <ul>
-         * <li>0: not started.</li>
-         * <li>1: running. Stream pulling and stream relay are normal.</li>
-         * <li>2: abnormal.</li>
-         * <li>3: stopped. It may be because exceptions occur during stream pulling or stream relay or you proactively call the StopLivePullToPush operation.</li>
-         * <li>\-1: exited.</li>
+         * <li>0: Not started (the start time has not been reached).</li>
+         * <li>1: Running normally (stream pulling and pushing are normal).</li>
+         * <li>2: Running abnormally.</li>
+         * <li>3: Stopped (stream pulling or pushing is abnormal, or the task was actively stopped by calling an operation).</li>
+         * <li>-1: Exited.</li>
          * </ul>
          * 
          * <strong>example:</strong>

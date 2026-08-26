@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveMessageGroupMessagesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the group queried.</p>
+     * <p>The group ID of the group to query.</p>
      * 
      * <strong>example:</strong>
      * <p>grouptest</p>
@@ -14,7 +14,7 @@ public class ListLiveMessageGroupMessagesResponseBody extends TeaModel {
     public String groupId;
 
     /**
-     * <p>Indicates whether the current page is followed by another page.</p>
+     * <p>Indicates whether there is a next page.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,13 +23,13 @@ public class ListLiveMessageGroupMessagesResponseBody extends TeaModel {
     public Boolean hasmore;
 
     /**
-     * <p>Details about the messages.</p>
+     * <p>The message list.</p>
      */
     @NameInMap("MessageList")
     public java.util.List<ListLiveMessageGroupMessagesResponseBodyMessageList> messageList;
 
     /**
-     * <p>The starting page number for the next query. A value of 0 indicates that no further pages can be queried.</p>
+     * <p>The start position of the next page. The value is 0 if there is no next page.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -102,7 +102,7 @@ public class ListLiveMessageGroupMessagesResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The additional information about the user who sent the message.</p>
+         * <p>The extended information of the user who sent the message.</p>
          * 
          * <strong>example:</strong>
          * <p>testusermeta2</p>
@@ -144,7 +144,7 @@ public class ListLiveMessageGroupMessagesResponseBody extends TeaModel {
         public String body;
 
         /**
-         * <p>The ID of the message.</p>
+         * <p>The message identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>c-1-1-0</p>
@@ -153,7 +153,7 @@ public class ListLiveMessageGroupMessagesResponseBody extends TeaModel {
         public String msgTid;
 
         /**
-         * <p>The type of the message.</p>
+         * <p>The message type.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -162,13 +162,13 @@ public class ListLiveMessageGroupMessagesResponseBody extends TeaModel {
         public Long msgType;
 
         /**
-         * <p>The details about the user who sent the message.</p>
+         * <p>The message sender details.</p>
          */
         @NameInMap("Sender")
         public ListLiveMessageGroupMessagesResponseBodyMessageListSender sender;
 
         /**
-         * <p>The sequence number of the message.</p>
+         * <p>The message sequence number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -177,7 +177,7 @@ public class ListLiveMessageGroupMessagesResponseBody extends TeaModel {
         public Long seqNumber;
 
         /**
-         * <p>The time when the message was sent. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the message was created, expressed as a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1697081134</p>

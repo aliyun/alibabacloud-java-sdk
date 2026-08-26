@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMessageRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>The interactive message application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListMessageRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>The message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListMessageRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The number of the page to return. Default value: 1. Valid values: 1 to 100000.</p>
+     * <p>The page number. Default value: 1. Valid values: 1 to 100000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ListMessageRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. Valid values: 1 to 50.</p>
+     * <p>The number of users displayed per page. Default value: 20. Valid values: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,10 +45,12 @@ public class ListMessageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>The sorting method. Valid values:</p>
      * <ul>
-     * <li>0: ascending order by time</li>
-     * <li>1: descending order by time</li>
+     * <li><p>0: ascending order by time.</p>
+     * </li>
+     * <li><p>1: descending order by time.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +60,7 @@ public class ListMessageRequest extends TeaModel {
     public Integer sortType;
 
     /**
-     * <p>The type of the custom message. Valid values: integers greater than 10000.</p>
+     * <p>The user-defined message type. The value must be greater than 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>10002</p>

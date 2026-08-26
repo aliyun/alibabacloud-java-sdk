@@ -97,7 +97,7 @@ public class DescribeLiveUserDomainsRequest extends TeaModel {
      * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aek2egyoep3jp7a</p>
+     * <p>rg-<strong>kzvyjetyjjm</strong></p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

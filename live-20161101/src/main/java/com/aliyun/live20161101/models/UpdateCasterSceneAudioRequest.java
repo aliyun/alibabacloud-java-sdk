@@ -13,11 +13,13 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, you can obtain the ID from the CasterId parameter in the response.</p>
+     * </li>
+     * <li><p>If you create a production studio in the LIVE console, go to the <strong>LIVE Console</strong> &gt; <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> page to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The name of the production studio in the list on the Cloud Production Studio page is the ID of the production studio.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,10 +30,12 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The audio mode. By default, the AFV mode is used. If you do not specify this parameter, the scene retains the last configuration. Valid values:</p>
+     * <p>Specifies whether to enable the AFV mode. If you leave this parameter empty, the last configuration is retained. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: the audio mixing mode.</li>
-     * <li><strong>1</strong>: the AFV mode.</li>
+     * <li><p><strong>0</strong>: audio mixing mode.</p>
+     * </li>
+     * <li><p><strong>1</strong>: audio-follows-video mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +45,7 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
     public Integer followEnable;
 
     /**
-     * <p>The location IDs of the audio layers, which are in the same order as the audio layers.</p>
+     * <p>The list of associated location IDs. The order of the location IDs must be the same as the order of the audio layers.</p>
      * 
      * <strong>example:</strong>
      * <p>RV01</p>
@@ -52,11 +56,17 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the scene. If you call the <a href="https://help.aliyun.com/document_detail/2848039.html">DescribeCasterScenes</a> operation to query scenes of the production studio, check the value of the response parameter ComponentId to obtain the ID.</p>
+     * <p>The ID of the scene. If you query the list of scenes in a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848039.html">DescribeCasterScenes</a> operation, you can obtain the ID from the ComponentId parameter in the response.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,18 +138,23 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
 
     public static class UpdateCasterSceneAudioRequestAudioLayer extends TeaModel {
         /**
-         * <p>Specifies whether to enable the features provided by the audio 3A algorithms. This parameter consists of the following fields:</p>
+         * <p>Specifies whether to enable the features provided by the 3A audio algorithm. This parameter consists of the following fields:</p>
          * <ul>
-         * <li><strong>enableAgc</strong>: specifies whether to enable automatic gain control (AGC). This field is optional. Valid values: 0 and 1. <strong>0</strong> is the default value, which specifies that AGC is disabled. <strong>1</strong> specifies that AGC is enabled.</li>
-         * <li><strong>enableAns</strong>: specifies whether to enable active noise suppression (ANS). This field is optional. Valid values: 0 and 1. <strong>0</strong> is the default value, which specifies that ANS is disabled. <strong>1</strong> specifies that ANS is enabled.</li>
-         * <li><strong>ansMode</strong>: specifies the mode for ANS. This field is optional and takes effect only if you set <strong>enableAns</strong> to <strong>1</strong>. Valid values: 0 and 1. <strong>0</strong> is the default value, which specifies the speech noise reduction mode. <strong>1</strong> specifies the music noise reduction mode.</li>
+         * <li><p><strong>enableAgc</strong>: (Optional) Specifies whether to enable the automatic gain control (AGC) feature of the 3A algorithm. Valid values: <strong>0</strong> (disabled, default) and <strong>1</strong> (enabled).</p>
+         * </li>
+         * <li><p><strong>enableAns</strong>: (Optional) Specifies whether to enable the intelligent noise reduction feature of the 3A algorithm. Valid values: <strong>0</strong> (disabled, default) and <strong>1</strong> (enabled).</p>
+         * </li>
+         * <li><p><strong>ansMode</strong>: (Optional) The mode of the intelligent noise reduction feature. This field is active only when <strong>enableAns</strong> is set to <strong>1</strong>. Valid values: <strong>0</strong> (speech noise reduction, default) and <strong>1</strong> (music noise reduction).</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> To ensure a better noise reduction effect, we recommend that you set ansMode to 1.</p>
+         * <p>For better noise reduction, set ansMode to 1.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>enableBeautify</strong>: specifies whether to enable voice change. This field is optional. Valid values: 0 and 1. <strong>0</strong> is the default value, which specifies that voice change is disabled. <strong>1</strong> specifies that voice change is enabled.</li>
-         * <li><strong>voiceBeautifyMode</strong>: specifies the mode for voice change. This field is optional and takes effect only if you set <strong>enableBeautify</strong> to <strong>1</strong>. Valid values: 0 and 1. <strong>0</strong> is the default value, which specifies the magnetic male voice mode. <strong>1</strong> specifies the fresh female voice mode.</li>
+         * <li><p><strong>enableBeautify</strong>: (Optional) Specifies whether to enable voice beautification. Valid values: <strong>0</strong> (disabled, default) and <strong>1</strong> (enabled).</p>
+         * </li>
+         * <li><p><strong>voiceBeautifyMode</strong>: (Optional) The voice beautification mode. This field is active only when <strong>enableBeautify</strong> is set to <strong>1</strong>. Valid values: <strong>0</strong> (magnetic male voice, default) and <strong>1</strong> (fresh female voice).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,8 +164,8 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
         public String filter;
 
         /**
-         * <p>The fixed delay of the audio layer. This parameter is used to synchronize the audio with subtitles.</p>
-         * <p>Unit: milliseconds. Valid values: <strong>0 to 5000</strong>. Default value: <strong>0</strong>.</p>
+         * <p>The fixed latency of the audio layer. This parameter is used to synchronize the audio with captions.</p>
+         * <p>Unit: milliseconds. Valid values: 0 to <strong>5000</strong>. Default value: <strong>0</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -159,11 +174,14 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
         public Integer fixedDelayDuration;
 
         /**
-         * <p>The sound channels that are used for volume input in the audio layer. Valid values:</p>
+         * <p>The sound channels that are used for volume input. Valid values:</p>
          * <ul>
-         * <li><strong>leftChannel</strong>: the left channel</li>
-         * <li><strong>rightChannel</strong>: the right channel</li>
-         * <li><strong>all</strong> (default): both the left and right channels</li>
+         * <li><p><strong>leftChannel</strong>: the left sound channel.</p>
+         * </li>
+         * <li><p><strong>rightChannel</strong>: the right sound channel.</p>
+         * </li>
+         * <li><p><strong>all</strong> (default): both sound channels.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,11 +191,14 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
         public String validChannel;
 
         /**
-         * <p>The multiple of the original volume at which the audio layer plays audio. Valid values: <strong>0 to 10.0</strong>. Default value: <strong>1.0</strong>.</p>
+         * <p>The volume multiplier for the audio stream. Valid values: 0 to <strong>10.0</strong>. Default value: <strong>1.0</strong>.</p>
          * <ul>
-         * <li><strong>1.0</strong>: specifies that the audio layer plays audio at the original volume.</li>
-         * <li>A value smaller than <strong>1</strong>: specifies that the audio layer plays audio at a volume that is less than the original volume.</li>
-         * <li>A value greater than <strong>1</strong>: specifies that the audio layer plays audio at a volume that is more than the original volume.</li>
+         * <li><p><strong>1.0</strong>: The original volume is used.</p>
+         * </li>
+         * <li><p>A value less than <strong>1</strong> decreases the volume.</p>
+         * </li>
+         * <li><p>A value greater than <strong>1</strong> increases the volume.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

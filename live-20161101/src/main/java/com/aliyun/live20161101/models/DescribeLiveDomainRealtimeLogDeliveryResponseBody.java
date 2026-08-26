@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRealtimeLogDeliveryResponseBody extends TeaModel {
     /**
-     * <p>The name of the Logstore to which log entries are delivered.</p>
+     * <p>The name of the Logstore in Simple Log Service (SLS) for real-time log delivery.</p>
      * 
      * <strong>example:</strong>
      * <p>logstore_example</p>
@@ -14,7 +14,7 @@ public class DescribeLiveDomainRealtimeLogDeliveryResponseBody extends TeaModel 
     public String logstore;
 
     /**
-     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+     * <p>The name of the SLS project for real-time log delivery.</p>
      * 
      * <strong>example:</strong>
      * <p>project_example</p>
@@ -23,7 +23,7 @@ public class DescribeLiveDomainRealtimeLogDeliveryResponseBody extends TeaModel 
     public String project;
 
     /**
-     * <p>The ID of the region where the Log Service project is deployed.</p>
+     * <p>The region where the SLS project is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -43,8 +43,10 @@ public class DescribeLiveDomainRealtimeLogDeliveryResponseBody extends TeaModel 
     /**
      * <p>The status of real-time log delivery. Valid values:</p>
      * <ul>
-     * <li>online: Real-time log delivery is enabled.</li>
-     * <li>offline: Real-time log delivery is disabled.</li>
+     * <li><p>online: Real-time log delivery is enabled.</p>
+     * </li>
+     * <li><p>offline: Real-time log delivery is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

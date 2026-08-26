@@ -14,7 +14,7 @@ public class DescribeLiveVerifyContentResponseBody extends TeaModel {
     public String content;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>

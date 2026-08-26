@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListMessageAppRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: 1. Valid values: 1 to 100000.</p>
+     * <p>Page number. Default value: 1. Valid values: 1 to 100000.</p>
+     * <blockquote>
+     * <p>This page number is the current display page.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,7 @@ public class ListMessageAppRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of applications to return on each page. Default value: 20. Valid values: 1 to 50.</p>
+     * <p>Number of applications displayed per page. Default value: 20. Valid values: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +28,10 @@ public class ListMessageAppRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>Sorting method. Valid values:</p>
      * <ul>
-     * <li>0: ascending order by time</li>
-     * <li>1: descending order by time</li>
+     * <li>0: Ascending order by time.</li>
+     * <li>1: Descending order by time.</li>
      * </ul>
      * 
      * <strong>example:</strong>

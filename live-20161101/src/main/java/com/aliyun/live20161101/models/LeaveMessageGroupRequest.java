@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LeaveMessageGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>Interactive message application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class LeaveMessageGroupRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Specifies whether to broadcast statistical messages. If you set the value to true, statistical messages of the message group are broadcasted after the users join the message group. The client can receive and process these messages. Valid values:</p>
+     * <p>Specifies whether to broadcast statistics messages. When enabled, the statistics information of the message group will be broadcast after joining the message group, and the client can receive and process this message. Valid values:</p>
      * <ul>
-     * <li>true: broadcasts statistical messages.</li>
-     * <li>false: does not broadcast statistical messages.</li>
+     * <li>true: Broadcast statistics messages.</li>
+     * <li>false: Do not broadcast statistics messages.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,11 +28,11 @@ public class LeaveMessageGroupRequest extends TeaModel {
     public Boolean broadCastStatistics;
 
     /**
-     * <p>The mode in which system messages are broadcasted. Valid values:</p>
+     * <p>System message diffusion type. Valid values:</p>
      * <ul>
-     * <li>0: specifies that system messages are not broadcasted. This is the default value.</li>
-     * <li>1: specifies that system messages are broadcasted to specified users.</li>
-     * <li>2: specifies that system messages are broadcasted to the message group.</li>
+     * <li>0 (default): No diffusion.</li>
+     * <li>1: Diffusion to specified users.</li>
+     * <li>2: Diffusion to the group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class LeaveMessageGroupRequest extends TeaModel {
     public Integer broadCastType;
 
     /**
-     * <p>The ID of the message group.</p>
+     * <p>Message group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class LeaveMessageGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the user. Each user has a unique ID in the application.</p>
+     * <p>User ID, which is customized by the user and must be unique under the AppId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

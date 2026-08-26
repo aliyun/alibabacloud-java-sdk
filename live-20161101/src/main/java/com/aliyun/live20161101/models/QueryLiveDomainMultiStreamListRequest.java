@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryLiveDomainMultiStreamListRequest extends TeaModel {
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The primary streaming domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class QueryLiveDomainMultiStreamListRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
-     * <p>The end time must be later than the start time. The time range specified by the StartTime and EndTime parameters cannot exceed seven days. If the two parameters are not specified, data of the last 24 hours is queried by default.</p>
+     * <p>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC time).</p>
+     * <p>The end time must be later than the start time. The interval between the start time and end time cannot exceed 7 days. Default value: the last 24 hours.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-02T01:00:00Z</p>
@@ -47,7 +47,7 @@ public class QueryLiveDomainMultiStreamListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. The time range specified by the StartTime and EndTime parameters cannot exceed seven days.</p>
+     * <p>The start time of the query range. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC time). The interval between StartTime and EndTime must be within 7 days.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-01T01:00:00Z</p>
@@ -56,7 +56,7 @@ public class QueryLiveDomainMultiStreamListRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the live stream. This parameter is used for exact match.</p>
+     * <p>The name of the live stream. This parameter is used for exact match filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>teststream</p>

@@ -7,11 +7,13 @@ public class SetCasterChannelRequest extends TeaModel {
     /**
      * <p>The ID of the production studio.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+     * <li><p>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value returned in the response.</p>
+     * </li>
+     * <li><p>If you create a production studio in the ApsaraVideo Live console, go to the <strong>Production Studio</strong> &gt; <strong>Cloud Production Studio</strong> page to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+     * <p>The production studio name in the list on the Cloud Production Studio page is the production studio ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,8 +24,8 @@ public class SetCasterChannelRequest extends TeaModel {
     public String casterId;
 
     /**
-     * <p>The ID of the channel.</p>
-     * <p>When channels are enabled, the layout references the channel IDs. You can specify up to one resource for a channel. The number of resources is limited by the number of the channels of the production studio. The value must be in the RV[Number] format, such as RV01 and RV12.</p>
+     * <p>The channel ID.</p>
+     * <p>The reference ID for the layout scene. You can set a maximum of one resource for each channel. The total number of channels is determined when you create the production studio. The format is \<code>RV01\\</code> to \<code>RV12\\</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class SetCasterChannelRequest extends TeaModel {
     public String channelId;
 
     /**
-     * <p>The face retouching effect. Valid values: 0 (all effects), 1 (skin smoothing), 2 (skin whitening), 3 (dark circles removal), and 4 (nasolabial folds removal).</p>
+     * <p>The facial retouching settings. Valid values: 0 (whole), 1 (skin smoothing), 2 (skin whitening), 3 (dark circle removal), and 4 (nasolabial fold removal).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -45,10 +47,12 @@ public class SetCasterChannelRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The playback status. This parameter take effects for video files, but not for live streams. Valid values:</p>
+     * <p>The playback status. This parameter applies only to video files, not live streams. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: specifies that the video source is playing. This is the default value.</li>
-     * <li><strong>0</strong>: specifies that the playback of the video source is paused.</li>
+     * <li><p><strong>1</strong> (default): Playback.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Pause.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,6 +61,12 @@ public class SetCasterChannelRequest extends TeaModel {
     @NameInMap("PlayStatus")
     public Integer playStatus;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -70,7 +80,7 @@ public class SetCasterChannelRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The offset of the position where the production studio starts reading the video source. The value must be greater than or equal to 0, indicating an offset from the first frame. This parameter take effects for video files, but not for live streams. Unit: milliseconds.</p>
+     * <p>This parameter applies only to video files, not live streams. The value must be greater than or equal to 0. It specifies the offset from the first frame at which to start reading the file. Unit: milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

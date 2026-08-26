@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeCastersRequest extends TeaModel {
     /**
-     * <p>The ID of the production studio.</p>
+     * <p>The production studio ID.</p>
      * <ul>
-     * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848012.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
-     * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the ApsaraVideo Live console and click Production Studios in the left-side navigation pane.</li>
+     * <li><p>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848012.html">CreateCaster operation</a>, check the CasterId parameter returned by the CreateCaster operation.</p>
+     * </li>
+     * <li><p>If you created the production studio in the ApsaraVideo Live console, go to <strong>ApsaraVideo Live console &gt; Production Studios &gt; Cloud Production Studio</strong> to view the ID.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can find the ID of the production studio in the Instance ID/Name column.</p>
-     * </li>
-     * <li><p>If you leave this parameter empty, the data of all production studios is returned.</p>
-     * </li>
+     * <li>The production studio name in the production studio list on the Cloud Production Studio page is the production studio ID.</li>
+     * <li>If this parameter is left empty, the merged data of all production studios is returned by default.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>LIVEPRODUCER_POST-cn-0pp1czt****</p>
@@ -37,8 +37,10 @@ public class DescribeCastersRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>0: the subscription billing method</li>
-     * <li>1: the pay-as-you-go billing method</li>
+     * <li><p>0: PrePaid (subscription).</p>
+     * </li>
+     * <li><p>1: PostPaid (pay-as-you-go).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +50,7 @@ public class DescribeCastersRequest extends TeaModel {
     public Integer chargeType;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-29T11:00:00Z</p>
@@ -57,12 +59,16 @@ public class DescribeCastersRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of the production studio. Valid values:</p>
+     * <p>The specification type of the production studio. Valid values:</p>
      * <ul>
-     * <li>1: general mode</li>
-     * <li>3: lightweight carousel playback mode</li>
-     * <li>4: virtual studio</li>
-     * <li>6: playlist mode</li>
+     * <li><p>1: general mode.</p>
+     * </li>
+     * <li><p>3: lightweight playlist mode.</p>
+     * </li>
+     * <li><p>4: virtual studio mode.</p>
+     * </li>
+     * <li><p>6: playlist mode (new playlist mode production studio).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,9 +78,10 @@ public class DescribeCastersRequest extends TeaModel {
     public String normType;
 
     /**
-     * <p>Specifies whether to sort the production studios in ascending order based on the modification time.</p>
+     * <p>Specifies whether to sort the production studios in ascending order by modification time.</p>
+     * <p>Valid values: true (ascending order by modification time) | false (descending order by modification time, which is the default value).</p>
      * <blockquote>
-     * <p> If you leave this parameter empty, the default value is used. Default value: false.</p>
+     * <p>If this parameter is not specified, the default value is &quot;false&quot;.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,7 +94,7 @@ public class DescribeCastersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,7 +103,7 @@ public class DescribeCastersRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of templates to return on each page. If you leave this parameter empty, the default value is used. Default value: 100.</p>
+     * <p>The number of entries per page. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -104,11 +111,17 @@ public class DescribeCastersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">Resource groups</a>.</p>
+     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzw******</p>
@@ -117,7 +130,7 @@ public class DescribeCastersRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2016-06-29T09:00:00Z</p>
@@ -126,10 +139,12 @@ public class DescribeCastersRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the production studio. Valid values:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
-     * <li>0: idle</li>
-     * <li>1: streaming</li>
+     * <li><p>0: idle.  </p>
+     * </li>
+     * <li><p>1: streaming.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,7 +154,7 @@ public class DescribeCastersRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeCastersRequestTag> tag;
@@ -263,7 +278,7 @@ public class DescribeCastersRequest extends TeaModel {
 
     public static class DescribeCastersRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -272,7 +287,7 @@ public class DescribeCastersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

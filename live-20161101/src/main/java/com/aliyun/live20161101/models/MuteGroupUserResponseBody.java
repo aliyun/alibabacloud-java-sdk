@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MuteGroupUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16A96B9A-****-CB92E68F4CD8</p>
@@ -42,10 +42,12 @@ public class MuteGroupUserResponseBody extends TeaModel {
 
     public static class MuteGroupUserResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the mute is successful. Valid values:</p>
+         * <p>Indicates whether the mute operation is successful. Valid values:</p>
          * <ul>
-         * <li>true: The mute is successful.</li>
-         * <li>false: The mute failed.</li>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Not successful.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

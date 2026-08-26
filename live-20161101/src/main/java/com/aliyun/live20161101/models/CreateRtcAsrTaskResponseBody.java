@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRtcAsrTaskResponseBody extends TeaModel {
     /**
-     * <p>The result of the request. If success is returned, the request is successful. If an error message is returned, the request failed.</p>
+     * <p>The result description. The value success indicates a successful operation. An error message is returned if a fault occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class CreateRtcAsrTaskResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The gateway request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7FF5417D-06E9-5A2C-9A70-581F6149E6C1</p>
@@ -23,7 +23,7 @@ public class CreateRtcAsrTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned HTTP status code. HTTP status code 2000 indicates that the request is successful. If another HTTP status code is returned, the request failed.</p>
+     * <p>The status code. A value of 2000 indicates success. Other values indicate exceptions.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -32,7 +32,7 @@ public class CreateRtcAsrTaskResponseBody extends TeaModel {
     public Long retCode;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The generated task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>asr-a6ac15e0-9118-4b4c-9e64-306163a0****</p>

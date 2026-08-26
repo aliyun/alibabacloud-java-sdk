@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLivePullToPushResponseBody extends TeaModel {
     /**
-     * <p>The current file index.</p>
+     * <p>The current effective playlist sequence offset.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
     public Integer currentFileIndex;
 
     /**
-     * <p>The current offset for video playback.</p>
+     * <p>The current effective video playback offset.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -35,21 +35,19 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>3271ACD2-F143-1204-AFDB-9A87C131****</p>
+     * <p>a05e6b15-15af-405b-a4a2-0152245d****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The code that is returned for the request.</p>
+     * <p>The return code.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>0 is returned if the request is normal.</p>
-     * </li>
-     * <li><p>For information about codes that are returned when exceptions occur, see the following Error codes table.</p>
-     * </li>
+     * <li>&quot;0&quot; is returned in normal cases.</li>
+     * <li>For error cases, refer to the error code list below.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -58,13 +56,13 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
     public Integer retCode;
 
     /**
-     * <p>The reason why the task is stopped.</p>
+     * <p>The reason why the task exited. Valid values:</p>
      * <ul>
-     * <li>TriggerByUser: You proactively stopped the task.</li>
-     * <li>OverEndTime: The specified end time was exceeded.</li>
+     * <li>TriggerByUser: The task was actively ended by the user.</li>
+     * <li>OverEndTime: The preset end time was exceeded.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is returned only if the task is stopped.</p>
+     * <p>This parameter is returned only when the task is in the exited state.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,61 +72,61 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
     public String taskExitReason;
 
     /**
-     * <p>The time when the task was exited. The value is a Unix timestamp in seconds.</p>
+     * <p>The time when the task exited. The value is a UNIX timestamp in seconds.</p>
      * <blockquote>
-     * <p> This parameter is returned only if the task status is exited.</p>
+     * <p>This parameter is returned only when the task is in the exited state.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1724740200</p>
+     * <p>1726354625</p>
      */
     @NameInMap("TaskExitTime")
     public Integer taskExitTime;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the node returned when you create task.</p>
      * 
      * <strong>example:</strong>
-     * <p>fd245384-4067-4f91-9d75-9666a6bc9****</p>
+     * <p>fb0d4ac7-c7e3-4978-9743-0bf2f6e8****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
-     * <p>The information about the task.</p>
+     * <p>The task information.</p>
      */
     @NameInMap("TaskInfo")
     public DescribeLivePullToPushResponseBodyTaskInfo taskInfo;
 
     /**
-     * <p>The reason why the task was stopped.</p>
+     * <p>The reason why the task stopped running. Valid values:</p>
      * <ul>
-     * <li>PullStreamFailed: An exception occurred while pulling the source stream. A retry is in progress.</li>
-     * <li>PushStreamFailed: An exception occurred while ingesting the stream. A retry is in progress.</li>
-     * <li>UnknownError: An unknown exception occurred.</li>
+     * <li>PullStreamFailed: Source stream pulling is abnormal. Retrying.</li>
+     * <li>PushStreamFailed: Destination stream pushing is abnormal. Retrying.</li>
+     * <li>UnknownError: Unknown error.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is returned only if the task status is stopped.</p>
+     * <p>This parameter is returned only when the task is in the stopped state.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>UnknownError</p>
+     * <p>PullStreamFailed</p>
      */
     @NameInMap("TaskInvalidReason")
     public String taskInvalidReason;
 
     /**
-     * <p>The current status of the task.</p>
+     * <p>The current status of the task. Valid values:</p>
      * <ul>
-     * <li>0: not started.</li>
-     * <li>1: running. Stream pulling and stream relay are normal.</li>
-     * <li>2: abnormal.</li>
-     * <li>3: stopped. It may be because exceptions occur during stream pulling or stream relay or you proactively call the StopLivePullToPush operation.</li>
-     * <li>\-1: exited.</li>
+     * <li>0: Not started (the start time has not been reached).</li>
+     * <li>1: Running normally (stream pulling and pushing are both normal).</li>
+     * <li>2: Running abnormally.</li>
+     * <li>3: Stopped (stream pulling or pushing is abnormal, or the task was actively stopped by calling an API operation).</li>
+     * <li>-1: Exited.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("TaskStatus")
     public Integer taskStatus;
@@ -227,6 +225,9 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
     }
 
     public static class DescribeLivePullToPushResponseBodyTaskInfo extends TeaModel {
+        @NameInMap("AuthKey")
+        public String authKey;
+
         /**
          * <p>The HTTP callback URL.</p>
          * 
@@ -237,7 +238,7 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         public String callbackURL;
 
         /**
-         * <p>The destination URL to which the stream is relayed.</p>
+         * <p>The destination ingest URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://pushtest.********.aliyunlive.com/pulltest493/pulltest-w434</p>
@@ -246,7 +247,7 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         public String dstUrl;
 
         /**
-         * <p>The end time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the task. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-27T14:30:00Z</p>
@@ -255,7 +256,7 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The file index, which indicates the sequence of the file where the playback starts.</p>
+         * <p>The file index. Playback starts from the nth file.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -263,32 +264,33 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         @NameInMap("FileIndex")
         public Integer fileIndex;
 
+        @NameInMap("NotifyItemSwitch")
+        public String notifyItemSwitch;
+
         /**
-         * <p>The offset of the position where the system starts to read the video resource. Unit: seconds. Valid values: positive numbers.</p>
+         * <p>The start offset of the video file. Unit: seconds. The value must be greater than 0.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter indicates an offset from the first frame.</p>
-         * </li>
-         * <li><p>This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</p>
-         * </li>
+         * <li>Indicates the position from which reading starts, relative to the first frame.</li>
+         * <li>This parameter is valid only for video-on-demand resources or video files.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>0</p>
          */
         @NameInMap("Offset")
         public Integer offset;
 
         /**
-         * <p>The number of playbacks after the first playback is complete. Valid values:</p>
+         * <p>The number of times playback repeats after completion. Valid values:</p>
          * <ul>
-         * <li>0 (default): specifies that the video list is played only once.</li>
-         * <li>\-1: specifies that the video list is played in loop mode.</li>
-         * <li>Positive integer: specifies the number of times the video list repeats after the first playback is complete.</li>
+         * <li>0 (default): No repeat playback.</li>
+         * <li>-1: Infinite loop.</li>
+         * <li>Other positive integers: the number of times playback repeats after completion.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</p>
+         * <p>This parameter applies only to video-on-demand or third-party video streams.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -297,8 +299,11 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         @NameInMap("RepeatNumber")
         public Integer repeatNumber;
 
+        @NameInMap("ReqAuth")
+        public String reqAuth;
+
         /**
-         * <p>The number of retries allowed.</p>
+         * <p>The number of retries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -316,7 +321,7 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         public Integer retryInterval;
 
         /**
-         * <p>The protocol of the source stream.</p>
+         * <p>The source stream protocol name.</p>
          * 
          * <strong>example:</strong>
          * <p>RTMP</p>
@@ -325,21 +330,21 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         public String sourceProtocol;
 
         /**
-         * <p>The type of the source stream. Valid values:</p>
+         * <p>The source stream type. Valid values:</p>
          * <ul>
-         * <li>live: a live stream</li>
-         * <li>vod: a list of ApsaraVideo VOD resources</li>
-         * <li>url: a list of video resources from a third party</li>
+         * <li>live: live stream.</li>
+         * <li>vod: ApsaraVideo VOD resource.</li>
+         * <li>url: third-party video file resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>live</p>
+         * <p>vod</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The source URLs.</p>
+         * <p>The source stream URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://pulltest.****.aliyunlive.com/pulltest493/pulltest-w434</p>
@@ -348,7 +353,7 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         public java.util.List<String> sourceUrls;
 
         /**
-         * <p>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the task. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-26T10:30:00Z</p>
@@ -377,6 +382,14 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         public static DescribeLivePullToPushResponseBodyTaskInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLivePullToPushResponseBodyTaskInfo self = new DescribeLivePullToPushResponseBodyTaskInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLivePullToPushResponseBodyTaskInfo setAuthKey(String authKey) {
+            this.authKey = authKey;
+            return this;
+        }
+        public String getAuthKey() {
+            return this.authKey;
         }
 
         public DescribeLivePullToPushResponseBodyTaskInfo setCallbackURL(String callbackURL) {
@@ -411,6 +424,14 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
             return this.fileIndex;
         }
 
+        public DescribeLivePullToPushResponseBodyTaskInfo setNotifyItemSwitch(String notifyItemSwitch) {
+            this.notifyItemSwitch = notifyItemSwitch;
+            return this;
+        }
+        public String getNotifyItemSwitch() {
+            return this.notifyItemSwitch;
+        }
+
         public DescribeLivePullToPushResponseBodyTaskInfo setOffset(Integer offset) {
             this.offset = offset;
             return this;
@@ -425,6 +446,14 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         }
         public Integer getRepeatNumber() {
             return this.repeatNumber;
+        }
+
+        public DescribeLivePullToPushResponseBodyTaskInfo setReqAuth(String reqAuth) {
+            this.reqAuth = reqAuth;
+            return this;
+        }
+        public String getReqAuth() {
+            return this.reqAuth;
         }
 
         public DescribeLivePullToPushResponseBodyTaskInfo setRetryCount(Integer retryCount) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveStreamTranscodeRequest extends TeaModel {
     /**
-     * <p>The name of the application to which the stream belongs, and it cannot be modified.</p>
+     * <p>The AppName of the live stream. This parameter cannot be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateLiveStreamTranscodeRequest extends TeaModel {
     public String app;
 
     /**
-     * <p>Streamer domain name, not modifiable.</p>
+     * <p>The streaming domain. This parameter cannot be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,12 +25,18 @@ public class UpdateLiveStreamTranscodeRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The encryption configuration. The value is a JSON string. The following fields are included in the syntax:</p>
+     * <p>The encryption settings, formatted as a JSON string.</p>
      * <ul>
-     * <li>EncryptType: the type of the encryption. Set the value to <strong>aliyun</strong>.</li>
-     * <li>KmsKeyID: the ID of the CMK in KMS.</li>
-     * <li>KmsKeyExpireInterval: the validity period of the CMK. Valid values: <strong>60 to 3600</strong>. Unit: seconds.</li>
+     * <li><p><strong>EncryptType</strong>: The encryption type. Set the value to aliyun.</p>
+     * </li>
+     * <li><p><strong>KmsKeyID</strong>: The ID of the customer master key (CMK) in Key Management Service (KMS).</p>
+     * </li>
+     * <li><p><strong>KmsKeyExpireInterval</strong>: The key rotation period. Unit: seconds. Valid values: <strong>60 to 3600.</strong></p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>When you use Digital Rights Management (DRM) encryption, you cannot modify <strong>KmsKeyID</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{&quot;EncryptType&quot;: &quot;aliyun&quot;, &quot;KmsKeyID&quot;:&quot;afce5722-81d2-43c3-9930-7601da11****&quot;,&quot;KmsKeyExpireInterval&quot;:&quot;3600&quot;}</p>
@@ -39,10 +45,12 @@ public class UpdateLiveStreamTranscodeRequest extends TeaModel {
     public String encryptParameters;
 
     /**
-     * <p>Specifies whether to enable triggered transcoding. Valid values:</p>
+     * <p>Specifies whether to enable on-demand transcoding. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: enables triggered transcoding.</li>
-     * <li><strong>no</strong>: disables triggered transcoding.</li>
+     * <li><p><strong>yes</strong>: Transcoding only starts when the first viewer requests this transcoded stream.</p>
+     * </li>
+     * <li><p><strong>no</strong>: Transcoding starts immediately after the stream is published.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,11 +62,17 @@ public class UpdateLiveStreamTranscodeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Transcoding template, not modifiable.</p>
+     * <p>The transcoding template name. This parameter cannot be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

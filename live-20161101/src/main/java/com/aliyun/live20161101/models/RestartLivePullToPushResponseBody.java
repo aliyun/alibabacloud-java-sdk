@@ -14,7 +14,7 @@ public class RestartLivePullToPushResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The new task ID.</p>
+     * <p>The node ID returned when you create task.</p>
      * 
      * <strong>example:</strong>
      * <p>fb0d4ac7-c7e3-4978-9743-0bf2f6e8****</p>

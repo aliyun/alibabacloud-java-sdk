@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMessageAppRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>The ID of the interactive message application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

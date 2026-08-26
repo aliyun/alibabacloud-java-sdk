@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLiveTagResourcesResponseBody extends TeaModel {
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>6a5e8f4fae643e70d1a2ff1827cd91bd</p>
      */
@@ -12,6 +14,8 @@ public class ListLiveTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */

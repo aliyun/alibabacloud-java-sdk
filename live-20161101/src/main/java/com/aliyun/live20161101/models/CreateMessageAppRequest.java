@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateMessageAppRequest extends TeaModel {
     /**
-     * <p>The configurations of the application.</p>
+     * <p>The application configuration.</p>
      */
     @NameInMap("AppConfig")
     public java.util.Map<String, String> appConfig;
 
     /**
-     * <p>The name of the interactive message application. The name must be 2 to 16 characters in length.</p>
+     * <p>The name of the interactive message application. The length must be 2 to 16 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class CreateMessageAppRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The extended fields.</p>
+     * <p>The extension field.</p>
      */
     @NameInMap("Extension")
     public java.util.Map<String, String> extension;

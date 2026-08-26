@@ -17,7 +17,7 @@ public class ListPlaylistRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -26,7 +26,7 @@ public class ListPlaylistRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the episode list. If you set this parameter, only the information about the specified episode lists is returned. If you do not set this parameter, the information about all episode lists that belong to the account is returned. If the episode list was created by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, check the value of the response parameter ProgramId to obtain the ID.</p>
+     * <p>The ID of the playlist. If you specify this parameter, only the information about the specified playlist is returned. If you leave this parameter empty, the information about all playlists that belong to your account is returned. Use the ProgramId value returned by the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
@@ -34,6 +34,12 @@ public class ListPlaylistRequest extends TeaModel {
     @NameInMap("ProgramId")
     public String programId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

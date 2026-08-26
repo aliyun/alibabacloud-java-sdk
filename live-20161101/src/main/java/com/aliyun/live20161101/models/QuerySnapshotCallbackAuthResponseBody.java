@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySnapshotCallbackAuthResponseBody extends TeaModel {
     /**
-     * <p>The callback authentication key.</p>
+     * <p>The authentication key for callbacks.</p>
      * 
      * <strong>example:</strong>
      * <p>yourkey</p>
@@ -14,10 +14,12 @@ public class QuerySnapshotCallbackAuthResponseBody extends TeaModel {
     public String callbackAuthKey;
 
     /**
-     * <p>Indicates whether callback authentication is enabled. Valid values:</p>
+     * <p>Indicates whether authentication for callbacks is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: Callback authentication is enabled.</li>
-     * <li><strong>no</strong>: Callback authentication is disabled.</li>
+     * <li><p><strong>yes</strong>: enabled.</p>
+     * </li>
+     * <li><p><strong>no</strong>: disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class QuerySnapshotCallbackAuthResponseBody extends TeaModel {
     public String callbackReqAuth;
 
     /**
-     * <p>The main streaming domain.</p>
+     * <p>The streaming domain.</p>
      * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>

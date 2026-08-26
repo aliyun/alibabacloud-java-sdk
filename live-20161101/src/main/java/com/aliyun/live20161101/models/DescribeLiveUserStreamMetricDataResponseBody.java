@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
     /**
+     * <p>The streaming domain information.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.com</p>
      */
@@ -21,6 +23,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +32,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +41,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
      */
@@ -42,16 +50,23 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The beginning of the time range to query. The time is in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2015-12-10T20:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The traffic data for each time interval.</p>
+     */
     @NameInMap("StreamDetailData")
     public java.util.List<DescribeLiveUserStreamMetricDataResponseBodyStreamDetailData> streamDetailData;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -129,6 +144,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
 
     public static class DescribeLiveUserStreamMetricDataResponseBodyStreamDetailData extends TeaModel {
         /**
+         * <p>The application name. This value is returned regardless of whether it is specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>app</p>
          */
@@ -136,6 +153,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The total bandwidth per minute for the stream, in bps.</p>
+         * 
          * <strong>example:</strong>
          * <p>423304182.66</p>
          */
@@ -143,6 +162,11 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Float bps;
 
         /**
+         * <p>The total number of concurrent connections per minute for the stream.</p>
+         * <blockquote>
+         * <p><strong>Concurrent connections</strong> refers to the count of client process connections to the same stream within a unit of time.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>423304182</p>
          */
@@ -150,6 +174,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The bandwidth for the FLV protocol, in bps. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>454</p>
          */
@@ -157,6 +183,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Float flvBps;
 
         /**
+         * <p>The number of concurrent connections for the FLV protocol. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -164,6 +192,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Long flvCount;
 
         /**
+         * <p>The traffic for the FLV protocol, in bytes. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>1254</p>
          */
@@ -171,6 +201,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Double flvTraffic;
 
         /**
+         * <p>The bandwidth for the HLS protocol, in bps. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>4456</p>
          */
@@ -178,6 +210,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Float hlsBps;
 
         /**
+         * <p>The number of concurrent connections for the HLS protocol. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>56</p>
          */
@@ -185,6 +219,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Long hlsCount;
 
         /**
+         * <p>The traffic for the HLS protocol, in bytes. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>568</p>
          */
@@ -192,6 +228,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Double hlsTraffic;
 
         /**
+         * <p>The number of new connections per minute for the stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>450</p>
          */
@@ -199,6 +237,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Long newConns;
 
         /**
+         * <p>The bandwidth for the P2P protocol, in bps. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>6845</p>
          */
@@ -206,6 +246,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Float p2pBps;
 
         /**
+         * <p>The number of concurrent connections for the P2P protocol. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>78</p>
          */
@@ -213,6 +255,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Long p2pCount;
 
         /**
+         * <p>The traffic for the P2P protocol, in bytes. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>4102</p>
          */
@@ -220,6 +264,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Double p2pTraffic;
 
         /**
+         * <p>The bandwidth for the RTMP protocol, in bps. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>3323</p>
          */
@@ -227,6 +273,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Float rtmpBps;
 
         /**
+         * <p>The number of concurrent connections for the RTMP protocol. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>63</p>
          */
@@ -234,6 +282,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Long rtmpCount;
 
         /**
+         * <p>The traffic for the RTMP protocol, in bytes. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>5568</p>
          */
@@ -241,6 +291,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Double rtmpTraffic;
 
         /**
+         * <p>The bandwidth for the RTS protocol, in bps. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>2361</p>
          */
@@ -248,6 +300,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Double rtsBps;
 
         /**
+         * <p>The number of concurrent connections for the RTS protocol. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>89</p>
          */
@@ -255,6 +309,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Long rtsCount;
 
         /**
+         * <p>The traffic for the RTS protocol, in bytes. This field is not returned if the specified protocol does not match.</p>
+         * 
          * <strong>example:</strong>
          * <p>2322</p>
          */
@@ -262,6 +318,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public Double rtsTraffic;
 
         /**
+         * <p>The stream name. This value is returned regardless of whether it is specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.flv</p>
          */
@@ -269,6 +327,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public String streamName;
 
         /**
+         * <p>The start time of the time slice. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC+0.</p>
+         * 
          * <strong>example:</strong>
          * <p>2015-12-10T20:00:00Z</p>
          */
@@ -276,6 +336,8 @@ public class DescribeLiveUserStreamMetricDataResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
+         * <p>The total traffic per minute for the stream, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>423304182</p>
          */
