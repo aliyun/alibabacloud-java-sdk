@@ -11,7 +11,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public java.util.List<ListAuthorizationResourcesResponseBodyAuthorizationResources> authorizationResources;
 
     /**
-     * <p>The number of entries per page in a paged query. This parameter is used for paging.</p>
+     * <p>The number of rows per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token returned for the next page query.</p>
+     * <p>The pagination token returned by this call, used for the next page query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -94,6 +94,9 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public static class ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition extends TeaModel {
         /**
          * <p>Specifies whether same-name identity accounts are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowSameNameIdentity")
         public Boolean allowSameNameIdentity;
@@ -137,7 +140,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
 
     public static class ListAuthorizationResourcesResponseBodyAuthorizationResources extends TeaModel {
         /**
-         * <p>The ID of the resource entity associated with the authorization resource.</p>
+         * <p>The resource entity ID associated with the authorization resource.</p>
          * 
          * <strong>example:</strong>
          * <p>carole_01kmek49aqxxxx</p>
@@ -146,9 +149,9 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String authorizationResourceEntityId;
 
         /**
-         * <p>The type of the resource entity associated with the authorization resource. Valid values:</p>
+         * <p>The resource entity type associated with the authorization resource. Valid values:</p>
          * <ul>
-         * <li>cloud_account_role: cloud role.</li>
+         * <li>cloud_account_role: cloud role</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +197,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
          * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
-         * <p>1787023451494</p>
+         * <p>1768789292000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -212,7 +215,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
          * <p>The update time.</p>
          * 
          * <strong>example:</strong>
-         * <p>1787023451494</p>
+         * <p>1768789292000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

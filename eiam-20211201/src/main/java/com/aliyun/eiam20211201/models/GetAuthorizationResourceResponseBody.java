@@ -43,6 +43,9 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
     public static class GetAuthorizationResourceResponseBodyAuthorizationResourceConditionCredentialCondition extends TeaModel {
         /**
          * <p>Specifies whether same-name identity accounts are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowSameNameIdentity")
         public Boolean allowSameNameIdentity;

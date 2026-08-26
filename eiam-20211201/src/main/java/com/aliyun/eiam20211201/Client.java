@@ -851,7 +851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes a specified ResourceServer for a Client application.</p>
+     * <p>Grants a specified ResourceServer to a Client application.</p>
      * 
      * @param request AuthorizeResourceServerToClientRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -891,7 +891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes a specified ResourceServer for a Client application.</p>
+     * <p>Grants a specified ResourceServer to a Client application.</p>
      * 
      * @param request AuthorizeResourceServerToClientRequest
      * @return AuthorizeResourceServerToClientResponse
@@ -2993,6 +2993,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a trusted origin.</p>
+     * 
+     * @param request CreateTrustedOriginRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTrustedOriginResponse
+     */
+    public CreateTrustedOriginResponse createTrustedOriginWithOptions(CreateTrustedOriginRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.origin)) {
+            query.put("Origin", request.origin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustOriginName)) {
+            query.put("TrustOriginName", request.trustOriginName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedOriginScene)) {
+            query.put("TrustedOriginScene", request.trustedOriginScene);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTrustedOrigin"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTrustedOriginResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a trusted origin.</p>
+     * 
+     * @param request CreateTrustedOriginRequest
+     * @return CreateTrustedOriginResponse
+     */
+    public CreateTrustedOriginResponse createTrustedOrigin(CreateTrustedOriginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTrustedOriginWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates an EIAM account in a specified EIAM instance.</p>
      * 
      * @param request CreateUserRequest
@@ -4445,6 +4505,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteResourceServerScopeResponse deleteResourceServerScope(DeleteResourceServerScopeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteResourceServerScopeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a trusted origin.</p>
+     * 
+     * @param request DeleteTrustedOriginRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTrustedOriginResponse
+     */
+    public DeleteTrustedOriginResponse deleteTrustedOriginWithOptions(DeleteTrustedOriginRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedOriginId)) {
+            query.put("TrustedOriginId", request.trustedOriginId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTrustedOrigin"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTrustedOriginResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a trusted origin.</p>
+     * 
+     * @param request DeleteTrustedOriginRequest
+     * @return DeleteTrustedOriginResponse
+     */
+    public DeleteTrustedOriginResponse deleteTrustedOrigin(DeleteTrustedOriginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteTrustedOriginWithOptions(request, runtime);
     }
 
     /**
@@ -5907,6 +6019,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Disables a trusted origin.</p>
+     * 
+     * @param request DisableTrustedOriginRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableTrustedOriginResponse
+     */
+    public DisableTrustedOriginResponse disableTrustedOriginWithOptions(DisableTrustedOriginRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedOriginId)) {
+            query.put("TrustedOriginId", request.trustedOriginId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableTrustedOrigin"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableTrustedOriginResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disables a trusted origin.</p>
+     * 
+     * @param request DisableTrustedOriginRequest
+     * @return DisableTrustedOriginResponse
+     */
+    public DisableTrustedOriginResponse disableTrustedOrigin(DisableTrustedOriginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableTrustedOriginWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</p>
      * 
      * @param request DisableUserRequest
@@ -7255,6 +7415,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnableResourceServerCustomSubjectResponse enableResourceServerCustomSubject(EnableResourceServerCustomSubjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableResourceServerCustomSubjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enables a trusted origin.</p>
+     * 
+     * @param request EnableTrustedOriginRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableTrustedOriginResponse
+     */
+    public EnableTrustedOriginResponse enableTrustedOriginWithOptions(EnableTrustedOriginRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedOriginId)) {
+            query.put("TrustedOriginId", request.trustedOriginId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableTrustedOrigin"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableTrustedOriginResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enables a trusted origin.</p>
+     * 
+     * @param request EnableTrustedOriginRequest
+     * @return EnableTrustedOriginResponse
+     */
+    public EnableTrustedOriginResponse enableTrustedOrigin(EnableTrustedOriginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableTrustedOriginWithOptions(request, runtime);
     }
 
     /**
@@ -10127,6 +10335,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the details of a trusted origin.</p>
+     * 
+     * @param request GetTrustedOriginRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTrustedOriginResponse
+     */
+    public GetTrustedOriginResponse getTrustedOriginWithOptions(GetTrustedOriginRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedOriginId)) {
+            query.put("TrustedOriginId", request.trustedOriginId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTrustedOrigin"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTrustedOriginResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a trusted origin.</p>
+     * 
+     * @param request GetTrustedOriginRequest
+     * @return GetTrustedOriginResponse
+     */
+    public GetTrustedOriginResponse getTrustedOrigin(GetTrustedOriginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTrustedOriginWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of an EIAM account.</p>
      * 
      * @param request GetUserRequest
@@ -11146,6 +11402,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When calling this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of authorization resource information.</p>
      * 
@@ -11194,6 +11453,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When calling this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of authorization resource information.</p>
      * 
@@ -13745,6 +14007,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of trusted origins.</p>
+     * 
+     * @param request ListTrustedOriginsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTrustedOriginsResponse
+     */
+    public ListTrustedOriginsResponse listTrustedOriginsWithOptions(ListTrustedOriginsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.origin)) {
+            query.put("Origin", request.origin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustOriginName)) {
+            query.put("TrustOriginName", request.trustOriginName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedOriginScene)) {
+            query.put("TrustedOriginScene", request.trustedOriginScene);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTrustedOrigins"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTrustedOriginsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of trusted origins.</p>
+     * 
+     * @param request ListTrustedOriginsRequest
+     * @return ListTrustedOriginsResponse
+     */
+    public ListTrustedOriginsResponse listTrustedOrigins(ListTrustedOriginsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTrustedOriginsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation queries only the applications that are directly assigned to an organization. You can use the <strong>ApplicationIds</strong> parameter to filter the applications.</p>
      * 
@@ -14974,7 +15304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the authorization granted by a specified ResourceServer to a Client application.</p>
+     * <p>Revokes the authorization granted by a specified ResourceServer to a Client application.</p>
      * 
      * @param request RevokeResourceServerFromClientRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15014,7 +15344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the authorization granted by a specified ResourceServer to a Client application.</p>
+     * <p>Revokes the authorization granted by a specified ResourceServer to a Client application.</p>
      * 
      * @param request RevokeResourceServerFromClientRequest
      * @return RevokeResourceServerFromClientResponse
@@ -15026,7 +15356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the scope permissions of a specified ResourceServer from a client application.</p>
+     * <p>Revokes the Scope permissions of a specified ResourceServer from a Client application.</p>
      * 
      * @param request RevokeResourceServerScopesFromClientRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15070,7 +15400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the scope permissions of a specified ResourceServer from a client application.</p>
+     * <p>Revokes the Scope permissions of a specified ResourceServer from a Client application.</p>
      * 
      * @param request RevokeResourceServerScopesFromClientRequest
      * @return RevokeResourceServerScopesFromClientResponse
@@ -19288,6 +19618,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateResourceServerScopeResponse updateResourceServerScope(UpdateResourceServerScopeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateResourceServerScopeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a trusted origin.</p>
+     * 
+     * @param request UpdateTrustedOriginRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTrustedOriginResponse
+     */
+    public UpdateTrustedOriginResponse updateTrustedOriginWithOptions(UpdateTrustedOriginRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustOriginName)) {
+            query.put("TrustOriginName", request.trustOriginName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedOriginId)) {
+            query.put("TrustedOriginId", request.trustedOriginId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedOriginScene)) {
+            query.put("TrustedOriginScene", request.trustedOriginScene);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTrustedOrigin"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTrustedOriginResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a trusted origin.</p>
+     * 
+     * @param request UpdateTrustedOriginRequest
+     * @return UpdateTrustedOriginResponse
+     */
+    public UpdateTrustedOriginResponse updateTrustedOrigin(UpdateTrustedOriginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateTrustedOriginWithOptions(request, runtime);
     }
 
     /**

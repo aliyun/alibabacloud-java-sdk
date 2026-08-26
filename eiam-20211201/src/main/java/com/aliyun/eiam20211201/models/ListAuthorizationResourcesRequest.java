@@ -46,7 +46,7 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that identifies the start position of the next page.</p>
+     * <p>The pagination token that marks the starting position of the next page.</p>
      * <ul>
      * <li>If this parameter is not specified, the query starts from the first page.</li>
      * </ul>
@@ -104,11 +104,11 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
 
     public static class ListAuthorizationResourcesRequestFilter extends TeaModel {
         /**
-         * <p>The name of the filter field. Valid values:</p>
+         * <p>The filter field name. Valid values:</p>
          * <ul>
-         * <li><p>AuthorizationResourceEntityType: the type of the resource entity associated with the authorization resource.</p>
+         * <li><p>AuthorizationResourceEntityType: the resource entity type associated with the authorization resource</p>
          * </li>
-         * <li><p>AuthorizationResourceEntityId: the ID of the resource entity associated with the authorization resource.</p>
+         * <li><p>AuthorizationResourceEntityId: the resource entity ID associated with the authorization resource</p>
          * </li>
          * </ul>
          * 
