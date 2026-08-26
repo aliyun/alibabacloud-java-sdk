@@ -1070,6 +1070,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a DataAgent theme.</p>
+     * 
+     * @param request CreateDataAgentThemeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataAgentThemeResponse
+     */
+    public CreateDataAgentThemeResponse createDataAgentThemeWithOptions(CreateDataAgentThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileFrom)) {
+            query.put("FileFrom", request.fileFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.themeId)) {
+            query.put("ThemeId", request.themeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.themeName)) {
+            query.put("ThemeName", request.themeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.themeType)) {
+            query.put("ThemeType", request.themeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataAgentTheme"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataAgentThemeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a DataAgent theme.</p>
+     * 
+     * @param request CreateDataAgentThemeRequest
+     * @return CreateDataAgentThemeResponse
+     */
+    public CreateDataAgentThemeResponse createDataAgentTheme(CreateDataAgentThemeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataAgentThemeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a DataAgent workspace.</p>
      * 
      * @param request CreateDataAgentWorkspaceRequest
@@ -1416,7 +1480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建sql模版</p>
+     * <p>Creates an SQL template.</p>
      * 
      * @param request CreateOneMetaSqlTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1476,7 +1540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建sql模版</p>
+     * <p>Creates an SQL template.</p>
      * 
      * @param request CreateOneMetaSqlTemplateRequest
      * @return CreateOneMetaSqlTemplateResponse
@@ -2304,7 +2368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除onemeta3.0的Ossie模型</p>
+     * <p>Deletes an Ossie model from onemeta 3.0.</p>
      * 
      * @param request DeleteOneMetaOssieModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2336,7 +2400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除onemeta3.0的Ossie模型</p>
+     * <p>Deletes an Ossie model from onemeta 3.0.</p>
      * 
      * @param request DeleteOneMetaOssieModelRequest
      * @return DeleteOneMetaOssieModelResponse
@@ -2348,7 +2412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除sql模版</p>
+     * <p>Deletes a knowledge base in OneMeta 3.0.</p>
      * 
      * @param request DeleteOneMetaSqlTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2380,7 +2444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除sql模版</p>
+     * <p>Deletes a knowledge base in OneMeta 3.0.</p>
      * 
      * @param request DeleteOneMetaSqlTemplateRequest
      * @return DeleteOneMetaSqlTemplateResponse
@@ -2606,6 +2670,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDataAgentSessionResponse describeDataAgentSession(DescribeDataAgentSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDataAgentSessionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Invokes the DescribeDataAgentTheme operation to query the details of a single DataAgent theme, including the theme name, stage, source, common scenarios, description, and creation and modification time.</p>
+     * 
+     * @param request DescribeDataAgentThemeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataAgentThemeResponse
+     */
+    public DescribeDataAgentThemeResponse describeDataAgentThemeWithOptions(DescribeDataAgentThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.themeId)) {
+            query.put("ThemeId", request.themeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDataAgentTheme"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataAgentThemeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Invokes the DescribeDataAgentTheme operation to query the details of a single DataAgent theme, including the theme name, stage, source, common scenarios, description, and creation and modification time.</p>
+     * 
+     * @param request DescribeDataAgentThemeRequest
+     * @return DescribeDataAgentThemeResponse
+     */
+    public DescribeDataAgentThemeResponse describeDataAgentTheme(DescribeDataAgentThemeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDataAgentThemeWithOptions(request, runtime);
     }
 
     /**
@@ -3256,6 +3364,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
+     * Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</p>
+     * 
+     * @param request GetDataAgentThemeUploadSignatureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataAgentThemeUploadSignatureResponse
+     */
+    public GetDataAgentThemeUploadSignatureResponse getDataAgentThemeUploadSignatureWithOptions(GetDataAgentThemeUploadSignatureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.themeId)) {
+            query.put("ThemeId", request.themeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataAgentThemeUploadSignature"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataAgentThemeUploadSignatureResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
+     * Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</p>
+     * 
+     * @param request GetDataAgentThemeUploadSignatureRequest
+     * @return GetDataAgentThemeUploadSignatureResponse
+     */
+    public GetDataAgentThemeUploadSignatureResponse getDataAgentThemeUploadSignature(GetDataAgentThemeUploadSignatureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataAgentThemeUploadSignatureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the details of a collaborative workspace.</p>
      * 
      * @param request GetDataAgentWorkspaceInfoRequest
@@ -3768,7 +3922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取onemeta3.0的Ossie模型</p>
+     * <p>Retrieves the Ossie model of onemeta 3.0.</p>
      * 
      * @param request GetOneMetaOssieModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3804,7 +3958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取onemeta3.0的Ossie模型</p>
+     * <p>Retrieves the Ossie model of onemeta 3.0.</p>
      * 
      * @param request GetOneMetaOssieModelRequest
      * @return GetOneMetaOssieModelResponse
@@ -4046,7 +4200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入Ossie模型</p>
+     * <p>Creates an SQL template.</p>
      * 
      * @param request ImportOneMetaOssieModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4106,7 +4260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入Ossie模型</p>
+     * <p>Creates an SQL template.</p>
      * 
      * @param request ImportOneMetaOssieModelRequest
      * @return ImportOneMetaOssieModelResponse
@@ -4888,6 +5042,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDataAgentSessionResponse listDataAgentSession(ListDataAgentSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataAgentSessionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Invokes the ListDataAgentTheme operation to query the DataAgent theme list by paging. You can filter themes by theme stage, source, and common scenarios.</p>
+     * 
+     * @param request ListDataAgentThemeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAgentThemeResponse
+     */
+    public ListDataAgentThemeResponse listDataAgentThemeWithOptions(ListDataAgentThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.themeFrom)) {
+            query.put("ThemeFrom", request.themeFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.themeType)) {
+            query.put("ThemeType", request.themeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAgentTheme"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAgentThemeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Invokes the ListDataAgentTheme operation to query the DataAgent theme list by paging. You can filter themes by theme stage, source, and common scenarios.</p>
+     * 
+     * @param request ListDataAgentThemeRequest
+     * @return ListDataAgentThemeResponse
+     */
+    public ListDataAgentThemeResponse listDataAgentTheme(ListDataAgentThemeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAgentThemeWithOptions(request, runtime);
     }
 
     /**
@@ -6158,7 +6380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取ossie模型列表</p>
+     * <p>Retrieves a list of OSSIE models.</p>
      * 
      * @param request ListOneMetaOssieModelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6214,7 +6436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取ossie模型列表</p>
+     * <p>Retrieves a list of OSSIE models.</p>
      * 
      * @param request ListOneMetaOssieModelsRequest
      * @return ListOneMetaOssieModelsResponse
@@ -6226,7 +6448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取sql模版</p>
+     * <p>Retrieves SQL templates.</p>
      * 
      * @param request ListOneMetaSqlTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6286,7 +6508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取sql模版</p>
+     * <p>Retrieves SQL templates.</p>
      * 
      * @param request ListOneMetaSqlTemplatesRequest
      * @return ListOneMetaSqlTemplatesResponse
@@ -6568,6 +6790,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDataAgentMcpResponse modifyDataAgentMcp(ModifyDataAgentMcpRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDataAgentMcpWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ModifyDataAgentTheme</p>
+     * 
+     * @param request ModifyDataAgentThemeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDataAgentThemeResponse
+     */
+    public ModifyDataAgentThemeResponse modifyDataAgentThemeWithOptions(ModifyDataAgentThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.themeId)) {
+            query.put("ThemeId", request.themeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.themeName)) {
+            query.put("ThemeName", request.themeName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDataAgentTheme"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDataAgentThemeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ModifyDataAgentTheme</p>
+     * 
+     * @param request ModifyDataAgentThemeRequest
+     * @return ModifyDataAgentThemeResponse
+     */
+    public ModifyDataAgentThemeResponse modifyDataAgentTheme(ModifyDataAgentThemeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDataAgentThemeWithOptions(request, runtime);
     }
 
     /**
@@ -6900,12 +7174,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
      * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
      * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the user\&quot;s previous message content.</li>
-     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are optional but provide more detailed context information.</li>
+     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7017,12 +7289,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
      * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
      * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the user\&quot;s previous message content.</li>
-     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are optional but provide more detailed context information.</li>
+     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8110,7 +8380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Ossie模型</p>
+     * <p>Updates an SQL template.</p>
      * 
      * @param request UpdateOneMetaOssieModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8170,7 +8440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Ossie模型</p>
+     * <p>Updates an SQL template.</p>
      * 
      * @param request UpdateOneMetaOssieModelRequest
      * @return UpdateOneMetaOssieModelResponse
@@ -8182,7 +8452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新sql模版</p>
+     * <p>Updates an SQL template.</p>
      * 
      * @param request UpdateOneMetaSqlTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8242,7 +8512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新sql模版</p>
+     * <p>Updates an SQL template.</p>
      * 
      * @param request UpdateOneMetaSqlTemplateRequest
      * @return UpdateOneMetaSqlTemplateResponse

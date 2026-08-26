@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteOneMetaOssieModelRequest extends TeaModel {
     /**
+     * <p>The UUID of the knowledge base.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86c5c290052147c***</p>
      */
     @NameInMap("KnowledgeUuid")
     public String knowledgeUuid;

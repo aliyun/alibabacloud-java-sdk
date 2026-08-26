@@ -4,30 +4,93 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class UpdateOneMetaOssieModelRequest extends TeaModel {
+    /**
+     * <p>The UUID of the associated folder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mc-HZ-OfjcNc2z***</p>
+     */
     @NameInMap("CatalogUuid")
     public String catalogUuid;
 
+    /**
+     * <p>The UUID of the associated database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>md-HZ-fp9K7r***</p>
+     */
     @NameInMap("DatabaseUuid")
     public String databaseUuid;
 
+    /**
+     * <p>The semantic description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Order summary</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The document type of the semantic model. Valid values:</p>
+     * <ul>
+     * <li>JSON</li>
+     * <li>YAML</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>JSON</p>
+     */
     @NameInMap("DocFormat")
     public String docFormat;
 
+    /**
+     * <p>The document definition of the semantic model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;version&quot;: &quot;0.2.0.dev0&quot;,
+     *   &quot;semantic_model&quot;: [
+     *     {
+     *       &quot;name&quot;: &quot;sales&quot;,
+     *       &quot;datasets&quot;: [
+     *         {
+     *           &quot;name&quot;: &quot;orders&quot;,
+     *           &quot;source&quot;: &quot;analytics.public.orders&quot;
+     *         }
+     *       ]
+     *     }
+     *   ]
+     * }</p>
+     */
     @NameInMap("Document")
     public String document;
 
     /**
+     * <p>The UUID of the knowledge.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86c5c290052147c***</p>
      */
     @NameInMap("KnowledgeUuid")
     public String knowledgeUuid;
 
+    /**
+     * <p>The tag of the semantic model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sales</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
+    /**
+     * <p>The semantic title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Order total</p>
+     */
     @NameInMap("Title")
     public String title;
 

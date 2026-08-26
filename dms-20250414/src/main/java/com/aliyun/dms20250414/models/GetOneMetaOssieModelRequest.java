@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetOneMetaOssieModelRequest extends TeaModel {
     /**
+     * <p>The document type of the semantic model. Valid values: JSON and YAML.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JSON</p>
      */
     @NameInMap("DocFormat")
     public String docFormat;
 
     /**
+     * <p>The UUID of the knowledge base.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86c5c290052147c***</p>
      */
     @NameInMap("KnowledgeUuid")
     public String knowledgeUuid;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateOneMetaSqlTemplateRequest extends TeaModel {
     /**
+     * <p>The UUID of the associated folder.</p>
+     * 
      * <strong>example:</strong>
      * <p>mc-HZ-OfjcNc2z***</p>
      */
@@ -12,6 +14,8 @@ public class CreateOneMetaSqlTemplateRequest extends TeaModel {
     public String catalogUuid;
 
     /**
+     * <p>The UUID of the associated database.</p>
+     * 
      * <strong>example:</strong>
      * <p>md-HZ-fp9K7r***</p>
      */
@@ -19,6 +23,8 @@ public class CreateOneMetaSqlTemplateRequest extends TeaModel {
     public String databaseUuid;
 
     /**
+     * <p>The description of the SQL template.</p>
+     * 
      * <strong>example:</strong>
      * <p>sales template</p>
      */
@@ -26,6 +32,7 @@ public class CreateOneMetaSqlTemplateRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The content of the SQL template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,7 @@ public class CreateOneMetaSqlTemplateRequest extends TeaModel {
     public String expr;
 
     /**
+     * <p>The knowledge source of the SQL template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,8 @@ public class CreateOneMetaSqlTemplateRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>The custom template parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;start_day_id&quot;: &quot;2026-08-01&quot;, &quot;end_day_id&quot;: &quot;2026-08-16&quot;}</p>
      */
@@ -51,6 +61,8 @@ public class CreateOneMetaSqlTemplateRequest extends TeaModel {
     public String sqlParams;
 
     /**
+     * <p>The tag of the SQL template.</p>
+     * 
      * <strong>example:</strong>
      * <p>sales</p>
      */
@@ -58,6 +70,7 @@ public class CreateOneMetaSqlTemplateRequest extends TeaModel {
     public String tag;
 
     /**
+     * <p>The title of the SQL template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

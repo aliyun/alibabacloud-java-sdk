@@ -4,10 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class CreateOneMetaSqlTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The response struct.</p>
+     */
     @NameInMap("Data")
     public OneMetaSqlTemplateView data;
 
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError</p>
      */
@@ -15,6 +20,8 @@ public class CreateOneMetaSqlTemplateResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>ServerUnrecognizedException</p>
      */
@@ -22,6 +29,8 @@ public class CreateOneMetaSqlTemplateResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
      */
@@ -29,6 +38,12 @@ public class CreateOneMetaSqlTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.                                 </li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
