@@ -4,11 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitAIMediaAuditJobRequest extends TeaModel {
+    @NameInMap("CensorProvider")
+    public String censorProvider;
+
     /**
      * <p>The configuration of the review job.</p>
      * <ul>
-     * <li>Other configuration items of the review job. Currently, only the ResourceType field is supported, which is used to specify the media file type. You can adjust the review standards and rules for this type.</li>
-     * <li>To adjust the review standards and rules for ResourceType, submit a ticket for technical support. For information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
+     * <li>For other configuration items of the review job, only the ResourceType field is currently supported. This field controls the media file type, and you can adjust the review standards and rules for the specified type.</li>
+     * <li>To adjust the review standards and rules for a ResourceType, submit a ticket for technical support. For information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
      * <li>Usage notes for ResourceType: Only letters, digits, and underscores (_) are allowed.</li>
      * </ul>
      * 
@@ -37,6 +40,9 @@ public class SubmitAIMediaAuditJobRequest extends TeaModel {
     @NameInMap("MediaType")
     public String mediaType;
 
+    @NameInMap("ServiceParameters")
+    public String serviceParameters;
+
     /**
      * <p>The AI template ID. You can obtain the ID by using one of the following methods:</p>
      * <ul>
@@ -54,9 +60,9 @@ public class SubmitAIMediaAuditJobRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+     * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks. For more information, refer to <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
      * <blockquote>
-     * <p>To use the message callback in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</p>
+     * <p>To use message callbacks in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, refer to <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,9 +71,23 @@ public class SubmitAIMediaAuditJobRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
+    @NameInMap("VideoService")
+    public String videoService;
+
+    @NameInMap("VoiceService")
+    public String voiceService;
+
     public static SubmitAIMediaAuditJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitAIMediaAuditJobRequest self = new SubmitAIMediaAuditJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitAIMediaAuditJobRequest setCensorProvider(String censorProvider) {
+        this.censorProvider = censorProvider;
+        return this;
+    }
+    public String getCensorProvider() {
+        return this.censorProvider;
     }
 
     public SubmitAIMediaAuditJobRequest setMediaAuditConfiguration(String mediaAuditConfiguration) {
@@ -94,6 +114,14 @@ public class SubmitAIMediaAuditJobRequest extends TeaModel {
         return this.mediaType;
     }
 
+    public SubmitAIMediaAuditJobRequest setServiceParameters(String serviceParameters) {
+        this.serviceParameters = serviceParameters;
+        return this;
+    }
+    public String getServiceParameters() {
+        return this.serviceParameters;
+    }
+
     public SubmitAIMediaAuditJobRequest setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -108,6 +136,22 @@ public class SubmitAIMediaAuditJobRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
+    }
+
+    public SubmitAIMediaAuditJobRequest setVideoService(String videoService) {
+        this.videoService = videoService;
+        return this;
+    }
+    public String getVideoService() {
+        return this.videoService;
+    }
+
+    public SubmitAIMediaAuditJobRequest setVoiceService(String voiceService) {
+        this.voiceService = voiceService;
+        return this;
+    }
+    public String getVoiceService() {
+        return this.voiceService;
     }
 
 }

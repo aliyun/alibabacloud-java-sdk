@@ -87,11 +87,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
-     * <li>Before adding an AI template for automated review or smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</li>
+     * <li>&lt;props=&quot;china&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</li>
+     * <li>&lt;props=&quot;intl&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated automated review or smart thumbnail.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an AI template used for automated review and smart thumbnail tasks.</p>
+     * <p>Adds an AI template for automated review and smart thumbnail tasks.</p>
      * 
      * @param request AddAITemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -133,11 +134,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Currently, this operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</li>
-     * <li>Before adding an AI template for automated review or smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</li>
+     * <li>&lt;props=&quot;china&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</li>
+     * <li>&lt;props=&quot;intl&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated automated review or smart thumbnail.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an AI template used for automated review and smart thumbnail tasks.</p>
+     * <p>Adds an AI template for automated review and smart thumbnail tasks.</p>
      * 
      * @param request AddAITemplateRequest
      * @return AddAITemplateResponse
@@ -8401,7 +8403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Usage notes</h3>
      * <p>This operation is supported only in the Singapore region.</p>
      * <h3>QPS limit</h3>
-     * <p>The maximum queries per second (QPS) for a single user for this operation is 20. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
+     * <p>You can call this operation up to 20 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the summary of automated review results.</p>
@@ -8440,7 +8442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Usage notes</h3>
      * <p>This operation is supported only in the Singapore region.</p>
      * <h3>QPS limit</h3>
-     * <p>The maximum queries per second (QPS) for a single user for this operation is 20. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
+     * <p>You can call this operation up to 20 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the summary of automated review results.</p>
@@ -12026,7 +12028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits an image automated review task. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</p>
+     * <p>Submits an automated review task for an image. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</p>
      * 
      * @param request SubmitAIImageAuditJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12035,6 +12037,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitAIImageAuditJobResponse submitAIImageAuditJobWithOptions(SubmitAIImageAuditJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.censorProvider)) {
+            query.put("CensorProvider", request.censorProvider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageService)) {
+            query.put("ImageService", request.imageService);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mediaAuditConfiguration)) {
             query.put("MediaAuditConfiguration", request.mediaAuditConfiguration);
         }
@@ -12057,6 +12067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            query.put("ServiceParameters", request.serviceParameters);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
@@ -12091,7 +12105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits an image automated review task. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</p>
+     * <p>Submits an automated review task for an image. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</p>
      * 
      * @param request SubmitAIImageAuditJobRequest
      * @return SubmitAIImageAuditJobResponse
@@ -12278,11 +12292,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Before using this API, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;see <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</strong></li>
+     * <li><strong>Before using this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;refer to <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</strong></li>
      * <li>This operation currently supports only the <strong>Shanghai</strong>, <strong>Beijing</strong>, and <strong>Singapore</strong> regions.</li>
-     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</li>
-     * <li>For the development guide on submitting automated review jobs, see <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</li>
-     * <li>After an automated review job is complete, the image resources generated during the job are retained free of charge for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</li>
+     * <li>For the development guide on submitting automated review jobs, refer to <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</li>
+     * <li>After an automated review job is complete, the image resources generated during the job are retained for free for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12295,6 +12309,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitAIMediaAuditJobResponse submitAIMediaAuditJobWithOptions(SubmitAIMediaAuditJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.censorProvider)) {
+            query.put("CensorProvider", request.censorProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mediaAuditConfiguration)) {
             query.put("MediaAuditConfiguration", request.mediaAuditConfiguration);
         }
@@ -12307,12 +12325,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MediaType", request.mediaType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            query.put("ServiceParameters", request.serviceParameters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             query.put("TemplateId", request.templateId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
             query.put("UserData", request.userData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoService)) {
+            query.put("VideoService", request.videoService);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voiceService)) {
+            query.put("VoiceService", request.voiceService);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -12335,11 +12365,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Before using this API, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;see <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</strong></li>
+     * <li><strong>Before using this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;refer to <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</strong></li>
      * <li>This operation currently supports only the <strong>Shanghai</strong>, <strong>Beijing</strong>, and <strong>Singapore</strong> regions.</li>
-     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</li>
-     * <li>For the development guide on submitting automated review jobs, see <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</li>
-     * <li>After an automated review job is complete, the image resources generated during the job are retained free of charge for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</li>
+     * <li>For the development guide on submitting automated review jobs, refer to <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</li>
+     * <li>After an automated review job is complete, the image resources generated during the job are retained for free for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</li>
      * </ul>
      * 
      * <b>summary</b> : 

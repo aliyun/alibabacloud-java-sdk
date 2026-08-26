@@ -4,15 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitAIImageAuditJobRequest extends TeaModel {
+    @NameInMap("CensorProvider")
+    public String censorProvider;
+
+    @NameInMap("ImageService")
+    public String imageService;
+
     /**
      * <p>The review node configuration.</p>
      * <ul>
-     * <li>Other configuration items of the review node. Currently, only the ResourceType field is supported, which is used to specify the media file type and adjust the review standards and rules for the specified type.</li>
-     * <li>Usage notes for ResourceType: only letters, digits, and underscores are allowed.</li>
+     * <li>Other configuration items of the review node. Currently, only the ResourceType field is supported, which is used to specify the media file type. You can adjust the review standards and rules for the specified type.</li>
+     * <li>Usage notes for ResourceType: Only letters, digits, and underscores (_) are allowed.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can customize the ResourceType field as described in the usage notes. After customization, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a Yida form</a> to commit to Alibaba Cloud for spooling before the configuration takes effect.</li>
+     * <li>You can customize the ResourceType field based on the usage notes. After customization, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a Yida form</a> to commit to Alibaba Cloud for spooling before the configuration takes effect.</li>
      * <li>To adjust the review standards and rules for a specific ResourceType, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a Yida form</a> to request technical support.</li>
      * </ul>
      * </blockquote>
@@ -46,11 +52,14 @@ public class SubmitAIImageAuditJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public String resourceOwnerId;
 
+    @NameInMap("ServiceParameters")
+    public String serviceParameters;
+
     /**
      * <p>The AI template ID. You can obtain the ID by using one of the following methods:</p>
      * <ul>
-     * <li>When you call the <a href="https://help.aliyun.com/document_detail/102930.html">Add AI template</a> operation to add an AI template, the AI template ID is the value of TemplateId in the response.</li>
-     * <li>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">Query AI template list</a> operation to obtain the AI template ID, which is the value of TemplateId in the response.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/102930.html">Add AI template</a> operation to add an AI template. The AI template ID is the value of TemplateId in the response.</li>
+     * <li>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">Query AI template list</a> operation to query the AI template ID, which is the value of TemplateId in the response.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -63,6 +72,22 @@ public class SubmitAIImageAuditJobRequest extends TeaModel {
     public static SubmitAIImageAuditJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitAIImageAuditJobRequest self = new SubmitAIImageAuditJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitAIImageAuditJobRequest setCensorProvider(String censorProvider) {
+        this.censorProvider = censorProvider;
+        return this;
+    }
+    public String getCensorProvider() {
+        return this.censorProvider;
+    }
+
+    public SubmitAIImageAuditJobRequest setImageService(String imageService) {
+        this.imageService = imageService;
+        return this;
+    }
+    public String getImageService() {
+        return this.imageService;
     }
 
     public SubmitAIImageAuditJobRequest setMediaAuditConfiguration(String mediaAuditConfiguration) {
@@ -111,6 +136,14 @@ public class SubmitAIImageAuditJobRequest extends TeaModel {
     }
     public String getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public SubmitAIImageAuditJobRequest setServiceParameters(String serviceParameters) {
+        this.serviceParameters = serviceParameters;
+        return this;
+    }
+    public String getServiceParameters() {
+        return this.serviceParameters;
     }
 
     public SubmitAIImageAuditJobRequest setTemplateId(String templateId) {
