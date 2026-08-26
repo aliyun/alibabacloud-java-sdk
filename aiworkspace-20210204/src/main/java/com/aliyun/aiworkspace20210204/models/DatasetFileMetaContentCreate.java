@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DatasetFileMetaContentCreate extends TeaModel {
     /**
-     * <p>The comment on the file.</p>
+     * <p>The file comment.</p>
      * 
      * <strong>example:</strong>
      * <p>The first image file in the dataset.</p>
@@ -14,7 +14,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String comment;
 
     /**
-     * <p>The MIME type of the file. It includes a type and a subtype.</p>
+     * <p>The MIME type of the file. Contains Type and SubType.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The size of the file in bytes.</p>
+     * <p>The file size in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -33,7 +33,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The time when the file was created. The time is in ISO 8601 format.</p>
+     * <p>The file creation time in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String fileCreateTime;
 
     /**
-     * <p>The fingerprint of the file. This value ensures the uniqueness of the file content and changes if the content is modified. For OSS files, this is the ETag. For NAS files, this is the MD5 value.</p>
+     * <p>The file fingerprint value. Used to determine the uniqueness of file content. This value changes when the file content is modified. OSS files use ETag, and NAS files use MD5 values.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String fileFingerPrint;
 
     /**
-     * <p>The name of the file.</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
      * <p>00001.jpeg</p>
@@ -62,7 +62,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The type of the file. This is the same as the Multipurpose Internet Mail Extensions (MIME) type.</p>
+     * <p>The file type. Same as MIME Type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The time when the file was last modified. The time is in ISO 8601 format.</p>
+     * <p>The last modification time of the file in ISO 8601 format.</p>
      * <p>This parameter is required.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
@@ -83,60 +83,49 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String fileUpdateTime;
 
     /**
-     * <p>The specific metadata of the file. This metadata cannot be used for retrieval. The value must be a JSON string.</p>
+     * <p>The specific metadata of the file, not searchable. In JSON string format.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;Image&quot;:
-     *     {
-     *         &quot;Width&quot;: 1920,
-     *         &quot;Height&quot;: 1080,
-     *         &quot;Channel&quot;: 3
-     *     }
+     *     &quot;ImageHeight&quot;: 1080,
+     *     &quot;ImageWidth&quot;: 1920
      * }</p>
      */
     @NameInMap("MetaAttributes")
     public String metaAttributes;
 
     /**
-     * <p>The tags that are manually added by users. The \<code>add\\</code> operation is used to add tags to a tag group. The value must be a JSON string.
-     * The following tag group is available:</p>
+     * <p>User manual tagging: (add indicates adding tags to the tag group). In JSON string format.
+     * The operable tag groups are:</p>
      * <ul>
-     * <li>user: A list of tag names added to a single piece of metadata.</li>
+     * <li>user: The list of tag names manually added by the user for a single metadata entry.</li>
      * </ul>
      * <pre><code>{
      *     &quot;user&quot;:{
-     *         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;]
+     *         &quot;add&quot;:[&quot;lane_line&quot;,&quot;sunny&quot;]
      *     }
      * }
      * </code></pre>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;user&quot;:[&quot;cat&quot;, &quot;White&quot;]}</p>
+     * <p>{
+     *     &quot;user&quot;:{
+     *         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;]
+     *     }
+     * }</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
-     * <p>The unique URI of the file. This URI records the unique path of the file. The path can be an OSS or NAS path.</p>
+     * <p>The unique URI of the file. Used to record the unique file path. Supports file paths in OSS and NAS.</p>
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>OSS</p>
-     * </summary>
-     * 
-     * <p>oss\://${bucket}/${path}</p>
+     * <summary>OSS</summary>
+     * oss://${bucket}/${path}
      * </details>
-     * 
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>NAS</p>
-     * </summary>
-     * 
-     * <p>nas\://${fileSystemId}/${path}</p>
+     * <summary>NAS</summary>
+     * nas://${fileSystemId}/${path}
      * </details>
      * 
      * <p>This parameter is required.</p>

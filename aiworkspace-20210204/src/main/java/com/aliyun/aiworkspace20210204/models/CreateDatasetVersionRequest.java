@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetVersionRequest extends TeaModel {
     /**
-     * <p>The number of files in the dataset.</p>
+     * <p>The number of dataset files.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -14,7 +14,7 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public Long dataCount;
 
     /**
-     * <p>The size of the space occupied by the dataset files. Unit: bytes.</p>
+     * <p>The size of space occupied by dataset files. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>19000</p>
@@ -23,16 +23,18 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The type of the data source. If you specify multiple types, separate them with commas (,). Valid values:</p>
+     * <p>The data source type. Separate multiple values with commas (,). Valid values:</p>
      * <ul>
-     * <li><p>NAS: The data is stored in Alibaba Cloud File Storage (NAS).</p>
+     * <li><p>NAS: Alibaba Cloud Network Attached Storage (NAS).</p>
      * </li>
-     * <li><p>OSS: The data is stored in Alibaba Cloud Object Storage Service (OSS).</p>
+     * <li><p>OSS: Alibaba Cloud Object Storage Service (OSS).</p>
      * </li>
      * <li><p>CPFS</p>
      * </li>
      * </ul>
-     * <p>Note: The DataSourceType of the version must be the same as the DataSourceType of the dataset. The system verifies this consistency when you create the version.</p>
+     * <blockquote>
+     * <p>The DataSourceType of the version must be consistent with the DataSourceType of the dataset. Validation is performed against the dataset when a version is created.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +44,16 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>A custom description for the dataset version. This helps distinguish different dataset versions.</p>
+     * <p>UserMetricsEndpoints</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::1234567890123456:role/role-name</p>
+     */
+    @NameInMap("DatasetTaskRamRole")
+    public String datasetTaskRamRole;
+
+    /**
+     * <p>The custom description of the dataset version, used to distinguish different dataset versions.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a description of the dataset version.</p>
@@ -51,66 +62,47 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The storage import configuration of the dataset. Supported storage types include OSS, NAS, and CPFS.</p>
+     * <p>The storage import configuration of the dataset. OSS, NAS, and CPFS are supported.</p>
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>OSS</p>
-     * </summary>
-     * 
-     * <p>{<br>
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>
-     * &quot;bucket&quot;: &quot;${bucket}&quot;,// The bucket name.<br>
-     * &quot;path&quot;: &quot;${path}&quot; // The file path.<br>
-     * }</p>
+     * <summary>OSS</summary>
+     * {<BR>
+     *   "region": "${region}",//Region ID<BR>
+     *   "bucket": "${bucket}",//Bucket name<BR>
+     *   "path": "${path}" //File path<BR>
+     * }<BR>
      * </details>
      * 
      * <details>
+     * <summary>NAS</summary>
+     * {<BR>
+     *   "region": "${region}",//Region ID<BR>
+     *   "fileSystemId": "${file_system_id}", //File system ID<BR>
+     *   "path": "${path}", //File system path<BR>
+     *   "mountTarget": "${mount_target}" //File system mount target<BR>
+     * }<BR>
+     * </details>
      * 
-     * <summary>
      * 
-     * <p>NAS</p>
-     * </summary>
-     * 
-     * <p>{<br>
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.<br>
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path.<br>
-     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount target of the file system.<br>
-     * }</p>
+     * <details>
+     * <summary>CPFS</summary>
+     * {<BR>
+     *   "region": "${region}",//Region ID<BR>
+     *   "fileSystemId": "${file_system_id}", //File system ID<BR>
+     *   "protocolServiceId":"${protocol_service_id}", //File system protocol service<BR>
+     *   "exportId": "${export_id}", //File system export directory<BR>
+     *   "path": "${path}",  //File system path<BR>
+     * }<BR>
      * </details>
      * 
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>CPFS</p>
-     * </summary>
-     * 
-     * <p>{<br>
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.<br>
-     * &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The protocol service of the file system.<br>
-     * &quot;exportId&quot;: &quot;${export_id}&quot;, // The exported directory of the file system.<br>
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path.<br>
-     * }</p>
-     * </details>
-     * 
-     * <details>
-     * 
-     * <summary>
-     * 
-     * <p>Intelligent Computing CPFS</p>
-     * </summary>
-     * 
-     * <p>{<br>
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.<br>
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path.<br>
-     * &quot;mountTarget&quot;: &quot;${mount_target}&quot;, // The mount target of the file system. This parameter is specific to the Intelligent Computing edition.<br>
-     * &quot;isVpcMount&quot;: boolean, // Specifies whether the mount target is in a VPC. This parameter is specific to the Intelligent Computing edition.<br>
-     * }</p>
+     * <summary>Lingjun CPFS</summary>
+     * {<BR>
+     *   "region": "${region}",//Region ID<BR>
+     *   "fileSystemId": "${file_system_id}", //File system ID<BR>
+     *   "path": "${path}",  //File system path<BR>
+     *   "mountTarget": "${mount_target}" //File system mount target, specific to Lingjun edition<BR>
+     *   "isVpcMount": boolean, //Whether it is a VPC mount target, specific to Lingjun edition<BR>
+     * }<BR>
      * </details>
      * 
      * <strong>example:</strong>
@@ -126,14 +118,14 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String importInfo;
 
     /**
-     * <p>A list of tags for the dataset version.</p>
+     * <p>The list of dataset version labels.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The extended field, which is a JSON string.
-     * When DLC uses the dataset, you can configure the mountPath field to specify the default mount path for the dataset.</p>
+     * <p>The extended field in JsonString format.
+     * When DLC uses a dataset, you can specify the default mount path of the dataset by configuring the mountPath field.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -146,10 +138,8 @@ public class CreateDatasetVersionRequest extends TeaModel {
     /**
      * <p>The property of the dataset. Valid values:</p>
      * <ul>
-     * <li><p>FILE: A file.</p>
-     * </li>
-     * <li><p>DIRECTORY: A folder.</p>
-     * </li>
+     * <li>FILE: file.</li>
+     * <li>DIRECTORY: folder.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -160,14 +150,11 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String property;
 
     /**
-     * <p>The ID of the data source.</p>
+     * <p>The data source ID.</p>
      * <ul>
-     * <li><p>If SourceType is set to USER, you can customize the SourceId.</p>
-     * </li>
-     * <li><p>If SourceType is set to ITAG, which indicates a dataset generated from the annotation results of the iTAG module, SourceId is the task ID from iTAG.</p>
-     * </li>
-     * <li><p>If SourceType is set to PAI_PUBLIC_DATASET, which indicates a dataset created from a public PAI dataset, SourceId is empty by default.</p>
-     * </li>
+     * <li>If SourceType is USER, SourceId can be customized.</li>
+     * <li>If SourceType is ITAG, which indicates a dataset generated from iTAG annotation results, SourceId is the iTAG task ID.</li>
+     * <li>If SourceType is PAI_PUBLIC_DATASET, which indicates a dataset created from a PAI public dataset, SourceId is empty by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -177,14 +164,11 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The type of the data source. The default value is USER. Valid values:</p>
+     * <p>The data source type. Default value: USER. Valid values:</p>
      * <ul>
-     * <li><p>PAI-PUBLIC-DATASET: a public dataset from PAI.</p>
-     * </li>
-     * <li><p>ITAG: a dataset generated from the annotation results of the iTAG module.</p>
-     * </li>
-     * <li><p>USER: a dataset registered by a user.</p>
-     * </li>
+     * <li>PAI-PUBLIC-DATASET: PAI public dataset.</li>
+     * <li>ITAG: dataset generated from iTAG annotation results.</li>
+     * <li>USER: user-registered dataset.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -194,16 +178,14 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The following examples show how to configure the URI:</p>
+     * <p>Examples of Uri configurations:</p>
      * <ul>
-     * <li><p>If the data source type is OSS: <code>oss://bucket.endpoint/object</code></p>
-     * </li>
-     * <li><p>If the data source type is NAS:
-     * The format for a general-purpose NAS file system is <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>.
-     * CPFS 1.0: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>.
+     * <li>If the data source type is OSS: <code>oss://bucket.endpoint/object</code></li>
+     * <li>If the data source type is NAS:
+     * General-purpose NAS format: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>;
+     * CPFS 1.0: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>;
      * CPFS 2.0: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>.
-     * CPFS 1.0 and CPFS 2.0 are distinguished by the format of the fsid. The format for CPFS 1.0 is cpfs-&lt;8 ASCII characters&gt;. The format for CPFS 2.0 is cpfs-&lt;16 ASCII characters&gt;.</p>
-     * </li>
+     * CPFS 1.0 and CPFS 2.0 are distinguished by the format of the fsid: CPFS 1.0 format is cpfs-&lt;8 ASCII characters&gt;; CPFS 2.0 format is cpfs-&lt;16 ASCII characters&gt;.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -212,6 +194,9 @@ public class CreateDatasetVersionRequest extends TeaModel {
      */
     @NameInMap("Uri")
     public String uri;
+
+    @NameInMap("UserMetricsEndpoints")
+    public java.util.List<UserMetricsEndpoint> userMetricsEndpoints;
 
     public static CreateDatasetVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDatasetVersionRequest self = new CreateDatasetVersionRequest();
@@ -240,6 +225,14 @@ public class CreateDatasetVersionRequest extends TeaModel {
     }
     public String getDataSourceType() {
         return this.dataSourceType;
+    }
+
+    public CreateDatasetVersionRequest setDatasetTaskRamRole(String datasetTaskRamRole) {
+        this.datasetTaskRamRole = datasetTaskRamRole;
+        return this;
+    }
+    public String getDatasetTaskRamRole() {
+        return this.datasetTaskRamRole;
     }
 
     public CreateDatasetVersionRequest setDescription(String description) {
@@ -304,6 +297,14 @@ public class CreateDatasetVersionRequest extends TeaModel {
     }
     public String getUri() {
         return this.uri;
+    }
+
+    public CreateDatasetVersionRequest setUserMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
+        this.userMetricsEndpoints = userMetricsEndpoints;
+        return this;
+    }
+    public java.util.List<UserMetricsEndpoint> getUserMetricsEndpoints() {
+        return this.userMetricsEndpoints;
     }
 
 }

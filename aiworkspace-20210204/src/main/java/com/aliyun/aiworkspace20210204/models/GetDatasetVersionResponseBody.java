@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatasetVersionResponseBody extends TeaModel {
     /**
-     * <p>The number of data entries.</p>
+     * <p>The data volume.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -14,7 +14,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public Long dataCount;
 
     /**
-     * <p>The size of the dataset.</p>
+     * <p>The dataset size.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -23,7 +23,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The type of the data source.</p>
+     * <p>The data source type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The ID of the dataset.</p>
+     * <p>The primary resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-dkdbnnap0g7b6su4yg</p>
@@ -42,7 +42,16 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>The description of the version.</p>
+     * <p>DatasetTaskRamRole</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::1234567890123456:role/role-name</p>
+     */
+    @NameInMap("DatasetTaskRamRole")
+    public String datasetTaskRamRole;
+
+    /**
+     * <p>The version description.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a description of the dataset version.</p>
@@ -51,7 +60,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The time when the dataset version was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-13T10:22:05.694Z</p>
@@ -60,7 +69,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the dataset version was last modified.</p>
+     * <p>The last modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-13T10:22:05.694Z</p>
@@ -69,48 +78,30 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The storage import configuration of the dataset. Supported storage services include OSS, NAS, and CPFS.</p>
+     * <p>The storage import configuration of the dataset. OSS, NAS, and CPFS are supported.</p>
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>OSS</p>
-     * </summary>
-     * 
-     * <p>{
-     * &quot;region&quot;: &quot;${region}&quot;,// Region ID
-     * &quot;bucket&quot;: &quot;${bucket}&quot;,// Bucket name
-     * &quot;path&quot;: &quot;${path}&quot; // File path
-     * }</p>
+     * <summary>OSS</summary>
+     * {
+     * "region": "${region}",//The region ID.
+     * "bucket": "${bucket}",//The bucket name.
+     * "path": "${path}" //The file path.
+     * }
      * </details>
      * 
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>NAS</p>
-     * </summary>
+     * <summary>NAS</summary>
      * 
      * </details>
      * 
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>CPFS</p>
-     * </summary>
-     * 
-     * <p>Block content</p>
+     * <summary>CPFS</summary>
+     * Block content
      * </details>
      * 
+     * 
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>AI Computing CPFS</p>
-     * </summary>
-     * 
-     * <p>Block content</p>
+     * <summary>Intelligent computing CPFS</summary>
+     * Block content
      * </details>
      * 
      * <strong>example:</strong>
@@ -126,18 +117,16 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String importInfo;
 
     /**
-     * <p>The tags of the resource.</p>
+     * <p>The resource labels.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The access permissions when the dataset is mounted.</p>
+     * <p>The permission when the dataset is mounted. Valid values:</p>
      * <ul>
-     * <li><p>RO: Read-only mount</p>
-     * </li>
-     * <li><p>RW: Read-write mount</p>
-     * </li>
+     * <li>RO: read-only mount</li>
+     * <li>RW: read and write mount</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,7 +136,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String mountAccess;
 
     /**
-     * <p>Additional options.</p>
+     * <p>The extension field.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -168,7 +157,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String property;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>C55DF3DA-F120-5E37-A374-F49365531701</p>
@@ -177,7 +166,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the dataset source.</p>
+     * <p>The dataset source ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-rbvg5wzljzjhc9ks92</p>
@@ -186,7 +175,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The source type.</p>
+     * <p>The data source type.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -195,7 +184,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The URI of the dataset version.</p>
+     * <p>The URI configuration example.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -204,8 +193,11 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     @NameInMap("Uri")
     public String uri;
 
+    @NameInMap("UserMetricsEndpoints")
+    public java.util.List<UserMetricsEndpoint> userMetricsEndpoints;
+
     /**
-     * <p>The name of the dataset version.</p>
+     * <p>The dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -248,6 +240,14 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     }
     public String getDatasetId() {
         return this.datasetId;
+    }
+
+    public GetDatasetVersionResponseBody setDatasetTaskRamRole(String datasetTaskRamRole) {
+        this.datasetTaskRamRole = datasetTaskRamRole;
+        return this;
+    }
+    public String getDatasetTaskRamRole() {
+        return this.datasetTaskRamRole;
     }
 
     public GetDatasetVersionResponseBody setDescription(String description) {
@@ -344,6 +344,14 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     }
     public String getUri() {
         return this.uri;
+    }
+
+    public GetDatasetVersionResponseBody setUserMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
+        this.userMetricsEndpoints = userMetricsEndpoints;
+        return this;
+    }
+    public java.util.List<UserMetricsEndpoint> getUserMetricsEndpoints() {
+        return this.userMetricsEndpoints;
     }
 
     public GetDatasetVersionResponseBody setVersionName(String versionName) {

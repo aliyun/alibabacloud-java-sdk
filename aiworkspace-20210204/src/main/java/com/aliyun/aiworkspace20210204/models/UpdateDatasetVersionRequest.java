@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetVersionRequest extends TeaModel {
     /**
-     * <p>The number of files in the dataset.</p>
+     * <p>The number of dataset files.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class UpdateDatasetVersionRequest extends TeaModel {
     public Long dataCount;
 
     /**
-     * <p>The size of the dataset files, in bytes.</p>
+     * <p>The size of the space occupied by dataset files. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -23,7 +23,16 @@ public class UpdateDatasetVersionRequest extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>A custom description of the dataset to distinguish it from other datasets.</p>
+     * <p>DatasetTaskRamRole</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::1234567890123456:role/role-name</p>
+     */
+    @NameInMap("DatasetTaskRamRole")
+    public String datasetTaskRamRole;
+
+    /**
+     * <p>The custom description of the dataset, which is used to distinguish different datasets.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a description of a dataset version.</p>
@@ -32,8 +41,7 @@ public class UpdateDatasetVersionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>An extension field in the JSON String format.
-     * When DLC uses the dataset, you can configure the mountPath field to specify the default mount path.</p>
+     * <p>The extended field in JsonString format. When DLC uses the dataset, you can specify the default mount path of the dataset by configuring the mountPath field.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -42,6 +50,9 @@ public class UpdateDatasetVersionRequest extends TeaModel {
      */
     @NameInMap("Options")
     public String options;
+
+    @NameInMap("UserMetricsEndpoints")
+    public java.util.List<UserMetricsEndpoint> userMetricsEndpoints;
 
     public static UpdateDatasetVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetVersionRequest self = new UpdateDatasetVersionRequest();
@@ -64,6 +75,14 @@ public class UpdateDatasetVersionRequest extends TeaModel {
         return this.dataSize;
     }
 
+    public UpdateDatasetVersionRequest setDatasetTaskRamRole(String datasetTaskRamRole) {
+        this.datasetTaskRamRole = datasetTaskRamRole;
+        return this;
+    }
+    public String getDatasetTaskRamRole() {
+        return this.datasetTaskRamRole;
+    }
+
     public UpdateDatasetVersionRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +97,14 @@ public class UpdateDatasetVersionRequest extends TeaModel {
     }
     public String getOptions() {
         return this.options;
+    }
+
+    public UpdateDatasetVersionRequest setUserMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
+        this.userMetricsEndpoints = userMetricsEndpoints;
+        return this;
+    }
+    public java.util.List<UserMetricsEndpoint> getUserMetricsEndpoints() {
+        return this.userMetricsEndpoints;
     }
 
 }

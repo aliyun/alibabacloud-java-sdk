@@ -20,7 +20,7 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The current page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of resources that match the filter conditions.</p>
+     * <p>The resource count that matches the conditional filter criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

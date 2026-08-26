@@ -20,7 +20,7 @@ public class ListDatasetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of datasets.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

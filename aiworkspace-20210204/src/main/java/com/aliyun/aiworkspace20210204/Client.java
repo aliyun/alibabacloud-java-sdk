@@ -578,6 +578,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DataType", request.dataType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetTaskRamRole)) {
+            body.put("DatasetTaskRamRole", request.datasetTaskRamRole);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
         }
@@ -642,6 +646,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("UserId", request.userId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userMetricsEndpoints)) {
+            body.put("UserMetricsEndpoints", request.userMetricsEndpoints);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.versionDescription)) {
             body.put("VersionDescription", request.versionDescription);
         }
@@ -687,7 +695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates file metadata records for a dataset in a batch.</p>
+     * <p>Creates file metadata records in a dataset in batches.</p>
      * 
      * @param request CreateDatasetFileMetasRequest
      * @param headers map
@@ -729,7 +737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates file metadata records for a dataset in a batch.</p>
+     * <p>Creates file metadata records in a dataset in batches.</p>
      * 
      * @param request CreateDatasetFileMetasRequest
      * @return CreateDatasetFileMetasResponse
@@ -951,6 +959,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DataSourceType", request.dataSourceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetTaskRamRole)) {
+            body.put("DatasetTaskRamRole", request.datasetTaskRamRole);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
         }
@@ -981,6 +993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.uri)) {
             body.put("Uri", request.uri);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userMetricsEndpoints)) {
+            body.put("UserMetricsEndpoints", request.userMetricsEndpoints);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1877,7 +1893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a workspace role.</p>
+     * <p>Adds a workspace role.</p>
      * 
      * @param request CreateWorkspaceRoleRequest
      * @param headers map
@@ -1923,7 +1939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a workspace role.</p>
+     * <p>Adds a workspace role.</p>
      * 
      * @param request CreateWorkspaceRoleRequest
      * @return CreateWorkspaceRoleResponse
@@ -3434,7 +3450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a specific dataset version.</p>
+     * <p>Retrieves the information of a specified dataset version.</p>
      * 
      * @param request GetDatasetVersionRequest
      * @param headers map
@@ -3462,7 +3478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a specific dataset version.</p>
+     * <p>Retrieves the information of a specified dataset version.</p>
      * 
      * @param request GetDatasetVersionRequest
      * @return GetDatasetVersionResponse
@@ -4702,7 +4718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the datasets in a workspace.</p>
+     * <p>Retrieves the list of datasets in a specified workspace.</p>
      * 
      * @param request ListDatasetsRequest
      * @param headers map
@@ -4804,7 +4820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the datasets in a workspace.</p>
+     * <p>Retrieves the list of datasets in a specified workspace.</p>
      * 
      * @param request ListDatasetsRequest
      * @return ListDatasetsResponse
@@ -7045,7 +7061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information for a specific version of a dataset.</p>
+     * <p>Updates the information of a specified dataset version.</p>
      * 
      * @param request UpdateDatasetVersionRequest
      * @param headers map
@@ -7063,12 +7079,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DataSize", request.dataSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetTaskRamRole)) {
+            body.put("DatasetTaskRamRole", request.datasetTaskRamRole);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.options)) {
             body.put("Options", request.options);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userMetricsEndpoints)) {
+            body.put("UserMetricsEndpoints", request.userMetricsEndpoints);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -7091,7 +7115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information for a specific version of a dataset.</p>
+     * <p>Updates the information of a specified dataset version.</p>
      * 
      * @param request UpdateDatasetVersionRequest
      * @return UpdateDatasetVersionResponse
