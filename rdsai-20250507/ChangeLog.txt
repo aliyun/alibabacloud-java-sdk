@@ -1,3 +1,8 @@
+2026-08-27 Version: 3.9.1
+- Update API DescribeModelOperator: add request parameters Region.
+- Update API GetModelOperatorOrder: add request parameters Region.
+
+
 2026-08-24 Version: 3.9.0
 - Support API GetChatModel.
 - Update API CreateSandboxTemplate: add request parameters Image.

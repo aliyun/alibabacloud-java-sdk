@@ -11,7 +11,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
     public GetModelOperatorOrderResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Request result.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -76,6 +76,8 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
 
     public static class GetModelOperatorOrderResponseBodyDataInstanceList extends TeaModel {
         /**
+         * <p>The instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PREPAY</p>
          */
@@ -83,7 +85,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The instance end time (format: Timestamp).</p>
+         * <p>The end time of the instance. Format: Timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1775145600000</p>
@@ -92,7 +94,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>instance type</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>xlarge</p>
@@ -110,7 +112,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The instance start time (format: Timestamp).</p>
+         * <p>The start time of the instance. Format: Timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1772439028000</p>
@@ -193,7 +195,7 @@ public class GetModelOperatorOrderResponseBody extends TeaModel {
         public Boolean hasValidOrder;
 
         /**
-         * <p>The instance list.</p>
+         * <p>The list of instances.</p>
          */
         @NameInMap("InstanceList")
         public java.util.List<GetModelOperatorOrderResponseBodyDataInstanceList> instanceList;

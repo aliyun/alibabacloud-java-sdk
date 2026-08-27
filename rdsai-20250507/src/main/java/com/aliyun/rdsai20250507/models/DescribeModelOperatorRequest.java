@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeModelOperatorRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    /**
+     * <p>The region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("Region")
+    public String region;
 
     public static DescribeModelOperatorRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeModelOperatorRequest self = new DescribeModelOperatorRequest();
@@ -24,6 +33,14 @@ public class DescribeModelOperatorRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeModelOperatorRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
 }

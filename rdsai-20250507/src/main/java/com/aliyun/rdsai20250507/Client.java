@@ -2336,11 +2336,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>View basic information and usage for the RDS AI Assistant Ultimate Edition.</p>
+     * <p>Queries the basic information and usage of RDS AI Assistant Ultimate Edition.</p>
      * 
      * @param request DescribeModelOperatorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2351,6 +2351,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2372,11 +2376,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>View basic information and usage for the RDS AI Assistant Ultimate Edition.</p>
+     * <p>Queries the basic information and usage of RDS AI Assistant Ultimate Edition.</p>
      * 
      * @param request DescribeModelOperatorRequest
      * @return DescribeModelOperatorResponse
@@ -3049,10 +3053,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engine</h3>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain RDS AI Assistant Ultimate order information</p>
+     * <p>Retrieves order information for the RDS AI Assistant Ultimate Edition.</p>
      * 
      * @param request GetModelOperatorOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3060,7 +3065,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetModelOperatorOrderResponse getModelOperatorOrderWithOptions(GetModelOperatorOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetModelOperatorOrder"),
             new TeaPair("version", "2025-05-07"),
@@ -3077,10 +3089,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engine</h3>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain RDS AI Assistant Ultimate order information</p>
+     * <p>Retrieves order information for the RDS AI Assistant Ultimate Edition.</p>
      * 
      * @param request GetModelOperatorOrderRequest
      * @return GetModelOperatorOrderResponse
