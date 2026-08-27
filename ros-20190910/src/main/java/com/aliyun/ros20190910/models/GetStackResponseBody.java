@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetStackResponseBody extends TeaModel {
     /**
-     * <p>The number of resources on which drift detection was performed.</p>
+     * <p>The number of resources on which drift detection has been performed.</p>
      * <blockquote>
-     * <p> This parameter is returned only if the most recent drift detection on the stack was successful.</p>
+     * <p>This parameter is returned only when the most recent drift detection on the stack was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetStackResponseBody extends TeaModel {
     public Integer checkedStackResourceCount;
 
     /**
-     * <p>The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the stack was created. The time is displayed in UTC+0 and follows the ISO 8601 standard without the trailing Z. Format: YYYY-MM-DDThh:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-09-16T08:21:40</p>
@@ -28,11 +28,11 @@ public class GetStackResponseBody extends TeaModel {
     /**
      * <p>Indicates whether deletion protection is enabled for the stack. Valid values:</p>
      * <ul>
-     * <li>Enabled: Deletion protection is enabled for the stack.</li>
-     * <li>Disabled: Deletion protection is disabled for the stack. You can delete the stack by using the ROS console or by calling the DeleteStack operation.</li>
+     * <li>Enabled: Deletion protection is enabled.</li>
+     * <li>Disabled: Deletion protection is disabled. In this case, you can release the stack by using the console or by calling the DeleteStack operation.</li>
      * </ul>
      * <blockquote>
-     * <p> Deletion protection of a nested stack is the same as deletion protection of its root stack.</p>
+     * <p>The deletion protection mechanism of a nested stack is the same as that of the root stack.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,8 +53,8 @@ public class GetStackResponseBody extends TeaModel {
     /**
      * <p>Indicates whether rollback is disabled when the stack fails to be created. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li>true: Rollback is disabled. No rollback is performed when the stack fails to be created.</li>
+     * <li>false (default): Rollback is enabled. Rollback is performed when the stack fails to be created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class GetStackResponseBody extends TeaModel {
     public String driftDetectionTime;
 
     /**
-     * <p>The description of the console user interface (UI).</p>
+     * <p>The interface description.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -82,15 +82,15 @@ public class GetStackResponseBody extends TeaModel {
     public String _interface;
 
     /**
-     * <p>The log of the stack.</p>
+     * <p>The stack-related output logs.</p>
      */
     @NameInMap("Log")
     public GetStackResponseBodyLog log;
 
     /**
-     * <p>The number of resources on which drift detection was not performed.</p>
+     * <p>The number of resources on which drift detection has not been performed.</p>
      * <blockquote>
-     * <p> This parameter is returned only if the most recent drift detection on the stack was successful.</p>
+     * <p>This parameter is returned only when the most recent drift detection on the stack was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,34 +106,34 @@ public class GetStackResponseBody extends TeaModel {
     public java.util.List<String> notificationURLs;
 
     /**
-     * <p>The supplementary information that is returned if an error occurs on a stack operation.</p>
+     * <p>The supplementary information that is returned when an error occurs during a stack operation.</p>
      * <blockquote>
-     * <p> This parameter is returned together with at least one sub-parameter and only under specific conditions. For example, the supplementary information is returned when an API operation of another Alibaba Cloud service fails to be called.</p>
+     * <p>This property is returned only in specific cases and contains at least one sub-property. For example, an error occurs when another cloud service API is called.</p>
      * </blockquote>
      */
     @NameInMap("OperationInfo")
     public GetStackResponseBodyOperationInfo operationInfo;
 
     /**
-     * <p>The order IDs. This parameter is returned only if you configured manual payment when you created a subscription stack.</p>
+     * <p>The list of order IDs. This parameter is returned only when manual payment for subscription orders is configured during stack creation.</p>
      */
     @NameInMap("OrderIds")
     public java.util.List<String> orderIds;
 
     /**
-     * <p>The outputs of the stack.</p>
+     * <p>The list of stack outputs.</p>
      */
     @NameInMap("Outputs")
     public java.util.List<java.util.Map<String, ?>> outputs;
 
     /**
-     * <p>The parameters of the stack.</p>
+     * <p>The stack parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<GetStackResponseBodyParameters> parameters;
 
     /**
-     * <p>The ID of the parent stack.</p>
+     * <p>The parent stack ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf692****</p>
@@ -142,10 +142,7 @@ public class GetStackResponseBody extends TeaModel {
     public String parentStackId;
 
     /**
-     * <p>The name of the Resource Access Management (RAM) role. ROS assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
-     * ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack, ROS assumes the RAM role even if you do not have permissions to use the RAM role. You must make sure that permissions are granted to the RAM role based on the principle of least privilege.\
-     * If this parameter is not specified, ROS uses the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\
-     * The RAM role name can be up to 64 characters in length.</p>
+     * <p>The RAM role name. Resource Orchestration Service (ROS) assumes this role to create the stack and calls API operations on behalf of the user by using the credentials of the role.<br>ROS always uses this role for all operations that are performed on the stack. As long as the user has the permission to perform operations on the stack, ROS uses this role even if the user does not have the permission to use the role. This ensures that the role grants the least privilege.<br>If no value is specified, ROS uses the role that was previously associated with the stack. If no role is available, ROS uses a temporary credential generated from the user credentials.<br>The RAM role name can be up to 64 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test-role</p>
@@ -154,7 +151,7 @@ public class GetStackResponseBody extends TeaModel {
     public String ramRoleName;
 
     /**
-     * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -172,7 +169,7 @@ public class GetStackResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -181,13 +178,13 @@ public class GetStackResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource creation progress.</p>
+     * <p>The resource processing progress.</p>
      */
     @NameInMap("ResourceProgress")
     public GetStackResponseBodyResourceProgress resourceProgress;
 
     /**
-     * <p>当资源栈状态为回滚失败时，该字段展示导致回滚的前一阶段执行失败的原因。</p>
+     * <p>When the stack status is rollback failed, this field displays the root cause of the failure in the previous phase that triggered the rollback.</p>
      * 
      * <strong>example:</strong>
      * <p>Resource UPDATE failed: Exception: resources.FailToCreate: FailToCreate: reason</p>
@@ -196,7 +193,7 @@ public class GetStackResponseBody extends TeaModel {
     public String rollbackFailedRootReason;
 
     /**
-     * <p>The ID of the root stack. This parameter is returned if the specified stack is a nested stack.</p>
+     * <p>The root stack ID. This parameter is returned only when the stack is a nested stack.</p>
      * 
      * <strong>example:</strong>
      * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf692****</p>
@@ -205,10 +202,12 @@ public class GetStackResponseBody extends TeaModel {
     public String rootStackId;
 
     /**
-     * <p>Indicates whether the stack is a managed stack. Valid values:</p>
+     * <p>Indicates whether the stack is a managed stack. Valid values:  </p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The stack is a managed stack.  </p>
+     * </li>
+     * <li><p>false: The stack is not a managed stack.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -218,7 +217,7 @@ public class GetStackResponseBody extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The name of the service to which the managed stack belongs.</p>
+     * <p>The service name to which the managed stack belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>ACVS</p>
@@ -227,11 +226,11 @@ public class GetStackResponseBody extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The state of the stack on which the most recent successful drift detection was performed. Valid values:</p>
+     * <p>The drift status of the stack in the most recent successful drift detection. Valid values:</p>
      * <ul>
      * <li>DRIFTED: The stack has drifted.</li>
-     * <li>NOT_CHECKED: No successful drift detection is performed on the stack.</li>
-     * <li>IN_SYNC: The stack is being synchronized.</li>
+     * <li>NOT_CHECKED: No successful drift detection has been performed on the stack.</li>
+     * <li>IN_SYNC: The stack is in sync.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -250,8 +249,7 @@ public class GetStackResponseBody extends TeaModel {
     public String stackId;
 
     /**
-     * <p>The stack name.\
-     * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or letter.</p>
+     * <p>The stack name.<br>The name can be up to 255 characters in length and must start with a digit or letter. It can contain digits, letters, hyphens (-), and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>MyStack</p>
@@ -262,8 +260,8 @@ public class GetStackResponseBody extends TeaModel {
     /**
      * <p>The stack type. Valid values:</p>
      * <ul>
-     * <li>ROS: ROS stack. The stack is created by using a ROS template.</li>
-     * <li>Terraform: Terraform stack. The stack is created by using a Terraform template.</li>
+     * <li>ROS: The stack uses an ROS template.</li>
+     * <li>Terraform: The stack uses a Terraform template.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -273,7 +271,7 @@ public class GetStackResponseBody extends TeaModel {
     public String stackType;
 
     /**
-     * <p>The state of the stack. Valid values:</p>
+     * <p>The stack status. Valid values:  </p>
      * <ul>
      * <li>CREATE_IN_PROGRESS: The stack is being created.</li>
      * <li>CREATE_FAILED: The stack failed to be created.</li>
@@ -283,28 +281,29 @@ public class GetStackResponseBody extends TeaModel {
      * <li>UPDATE_COMPLETE: The stack is updated.</li>
      * <li>DELETE_IN_PROGRESS: The stack is being deleted.</li>
      * <li>DELETE_FAILED: The stack failed to be deleted.</li>
-     * <li>CREATE_ROLLBACK_IN_PROGRESS: The resources are being rolled back after the stack failed to be created.</li>
-     * <li>CREATE_ROLLBACK_FAILED: The resources failed to be rolled back after the stack failed to be created.</li>
-     * <li>CREATE_ROLLBACK_COMPLETE: The resources are rolled back after the stack failed to be created.</li>
-     * <li>ROLLBACK_IN_PROGRESS: The resources of the stack are being rolled back.</li>
-     * <li>ROLLBACK_FAILED: The resources of the stack failed to be rolled back.</li>
-     * <li>ROLLBACK_COMPLETE: The resources of the stack are rolled back.</li>
+     * <li>DELETE_COMPLETE: The stack is deleted.</li>
+     * <li>CREATE_ROLLBACK_IN_PROGRESS: The stack creation is being rolled back.</li>
+     * <li>CREATE_ROLLBACK_FAILED: The stack creation failed to be rolled back.</li>
+     * <li>CREATE_ROLLBACK_COMPLETE: The stack creation is rolled back.</li>
+     * <li>ROLLBACK_IN_PROGRESS: The stack is being rolled back.</li>
+     * <li>ROLLBACK_FAILED: The stack failed to be rolled back.</li>
+     * <li>ROLLBACK_COMPLETE: The stack is rolled back.</li>
      * <li>CHECK_IN_PROGRESS: The stack is being validated.</li>
      * <li>CHECK_FAILED: The stack failed to be validated.</li>
      * <li>CHECK_COMPLETE: The stack is validated.</li>
      * <li>REVIEW_IN_PROGRESS: The stack is being reviewed.</li>
-     * <li>IMPORT_CREATE_IN_PROGRESS: The stack is being created by using imported resources.</li>
-     * <li>IMPORT_CREATE_FAILED: The stack failed to be created by using imported resources.</li>
-     * <li>IMPORT_CREATE_COMPLETE: The stack is created by using imported resources.</li>
-     * <li>IMPORT_CREATE_ROLLBACK_IN_PROGRESS: The resources are being rolled back after the stack failed to be created by using imported resources.</li>
-     * <li>IMPORT_CREATE_ROLLBACK_FAILED: The resources failed to be rolled back after the stack failed to be created by using imported resources.</li>
-     * <li>IMPORT_CREATE_ROLLBACK_COMPLETE: The resources are rolled back after the stack failed to be created by using imported resources.</li>
-     * <li>IMPORT_UPDATE_IN_PROGRESS: The stack is being updated by using imported resources.</li>
-     * <li>IMPORT_UPDATE_FAILED: The stack failed to be updated by using imported resources.</li>
-     * <li>IMPORT_UPDATE_COMPLETE: The stack is updated by using imported resources.</li>
-     * <li>IMPORT_UPDATE_ROLLBACK_IN_PROGRESS: The resources are being rolled back after the stack failed to be updated by using imported resources.</li>
-     * <li>IMPORT_UPDATE_ROLLBACK_FAILED: The resources failed to be rolled back after the stack failed to be updated by using imported resources.</li>
-     * <li>IMPORT_UPDATE_ROLLBACK_COMPLETE: The resources are rolled back after the stack failed to be updated by using imported resources.</li>
+     * <li>IMPORT_CREATE_IN_PROGRESS: The stack is being created through resource import.</li>
+     * <li>IMPORT_CREATE_FAILED: The stack failed to be created through resource import.</li>
+     * <li>IMPORT_CREATE_COMPLETE: The stack is created through resource import.</li>
+     * <li>IMPORT_CREATE_ROLLBACK_IN_PROGRESS: The stack creation through resource import is being rolled back.</li>
+     * <li>IMPORT_CREATE_ROLLBACK_FAILED: The stack creation through resource import failed to be rolled back.</li>
+     * <li>IMPORT_CREATE_ROLLBACK_COMPLETE: The stack creation through resource import is rolled back.</li>
+     * <li>IMPORT_UPDATE_IN_PROGRESS: The stack is being updated through resource import.</li>
+     * <li>IMPORT_UPDATE_FAILED: The stack failed to be updated through resource import.</li>
+     * <li>IMPORT_UPDATE_COMPLETE: The stack is updated through resource import.</li>
+     * <li>IMPORT_UPDATE_ROLLBACK_IN_PROGRESS: The stack update through resource import is being rolled back.</li>
+     * <li>IMPORT_UPDATE_ROLLBACK_FAILED: The stack update through resource import failed to be rolled back.</li>
+     * <li>IMPORT_UPDATE_ROLLBACK_COMPLETE: The stack update through resource import is rolled back.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -329,7 +328,7 @@ public class GetStackResponseBody extends TeaModel {
     public java.util.List<GetStackResponseBodyTags> tags;
 
     /**
-     * <p>The description of the template.</p>
+     * <p>The template description.</p>
      * 
      * <strong>example:</strong>
      * <p>Create a VPC.</p>
@@ -338,8 +337,8 @@ public class GetStackResponseBody extends TeaModel {
     public String templateDescription;
 
     /**
-     * <p>The template ID. This parameter is returned only if the current stack template is a custom template or shared template.</p>
-     * <p>If the template is a shared template, the value of this parameter is the same as the value of TemplateARN.</p>
+     * <p>The template ID. This parameter is returned only when the template used by the stack is a private template or a shared template.</p>
+     * <p>If the template is a shared template, the returned value is the same as the TemplateARN of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>a52f81be-496f-4e1c-a286-8852ab54****</p>
@@ -348,7 +347,7 @@ public class GetStackResponseBody extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The ID of the resource scenario. This parameter is returned only if the current template of the stack is generated from a resource scenario.</p>
+     * <p>The resource scenario ID. This parameter is returned only when the template used by the stack is generated from a resource scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>ts-7f7a704cf71c49a6****</p>
@@ -357,7 +356,7 @@ public class GetStackResponseBody extends TeaModel {
     public String templateScratchId;
 
     /**
-     * <p>The URL of the file that contains the template body. This parameter is returned only if the current template of the stack is from a URL. The URL can point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket.</p>
+     * <p>The URL of the file that contains the template body. This parameter is returned only when the template used by the stack is from a URL, including a web server (HTTP or HTTPS) or an Alibaba Cloud OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://ros/template/demo</p>
@@ -366,8 +365,8 @@ public class GetStackResponseBody extends TeaModel {
     public String templateURL;
 
     /**
-     * <p>The version of the template. This parameter is returned only if the current stack template is a custom template or shared template.</p>
-     * <p>If the template is a shared template, this parameter is returned only if VersionOption is set to AllVersions.</p>
+     * <p>The template version. This parameter is returned only when the template used by the stack is a private template or a shared template.</p>
+     * <p>If the template is a shared template, this parameter is returned only when VersionOption is set to AllVersions during sharing.</p>
      * <p>Valid values: v1 to v100.</p>
      * 
      * <strong>example:</strong>
@@ -386,7 +385,7 @@ public class GetStackResponseBody extends TeaModel {
     public Integer timeoutInMinutes;
 
     /**
-     * <p>The time when the stack was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the stack was last updated. The time is displayed in UTC+0 and follows the ISO 8601 standard without the trailing Z. Format: YYYY-MM-DDThh:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-09-17T08:21:40</p>
@@ -705,7 +704,7 @@ public class GetStackResponseBody extends TeaModel {
 
     public static class GetStackResponseBodyLogResourceLogsLogs extends TeaModel {
         /**
-         * <p>The content of a resource log.</p>
+         * <p>The content of a log entry associated with the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -714,7 +713,7 @@ public class GetStackResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The keywords of a resource log.</p>
+         * <p>The list of keywords for a log entry associated with the resource.</p>
          */
         @NameInMap("Keys")
         public java.util.List<String> keys;
@@ -744,13 +743,13 @@ public class GetStackResponseBody extends TeaModel {
 
     public static class GetStackResponseBodyLogResourceLogs extends TeaModel {
         /**
-         * <p>All the logs that are associated with the resources.</p>
+         * <p>All logs associated with the resource.</p>
          */
         @NameInMap("Logs")
         public java.util.List<GetStackResponseBodyLogResourceLogsLogs> logs;
 
         /**
-         * <p>The name of the resource that is defined in the template.</p>
+         * <p>The resource name defined in the template.</p>
          * 
          * <strong>example:</strong>
          * <p>MyResourceCleaner</p>
@@ -785,12 +784,16 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * <p>The name of the Terraform command that is run. Valid values:</p>
          * <ul>
-         * <li>apply</li>
-         * <li>plan</li>
-         * <li>destroy</li>
-         * <li>version</li>
+         * <li><p>apply</p>
+         * </li>
+         * <li><p>plan</p>
+         * </li>
+         * <li><p>destroy</p>
+         * </li>
+         * <li><p>version</p>
+         * </li>
          * </ul>
-         * <p>For more information about Terraform commands, see <a href="https://www.terraform.io/cli/commands">Basic CLI Features</a>.</p>
+         * <p>For more information about the commands, see <a href="https://www.terraform.io/cli/commands">Command</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>apply</p>
@@ -799,7 +802,7 @@ public class GetStackResponseBody extends TeaModel {
         public String command;
 
         /**
-         * <p>The content of the output stream that is returned after the command is run.</p>
+         * <p>The content that is output by the current command in the current output stream.</p>
          * 
          * <strong>example:</strong>
          * <p>Apply complete! Resources: 42 added, 0 changed, 0 destroyed.</p>
@@ -810,8 +813,10 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * <p>The output stream. Valid values:</p>
          * <ul>
-         * <li>stdout: standard output stream</li>
-         * <li>stderr: standard error stream</li>
+         * <li><p>stdout: standard output.</p>
+         * </li>
+         * <li><p>stderr: standard error.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -853,18 +858,19 @@ public class GetStackResponseBody extends TeaModel {
 
     public static class GetStackResponseBodyLog extends TeaModel {
         /**
-         * <p>The logs of resources in the stack. This parameter is returned if LogOption is set to Resource or All.</p>
+         * <p>The resource output logs. This parameter is returned when LogOption is set to Resource or All.</p>
          * <blockquote>
-         * <p> The logs are returned only for resources of specific types, such as the <code>ALIYUN::ROS::ResourceCleaner</code> type.</p>
+         * <p>Only certain resource types return resource logs, such as <code>ALIYUN::ROS::ResourceCleaner</code>.</p>
          * </blockquote>
          */
         @NameInMap("ResourceLogs")
         public java.util.List<GetStackResponseBodyLogResourceLogs> resourceLogs;
 
         /**
-         * <p>The logs generated when the Terraform stack is run. This parameter is returned only for a Terraform stack. This parameter is returned if LogOption is left empty or set to Stack or All.</p>
+         * <p>The Terraform output logs. This parameter is returned only for Terraform stacks.
+         * This parameter is returned when LogOption is not specified, or when LogOption is set to Stack or All.</p>
          * <blockquote>
-         * <p> This parameter is not returned for a running stack. The logs are generated from the most recent operation on the stack, such as the creation, resumed creation, update, or deletion operation.</p>
+         * <p>This parameter is not returned for stacks that are running. This parameter indicates the logs of the most recent operation (creation, continued creation, update, or deletion) on the stack.</p>
          * </blockquote>
          */
         @NameInMap("TerraformLogs")
@@ -895,7 +901,7 @@ public class GetStackResponseBody extends TeaModel {
 
     public static class GetStackResponseBodyOperationInfo extends TeaModel {
         /**
-         * <p>The name of the API operation that belongs to another Alibaba Cloud service.</p>
+         * <p>The name of the API operation called on another cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>DeleteSecurityGroup</p>
@@ -913,7 +919,7 @@ public class GetStackResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The logical ID of the resource on which the operation error occurs.</p>
+         * <p>The logical ID of the resource on which the operation error occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>EcsSecurityGroup</p>
@@ -931,7 +937,7 @@ public class GetStackResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The ID of the request that is initiated to call the API operation of another Alibaba Cloud service.</p>
+         * <p>The request ID of the API call to another cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>071D6166-3F6B-5C7B-A1F0-0113FBB643A8</p>
@@ -940,7 +946,7 @@ public class GetStackResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The type of the resource on which the operation error occurs.</p>
+         * <p>The resource type on which the operation error occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::ECS::SecurityGroup</p>
@@ -1047,7 +1053,7 @@ public class GetStackResponseBody extends TeaModel {
 
     public static class GetStackResponseBodyResourceProgressInProgressResourceDetails extends TeaModel {
         /**
-         * <p>The desired progress value of the resource.</p>
+         * <p>The target progress value of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1123,9 +1129,9 @@ public class GetStackResponseBody extends TeaModel {
 
     public static class GetStackResponseBodyResourceProgress extends TeaModel {
         /**
-         * <p>The number of resources that failed to be created.</p>
+         * <p>The number of resources that failed to be processed.</p>
          * <blockquote>
-         * <p> This parameter is returned only if <code>ShowResourceProgress</code> is set to <code>EnabledIfCreateStack</code>.</p>
+         * <p>This parameter is returned only when ShowResourceProgress is set to EnabledIfCreateStack.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1135,9 +1141,9 @@ public class GetStackResponseBody extends TeaModel {
         public Integer failedResourceCount;
 
         /**
-         * <p>The number of resources that are being created.</p>
+         * <p>The number of resources that are being processed.</p>
          * <blockquote>
-         * <p> This parameter is returned only if <code>ShowResourceProgress</code> is set to <code>EnabledIfCreateStack</code>.</p>
+         * <p>This parameter is returned only when ShowResourceProgress is set to EnabledIfCreateStack.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1147,18 +1153,18 @@ public class GetStackResponseBody extends TeaModel {
         public Integer inProgressResourceCount;
 
         /**
-         * <p>The progress details of resources that are being created.</p>
+         * <p>The list of progress details for resources that are being processed.</p>
          * <blockquote>
-         * <p> This parameter is returned only if <code>ShowResourceProgress</code> is set to <code>EnabledIfCreateStack</code>.</p>
+         * <p>This parameter is returned only when ShowResourceProgress is set to EnabledIfCreateStack.</p>
          * </blockquote>
          */
         @NameInMap("InProgressResourceDetails")
         public java.util.List<GetStackResponseBodyResourceProgressInProgressResourceDetails> inProgressResourceDetails;
 
         /**
-         * <p>The number of resources to be created.</p>
+         * <p>The number of resources that are pending processing.</p>
          * <blockquote>
-         * <p> This parameter is returned only if <code>ShowResourceProgress</code> is set to <code>EnabledIfCreateStack</code>.</p>
+         * <p>This parameter is returned only when ShowResourceProgress is set to EnabledIfCreateStack.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1168,10 +1174,10 @@ public class GetStackResponseBody extends TeaModel {
         public Integer pendingResourceCount;
 
         /**
-         * <p>The creation or rollback progress of the stack, in percentage. Valid values: 0 to 100.</p>
-         * <p>The value progressively increases from 0 to 100 during a stack creation operation. If the stack is created, the value reaches 100. If the stack fails to be created, a rollback is started for the stack resources, and the value progressively increases from the percentage of the remaining progress (100 - Progress value generated when the stack fails to be created). The value increases to 100 when the stack resources are rolled back. This parameter indicates the creation progress during a stack creation operation and indicates the rollback progress during a stack rollback operation.</p>
+         * <p>The stack action progress percentage. Value range: 0 to 100.</p>
+         * <p>Example: During stack creation, the value starts from 0 and increases. If the creation succeeds, the value reaches 100. If the creation fails and rollback begins, the value starts from another value (100 minus the progress value when the resource creation failed) and increases. When the rollback succeeds, the value reaches 100. During stack creation, this parameter indicates the progress of the creation action. During stack rollback, this parameter indicates the progress of the rollback action.</p>
          * <blockquote>
-         * <p> This parameter is returned only if <code>ShowResourceProgress</code> is set to <code>PercentageOnly</code>.</p>
+         * <p>This parameter is returned only when ShowResourceProgress is set to PercentageOnly.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1181,10 +1187,10 @@ public class GetStackResponseBody extends TeaModel {
         public Float stackActionProgress;
 
         /**
-         * <p>The overall creation progress of the stack, in percentage. Valid values: 0 to 100.</p>
-         * <p>The value progressively increases from 0 to 100 during a stack creation operation. If the stack is created, the value reaches 100. If the stack fails to be created, a rollback is started for the stack resources, and the value progressively decreases. The value decreases to 0 when the stack resources are rolled back. This parameter indicates only the overall creation progress, regardless of whether during a stack creation or rollback operation.</p>
+         * <p>The stack operation progress percentage. Value range: 0 to 100.</p>
+         * <p>Example: During stack creation, the value starts from 0 and increases. If the creation succeeds, the value reaches 100. If the creation fails and rollback begins, the value decreases. When the rollback succeeds, the value reaches 0. This parameter indicates the overall progress of the creation operation, regardless of whether the stack status is creating or rolling back.</p>
          * <blockquote>
-         * <p> This parameter is returned only if <code>ShowResourceProgress</code> is set to <code>PercentageOnly</code>.</p>
+         * <p>This parameter is returned only when ShowResourceProgress is set to PercentageOnly.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1194,9 +1200,9 @@ public class GetStackResponseBody extends TeaModel {
         public Float stackOperationProgress;
 
         /**
-         * <p>The number of resources that are created.</p>
+         * <p>The number of resources that are successfully processed.</p>
          * <blockquote>
-         * <p> This parameter is returned only if <code>ShowResourceProgress</code> is set to <code>EnabledIfCreateStack</code>.</p>
+         * <p>This parameter is returned only when ShowResourceProgress is set to EnabledIfCreateStack.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1208,7 +1214,7 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * <p>The total number of resources.</p>
          * <blockquote>
-         * <p> This parameter is returned only if <code>ShowResourceProgress</code> is set to <code>EnabledIfCreateStack</code>.</p>
+         * <p>This parameter is returned only when ShowResourceProgress is set to EnabledIfCreateStack.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

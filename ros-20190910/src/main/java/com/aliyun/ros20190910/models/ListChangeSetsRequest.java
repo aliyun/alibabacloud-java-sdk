@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChangeSetsRequest extends TeaModel {
     /**
-     * <p>The ID of the change set. If detailed information about the change set is not required, you can use this parameter to replace the GetChangeSet operation.</p>
+     * <p>The change set ID. If you do not need detailed information about the change set, you can use this parameter instead of calling the GetChangeSet operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1f6521a4-05af-4975-afe9-bc4b45ad****</p>
@@ -14,7 +14,7 @@ public class ListChangeSetsRequest extends TeaModel {
     public String changeSetId;
 
     /**
-     * <p>The name of change set N. Maximum value of N: 5. You can use an asterisk (\*) as a wildcard for fuzzy search.</p>
+     * <p>The name of the change set. Maximum value of N: 5. You can use the wildcard character asterisk (\*) for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>MyChangeSet</p>
@@ -23,14 +23,14 @@ public class ListChangeSetsRequest extends TeaModel {
     public java.util.List<String> changeSetName;
 
     /**
-     * <p>The execution status of change set N. Maximum value of N: 5. Valid values:</p>
+     * <p>The execution status of the change set. Maximum value of N: 5. Valid values:</p>
      * <ul>
      * <li>UNAVAILABLE</li>
      * <li>AVAILABLE</li>
      * <li>EXECUTE_IN_PROGRESS</li>
      * <li>EXECUTE_COMPLETE</li>
      * <li>EXECUTE_FAILED</li>
-     * <li>OBSOLETE</li>
+     * <li>OBSOLETE.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,9 +40,7 @@ public class ListChangeSetsRequest extends TeaModel {
     public java.util.List<String> executionStatus;
 
     /**
-     * <p>The page number.\
-     * Pages start from page 1.\
-     * Default value: 1.</p>
+     * <p>The page number of the change set list.<br>Minimum value: 1.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,8 +49,8 @@ public class ListChangeSetsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.\
-     * Valid values: 1 to 50.\
+     * <p>The number of entries per page in paging query. The value must be an integer.
+     * Valid values: 1 to 50.
      * Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +60,7 @@ public class ListChangeSetsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the change set. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the change set. You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +70,7 @@ public class ListChangeSetsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the stack.</p>
+     * <p>The stack ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,14 +80,14 @@ public class ListChangeSetsRequest extends TeaModel {
     public String stackId;
 
     /**
-     * <p>The status of change set N. Maximum value of N: 5. Valid values:</p>
+     * <p>The status of the change set. Maximum value of N: 5. Valid values:</p>
      * <ul>
      * <li>CREATE_PENDING</li>
      * <li>CREATE_IN_PROGRESS</li>
      * <li>CREATE_COMPLETE</li>
      * <li>CREATE_FAILED</li>
      * <li>DELETE_FAILED</li>
-     * <li>DELETE_COMPLETE</li>
+     * <li>DELETE_COMPLETE.</li>
      * </ul>
      * 
      * <strong>example:</strong>

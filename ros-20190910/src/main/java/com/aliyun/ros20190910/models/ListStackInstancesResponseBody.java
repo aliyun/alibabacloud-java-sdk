@@ -138,9 +138,12 @@ public class ListStackInstancesResponseBody extends TeaModel {
          * <p>The state of the stack when the last successful drift detection was performed on the stack group.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>DRIFTED: The stack has drifted.</li>
-         * <li>NOT_CHECKED: No successful drift detection is performed on the stack.</li>
-         * <li>IN_SYNC: The stack is being synchronized.</li>
+         * <li><p>DRIFTED: The stack has drifted.</p>
+         * </li>
+         * <li><p>NOT_CHECKED: No successful drift detection is performed on the stack.</p>
+         * </li>
+         * <li><p>IN_SYNC: The stack is being synchronized.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>This parameter is returned only if drift detection is performed on the stack group.</p>
@@ -190,9 +193,12 @@ public class ListStackInstancesResponseBody extends TeaModel {
          * </li>
          * <li><p>OUTDATED: The stack is not up-to-date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:</p>
          * <ul>
-         * <li>When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.</li>
-         * <li>When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.</li>
-         * <li>The creation or update operation is not complete.</li>
+         * <li><p>When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.</p>
+         * </li>
+         * <li><p>When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.</p>
+         * </li>
+         * <li><p>The creation or update operation is not complete.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>

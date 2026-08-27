@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListTemplateScratchesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1.</p>
-     * <p>Default value: 1</p>
+     * <p>The page number of the resource scenario list.</p>
+     * <p>Start value: 1.</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,7 +16,7 @@ public class ListTemplateScratchesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page in a paged query. Settings for paging.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -27,8 +27,8 @@ public class ListTemplateScratchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the scenario.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the resource scenario.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListTemplateScratchesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -47,11 +47,11 @@ public class ListTemplateScratchesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The status of the scenario. Valid values:</p>
+     * <p>The status of the resource scenario. Valid values:</p>
      * <ul>
-     * <li>GENERATE_IN_PROGRESS: The scenario is being created.</li>
-     * <li>GENERATE_COMPLETE: The scenario is created.</li>
-     * <li>GENERATE_FAILED: The scenario fails to be created.</li>
+     * <li>GENERATE_IN_PROGRESS: being generated.</li>
+     * <li>GENERATE_COMPLETE: generated.</li>
+     * <li>GENERATE_FAILED: failed to be generated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,13 +61,13 @@ public class ListTemplateScratchesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags of the scenario.</p>
+     * <p>The tags of the resource scenario.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListTemplateScratchesRequestTags> tags;
 
     /**
-     * <p>The ID of the scenario.</p>
+     * <p>The ID of the resource scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>ts-7f7a704cf71c49a6****</p>
@@ -78,10 +78,14 @@ public class ListTemplateScratchesRequest extends TeaModel {
     /**
      * <p>The type of the resource scenario. Valid values:</p>
      * <ul>
-     * <li>ArchitectureReplication: resource replication</li>
-     * <li>ArchitectureDetection: resource detection</li>
-     * <li>ResourceImport: resource management</li>
-     * <li>ResourceMigration: resource migration</li>
+     * <li><p>ArchitectureReplication: resource replication.</p>
+     * </li>
+     * <li><p>ArchitectureDetection: resource detection.</p>
+     * </li>
+     * <li><p>ResourceImport: resource management.</p>
+     * </li>
+     * <li><p>ResourceMigration: resource migration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,9 +165,9 @@ public class ListTemplateScratchesRequest extends TeaModel {
 
     public static class ListTemplateScratchesRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the scenario.</p>
+         * <p>The tag key of the resource scenario.</p>
          * <blockquote>
-         * <p>Tags is optional. If you want to specify Tags, you must specify Key.</p>
+         * <p>Tags is optional. If you specify Tags, you must specify Tags.N.Key.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -174,7 +178,7 @@ public class ListTemplateScratchesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the scenario.</p>
+         * <p>The tag value of the resource scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

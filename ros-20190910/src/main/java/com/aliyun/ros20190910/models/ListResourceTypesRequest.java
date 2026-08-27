@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListResourceTypesRequest extends TeaModel {
     /**
-     * <p>The entity type. Valid values:</p>
+     * <p>The entity type. Valid values:  </p>
      * <ul>
-     * <li>All: all types of resources.</li>
-     * <li>Resource (default): regular resources. For more information, see <a href="https://help.aliyun.com/document_detail/28863.html">Resources</a>.</li>
-     * <li>DataSource: DataSource resources. For more information, see <a href="https://help.aliyun.com/document_detail/404753.html">DataSource resources</a>.</li>
-     * <li>Module: modules.</li>
+     * <li><p>All: all resource types.</p>
+     * </li>
+     * <li><p>Resource (default): regular resource types. For more information, see <a href="https://help.aliyun.com/document_detail/28863.html">Resources</a>.</p>
+     * </li>
+     * <li><p>DataSource: data source resource types. For more information, see <a href="https://help.aliyun.com/document_detail/404753.html">Data source resources</a>.</p>
+     * </li>
+     * <li><p>Module: modules.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,10 +24,10 @@ public class ListResourceTypesRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The provider of the resource type. Valid values:</p>
+     * <p>The resource type provider. Valid values:</p>
      * <ul>
-     * <li>ROS (default): The resource type is provided by Resource Orchestration Service (ROS).</li>
-     * <li>Self: The resource type is provided by you.</li>
+     * <li>ROS (default): Resource Orchestration Service.</li>
+     * <li>Self: the user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +37,7 @@ public class ListResourceTypesRequest extends TeaModel {
     public String provider;
 
     /**
-     * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\<em>). You can use an asterisk (\</em>) to perform a fuzzy match.</p>
+     * <p>The resource type. The value can contain uppercase and lowercase letters, digits, colons (:), and asterisks (\*). If an asterisk is used, fuzzy match is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>MODULE::MyOrganization::MyService::MyUsecase</p>

@@ -96,10 +96,14 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
          * <p>The operation type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>CREATE</li>
-         * <li>UPDATE</li>
-         * <li>DELETE</li>
-         * <li>DETECT_DRIFT</li>
+         * <li><p>CREATE</p>
+         * </li>
+         * <li><p>UPDATE</p>
+         * </li>
+         * <li><p>DELETE</p>
+         * </li>
+         * <li><p>DETECT_DRIFT</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,11 +170,16 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
          * <p>The state of the operation.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>RUNNING</li>
-         * <li>SUCCEEDED</li>
-         * <li>FAILED</li>
-         * <li>STOPPING</li>
-         * <li>STOPPED</li>
+         * <li><p>RUNNING</p>
+         * </li>
+         * <li><p>SUCCEEDED</p>
+         * </li>
+         * <li><p>FAILED</p>
+         * </li>
+         * <li><p>STOPPING</p>
+         * </li>
+         * <li><p>STOPPED</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

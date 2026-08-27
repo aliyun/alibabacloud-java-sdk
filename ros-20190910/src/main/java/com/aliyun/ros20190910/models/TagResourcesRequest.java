@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The region ID of the tag that you want to create. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the tag. You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the resources.</p>
+     * <p>The resource IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,12 +25,16 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>stack: stack</li>
-     * <li>stackgroup: stack group</li>
-     * <li>template: template</li>
-     * <li>templatescratch: scenario</li>
+     * <li><p>stack</p>
+     * </li>
+     * <li><p>stackgroup</p>
+     * </li>
+     * <li><p>template</p>
+     * </li>
+     * <li><p>templatescratch: resource scenario.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +45,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags of the resource. You can specify up to 20 tags.</p>
+     * <p>The tags of the resources. You can specify up to 20 tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -86,8 +90,8 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys.</p>
+         * <p>The length must not exceed 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,8 +101,8 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The value of the tag to add to the resource. You can specify up to 20 tag values.</p>
+         * <p>The length must not exceed 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

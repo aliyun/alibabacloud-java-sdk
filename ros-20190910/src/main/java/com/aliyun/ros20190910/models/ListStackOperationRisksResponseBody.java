@@ -58,7 +58,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         /**
          * <p>The error code that is returned when the risk detection fails.</p>
          * <blockquote>
-         * <p> This parameter is not returned if the risk detection is successful.</p>
+         * <p>This parameter is not returned if the risk detection is successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         /**
          * <p>The error message that is returned when the risk detection fails.</p>
          * <blockquote>
-         * <p> This parameter is not returned if the risk detection is successful.</p>
+         * <p>This parameter is not returned if the risk detection is successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         /**
          * <p>The ID of the request when the risk detection fails.</p>
          * <blockquote>
-         * <p> This parameter is not returned if the risk detection is successful.</p>
+         * <p>This parameter is not returned if the risk detection is successful.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -130,10 +130,14 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         /**
          * <p>The type of the risk. Valid values:</p>
          * <ul>
-         * <li>Referenced: The resource is referenced by other resources.</li>
-         * <li>MaybeReferenced: The resource may be referenced by other resources.</li>
-         * <li>AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.</li>
-         * <li>OperationIgnored: The operation does not take effect for the resource.</li>
+         * <li><p>Referenced: The resource is referenced by other resources.</p>
+         * </li>
+         * <li><p>MaybeReferenced: The resource may be referenced by other resources.</p>
+         * </li>
+         * <li><p>AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.</p>
+         * </li>
+         * <li><p>OperationIgnored: The operation does not take effect for the resource.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStackResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID of the stack. You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListStackResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the region to which the stack belongs. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The stack ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

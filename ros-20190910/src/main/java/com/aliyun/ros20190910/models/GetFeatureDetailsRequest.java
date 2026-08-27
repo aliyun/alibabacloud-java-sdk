@@ -7,10 +7,14 @@ public class GetFeatureDetailsRequest extends TeaModel {
     /**
      * <p>The one or more features that you want to query. Valid values:</p>
      * <ul>
-     * <li>Terraform: the Terraform hosting feature.</li>
-     * <li>ResourceCleaner: the resource cleaner feature. You can use ALIYUN::ROS::ResourceCleaner to create a resource cleaner.</li>
-     * <li>TemplateScratch: the scenario feature.</li>
-     * <li>All: all features that are supported by ROS.</li>
+     * <li><p>Terraform: the Terraform hosting feature.</p>
+     * </li>
+     * <li><p>ResourceCleaner: the resource cleaner feature. You can use ALIYUN::ROS::ResourceCleaner to create a resource cleaner.</p>
+     * </li>
+     * <li><p>TemplateScratch: the scenario feature.</p>
+     * </li>
+     * <li><p>All: all features that are supported by ROS.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -7,9 +7,12 @@ public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The language in which you want to display the results. Valid values:</p>
      * <ul>
-     * <li>zh-CN (default): Chinese</li>
-     * <li>en-US: English</li>
-     * <li>ja: Japanese</li>
+     * <li><p>zh-CN (default): Chinese</p>
+     * </li>
+     * <li><p>en-US: English</p>
+     * </li>
+     * <li><p>ja: Japanese</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

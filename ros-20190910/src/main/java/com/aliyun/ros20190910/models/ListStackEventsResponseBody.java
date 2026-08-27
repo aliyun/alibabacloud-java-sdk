@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListStackEventsResponseBody extends TeaModel {
     /**
-     * <p>The events.</p>
+     * <p>The list of event objects.</p>
      */
     @NameInMap("Events")
     public java.util.List<ListStackEventsResponseBodyEvents> events;
 
     /**
-     * <p>The page number of the returned page.\
-     * Pages start from page 1.\
-     * Default value: 1.</p>
+     * <p>The page number of the event list.<br>Minimum value: 1.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -22,9 +20,7 @@ public class ListStackEventsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.\
-     * Maximum value: 50.\
-     * Default value: 10.</p>
+     * <p>The number of entries per page in a paged query. Settings for paging.<br>Maximum value: 50.<br>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +38,7 @@ public class ListStackEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned events.</p>
+     * <p>The total number of events.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -97,7 +93,7 @@ public class ListStackEventsResponseBody extends TeaModel {
 
     public static class ListStackEventsResponseBodyEvents extends TeaModel {
         /**
-         * <p>The time when the event was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the event was created. The time is displayed in UTC+0 and follows the ISO 8601 standard without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-08-01T04:07:39</p>
@@ -115,7 +111,7 @@ public class ListStackEventsResponseBody extends TeaModel {
         public String eventId;
 
         /**
-         * <p>The logical ID of the resource. The logical ID indicates the name of the resource that is defined in the template.</p>
+         * <p>The logical resource ID, which is the resource name defined in the template.</p>
          * 
          * <strong>example:</strong>
          * <p>WebServer</p>
@@ -160,7 +156,7 @@ public class ListStackEventsResponseBody extends TeaModel {
         public String stackName;
 
         /**
-         * <p>The state of the resource.</p>
+         * <p>The status of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE_COMPLETE</p>
@@ -169,7 +165,7 @@ public class ListStackEventsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason why the resource is in the current state.</p>
+         * <p>The reason for the status.</p>
          * 
          * <strong>example:</strong>
          * <p>state changed</p>

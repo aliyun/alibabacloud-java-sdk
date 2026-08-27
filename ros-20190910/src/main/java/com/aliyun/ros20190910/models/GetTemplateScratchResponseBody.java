@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTemplateScratchResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A8E0EF98-6FBD-5656-8298-FC8194F0F7B7</p>
@@ -93,7 +93,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource type filters.</p>
+         * <p>The resource type filter.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -123,7 +123,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratchSourceResources extends TeaModel {
         /**
-         * <p>The related resource type filters.</p>
+         * <p>The filter for related resource types.</p>
          */
         @NameInMap("RelatedResourceTypeFilter")
         public java.util.List<String> relatedResourceTypeFilter;
@@ -179,7 +179,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratchSourceTag extends TeaModel {
         /**
-         * <p>The source tags.</p>
+         * <p>The source tag.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;: &quot;b&quot;}</p>
@@ -188,7 +188,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public java.util.Map<String, ?> resourceTags;
 
         /**
-         * <p>The resource type filters.</p>
+         * <p>The resource type filter.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -218,10 +218,12 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratchStackProvision extends TeaModel {
         /**
-         * <p>Indicates whether the resource is replicated by calling the <a href="https://help.aliyun.com/document_detail/132086.html">CreateStack</a> operation. Valid values:</p>
+         * <p>Indicates whether you can call <a href="https://help.aliyun.com/document_detail/132086.html">CreateStack</a> to create a stack for resource replication. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Supported.</p>
+         * </li>
+         * <li><p>false: Not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,10 +233,12 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public Boolean creatable;
 
         /**
-         * <p>Indicates whether the resource is managed by calling the <a href="https://help.aliyun.com/document_detail/131051.html">CreateChangeSet</a> operation. Valid values:</p>
+         * <p>Indicates whether you can call <a href="https://help.aliyun.com/document_detail/131051.html">CreateChangeSet</a> to create a change set for resource management. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Supported.</p>
+         * </li>
+         * <li><p>false: Not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,8 +292,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * <p>The purpose of the stack. Valid values:</p>
          * <ul>
-         * <li>ResourceImport: resource management</li>
-         * <li>ArchitectureReplication: resource replication</li>
+         * <li><p>ResourceImport: resource management.</p>
+         * </li>
+         * <li><p>ArchitectureReplication: resource replication.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -331,8 +337,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratch extends TeaModel {
         /**
-         * <p>The time at which the resource scenario was created.</p>
-         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the resource scenario was created. The time is displayed in UTC+0 and follows the ISO 8601 standard without the trailing Z. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-22T01:49:22</p>
@@ -344,15 +349,15 @@ public class GetTemplateScratchResponseBody extends TeaModel {
          * <p>The description of the resource scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the resource scenario.</p>
+         * <p>复制VPC资源。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The status code of the resource scenario that fails to be created.</p>
+         * <p>The status code that indicates why the resource scenario failed to be generated.</p>
          * <blockquote>
-         * <p>This parameter is returned only if you set Status to GENERATE_FAILED.</p>
+         * <p>This parameter is returned only when Status is set to GENERATE_FAILED.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -362,11 +367,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public String failedCode;
 
         /**
-         * <p>The policy based on which the logical ID is generated. Valid values:</p>
+         * <p>The logical ID generation strategy. Valid values:</p>
          * <ul>
-         * <li>LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</li>
-         * <li>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</li>
-         * <li>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</li>
+         * <li><p>LongTypePrefixAndIndexSuffix (default): long type prefix with index suffix.</p>
+         * </li>
+         * <li><p>LongTypePrefixAndHashSuffix: long type prefix with hash suffix.</p>
+         * </li>
+         * <li><p>ShortTypePrefixAndHashSuffix: short type prefix with hash suffix.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,13 +384,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public String logicalIdStrategy;
 
         /**
-         * <p>The preference parameters of the resource scenario.</p>
+         * <p>The configuration parameters of the resource scenario.</p>
          */
         @NameInMap("PreferenceParameters")
         public java.util.List<GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters> preferenceParameters;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzmhzoaad5oq</p>
@@ -409,23 +417,26 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public GetTemplateScratchResponseBodyTemplateScratchSourceTag sourceTag;
 
         /**
-         * <p>The preset information of the stack.</p>
+         * <p>The stack provisioning information.</p>
          */
         @NameInMap("StackProvision")
         public GetTemplateScratchResponseBodyTemplateScratchStackProvision stackProvision;
 
         /**
-         * <p>The stacks that are associated with the resource scenario.</p>
+         * <p>The list of stacks associated with the resource scenario.</p>
          */
         @NameInMap("Stacks")
         public java.util.List<GetTemplateScratchResponseBodyTemplateScratchStacks> stacks;
 
         /**
-         * <p>The state of the resource scenario. Valid values:</p>
+         * <p>The status of the resource scenario. Valid values:</p>
          * <ul>
-         * <li>GENERATE_IN_PROGRESS: The resource scenario is being created.</li>
-         * <li>GENERATE_COMPLETE: The resource scenario is created.</li>
-         * <li>GENERATE_FAILED: The resource scenario fails to be created.</li>
+         * <li><p>GENERATE_IN_PROGRESS: being generated.</p>
+         * </li>
+         * <li><p>GENERATE_COMPLETE: generated.</p>
+         * </li>
+         * <li><p>GENERATE_FAILED: failed to be generated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -435,9 +446,9 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason why the resource scenario fails to be created.</p>
+         * <p>The reason why the resource scenario failed to be generated.</p>
          * <blockquote>
-         * <p>This parameter is returned only if you set Status to GENERATE_FAILED.</p>
+         * <p>This parameter is returned only when Status is set to GENERATE_FAILED.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -448,6 +459,9 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
         /**
          * <p>The resource scenario data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>参见返回示例</p>
          */
         @NameInMap("TemplateScratchData")
         public java.util.Map<String, ?> templateScratchData;
@@ -464,8 +478,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * <p>The type of the resource scenario. Valid values:</p>
          * <ul>
-         * <li>ResourceImport: resource management</li>
-         * <li>ArchitectureReplication: resource replication</li>
+         * <li><p>ResourceImport: resource management.</p>
+         * </li>
+         * <li><p>ArchitectureReplication: resource replication.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -475,8 +491,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public String templateScratchType;
 
         /**
-         * <p>The time at which the resource scenario was updated.</p>
-         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the resource scenario was last updated. The time is displayed in UTC+0 and follows the ISO 8601 standard without the trailing Z. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-22T01:49:23</p>

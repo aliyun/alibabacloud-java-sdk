@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). For more information, refer to <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -16,29 +14,25 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of parameter N in the template.</p>
+     * <p>The parameters that are defined in the template.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<GetTemplateParameterConstraintsShrinkRequestParameters> parameters;
 
     /**
-     * <p>The parameters whose values you want to query.</p>
+     * <p>The list of parameters to be queried.</p>
      */
     @NameInMap("ParametersKeyFilter")
     public String parametersKeyFilterShrink;
 
     /**
-     * <p>The order in which associated parameters are arranged.</p>
-     * <blockquote>
-     * <p> By default, the order of the associated parameters specified in the <code>Metadata</code> section of the template is used.</p>
-     * </blockquote>
+     * <p>The dependency of the parameters.</p>
      */
     @NameInMap("ParametersOrder")
     public String parametersOrderShrink;
 
     /**
-     * <p>The region ID of the template.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +43,7 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the stack.</p>
+     * <p>If you specify this parameter, the parameter constraints for an upgrade or downgrade scenario are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>c754d2a4-28f1-46df-b557-9586173a****</p>
@@ -57,22 +52,44 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     public String stackId;
 
     /**
-     * <p>The structure that contains the template body.</p>
-     * <p>The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
+     * <p>The structure of the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommended to use the HTTP POST + Body Param method to pass the parameter in the request body to avoid request failures caused by an excessively long URL.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Parameters&quot;:{&quot;ZoneInfo&quot;:{&quot;Type&quot;: &quot;String&quot;},&quot;InstanceType&quot;: {&quot;Type&quot;: &quot;String&quot;}},&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,&quot;Resources&quot;:{&quot;ECS&quot;:{&quot;Properties&quot;:{&quot;ZoneId&quot;:{&quot;Ref&quot;: &quot;ZoneInfo&quot;},&quot;InstanceType&quot;: {&quot;Ref&quot;: &quot;InstanceType&quot;}},&quot;Type&quot;: &quot;ALIYUN::ECS::Instance&quot;}}}</p>
+     * <p>{
+     *   &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,
+     *   &quot;Parameters&quot;: {
+     *     &quot;ZoneInfo&quot;: {
+     *       &quot;Type&quot;: &quot;String&quot;
+     *     },
+     *     &quot;InstanceType&quot;: {
+     *       &quot;Type&quot;: &quot;String&quot;
+     *     }
+     *   },
+     *   &quot;Resources&quot;: {
+     *     &quot;ECS&quot;: {
+     *       &quot;Type&quot;: &quot;ALIYUN::ECS::Instance&quot;,
+     *       &quot;Properties&quot;: {
+     *         &quot;ZoneId&quot;: {
+     *           &quot;Ref&quot;: &quot;ZoneInfo&quot;
+     *         },
+     *         &quot;InstanceType&quot;: {
+     *           &quot;Ref&quot;: &quot;InstanceType&quot;
+     *         }
+     *       }
+     *     }
+     *   }
+     * }</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
 
     /**
-     * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+     * <p>The ID of the template. This parameter applies to shared templates and private templates.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <p>You can specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,9 +99,9 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
+     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud OSS bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the OSS region is not specified, the default is the same as the RegionId parameter.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <p>You can specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,7 +113,7 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     /**
      * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if the TemplateId parameter is specified.</p>
+     * <p>TemplateVersion is valid only when TemplateId is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -192,9 +209,9 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
 
     public static class GetTemplateParameterConstraintsShrinkRequestParameters extends TeaModel {
         /**
-         * <p>The name of parameter N in the template.</p>
+         * <p>The name of the parameter that is defined in the template.</p>
          * <blockquote>
-         * <p> The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.</p>
+         * <p>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -205,9 +222,9 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
         public String parameterKey;
 
         /**
-         * <p>The value of parameter N in the template.</p>
+         * <p>The value of the parameter that is defined in the template.</p>
          * <blockquote>
-         * <p> The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.</p>
+         * <p>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

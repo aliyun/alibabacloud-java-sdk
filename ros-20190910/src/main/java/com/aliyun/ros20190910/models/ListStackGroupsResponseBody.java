@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStackGroupsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,11 +93,13 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     public static class ListStackGroupsResponseBodyStackGroupsAutoDeployment extends TeaModel {
         /**
-         * <p>Indicates whether automatic deployment is enabled.</p>
+         * <p>Whether automatic deployment is enabled.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: Automatic deployment is enabled. If you add a member to the folder to which the stack group belongs after automatic deployment is enabled, Resource Orchestration Service (ROS) automatically adds the stack instances in the stack group to the specified region of the member. If you delete the member from the folder, ROS automatically deletes the stack instances in the stack group from the specified region of the member.</li>
-         * <li>false: Automatic deployment is disabled. After you disable automatic deployment, the stack instances remain unchanged when you change the member in the folder.</li>
+         * <li><p>true: Automatic deployment is enabled. When a member account is added to the target folder, ROS deploys a stack instance for it. When a member account is removed, ROS deletes the stack instance.</p>
+         * </li>
+         * <li><p>false: Automatic deployment is disabled. Stack instances remain unchanged when folder membership changes.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,14 +109,16 @@ public class ListStackGroupsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>Indicates whether the stacks within a member are retained when you delete the member from the folder.</p>
+         * <p>Whether stacks are retained when member accounts are removed from the folder.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The stacks are retained.</p>
+         * </li>
+         * <li><p>false: The stacks are deleted.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is returned only if Enabled is set to true.</p>
+         * <p>Returned only when Enabled is true.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -148,7 +152,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     public static class ListStackGroupsResponseBodyStackGroupsTags extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the stack group.</p>
+         * <p>The tag key of the stack group.</p>
          * 
          * <strong>example:</strong>
          * <p>usage1</p>
@@ -157,7 +161,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the stack group.</p>
+         * <p>The tag value of the stack group.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -190,11 +194,17 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     public static class ListStackGroupsResponseBodyStackGroups extends TeaModel {
         /**
-         * <p>The information about automatic deployment settings.</p>
+         * <p>The automatic deployment settings.</p>
          */
         @NameInMap("AutoDeployment")
         public ListStackGroupsResponseBodyStackGroupsAutoDeployment autoDeployment;
 
+        /**
+         * <p>The creation time of the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-05T05:38:31</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -208,7 +218,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the most recent successful drift detection was performed on the stack group.</p>
+         * <p>The time of the last successful drift detection on the stack group.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-02-27T07:47:47</p>
@@ -217,14 +227,16 @@ public class ListStackGroupsResponseBody extends TeaModel {
         public String driftDetectionTime;
 
         /**
-         * <p>The permission model of the stack group.</p>
+         * <p>The permission model.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>SELF_MANAGED</li>
-         * <li>SERVICE_MANAGED</li>
+         * <li><p>SELF_MANAGED: self-managed permissions.</p>
+         * </li>
+         * <li><p>SERVICE_MANAGED: service-managed permissions.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>For more information about the permission models of stack groups, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>
+         * <p>For details on permission models of stack groups, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -243,12 +255,15 @@ public class ListStackGroupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The drift state of the stack group on which the most recent successful drift detection was performed.</p>
+         * <p>The drift status of the stack group from the last successful drift detection.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>DRIFTED: The stack group has drifted.</li>
-         * <li>NOT_CHECKED: No drift detection is performed on the stack group.</li>
-         * <li>IN_SYNC: No drifts are detected on the stack group.</li>
+         * <li><p>DRIFTED: The stack group has drifted from its template.</p>
+         * </li>
+         * <li><p>NOT_CHECKED: No drift detection has been performed.</p>
+         * </li>
+         * <li><p>IN_SYNC: The stack group matches its template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,11 +291,13 @@ public class ListStackGroupsResponseBody extends TeaModel {
         public String stackGroupName;
 
         /**
-         * <p>The state of the stack group.</p>
+         * <p>The status of the stack group.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>ACTIVE</li>
-         * <li>DELETED</li>
+         * <li><p>ACTIVE</p>
+         * </li>
+         * <li><p>DELETED</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,11 +307,17 @@ public class ListStackGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags that are added to the stack group.</p>
+         * <p>The tags of the stack group.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListStackGroupsResponseBodyStackGroupsTags> tags;
 
+        /**
+         * <p>The last update time of the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-02-15T16:40:25</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

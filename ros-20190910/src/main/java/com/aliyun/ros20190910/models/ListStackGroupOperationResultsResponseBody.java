@@ -95,11 +95,13 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         /**
          * <p>The ID of the account to which the stack instance belongs.</p>
          * <ul>
-         * <li>If the stack group has self-managed permissions, the stack instance belongs to an Alibaba Cloud account.</li>
-         * <li>If the stack group has service-managed permissions, the stack instance belongs to a member account in the resource directory.</li>
+         * <li><p>If the stack group has self-managed permissions, the stack instance belongs to an Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>If the stack group has service-managed permissions, the stack instance belongs to a member account in the resource directory.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> For more information about the account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>
+         * <p>For more information about the account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -111,7 +113,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         /**
          * <p>The folder ID of the resource directory.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the stack group is granted service-managed permissions.</p>
+         * <p>This parameter is returned only when the stack group is granted service-managed permissions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,11 +135,16 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
          * <p>The status of the operation.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>RUNNING: The operation is being performed.</li>
-         * <li>SUCCEEDED: The operation succeeded.</li>
-         * <li>FAILED: The operation failed.</li>
-         * <li>STOPPING: The operation is being stopped.</li>
-         * <li>STOPPED: The operation is stopped.</li>
+         * <li><p>RUNNING: The operation is being performed.</p>
+         * </li>
+         * <li><p>SUCCEEDED: The operation succeeded.</p>
+         * </li>
+         * <li><p>FAILED: The operation failed.</p>
+         * </li>
+         * <li><p>STOPPING: The operation is being stopped.</p>
+         * </li>
+         * <li><p>STOPPED: The operation is stopped.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +156,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         /**
          * <p>The reason why the operation is in a specific state.</p>
          * <blockquote>
-         * <p> This parameter is returned only when stack instances are in the OUTDATED state.</p>
+         * <p>This parameter is returned only when stack instances are in the OUTDATED state.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

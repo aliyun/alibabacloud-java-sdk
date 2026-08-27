@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStacksResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the stack list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListStacksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in paging Settings.  </p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -34,7 +34,7 @@ public class ListStacksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the stacks.</p>
+     * <p>The list of stacks.</p>
      */
     @NameInMap("Stacks")
     public java.util.List<ListStacksResponseBodyStacks> stacks;
@@ -95,7 +95,7 @@ public class ListStacksResponseBody extends TeaModel {
 
     public static class ListStacksResponseBodyStacksOperationInfo extends TeaModel {
         /**
-         * <p>The name of the API operation that belongs to another Alibaba Cloud service.</p>
+         * <p>The name of the API operation called on another cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>DeleteSecurityGroup</p>
@@ -104,7 +104,14 @@ public class ListStacksResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code. Valid values:</p>
+         * <ul>
+         * <li>Forbidden.RAM: Access denied by RAM.</li>
+         * <li>InvalidAccountStatus.NotEnoughBalance: Insufficient account balance.</li>
+         * <li>OrderError.EIP: EIP order error.</li>
+         * <li>QuotaExceeded.Eip: EIP quota exceeded.</li>
+         * </ul>
+         * <p>This information is generated based on call logs and may be incomplete. Verify the information.</p>
          * 
          * <strong>example:</strong>
          * <p>DependencyViolation</p>
@@ -131,7 +138,7 @@ public class ListStacksResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The ID of the request that is initiated to call the API operation of another Alibaba Cloud service.</p>
+         * <p>The request ID of the API call to another cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>071D6166-3F6B-5C7B-A1F0-0113FBB643A8</p>
@@ -140,7 +147,7 @@ public class ListStacksResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The type of the resource on which the operation error occurred.</p>
+         * <p>The resource type on which the operation error occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::ECS::SecurityGroup</p>
@@ -247,7 +254,7 @@ public class ListStacksResponseBody extends TeaModel {
 
     public static class ListStacksResponseBodyStacks extends TeaModel {
         /**
-         * <p>The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the stack was created. The time is displayed in UTC+0 in the ISO 8601 standard format without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-10T06:44:36</p>
@@ -258,11 +265,11 @@ public class ListStacksResponseBody extends TeaModel {
         /**
          * <p>Indicates whether deletion protection is enabled for the stack. Valid values:</p>
          * <ul>
-         * <li>Enabled: Deletion protection is enabled for the stack.</li>
-         * <li>Disabled: Deletion protection is disabled for the stack. In this case, you can delete the stack by using the console or calling the <a href="https://help.aliyun.com/document_detail/610812.html">DeleteStack</a> operation.</li>
+         * <li>Enabled: Deletion protection is enabled.</li>
+         * <li>Disabled: Deletion protection is disabled. You can delete the stack by using the console or by calling the <a href="https://help.aliyun.com/document_detail/610812.html">DeleteStack</a> operation.</li>
          * </ul>
          * <blockquote>
-         * <p> Deletion protection of a nested stack is the same as that of its root stack.</p>
+         * <p>The deletion protection mechanism of a nested stack is the same as that of the root stack.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -274,8 +281,8 @@ public class ListStacksResponseBody extends TeaModel {
         /**
          * <p>Indicates whether rollback is disabled when the stack fails to be created. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li>true: Rollback is disabled.</li>
+         * <li>false (default): Rollback is enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,9 +301,9 @@ public class ListStacksResponseBody extends TeaModel {
         public String driftDetectionTime;
 
         /**
-         * <p>The supplementary information that is returned if an error occurs on a stack operation.</p>
+         * <p>The supplementary information that is returned when an error occurs during a stack operation.</p>
          * <blockquote>
-         * <p> This parameter is returned only under specific conditions, and is returned together with at least one sub-parameter. For example, an error occurred when an API operation of another Alibaba Cloud service was called.</p>
+         * <p>This response property is returned only in specific cases and contains at least one sub-property. For example, an error occurs when another cloud service API is called.</p>
          * </blockquote>
          */
         @NameInMap("OperationInfo")
@@ -312,7 +319,7 @@ public class ListStacksResponseBody extends TeaModel {
         public String parentStackId;
 
         /**
-         * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the stack. You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -321,7 +328,7 @@ public class ListStacksResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2frunvw7****</p>
@@ -330,10 +337,12 @@ public class ListStacksResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether the stack is a managed stack. Valid values:</p>
+         * <p>Indicates whether the stack is a managed stack. Valid values:  </p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The stack is a managed stack.  </p>
+         * </li>
+         * <li><p>false: The stack is not a managed stack.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,7 +352,7 @@ public class ListStacksResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>The name of the service to which the managed stack belongs.</p>
+         * <p>The service name to which the managed stack belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ACVS</p>
@@ -352,11 +361,11 @@ public class ListStacksResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The state of the stack on which the most recent successful drift detection was performed. Valid values:</p>
+         * <p>The drift status of the stack in the most recent successful drift detection. Valid values:</p>
          * <ul>
          * <li>DRIFTED: The stack has drifted.</li>
-         * <li>NOT_CHECKED: No successful drift detection is performed on the stack.</li>
-         * <li>IN_SYNC: The stack is being synchronized.</li>
+         * <li>NOT_CHECKED: No successful drift detection has been performed on the stack.</li>
+         * <li>IN_SYNC: The stack is in sync.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,8 +395,8 @@ public class ListStacksResponseBody extends TeaModel {
         /**
          * <p>The stack type. Valid values:</p>
          * <ul>
-         * <li>ROS: ROS stack. The stack is created by using a ROS template.</li>
-         * <li>Terraform: Terraform stack. The stack is created by using a Terraform template.</li>
+         * <li>ROS: The stack uses an ROS template.</li>
+         * <li>Terraform: The stack uses a Terraform template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,7 +406,7 @@ public class ListStacksResponseBody extends TeaModel {
         public String stackType;
 
         /**
-         * <p>The state of the stack.</p>
+         * <p>The stack status.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE_COMPLETE</p>
@@ -406,7 +415,7 @@ public class ListStacksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason why the stack is in its current state.</p>
+         * <p>The reason why the stack is in its current status.</p>
          * 
          * <strong>example:</strong>
          * <p>Stack CREATE completed successfully</p>
@@ -421,7 +430,8 @@ public class ListStacksResponseBody extends TeaModel {
         public java.util.List<ListStacksResponseBodyStacksTags> tags;
 
         /**
-         * <p>The timeout period for creating the stack. Unit: minutes.</p>
+         * <p>The timeout period for creating the stack. Unit: minutes. Valid values: 10, 20, 60, 120, and 1440.</p>
+         * <p>This information is generated based on call logs and may be incomplete. Verify the information.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -430,7 +440,7 @@ public class ListStacksResponseBody extends TeaModel {
         public Integer timeoutInMinutes;
 
         /**
-         * <p>The time when the stack was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the stack was last updated. The time is displayed in UTC+0 in the ISO 8601 standard format without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-10T07:44:36</p>

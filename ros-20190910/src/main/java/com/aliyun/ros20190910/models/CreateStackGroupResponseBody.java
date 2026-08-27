@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStackGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
@@ -14,7 +14,7 @@ public class CreateStackGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the stack group.</p>
+     * <p>The stack group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2c036e78-9e82-428e-afd6-177f5d04****</p>

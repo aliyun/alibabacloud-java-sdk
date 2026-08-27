@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegisterResourceTypeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-     * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).\
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.<br>
+     * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).<br>
      * For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
@@ -48,8 +48,10 @@ public class RegisterResourceTypeRequest extends TeaModel {
      * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. The template body is used as the module content. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter takes effect only when EntityType is set to Module.</li>
-     * <li>You can specify only one of the TemplateBody and TemplateURL parameters.</li>
+     * <li><p>This parameter takes effect only when EntityType is set to Module.</p>
+     * </li>
+     * <li><p>You can specify only one of the TemplateBody and TemplateURL parameters.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -60,12 +62,15 @@ public class RegisterResourceTypeRequest extends TeaModel {
     public String templateBody;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. The template body is used as the module content.</p>
+     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. The template body is used as the module content.</p>
      * <blockquote>
      * <ul>
-     * <li>If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</li>
-     * <li>This parameter takes effect only when EntityType is set to Module.</li>
-     * <li>You can specify only one of the TemplateBody and TemplateURL parameters.</li>
+     * <li><p>If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+     * </li>
+     * <li><p>This parameter takes effect only when EntityType is set to Module.</p>
+     * </li>
+     * <li><p>You can specify only one of the TemplateBody and TemplateURL parameters.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * <p>The URL can be up to 1,024 bytes in length.</p>

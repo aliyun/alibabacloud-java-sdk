@@ -8,7 +8,7 @@ public class GetTemplateResponseBody extends TeaModel {
      * <p>Supplementary information for the public template.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;DeploymentDuration&quot;:null,&quot;Title&quot;:&quot;Self-Built_ElasticSearch_Snapshot_Saved_To_OSS&quot;,&quot;Labels&quot;:{&quot;ResourceTypes&quot;:[&quot;ALIYUN::ECS::Instance&quot;,&quot;ALIYUN::ECS::SecurityGroup&quot;,&quot;ALIYUN::ECS::VPC&quot;,&quot;ALIYUN::ECS::VSwitch&quot;,&quot;ALIYUN::OSS::Bucket&quot;,&quot;ALIYUN::ROS::WaitCondition&quot;,&quot;ALIYUN::ROS::WaitConditionHandle&quot;],&quot;DeployTypes&quot;:[&quot;ROS&quot;],&quot;ApplicationScenes&quot;:[&quot;其他&quot;]},&quot;Provider&quot;:&quot;ROS&quot;,&quot;Categories&quot;:[&quot;Solution&quot;]}</p>
+     * <p>{&quot;DeploymentDuration&quot;:null,&quot;Title&quot;:&quot;Self-Built_ElasticSearch_Snapshot_Saved_To_OSS&quot;,&quot;Labels&quot;:{&quot;ResourceTypes&quot;:[&quot;ALIYUN::ECS::Instance&quot;,&quot;ALIYUN::ECS::SecurityGroup&quot;,&quot;ALIYUN::ECS::VPC&quot;,&quot;ALIYUN::ECS::VSwitch&quot;,&quot;ALIYUN::OSS::Bucket&quot;,&quot;ALIYUN::ROS::WaitCondition&quot;,&quot;ALIYUN::ROS::WaitConditionHandle&quot;],&quot;DeployTypes&quot;:[&quot;ROS&quot;],&quot;ApplicationScenes&quot;:[&quot;other&quot;]},&quot;Provider&quot;:&quot;ROS&quot;,&quot;Categories&quot;:[&quot;Solution&quot;]}</p>
      */
     @NameInMap("AdditionalInfo")
     public java.util.Map<String, ?> additionalInfo;
@@ -26,8 +26,10 @@ public class GetTemplateResponseBody extends TeaModel {
      * <p>The time when the template was created. This parameter is returned only if you specify TemplateId.</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify TemplateVersion, the creation time of the template whose version is specified by TemplateVersion is returned.</li>
-     * <li>If you do not specify TemplateVersion, the creation time of the template whose version is the default version is returned.</li>
+     * <li><p>If you specify TemplateVersion, the creation time of the template whose version is specified by TemplateVersion is returned.</p>
+     * </li>
+     * <li><p>If you do not specify TemplateVersion, the creation time of the template whose version is the default version is returned.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -68,8 +70,10 @@ public class GetTemplateResponseBody extends TeaModel {
      * <p>Details of the sharing status of the template. This parameter is returned only if you specify TemplateId and set IncludePermission to Enabled.</p>
      * <blockquote>
      * <ul>
-     * <li>If TemplateVersion is not specified or does not take effect, the details of the sharing status of the template whose version is the default version is returned.</li>
-     * <li>If TemplateVersion is specified and takes effect, the details of the sharing status of the template whose version is specified by TemplateVersion is returned.</li>
+     * <li><p>If TemplateVersion is not specified or does not take effect, the details of the sharing status of the template whose version is the default version is returned.</p>
+     * </li>
+     * <li><p>If TemplateVersion is specified and takes effect, the details of the sharing status of the template whose version is specified by TemplateVersion is returned.</p>
+     * </li>
      * </ul>
      * </blockquote>
      */
@@ -107,8 +111,10 @@ public class GetTemplateResponseBody extends TeaModel {
      * <p>The sharing type of the template. This parameter is returned only if you specify TemplateId.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Private: The template belongs to the template owner.</li>
-     * <li>Shared: The template is shared by other users.</li>
+     * <li><p>Private: The template belongs to the template owner.</p>
+     * </li>
+     * <li><p>Shared: The template is shared by other users.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,8 +179,10 @@ public class GetTemplateResponseBody extends TeaModel {
      * <p>The name of the template. This parameter is returned only if you specify TemplateId.</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.</li>
-     * <li>If you not specify TemplateVersion, the name of the template whose version is the default version is returned.</li>
+     * <li><p>If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.</p>
+     * </li>
+     * <li><p>If you not specify TemplateVersion, the name of the template whose version is the default version is returned.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -185,7 +193,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The version of the template. This parameter is returned only if you specify TemplateId.\
+     * <p>The version of the template. This parameter is returned only if you specify TemplateId.<br>
      * If TemplateVersion is not specified or does not take effect, the default version is used.</p>
      * <p>If the template is a shared template, this parameter is returned only if you set VersionOption to AllVersions.</p>
      * 
@@ -199,8 +207,10 @@ public class GetTemplateResponseBody extends TeaModel {
      * <p>The time when the template was last updated. This parameter is returned only if you specify TemplateId.</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify TemplateVersion, the last update time of the template whose version is specified by TemplateVersion is returned.</li>
-     * <li>If you do not specify TemplateVersion, the last update time of the template whose version is the default version is returned.</li>
+     * <li><p>If you specify TemplateVersion, the last update time of the template whose version is specified by TemplateVersion is returned.</p>
+     * </li>
+     * <li><p>If you do not specify TemplateVersion, the last update time of the template whose version is the default version is returned.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -398,16 +408,21 @@ public class GetTemplateResponseBody extends TeaModel {
         /**
          * <p>The service that is used for resource sharing. Valid values:</p>
          * <ul>
-         * <li>ROS: Resources are shared from ROS by using the ROS console or calling the ROS API.</li>
-         * <li>ResourceDirectory: Resources are shared with accounts in a resource directory from Resource Management by using the resource sharing feature.<blockquote>
-         * <ul>
-         * <li>The number of accounts with which resources are shared from ROS is independent of the number of accounts with which resources are shared from the resource directory.</li>
-         * <li>The shared resources from ROS cannot override or overwrite the shared resources from the resource directory.</li>
-         * <li>The shared resources from the resource directory can overwrite the shared resources from ROS.</li>
-         * </ul>
-         * </blockquote>
+         * <li><p>ROS: Resources are shared from ROS by using the ROS console or calling the ROS API.</p>
+         * </li>
+         * <li><p>ResourceDirectory: Resources are shared with accounts in a resource directory from Resource Management by using the resource sharing feature.</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <ul>
+         * <li><p>The number of accounts with which resources are shared from ROS is independent of the number of accounts with which resources are shared from the resource directory.</p>
+         * </li>
+         * <li><p>The shared resources from ROS cannot override or overwrite the shared resources from the resource directory.</p>
+         * </li>
+         * <li><p>The shared resources from the resource directory can overwrite the shared resources from ROS.</p>
+         * </li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ROS</p>
@@ -429,10 +444,14 @@ public class GetTemplateResponseBody extends TeaModel {
          * <p>The version option for the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>AllVersions: All template versions are shared.</li>
-         * <li>Latest: Only the latest template version is shared. When the version of the template is updated, Resource Orchestration Service (ROS) updates the shared version to the latest version.</li>
-         * <li>Current: Only the latest template version is shared. When the version of the template is updated, ROS does not update the shared version.</li>
-         * <li>Specified: Only the specified template version is shared.</li>
+         * <li><p>AllVersions: All template versions are shared.</p>
+         * </li>
+         * <li><p>Latest: Only the latest template version is shared. When the version of the template is updated, Resource Orchestration Service (ROS) updates the shared version to the latest version.</p>
+         * </li>
+         * <li><p>Current: Only the latest template version is shared. When the version of the template is updated, ROS does not update the shared version.</p>
+         * </li>
+         * <li><p>Specified: Only the specified template version is shared.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

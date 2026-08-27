@@ -32,13 +32,16 @@ public class GetChangeSetResponseBody extends TeaModel {
     public String changeSetType;
 
     /**
-     * <p>The changes of the change set.</p>
+     * <p>The changes in the change set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>See examples.</p>
      */
     @NameInMap("Changes")
     public java.util.List<java.util.Map<String, ?>> changes;
 
     /**
-     * <p>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the change set was created. The time is in UTC and uses the <code>YYYY-MM-DDThh:mm:ss</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-01T02:20:56</p>
@@ -56,7 +59,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether rollback was performed when the stack failed to be created or updated.</p>
+     * <p>Indicates whether to disable rollback when a stack creation or update fails.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -74,7 +77,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     public String executionStatus;
 
     /**
-     * <p>The output logs of the change set.</p>
+     * <p>Logs for the change set.</p>
      */
     @NameInMap("Log")
     public GetChangeSetResponseBodyLog log;
@@ -86,7 +89,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     public java.util.List<GetChangeSetResponseBodyParameters> parameters;
 
     /**
-     * <p>The region ID of the change set.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -95,7 +98,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3766EE04-76DD-50F9-9C23-3AF136CD5708</p>
@@ -103,11 +106,17 @@ public class GetChangeSetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.<br></p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the stack with which the change set is associated.</p>
+     * <p>The ID of the stack to which the change set belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>a486fc19-ebb7-4ce9-a70b-554a7c3d****</p>
@@ -116,7 +125,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     public String stackId;
 
     /**
-     * <p>The name of the stack with which the change set is associated.</p>
+     * <p>The name of the stack to which the change set belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>stack_2021-10-13</p>
@@ -134,7 +143,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The reason why the change set is in its current state.</p>
+     * <p>The reason for the change set\&quot;s abnormal status.</p>
      * 
      * <strong>example:</strong>
      * <p>too many changes.</p>
@@ -142,13 +151,16 @@ public class GetChangeSetResponseBody extends TeaModel {
     @NameInMap("StatusReason")
     public String statusReason;
 
+    /**
+     * <p>The tags of the change set.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetChangeSetResponseBodyTags> tags;
 
     /**
      * <p>The template body of the change set.</p>
      * <blockquote>
-     * <p>This parameter takes effect only if you set ShowTemplate to true.</p>
+     * <p>This parameter is returned only when <code>ShowTemplate</code> is set to <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -158,7 +170,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     public String templateBody;
 
     /**
-     * <p>The timeout period that is specified for the stack creation or update operation.</p>
+     * <p>The timeout period for creating or updating the stack.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -333,14 +345,18 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     public static class GetChangeSetResponseBodyLogTerraformLogs extends TeaModel {
         /**
-         * <p>The name of the Terraform command that is run. Valid values:</p>
+         * <p>The name of the Terraform command that was executed. Valid values:</p>
          * <ul>
-         * <li>apply</li>
-         * <li>plan</li>
-         * <li>destroy</li>
-         * <li>version</li>
+         * <li><p>apply</p>
+         * </li>
+         * <li><p>plan</p>
+         * </li>
+         * <li><p>destroy</p>
+         * </li>
+         * <li><p>version</p>
+         * </li>
          * </ul>
-         * <p>For more information about Terraform commands, see <a href="https://www.terraform.io/cli/commands">Command</a>.</p>
+         * <p>For more information about the commands, see <a href="https://www.terraform.io/cli/commands">Command</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>apply</p>
@@ -349,7 +365,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         public String command;
 
         /**
-         * <p>The content of the output stream that is returned after the command is run.</p>
+         * <p>The content that the command wrote to the specified stream.</p>
          * 
          * <strong>example:</strong>
          * <p>Apply complete! Resources: 42 added, 0 changed, 0 destroyed.</p>
@@ -360,8 +376,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         /**
          * <p>The output stream. Valid values:</p>
          * <ul>
-         * <li>stdout: standard output stream</li>
-         * <li>stderr: standard error stream</li>
+         * <li><p><code>stdout</code>: standard output</p>
+         * </li>
+         * <li><p><code>stderr</code>: standard error</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -403,9 +421,9 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     public static class GetChangeSetResponseBodyLog extends TeaModel {
         /**
-         * <p>The Terraform logs. This parameter is returned only for change sets of Terraform stacks.</p>
+         * <p>The Terraform output logs. This parameter is returned only for change sets of Terraform-based stacks.</p>
          * <blockquote>
-         * <p>This parameter is not returned for change sets that are in the Creating state. This parameter indicates the logs of the change set creation operation for Terraform stacks.</p>
+         * <p>This parameter is unavailable while a change set is being created because the logs are generated only after the creation is complete.</p>
          * </blockquote>
          */
         @NameInMap("TerraformLogs")
@@ -428,7 +446,7 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     public static class GetChangeSetResponseBodyParameters extends TeaModel {
         /**
-         * <p>The key of the parameter.</p>
+         * <p>The name of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::Region</p>
@@ -469,9 +487,21 @@ public class GetChangeSetResponseBody extends TeaModel {
     }
 
     public static class GetChangeSetResponseBodyTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usage</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -35,9 +35,9 @@ public class SetStackPolicyRequest extends TeaModel {
     public String stackPolicyBody;
 
     /**
-     * <p>The URL for the file that contains the stack policy. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 16,384 bytes in length, and the URL can be up to 1,350 bytes in length.</p>
+     * <p>The URL for the file that contains the stack policy. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss\://ros/template/demo and oss\://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 16,384 bytes in length, and the URL can be up to 1,350 bytes in length.</p>
      * <blockquote>
-     * <p> If the region of the OSS bucket is not specified, the RegionId value is used.</p>
+     * <p>If the region of the OSS bucket is not specified, the RegionId value is used.</p>
      * </blockquote>
      * <p>You can specify one of the StackPolicyBody and StackPolicyURL parameters, but you cannot specify both of them.</p>
      * 

@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateStackGroupShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the RAM role that you specify for the administrator account when you create a self-managed stack group. ROS assumes the administrator role to perform operations. If you do not specify this parameter, AliyunROSStackGroupAdministrationRole is used as the default value. ROS uses the administrator role to assume the execution role AliyunROSStackGroupExecutionRole to perform operations on the stacks in the stack group.</p>
-     * <p>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>The RAM role for the administrator account in a self-managed stack group. ROS assumes this role to perform operations. Default: AliyunROSStackGroupAdministrationRole.</p>
+     * <p>1 to 64 characters. Can contain letters, digits, and hyphens (-).</p>
+     * <blockquote>
+     * <p>This parameter is required when PermissionModel is set to SELF_MANAGED.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>AliyunROSStackGroupAdministrationRole</p>
@@ -15,7 +18,7 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public String administrationRoleName;
 
     /**
-     * <p>The information about automatic deployment settings.</p>
+     * <p>The automatic deployment settings.</p>
      * <blockquote>
      * <p>You must specify this parameter if PermissionModel is set to SERVICE_MANAGED.</p>
      * </blockquote>
@@ -27,15 +30,13 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public String autoDeploymentShrink;
 
     /**
-     * <p>The options for the stack group. You can specify up to one option.</p>
+     * <p>The options for the stack group. Maximum: one option.</p>
      */
     @NameInMap("Capabilities")
     public java.util.List<String> capabilities;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-     * The token can contain letters, digits, underscores (_), and hyphens (-) and cannot exceed 64 characters in length.\
-     * For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+     * <p>The client token for idempotency. Must be unique across requests. Can contain letters, digits, underscores (_), and hyphens (-), up to 64 characters. <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -44,8 +45,7 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the stack group.\
-     * The description must be 1 to 256 characters in length.</p>
+     * <p>The stack group description. 1 to 256 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>StackGroup Description</p>
@@ -54,8 +54,11 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the RAM role that you specify for the execution account when you create a self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If you do not specify this parameter, AliyunROSStackGroupExecutionRole is used as the default value. ROS assumes the execution role to perform operations on the stacks in the stack group.</p>
-     * <p>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>The RAM role for the execution account in a self-managed stack group. The administrator role assumes this role to perform stack operations. Default: AliyunROSStackGroupExecutionRole.</p>
+     * <p>1 to 64 characters. Can contain letters, digits, and hyphens (-).</p>
+     * <blockquote>
+     * <p>This parameter is required when PermissionModel is set to SELF_MANAGED.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>AliyunROSStackGroupExecutionRole</p>
@@ -73,11 +76,13 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
      * <p>The permission model of the stack group.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>SELF_MANAGED (default): the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.</li>
-     * <li>SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.</li>
+     * <li><p>SELF_MANAGED (default): Create RAM roles for the administrator and execution accounts and establish a trust relationship between them.</p>
+     * </li>
+     * <li><p>SERVICE_MANAGED: ROS automatically creates service-linked roles for the administrator and execution accounts.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see <a href="https://help.aliyun.com/document_detail/308253.html">Manage a delegated administrator account</a> and <a href="https://help.aliyun.com/document_detail/298229.html">Enable trusted access</a>.</p>
+     * <p>To use SERVICE_MANAGED, your account must be the management account or a delegated administrator account of a resource directory with trusted access enabled. <a href="https://help.aliyun.com/document_detail/308253.html">Manage a delegated administrator account</a> and <a href="https://help.aliyun.com/document_detail/298229.html">Enable trusted access</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,7 +92,7 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public String permissionModel;
 
     /**
-     * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the stack group. Call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,8 +102,7 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.\
-     * For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">Resource groups</a>.</p>
+     * <p>The resource group ID. Defaults to the default resource group. <a href="https://help.aliyun.com/document_detail/94475.html">Resource groups</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -106,12 +110,27 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The stack ARN in the format acs:ros:${RegionId}:${AccountId}:stack/${StackId}. The stack group uses the template and parameters of this stack.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>Only supported in self-managed permission mode.</p>
+     * </li>
+     * <li><p>If StackArn is specified, Parameters must not be specified.</p>
+     * </li>
+     * <li><p>You must specify <strong>only one</strong> of TemplateBody, TemplateURL, TemplateId, or StackArn.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ros:cn-hangzhou:175458000000****:stack/4a65f506-c3cc-43b6-af06-3f000000****</p>
+     */
     @NameInMap("StackArn")
     public String stackArn;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\
-     * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+     * <p>The stack group name. Must be unique within a region. 1 to 255 characters. Can contain letters, digits, hyphens (-), and underscores (_). Must start with a letter or digit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -127,9 +146,9 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public java.util.List<CreateStackGroupShrinkRequestTags> tags;
 
     /**
-     * <p>The template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
+     * <p>The template body. 1 to 524,288 bytes. For large templates, pass the body in the HTTP POST request body to avoid URL length limits.</p>
      * <blockquote>
-     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <p>Specify exactly one of TemplateBody, TemplateURL, and TemplateId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -139,9 +158,9 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public String templateBody;
 
     /**
-     * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+     * <p>The template ID. Applies to shared and private templates.</p>
      * <blockquote>
-     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <p>Specify exactly one of TemplateBody, TemplateURL, and TemplateId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -151,9 +170,9 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+     * <p>The URL of the template file. Supports HTTP, HTTPS, and OSS URLs. 1 to 524,288 bytes. Examples: oss\://ros/template/demo, oss\://ros/template/demo?RegionId=cn-hangzhou. If no region ID is specified for the OSS bucket, the RegionId value applies.</p>
      * <blockquote>
-     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <p>Specify exactly one of TemplateBody, TemplateURL, and TemplateId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -163,7 +182,7 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public String templateURL;
 
     /**
-     * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
+     * <p>The template version. Defaults to the latest version.</p>
      * <blockquote>
      * <p>TemplateVersion takes effect only if you specify TemplateId.</p>
      * </blockquote>
@@ -317,7 +336,7 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
 
     public static class CreateStackGroupShrinkRequestParameters extends TeaModel {
         /**
-         * <p>The key of parameter N. If you do not specify the key and value of a parameter, ROS uses the default name and value that are defined in the template.</p>
+         * <p>The key of parameter N. If not specified, ROS uses the default name and value defined in the template.</p>
          * <p>Maximum value of N: 200.</p>
          * <blockquote>
          * <p>Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.</p>

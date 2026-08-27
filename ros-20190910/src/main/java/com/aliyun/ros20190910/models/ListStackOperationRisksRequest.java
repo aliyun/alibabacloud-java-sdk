@@ -16,8 +16,10 @@ public class ListStackOperationRisksRequest extends TeaModel {
     /**
      * <p>The type of the operation of which you want to detect risks. Valid values:</p>
      * <ul>
-     * <li>DeleteStack: detects high risks that may arise in resources when you delete a stack.</li>
-     * <li>CreateStack: detects the missing permissions when you fail to create a stack.</li>
+     * <li><p>DeleteStack: detects high risks that may arise in resources when you delete a stack.</p>
+     * </li>
+     * <li><p>CreateStack: detects the missing permissions when you fail to create a stack.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +31,10 @@ public class ListStackOperationRisksRequest extends TeaModel {
     /**
      * <p>The name of the RAM role.</p>
      * <ul>
-     * <li>If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.</li>
-     * <li>If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.</li>
+     * <li><p>If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.</p>
+     * </li>
+     * <li><p>If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.</p>
+     * </li>
      * </ul>
      * <p>The name of the RAM role can be up to 64 bytes in length.</p>
      * 
@@ -53,8 +57,10 @@ public class ListStackOperationRisksRequest extends TeaModel {
     /**
      * <p>Specifies whether to retain all resources in the stack. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only if you set OperationType to DeleteStack.</p>
@@ -90,7 +96,7 @@ public class ListStackOperationRisksRequest extends TeaModel {
     /**
      * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
      * <blockquote>
-     * <p> You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,7 +118,7 @@ public class ListStackOperationRisksRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify RegionId in the URL, the region ID of the stack is used.</p>
+     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss\://ros/stack-policy/demo and oss\://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify RegionId in the URL, the region ID of the stack is used.</p>
      * <blockquote>
      * <p>You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      * </blockquote>

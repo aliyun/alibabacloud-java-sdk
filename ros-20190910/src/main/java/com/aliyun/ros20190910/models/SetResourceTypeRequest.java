@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetResourceTypeRequest extends TeaModel {
     /**
-     * <p>The ID of the default version. You can use this parameter to specify the default version of the resource type.</p>
+     * <p>The ID of the default version. Specify this parameter to set the default version for the resource type.</p>
      * <blockquote>
-     * <p>You can specify only one of the VersionId and DefaultVersionId parameters.</p>
+     * <p>You can specify either VersionId or DefaultVersionId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class SetResourceTypeRequest extends TeaModel {
     public String defaultVersionId;
 
     /**
-     * <p>The description of the resource type or resource type version. The description can be up to 512 characters in length.</p>
+     * <p>The description of the resource type or a version of the resource type. The description can be up to 512 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>It is a demo.</p>
@@ -36,9 +36,9 @@ public class SetResourceTypeRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The version ID. If you want to modify a version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is modified.</p>
+     * <p>The version ID. Specify this parameter to modify a specific version of the resource type. Otherwise, the description of the resource type itself is modified.</p>
      * <blockquote>
-     * <p>You can specify only one of the VersionId and DefaultVersionId parameters.</p>
+     * <p>You can specify either VersionId or DefaultVersionId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

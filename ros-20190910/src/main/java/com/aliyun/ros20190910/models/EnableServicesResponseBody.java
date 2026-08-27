@@ -4,10 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class EnableServicesResponseBody extends TeaModel {
+    /**
+     * <p>A list of services that failed to be enabled.</p>
+     */
     @NameInMap("FailedServices")
     public java.util.List<EnableServicesResponseBodyFailedServices> failedServices;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E1BD3327-6BEE-53AD-8788-D892EB575962</p>
      */
@@ -37,6 +42,8 @@ public class EnableServicesResponseBody extends TeaModel {
 
     public static class EnableServicesResponseBodyFailedServices extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
@@ -44,6 +51,8 @@ public class EnableServicesResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Failed</p>
          */
@@ -51,6 +60,8 @@ public class EnableServicesResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The name of the Alibaba Cloud service.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACVS</p>
          */

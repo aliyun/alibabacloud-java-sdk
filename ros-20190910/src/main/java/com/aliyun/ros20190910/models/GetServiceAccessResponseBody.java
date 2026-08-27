@@ -4,9 +4,18 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetServiceAccessResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0DEFE672-690F-54C1-B42A-8E78E640BE07</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The trusted service details.</p>
+     */
     @NameInMap("ServiceAccessInfo")
     public GetServiceAccessResponseBodyServiceAccessInfo serviceAccessInfo;
 
@@ -32,6 +41,12 @@ public class GetServiceAccessResponseBody extends TeaModel {
     }
 
     public static class GetServiceAccessResponseBodyServiceAccessInfo extends TeaModel {
+        /**
+         * <p>Trusted service status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
+         */
         @NameInMap("Status")
         public String status;
 

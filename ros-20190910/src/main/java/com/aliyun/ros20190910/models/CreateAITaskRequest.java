@@ -12,7 +12,7 @@ public class CreateAITaskRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>创建一台ECS，部署nignx服务</p>
+     * <p>Create oneECS, and deploynignx service</p>
      */
     @NameInMap("Prompt")
     public String prompt;

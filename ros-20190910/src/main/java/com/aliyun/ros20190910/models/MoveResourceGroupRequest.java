@@ -15,7 +15,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
-     * <p>The region ID of the resource.\
+     * <p>The region ID of the resource.<br>
      * You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
@@ -38,9 +38,12 @@ public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li>stack: stack</li>
-     * <li>stackgroup: stack group</li>
-     * <li>template: template</li>
+     * <li><p>stack: stack</p>
+     * </li>
+     * <li><p>stackgroup: stack group</p>
+     * </li>
+     * <li><p>template: template</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

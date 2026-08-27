@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopStackGroupOperationRequest extends TeaModel {
     /**
-     * <p>The ID of the operation.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/151342.html">ListStackGroupOperations</a> operation to obtain the operation ID.</p>
+     * <p>The operation ID. Call the <a href="https://help.aliyun.com/document_detail/151342.html">ListStackGroupOperations</a> operation to query operation IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +15,7 @@ public class StopStackGroupOperationRequest extends TeaModel {
     public String operationId;
 
     /**
-     * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. Call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

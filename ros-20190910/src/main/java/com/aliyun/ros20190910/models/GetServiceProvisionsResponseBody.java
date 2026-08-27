@@ -14,7 +14,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the services.</p>
+     * <p>The details of the Alibaba Cloud services.</p>
      */
     @NameInMap("ServiceProvisions")
     public java.util.List<GetServiceProvisionsResponseBodyServiceProvisions> serviceProvisions;
@@ -41,12 +41,36 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     }
 
     public static class GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions extends TeaModel {
+        /**
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_postpaid_public_cn</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The URL for activating the commodity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://common-buy.aliyun.com/?commodityCode=acs_postpaid_public_cn">https://common-buy.aliyun.com/?commodityCode=acs_postpaid_public_cn</a></p>
+         */
         @NameInMap("EnableURL")
         public String enableURL;
 
+        /**
+         * <p>The activation status of the Alibaba Cloud service. Valid values:</p>
+         * <ul>
+         * <li><p>Enabled: The service is activated.</p>
+         * </li>
+         * <li><p>Disabled: The service is not activated.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -103,8 +127,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         /**
          * <p>The type of the API operation. Valid values:</p>
          * <ul>
-         * <li>Open: public</li>
-         * <li>Inner: private</li>
+         * <li><p>Open: an Alibaba Cloud API operation.</p>
+         * </li>
+         * <li><p>Inner: an internal API operation.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,7 +140,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public String apiType;
 
         /**
-         * <p>The parameters of the API operation. If a parameter is a variable, use the ${Variable name} format. Only the following variable is supported: ${RegionId}.</p>
+         * <p>The parameters of the API operation. The value of a parameter is a dynamic value. The following dynamic value is supported: ${RegionId}, which indicates the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>{   &quot;ServiceLinkedRole&quot;: &quot;AliyunServiceRoleForRdsPgsqlOnEcs&quot;,   &quot;RegionId&quot;: &quot;${RegionId}&quot; }</p>
@@ -163,16 +189,18 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
     public static class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles extends TeaModel {
         /**
-         * <p>The information about the API operation that is used to create the RAM role.</p>
+         * <p>The information about the API operation that is used to create the role.</p>
          */
         @NameInMap("ApiForCreation")
         public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation apiForCreation;
 
         /**
-         * <p>Indicates whether the RAM role is created. Valid values:</p>
+         * <p>Indicates whether the service-linked role is created. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The service-linked role is created.</p>
+         * </li>
+         * <li><p>false: The service-linked role is not created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +210,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public Boolean created;
 
         /**
-         * <p>The purpose for which the RAM role is used. Default value: Default. A value of Default indicates that the RAM role is the default role of the service.</p>
+         * <p>The purpose of the role. Default value: Default. This value indicates that the role is the default role of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>Default</p>
@@ -191,7 +219,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public String function;
 
         /**
-         * <p>The name of the role.</p>
+         * <p>The name of the service-linked role.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunServiceRoleForEHPC</p>
@@ -240,9 +268,9 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
     public static class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvision extends TeaModel {
         /**
-         * <p>The authorization URL of the RAM role.</p>
+         * <p>The URL that you can use to grant permissions to the service-linked role.</p>
          * <blockquote>
-         * <p>This parameter is returned if Created is set to false.</p>
+         * <p>This parameter is returned only when the value of Created is false.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -252,7 +280,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public String authorizationURL;
 
         /**
-         * <p>The RAM roles of the service.</p>
+         * <p>The service-linked roles.</p>
          */
         @NameInMap("Roles")
         public java.util.List<GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles> roles;
@@ -282,10 +310,12 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
     public static class GetServiceProvisionsResponseBodyServiceProvisions extends TeaModel {
         /**
-         * <p>Indicates whether automatic activation for the service is defined in the template. Valid values:</p>
+         * <p>Indicates whether the service is automatically activated when the template is used to create a stack. Valid values:</p>
          * <ul>
-         * <li>true: Automatic activation for the service is defined in the template.</li>
-         * <li>false: Manual activation for the service is defined in the template.</li>
+         * <li><p>true: The service is automatically activated.</p>
+         * </li>
+         * <li><p>false: The service is not automatically activated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,19 +324,22 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         @NameInMap("AutoEnableService")
         public Boolean autoEnableService;
 
+        /**
+         * <p>The details of the commodity. Some services, such as Container Compute Service (ACS), require you to activate multiple commodities.</p>
+         */
         @NameInMap("CommodityProvisions")
         public java.util.List<GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions> commodityProvisions;
 
         /**
-         * <p>The names of the services on which the service that is queried depends.</p>
+         * <p>The services on which the service that you want to query depends.</p>
          */
         @NameInMap("DependentServiceNames")
         public java.util.List<String> dependentServiceNames;
 
         /**
-         * <p>The URL that points to the activation page of the service.</p>
+         * <p>The URL that you can use to activate the Alibaba Cloud service.</p>
          * <blockquote>
-         * <p>This parameter is returned if Status is set to Disabled.</p>
+         * <p>This parameter is returned only when the value of Status is Disabled.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -316,13 +349,13 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public String enableURL;
 
         /**
-         * <p>The information about the RAM roles of the service. If this parameter is empty, no RAM role is associated with the service.</p>
+         * <p>The information about the service-linked roles of the Alibaba Cloud service. If this parameter is empty, no service-linked role is associated with the service.</p>
          */
         @NameInMap("RoleProvision")
         public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvision roleProvision;
 
         /**
-         * <p>The service name.</p>
+         * <p>The name of the Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>EHPC</p>
@@ -331,11 +364,14 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The activation status of the service. Valid values:</p>
+         * <p>The activation status of the Alibaba Cloud service. Valid values:</p>
          * <ul>
-         * <li>Enabled: The service is activated.</li>
-         * <li>Disabled: The service is not activated.</li>
-         * <li>Unknown: The activation status of the service is unknown.</li>
+         * <li><p>Enabled: The service is activated.</p>
+         * </li>
+         * <li><p>Disabled: The service is not activated.</p>
+         * </li>
+         * <li><p>Unknown: The activation status is unknown.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,9 +381,9 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason why the service is in the Disabled or Unknown state.</p>
+         * <p>The reason why the Alibaba Cloud service is not activated or the activation status is unknown.</p>
          * <blockquote>
-         * <p>This parameter is returned if Status is set to Disabled or Unknown.</p>
+         * <p>This parameter is returned only when the value of Status is Disabled or Unknown.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

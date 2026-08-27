@@ -4,12 +4,24 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListSummariesResponseBody extends TeaModel {
+    /**
+     * <p>Statistics about the number of central ROS resources.</p>
+     */
     @NameInMap("CenterSummary")
     public ListSummariesResponseBodyCenterSummary centerSummary;
 
+    /**
+     * <p>Statistics about the number of Resource Orchestration Service (ROS) resources in each region.</p>
+     */
     @NameInMap("RegionSummaries")
     public java.util.List<ListSummariesResponseBodyRegionSummaries> regionSummaries;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B842BB91-A004-59CC-83E3-C961567FCBC8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +55,21 @@ public class ListSummariesResponseBody extends TeaModel {
     }
 
     public static class ListSummariesResponseBodyCenterSummary extends TeaModel {
+        /**
+         * <p>The number of registered resource types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("RegisteredResourceTypeCount")
         public Integer registeredResourceTypeCount;
 
+        /**
+         * <p>The number of templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TemplateCount")
         public String templateCount;
 
@@ -73,9 +97,29 @@ public class ListSummariesResponseBody extends TeaModel {
     }
 
     public static class ListSummariesResponseBodyRegionSummariesStackDetails extends TeaModel {
+        /**
+         * <p>The brief status of the stack. Valid values:</p>
+         * <ul>
+         * <li><p>IN_PROGRESS: In progress (including creation, update, deletion, rollback, import creation, and import update in progress).</p>
+         * </li>
+         * <li><p>COMPLETE: Complete (including successful creation, update, deletion, rollback, import creation, and import update).</p>
+         * </li>
+         * <li><p>FAILED: Failed (including failed creation, update, deletion, rollback, import creation, and import update).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
+         */
         @NameInMap("BriefStatus")
         public String briefStatus;
 
+        /**
+         * <p>The number of stacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public String count;
 
@@ -103,18 +147,45 @@ public class ListSummariesResponseBody extends TeaModel {
     }
 
     public static class ListSummariesResponseBodyRegionSummaries extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of stacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StackCount")
         public String stackCount;
 
+        /**
+         * <p>Stack details.</p>
+         */
         @NameInMap("StackDetails")
         public java.util.List<ListSummariesResponseBodyRegionSummariesStackDetails> stackDetails;
 
+        /**
+         * <p>The number of stack groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StackGroupCount")
         public String stackGroupCount;
 
+        /**
+         * <p>The number of resource scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TemplateScratchCount")
         public Integer templateScratchCount;
 

@@ -19,8 +19,10 @@ public class GetTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the shared information about the template. Valid values:</p>
      * <ul>
-     * <li>Enabled</li>
-     * <li>Disabled (default)</li>
+     * <li><p>Enabled</p>
+     * </li>
+     * <li><p>Disabled (default)</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>Only the template owner can query the shared information of a template.</p>
@@ -35,8 +37,10 @@ public class GetTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the information about tags. Valid values:</p>
      * <ul>
-     * <li>Enabled</li>
-     * <li>Disabled (default)</li>
+     * <li><p>Enabled</p>
+     * </li>
+     * <li><p>Disabled (default)</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only if you specify TemplateId.</p>
@@ -98,8 +102,10 @@ public class GetTemplateRequest extends TeaModel {
      * <p>The stage of the template. This parameter takes effect only if you specify StackId, ChangeSetId, or StackGroupName.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Processed (default): returns the processed template.</li>
-     * <li>Original: returns the original template.</li>
+     * <li><p>Processed (default): returns the processed template.</p>
+     * </li>
+     * <li><p>Original: returns the original template.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +115,7 @@ public class GetTemplateRequest extends TeaModel {
     public String templateStage;
 
     /**
-     * <p>The version of the template. This parameter takes effect only if you specify TemplateId.\
+     * <p>The version of the template. This parameter takes effect only if you specify TemplateId.<br>
      * If the template is a shared template, you can specify this parameter only if VersionOption is set to AllVersions. For more information, see <a href="https://help.aliyun.com/document_detail/194768.html">SetTemplatePermission</a>.</p>
      * <p>Valid values: v1 to v100.</p>
      * 

@@ -4,6 +4,12 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListSummariesRequest extends TeaModel {
+    /**
+     * <p>Output information options.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>StackDetail</p>
+     */
     @NameInMap("Option")
     public String option;
 

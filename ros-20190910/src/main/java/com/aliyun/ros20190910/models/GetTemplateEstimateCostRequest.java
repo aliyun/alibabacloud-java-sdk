@@ -9,11 +9,13 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
      * <p>Maximum value of N: 200.</p>
      * <p>Examples:</p>
      * <ul>
-     * <li>Parameters.1.ParameterKey: <code>Name</code></li>
-     * <li>Parameters.2.ParameterKey: <code>Netmode</code></li>
+     * <li><p>Parameters.1.ParameterKey: <code>Name</code></p>
+     * </li>
+     * <li><p>Parameters.2.ParameterKey: <code>Netmode</code></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+     * <p>The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +34,7 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     /**
      * <p>The ID of the template. This parameter applies to shared and private templates.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <p>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -60,7 +62,7 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>The parameters.</p>
+     * <p>ROSTemplateFormatVersion: \&quot;2015-09-01\&quot;\nResources:\n  vpc:\n    Type: ALIYUN::ECS::VPC</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
@@ -70,11 +72,13 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
      * <p>Maximum value of N: 200.</p>
      * <p>Examples:</p>
      * <ul>
-     * <li>Parameters.1.ParameterValue: <code>DemoEip</code></li>
-     * <li>Parameters.2.ParameterValue: <code>public</code></li>
+     * <li><p>Parameters.1.ParameterValue: <code>DemoEip</code></p>
+     * </li>
+     * <li><p>Parameters.2.ParameterValue: <code>public</code></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+     * <p>The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -117,7 +121,7 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
      * <p>The ID of the scenario.</p>
      * <p>For more information about how to query the IDs of scenarios, see <a href="https://help.aliyun.com/document_detail/363050.html">ListTemplateScratches</a>.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <p>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

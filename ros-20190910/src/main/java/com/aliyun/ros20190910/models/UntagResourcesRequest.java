@@ -7,8 +7,10 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the resource. This parameter takes effect when TagKey is not specified in the request. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,10 +45,14 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li>stack: stack</li>
-     * <li>stackgroup: stack group</li>
-     * <li>template: template</li>
-     * <li>templatescratch: scenario</li>
+     * <li><p>stack: stack</p>
+     * </li>
+     * <li><p>stackgroup: stack group</p>
+     * </li>
+     * <li><p>template: template</p>
+     * </li>
+     * <li><p>templatescratch: scenario</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

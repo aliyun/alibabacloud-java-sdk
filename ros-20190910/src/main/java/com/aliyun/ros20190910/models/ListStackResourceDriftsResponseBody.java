@@ -116,9 +116,12 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         /**
          * <p>The drift type of the resource property. Valid values:</p>
          * <ul>
-         * <li>ADD: The value is added to a resource property whose data type is Array or List.</li>
-         * <li>REMOVE: The property is deleted from the current resource configuration.</li>
-         * <li>NOT_EQUAL: The current property value differs from the expected value that is defined in the stack template.</li>
+         * <li><p>ADD: The value is added to a resource property whose data type is Array or List.</p>
+         * </li>
+         * <li><p>REMOVE: The property is deleted from the current resource configuration.</p>
+         * </li>
+         * <li><p>NOT_EQUAL: The current property value differs from the expected value that is defined in the stack template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,10 +248,14 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         /**
          * <p>The drift state of the resource. Valid values:</p>
          * <ul>
-         * <li>DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</li>
-         * <li>MODIFIED: The actual configuration of the resource differs from its expected template configuration.</li>
-         * <li>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</li>
-         * <li>IN_SYNC: The actual configuration of the resource matches its expected template configuration.</li>
+         * <li><p>DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</p>
+         * </li>
+         * <li><p>MODIFIED: The actual configuration of the resource differs from its expected template configuration.</p>
+         * </li>
+         * <li><p>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</p>
+         * </li>
+         * <li><p>IN_SYNC: The actual configuration of the resource matches its expected template configuration.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -7,8 +7,10 @@ public class ListStackInstancesRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
      * <ul>
-     * <li>Pages start from page 1.</li>
-     * <li>Default value: 1.</li>
+     * <li><p>Pages start from page 1.</p>
+     * </li>
+     * <li><p>Default value: 1.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +22,10 @@ public class ListStackInstancesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <ul>
-     * <li>Valid values: 1 to 50.</li>
-     * <li>Default value: 10.</li>
+     * <li><p>Valid values: 1 to 50.</p>
+     * </li>
+     * <li><p>Default value: 10.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +45,7 @@ public class ListStackInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\
+     * <p>The name of the stack group. The name must be unique within a region.<br>
      * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
      * <p>This parameter is required.</p>
      * 
@@ -54,8 +58,10 @@ public class ListStackInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the destination account to which the stack belongs.</p>
      * <ul>
-     * <li>If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.</li>
-     * <li>If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.</li>
+     * <li><p>If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>For more information about the destination account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>

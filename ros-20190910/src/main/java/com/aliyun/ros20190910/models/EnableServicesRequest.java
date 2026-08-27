@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableServicesRequest extends TeaModel {
     /**
+     * <p>The region where the service is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class EnableServicesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>A list of services to enable.</p>
+     */
     @NameInMap("ServiceNames")
     public java.util.List<String> serviceNames;
 

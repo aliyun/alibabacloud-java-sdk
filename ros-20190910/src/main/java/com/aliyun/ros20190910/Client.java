@@ -8,7 +8,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "central";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-northeast-1", "ros.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "ros.aliyuncs.com"),
+            new TeaPair("cn-beijing", "ros.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ros.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "ros.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "ros.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ros.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "ros.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ros.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "ros.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "ros.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "ros.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ros.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "ros.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "ros.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ros.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ros.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "ros.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "ros.aliyuncs.com"),
+            new TeaPair("eu-central-1", "ros.aliyuncs.com"),
+            new TeaPair("eu-west-1", "ros.aliyuncs.com"),
+            new TeaPair("eu-west-2", "ros.aliyuncs.com"),
+            new TeaPair("na-south-1", "ros.aliyuncs.com"),
+            new TeaPair("sa-east-1", "ros.aliyuncs.com"),
+            new TeaPair("us-east-1", "ros.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "ros.aliyuncs.com"),
+            new TeaPair("us-west-1", "ros.aliyuncs.com"),
+            new TeaPair("ap-south-1", "ros.aliyuncs.com"),
+            new TeaPair("me-central-1", "ros.aliyuncs.com"),
+            new TeaPair("me-east-1", "ros.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "ros.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "ros.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "ros.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "ros.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "ros.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ros", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -298,26 +342,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Scenarios</h3>
-     * <h4><a href="#"></a>Use a change set to create a stack</h4>
-     * <p>If you want to manage a large number of cloud resources and preview the creation effect of the resources before a stack that contains the resources is created, you can create the stack by using a change set. In this case, you must set <code>ChangeSetType</code> to CREATE and configure the relevant parameters. For more information about change sets, see <a href="https://help.aliyun.com/document_detail/155649.html">Change set</a>.</p>
-     * <h4><a href="#"></a>Use a change set to update a stack</h4>
-     * <p>If you want to preview the impacts of changes to an existing stack before you update the stack resources, you can create a change set for the stack. In this case, you must set ChangeSetType to UPDATE and configure the relevant parameters. For more information about change sets, see <a href="https://help.aliyun.com/document_detail/155649.html">Change set</a>.</p>
-     * <h4><a href="#"></a>Use a change set and existing resources to create a stack</h4>
-     * <p>If you want to add existing cloud resources to a new stack for centralized management, you can use a change set to create a stack and import the resources to the stack. In this case, you must set ChangeSetType to IMPORT and configure the relevant parameters. For more information about the resource import feature, see <a href="https://help.aliyun.com/document_detail/193454.html">Overview</a>.</p>
-     * <h4><a href="#"></a>Use a change set and existing resources to update a stack</h4>
-     * <p>If you want to import existing resources to an existing stack for centralized management, you can use a change set to update the stack. In this case, you must set ChangeSetType to IMPORT and configure the relevant parameters. For more information about the resource import feature, see <a href="https://help.aliyun.com/document_detail/193454.html">Overview</a>.</p>
-     * <h3><a href="#"></a>Limits</h3>
+     * <h3>Scenarios</h3>
+     * <h4>Create a stack using a change set</h4>
+     * <p>To manage cloud resources and preview creation results before the stack is created, set <code>ChangeSetType</code> to CREATE. <a href="https://help.aliyun.com/document_detail/155649.html">Change sets</a>.</p>
+     * <h4>Update a stack using a change set</h4>
+     * <p>To preview the impact of an update before applying changes, set <code>ChangeSetType</code> to UPDATE. <a href="https://help.aliyun.com/document_detail/155649.html">Change sets</a>.</p>
+     * <h4>Create a stack from existing resources</h4>
+     * <p>To import existing cloud resources into a new stack, set <code>ChangeSetType</code> to IMPORT. <a href="https://help.aliyun.com/document_detail/193454.html">Overview</a>.</p>
+     * <h4>Import existing resources to a stack</h4>
+     * <p>To import existing resources into an existing stack, set <code>ChangeSetType</code> to IMPORT. <a href="https://help.aliyun.com/document_detail/193454.html">Overview</a>.</p>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>You can use change sets to update only stacks that are in specific states. For more information, see <a href="https://help.aliyun.com/document_detail/155873.html">Use a change set to update a stack</a>.</li>
-     * <li>A stack can have up to 20 change sets.</li>
-     * <li>Change sets reflect only the changes to stacks. Change sets do not reflect whether stacks can be successfully updated.</li>
-     * <li>A change set does not check if you exceed an account limit, if you update resources that cannot be updated, or if you have insufficient permissions to modify resources, all of which can cause a stack update to fail. If a stack update fails, Resource Orchestration Service (ROS) attempts to roll back your resources to their original status.
-     * This topic provides an example on how to use a change set to update a stack. In this example, a change set named <code>MyChangeSet</code> is created in the <code>China (Hangzhou)</code> region. The template of a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> is updated to <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</li>
+     * <li>Only stacks in specific states can be updated using change sets. <a href="https://help.aliyun.com/document_detail/155873.html">Update a stack using a change set</a>.</li>
+     * <li>A stack can have a maximum of 20 change sets at a time.</li>
+     * <li>A change set shows only the changes to a stack. It does not indicate whether the stack will be successfully updated.</li>
+     * <li>A change set does not check for issues such as exceeded account quotas, non-updatable resources, or insufficient permissions. These issues can cause the stack update to fail. If the update fails, ROS attempts to roll back resources to their previous state.
+     * In this example, a change set named <code>MyChangeSet</code> is created in the China (Hangzhou) region (<code>cn-hangzhou</code>) to update the template of stack <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> to <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a change set for a stack. You can view proposed changes before you execute the change set.</p>
+     * <p>Creates a change set for a stack so you can preview changes before execution.</p>
      * 
      * @param request CreateChangeSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -459,26 +503,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Scenarios</h3>
-     * <h4><a href="#"></a>Use a change set to create a stack</h4>
-     * <p>If you want to manage a large number of cloud resources and preview the creation effect of the resources before a stack that contains the resources is created, you can create the stack by using a change set. In this case, you must set <code>ChangeSetType</code> to CREATE and configure the relevant parameters. For more information about change sets, see <a href="https://help.aliyun.com/document_detail/155649.html">Change set</a>.</p>
-     * <h4><a href="#"></a>Use a change set to update a stack</h4>
-     * <p>If you want to preview the impacts of changes to an existing stack before you update the stack resources, you can create a change set for the stack. In this case, you must set ChangeSetType to UPDATE and configure the relevant parameters. For more information about change sets, see <a href="https://help.aliyun.com/document_detail/155649.html">Change set</a>.</p>
-     * <h4><a href="#"></a>Use a change set and existing resources to create a stack</h4>
-     * <p>If you want to add existing cloud resources to a new stack for centralized management, you can use a change set to create a stack and import the resources to the stack. In this case, you must set ChangeSetType to IMPORT and configure the relevant parameters. For more information about the resource import feature, see <a href="https://help.aliyun.com/document_detail/193454.html">Overview</a>.</p>
-     * <h4><a href="#"></a>Use a change set and existing resources to update a stack</h4>
-     * <p>If you want to import existing resources to an existing stack for centralized management, you can use a change set to update the stack. In this case, you must set ChangeSetType to IMPORT and configure the relevant parameters. For more information about the resource import feature, see <a href="https://help.aliyun.com/document_detail/193454.html">Overview</a>.</p>
-     * <h3><a href="#"></a>Limits</h3>
+     * <h3>Scenarios</h3>
+     * <h4>Create a stack using a change set</h4>
+     * <p>To manage cloud resources and preview creation results before the stack is created, set <code>ChangeSetType</code> to CREATE. <a href="https://help.aliyun.com/document_detail/155649.html">Change sets</a>.</p>
+     * <h4>Update a stack using a change set</h4>
+     * <p>To preview the impact of an update before applying changes, set <code>ChangeSetType</code> to UPDATE. <a href="https://help.aliyun.com/document_detail/155649.html">Change sets</a>.</p>
+     * <h4>Create a stack from existing resources</h4>
+     * <p>To import existing cloud resources into a new stack, set <code>ChangeSetType</code> to IMPORT. <a href="https://help.aliyun.com/document_detail/193454.html">Overview</a>.</p>
+     * <h4>Import existing resources to a stack</h4>
+     * <p>To import existing resources into an existing stack, set <code>ChangeSetType</code> to IMPORT. <a href="https://help.aliyun.com/document_detail/193454.html">Overview</a>.</p>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>You can use change sets to update only stacks that are in specific states. For more information, see <a href="https://help.aliyun.com/document_detail/155873.html">Use a change set to update a stack</a>.</li>
-     * <li>A stack can have up to 20 change sets.</li>
-     * <li>Change sets reflect only the changes to stacks. Change sets do not reflect whether stacks can be successfully updated.</li>
-     * <li>A change set does not check if you exceed an account limit, if you update resources that cannot be updated, or if you have insufficient permissions to modify resources, all of which can cause a stack update to fail. If a stack update fails, Resource Orchestration Service (ROS) attempts to roll back your resources to their original status.
-     * This topic provides an example on how to use a change set to update a stack. In this example, a change set named <code>MyChangeSet</code> is created in the <code>China (Hangzhou)</code> region. The template of a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> is updated to <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</li>
+     * <li>Only stacks in specific states can be updated using change sets. <a href="https://help.aliyun.com/document_detail/155873.html">Update a stack using a change set</a>.</li>
+     * <li>A stack can have a maximum of 20 change sets at a time.</li>
+     * <li>A change set shows only the changes to a stack. It does not indicate whether the stack will be successfully updated.</li>
+     * <li>A change set does not check for issues such as exceeded account quotas, non-updatable resources, or insufficient permissions. These issues can cause the stack update to fail. If the update fails, ROS attempts to roll back resources to their previous state.
+     * In this example, a change set named <code>MyChangeSet</code> is created in the China (Hangzhou) region (<code>cn-hangzhou</code>) to update the template of stack <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> to <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a change set for a stack. You can view proposed changes before you execute the change set.</p>
+     * <p>Creates a change set for a stack so you can preview changes before execution.</p>
      * 
      * @param request CreateChangeSetRequest
      * @return CreateChangeSetResponse
@@ -546,16 +590,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A stack is a collection of ROS resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see <a href="https://help.aliyun.com/document_detail/172973.html">Overview</a>.\
-     * When you call the operation, take note of the following limits:</p>
+     * <p>A stack is the management unit for ROS resources (<a href="https://help.aliyun.com/document_detail/172973.html">Overview</a>). Limits:</p>
      * <ul>
-     * <li>You can create up to 200 stacks within an Alibaba Cloud account.</li>
-     * <li>You can create up to 200 resources in a stack.
-     * This topic provides an example on how to create a stack named <code>MyStack</code> in the China (Hangzhou) region by using a template. In this example, <code>TemplateBody</code> is set to <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</li>
+     * <li>Each Alibaba Cloud account can create up to 200 stacks.</li>
+     * <li>Each stack can contain up to 200 resources.
+     * The following example creates a stack named <code>MyStack</code> in the China (Hangzhou) region with <code>TemplateBody</code> set to <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a stack that contains a collection of resources by using a Resource Orchestration Service (ROS) template.</p>
+     * <p>Creates a stack from a ROS template to deploy a group of resources.</p>
      * 
      * @param request CreateStackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -673,16 +716,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A stack is a collection of ROS resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see <a href="https://help.aliyun.com/document_detail/172973.html">Overview</a>.\
-     * When you call the operation, take note of the following limits:</p>
+     * <p>A stack is the management unit for ROS resources (<a href="https://help.aliyun.com/document_detail/172973.html">Overview</a>). Limits:</p>
      * <ul>
-     * <li>You can create up to 200 stacks within an Alibaba Cloud account.</li>
-     * <li>You can create up to 200 resources in a stack.
-     * This topic provides an example on how to create a stack named <code>MyStack</code> in the China (Hangzhou) region by using a template. In this example, <code>TemplateBody</code> is set to <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</li>
+     * <li>Each Alibaba Cloud account can create up to 200 stacks.</li>
+     * <li>Each stack can contain up to 200 resources.
+     * The following example creates a stack named <code>MyStack</code> in the China (Hangzhou) region with <code>TemplateBody</code> set to <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a stack that contains a collection of resources by using a Resource Orchestration Service (ROS) template.</p>
+     * <p>Creates a stack from a ROS template to deploy a group of resources.</p>
      * 
      * @param request CreateStackRequest
      * @return CreateStackResponse
@@ -694,17 +736,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A stack group is a collection of ROS stacks that you can manage as a unit. You can use an ROS template of a stack group to create stacks within Alibaba Cloud accounts across regions.
-     * You can create a stack group that is granted self-managed or service-managed permissions:</p>
+     * <p>A stack group manages multiple ROS stacks as a unit, enabling you to create stacks across Alibaba Cloud accounts and regions.
+     * Stack groups support two permission models:</p>
      * <ul>
-     * <li>If you use an Alibaba Cloud account to create a self-managed stack group, the administrator account and the execution account are Alibaba Cloud accounts.</li>
-     * <li>If you enable a resource directory and use the management account or a delegated administrator account of the resource directory to create a service-managed stack group, the administrator account is the management account or delegated administrator account, and the execution account is a member account of the resource directory.
-     * For more information about stack groups, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.
-     * In this topic, a stack group named <code>MyStackGroup</code> is created in the <code>China (Hangzhou)</code> region and granted the self-managed permissions. In this example, the template whose ID is <code>5ecd1e10-b0e9-4389-a565-e4c15efc****</code> is used.</li>
+     * <li>Self-managed: Both the administrator and execution accounts are Alibaba Cloud accounts.</li>
+     * <li>Service-managed: The administrator account is the management account or delegated administrator account of a resource directory. The execution account is a member account of that directory.
+     * <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.
+     * This example creates a self-managed stack group named <code>MyStackGroup</code> in the <code>China (Hangzhou)</code> region using template <code>5ecd1e10-b0e9-4389-a565-e4c15efc****</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates stack groups based on Resource Orchestration Service (ROS) templates. Stack groups allow you to create stacks within multiple Alibaba Cloud accounts across regions.</p>
+     * <p>Creates a stack group from an ROS template to create stacks across multiple Alibaba Cloud accounts and regions.</p>
      * 
      * @param tmpReq CreateStackGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -808,17 +850,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A stack group is a collection of ROS stacks that you can manage as a unit. You can use an ROS template of a stack group to create stacks within Alibaba Cloud accounts across regions.
-     * You can create a stack group that is granted self-managed or service-managed permissions:</p>
+     * <p>A stack group manages multiple ROS stacks as a unit, enabling you to create stacks across Alibaba Cloud accounts and regions.
+     * Stack groups support two permission models:</p>
      * <ul>
-     * <li>If you use an Alibaba Cloud account to create a self-managed stack group, the administrator account and the execution account are Alibaba Cloud accounts.</li>
-     * <li>If you enable a resource directory and use the management account or a delegated administrator account of the resource directory to create a service-managed stack group, the administrator account is the management account or delegated administrator account, and the execution account is a member account of the resource directory.
-     * For more information about stack groups, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.
-     * In this topic, a stack group named <code>MyStackGroup</code> is created in the <code>China (Hangzhou)</code> region and granted the self-managed permissions. In this example, the template whose ID is <code>5ecd1e10-b0e9-4389-a565-e4c15efc****</code> is used.</li>
+     * <li>Self-managed: Both the administrator and execution accounts are Alibaba Cloud accounts.</li>
+     * <li>Service-managed: The administrator account is the management account or delegated administrator account of a resource directory. The execution account is a member account of that directory.
+     * <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.
+     * This example creates a self-managed stack group named <code>MyStackGroup</code> in the <code>China (Hangzhou)</code> region using template <code>5ecd1e10-b0e9-4389-a565-e4c15efc****</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates stack groups based on Resource Orchestration Service (ROS) templates. Stack groups allow you to create stacks within multiple Alibaba Cloud accounts across regions.</p>
+     * <p>Creates a stack group from an ROS template to create stacks across multiple Alibaba Cloud accounts and regions.</p>
      * 
      * @param request CreateStackGroupRequest
      * @return CreateStackGroupResponse
@@ -830,11 +872,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that a stack group is created. For more information, see <a href="https://help.aliyun.com/document_detail/151333.html">CreateStackGroup</a>.
-     * In this topic, the stack group named <code>MyStackGroup</code> is used. The stack group is created in the China (Hangzhou) region and granted the self-managed permissions. In this example, stacks are created by using Alibaba Cloud accounts whose IDs are <code>151266687691****</code> and <code>141261387191****</code> in the China (Hangzhou) region and China (Beijing) region.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that a stack group is created. For more information, see <a href="https://help.aliyun.com/document_detail/151333.html">CreateStackGroup</a>.</p>
+     * <h3>Scenarios</h3>
+     * <h4>Create stacks across accounts</h4>
+     * <p>To create identical resources in multiple accounts, an administrator account can create a stack group, add multiple destination accounts, and deploy resources in a single region. This process creates multiple stacks in different accounts within the same region, improving deployment efficiency.</p>
+     * <h4>Create stacks across regions</h4>
+     * <p>To create identical resources in multiple regions, an administrator account can create a stack group, add a destination account, and deploy resources in multiple regions. This process creates multiple stacks in different regions within the same account, improving deployment efficiency.</p>
+     * <h4>Create stacks across accounts and regions</h4>
+     * <p>To create identical resources in multiple accounts across multiple regions, an administrator account can create a stack group, add multiple destination accounts, and deploy resources in multiple regions. This process creates multiple stacks in different accounts across different regions, improving deployment efficiency.
+     * This topic provides an example of creating stacks in the China (Hangzhou) and China (Beijing) regions in the Alibaba Cloud accounts <code>151266687691****</code> and <code>141261387191****</code>. The example uses a stack group named <code>MyStackGroup</code> that is created in the China (Hangzhou) region and uses self-managed permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates stack instances in the specified accounts and regions.</p>
+     * <p>Creates stack instances for one or more accounts in the specified regions.</p>
      * 
      * @param tmpReq CreateStackInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -928,11 +978,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that a stack group is created. For more information, see <a href="https://help.aliyun.com/document_detail/151333.html">CreateStackGroup</a>.
-     * In this topic, the stack group named <code>MyStackGroup</code> is used. The stack group is created in the China (Hangzhou) region and granted the self-managed permissions. In this example, stacks are created by using Alibaba Cloud accounts whose IDs are <code>151266687691****</code> and <code>141261387191****</code> in the China (Hangzhou) region and China (Beijing) region.</p>
+     * <h3>Prerequisites</h3>
+     * <p>Ensure that a stack group is created. For more information, see <a href="https://help.aliyun.com/document_detail/151333.html">CreateStackGroup</a>.</p>
+     * <h3>Scenarios</h3>
+     * <h4>Create stacks across accounts</h4>
+     * <p>To create identical resources in multiple accounts, an administrator account can create a stack group, add multiple destination accounts, and deploy resources in a single region. This process creates multiple stacks in different accounts within the same region, improving deployment efficiency.</p>
+     * <h4>Create stacks across regions</h4>
+     * <p>To create identical resources in multiple regions, an administrator account can create a stack group, add a destination account, and deploy resources in multiple regions. This process creates multiple stacks in different regions within the same account, improving deployment efficiency.</p>
+     * <h4>Create stacks across accounts and regions</h4>
+     * <p>To create identical resources in multiple accounts across multiple regions, an administrator account can create a stack group, add multiple destination accounts, and deploy resources in multiple regions. This process creates multiple stacks in different accounts across different regions, improving deployment efficiency.
+     * This topic provides an example of creating stacks in the China (Hangzhou) and China (Beijing) regions in the Alibaba Cloud accounts <code>151266687691****</code> and <code>141261387191****</code>. The example uses a stack group named <code>MyStackGroup</code> that is created in the China (Hangzhou) region and uses self-managed permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates stack instances in the specified accounts and regions.</p>
+     * <p>Creates stack instances for one or more accounts in the specified regions.</p>
      * 
      * @param request CreateStackInstancesRequest
      * @return CreateStackInstancesResponse
@@ -944,7 +1002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this topic, a custom template named <code>MyTemplate</code> is created in the <code>cn-hangzhou</code> region. The <code>TemplateBody</code> parameter of the template is set to <code>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</code>.</p>
+     * <p>This topic provides an example of how to create a template named <code>MyTemplate</code> in the China (Hangzhou) region (<code>cn-hangzhou</code>). The <code>TemplateBody</code> parameter is set to <code>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a custom template.</p>
@@ -1005,7 +1063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this topic, a custom template named <code>MyTemplate</code> is created in the <code>cn-hangzhou</code> region. The <code>TemplateBody</code> parameter of the template is set to <code>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</code>.</p>
+     * <p>This topic provides an example of how to create a template named <code>MyTemplate</code> in the China (Hangzhou) region (<code>cn-hangzhou</code>). The <code>TemplateBody</code> parameter is set to <code>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a custom template.</p>
@@ -1020,22 +1078,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Limits</h3>
-     * <p>Only specific resource types support the resource scenario feature. For more information, see <a href="https://help.aliyun.com/document_detail/353175.htmll">Resource types that support the scenario feature</a>.</p>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>Resource Orchestration Service (ROS) provides the resource scenario feature that allows you to specify the scope of a collection of resources on a user interface (UI) and perform operations, such as replication and management, on the resources. This helps you manage resources in a simplified manner. For more information about resource scenarios, see <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.</p>
-     * <h4><a href="#"></a>Resource replication scenario</h4>
-     * <p>If you want to replicate a collection of resources and dependencies between the resources, you can create a resource replication scenario. This type of resource scenario allows you to replicate all existing resources within the specified scope and generate a collection of resources that have the same architecture as the existing resources. For more information, see <a href="https://help.aliyun.com/document_detail/353133.html">Resource replication scenario</a>.</p>
-     * <h4><a href="#"></a>Resource detection scenario</h4>
-     * <p>If the relationships between resources that you want to create are complicated, you can create a resource detection scenario to preview the overall resource architecture or the architecture of a specific resource. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/2591901.html">Resource detection scenario</a>.</p>
-     * <h4><a href="#"></a>Resource management scenario</h4>
-     * <p>If you want to import a collection of existing resources to a stack and manage the resources in a centralized manner, you can create a resource management scenario. For more information, see <a href="https://help.aliyun.com/document_detail/353163.html">Resource management scenario</a>.</p>
-     * <h4><a href="#"></a>Resource migration scenario</h4>
-     * <p>If you want to migrate a collection of resources and dependencies between the resources, you can create a resource migration scenario. When you migrate the resources, ROS generates a stack. You can view the migration progress on the Stacks tab of the scenario details page. After you migrate the resources, you can delete source resources. For more information, see <a href="https://help.aliyun.com/document_detail/379902.html">Resource migration scenario</a>.
-     * This topic provides an example on how to create a resource replication scenario in the China (Hangzhou) region to replicate a resource. In this example, a virtual private cloud (VPC) whose ID is <code>vpc-bp1m6fww66xbntjyc****</code> is replicated.</p>
+     * <h3>Limits</h3>
+     * <p>Only specific resource types support the resource scenario feature. For more information, refer to <a href="https://help.aliyun.com/document_detail/353175.html">Resource types that support scenarios</a>.</p>
+     * <h3>Description</h3>
+     * <p>Resource Orchestration Service (ROS) provides the resource scenario feature. You can select a resource scope in the UI and perform operations such as replication or management of a group of resources, helping simplify resource management. For more information about resource scenarios, refer to <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.</p>
+     * <h4>Resource replication scenario</h4>
+     * <p>If you want to replicate a collection of resources and dependencies between the resources, you can create a resource replication scenario. This type of scenario lets you replicate all existing resources within the specified scope and generate a collection of resources that have the same architecture as the existing resources. For more information, refer to <a href="https://help.aliyun.com/document_detail/353133.html">Resource replication scenario</a>.</p>
+     * <h4>Resource profiling scenario</h4>
+     * <p>If the relationships between resources that you want to create are complicated, you can create a resource profiling scenario to preview the overall resource architecture or the architecture starting from a specific resource. This helps simplify resource management. For more information, refer to <a href="https://help.aliyun.com/document_detail/2591901.html">Resource detection scenario</a>.</p>
+     * <h4>Resource management scenario</h4>
+     * <p>If you need to import a collection of existing resources into a new resource stack for unified management, you can create a resource management scenario. For more information, refer to <a href="https://help.aliyun.com/document_detail/353163.html">Resource management scenario</a>.</p>
+     * <h4>Resource migration scenario</h4>
+     * <p>If you want to migrate a collection of resources and dependencies between the resources, you can create a resource migration scenario. When you migrate the resources, ROS generates a stack. You can view the migration progress on the Stacks tab of the scenario details page. After you migrate the resources, you can delete source resources. For more information, refer to <a href="https://help.aliyun.com/document_detail/379902.html">Resource migration scenario</a>.
+     * This topic provides an example of how to create a resource replication scenario in the China (Hangzhou) region to replicate a virtual private cloud (VPC) with the ID of <code>vpc-bp1m6fww66xbntjyc****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource scenario.</p>
+     * <p>Creates templatescratch: scenario.</p>
      * 
      * @param tmpReq CreateTemplateScratchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1129,22 +1187,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Limits</h3>
-     * <p>Only specific resource types support the resource scenario feature. For more information, see <a href="https://help.aliyun.com/document_detail/353175.htmll">Resource types that support the scenario feature</a>.</p>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>Resource Orchestration Service (ROS) provides the resource scenario feature that allows you to specify the scope of a collection of resources on a user interface (UI) and perform operations, such as replication and management, on the resources. This helps you manage resources in a simplified manner. For more information about resource scenarios, see <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.</p>
-     * <h4><a href="#"></a>Resource replication scenario</h4>
-     * <p>If you want to replicate a collection of resources and dependencies between the resources, you can create a resource replication scenario. This type of resource scenario allows you to replicate all existing resources within the specified scope and generate a collection of resources that have the same architecture as the existing resources. For more information, see <a href="https://help.aliyun.com/document_detail/353133.html">Resource replication scenario</a>.</p>
-     * <h4><a href="#"></a>Resource detection scenario</h4>
-     * <p>If the relationships between resources that you want to create are complicated, you can create a resource detection scenario to preview the overall resource architecture or the architecture of a specific resource. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/2591901.html">Resource detection scenario</a>.</p>
-     * <h4><a href="#"></a>Resource management scenario</h4>
-     * <p>If you want to import a collection of existing resources to a stack and manage the resources in a centralized manner, you can create a resource management scenario. For more information, see <a href="https://help.aliyun.com/document_detail/353163.html">Resource management scenario</a>.</p>
-     * <h4><a href="#"></a>Resource migration scenario</h4>
-     * <p>If you want to migrate a collection of resources and dependencies between the resources, you can create a resource migration scenario. When you migrate the resources, ROS generates a stack. You can view the migration progress on the Stacks tab of the scenario details page. After you migrate the resources, you can delete source resources. For more information, see <a href="https://help.aliyun.com/document_detail/379902.html">Resource migration scenario</a>.
-     * This topic provides an example on how to create a resource replication scenario in the China (Hangzhou) region to replicate a resource. In this example, a virtual private cloud (VPC) whose ID is <code>vpc-bp1m6fww66xbntjyc****</code> is replicated.</p>
+     * <h3>Limits</h3>
+     * <p>Only specific resource types support the resource scenario feature. For more information, refer to <a href="https://help.aliyun.com/document_detail/353175.html">Resource types that support scenarios</a>.</p>
+     * <h3>Description</h3>
+     * <p>Resource Orchestration Service (ROS) provides the resource scenario feature. You can select a resource scope in the UI and perform operations such as replication or management of a group of resources, helping simplify resource management. For more information about resource scenarios, refer to <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.</p>
+     * <h4>Resource replication scenario</h4>
+     * <p>If you want to replicate a collection of resources and dependencies between the resources, you can create a resource replication scenario. This type of scenario lets you replicate all existing resources within the specified scope and generate a collection of resources that have the same architecture as the existing resources. For more information, refer to <a href="https://help.aliyun.com/document_detail/353133.html">Resource replication scenario</a>.</p>
+     * <h4>Resource profiling scenario</h4>
+     * <p>If the relationships between resources that you want to create are complicated, you can create a resource profiling scenario to preview the overall resource architecture or the architecture starting from a specific resource. This helps simplify resource management. For more information, refer to <a href="https://help.aliyun.com/document_detail/2591901.html">Resource detection scenario</a>.</p>
+     * <h4>Resource management scenario</h4>
+     * <p>If you need to import a collection of existing resources into a new resource stack for unified management, you can create a resource management scenario. For more information, refer to <a href="https://help.aliyun.com/document_detail/353163.html">Resource management scenario</a>.</p>
+     * <h4>Resource migration scenario</h4>
+     * <p>If you want to migrate a collection of resources and dependencies between the resources, you can create a resource migration scenario. When you migrate the resources, ROS generates a stack. You can view the migration progress on the Stacks tab of the scenario details page. After you migrate the resources, you can delete source resources. For more information, refer to <a href="https://help.aliyun.com/document_detail/379902.html">Resource migration scenario</a>.
+     * This topic provides an example of how to create a resource replication scenario in the China (Hangzhou) region to replicate a virtual private cloud (VPC) with the ID of <code>vpc-bp1m6fww66xbntjyc****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource scenario.</p>
+     * <p>Creates templatescratch: scenario.</p>
      * 
      * @param request CreateTemplateScratchRequest
      * @return CreateTemplateScratchResponse
@@ -1156,10 +1214,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that the following requirements are met:
-     *     *   The status of the change set is CREATE_COMPLETE, CREATE_FAILED, or DELETE_FAILED.
-     *     *   The execution status is UNAVAILABLE or AVAILABLE.</p>
      * <ul>
+     * <li>Before you call this operation, make sure that the following requirements are met:<ul>
+     * <li>The status of the change set is CREATE_COMPLETE, CREATE_FAILED, or DELETE_FAILED.</li>
+     * <li>The execution status is UNAVAILABLE or AVAILABLE.</li>
+     * </ul>
+     * </li>
      * <li>After a change set is executed, other change sets associated with the same stack as this change set are also deleted.</li>
      * <li>After a stack is deleted, change sets associated with the stack are deleted.</li>
      * <li>If a change set of the CREATE type is deleted, you must delete stacks associated with the change set.
@@ -1203,10 +1263,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that the following requirements are met:
-     *     *   The status of the change set is CREATE_COMPLETE, CREATE_FAILED, or DELETE_FAILED.
-     *     *   The execution status is UNAVAILABLE or AVAILABLE.</p>
      * <ul>
+     * <li>Before you call this operation, make sure that the following requirements are met:<ul>
+     * <li>The status of the change set is CREATE_COMPLETE, CREATE_FAILED, or DELETE_FAILED.</li>
+     * <li>The execution status is UNAVAILABLE or AVAILABLE.</li>
+     * </ul>
+     * </li>
      * <li>After a change set is executed, other change sets associated with the same stack as this change set are also deleted.</li>
      * <li>After a stack is deleted, change sets associated with the stack are deleted.</li>
      * <li>If a change set of the CREATE type is deleted, you must delete stacks associated with the change set.
@@ -1270,7 +1332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a stack. You can specify whether to retain resources.</p>
+     * <p>Deletes a stack, optionally retaining resources.</p>
      * 
      * @param request DeleteStackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1326,7 +1388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a stack. You can specify whether to retain resources.</p>
+     * <p>Deletes a stack, optionally retaining resources.</p>
      * 
      * @param request DeleteStackRequest
      * @return DeleteStackResponse
@@ -1394,10 +1456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this topic, the stack group named <code>MyStackGroup</code> that is created in the China (Hangzhou) region is used. In this example, the stacks of the stack group that are deployed in the China (Beijing) region by using the Alibaba Cloud account whose ID is <code>151266687691****</code> are deleted.</p>
+     * <p>This topic provides an example of how to delete a stack instance from the <code>MyStackGroup</code> stack group. The stack group uses self-managed permissions and is in the China (Hangzhou) region. This example deletes the stack instance that is deployed in the China (Beijing) region for the Alibaba Cloud account <code>151266687691****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes stack instances in the specified accounts and regions. You can retain specific resources based on your business requirements when you call this operation.</p>
+     * <p>Deletes stack instances from specified accounts and regions. You can choose to retain the resources.</p>
      * 
      * @param tmpReq DeleteStackInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1479,10 +1541,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this topic, the stack group named <code>MyStackGroup</code> that is created in the China (Hangzhou) region is used. In this example, the stacks of the stack group that are deployed in the China (Beijing) region by using the Alibaba Cloud account whose ID is <code>151266687691****</code> are deleted.</p>
+     * <p>This topic provides an example of how to delete a stack instance from the <code>MyStackGroup</code> stack group. The stack group uses self-managed permissions and is in the China (Hangzhou) region. This example deletes the stack instance that is deployed in the China (Beijing) region for the Alibaba Cloud account <code>151266687691****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes stack instances in the specified accounts and regions. You can retain specific resources based on your business requirements when you call this operation.</p>
+     * <p>Deletes stack instances from specified accounts and regions. You can choose to retain the resources.</p>
      * 
      * @param request DeleteStackInstancesRequest
      * @return DeleteStackInstancesResponse
@@ -1494,7 +1556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If a template is shared with other Alibaba Cloud accounts, you must unshare the template before you delete it.</p>
+     * <p>If a template is shared with other Alibaba Cloud accounts, unshare it before deletion.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a template.</p>
@@ -1529,7 +1591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If a template is shared with other Alibaba Cloud accounts, you must unshare the template before you delete it.</p>
+     * <p>If a template is shared with other Alibaba Cloud accounts, unshare it before deletion.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a template.</p>
@@ -1598,16 +1660,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you delete a resource type, you can no longer use the resource type in Resource Orchestration Service (ROS).</p>
      * <ul>
-     * <li>If you delete a version of a resource type, you can no longer use the version in ROS.</li>
-     * <li>If a resource type has only one version, you can delete the version by calling the operation. If a resource type has more than one version, you must manually delete the remaining versions.</li>
-     * <li>When a resource type has more than one version, you cannot delete the default version by calling the operation.</li>
-     * <li>When a resource type has only one version, you can delete the resource type and the version by calling the operation.</li>
+     * <li>If you delete a resource type, it can no longer be used in ROS.</li>
+     * <li>If you delete a version of a resource type, that version can no longer be used in ROS.</li>
+     * <li>You can delete a resource type only if it has a single version. If a resource type has multiple versions, you must delete the other versions first.</li>
+     * <li>You cannot delete the default version if the resource type has more than one version.</li>
+     * <li>If a resource type has only one version, deleting that version also deletes the resource type.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a resource type or a version of a resource type.</p>
+     * <p>Deletes a resource type or a specific version of a resource type.</p>
      * 
      * @param request DeregisterResourceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1643,16 +1705,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you delete a resource type, you can no longer use the resource type in Resource Orchestration Service (ROS).</p>
      * <ul>
-     * <li>If you delete a version of a resource type, you can no longer use the version in ROS.</li>
-     * <li>If a resource type has only one version, you can delete the version by calling the operation. If a resource type has more than one version, you must manually delete the remaining versions.</li>
-     * <li>When a resource type has more than one version, you cannot delete the default version by calling the operation.</li>
-     * <li>When a resource type has only one version, you can delete the resource type and the version by calling the operation.</li>
+     * <li>If you delete a resource type, it can no longer be used in ROS.</li>
+     * <li>If you delete a version of a resource type, that version can no longer be used in ROS.</li>
+     * <li>You can delete a resource type only if it has a single version. If a resource type has multiple versions, you must delete the other versions first.</li>
+     * <li>You cannot delete the default version if the resource type has more than one version.</li>
+     * <li>If a resource type has only one version, deleting that version also deletes the resource type.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a resource type or a version of a resource type.</p>
+     * <p>Deletes a resource type or a specific version of a resource type.</p>
      * 
      * @param request DeregisterResourceTypeRequest
      * @return DeregisterResourceTypeResponse
@@ -1881,8 +1943,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Description</h3>
+     * <p>Enables trusted service access.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开启可信服务访问</p>
+     * <p>Enables trusted service access.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableServiceAccessResponse
@@ -1904,8 +1970,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Description</h3>
+     * <p>Enables trusted service access.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开启可信服务访问</p>
+     * <p>Enables trusted service access.</p>
      * @return EnableServiceAccessResponse
      */
     public EnableServiceAccessResponse enableServiceAccess() throws Exception {
@@ -1914,8 +1984,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Description</h3>
+     * <p>This operation enables multiple Alibaba Cloud services in a batch.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量开通</p>
+     * <p>Enables services in a batch.</p>
      * 
      * @param tmpReq EnableServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1956,8 +2030,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Description</h3>
+     * <p>This operation enables multiple Alibaba Cloud services in a batch.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量开通</p>
+     * <p>Enables services in a batch.</p>
      * 
      * @param request EnableServicesRequest
      * @return EnableServicesResponse
@@ -2029,7 +2107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>In this example, a template is generated for a resource management scenario that resides in the China (Hangzhou) region. The ID of the resource scenario is <code>ts-aa9c62feab844a6b****</code>.</p>
      * <blockquote>
-     * <p> You cannot generate a template for a resource detection scenario.</p>
+     * <p>You cannot generate a template for a resource detection scenario.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2079,7 +2157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>In this example, a template is generated for a resource management scenario that resides in the China (Hangzhou) region. The ID of the resource scenario is <code>ts-aa9c62feab844a6b****</code>.</p>
      * <blockquote>
-     * <p> You cannot generate a template for a resource detection scenario.</p>
+     * <p>You cannot generate a template for a resource detection scenario.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2095,11 +2173,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the policy information is related to Enterprise Distributed Application Service (EDAS), you must log on to your Alibaba Cloud account and grant the required permissions to the relevant RAM users.
-     * In this example, a policy is generated for a template whose ID is <code>5ecd1e10-b0e9-4389-a565-e4c15efc****</code>.</p>
+     * <p>If the policies required by the template include Enterprise Distributed Application Service (EDAS), log on to your Alibaba Cloud account and upgrade the RAM permissions for the Resource Access Management (RAM) users that require authorization.
+     * This topic provides an example of how to generate access policies for a template whose ID is <code>5ecd1e10-b0e9-4389-a565-e4c15efc****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates the information about a policy that is required by a template.</p>
+     * <p>Generates the policy information required by a specified template.</p>
      * 
      * @param request GenerateTemplatePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2155,11 +2233,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the policy information is related to Enterprise Distributed Application Service (EDAS), you must log on to your Alibaba Cloud account and grant the required permissions to the relevant RAM users.
-     * In this example, a policy is generated for a template whose ID is <code>5ecd1e10-b0e9-4389-a565-e4c15efc****</code>.</p>
+     * <p>If the policies required by the template include Enterprise Distributed Application Service (EDAS), log on to your Alibaba Cloud account and upgrade the RAM permissions for the Resource Access Management (RAM) users that require authorization.
+     * This topic provides an example of how to generate access policies for a template whose ID is <code>5ecd1e10-b0e9-4389-a565-e4c15efc****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates the information about a policy that is required by a template.</p>
+     * <p>Generates the policy information required by a specified template.</p>
      * 
      * @param request GenerateTemplatePolicyRequest
      * @return GenerateTemplatePolicyResponse
@@ -2219,10 +2297,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the details of a change set whose ID is <code>4c11658d-bd47-4dd0-ba64-727edc62****</code> is queried. The change set is created in the China (Hangzhou) region.</p>
+     * <p>This topic demonstrates how to query a change set with the ID <code>4c11658d-bd47-4dd0-ba64-727edc62****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries change sets. You can determine whether to query the templates of change sets.</p>
+     * <p>Returns details for a specified change set, optionally including the details of its associated template.</p>
      * 
      * @param request GetChangeSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2262,10 +2340,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the details of a change set whose ID is <code>4c11658d-bd47-4dd0-ba64-727edc62****</code> is queried. The change set is created in the China (Hangzhou) region.</p>
+     * <p>This topic demonstrates how to query a change set with the ID <code>4c11658d-bd47-4dd0-ba64-727edc62****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries change sets. You can determine whether to query the templates of change sets.</p>
+     * <p>Returns details for a specified change set, optionally including the details of its associated template.</p>
      * 
      * @param request GetChangeSetRequest
      * @return GetChangeSetResponse
@@ -2324,7 +2402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
      * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.</p>
      * <blockquote>
-     * <p> In the Examples section, only part of the sample code is provided.</p>
+     * <p>In the Examples section, only part of the sample code is provided.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2367,7 +2445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
      * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.</p>
      * <blockquote>
-     * <p> In the Examples section, only part of the sample code is provided.</p>
+     * <p>In the Examples section, only part of the sample code is provided.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2383,10 +2461,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
+     * <p>This topic provides an example of how to query the details of the <code>ALIYUN::ROS::WaitConditionHandle</code> resource type.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic provides an example on how to query the details of \<code>ALIYUN::ROS::WaitConditionHandle\\</code>.</p>
+     * <p>Queries the details of a resource type.</p>
      * 
      * @param request GetResourceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2422,10 +2500,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
+     * <p>This topic provides an example of how to query the details of the <code>ALIYUN::ROS::WaitConditionHandle</code> resource type.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic provides an example on how to query the details of \<code>ALIYUN::ROS::WaitConditionHandle\\</code>.</p>
+     * <p>Queries the details of a resource type.</p>
      * 
      * @param request GetResourceTypeRequest
      * @return GetResourceTypeResponse
@@ -2485,7 +2563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a trusted service.</p>
+     * <p>Queries the access status of a trusted service.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetServiceAccessResponse
@@ -2508,7 +2586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a trusted service.</p>
+     * <p>Queries the access status of a trusted service.</p>
      * @return GetServiceAccessResponse
      */
     public GetServiceAccessResponse getServiceAccess() throws Exception {
@@ -2518,14 +2596,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Description</h3>
-     * <p>This topic describes how to query the activation status and the RAM roles of an Alibaba Cloud service. In this example, the Elastic High Performance Computing (E-HPC) service that is deployed in the China (Hangzhou) region is queried.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example of how to query the activation status of Elastic High Performance Computing (EHPC) and information about the service-linked roles for EHPC in the China (Hangzhou) region.</p>
      * <blockquote>
      * <p>Make sure that you have the permissions to call the <a href="https://help.aliyun.com/document_detail/28711.html">GetRole</a> operation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the activation status and the RAM roles of an Alibaba Cloud service.</p>
+     * <p>Queries the activation status of an Alibaba Cloud service and information about its service-linked roles.</p>
      * 
      * @param request GetServiceProvisionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2583,14 +2661,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Description</h3>
-     * <p>This topic describes how to query the activation status and the RAM roles of an Alibaba Cloud service. In this example, the Elastic High Performance Computing (E-HPC) service that is deployed in the China (Hangzhou) region is queried.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example of how to query the activation status of Elastic High Performance Computing (EHPC) and information about the service-linked roles for EHPC in the China (Hangzhou) region.</p>
      * <blockquote>
      * <p>Make sure that you have the permissions to call the <a href="https://help.aliyun.com/document_detail/28711.html">GetRole</a> operation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the activation status and the RAM roles of an Alibaba Cloud service.</p>
+     * <p>Queries the activation status of an Alibaba Cloud service and information about its service-linked roles.</p>
      * 
      * @param request GetServiceProvisionsRequest
      * @return GetServiceProvisionsResponse
@@ -2602,10 +2680,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the information about a stack whose ID is <code>c754d2a4-28f1-46df-b557-9586173a****</code> in the China (Hangzhou) region is queried.</p>
+     * <p>This topic provides an example of how to query the information of a stack whose ID is <code>c754d2a4-28f1-46df-b557-9586173a****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a stack in Resource Orchestration Service (ROS).</p>
+     * <p>Queries stack information.</p>
      * 
      * @param request GetStackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2657,10 +2735,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the information about a stack whose ID is <code>c754d2a4-28f1-46df-b557-9586173a****</code> in the China (Hangzhou) region is queried.</p>
+     * <p>This topic provides an example of how to query the information of a stack whose ID is <code>c754d2a4-28f1-46df-b557-9586173a****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a stack in Resource Orchestration Service (ROS).</p>
+     * <p>Queries stack information.</p>
      * 
      * @param request GetStackRequest
      * @return GetStackResponse
@@ -2726,10 +2804,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
+     * <p>This topic provides an example of how to query a stack group named <code>MyStackGroup</code>. The stack group is in the China (Hangzhou) region and uses the self-managed permission mode.</p>
      * 
      * <b>summary</b> : 
-     * <p>In this example, the information about a stack group named \\<code>MyStackGroup\\\\</code> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</p>
+     * <p>Queries the details of a stack group by its name in an Alibaba Cloud region.</p>
      * 
      * @param request GetStackGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2769,10 +2847,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
+     * <p>This topic provides an example of how to query a stack group named <code>MyStackGroup</code>. The stack group is in the China (Hangzhou) region and uses the self-managed permission mode.</p>
      * 
      * <b>summary</b> : 
-     * <p>In this example, the information about a stack group named \\<code>MyStackGroup\\\\</code> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</p>
+     * <p>Queries the details of a stack group by its name in an Alibaba Cloud region.</p>
      * 
      * @param request GetStackGroupRequest
      * @return GetStackGroupResponse
@@ -2904,10 +2982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the stack policy of a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> is queried. The stack is deployed in the China (Hangzhou) region.</p>
+     * <p>This example queries the stack policy of stack <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a stack policy in an Alibaba Cloud region.</p>
+     * <p>Queries the stack policy of a specified stack.</p>
      * 
      * @param request GetStackPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2943,10 +3021,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the stack policy of a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> is queried. The stack is deployed in the China (Hangzhou) region.</p>
+     * <p>This example queries the stack policy of stack <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a stack policy in an Alibaba Cloud region.</p>
+     * <p>Queries the stack policy of a specified stack.</p>
      * 
      * @param request GetStackPolicyRequest
      * @return GetStackPolicyResponse
@@ -2958,31 +3036,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <table>
-     * <thead>
-     * <tr>
-     * <th>Http status code</th>
-     * <th>Error code</th>
-     * <th>Error message</th>
-     * <th>Description</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>404</td>
-     * <td>ResourceNotFound</td>
-     * <td>The Resource ({name}) could not be found in Stack {stack}.</td>
-     * <td>The error message returned because the specified resource does not exist in the stack. name indicates the resource name. stack indicates the stack name or ID.</td>
-     * </tr>
-     * <tr>
-     * <td>404</td>
-     * <td>StackNotFound</td>
-     * <td>The Stack ({name}) could not be found.</td>
-     * <td>The error message returned because the stack does not exist. name indicates the name or ID of the stack.</td>
-     * </tr>
-     * </tbody></table>
+     * <p>This topic provides an example on how to query the details of a resource named <code>WebServer</code> in a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>For more information about common request parameters, see [Common parameters]\(<del>131957</del>).</p>
+     * <p>Query a resource in a specific stack.</p>
      * 
      * @param request GetStackResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3034,31 +3091,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <table>
-     * <thead>
-     * <tr>
-     * <th>Http status code</th>
-     * <th>Error code</th>
-     * <th>Error message</th>
-     * <th>Description</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>404</td>
-     * <td>ResourceNotFound</td>
-     * <td>The Resource ({name}) could not be found in Stack {stack}.</td>
-     * <td>The error message returned because the specified resource does not exist in the stack. name indicates the resource name. stack indicates the stack name or ID.</td>
-     * </tr>
-     * <tr>
-     * <td>404</td>
-     * <td>StackNotFound</td>
-     * <td>The Stack ({name}) could not be found.</td>
-     * <td>The error message returned because the stack does not exist. name indicates the name or ID of the stack.</td>
-     * </tr>
-     * </tbody></table>
+     * <p>This topic provides an example on how to query the details of a resource named <code>WebServer</code> in a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>For more information about common request parameters, see [Common parameters]\(<del>131957</del>).</p>
+     * <p>Query a resource in a specific stack.</p>
      * 
      * @param request GetStackResourceRequest
      * @return GetStackResourceResponse
@@ -3156,54 +3192,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the &quot;<strong>Resource types that support price inquiry</strong>&quot; section of the <a href="https://help.aliyun.com/document_detail/203165.html">Estimate resource prices</a> topic.</li>
      * <li>For more information about the resources that support price inquiry in Terraform templates, see the &quot;<strong>ROS resources supported by Terraform</strong>&quot; section of the <a href="https://help.aliyun.com/document_detail/184389.html">ROS features and resources supported by Terraform</a> topic.
-     * The following sample code provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create based on a template. In this example, the following template is used:
-     * {
+     * The following sample code provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create based on a template. In this example, the following template is used:</li>
+     * </ul>
+     * <pre><code>{
      *   &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,
      *   &quot;Parameters&quot;: {
-     * &quot;Isp&quot;: {
-     *   &quot;Type&quot;: &quot;String&quot;,
-     *   &quot;Default&quot;: &quot;BGP&quot;
-     * },
-     * &quot;Name&quot;: {
-     *   &quot;Type&quot;: &quot;String&quot;,
-     *   &quot;Default&quot;: &quot;test&quot;
-     * },
-     * &quot;Netmode&quot;: {
-     *   &quot;Type&quot;: &quot;String&quot;,
-     *   &quot;Default&quot;: &quot;public&quot;
-     * },
-     * &quot;Bandwidth&quot;: {
-     *   &quot;Type&quot;: &quot;Number&quot;,
-     *   &quot;Default&quot;: 5
-     * }
-     *   },
-     *   &quot;Resources&quot;: {
-     * &quot;NewEip&quot;: {
-     *   &quot;Type&quot;: &quot;ALIYUN::VPC::EIP&quot;,
-     *   &quot;Properties&quot;: {
-     *     &quot;InstanceChargeType&quot;: &quot;Prepaid&quot;,
-     *     &quot;PricingCycle&quot;: &quot;Month&quot;,
      *     &quot;Isp&quot;: {
-     *       &quot;Ref&quot;: &quot;Isp&quot;
+     *       &quot;Type&quot;: &quot;String&quot;,
+     *       &quot;Default&quot;: &quot;BGP&quot;
      *     },
-     *     &quot;Period&quot;: 1,
-     *     &quot;DeletionProtection&quot;: false,
-     *     &quot;AutoPay&quot;: false,
      *     &quot;Name&quot;: {
-     *       &quot;Ref&quot;: &quot;Name&quot;
+     *       &quot;Type&quot;: &quot;String&quot;,
+     *       &quot;Default&quot;: &quot;test&quot;
      *     },
-     *     &quot;InternetChargeType&quot;: &quot;PayByTraffic&quot;,
      *     &quot;Netmode&quot;: {
-     *       &quot;Ref&quot;: &quot;Netmode&quot;
+     *       &quot;Type&quot;: &quot;String&quot;,
+     *       &quot;Default&quot;: &quot;public&quot;
      *     },
      *     &quot;Bandwidth&quot;: {
-     *       &quot;Ref&quot;: &quot;Bandwidth&quot;
+     *       &quot;Type&quot;: &quot;Number&quot;,
+     *       &quot;Default&quot;: 5
+     *     }
+     *   },
+     *   &quot;Resources&quot;: {
+     *     &quot;NewEip&quot;: {
+     *       &quot;Type&quot;: &quot;ALIYUN::VPC::EIP&quot;,
+     *       &quot;Properties&quot;: {
+     *         &quot;InstanceChargeType&quot;: &quot;Prepaid&quot;,
+     *         &quot;PricingCycle&quot;: &quot;Month&quot;,
+     *         &quot;Isp&quot;: {
+     *           &quot;Ref&quot;: &quot;Isp&quot;
+     *         },
+     *         &quot;Period&quot;: 1,
+     *         &quot;DeletionProtection&quot;: false,
+     *         &quot;AutoPay&quot;: false,
+     *         &quot;Name&quot;: {
+     *           &quot;Ref&quot;: &quot;Name&quot;
+     *         },
+     *         &quot;InternetChargeType&quot;: &quot;PayByTraffic&quot;,
+     *         &quot;Netmode&quot;: {
+     *           &quot;Ref&quot;: &quot;Netmode&quot;
+     *         },
+     *         &quot;Bandwidth&quot;: {
+     *           &quot;Ref&quot;: &quot;Bandwidth&quot;
+     *         }
+     *       }
      *     }
      *   }
      * }
-     *   }
-     * }</li>
-     * </ul>
+     * </code></pre>
      * 
      * <b>summary</b> : 
      * <p>Queries the estimated prices of the resources in a template.</p>
@@ -3280,54 +3317,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the &quot;<strong>Resource types that support price inquiry</strong>&quot; section of the <a href="https://help.aliyun.com/document_detail/203165.html">Estimate resource prices</a> topic.</li>
      * <li>For more information about the resources that support price inquiry in Terraform templates, see the &quot;<strong>ROS resources supported by Terraform</strong>&quot; section of the <a href="https://help.aliyun.com/document_detail/184389.html">ROS features and resources supported by Terraform</a> topic.
-     * The following sample code provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create based on a template. In this example, the following template is used:
-     * {
+     * The following sample code provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create based on a template. In this example, the following template is used:</li>
+     * </ul>
+     * <pre><code>{
      *   &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,
      *   &quot;Parameters&quot;: {
-     * &quot;Isp&quot;: {
-     *   &quot;Type&quot;: &quot;String&quot;,
-     *   &quot;Default&quot;: &quot;BGP&quot;
-     * },
-     * &quot;Name&quot;: {
-     *   &quot;Type&quot;: &quot;String&quot;,
-     *   &quot;Default&quot;: &quot;test&quot;
-     * },
-     * &quot;Netmode&quot;: {
-     *   &quot;Type&quot;: &quot;String&quot;,
-     *   &quot;Default&quot;: &quot;public&quot;
-     * },
-     * &quot;Bandwidth&quot;: {
-     *   &quot;Type&quot;: &quot;Number&quot;,
-     *   &quot;Default&quot;: 5
-     * }
-     *   },
-     *   &quot;Resources&quot;: {
-     * &quot;NewEip&quot;: {
-     *   &quot;Type&quot;: &quot;ALIYUN::VPC::EIP&quot;,
-     *   &quot;Properties&quot;: {
-     *     &quot;InstanceChargeType&quot;: &quot;Prepaid&quot;,
-     *     &quot;PricingCycle&quot;: &quot;Month&quot;,
      *     &quot;Isp&quot;: {
-     *       &quot;Ref&quot;: &quot;Isp&quot;
+     *       &quot;Type&quot;: &quot;String&quot;,
+     *       &quot;Default&quot;: &quot;BGP&quot;
      *     },
-     *     &quot;Period&quot;: 1,
-     *     &quot;DeletionProtection&quot;: false,
-     *     &quot;AutoPay&quot;: false,
      *     &quot;Name&quot;: {
-     *       &quot;Ref&quot;: &quot;Name&quot;
+     *       &quot;Type&quot;: &quot;String&quot;,
+     *       &quot;Default&quot;: &quot;test&quot;
      *     },
-     *     &quot;InternetChargeType&quot;: &quot;PayByTraffic&quot;,
      *     &quot;Netmode&quot;: {
-     *       &quot;Ref&quot;: &quot;Netmode&quot;
+     *       &quot;Type&quot;: &quot;String&quot;,
+     *       &quot;Default&quot;: &quot;public&quot;
      *     },
      *     &quot;Bandwidth&quot;: {
-     *       &quot;Ref&quot;: &quot;Bandwidth&quot;
+     *       &quot;Type&quot;: &quot;Number&quot;,
+     *       &quot;Default&quot;: 5
+     *     }
+     *   },
+     *   &quot;Resources&quot;: {
+     *     &quot;NewEip&quot;: {
+     *       &quot;Type&quot;: &quot;ALIYUN::VPC::EIP&quot;,
+     *       &quot;Properties&quot;: {
+     *         &quot;InstanceChargeType&quot;: &quot;Prepaid&quot;,
+     *         &quot;PricingCycle&quot;: &quot;Month&quot;,
+     *         &quot;Isp&quot;: {
+     *           &quot;Ref&quot;: &quot;Isp&quot;
+     *         },
+     *         &quot;Period&quot;: 1,
+     *         &quot;DeletionProtection&quot;: false,
+     *         &quot;AutoPay&quot;: false,
+     *         &quot;Name&quot;: {
+     *           &quot;Ref&quot;: &quot;Name&quot;
+     *         },
+     *         &quot;InternetChargeType&quot;: &quot;PayByTraffic&quot;,
+     *         &quot;Netmode&quot;: {
+     *           &quot;Ref&quot;: &quot;Netmode&quot;
+     *         },
+     *         &quot;Bandwidth&quot;: {
+     *           &quot;Ref&quot;: &quot;Bandwidth&quot;
+     *         }
+     *       }
      *     }
      *   }
      * }
-     *   }
-     * }</li>
-     * </ul>
+     * </code></pre>
      * 
      * <b>summary</b> : 
      * <p>Queries the estimated prices of the resources in a template.</p>
@@ -3342,11 +3380,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the values of a parameter. In this example, the values of the <code>ZoneInfo</code> parameter in a template that is created in the China (Hangzhou) region are queried. The template body is <code>{&quot;Parameters&quot;:{&quot;ZoneInfo&quot;:{&quot;Type&quot;: &quot;String&quot;},&quot;InstanceType&quot;: {&quot;Type&quot;: &quot;String&quot;}},&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,&quot;Resources&quot;:{&quot;ECS&quot;:{&quot;Properties&quot;:{&quot;ZoneId&quot;:{&quot;Ref&quot;: &quot;ZoneInfo&quot;},&quot;InstanceType&quot;: {&quot;Ref&quot;: &quot;InstanceType&quot;}},&quot;Type&quot;: &quot;ALIYUN::ECS::Instance&quot;}}}</code>.
-     * For more information about the template parameters whose values you can query by calling this operation and the sample code of the template, see <a href="https://help.aliyun.com/document_detail/432820.html">Query the constraints of parameters</a>.</p>
+     * <h3>Description</h3>
+     * <p>This topic provides an example of how to query the valid values for the <code>ZoneInfo</code> parameter in a template specific to the China (Hangzhou) region. The template is <code>{ &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;, &quot;Parameters&quot;: { &quot;ZoneInfo&quot;: { &quot;Type&quot;: &quot;String&quot; }, &quot;InstanceType&quot;: { &quot;Type&quot;: &quot;String&quot; } }, &quot;Resources&quot;: { &quot;ECS&quot;: { &quot;Type&quot;: &quot;ALIYUN::ECS::Instance&quot;, &quot;Properties&quot;: { &quot;ZoneId&quot;: { &quot;Ref&quot;: &quot;ZoneInfo&quot; }, &quot;InstanceType&quot;: { &quot;Ref&quot;: &quot;InstanceType&quot; } } } } }</code>.
+     * For more information about the queryable parameters and template content, refer to <a href="https://help.aliyun.com/document_detail/432820.html">Query parameter constraints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the values of one or more parameters in a template.</p>
+     * <p>Queries the valid values of the parameters in a template.</p>
      * 
      * @param tmpReq GetTemplateParameterConstraintsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3426,11 +3465,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the values of a parameter. In this example, the values of the <code>ZoneInfo</code> parameter in a template that is created in the China (Hangzhou) region are queried. The template body is <code>{&quot;Parameters&quot;:{&quot;ZoneInfo&quot;:{&quot;Type&quot;: &quot;String&quot;},&quot;InstanceType&quot;: {&quot;Type&quot;: &quot;String&quot;}},&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,&quot;Resources&quot;:{&quot;ECS&quot;:{&quot;Properties&quot;:{&quot;ZoneId&quot;:{&quot;Ref&quot;: &quot;ZoneInfo&quot;},&quot;InstanceType&quot;: {&quot;Ref&quot;: &quot;InstanceType&quot;}},&quot;Type&quot;: &quot;ALIYUN::ECS::Instance&quot;}}}</code>.
-     * For more information about the template parameters whose values you can query by calling this operation and the sample code of the template, see <a href="https://help.aliyun.com/document_detail/432820.html">Query the constraints of parameters</a>.</p>
+     * <h3>Description</h3>
+     * <p>This topic provides an example of how to query the valid values for the <code>ZoneInfo</code> parameter in a template specific to the China (Hangzhou) region. The template is <code>{ &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;, &quot;Parameters&quot;: { &quot;ZoneInfo&quot;: { &quot;Type&quot;: &quot;String&quot; }, &quot;InstanceType&quot;: { &quot;Type&quot;: &quot;String&quot; } }, &quot;Resources&quot;: { &quot;ECS&quot;: { &quot;Type&quot;: &quot;ALIYUN::ECS::Instance&quot;, &quot;Properties&quot;: { &quot;ZoneId&quot;: { &quot;Ref&quot;: &quot;ZoneInfo&quot; }, &quot;InstanceType&quot;: { &quot;Ref&quot;: &quot;InstanceType&quot; } } } } }</code>.
+     * For more information about the queryable parameters and template content, refer to <a href="https://help.aliyun.com/document_detail/432820.html">Query parameter constraints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the values of one or more parameters in a template.</p>
+     * <p>Queries the valid values of the parameters in a template.</p>
      * 
      * @param request GetTemplateParameterConstraintsRequest
      * @return GetTemplateParameterConstraintsResponse
@@ -3442,7 +3482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries recommended parameters.</p>
+     * <p>推荐参数</p>
      * 
      * @param request GetTemplateRecommendParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3498,7 +3538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries recommended parameters.</p>
+     * <p>推荐参数</p>
      * 
      * @param request GetTemplateRecommendParametersRequest
      * @return GetTemplateRecommendParametersResponse
@@ -3510,10 +3550,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the details of the resource scenario whose ID is <code>ts-7f7a704cf71c49a6****</code> is queried. In the response, the source node data is displayed.</p>
+     * <p>This topic provides an example of how to query the details of the resource scenario <code>ts-7f7a704cf71c49a6****</code> in the China (Hangzhou) region and display source node data.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a resource scenario.</p>
+     * <p>Retrieves the details of a resource scenario.</p>
      * 
      * @param request GetTemplateScratchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3553,10 +3593,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the details of the resource scenario whose ID is <code>ts-7f7a704cf71c49a6****</code> is queried. In the response, the source node data is displayed.</p>
+     * <p>This topic provides an example of how to query the details of the resource scenario <code>ts-7f7a704cf71c49a6****</code> in the China (Hangzhou) region and display source node data.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a resource scenario.</p>
+     * <p>Retrieves the details of a resource scenario.</p>
      * 
      * @param request GetTemplateScratchRequest
      * @return GetTemplateScratchResponse
@@ -3838,7 +3878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries change sets.</p>
+     * <p>Queries the details of created change sets.</p>
      * 
      * @param request ListChangeSetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3898,7 +3938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries change sets.</p>
+     * <p>Queries the details of created change sets.</p>
      * 
      * @param request ListChangeSetsRequest
      * @return ListChangeSetsResponse
@@ -3906,6 +3946,160 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListChangeSetsResponse listChangeSets(ListChangeSetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listChangeSetsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>When calling the V2 service, set the <code>AgentVersion</code> parameter to <code>V2</code>.</li>
+     * <li>This operation only accepts the <code>SessionId</code> of the current user\&quot;s session. It does not directly return a message array. Instead, it returns pre-signed download URLs for <code>session.jsonl</code> and <code>a2a-snapshot.json</code>.</li>
+     * <li>The download URLs are valid for 1800 seconds (30 minutes). Complete the download within the validity period.</li>
+     * <li>The URLs in the response contain signature parameters. Do not log, share, or cache them for extended periods.</li>
+     * <li><code>MaxResults</code> and <code>NextToken</code> are compatibility fields that are not consumed in V2.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the message history and Pipeline snapshot temporary download URL for a specified session by session ID.</p>
+     * 
+     * @param request ListChatMessagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChatMessagesResponse
+     */
+    public ListChatMessagesResponse listChatMessagesWithOptions(ListChatMessagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListChatMessages"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChatMessagesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>When calling the V2 service, set the <code>AgentVersion</code> parameter to <code>V2</code>.</li>
+     * <li>This operation only accepts the <code>SessionId</code> of the current user\&quot;s session. It does not directly return a message array. Instead, it returns pre-signed download URLs for <code>session.jsonl</code> and <code>a2a-snapshot.json</code>.</li>
+     * <li>The download URLs are valid for 1800 seconds (30 minutes). Complete the download within the validity period.</li>
+     * <li>The URLs in the response contain signature parameters. Do not log, share, or cache them for extended periods.</li>
+     * <li><code>MaxResults</code> and <code>NextToken</code> are compatibility fields that are not consumed in V2.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the message history and Pipeline snapshot temporary download URL for a specified session by session ID.</p>
+     * 
+     * @param request ListChatMessagesRequest
+     * @return ListChatMessagesResponse
+     */
+    public ListChatMessagesResponse listChatMessages(ListChatMessagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listChatMessagesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Set <code>AgentVersion</code> to <code>V2</code> when calling the V2 service.</li>
+     * <li>This operation returns only sessions of the current user, sorted by <code>UpdatedAt</code> in descending order by default.</li>
+     * <li>Use the <code>Mode</code> parameter to filter sessions by mode. Valid values: <code>IaCCodeNormal</code> and <code>IaCCodePipeline</code>.</li>
+     * <li>Do not reuse an old <code>NextToken</code> after switching <code>Mode</code>.</li>
+     * <li>Use the <code>CreatedAt</code> and <code>UpdatedAt</code> fields for time information. The <code>UpdatedTime</code> field in the metadata is a compatibility field and is not returned in the current response.</li>
+     * <li>Set the <code>MaxResults</code> request parameter to specify the number of entries per page. Valid values: 1 to 100.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the ROS Agent V2 session list of the current user by paging.</p>
+     * 
+     * @param request ListChatSessionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChatSessionsResponse
+     */
+    public ListChatSessionsResponse listChatSessionsWithOptions(ListChatSessionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListChatSessions"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChatSessionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Set <code>AgentVersion</code> to <code>V2</code> when calling the V2 service.</li>
+     * <li>This operation returns only sessions of the current user, sorted by <code>UpdatedAt</code> in descending order by default.</li>
+     * <li>Use the <code>Mode</code> parameter to filter sessions by mode. Valid values: <code>IaCCodeNormal</code> and <code>IaCCodePipeline</code>.</li>
+     * <li>Do not reuse an old <code>NextToken</code> after switching <code>Mode</code>.</li>
+     * <li>Use the <code>CreatedAt</code> and <code>UpdatedAt</code> fields for time information. The <code>UpdatedTime</code> field in the metadata is a compatibility field and is not returned in the current response.</li>
+     * <li>Set the <code>MaxResults</code> request parameter to specify the number of entries per page. Valid values: 1 to 100.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the ROS Agent V2 session list of the current user by paging.</p>
+     * 
+     * @param request ListChatSessionsRequest
+     * @return ListChatSessionsResponse
+     */
+    public ListChatSessionsResponse listChatSessions(ListChatSessionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listChatSessionsWithOptions(request, runtime);
     }
 
     /**
@@ -3970,7 +4164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the registration records of a resource.</p>
+     * <p>Queries a list of resource registration records.</p>
      * 
      * @param request ListResourceTypeRegistrationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4022,7 +4216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the registration records of a resource.</p>
+     * <p>Queries a list of resource registration records.</p>
      * 
      * @param request ListResourceTypeRegistrationsRequest
      * @return ListResourceTypeRegistrationsResponse
@@ -4034,7 +4228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the versions of resource types, including the resource types created by you and provided by Resource Orchestration Service (ROS).</p>
+     * <p>Queries the list of resource type versions, including resource types created by the user and those provided by Resource Orchestration Service (ROS).</p>
      * 
      * @param request ListResourceTypeVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4066,7 +4260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the versions of resource types, including the resource types created by you and provided by Resource Orchestration Service (ROS).</p>
+     * <p>Queries the list of resource type versions, including resource types created by the user and those provided by Resource Orchestration Service (ROS).</p>
      * 
      * @param request ListResourceTypeVersionsRequest
      * @return ListResourceTypeVersionsResponse
@@ -4078,10 +4272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about errors common to all operations, see <a href="/help/en/resource-orchestration-service/latest/common-error-codes">Common error codes</a>.</p>
+     * <p>This topic provides an example of how to query the list of regular resource types supported by ROS.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic provides an example on how to query the list of resource types supported by Resource Orchestration Service (ROS).</p>
+     * <p>Queries the list of supported resource types.</p>
      * 
      * @param request ListResourceTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4121,10 +4315,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about errors common to all operations, see <a href="/help/en/resource-orchestration-service/latest/common-error-codes">Common error codes</a>.</p>
+     * <p>This topic provides an example of how to query the list of regular resource types supported by ROS.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic provides an example on how to query the list of resource types supported by Resource Orchestration Service (ROS).</p>
+     * <p>Queries the list of supported resource types.</p>
      * 
      * @param request ListResourceTypesRequest
      * @return ListResourceTypesResponse
@@ -4136,7 +4330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a stack and the resource events of the stack.</p>
+     * <p>Queries events of a stack and the resources in the stack.</p>
      * 
      * @param request ListStackEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4192,7 +4386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a stack and the resource events of the stack.</p>
+     * <p>Queries events of a stack and the resources in the stack.</p>
      * 
      * @param request ListStackEventsRequest
      * @return ListStackEventsResponse
@@ -4322,10 +4516,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the list of stack groups that are in the ACTIVE state and deployed in the China (Hangzhou) region is queried.</p>
+     * <p>This example queries stack groups in the ACTIVE state in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of stack groups in an Alibaba Cloud region.</p>
+     * <p>Queries stack groups in a region.</p>
      * 
      * @param request ListStackGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4377,10 +4571,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the list of stack groups that are in the ACTIVE state and deployed in the China (Hangzhou) region is queried.</p>
+     * <p>This example queries stack groups in the ACTIVE state in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of stack groups in an Alibaba Cloud region.</p>
+     * <p>Queries stack groups in a region.</p>
      * 
      * @param request ListStackGroupsRequest
      * @return ListStackGroupsResponse
@@ -4622,10 +4816,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
+     * <p>This topic provides an example on how to query the resources in a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is \<code>4a6c9851-3b0f-4f5f-b4ca-a14bf691\\*\\*\\*\\*\\</code> in the China (Hangzhou) region are queried.</p>
+     * <p>Queries the resources in a specified stack.</p>
      * 
      * @param request ListStackResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4661,10 +4855,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/131957.html">Common parameters</a>.</p>
+     * <p>This topic provides an example on how to query the resources in a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is \<code>4a6c9851-3b0f-4f5f-b4ca-a14bf691\\*\\*\\*\\*\\</code> in the China (Hangzhou) region are queried.</p>
+     * <p>Queries the resources in a specified stack.</p>
      * 
      * @param request ListStackResourcesRequest
      * @return ListStackResourcesResponse
@@ -4676,11 +4870,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3></h3>
-     * <p>This topic provides an example on how to query a list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.</p>
+     * <h3>Operation description</h3>
+     * <p>This topic provides an example of how to query the list of stacks in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of stacks.</p>
+     * <p>Queries the list of stacks.</p>
      * 
      * @param request ListStacksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4760,11 +4954,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3></h3>
-     * <p>This topic provides an example on how to query a list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.</p>
+     * <h3>Operation description</h3>
+     * <p>This topic provides an example of how to query the list of stacks in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of stacks.</p>
+     * <p>Queries the list of stacks.</p>
      * 
      * @param request ListStacksRequest
      * @return ListStacksResponse
@@ -4775,8 +4969,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example of how to query a list of stacks in the China (Hangzhou) region.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries summaries.</p>
+     * <p>Queries for an overview.</p>
      * 
      * @param request ListSummariesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4807,8 +5005,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example of how to query a list of stacks in the China (Hangzhou) region.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries summaries.</p>
+     * <p>Queries for an overview.</p>
      * 
      * @param request ListSummariesRequest
      * @return ListSummariesResponse
@@ -4820,10 +5022,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the tag keys that are added to a stack in the China (Hangzhou) region are queried.</p>
+     * <p>This topic provides an example of how to query the tag keys that are attached to a stack in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tag keys that are added to resources in a template or stack in an Alibaba Cloud region.</p>
+     * <p>Queries the tag keys for stacks or templates in a specified region.</p>
      * 
      * @param request ListTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4863,10 +5065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the tag keys that are added to a stack in the China (Hangzhou) region are queried.</p>
+     * <p>This topic provides an example of how to query the tag keys that are attached to a stack in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tag keys that are added to resources in a template or stack in an Alibaba Cloud region.</p>
+     * <p>Queries the tag keys for stacks or templates in a specified region.</p>
      * 
      * @param request ListTagKeysRequest
      * @return ListTagKeysResponse
@@ -5016,10 +5218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the scenarios that are created in the China (Hangzhou) region are queried. In the response, a scenario of the Resource Management and a scenario of the Resource Replication type are returned.</p>
+     * <p>This topic provides an example of how to query the list of resource scenarios in the China (Hangzhou) region. The response shows that there are two resource scenarios in the China (Hangzhou) region: resource management and resource replication.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries scenarios.</p>
+     * <p>Queries a list of resource scenarios.</p>
      * 
      * @param request ListTemplateScratchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5079,10 +5281,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the scenarios that are created in the China (Hangzhou) region are queried. In the response, a scenario of the Resource Management and a scenario of the Resource Replication type are returned.</p>
+     * <p>This topic provides an example of how to query the list of resource scenarios in the China (Hangzhou) region. The response shows that there are two resource scenarios in the China (Hangzhou) region: resource management and resource replication.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries scenarios.</p>
+     * <p>Queries a list of resource scenarios.</p>
      * 
      * @param request ListTemplateScratchesRequest
      * @return ListTemplateScratchesResponse
@@ -5146,7 +5348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List Templates</p>
+     * <p>Queries a list of private and shared templates.</p>
      * 
      * @param request ListTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5206,7 +5408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List Templates</p>
+     * <p>Queries a list of private and shared templates.</p>
      * 
      * @param request ListTemplatesRequest
      * @return ListTemplatesResponse
@@ -5280,10 +5482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a stack named <code>MyStack</code> in the China (Hangzhou) region by using a template and preview the information about the stack. In this example, the <code>template body</code> is <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</p>
+     * <p>In this example, a stack named <code>MyStack</code> is created in the China (Hangzhou) region and previewed. The <code>TemplateBody</code> parameter of the stack is set to <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Previews the information about a stack that you want to create based on a template. You can call this operation to verify whether the template resources are valid.</p>
+     * <p>Previews the information about a stack that you want to create or update based on a template. You can call this operation to verify whether the template resources are valid.</p>
      * 
      * @param request PreviewStackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5389,10 +5591,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a stack named <code>MyStack</code> in the China (Hangzhou) region by using a template and preview the information about the stack. In this example, the <code>template body</code> is <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</p>
+     * <p>In this example, a stack named <code>MyStack</code> is created in the China (Hangzhou) region and previewed. The <code>TemplateBody</code> parameter of the stack is set to <code>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Previews the information about a stack that you want to create based on a template. You can call this operation to verify whether the template resources are valid.</p>
+     * <p>Previews the information about a stack that you want to create or update based on a template. You can call this operation to verify whether the template resources are valid.</p>
      * 
      * @param request PreviewStackRequest
      * @return PreviewStackResponse
@@ -5404,8 +5606,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Versions increase from v1.</p>
      * <ul>
+     * <li>Versions increase from v1.</li>
      * <li>If you create a new resource type, v1 is used as the default version of the resource type. You can call the SetResourceType operation to change the default version of a resource type.</li>
      * </ul>
      * 
@@ -5464,8 +5666,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Versions increase from v1.</p>
      * <ul>
+     * <li>Versions increase from v1.</li>
      * <li>If you create a new resource type, v1 is used as the default version of the resource type. You can call the SetResourceType operation to change the default version of a resource type.</li>
      * </ul>
      * 
@@ -5534,7 +5736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a resource type or a version of a resource type.</p>
+     * <p>Modifies the description of a resource type or a version of that type.</p>
      * 
      * @param request SetResourceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5578,7 +5780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a resource type or a version of a resource type.</p>
+     * <p>Modifies the description of a resource type or a version of that type.</p>
      * 
      * @param request SetResourceTypeRequest
      * @return SetResourceTypeResponse
@@ -5788,7 +5990,171 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to stop a stack group operation whose ID is <code>6da106ca-1784-4a6f-a7e1-e723863****</code> in the China (Hangzhou) region.</p>
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>When calling this API, ensure that <code>AgentVersion</code> is set to <code>V2</code>.</li>
+     * <li>If <code>SessionId</code> is not provided, a new session is created. If <code>SessionId</code> is provided, the existing session is continued.</li>
+     * <li>The default value of <code>Mode</code> is <code>IaCCodeNormal</code>. Only <code>IaCCodeNormal</code> and <code>IaCCodePipeline</code> modes are supported. An existing session cannot switch modes.</li>
+     * <li><code>EnableThinking</code> defaults to <code>true</code>, which specifies whether to output thinking content. This can be reset in each request.</li>
+     * <li>A maximum of 5 image attachments are supported. Each attachment can be up to 5 MiB and must be accessed through an OssObjectKey under the current user directory.</li>
+     * <li><code>ClientContext</code> is a page context JSON string with a maximum size of 16 KiB. It is valid only in <code>IaCCodeNormal</code> mode.</li>
+     * <li>The response type is <code>text/event-stream</code>. A successful HTTP connection does not indicate that the operation is complete. Continue reading SSE events until a terminal state is reached.</li>
+     * <li>When the <code>TASK_STATE_INPUT_REQUIRED</code> status is received, it indicates that user input is required. This is not a failure state.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Returns agent events through SSE streaming. Supports creating a new session or continuing an existing session.</p>
+     * 
+     * @param request StartChatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartChatResponse
+     */
+    public StartChatResponse startChatWithOptions(StartChatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attachments)) {
+            query.put("Attachments", request.attachments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enablePartialMessage)) {
+            query.put("EnablePartialMessage", request.enablePartialMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableThinking)) {
+            query.put("EnableThinking", request.enableThinking);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartChat"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "string")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartChatResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>When calling this API, ensure that <code>AgentVersion</code> is set to <code>V2</code>.</li>
+     * <li>If <code>SessionId</code> is not provided, a new session is created. If <code>SessionId</code> is provided, the existing session is continued.</li>
+     * <li>The default value of <code>Mode</code> is <code>IaCCodeNormal</code>. Only <code>IaCCodeNormal</code> and <code>IaCCodePipeline</code> modes are supported. An existing session cannot switch modes.</li>
+     * <li><code>EnableThinking</code> defaults to <code>true</code>, which specifies whether to output thinking content. This can be reset in each request.</li>
+     * <li>A maximum of 5 image attachments are supported. Each attachment can be up to 5 MiB and must be accessed through an OssObjectKey under the current user directory.</li>
+     * <li><code>ClientContext</code> is a page context JSON string with a maximum size of 16 KiB. It is valid only in <code>IaCCodeNormal</code> mode.</li>
+     * <li>The response type is <code>text/event-stream</code>. A successful HTTP connection does not indicate that the operation is complete. Continue reading SSE events until a terminal state is reached.</li>
+     * <li>When the <code>TASK_STATE_INPUT_REQUIRED</code> status is received, it indicates that user input is required. This is not a failure state.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Returns agent events through SSE streaming. Supports creating a new session or continuing an existing session.</p>
+     * 
+     * @param request StartChatRequest
+     * @return StartChatResponse
+     */
+    public StartChatResponse startChat(StartChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startChatWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>When calling this operation, ensure that <code>AgentVersion</code> is set to <code>V2</code> to route to the correct backend service.</li>
+     * <li><code>SessionId</code> is required to identify the specific session to stop.</li>
+     * <li>In a multi-process environment, if the target session is within the calling process, a cancel signal is sent directly and the system waits for cleanup to complete. If the session is managed by another process, a cancel request is sent to the remote end through the persisted active session state, and a <code>Stopping</code> status is returned immediately.</li>
+     * <li>When no active task exists, the API returns the <code>NoActiveStream</code> status code, which is not considered an error condition.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a running task in a specified ROS Agent V2 session.</p>
+     * 
+     * @param request StopChatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopChatResponse
+     */
+    public StopChatResponse stopChatWithOptions(StopChatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopChat"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopChatResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>When calling this operation, ensure that <code>AgentVersion</code> is set to <code>V2</code> to route to the correct backend service.</li>
+     * <li><code>SessionId</code> is required to identify the specific session to stop.</li>
+     * <li>In a multi-process environment, if the target session is within the calling process, a cancel signal is sent directly and the system waits for cleanup to complete. If the session is managed by another process, a cancel request is sent to the remote end through the persisted active session state, and a <code>Stopping</code> status is returned immediately.</li>
+     * <li>When no active task exists, the API returns the <code>NoActiveStream</code> status code, which is not considered an error condition.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a running task in a specified ROS Agent V2 session.</p>
+     * 
+     * @param request StopChatRequest
+     * @return StopChatResponse
+     */
+    public StopChatResponse stopChat(StopChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopChatWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This example stops the stack group operation <code>6da106ca-1784-4a6f-a7e1-e723863****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
      * <p>Stops an ongoing operation in a stack group.</p>
@@ -5827,7 +6193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to stop a stack group operation whose ID is <code>6da106ca-1784-4a6f-a7e1-e723863****</code> in the China (Hangzhou) region.</p>
+     * <p>This example stops the stack group operation <code>6da106ca-1784-4a6f-a7e1-e723863****</code> in the China (Hangzhou) region.</p>
      * 
      * <b>summary</b> : 
      * <p>Stops an ongoing operation in a stack group.</p>
@@ -5842,7 +6208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a tag and add the tag to a stack. In this example, the stack ID is <code>7fee80e1-8c48-4c2f-8300-0f6dc40b****</code>, the tag key is <code>FinanceDept</code>, and the tag value is <code>FinanceJoshua</code>.</p>
+     * <p>This topic provides an example of how to create and add a tag to a resource stack in China (Hangzhou) region. The resource stack ID is <code>7fee80e1-8c48-4c2f-8300-0f6dc40b****</code>, with the tag key of <code>FinanceDept</code> and the tag value of <code>FinanceJoshua</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates and adds tags to resources.</p>
@@ -5889,7 +6255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a tag and add the tag to a stack. In this example, the stack ID is <code>7fee80e1-8c48-4c2f-8300-0f6dc40b****</code>, the tag key is <code>FinanceDept</code>, and the tag value is <code>FinanceJoshua</code>.</p>
+     * <p>This topic provides an example of how to create and add a tag to a resource stack in China (Hangzhou) region. The resource stack ID is <code>7fee80e1-8c48-4c2f-8300-0f6dc40b****</code>, with the tag key of <code>FinanceDept</code> and the tag value of <code>FinanceJoshua</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates and adds tags to resources.</p>
@@ -5970,15 +6336,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The values of parameters in the Parameters section vary based on the value that you specify for the UsePreviousParameters parameter in the request. If you do not add the parameters that are defined in the template to the Parameters section, take note of the following items:</p>
+     * <p>The values of Parameters and UsePreviousParameters are related. If a parameter defined in the template is not specified in Parameters:  </p>
      * <ul>
-     * <li>UsePreviousParameters is set to false: If the template parameters have default values, the default values are used. Otherwise, you must specify values for the template parameters in the Parameters section.</li>
-     * <li>UsePreviousParameters is set to true: If you specify values for the template parameters when you create a stack, the values are used. If you leave the template parameters empty when you create a stack but the template parameters have default values, the default values are used.
-     * This topic describes how to update a stack. In this example, the template body of a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> in the China (Beijing) region is updated to <code>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</code>.</li>
+     * <li>If UsePreviousParameters is set to false: the default value of the parameter in the template is used if available. If no default value exists, you must specify the parameter in Parameters.  </li>
+     * <li>If UsePreviousParameters is set to true: if the parameter was specified when the stack was created, the specified value is used. If the parameter was not specified when the stack was created and the parameter has a default value in the template, the default value is used.</li>
      * </ul>
+     * <p>This topic provides an example to show how to update the template content of a stack in the China (Beijing) region to <code>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</code>. The stack ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a stack.</p>
+     * <p>Updates the resource information of a created stack.</p>
      * 
      * @param request UpdateStackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6100,15 +6466,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The values of parameters in the Parameters section vary based on the value that you specify for the UsePreviousParameters parameter in the request. If you do not add the parameters that are defined in the template to the Parameters section, take note of the following items:</p>
+     * <p>The values of Parameters and UsePreviousParameters are related. If a parameter defined in the template is not specified in Parameters:  </p>
      * <ul>
-     * <li>UsePreviousParameters is set to false: If the template parameters have default values, the default values are used. Otherwise, you must specify values for the template parameters in the Parameters section.</li>
-     * <li>UsePreviousParameters is set to true: If you specify values for the template parameters when you create a stack, the values are used. If you leave the template parameters empty when you create a stack but the template parameters have default values, the default values are used.
-     * This topic describes how to update a stack. In this example, the template body of a stack whose ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code> in the China (Beijing) region is updated to <code>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</code>.</li>
+     * <li>If UsePreviousParameters is set to false: the default value of the parameter in the template is used if available. If no default value exists, you must specify the parameter in Parameters.  </li>
+     * <li>If UsePreviousParameters is set to true: if the parameter was specified when the stack was created, the specified value is used. If the parameter was not specified when the stack was created and the parameter has a default value in the template, the default value is used.</li>
      * </ul>
+     * <p>This topic provides an example to show how to update the template content of a stack in the China (Beijing) region to <code>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</code>. The stack ID is <code>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a stack.</p>
+     * <p>Updates the resource information of a created stack.</p>
      * 
      * @param request UpdateStackRequest
      * @return UpdateStackResponse
@@ -6120,11 +6486,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The name of the stack group. The name must be unique within a region.
-     * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or a letter.</p>
+     * <p>This topic provides an example of how to update the template of the stack group <code>MyStackGroup</code> to <code>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</code>. The stack group is in the China (Hangzhou) region and uses self-managed permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update an already created stack group.</p>
+     * <p>Updates an existing stack group.</p>
      * 
      * @param tmpReq UpdateStackGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6256,11 +6621,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The name of the stack group. The name must be unique within a region.
-     * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or a letter.</p>
+     * <p>This topic provides an example of how to update the template of the stack group <code>MyStackGroup</code> to <code>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</code>. The stack group is in the China (Hangzhou) region and uses self-managed permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update an already created stack group.</p>
+     * <p>Updates an existing stack group.</p>
      * 
      * @param request UpdateStackGroupRequest
      * @return UpdateStackGroupResponse
@@ -6272,10 +6636,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this topic, the stack group named <code>MyStackGroup</code> that is created in the China (Hangzhou) region is used. The stack group is granted the self-managed permissions. In this example, stacks of the stack group are updated by using the Alibaba Cloud accounts whose IDs are <code>151266687691****</code> and <code>141261387191****</code> in the China (Hangzhou) region and China (Beijing) region.</p>
+     * <p>This topic provides an example of how to update stacks for the stack group <code>MyStackGroup</code>, which is in the China (Hangzhou) region and uses self-managed permissions. The stacks are updated for the Alibaba Cloud accounts <code>151266687691****</code> and <code>141261387191****</code> in the China (Hangzhou) and China (Beijing) regions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates stack instances in the specified accounts and regions.</p>
+     * <p>Updates stack instances for one or more accounts in specified regions.</p>
      * 
      * @param tmpReq UpdateStackInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6361,10 +6725,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this topic, the stack group named <code>MyStackGroup</code> that is created in the China (Hangzhou) region is used. The stack group is granted the self-managed permissions. In this example, stacks of the stack group are updated by using the Alibaba Cloud accounts whose IDs are <code>151266687691****</code> and <code>141261387191****</code> in the China (Hangzhou) region and China (Beijing) region.</p>
+     * <p>This topic provides an example of how to update stacks for the stack group <code>MyStackGroup</code>, which is in the China (Hangzhou) region and uses self-managed permissions. The stacks are updated for the Alibaba Cloud accounts <code>151266687691****</code> and <code>141261387191****</code> in the China (Hangzhou) and China (Beijing) regions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates stack instances in the specified accounts and regions.</p>
+     * <p>Updates stack instances for one or more accounts in specified regions.</p>
      * 
      * @param request UpdateStackInstancesRequest
      * @return UpdateStackInstancesResponse
@@ -6448,7 +6812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When updating a template, please note:   </p>
+     * <p>When updating a template, please note:</p>
      * <ul>
      * <li>If you specify <code>TemplateBody</code> or <code>TemplateURL</code>, the template version will be incremented by 1 after a successful update. For example, the version changes from v1 to v2.</li>
      * <li>If neither <code>TemplateBody</code> nor <code>TemplateURL</code> is specified, the template version remains unchanged.</li>
@@ -6518,7 +6882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When updating a template, please note:   </p>
+     * <p>When updating a template, please note:</p>
      * <ul>
      * <li>If you specify <code>TemplateBody</code> or <code>TemplateURL</code>, the template version will be incremented by 1 after a successful update. For example, the version changes from v1 to v2.</li>
      * <li>If neither <code>TemplateBody</code> nor <code>TemplateURL</code> is specified, the template version remains unchanged.</li>
@@ -6543,7 +6907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3><a href="#"></a>Resource migration scenario</h3>
      * <ul>
      * <li>If you want to update a resource migration scenario in which the migrated source resources are retained, you can delete the source resources to manage the updated resource migration scenario. You can also call the <a href="https://help.aliyun.com/document_detail/610829.html">GenerateTemplateByScratch</a> operation to generate a template for the resource scenario.
-     * **
+     * \<em>\</em>
      * <strong>Note</strong> Make sure that the source resources that you want to delete from a resource migration scenario are associated only with the resource scenario. Otherwise, the source resources fail to be deleted.</li>
      * <li>If you want to update a resource migration scenario in which the migrated source resources are deleted, you can only call the <a href="https://help.aliyun.com/document_detail/610829.html">GenerateTemplateByScratch</a> operation to generate a template for the resource scenario.</li>
      * </ul>
@@ -6649,7 +7013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3><a href="#"></a>Resource migration scenario</h3>
      * <ul>
      * <li>If you want to update a resource migration scenario in which the migrated source resources are retained, you can delete the source resources to manage the updated resource migration scenario. You can also call the <a href="https://help.aliyun.com/document_detail/610829.html">GenerateTemplateByScratch</a> operation to generate a template for the resource scenario.
-     * **
+     * \<em>\</em>
      * <strong>Note</strong> Make sure that the source resources that you want to delete from a resource migration scenario are associated only with the resource scenario. Otherwise, the source resources fail to be deleted.</li>
      * <li>If you want to update a resource migration scenario in which the migrated source resources are deleted, you can only call the <a href="https://help.aliyun.com/document_detail/610829.html">GenerateTemplateByScratch</a> operation to generate a template for the resource scenario.</li>
      * </ul>
@@ -6672,10 +7036,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, a template that you want to use to create a stack is validated. <code>TemplateURL</code> is set to <code>oss://ros/template/demo</code>.</p>
+     * <p>This API operation validates only templates and does not involve user data. RAM authentication is not required.
+     * This topic provides an example of how to validate a stack template. In this example, the <code>TemplateURL</code> of the template file is <code>oss://ros/template/demo</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Validates a template by using a template URL or template body. The template is used to create a stack.</p>
+     * <p>Validates a template that is used to create a stack by specifying template URL or body.</p>
      * 
      * @param request ValidateTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6729,10 +7094,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, a template that you want to use to create a stack is validated. <code>TemplateURL</code> is set to <code>oss://ros/template/demo</code>.</p>
+     * <p>This API operation validates only templates and does not involve user data. RAM authentication is not required.
+     * This topic provides an example of how to validate a stack template. In this example, the <code>TemplateURL</code> of the template file is <code>oss://ros/template/demo</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Validates a template by using a template URL or template body. The template is used to create a stack.</p>
+     * <p>Validates a template that is used to create a stack by specifying template URL or body.</p>
      * 
      * @param request ValidateTemplateRequest
      * @return ValidateTemplateResponse

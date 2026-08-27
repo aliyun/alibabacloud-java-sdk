@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetResourceTypeResponseBody extends TeaModel {
     /**
-     * <p>The type of the resource.</p>
+     * <p>The return values of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>参见示例</p>
      */
     @NameInMap("Attributes")
     public java.util.Map<String, ?> attributes;
 
     /**
-     * <p>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the resource type was created. The time is displayed in UTC+0 and follows the ISO 8601 standard without the trailing Z. Format: YYYY-MM-DDThh:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-02-24T08:25:21</p>
@@ -22,7 +25,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
     /**
      * <p>The default version ID.</p>
      * <blockquote>
-     * <p>This parameter is returned only if the resource type is queried.</p>
+     * <p>This parameter is returned only when the resource type is queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,9 +46,12 @@ public class GetResourceTypeResponseBody extends TeaModel {
     /**
      * <p>The entity type. Valid values:</p>
      * <ul>
-     * <li>Resource: regular resource. For more information, see <a href="https://help.aliyun.com/document_detail/28863.html">Resources</a>.</li>
-     * <li>DataSource: DataSource resource. For more information, see <a href="https://help.aliyun.com/document_detail/404753.html">DataSource resources</a>.</li>
-     * <li>module: module.</li>
+     * <li><p>Resource: a regular resource type. For more information, see <a href="https://help.aliyun.com/document_detail/28863.html">Resources</a>.</p>
+     * </li>
+     * <li><p>DataSource: a data source resource type. For more information, see <a href="https://help.aliyun.com/document_detail/404753.html">Data source resources</a>.</p>
+     * </li>
+     * <li><p>Module: a module.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,12 +63,12 @@ public class GetResourceTypeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the version is the default version. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter is returned only if a specific version of the resource type is queried.</p>
+     * <li>true: The version is the default version.</li>
+     * <li>false: The version is not the default version.<blockquote>
+     * <p>This parameter is returned only when a specific version of the resource type is queried.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -73,7 +79,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
     /**
      * <p>The latest version ID.</p>
      * <blockquote>
-     * <p>This parameter is returned only if the resource type is queried.</p>
+     * <p>This parameter is returned only when the resource type is queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,20 +89,19 @@ public class GetResourceTypeResponseBody extends TeaModel {
     public String latestVersionId;
 
     /**
-     * <p>Indicates whether the resource supports drift detection. Default value: false. Valid values:</p>
-     * <ul>
-     * <li>true: Drift detection is supported.</li>
-     * <li>false: Drift detection is not supported.</li>
-     * </ul>
+     * <p>The properties of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>参见示例</p>
      */
     @NameInMap("Properties")
     public java.util.Map<String, ?> properties;
 
     /**
-     * <p>The provider of the resource type. Valid values:</p>
+     * <p>The resource type provider. Valid values:</p>
      * <ul>
-     * <li>ROS: The resource type is provided by Resource Orchestration Service (ROS).</li>
-     * <li>Self: The resource type is provided by you.</li>
+     * <li>ROS: Resource Orchestration Service.</li>
+     * <li>Self: the user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +111,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
     public String provider;
 
     /**
-     * <p>The attributes of the resource.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A28FBA2E-B6B3-5822-AA45-AB875EF23641</p>
@@ -115,7 +120,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The properties of the resource.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>ALIYUN::ROS::WaitConditionHandle</p>
@@ -124,10 +129,12 @@ public class GetResourceTypeResponseBody extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Indicates whether the resource supports scratch detection. Default value: false. Valid values:</p>
+     * <p>Indicates whether the resource supports drift detection. Valid values:</p>
      * <ul>
-     * <li>true: Scratch detection is supported.</li>
-     * <li>false: Scratch detection is not supported.</li>
+     * <li><p>true: Supported.</p>
+     * </li>
+     * <li><p>false: Not supported.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -137,10 +144,12 @@ public class GetResourceTypeResponseBody extends TeaModel {
     public Boolean supportDriftDetection;
 
     /**
-     * <p>The entity type. Valid values:</p>
+     * <p>Indicates whether the resource supports resource scenarios. Valid values:</p>
      * <ul>
-     * <li>Resource: resources other than DataSource resources. For more information, see <a href="https://help.aliyun.com/document_detail/28863.html">Resources</a>.</li>
-     * <li>DataSource: DataSource resources.</li>
+     * <li><p>true: Supported.</p>
+     * </li>
+     * <li><p>false: Not supported.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -150,9 +159,9 @@ public class GetResourceTypeResponseBody extends TeaModel {
     public Boolean supportScratchDetection;
 
     /**
-     * <p>The template content in the module.</p>
+     * <p>The template content of the module.</p>
      * <blockquote>
-     * <p>This parameter is returned only if a specific version of the resource type is queried.</p>
+     * <p>This parameter is returned only when a specific version of the resource type is queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -164,7 +173,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
     /**
      * <p>The total number of versions.</p>
      * <blockquote>
-     * <p>This parameter is returned only if the resource type is queried.</p>
+     * <p>This parameter is returned only when the resource type is queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -174,7 +183,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
     public Integer totalVersionCount;
 
     /**
-     * <p>The update time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the resource type was updated. The time is displayed in UTC+0 and follows the ISO 8601 standard without the trailing Z. Format: YYYY-MM-DDThh:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-02-24T08:25:21</p>

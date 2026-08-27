@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateScratchResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>84980977-22F0-5421-B30D-B201311D5DCF</p>

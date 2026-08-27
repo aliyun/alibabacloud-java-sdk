@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class PreviewStackRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-     * The token can be up to 64 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).\
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+     * The token can be up to 64 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).
      * For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,10 @@ public class PreviewStackRequest extends TeaModel {
     /**
      * <p>Specifies whether to disable rollback for the resources when the stack fails to be created. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,8 +34,10 @@ public class PreviewStackRequest extends TeaModel {
      * <p>Specifies whether to query the parameters that you want to use in compliance precheck.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,8 +79,10 @@ public class PreviewStackRequest extends TeaModel {
      * <p>The stack ID. You can use this parameter to preview a stack that you want to update.</p>
      * <blockquote>
      * <ul>
-     * <li>You must and can specify only one of StackName and StackId.</li>
-     * <li>In the scenario in which you preview a stack that you want to create or update, you cannot preview the resources in its nested stacks.</li>
+     * <li><p>You must and can specify only one of StackName and StackId.</p>
+     * </li>
+     * <li><p>In the scenario in which you preview a stack that you want to create or update, you cannot preview the resources in its nested stacks.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -111,7 +117,7 @@ public class PreviewStackRequest extends TeaModel {
     public String stackPolicyBody;
 
     /**
-     * <p>The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+     * <p>The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss\://ros/stack-policy/demo or oss\://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
      * <blockquote>
      * <p>You can specify only one of StackPolicyBody and StackPolicyURL.</p>
      * </blockquote>
@@ -123,6 +129,9 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
 
+    /**
+     * <p>The resources marked as tainted.</p>
+     */
     @NameInMap("TaintResources")
     public java.util.List<String> taintResources;
 
@@ -174,7 +183,7 @@ public class PreviewStackRequest extends TeaModel {
     public String templateScratchRegionId;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
      * <blockquote>
      * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      * </blockquote>
@@ -205,6 +214,19 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("TimeoutInMinutes")
     public Long timeoutInMinutes;
 
+    /**
+     * <p>Specifies whether to use the values of parameters that were last used.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>true: The parameters that were last used are reused.</p>
+     * </li>
+     * <li><p>false: The parameters that were last used are not reused.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UsePreviousParameters")
     public Boolean usePreviousParameters;
 

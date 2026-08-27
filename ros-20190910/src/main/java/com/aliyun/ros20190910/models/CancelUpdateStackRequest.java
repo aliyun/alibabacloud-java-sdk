@@ -7,8 +7,10 @@ public class CancelUpdateStackRequest extends TeaModel {
     /**
      * <p>The method to cancel the update operation. Valid values:</p>
      * <ul>
-     * <li>Quick: cancels the update of a stack as soon as possible.</li>
-     * <li>Safe: cancels the update of a stack as safely as possible.</li>
+     * <li><p>Quick: cancels the update of a stack as soon as possible.</p>
+     * </li>
+     * <li><p>Safe: cancels the update of a stack as safely as possible.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

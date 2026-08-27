@@ -15,7 +15,7 @@ public class GetChangeSetRequest extends TeaModel {
     public String changeSetId;
 
     /**
-     * <p>The region ID of the change set. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region to which the change set belongs. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,12 @@ public class GetChangeSetRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to obtain the template. Valid values:</p>
+     * <p>Specifies whether to return the template. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true: The template is returned.</p>
+     * </li>
+     * <li><p>false (default): The template is not returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

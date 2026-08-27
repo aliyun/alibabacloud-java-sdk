@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateStackResponseBody extends TeaModel {
     /**
-     * <p>The dry run result. This parameter is returned only if DryRun is set to true.</p>
+     * <p>The validation result. This parameter is returned only when DryRun is set to true.</p>
      */
     @NameInMap("DryRunResult")
     public UpdateStackResponseBodyDryRunResult dryRunResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
@@ -20,7 +20,7 @@ public class UpdateStackResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the stack.</p>
+     * <p>The stack ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
@@ -59,17 +59,17 @@ public class UpdateStackResponseBody extends TeaModel {
 
     public static class UpdateStackResponseBodyDryRunResult extends TeaModel {
         /**
-         * <p>The parameters that can be modified. If you change only values of the parameters in a stack template and use the template to update the stack, no validation errors are caused.</p>
+         * <p>The parameters that are allowed to be modified.</p>
          */
         @NameInMap("ParametersAllowedToBeModified")
         public java.util.List<String> parametersAllowedToBeModified;
 
         /**
-         * <p>The parameters whose changes cause service interruptions.</p>
+         * <p>The list of parameters that will definitely cause resource interruption.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is supported only for a small number of resource types.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li>Only a small number of resource types are supported.</li>
+         * <li>This applies only to updating ROS stacks.</li>
          * </ul>
          * </blockquote>
          */
@@ -77,11 +77,11 @@ public class UpdateStackResponseBody extends TeaModel {
         public java.util.List<String> parametersCauseInterruptionIfModified;
 
         /**
-         * <p>The parameters whose changes trigger replacement updates for resources.</p>
+         * <p>The list of parameters that will definitely cause resource replacement update.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter can be returned only if ReplacementOption is set to Enabled.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li>This is returned only when ReplacementOption is set to Enabled.</li>
+         * <li>This applies only to updating ROS stacks.</li>
          * </ul>
          * </blockquote>
          */
@@ -89,17 +89,17 @@ public class UpdateStackResponseBody extends TeaModel {
         public java.util.List<String> parametersCauseReplacementIfModified;
 
         /**
-         * <p>The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.</p>
+         * <p>The parameters that may be allowed to be modified.</p>
          */
         @NameInMap("ParametersConditionallyAllowedToBeModified")
         public java.util.List<String> parametersConditionallyAllowedToBeModified;
 
         /**
-         * <p>The parameters whose changes cause service interruptions under specific conditions.</p>
+         * <p>The list of parameters that may cause resource interruption.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is supported only for a small number of resource types.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li>Only a small number of resource types are supported.</li>
+         * <li>This applies only to updating ROS stacks.</li>
          * </ul>
          * </blockquote>
          */
@@ -107,11 +107,11 @@ public class UpdateStackResponseBody extends TeaModel {
         public java.util.List<String> parametersConditionallyCauseInterruptionIfModified;
 
         /**
-         * <p>The parameters whose changes trigger replacement updates for resources under specific conditions.</p>
+         * <p>The list of parameters that may cause resource replacement update.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter can be returned only if ReplacementOption is set to Enabled.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li>This is returned only when ReplacementOption is set to Enabled.</li>
+         * <li>This applies only to updating ROS stacks.</li>
          * </ul>
          * </blockquote>
          */
@@ -119,23 +119,23 @@ public class UpdateStackResponseBody extends TeaModel {
         public java.util.List<String> parametersConditionallyCauseReplacementIfModified;
 
         /**
-         * <p>The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.</p>
+         * <p>The parameters that are not allowed to be modified.</p>
          */
         @NameInMap("ParametersNotAllowedToBeModified")
         public java.util.List<String> parametersNotAllowedToBeModified;
 
         /**
-         * <p>The parameters that can be modified under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether validation errors are caused.</p>
+         * <p>The parameters that are uncertain to be allowed to be modified.</p>
          */
         @NameInMap("ParametersUncertainlyAllowedToBeModified")
         public java.util.List<String> parametersUncertainlyAllowedToBeModified;
 
         /**
-         * <p>The parameters whose changes cause service interruptions under uncertain conditions.</p>
+         * <p>The list of parameters that are uncertain to cause resource interruption.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is supported only for a small number of resource types.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li>Only a small number of resource types are supported.</li>
+         * <li>This applies only to updating ROS stacks.</li>
          * </ul>
          * </blockquote>
          */
@@ -143,11 +143,11 @@ public class UpdateStackResponseBody extends TeaModel {
         public java.util.List<String> parametersUncertainlyCauseInterruptionIfModified;
 
         /**
-         * <p>The parameters whose changes trigger replacement updates for resources under uncertain conditions.</p>
+         * <p>The list of parameters that are uncertain to cause resource replacement update.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter can be returned only if ReplacementOption is set to Enabled.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li>This is returned only when ReplacementOption is set to Enabled.</li>
+         * <li>This applies only to updating ROS stacks.</li>
          * </ul>
          * </blockquote>
          */

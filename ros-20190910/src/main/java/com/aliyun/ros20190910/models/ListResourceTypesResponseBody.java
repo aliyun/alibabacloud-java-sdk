@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceTypesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EA00860C-ECAF-5253-A1F9-8198695A7157</p>
@@ -14,13 +14,13 @@ public class ListResourceTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource type summaries.</p>
+     * <p>The resource type summary list.</p>
      */
     @NameInMap("ResourceTypeSummaries")
     public java.util.List<ListResourceTypesResponseBodyResourceTypeSummaries> resourceTypeSummaries;
 
     /**
-     * <p>The array of resource types.</p>
+     * <p>The resource type array.</p>
      */
     @NameInMap("ResourceTypes")
     public java.util.List<String> resourceTypes;
@@ -56,7 +56,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     public static class ListResourceTypesResponseBodyResourceTypeSummaries extends TeaModel {
         /**
-         * <p>The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * <p>The creation time. The time is displayed in UTC+0 based on the ISO 8601 standard but without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-24T08:25:21</p>
@@ -65,7 +65,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the default version.</p>
+         * <p>The default version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -74,7 +74,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String defaultVersionId;
 
         /**
-         * <p>The description of the resource type.</p>
+         * <p>The resource type description.</p>
          * 
          * <strong>example:</strong>
          * <p>It is a demo.</p>
@@ -83,11 +83,11 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The entity type. Valid values:</p>
+         * <p>The entity type. Valid values: </p>
          * <ul>
-         * <li>Resource: regular resources.</li>
-         * <li>DataSource: DataSource resources.</li>
-         * <li>Module: modules.</li>
+         * <li>Resource: regular resource type.</li>
+         * <li>DataSource: data source resource type. </li>
+         * <li>Module: module.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The ID of the latest version.</p>
+         * <p>The latest version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>v10</p>
@@ -106,10 +106,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String latestVersionId;
 
         /**
-         * <p>The provider of the resource type. Valid values:</p>
+         * <p>The resource type provider. Valid values:</p>
          * <ul>
-         * <li>ROS: The resource type is provided by ROS.</li>
-         * <li>Self: The resource type is provided by you.</li>
+         * <li>ROS: Resource Orchestration Service.</li>
+         * <li>Self: the user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The number of versions.</p>
+         * <p>The total number of versions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -137,7 +137,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public Integer totalVersionCount;
 
         /**
-         * <p>The update time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * <p>The update time. The time is displayed in UTC+0 based on the ISO 8601 standard but without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-24T08:25:21</p>

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class EnableServiceAccessResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>23045A5D-720E-5D11-A752-E1568F725C93</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The trusted service access information.</p>
+     */
     @NameInMap("ServiceAccessInfo")
     public EnableServiceAccessResponseBodyServiceAccessInfo serviceAccessInfo;
 
@@ -37,6 +42,8 @@ public class EnableServiceAccessResponseBody extends TeaModel {
 
     public static class EnableServiceAccessResponseBodyServiceAccessInfo extends TeaModel {
         /**
+         * <p>The trusted service access status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENABLED</p>
          */

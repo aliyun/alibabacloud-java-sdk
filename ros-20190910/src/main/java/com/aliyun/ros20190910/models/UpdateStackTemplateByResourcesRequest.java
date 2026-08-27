@@ -18,11 +18,13 @@ public class UpdateStackTemplateByResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to only preview the corrected template in this request. Default value: false. Valid values:</p>
      * <ul>
-     * <li>true: returns the content of the corrected template and does not correct the template. After Resource Orchestration Service (ROS) compares the corrected template with the original template, ROS determines whether to execute the correction.</li>
-     * <li>false: corrects the template to eliminate drift.</li>
+     * <li><p>true: returns the content of the corrected template and does not correct the template. After Resource Orchestration Service (ROS) compares the corrected template with the original template, ROS determines whether to execute the correction.</p>
+     * </li>
+     * <li><p>false: corrects the template to eliminate drift.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> We recommend that you set the DryRun parameter to true to preview the corrected template. If the template content meets expectations, set the DryRun parameter to false to execute the correction.</p>
+     * <p>We recommend that you set the DryRun parameter to true to preview the corrected template. If the template content meets expectations, set the DryRun parameter to false to execute the correction.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,8 +65,10 @@ public class UpdateStackTemplateByResourcesRequest extends TeaModel {
     /**
      * <p>The format of the returned template. Default value: JSON. Valid values:</p>
      * <ul>
-     * <li>JSON</li>
-     * <li>YAML</li>
+     * <li><p>JSON</p>
+     * </li>
+     * <li><p>YAML</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

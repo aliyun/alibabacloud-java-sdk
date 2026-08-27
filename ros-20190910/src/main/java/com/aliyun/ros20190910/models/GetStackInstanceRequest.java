@@ -7,11 +7,13 @@ public class GetStackInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the Outputs parameter. The Outputs parameter specifies the outputs of the stack. Valid values:</p>
      * <ul>
-     * <li>Enabled: returns the Outputs parameter.</li>
-     * <li>Disabled (default): does not return the Outputs parameter.</li>
+     * <li><p>Enabled: returns the Outputs parameter.</p>
+     * </li>
+     * <li><p>Disabled (default): does not return the Outputs parameter.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The Outputs parameter requires a long period of time to calculate. If you do not require the outputs of the stack, we recommend that you set OutputOption to Disabled to improve the response speed of the API operation.</p>
+     * <p>The Outputs parameter requires a long period of time to calculate. If you do not require the outputs of the stack, we recommend that you set OutputOption to Disabled to improve the response speed of the API operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class GetStackInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\
+     * <p>The name of the stack group. The name must be unique within a region.<br>
      * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
      * <p>This parameter is required.</p>
      * 
@@ -44,8 +46,10 @@ public class GetStackInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the destination account to which the stack belongs.</p>
      * <ul>
-     * <li>If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.</li>
-     * <li>If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.</li>
+     * <li><p>If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>For more information about the destination account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>

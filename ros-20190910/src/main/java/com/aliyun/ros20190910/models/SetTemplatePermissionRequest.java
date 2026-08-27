@@ -5,18 +5,20 @@ import com.aliyun.tea.*;
 
 public class SetTemplatePermissionRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud accounts with or from which you want to share or unshare the template.\
+     * <p>The Alibaba Cloud accounts with or from which you want to share or unshare the template.<br>
      * Valid values of N: 1, 2, 3, 4, and 5.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter cannot be set to the ID of the Alibaba Cloud account that owns the template, or the RAM users of this Alibaba Cloud account.</li>
-     * <li>When ShareOption is set to CancelSharing, you can unshare the template from all the specified Alibaba Cloud accounts by using an asterisk (\*).</li>
+     * <li><p>This parameter cannot be set to the ID of the Alibaba Cloud account that owns the template, or the RAM users of this Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>When ShareOption is set to CancelSharing, you can unshare the template from all the specified Alibaba Cloud accounts by using an asterisk (\*).</p>
+     * </li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456789</p>
+     * <p>151266687691****</p>
      */
     @NameInMap("AccountIds")
     public java.util.List<String> accountIds;
@@ -25,8 +27,10 @@ public class SetTemplatePermissionRequest extends TeaModel {
      * <p>The sharing option.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>ShareToAccounts: shares the template with other Alibaba Cloud accounts.</li>
-     * <li>CancelSharing: unshares the template.</li>
+     * <li><p>ShareToAccounts: shares the template with other Alibaba Cloud accounts.</p>
+     * </li>
+     * <li><p>CancelSharing: unshares the template.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -60,10 +64,14 @@ public class SetTemplatePermissionRequest extends TeaModel {
      * <p>The version option for the shared template. This parameter takes effect only if you set ShareOption to ShareToAccounts.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>AllVersions (default): shares all versions of the template.</li>
-     * <li>Latest: shares only the latest version of template. When the version of the template is updated, ROS updates the shared version to the latest version.</li>
-     * <li>Current: shares only the current version of the template. When the version of the template is updated, ROS does not update the shared version.</li>
-     * <li>Specified: shares only the specified version of the template.</li>
+     * <li><p>AllVersions (default): shares all versions of the template.</p>
+     * </li>
+     * <li><p>Latest: shares only the latest version of template. When the version of the template is updated, ROS updates the shared version to the latest version.</p>
+     * </li>
+     * <li><p>Current: shares only the current version of the template. When the version of the template is updated, ROS does not update the shared version.</p>
+     * </li>
+     * <li><p>Specified: shares only the specified version of the template.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

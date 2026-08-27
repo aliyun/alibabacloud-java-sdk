@@ -14,7 +14,7 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The versions of the resource types.</p>
+     * <p>The list of resource type version information.</p>
      */
     @NameInMap("ResourceTypeVersions")
     public java.util.List<ListResourceTypeVersionsResponseBodyResourceTypeVersions> resourceTypeVersions;
@@ -42,7 +42,7 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
 
     public static class ListResourceTypeVersionsResponseBodyResourceTypeVersions extends TeaModel {
         /**
-         * <p>The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * <p>The time when the version was created. The time is displayed in UTC+0 based on the ISO 8601 standard but without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-24T08:25:21</p>
@@ -51,7 +51,7 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the version.</p>
+         * <p>The version description.</p>
          * 
          * <strong>example:</strong>
          * <p>It is a demo.</p>
@@ -60,7 +60,7 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The entity type. Only Module may be returned.</p>
+         * <p>The entity type. Valid values: Module, which indicates a module.</p>
          * 
          * <strong>example:</strong>
          * <p>Module</p>
@@ -71,8 +71,8 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the version is the default version. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The version is the default version.</li>
+         * <li>false: The version is not the default version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,10 +82,10 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
         public Boolean isDefaultVersion;
 
         /**
-         * <p>The provider of the resource type. Valid values:</p>
+         * <p>The resource type provider. Valid values:</p>
          * <ul>
-         * <li>ROS: ROS</li>
-         * <li>Self: yourself</li>
+         * <li>ROS: Resource Orchestration Service.</li>
+         * <li>Self: The user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The time when the version was updated. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * <p>The time when the version was last updated. The time is displayed in UTC+0 based on the ISO 8601 standard but without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-24T08:25:21</p>

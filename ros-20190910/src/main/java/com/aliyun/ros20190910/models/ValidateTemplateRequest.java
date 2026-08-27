@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ValidateTemplateRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. The client generates the value, which must be unique.</p>
+     * <p>The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -16,7 +16,7 @@ public class ValidateTemplateRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The region ID of the template. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the stack template. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent list of Alibaba Cloud regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -25,9 +25,7 @@ public class ValidateTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\
-     * If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.\
-     * You can specify the TemplateBody or TemplateURL parameter, but not both parameters.</p>
+     * <p>The structure of the template body. The template body can be 1 to 524,288 bytes in length.<br>If the template body is long, use a POST request and place the parameter in the request body. This prevents a request failure caused by an excessively long URL.<br>You can specify either TemplateBody or TemplateURL, but not both.<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</p>
@@ -36,11 +34,11 @@ public class ValidateTemplateRequest extends TeaModel {
     public String templateBody;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</p>
+     * <p>The location of the file that contains the template body. The URL must point to a template that is located on an HTTP web server or in an Alibaba Cloud OSS bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 524,288 bytes in size.</p>
      * <blockquote>
-     * <p>If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+     * <p>If you do not specify the region of the OSS bucket, the value of the RegionId parameter is used.</p>
      * </blockquote>
-     * <p>You can specify one of TemplateBody and TemplateURL, but not both of them. The URL can be up to 1,024 bytes in length.\</p>
+     * <p>You can specify either TemplateBody or TemplateURL, but not both.<br>The URL can be up to 1,024 bytes in length.<br></p>
      * 
      * <strong>example:</strong>
      * <p>oss://ros/template/demo</p>
@@ -49,7 +47,7 @@ public class ValidateTemplateRequest extends TeaModel {
     public String templateURL;
 
     /**
-     * <p>The options that are used to control the generation of information about the stack update. You can specify up to two options.</p>
+     * <p>The list of options for the update information. The list can contain up to two options.</p>
      */
     @NameInMap("UpdateInfoOptions")
     public java.util.List<String> updateInfoOptions;
@@ -57,12 +55,15 @@ public class ValidateTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable additional validation for the template. Valid values:</p>
      * <ul>
-     * <li>None (default): does not enable additional validation.</li>
-     * <li>EnableTerraformValidation: runs the <code>terraform validate</code> command in the Terraform CLI to enable additional validation for a Terraform template.</li>
-     * <li>EnableFastTerraformValidation: runs a command that is similar to the <code>terraform validate</code> command in the Terraform CLI to enable additional validation for a Terraform template.</li>
+     * <li><p>None (default): No additional validation is enabled.</p>
+     * </li>
+     * <li><p>EnableTerraformValidation: For a Terraform template, the <code>terraform validate</code> command of the Terraform command-line interface (CLI) is used to enable additional validation.</p>
+     * </li>
+     * <li><p>EnableFastTerraformValidation: For a Terraform template, a command that is similar to the <code>terraform validate</code> command of the Terraform CLI is used to enable additional validation.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Compared with the EnableTerraformValidation method, the EnableFastTerraformValidation method validates a template at a faster speed but a lower integrity level.</p>
+     * <p>Compared with EnableTerraformValidation, EnableFastTerraformValidation is faster but less comprehensive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

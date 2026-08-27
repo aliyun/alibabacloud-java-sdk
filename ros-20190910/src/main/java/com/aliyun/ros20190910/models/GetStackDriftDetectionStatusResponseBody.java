@@ -16,9 +16,12 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
     /**
      * <p>The drift detection status. Valid values:</p>
      * <ul>
-     * <li>DETECTION_COMPLETE: The drift detection operation has been completed for all resources that support drift detection in the stack.</li>
-     * <li>DETECTION_FAILED: The stack drift detection operation has failed for at least one resource in the stack.</li>
-     * <li>DETECTION_IN_PROGRESS: The stack drift detection operation is in progress.</li>
+     * <li><p>DETECTION_COMPLETE: The drift detection operation has been completed for all resources that support drift detection in the stack.</p>
+     * </li>
+     * <li><p>DETECTION_FAILED: The stack drift detection operation has failed for at least one resource in the stack.</p>
+     * </li>
+     * <li><p>DETECTION_IN_PROGRESS: The stack drift detection operation is in progress.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,9 +69,12 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
     /**
      * <p>The drift status of the stack. Valid values:</p>
      * <ul>
-     * <li>DRIFTED: The actual configuration of the stack differs, or has drifted, from its expected template configuration. A stack is considered to have drifted if one or more of its resources have drifted.</li>
-     * <li>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</li>
-     * <li>IN_SYNC: The current configuration of each supported resource matches its expected template configuration. A stack with no resources that support drift detection also has a status of IN_SYNC.</li>
+     * <li><p>DRIFTED: The actual configuration of the stack differs, or has drifted, from its expected template configuration. A stack is considered to have drifted if one or more of its resources have drifted.</p>
+     * </li>
+     * <li><p>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</p>
+     * </li>
+     * <li><p>IN_SYNC: The current configuration of each supported resource matches its expected template configuration. A stack with no resources that support drift detection also has a status of IN_SYNC.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

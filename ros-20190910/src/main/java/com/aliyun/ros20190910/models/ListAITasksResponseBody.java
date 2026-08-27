@@ -127,7 +127,7 @@ public class ListAITasksResponseBody extends TeaModel {
          * <p>The description of the AI task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Create an ECS instance and deploy the Nginx service.</p>
+         * <p>Create an ECS instance and deploy an Nginx service</p>
          */
         @NameInMap("Prompt")
         public String prompt;

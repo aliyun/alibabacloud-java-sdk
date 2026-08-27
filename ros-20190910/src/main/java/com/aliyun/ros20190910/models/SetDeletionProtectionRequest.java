@@ -7,11 +7,13 @@ public class SetDeletionProtectionRequest extends TeaModel {
     /**
      * <p>Indicates whether stack deletion protection is enabled. Valid values:</p>
      * <ul>
-     * <li>Enabled: enables the stack deletion protection.</li>
-     * <li>Disabled (default): Resource stack deletion protection is Disabled. You can use the console or API(DeleteStack) to release the stack resources.</li>
+     * <li><p>Enabled: enables the stack deletion protection.</p>
+     * </li>
+     * <li><p>Disabled (default): Resource stack deletion protection is Disabled. You can use the console or API(DeleteStack) to release the stack resources.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The deletion of nested stacks is the same as the root stack.</p>
+     * <p>The deletion of nested stacks is the same as the root stack.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

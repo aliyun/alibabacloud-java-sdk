@@ -17,7 +17,40 @@ public class GetTemplateEstimateCostResponseBody extends TeaModel {
      * <p>The resource details.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;LogicalResourceIdPattern\&quot;: \&quot;wait1\&quot;, \&quot;ResourceType\&quot;: \&quot;time_sleep\&quot;, \&quot;ResourcePath\&quot;: \&quot;wait1\&quot;}, {\&quot;LogicalResourceIdPattern\&quot;: \&quot;wait2\&quot;, \&quot;ResourceType\&quot;: \&quot;time_sleep\&quot;, \&quot;ResourcePath\&quot;: \&quot;wait2\&quot;}]</p>
+     * <p>{
+     *   &quot;NewEip&quot;: {
+     *     &quot;Type&quot;: &quot;ALIYUN::VPC::EIP&quot;,
+     *     &quot;Success&quot;: true,
+     *     &quot;Result&quot;: {
+     *       &quot;Order&quot;: {
+     *         &quot;TaxAmount&quot;: 0.0,
+     *         &quot;Currency&quot;: &quot;CNY&quot;,
+     *         &quot;RuleIds&quot;: [
+     *           &quot;102204102264****&quot;
+     *         ],
+     *         &quot;TradeAmount&quot;: 87.5,
+     *         &quot;OriginalAmount&quot;: 125.0,
+     *         &quot;DiscountAmount&quot;: 37.5
+     *       },
+     *       &quot;OrderSupplement&quot;: {
+     *         &quot;ChargeType&quot;: &quot;PrePaid&quot;,
+     *         &quot;Period&quot;: 1,
+     *         &quot;Quantity&quot;: 1,
+     *         &quot;PriceType&quot;: &quot;Total&quot;,
+     *         &quot;PeriodUnit&quot;: &quot;Month&quot;
+     *       },
+     *       &quot;InquiryType&quot;: &quot;Buy&quot;,
+     *       &quot;Rules&quot;: {
+     *         &quot;Rule&quot;: [
+     *           {
+     *             &quot;RuleDescId&quot;: &quot;102204102264****&quot;,
+     *             &quot;Name&quot;: &quot;Contract_Discount_Full_Order_30%_Off&quot;
+     *           }
+     *         ]
+     *       }
+     *     }
+     *   }
+     * }</p>
      */
     @NameInMap("Resources")
     public java.util.Map<String, ?> resources;

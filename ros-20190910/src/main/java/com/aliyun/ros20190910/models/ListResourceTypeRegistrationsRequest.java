@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceTypeRegistrationsRequest extends TeaModel {
     /**
-     * <p>The entity type. Set the value to Module.</p>
+     * <p>The entity type. Valid values: Module.</p>
      * 
      * <strong>example:</strong>
      * <p>Module</p>
@@ -14,7 +14,7 @@ public class ListResourceTypeRegistrationsRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number for paging. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListResourceTypeRegistrationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
+     * <p>The number of entries per page for paging. Valid values: 1 to 50. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListResourceTypeRegistrationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the registration record.</p>
+     * <p>The registration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
@@ -41,7 +41,7 @@ public class ListResourceTypeRegistrationsRequest extends TeaModel {
     public String registrationId;
 
     /**
-     * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\<em>). You can use an asterisk (\</em>) to perform a fuzzy match.</p>
+     * <p>The resource type. The value can contain uppercase and lowercase letters, digits, colons (:), and asterisks (*). If you use an asterisk, fuzzy match is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
@@ -50,11 +50,11 @@ public class ListResourceTypeRegistrationsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The registration state. Valid values:</p>
+     * <p>The registration status. Valid values:</p>
      * <ul>
-     * <li>IN_PROGRESS</li>
-     * <li>COMPLETE</li>
-     * <li>FAILED</li>
+     * <li>IN_PROGRESS: In progress.</li>
+     * <li>COMPLETE: Succeeded.</li>
+     * <li>FAILED: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

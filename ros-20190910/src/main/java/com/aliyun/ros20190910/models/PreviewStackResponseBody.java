@@ -44,10 +44,14 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * <p>The name of the Terraform command that is run. Valid values:</p>
          * <ul>
-         * <li>apply</li>
-         * <li>plan</li>
-         * <li>destroy</li>
-         * <li>version</li>
+         * <li><p>apply</p>
+         * </li>
+         * <li><p>plan</p>
+         * </li>
+         * <li><p>destroy</p>
+         * </li>
+         * <li><p>version</p>
+         * </li>
          * </ul>
          * <p>For more information about Terraform commands, see <a href="https://www.terraform.io/cli/commands">Basic CLI Features</a>.</p>
          * 
@@ -69,8 +73,10 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * <p>The output stream. Valid values:</p>
          * <ul>
-         * <li>stdout: standard output stream</li>
-         * <li>stderr: standard error stream</li>
+         * <li><p>stdout: standard output stream</p>
+         * </li>
+         * <li><p>stderr: standard error stream</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,10 +196,14 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * <p>The action that is performed on the resource. Valid values:</p>
          * <ul>
-         * <li>Add</li>
-         * <li>Modify</li>
-         * <li>Remove</li>
-         * <li>None</li>
+         * <li><p>Add</p>
+         * </li>
+         * <li><p>Modify</p>
+         * </li>
+         * <li><p>Remove</p>
+         * </li>
+         * <li><p>None</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,9 +252,12 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * <p>Indicates whether a replacement update is performed on the template. Valid values:</p>
          * <ul>
-         * <li>True: A replacement update is performed on the template.</li>
-         * <li>False: A change is made on the template.</li>
-         * <li>Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.</li>
+         * <li><p>True: A replacement update is performed on the template.</p>
+         * </li>
+         * <li><p>False: A change is made on the template.</p>
+         * </li>
+         * <li><p>Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>This parameter is returned only if Action is set to Modify.</p>

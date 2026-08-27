@@ -71,7 +71,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         public String logicalResourceId;
 
         /**
-         * <p>The key-value mapping between strings. The value is a JSON string that identifies the resource that you want to import into a stack.\
+         * <p>The key-value mapping between strings. The value is a JSON string that identifies the resource that you want to import into a stack.<br>
          * A key is an identifier for a resource, and a value is an assignment of data to the key. For example, VpcId is a key that indicates the ID of a virtual private cloud (VPC), and <code>vpc-bp1m6fww66xbntjyc****&quot;</code> is a value that is assigned to VpcId.</p>
          * 
          * <strong>example:</strong>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListStackGroupsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <ul>
-     * <li>Pages start from page 1.</li>
-     * <li>Default value: 1.</li>
+     * <li><p>Starts from 1.</p>
+     * </li>
+     * <li><p>Default value: 1.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +22,10 @@ public class ListStackGroupsRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <ul>
-     * <li>Valid values: 1 to 50.</li>
-     * <li>Default value: 10.</li>
+     * <li><p>Valid values: 1 to 50.</p>
+     * </li>
+     * <li><p>Default value: 10.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,7 @@ public class ListStackGroupsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the stack group. Call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,9 +45,9 @@ public class ListStackGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.</p>
+     * <p>The ID of the resource group. If not specified, stack groups in all resource groups are returned.</p>
      * <blockquote>
-     * <p>To obtain the resource group ID, go to the <strong>Resource Group</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information about a resource group</a>.</p>
+     * <p>You can find the resource group ID on the <strong>Resource Groups</strong> page in the <strong>Resource Management</strong> console. <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,11 +57,13 @@ public class ListStackGroupsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The state of the stack group. If you do not specify this parameter, the stack groups in all states in the specified region are queried.</p>
+     * <p>The status of the stack group. If not specified, stack groups in all states are returned.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>ACTIVE</li>
-     * <li>DELETED</li>
+     * <li><p>ACTIVE: The stack group is active.</p>
+     * </li>
+     * <li><p>DELETED: The stack group is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +73,7 @@ public class ListStackGroupsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags that are added to the stack group.</p>
+     * <p>The tags of the stack group.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListStackGroupsRequestTags> tags;
@@ -127,9 +133,9 @@ public class ListStackGroupsRequest extends TeaModel {
 
     public static class ListStackGroupsRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the stack group.</p>
+         * <p>The tag key of the stack group.</p>
          * <blockquote>
-         * <p>Tags is optional. If you specify Tags, you must specify Tags.N.Key.</p>
+         * <p>Tags is optional. If you specify Tags, Tags.N.Key is required.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -140,7 +146,7 @@ public class ListStackGroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the stack group.</p>
+         * <p>The tag value of the stack group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

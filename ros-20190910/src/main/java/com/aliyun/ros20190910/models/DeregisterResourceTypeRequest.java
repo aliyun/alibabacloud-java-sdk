@@ -15,7 +15,7 @@ public class DeregisterResourceTypeRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The version ID. If you want to delete a version of the resource type, you must specify this parameter.</p>
+     * <p>The version ID. Specify this parameter to delete a specific version of the resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>

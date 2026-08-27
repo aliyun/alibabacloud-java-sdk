@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
     /**
-     * <p>The tag keys.</p>
+     * <p>The list of tag keys.</p>
      */
     @NameInMap("Keys")
     public java.util.List<String> keys;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -20,7 +20,7 @@ public class ListTagKeysResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C429473A-5C66-4661-B5F8-4F900CD4330A</p>

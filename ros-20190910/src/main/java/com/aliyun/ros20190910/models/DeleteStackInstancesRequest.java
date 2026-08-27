@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteStackInstancesRequest extends TeaModel {
     /**
-     * <p>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</p>
+     * <p>The IDs of the accounts from which to delete stack instances. This parameter applies only to stack groups that use self-managed permissions. You can specify up to 50 account IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;151266687691****&quot;]</p>
@@ -14,9 +14,7 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public java.util.List<String> accountIds;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-     * The token can contain letters, digits, hyphens (-), and underscores (_), and cannot exceed 64 characters in length.\
-     * For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can use your client to generate the token, but you must make sure that the token is unique among different requests.<br>The token can be up to 64 characters long and can contain letters, digits, hyphens (-), and underscores (_).<br>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -25,14 +23,14 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The folders in which you want to deploy stacks in service-managed mode.</p>
+     * <p>The deployment targets from which to delete stack instances. This parameter applies only to stack groups that use service-managed permissions.</p>
      */
     @NameInMap("DeploymentTargets")
     public DeleteStackInstancesRequestDeploymentTargets deploymentTargets;
 
     /**
-     * <p>The description of the delete operation.</p>
-     * <p>The description must be 1 to 256 characters in length.</p>
+     * <p>The description of the operation to delete stack instances.</p>
+     * <p>The description can be 1 to 256 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>Delete stack instances in hangzhou and beijing</p>
@@ -41,35 +39,35 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public String operationDescription;
 
     /**
-     * <p>The preference settings of the delete operation.</p>
-     * <p>The following parameters are available:</p>
+     * <p>The preferences for the operation to delete stack instances.</p>
+     * <p>This parameter contains the following subparameters:</p>
      * <ul>
      * <li><p>{&quot;FailureToleranceCount&quot;: N}</p>
-     * <p> The number of accounts within which stack operation failures are allowed in each region. If the value of this parameter is exceeded in a region, ROS stops the operation in the region. If ROS stops the operation in one region, ROS stops the operation in other regions.</p>
-     * <p> Valid values of N: 0 to 20.</p>
-     * <p> If you do not specify FailureToleranceCount, 0 is used as the default value.</p>
+     * <p>The number of accounts in each region for which the deletion of stack instances can fail. If the number of failures in a region exceeds this value, the operation stops in that region. If the operation stops in one region, it does not continue in other regions.</p>
+     * <p>The value of N must be an integer from 0 to 20.</p>
+     * <p>If you do not specify FailureToleranceCount, the default value is 0.</p>
      * </li>
      * <li><p>{&quot;FailureTolerancePercentage&quot;: N}</p>
-     * <p> The percentage of the number of accounts within which stack operation failures are allowed to the total number of accounts in each region. If the value of this parameter is exceeded, ROS stops the operation in the region.</p>
-     * <p> Valid values of N: 0 to 100. If the numeric value in the percentage is not an integer, ROS rounds the value down to the nearest integer.</p>
-     * <p> If you do not specify FailureTolerancePercentage, 0 is used as the default value.</p>
+     * <p>The percentage of accounts in each region for which the deletion of stack instances can fail. If the percentage of failures in a region exceeds this value, the operation stops in that region.</p>
+     * <p>The value of N must be an integer from 0 to 100. If the calculated percentage is not an integer, ROS rounds it down to the nearest integer.</p>
+     * <p>If you do not specify FailureTolerancePercentage, the default value is 0.</p>
      * </li>
      * <li><p>{&quot;MaxConcurrentCount&quot;: N}</p>
-     * <p> The maximum number of accounts within which multiple stacks are deployed at the same time in each region.</p>
-     * <p> Valid values of N: 1 to 20.</p>
-     * <p> If you do not specify MaxConcurrentCount, 1 is used as the default value.</p>
+     * <p>The maximum number of accounts in each region for which stack instances can be deleted at the same time.</p>
+     * <p>The value of N must be an integer from 1 to 20.</p>
+     * <p>If you do not specify MaxConcurrentCount, the default value is 1.</p>
      * </li>
      * <li><p>{&quot;MaxConcurrentPercentage&quot;: N}</p>
-     * <p> The percentage of the maximum number of accounts within which stacks are deployed at the same time to the total number of accounts in each region.</p>
-     * <p> Valid values of N: 1 to 100. If the numeric value in the percentage is not an integer, ROS rounds the number down to the nearest integer.</p>
-     * <p> If you do not specify MaxConcurrentPercentage, 1 is used as the default value.</p>
+     * <p>The maximum percentage of accounts in each region for which stack instances can be deleted at the same time.</p>
+     * <p>The value of N must be an integer from 1 to 100. If the calculated percentage is not an integer, ROS rounds it down to the nearest integer.</p>
+     * <p>If you do not specify MaxConcurrentPercentage, the default value is 1.</p>
      * </li>
-     * <li><p>{&quot;RegionConcurrencyType&quot;: N}</p>
-     * <p>The mode that you want to use to deploy stacks across regions. Valid values:</p>
+     * <li><p>{&quot;RegionConcurrencyType&quot;: N}
+     * The concurrency model for deleting stack instances in different regions. Valid values:</p>
      * <ul>
-     * <li><p>SEQUENTIAL (default): deploys stacks in the specified regions one by one in sequence. This way, ROS deploys stacks in only one region at a time. </p>
+     * <li><p>SEQUENTIAL (default): Deletes stack instances in each specified region sequentially. At any given time, the operation deletes stack instances in only one region.</p>
      * </li>
-     * <li><p>PARALLEL: deploys stacks in all the specified regions in parallel.</p>
+     * <li><p>PARALLEL: Deletes stack instances in all specified regions in parallel.</p>
      * </li>
      * </ul>
      * </li>
@@ -77,8 +75,10 @@ public class DeleteStackInstancesRequest extends TeaModel {
      * <p>Separate multiple parameters with commas (,).</p>
      * <blockquote>
      * <ul>
-     * <li>You can specify only one of the following parameters: MaxConcurrentCount and MaxConcurrentPercentage.</li>
-     * <li>You can specify only one of the following parameters: FailureToleranceCount and FailureTolerancePercentage.</li>
+     * <li><p>You cannot specify both MaxConcurrentCount and MaxConcurrentPercentage.</p>
+     * </li>
+     * <li><p>You cannot specify both FailureToleranceCount and FailureTolerancePercentage.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -89,7 +89,7 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public java.util.Map<String, ?> operationPreferences;
 
     /**
-     * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the stack group. Call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the regions where you want to delete the stacks. You can specify up to 20 region IDs.</p>
+     * <p>The IDs of the regions where the stack instances are deployed. You can specify up to 20 region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,11 +109,13 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public java.util.List<String> regionIds;
 
     /**
-     * <p>Specifies whether to delete the stacks.</p>
+     * <p>Specifies whether to retain the stacks.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: retains the stacks.</li>
-     * <li>false: deletes the stacks.</li>
+     * <li><p>true: The stacks are retained.</p>
+     * </li>
+     * <li><p>false: The stacks are deleted.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -124,8 +126,7 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public Boolean retainStacks;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\
-     * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+     * <p>The name of the stack group. The name must be unique within a region.<br>The name can be up to 255 characters long. It must start with a letter or a digit and can contain letters, digits, hyphens (-), and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -213,19 +214,19 @@ public class DeleteStackInstancesRequest extends TeaModel {
 
     public static class DeleteStackInstancesRequestDeploymentTargets extends TeaModel {
         /**
-         * <p>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</p>
+         * <p>The IDs of member accounts in the resource directory. You can specify up to 30 member account IDs.</p>
          * <blockquote>
-         * <p>To view the folder IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information about a folder</a>.</p>
+         * <p>You can find the member account IDs on the Overview page in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/111624.html">View the details of a member</a>.</p>
          * </blockquote>
          */
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
 
         /**
-         * <p>The IDs of the folders in the resource directory. You can add up to five folder IDs.</p>
-         * <p>You can create stacks within all the member accounts in the specified folders. If you create stacks in the Root folder, the stacks are created within all member accounts in the resource directory.</p>
+         * <p>The IDs of folders in the resource directory. You can specify up to 20 folder IDs.</p>
+         * <p>Stack instances are deleted from all member accounts in the specified folders. If you specify the Root folder, stack instances are deleted from all member accounts in your resource directory.</p>
          * <blockquote>
-         * <p>To view the folder IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information about a folder</a>.</p>
+         * <p>You can find the folder IDs on the Overview page in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information of a folder</a>.</p>
          * </blockquote>
          */
         @NameInMap("RdFolderIds")

@@ -21,23 +21,26 @@ public class GetServiceProvisionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The services.</p>
+     * <p>The list of Alibaba Cloud services.</p>
      */
     @NameInMap("Services")
     public java.util.List<GetServiceProvisionsRequestServices> services;
 
     /**
-     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs. You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <p>The structure of the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend to use the HTTP POST + Body Param method to pass the parameter in the request body to avoid request failures caused by an excessively long URL.</p>
+     * <blockquote>
+     * <p>You can specify only one of the TemplateBody, TemplateURL, TemplateId, and Services parameters.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,&quot;Resources&quot;: {&quot;ApiGateway&quot;: {&quot;Type&quot;: &quot;ALIYUN::ApiGateway::Group&quot;,&quot;Properties&quot;: { &quot;GroupName&quot;: &quot;ros_example&quot; }},&quot;FC&quot;: {&quot;Type&quot;: &quot;ALIYUN::FC::Service&quot;,&quot;Properties&quot;: {&quot;ServiceName&quot;: &quot;ros_example&quot;}}}}</p>
+     * <p>ROSTemplateFormatVersion: \&quot;2015-09-01\&quot;\r\nResources:\r\n  Vpc:\r\n    Type: ALIYUN::ECS::VPC\r\n    Properties:\r\n      CidrBlock: 192.168.0.0/24\r\n      VpcName: TestVpc</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
 
     /**
      * <p>The template ID. This parameter applies to shared and private templates.</p>
-     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</p>
+     * <p>You can specify only one of the TemplateBody, TemplateURL, TemplateId, and Services parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
@@ -46,8 +49,8 @@ public class GetServiceProvisionsRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
-     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</p>
+     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples of OSS URLs: oss\://ros/template/demo and oss\://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
+     * <p>You can specify only one of the TemplateBody, TemplateURL, TemplateId, and Services parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://ros-template/demo</p>
@@ -57,7 +60,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
 
     /**
      * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
-     * <p>This parameter takes effect only when TemplateId is specified.</p>
+     * <p>This parameter takes effect only when you specify TemplateId.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -130,7 +133,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
         /**
          * <p>The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.</p>
          * <blockquote>
-         * <p>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.</p>
+         * <p>Parameters is optional. If you specify Parameters, you must specify ParameterKey.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -143,7 +146,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
         /**
          * <p>The value of the parameter.</p>
          * <blockquote>
-         * <p>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</p>
+         * <p>Parameters is optional. If you specify Parameters, you must specify ParameterValue.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -178,43 +181,78 @@ public class GetServiceProvisionsRequest extends TeaModel {
 
     public static class GetServiceProvisionsRequestServices extends TeaModel {
         /**
-         * <p>The name of the service or feature. Valid values:</p>
+         * <p>The name of the Alibaba Cloud service. Valid values:</p>
          * <ul>
-         * <li>AHAS: Application High Availability Service</li>
-         * <li>ARMS: Application Real-Time Monitoring Service (ARMS)</li>
-         * <li>ApiGateway: API Gateway</li>
-         * <li>BatchCompute: Batch Compute</li>
-         * <li>BrainIndustrial: Industrial Brain</li>
-         * <li>CloudStorageGateway: Cloud Storage Gateway (CSG)</li>
-         * <li>CMS: CloudMonitor</li>
-         * <li>CR: Container Registry</li>
-         * <li>CS: Container Service for Kubernetes (ACK)</li>
-         * <li>DCDN: Dynamic Content Delivery Network (DCDN)</li>
-         * <li>DataHub: DataHub</li>
-         * <li>DataWorks: DataWorks</li>
-         * <li>EDAS: Enterprise Distributed Application Service (EDAS)</li>
-         * <li>EHPC: E-HPC</li>
-         * <li>EMAS: Enterprise Mobile Application Studio (EMAS)</li>
-         * <li>FC: Function Compute</li>
-         * <li>FNF: CloudFlow (SWF)</li>
-         * <li>MaxCompute: MaxCompute</li>
-         * <li>MNS: Message Service (MNS)</li>
-         * <li>HBR: Cloud Backup</li>
-         * <li>IMM: Intelligent Media Management (IMM)</li>
-         * <li>IOT: IoT Platform</li>
-         * <li>KMS: Key Management Service (KMS)</li>
-         * <li>NAS: File Storage NAS (NAS)</li>
-         * <li>NLP: Natural Language Processing (NLP)</li>
-         * <li>OSS: Object Storage Service (OSS)</li>
-         * <li>OTS: Tablestore</li>
-         * <li>PrivateLink: PrivateLink</li>
-         * <li>PrivateZone: Alibaba Cloud DNS PrivateZone</li>
-         * <li>RocketMQ: ApsaraMQ for RocketMQ</li>
-         * <li>SAE: Serverless App Engine (SAE)</li>
-         * <li>SLS: Simple Log Service (SLS)</li>
-         * <li>TrafficMirror: traffic mirroring</li>
-         * <li>VS: Video Surveillance System</li>
-         * <li>Xtrace: Managed Service for OpenTelemetry</li>
+         * <li><p>AHAS: Application High Availability Service.</p>
+         * </li>
+         * <li><p>ARMS: Application Real-Time Monitoring Service.</p>
+         * </li>
+         * <li><p>ApiGateway: API Gateway.</p>
+         * </li>
+         * <li><p>BatchCompute: Batch Compute.</p>
+         * </li>
+         * <li><p>BrainIndustrial: Industrial Intelligence.</p>
+         * </li>
+         * <li><p>CloudStorageGateway: Cloud Storage Gateway.</p>
+         * </li>
+         * <li><p>CMS: Cloud Monitor.</p>
+         * </li>
+         * <li><p>CR: Container Registry.</p>
+         * </li>
+         * <li><p>CS: Container Service.</p>
+         * </li>
+         * <li><p>DCDN: DCDN.</p>
+         * </li>
+         * <li><p>DataHub: DataHub.</p>
+         * </li>
+         * <li><p>DataWorks: DataWorks.</p>
+         * </li>
+         * <li><p>EDAS: Enterprise Distributed Application Service.</p>
+         * </li>
+         * <li><p>EHPC: Elastic High Performance Computing.</p>
+         * </li>
+         * <li><p>EMAS: Enterprise Mobile Application Studio.</p>
+         * </li>
+         * <li><p>FC: Function Compute.</p>
+         * </li>
+         * <li><p>FNF: CloudFlow.</p>
+         * </li>
+         * <li><p>MaxCompute: MaxCompute.</p>
+         * </li>
+         * <li><p>SMQ: Simple Message Queue (formerly MNS).</p>
+         * </li>
+         * <li><p>HBR: Cloud Backup.</p>
+         * </li>
+         * <li><p>IMM: Intelligent Media Management.</p>
+         * </li>
+         * <li><p>IOT: IoT Platform.</p>
+         * </li>
+         * <li><p>KMS: Key Management Service.</p>
+         * </li>
+         * <li><p>NAS: File Storage NAS.</p>
+         * </li>
+         * <li><p>NLP: Natural Language Processing.</p>
+         * </li>
+         * <li><p>OSS: Object Storage Service.</p>
+         * </li>
+         * <li><p>OTS: Tablestore.</p>
+         * </li>
+         * <li><p>PrivateLink: PrivateLink.</p>
+         * </li>
+         * <li><p>PrivateZone: PrivateZone.</p>
+         * </li>
+         * <li><p>RocketMQ: Message Queue for Apache RocketMQ.</p>
+         * </li>
+         * <li><p>SAE: Serverless App Engine.</p>
+         * </li>
+         * <li><p>SLS: Simple Log Service.</p>
+         * </li>
+         * <li><p>TrafficMirror: Traffic Mirroring.</p>
+         * </li>
+         * <li><p>VS: Video Surveillance.</p>
+         * </li>
+         * <li><p>Xtrace: Tracing Analysis.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

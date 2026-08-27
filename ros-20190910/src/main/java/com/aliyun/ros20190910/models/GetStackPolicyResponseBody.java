@@ -14,7 +14,7 @@ public class GetStackPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.</p>
+     * <p>The stack policy body. Length: 1 to 16,384 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;Update:<em>&quot;, &quot;Effect&quot;: &quot;Allow&quot;,&quot;Principal&quot;: &quot;</em>&quot;,&quot;Resource&quot;: &quot;*&quot;}]}</p>

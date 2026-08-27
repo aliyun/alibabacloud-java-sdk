@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetTemplateScratchRequest extends TeaModel {
     /**
      * <p>The region ID of the resource scenario.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,14 +18,18 @@ public class GetTemplateScratchRequest extends TeaModel {
     /**
      * <p>The data display option. Valid values:</p>
      * <ul>
-     * <li>Sources: displays only the data of source nodes. This setting takes effect only when TemplateScratchType is set to ArchitectureDetection.</li>
-     * <li>Source: displays only the data of the source node. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.</li>
-     * <li>Provisions: displays only the data of new nodes. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.</li>
-     * <li>All: displays all data.</li>
+     * <li><p>Sources: displays only source node data. This value is applicable when TemplateScratchType is set to ArchitectureDetection.</p>
+     * </li>
+     * <li><p>Source: displays only source node data. This value is applicable when TemplateScratchType is not set to ArchitectureDetection.</p>
+     * </li>
+     * <li><p>Provisions: displays only new node data. This value is applicable when TemplateScratchType is not set to ArchitectureDetection.</p>
+     * </li>
+     * <li><p>All: displays all data.</p>
+     * </li>
      * </ul>
      * <p>For more information about source nodes and new nodes, see <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the node data is not displayed.</p>
+     * <p>If you do not specify this parameter, node data is not displayed by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

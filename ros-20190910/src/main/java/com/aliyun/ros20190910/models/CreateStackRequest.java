@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateStackRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
+     * <p>Ensures request idempotency. Must be client-generated and globally unique. Maximum length: 64 characters. Can contain <strong>letters</strong>, <strong>digits</strong>,<strong>&#x20;hyphens (-)</strong>, an&#x64;<strong>&#x20;underscores (_)</strong>.</p>
+     * <p><a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a></p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -15,15 +15,21 @@ public class CreateStackRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The creation option for the stack. Valid values:</p>
+     * <p>The post-creation behavior for the stack. Valid values:</p>
      * <ul>
-     * <li>KeepStackOnCreationComplete (default): After the stack is created, the stack and its resources are retained. The quota for the maximum number of stacks that can be created in ROS is consumed.</li>
-     * <li>AbandonStackOnCreationComplete: After the stack is created, the stack is deleted, but its resources are retained. The quota for the maximum number of stacks that can be created in ROS is not consumed. If the stack fails to be created, the stack is retained.</li>
-     * <li>AbandonStackOnCreationRollbackComplete: When the resources of the stack are rolled back after the stack fails to be created, the stack is deleted. The quota for the maximum number of stacks that can be created in ROS is not consumed. In other rollback scenarios, the stack is retained.</li>
-     * <li>ManuallyPay: When you create the stack, you must manually pay for the subscription resources that are used. The following resource types support manual payment: <code>ALIYUN::ECS::InstanceGroup</code>, <code>ALIYUN::RDS::DBInstance</code>, <code>ALIYUN::SLB::LoadBalancer</code>, <code>ALIYUN::VPC::EIP</code>, and <code>ALIYUN::VPC::VpnGateway</code>.</li>
+     * <li><p>KeepStackOnCreationComplete (default): retains the stack and resources after creation. Counts toward the stack quota.</p>
+     * </li>
+     * <li><p>AbandonStackOnCreationComplete: deletes the stack but retains resources after creation. Does not count toward the stack quota. The stack is retained if creation fails.</p>
+     * </li>
+     * <li><p>AbandonStackOnCreationRollbackComplete: deletes the stack after a creation rollback. Does not count toward the stack quota. The stack is retained in other rollback scenarios.</p>
+     * </li>
+     * <li><p>ManuallyPay: requires manual payment for subscription resources during stack creation. Supported resource types: <code>ALIYUN::ECS::InstanceGroup</code>, <code>ALIYUN::RDS::DBInstance</code>, <code>ALIYUN::SLB::LoadBalancer</code>, <code>ALIYUN::VPC::EIP</code>, and <code>ALIYUN::VPC::VpnGateway</code>.</p>
+     * </li>
+     * <li><p>RetryOnNoStock: automatically retries resource creation on insufficient inventory. Supported resource type: <code>ALIYUN::RDS::DBInstance</code>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can specify only one of CreateOption and CreateOptions.</p>
+     * <p>You can specify only one of the following parameters: CreateOption or CreateOptions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,13 +45,15 @@ public class CreateStackRequest extends TeaModel {
     public java.util.List<String> createOptions;
 
     /**
-     * <p>Specifies whether to enable deletion protection for the stack. Valid values:</p>
+     * <p>Specifies whether to enable deletion protection on the stack. Valid values:</p>
      * <ul>
-     * <li>Enabled.</li>
-     * <li>Disabled (default). If deletion protection is disabled, you can delete the stack by using the ROS console or by calling the DeleteStack operation.</li>
+     * <li><p>Enabled: enables deletion protection.</p>
+     * </li>
+     * <li><p>Disabled (default): allows stack deletion via the ROS console or the DeleteStack API.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>The value of DeletionProtection that you specify for the root stack applies to its nested stacks.</p>
+     * <p>The deletion protection of a nested stack is the same as that of its root stack.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,11 +63,13 @@ public class CreateStackRequest extends TeaModel {
     public String deletionProtection;
 
     /**
-     * <p>Specifies whether to disable rollback for the resources when the stack fails to be created.</p>
+     * <p>Specifies whether to disable rollback when stack creation fails.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true: disables rollback.</p>
+     * </li>
+     * <li><p>false (default): enables rollback.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,20 +79,17 @@ public class CreateStackRequest extends TeaModel {
     public Boolean disableRollback;
 
     /**
-     * <p>The callback URLs that are used to receive stack events. Valid values:</p>
+     * <p>The callback URL for stack events. Valid values:</p>
      * <ul>
-     * <li>HTTP POST URL</li>
+     * <li><p>HTTP POST URL. Maximum length: 1,024 bytes.</p>
+     * </li>
+     * <li><p>EventBridge receives stack status change notifications. View events in the <a href="https://eventbridge.console.aliyun.com">EventBridge console</a>.</p>
+     * </li>
      * </ul>
-     * <p>Each URL can be up to 1,024 bytes in length.</p>
-     * <ul>
-     * <li>eventbridge</li>
-     * </ul>
-     * <p>When the status of a stack changes, ROS sends notifications to the EventBridge service. You can view the event information in the <a href="https://eventbridge.console.aliyun.com">EventBridge</a> console.</p>
      * <blockquote>
-     * <p>This feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Hong Kong), and China (Zhangjiakou) regions.</p>
+     * <p>Supported regions: China (Hangzhou), China (Shanghai), China (Beijing), China (Hong Kong), and China (Zhangjiakou).</p>
      * </blockquote>
-     * <p>Maximum value of N: 5. When the status of a stack changes, ROS sends a notification to the specified URL. When rollback is enabled for the stack, notifications are sent if the stack is in the CREATE_ROLLBACK or ROLLBACK state, but are not sent if the stack is in the CREATE_FAILED, UPDATE_FAILED, or IN_PROGRESS state.\
-     * ROS sends notifications regardless of whether you specify the Outputs section. The following sample code provides an example on the content of a notification:</p>
+     * <p>Maximum value of N: 5. ROS sends notifications on stack status changes, except for IN_PROGRESS events. With rollback enabled, CREATE_ROLLBACK and ROLLBACK events replace CREATE_FAILED and UPDATE_FAILED notifications. Notifications always include Outputs. Example notification:</p>
      * <pre><code>{
      *    &quot;Outputs&quot;: [
      *        {
@@ -104,12 +111,14 @@ public class CreateStackRequest extends TeaModel {
     public java.util.List<String> notificationURLs;
 
     /**
-     * <p>The maximum number of concurrent operations that can be performed on resources.</p>
-     * <p>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</p>
+     * <p>The maximum number of concurrent operations on resources.</p>
+     * <p>Default: empty. Accepts integers greater than or equal to 0.</p>
      * <blockquote>
      * <ul>
-     * <li>If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</li>
-     * <li>If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.</li>
+     * <li><p>If greater than 0, the specified value is used. If 0 or empty, no limit applies to ROS stacks; Terraform stacks use the Terraform default (typically 10).</p>
+     * </li>
+     * <li><p>The specified value persists with the stack and affects subsequent operations such as updates.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -126,10 +135,9 @@ public class CreateStackRequest extends TeaModel {
     public java.util.List<CreateStackRequestParameters> parameters;
 
     /**
-     * <p>The name of the RAM role. ROS assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
-     * ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.</p>
-     * <p>If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.</p>
-     * <p>The RAM role name can be up to 64 characters in length.</p>
+     * <p>The RAM role name. ROS assumes this role for all stack API calls, even when the user has direct permissions, ensuring least-privilege access. <a href="https://help.aliyun.com/document_detail/2568025.html">Use a stack role</a>.</p>
+     * <p>If not specified, ROS uses the role associated with the stack, or a temporary credential from your account if no role exists.</p>
+     * <p>Maximum length: 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>test-role</p>
@@ -138,7 +146,7 @@ public class CreateStackRequest extends TeaModel {
     public String ramRoleName;
 
     /**
-     * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. Call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,8 +156,8 @@ public class CreateStackRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If you leave this parameter empty, the stack is added to the default resource group.</p>
-     * <p>For more information about resource groups, see the &quot;Resource group&quot; section of the <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a> topic.</p>
+     * <p>The ID of the resource group. If not specified, the stack is added to the default resource group.</p>
+     * <p><a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group</a></p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -158,8 +166,7 @@ public class CreateStackRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The name of the stack.\
-     * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a letter.</p>
+     * <p>The stack name. Maximum length: 255 characters. Must start with a <strong>letter</strong> and can contain <strong>letters</strong>, <strong>digits</strong>, <strong>hyphens (-)</strong>, and <strong>underscores (_)</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -169,9 +176,9 @@ public class CreateStackRequest extends TeaModel {
     public String stackName;
 
     /**
-     * <p>The structure that contains the stack policy body. The policy body must be 1 to 16,384 bytes in length.</p>
+     * <p>The stack policy body. Length: 1 to 16,384 bytes.</p>
      * <blockquote>
-     * <p>You can specify only one of StackPolicyBody and StackPolicyURL.</p>
+     * <p>You can specify only one of the following parameters: StackPolicyBody or StackPolicyURL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -181,11 +188,11 @@ public class CreateStackRequest extends TeaModel {
     public String stackPolicyBody;
 
     /**
-     * <p>The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+     * <p>The URL of the stack policy file. Supports HTTP, HTTPS, and OSS URLs (for example, oss\://ros/stack-policy/demo or oss\://ros/stack-policy/demo?RegionId=cn-hangzhou). Maximum file size: 16,384 bytes. If no OSS region is specified, the RegionId value is used.</p>
      * <blockquote>
-     * <p>You can specify only one of StackPolicyBody and StackPolicyURL.</p>
+     * <p>You can specify only one of the following parameters: StackPolicyBody or StackPolicyURL.</p>
      * </blockquote>
-     * <p>The URL can be up to 1,350 bytes in length.</p>
+     * <p>Maximum URL length: 1,350 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://ros-stack-policy/demo</p>
@@ -194,15 +201,15 @@ public class CreateStackRequest extends TeaModel {
     public String stackPolicyURL;
 
     /**
-     * <p>The tags that you want to add to the stack.</p>
+     * <p>The tags of the stack.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateStackRequestTags> tags;
 
     /**
-     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
+     * <p>The template body. Length: <strong>1 to 524,288 bytes</strong>. Use <strong>HTTP POST</strong> with <strong>Body parameters</strong> for large content to avoid URL length limits.</p>
      * <blockquote>
-     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <p>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, or TemplateScratchId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -212,9 +219,9 @@ public class CreateStackRequest extends TeaModel {
     public String templateBody;
 
     /**
-     * <p>The template ID. This parameter applies to shared templates and private templates.</p>
+     * <p>The template ID. This parameter applies to shared and private templates.</p>
      * <blockquote>
-     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <p>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, or TemplateScratchId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -224,10 +231,10 @@ public class CreateStackRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The scenario ID.</p>
-     * <p>For more information about how to query the scenario ID, see <a href="https://help.aliyun.com/document_detail/363050.html">ListTemplateScratches</a>.</p>
+     * <p>The ID of the resource scenario.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/363050.html">ListTemplateScratches</a> to query resource scenario IDs.</p>
      * <blockquote>
-     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <p>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, or TemplateScratchId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -237,8 +244,8 @@ public class CreateStackRequest extends TeaModel {
     public String templateScratchId;
 
     /**
-     * <p>The region ID of the scenario. The default value is the same as the value of RegionId.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the resource scenario. Default value: the value of RegionId.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -247,9 +254,9 @@ public class CreateStackRequest extends TeaModel {
     public String templateScratchRegionId;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+     * <p>The URL of the template file. Supports HTTP, HTTPS, and OSS URLs (for example, oss\://ros/stack-policy/demo or oss\://ros/stack-policy/demo?RegionId=cn-hangzhou). Maximum template size: 524,288 bytes. If no OSS region is specified, the RegionId value is used.</p>
      * <blockquote>
-     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <p>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, or TemplateScratchId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -259,7 +266,7 @@ public class CreateStackRequest extends TeaModel {
     public String templateURL;
 
     /**
-     * <p>The version of the template. This parameter takes effect only when TemplateId is specified.</p>
+     * <p>The version of the template. This parameter takes effect only when you specify TemplateId.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -268,11 +275,12 @@ public class CreateStackRequest extends TeaModel {
     public String templateVersion;
 
     /**
-     * <p>The timeout period for creating the stack.</p>
+     * <p>The stack creation timeout. Unit: minutes.</p>
      * <ul>
-     * <li>Default value: 60.</li>
-     * <li>Unit: minutes.</li>
-     * <li>Valid values: 10 to 1440.</li>
+     * <li><p>Default value: 60.</p>
+     * </li>
+     * <li><p>Valid values: 10 to 1440.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -464,11 +472,10 @@ public class CreateStackRequest extends TeaModel {
 
     public static class CreateStackRequestParameters extends TeaModel {
         /**
-         * <p>The key of parameter N that is defined in the template. If you do not specify the name and value of a parameter, ROS uses the default name and value that are specified in the template.</p>
-         * <p>Maximum value of N: 200.\
-         * The name must be 1 to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The name of parameter N defined in the template. If you do not specify the name and value of a parameter, ROS uses the default value in the template.</p>
+         * <p>The maximum value of N is 200. The name must be 1 to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. The name cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <blockquote>
-         * <p>The Parameters parameter is optional. If you specify Parameters, you must specify Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+         * <p>Parameters is an optional parameter. To specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -479,11 +486,10 @@ public class CreateStackRequest extends TeaModel {
         public String parameterKey;
 
         /**
-         * <p>The value of parameter N that is defined in the template.</p>
-         * <p>Maximum value of N: 200.\
-         * The value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The value of parameter N defined in the template.</p>
+         * <p>The maximum value of N is 200. The value must be 0 to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <blockquote>
-         * <p>The Parameters parameter is optional. If you specify Parameters, you must specify Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+         * <p>Parameters is an optional parameter. To specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -518,12 +524,14 @@ public class CreateStackRequest extends TeaModel {
 
     public static class CreateStackRequestTags extends TeaModel {
         /**
-         * <p>The key of tag N that you want to add to the stack.</p>
-         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N of the stack.</p>
+         * <p>Valid values: 1 to 20.</p>
          * <blockquote>
          * <ul>
-         * <li>The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.</li>
-         * <li>The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see <a href="https://help.aliyun.com/document_detail/201421.html">Propagate tags</a>.</li>
+         * <li><p>Tags is an optional parameter. To specify Tags, you must specify Tags.N.Key.</p>
+         * </li>
+         * <li><p>Stack tags propagate to each resource that supports tagging. <a href="https://help.aliyun.com/document_detail/201421.html">Tag propagation</a>.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -535,10 +543,10 @@ public class CreateStackRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N that you want to add to the stack.</p>
-         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N of the stack.</p>
+         * <p>Valid values: 1 to 20.</p>
          * <blockquote>
-         * <p>The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see <a href="https://help.aliyun.com/document_detail/201421.html">Propagate tags</a>.</p>
+         * <p>Stack tags propagate to taggable resources. <a href="https://help.aliyun.com/document_detail/201421.html">Tag propagation</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

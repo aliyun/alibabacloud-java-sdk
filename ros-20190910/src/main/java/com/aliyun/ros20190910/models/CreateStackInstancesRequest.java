@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateStackInstancesRequest extends TeaModel {
     /**
-     * <p>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</p>
+     * <p>The IDs of the destination accounts where you want to create stacks using self-managed permissions. You can specify up to 50 account IDs.</p>
      * <blockquote>
-     * <p>You must specify one of the following parameters: <code>AccountIds</code> and <code>DeploymentTargets</code>.</p>
+     * <p>You can specify only one of the <code>AccountIds</code> and <code>DeploymentTargets</code> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,7 @@ public class CreateStackInstancesRequest extends TeaModel {
     public java.util.List<String> accountIds;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-     * The token can contain letters, digits, hyphens (-), and underscores (_), and cannot exceed 64 characters in length.\
-     * For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. The client generates the token, which must be globally unique.<br>The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).<br>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -27,13 +25,16 @@ public class CreateStackInstancesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The deployment options for deploying stacks in service-managed permission mode. You can specify up to one deployment option.</p>
+     */
     @NameInMap("DeploymentOptions")
     public java.util.List<String> deploymentOptions;
 
     /**
-     * <p>The folders in which ROS deploy stacks in service-managed permission model.</p>
+     * <p>The deployment targets for deploying stacks in service-managed permission mode.</p>
      * <blockquote>
-     * <p>You must specify one of the following parameters: <code>AccountIds</code> and <code>DeploymentTargets</code>.</p>
+     * <p>You can specify only one of the <code>AccountIds</code> and <code>DeploymentTargets</code> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,11 +44,13 @@ public class CreateStackInstancesRequest extends TeaModel {
     public CreateStackInstancesRequestDeploymentTargets deploymentTargets;
 
     /**
-     * <p>Specifies whether to disable rollback when the stack fails to be created.</p>
+     * <p>Indicates whether to disable rollback when a stack fails to be created.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true: Disables rollback.</p>
+     * </li>
+     * <li><p>false (default): Enables rollback.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +60,7 @@ public class CreateStackInstancesRequest extends TeaModel {
     public Boolean disableRollback;
 
     /**
-     * <p>The description of the stack creation operation.</p>
+     * <p>The description of the operation to create the stacks.</p>
      * <p>The description must be 1 to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -67,42 +70,45 @@ public class CreateStackInstancesRequest extends TeaModel {
     public String operationDescription;
 
     /**
-     * <p>The preference settings of the stack creation operation.</p>
+     * <p>The preferences for the operation.</p>
      * <p>The following parameters are available:</p>
      * <ul>
      * <li><p>{&quot;FailureToleranceCount&quot;: N}</p>
-     * <p> The number of accounts within which stack operation failures are allowed in each region. If the value of this parameter is exceeded in a region, Resource Orchestration Service (ROS) stops the operation in the region. If ROS stops the operation in one region, ROS stops the operation in other regions.</p>
-     * <p> Valid values of N: 0 to 20.</p>
-     * <p> If you do not specify FailureToleranceCount, 0 is used as the default value.</p>
+     * <p>The number of accounts per region in which the operation can fail. If the number of failed operations in a region exceeds this value, Resource Orchestration Service (ROS) stops the operation in that region. If the operation is stopped in a region, the operation is not performed in other regions.</p>
+     * <p>The value of N can be an integer from 0 to 20.</p>
+     * <p>If you do not specify this parameter, the default value is 0.</p>
      * </li>
      * <li><p>{&quot;FailureTolerancePercentage&quot;: N}</p>
-     * <p> The percentage of the number of accounts within which stack operation failures are allowed to the total number of accounts in each region. If the value of this parameter is exceeded, ROS stops the operation in the region.</p>
-     * <p> Valid values of N: 0 to 100. If the numeric value in the percentage is not an integer, ROS rounds the value down to the nearest integer.</p>
-     * <p> If you do not specify FailureTolerancePercentage, 0 is used as the default value.</p>
+     * <p>The percentage of accounts per region in which the operation can fail, relative to the total number of accounts. If the percentage of failed operations in a region exceeds this value, ROS stops the operation in that region.</p>
+     * <p>The value of N can be an integer from 0 to 100. If the percentage is not an integer, ROS rounds down the value.</p>
+     * <p>If you do not specify this parameter, the default value is 0.</p>
      * </li>
      * <li><p>{&quot;MaxConcurrentCount&quot;: N}</p>
-     * <p>The maximum number of accounts within which multiple stacks are deployed at the same time in each region.</p>
-     * <p>Valid values of N: 1 to 20.</p>
-     * <p>If you do not specify MaxConcurrentCount, 1 is used as the default value.</p>
+     * <p>The maximum number of accounts in each region where stacks can be deployed at the same time.</p>
+     * <p>The value of N can be an integer from 1 to 20.</p>
+     * <p>If you do not specify this parameter, the default value is 1.</p>
      * </li>
      * <li><p>{&quot;MaxConcurrentPercentage&quot;: N}</p>
-     * <p> The percentage of the maximum number of accounts within which multiple stacks are deployed at the same time to the total number of accounts in each region.</p>
-     * <p> Valid values: 1 to 100. If the numeric value in the percentage is not an integer, ROS rounds the number down to the nearest integer.</p>
-     * <p> If you do not specify MaxConcurrentPercentage, 1 is used as the default value.</p>
+     * <p>The percentage of accounts in each region where stacks can be deployed at the same time, relative to the total number of accounts.</p>
+     * <p>The value of N can be an integer from 1 to 100. If the percentage is not an integer, ROS rounds down the value.</p>
+     * <p>If you do not specify this parameter, the default value is 1.</p>
      * </li>
-     * <li><p>{&quot;RegionConcurrencyType&quot;: N}\
-     *  The mode that you want to use to deploy stacks across regions. Valid values: </p>
+     * <li><p>{&quot;RegionConcurrencyType&quot;: N}<br>The concurrency type of deployment regions. Valid values:</p>
      * <ul>
-     * <li>SEQUENTIAL (default): deploys stacks in each specified region based on the specified sequence of regions. ROS deploys stacks in one region at a time. </li>
-     * <li>PARALLEL: deploys stacks in parallel across all specified regions.</li>
+     * <li><p>SEQUENTIAL (default): Deploys stacks in the specified regions one by one. Stacks are deployed in only one region at a time.</p>
+     * </li>
+     * <li><p>PARALLEL: Deploys stacks in all specified regions at the same time.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * <p>Separate multiple parameters with commas (,).</p>
      * <blockquote>
      * <ul>
-     * <li>You can specify only one of the following parameters: MaxConcurrentCount and MaxConcurrentPercentage.</li>
-     * <li>You can specify only one of the following parameters: FailureToleranceCount and FailureTolerancePercentage.</li>
+     * <li><p>You cannot specify MaxConcurrentCount and MaxConcurrentPercentage at the same time.</p>
+     * </li>
+     * <li><p>You cannot specify FailureToleranceCount and FailureTolerancePercentage at the same time.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -113,13 +119,14 @@ public class CreateStackInstancesRequest extends TeaModel {
     public java.util.Map<String, ?> operationPreferences;
 
     /**
-     * <p>The parameters that are used to override specific parameters.</p>
+     * <p>A list of parameters that overwrite the template parameters.</p>
      */
     @NameInMap("ParameterOverrides")
     public java.util.List<CreateStackInstancesRequestParameterOverrides> parameterOverrides;
 
     /**
-     * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the stack group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,7 +136,7 @@ public class CreateStackInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the regions where you want to create the stacks. You can specify up to 20 region IDs.</p>
+     * <p>The IDs of the destination regions. You can specify up to 20 region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -139,8 +146,7 @@ public class CreateStackInstancesRequest extends TeaModel {
     public java.util.List<String> regionIds;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\
-     * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+     * <p>The name of the stack group. The name must be unique within a region.<br>The name can be up to 255 characters in length. It must start with a letter or a digit and can contain letters, digits, hyphens (-), and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -150,10 +156,12 @@ public class CreateStackInstancesRequest extends TeaModel {
     public String stackGroupName;
 
     /**
-     * <p>The timeout period within which you can create the stack.</p>
+     * <p>The timeout period for creating the stacks.</p>
      * <ul>
-     * <li>Default value: 60.</li>
-     * <li>Unit: minutes.</li>
+     * <li><p>Default value: 60.</p>
+     * </li>
+     * <li><p>Unit: minutes.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -264,14 +272,20 @@ public class CreateStackInstancesRequest extends TeaModel {
     }
 
     public static class CreateStackInstancesRequestDeploymentTargets extends TeaModel {
+        /**
+         * <p>The IDs of the member accounts in the resource directory. You can specify up to 30 member account IDs.</p>
+         * <blockquote>
+         * <p>You can view the member account IDs on the Overview page in the Resource Management console. For more information, see View the details of a member.</p>
+         * </blockquote>
+         */
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
 
         /**
-         * <p>The folder IDs of the resource directory. You can add up to five folder IDs.</p>
-         * <p>You can create stacks within all the member accounts in the specified folders. If you create stacks in the Root folder, the stacks are created within all member accounts in the resource directory.</p>
+         * <p>The IDs of the folders in the resource directory. You can specify up to 20 folder IDs.</p>
+         * <p>You can create stacks in all the member accounts in the specified folders. If you select the root folder, stacks are created in all the member accounts in the resource directory.</p>
          * <blockquote>
-         * <p>To view the folder IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information about a folder</a>.</p>
+         * <p>You can view the folder IDs on the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information of a folder</a>.</p>
          * </blockquote>
          */
         @NameInMap("RdFolderIds")
@@ -302,12 +316,14 @@ public class CreateStackInstancesRequest extends TeaModel {
 
     public static class CreateStackInstancesRequestParameterOverrides extends TeaModel {
         /**
-         * <p>The key of parameter N that you want to use to override a specific parameter. If you do not specify this parameter, ROS uses the name that you specified when you created the stack group.</p>
-         * <p>Maximum value of N: 200.</p>
+         * <p>The name of the parameter to overwrite. If you do not specify this parameter, ROS uses the parameter name that was specified when the stack group was created.</p>
+         * <p>You can specify up to 200 parameters.</p>
          * <blockquote>
          * <ul>
-         * <li>ParameterOverrides is optional.</li>
-         * <li>If you specify ParameterOverrides, you must specify ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</li>
+         * <li><p>ParameterOverrides is optional.</p>
+         * </li>
+         * <li><p>If you specify ParameterOverrides, you must specify both ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -319,12 +335,14 @@ public class CreateStackInstancesRequest extends TeaModel {
         public String parameterKey;
 
         /**
-         * <p>The value of parameter N that you want to use to override a specific parameter. If you do not specify this parameter, ROS uses the value that you specify when you create the stack group.</p>
-         * <p>Maximum value of N: 200.</p>
+         * <p>The value of the parameter to overwrite. If you do not specify this parameter, ROS uses the parameter value that was specified when the stack group was created.</p>
+         * <p>You can specify up to 200 parameters.</p>
          * <blockquote>
          * <ul>
-         * <li>ParameterOverrides is optional.</li>
-         * <li>If you specify ParameterOverrides, you must specify ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</li>
+         * <li><p>ParameterOverrides is optional.</p>
+         * </li>
+         * <li><p>If you specify ParameterOverrides, you must specify both ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>

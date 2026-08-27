@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStackEventsRequest extends TeaModel {
     /**
-     * <p>The logical IDs of the resources.</p>
+     * <p>The logical resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WebServer</p>
@@ -14,9 +14,7 @@ public class ListStackEventsRequest extends TeaModel {
     public java.util.List<String> logicalResourceId;
 
     /**
-     * <p>The number of the page to return.\
-     * Pages start from page 1.\
-     * Default value: 1.</p>
+     * <p>The page number of the event list.<br>Minimum value: 1.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -25,9 +23,7 @@ public class ListStackEventsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.\
-     * Maximum value: 50.\
-     * Default value: 10.</p>
+     * <p>The number of entries per page in a paged query. Settings for paging.<br>Maximum value: 50.<br>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,7 +32,7 @@ public class ListStackEventsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +42,7 @@ public class ListStackEventsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource types.</p>
+     * <p>The resource type list.</p>
      * 
      * <strong>example:</strong>
      * <p>ALIYUN::ECS::Instance</p>
@@ -65,7 +61,7 @@ public class ListStackEventsRequest extends TeaModel {
     public String stackId;
 
     /**
-     * <p>The status of the resource.</p>
+     * <p>The resource status.</p>
      * 
      * <strong>example:</strong>
      * <p>CREATE_IN_PROGRESS</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStackResourcesResponseBody extends TeaModel {
     /**
-     * <p>Details about resources.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
@@ -14,7 +14,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resources.</p>
+     * <p>The list of resource objects.</p>
      */
     @NameInMap("Resources")
     public java.util.List<ListStackResourcesResponseBodyResources> resources;
@@ -42,9 +42,9 @@ public class ListStackResourcesResponseBody extends TeaModel {
 
     public static class ListStackResourcesResponseBodyResourcesModuleInfo extends TeaModel {
         /**
-         * <p>The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (<code>/</code>).</p>
-         * <p>In the following example, the resource is created from Module B nested within Parent Module A:</p>
-         * <p><code>moduleA/moduleB</code></p>
+         * <p>The concatenated list of logical IDs of one or more modules that contain the resource. The modules are listed starting from the outermost module and are separated by <code>/</code>.</p>
+         * <p>In the following example, the resource is created from a module moduleB that is nested in a parent module moduleA.</p>
+         * <p><code>moduleA/moduleB</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>moduleA/moduleB</p>
@@ -53,9 +53,9 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String logicalIdHierarchy;
 
         /**
-         * <p>The concatenated types of one or more modules that contain the resource. The module types are listed from the outermost layer and separated by forward slashes (<code>/</code>).</p>
-         * <p>In the following example, the resource is created from a module of the <code>MODULE::ROS::Child::Example</code> type that is nested within a parent module of the <code>MODULE::ROS::Parent::Example</code> type:</p>
-         * <p><code>MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example</code></p>
+         * <p>The concatenated list of module types of one or more modules that contain the resource. The module types are listed starting from the outermost module and are separated by <code>/</code>.</p>
+         * <p>In the following example, the resource is created from a module of the <code>MODULE::ROS::Child::Example</code> type, which is nested in a parent module of the <code>MODULE::ROS::Parent::Example</code> type.</p>
+         * <p><code>MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example</p>
@@ -88,7 +88,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
 
     public static class ListStackResourcesResponseBodyResources extends TeaModel {
         /**
-         * <p>The time when the resource was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * <p>The time when the resource was created. The time is displayed in UTC+0 and follows the ISO 8601 standard. The time is in the YYYY-MM-DDThh:mm:ss format without the Z suffix.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-08-01T06:01:23</p>
@@ -97,7 +97,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the most recent successful drift detection was performed on the stack.</p>
+         * <p>The time when the resource drift was detected during the most recent successful drift detection on the stack.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-02-27T07:47:47</p>
@@ -106,7 +106,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String driftDetectionTime;
 
         /**
-         * <p>The logical ID of the resource. The logical ID is the resource name that is defined in the template.</p>
+         * <p>The logical resource ID, which is the name defined in the template.</p>
          * 
          * <strong>example:</strong>
          * <p>dummy</p>
@@ -115,13 +115,13 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String logicalResourceId;
 
         /**
-         * <p>The information about the modules from which the resource is created. This parameter is returned only if the resource is created from modules.</p>
+         * <p>The information about the module from which the resource is created. This parameter is returned only if the resource is created from a module.</p>
          */
         @NameInMap("ModuleInfo")
         public ListStackResourcesResponseBodyResourcesModuleInfo moduleInfo;
 
         /**
-         * <p>The physical ID of the resource.</p>
+         * <p>The physical resource ID, which is the actual resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d04af923-e6b7-4272-aeaa-47ec9777****</p>
@@ -130,12 +130,12 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String physicalResourceId;
 
         /**
-         * <p>The drift state of the resource in the most recent successful drift detection. Valid values:</p>
+         * <p>The drift status of the resource in the most recent successful drift detection on the stack. Valid values:</p>
          * <ul>
-         * <li>DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</li>
-         * <li>MODIFIED: The actual configuration of the resource differs from its expected template configuration.</li>
-         * <li>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</li>
-         * <li>IN_SYNC: The actual configuration of the resource matches its expected template configuration.</li>
+         * <li>DELETED: The resource differs from the expected template configuration because the resource is deleted.</li>
+         * <li>MODIFIED: The resource differs from the expected template configuration.</li>
+         * <li>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the resource differs from the expected template configuration.</li>
+         * <li>IN_SYNC: The current configuration of the resource matches the expected template configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,8 +163,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String stackId;
 
         /**
-         * <p>The stack name.\
-         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
+         * <p>The stack name. The name can be up to 255 characters in length and must start with a digit or a letter. It can contain digits, letters, hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
          * <p>test-describe-resource</p>
@@ -173,24 +172,40 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String stackName;
 
         /**
-         * <p>The state of the resource. Valid values:</p>
+         * <p>The resource status. Valid values:</p>
          * <ul>
-         * <li>INIT_COMPLETE: The resource is pending to be created.</li>
-         * <li>CREATE_COMPLETE: The resource is created.</li>
-         * <li>CREATE_FAILED: The resource failed to be created.</li>
-         * <li>CREATE_IN_PROGRESS: The resource is being created.</li>
-         * <li>UPDATE_IN_PROGRESS: The resource is being updated.</li>
-         * <li>UPDATE_FAILED: The resource failed to be updated.</li>
-         * <li>UPDATE_COMPLETE: The resource is updated.</li>
-         * <li>DELETE_IN_PROGRESS: The resource is being deleted.</li>
-         * <li>DELETE_FAILED: The resource failed to be deleted.</li>
-         * <li>DELETE_COMPLETE: The resource is deleted.</li>
-         * <li>CHECK_IN_PROGRESS: The resource is being validated.</li>
-         * <li>CHECK_FAILED: The resource failed to be validated.</li>
-         * <li>CHECK_COMPLETE: The resource is validated.</li>
-         * <li>IMPORT_IN_PROGRESS: The resource is being imported.</li>
-         * <li>IMPORT_FAILED: The resource failed to be imported.</li>
-         * <li>IMPORT_COMPLETE: The resource is imported.</li>
+         * <li><p>INIT_COMPLETE: The resource is pending creation.</p>
+         * </li>
+         * <li><p>CREATE_COMPLETE: The resource is created.</p>
+         * </li>
+         * <li><p>CREATE_FAILED: The resource failed to be created.</p>
+         * </li>
+         * <li><p>CREATE_IN_PROGRESS: The resource is being created.</p>
+         * </li>
+         * <li><p>UPDATE_IN_PROGRESS: The resource is being updated.</p>
+         * </li>
+         * <li><p>UPDATE_FAILED: The resource failed to be updated.</p>
+         * </li>
+         * <li><p>UPDATE_COMPLETE: The resource is updated.</p>
+         * </li>
+         * <li><p>DELETE_IN_PROGRESS: The resource is being deleted.</p>
+         * </li>
+         * <li><p>DELETE_FAILED: The resource failed to be deleted.</p>
+         * </li>
+         * <li><p>DELETE_COMPLETE: The resource is deleted.</p>
+         * </li>
+         * <li><p>CHECK_IN_PROGRESS: The resource is being checked.</p>
+         * </li>
+         * <li><p>CHECK_FAILED: The resource failed to be checked.</p>
+         * </li>
+         * <li><p>CHECK_COMPLETE: The resource is checked.</p>
+         * </li>
+         * <li><p>IMPORT_IN_PROGRESS: The resource import is in progress.</p>
+         * </li>
+         * <li><p>IMPORT_FAILED: The resource import failed.</p>
+         * </li>
+         * <li><p>IMPORT_COMPLETE: The resource import is complete.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +215,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason why the resource is in its current state.</p>
+         * <p>The reason for the resource status.</p>
          * 
          * <strong>example:</strong>
          * <p>state changed</p>
@@ -209,7 +224,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>The time when the resource was updated. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * <p>The time when the resource was last updated. The time is displayed in UTC+0 and follows the ISO 8601 standard. The time is in the YYYY-MM-DDThh:mm:ss format without the Z suffix.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-08-01T06:01:29</p>

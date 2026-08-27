@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The registration records of the resource.</p>
+     * <p>The list of resource registration records.</p>
      */
     @NameInMap("Registrations")
     public java.util.List<ListResourceTypeRegistrationsResponseBodyRegistrations> registrations;
@@ -76,7 +76,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
 
     public static class ListResourceTypeRegistrationsResponseBodyRegistrations extends TeaModel {
         /**
-         * <p>The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * <p>The time when the registration record was created. The time is displayed in UTC+0 based on the ISO 8601 standard but without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-02T07:28:35</p>
@@ -85,7 +85,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The entity type. Only Module may be returned.</p>
+         * <p>The entity type. Valid values: Module.</p>
          * 
          * <strong>example:</strong>
          * <p>Module</p>
@@ -94,7 +94,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The ID of the registration record.</p>
+         * <p>The registration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
@@ -112,11 +112,11 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The registration state. Valid values:</p>
+         * <p>The registration status. Valid values:</p>
          * <ul>
-         * <li>IN_PROGRESS: The registration is in progress.</li>
-         * <li>COMPLETE: The registration is successful.</li>
-         * <li>FAILED: The registration failed.</li>
+         * <li>IN_PROGRESS: In progress.</li>
+         * <li>COMPLETE: Succeeded.</li>
+         * <li>FAILED: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason for the state.</p>
+         * <p>The reason for the status.</p>
          * 
          * <strong>example:</strong>
          * <p>Module is created successfully</p>

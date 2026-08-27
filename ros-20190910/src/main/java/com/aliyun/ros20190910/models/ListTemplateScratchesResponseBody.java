@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTemplateScratchesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the resource scenario list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in a paged query. Settings for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D1C09606-C58B-558F-9B4E-5BF263D17D09</p>
@@ -38,7 +38,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     public java.util.List<ListTemplateScratchesResponseBodyTemplateScratches> templateScratches;
 
     /**
-     * <p>The total number of scenarios.</p>
+     * <p>The total number of resource scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -93,7 +93,32 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters extends TeaModel {
         /**
-         * <p>The parameter name.</p>
+         * <p>The parameter name. Valid values:</p>
+         * <ul>
+         * <li>AlbAddressIpVersion: the IP version of the ALB address.</li>
+         * <li>AlbAddressType: the ALB address type.</li>
+         * <li>AlbLoadBalancerEdition: the ALB load balancing edition.</li>
+         * <li>AlbZoneMappings: the ALB active zone mappings.</li>
+         * <li>RamAttachedPolicyReplication: RAM policy replication.</li>
+         * <li>DeletionPolicy: the delete policy.</li>
+         * <li>DisableNameUnique: specifies whether to disable name uniqueness.</li>
+         * <li>InstanceAmount: the number of instances.</li>
+         * <li>InstanceDataReplication: instance data replication.</li>
+         * <li>InstancePeriod: the instance epoch.</li>
+         * <li>InstancePeriodUnit: the instance epoch unit.</li>
+         * <li>NamePrefix: the name prefix.</li>
+         * <li>RamAttachedPolicyReplication: RAM attached policy replication.</li>
+         * <li>RegionId: the region ID.</li>
+         * <li>RegionIds: the list of region IDs.</li>
+         * <li>ResourceView: the resource view.</li>
+         * <li>ReuseStrategy: the reuse strategy.</li>
+         * <li>SlbListenerProtocols: the SLB listener protocols.</li>
+         * <li>TemplateType: the template type.</li>
+         * <li>VSwitchId: the vSwitch ID.</li>
+         * <li>VpcId: the VPC ID.</li>
+         * <li>ZoneId: the zone ID.</li>
+         * </ul>
+         * <p>This information is generated based on call logs and may be incomplete. Verify the information.</p>
          * 
          * <strong>example:</strong>
          * <p>DeletionPolicy</p>
@@ -135,7 +160,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesSourceResourceGroup extends TeaModel {
         /**
-         * <p>The ID of the source resource group.</p>
+         * <p>The source resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -144,7 +169,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource types for filtering resources.</p>
+         * <p>The resource type filter.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -183,7 +208,13 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>ALIYUN::ALB::LoadBalancer: Application Load Balancer (ALB) for load balancing.</li>
+         * <li>ALIYUN::ECS::Instance: Elastic Compute Service (ECS) instance.</li>
+         * <li>ALIYUN::RAM::Role: RAM role.</li>
+         * </ul>
+         * <p>This information is generated based on call logs and may be incomplete. Verify the information.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::ECS::VPC</p>
@@ -216,7 +247,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesSourceTag extends TeaModel {
         /**
-         * <p>The source tags.</p>
+         * <p>The source tag.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;: &quot;b&quot;}</p>
@@ -225,7 +256,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public java.util.Map<String, ?> resourceTags;
 
         /**
-         * <p>The resource types for filtering resources.</p>
+         * <p>The resource type filter.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -297,8 +328,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     public static class ListTemplateScratchesResponseBodyTemplateScratches extends TeaModel {
         /**
-         * <p>The time when the resource scenario was created.</p>
-         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the resource scenario was created. The time is displayed in UTC+0 and follows the ISO 8601 standard without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-07T08:06:44</p>
@@ -310,16 +340,23 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
          * <p>The description of the resource scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the scenario.</p>
+         * <p>纳管VPC资源。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The status code of the resource scenario that failed to be generated.</p>
+         * <p>The status code that indicates why the resource scenario failed to be generated. Valid values:</p>
+         * <ul>
+         * <li>InvalidZoneId: invalid zone ID.</li>
+         * <li>IncorrectInstanceStatus: the instance status does not support this operation.</li>
+         * <li>RecommendEmpty.DiskCategoryNotRecommended: the cloud disk category is unavailable.</li>
+         * <li>Forbidden.RAM: insufficient RAM permissions.</li>
+         * </ul>
          * <blockquote>
-         * <p> This parameter is returned only if the value of Status is GENERATE_FAILED.</p>
+         * <p>This parameter is returned only if Status is GENERATE_FAILED.</p>
          * </blockquote>
+         * <p>This information is generated based on call logs and may be incomplete. Verify the information.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidZoneId</p>
@@ -328,11 +365,14 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String failedCode;
 
         /**
-         * <p>The policy based on which the logical ID is generated. Valid values:</p>
+         * <p>The logical ID generation strategy. Valid values:</p>
          * <ul>
-         * <li>LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</li>
-         * <li>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</li>
-         * <li>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</li>
+         * <li><p>LongTypePrefixAndIndexSuffix (default): long type prefix with index suffix.</p>
+         * </li>
+         * <li><p>LongTypePrefixAndHashSuffix: long type prefix with hash suffix.</p>
+         * </li>
+         * <li><p>ShortTypePrefixAndHashSuffix: short type prefix with hash suffix.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -342,13 +382,13 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String logicalIdStrategy;
 
         /**
-         * <p>The preference parameters of the resource scenario.</p>
+         * <p>The configuration parameters of the resource scenario.</p>
          */
         @NameInMap("PreferenceParameters")
         public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters> preferenceParameters;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm4nxcvht4pmi</p>
@@ -375,7 +415,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public ListTemplateScratchesResponseBodyTemplateScratchesSourceTag sourceTag;
 
         /**
-         * <p>The state of the resource scenario.</p>
+         * <p>The status of the resource scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>GENERATE_COMPLETE</p>
@@ -386,7 +426,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         /**
          * <p>The reason why the resource scenario failed to be generated.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the value of Status is GENERATE_FAILED.</p>
+         * <p>This parameter is returned only if Status is GENERATE_FAILED.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -413,8 +453,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         /**
          * <p>The type of the resource scenario. Valid values:</p>
          * <ul>
-         * <li>ResourceImport: resource management</li>
-         * <li>ArchitectureReplication: resource replication</li>
+         * <li><p>ResourceImport: resource management.</p>
+         * </li>
+         * <li><p>ArchitectureReplication: resource replication.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -424,8 +466,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String templateScratchType;
 
         /**
-         * <p>The time when the resource scenario was updated.</p>
-         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the resource scenario was last updated. The time is displayed in UTC+0 and follows the ISO 8601 standard without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-07T08:06:44</p>

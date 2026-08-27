@@ -18,7 +18,7 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
      * <p>The description of the scenario.</p>
      * 
      * <strong>example:</strong>
-     * <p>The description of the scenario.</p>
+     * <p>Copy VPC resources.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -26,8 +26,10 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The execution mode. Valid values:</p>
      * <ul>
-     * <li>Async (default)</li>
-     * <li>Sync</li>
+     * <li><p>Async (default)</p>
+     * </li>
+     * <li><p>Sync</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.</p>
@@ -42,12 +44,15 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The policy based on which the logical ID is generated. Valid values:</p>
      * <ul>
-     * <li>LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</li>
-     * <li>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</li>
-     * <li>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</li>
+     * <li><p>LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
+     * </li>
+     * <li><p>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
+     * </li>
+     * <li><p>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set TemplateScratchType to ArchitectureDetection, the default value of LogicalIdStrategy is LongTypePrefixAndHashSuffix. In other cases, the default value of LogicalIdStrategy is LongTypePrefixAndIndexSuffix.</p>
+     * <p>If you set TemplateScratchType to ArchitectureDetection, the default value of LogicalIdStrategy is LongTypePrefixAndHashSuffix. In other cases, the default value of LogicalIdStrategy is LongTypePrefixAndIndexSuffix.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,7 +90,7 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The source resource group.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</p>
+     * <p>You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</p>
      * </blockquote>
      */
     @NameInMap("SourceResourceGroup")
@@ -94,7 +99,7 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The source resources.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</p>
+     * <p>You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</p>
      * </blockquote>
      */
     @NameInMap("SourceResources")
@@ -103,7 +108,7 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The source tag.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</p>
+     * <p>You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</p>
      * </blockquote>
      */
     @NameInMap("SourceTag")
@@ -113,7 +118,7 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
      * <p>The ID of the resource scenario.</p>
      * <p>The valid values of the ParameterKey and ParameterValue request parameters vary based on the IDs of different types of resource scenarios. For more information, see the &quot;Additional information about request parameters&quot; section of this topic.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/610832.html">ListTemplateScratches</a> operation to query the ID of a resource scenario.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/610832.html">ListTemplateScratches</a> operation to query the ID of a resource scenario.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

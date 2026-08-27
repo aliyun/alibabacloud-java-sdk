@@ -35,10 +35,14 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li>stack: stack</li>
-     * <li>stackgroup: stack group</li>
-     * <li>template: template</li>
-     * <li>templatescratch: scenario</li>
+     * <li><p>stack: stack</p>
+     * </li>
+     * <li><p>stackgroup: stack group</p>
+     * </li>
+     * <li><p>template: template</p>
+     * </li>
+     * <li><p>templatescratch: scenario</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -101,7 +105,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.\
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.<br>
          * The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +115,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.\
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.<br>
          * The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * 
          * <strong>example:</strong>

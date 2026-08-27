@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateTemplateResponseBody extends TeaModel {
     /**
-     * <p>The description of the template.</p>
+     * <p>The description of the stack template.</p>
      * 
      * <strong>example:</strong>
      * <p>No description</p>
@@ -14,13 +14,13 @@ public class ValidateTemplateResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The outputs of the template.</p>
+     * <p>The list of template outputs.</p>
      */
     @NameInMap("Outputs")
     public java.util.List<ValidateTemplateResponseBodyOutputs> outputs;
 
     /**
-     * <p>The parameters that are defined in the Parameters section of the template.</p>
+     * <p>The list of input parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<java.util.Map<String, ?>> parameters;
@@ -35,17 +35,19 @@ public class ValidateTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource types that are used in the template.</p>
+     * <p>The information about the resource types that are used in the template.</p>
      */
     @NameInMap("ResourceTypes")
     public ValidateTemplateResponseBodyResourceTypes resourceTypes;
 
     /**
-     * <p>The regular resources that are defined in the template.</p>
+     * <p>The list of regular resources that are defined in the template.</p>
      * <blockquote>
      * <ul>
-     * <li>For a Resource Orchestration Service (ROS) template, the resource whose definition contains <code>Count</code> is not displayed as a list.</li>
-     * <li>For a Terraform template, the resource whose definition contains <code>count</code> or <code>for_each</code> is not displayed as a list.</li>
+     * <li><p>For ROS templates, resources whose definitions contain the <code>Count</code> field are not expanded.</p>
+     * </li>
+     * <li><p>For Terraform templates, resources whose definitions contain <code>count</code> or <code>for_each</code> are not expanded.</p>
+     * </li>
      * </ul>
      * </blockquote>
      */
@@ -53,7 +55,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
     public java.util.List<ValidateTemplateResponseBodyResources> resources;
 
     /**
-     * <p>The information about the stack update. This parameter cannot be returned if the value of UpdateInfoOptions contains Disabled.</p>
+     * <p>The information about the stack update. This parameter is not returned if Disabled is specified for UpdateInfoOptions.</p>
      */
     @NameInMap("UpdateInfo")
     public ValidateTemplateResponseBodyUpdateInfo updateInfo;
@@ -180,13 +182,13 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
     public static class ValidateTemplateResponseBodyResourceTypes extends TeaModel {
         /**
-         * <p>The DataSource resource types that are used in the template. The value is deduplicated.</p>
+         * <p>The list of data source resource types. Duplicates are removed.</p>
          */
         @NameInMap("DataSources")
         public java.util.List<String> dataSources;
 
         /**
-         * <p>The regular resource types that are used in the template. The value is deduplicated.</p>
+         * <p>The list of regular resource types. Duplicates are removed.</p>
          */
         @NameInMap("Resources")
         public java.util.List<String> resources;
@@ -216,32 +218,43 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
     public static class ValidateTemplateResponseBodyResources extends TeaModel {
         /**
-         * <p>The pattern in which the logical IDs of regular resources are formed.</p>
-         * <p>If resources are defined in a ROS template, the following rules apply:</p>
+         * <p>The string pattern for the logical ID of the regular resource.</p>
+         * <p>For ROS templates, the following two cases exist:</p>
          * <ul>
-         * <li>Resource whose definition does not contain <code>Count</code>: If the resource name defined in the template is <code>server</code>, the values of LogicalResourceIdPattern and <code>ResourcePath</code> are both <code>server</code>.``</li>
-         * <li>Resource whose definition contains <code>Count</code>: If the resource name defined in the template is <code>server</code>, the value of LogicalResourceIdPattern is <code>server[*]</code>, and the value of <code>ResourcePath</code> is <code>server</code>.</li>
+         * <li><p>The resource definition does not contain the <code>Count</code> field: If the resource name defined in the template is <code>server</code>, the value of this parameter is <code>server</code>, and the value of <code>ResourcePath</code> is <code>server</code>.</p>
+         * </li>
+         * <li><p>The resource definition contains the <code>Count</code> field: If the resource name defined in the template is <code>server</code>, the value of this parameter is <code>server[*]</code>, and the value of <code>ResourcePath</code> is <code>server</code>.</p>
+         * </li>
          * </ul>
-         * <p>If resources and <a href="https://www.terraform.io/language/modules">modules</a> are defined in a Terraform template, the following rules apply:</p>
+         * <p>For resources and <a href="https://www.terraform.io/language/modules">modules</a> in Terraform templates, the following two cases exist:</p>
          * <ul>
-         * <li>Resource and module whose definitions do not contain <a href="https://www.terraform.io/language/meta-arguments/count"><code>count</code></a> or <a href="https://www.terraform.io/language/meta-arguments/for_each"><code>for_each</code></a>: If the resource name defined in the template is <code>server</code>, the values of LogicalResourceIdPattern and <code>ResourcePath</code> are both <code>server</code>.``</li>
-         * <li>Resource and module whose definitions contain <a href="https://www.terraform.io/language/meta-arguments/count"><code>count</code></a> or <a href="https://www.terraform.io/language/meta-arguments/for_each"><code>for_each</code></a>: If the resource name defined in the template is <code>server</code>, the value of LogicalResourceIdPattern is <code>server[*]</code>, and the value of <code>ResourcePath</code> is <code>server</code>.</li>
+         * <li><p>The definition does not contain <a href="https://www.terraform.io/language/meta-arguments/count"><code>count</code></a> or <a href="https://www.terraform.io/language/meta-arguments/for_each"><code>for_each</code></a>: If the name is <code>server</code>, the value of this parameter is <code>server</code>, and the value of <code>ResourcePath</code> is <code>server</code>.</p>
+         * </li>
+         * <li><p>The definition contains <a href="https://www.terraform.io/language/meta-arguments/count"><code>count</code></a> or <a href="https://www.terraform.io/language/meta-arguments/for_each"><code>for_each</code></a>: If the name is <code>server</code>, the value of this parameter is <code>server[*]</code>, and the value of <code>ResourcePath</code> is <code>server</code>.</p>
+         * </li>
          * </ul>
-         * <p>Examples of LogicalResourceIdPattern for resources in a Terraform template:</p>
+         * <p>The following examples show the values for Terraform templates:</p>
          * <ul>
-         * <li><p>Valid values of LogicalResourceIdPattern if a resource belongs to the root module:</p>
+         * <li><p>Resources in the root module:</p>
          * <ul>
-         * <li><code>server</code>: In this case, <code>count</code> and <code>for_each</code> are not contained in the resource. The value of <code>ResourcePath</code> is <code>server</code>.</li>
-         * <li><code>server[*]</code>: In this case, <code>count</code> or <code>for_each</code> is contained in the resource. The value of <code>ResourcePath</code> is <code>server</code>.</li>
+         * <li><p><code>server</code>: <code>count</code> and <code>for_each</code> are not used. The value of <code>ResourcePath</code> is <code>server</code>.</p>
+         * </li>
+         * <li><p><code>server[*]</code>: <code>count</code> or <code>for_each</code> is used. The value of <code>ResourcePath</code> is <code>server</code>.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Valid values of LogicalResourceIdPattern if a resource belongs to a child module:</p>
+         * <li><p>Resources in a child module:</p>
          * <ul>
-         * <li><code>app.server</code>: In this case, <code>count</code> and <code>for_each</code> are not contained in the <code>app</code> module and the <code>server</code> resource. The value of <code>ResourcePath</code> is <code>app.server</code>.````</li>
-         * <li><code>app.server[*]</code>: In this case, <code>count</code> or <code>for_each</code> is contained in the <code>server</code> resource, but <code>count</code> and <code>for_each</code> are not contained in the <code>app</code> module. The value of <code>ResourcePath</code> is <code>app.server</code>.</li>
-         * <li><code>app[*].server</code>: In this case, <code>count</code> or <code>for_each</code> is contained in the <code>app</code> module, but <code>count</code> and <code>for_each</code> are not contained in the <code>server</code> resource. The value of <code>ResourcePath</code> is <code>app.server</code>.</li>
-         * <li><code>app[*].server[*]</code>: In this case, <code>count</code> or <code>for_each</code> is contained in the <code>app</code> module and the <code>server</code> resource. The value of <code>ResourcePath</code> is <code>app.server</code>.````</li>
-         * <li><code>app.app_group[*].server</code>: In this case, <code>count</code> or <code>for_each</code> is contained in the <code>app_group</code> module, but <code>count</code> and <code>for_each</code> are not contained in the <code>app</code> module and the <code>server</code> resource. The value of <code>ResourcePath</code> is <code>app.app_group.server</code>. The <code>app_group</code> module is a child module of the <code>app</code> module.````</li>
+         * <li><p><code>app.server</code>: The <code>app</code> module does not use <code>count</code> or <code>for_each</code>, and the <code>server</code> resource does not use <code>count</code> or <code>for_each</code>. The value of <code>ResourcePath</code> is <code>app.server</code>.</p>
+         * </li>
+         * <li><p><code>app.server[*]</code>: The <code>app</code> module does not use <code>count</code> or <code>for_each</code>, but the <code>server</code> resource uses <code>count</code> or <code>for_each</code>. The value of <code>ResourcePath</code> is <code>app.server</code>.</p>
+         * </li>
+         * <li><p><code>app[*].server</code>: The <code>app</code> module uses <code>count</code> or <code>for_each</code>, but the <code>server</code> resource does not use <code>count</code> or <code>for_each</code>. The value of <code>ResourcePath</code> is <code>app.server</code>.</p>
+         * </li>
+         * <li><p><code>app[*].server[*]</code>: The <code>app</code> module uses <code>count</code> or <code>for_each</code>, and the <code>server</code> resource uses <code>count</code> or <code>for_each</code>. The value of <code>ResourcePath</code> is <code>app.server</code>.</p>
+         * </li>
+         * <li><p><code>app.app_group[*].server</code>: The <code>app</code> module does not use <code>count</code> or <code>for_each</code>, the <code>app_group</code> module uses <code>count</code> or <code>for_each</code> (the <code>app_group</code> module is a child module of the <code>app</code> module), and the <code>server</code> resource does not use <code>count</code> or <code>for_each</code>. The value of <code>ResourcePath</code> is <code>app.app_group.server</code>.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -253,7 +266,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
         public String logicalResourceIdPattern;
 
         /**
-         * <p>The path of the regular resource. In most cases, the path of a regular resource is the same as the resource name.</p>
+         * <p>The path of the regular resource. The path is usually the same as the resource name.</p>
          * 
          * <strong>example:</strong>
          * <p>server</p>
@@ -303,17 +316,19 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
     public static class ValidateTemplateResponseBodyUpdateInfo extends TeaModel {
         /**
-         * <p>The parameters that can be modified.</p>
+         * <p>The list of parameters that can be modified.</p>
          */
         @NameInMap("ParametersAllowedToBeModified")
         public java.util.List<String> parametersAllowedToBeModified;
 
         /**
-         * <p>The parameters whose changes cause service interruptions.</p>
+         * <p>The list of parameters that cause resource interruptions if they are modified.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is supported only for a small number of resource types.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li><p>This parameter is supported for only a few resource types.</p>
+         * </li>
+         * <li><p>This parameter is applicable only to ROS stacks.</p>
+         * </li>
          * </ul>
          * </blockquote>
          */
@@ -321,11 +336,13 @@ public class ValidateTemplateResponseBody extends TeaModel {
         public java.util.List<String> parametersCauseInterruptionIfModified;
 
         /**
-         * <p>The parameters whose changes trigger replacement updates for resources.</p>
+         * <p>The list of parameters that cause replacement updates if they are modified.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter can be returned only if the value of UpdateInfoOptions contains EnableReplacement.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li><p>This parameter is returned only if EnableReplacement is specified for UpdateInfoOptions.</p>
+         * </li>
+         * <li><p>This parameter is applicable only to ROS stacks.</p>
+         * </li>
          * </ul>
          * </blockquote>
          */
@@ -333,17 +350,19 @@ public class ValidateTemplateResponseBody extends TeaModel {
         public java.util.List<String> parametersCauseReplacementIfModified;
 
         /**
-         * <p>The parameters that can be modified under specific conditions.</p>
+         * <p>The list of parameters that may be allowed to be modified.</p>
          */
         @NameInMap("ParametersConditionallyAllowedToBeModified")
         public java.util.List<String> parametersConditionallyAllowedToBeModified;
 
         /**
-         * <p>The parameters whose changes cause service interruptions under specific conditions.</p>
+         * <p>The list of parameters that may cause resource interruptions if they are modified.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is supported only for a small number of resource types.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li><p>This parameter is supported for only a few resource types.</p>
+         * </li>
+         * <li><p>This parameter is applicable only to ROS stacks.</p>
+         * </li>
          * </ul>
          * </blockquote>
          */
@@ -351,11 +370,13 @@ public class ValidateTemplateResponseBody extends TeaModel {
         public java.util.List<String> parametersConditionallyCauseInterruptionIfModified;
 
         /**
-         * <p>The parameters whose changes trigger replacement updates for resources under specific conditions.</p>
+         * <p>The list of parameters that may cause replacement updates if they are modified.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter can be returned only if the value of UpdateInfoOptions contains EnableReplacement.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li><p>This parameter is returned only if EnableReplacement is specified for UpdateInfoOptions.</p>
+         * </li>
+         * <li><p>This parameter is applicable only to ROS stacks.</p>
+         * </li>
          * </ul>
          * </blockquote>
          */
@@ -363,23 +384,25 @@ public class ValidateTemplateResponseBody extends TeaModel {
         public java.util.List<String> parametersConditionallyCauseReplacementIfModified;
 
         /**
-         * <p>The parameters that cannot be modified.</p>
+         * <p>The list of parameters that cannot be modified.</p>
          */
         @NameInMap("ParametersNotAllowedToBeModified")
         public java.util.List<String> parametersNotAllowedToBeModified;
 
         /**
-         * <p>The parameters that can be modified under uncertain conditions.</p>
+         * <p>The list of parameters whose modification permissions are uncertain.</p>
          */
         @NameInMap("ParametersUncertainlyAllowedToBeModified")
         public java.util.List<String> parametersUncertainlyAllowedToBeModified;
 
         /**
-         * <p>The parameters whose changes cause service interruptions under uncertain conditions.</p>
+         * <p>The list of parameters that cause resource interruptions under uncertain conditions if they are modified.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is supported only for a small number of resource types.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li><p>This parameter is supported for only a few resource types.</p>
+         * </li>
+         * <li><p>This parameter is applicable only to ROS stacks.</p>
+         * </li>
          * </ul>
          * </blockquote>
          */
@@ -387,11 +410,13 @@ public class ValidateTemplateResponseBody extends TeaModel {
         public java.util.List<String> parametersUncertainlyCauseInterruptionIfModified;
 
         /**
-         * <p>The parameters whose changes trigger replacement updates for resources under uncertain conditions.</p>
+         * <p>The list of parameters that cause replacement updates under uncertain conditions if they are modified.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter can be returned only if the value of UpdateInfoOptions contains EnableReplacement.</li>
-         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * <li><p>This parameter is returned only if EnableReplacement is specified for UpdateInfoOptions.</p>
+         * </li>
+         * <li><p>This parameter is applicable only to ROS stacks.</p>
+         * </li>
          * </ul>
          * </blockquote>
          */

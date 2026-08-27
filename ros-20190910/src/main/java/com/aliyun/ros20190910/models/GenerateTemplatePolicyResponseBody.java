@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class GenerateTemplatePolicyResponseBody extends TeaModel {
     /**
-     * <p>The information about the policy.</p>
+     * <p>The access policy information.</p>
      */
     @NameInMap("Policy")
     public GenerateTemplatePolicyResponseBodyPolicy policy;
 
+    /**
+     * <p>The policy function configurations.</p>
+     */
     @NameInMap("PolicyFunctions")
     public java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctions> policyFunctions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
@@ -53,13 +56,13 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
 
     public static class GenerateTemplatePolicyResponseBodyPolicyStatement extends TeaModel {
         /**
-         * <p>The operations that are performed on the specified resource.</p>
+         * <p>The operation on the specific resource.</p>
          */
         @NameInMap("Action")
         public java.util.List<String> action;
 
         /**
-         * <p>The condition that is required for the policy to take effect.</p>
+         * <p>The condition for the authorization to take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -72,10 +75,12 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         public java.util.Map<String, ?> condition;
 
         /**
-         * <p>The effect of the statement. Valid values:</p>
+         * <p>The authorization effect. Valid values:  </p>
          * <ul>
-         * <li>Allow</li>
-         * <li>Deny</li>
+         * <li><p>Allow: Allowed.  </p>
+         * </li>
+         * <li><p>Deny: Denied.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,7 +90,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         public String effect;
 
         /**
-         * <p>The objects that the statement covers. An asterisk (\*) indicates all resources.</p>
+         * <p>The specific resource that is authorized. An asterisk (*) indicates all resources.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -136,7 +141,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
 
     public static class GenerateTemplatePolicyResponseBodyPolicy extends TeaModel {
         /**
-         * <p>The statements that are contained in the policy.</p>
+         * <p>The access policy statement details.</p>
          */
         @NameInMap("Statement")
         public java.util.List<GenerateTemplatePolicyResponseBodyPolicyStatement> statement;
@@ -174,15 +179,33 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
     }
 
     public static class GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions extends TeaModel {
+        /**
+         * <p>The function in the policy function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>notContains</p>
+         */
         @NameInMap("Function")
         public String function;
 
+        /**
+         * <p>The operation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateStack</p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <p>The list of related properties.</p>
+         */
         @NameInMap("RelatedProperties")
         public java.util.List<String> relatedProperties;
 
+        /**
+         * <p>The requirement level of the function.</p>
+         */
         @NameInMap("RequirementLevel")
         public String requirementLevel;
 
@@ -226,12 +249,27 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
     }
 
     public static class GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions extends TeaModel {
+        /**
+         * <p>The policy function list.</p>
+         */
         @NameInMap("Functions")
         public java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions> functions;
 
+        /**
+         * <p>The logical resource ID of the policy function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLBLoadBalancer_00001</p>
+         */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        /**
+         * <p>The resource type associated with the policy function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stack</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -267,12 +305,24 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
     }
 
     public static class GenerateTemplatePolicyResponseBodyPolicyFunctions extends TeaModel {
+        /**
+         * <p>The action in the policy function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accept</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The policy function list.</p>
+         */
         @NameInMap("ActionPolicyFunctions")
         public java.util.List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions> actionPolicyFunctions;
 
+        /**
+         * <p>The requirement level of the policy function.</p>
+         */
         @NameInMap("RequirementLevel")
         public String requirementLevel;
 

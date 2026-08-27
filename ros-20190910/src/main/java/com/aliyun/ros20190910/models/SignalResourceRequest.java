@@ -48,9 +48,12 @@ public class SignalResourceRequest extends TeaModel {
     /**
      * <p>The status of the signal. Failure signals can cause stack creation or update to fail. If all signals are warnings, the stack cannot be created or updated. Valid values:</p>
      * <ul>
-     * <li>SUCCESS</li>
-     * <li>FAILURE</li>
-     * <li>WARNING</li>
+     * <li><p>SUCCESS</p>
+     * </li>
+     * <li><p>FAILURE</p>
+     * </li>
+     * <li><p>WARNING</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

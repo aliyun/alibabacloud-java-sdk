@@ -199,11 +199,16 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
          * <p>The drift detection state.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>COMPLETED: Drift detection is performed on the stack group and all stack instances passed the drift detection.</li>
-         * <li>FAILED: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection exceeds the specified threshold.</li>
-         * <li>PARTIAL_SUCCESS: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection does not exceed the specified threshold.</li>
-         * <li>IN_PROGRESS: Drift detection is being performed on the stack group.</li>
-         * <li>STOPPED: Drift detection is canceled for the stack group.</li>
+         * <li><p>COMPLETED: Drift detection is performed on the stack group and all stack instances passed the drift detection.</p>
+         * </li>
+         * <li><p>FAILED: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection exceeds the specified threshold.</p>
+         * </li>
+         * <li><p>PARTIAL_SUCCESS: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection does not exceed the specified threshold.</p>
+         * </li>
+         * <li><p>IN_PROGRESS: Drift detection is being performed on the stack group.</p>
+         * </li>
+         * <li><p>STOPPED: Drift detection is canceled for the stack group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,9 +266,12 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
          * <p>The drift state of the stack group.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>DRIFTED: At least one stack instance in the stack group has drifted.</li>
-         * <li>NOT_CHECKED: No successful drift detection is performed in the stack group.</li>
-         * <li>IN_SYNC: All the stack instances in the stack group are being synchronized.</li>
+         * <li><p>DRIFTED: At least one stack instance in the stack group has drifted.</p>
+         * </li>
+         * <li><p>NOT_CHECKED: No successful drift detection is performed in the stack group.</p>
+         * </li>
+         * <li><p>IN_SYNC: All the stack instances in the stack group are being synchronized.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -365,10 +373,14 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
          * <p>The operation type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>CREATE</li>
-         * <li>UPDATE</li>
-         * <li>DELETE</li>
-         * <li>DETECT_DRIFT</li>
+         * <li><p>CREATE</p>
+         * </li>
+         * <li><p>UPDATE</p>
+         * </li>
+         * <li><p>DELETE</p>
+         * </li>
+         * <li><p>DETECT_DRIFT</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -450,8 +462,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
          * <p>Indicates whether stacks are retained when the associated stack instances are deleted. When you delete a stack instance, you can choose to delete or retain the stack with which the stack instance is associated.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: Stacks are retained when the associated stack instances are deleted.</li>
-         * <li>false: Stacks are deleted when the associated stack instances are deleted. Proceed with caution.</li>
+         * <li><p>true: Stacks are retained when the associated stack instances are deleted.</p>
+         * </li>
+         * <li><p>false: Stacks are deleted when the associated stack instances are deleted. Proceed with caution.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>This parameter is returned only if you delete stack instances.</p>
@@ -494,11 +508,16 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
          * <p>The state of the operation.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>RUNNING</li>
-         * <li>SUCCEEDED</li>
-         * <li>FAILED</li>
-         * <li>STOPPING</li>
-         * <li>STOPPED</li>
+         * <li><p>RUNNING</p>
+         * </li>
+         * <li><p>SUCCEEDED</p>
+         * </li>
+         * <li><p>FAILED</p>
+         * </li>
+         * <li><p>STOPPING</p>
+         * </li>
+         * <li><p>STOPPED</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -11,7 +11,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
     public java.util.List<ListChangeSetsResponseBodyChangeSets> changeSets;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number in paging query. The value is an integer with a minimum value of 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
@@ -92,9 +92,21 @@ public class ListChangeSetsResponseBody extends TeaModel {
     }
 
     public static class ListChangeSetsResponseBodyChangeSetsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usage</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -141,7 +153,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         public String changeSetName;
 
         /**
-         * <p>The type of the change set.</p>
+         * <p>The type of the change set. Valid values: CREATE, UPDATE, and DELETE.</p>
          * 
          * <strong>example:</strong>
          * <p>UPDATE</p>
@@ -150,7 +162,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         public String changeSetType;
 
         /**
-         * <p>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the change set was created. The time is displayed in UTC+0 based on the ISO 8601 standard without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-08-01T05:16:31</p>
@@ -177,7 +189,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         public String executionStatus;
 
         /**
-         * <p>The region ID of the change set.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -185,11 +197,17 @@ public class ListChangeSetsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resource group ID.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the stack with which the change set is associated.</p>
+         * <p>The ID of the stack to which the change set belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
@@ -198,7 +216,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         public String stackId;
 
         /**
-         * <p>The name of the stack with which the change set is associated.</p>
+         * <p>The name of the stack to which the change set belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>MyStack</p>
@@ -216,7 +234,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason why the change set is in its current state.</p>
+         * <p>The reason why the change set is in its current status.</p>
          * 
          * <strong>example:</strong>
          * <p>too many changes</p>
@@ -224,6 +242,9 @@ public class ListChangeSetsResponseBody extends TeaModel {
         @NameInMap("StatusReason")
         public String statusReason;
 
+        /**
+         * <p>The tags of the change set.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListChangeSetsResponseBodyChangeSetsTags> tags;
 

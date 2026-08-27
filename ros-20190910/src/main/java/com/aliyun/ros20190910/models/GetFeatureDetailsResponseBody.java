@@ -342,8 +342,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the resource scope can be specified by source resource group. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -355,8 +357,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the resource scope can be specified by source resource. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -368,8 +372,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the resource scope can be specified by source tag, resource group, or resource. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -381,8 +387,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the resource scope can be specified by source tag. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

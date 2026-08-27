@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -14,7 +14,7 @@ public class ListTagKeysRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the tag key. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,12 +24,16 @@ public class ListTagKeysRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>stack: stack</li>
-     * <li>stackgroup: stack group</li>
-     * <li>template: template</li>
-     * <li>templatescratch: scenario</li>
+     * <li><p>stack: stack.</p>
+     * </li>
+     * <li><p>stackgroup: stack group.</p>
+     * </li>
+     * <li><p>template: template.</p>
+     * </li>
+     * <li><p>templatescratch: resource scenario.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

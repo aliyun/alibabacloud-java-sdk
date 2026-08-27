@@ -36,10 +36,14 @@ public class ListTagValuesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li>stack: stack</li>
-     * <li>stackgroup: stack group</li>
-     * <li>template: template</li>
-     * <li>templatescratch: scenario</li>
+     * <li><p>stack: stack</p>
+     * </li>
+     * <li><p>stackgroup: stack group</p>
+     * </li>
+     * <li><p>template: template</p>
+     * </li>
+     * <li><p>templatescratch: scenario</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

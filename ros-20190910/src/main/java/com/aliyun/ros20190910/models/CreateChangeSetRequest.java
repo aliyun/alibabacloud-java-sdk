@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateChangeSetRequest extends TeaModel {
     /**
-     * <p>The name of the change set.\
-     * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or a letter.</p>
+     * <p>The change set name. Maximum length: 255 characters. The name can contain digits, letters, hyphens (-), and underscores (_), and must start with a digit or letter.</p>
      * <blockquote>
-     * <p>Make sure that the name is unique among all names of change sets that are associated with the specified stack.</p>
+     * <p>The name of the change set must be unique within the stack.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -21,19 +20,22 @@ public class CreateChangeSetRequest extends TeaModel {
     /**
      * <p>The type of the change set. Valid values:</p>
      * <ul>
-     * <li>CREATE: creates a change set for a new stack.</li>
-     * <li>UPDATE (default): creates a change set for an existing stack.</li>
-     * <li>IMPORT: creates a change set for a new stack or an existing stack to import resources that are not managed by ROS.</li>
+     * <li><p>CREATE: creates a change set for a new stack.</p>
+     * </li>
+     * <li><p>UPDATE (default): creates a change set for an existing stack.</p>
+     * </li>
+     * <li><p>IMPORT: creates a change set for a new stack or an existing stack to import resources that are not managed by ROS.</p>
+     * </li>
      * </ul>
-     * <p>If you set ChangeSetType to CREATE, ROS creates a stack. The stack remains in the <code>REVIEW_IN_PROGRESS</code> state until you execute the change set.</p>
+     * <p>If you set the value of ChangeSetType to CREATE, ROS creates a new stack. The stack is in the <code>REVIEW_IN_PROGRESS</code> state until you execute the change set.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You cannot set ChangeSetType to UPDATE when you create a change set for a new stack. You cannot set ChangeSetType to CREATE when you create a change set for an existing stack.</p>
+     * <li><p>You cannot use the UPDATE type to create a change set for a new stack or the CREATE type to create a change set for an existing stack.</p>
      * </li>
-     * <li><p>If you set ChangeSetType to Import, you cannot configure a stack policy. You can specify ChangeSetType only when you create or update a stack.</p>
+     * <li><p>You cannot set a stack policy for a change set of the IMPORT type. You can set a stack policy when you create or update a stack.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>UPDATE</p>
@@ -42,9 +44,7 @@ public class CreateChangeSetRequest extends TeaModel {
     public String changeSetType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.\
-     * The token can contain letters, digits, hyphens (-), and underscores (_) and cannot exceed 64 characters in length.\
-     * For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+     * <p>The client token used to ensure request idempotence. The token must be unique across requests and can be up to 64 characters in length, containing letters, digits, hyphens (-), and underscores (_). <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -62,14 +62,15 @@ public class CreateChangeSetRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to disable rollback when the stack fails to be created.\
-     * Valid values:</p>
+     * <p>Specifies whether to disable rollback on stack creation failure. Valid values:</p>
      * <ul>
-     * <li>true: disables rollback for the stack when the stack fails to be created.</li>
-     * <li>false (default): enables rollback for the stack when the stack fails to be created.</li>
+     * <li><p>true: disables rollback on creation failure.</p>
+     * </li>
+     * <li><p>false (default): enables rollback on creation failure.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only if you set ChangeSetType to CREATE or IMPORT.</p>
+     * <p>This parameter takes effect only when ChangeSetType is set to CREATE or IMPORT.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,7 +80,7 @@ public class CreateChangeSetRequest extends TeaModel {
     public Boolean disableRollback;
 
     /**
-     * <p>The callback URLs that are used to receive stack events.</p>
+     * <p>The list of webhook addresses for receiving stack event notifications.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://my-site.com/ros-notify">http://my-site.com/ros-notify</a></p>
@@ -88,20 +89,25 @@ public class CreateChangeSetRequest extends TeaModel {
     public java.util.List<String> notificationURLs;
 
     /**
-     * <p>The maximum number of concurrent operations that can be performed on resources. By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0. If you set this parameter to a specific value, ROS associates the value with the stack. The value can affect subsequent operations on the stack.</p>
-     * <p>This parameter takes effect only if you set ChangeSetType to CREATE or UPDATE.</p>
+     * <p>The maximum number of concurrent resource operations. By default, this value is empty. Once set, the value is associated with the stack and affects subsequent operations.</p>
+     * <p>This parameter takes effect only when ChangeSetType is set to CREATE or UPDATE. Valid values:</p>
      * <ul>
-     * <li><p>Valid values for change sets of the CREATE type:</p>
+     * <li><p>If ChangeSetType is set to CREATE</p>
      * <ul>
-     * <li>If you set this parameter to an integer that is greater than 0, the integer is used.</li>
-     * <li>If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</li>
+     * <li><p>If you set this parameter to an integer that is greater than 0, the integer is used.</p>
+     * </li>
+     * <li><p>If you set this parameter to 0 or do not set this parameter, no limit is imposed on ROS stacks. For Terraform stacks, the default value of Terraform is used, which is 10.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>Valid values for change sets of the UPDATE type:</p>
+     * <li><p>If ChangeSetType is set to UPDATE</p>
      * <ul>
-     * <li>If you set this parameter to an integer that is greater than 0, the integer is used.</li>
-     * <li>If you set this parameter to 0, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</li>
-     * <li>If you leave this parameter empty, the value that you specified for this parameter in the previous request is used. If you left this parameter empty in the previous request, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</li>
+     * <li><p>If you set this parameter to an integer that is greater than 0, the integer is used.</p>
+     * </li>
+     * <li><p>If you set this parameter to 0, no limit is imposed on ROS stacks. For Terraform stacks, the default value of Terraform is used, which is 10.</p>
+     * </li>
+     * <li><p>If you do not set this parameter, the value that you specified in the previous operation is used. If you did not set this parameter in the previous operation, no limit is imposed on ROS stacks. For Terraform stacks, the default value of Terraform is used, which is 10.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -119,11 +125,8 @@ public class CreateChangeSetRequest extends TeaModel {
     public java.util.List<CreateChangeSetRequestParameters> parameters;
 
     /**
-     * <p>The name of the Resource Access Management (RAM) role. ROS assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
-     * ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack, ROS assumes the RAM role even if you do not have permissions to use the RAM role. You must make sure that permissions are granted to the RAM role based on the principle of least privilege.\
-     * If you do not specify this parameter, ROS assumes the existing role of the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\
-     * The RAM role name can be up to 64 characters in length.</p>
-     * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/2568025.html">Use a stack role</a>.</p>
+     * <p>The RAM role name. ROS assumes this role to call Alibaba Cloud service APIs and always uses it for all stack operations. If you lack the required permissions, ROS assumes the role specified by RamRoleName. If unspecified, ROS uses the existing stack role. If no role is available, ROS uses a temporary credential from your account. Maximum length: 64 bytes.</p>
+     * <p><a href="https://help.aliyun.com/document_detail/2568025.html">Stack roles</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>test-role</p>
@@ -133,7 +136,7 @@ public class CreateChangeSetRequest extends TeaModel {
 
     /**
      * <p>The region ID of the change set.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,13 +146,15 @@ public class CreateChangeSetRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to enable replacement update if a resource property is changed and you cannot modify the new resource property. For a change, the physical ID of the resource remains unchanged. For a replacement update, the existing resource is deleted, a new resource is created, and the physical ID of the resource is changed. Valid values:</p>
+     * <p>Specifies whether to enable replacement update when a resource property change does not support modification updates. A replacement update deletes the existing resource and creates a new one with a new physical ID. Valid values:</p>
      * <ul>
-     * <li>Enabled</li>
-     * <li>Disabled (default)</li>
+     * <li><p>Enabled: enables replacement update.</p>
+     * </li>
+     * <li><p>Disabled (default): disables replacement update.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Operations that you perform to modify the resource properties for an update take precedence over operations you perform to replace the resource properties for an update. This parameter takes effect only if you set ChangeSetType to UPDATE.</p>
+     * <p>Modification updates are preferentially used. This parameter takes effect only when ChangeSetType is set to UPDATE.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -158,20 +163,25 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("ReplacementOption")
     public String replacementOption;
 
+    /**
+     * <p>The resource group ID. If unspecified, the stack is added to the default resource group. <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The resources that you want to import to the stack.</p>
+     * <p>The list of resources to be imported.</p>
      */
     @NameInMap("ResourcesToImport")
     public java.util.List<CreateChangeSetRequestResourcesToImport> resourcesToImport;
 
     /**
-     * <p>The ID of the stack for which you want to create the change set. ROS compares the stack information with the information that you submit, such as an updated template or parameter value, to generate the change set.\
-     * You can call the <a href="https://help.aliyun.com/document_detail/610818.html">ListStacks</a> operation to query the stack ID.</p>
+     * <p>The stack ID. ROS compares the stack information with the submitted changes, such as a modified template or different parameter values, to generate the change set. Call <a href="https://help.aliyun.com/document_detail/610818.html">ListStacks</a> to query stack IDs.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when ChangeSetType is set to UPDATE or IMPORT.</p>
+     * <p>This parameter takes effect only when ChangeSetType is set to UPDATE or IMPORT.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -181,10 +191,9 @@ public class CreateChangeSetRequest extends TeaModel {
     public String stackId;
 
     /**
-     * <p>The name of the stack for which you want to create the change set.\
-     * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or a letter.</p>
+     * <p>The stack name. Maximum length: 255 characters. The name can contain digits, letters, hyphens (-), and underscores (_), and must start with a digit or letter.</p>
      * <blockquote>
-     * <p>This parameter takes effect only if you set ChangeSetType to CREATE or IMPORT.</p>
+     * <p>This parameter takes effect only when ChangeSetType is set to CREATE or IMPORT.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -194,14 +203,18 @@ public class CreateChangeSetRequest extends TeaModel {
     public String stackName;
 
     /**
-     * <p>The structure that contains the stack policy body. The policy body must be 1 to 16,384 bytes in length.</p>
-     * <p>If you set ChangeSetType to <strong>CREATE</strong>, you can specify StackPolicyBody or StackPolicyURL.</p>
-     * <p>If you set ChangeSetType to <strong>UPDATE</strong>, you can specify only one of the following parameters:</p>
+     * <p>The structure of the stack policy. The policy body must be 1 to 16,384 bytes in length.</p>
+     * <p>When ChangeSetType is set to <strong>CREATE</strong>, you can specify only one of the StackPolicyBody and StackPolicyURL parameters.</p>
+     * <p>When ChangeSetType is set to <strong>UPDATE</strong>, you can specify only one of the following parameters:</p>
      * <ul>
-     * <li>StackPolicyBody</li>
-     * <li>StackPolicyURL</li>
-     * <li>StackPolicyDuringUpdateBody</li>
-     * <li>StackPolicyDuringUpdateURL</li>
+     * <li><p>StackPolicyBody</p>
+     * </li>
+     * <li><p>StackPolicyURL</p>
+     * </li>
+     * <li><p>StackPolicyDuringUpdateBody</p>
+     * </li>
+     * <li><p>StackPolicyDuringUpdateURL</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -211,14 +224,16 @@ public class CreateChangeSetRequest extends TeaModel {
     public String stackPolicyBody;
 
     /**
-     * <p>The structure of the temporary overriding stack policy. The policy body must be 1 to 16,384 bytes in length.\
-     * If you need to update protected resources, specify a temporary overriding stack policy for the resources during the update. If you do not specify a temporary overriding stack policy, the existing stack policy that is associated with the stack is used.\
-     * This parameter takes effect only if you set ChangeSetType to UPDATE. You can specify only one of the following parameters:</p>
+     * <p>The temporary overriding stack policy body. Length: 1 to 16,384 bytes. To update protected resources, specify a temporary overriding policy. If unspecified, the current stack policy applies. This parameter takes effect only when ChangeSetType is set to UPDATE. You can specify only one of the following parameters:</p>
      * <ul>
-     * <li>StackPolicyBody</li>
-     * <li>StackPolicyURL</li>
-     * <li>StackPolicyDuringUpdateBody</li>
-     * <li>StackPolicyDuringUpdateURL</li>
+     * <li><p>StackPolicyBody</p>
+     * </li>
+     * <li><p>StackPolicyURL</p>
+     * </li>
+     * <li><p>StackPolicyDuringUpdateBody</p>
+     * </li>
+     * <li><p>StackPolicyDuringUpdateURL</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -228,17 +243,20 @@ public class CreateChangeSetRequest extends TeaModel {
     public String stackPolicyDuringUpdateBody;
 
     /**
-     * <p>The URL of the stack policy based on which the stack is updated. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length.</p>
+     * <p>The URL of the temporary overriding stack policy file. The URL must point to a policy on a web server (HTTP or HTTPS) or in an OSS bucket, such as oss\://ros/stack-policy/demo or oss\://ros/stack-policy/demo?RegionId=cn-hangzhou. Maximum policy file size: 16,384 bytes.</p>
      * <blockquote>
      * <p>If you do not specify the region of the OSS bucket, the value of RegionId is used.</p>
      * </blockquote>
-     * <p>The URL can be up to 1,350 bytes in length.\
-     * If you need to update protected resources, specify a temporary overriding stack policy for the resources during the update. If you do not specify a stack policy, the existing policy that is associated with the stack is used. This parameter takes effect only if you set ChangeSetType to UPDATE. You can specify only one of the following parameters:</p>
+     * <p>Maximum URL length: 1,350 bytes. To update protected resources, specify a temporary overriding stack policy. If unspecified, the current stack policy applies. This parameter takes effect only when ChangeSetType is set to UPDATE. You can specify only one of the following parameters:</p>
      * <ul>
-     * <li>StackPolicyBody</li>
-     * <li>StackPolicyURL</li>
-     * <li>StackPolicyDuringUpdateBody</li>
-     * <li>StackPolicyDuringUpdateURL</li>
+     * <li><p>StackPolicyBody</p>
+     * </li>
+     * <li><p>StackPolicyURL</p>
+     * </li>
+     * <li><p>StackPolicyDuringUpdateBody</p>
+     * </li>
+     * <li><p>StackPolicyDuringUpdateURL</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -248,18 +266,22 @@ public class CreateChangeSetRequest extends TeaModel {
     public String stackPolicyDuringUpdateURL;
 
     /**
-     * <p>The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length.</p>
-     * <p>The URL can be up to 1,350 bytes in length.</p>
+     * <p>The URL of the stack policy file. The URL must point to a policy on a web server (HTTP or HTTPS) or in an OSS bucket, such as oss\://ros/stack-policy/demo or oss\://ros/stack-policy/demo?RegionId=cn-hangzhou. Maximum policy file size: 16,384 bytes.</p>
+     * <p>Maximum URL length: 1,350 bytes.</p>
      * <blockquote>
-     * <p> If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+     * <p>If you do not specify the region of the OSS bucket, the value of RegionId is used.</p>
      * </blockquote>
-     * <p>If you set ChangeSetType to <strong>CREATE</strong>, you can specify StackPolicyBody or StackPolicyURL.</p>
-     * <p>If you set ChangeSetType to <strong>UPDATE</strong>, you can specify only one of the following parameters:</p>
+     * <p>When ChangeSetType is set to <strong>CREATE</strong>, you can specify only one of the StackPolicyBody and StackPolicyURL parameters.</p>
+     * <p>When ChangeSetType is set to <strong>UPDATE</strong>, you can specify only one of the following parameters:</p>
      * <ul>
-     * <li>StackPolicyBody</li>
-     * <li>StackPolicyURL</li>
-     * <li>StackPolicyDuringUpdateBody</li>
-     * <li>StackPolicyDuringUpdateURL</li>
+     * <li><p>StackPolicyBody</p>
+     * </li>
+     * <li><p>StackPolicyURL</p>
+     * </li>
+     * <li><p>StackPolicyDuringUpdateBody</p>
+     * </li>
+     * <li><p>StackPolicyDuringUpdateURL</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -268,16 +290,22 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
 
+    /**
+     * <p>The tags of the change set.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateChangeSetRequestTags> tags;
 
+    /**
+     * <p>The list of resources to be marked as dirty.</p>
+     */
     @NameInMap("TaintResources")
     public java.util.List<String> taintResources;
 
     /**
-     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
+     * <p>The template body. Length: 1 to 524,288 bytes. For large templates, use HTTP POST with a body parameter to avoid URL length limits.</p>
      * <blockquote>
-     * <p> You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <p>You can specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -288,9 +316,9 @@ public class CreateChangeSetRequest extends TeaModel {
 
     /**
      * <p>The template ID. This parameter applies to shared templates and private templates.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/610842.html">ListTemplates</a> operation to query the template ID.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/610842.html">ListTemplates</a> to query template IDs.</p>
      * <blockquote>
-     * <p> You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <p>You can specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -300,10 +328,10 @@ public class CreateChangeSetRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The ID of the resource scenario. In this example, this parameter specifies the ID of a resource management scenario.</p>
-     * <p>This parameter takes effect only when ChangeSetType is set to IMPORT. TemplateScratchId is supported only when you import resources to create a new stack.</p>
-     * <p>If you want to use a resource management scenario to import resources, you can specify only TemplateScratchId rather than configuring parameters related to templates.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/610832.html">ListTemplateScratches</a> operation to query the ID of the resource management scenario.</p>
+     * <p>The resource scenario ID, which is the resource management scenario ID.</p>
+     * <p>This parameter takes effect only when ChangeSetType is set to IMPORT. This parameter supports only the creation of new stacks for resource import.</p>
+     * <p>If you want to import resources in a resource management scenario, specify only this parameter. Do not specify parameters related to templates.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/610832.html">ListTemplateScratches</a> to query scenario IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
@@ -312,11 +340,11 @@ public class CreateChangeSetRequest extends TeaModel {
     public String templateScratchId;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</p>
+     * <p>The URL of the template file. The URL must point to a template on a web server (HTTP or HTTPS) or in an OSS bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. Maximum template body size: 524,288 bytes.</p>
      * <blockquote>
      * <p>If you do not specify the region of the OSS bucket, the value of RegionId is used.</p>
      * </blockquote>
-     * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <p>You can specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</p>
      * <p>The URL can be up to 1,024 bytes in length.</p>
      * 
      * <strong>example:</strong>
@@ -328,7 +356,7 @@ public class CreateChangeSetRequest extends TeaModel {
     /**
      * <p>The version of the template.</p>
      * <blockquote>
-     * <p>This parameter takes effect only if you specify TemplateId.</p>
+     * <p>This parameter takes effect only when TemplateId is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -338,12 +366,14 @@ public class CreateChangeSetRequest extends TeaModel {
     public String templateVersion;
 
     /**
-     * <p>The amount of time that can elapse before the stack enters the CREATE_FAILED or UPDATE_FAILED state.\
-     * If you set ChangeSetType to CREATE, this parameter is required. If you set ChangeSetType to UPDATE, this parameter is optional.</p>
+     * <p>The timeout period before the stack enters CREATE_FAILED or UPDATE_FAILED state. Required when ChangeSetType is CREATE. Optional when ChangeSetType is UPDATE.</p>
      * <ul>
-     * <li>Unit: minutes.</li>
-     * <li>Valid values: 10 to 1440.</li>
-     * <li>Default value: 60.</li>
+     * <li><p>Unit: minutes.</p>
+     * </li>
+     * <li><p>Valid values: 10 to 1440.</p>
+     * </li>
+     * <li><p>Default value: 60.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -353,13 +383,15 @@ public class CreateChangeSetRequest extends TeaModel {
     public Long timeoutInMinutes;
 
     /**
-     * <p>Specifies whether to use the values that were passed last time for the parameters that you do not specify in the current request. Valid values:</p>
+     * <p>Specifies whether to use the values of parameters that were last used. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only if you set ChangeSetType to UPDATE or IMPORT.</p>
+     * <p>This parameter takes effect only when ChangeSetType is set to UPDATE or IMPORT.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -599,9 +631,9 @@ public class CreateChangeSetRequest extends TeaModel {
 
     public static class CreateChangeSetRequestParameters extends TeaModel {
         /**
-         * <p>The key of parameter N that is defined in the template. If you do not specify the key and value of a parameter, ROS uses the default name and value that are defined in the template. Maximum value of N: 200.</p>
+         * <p>The name of the parameter that is defined in the template. If you do not specify the name and value of a parameter, ROS uses the default name and value that are specified in the template. The value of N can be up to 200.</p>
          * <blockquote>
-         * <p> Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.</p>
+         * <p>The Parameters parameter is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -612,9 +644,9 @@ public class CreateChangeSetRequest extends TeaModel {
         public String parameterKey;
 
         /**
-         * <p>The value of parameter N that is defined in the template. Maximum value of N: 200.</p>
+         * <p>The value of the parameter that is defined in the template. The value of N can be up to 200.</p>
          * <blockquote>
-         * <p> Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.</p>
+         * <p>The Parameters parameter is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -649,9 +681,9 @@ public class CreateChangeSetRequest extends TeaModel {
 
     public static class CreateChangeSetRequestResourcesToImport extends TeaModel {
         /**
-         * <p>The logical ID of resource N. The logical ID is the name of the resource defined in the template.</p>
+         * <p>The logical ID of the resource. The logical ID is the resource name that is defined in the template.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when ChangeSetType is set to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must specify ResourcesToImport.N.LogicalResourceId.</p>
+         * <p>This parameter takes effect only when ChangeSetType is set to IMPORT. The ResourcesToImport parameter is optional. If you specify ResourcesToImport, you must also specify ResourcesToImport.N.LogicalResourceId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -661,11 +693,10 @@ public class CreateChangeSetRequest extends TeaModel {
         public String logicalResourceId;
 
         /**
-         * <p>The key-value mapping between strings. The key-value mapping is used to identify resource N that you want to import. The key-value mapping must be a JSON string.\
-         * A key is an identifier property of a resource and a value is the property value. For example, the key of the ALIYUN::ECS::VPC resource is VpcId and the value is <code>vpc-2zevx9ios****</code>.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/172485.html">GetTemplateSummary</a> operation to query the identifier property of the resource.</p>
+         * <p>A key-value mapping between strings. The value is a JSON string that is used to identify the resource to be imported. The key is the identifier property of the resource, such as the VpcId of an ALIYUN::ECS::VPC resource. The value is the value of the property, such as <code>vpc-2zevx9ios****</code>.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/172485.html">GetTemplateSummary</a> to query resource identifier properties.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when ChangeSetType is set to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must specify ResourcesToImport.N.ResourceIdentifier.</p>
+         * <p>This parameter takes effect only when ChangeSetType is set to IMPORT. The ResourcesToImport parameter is optional. If you specify ResourcesToImport, you must also specify ResourcesToImport.N.ResourceIdentifier.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -675,9 +706,9 @@ public class CreateChangeSetRequest extends TeaModel {
         public String resourceIdentifier;
 
         /**
-         * <p>The type of resource N. The resource type must be the same as the resource type that is defined in the template.</p>
+         * <p>The type of the resource. The resource type must be the same as the resource type that is defined in the template.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when ChangeSetType is set to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must specify ResourcesToImport.N.ResourceType.</p>
+         * <p>This parameter takes effect only when ChangeSetType is set to IMPORT. The ResourcesToImport parameter is optional. If you specify ResourcesToImport, you must also specify ResourcesToImport.N.ResourceType.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -718,9 +749,34 @@ public class CreateChangeSetRequest extends TeaModel {
     }
 
     public static class CreateChangeSetRequestTags extends TeaModel {
+        /**
+         * <p>The tag key of the stack.</p>
+         * <p>The value of N can be from 1 to 20.</p>
+         * <blockquote>
+         * <ul>
+         * <li><p>The Tags parameter is optional. If you specify Tags, you must also specify Tags.N.Key.</p>
+         * </li>
+         * <li><p>The tag is propagated to each stack resource that supports tags. <a href="https://help.aliyun.com/document_detail/201421.html">Propagate tags</a>.</p>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>usage</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the stack.</p>
+         * <p>The value of N can be from 1 to 20.</p>
+         * <blockquote>
+         * <p>The tag is propagated to each stack resource that supports tags. For more information, see <a href="https://help.aliyun.com/document_detail/201421.html">Propagate tags</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
