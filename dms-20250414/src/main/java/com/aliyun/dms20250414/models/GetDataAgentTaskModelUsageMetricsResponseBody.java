@@ -94,7 +94,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
 
     public static class GetDataAgentTaskModelUsageMetricsResponseBodyData extends TeaModel {
         /**
-         * <p>The start time of the statistical interval for this time series point. The value is a UNIX timestamp in seconds.</p>
+         * <p>The start time of the statistical interval for this time series data point. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -103,7 +103,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
-         * <p>The end time of the statistical interval for this time series point. The value is a UNIX timestamp in seconds.</p>
+         * <p>The end time of the statistical interval for this time series data point. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660860</p>
@@ -112,7 +112,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The TPM for this time series point, which is the number of tokens consumed within the statistical interval.</p>
+         * <p>The TPM for this time series data point, which is the number of tokens consumed within the statistical interval.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>

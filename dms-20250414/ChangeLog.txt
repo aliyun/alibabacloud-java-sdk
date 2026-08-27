@@ -1,3 +1,12 @@
+2026-08-27 Version: 1.25.0
+- Support API CreateDataAgentSkillMeta.
+- Support API DeleteDataAgentSkillMeta.
+- Support API DescribeSkillFileUploadSignature.
+- Support API ListDataAgentSkillMeta.
+- Update API GetDataAgentTaskModelUsage: add request parameters InstanceIds.
+- Update API GetDataAgentTaskModelUsageMetrics: add request parameters InstanceIds.
+
+
 2026-08-26 Version: 1.24.0
 - Support API CreateDataAgentTheme.
 - Support API DescribeDataAgentTheme.

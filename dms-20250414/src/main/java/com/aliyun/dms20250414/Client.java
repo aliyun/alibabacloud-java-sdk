@@ -1070,6 +1070,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates and registers a DataAgent skill.</p>
+     * 
+     * @param request CreateDataAgentSkillMetaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataAgentSkillMetaResponse
+     */
+    public CreateDataAgentSkillMetaResponse createDataAgentSkillMetaWithOptions(CreateDataAgentSkillMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
+            query.put("SkillName", request.skillName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadLocation)) {
+            query.put("UploadLocation", request.uploadLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataAgentSkillMeta"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataAgentSkillMetaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates and registers a DataAgent skill.</p>
+     * 
+     * @param request CreateDataAgentSkillMetaRequest
+     * @return CreateDataAgentSkillMetaResponse
+     */
+    public CreateDataAgentSkillMetaResponse createDataAgentSkillMeta(CreateDataAgentSkillMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataAgentSkillMetaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a DataAgent theme.</p>
      * 
      * @param request CreateDataAgentThemeRequest
@@ -1908,6 +1964,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDataAgentMemoryResponse deleteDataAgentMemory(DeleteDataAgentMemoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDataAgentMemoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a DataAgent skill.</p>
+     * 
+     * @param request DeleteDataAgentSkillMetaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataAgentSkillMetaResponse
+     */
+    public DeleteDataAgentSkillMetaResponse deleteDataAgentSkillMetaWithOptions(DeleteDataAgentSkillMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            query.put("SkillId", request.skillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataAgentSkillMeta"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataAgentSkillMetaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a DataAgent skill.</p>
+     * 
+     * @param request DeleteDataAgentSkillMetaRequest
+     * @return DeleteDataAgentSkillMetaResponse
+     */
+    public DeleteDataAgentSkillMetaResponse deleteDataAgentSkillMeta(DeleteDataAgentSkillMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataAgentSkillMetaWithOptions(request, runtime);
     }
 
     /**
@@ -2906,6 +3010,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves the signature information for uploading skill files.</p>
+     * 
+     * @param request DescribeSkillFileUploadSignatureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSkillFileUploadSignatureResponse
+     */
+    public DescribeSkillFileUploadSignatureResponse describeSkillFileUploadSignatureWithOptions(DescribeSkillFileUploadSignatureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSkillFileUploadSignature"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSkillFileUploadSignatureResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the signature information for uploading skill files.</p>
+     * 
+     * @param request DescribeSkillFileUploadSignatureRequest
+     * @return DescribeSkillFileUploadSignatureResponse
+     */
+    public DescribeSkillFileUploadSignatureResponse describeSkillFileUploadSignature(DescribeSkillFileUploadSignatureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSkillFileUploadSignatureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Calls back after a file is uploaded.</p>
      * 
      * @param request FileUploadCallbackRequest
@@ -3232,17 +3380,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</p>
      * 
-     * @param request GetDataAgentTaskModelUsageRequest
+     * @param tmpReq GetDataAgentTaskModelUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataAgentTaskModelUsageResponse
      */
-    public GetDataAgentTaskModelUsageResponse getDataAgentTaskModelUsageWithOptions(GetDataAgentTaskModelUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetDataAgentTaskModelUsageResponse getDataAgentTaskModelUsageWithOptions(GetDataAgentTaskModelUsageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDataAgentTaskModelUsageShrinkRequest request = new GetDataAgentTaskModelUsageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
             query.put("BeginTime", request.beginTime);
@@ -3254,6 +3408,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.payLevel)) {
@@ -3283,7 +3441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</p>
@@ -3303,12 +3461,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range, returning token consumption at each time point with minute-level granularity.</p>
      * 
-     * @param request GetDataAgentTaskModelUsageMetricsRequest
+     * @param tmpReq GetDataAgentTaskModelUsageMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataAgentTaskModelUsageMetricsResponse
      */
-    public GetDataAgentTaskModelUsageMetricsResponse getDataAgentTaskModelUsageMetricsWithOptions(GetDataAgentTaskModelUsageMetricsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetDataAgentTaskModelUsageMetricsResponse getDataAgentTaskModelUsageMetricsWithOptions(GetDataAgentTaskModelUsageMetricsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDataAgentTaskModelUsageMetricsShrinkRequest request = new GetDataAgentTaskModelUsageMetricsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
             query.put("BeginTime", request.beginTime);
@@ -3320,6 +3484,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.payLevel)) {
@@ -5042,6 +5210,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDataAgentSessionResponse listDataAgentSession(ListDataAgentSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataAgentSessionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of DataAgent skills.</p>
+     * 
+     * @param request ListDataAgentSkillMetaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAgentSkillMetaResponse
+     */
+    public ListDataAgentSkillMetaResponse listDataAgentSkillMetaWithOptions(ListDataAgentSkillMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillFrom)) {
+            query.put("SkillFrom", request.skillFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            query.put("SkillId", request.skillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
+            query.put("SkillName", request.skillName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAgentSkillMeta"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAgentSkillMetaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of DataAgent skills.</p>
+     * 
+     * @param request ListDataAgentSkillMetaRequest
+     * @return ListDataAgentSkillMetaResponse
+     */
+    public ListDataAgentSkillMetaResponse listDataAgentSkillMeta(ListDataAgentSkillMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAgentSkillMetaWithOptions(request, runtime);
     }
 
     /**
@@ -6794,7 +7030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ModifyDataAgentTheme</p>
+     * <p>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</p>
      * 
      * @param request ModifyDataAgentThemeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6834,7 +7070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ModifyDataAgentTheme</p>
+     * <p>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</p>
      * 
      * @param request ModifyDataAgentThemeRequest
      * @return ModifyDataAgentThemeResponse

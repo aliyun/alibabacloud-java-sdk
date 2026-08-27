@@ -3,7 +3,7 @@ package com.aliyun.dms20250414.models;
 
 import com.aliyun.tea.*;
 
-public class GetDataAgentTaskModelUsageRequest extends TeaModel {
+public class GetDataAgentTaskModelUsageMetricsShrinkRequest extends TeaModel {
     /**
      * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</p>
      * 
@@ -11,10 +11,10 @@ public class GetDataAgentTaskModelUsageRequest extends TeaModel {
      * <p>1735660800</p>
      */
     @NameInMap("BeginTime")
-    public Long beginTime;
+    public String beginTime;
 
     /**
-     * <p>The current Data Management unit.</p>
+     * <p>The current DMS unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -29,10 +29,10 @@ public class GetDataAgentTaskModelUsageRequest extends TeaModel {
      * <p>1735747200</p>
      */
     @NameInMap("EndTime")
-    public Long endTime;
+    public String endTime;
 
     @NameInMap("InstanceIds")
-    public java.util.List<String> instanceIds;
+    public String instanceIdsShrink;
 
     @NameInMap("PayLevel")
     public String payLevel;
@@ -46,20 +46,20 @@ public class GetDataAgentTaskModelUsageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static GetDataAgentTaskModelUsageRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetDataAgentTaskModelUsageRequest self = new GetDataAgentTaskModelUsageRequest();
+    public static GetDataAgentTaskModelUsageMetricsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetDataAgentTaskModelUsageMetricsShrinkRequest self = new GetDataAgentTaskModelUsageMetricsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetDataAgentTaskModelUsageRequest setBeginTime(Long beginTime) {
+    public GetDataAgentTaskModelUsageMetricsShrinkRequest setBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
     }
-    public Long getBeginTime() {
+    public String getBeginTime() {
         return this.beginTime;
     }
 
-    public GetDataAgentTaskModelUsageRequest setDMSUnit(String DMSUnit) {
+    public GetDataAgentTaskModelUsageMetricsShrinkRequest setDMSUnit(String DMSUnit) {
         this.DMSUnit = DMSUnit;
         return this;
     }
@@ -67,23 +67,23 @@ public class GetDataAgentTaskModelUsageRequest extends TeaModel {
         return this.DMSUnit;
     }
 
-    public GetDataAgentTaskModelUsageRequest setEndTime(Long endTime) {
+    public GetDataAgentTaskModelUsageMetricsShrinkRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
-    public Long getEndTime() {
+    public String getEndTime() {
         return this.endTime;
     }
 
-    public GetDataAgentTaskModelUsageRequest setInstanceIds(java.util.List<String> instanceIds) {
-        this.instanceIds = instanceIds;
+    public GetDataAgentTaskModelUsageMetricsShrinkRequest setInstanceIdsShrink(String instanceIdsShrink) {
+        this.instanceIdsShrink = instanceIdsShrink;
         return this;
     }
-    public java.util.List<String> getInstanceIds() {
-        return this.instanceIds;
+    public String getInstanceIdsShrink() {
+        return this.instanceIdsShrink;
     }
 
-    public GetDataAgentTaskModelUsageRequest setPayLevel(String payLevel) {
+    public GetDataAgentTaskModelUsageMetricsShrinkRequest setPayLevel(String payLevel) {
         this.payLevel = payLevel;
         return this;
     }
@@ -91,7 +91,7 @@ public class GetDataAgentTaskModelUsageRequest extends TeaModel {
         return this.payLevel;
     }
 
-    public GetDataAgentTaskModelUsageRequest setRegionId(String regionId) {
+    public GetDataAgentTaskModelUsageMetricsShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

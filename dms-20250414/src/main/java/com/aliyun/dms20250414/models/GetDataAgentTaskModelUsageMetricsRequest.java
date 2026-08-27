@@ -31,6 +31,9 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
     @NameInMap("PayLevel")
     public String payLevel;
 
@@ -70,6 +73,14 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public GetDataAgentTaskModelUsageMetricsRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public GetDataAgentTaskModelUsageMetricsRequest setPayLevel(String payLevel) {
