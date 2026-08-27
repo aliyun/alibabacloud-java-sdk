@@ -1,3 +1,34 @@
+2026-08-27 Version: 12.1.0
+- Support API BatchUpdateHttpApiOperation.
+- Support API CreateHttpApiVersion.
+- Support API CreateMigrationTask.
+- Support API CreatePluginWorkspace.
+- Support API CreateRiskCheckTask.
+- Support API DeleteMigrationTask.
+- Support API DetachAndDeletePolicy.
+- Support API GetGatewayElasticPolicy.
+- Support API GetMigrationNamespacedServices.
+- Support API GetMigrationTask.
+- Support API GetPluginWorkspace.
+- Support API GetRiskNotification.
+- Support API InvokeAIAgent.
+- Support API ListGatewayAuthorizableSecurityGroups.
+- Support API ListGatewayAuthorizedSecurityGroupRules.
+- Support API ListGatewayErrorAccessLogs.
+- Support API ListGatewayLoadBalancers.
+- Support API ListGlobalPolicies.
+- Support API ListInstallableGateways.
+- Support API ListK8sClusterSources.
+- Support API ListMigrationTasks.
+- Support API ListMseNacosSources.
+- Support API ListPluginRepositories.
+- Support API UpdateGatewayMaintenancePeriod.
+- Support API UpdateMigrationTask.
+- Support API UpdateNetworkAccess.
+- Support API UpdateRiskNotification.
+- Support API VerifyMigrationTask.
+
+
 2026-08-24 Version: 12.0.4
 - Update API CreateHttpApiRoute: add request parameters body.backendConfig.services.$.groupName.
 - Update API CreateHttpApiRoute: add request parameters body.backendConfig.services.$.httpDubboTranscoder.

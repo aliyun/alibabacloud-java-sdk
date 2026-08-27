@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AiStatisticsPathField extends TeaModel {
     /**
-     * <p>The secondary category.</p>
+     * <p>The secondary business category of the field. Optional. Valid values: conversation (conversation content), config (configuration parameters), tools (tool calling), usage (usage statistics), metadata (metadata), choices (candidate results), identity (identity identifier), cache (cache information), media (multimedia content), logprobs (log probabilities), and custom (custom field). Set custom fields to custom.</p>
      * 
      * <strong>example:</strong>
      * <p>conversation</p>
@@ -17,13 +17,13 @@ public class AiStatisticsPathField extends TeaModel {
      * <p>The field description.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户输入的问题内容</p>
+     * <p>The question content entered by the user</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The log key.</p>
+     * <p>The log key (field name).</p>
      * 
      * <strong>example:</strong>
      * <p>question</p>
@@ -32,7 +32,7 @@ public class AiStatisticsPathField extends TeaModel {
     public String fieldKey;
 
     /**
-     * <p>The request or response direction.</p>
+     * <p>The request or response attribution. The backend normalizes this to request or response based on source.</p>
      * 
      * <strong>example:</strong>
      * <p>request</p>
@@ -41,7 +41,7 @@ public class AiStatisticsPathField extends TeaModel {
     public String io;
 
     /**
-     * <p>The corresponding JSON path (GJSON syntax).</p>
+     * <p>The corresponding jsonPath (gjson syntax).</p>
      * 
      * <strong>example:</strong>
      * <p>messages.#.content</p>
@@ -50,16 +50,16 @@ public class AiStatisticsPathField extends TeaModel {
     public String jsonPath;
 
     /**
-     * <p>The display name of the field.</p>
+     * <p>The annotation for the field key name.</p>
      * 
      * <strong>example:</strong>
-     * <p>问题内容</p>
+     * <p>Question content</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>Specifies whether collection is enabled.</p>
+     * <p>Indicates whether collection is enabled to create a log record for the corresponding field in AI request logs.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,12 +68,7 @@ public class AiStatisticsPathField extends TeaModel {
     public Boolean recordEnabled;
 
     /**
-     * <p>The rule used for streaming response extraction. Valid values:</p>
-     * <ul>
-     * <li>append: appends content</li>
-     * <li>first: retrieves the first value</li>
-     * <li>replace: retrieves the last value</li>
-     * </ul>
+     * <p>The aggregation rule for streaming response fields. Valid values: append, first, and replace. append: appends the matched values from each streaming chunk in sequence. first: retains the first matched value. replace: uses the last matched value. When source is response_streaming_body and rule is not specified, first is used by default. This field is not required for non-streaming scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>append</p>
@@ -82,7 +77,7 @@ public class AiStatisticsPathField extends TeaModel {
     public String rule;
 
     /**
-     * <p>Indicates whether the field is sensitive.</p>
+     * <p>Specifies whether the field is sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -91,7 +86,7 @@ public class AiStatisticsPathField extends TeaModel {
     public Boolean sensitive;
 
     /**
-     * <p>The data source.</p>
+     * <p>The source of the field value. Valid values: fixed_value (fixed value), request_body (request body), request_header (request header), response_header (response header), response_body (non-streaming response body), and response_streaming_body (streaming response body).</p>
      * 
      * <strong>example:</strong>
      * <p>request_body</p>

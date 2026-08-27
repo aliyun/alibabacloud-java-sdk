@@ -266,8 +266,8 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * <p>The status of load balancing. Valid values:</p>
          * <ul>
-         * <li>Ready: active.</li>
-         * <li>NotCreate: not associated with an instance.</li>
+         * <li>Ready: Active.</li>
+         * <li>NotCreate: No associated instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -767,7 +767,11 @@ public class GetGatewayResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The running mode of AI multi-tenant V2. Default value: ENTERPRISE. Only AI + MultiTenantServerless allows this parameter.</p>
+         * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. Only AI + MultiTenantServerless allows this parameter. Valid values:</p>
+         * <ul>
+         * <li>ENTERPRISE: default.</li>
+         * <li>STANDARD: allowed only for AI multi-tenant V2.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
