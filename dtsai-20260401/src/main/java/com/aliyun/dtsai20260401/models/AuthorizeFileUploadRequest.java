@@ -13,6 +13,9 @@ public class AuthorizeFileUploadRequest extends TeaModel {
     @NameInMap("AgentName")
     public String agentName;
 
+    @NameInMap("BatchSize")
+    public String batchSize;
+
     /**
      * <p>The format of the file to be uploaded.</p>
      * 
@@ -43,6 +46,14 @@ public class AuthorizeFileUploadRequest extends TeaModel {
     }
     public String getAgentName() {
         return this.agentName;
+    }
+
+    public AuthorizeFileUploadRequest setBatchSize(String batchSize) {
+        this.batchSize = batchSize;
+        return this;
+    }
+    public String getBatchSize() {
+        return this.batchSize;
     }
 
     public AuthorizeFileUploadRequest setFileFormat(String fileFormat) {

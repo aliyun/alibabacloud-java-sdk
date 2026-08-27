@@ -1,3 +1,9 @@
+2026-08-27 Version: 1.1.1
+- Update API AuthorizeFileUpload: add request parameters BatchSize.
+- Update API AuthorizeFileUpload: add response parameters Body.Authorizations.
+- Update API AuthorizeFileUpload: add response parameters Body.ExpireTime.
+
+
 2026-08-24 Version: 1.1.0
 - Support API AuthorizeFileUpload.
 

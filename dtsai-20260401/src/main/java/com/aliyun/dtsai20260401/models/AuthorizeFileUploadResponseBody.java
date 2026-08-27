@@ -13,6 +13,9 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
     @NameInMap("AccessKeyId")
     public String accessKeyId;
 
+    @NameInMap("Authorizations")
+    public java.util.List<AuthorizeFileUploadResponseBodyAuthorizations> authorizations;
+
     /**
      * <p>The destination OSS bucket.</p>
      * 
@@ -58,6 +61,9 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("ExpireTime")
+    public Long expireTime;
+
     /**
      * <p>The business-level HTTP status code.</p>
      * 
@@ -86,7 +92,7 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The Security Token Service (STS) token.</p>
+     * <p>The Security Token Service (STS) temporary security token.</p>
      * 
      * <strong>example:</strong>
      * <p>CAISxxx</p>
@@ -123,6 +129,14 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
     }
     public String getAccessKeyId() {
         return this.accessKeyId;
+    }
+
+    public AuthorizeFileUploadResponseBody setAuthorizations(java.util.List<AuthorizeFileUploadResponseBodyAuthorizations> authorizations) {
+        this.authorizations = authorizations;
+        return this;
+    }
+    public java.util.List<AuthorizeFileUploadResponseBodyAuthorizations> getAuthorizations() {
+        return this.authorizations;
     }
 
     public AuthorizeFileUploadResponseBody setBucket(String bucket) {
@@ -163,6 +177,14 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public AuthorizeFileUploadResponseBody setExpireTime(Long expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+    public Long getExpireTime() {
+        return this.expireTime;
     }
 
     public AuthorizeFileUploadResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -211,6 +233,47 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class AuthorizeFileUploadResponseBodyAuthorizations extends TeaModel {
+        @NameInMap("EncodedPolicy")
+        public String encodedPolicy;
+
+        @NameInMap("ObjectKey")
+        public String objectKey;
+
+        @NameInMap("Signature")
+        public String signature;
+
+        public static AuthorizeFileUploadResponseBodyAuthorizations build(java.util.Map<String, ?> map) throws Exception {
+            AuthorizeFileUploadResponseBodyAuthorizations self = new AuthorizeFileUploadResponseBodyAuthorizations();
+            return TeaModel.build(map, self);
+        }
+
+        public AuthorizeFileUploadResponseBodyAuthorizations setEncodedPolicy(String encodedPolicy) {
+            this.encodedPolicy = encodedPolicy;
+            return this;
+        }
+        public String getEncodedPolicy() {
+            return this.encodedPolicy;
+        }
+
+        public AuthorizeFileUploadResponseBodyAuthorizations setObjectKey(String objectKey) {
+            this.objectKey = objectKey;
+            return this;
+        }
+        public String getObjectKey() {
+            return this.objectKey;
+        }
+
+        public AuthorizeFileUploadResponseBodyAuthorizations setSignature(String signature) {
+            this.signature = signature;
+            return this;
+        }
+        public String getSignature() {
+            return this.signature;
+        }
+
     }
 
 }

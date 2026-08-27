@@ -149,6 +149,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AgentName", request.agentName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.batchSize)) {
+            query.put("BatchSize", request.batchSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileFormat)) {
             query.put("FileFormat", request.fileFormat);
         }
