@@ -14,7 +14,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The knowledge graph name.</p>
+     * <p>The graph name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +40,15 @@ public class GetGraphSchemaResponseBody extends TeaModel {
      */
     @NameInMap("requestId")
     public String requestId;
+
+    /**
+     * <p>The active QueryAgent registered schema ID corresponding to the graph. The value is null if not yet registered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schema_123456</p>
+     */
+    @NameInMap("schemaId")
+    public String schemaId;
 
     /**
      * <p>The version.</p>
@@ -96,6 +105,14 @@ public class GetGraphSchemaResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetGraphSchemaResponseBody setSchemaId(String schemaId) {
+        this.schemaId = schemaId;
+        return this;
+    }
+    public String getSchemaId() {
+        return this.schemaId;
     }
 
     public GetGraphSchemaResponseBody setSchemaVersion(String schemaVersion) {

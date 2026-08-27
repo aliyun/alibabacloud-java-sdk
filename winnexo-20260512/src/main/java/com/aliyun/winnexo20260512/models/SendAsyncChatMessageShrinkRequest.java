@@ -48,7 +48,7 @@ public class SendAsyncChatMessageShrinkRequest extends TeaModel {
     public String filesShrink;
 
     /**
-     * <p>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, a new session uses standard, and an existing session retains its current tier.</p>
+     * <p>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, new sessions use standard, and existing sessions retain their current tier.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -84,7 +84,7 @@ public class SendAsyncChatMessageShrinkRequest extends TeaModel {
     public Boolean stream;
 
     /**
-     * <p>The task execution metadata returned by executeScheduledTask. If specified, the request is processed through the task execution pipeline.</p>
+     * <p>The task execution metadata returned by executeScheduledTask. When provided, the request is processed through the task execution pipeline.</p>
      */
     @NameInMap("taskExecution")
     public String taskExecutionShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGraphSchemaRequest extends TeaModel {
     /**
-     * <p>The knowledge graph name. Call listGraphs to obtain this value.</p>
+     * <p>The graph name. Call listGraphs first to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

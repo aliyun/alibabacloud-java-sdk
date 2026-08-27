@@ -15,6 +15,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shanghai", "winnexo.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "winnexo.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "winnexo.cn-hangzhou.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("winnexo", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -132,6 +137,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation supports batch addition of members by providing a user group ID and one or more user IDs.</li>
+     * <li>Duplicate entries in the user ID list do not cause errors. The system automatically handles duplicates to ensure each user is added only once.</li>
+     * <li>The caller must have the required permissions to perform this operation.</li>
+     * <li>This operation is applicable to scenarios that require quick team structure management or access control policy adjustments.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds multiple tenant members to a specified user group in a single request.</p>
+     * 
+     * @param tmpReq AddUserGroupMembersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddUserGroupMembersResponse
+     */
+    public AddUserGroupMembersResponse addUserGroupMembersWithOptions(AddUserGroupMembersRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddUserGroupMembersShrinkRequest request = new AddUserGroupMembersShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userIds)) {
+            request.userIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userIds, "userIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            body.put("userGroupId", request.userGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdsShrink)) {
+            body.put("userIds", request.userIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddUserGroupMembers"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/addUserGroupMembers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddUserGroupMembersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation supports batch addition of members by providing a user group ID and one or more user IDs.</li>
+     * <li>Duplicate entries in the user ID list do not cause errors. The system automatically handles duplicates to ensure each user is added only once.</li>
+     * <li>The caller must have the required permissions to perform this operation.</li>
+     * <li>This operation is applicable to scenarios that require quick team structure management or access control policy adjustments.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds multiple tenant members to a specified user group in a single request.</p>
+     * 
+     * @param request AddUserGroupMembersRequest
+     * @return AddUserGroupMembersResponse
+     */
+    public AddUserGroupMembersResponse addUserGroupMembers(AddUserGroupMembersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addUserGroupMembersWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Performs a service health check.</p>
      * 
@@ -176,6 +262,133 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.checkHealthWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</p>
+     * <ul>
+     * <li><code>priority</code>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</li>
+     * <li><code>targetTenantIds</code> / <code>targetRoleCodes</code>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</li>
+     * <li><code>effectiveStart</code> / <code>effectiveEnd</code>: ISO 8601 timestamps with time zone information.</li>
+     * <li><code>publishNow</code>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service notice.</p>
+     * 
+     * @param tmpReq CreateAnnouncementRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAnnouncementResponse
+     */
+    public CreateAnnouncementResponse createAnnouncementWithOptions(CreateAnnouncementRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAnnouncementShrinkRequest request = new CreateAnnouncementShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.targetRoleCodes)) {
+            request.targetRoleCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.targetRoleCodes, "targetRoleCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.targetTenantIds)) {
+            request.targetTenantIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.targetTenantIds, "targetTenantIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayPage)) {
+            body.put("displayPage", request.displayPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayType)) {
+            body.put("displayType", request.displayType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveEnd)) {
+            body.put("effectiveEnd", request.effectiveEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveStart)) {
+            body.put("effectiveStart", request.effectiveStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishNow)) {
+            body.put("publishNow", request.publishNow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetRoleCodesShrink)) {
+            body.put("targetRoleCodes", request.targetRoleCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetRoleMode)) {
+            body.put("targetRoleMode", request.targetRoleMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetTenantIdsShrink)) {
+            body.put("targetTenantIds", request.targetTenantIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetTenantMode)) {
+            body.put("targetTenantMode", request.targetTenantMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            body.put("title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAnnouncement"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createAnnouncement"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAnnouncementResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</p>
+     * <ul>
+     * <li><code>priority</code>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</li>
+     * <li><code>targetTenantIds</code> / <code>targetRoleCodes</code>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</li>
+     * <li><code>effectiveStart</code> / <code>effectiveEnd</code>: ISO 8601 timestamps with time zone information.</li>
+     * <li><code>publishNow</code>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service notice.</p>
+     * 
+     * @param request CreateAnnouncementRequest
+     * @return CreateAnnouncementResponse
+     */
+    public CreateAnnouncementResponse createAnnouncement(CreateAnnouncementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAnnouncementWithOptions(request, headers, runtime);
     }
 
     /**
@@ -435,6 +648,226 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</li>
+     * <li>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</li>
+     * <li>groupId, chatId, and historyStartTime are required.</li>
+     * <li>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</li>
+     * <li>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a group-level DingTalk chat knowledge source.</p>
+     * 
+     * @param tmpReq CreateGroupDingtalkChatRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGroupDingtalkChatResponse
+     */
+    public CreateGroupDingtalkChatResponse createGroupDingtalkChatWithOptions(CreateGroupDingtalkChatRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateGroupDingtalkChatShrinkRequest request = new CreateGroupDingtalkChatShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.updateFrequency)) {
+            request.updateFrequencyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.updateFrequency, "updateFrequency", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chatId)) {
+            body.put("chatId", request.chatId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chatName)) {
+            body.put("chatName", request.chatName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            body.put("directoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("groupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.historyStartTime)) {
+            body.put("historyStartTime", request.historyStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notes)) {
+            body.put("notes", request.notes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatingObjectName)) {
+            body.put("operatingObjectName", request.operatingObjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateFrequencyShrink)) {
+            body.put("updateFrequency", request.updateFrequencyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGroupDingtalkChat"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createGroupDingtalkChat"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGroupDingtalkChatResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</li>
+     * <li>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</li>
+     * <li>groupId, chatId, and historyStartTime are required.</li>
+     * <li>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</li>
+     * <li>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a group-level DingTalk chat knowledge source.</p>
+     * 
+     * @param request CreateGroupDingtalkChatRequest
+     * @return CreateGroupDingtalkChatResponse
+     */
+    public CreateGroupDingtalkChatResponse createGroupDingtalkChat(CreateGroupDingtalkChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createGroupDingtalkChatWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description\n\nFixed as <code>ONLINE_DOC + FEISHU + GROUP</code>. <code>groupId</code> is required. If <code>directoryId</code> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</p>
+     * 
+     * @param tmpReq CreateGroupFeishuDocRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGroupFeishuDocResponse
+     */
+    public CreateGroupFeishuDocResponse createGroupFeishuDocWithOptions(CreateGroupFeishuDocRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateGroupFeishuDocShrinkRequest request = new CreateGroupFeishuDocShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.objectBindings)) {
+            request.objectBindingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.objectBindings, "objectBindings", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.syncConfig)) {
+            request.syncConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.syncConfig, "syncConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            body.put("directoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docUrl)) {
+            body.put("docUrl", request.docUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("groupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notes)) {
+            body.put("notes", request.notes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectBindingsShrink)) {
+            body.put("objectBindings", request.objectBindingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatingObjectName)) {
+            body.put("operatingObjectName", request.operatingObjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncConfigShrink)) {
+            body.put("syncConfig", request.syncConfigShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGroupFeishuDoc"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createGroupFeishuDoc"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGroupFeishuDocResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description\n\nFixed as <code>ONLINE_DOC + FEISHU + GROUP</code>. <code>groupId</code> is required. If <code>directoryId</code> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</p>
+     * 
+     * @param request CreateGroupFeishuDocRequest
+     * @return CreateGroupFeishuDocResponse
+     */
+    public CreateGroupFeishuDocResponse createGroupFeishuDoc(CreateGroupFeishuDocRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createGroupFeishuDocWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
      * <li>This operation adds an AliDing online document to a specified enterprise knowledge base.</li>
@@ -613,6 +1046,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createKnowledgeBaseDirectoryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description\n\nFixed as <code>ONLINE_DOC + FEISHU + TENANT</code>. <code>directoryId</code> is required. The invoker must have the enterprise knowledge base feature permission and knowledge base management permission on the target knowledge base.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a single Lark online document in the enterprise knowledge base using the current user\&quot;s Lark authorization.</p>
+     * 
+     * @param tmpReq CreateKnowledgeBaseFeishuDocRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKnowledgeBaseFeishuDocResponse
+     */
+    public CreateKnowledgeBaseFeishuDocResponse createKnowledgeBaseFeishuDocWithOptions(CreateKnowledgeBaseFeishuDocRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateKnowledgeBaseFeishuDocShrinkRequest request = new CreateKnowledgeBaseFeishuDocShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.objectBindings)) {
+            request.objectBindingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.objectBindings, "objectBindings", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.syncConfig)) {
+            request.syncConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.syncConfig, "syncConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            body.put("directoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docUrl)) {
+            body.put("docUrl", request.docUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notes)) {
+            body.put("notes", request.notes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectBindingsShrink)) {
+            body.put("objectBindings", request.objectBindingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatingObjectName)) {
+            body.put("operatingObjectName", request.operatingObjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncConfigShrink)) {
+            body.put("syncConfig", request.syncConfigShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKnowledgeBaseFeishuDoc"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createKnowledgeBaseFeishuDoc"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKnowledgeBaseFeishuDocResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description\n\nFixed as <code>ONLINE_DOC + FEISHU + TENANT</code>. <code>directoryId</code> is required. The invoker must have the enterprise knowledge base feature permission and knowledge base management permission on the target knowledge base.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a single Lark online document in the enterprise knowledge base using the current user\&quot;s Lark authorization.</p>
+     * 
+     * @param request CreateKnowledgeBaseFeishuDocRequest
+     * @return CreateKnowledgeBaseFeishuDocResponse
+     */
+    public CreateKnowledgeBaseFeishuDocResponse createKnowledgeBaseFeishuDoc(CreateKnowledgeBaseFeishuDocRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createKnowledgeBaseFeishuDocWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1239,6 +1773,117 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Connects a specified DingTalk group chat to the personal knowledge base of the current user.</li>
+     * <li>The resource type is fixed to DINGTALK, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</li>
+     * <li>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</li>
+     * <li>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</li>
+     * <li>The same group chat can be created as different sources. Each source is isolated by sourceId.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a personal DingTalk group chat knowledge source.</p>
+     * 
+     * @param tmpReq CreatePersonalDingtalkChatRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePersonalDingtalkChatResponse
+     */
+    public CreatePersonalDingtalkChatResponse createPersonalDingtalkChatWithOptions(CreatePersonalDingtalkChatRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePersonalDingtalkChatShrinkRequest request = new CreatePersonalDingtalkChatShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.updateFrequency)) {
+            request.updateFrequencyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.updateFrequency, "updateFrequency", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chatId)) {
+            body.put("chatId", request.chatId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chatName)) {
+            body.put("chatName", request.chatName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            body.put("directoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.historyStartTime)) {
+            body.put("historyStartTime", request.historyStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notes)) {
+            body.put("notes", request.notes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatingObjectName)) {
+            body.put("operatingObjectName", request.operatingObjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateFrequencyShrink)) {
+            body.put("updateFrequency", request.updateFrequencyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePersonalDingtalkChat"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createPersonalDingtalkChat"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePersonalDingtalkChatResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Connects a specified DingTalk group chat to the personal knowledge base of the current user.</li>
+     * <li>The resource type is fixed to DINGTALK, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</li>
+     * <li>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</li>
+     * <li>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</li>
+     * <li>The same group chat can be created as different sources. Each source is isolated by sourceId.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a personal DingTalk group chat knowledge source.</p>
+     * 
+     * @param request CreatePersonalDingtalkChatRequest
+     * @return CreatePersonalDingtalkChatResponse
+     */
+    public CreatePersonalDingtalkChatResponse createPersonalDingtalkChat(CreatePersonalDingtalkChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPersonalDingtalkChatWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
      * <li>This operation uploads a DingTalk meeting as a resource to the &quot;My Resources&quot; section of a specified digital employee.</li>
@@ -1629,6 +2274,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createPersonalFeishuChatWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description\n\nFixed as <code>ONLINE_DOC + FEISHU + PERSONAL</code>. The Lark connector user is determined by the trusted OpenAPI identity. If <code>directoryId</code> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a personal knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</p>
+     * 
+     * @param tmpReq CreatePersonalFeishuDocRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePersonalFeishuDocResponse
+     */
+    public CreatePersonalFeishuDocResponse createPersonalFeishuDocWithOptions(CreatePersonalFeishuDocRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePersonalFeishuDocShrinkRequest request = new CreatePersonalFeishuDocShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.objectBindings)) {
+            request.objectBindingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.objectBindings, "objectBindings", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.syncConfig)) {
+            request.syncConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.syncConfig, "syncConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            body.put("directoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docUrl)) {
+            body.put("docUrl", request.docUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notes)) {
+            body.put("notes", request.notes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectBindingsShrink)) {
+            body.put("objectBindings", request.objectBindingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatingObjectName)) {
+            body.put("operatingObjectName", request.operatingObjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTags)) {
+            body.put("sourceTags", request.sourceTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncConfigShrink)) {
+            body.put("syncConfig", request.syncConfigShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePersonalFeishuDoc"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createPersonalFeishuDoc"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePersonalFeishuDocResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description\n\nFixed as <code>ONLINE_DOC + FEISHU + PERSONAL</code>. The Lark connector user is determined by the trusted OpenAPI identity. If <code>directoryId</code> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a personal knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</p>
+     * 
+     * @param request CreatePersonalFeishuDocRequest
+     * @return CreatePersonalFeishuDocResponse
+     */
+    public CreatePersonalFeishuDocResponse createPersonalFeishuDoc(CreatePersonalFeishuDocRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPersonalFeishuDocWithOptions(request, headers, runtime);
     }
 
     /**
@@ -2361,6 +3107,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>WinNexo user management OpenAPI: Creates a user group. The tenant identity is derived from the authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a user group under the tenant to which the authenticated identity belongs.</p>
+     * 
+     * @param request CreateUserGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateUserGroupResponse
+     */
+    public CreateUserGroupResponse createUserGroupWithOptions(CreateUserGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentId)) {
+            body.put("parentId", request.parentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupName)) {
+            body.put("userGroupName", request.userGroupName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateUserGroup"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createUserGroup"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUserGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>WinNexo user management OpenAPI: Creates a user group. The tenant identity is derived from the authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a user group under the tenant to which the authenticated identity belongs.</p>
+     * 
+     * @param request CreateUserGroupRequest
+     * @return CreateUserGroupResponse
+     */
+    public CreateUserGroupResponse createUserGroup(CreateUserGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createUserGroupWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a user and sets initial roles and user groups via OpenAPI.
+     *     Business orchestration:
+     *     1. Parses roleCodes → role_ids (system role enumeration validation)
+     *     2. Checks whether the user already exists (used to return the isNewUser flag)
+     *     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
+     *     4. Returns the creation result (including the isNewUser flag)
+     *     Error codes:
+     *     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
+     *     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
+     *     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a WINNEXO user in the current tenant and assigns roles and user groups to the user.</p>
+     * 
+     * @param tmpReq CreateUserWithGroupsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateUserWithGroupsResponse
+     */
+    public CreateUserWithGroupsResponse createUserWithGroupsWithOptions(CreateUserWithGroupsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateUserWithGroupsShrinkRequest request = new CreateUserWithGroupsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.roleCodes)) {
+            request.roleCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.roleCodes, "roleCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userGroupIds)) {
+            request.userGroupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userGroupIds, "userGroupIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passwordEncrypted)) {
+            body.put("passwordEncrypted", request.passwordEncrypted);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleCodesShrink)) {
+            body.put("roleCodes", request.roleCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIdsShrink)) {
+            body.put("userGroupIds", request.userGroupIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wnAccountId)) {
+            body.put("wnAccountId", request.wnAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateUserWithGroups"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createUserWithGroups"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUserWithGroupsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a user and sets initial roles and user groups via OpenAPI.
+     *     Business orchestration:
+     *     1. Parses roleCodes → role_ids (system role enumeration validation)
+     *     2. Checks whether the user already exists (used to return the isNewUser flag)
+     *     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
+     *     4. Returns the creation result (including the isNewUser flag)
+     *     Error codes:
+     *     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
+     *     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
+     *     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a WINNEXO user in the current tenant and assigns roles and user groups to the user.</p>
+     * 
+     * @param request CreateUserWithGroupsRequest
+     * @return CreateUserWithGroupsResponse
+     */
+    public CreateUserWithGroupsResponse createUserWithGroups(CreateUserWithGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createUserWithGroupsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
      * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
@@ -2804,7 +3720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Reads the active schema_content and securely trims it based on the token user\&quot;s semantic resource READ permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the active Graph Schema that is readable by the current user.</p>
+     * <p>Retrieves the active Graph Schema readable by the current user.</p>
      * 
      * @param request GetGraphSchemaRequest
      * @param headers map
@@ -2847,7 +3763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Reads the active schema_content and securely trims it based on the token user\&quot;s semantic resource READ permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the active Graph Schema that is readable by the current user.</p>
+     * <p>Retrieves the active Graph Schema readable by the current user.</p>
      * 
      * @param request GetGraphSchemaRequest
      * @return GetGraphSchemaResponse
@@ -3170,6 +4086,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getScheduledTaskExecutionRecordsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the channels and methods available to the current user for scheduled task push notifications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the push configuration options for scheduled tasks.</p>
+     * 
+     * @param request GetScheduledTaskPushOptionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetScheduledTaskPushOptionsResponse
+     */
+    public GetScheduledTaskPushOptionsResponse getScheduledTaskPushOptionsWithOptions(GetScheduledTaskPushOptionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.digitalEmployeeName)) {
+            body.put("digitalEmployeeName", request.digitalEmployeeName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetScheduledTaskPushOptions"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/getScheduledTaskPushOptions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetScheduledTaskPushOptionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the channels and methods available to the current user for scheduled task push notifications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the push configuration options for scheduled tasks.</p>
+     * 
+     * @param request GetScheduledTaskPushOptionsRequest
+     * @return GetScheduledTaskPushOptionsResponse
+     */
+    public GetScheduledTaskPushOptionsResponse getScheduledTaskPushOptions(GetScheduledTaskPushOptionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getScheduledTaskPushOptionsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -3605,6 +4584,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Retrieves the INSTANCE token for a user and ensures that it is in an active state (idempotent).
+     *     Business logic:
+     *     1. Obtains user_id from identity (caller_type=user is enforced).
+     *     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+     *     3. Calls ensure_active_token:
+     *        - If an ACTIVE token exists, returns the token in plaintext as-is (no reset, no key rotation).
+     *        - If an INACTIVE token exists, automatically re-enables it and returns the plaintext.
+     *        - If no token exists (or only expired RESET records exist), creates a new token and returns the plaintext.
+     *     Difference from EnableToken: When an ACTIVE token already exists, EnableToken returns only the masked value. This operation guarantees that a usable plaintext credential is returned without destroying the existing token.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves an API token and ensures that it is active.</p>
+     * 
+     * @param request GetTokenEnsureEnableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTokenEnsureEnableResponse
+     */
+    public GetTokenEnsureEnableResponse getTokenEnsureEnableWithOptions(GetTokenEnsureEnableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.wnUserId)) {
+            body.put("wnUserId", request.wnUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTokenEnsureEnable"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/getTokenEnsureEnable"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTokenEnsureEnableResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the INSTANCE token for a user and ensures that it is in an active state (idempotent).
+     *     Business logic:
+     *     1. Obtains user_id from identity (caller_type=user is enforced).
+     *     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+     *     3. Calls ensure_active_token:
+     *        - If an ACTIVE token exists, returns the token in plaintext as-is (no reset, no key rotation).
+     *        - If an INACTIVE token exists, automatically re-enables it and returns the plaintext.
+     *        - If no token exists (or only expired RESET records exist), creates a new token and returns the plaintext.
+     *     Difference from EnableToken: When an ACTIVE token already exists, EnableToken returns only the masked value. This operation guarantees that a usable plaintext credential is returned without destroying the existing token.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves an API token and ensures that it is active.</p>
+     * 
+     * @param request GetTokenEnsureEnableRequest
+     * @return GetTokenEnsureEnableResponse
+     */
+    public GetTokenEnsureEnableResponse getTokenEnsureEnable(GetTokenEnsureEnableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getTokenEnsureEnableWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries the INSTANCE token status of a user.
      *     Business logic:
      *     1. Retrieves user_id from identity (caller_type=user is required).
@@ -3820,6 +4874,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</li>
+     * <li><code>userGroupId</code> is a required parameter that must be provided in the request body.</li>
+     * <li><code>tenantId</code> is an optional parameter that can be passed through the query string.</li>
+     * <li>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</li>
+     * <li>The content type for both requests and responses is <code>application/json</code>.</li>
+     * <li>Ensure that you have the required permissions (such as <code>winnexo:GetUserGroup</code>) before calling this operation.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified user group, including its parent group, child groups, and members.</p>
+     * 
+     * @param request GetUserGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserGroupResponse
+     */
+    public GetUserGroupResponse getUserGroupWithOptions(GetUserGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            body.put("userGroupId", request.userGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserGroup"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/getUserGroup"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</li>
+     * <li><code>userGroupId</code> is a required parameter that must be provided in the request body.</li>
+     * <li><code>tenantId</code> is an optional parameter that can be passed through the query string.</li>
+     * <li>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</li>
+     * <li>The content type for both requests and responses is <code>application/json</code>.</li>
+     * <li>Ensure that you have the required permissions (such as <code>winnexo:GetUserGroup</code>) before calling this operation.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified user group, including its parent group, child groups, and members.</p>
+     * 
+     * @param request GetUserGroupRequest
+     * @return GetUserGroupResponse
+     */
+    public GetUserGroupResponse getUserGroup(GetUserGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getUserGroupWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
      * <li>This operation returns the detailed information of the current authenticated user.</li>
@@ -3986,6 +5115,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.grantAgentUsersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries currently effective service notices.</p>
+     * 
+     * @param request ListActiveAnnouncementsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListActiveAnnouncementsResponse
+     */
+    public ListActiveAnnouncementsResponse listActiveAnnouncementsWithOptions(ListActiveAnnouncementsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListActiveAnnouncements"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listActiveAnnouncements"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListActiveAnnouncementsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries currently effective service notices.</p>
+     * 
+     * @param request ListActiveAnnouncementsRequest
+     * @return ListActiveAnnouncementsResponse
+     */
+    public ListActiveAnnouncementsResponse listActiveAnnouncements(ListActiveAnnouncementsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listActiveAnnouncementsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -5293,6 +6487,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API is used to query the complete user group hierarchy under a specified tenant, including the basic information of each user group and its direct child user group list. Use the <code>tenantId</code> parameter to specify the tenant ID to query. If this parameter is not provided, the caller\&quot;s tenant ID is used by default.</p>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>This operation returns only the direct member count and direct child user group count. It does not include information about indirect members or child groups.</li>
+     * <li>The external synchronization status field is empty when data is normal. It is populated with relevant information only when data is out of sync between an external system (such as WeCom) and the internal system.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Returns the multi-level user group tree for the current tenant.</p>
+     * 
+     * @param request ListUserGroupsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserGroupsResponse
+     */
+    public ListUserGroupsResponse listUserGroupsWithOptions(ListUserGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserGroups"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listUserGroups"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserGroupsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API is used to query the complete user group hierarchy under a specified tenant, including the basic information of each user group and its direct child user group list. Use the <code>tenantId</code> parameter to specify the tenant ID to query. If this parameter is not provided, the caller\&quot;s tenant ID is used by default.</p>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>This operation returns only the direct member count and direct child user group count. It does not include information about indirect members or child groups.</li>
+     * <li>The external synchronization status field is empty when data is normal. It is populated with relevant information only when data is out of sync between an external system (such as WeCom) and the internal system.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Returns the multi-level user group tree for the current tenant.</p>
+     * 
+     * @param request ListUserGroupsRequest
+     * @return ListUserGroupsResponse
+     */
+    public ListUserGroupsResponse listUserGroups(ListUserGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listUserGroupsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li>This operation returns subdirectories and READY resources under the specified directory based on the enterprise knowledge base frontend scope.</li>
@@ -5929,6 +7188,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Idempotently offlines a platform announcement by announcement ID. Returns <code>changed=true</code> when a PUBLISHED announcement is offlined for the first time. Returns <code>changed=false</code> when the announcement is already offline or expired.
+     * The caller must belong to the system operations tenant and have announcement management permissions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Offlines a service notice.</p>
+     * 
+     * @param request OfflineAnnouncementRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OfflineAnnouncementResponse
+     */
+    public OfflineAnnouncementResponse offlineAnnouncementWithOptions(OfflineAnnouncementRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.announcementId)) {
+            body.put("announcementId", request.announcementId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OfflineAnnouncement"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/offlineAnnouncement"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OfflineAnnouncementResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Idempotently offlines a platform announcement by announcement ID. Returns <code>changed=true</code> when a PUBLISHED announcement is offlined for the first time. Returns <code>changed=false</code> when the announcement is already offline or expired.
+     * The caller must belong to the system operations tenant and have announcement management permissions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Offlines a service notice.</p>
+     * 
+     * @param request OfflineAnnouncementRequest
+     * @return OfflineAnnouncementResponse
+     */
+    public OfflineAnnouncementResponse offlineAnnouncement(OfflineAnnouncementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.offlineAnnouncementWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li>This operation previews the content of a specified knowledge entry in an enterprise knowledge base.</li>
@@ -6469,6 +7791,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeUserWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation supports batch removal of direct member relationships between users and a specified user group by providing the user group ID and one or more user IDs.</li>
+     * <li>The <code>userIds</code> parameter accepts an integer array that represents the list of platform user IDs to be removed.</li>
+     * <li>If a user you attempt to remove is not a direct member of the user group, the final result count is not affected.</li>
+     * <li>After a successful call, the response returns information such as the number of members actually removed and the number of members before the request was processed.</li>
+     * <li>This operation requires appropriate permission authentication and is recorded in operation logs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes direct member relationships in bulk from a specified user group.</p>
+     * 
+     * @param tmpReq RemoveUserGroupMembersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveUserGroupMembersResponse
+     */
+    public RemoveUserGroupMembersResponse removeUserGroupMembersWithOptions(RemoveUserGroupMembersRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RemoveUserGroupMembersShrinkRequest request = new RemoveUserGroupMembersShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userIds)) {
+            request.userIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userIds, "userIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            body.put("userGroupId", request.userGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdsShrink)) {
+            body.put("userIds", request.userIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveUserGroupMembers"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/removeUserGroupMembers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveUserGroupMembersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation supports batch removal of direct member relationships between users and a specified user group by providing the user group ID and one or more user IDs.</li>
+     * <li>The <code>userIds</code> parameter accepts an integer array that represents the list of platform user IDs to be removed.</li>
+     * <li>If a user you attempt to remove is not a direct member of the user group, the final result count is not affected.</li>
+     * <li>After a successful call, the response returns information such as the number of members actually removed and the number of members before the request was processed.</li>
+     * <li>This operation requires appropriate permission authentication and is recorded in operation logs.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes direct member relationships in bulk from a specified user group.</p>
+     * 
+     * @param request RemoveUserGroupMembersRequest
+     * @return RemoveUserGroupMembersResponse
+     */
+    public RemoveUserGroupMembersResponse removeUserGroupMembers(RemoveUserGroupMembersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.removeUserGroupMembersWithOptions(request, headers, runtime);
     }
 
     /**
@@ -7473,6 +8878,192 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.runSkillWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>Saves specified group outputs to the repository directory of the same collaboration group.</li>
+     * <li>Supports two modes: <code>link</code> (maintains output association) and <code>copy</code> (creates an independent snapshot).</li>
+     * <li>The caller must be a platform user and a member of the target group. The caller can archive group outputs visible to them, including outputs created by other members.</li>
+     * <li>If <code>directoryId</code> is not specified, the default repository directory of the target group is used.</li>
+     * <li>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</li>
+     * <li>After unified validation passes, entries are saved one by one. The response results maintain the same order as <code>itemIds</code>. A failure of a single entry does not affect other entries.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Saves group outputs in batches to the collaboration group repository.</p>
+     * 
+     * @param tmpReq SaveGroupOutputFileToGroupResourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveGroupOutputFileToGroupResourceResponse
+     */
+    public SaveGroupOutputFileToGroupResourceResponse saveGroupOutputFileToGroupResourceWithOptions(SaveGroupOutputFileToGroupResourceRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SaveGroupOutputFileToGroupResourceShrinkRequest request = new SaveGroupOutputFileToGroupResourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.itemIds)) {
+            request.itemIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itemIds, "itemIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            body.put("directoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("groupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itemIdsShrink)) {
+            body.put("itemIds", request.itemIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            body.put("mode", request.mode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveGroupOutputFileToGroupResource"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/saveGroupOutputFileToGroupResource"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveGroupOutputFileToGroupResourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>Saves specified group outputs to the repository directory of the same collaboration group.</li>
+     * <li>Supports two modes: <code>link</code> (maintains output association) and <code>copy</code> (creates an independent snapshot).</li>
+     * <li>The caller must be a platform user and a member of the target group. The caller can archive group outputs visible to them, including outputs created by other members.</li>
+     * <li>If <code>directoryId</code> is not specified, the default repository directory of the target group is used.</li>
+     * <li>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</li>
+     * <li>After unified validation passes, entries are saved one by one. The response results maintain the same order as <code>itemIds</code>. A failure of a single entry does not affect other entries.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Saves group outputs in batches to the collaboration group repository.</p>
+     * 
+     * @param request SaveGroupOutputFileToGroupResourceRequest
+     * @return SaveGroupOutputFileToGroupResourceResponse
+     */
+    public SaveGroupOutputFileToGroupResourceResponse saveGroupOutputFileToGroupResource(SaveGroupOutputFileToGroupResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.saveGroupOutputFileToGroupResourceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</li>
+     * <li>Supports two modes: <code>link</code> (maintains output association) and <code>copy</code> (creates an independent snapshot).</li>
+     * <li>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</li>
+     * <li>If <code>directoryId</code> is not specified, the current operator\&quot;s default personal directory is used.</li>
+     * <li>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</li>
+     * <li>After unified validation passes, entries are saved one by one. The response results maintain the same order as <code>itemIds</code>. A failure to save a single entry does not affect other entries.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Batch saves group outputs to the current operator\&quot;s personal knowledge base.</p>
+     * 
+     * @param tmpReq SaveGroupOutputFileToPersonalResourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveGroupOutputFileToPersonalResourceResponse
+     */
+    public SaveGroupOutputFileToPersonalResourceResponse saveGroupOutputFileToPersonalResourceWithOptions(SaveGroupOutputFileToPersonalResourceRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SaveGroupOutputFileToPersonalResourceShrinkRequest request = new SaveGroupOutputFileToPersonalResourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.itemIds)) {
+            request.itemIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itemIds, "itemIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            body.put("directoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("groupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itemIdsShrink)) {
+            body.put("itemIds", request.itemIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            body.put("mode", request.mode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveGroupOutputFileToPersonalResource"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/saveGroupOutputFileToPersonalResource"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveGroupOutputFileToPersonalResourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</li>
+     * <li>Supports two modes: <code>link</code> (maintains output association) and <code>copy</code> (creates an independent snapshot).</li>
+     * <li>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</li>
+     * <li>If <code>directoryId</code> is not specified, the current operator\&quot;s default personal directory is used.</li>
+     * <li>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</li>
+     * <li>After unified validation passes, entries are saved one by one. The response results maintain the same order as <code>itemIds</code>. A failure to save a single entry does not affect other entries.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Batch saves group outputs to the current operator\&quot;s personal knowledge base.</p>
+     * 
+     * @param request SaveGroupOutputFileToPersonalResourceRequest
+     * @return SaveGroupOutputFileToPersonalResourceResponse
+     */
+    public SaveGroupOutputFileToPersonalResourceResponse saveGroupOutputFileToPersonalResource(SaveGroupOutputFileToPersonalResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.saveGroupOutputFileToPersonalResourceWithOptions(request, headers, runtime);
     }
 
     /**
@@ -8986,6 +10577,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateUserWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>WinNexo user management OpenAPI: updates a user group. The tenant identity is obtained from the authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name, description, and parent relationship of a specified user group.</p>
+     * 
+     * @param request UpdateUserGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateUserGroupResponse
+     */
+    public UpdateUserGroupResponse updateUserGroupWithOptions(UpdateUserGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.moveToRoot)) {
+            body.put("moveToRoot", request.moveToRoot);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentId)) {
+            body.put("parentId", request.parentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            body.put("userGroupId", request.userGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupName)) {
+            body.put("userGroupName", request.userGroupName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUserGroup"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/updateUserGroup"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>WinNexo user management OpenAPI: updates a user group. The tenant identity is obtained from the authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name, description, and parent relationship of a specified user group.</p>
+     * 
+     * @param request UpdateUserGroupRequest
+     * @return UpdateUserGroupResponse
+     */
+    public UpdateUserGroupResponse updateUserGroup(UpdateUserGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateUserGroupWithOptions(request, headers, runtime);
     }
 
     /**
