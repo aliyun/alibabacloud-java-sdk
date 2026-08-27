@@ -14,7 +14,7 @@ public class ListRolesResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.````</p>
+     * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>. If the value of <code>IsTruncated</code> is <code>true</code>, call this operation again and use <code>Marker</code> to retrieve the truncated content.</p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>
@@ -121,6 +121,9 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyRolesRole extends TeaModel {
+        @NameInMap("AllowConsoleLogin")
+        public Boolean allowConsoleLogin;
+
         @NameInMap("Arn")
         public String arn;
 
@@ -148,6 +151,14 @@ public class ListRolesResponseBody extends TeaModel {
         public static ListRolesResponseBodyRolesRole build(java.util.Map<String, ?> map) throws Exception {
             ListRolesResponseBodyRolesRole self = new ListRolesResponseBodyRolesRole();
             return TeaModel.build(map, self);
+        }
+
+        public ListRolesResponseBodyRolesRole setAllowConsoleLogin(Boolean allowConsoleLogin) {
+            this.allowConsoleLogin = allowConsoleLogin;
+            return this;
+        }
+        public Boolean getAllowConsoleLogin() {
+            return this.allowConsoleLogin;
         }
 
         public ListRolesResponseBodyRolesRole setArn(String arn) {

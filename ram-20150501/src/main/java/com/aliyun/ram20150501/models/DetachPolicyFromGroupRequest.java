@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachPolicyFromGroupRequest extends TeaModel {
     /**
-     * <p>The name of the RAM user group.</p>
+     * <p>The name of the user group.</p>
      * 
      * <strong>example:</strong>
      * <p>dev</p>
@@ -14,7 +14,7 @@ public class DetachPolicyFromGroupRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The name of the policy.</p>
+     * <p>The name of the access policy.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS-Administrator</p>
@@ -23,7 +23,7 @@ public class DetachPolicyFromGroupRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The type of the policy. Valid values: <code>System</code> and <code>Custom</code>.</p>
+     * <p>The type of the access policy. Valid values: <code>System</code> or <code>Custom</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Custom</p>
@@ -31,6 +31,12 @@ public class DetachPolicyFromGroupRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-9gLOoK****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

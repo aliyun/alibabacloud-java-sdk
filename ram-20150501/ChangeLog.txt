@@ -1,3 +1,18 @@
+2026-08-27 Version: 1.3.0
+- Support API CreateServiceLinkedRole.
+- Support API DeleteServiceLinkedRole.
+- Support API GetServiceLinkedRoleTemplate.
+- Update API CreateRole: add request parameters AllowConsoleLogin.
+- Update API CreateRole: add response parameters Body.Role.AllowConsoleLogin.
+- Update API GetRole: add response parameters Body.Role.AllowConsoleLogin.
+- Update API GetRole: add response parameters Body.Role.IsServiceLinkedRole.
+- Update API GetRole: add response parameters Body.Role.LatestDeletionTask.
+- Update API GetRole: add response parameters Body.Role.RolePrincipalName.
+- Update API ListRoles: add response parameters Body.Roles.$.AllowConsoleLogin.
+- Update API UpdateRole: add request parameters NewAllowConsoleLogin.
+- Update API UpdateRole: add response parameters Body.Role.AllowConsoleLogin.
+
+
 2026-03-31 Version: 1.2.1
 - Update API AttachPolicyToGroup: add request parameters ResourceGroupId.
 - Update API AttachPolicyToRole: add request parameters ResourceGroupId.

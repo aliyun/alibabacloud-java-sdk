@@ -7,8 +7,10 @@ public class SetPasswordPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether a password will expire. Valid values: <code>true</code> and <code>false</code>. Default value: <code>false</code>. If you leave this parameter unspecified, the default value false is used.</p>
      * <ul>
-     * <li>If you set this parameter to <code>true</code>, the Alibaba Cloud account to which the RAM users belong must reset the passwords before the RAM users can log on to the Alibaba Cloud Management Console.</li>
-     * <li>If you set this parameter to <code>false</code>, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.</li>
+     * <li><p>If you set this parameter to <code>true</code>, the Alibaba Cloud account to which the RAM users belong must reset the passwords before the RAM users can log on to the Alibaba Cloud Management Console.</p>
+     * </li>
+     * <li><p>If you set this parameter to <code>false</code>, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

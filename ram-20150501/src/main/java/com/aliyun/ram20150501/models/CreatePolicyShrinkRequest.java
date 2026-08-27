@@ -9,7 +9,7 @@ public class CreatePolicyShrinkRequest extends TeaModel {
      * <p>The description must be 1 to 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>Query ECS instances in a specific region</p>
+     * <p>View ECS instances in a specified region</p>
      */
     @NameInMap("Description")
     public String description;

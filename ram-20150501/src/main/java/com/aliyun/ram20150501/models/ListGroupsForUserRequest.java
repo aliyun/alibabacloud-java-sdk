@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGroupsForUserRequest extends TeaModel {
     /**
-     * <p>The name of the RAM user.</p>
+     * <p>The username of the Resource Access Management (RAM) user.</p>
      * 
      * <strong>example:</strong>
      * <p>Alice</p>

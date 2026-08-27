@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPolicyVersionsRequest extends TeaModel {
     /**
-     * <p>The name of the policy.</p>
+     * <p>The name of the access policy.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS-Administrator</p>
@@ -14,7 +14,7 @@ public class ListPolicyVersionsRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The type of the policy. Valid values: <code>System</code> and <code>Custom</code>.</p>
+     * <p>The type of the access policy. Valid values: <code>System</code>, <code>Custom</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Custom</p>

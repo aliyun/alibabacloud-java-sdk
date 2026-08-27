@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPolicyVersionResponseBody extends TeaModel {
     /**
-     * <p>The information about the policy version.</p>
+     * <p>The version information of the access policy.</p>
      */
     @NameInMap("PolicyVersion")
     public GetPolicyVersionResponseBodyPolicyVersion policyVersion;
@@ -42,7 +42,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
 
     public static class GetPolicyVersionResponseBodyPolicyVersion extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the version was created. The time is in UTC and in the format of <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -51,7 +51,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>Indicates whether the policy version is the default version.</p>
+         * <p>Indicates whether this is the default version.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -60,7 +60,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         public Boolean isDefaultVersion;
 
         /**
-         * <p>The document of the policy.</p>
+         * <p>The policy document of the permission.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
@@ -69,7 +69,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         public String policyDocument;
 
         /**
-         * <p>The ID of the policy version.</p>
+         * <p>The ID of the access policy version.</p>
          * 
          * <strong>example:</strong>
          * <p>v3</p>

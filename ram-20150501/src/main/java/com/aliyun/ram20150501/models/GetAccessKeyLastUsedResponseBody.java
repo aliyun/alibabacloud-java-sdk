@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedResponseBody extends TeaModel {
     /**
-     * <p>The details of the time when the AccessKey pair was used for the last time.</p>
+     * <p>Information about the last time the AccessKey pair was used.</p>
      */
     @NameInMap("AccessKeyLastUsed")
     public GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed accessKeyLastUsed;
@@ -42,7 +42,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
 
     public static class GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed extends TeaModel {
         /**
-         * <p>The time when the AccessKey pair was used for the last time.</p>
+         * <p>The last time the AccessKey pair was used.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-21T06:37:40Z</p>

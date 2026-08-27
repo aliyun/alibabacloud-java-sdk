@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesForRoleRequest extends TeaModel {
     /**
-     * <p>The name of the RAM role.</p>
+     * <p>The name of the role.</p>
      * 
      * <strong>example:</strong>
      * <p>AdminRole</p>

@@ -80,8 +80,10 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
         /**
          * <p>The type of the policy. Valid values:</p>
          * <ul>
-         * <li>Custom</li>
-         * <li>System</li>
+         * <li><p>Custom</p>
+         * </li>
+         * <li><p>System</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

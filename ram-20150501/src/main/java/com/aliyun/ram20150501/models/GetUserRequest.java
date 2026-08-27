@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
     /**
-     * <p>The username of the RAM user.</p>
-     * <p>The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+     * <p>The name of the RAM user.</p>
+     * <p>The name is 1 to 64 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>

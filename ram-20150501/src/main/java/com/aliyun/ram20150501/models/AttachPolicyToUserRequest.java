@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachPolicyToUserRequest extends TeaModel {
     /**
-     * <p>The name of the policy.</p>
+     * <p>The name of the access policy.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS-Administrator</p>
@@ -14,7 +14,7 @@ public class AttachPolicyToUserRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The type of the policy. Valid values: <code>System</code> and <code>Custom</code>.</p>
+     * <p>The type of the access policy. Valid values: <code>System</code> or <code>Custom</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Custom</p>
@@ -22,11 +22,17 @@ public class AttachPolicyToUserRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-9gLOoK****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the RAM user.</p>
+     * <p>The username.</p>
      * 
      * <strong>example:</strong>
      * <p>zhangq****</p>

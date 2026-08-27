@@ -14,8 +14,10 @@ public class TagResourcesRequest extends TeaModel {
      * <p>The resource type.</p>
      * <p>Enumerated values:</p>
      * <ul>
-     * <li>role: RAM roles.</li>
-     * <li>policy: policies.</li>
+     * <li><p>role: RAM roles.</p>
+     * </li>
+     * <li><p>policy: policies.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

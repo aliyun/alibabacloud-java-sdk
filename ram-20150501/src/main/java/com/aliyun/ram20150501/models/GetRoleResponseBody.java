@@ -14,7 +14,7 @@ public class GetRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the RAM role.</p>
+     * <p>The role information.</p>
      */
     @NameInMap("Role")
     public GetRoleResponseBodyRole role;
@@ -40,9 +40,60 @@ public class GetRoleResponseBody extends TeaModel {
         return this.role;
     }
 
+    public static class GetRoleResponseBodyRoleLatestDeletionTask extends TeaModel {
+        /**
+         * <p>The time when the deletion task was created. The time is in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-23T12:33:18Z</p>
+         */
+        @NameInMap("CreateDate")
+        public String createDate;
+
+        /**
+         * <p>The ID of the deletion task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task/acs-service-role/sas.aliyuncs.com/AliyunServiceRoleForSas/20843430-bb43-44fe-a7ff-02ab09183436</p>
+         */
+        @NameInMap("DeletionTaskId")
+        public String deletionTaskId;
+
+        public static GetRoleResponseBodyRoleLatestDeletionTask build(java.util.Map<String, ?> map) throws Exception {
+            GetRoleResponseBodyRoleLatestDeletionTask self = new GetRoleResponseBodyRoleLatestDeletionTask();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRoleResponseBodyRoleLatestDeletionTask setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
+        }
+
+        public GetRoleResponseBodyRoleLatestDeletionTask setDeletionTaskId(String deletionTaskId) {
+            this.deletionTaskId = deletionTaskId;
+            return this;
+        }
+        public String getDeletionTaskId() {
+            return this.deletionTaskId;
+        }
+
+    }
+
     public static class GetRoleResponseBodyRole extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         * <p>Indicates whether console logon is allowed for the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AllowConsoleLogin")
+        public Boolean allowConsoleLogin;
+
+        /**
+         * <p>The resource descriptor of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/ECSAdmin</p>
@@ -51,7 +102,7 @@ public class GetRoleResponseBody extends TeaModel {
         public String arn;
 
         /**
-         * <p>The policy that specifies the trusted entity to assume the RAM role.</p>
+         * <p>The access policy that specifies the permission to assume the role.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::123456789012****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</p>
@@ -60,7 +111,7 @@ public class GetRoleResponseBody extends TeaModel {
         public String assumeRolePolicyDocument;
 
         /**
-         * <p>The time when the RAM role was created.</p>
+         * <p>The time when the role was created. The time is in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -69,16 +120,31 @@ public class GetRoleResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The description of the RAM role.</p>
+         * <p>The description of the role.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS administrator</p>
+         * <p>ECS management role</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The maximum session duration of the RAM role.</p>
+         * <p>Indicates whether the role is a service-linked role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("IsServiceLinkedRole")
+        public Boolean isServiceLinkedRole;
+
+        /**
+         * <p>The information about the most recent deletion task.</p>
+         */
+        @NameInMap("LatestDeletionTask")
+        public GetRoleResponseBodyRoleLatestDeletionTask latestDeletionTask;
+
+        /**
+         * <p>The maximum session duration of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -87,7 +153,7 @@ public class GetRoleResponseBody extends TeaModel {
         public Long maxSessionDuration;
 
         /**
-         * <p>The ID of the RAM role.</p>
+         * <p>The ID of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>901234567890****</p>
@@ -96,7 +162,7 @@ public class GetRoleResponseBody extends TeaModel {
         public String roleId;
 
         /**
-         * <p>The name of the RAM role.</p>
+         * <p>The name of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>ECSAdmin</p>
@@ -105,7 +171,16 @@ public class GetRoleResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The time when the RAM role was modified.</p>
+         * <p>The name of the role with the domain name suffix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>
+         */
+        @NameInMap("RolePrincipalName")
+        public String rolePrincipalName;
+
+        /**
+         * <p>The time when the role was last updated. The time is in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -116,6 +191,14 @@ public class GetRoleResponseBody extends TeaModel {
         public static GetRoleResponseBodyRole build(java.util.Map<String, ?> map) throws Exception {
             GetRoleResponseBodyRole self = new GetRoleResponseBodyRole();
             return TeaModel.build(map, self);
+        }
+
+        public GetRoleResponseBodyRole setAllowConsoleLogin(Boolean allowConsoleLogin) {
+            this.allowConsoleLogin = allowConsoleLogin;
+            return this;
+        }
+        public Boolean getAllowConsoleLogin() {
+            return this.allowConsoleLogin;
         }
 
         public GetRoleResponseBodyRole setArn(String arn) {
@@ -150,6 +233,22 @@ public class GetRoleResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetRoleResponseBodyRole setIsServiceLinkedRole(Boolean isServiceLinkedRole) {
+            this.isServiceLinkedRole = isServiceLinkedRole;
+            return this;
+        }
+        public Boolean getIsServiceLinkedRole() {
+            return this.isServiceLinkedRole;
+        }
+
+        public GetRoleResponseBodyRole setLatestDeletionTask(GetRoleResponseBodyRoleLatestDeletionTask latestDeletionTask) {
+            this.latestDeletionTask = latestDeletionTask;
+            return this;
+        }
+        public GetRoleResponseBodyRoleLatestDeletionTask getLatestDeletionTask() {
+            return this.latestDeletionTask;
+        }
+
         public GetRoleResponseBodyRole setMaxSessionDuration(Long maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
@@ -172,6 +271,14 @@ public class GetRoleResponseBody extends TeaModel {
         }
         public String getRoleName() {
             return this.roleName;
+        }
+
+        public GetRoleResponseBodyRole setRolePrincipalName(String rolePrincipalName) {
+            this.rolePrincipalName = rolePrincipalName;
+            return this;
+        }
+        public String getRolePrincipalName() {
+            return this.rolePrincipalName;
         }
 
         public GetRoleResponseBodyRole setUpdateDate(String updateDate) {

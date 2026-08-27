@@ -44,8 +44,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Resource Access Management (RAM) users can manage their AccessKey pairs. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,8 +75,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether RAM users can change their passwords. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -86,8 +90,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether RAM users can save security codes for MFA during logon. Each security code is valid for seven days. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,8 +105,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         /**
          * <p>The subnet mask that indicates the IP addresses from which logon to the Alibaba Cloud Management Console is allowed. This parameter applies to password-based logon and single sign-on (SSO). However, this parameter does not apply to API calls that are authenticated based on AccessKey pairs.</p>
          * <ul>
-         * <li>If you specify a subnet mask, RAM users can use only the IP addresses in the subnet mask to log on to the Alibaba Cloud Management Console.</li>
-         * <li>If you do not specify a subnet mask, RAM users can use all IP addresses to log on to the Alibaba Cloud Management Console.</li>
+         * <li><p>If you specify a subnet mask, RAM users can use only the IP addresses in the subnet mask to log on to the Alibaba Cloud Management Console.</p>
+         * </li>
+         * <li><p>If you do not specify a subnet mask, RAM users can use all IP addresses to log on to the Alibaba Cloud Management Console.</p>
+         * </li>
          * </ul>
          * <p>If you want to specify more than one subnet mask, separate the masks with semicolons (;). Example: 192.168.0.0/16;10.0.0.0/8.</p>
          * 
@@ -162,8 +170,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their MFA devices. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,8 +201,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their public keys. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,7 +250,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         /**
          * <p>The public key preference.</p>
          * <blockquote>
-         * <p> This parameter is valid only for the Japan site.</p>
+         * <p>This parameter is valid only for the Japan site.</p>
          * </blockquote>
          */
         @NameInMap("PublicKeyPreference")

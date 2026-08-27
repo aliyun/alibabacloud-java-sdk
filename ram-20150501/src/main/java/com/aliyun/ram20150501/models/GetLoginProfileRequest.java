@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLoginProfileRequest extends TeaModel {
     /**
-     * <p>The name of the RAM user.</p>
+     * <p>The username.</p>
      * 
      * <strong>example:</strong>
      * <p>zhangq****</p>

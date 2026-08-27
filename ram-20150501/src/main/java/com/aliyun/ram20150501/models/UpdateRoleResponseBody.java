@@ -14,7 +14,7 @@ public class UpdateRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the RAM role.</p>
+     * <p>The information of the RAM role.</p>
      */
     @NameInMap("Role")
     public UpdateRoleResponseBodyRole role;
@@ -42,7 +42,16 @@ public class UpdateRoleResponseBody extends TeaModel {
 
     public static class UpdateRoleResponseBodyRole extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         * <p>Specifies whether the RAM role is allowed to log on to the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AllowConsoleLogin")
+        public Boolean allowConsoleLogin;
+
+        /**
+         * <p>The resource descriptor of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/ECSAdmin</p>
@@ -51,7 +60,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         public String arn;
 
         /**
-         * <p>The trust policy that specifies the trusted entity to assume the RAM role.</p>
+         * <p>The trust policy of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::123456789012****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</p>
@@ -72,13 +81,13 @@ public class UpdateRoleResponseBody extends TeaModel {
          * <p>The description of the RAM role.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS administrator</p>
+         * <p>ECS management role</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The maximum session time of the RAM role.</p>
+         * <p>The maximum session duration of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -105,7 +114,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The time when the description of the RAM role was changed.</p>
+         * <p>The time when the RAM role was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -116,6 +125,14 @@ public class UpdateRoleResponseBody extends TeaModel {
         public static UpdateRoleResponseBodyRole build(java.util.Map<String, ?> map) throws Exception {
             UpdateRoleResponseBodyRole self = new UpdateRoleResponseBodyRole();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateRoleResponseBodyRole setAllowConsoleLogin(Boolean allowConsoleLogin) {
+            this.allowConsoleLogin = allowConsoleLogin;
+            return this;
+        }
+        public Boolean getAllowConsoleLogin() {
+            return this.allowConsoleLogin;
         }
 
         public UpdateRoleResponseBodyRole setArn(String arn) {

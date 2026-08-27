@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccessKeyRequest extends TeaModel {
     /**
-     * <p>The name of the RAM user. If a RAM user calls this operation and does not specify this parameter, an AccessKey pair is created for the RAM user.</p>
+     * <p>The username. When a Resource Access Management (RAM) user invokes this operation, an AccessKey pair is created for the RAM user by default.</p>
      * 
      * <strong>example:</strong>
      * <p>zhangq****</p>

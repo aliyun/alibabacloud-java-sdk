@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGroupRequest extends TeaModel {
     /**
-     * <p>The name of the RAM user group.</p>
+     * <p>The name of the user group.</p>
      * 
      * <strong>example:</strong>
      * <p>Dev-Team</p>

@@ -8,7 +8,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public ListGroupsResponseBodyGroups groups;
 
     /**
-     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <p>Indicates whether the returned results are truncated. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -21,9 +21,9 @@ public class ListGroupsResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token for querying the next page of results.</p>
      * <blockquote>
-     * <p> This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
+     * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public String marker;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>065527AA-2F2E-AD7C-7484-F2626CFE4934</p>

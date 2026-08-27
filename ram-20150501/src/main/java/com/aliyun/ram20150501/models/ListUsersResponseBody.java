@@ -14,7 +14,7 @@ public class ListUsersResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set <code>Marker</code> to obtain the truncated part.``</p>
+     * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set <code>Marker</code> to obtain the truncated part.\<code>\\</code></p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>

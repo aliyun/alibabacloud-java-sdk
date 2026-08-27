@@ -8,7 +8,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     public ListGroupsForUserResponseBodyGroups groups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DA772B52-BF9F-54CA-AC77-AA7A2DA89D46</p>

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.``</p>
-     * <p>When you call the operation for the first time, if the total number of returned entries exceeds the value of <code>MaxItems</code>, the entries are truncated. The system returns entries based on the value of <code>MaxItems</code> and does not return the excess entries. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and <code>Marker</code> is returned. In the next call, you can use the value of <code>Marker</code> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <code>IsTruncated</code> becomes <code>false</code>. This way, all entries are returned.</p>
+     * <p>The token for querying the next page of results. You do not need to specify <code>Marker</code> for the first API call.</p>
+     * <p>If the total number of returned entries exceeds the <code>MaxItems</code> limit during the first API call, the data is truncated and only <code>MaxItems</code> entries are returned. In this case, the <code>IsTruncated</code> response parameter is <code>true</code> and a <code>Marker</code> is returned. You can use the <code>Marker</code> returned from the previous call to continue calling the API with the other request parameters unchanged to query the truncated data. You can repeat this process until <code>IsTruncated</code> is <code>false</code>, which indicates that all data has been queried.</p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>
@@ -15,7 +15,7 @@ public class ListGroupsRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 100.</p>
      * 

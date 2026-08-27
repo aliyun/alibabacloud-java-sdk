@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersForGroupRequest extends TeaModel {
     /**
-     * <p>The name of the RAM user group.</p>
+     * <p>The name of the user group.</p>
      * 
      * <strong>example:</strong>
      * <p>Dev-Team</p>
@@ -14,7 +14,7 @@ public class ListUsersForGroupRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+     * <p>The marker. If the response is truncated, you can use this parameter to obtain the content that starts from the position after the truncation.</p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>
@@ -23,7 +23,7 @@ public class ListUsersForGroupRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The number of entries to return. If a response is truncated because it reaches the value of <code>MaxItems</code>, the value of <code>IsTruncated</code> will be <code>true</code>.</p>
+     * <p>The maximum number of entries to return. If the response is truncated because it reaches the <code>MaxItems</code> limit, the <code>IsTruncated</code> response parameter is set to <code>true</code>.</p>
      * <p>Valid values: 1 to 1000. Default value: 100.</p>
      * 
      * <strong>example:</strong>

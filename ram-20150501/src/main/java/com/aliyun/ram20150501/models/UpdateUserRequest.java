@@ -27,7 +27,7 @@ public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The new email address of the RAM user.</p>
      * <blockquote>
-     * <p> This parameter applies only to the China site (aliyun.com).</p>
+     * <p>This parameter applies only to the China site (aliyun.com).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class UpdateUserRequest extends TeaModel {
      * <p>The new mobile phone number of the RAM user.</p>
      * <p>Format: \<Country code>-\<Mobile phone number>.</p>
      * <blockquote>
-     * <p> This parameter applies only to the China site (aliyun.com).</p>
+     * <p>This parameter applies only to the China site (aliyun.com).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

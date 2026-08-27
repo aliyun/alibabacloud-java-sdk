@@ -18,7 +18,7 @@ public class UpdateGroupRequest extends TeaModel {
      * <p>The new description must be 1 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>NewDev-Team</p>
+     * <p>Development team</p>
      */
     @NameInMap("NewComments")
     public String newComments;

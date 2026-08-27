@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ram20150501</artifactId>
-  <version>1.2.1</version>
+  <version>1.3.0</version>
   <packaging>jar</packaging>
   <name>ram20150501</name>
   <description>Alibaba Cloud Resource Access Management (20150501) SDK for Java
@@ -209,7 +209,7 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.9.0</version>
+        <version>0.10.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>

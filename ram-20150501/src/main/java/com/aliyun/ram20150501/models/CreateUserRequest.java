@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateUserRequest extends TeaModel {
     /**
      * <p>The description of the RAM user.</p>
-     * <p>The description must be 1 to 128 characters in length.</p>
+     * <p>It must be 1 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a cloud computing engineer.</p>
@@ -16,7 +16,7 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The display name of the RAM user.</p>
-     * <p>The name must be 1 to 128 characters in length.</p>
+     * <p>It must be 1 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -27,7 +27,7 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>The email address of the RAM user.</p>
      * <blockquote>
-     * <p> This parameter applies only to the China site (aliyun.com).</p>
+     * <p>This parameter applies only to the China site (aliyun.com).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,9 +38,9 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The mobile phone number of the RAM user.</p>
-     * <p>Format: \<Country code>-\<Mobile phone number>.</p>
+     * <p>Format: \<Country code>-\<Phone number>.</p>
      * <blockquote>
-     * <p> This parameter applies only to the China site (aliyun.com).</p>
+     * <p>This parameter applies only to the China site (aliyun.com).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The name of the RAM user.</p>
-     * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+     * <p>It must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>

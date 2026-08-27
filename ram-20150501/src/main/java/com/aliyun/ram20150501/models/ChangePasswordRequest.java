@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangePasswordRequest extends TeaModel {
     /**
-     * <p>The new password that is used to log on to the console.</p>
-     * <p>The password must meet the complexity requirements. For more information, see <a href="https://help.aliyun.com/document_detail/28739.html">SetPasswordPolicy</a>.</p>
+     * <p>The new console logon password of the Resource Access Management (RAM) user.</p>
+     * <p>The password must meet the password strength requirements. For more information, see <a href="https://help.aliyun.com/document_detail/28739.html">SetPasswordPolicy</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>aw$2****</p>
@@ -15,7 +15,7 @@ public class ChangePasswordRequest extends TeaModel {
     public String newPassword;
 
     /**
-     * <p>The old password that is used to log on to the console.</p>
+     * <p>The old console logon password of the Resource Access Management (RAM) user.</p>
      * 
      * <strong>example:</strong>
      * <p>12****</p>

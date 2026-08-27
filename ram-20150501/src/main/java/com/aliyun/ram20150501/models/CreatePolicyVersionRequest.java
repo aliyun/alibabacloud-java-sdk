@@ -26,8 +26,10 @@ public class CreatePolicyVersionRequest extends TeaModel {
      * <p>The rotation strategy of the policy. The rotation strategy can be used to delete an early policy version.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>None</code>: disables the rotation strategy.</li>
-     * <li><code>DeleteOldestNonDefaultVersionWhenLimitExceeded</code>: deletes the earliest non-active version if the number of versions exceeds the limit.</li>
+     * <li><p><code>None</code>: disables the rotation strategy.</p>
+     * </li>
+     * <li><p><code>DeleteOldestNonDefaultVersionWhenLimitExceeded</code>: deletes the earliest non-active version if the number of versions exceeds the limit.</p>
+     * </li>
      * </ul>
      * <p>Default value: <code>None</code>.</p>
      * 

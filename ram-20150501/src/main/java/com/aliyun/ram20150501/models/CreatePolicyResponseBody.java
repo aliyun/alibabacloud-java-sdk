@@ -63,7 +63,7 @@ public class CreatePolicyResponseBody extends TeaModel {
          * <p>The description of the policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>Query ECS instances in a specific region</p>
+         * <p>View ECS instances in a specified region</p>
          */
         @NameInMap("Description")
         public String description;
@@ -80,8 +80,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         /**
          * <p>The type of the policy. Valid values:</p>
          * <ul>
-         * <li>Custom</li>
-         * <li>System</li>
+         * <li><p>Custom</p>
+         * </li>
+         * <li><p>System</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

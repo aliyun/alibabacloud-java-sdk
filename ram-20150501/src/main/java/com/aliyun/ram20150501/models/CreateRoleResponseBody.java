@@ -42,7 +42,16 @@ public class CreateRoleResponseBody extends TeaModel {
 
     public static class CreateRoleResponseBodyRole extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         * <p>Indicates whether console logon is allowed for the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AllowConsoleLogin")
+        public Boolean allowConsoleLogin;
+
+        /**
+         * <p>The resource descriptor of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/ECSAdmin</p>
@@ -51,7 +60,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String arn;
 
         /**
-         * <p>The trust policy that specifies the trusted entity to assume the RAM role.</p>
+         * <p>The trust policy of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::123456789012****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</p>
@@ -72,13 +81,13 @@ public class CreateRoleResponseBody extends TeaModel {
          * <p>The description of the RAM role.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS administrator</p>
+         * <p>ECS management role.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The maximum session time of the RAM role.</p>
+         * <p>The maximum session duration of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -107,6 +116,14 @@ public class CreateRoleResponseBody extends TeaModel {
         public static CreateRoleResponseBodyRole build(java.util.Map<String, ?> map) throws Exception {
             CreateRoleResponseBodyRole self = new CreateRoleResponseBodyRole();
             return TeaModel.build(map, self);
+        }
+
+        public CreateRoleResponseBodyRole setAllowConsoleLogin(Boolean allowConsoleLogin) {
+            this.allowConsoleLogin = allowConsoleLogin;
+            return this;
+        }
+        public Boolean getAllowConsoleLogin() {
+            return this.allowConsoleLogin;
         }
 
         public CreateRoleResponseBodyRole setArn(String arn) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesShrinkRequest extends TeaModel {
     /**
-     * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+     * <p>The marker. If the response is truncated, you can use <code>Marker</code> to obtain the content that starts from the position after the truncation point.</p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>
@@ -14,7 +14,7 @@ public class ListPoliciesShrinkRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The number of entries to return. If a response is truncated because it reaches the value of <code>MaxItems</code>, the value of <code>IsTruncated</code> will be <code>true</code>.</p>
+     * <p>The number of entries to return. If the response is truncated because it reaches the <code>MaxItems</code> limit, the <code>IsTruncated</code> response parameter equals <code>true</code>.</p>
      * <p>Valid values: 1 to 1000. Default value: 100.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListPoliciesShrinkRequest extends TeaModel {
     public Integer maxItems;
 
     /**
-     * <p>The type of the policies. Valid values: <code>System</code> and <code>Custom</code>. If you do not specify the parameter, all policies are returned.``</p>
+     * <p>The type of the access policy. Valid values: <code>System</code> and <code>Custom</code>. If this parameter is not specified, all access policies are listed.</p>
      * 
      * <strong>example:</strong>
      * <p>System</p>

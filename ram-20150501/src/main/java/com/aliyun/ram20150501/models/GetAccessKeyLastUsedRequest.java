@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedRequest extends TeaModel {
     /**
+     * <p>The ID of the AccessKey pair.</p>
+     * 
      * <strong>example:</strong>
      * <p>LTAI4GFTgcR8m8cZQDTH****</p>
      */
@@ -12,6 +14,8 @@ public class GetAccessKeyLastUsedRequest extends TeaModel {
     public String userAccessKeyId;
 
     /**
+     * <p>The name of the RAM user.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

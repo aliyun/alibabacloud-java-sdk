@@ -71,7 +71,7 @@ public class UpdateUserResponseBody extends TeaModel {
         /**
          * <p>The email address of the RAM user.</p>
          * <blockquote>
-         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+         * <p>This parameter can be returned only on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class UpdateUserResponseBody extends TeaModel {
         /**
          * <p>The mobile phone number of the RAM user.</p>
          * <blockquote>
-         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+         * <p>This parameter can be returned only on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
