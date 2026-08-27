@@ -13,7 +13,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-beijing", "modelstudio.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "modelstudio.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "modelstudio.ap-northeast-1.aliyuncs.com"),
             new TeaPair("us-east-1", "modelstudio.us-east-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "modelstudio.eu-central-1.aliyuncs.com")
         );
@@ -656,6 +655,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getApiKeyWithOptions(apiKeyId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询账单概览</p>
+     * 
+     * @param tmpReq GetBillingOverviewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBillingOverviewResponse
+     */
+    public GetBillingOverviewResponse getBillingOverviewWithOptions(GetBillingOverviewRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetBillingOverviewShrinkRequest request = new GetBillingOverviewShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "filter", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.groupBy)) {
+            request.groupByShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.groupBy, "groupBy", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billMonth)) {
+            query.put("billMonth", request.billMonth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupByShrink)) {
+            query.put("groupBy", request.groupByShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locale)) {
+            query.put("locale", request.locale);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topNum)) {
+            query.put("topNum", request.topNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zeroFilter)) {
+            query.put("zeroFilter", request.zeroFilter);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBillingOverview"),
+            new TeaPair("version", "2026-02-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/modelstudio/billing/overview"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBillingOverviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询账单概览</p>
+     * 
+     * @param request GetBillingOverviewRequest
+     * @return GetBillingOverviewResponse
+     */
+    public GetBillingOverviewResponse getBillingOverview(GetBillingOverviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getBillingOverviewWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询账单趋势</p>
+     * 
+     * @param tmpReq GetBillingTrendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBillingTrendResponse
+     */
+    public GetBillingTrendResponse getBillingTrendWithOptions(GetBillingTrendRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetBillingTrendShrinkRequest request = new GetBillingTrendShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "filter", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.groupBy)) {
+            request.groupByShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.groupBy, "groupBy", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timePeriod)) {
+            request.timePeriodShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timePeriod, "timePeriod", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.granularity)) {
+            query.put("granularity", request.granularity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupByShrink)) {
+            query.put("groupBy", request.groupByShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locale)) {
+            query.put("locale", request.locale);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timePeriodShrink)) {
+            query.put("timePeriod", request.timePeriodShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topNum)) {
+            query.put("topNum", request.topNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zeroFilter)) {
+            query.put("zeroFilter", request.zeroFilter);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBillingTrend"),
+            new TeaPair("version", "2026-02-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/modelstudio/billing/trend"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBillingTrendResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询账单趋势</p>
+     * 
+     * @param request GetBillingTrendRequest
+     * @return GetBillingTrendResponse
+     */
+    public GetBillingTrendResponse getBillingTrend(GetBillingTrendRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getBillingTrendWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1845,7 +2014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新业务空间模型授权</p>
+     * <p>Updates model authorization for a workspace.</p>
      * 
      * @param request UpdateModelPermissionsRequest
      * @param headers map
@@ -1887,7 +2056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新业务空间模型授权</p>
+     * <p>Updates model authorization for a workspace.</p>
      * 
      * @param request UpdateModelPermissionsRequest
      * @return UpdateModelPermissionsResponse

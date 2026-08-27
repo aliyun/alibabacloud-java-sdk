@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class UpdateModelPermissionsRequest extends TeaModel {
     /**
+     * <p>The tri-state value for one-click authorization. Valid values:</p>
+     * <ul>
+     * <li>OPEN: grants authorization to all models with one click.</li>
+     * <li>CLOSE: cancels one-click authorization.</li>
+     * <li>KEEP: keeps per-model authorization.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OPEN</p>
      */
     @NameInMap("accessAllEntities")
     public String accessAllEntities;
 
+    /**
+     * <p>The list of per-model authorization items.</p>
+     */
     @NameInMap("models")
     public java.util.List<UpdateModelPermissionsRequestModels> models;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,16 +64,26 @@ public class UpdateModelPermissionsRequest extends TeaModel {
     }
 
     public static class UpdateModelPermissionsRequestModels extends TeaModel {
+        /**
+         * <p>Specifies whether to grant model deployment permission.</p>
+         */
         @NameInMap("deploy")
         public Boolean deploy;
 
+        /**
+         * <p>Specifies whether to grant model training permission.</p>
+         */
         @NameInMap("fineTune")
         public Boolean fineTune;
 
+        /**
+         * <p>Specifies whether to grant model invocation permission.</p>
+         */
         @NameInMap("inference")
         public Boolean inference;
 
         /**
+         * <p>The model.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
