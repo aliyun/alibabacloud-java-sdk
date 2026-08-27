@@ -4,6 +4,9 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class CreateDigitalEmployeeRequest extends TeaModel {
+    /**
+     * <p>The attributes.</p>
+     */
     @NameInMap("attributes")
     public java.util.Map<String, String> attributes;
 
@@ -35,7 +38,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The list of knowledge bases.</p>
+     * <p>The knowledge base list.</p>
      */
     @NameInMap("knowledges")
     public CreateDigitalEmployeeRequestKnowledges knowledges;
@@ -88,7 +91,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
      * <p>The tool calling security policy configuration of the digital employee.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
+     * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
      */
     @NameInMap("toolPolicy")
     public CreateDigitalEmployeeRequestToolPolicy toolPolicy;
@@ -188,7 +191,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     public static class CreateDigitalEmployeeRequestKnowledgesBailian extends TeaModel {
         /**
-         * <p>The attributes of the knowledge base.</p>
+         * <p>The knowledge base attributes.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -264,13 +267,13 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     public static class CreateDigitalEmployeeRequestKnowledges extends TeaModel {
         /**
-         * <p>The list of Bailian knowledge bases.</p>
+         * <p>The Bailian knowledge base list.</p>
          */
         @NameInMap("bailian")
         public java.util.List<CreateDigitalEmployeeRequestKnowledgesBailian> bailian;
 
         /**
-         * <p>The list of SOP knowledge bases.</p>
+         * <p>The SOP knowledge base list.</p>
          */
         @NameInMap("sop")
         public java.util.List<java.util.Map<String, ?>> sop;
@@ -306,7 +309,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public java.util.List<String> allowCidrs;
 
         /**
-         * <p>The list of allowed FQDNs. A maximum of 50 FQDNs are supported.</p>
+         * <p>The list of allowed FQDNs. A maximum of 50 entries are supported.</p>
          */
         @NameInMap("allowFqdns")
         public java.util.List<String> allowFqdns;
@@ -353,7 +356,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     public static class CreateDigitalEmployeeRequestToolPolicyAliyunStatements extends TeaModel {
         /**
-         * <p>The list of Aliyun OpenAPI actions. The format is product:ApiName, product:Prefix*, or product:*.</p>
+         * <p>The list of Aliyun OpenAPI actions. Format: product:ApiName, product:Prefix*, or product:*.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]</p>
@@ -431,7 +434,25 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     public static class CreateDigitalEmployeeRequestToolPolicyAliyun extends TeaModel {
         /**
-         * <p>Specifies whether to enable the Aliyun MCP tool policy.</p>
+         * <p>The auto-pass policy. Entries are RAM Action strings in the format of product:ApiName, product:Prefix*, or product:<em>. Matched requests are automatically passed without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically passed. Unmatched requests require human-in-the-loop (HIL) confirmation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
+         */
+        @NameInMap("autoPassPolicy")
+        public java.util.List<String> autoPassPolicy;
+
+        /**
+         * <p>The explicit deny policy with the highest priority. Entries are RAM Action strings in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are actively denied. When matched by STAROps, the request is directly denied. Pop performs a secondary fallback check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
+         */
+        @NameInMap("denyPolicy")
+        public java.util.List<String> denyPolicy;
+
+        /**
+         * <p>Specifies whether to enable the Aliyun MCP tool policy. The policy is enabled by default and is disabled only when this parameter is explicitly set to false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -440,17 +461,34 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The list of Aliyun OpenAPI tool policy statements.</p>
+         * <p><strong>[Deprecated]</strong> Use denyPolicy and autoPassPolicy instead. This parameter is still returned during the transition period. Original description: The list of Aliyun OpenAPI tool policy statements.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
          */
         @NameInMap("statements")
+        @Deprecated
         public java.util.List<CreateDigitalEmployeeRequestToolPolicyAliyunStatements> statements;
 
         public static CreateDigitalEmployeeRequestToolPolicyAliyun build(java.util.Map<String, ?> map) throws Exception {
             CreateDigitalEmployeeRequestToolPolicyAliyun self = new CreateDigitalEmployeeRequestToolPolicyAliyun();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicyAliyun setAutoPassPolicy(java.util.List<String> autoPassPolicy) {
+            this.autoPassPolicy = autoPassPolicy;
+            return this;
+        }
+        public java.util.List<String> getAutoPassPolicy() {
+            return this.autoPassPolicy;
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicyAliyun setDenyPolicy(java.util.List<String> denyPolicy) {
+            this.denyPolicy = denyPolicy;
+            return this;
+        }
+        public java.util.List<String> getDenyPolicy() {
+            return this.denyPolicy;
         }
 
         public CreateDigitalEmployeeRequestToolPolicyAliyun setEnable(Boolean enable) {
@@ -461,6 +499,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
             return this.enable;
         }
 
+        @Deprecated
         public CreateDigitalEmployeeRequestToolPolicyAliyun setStatements(java.util.List<CreateDigitalEmployeeRequestToolPolicyAliyunStatements> statements) {
             this.statements = statements;
             return this;
@@ -476,7 +515,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
          * <p>The Aliyun MCP tool calling security policy configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
+         * <p>{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
          */
         @NameInMap("aliyun")
         public CreateDigitalEmployeeRequestToolPolicyAliyun aliyun;

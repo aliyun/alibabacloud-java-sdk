@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateArtifactUploadTokenResponseBody extends TeaModel {
     /**
+     * <p>The AccessKey ID used for OSS uploads.</p>
+     * 
      * <strong>example:</strong>
      * <p>LTAI******</p>
      */
@@ -12,6 +14,8 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
     public String accessId;
 
     /**
+     * <p>The normalized logical upload directory on the server side, relative to the digital human artifact root directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>upload/2026-05-25/</p>
      */
@@ -19,6 +23,8 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
     public String artifactPath;
 
     /**
+     * <p>The allowed OSS object prefix for uploads.</p>
+     * 
      * <strong>example:</strong>
      * <p>agents/123/sample-agent/home/starops/upload/2026-05-25/</p>
      */
@@ -26,6 +32,8 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
     public String dir;
 
     /**
+     * <p>The expiration time of the upload credential. The value is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1770000000</p>
      */
@@ -33,6 +41,8 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
     public Long expire;
 
     /**
+     * <p>The OSS form upload URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com">https://example-bucket.oss-cn-shanghai.aliyuncs.com</a></p>
      */
@@ -40,6 +50,8 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
     public String host;
 
     /**
+     * <p>The maximum size of a single file upload, in bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>104857600</p>
      */
@@ -47,6 +59,8 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
     public Long maxSize;
 
     /**
+     * <p>The Base64-encoded OSS Post Policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJleHBpcmF0aW9uIjoiMjAyNi0wNS0yMVQwODowMDowMFoifQ==</p>
      */
@@ -54,6 +68,8 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
     public String policy;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0A1B2C3D-4E5F-6789-ABCD-1234567890AB</p>
      */
@@ -61,6 +77,8 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The OSS Post Policy signature.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc123signature</p>
      */
@@ -68,6 +86,8 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
     public String signature;
 
     /**
+     * <p>The status code returned upon a successful OSS upload.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */

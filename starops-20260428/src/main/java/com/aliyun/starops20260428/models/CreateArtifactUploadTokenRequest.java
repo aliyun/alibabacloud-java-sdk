@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateArtifactUploadTokenRequest extends TeaModel {
     /**
+     * <p>The artifact upload directory, relative to the digital human artifact root directory. The value can only be empty or a directory under upload/. If not specified, upload/{YYYY-MM-DD}/ is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>upload/2026-05-25/</p>
      */

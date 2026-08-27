@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetArtifactDownloadUrlRequest extends TeaModel {
     /**
+     * <p>The artifact file path, relative to the digital worker artifact root directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

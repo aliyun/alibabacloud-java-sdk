@@ -99,7 +99,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ARN of the RAM role.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::12345678912:role/testrole</p>
@@ -520,6 +520,24 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
     public static class GetDigitalEmployeeResponseBodyToolPolicyAliyun extends TeaModel {
         /**
+         * <p>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched requests are automatically approved without human confirmation. If empty or not configured, built-in read-only operations (Get</em>, List*, Describe*) are automatically approved. Unmatched requests require human-in-the-loop (HIL) confirmation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
+         */
+        @NameInMap("autoPassPolicy")
+        public java.util.List<String> autoPassPolicy;
+
+        /**
+         * <p>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If empty or not configured, no operations are actively denied. STAROps directly rejects matched requests. The Pop side performs a secondary fallback check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
+         */
+        @NameInMap("denyPolicy")
+        public java.util.List<String> denyPolicy;
+
+        /**
          * <p>Indicates whether the policy is enabled.</p>
          * 
          * <strong>example:</strong>
@@ -535,11 +553,28 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
          * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
          */
         @NameInMap("statements")
+        @Deprecated
         public java.util.List<GetDigitalEmployeeResponseBodyToolPolicyAliyunStatements> statements;
 
         public static GetDigitalEmployeeResponseBodyToolPolicyAliyun build(java.util.Map<String, ?> map) throws Exception {
             GetDigitalEmployeeResponseBodyToolPolicyAliyun self = new GetDigitalEmployeeResponseBodyToolPolicyAliyun();
             return TeaModel.build(map, self);
+        }
+
+        public GetDigitalEmployeeResponseBodyToolPolicyAliyun setAutoPassPolicy(java.util.List<String> autoPassPolicy) {
+            this.autoPassPolicy = autoPassPolicy;
+            return this;
+        }
+        public java.util.List<String> getAutoPassPolicy() {
+            return this.autoPassPolicy;
+        }
+
+        public GetDigitalEmployeeResponseBodyToolPolicyAliyun setDenyPolicy(java.util.List<String> denyPolicy) {
+            this.denyPolicy = denyPolicy;
+            return this;
+        }
+        public java.util.List<String> getDenyPolicy() {
+            return this.denyPolicy;
         }
 
         public GetDigitalEmployeeResponseBodyToolPolicyAliyun setEnable(Boolean enable) {
@@ -550,6 +585,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             return this.enable;
         }
 
+        @Deprecated
         public GetDigitalEmployeeResponseBodyToolPolicyAliyun setStatements(java.util.List<GetDigitalEmployeeResponseBodyToolPolicyAliyunStatements> statements) {
             this.statements = statements;
             return this;

@@ -1,3 +1,12 @@
+2026-08-27 Version: 1.3.1
+- Update API CreateDigitalEmployee: add request parameters body.toolPolicy.aliyun.autoPassPolicy.
+- Update API CreateDigitalEmployee: add request parameters body.toolPolicy.aliyun.denyPolicy.
+- Update API GetDigitalEmployee: add response parameters Body.toolPolicy.aliyun.autoPassPolicy.
+- Update API GetDigitalEmployee: add response parameters Body.toolPolicy.aliyun.denyPolicy.
+- Update API UpdateDigitalEmployee: add request parameters body.toolPolicy.aliyun.autoPassPolicy.
+- Update API UpdateDigitalEmployee: add request parameters body.toolPolicy.aliyun.denyPolicy.
+
+
 2026-07-27 Version: 1.3.0
 - Support API CreateArtifactUploadToken.
 - Support API GetArtifactDownloadUrl.

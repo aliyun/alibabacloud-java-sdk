@@ -38,7 +38,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The list of knowledge bases.</p>
+     * <p>The knowledge base list.</p>
      */
     @NameInMap("knowledges")
     public UpdateDigitalEmployeeRequestKnowledges knowledges;
@@ -62,7 +62,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public UpdateDigitalEmployeeRequestSandboxNetworkPolicy sandboxNetworkPolicy;
 
     /**
-     * <p>The security policy configuration for tool calling of the digital employee.</p>
+     * <p>The tool calling security policy configuration of the digital employee.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
@@ -141,7 +141,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestKnowledgesBailian extends TeaModel {
         /**
-         * <p>The attributes of the knowledge base.</p>
+         * <p>The knowledge base attributes.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -217,13 +217,13 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestKnowledges extends TeaModel {
         /**
-         * <p>The list of Bailian knowledge bases.</p>
+         * <p>The Bailian knowledge base list.</p>
          */
         @NameInMap("bailian")
         public java.util.List<UpdateDigitalEmployeeRequestKnowledgesBailian> bailian;
 
         /**
-         * <p>The list of SOP knowledge bases.</p>
+         * <p>The SOP knowledge base list.</p>
          */
         @NameInMap("sop")
         public java.util.List<java.util.Map<String, ?>> sop;
@@ -315,7 +315,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public java.util.List<String> actions;
 
         /**
-         * <p>The API version. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The API version.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-30</p>
@@ -334,7 +334,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String decision;
 
         /**
-         * <p>The cloud service code.</p>
+         * <p>The cloud product code.</p>
          * 
          * <strong>example:</strong>
          * <p>Cms</p>
@@ -384,6 +384,24 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestToolPolicyAliyun extends TeaModel {
         /**
+         * <p>The automatic pass-through policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched actions are automatically allowed without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically allowed. Unmatched actions require human-in-the-loop (HIL) confirmation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
+         */
+        @NameInMap("autoPassPolicy")
+        public java.util.List<String> autoPassPolicy;
+
+        /**
+         * <p>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are actively denied. STAROps directly denies matched actions. Pop performs secondary enforcement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
+         */
+        @NameInMap("denyPolicy")
+        public java.util.List<String> denyPolicy;
+
+        /**
          * <p>Specifies whether to enable the policy.</p>
          * 
          * <strong>example:</strong>
@@ -399,11 +417,28 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
          * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
          */
         @NameInMap("statements")
+        @Deprecated
         public java.util.List<UpdateDigitalEmployeeRequestToolPolicyAliyunStatements> statements;
 
         public static UpdateDigitalEmployeeRequestToolPolicyAliyun build(java.util.Map<String, ?> map) throws Exception {
             UpdateDigitalEmployeeRequestToolPolicyAliyun self = new UpdateDigitalEmployeeRequestToolPolicyAliyun();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateDigitalEmployeeRequestToolPolicyAliyun setAutoPassPolicy(java.util.List<String> autoPassPolicy) {
+            this.autoPassPolicy = autoPassPolicy;
+            return this;
+        }
+        public java.util.List<String> getAutoPassPolicy() {
+            return this.autoPassPolicy;
+        }
+
+        public UpdateDigitalEmployeeRequestToolPolicyAliyun setDenyPolicy(java.util.List<String> denyPolicy) {
+            this.denyPolicy = denyPolicy;
+            return this;
+        }
+        public java.util.List<String> getDenyPolicy() {
+            return this.denyPolicy;
         }
 
         public UpdateDigitalEmployeeRequestToolPolicyAliyun setEnable(Boolean enable) {
@@ -414,6 +449,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
             return this.enable;
         }
 
+        @Deprecated
         public UpdateDigitalEmployeeRequestToolPolicyAliyun setStatements(java.util.List<UpdateDigitalEmployeeRequestToolPolicyAliyunStatements> statements) {
             this.statements = statements;
             return this;
@@ -426,7 +462,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestToolPolicy extends TeaModel {
         /**
-         * <p>The security policy configuration for Aliyun CLI tool calling.</p>
+         * <p>The Aliyun CLI tool calling security policy configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>

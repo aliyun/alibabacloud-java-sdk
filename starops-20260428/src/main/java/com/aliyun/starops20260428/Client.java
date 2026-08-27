@@ -32,10 +32,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取上传内容所需链接，适用于大文件。</p>
+     * <p>Obtains the link required to upload content. This operation is applicable to large files.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建产物上传凭证</p>
+     * <p>Creates an artifact upload credential.</p>
      * 
      * @param request CreateArtifactUploadTokenRequest
      * @param headers map
@@ -69,10 +69,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取上传内容所需链接，适用于大文件。</p>
+     * <p>Obtains the link required to upload content. This operation is applicable to large files.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建产物上传凭证</p>
+     * <p>Creates an artifact upload credential.</p>
      * 
      * @param request CreateArtifactUploadTokenRequest
      * @return CreateArtifactUploadTokenResponse
@@ -85,10 +85,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Starts a session.</p>
+     * <p>Initiates a conversation.</p>
      * 
      * <b>summary</b> : 
-     * <p>New conversation</p>
+     * <p>Creates a conversation.</p>
      * 
      * @param request CreateChatRequest
      * @param headers map
@@ -138,10 +138,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Starts a session.</p>
+     * <p>Initiates a conversation.</p>
      * 
      * <b>summary</b> : 
-     * <p>New conversation</p>
+     * <p>Creates a conversation.</p>
      * 
      * @param request CreateChatRequest
      * @return CreateChatResponse
@@ -157,7 +157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates a digital employee.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a digital employee.</p>
+     * <p>Creates a DigitalEmployee.</p>
      * 
      * @param request CreateDigitalEmployeeRequest
      * @param headers map
@@ -234,7 +234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates a digital employee.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a digital employee.</p>
+     * <p>Creates a DigitalEmployee.</p>
      * 
      * @param request CreateDigitalEmployeeRequest
      * @return CreateDigitalEmployeeResponse
@@ -811,8 +811,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the download URL for artifact content. This operation is suitable for large files.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取产物下载链接</p>
+     * <p>Retrieves the download URL for an artifact.</p>
      * 
      * @param request GetArtifactDownloadUrlRequest
      * @param headers map
@@ -845,8 +848,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the download URL for artifact content. This operation is suitable for large files.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取产物下载链接</p>
+     * <p>Retrieves the download URL for an artifact.</p>
      * 
      * @param request GetArtifactDownloadUrlRequest
      * @return GetArtifactDownloadUrlResponse
@@ -1276,7 +1282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Lists digital employees.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns a list of digital employees.</p>
+     * <p>Lists digital employees.</p>
      * 
      * @param tmpReq ListDigitalEmployeesRequest
      * @param headers map
@@ -1343,7 +1349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Lists digital employees.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns a list of digital employees.</p>
+     * <p>Lists digital employees.</p>
      * 
      * @param request ListDigitalEmployeesRequest
      * @return ListDigitalEmployeesResponse

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDigitalEmployeesResponseBody extends TeaModel {
     /**
-     * <p>A list of digital employees.</p>
+     * <p>The list of digital employees.</p>
      */
     @NameInMap("digitalEmployees")
     public java.util.List<ListDigitalEmployeesResponseBodyDigitalEmployees> digitalEmployees;
 
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of results returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -29,7 +29,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -38,7 +38,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>56</p>
@@ -102,7 +102,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String attributes;
 
         /**
-         * <p>The ID of the Model Studio index.</p>
+         * <p>The Bailian index ID.</p>
          * 
          * <strong>example:</strong>
          * <p>index-xxxx</p>
@@ -120,7 +120,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The ID of the Model Studio workspace.</p>
+         * <p>The Bailian workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>llm-xxxx</p>
@@ -169,13 +169,13 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges extends TeaModel {
         /**
-         * <p>A list of Model Studio knowledge bases.</p>
+         * <p>The list of Bailian knowledge bases.</p>
          */
         @NameInMap("bailian")
         public java.util.List<ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian> bailian;
 
         /**
-         * <p>A list of SOP knowledge bases.</p>
+         * <p>The list of SOP knowledge bases.</p>
          */
         @NameInMap("sop")
         public java.util.List<java.util.Map<String, ?>> sop;
@@ -204,9 +204,6 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
     }
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployees extends TeaModel {
-        /**
-         * <p>The custom attributes of the digital employee.</p>
-         */
         @NameInMap("attributes")
         public java.util.Map<String, String> attributes;
 
@@ -257,7 +254,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String employeeType;
 
         /**
-         * <p>A list of knowledge bases.</p>
+         * <p>The list of knowledge bases.</p>
          */
         @NameInMap("knowledges")
         public ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges knowledges;
@@ -272,7 +269,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ae******ey</p>
@@ -281,7 +278,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The RAM role ARN.</p>
+         * <p>The ARN of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::12345678912:role/testrole</p>
@@ -290,7 +287,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>A list of tags.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;

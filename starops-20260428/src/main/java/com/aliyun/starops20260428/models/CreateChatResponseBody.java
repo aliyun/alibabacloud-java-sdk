@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateChatResponseBody extends TeaModel {
     /**
-     * <p>A list of message objects in the session.</p>
+     * <p>The list of messages in the session.</p>
      */
     @NameInMap("messages")
     public java.util.List<CreateChatResponseBodyMessages> messages;
 
     /**
-     * <p>A unique identifier for the API request, useful for troubleshooting.</p>
+     * <p>The ID data of the current message request. The first request ID in the root data.</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-XXXX-XXXX-XXXX-9A629907C1F0</p>
@@ -20,7 +20,7 @@ public class CreateChatResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Uniquely identifies the request chain for tracing.</p>
+     * <p>The ID data of the current message request. The first trace ID in the root data.</p>
      * 
      * <strong>example:</strong>
      * <p>21504600000008405622576e3b48</p>
@@ -59,19 +59,19 @@ public class CreateChatResponseBody extends TeaModel {
 
     public static class CreateChatResponseBodyMessages extends TeaModel {
         /**
-         * <p>A list of invoked agents.</p>
+         * <p>The list of invoked agents.</p>
          */
         @NameInMap("agents")
         public java.util.List<java.util.Map<String, ?>> agents;
 
         /**
-         * <p>A list of generated artifacts.</p>
+         * <p>The artifact output information.</p>
          */
         @NameInMap("artifacts")
         public java.util.List<java.util.Map<String, ?>> artifacts;
 
         /**
-         * <p>The ID of the current call.</p>
+         * <p>The current execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>call_search_001</p>
@@ -80,13 +80,13 @@ public class CreateChatResponseBody extends TeaModel {
         public String callId;
 
         /**
-         * <p>A list of content objects.</p>
+         * <p>The content information.</p>
          */
         @NameInMap("contents")
         public java.util.List<java.util.Map<String, ?>> contents;
 
         /**
-         * <p>Message details.</p>
+         * <p>The message details.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -95,13 +95,13 @@ public class CreateChatResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>A list of events.</p>
+         * <p>The list of events.</p>
          */
         @NameInMap("events")
         public java.util.List<java.util.Map<String, ?>> events;
 
         /**
-         * <p>The ID of the parent call.</p>
+         * <p>The execution ID of the parent level.</p>
          * 
          * <strong>example:</strong>
          * <p>sess_abc123</p>
@@ -110,7 +110,7 @@ public class CreateChatResponseBody extends TeaModel {
         public String parentCallId;
 
         /**
-         * <p>The role of the message sender.</p>
+         * <p>The role that initiated the message.</p>
          * 
          * <strong>example:</strong>
          * <p>tool</p>
@@ -119,7 +119,7 @@ public class CreateChatResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The message sequence number.</p>
+         * <p>The sequence number of the message.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class CreateChatResponseBody extends TeaModel {
         public Integer seq;
 
         /**
-         * <p>The timestamp, in nanoseconds.</p>
+         * <p>The timestamp in nanoseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765000005</p>
@@ -137,13 +137,13 @@ public class CreateChatResponseBody extends TeaModel {
         public String timestamp;
 
         /**
-         * <p>A list of tool calls.</p>
+         * <p>The list of tools used.</p>
          */
         @NameInMap("tools")
         public java.util.List<java.util.Map<String, ?>> tools;
 
         /**
-         * <p>The message type.</p>
+         * <p>The specific type of the message.</p>
          * 
          * <strong>example:</strong>
          * <p>done</p>
@@ -152,7 +152,7 @@ public class CreateChatResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The message version.</p>
+         * <p>The version number of the message.</p>
          * 
          * <strong>example:</strong>
          * <p>v0.1.0</p>

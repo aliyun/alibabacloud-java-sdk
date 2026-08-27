@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateChatRequest extends TeaModel {
     /**
-     * <p>The operation type. Valid values: <code>create</code> (default), <code>reconnect</code>, and <code>stop</code>.</p>
+     * <p>The action type. Valid values:</p>
+     * <ul>
+     * <li>create: creates a conversation.</li>
+     * <li>reconnect: reconnects to an existing conversation.</li>
+     * <li>stop: stops the conversation.</li>
+     * </ul>
+     * <p>Default value: create.</p>
      * 
      * <strong>example:</strong>
      * <p>create</p>
@@ -23,13 +29,13 @@ public class CreateChatRequest extends TeaModel {
     public String digitalEmployeeName;
 
     /**
-     * <p>The message list.</p>
+     * <p>The list of messages.</p>
      */
     @NameInMap("messages")
     public java.util.List<CreateChatRequestMessages> messages;
 
     /**
-     * <p>The session thread ID.</p>
+     * <p>The conversation thread ID.</p>
      * 
      * <strong>example:</strong>
      * <p>thread_id01</p>
@@ -38,7 +44,7 @@ public class CreateChatRequest extends TeaModel {
     public String threadId;
 
     /**
-     * <p>The set of variables.</p>
+     * <p>The list of variables.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -145,13 +151,13 @@ public class CreateChatRequest extends TeaModel {
 
     public static class CreateChatRequestMessages extends TeaModel {
         /**
-         * <p>The multimodal content of the message.</p>
+         * <p>The text or multimodal array.</p>
          */
         @NameInMap("contents")
         public java.util.List<CreateChatRequestMessagesContents> contents;
 
         /**
-         * <p>A unique identifier for the message.</p>
+         * <p>The unique identifier of the current message.</p>
          * 
          * <strong>example:</strong>
          * <p>message_id02</p>
@@ -169,7 +175,7 @@ public class CreateChatRequest extends TeaModel {
         public String role;
 
         /**
-         * <p>The tool call list.</p>
+         * <p>The list of tool invocations.</p>
          */
         @NameInMap("tools")
         public java.util.List<java.util.Map<String, ?>> tools;

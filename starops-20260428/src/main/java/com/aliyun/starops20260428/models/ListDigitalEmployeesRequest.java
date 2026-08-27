@@ -23,7 +23,7 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public String employeeType;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The page size. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
@@ -50,7 +50,7 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ae******ey</p>
