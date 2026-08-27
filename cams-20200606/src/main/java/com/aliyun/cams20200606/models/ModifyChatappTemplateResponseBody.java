@@ -14,9 +14,9 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The request status code.</p>
+     * <p>The response code.</p>
      * <ul>
-     * <li><p>OK indicates the request was successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -51,6 +51,13 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ModifyChatappTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyChatappTemplateResponseBody self = new ModifyChatappTemplateResponseBody();
@@ -95,6 +102,14 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyChatappTemplateResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class ModifyChatappTemplateResponseBodyData extends TeaModel {

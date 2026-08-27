@@ -14,7 +14,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>Specifies whether to pause sending when a Utility template is changed to Marketing type.</p>
+     * <p>When a Utility template is changed to Marketing type, the template is paused for sending.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -25,7 +25,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The list of message template components.</p>
      * <blockquote>
-     * <p>When Category is set to AUTHENTICATION, Components cannot contain a node with Type set to HEADER. When Type is set to BODY or FOOTER and the Text content is empty, the content is automatically generated.</p>
+     * <p>When Category is AUTHENTICATION, Components cannot contain a node with Type set to HEADER. When Type is BODY/FOOTER, the Text content is empty and is automatically generated.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -33,7 +33,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String componentsShrink;
 
     /**
-     * <p>The SpaceId of the ISV sub-customer or the instance ID of a direct customer.</p>
+     * <p>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</p>
      * 
      * <strong>example:</strong>
      * <p>28251486512358****</p>
@@ -44,33 +44,33 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The ISV customer WabaId.</p>
      * <blockquote>
-     * <p>Deprecated parameter. Use CustSpaceId instead.</p>
+     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>65921621816****</p>
      */
     @NameInMap("CustWabaId")
-    @Deprecated
     public String custWabaId;
 
     /**
-     * <p>The examples for creating the template.</p>
+     * <p>The example for creating a template.</p>
      */
     @NameInMap("Example")
     public String exampleShrink;
 
     /**
-     * <p>The ISV verification code used to verify whether the RAM user is authorized by the ISV.</p>
+     * <p>The ISV verification code used to verify whether the sub-account is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>ksiekdki39ksks93939</p>
      */
     @NameInMap("IsvCode")
+    @Deprecated
     public String isvCode;
 
     /**
-     * <p>The template language. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The template language. For language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,8 +82,8 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The validity period for sending template messages in WhatsApp.</p>
      * <ul>
-     * <li>AUTHENTICATION: valid values are 30 to 900. </li>
-     * <li>UTILITY: valid values are 30 to 43200.</li>
+     * <li>AUTHENTICATION: valid values range from 30 to 900. </li>
+     * <li>UTILITY: valid values range from 30 to 43200.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,6 +91,15 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
      */
     @NameInMap("MessageSendTtlSeconds")
     public Integer messageSendTtlSeconds;
+
+    /**
+     * <p>productSetId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>939***</p>
+     */
+    @NameInMap("ProductSetId")
+    public String productSetId;
 
     /**
      * <p>The message template code.</p>
@@ -159,7 +168,6 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
         return this.custSpaceId;
     }
 
-    @Deprecated
     public ModifyChatappTemplateShrinkRequest setCustWabaId(String custWabaId) {
         this.custWabaId = custWabaId;
         return this;
@@ -176,6 +184,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
         return this.exampleShrink;
     }
 
+    @Deprecated
     public ModifyChatappTemplateShrinkRequest setIsvCode(String isvCode) {
         this.isvCode = isvCode;
         return this;
@@ -198,6 +207,14 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     }
     public Integer getMessageSendTtlSeconds() {
         return this.messageSendTtlSeconds;
+    }
+
+    public ModifyChatappTemplateShrinkRequest setProductSetId(String productSetId) {
+        this.productSetId = productSetId;
+        return this;
+    }
+    public String getProductSetId() {
+        return this.productSetId;
     }
 
     public ModifyChatappTemplateShrinkRequest setTemplateCode(String templateCode) {

@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class DeprecateFlowRequest extends TeaModel {
     /**
+     * <p>The space ID of the ISV sub-customer.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-awsd12312o3j</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The Flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1212323</p>
      */
     @NameInMap("FlowId")
     public String flowId;

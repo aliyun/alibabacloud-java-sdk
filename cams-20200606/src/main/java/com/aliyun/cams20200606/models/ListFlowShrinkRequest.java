@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListFlowShrinkRequest extends TeaModel {
     /**
+     * <p>The SpaceId of the ISV sub-customer.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-sa2ksj21jksd</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The Flow name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>flow-21101</p>
      */
     @NameInMap("FlowName")
     public String flowName;
@@ -21,6 +25,9 @@ public class ListFlowShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("Page")
     public String pageShrink;
 

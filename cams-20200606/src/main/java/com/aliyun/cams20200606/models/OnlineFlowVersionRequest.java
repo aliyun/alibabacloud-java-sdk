@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OnlineFlowVersionRequest extends TeaModel {
     /**
-     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
      * 
      * <strong>example:</strong>
      * <p>ALICOM_OPAAS</p>
@@ -14,7 +14,7 @@ public class OnlineFlowVersionRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>Business extension information. The default value is an empty object.</p>
+     * <p>The business extension information. Default value: an empty collection.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class OnlineFlowVersionRequest extends TeaModel {
     public java.util.Map<String, ?> bizExtend;
 
     /**
-     * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>f4912c16943b4dfba44bd6fedacf****</p>
@@ -32,7 +32,7 @@ public class OnlineFlowVersionRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>The flow version. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the flow name to open the orchestration canvas and view the flow version.</p>
+     * <p>The flow version. You can click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas page and view the flow version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,10 +44,10 @@ public class OnlineFlowVersionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The remarks for the flow. You can view the remarks in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow remark. You can view the flow remark on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
      * 
      * <strong>example:</strong>
-     * <p>通过API触发下发验证模板</p>
+     * <p>Trigger verification template delivery through API.</p>
      */
     @NameInMap("Remark")
     public String remark;

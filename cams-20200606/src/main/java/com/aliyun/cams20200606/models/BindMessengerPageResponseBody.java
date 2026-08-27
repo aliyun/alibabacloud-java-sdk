@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindMessengerPageResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,16 +14,23 @@ public class BindMessengerPageResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<BindMessengerPageResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -29,6 +38,8 @@ public class BindMessengerPageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DSFDS-8FSDFS**</p>
      */
@@ -36,6 +47,12 @@ public class BindMessengerPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class BindMessengerPageResponseBody extends TeaModel {
 
     public static class BindMessengerPageResponseBodyData extends TeaModel {
         /**
+         * <p>The connection status.</p>
+         * 
          * <strong>example:</strong>
          * <p>CONNECTED</p>
          */
@@ -104,6 +123,8 @@ public class BindMessengerPageResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
+         * <p>The current page ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1654543543543</p>
          */
@@ -111,6 +132,8 @@ public class BindMessengerPageResponseBody extends TeaModel {
         public String pageId;
 
         /**
+         * <p>The page name.</p>
+         * 
          * <strong>example:</strong>
          * <p>iwhalecloud</p>
          */

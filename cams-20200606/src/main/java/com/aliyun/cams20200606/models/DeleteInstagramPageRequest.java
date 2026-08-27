@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteInstagramPageRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,6 +18,7 @@ public class DeleteInstagramPageRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The PageId of the Messenger page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

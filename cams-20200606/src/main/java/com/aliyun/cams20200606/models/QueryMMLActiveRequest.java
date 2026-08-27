@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryMMLActiveRequest extends TeaModel {
     /**
+     * <p>The SpaceId of the ISV sub-customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>erer-retreerew**</p>
      */

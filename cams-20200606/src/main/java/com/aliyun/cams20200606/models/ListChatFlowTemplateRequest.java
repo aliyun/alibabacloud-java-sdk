@@ -15,7 +15,7 @@ public class ListChatFlowTemplateRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>The keyword for the search. The operation performs a fuzzy query for template names based on this keyword.</p>
+     * <p>The search keyword. Used for fuzzy match of template names.</p>
      * 
      * <strong>example:</strong>
      * <p>LLM</p>
@@ -36,7 +36,7 @@ public class ListChatFlowTemplateRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,18 +51,13 @@ public class ListChatFlowTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The trigger type of the flow. Valid values:</p>
+     * <p>The flow trigger type. Valid values:</p>
      * <ul>
-     * <li><p>TriggeredManually</p>
-     * </li>
-     * <li><p>TriggeredByWhatsApp</p>
-     * </li>
-     * <li><p>TriggeredByInstagram</p>
-     * </li>
-     * <li><p>TriggeredByViber</p>
-     * </li>
-     * <li><p>TriggeredByMessenger</p>
-     * </li>
+     * <li>TriggeredManually</li>
+     * <li>TriggeredByWhatsApp</li>
+     * <li>TriggeredByInstagram</li>
+     * <li>TriggeredByViber</li>
+     * <li>TriggeredByMessenger</li>
      * </ul>
      * 
      * <strong>example:</strong>

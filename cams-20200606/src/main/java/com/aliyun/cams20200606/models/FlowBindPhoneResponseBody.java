@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FlowBindPhoneResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,11 +32,11 @@ public class FlowBindPhoneResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the result was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: Yes.</p>
+     * <li><p>true: The operation is successful.</p>
      * </li>
-     * <li><p>false: No.</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 
@@ -56,9 +56,9 @@ public class FlowBindPhoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p>true: The operation is successful.</p>
      * </li>
      * <li><p>false: The operation failed.</p>
      * </li>

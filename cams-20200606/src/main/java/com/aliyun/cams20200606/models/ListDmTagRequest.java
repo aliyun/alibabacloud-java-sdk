@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDmTagRequest extends TeaModel {
     /**
+     * <p>The search keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>a</p>
      */
@@ -15,6 +17,8 @@ public class ListDmTagRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class ListDmTagRequest extends TeaModel {
     public Long pageIndex;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

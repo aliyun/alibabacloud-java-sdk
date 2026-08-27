@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListChatappTemplateRequest extends TeaModel {
     /**
-     * <p>The review state of the template. Valid values:</p>
+     * <p>The review status. Valid values:</p>
      * <ul>
-     * <li><p><strong>pass</strong>: The template is approved.</p>
+     * <li><p><strong>pass</strong>: Approved.</p>
      * </li>
-     * <li><p><strong>fail</strong>: The template is rejected.</p>
+     * <li><p><strong>fail</strong>: Rejected.</p>
      * </li>
-     * <li><p><strong>auditing</strong>: The template is being reviewed.</p>
+     * <li><p><strong>auditing</strong>: Under review.</p>
      * </li>
-     * <li><p><strong>unaudit</strong>: The review is suspended.</p>
+     * <li><p><strong>unaudit</strong>: Review suspended.</p>
      * </li>
      * </ul>
      * 
@@ -24,6 +24,8 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String auditStatus;
 
     /**
+     * <p>The category of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>AUTHENTICATION</p>
      */
@@ -31,7 +33,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The code of the message template.</p>
+     * <p>The code of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>838888822*****</p>
@@ -40,7 +42,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The space ID of the RAM user within the ISV account.</p>
+     * <p>The space ID of the ISV sub-customer, or the instance ID of a direct customer.</p>
      * 
      * <strong>example:</strong>
      * <p>28251486512358****</p>
@@ -49,9 +51,9 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * <p>The WabaId of the ISV customer.</p>
      * <blockquote>
-     * <p>CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+     * <p>This is a deprecated parameter. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,7 +64,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
+     * <p>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
@@ -71,7 +73,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The language of the template. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -107,7 +109,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the message template.</p>
+     * <p>The templatetype. Valid values:</p>
      * <ul>
      * <li><p><strong>WHATSAPP</strong></p>
      * </li>
@@ -243,7 +245,7 @@ public class ListChatappTemplateRequest extends TeaModel {
         public Integer index;
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The number of templates to query per page. Default value: 10.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

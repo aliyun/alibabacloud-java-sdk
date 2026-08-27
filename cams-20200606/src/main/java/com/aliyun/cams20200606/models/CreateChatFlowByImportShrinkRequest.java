@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     /**
-     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
      * 
      * <strong>example:</strong>
      * <p>ALICOM_OPAAS</p>
@@ -14,7 +14,7 @@ public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>The business extension information. The default value is an empty collection.</p>
+     * <p>The business extension information. Default value: an empty collection.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     public String bizExtendShrink;
 
     /**
-     * <p>The flow DSL data to import. This is a block of data in JSON format. To obtain this data, arrange the components on the canvas in the Flow Editor, save the flow, and then click <strong>Settings</strong> &gt; <strong>Export</strong> in the upper-right corner of the canvas. The flow is exported as a JSON data file.</p>
+     * <p>The imported flow DSL data, which is a JSON-formatted string. You can arrange flow components on the canvas in the flow orchestration console in advance, save the flow, and then click <strong>Settings</strong> &gt; <strong>Export</strong> in the upper-right corner of the canvas to export a JSON data file for viewing.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -45,10 +45,10 @@ public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The remarks for the flow.</p>
+     * <p>The flow remarks.</p>
      * 
      * <strong>example:</strong>
-     * <p>触发订阅</p>
+     * <p>Trigger Subscription.</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -60,10 +60,10 @@ public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The title of the flow.</p>
+     * <p>The flow title.</p>
      * 
      * <strong>example:</strong>
-     * <p>WhatsApp触发订阅</p>
+     * <p>WhatsApp Trigger Subscription.</p>
      */
     @NameInMap("Title")
     public String title;

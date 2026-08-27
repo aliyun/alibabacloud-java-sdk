@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailRequest extends TeaModel {
     /**
-     * <p>The SpaceId of the ISV sub-customer or the instance ID of a direct customer.</p>
+     * <p>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</p>
      * 
      * <strong>example:</strong>
      * <p>28251486512358****</p>
@@ -16,7 +16,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     /**
      * <p>The WabaId of the ISV customer.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
+     * <p>Deprecated parameter. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,6 +33,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
      * <p>skdi3kksloslikdkkdk</p>
      */
     @NameInMap("IsvCode")
+    @Deprecated
     public String isvCode;
 
     /**
@@ -64,7 +65,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The templatetype.</p>
+     * <p>The templatetype. Valid values:</p>
      * <ul>
      * <li><p><strong>WHATSAPP</strong></p>
      * </li>
@@ -100,6 +101,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
         return this.custWabaId;
     }
 
+    @Deprecated
     public GetChatappTemplateDetailRequest setIsvCode(String isvCode) {
         this.isvCode = isvCode;
         return this;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFlowNodePrototypeV2Request extends TeaModel {
     /**
-     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,15 +15,15 @@ public class ListFlowNodePrototypeV2Request extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>The code for the component group. Valid values:</p>
+     * <p>The component group code. Valid values:</p>
      * <ul>
-     * <li><p>Messaging: Message components.</p>
+     * <li><p>Messaging: messaging components.</p>
      * </li>
-     * <li><p>Core: Core components.</p>
+     * <li><p>Core: core components.</p>
      * </li>
-     * <li><p>Intelligence: Intelligence components.</p>
+     * <li><p>Intelligence: intelligent components.</p>
      * </li>
-     * <li><p>Contact: Contact management components.</p>
+     * <li><p>Contact: contact management components.</p>
      * </li>
      * </ul>
      * 
@@ -34,7 +34,7 @@ public class ListFlowNodePrototypeV2Request extends TeaModel {
     public String groupCode;
 
     /**
-     * <p>The search keyword. This parameter is used to perform a fuzzy query by flow component name.</p>
+     * <p>The search keyword. This parameter is used for fuzzy match based on the flow component name.</p>
      * 
      * <strong>example:</strong>
      * <p>WhatsApp</p>
@@ -46,7 +46,7 @@ public class ListFlowNodePrototypeV2Request extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

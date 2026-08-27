@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncFlowRequest extends TeaModel {
     /**
-     * <p>通道实例</p>
+     * <p>The channel instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

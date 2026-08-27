@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class BindMessengerPageRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Sample value sample value sample value.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,6 +18,7 @@ public class BindMessengerPageRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The PageId of the Messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,8 @@ public class BindMessengerPageRequest extends TeaModel {
     public String pageId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>
      */

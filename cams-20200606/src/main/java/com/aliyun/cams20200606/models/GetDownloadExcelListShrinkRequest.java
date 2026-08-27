@@ -5,39 +5,59 @@ import com.aliyun.tea.*;
 
 public class GetDownloadExcelListShrinkRequest extends TeaModel {
     /**
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: &quot;{}&quot;.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
+     * <p>The query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>aa</p>
      */
     @NameInMap("Condition")
     public String condition;
 
+    /**
+     * <p>The country names.</p>
+     */
     @NameInMap("CountryNames")
     public String countryNamesShrink;
 
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>2025-12-01</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
+     * <p>The group ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>111</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The contact group IDs.</p>
+     */
     @NameInMap("GroupIds")
     public String groupIdsShrink;
 
@@ -51,8 +71,10 @@ public class GetDownloadExcelListShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>2025-11-01</p>
      */
     @NameInMap("StartDate")
     public String startDate;

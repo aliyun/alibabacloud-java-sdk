@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListViberServiceMessageResponseBody extends TeaModel {
     /**
+     * <p>The access denial details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,16 +14,29 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p>OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListViberServiceMessageResponseBodyData> data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +44,8 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. This is used for troubleshooting when an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>ddhjdn-dnjdnkdjknd**</p>
      */
@@ -36,6 +53,14 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: Successful.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,32 +122,50 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
 
     public static class ListViberServiceMessageResponseBodyData extends TeaModel {
         /**
+         * <p>The business account name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test.</p>
          */
         @NameInMap("BusinessAccountName")
         public String businessAccountName;
 
+        /**
+         * <p>The destination country or region ID.</p>
+         */
         @NameInMap("DestinationCountryId")
         public java.util.List<String> destinationCountryId;
 
+        /**
+         * <p>The destination country or region ID.</p>
+         */
         @NameInMap("DestinationInternationalCountryId")
         public java.util.List<String> destinationInternationalCountryId;
 
         /**
+         * <p>The industry involved.</p>
+         * 
          * <strong>example:</strong>
-         * <p>医疗服务</p>
+         * <p>Healthcare.</p>
          */
         @NameInMap("IndustryInvolved")
         public String industryInvolved;
 
+        /**
+         * <p>The collection of destination countries or regions.</p>
+         */
         @NameInMap("MessageDestinationCountry")
         public java.util.List<String> messageDestinationCountry;
 
+        /**
+         * <p>The list of international destination countries or regions.</p>
+         */
         @NameInMap("MessageDestinationInternationalCountry")
         public java.util.List<String> messageDestinationInternationalCountry;
 
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>25644</p>
          */
@@ -130,6 +173,8 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The resource status.</p>
+         * 
          * <strong>example:</strong>
          * <p>stop</p>
          */

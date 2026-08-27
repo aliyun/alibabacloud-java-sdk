@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFlowVersionShrinkRequest extends TeaModel {
     /**
-     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
      * 
      * <strong>example:</strong>
      * <p>ALICOM_OPAAS</p>
@@ -14,7 +14,7 @@ public class CreateFlowVersionShrinkRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>The business extension information. The default value is an empty collection.</p>
+     * <p>The business extension information. Default value: an empty collection.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class CreateFlowVersionShrinkRequest extends TeaModel {
     public String bizExtendShrink;
 
     /**
-     * <p>The code of the flow. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>9ccc41**************************</p>
@@ -32,7 +32,7 @@ public class CreateFlowVersionShrinkRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>The version of the flow to copy. To view the historical versions of a flow, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> and click a flow name to open the orchestration canvas.</p>
+     * <p>The flow version to copy. Click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to enter the canvas orchestration page and view historical flow versions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,10 +44,10 @@ public class CreateFlowVersionShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The remarks for the version.</p>
+     * <p>The version remarks.</p>
      * 
      * <strong>example:</strong>
-     * <p>修复发送WhatsApp消息错误</p>
+     * <p>Fix WhatsApp message sending error.</p>
      */
     @NameInMap("Remark")
     public String remark;

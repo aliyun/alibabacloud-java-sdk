@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstagramPostsRequest extends TeaModel {
     /**
+     * <p>The space ID/instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

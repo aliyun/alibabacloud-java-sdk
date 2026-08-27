@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPhoneMessageQrdlRequest extends TeaModel {
     /**
-     * <p>The space ID of the ISV sub-customer, or the instance ID of the direct customer.</p>
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
      * 
      * <strong>example:</strong>
      * <p>cams-8filvjc8snw</p>

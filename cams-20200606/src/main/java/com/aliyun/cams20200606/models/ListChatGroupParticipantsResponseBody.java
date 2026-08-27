@@ -18,7 +18,7 @@ public class ListChatGroupParticipantsResponseBody extends TeaModel {
      * <ul>
      * <li><p>OK: The request was successful.</p>
      * </li>
-     * <li><p>For other values, see the <a href="https://help.aliyun.com/document_detail/196974.html">error code list</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class ListChatGroupParticipantsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListChatGroupParticipantsResponseBodyData data;
@@ -53,12 +53,10 @@ public class ListChatGroupParticipantsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +120,7 @@ public class ListChatGroupParticipantsResponseBody extends TeaModel {
 
     public static class ListChatGroupParticipantsResponseBodyDataList extends TeaModel {
         /**
-         * <p>The phone number of the group member.</p>
+         * <p>The group member number.</p>
          * 
          * <strong>example:</strong>
          * <p>861382***</p>
@@ -153,7 +151,7 @@ public class ListChatGroupParticipantsResponseBody extends TeaModel {
         public java.util.List<ListChatGroupParticipantsResponseBodyDataList> list;
 
         /**
-         * <p>The total number of participants.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

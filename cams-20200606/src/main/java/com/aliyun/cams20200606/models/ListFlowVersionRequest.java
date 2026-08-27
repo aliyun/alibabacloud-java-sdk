@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFlowVersionRequest extends TeaModel {
     /**
-     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
      * 
      * <strong>example:</strong>
      * <p>ALICOM_OPAAS</p>
@@ -14,7 +14,7 @@ public class ListFlowVersionRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>Business extension information. The default value is an empty collection.</p>
+     * <p>The business extension information. Default value: an empty collection.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class ListFlowVersionRequest extends TeaModel {
     public java.util.Map<String, ?> bizExtend;
 
     /**
-     * <p>The flow code. Find the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</p>
+     * <p>The flow code. You can query the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>9ccc41**************************</p>
@@ -35,7 +35,7 @@ public class ListFlowVersionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class ListFlowVersionRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -59,16 +59,12 @@ public class ListFlowVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the flow version. Valid values:</p>
+     * <p>The flow version status. Valid values:</p>
      * <ul>
-     * <li><p>DRAFT: The flow is a draft.</p>
-     * </li>
-     * <li><p>DELETED: The flow is deleted.</p>
-     * </li>
-     * <li><p>ONLINE: The flow is published.</p>
-     * </li>
-     * <li><p>OFFLINE: The flow is unpublished.</p>
-     * </li>
+     * <li>DRAFT: draft.</li>
+     * <li>DELETED: deleted.</li>
+     * <li>ONLINE: online.</li>
+     * <li>OFFLINE: offline.</li>
      * </ul>
      * 
      * <strong>example:</strong>

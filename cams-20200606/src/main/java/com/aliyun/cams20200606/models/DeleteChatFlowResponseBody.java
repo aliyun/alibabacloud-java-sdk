@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatFlowResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,7 +32,7 @@ public class DeleteChatFlowResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -47,11 +47,11 @@ public class DeleteChatFlowResponseBody extends TeaModel {
     public java.util.Map<String, ?> response;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false: The request failed.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

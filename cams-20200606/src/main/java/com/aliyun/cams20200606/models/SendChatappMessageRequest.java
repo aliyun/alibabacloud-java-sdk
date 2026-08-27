@@ -17,9 +17,9 @@ public class SendChatappMessageRequest extends TeaModel {
     public String adAccountId;
 
     /**
-     * <p>The message category (for WhatsApp direct send).</p>
+     * <p>The message type (for WhatsApp direct send).</p>
      * <blockquote>
-     * <p>Warning: Do not specify this parameter unless you are a Meta-invited customer. Otherwise, message delivery will fail.</p>
+     * <p>Warning: Do not specify this parameter if you are not a Meta-invited customer. Otherwise, message sending fails.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,6 +39,10 @@ public class SendChatappMessageRequest extends TeaModel {
      * </li>
      * <li><p><strong>telegram</strong></p>
      * </li>
+     * <li><p><strong>line</strong></p>
+     * </li>
+     * <li><p><strong>telegram</strong></p>
+     * </li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;- <strong>viber</strong></p>
      * <p>This parameter is required.</p>
@@ -51,38 +55,93 @@ public class SendChatappMessageRequest extends TeaModel {
 
     /**
      * <p>The message content.</p>
-     * <p><strong>WhatsApp message notes:</strong></p>
+     * <details>
+     * <summary>WhatsApp message notes:</summary>
+     * 
      * <ul>
-     * <li>If <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required and the <strong>Caption</strong> field must not be specified.</li>
-     * <li>If <strong>messageType</strong> is <strong>image</strong>, the <strong>Link</strong> field is required.</li>
-     * <li>If <strong>messageType</strong> is <strong>video</strong>, the <strong>Link</strong> field is required.</li>
-     * <li>If <strong>messageType</strong> is <strong>audio</strong>, the <strong>Link</strong> field is required and the <strong>Caption</strong> field is invalid.</li>
-     * <li>If <strong>messageType</strong> is <strong>document</strong>, the <strong>Link</strong> and <strong>FileName</strong> fields are required and the <strong>Caption</strong> field is invalid.</li>
-     * <li>If <strong>messageType</strong> is <strong>interactive</strong>, the <strong>type</strong> and <strong>action</strong> fields are required.</li>
-     * <li>If <strong>messageType</strong> is <strong>contacts</strong>, the <strong>name</strong> field is required.</li>
-     * <li>If <strong>messageType</strong> is <strong>location</strong>, the <strong>longitude</strong> and <strong>latitude</strong> fields are required.</li>
-     * <li>If <strong>messageType</strong> is <strong>sticker</strong>, the <strong>Link</strong> field is required and the <strong>Caption</strong> and <strong>FileName</strong> fields are invalid.</li>
-     * <li>If <strong>messageType</strong> is <strong>reaction</strong>, the <strong>messageId</strong> and <strong>emoji</strong> fields are required.</li>
+     * <li>When <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required and the <strong>Caption</strong> field must not be specified.</li>
+     * <li>When <strong>messageType</strong> is <strong>image</strong>, the <strong>Link</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>video</strong>, the <strong>Link</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>audio</strong>, the <strong>Link</strong> field is required and the <strong>Caption</strong> field is invalid.</li>
+     * <li>When <strong>messageType</strong> is <strong>document</strong>, the <strong>Link</strong> and <strong>FileName</strong> fields are required and the <strong>Caption</strong> field is invalid.</li>
+     * <li>When <strong>messageType</strong> is <strong>interactive</strong>, the <strong>type</strong> and <strong>action</strong> fields are required.</li>
+     * <li>When <strong>messageType</strong> is <strong>contacts</strong>, the <strong>name</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>location</strong>, the <strong>longitude</strong> and <strong>latitude</strong> fields are required.</li>
+     * <li>When <strong>messageType</strong> is <strong>sticker</strong>, the <strong>Link</strong> field is required and the <strong>Caption</strong> and <strong>FileName</strong> fields are invalid.</li>
+     * <li>When <strong>messageType</strong> is <strong>reaction</strong>, the <strong>messageId</strong> and <strong>emoji</strong> fields are required.</details></li>
      * </ul>
-     * <p><strong>Messenger message notes:</strong></p>
+     * <details>
+     * <summary>Messenger message notes:</summary>
+     * 
      * <ul>
-     * <li>If <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required.</li>
-     * <li>If <strong>messageType</strong> is <strong>image</strong>, <strong>video</strong>, <strong>audio</strong>, or <strong>document</strong>, the <strong>link</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>image</strong>, <strong>video</strong>, <strong>audio</strong>, or <strong>document</strong>, the <strong>link</strong> field is required.</details></li>
      * </ul>
-     * <p><strong>Instagram message notes:</strong></p>
+     * <details>
+     * <summary>Instagram message notes:</summary>
+     * 
      * <ul>
-     * <li>If <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required.</li>
-     * <li>If <strong>messageType</strong> is <strong>image</strong>, <strong>video</strong>, or <strong>audio</strong>, the <strong>link</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>image</strong>, <strong>video</strong>, or <strong>audio</strong>, the <strong>link</strong> field is required.</details></li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;<strong>Viber message notes:</strong>
-     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required.
-     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>image</strong>, the <strong>link</strong> field is required.
-     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>video</strong>, the <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong> fields are required.
-     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>document</strong>, the <strong>link</strong>, <strong>fileName</strong>, and <strong>fileType</strong> fields are required.
-     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>text_button</strong>, the <strong>text</strong>, <strong>caption</strong>, and <strong>action</strong> fields are required.
-     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>text_image_button</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>caption</strong>, and <strong>action</strong> fields are required.
-     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>text_video</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong> fields are required.
-     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>text_video_button</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, <strong>duration</strong>, and <strong>caption</strong> fields are required, and the <strong>action</strong> field must not be empty.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <details>
+     * <summary>Viber message notes:</summary>
+     * 
+     * <ul>
+     * <li>When <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>image</strong>, the <strong>link</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>video</strong>, the <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong> fields are required.</li>
+     * <li>When <strong>messageType</strong> is <strong>document</strong>, the <strong>link</strong>, <strong>fileName</strong>, and <strong>fileType</strong> fields are required.</li>
+     * <li>When <strong>messageType</strong> is <strong>text_button</strong>, the <strong>text</strong>, <strong>caption</strong>, and <strong>action</strong> fields are required.</li>
+     * <li>When <strong>messageType</strong> is <strong>text_image_button</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>caption</strong>, and <strong>action</strong> fields are required.</li>
+     * <li>When <strong>messageType</strong> is <strong>text_video</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong> fields are required.</li>
+     * <li>When <strong>messageType</strong> is <strong>text_video_button</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, <strong>duration</strong>, and <strong>caption</strong> fields are required, and the <strong>action</strong> field must not be empty.</details></li>
+     * </ul>
+     * <details>
+     * <summary>Telegram message notes:</summary>
+     * 
+     * <ul>
+     * <li>When <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>image</strong>, <strong>video</strong>, <strong>audio</strong>, <strong>gif</strong>, or <strong>sticker</strong>, the <strong>link</strong> field is required.</li>
+     * <li>When <strong>messageType</strong> is <strong>location</strong>, the <strong>latitude</strong> and <strong>longitude</strong> fields are required.</li>
+     * <li>When <strong>messageType</strong> is <strong>interactive</strong>, the <strong>type</strong> field is required. You can send various Telegram message types. Example: {&quot;type&quot;: &quot;sendPhoto&quot;, &quot;sendPhoto&quot;: {&quot;photo&quot;:&quot;<a href="http://img.png%22,%22caption%22:%2221%22%7D%7D">http://img.png&quot;,&quot;caption&quot;:&quot;21&quot;}}</a>. This can be used to send a Photo type message. For more information about message types, see <a href="https://core.telegram.org/bots/api#sendphoto">Telegram message body</a>.</details></li>
+     * </ul>
+     * <details>
+     * <summary>LINE message notes:</summary>
+     * 
+     * <ul>
+     * <li><p>When <strong>messageType</strong> is <strong>text</strong> or <strong>textV2</strong>, the <strong>text</strong> field is required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>image</strong> or <strong>video</strong>, the <strong>link</strong> and <strong>previewImageUrl</strong> fields are required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>audio</strong>, the <strong>link</strong> and <strong>duration</strong> fields are required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>buttons</strong> or <strong>confirm</strong>, the <strong>text</strong> and <strong>actions</strong> fields are required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>carousel</strong> or <strong>imageCarousel</strong>, the <strong>columns</strong> field is required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>quickReply</strong>, the <strong>text</strong> and <strong>items</strong> fields are required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>sticker</strong>, the <strong>packageId</strong> and <strong>stickerId</strong> fields are required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>location</strong>, the <strong>title</strong>, <strong>address</strong>, <strong>latitude</strong>, and <strong>longitude</strong> fields are required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>coupon</strong>, the <strong>couponId</strong> field is required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>imagemap</strong>, the <strong>baseUrl</strong> and <strong>altText</strong> fields are required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>flex</strong>, the <strong>contents</strong> and <strong>altText</strong> fields are required.</p>
+     * </li>
+     * <li><p>When <strong>messageType</strong> is <strong>interactive</strong>, you can pass in message formats supported by LINE:</p>
+     * <ul>
+     * <li>To send a single message, the <strong>type</strong> field is required, and other fields follow the LINE message body format. Example: {&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;test&quot;}</li>
+     * <li>To send multiple messages (LINE supports up to 5 messages at a time), the <strong>messages</strong> field is required. Example: {&quot;messages&quot;: [{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;test&quot;}, {&quot;type&quot;: &quot;image&quot;, &quot;originalContentUrl&quot;: &quot;<a href="http://img.png">http://img.png</a>&quot;, &quot;previewImageUrl&quot;: &quot;<a href="http://img2.png%22%7D%5D%7D">http://img2.png&quot;}]}</a></li>
+     * <li>For more information, see <a href="https://developers.line.biz/en/reference/messaging-api/#message-objects">LINE message body</a>.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </details>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -105,7 +164,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public String contextMessageId;
 
     /**
-     * <p>The SpaceId of the ISV sub-customer, or the direct customer instance ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
+     * <p>The SpaceId of the ISV sub-customer or the instance ID of a direct customer. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>cams-8c8*********</p>
@@ -114,7 +173,13 @@ public class SendChatappMessageRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ISV customer WABA ID. This parameter is deprecated. Use CustSpaceId instead, which is the direct customer instance ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
+     * <p>The ISV customer WABA ID. </p>
+     * <blockquote>
+     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
+     * <ul>
+     * <li>You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cams-8c8*********</p>
@@ -124,7 +189,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The custom fallback content. This parameter is for the China site (Chinese mainland). China site users can ignore this parameter.</p>
+     * <p>The custom fallback content. This parameter is for the China International site. China site users can ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Fallback SMS</p>
@@ -133,7 +198,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public String fallBackContent;
 
     /**
-     * <p>The fallback trigger time. This parameter is for the international site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;If the message does not return a delivered receipt within the specified time, fallback is triggered. If this parameter is not specified, fallback is not triggered based on time and occurs only when the message fails to send or a failure status report is received. Unit: seconds. Minimum value: 60. Maximum value: 43200.</p>
+     * <p>The fallback trigger time. This parameter is for the China International site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;If the message does not return a delivered receipt within the specified time, fallback is triggered. If this parameter is not specified, fallback is triggered only when the message fails to send or a failure status report is received. Unit: seconds. Minimum value: 60. Maximum value: 43200.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -142,7 +207,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public Integer fallBackDuration;
 
     /**
-     * <p>The fallback policy ID. This parameter is for the China site (Chinese mainland). China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;You can view the policy ID on the <a href="https://chatapp.console.alibabacloud.com/FallbackStrategy"><strong>Fallback Policy</strong></a> page.</p>
+     * <p>The fallback policy ID. This parameter is for the China International site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;You can view the policy ID on the <a href="https://chatapp.console.alibabacloud.com/FallbackStrategy"><strong>Fallback Strategy</strong></a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>S0****</p>
@@ -151,9 +216,9 @@ public class SendChatappMessageRequest extends TeaModel {
     public String fallBackId;
 
     /**
-     * <p>The fallback rule. This parameter is for the international site. China site users can ignore this parameter.
+     * <p>The fallback rule. This parameter is for the China International site. China site users can ignore this parameter.
      * &lt;props=&quot;intl&quot;&gt;Valid values:
-     * &lt;props=&quot;intl&quot;&gt;- <strong>undelivered</strong>: fallback is triggered when the message cannot be delivered to the device (template and parameter validation must pass at the sending stage; template bans or number bans are not validated). This rule is used by default if the parameter value is empty.
+     * &lt;props=&quot;intl&quot;&gt;- <strong>undelivered</strong>: fallback is triggered when the message cannot be delivered to the endpoint (template and parameter validation must pass during the sending state; blocked templates or numbers are not validated). This rule is used by default when the parameter value is empty.
      * &lt;props=&quot;intl&quot;&gt;- <strong>sentFailed</strong>: fallback is also triggered when template or template variable validation fails. Only the channelType, type, messageType, to, and from (existence check) parameters are strictly validated.</p>
      * 
      * <strong>example:</strong>
@@ -164,6 +229,9 @@ public class SendChatappMessageRequest extends TeaModel {
 
     /**
      * <p>The Flow message object.</p>
+     * <blockquote>
+     * <p>Valid only for WHATSAPP.</p>
+     * </blockquote>
      */
     @NameInMap("FlowAction")
     public SendChatappMessageRequestFlowAction flowAction;
@@ -171,10 +239,12 @@ public class SendChatappMessageRequest extends TeaModel {
     /**
      * <p>The sender number.</p>
      * <ul>
-     * <li>If ChannelType is set to <strong>whatsapp</strong>, this is the phone number registered and bindded with WhatsApp. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</li>
-     * <li>If ChannelType is set to <strong>messenger</strong>, this is the Page ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Public Page</strong> page.</li>
-     * <li>If ChannelType is set to <strong>instagram</strong>, this is the Instagram professional account ID (Account ID). You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Professional Account</strong> page.
-     * &lt;props=&quot;intl&quot;&gt;- If ChannelType is set to <strong>viber</strong>, this is the Viber Service ID. You can view it on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Service ID Management</strong> page.</li>
+     * <li>When ChannelType is <strong>whatsapp</strong>, this is the phone number registered and bindng with WhatsApp. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Number Management</strong> page.</li>
+     * <li>When ChannelType is <strong>messenger</strong>, this is the Page ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Public Page</strong> page.</li>
+     * <li>When ChannelType is <strong>instagram</strong>, this is the Instagram professional account ID (Account ID). You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Professional Account</strong> page.
+     * &lt;props=&quot;intl&quot;&gt;- When ChannelType is <strong>viber</strong>, this is the Viber Service ID. You can view it on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Service ID Management</strong> page.</li>
+     * <li>When ChannelType is <strong>telegram</strong>, this is the Telegram bot ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Bot Management</strong> page.</li>
+     * <li>When ChannelType is <strong>line</strong>, this is the LINE Channel ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>LINE Official Account</strong> page.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -185,7 +255,10 @@ public class SendChatappMessageRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The ISV verification code used to verify whether a RAM user is authorized by the ISV. This parameter is deprecated and can be ignored.</p>
+     * <p>The ISV verification code.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated. You can ignore it.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123123******</p>
@@ -195,10 +268,13 @@ public class SendChatappMessageRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The Viber message type. This parameter is for the international site. China site users can ignore this parameter.
+     * <p>The Viber message type. This parameter is for the China International site. China site users can ignore this parameter.
      * &lt;props=&quot;intl&quot;&gt;Valid values:
      * &lt;props=&quot;intl&quot;&gt;- <strong>pormotion</strong>: marketing or promotional messages.
      * &lt;props=&quot;intl&quot;&gt;- <strong>transaction</strong>: notification messages.</p>
+     * <blockquote>
+     * <p>Valid only for VIBER.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>promotion</p>
@@ -255,7 +331,7 @@ public class SendChatappMessageRequest extends TeaModel {
      * </li>
      * <li><p>typing_indicator: typing indicator message.</p>
      * </li>
-     * <li><p>pin: pin or unpin message (available only for group messages).</p>
+     * <li><p>pin: pin or unpin message (group messages only).</p>
      * </li>
      * <li><p>carousel: carousel message.</p>
      * </details></li>
@@ -328,7 +404,51 @@ public class SendChatappMessageRequest extends TeaModel {
      * </li>
      * <li><p>sticker: sticker message.</p>
      * </li>
+     * <li><p>interactive: custom pass-through Telegram message.</p>
+     * </li>
      * </ul>
+     * </details>
+     * 
+     * <details>
+     * <summary>LINE</summary>
+     * 
+     * <ul>
+     * <li><p>text: text message.</p>
+     * </li>
+     * <li><p>image: image message.</p>
+     * </li>
+     * <li><p>video: video message.</p>
+     * </li>
+     * <li><p>audio: audio message.</p>
+     * </li>
+     * <li><p>buttons: button message.</p>
+     * </li>
+     * <li><p>confirm: confirm message.</p>
+     * </li>
+     * <li><p>carousel: carousel message.</p>
+     * </li>
+     * <li><p>imageCarousel: image carousel message.</p>
+     * </li>
+     * <li><p>quickReply: quick reply message.</p>
+     * </li>
+     * <li><p>sticker: sticker message.</p>
+     * </li>
+     * <li><p>location: location message.</p>
+     * </li>
+     * <li><p>textV2: text message (V2).</p>
+     * </li>
+     * <li><p>coupon: coupon message.</p>
+     * </li>
+     * <li><p>imagemap: imagemap message.</p>
+     * </li>
+     * <li><p>flex: flex message.</p>
+     * </li>
+     * <li><p>interactive: custom pass-through LINE message.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p><a href="https://developers.line.biz/en/reference/messaging-api/#message-objects">For more information, see the message types supported by LINE</a></p>
+     * </blockquote>
      * </details>
      * 
      * <strong>example:</strong>
@@ -342,6 +462,9 @@ public class SendChatappMessageRequest extends TeaModel {
 
     /**
      * <p>The collection of button trigger messages.</p>
+     * <blockquote>
+     * <p>This parameter is valid only for WHATSAPP.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>payloadtext1,payloadtext2,payloadtext3</p>
@@ -350,7 +473,10 @@ public class SendChatappMessageRequest extends TeaModel {
     public java.util.List<String> payload;
 
     /**
-     * <p>The product information. This parameter applies only to the WhatsApp channel type and refers to the product information you uploaded on Meta.</p>
+     * <p>The product information. This parameter is valid only for WhatsApp channel types. It refers to the product information you uploaded on Meta.</p>
+     * <blockquote>
+     * <p>Valid only for WHATSAPP.</p>
+     * </blockquote>
      */
     @NameInMap("ProductAction")
     public SendChatappMessageRequestProductAction productAction;
@@ -361,6 +487,8 @@ public class SendChatappMessageRequest extends TeaModel {
      * <li><p>individual: an individual.</p>
      * </li>
      * <li><p>group: a group.</p>
+     * </li>
+     * <li><p>userId: WhatsApp BSUID. Valid only for WHATSAPP.</p>
      * </li>
      * </ul>
      * 
@@ -377,7 +505,10 @@ public class SendChatappMessageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tag information. Custom tag information for Viber message delivery.</p>
+     * <p>The tag information. Custom tag information when sending Viber messages.</p>
+     * <blockquote>
+     * <p>Valid only for VIBER.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>tag</p>
@@ -421,10 +552,12 @@ public class SendChatappMessageRequest extends TeaModel {
     /**
      * <p>The recipient number.</p>
      * <ul>
-     * <li>If ChannelType is set to <strong>whatsapp</strong>, this is the phone number of the message recipient.</li>
-     * <li>If ChannelType is set to <strong>messenger</strong>, this is the Page-Scoped User ID generated when the user interacts with the Facebook page.</li>
-     * <li>If ChannelType is set to <strong>instagram</strong>, this is the Instagram User ID generated when the user interacts with the Instagram business or creator account.
-     * &lt;props=&quot;intl&quot;&gt;- If ChannelType is set to <strong>viber</strong>, this is the phone number of the message recipient.</li>
+     * <li>When ChannelType is <strong>whatsapp</strong>, this is the phone number or BSUID of the message recipient.</li>
+     * <li>When ChannelType is <strong>messenger</strong>, this is the Page-Scoped User ID generated when the user interacts with the Facebook page.</li>
+     * <li>When ChannelType is <strong>instagram</strong>, this is the Instagram User ID generated when the user interacts with the Instagram business or creator account.
+     * &lt;props=&quot;intl&quot;&gt;- When ChannelType is <strong>viber</strong>, this is the phone number of the message recipient.</li>
+     * <li>When ChannelType is <strong>telegram</strong>, this is the Telegram chatId.</li>
+     * <li>When ChannelType is <strong>line</strong>, this is the LINE User ID.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -447,7 +580,10 @@ public class SendChatappMessageRequest extends TeaModel {
     public String tokenType;
 
     /**
-     * <p>The custom tracking data passed in for Viber message types. This parameter is for the international site. China site users can ignore this parameter.</p>
+     * <p>The custom tracking data passed in for Viber message types. This parameter is for the China International site. China site users can ignore this parameter.</p>
+     * <blockquote>
+     * <p>Valid only for VIBER.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Tracking Data</p>
@@ -456,7 +592,10 @@ public class SendChatappMessageRequest extends TeaModel {
     public String trackingData;
 
     /**
-     * <p>The timeout period for Viber message delivery. This parameter is for the international site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;Unit: seconds. Valid values: 30 to 1209600.</p>
+     * <p>The Viber message sending timeout period. This parameter is for the China International site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;Unit: seconds. Valid values: 30 to 1209600.</p>
+     * <blockquote>
+     * <p>Valid only for VIBER.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -469,11 +608,11 @@ public class SendChatappMessageRequest extends TeaModel {
      * <ul>
      * <li><p>template: a message template that has been approved in the console. This type of message can be sent at any time.</p>
      * </li>
-     * <li><p>message: a message in any format. This type of message can be sent only within 24 hours after the last message is received from the user.</p>
+     * <li><p>message: a message in any format. This type of message can only be sent within 24 hours after receiving the last message from the user.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Notice: If Type is set to template, you must specify TemplateCode. If Type is set to message, you must specify MessageType.</p>
+     * <p>Notice: When Type is set to template, you must specify TemplateCode. When Type is set to message, you must specify MessageType.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -828,7 +967,7 @@ public class SendChatappMessageRequest extends TeaModel {
 
     public static class SendChatappMessageRequestProductActionSections extends TeaModel {
         /**
-         * <p>The list of product information.</p>
+         * <p>The list of product items.</p>
          */
         @NameInMap("ProductItems")
         public java.util.List<SendChatappMessageRequestProductActionSectionsProductItems> productItems;
@@ -873,7 +1012,7 @@ public class SendChatappMessageRequest extends TeaModel {
         public java.util.List<SendChatappMessageRequestProductActionSections> sections;
 
         /**
-         * <p>The product catalog ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2539783.html">ListProductCatalog</a> operation.</p>
+         * <p>The product catalog ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2539783.html">ListProductCatalog</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>skkks99****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class WhatsappCallShrinkRequest extends TeaModel {
     /**
-     * <p>The business number.</p>
+     * <p>The business phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class WhatsappCallShrinkRequest extends TeaModel {
     public String businessNumber;
 
     /**
-     * <p>The action to perform on the call.</p>
+     * <p>The call action.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,8 +34,7 @@ public class WhatsappCallShrinkRequest extends TeaModel {
     public String callId;
 
     /**
-     * <p>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</p>
-     * <p>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
+     * <p>The space ID or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +59,7 @@ public class WhatsappCallShrinkRequest extends TeaModel {
     public String sessionShrink;
 
     /**
-     * <p>The user\&quot;s number.</p>
+     * <p>The user phone number.</p>
      * 
      * <strong>example:</strong>
      * <p>86131***</p>

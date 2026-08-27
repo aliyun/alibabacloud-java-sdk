@@ -17,7 +17,7 @@ public class CreatePhoneMessageQrdlRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The type of the generated image. Valid values:</p>
+     * <p>The type of image to generate. Valid values:</p>
      * <ul>
      * <li><p>PNG</p>
      * </li>
@@ -36,9 +36,9 @@ public class CreatePhoneMessageQrdlRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The phone number. You can view the phone number on the
+     * <p>The phone number. You can view it on the
      * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>
-     * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>&gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Number Management</strong> page.</p>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>&gt;<strong>Manage</strong>&gt;<strong>WABA Management</strong>&gt;<strong>Number Management</strong> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -49,9 +49,9 @@ public class GetChatFlowMetricResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p>true: successful.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p>false: failed.</p>
      * </li>
      * </ul>
      * 

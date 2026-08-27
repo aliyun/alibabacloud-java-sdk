@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetFlowResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -93,7 +99,7 @@ public class GetFlowResponseBody extends TeaModel {
         public java.util.List<String> categories;
 
         /**
-         * <p>The API version.</p>
+         * <p>The API version information.</p>
          * 
          * <strong>example:</strong>
          * <p>3.0</p>
@@ -102,6 +108,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String dataApiVersion;
 
         /**
+         * <p>The URL of the WA Flow Endpoint</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://abc.com">http://abc.com</a></p>
          */
@@ -109,7 +117,7 @@ public class GetFlowResponseBody extends TeaModel {
         public String endpointUri;
 
         /**
-         * <p>The flow ID.</p>
+         * <p>Flow ID。</p>
          * 
          * <strong>example:</strong>
          * <p>92675332812643****</p>
@@ -118,7 +126,7 @@ public class GetFlowResponseBody extends TeaModel {
         public String flowId;
 
         /**
-         * <p>The flow name.</p>
+         * <p>The Flow name.</p>
          * 
          * <strong>example:</strong>
          * <p>flow_001</p>
@@ -127,7 +135,7 @@ public class GetFlowResponseBody extends TeaModel {
         public String flowName;
 
         /**
-         * <p>The JSON version.</p>
+         * <p>The JSON version information.</p>
          * 
          * <strong>example:</strong>
          * <p>2.1</p>
@@ -154,7 +162,12 @@ public class GetFlowResponseBody extends TeaModel {
         public Long previewUrlExpires;
 
         /**
-         * <p>The status of the flow.</p>
+         * <p>The status of the Flow. Valid values:</p>
+         * <ul>
+         * <li>PUBLISHED: Published.</li>
+         * <li>DRAFT: Draft.</li>
+         * <li>DEPRECATED: Deprecated.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DRAFT</p>

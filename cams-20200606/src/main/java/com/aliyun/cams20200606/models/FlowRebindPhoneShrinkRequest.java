@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class FlowRebindPhoneShrinkRequest extends TeaModel {
     /**
-     * <p>The message channel code, which is the channel ID. You can view the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
-     * <p>This parameter is required.</p>
+     * <p>The message channel code, which is the channel ID. You can view the channel ID in the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> console.</p>
      * 
      * <strong>example:</strong>
      * <p>cams-8c8*********</p>
@@ -34,7 +33,7 @@ public class FlowRebindPhoneShrinkRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The flow code. You can view it on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page.</p>
+     * <p>The flow code. You can view this in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,13 +43,19 @@ public class FlowRebindPhoneShrinkRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, click the flow name to open the flow builder canvas and view the flow version.</p>
+     * <p>The flow version. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console, click the flow name to open the flow editor canvas and view the flow version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;
+
+    /**
+     * <p>The multi-WABA binding configurations.</p>
+     */
+    @NameInMap("MultiWabaPhoneNumbers")
+    public String multiWabaPhoneNumbersShrink;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -70,12 +75,11 @@ public class FlowRebindPhoneShrinkRequest extends TeaModel {
     /**
      * <p>The WABA account ID, PageId, or AccountId&lt;props=&quot;intl&quot;&gt;, or ServiceId.</p>
      * <ul>
-     * <li><p>If ChannelType is set to WHATSAPP, specify the WABA account ID. You can view the WABA account ID on the Channel Management &gt; Manage &gt; WABA Management page.</p>
+     * <li><p>If ChannelType is set to WHATSAPP, specify the WABA account ID. You can view the WABA account ID in Channel Management &gt; Manage &gt; WABA Management.</p>
      * </li>
      * <li><p>If ChannelType is not set to WHATSAPP, specify the PageId for MESSENGER, the AccountId for INSTAGRAM&lt;props=&quot;intl&quot;&gt;, or the ServiceId for VIBER.</p>
      * </li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1952************</p>
@@ -118,6 +122,14 @@ public class FlowRebindPhoneShrinkRequest extends TeaModel {
     }
     public String getFlowVersion() {
         return this.flowVersion;
+    }
+
+    public FlowRebindPhoneShrinkRequest setMultiWabaPhoneNumbersShrink(String multiWabaPhoneNumbersShrink) {
+        this.multiWabaPhoneNumbersShrink = multiWabaPhoneNumbersShrink;
+        return this;
+    }
+    public String getMultiWabaPhoneNumbersShrink() {
+        return this.multiWabaPhoneNumbersShrink;
     }
 
     public FlowRebindPhoneShrinkRequest setOwnerId(Long ownerId) {

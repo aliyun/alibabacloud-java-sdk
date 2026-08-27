@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDmTagResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,16 +14,29 @@ public class ListDmTagResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The response status code.</p>
+     * <ul>
+     * <li><p>OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDmTagResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +44,8 @@ public class ListDmTagResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hgfh77-gfh55***</p>
      */
@@ -36,6 +53,14 @@ public class ListDmTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -43,6 +68,8 @@ public class ListDmTagResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>42</p>
      */
@@ -112,6 +139,8 @@ public class ListDmTagResponseBody extends TeaModel {
 
     public static class ListDmTagResponseBodyData extends TeaModel {
         /**
+         * <p>The tag description.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -119,6 +148,8 @@ public class ListDmTagResponseBody extends TeaModel {
         public String tagDescription;
 
         /**
+         * <p>The tag ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -126,6 +157,8 @@ public class ListDmTagResponseBody extends TeaModel {
         public String tagId;
 
         /**
+         * <p>The tag name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */

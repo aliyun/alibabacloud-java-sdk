@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateChatFlowShrinkRequest extends TeaModel {
     /**
-     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
      * 
      * <strong>example:</strong>
      * <p>ALICOM_OPAAS</p>
@@ -14,7 +14,7 @@ public class UpdateChatFlowShrinkRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>The business extension information. The default value is an empty collection.</p>
+     * <p>The business extension information. Default value: an empty collection.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class UpdateChatFlowShrinkRequest extends TeaModel {
     public String bizExtendShrink;
 
     /**
-     * <p>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>9ccc41**************************</p>
@@ -35,10 +35,10 @@ public class UpdateChatFlowShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The updated remarks for the flow.</p>
+     * <p>The updated flow remark.</p>
      * 
      * <strong>example:</strong>
-     * <p>流程备注</p>
+     * <p>FlowRemark.</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -50,10 +50,10 @@ public class UpdateChatFlowShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The updated name of the flow.</p>
+     * <p>The updated flow name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试流程</p>
+     * <p>TestFlow.</p>
      */
     @NameInMap("Title")
     public String title;

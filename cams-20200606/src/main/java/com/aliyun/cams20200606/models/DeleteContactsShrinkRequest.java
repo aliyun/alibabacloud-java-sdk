@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class DeleteContactsShrinkRequest extends TeaModel {
     /**
+     * <p>The business code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
+     * <p>The contact details.</p>
+     * 
      * <strong>example:</strong>
      * <p>1507486****</p>
      */
@@ -22,6 +32,8 @@ public class DeleteContactsShrinkRequest extends TeaModel {
     public String contactDetails;
 
     /**
+     * <p>The contact name.</p>
+     * 
      * <strong>example:</strong>
      * <p>hahaha</p>
      */
@@ -29,6 +41,8 @@ public class DeleteContactsShrinkRequest extends TeaModel {
     public String contactName;
 
     /**
+     * <p>The country.</p>
+     * 
      * <strong>example:</strong>
      * <p>China</p>
      */
@@ -36,6 +50,8 @@ public class DeleteContactsShrinkRequest extends TeaModel {
     public String country;
 
     /**
+     * <p>The file path.</p>
+     * 
      * <strong>example:</strong>
      * <p>http://****</p>
      */

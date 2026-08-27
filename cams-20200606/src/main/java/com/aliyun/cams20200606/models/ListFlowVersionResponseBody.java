@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFlowVersionResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -41,7 +41,7 @@ public class ListFlowVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The response data.</p>
+     * <p>The response content.</p>
      */
     @NameInMap("Response")
     public java.util.Map<String, ?> response;
@@ -49,9 +49,9 @@ public class ListFlowVersionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p>true: successful.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p>false: failed.</p>
      * </li>
      * </ul>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class WhatsappCallResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -29,7 +29,7 @@ public class WhatsappCallResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error description.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -38,7 +38,7 @@ public class WhatsappCallResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Model")
     public WhatsappCallResponseBodyModel model;
@@ -55,10 +55,8 @@ public class WhatsappCallResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +120,7 @@ public class WhatsappCallResponseBody extends TeaModel {
 
     public static class WhatsappCallResponseBodyModel extends TeaModel {
         /**
-         * <p>The unique identifier for each call.</p>
+         * <p>The unique identifier of each call.</p>
          * 
          * <strong>example:</strong>
          * <p>wamid-xx**</p>

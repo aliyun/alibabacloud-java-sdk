@@ -23,6 +23,24 @@ public class ListChatFlowRequest extends TeaModel {
     public java.util.Map<String, ?> bizExtend;
 
     /**
+     * <p>flowCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleValueSampleValue</p>
+     */
+    @NameInMap("FlowCode")
+    public String flowCode;
+
+    /**
+     * <p>The flow status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleValueSampleValue</p>
+     */
+    @NameInMap("FlowStatus")
+    public String flowStatus;
+
+    /**
      * <p>The flow trigger type. Valid values:</p>
      * <ul>
      * <li>TriggeredManually</li>
@@ -47,6 +65,10 @@ public class ListChatFlowRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -68,9 +90,26 @@ public class ListChatFlowRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The phone number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleValue</p>
+     */
+    @NameInMap("PhoneNumber")
+    public String phoneNumber;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -98,6 +137,15 @@ public class ListChatFlowRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SampleValueSampleValue</p>
+     */
+    @NameInMap("Title")
+    public String title;
+
     public static ListChatFlowRequest build(java.util.Map<String, ?> map) throws Exception {
         ListChatFlowRequest self = new ListChatFlowRequest();
         return TeaModel.build(map, self);
@@ -117,6 +165,22 @@ public class ListChatFlowRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getBizExtend() {
         return this.bizExtend;
+    }
+
+    public ListChatFlowRequest setFlowCode(String flowCode) {
+        this.flowCode = flowCode;
+        return this;
+    }
+    public String getFlowCode() {
+        return this.flowCode;
+    }
+
+    public ListChatFlowRequest setFlowStatus(String flowStatus) {
+        this.flowStatus = flowStatus;
+        return this;
+    }
+    public String getFlowStatus() {
+        return this.flowStatus;
     }
 
     public ListChatFlowRequest setFlowTriggerType(String flowTriggerType) {
@@ -159,6 +223,14 @@ public class ListChatFlowRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListChatFlowRequest setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
     public ListChatFlowRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -189,6 +261,14 @@ public class ListChatFlowRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListChatFlowRequest setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public String getTitle() {
+        return this.title;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
+    @NameInMap("BindId")
+    public String bindId;
+
     /**
      * <p>The channel type. Valid values:</p>
      * <ul>
@@ -14,10 +17,7 @@ public class ListInstanceRequest extends TeaModel {
      * <li><p><strong>instagram</strong></p>
      * </li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>viber</strong></li>
-     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;- <strong>viber</strong></p>
      * 
      * <strong>example:</strong>
      * <p>VIBER</p>
@@ -26,7 +26,7 @@ public class ListInstanceRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The filter string for the query.</p>
+     * <p>The filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>aa</p>
@@ -35,7 +35,7 @@ public class ListInstanceRequest extends TeaModel {
     public String filterStr;
 
     /**
-     * <p>The instance ID. Use this parameter for non-Alibaba Cloud hosts only.</p>
+     * <p>The instance ID. Only non-Alibaba Cloud hosts are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>r-uf6wd7pkyjwxvlxfhk</p>
@@ -52,8 +52,11 @@ public class ListInstanceRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    @NameInMap("IsBind")
+    public Boolean isBind;
+
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>92</p>
@@ -62,7 +65,7 @@ public class ListInstanceRequest extends TeaModel {
     public Long pageIndex;
 
     /**
-     * <p>The number of items to return per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>87</p>
@@ -71,7 +74,7 @@ public class ListInstanceRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the resource group that contains the instance.</p>
+     * <p>The ID of the enterprise resource group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>
@@ -80,7 +83,7 @@ public class ListInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The submission time, in <code>YYYY-MM-DD HH:MM:SS</code> format.</p>
+     * <p>The submit time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-12 00:00:00</p>
@@ -91,6 +94,14 @@ public class ListInstanceRequest extends TeaModel {
     public static ListInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceRequest self = new ListInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstanceRequest setBindId(String bindId) {
+        this.bindId = bindId;
+        return this;
+    }
+    public String getBindId() {
+        return this.bindId;
     }
 
     public ListInstanceRequest setChannelType(String channelType) {
@@ -123,6 +134,14 @@ public class ListInstanceRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public ListInstanceRequest setIsBind(Boolean isBind) {
+        this.isBind = isBind;
+        return this;
+    }
+    public Boolean getIsBind() {
+        return this.isBind;
     }
 
     public ListInstanceRequest setPageIndex(Long pageIndex) {

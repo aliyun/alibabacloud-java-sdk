@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,11 +14,11 @@ public class ListInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The request status code.</p>
+     * <p>The response code.</p>
      * <ul>
-     * <li><p><code>OK</code> indicates that the request was successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>For other error codes, see the <a href="https://help.aliyun.com/document_detail/196974.html">Error Code List</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class ListInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>An array of objects, each representing an instance.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListInstanceResponseBodyData> data;
@@ -53,12 +53,10 @@ public class ListInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +66,7 @@ public class ListInstanceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries that match the specified criteria.</p>
+     * <p>The total number of records that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -175,7 +173,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String custSpaceId;
 
         /**
-         * <p>The ID of the associated Facebook Business Manager account.</p>
+         * <p>The bound Facebook ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,7 +209,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The ISV terms.</p>
+         * <p>The ISV/Client agreement file name.</p>
          * 
          * <strong>example:</strong>
          * <p>aa</p>
@@ -220,7 +218,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String isvTerms;
 
         /**
-         * <p>The office address.</p>
+         * <p>The enterprise address.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -238,7 +236,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the region where the resource is located.</p>
+         * <p>The region to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -247,7 +245,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String resourceRegionId;
 
         /**
-         * <p>The state of the instance.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>published</p>
@@ -256,7 +254,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The time when the instance was submitted.</p>
+         * <p>The submit time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-12 00:00:00</p>

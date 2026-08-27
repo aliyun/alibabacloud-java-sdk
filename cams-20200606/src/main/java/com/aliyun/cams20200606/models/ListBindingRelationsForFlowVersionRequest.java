@@ -7,17 +7,11 @@ public class ListBindingRelationsForFlowVersionRequest extends TeaModel {
     /**
      * <p>The channel type. Valid values:</p>
      * <ul>
-     * <li><p>INSTAGRAM</p>
-     * </li>
-     * <li><p>WHATSAPP</p>
-     * </li>
-     * <li><p>MESSENGER</p>
-     * </li>
+     * <li>INSTAGRAM</li>
+     * <li>WHATSAPP</li>
+     * <li>MESSENGER</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>VIBER</li>
-     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;- VIBER</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +21,7 @@ public class ListBindingRelationsForFlowVersionRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

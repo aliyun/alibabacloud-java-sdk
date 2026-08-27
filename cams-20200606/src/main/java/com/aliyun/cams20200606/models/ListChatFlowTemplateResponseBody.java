@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChatFlowTemplateResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -49,9 +49,9 @@ public class ListChatFlowTemplateResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

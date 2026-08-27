@@ -23,6 +23,15 @@ public class ReadFlowVersionShrinkRequest extends TeaModel {
     public String bizExtendShrink;
 
     /**
+     * <p>The draft version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample valueSample value</p>
+     */
+    @NameInMap("DraftVersion")
+    public String draftVersion;
+
+    /**
      * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</p>
      * 
      * <strong>example:</strong>
@@ -83,6 +92,14 @@ public class ReadFlowVersionShrinkRequest extends TeaModel {
     }
     public String getBizExtendShrink() {
         return this.bizExtendShrink;
+    }
+
+    public ReadFlowVersionShrinkRequest setDraftVersion(String draftVersion) {
+        this.draftVersion = draftVersion;
+        return this;
+    }
+    public String getDraftVersion() {
+        return this.draftVersion;
     }
 
     public ReadFlowVersionShrinkRequest setFlowCode(String flowCode) {

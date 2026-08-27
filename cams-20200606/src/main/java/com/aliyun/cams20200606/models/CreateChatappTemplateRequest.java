@@ -5,35 +5,34 @@ import com.aliyun.tea.*;
 
 public class CreateChatappTemplateRequest extends TeaModel {
     /**
-     * <p>Indicates whether to allow Facebook to automatically change the category of the template. This can increase the approval rate of the template. This parameter is valid only when TemplateType is set to WHATSAPP.</p>
+     * <p>Specifies whether to allow Facebook to automatically change the template category (to improve the template approval rate). This property is valid only when TemplateType is set to WHATSAPP.</p>
      * <blockquote>
-     * <p>Notice: This property is deprecated. WhatsApp no longer supports this property.</p>
+     * <p>Notice: This property has been deprecated. WhatsApp no longer supports this property.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("AllowCategoryChange")
-    @Deprecated
     public Boolean allowCategoryChange;
 
     /**
-     * <p>WhatsApp template categories:</p>
+     * <p>WhatsApp template category. Valid values:</p>
      * <ul>
-     * <li><p><strong>UTILITY</strong>: Transactional.</p>
+     * <li><p><strong>UTILITY</strong>: transaction-related.</p>
      * </li>
-     * <li><p><strong>MARKETING</strong>: Marketing.</p>
+     * <li><p><strong>MARKETING</strong>: marketing.</p>
      * </li>
-     * <li><p><strong>AUTHENTICATION</strong>: Authentication.</p>
+     * <li><p><strong>AUTHENTICATION</strong>: identity verification.</p>
      * </li>
      * </ul>
-     * <p>Viber template categories:</p>
+     * <p>Viber template category. Valid values:</p>
      * <ul>
-     * <li><p><strong>UTILITY</strong>: Transactional.</p>
+     * <li><p><strong>UTILITY</strong>: transaction-related.</p>
      * </li>
-     * <li><p><strong>MARKETING</strong>: Marketing.</p>
+     * <li><p><strong>MARKETING</strong>: marketing.</p>
      * </li>
-     * <li><p><strong>AUTHENTICATION</strong>: Authentication.</p>
+     * <li><p><strong>AUTHENTICATION</strong>: identity verification.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -44,13 +43,19 @@ public class CreateChatappTemplateRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>Specifies whether to pause template sending when a Utility template is changed to Marketing type. This property is valid only for WhatsApp templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CategoryChangePaused")
     public Boolean categoryChangePaused;
 
     /**
      * <p>The list of message template components.</p>
      * <blockquote>
-     * <p>When Category is set to AUTHENTICATION, the Components array cannot contain a component of the HEADER type. If the component type is BODY or FOOTER, the Text parameter must be empty.</p>
+     * <p>When Category=AUTHENTICATION, Components cannot contain nodes with Type=HEADER. When Type=BODY or FOOTER, the Text content must be empty.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -58,7 +63,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public java.util.List<CreateChatappTemplateRequestComponents> components;
 
     /**
-     * <p>The Space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
+     * <p>The SpaceId of the ISV sub-customer or the direct customer instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>293483938849493</p>
@@ -67,9 +72,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The WhatsApp Business Account (WABA) ID of the independent software vendor (ISV) customer.</p>
+     * <p>The ISV customer WabaId.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
+     * <p>Deprecated parameter. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -80,7 +85,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>An example of how to create a template.</p>
+     * <p>The example for creating the template.</p>
      * 
      * <strong>example:</strong>
      * <p>hello_whatsapp</p>
@@ -89,16 +94,17 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public java.util.Map<String, String> example;
 
     /**
-     * <p>The ISV verification code, used to verify whether the RAM user is authorized by the ISV.</p>
+     * <p>The ISV verification code, used to verify whether the sub-account is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
      */
     @NameInMap("IsvCode")
+    @Deprecated
     public String isvCode;
 
     /**
-     * <p>The template language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The template language. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,12 +114,10 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The time-to-live (TTL) of the template message in WhatsApp.</p>
+     * <p>The time-to-live (TTL) for template messages in WhatsApp.</p>
      * <ul>
-     * <li><p>For AUTHENTICATION templates, the value ranges from 30 to 900.</p>
-     * </li>
-     * <li><p>For UTILITY templates, the value ranges from 30 to 43200.</p>
-     * </li>
+     * <li>AUTHENTICATION: valid values range from 30 to 900. </li>
+     * <li>UTILITY: valid values range from 30 to 43200.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,7 +137,16 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The template type.</p>
+     * <p>productSetId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9928**</p>
+     */
+    @NameInMap("ProductSetId")
+    public String productSetId;
+
+    /**
+     * <p>The templatetype. Valid values:</p>
      * <ul>
      * <li><p><strong>WHATSAPP</strong></p>
      * </li>
@@ -153,7 +166,6 @@ public class CreateChatappTemplateRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    @Deprecated
     public CreateChatappTemplateRequest setAllowCategoryChange(Boolean allowCategoryChange) {
         this.allowCategoryChange = allowCategoryChange;
         return this;
@@ -211,6 +223,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         return this.example;
     }
 
+    @Deprecated
     public CreateChatappTemplateRequest setIsvCode(String isvCode) {
         this.isvCode = isvCode;
         return this;
@@ -243,6 +256,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
         return this.name;
     }
 
+    public CreateChatappTemplateRequest setProductSetId(String productSetId) {
+        this.productSetId = productSetId;
+        return this;
+    }
+    public String getProductSetId() {
+        return this.productSetId;
+    }
+
     public CreateChatappTemplateRequest setTemplateType(String templateType) {
         this.templateType = templateType;
         return this;
@@ -253,7 +274,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
 
     public static class CreateChatappTemplateRequestComponentsButtonsSupportedApps extends TeaModel {
         /**
-         * <p>This parameter is required for WhatsApp templates when Category is set to AUTHENTICATION and the button type is ONE_TAP or ZERO_TAP. It specifies the package name of the app that WhatsApp will launch.</p>
+         * <p>Required for WhatsApp templates when Category is AUTHENTICATION and Button Type is ONE_TAP/ZERO_TAP. The package name of the application invoked by WhatsApp.</p>
          * 
          * <strong>example:</strong>
          * <p>com.kuaidian.waimaistaff</p>
@@ -262,7 +283,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String packageName;
 
         /**
-         * <p>This parameter is required for WhatsApp templates when Category is set to AUTHENTICATION and the button type is ONE_TAP or ZERO_TAP. It specifies the signature hash of the app that WhatsApp will launch.</p>
+         * <p>Required for WhatsApp templates when Category is AUTHENTICATION and Button Type is ONE_TAP/ZERO_TAP. The signature hash value for the application invoked by WhatsApp.</p>
          * 
          * <strong>example:</strong>
          * <p>ieid83kdiek</p>
@@ -295,7 +316,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
 
     public static class CreateChatappTemplateRequestComponentsButtons extends TeaModel {
         /**
-         * <p>This parameter is required for WhatsApp templates when Category is set to AUTHENTICATION and the button type is ONE_TAP or ZERO_TAP. It specifies the button text for the WhatsApp autofill action.</p>
+         * <p>Required for WhatsApp templates when Category is AUTHENTICATION and Button Type is ONE_TAP/ZERO_TAP. The button text for the WhatsApp Autofill operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Autofill</p>
@@ -304,7 +325,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String autofillText;
 
         /**
-         * <p>The value of the coupon code. It supports only letters and digits. You can pass a variable such as $(couponCode) and then pass the actual coupon code when sending the message.</p>
+         * <p>The coupon code value. Only letters and numbers are supported. You can pass in a variable such as $(couponCode) and provide the actual coupon code when sending.</p>
          * 
          * <strong>example:</strong>
          * <p>120293</p>
@@ -313,11 +334,11 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String couponCode;
 
         /**
-         * <p>The flow data event type. Valid values:</p>
+         * <p>The Flow data event type. Valid values:</p>
          * <ul>
-         * <li><p>DATA_EXCHANGE: Data exchange.</p>
+         * <li><p>DATA_EXCHANGE: data exchange.</p>
          * </li>
-         * <li><p>NAVIGATE: Navigation.</p>
+         * <li><p>NAVIGATE: navigation.</p>
          * </li>
          * </ul>
          * 
@@ -328,7 +349,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String flowAction;
 
         /**
-         * <p>The flow ID.</p>
+         * <p>Flow ID。</p>
          * 
          * <strong>example:</strong>
          * <p>479884093605****</p>
@@ -337,7 +358,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String flowId;
 
         /**
-         * <p>This parameter is valid for WhatsApp templates when Category is set to Marketing and the button type is QUICK_REPLY. It indicates that the button is a marketing opt-out button. If a customer clicks this button and you have configured sending control operations in ChatApp, subsequent marketing messages will not be sent to the customer.</p>
+         * <p>Valid for WhatsApp templates when Category is Marketing and Button type is QUICK_REPLY. Indicates the button is a marketing opt-out button. If the customer clicks this button and send control is configured on ChatApp, subsequent Marketing messages will not be sent to the customer.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -346,7 +367,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public Boolean isOptOut;
 
         /**
-         * <p>The screen to navigate to. This parameter is required when FlowAction is set to NAVIGATE.</p>
+         * <p>The navigate screen. Required when FlowAction=NAVIGATE.</p>
          * 
          * <strong>example:</strong>
          * <p>DETAILS</p>
@@ -355,17 +376,16 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String navigateScreen;
 
         /**
-         * <p>Use the properties under SupportedApps.</p>
+         * <p>Use the properties under SupportedApps instead.</p>
          * 
          * <strong>example:</strong>
          * <p>com.demo</p>
          */
         @NameInMap("PackageName")
-        @Deprecated
         public String packageName;
 
         /**
-         * <p>The phone number. This parameter is valid only when the button type is <strong>PHONE_NUMBER</strong>.</p>
+         * <p>The phone number. Valid only when the button type is <strong>PHONE_NUMBER</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>+861368897****</p>
@@ -374,23 +394,22 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Use the properties under SupportedApps.</p>
+         * <p>Use the properties under SupportedApps instead.</p>
          * 
          * <strong>example:</strong>
          * <p>wi299382</p>
          */
         @NameInMap("SignatureHash")
-        @Deprecated
         public String signatureHash;
 
         /**
-         * <p>The list of supported apps.</p>
+         * <p>The list of supported applications.</p>
          */
         @NameInMap("SupportedApps")
         public java.util.List<CreateChatappTemplateRequestComponentsButtonsSupportedApps> supportedApps;
 
         /**
-         * <p>The name displayed on the button.</p>
+         * <p>The display name of the button.</p>
          * 
          * <strong>example:</strong>
          * <p>Call Me</p>
@@ -401,31 +420,29 @@ public class CreateChatappTemplateRequest extends TeaModel {
         /**
          * <p>The button type.</p>
          * <ul>
-         * <li><p><strong>PHONE_NUMBER</strong>: A call button.</p>
+         * <li><p><strong>PHONE_NUMBER</strong>: dial phone button</p>
          * </li>
-         * <li><p><strong>URL</strong>: A URL button.</p>
+         * <li><p><strong>URL</strong>: web button</p>
          * </li>
-         * <li><p><strong>QUICK_REPLY</strong>: A quick reply button.</p>
+         * <li><p><strong>QUICK_REPLY</strong>: quick reply button</p>
          * </li>
-         * <li><p><strong>COPY_CODE</strong>: A button to copy a verification code or coupon code.</p>
+         * <li><p><strong>COPY_CODE</strong>: copy verification code or coupon code</p>
          * </li>
-         * <li><p><strong>ONE_TAP</strong>: An autofill button for AUTHENTICATION templates.</p>
+         * <li><p><strong>ONE_TAP</strong>: autofill button for AUTHENTICATION templates</p>
          * </li>
-         * <li><p><strong>ZERO_TAP</strong>: An autofill button for AUTHENTICATION templates.</p>
+         * <li><p><strong>ZERO_TAP</strong>: autofill button for AUTHENTICATION templates</p>
          * </li>
-         * <li><p><strong>MPM</strong>: A multi-product message.</p>
+         * <li><p><strong>MPM</strong>: multi-product catalog</p>
          * </li>
-         * <li><p><strong>CATALOG</strong>: A catalog.</p>
+         * <li><p><strong>CATALOG</strong>: catalog</p>
          * </li>
-         * <li><p><strong>FLOW</strong>: Opens a WhatsApp flow.</p>
+         * <li><p><strong>FLOW</strong>: open WhatsApp flow</p>
          * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li><p>For WhatsApp templates, if Category is set to AUTHENTICATION, only one button is allowed. The button type must be COPY_CODE or ONE_TAP. If you set the button type to COPY_CODE, the Text parameter is required. If you set the button type to ONE_TAP, the Text (the name of the copy code button displayed on the client if the destination app is not installed), SignatureHash, PackageName, and AutofillText parameters are required.</p>
-         * </li>
-         * <li><p>For Viber templates, only one button is allowed, and it must be of the URL type.</p>
-         * </li>
+         * <li>For WhatsApp templates with Category AUTHENTICATION, only one button is allowed, and the type can only be COPY_CODE/ONE_TAP. When COPY_CODE is selected, Text is required. When ONE_TAP is selected, Text (displayed when the target application is not installed on the device, representing the copy verification code button name), SignatureHash, PackageName, and AutofillText are required.</li>
+         * <li>Viber templates allow only one Button, and it must be URL type.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -437,7 +454,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL that is visited when the URL button is clicked.</p>
+         * <p>The URL to visit when the link button is clicked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com">https://example.com</a></p>
@@ -448,9 +465,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
         /**
          * <p>The URL type.</p>
          * <ul>
-         * <li><p><strong>static</strong>: Static</p>
+         * <li><p><strong>static</strong>: static</p>
          * </li>
-         * <li><p><strong>dynamic</strong>: Dynamic</p>
+         * <li><p><strong>dynamic</strong>: dynamic</p>
          * </li>
          * </ul>
          * 
@@ -513,7 +530,6 @@ public class CreateChatappTemplateRequest extends TeaModel {
             return this.navigateScreen;
         }
 
-        @Deprecated
         public CreateChatappTemplateRequestComponentsButtons setPackageName(String packageName) {
             this.packageName = packageName;
             return this;
@@ -530,7 +546,6 @@ public class CreateChatappTemplateRequest extends TeaModel {
             return this.phoneNumber;
         }
 
-        @Deprecated
         public CreateChatappTemplateRequestComponentsButtons setSignatureHash(String signatureHash) {
             this.signatureHash = signatureHash;
             return this;
@@ -603,11 +618,11 @@ public class CreateChatappTemplateRequest extends TeaModel {
         /**
          * <p>The button type.</p>
          * <ul>
-         * <li><p><strong>PHONE_NUMBER</strong>: A call button.</p>
+         * <li><p><strong>PHONE_NUMBER</strong>: dial phone button</p>
          * </li>
-         * <li><p><strong>URL</strong>: A URL button.</p>
+         * <li><p><strong>URL</strong>: web button</p>
          * </li>
-         * <li><p><strong>QUICK_REPLY</strong>: A quick reply button.</p>
+         * <li><p><strong>QUICK_REPLY</strong>: quick reply button</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -619,7 +634,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL that is visited when the button is clicked.</p>
+         * <p>The URL that is accessed when the button is clicked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://alibaba.com/xx">https://alibaba.com/xx</a></p>
@@ -628,11 +643,11 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String url;
 
         /**
-         * <p>The URL type.</p>
+         * <p>The URL type. </p>
          * <ul>
-         * <li><p><strong>static</strong>: Static</p>
+         * <li><p><strong>static</strong>: Static.</p>
          * </li>
-         * <li><p><strong>dynamic</strong>: Dynamic</p>
+         * <li><p><strong>dynamic</strong>: Dynamic.</p>
          * </li>
          * </ul>
          * 
@@ -691,15 +706,15 @@ public class CreateChatappTemplateRequest extends TeaModel {
 
     public static class CreateChatappTemplateRequestComponentsCardsCardComponents extends TeaModel {
         /**
-         * <p>The list of buttons. This parameter applies only to the BUTTONS component. Each card in a carousel can have a maximum of two buttons.</p>
+         * <p>The button list. Applicable only to BUTTONS components. Each Carousel card can have a maximum of two buttons.</p>
          */
         @NameInMap("Buttons")
         public java.util.List<CreateChatappTemplateRequestComponentsCardsCardComponentsButtons> buttons;
 
         /**
-         * <p>The type of the media resource. This parameter is valid when Type is set to HEADER.</p>
+         * <p>The media resource type. Valid when Type = HEADER.</p>
          * <ul>
-         * <li><p><strong>IMAGE</strong>: image</p>
+         * <li><p><strong>IMAGE</strong>: image </p>
          * </li>
          * <li><p><strong>VIDEO</strong>: video</p>
          * </li>
@@ -712,7 +727,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The content of the BODY component in the carousel card.</p>
+         * <p>The BODY content in the Carousel card.</p>
          * 
          * <strong>example:</strong>
          * <p>Who is the very powerful team</p>
@@ -739,7 +754,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The path of the media resource.</p>
+         * <p>The material path.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://alibaba.com/img.png">https://alibaba.com/img.png</a></p>
@@ -796,8 +811,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
 
     public static class CreateChatappTemplateRequestComponentsCards extends TeaModel {
         /**
-         * <p>The list of controls in the carousel card.</p>
-         * <p>This parameter is required.</p>
+         * <p>The list of components in the Carousel card.</p>
          */
         @NameInMap("CardComponents")
         public java.util.List<CreateChatappTemplateRequestComponentsCardsCardComponents> cardComponents;
@@ -819,7 +833,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
 
     public static class CreateChatappTemplateRequestComponents extends TeaModel {
         /**
-         * <p>This parameter is valid for WhatsApp templates when Category is set to AUTHENTICATION and the component type is Body. It indicates that a security recommendation is displayed above the body, advising the user not to share the verification code.</p>
+         * <p>Valid for WhatsApp templates when Category is AUTHENTICATION and Component Type is Body. Displays a prompt above the Body advising not to share the verification code with others.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -828,27 +842,21 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public Boolean addSecretRecommendation;
 
         /**
-         * <p>The list of buttons. This parameter applies only to the <strong>BUTTONS</strong> component.</p>
+         * <p>The button list. Applicable only to <strong>BUTTONS</strong> components.</p>
          * <blockquote>
-         * <p>Number of buttons for WhatsApp</p>
+         * <p>WhatsApp button quantity rules:</p>
          * <ul>
-         * <li><p>For MARKETING or UTILITY templates, you can add up to 10 buttons.</p>
-         * </li>
-         * <li><p>You can add only one button of the PHONE_NUMBER type.</p>
-         * </li>
-         * <li><p>You can add up to two buttons of the URL type.</p>
-         * </li>
-         * <li><p>Buttons of the QUICK_REPLY type cannot be mixed with buttons of the PHONE_NUMBER or URL type.</p>
-         * </li>
+         * <li>For WhatsApp templates with Category MARKETING/UTILITY, a maximum of 10 buttons are allowed.</li>
+         * <li>Only 1 PHONE_NUMBER button is allowed.</li>
+         * <li>A maximum of 2 URL buttons are allowed.</li>
+         * <li>QUICK_REPLY buttons cannot appear in mixed order with PHONE_NUMBER/URL buttons.</li>
          * </ul>
          * </blockquote>
          * <blockquote>
-         * <p>Number of buttons for Viber</p>
+         * <p>Viber button quantity rules:</p>
          * <ul>
-         * <li><p>Only one button of the URL type is allowed.</p>
-         * </li>
-         * <li><p>If the HEADER component contains a video, the button type is URL, but you cannot set a URL.</p>
-         * </li>
+         * <li>Only URL type is supported, and only one button is allowed.</li>
+         * <li>When the HEADER contains a VIDEO, the button type is URL, but you cannot set a URL address.</li>
          * </ul>
          * </blockquote>
          */
@@ -865,13 +873,13 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String caption;
 
         /**
-         * <p>The list of cards for a carousel template.</p>
+         * <p>The Carousel template card list.</p>
          */
         @NameInMap("Cards")
         public java.util.List<CreateChatappTemplateRequestComponentsCards> cards;
 
         /**
-         * <p>The validity period of the verification code for a WhatsApp AUTHENTICATION template, in minutes. This parameter is valid only for WhatsApp messages when Category is set to AUTHENTICATION and the component type is Footer. This information is displayed in the footer.</p>
+         * <p>The validity period (in minutes) of the verification code for WhatsApp AUTHENTICATION templates. Valid only for WhatsApp messages when Category is AUTHENTICATION and Component Type is Footer (displayed in the Footer position).</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -880,7 +888,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public Integer codeExpirationMinutes;
 
         /**
-         * <p>The duration of the video in a Viber video message, in seconds. The value ranges from 0 to 600.</p>
+         * <p>The duration (in seconds) of Viber video messages. Valid values: 0 to 600.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -898,7 +906,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file type of a Viber file message.</p>
+         * <p>The file type for Viber file messages.</p>
          * 
          * <strong>example:</strong>
          * <p>docx</p>
@@ -907,7 +915,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String fileType;
 
         /**
-         * <p>The type of the media resource.</p>
+         * <p>The media resource type.</p>
          * <ul>
          * <li><p><strong>TEXT</strong>: text</p>
          * </li>
@@ -926,7 +934,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>Indicates whether the coupon code has an expiration time. This parameter is used when type is set to LIMITED_TIME_OFFER.</p>
+         * <p>Specifies whether the coupon code has an expiration time. This parameter is used when type = LIMITED_TIME_OFFER.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -935,9 +943,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public Boolean hasExpiration;
 
         /**
-         * <p>The text of the message to send.</p>
+         * <p>The text of the message to be sent.</p>
          * <blockquote>
-         * <p>For WhatsApp templates, if Category is set to AUTHENTICATION, this parameter is empty.</p>
+         * <p>For WHATSAPP type, this property value is empty when Category=AUTHENTICATION.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -947,7 +955,7 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String text;
 
         /**
-         * <p>The thumbnail of a Viber message that contains a video.</p>
+         * <p>The thumbnail for Viber video messages.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cdn.multiplymall.mobiapp.cloud/yunmall/B-LM-LMALL202207130001/20220730/d712a057-a6af-4513-bbe6-7ee57ea60983.png?x-oss-process=image/resize,w_100">https://cdn.multiplymall.mobiapp.cloud/yunmall/B-LM-LMALL202207130001/20220730/d712a057-a6af-4513-bbe6-7ee57ea60983.png?x-oss-process=image/resize,w_100</a></p>
@@ -973,12 +981,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li><p>For WhatsApp templates, the BODY component can contain up to 1,024 characters. The HEADER and FOOTER components can contain up to 60 characters.</p>
-         * </li>
-         * <li><p>For Viber templates, the FOOTER, CAROUSEL, and LIMITED_TIME_OFFER types are invalid.</p>
-         * </li>
-         * <li><p>For Viber templates, images, videos, and files are placed in the HEADER component. The client displays the image below the text. The text is placed in the BODY component.</p>
-         * </li>
+         * <li>For WhatsApp templates, the <strong>BODY</strong> component cannot exceed 1024 characters. The <strong>HEADER</strong> and <strong>FOOTER</strong> components cannot exceed 60 characters.</li>
+         * <li>For Viber templates, the <strong>FOOTER</strong>, <strong>CAROUSEL</strong>, and <strong>LIMITED_TIME_OFFER</strong> types are invalid.</li>
+         * <li>For Viber templates, images, videos, and files are placed in the <strong>HEADER</strong> (the device displays images below the text). Text is placed in the <strong>BODY</strong>.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -990,9 +995,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The path of the media resource.</p>
+         * <p>The media resource path.</p>
          * <blockquote>
-         * <p>For Viber templates, the recommended image size is 800 × 800 pixels.</p>
+         * <p>For Viber type, the recommended image size is 800 px × 800 px.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,7 +32,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -120,7 +120,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>The prefilled message content.</p>
+         * <p>The message content.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello</p>

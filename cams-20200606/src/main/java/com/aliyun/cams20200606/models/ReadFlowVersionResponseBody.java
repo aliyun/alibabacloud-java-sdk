@@ -41,7 +41,7 @@ public class ReadFlowVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The response content.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Response")
     public java.util.Map<String, ?> response;

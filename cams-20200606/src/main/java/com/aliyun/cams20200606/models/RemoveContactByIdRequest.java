@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveContactByIdRequest extends TeaModel {
     /**
+     * <p>The contact ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveContactByIdRequest extends TeaModel {
     public String contactId;
 
     /**
+     * <p>The contact group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

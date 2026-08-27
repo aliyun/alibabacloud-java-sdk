@@ -5,34 +5,38 @@ import com.aliyun.tea.*;
 
 public class CreateMessengerPageShrinkRequest extends TeaModel {
     /**
+     * <p>The IDs of the authorized ad accounts.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AdAccountIds")
     public String adAccountIdsShrink;
 
     /**
+     * <p>The authorization code obtained after the embedded authorization is completed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>EAA****</p>
      */
     @NameInMap("AuthenticationCode")
     public String authenticationCode;
 
     /**
+     * <p>The Business platform ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>293***</p>
      */
     @NameInMap("BusinessId")
     public String businessId;
 
     /**
+     * <p>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-s***</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -41,10 +45,11 @@ public class CreateMessengerPageShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The PageId of the messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>19283***</p>
      */
     @NameInMap("PageId")
     public String pageId;

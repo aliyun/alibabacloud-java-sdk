@@ -5,50 +5,70 @@ import com.aliyun.tea.*;
 
 public class AddMarketingFlowRequest extends TeaModel {
     /**
+     * <p>The description of the campaign.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Example value example value.</p>
      */
     @NameInMap("ActivityDesc")
     public String activityDesc;
 
     /**
+     * <p>The name of the node instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Example value example value.</p>
      */
     @NameInMap("ActivityName")
     public String activityName;
 
     /**
+     * <p>The business code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example value.</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 
     /**
+     * <p>The cron expression.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Example value example value example value.</p>
      */
     @NameInMap("CronExpression")
     public String cronExpression;
 
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Example value example value example value.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
+     * <p>The trigger method of the baseline scan. Valid values:</p>
+     * <ul>
+     * <li><strong>Schedule</strong>: Triggered by a periodic configuration task.</li>
+     * <li><strong>Manual</strong>: Manually triggered.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example value.</p>
      */
     @NameInMap("ExecutionType")
     public String executionType;
@@ -57,30 +77,44 @@ public class AddMarketingFlowRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The parameter flag.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example value.</p>
      */
     @NameInMap("ParamFlag")
     public String paramFlag;
 
+    /**
+     * <p>The API parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Params")
     public java.util.Map<String, ?> params;
 
     /**
+     * <p>The code of the associated flow.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example value.</p>
      */
     @NameInMap("RelatedFlowCode")
     public String relatedFlowCode;
 
     /**
+     * <p>The name of the associated flow.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example value.</p>
      */
     @NameInMap("RelatedFlowName")
     public String relatedFlowName;
 
     /**
+     * <p>The ID of the related group.</p>
+     * 
      * <strong>example:</strong>
      * <p>43</p>
      */
@@ -94,8 +128,10 @@ public class AddMarketingFlowRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example value.</p>
      */
     @NameInMap("StartDate")
     public String startDate;

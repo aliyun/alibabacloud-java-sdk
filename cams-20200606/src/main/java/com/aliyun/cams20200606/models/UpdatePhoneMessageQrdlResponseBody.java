@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
     /**
-     * <p>The access denial details.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -129,7 +129,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         public String prefilledMessage;
 
         /**
-         * <p>The QR code image URL.</p>
+         * <p>The URL of the QR code image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://img.png">https://img.png</a></p>

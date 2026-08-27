@@ -723,7 +723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增营销活动</p>
+     * <p>Creates a campaign.</p>
      * 
      * @param tmpReq AddMarketingFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -825,7 +825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增营销活动</p>
+     * <p>Creates a campaign.</p>
      * 
      * @param request AddMarketingFlowRequest
      * @return AddMarketingFlowResponse
@@ -1033,7 +1033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定选择的pageId</p>
+     * <p>Binds the selected pageId.</p>
      * 
      * @param request BindMessengerPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1085,7 +1085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定选择的pageId</p>
+     * <p>Binds the selected pageId.</p>
      * 
      * @param request BindMessengerPageRequest
      * @return BindMessengerPageResponse
@@ -1097,7 +1097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Moves a resource to a different resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1137,7 +1137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Moves a resource to a different resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -1746,8 +1746,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This API operation creates a flow. You can also create a flow manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> interface.</li>
-     * <li>After you create a flow, you can orchestrate the canvas. For more information, see <a href="https://help.aliyun.com/document_detail/2836818.html">Flow Editor components</a>.</li>
+     * <li>You can create a flow by calling this operation or manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</li>
+     * <li>After creating a flow, refer to <a href="https://help.aliyun.com/document_detail/2836818.html">Flow editor component description</a> to orchestrate the canvas.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1765,6 +1765,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.bizExtendShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.bizExtend, "BizExtend", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lifeCycleExtendData)) {
+            request.lifeCycleExtendDataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lifeCycleExtendData, "LifeCycleExtendData", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizCode)) {
             query.put("BizCode", request.bizCode);
@@ -1774,8 +1778,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizExtend", request.bizExtendShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createFromFlowCode)) {
+            query.put("CreateFromFlowCode", request.createFromFlowCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createFromFlowVersion)) {
+            query.put("CreateFromFlowVersion", request.createFromFlowVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.flowTriggerType)) {
             query.put("FlowTriggerType", request.flowTriggerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lifeCycleExtendDataShrink)) {
+            query.put("LifeCycleExtendData", request.lifeCycleExtendDataShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -1818,8 +1834,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This API operation creates a flow. You can also create a flow manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> interface.</li>
-     * <li>After you create a flow, you can orchestrate the canvas. For more information, see <a href="https://help.aliyun.com/document_detail/2836818.html">Flow Editor components</a>.</li>
+     * <li>You can create a flow by calling this operation or manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</li>
+     * <li>After creating a flow, refer to <a href="https://help.aliyun.com/document_detail/2836818.html">Flow editor component description</a> to orchestrate the canvas.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1836,9 +1852,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to create and import a flow. You can also create and import a flow manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</li>
-     * <li>Before you call this operation, ensure that you have exported the Domain-Specific Language (DSL) data for the flow.</li>
-     * <li>If you do not have the exported DSL data for a flow, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>. Click a flow name to open the canvas. Arrange the components on the canvas, save the flow, and then export it as a JSON data file.</li>
+     * <li>You can call this operation to create and import a flow, or manually create and import a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console.</li>
+     * <li>Before calling this operation, make sure you have exported flow DSL data.</li>
+     * <li>If you do not have exported flow DSL data, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console, click a flow name to open the canvas orchestration page, arrange canvas components, save the flow, and export it as a JSON data file.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1909,9 +1925,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to create and import a flow. You can also create and import a flow manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</li>
-     * <li>Before you call this operation, ensure that you have exported the Domain-Specific Language (DSL) data for the flow.</li>
-     * <li>If you do not have the exported DSL data for a flow, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>. Click a flow name to open the canvas. Arrange the components on the canvas, save the flow, and then export it as a JSON data file.</li>
+     * <li>You can call this operation to create and import a flow, or manually create and import a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console.</li>
+     * <li>Before calling this operation, make sure you have exported flow DSL data.</li>
+     * <li>If you do not have exported flow DSL data, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console, click a flow name to open the canvas orchestration page, arrange canvas components, save the flow, and export it as a JSON data file.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1928,14 +1944,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>To update the log settings for a flow using the API, you must first create the log settings. After the settings are created, call the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation to view the log settings. Then, call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the settings.</li>
-     * <li>If you do not need to update the log settings using the API, you can manually update the log settings on the Log page. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>, choose <strong>Settings</strong> &gt; <strong>Log</strong>.</li>
-     * <li>Before you call this operation, make sure that you have successfully created a flow.</li>
-     * <li>If you do not have a successfully created flow, you can create one manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>To update a flow log setting by using an API, you must first create a flow log setting. After the setting is created, you can call the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation to view the flow log setting information, and then call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log setting.</li>
+     * <li>If you do not need to update the flow log setting by using an API, you can manually update the flow log information in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> &gt; <strong>Settings</strong> &gt; <strong>Log</strong> page.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created flow.</li>
+     * <li>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a flow.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates log settings for a flow.</p>
+     * <p>Creates a flow log setting.</p>
      * 
      * @param request CreateChatFlowLogSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1980,14 +1996,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>To update the log settings for a flow using the API, you must first create the log settings. After the settings are created, call the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation to view the log settings. Then, call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the settings.</li>
-     * <li>If you do not need to update the log settings using the API, you can manually update the log settings on the Log page. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>, choose <strong>Settings</strong> &gt; <strong>Log</strong>.</li>
-     * <li>Before you call this operation, make sure that you have successfully created a flow.</li>
-     * <li>If you do not have a successfully created flow, you can create one manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>To update a flow log setting by using an API, you must first create a flow log setting. After the setting is created, you can call the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation to view the flow log setting information, and then call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log setting.</li>
+     * <li>If you do not need to update the flow log setting by using an API, you can manually update the flow log information in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> &gt; <strong>Settings</strong> &gt; <strong>Log</strong> page.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created flow.</li>
+     * <li>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a flow.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates log settings for a flow.</p>
+     * <p>Creates a flow log setting.</p>
      * 
      * @param request CreateChatFlowLogSettingRequest
      * @return CreateChatFlowLogSettingResponse
@@ -2070,12 +2086,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>The queries per second (QPS) limit for this API operation is 50 for a single user. If you exceed the limit, API calls are rate-limited, which may affect your business. We recommend that you call this operation at a reasonable frequency.</p>
-     * <h3>Status change</h3>
-     * <p>You can monitor template status and quality changes using Message Service (MNS) or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</p>
+     * <p>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
+     * <h3>Status changes</h3>
+     * <p>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a message template. After a template is approved, you can use it to send messages.</p>
+     * <p>Creates a message template. After the template is approved, you can use it to send messages.</p>
      * 
      * @param tmpReq CreateChatappTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2093,57 +2109,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.exampleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.example, "Example", "json");
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.allowCategoryChange)) {
-            body.put("AllowCategoryChange", request.allowCategoryChange);
+            query.put("AllowCategoryChange", request.allowCategoryChange);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
-            body.put("Category", request.category);
+            query.put("Category", request.category);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.categoryChangePaused)) {
-            body.put("CategoryChangePaused", request.categoryChangePaused);
+            query.put("CategoryChangePaused", request.categoryChangePaused);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.componentsShrink)) {
-            body.put("Components", request.componentsShrink);
+            query.put("Components", request.componentsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
-            body.put("CustSpaceId", request.custSpaceId);
+            query.put("CustSpaceId", request.custSpaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
-            body.put("CustWabaId", request.custWabaId);
+            query.put("CustWabaId", request.custWabaId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.exampleShrink)) {
-            body.put("Example", request.exampleShrink);
+            query.put("Example", request.exampleShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
-            body.put("IsvCode", request.isvCode);
+            query.put("IsvCode", request.isvCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
-            body.put("Language", request.language);
+            query.put("Language", request.language);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.messageSendTtlSeconds)) {
-            body.put("MessageSendTtlSeconds", request.messageSendTtlSeconds);
+            query.put("MessageSendTtlSeconds", request.messageSendTtlSeconds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("Name", request.name);
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productSetId)) {
+            query.put("ProductSetId", request.productSetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
-            body.put("TemplateType", request.templateType);
+            query.put("TemplateType", request.templateType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateChatappTemplate"),
@@ -2162,12 +2182,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>The queries per second (QPS) limit for this API operation is 50 for a single user. If you exceed the limit, API calls are rate-limited, which may affect your business. We recommend that you call this operation at a reasonable frequency.</p>
-     * <h3>Status change</h3>
-     * <p>You can monitor template status and quality changes using Message Service (MNS) or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</p>
+     * <p>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
+     * <h3>Status changes</h3>
+     * <p>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a message template. After a template is approved, you can use it to send messages.</p>
+     * <p>Creates a message template. After the template is approved, you can use it to send messages.</p>
      * 
      * @param request CreateChatappTemplateRequest
      * @return CreateChatappTemplateResponse
@@ -2340,13 +2360,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to create a new flow version. You can also manually copy a flow version from the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>. To do this, click a flow name to open the orchestration canvas and then copy the version.</li>
-     * <li>Before you call this operation, make sure that you have created a flow.</li>
-     * <li>If you have not created a flow, you can create one manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>You can call this operation to create a new flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to enter the canvas orchestration page and manually copy a new flow version.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created flow.</li>
+     * <li>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new version of a flow by copying an existing version.</p>
+     * <p>Creates a new flow version by copying an existing flow version.</p>
      * 
      * @param tmpReq CreateFlowVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2413,13 +2433,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to create a new flow version. You can also manually copy a flow version from the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>. To do this, click a flow name to open the orchestration canvas and then copy the version.</li>
-     * <li>Before you call this operation, make sure that you have created a flow.</li>
-     * <li>If you have not created a flow, you can create one manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>You can call this operation to create a new flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to enter the canvas orchestration page and manually copy a new flow version.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created flow.</li>
+     * <li>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new version of a flow by copying an existing version.</p>
+     * <p>Creates a new flow version by copying an existing flow version.</p>
      * 
      * @param request CreateFlowVersionRequest
      * @return CreateFlowVersionResponse
@@ -2587,7 +2607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>嵌入式授权messenger</p>
+     * <p>Authorizes an embedded messenger.</p>
      * 
      * @param tmpReq CreateMessengerPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2653,7 +2673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>嵌入式授权messenger</p>
+     * <p>Authorizes an embedded messenger.</p>
      * 
      * @param request CreateMessengerPageRequest
      * @return CreateMessengerPageResponse
@@ -2668,13 +2688,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>After the QR code is created, users can scan it with WhatsApp to quickly open the corresponding business phone number.</li>
      * <li>Before calling this operation, make sure that you have a successfully created WhatsApp message channel.</li>
-     * <li>If you do not have a successfully created WhatsApp message channel, manually create one on the
+     * <li>If you do not have a successfully created WhatsApp message channel, you can manually create one on the
      * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
      * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>
      * page.</li>
      * </ul>
      * <h4>QPS limit</h4>
-     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a message QR code.</p>
@@ -2736,13 +2756,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>After the QR code is created, users can scan it with WhatsApp to quickly open the corresponding business phone number.</li>
      * <li>Before calling this operation, make sure that you have a successfully created WhatsApp message channel.</li>
-     * <li>If you do not have a successfully created WhatsApp message channel, manually create one on the
+     * <li>If you do not have a successfully created WhatsApp message channel, you can manually create one on the
      * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
      * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>
      * page.</li>
      * </ul>
      * <h4>QPS limit</h4>
-     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a message QR code.</p>
@@ -2757,7 +2777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据嵌入式code获取pageId入库</p>
+     * <p>Retrieves and stores the pageId based on the embedded code.</p>
      * 
      * @param tmpReq CreateWhatsappConversionApiRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2815,7 +2835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据嵌入式code获取pageId入库</p>
+     * <p>Retrieves and stores the pageId based on the embedded code.</p>
      * 
      * @param request CreateWhatsappConversionApiRequest
      * @return CreateWhatsappConversionApiResponse
@@ -2828,9 +2848,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to delete a flow. You can also manually delete a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</li>
-     * <li>Before you delete a flow, make sure its status is Unpublished.</li>
-     * <li>Deleted flows cannot be recovered. Proceed with caution.</li>
+     * <li>You can call this operation to delete a flow, or manually delete a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</li>
+     * <li>Before deleting a flow, make sure the flow status is offline.</li>
+     * <li>A deleted flow cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2893,9 +2913,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to delete a flow. You can also manually delete a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</li>
-     * <li>Before you delete a flow, make sure its status is Unpublished.</li>
-     * <li>Deleted flows cannot be recovered. Proceed with caution.</li>
+     * <li>You can call this operation to delete a flow, or manually delete a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</li>
+     * <li>Before deleting a flow, make sure the flow status is offline.</li>
+     * <li>A deleted flow cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3275,7 +3295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑联系人-删除联系人</p>
+     * <p>Deletes a contact from the contact list.</p>
      * 
      * @param tmpReq DeleteContactsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3345,7 +3365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑联系人-删除联系人</p>
+     * <p>Deletes a contact from the contact list.</p>
      * 
      * @param request DeleteContactsRequest
      * @return DeleteContactsResponse
@@ -3569,7 +3589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除群组</p>
+     * <p>Deletes a group.</p>
      * 
      * @param request DeleteGroupByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3613,7 +3633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除群组</p>
+     * <p>Deletes a group.</p>
      * 
      * @param request DeleteGroupByIdRequest
      * @return DeleteGroupByIdResponse
@@ -3625,7 +3645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除ins的page</p>
+     * <p>Deletes a page from an Instagram instance.</p>
      * 
      * @param request DeleteInstagramPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3673,7 +3693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除ins的page</p>
+     * <p>Deletes a page from an Instagram instance.</p>
      * 
      * @param request DeleteInstagramPageRequest
      * @return DeleteInstagramPageResponse
@@ -3857,7 +3877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除messenger的page</p>
+     * <p>Deletes a Messenger page.</p>
      * 
      * @param request DeleteMessengerPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3905,7 +3925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除messenger的page</p>
+     * <p>Deletes a Messenger page.</p>
      * 
      * @param request DeleteMessengerPageRequest
      * @return DeleteMessengerPageResponse
@@ -4047,10 +4067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</p>
+     * <p>The China Message Service API has a single-user QPS limit of 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deprecates a WhatsApp flow.</p>
+     * <p>Deprecates a Flow.</p>
      * 
      * @param request DeprecateFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4098,10 +4118,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</p>
+     * <p>The China Message Service API has a single-user QPS limit of 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deprecates a WhatsApp flow.</p>
+     * <p>Deprecates a Flow.</p>
      * 
      * @param request DeprecateFlowRequest
      * @return DeprecateFlowResponse
@@ -4192,17 +4212,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Call this API operation to attach a phone number or a business account ID to a flow. You can also manually attach them on the <strong>Settings</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>.</li>
-     * <li>Before you call this API operation, make sure that you have created a flow and a message channel of the corresponding type.</li>
-     * <li>For a WhatsApp channel, you must have completed <a href="https://help.aliyun.com/document_detail/172335.html">WhatsApp Business Account (WABA) registration and binding</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">added a phone number</a>.</li>
-     * <li>For a Messenger channel, you must have <a href="https://help.aliyun.com/document_detail/2837713.html">connected a public homepage account</a>.</li>
-     * <li>For an Instagram channel, you must have <a href="https://help.aliyun.com/document_detail/2837720.html">connected a professional account</a>.
-     * &lt;props=&quot;intl&quot;&gt;</li>
-     * <li>For a Viber channel, you must have <a href="https://help.aliyun.com/document_detail/2807995.html">requested a service number</a>.</li>
+     * <li>You can call this operation to bind a phone number or merchant account ID to a flow, or manually bind them in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong> page.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created flow and a successfully created message channel that corresponds to the flow type.</li>
+     * <li>For the WhatsApp channel type, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</li>
+     * <li>For the Messenger channel type, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</li>
+     * <li>For the Instagram channel type, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
+     * &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches a phone number or a business account ID to a flow.</p>
+     * <p>Binds a phone number or merchant account ID to a flow.</p>
      * 
      * @param tmpReq FlowBindPhoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4212,6 +4231,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         FlowBindPhoneShrinkRequest request = new FlowBindPhoneShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.multiWabaPhoneNumbers)) {
+            request.multiWabaPhoneNumbersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.multiWabaPhoneNumbers, "MultiWabaPhoneNumbers", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.phoneNumbers)) {
             request.phoneNumbersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.phoneNumbers, "PhoneNumbers", "json");
         }
@@ -4231,6 +4254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.flowVersion)) {
             query.put("FlowVersion", request.flowVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiWabaPhoneNumbersShrink)) {
+            query.put("MultiWabaPhoneNumbers", request.multiWabaPhoneNumbersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -4273,17 +4300,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Call this API operation to attach a phone number or a business account ID to a flow. You can also manually attach them on the <strong>Settings</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>.</li>
-     * <li>Before you call this API operation, make sure that you have created a flow and a message channel of the corresponding type.</li>
-     * <li>For a WhatsApp channel, you must have completed <a href="https://help.aliyun.com/document_detail/172335.html">WhatsApp Business Account (WABA) registration and binding</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">added a phone number</a>.</li>
-     * <li>For a Messenger channel, you must have <a href="https://help.aliyun.com/document_detail/2837713.html">connected a public homepage account</a>.</li>
-     * <li>For an Instagram channel, you must have <a href="https://help.aliyun.com/document_detail/2837720.html">connected a professional account</a>.
-     * &lt;props=&quot;intl&quot;&gt;</li>
-     * <li>For a Viber channel, you must have <a href="https://help.aliyun.com/document_detail/2807995.html">requested a service number</a>.</li>
+     * <li>You can call this operation to bind a phone number or merchant account ID to a flow, or manually bind them in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong> page.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created flow and a successfully created message channel that corresponds to the flow type.</li>
+     * <li>For the WhatsApp channel type, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</li>
+     * <li>For the Messenger channel type, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</li>
+     * <li>For the Instagram channel type, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
+     * &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches a phone number or a business account ID to a flow.</p>
+     * <p>Binds a phone number or merchant account ID to a flow.</p>
      * 
      * @param request FlowBindPhoneRequest
      * @return FlowBindPhoneResponse
@@ -4296,7 +4322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to rebind a phone number or merchant account ID to a flow that already has a binding. You can also manually rebind on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong> page.</li>
+     * <li>Call this operation to rebind a phone number or merchant account ID to a flow that already has a binding. You can also manually rebind in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong>.</li>
      * <li>Before calling this operation, make sure that your flow already has a phone number or merchant account ID bound to it.</li>
      * <li>If you are binding a phone number or merchant account ID to a flow for the first time, use the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</li>
      * </ul>
@@ -4312,6 +4338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         FlowRebindPhoneShrinkRequest request = new FlowRebindPhoneShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.multiWabaPhoneNumbers)) {
+            request.multiWabaPhoneNumbersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.multiWabaPhoneNumbers, "MultiWabaPhoneNumbers", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.phoneNumbers)) {
             request.phoneNumbersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.phoneNumbers, "PhoneNumbers", "json");
         }
@@ -4331,6 +4361,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.flowVersion)) {
             query.put("FlowVersion", request.flowVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiWabaPhoneNumbersShrink)) {
+            query.put("MultiWabaPhoneNumbers", request.multiWabaPhoneNumbersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -4373,7 +4407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to rebind a phone number or merchant account ID to a flow that already has a binding. You can also manually rebind on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong> page.</li>
+     * <li>Call this operation to rebind a phone number or merchant account ID to a flow that already has a binding. You can also manually rebind in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong>.</li>
      * <li>Before calling this operation, make sure that your flow already has a phone number or merchant account ID bound to it.</li>
      * <li>If you are binding a phone number or merchant account ID to a flow for the first time, use the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</li>
      * </ul>
@@ -4392,15 +4426,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you call this operation, ensure that the flow is unpublished. If the flow is published, you can unpublish it manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> by clicking the flow name to open the orchestration canvas. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to unpublish the flow.</li>
-     * <li>You can call this operation to unbind a phone number or business account ID from a flow. You can also perform this action manually on the <strong>Settings</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>.</li>
-     * <li>Before you call this operation, ensure that a phone number or business account ID is bound to the flow.</li>
-     * <li>If no phone number or business account ID is bound to the flow, you can bind one manually on the <strong>Settings</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</li>
-     * <li>After a phone number or business account ID is unbound from a flow, the flow cannot be published. You must bind a new phone number or business account ID to the flow before you can publish it.</li>
+     * <li>Before calling this operation, make sure your flow is in the offline state. If your flow is in the online state, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, click the flow name to enter the canvas orchestration page, and manually take it offline, or call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to take the flow offline.</li>
+     * <li>You can call this operation to dissociate a phone number or merchant account ID from a flow, or manually dissociate them on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong> page.</li>
+     * <li>Before calling this operation, make sure your successfully created flow has a phone number or merchant account ID associated with it.</li>
+     * <li>If you have not associated a phone number or merchant account ID, you can manually associate one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong> page, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to associate one.</li>
+     * <li>After dissociating a phone number or merchant account ID from a flow, the flow cannot be published. You must re-associate a phone number or merchant account ID before the flow can be published.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a phone number or business account ID from a flow.</p>
+     * <p>Dissociates a phone number or merchant account ID from a flow.</p>
      * 
      * @param tmpReq FlowUnbindPhoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4463,15 +4497,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you call this operation, ensure that the flow is unpublished. If the flow is published, you can unpublish it manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> by clicking the flow name to open the orchestration canvas. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to unpublish the flow.</li>
-     * <li>You can call this operation to unbind a phone number or business account ID from a flow. You can also perform this action manually on the <strong>Settings</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>.</li>
-     * <li>Before you call this operation, ensure that a phone number or business account ID is bound to the flow.</li>
-     * <li>If no phone number or business account ID is bound to the flow, you can bind one manually on the <strong>Settings</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</li>
-     * <li>After a phone number or business account ID is unbound from a flow, the flow cannot be published. You must bind a new phone number or business account ID to the flow before you can publish it.</li>
+     * <li>Before calling this operation, make sure your flow is in the offline state. If your flow is in the online state, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, click the flow name to enter the canvas orchestration page, and manually take it offline, or call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to take the flow offline.</li>
+     * <li>You can call this operation to dissociate a phone number or merchant account ID from a flow, or manually dissociate them on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong> page.</li>
+     * <li>Before calling this operation, make sure your successfully created flow has a phone number or merchant account ID associated with it.</li>
+     * <li>If you have not associated a phone number or merchant account ID, you can manually associate one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong> page, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to associate one.</li>
+     * <li>After dissociating a phone number or merchant account ID from a flow, the flow cannot be published. You must re-associate a phone number or merchant account ID before the flow can be published.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a phone number or business account ID from a flow.</p>
+     * <p>Dissociates a phone number or merchant account ID from a flow.</p>
      * 
      * @param request FlowUnbindPhoneRequest
      * @return FlowUnbindPhoneResponse
@@ -4539,7 +4573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过类型查询出个人待审核的单子</p>
+     * <p>Queries pending review tickets for an individual by type.</p>
      * 
      * @param request GetAuditRequestByTypeUnAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4587,7 +4621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过类型查询出个人待审核的单子</p>
+     * <p>Queries pending review tickets for an individual by type.</p>
      * 
      * @param request GetAuditRequestByTypeUnAuditRequest
      * @return GetAuditRequestByTypeUnAuditResponse
@@ -4653,9 +4687,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Before calling this operation, make sure that the flow you created is online and has been triggered.</li>
-     * <li>If your flow is not online, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to open the canvas, and manually bring the flow online. Alternatively, call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow online.</li>
-     * <li>For flows with a manual trigger type, call the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation to trigger the flow, or go to the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> page and trigger the flow by associating it with a campaign.</li>
-     * <li>For flows with a non-manual trigger type, you do not need to manually trigger the flow. The flow is automatically triggered when a message is sent to the bound business account.</li>
+     * <li>If your flow is not online, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the canvas orchestration page, and manually bring the flow online. Alternatively, call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow online.</li>
+     * <li>For flows with a manual trigger type, call the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation to trigger the flow, or go to the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> page and trigger the flow by associating it with a marketing activity.</li>
+     * <li>For flows with a non-manual trigger type, you do not need to manually trigger the flow. The flow is triggered when a message is sent to the business account bound to the flow.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4743,9 +4777,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Before calling this operation, make sure that the flow you created is online and has been triggered.</li>
-     * <li>If your flow is not online, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to open the canvas, and manually bring the flow online. Alternatively, call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow online.</li>
-     * <li>For flows with a manual trigger type, call the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation to trigger the flow, or go to the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> page and trigger the flow by associating it with a campaign.</li>
-     * <li>For flows with a non-manual trigger type, you do not need to manually trigger the flow. The flow is automatically triggered when a message is sent to the bound business account.</li>
+     * <li>If your flow is not online, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the canvas orchestration page, and manually bring the flow online. Alternatively, call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow online.</li>
+     * <li>For flows with a manual trigger type, call the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation to trigger the flow, or go to the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> page and trigger the flow by associating it with a marketing activity.</li>
+     * <li>For flows with a non-manual trigger type, you do not need to manually trigger the flow. The flow is triggered when a message is sent to the business account bound to the flow.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4762,8 +4796,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to query the details of a flow template. You can also go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> &gt; <strong>View Templates</strong> page and click a template name to view its details.</li>
-     * <li>After you view the details of a template on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> &gt; <strong>View Templates</strong> page, you can use the template to create a flow.</li>
+     * <li>You can call this operation to query the details of a flow template. You can also view template details by clicking the template name on the <strong>Template View</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>.</li>
+     * <li>After you view template details by clicking the template name on the <strong>Template View</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>, you can directly use the template to create a flow.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4816,8 +4850,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to query the details of a flow template. You can also go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> &gt; <strong>View Templates</strong> page and click a template name to view its details.</li>
-     * <li>After you view the details of a template on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> &gt; <strong>View Templates</strong> page, you can use the template to create a flow.</li>
+     * <li>You can call this operation to query the details of a flow template. You can also view template details by clicking the template name on the <strong>Template View</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>.</li>
+     * <li>After you view template details by clicking the template name on the <strong>Template View</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>, you can directly use the template to create a flow.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5042,7 +5076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
+     * <p>The single-user QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a Chat App Message Service message template.</p>
@@ -5102,7 +5136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
+     * <p>The single-user QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a Chat App Message Service message template.</p>
@@ -5543,7 +5577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下载excel数据</p>
+     * <p>Downloads Excel data.</p>
      * 
      * @param tmpReq GetDownloadExcelListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5629,7 +5663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下载excel数据</p>
+     * <p>Downloads Excel data.</p>
      * 
      * @param request GetDownloadExcelListRequest
      * @return GetDownloadExcelListResponse
@@ -5641,7 +5675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取ins的page列表</p>
+     * <p>Retrieves the list of Instagram pages for an instance.</p>
      * 
      * @param request GetFbInstagramPagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5689,7 +5723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取ins的page列表</p>
+     * <p>Retrieves the list of Instagram pages for an instance.</p>
      * 
      * @param request GetFbInstagramPagesRequest
      * @return GetFbInstagramPagesResponse
@@ -5701,7 +5735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取facebook的pageId列表</p>
+     * <p>Retrieves the list of Facebook page IDs.</p>
      * 
      * @param request GetFbMessengerPagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5749,7 +5783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取facebook的pageId列表</p>
+     * <p>Retrieves the list of Facebook page IDs.</p>
      * 
      * @param request GetFbMessengerPagesRequest
      * @return GetFbMessengerPagesResponse
@@ -5762,14 +5796,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before calling this operation, make sure that you have created a WhatsApp flow.</li>
-     * <li>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</li>
+     * <li>Before calling this operation, make sure that you have successfully created a WhatsApp Flow.</li>
+     * <li>If you do not have a successfully created WhatsApp Flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation to create one.</li>
      * </ul>
      * <h4>QPS limit</h4>
-     * <p>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a WhatsApp flow, including its status, name, categories, and preview URL.</p>
+     * <p>Retrieves the details of a Flow.</p>
      * 
      * @param request GetFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5818,14 +5852,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before calling this operation, make sure that you have created a WhatsApp flow.</li>
-     * <li>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</li>
+     * <li>Before calling this operation, make sure that you have successfully created a WhatsApp Flow.</li>
+     * <li>If you do not have a successfully created WhatsApp Flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation to create one.</li>
      * </ul>
      * <h4>QPS limit</h4>
-     * <p>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a WhatsApp flow, including its status, name, categories, and preview URL.</p>
+     * <p>Retrieves the details of a Flow.</p>
      * 
      * @param request GetFlowRequest
      * @return GetFlowResponse
@@ -5838,14 +5872,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before calling this operation, make sure that you have created a WhatsApp flow.</li>
-     * <li>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</li>
+     * <li>Before calling this operation, make sure that you have successfully created a WhatsApp Flow.</li>
+     * <li>If you do not have a successfully created WhatsApp Flow, create one by calling the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation.</li>
      * </ul>
      * <h4>QPS limit</h4>
-     * <p>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the JSON content of a WhatsApp flow.</p>
+     * <p>Retrieves the JSON-formatted content of a Flow.</p>
      * 
      * @param request GetFlowJSONAssestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5894,14 +5928,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before calling this operation, make sure that you have created a WhatsApp flow.</li>
-     * <li>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</li>
+     * <li>Before calling this operation, make sure that you have successfully created a WhatsApp Flow.</li>
+     * <li>If you do not have a successfully created WhatsApp Flow, create one by calling the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation.</li>
      * </ul>
      * <h4>QPS limit</h4>
-     * <p>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the JSON content of a WhatsApp flow.</p>
+     * <p>Retrieves the JSON-formatted content of a Flow.</p>
      * 
      * @param request GetFlowJSONAssestRequest
      * @return GetFlowJSONAssestResponse
@@ -5914,15 +5948,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After you create a WhatsApp flow, call this operation to generate a temporary preview URL for the flow.</li>
-     * <li>Before you call this operation, make sure that you have created a WhatsApp flow.</li>
-     * <li>If you do not have a WhatsApp flow, you can call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</li>
+     * <li>After creating a WhatsApp Flow, you can call this operation to retrieve the Flow preview URL to preview your Flow.</li>
+     * <li>Before calling this operation, make sure you have a successfully created WhatsApp Flow.</li>
+     * <li>If you do not have a successfully created WhatsApp Flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation to create one.</li>
      * </ul>
      * <h4>QPS limit</h4>
-     * <p>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a temporary preview URL for a WhatsApp flow.</p>
+     * <p>Retrieves the preview URL of a Flow.</p>
      * 
      * @param request GetFlowPreviewUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5971,15 +6005,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After you create a WhatsApp flow, call this operation to generate a temporary preview URL for the flow.</li>
-     * <li>Before you call this operation, make sure that you have created a WhatsApp flow.</li>
-     * <li>If you do not have a WhatsApp flow, you can call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</li>
+     * <li>After creating a WhatsApp Flow, you can call this operation to retrieve the Flow preview URL to preview your Flow.</li>
+     * <li>Before calling this operation, make sure you have a successfully created WhatsApp Flow.</li>
+     * <li>If you do not have a successfully created WhatsApp Flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation to create one.</li>
      * </ul>
      * <h4>QPS limit</h4>
-     * <p>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a temporary preview URL for a WhatsApp flow.</p>
+     * <p>Retrieves the preview URL of a Flow.</p>
      * 
      * @param request GetFlowPreviewUrlRequest
      * @return GetFlowPreviewUrlResponse
@@ -5991,7 +6025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询群组是否重名</p>
+     * <p>Queries whether a group name already exists.</p>
      * 
      * @param tmpReq GetGroupExistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6049,7 +6083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询群组是否重名</p>
+     * <p>Queries whether a group name already exists.</p>
      * 
      * @param request GetGroupExistRequest
      * @return GetGroupExistResponse
@@ -6356,10 +6390,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to retrieve the verification status of a phone number. You can also view the status on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</li>
-     * <li>Before calling this operation, add a phone number to your WhatsApp Business Account (WABA) and submit it for verification.</li>
-     * <li>If you have not added a phone number to your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to obtain a verification code and register the number.
-     * This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</li>
+     * <li>You can call this operation to retrieve the verification status of a phone number. You can also view the verification status in the
+     * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a>&gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</li>
+     * <li>This operation only queries the verification status of a phone number. If the phone number status is verified, you can directly call the registration operation to register the phone number without obtaining a new verification code.</li>
+     * <li>Before calling this operation, make sure that a phone number has been added to your WABA and that phone number verification has been submitted.</li>
+     * <li>If a phone number has been added to your WABA and needs to be registered, but the verification status is unverified or verification has expired, call <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> to obtain a verification code and register the phone number.
+     * The queries per second (QPS) limit for a single user on this operation is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6412,10 +6449,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to retrieve the verification status of a phone number. You can also view the status on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</li>
-     * <li>Before calling this operation, add a phone number to your WhatsApp Business Account (WABA) and submit it for verification.</li>
-     * <li>If you have not added a phone number to your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to obtain a verification code and register the number.
-     * This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</li>
+     * <li>You can call this operation to retrieve the verification status of a phone number. You can also view the verification status in the
+     * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a>&gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</li>
+     * <li>This operation only queries the verification status of a phone number. If the phone number status is verified, you can directly call the registration operation to register the phone number without obtaining a new verification code.</li>
+     * <li>Before calling this operation, make sure that a phone number has been added to your WABA and that phone number verification has been submitted.</li>
+     * <li>If a phone number has been added to your WABA and needs to be registered, but the verification status is unverified or verification has expired, call <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> to obtain a verification code and register the phone number.
+     * The queries per second (QPS) limit for a single user on this operation is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6605,7 +6645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>可以申请暂停的次数</p>
+     * <p>Queries the number of times that a pause can be requested.</p>
      * 
      * @param request GetViberPauseTimesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6649,7 +6689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>可以申请暂停的次数</p>
+     * <p>Queries the number of times that a pause can be requested.</p>
      * 
      * @param request GetViberPauseTimesRequest
      * @return GetViberPauseTimesResponse
@@ -6727,7 +6767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取嵌入式授权page</p>
+     * <p>Retrieves the embedded authorization page.</p>
      * 
      * @param request GetWhatsappConversionApiRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6771,7 +6811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取嵌入式授权page</p>
+     * <p>Retrieves the embedded authorization page.</p>
      * 
      * @param request GetWhatsappConversionApiRequest
      * @return GetWhatsappConversionApiResponse
@@ -7035,7 +7075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询群组列表</p>
+     * <p>Queries the list of groups.</p>
      * 
      * @param tmpReq ListAllGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7089,7 +7129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询群组列表</p>
+     * <p>Queries the list of groups.</p>
      * 
      * @param request ListAllGroupsRequest
      * @return ListAllGroupsResponse
@@ -7101,7 +7141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询绑定的dm账号</p>
+     * <p>Queries the bound DM account.</p>
      * 
      * @param request ListBindDmAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7145,7 +7185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询绑定的dm账号</p>
+     * <p>Queries the bound DM account.</p>
      * 
      * @param request ListBindDmAccountRequest
      * @return ListBindDmAccountResponse
@@ -7158,13 +7198,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to query the phone numbers or business account IDs attached to a flow. You can also view this information on the <strong>Settings</strong> page in the <strong>Flow Editor</strong>.</li>
-     * <li>Before you call this operation, ensure that a phone number or business account ID is attached to your flow.</li>
-     * <li>If a phone number or business account ID is not attached to your flow, you can attach one manually on the <strong>Settings</strong> page in the <strong>Flow Editor</strong> or by calling the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</li>
+     * <li>You can call this operation to query the list of phone numbers or business account IDs bound to a flow. You can also view the list in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong>.</li>
+     * <li>Before calling this operation, make sure that your flow is already bound to phone numbers or business account IDs.</li>
+     * <li>If your flow is not bound to phone numbers or business account IDs, manually bind them in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong>, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to bind them.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the phone numbers or business account IDs attached to a flow.</p>
+     * <p>Queries the list of phone numbers or business account IDs bound to a flow based on the flow code.</p>
      * 
      * @param request ListBindingRelationsForFlowVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7213,13 +7253,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to query the phone numbers or business account IDs attached to a flow. You can also view this information on the <strong>Settings</strong> page in the <strong>Flow Editor</strong>.</li>
-     * <li>Before you call this operation, ensure that a phone number or business account ID is attached to your flow.</li>
-     * <li>If a phone number or business account ID is not attached to your flow, you can attach one manually on the <strong>Settings</strong> page in the <strong>Flow Editor</strong> or by calling the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</li>
+     * <li>You can call this operation to query the list of phone numbers or business account IDs bound to a flow. You can also view the list in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong>.</li>
+     * <li>Before calling this operation, make sure that your flow is already bound to phone numbers or business account IDs.</li>
+     * <li>If your flow is not bound to phone numbers or business account IDs, manually bind them in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong>, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to bind them.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the phone numbers or business account IDs attached to a flow.</p>
+     * <p>Queries the list of phone numbers or business account IDs bound to a flow based on the flow code.</p>
      * 
      * @param request ListBindingRelationsForFlowVersionRequest
      * @return ListBindingRelationsForFlowVersionResponse
@@ -7234,8 +7274,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You can call this operation to query flows, or manually query flows in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</li>
      * <li>Before calling this operation, make sure that you have successfully created flows.</li>
-     * <li>If you do not have any successfully created flows, manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a flow.</li>
-     * <li>The optional parameters in this operation are filter conditions for querying flows. If you do not specify these parameters, all flows are returned.</li>
+     * <li>If you do not have any successfully created flows, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>The optional parameters in this operation are filter conditions for querying flows. If you do not specify them, all flows are queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7262,6 +7302,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizExtend", request.bizExtendShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.flowCode)) {
+            query.put("FlowCode", request.flowCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowStatus)) {
+            query.put("FlowStatus", request.flowStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.flowTriggerType)) {
             query.put("FlowTriggerType", request.flowTriggerType);
         }
@@ -7282,6 +7330,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumber)) {
+            query.put("PhoneNumber", request.phoneNumber);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -7296,6 +7348,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -7320,8 +7376,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You can call this operation to query flows, or manually query flows in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</li>
      * <li>Before calling this operation, make sure that you have successfully created flows.</li>
-     * <li>If you do not have any successfully created flows, manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a flow.</li>
-     * <li>The optional parameters in this operation are filter conditions for querying flows. If you do not specify these parameters, all flows are returned.</li>
+     * <li>If you do not have any successfully created flows, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>The optional parameters in this operation are filter conditions for querying flows. If you do not specify them, all flows are queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7338,8 +7394,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to list flow templates. You can also view the list of templates on the <strong>View Templates</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>.</li>
-     * <li>You can use the optional parameters in this operation to filter the list of templates. If you do not specify any filter conditions, all templates are returned.</li>
+     * <li>You can call this operation to view the template list, or view the template list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> &gt; <strong>Template View</strong> page.</li>
+     * <li>The optional parameters in this operation are filter conditions for the template list. If not specified, all templates are queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7404,8 +7460,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to list flow templates. You can also view the list of templates on the <strong>View Templates</strong> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>.</li>
-     * <li>You can use the optional parameters in this operation to filter the list of templates. If you do not specify any filter conditions, all templates are returned.</li>
+     * <li>You can call this operation to view the template list, or view the template list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> &gt; <strong>Template View</strong> page.</li>
+     * <li>The optional parameters in this operation are filter conditions for the template list. If not specified, all templates are queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7532,16 +7588,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: 
-     * This operation is an internal preview feature. Contact your account manager to request access.</p>
+     * <p>Notice: The feature of retrieving IM group member lists through API is a Meta beta feature. Contact your account manager to apply for access.</p>
      * </blockquote>
      * <ul>
-     * <li>Before calling this operation, ensure you have created an IM group with an invitation link, and that members have joined by using that link.</li>
-     * <li>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</li>
+     * <li>Before calling this operation, make sure that the IM group you created has an IM group invitation link added and that members have joined the IM group through the link.</li>
+     * <li>If you do not have a created IM group, use the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invitation link.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the members of an IM group.</p>
+     * <p>Retrieves the member list of an IM group.</p>
      * 
      * @param tmpReq ListChatGroupParticipantsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7608,16 +7663,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: 
-     * This operation is an internal preview feature. Contact your account manager to request access.</p>
+     * <p>Notice: The feature of retrieving IM group member lists through API is a Meta beta feature. Contact your account manager to apply for access.</p>
      * </blockquote>
      * <ul>
-     * <li>Before calling this operation, ensure you have created an IM group with an invitation link, and that members have joined by using that link.</li>
-     * <li>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</li>
+     * <li>Before calling this operation, make sure that the IM group you created has an IM group invitation link added and that members have joined the IM group through the link.</li>
+     * <li>If you do not have a created IM group, use the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invitation link.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the members of an IM group.</p>
+     * <p>Retrieves the member list of an IM group.</p>
      * 
      * @param request ListChatGroupParticipantsRequest
      * @return ListChatGroupParticipantsResponse
@@ -7758,10 +7812,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries message templates.</p>
+     * <p>Retrieves a list of message templates.</p>
      * 
      * @param tmpReq ListChatappTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7848,10 +7902,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries message templates.</p>
+     * <p>Retrieves a list of message templates.</p>
      * 
      * @param request ListChatappTemplateRequest
      * @return ListChatappTemplateResponse
@@ -8017,7 +8071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询DM的tag</p>
+     * <p>Queries the tags of DirectMail.</p>
      * 
      * @param request ListDmTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8069,7 +8123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询DM的tag</p>
+     * <p>Queries the tags of DirectMail.</p>
      * 
      * @param request ListDmTagRequest
      * @return ListDmTagResponse
@@ -8137,10 +8191,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows a maximum of 5 requests per second (RPS) per account. Excess requests are throttled and may result in service interruptions.</p>
+     * <p>The China Message Service API has a single-user QPS limit of 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of WhatsApp flows.</p>
+     * <p>Queries the list of Flows.</p>
      * 
      * @param tmpReq ListFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8198,10 +8252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows a maximum of 5 requests per second (RPS) per account. Excess requests are throttled and may result in service interruptions.</p>
+     * <p>The China Message Service API has a single-user QPS limit of 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of WhatsApp flows.</p>
+     * <p>Queries the list of Flows.</p>
      * 
      * @param request ListFlowRequest
      * @return ListFlowResponse
@@ -8274,8 +8328,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this API operation to query flow component prototypes. You can also view the prototypes on the orchestration canvas in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> by clicking a flow name.</li>
-     * <li>You can use the optional parameters for this operation to filter flow component prototypes. If you do not specify any optional parameters, all flow component prototypes are returned.</li>
+     * <li>You can call this operation to query flow component prototypes. You can also click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view flow component prototypes.</li>
+     * <li>The optional parameters in this operation are filter conditions for flow component prototypes. If you do not specify them, all flow component prototypes are queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8340,8 +8394,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this API operation to query flow component prototypes. You can also view the prototypes on the orchestration canvas in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> by clicking a flow name.</li>
-     * <li>You can use the optional parameters for this operation to filter flow component prototypes. If you do not specify any optional parameters, all flow component prototypes are returned.</li>
+     * <li>You can call this operation to query flow component prototypes. You can also click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view flow component prototypes.</li>
+     * <li>The optional parameters in this operation are filter conditions for flow component prototypes. If you do not specify them, all flow component prototypes are queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8358,10 +8412,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this API operation to query flow versions. You can also view flow versions in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> by clicking a flow name to open the orchestration canvas.</li>
-     * <li>Before calling this API operation, make sure that you have created one or more flows.</li>
-     * <li>If you have not created any flows, create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> API operation.</li>
-     * <li>The optional parameters for this API operation are filter conditions. If you do not specify any optional parameters, all flow versions are returned.</li>
+     * <li>You can call this operation to query flow versions. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view flow versions.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created flow.</li>
+     * <li>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>The optional parameters in this operation are filter conditions for querying flow versions. If you do not specify them, all flow versions are queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8436,10 +8490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this API operation to query flow versions. You can also view flow versions in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> by clicking a flow name to open the orchestration canvas.</li>
-     * <li>Before calling this API operation, make sure that you have created one or more flows.</li>
-     * <li>If you have not created any flows, create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> API operation.</li>
-     * <li>The optional parameters for this API operation are filter conditions. If you do not specify any optional parameters, all flow versions are returned.</li>
+     * <li>You can call this operation to query flow versions. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view flow versions.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created flow.</li>
+     * <li>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>The optional parameters in this operation are filter conditions for querying flow versions. If you do not specify them, all flow versions are queried.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8511,7 +8565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询instagram帖子列表</p>
+     * <p>Queries the list of Instagram posts.</p>
      * 
      * @param request ListInstagramPostsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8555,7 +8609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询instagram帖子列表</p>
+     * <p>Queries the list of Instagram posts.</p>
      * 
      * @param request ListInstagramPostsRequest
      * @return ListInstagramPostsResponse
@@ -8567,7 +8621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists instances.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request ListInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8576,6 +8630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstanceResponse listInstanceWithOptions(ListInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bindId)) {
+            query.put("BindId", request.bindId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.channelType)) {
             query.put("ChannelType", request.channelType);
         }
@@ -8590,6 +8648,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isBind)) {
+            query.put("IsBind", request.isBind);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
@@ -8627,7 +8689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists instances.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request ListInstanceRequest
      * @return ListInstanceResponse
@@ -8955,7 +9017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The queries per second (QPS) limit for this operation is 5 per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as appropriate.</p>
+     * <p>The queries per second (QPS) limit for this operation is 5 per user. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of message QR codes.</p>
@@ -9006,7 +9068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The queries per second (QPS) limit for this operation is 5 per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as appropriate.</p>
+     * <p>The queries per second (QPS) limit for this operation is 5 per user. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of message QR codes.</p>
@@ -9189,7 +9251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>展示viber申请单服务号卡片</p>
+     * <p>Displays the Viber service number card for an application form.</p>
      * 
      * @param request ListViberServiceMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9233,7 +9295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>展示viber申请单服务号卡片</p>
+     * <p>Displays the Viber service number card for an application form.</p>
      * 
      * @param request ListViberServiceMessageRequest
      * @return ListViberServiceMessageResponse
@@ -9296,7 +9358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>QPS limit</h3>
      * <p>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
      * <h3>Status changes</h3>
-     * <p>Changes to the template status and quality can be monitored through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</p>
+     * <p>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies a message template. Only templates that have not been reviewed or that failed the review can be modified.</p>
@@ -9317,57 +9379,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.exampleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.example, "Example", "json");
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
-            body.put("Category", request.category);
+            query.put("Category", request.category);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.categoryChangePaused)) {
-            body.put("CategoryChangePaused", request.categoryChangePaused);
+            query.put("CategoryChangePaused", request.categoryChangePaused);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.componentsShrink)) {
-            body.put("Components", request.componentsShrink);
+            query.put("Components", request.componentsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
-            body.put("CustSpaceId", request.custSpaceId);
+            query.put("CustSpaceId", request.custSpaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
-            body.put("CustWabaId", request.custWabaId);
+            query.put("CustWabaId", request.custWabaId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.exampleShrink)) {
-            body.put("Example", request.exampleShrink);
+            query.put("Example", request.exampleShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
-            body.put("IsvCode", request.isvCode);
+            query.put("IsvCode", request.isvCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
-            body.put("Language", request.language);
+            query.put("Language", request.language);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.messageSendTtlSeconds)) {
-            body.put("MessageSendTtlSeconds", request.messageSendTtlSeconds);
+            query.put("MessageSendTtlSeconds", request.messageSendTtlSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productSetId)) {
+            query.put("ProductSetId", request.productSetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
-            body.put("TemplateCode", request.templateCode);
+            query.put("TemplateCode", request.templateCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
-            body.put("TemplateName", request.templateName);
+            query.put("TemplateName", request.templateName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
-            body.put("TemplateType", request.templateType);
+            query.put("TemplateType", request.templateType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyChatappTemplate"),
@@ -9388,7 +9454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>QPS limit</h3>
      * <p>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
      * <h3>Status changes</h3>
-     * <p>Changes to the template status and quality can be monitored through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</p>
+     * <p>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies a message template. Only templates that have not been reviewed or that failed the review can be modified.</p>
@@ -9663,7 +9729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>联系人变更群组</p>
+     * <p>Modifies the group associations of contacts.</p>
      * 
      * @param tmpReq MoveContactToGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9729,7 +9795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>联系人变更群组</p>
+     * <p>Modifies the group associations of contacts.</p>
      * 
      * @param request MoveContactToGroupRequest
      * @return MoveContactToGroupResponse
@@ -9742,14 +9808,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to unpublish a flow version. You can also manually unpublish a flow version in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> by clicking the flow name to open the orchestration canvas.</li>
-     * <li>Before calling this operation, make sure that the flow is published.</li>
-     * <li>If a flow is not published, you can publish it manually from the orchestration canvas in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, or by calling the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation.</li>
-     * <li>After a flow version is unpublished, the orchestrated flow stops running. This may affect your business. Proceed with caution.</li>
+     * <li>You can call this operation to offline a flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually offline the flow version.</li>
+     * <li>Before calling this operation, make sure the flow you created is already online.</li>
+     * <li>If the flow you created is not online, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually bring the flow version online, or call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow version online.</li>
+     * <li>After the flow version is offlined, the orchestrated flow stops running, which may affect your business. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unpublishes a flow version.</p>
+     * <p>Offlines a flow version.</p>
      * 
      * @param tmpReq OfflineFlowVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9816,14 +9882,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to unpublish a flow version. You can also manually unpublish a flow version in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> by clicking the flow name to open the orchestration canvas.</li>
-     * <li>Before calling this operation, make sure that the flow is published.</li>
-     * <li>If a flow is not published, you can publish it manually from the orchestration canvas in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, or by calling the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation.</li>
-     * <li>After a flow version is unpublished, the orchestrated flow stops running. This may affect your business. Proceed with caution.</li>
+     * <li>You can call this operation to offline a flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually offline the flow version.</li>
+     * <li>Before calling this operation, make sure the flow you created is already online.</li>
+     * <li>If the flow you created is not online, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually bring the flow version online, or call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow version online.</li>
+     * <li>After the flow version is offlined, the orchestrated flow stops running, which may affect your business. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unpublishes a flow version.</p>
+     * <p>Offlines a flow version.</p>
      * 
      * @param request OfflineFlowVersionRequest
      * @return OfflineFlowVersionResponse
@@ -9836,10 +9902,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to publish a flow version. You can also manually publish a flow version in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> by clicking the flow name to open the orchestration canvas.</li>
-     * <li>Before you call this operation, make sure that you have created a flow and attached it to a phone number or a business account ID.</li>
-     * <li>If you have not created a flow, you can create one manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> and attach a phone number or business account ID. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and attach a phone number or business account ID.</li>
-     * <li>After a flow with a non-manual trigger is published, it is triggered when the attached phone number or business account sends a message to the business. If your flow contains components that incur fees, such as message sending or function invocations, make sure you understand the billing methods and pricing of the related products before you call this operation.</li>
+     * <li>You can call this operation to publish a flow version. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually publish a flow version.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created flow and that your flow is bindded to a phone number or merchant account ID.</li>
+     * <li>If you do not have a successfully created flow, you can manually create a flow and bindded it to a phone number or merchant account ID on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and bind it to a phone number or merchant account ID.</li>
+     * <li>After a flow with a non-manual trigger type is published, the flow is triggered when the bound phone number or merchant account sends a message to the merchant. If your flow contains components that incur fees for corresponding cloud services, such as message sending or function calling, make sure that you fully understand the billing methods and pricing of the related services before using this operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9910,10 +9976,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to publish a flow version. You can also manually publish a flow version in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> by clicking the flow name to open the orchestration canvas.</li>
-     * <li>Before you call this operation, make sure that you have created a flow and attached it to a phone number or a business account ID.</li>
-     * <li>If you have not created a flow, you can create one manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> and attach a phone number or business account ID. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and attach a phone number or business account ID.</li>
-     * <li>After a flow with a non-manual trigger is published, it is triggered when the attached phone number or business account sends a message to the business. If your flow contains components that incur fees, such as message sending or function invocations, make sure you understand the billing methods and pricing of the related products before you call this operation.</li>
+     * <li>You can call this operation to publish a flow version. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually publish a flow version.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created flow and that your flow is bindded to a phone number or merchant account ID.</li>
+     * <li>If you do not have a successfully created flow, you can manually create a flow and bindded it to a phone number or merchant account ID on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and bind it to a phone number or merchant account ID.</li>
+     * <li>After a flow with a non-manual trigger type is published, the flow is triggered when the bound phone number or merchant account sends a message to the merchant. If your flow contains components that incur fees for corresponding cloud services, such as message sending or function calling, make sure that you fully understand the billing methods and pricing of the related services before using this operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9929,7 +9995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通Chatapp服务</p>
+     * <p>Activates the Chat App Message Service.</p>
      * 
      * @param request OpenChatappServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9969,7 +10035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通Chatapp服务</p>
+     * <p>Activates the Chat App Message Service.</p>
      * 
      * @param request OpenChatappServiceRequest
      * @return OpenChatappServiceResponse
@@ -9981,7 +10047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停服务</p>
+     * <p>Pauses a service.</p>
      * 
      * @param request PauseMarketingFLowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10029,7 +10095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停服务</p>
+     * <p>Pauses a service.</p>
      * 
      * @param request PauseMarketingFLowRequest
      * @return PauseMarketingFLowResponse
@@ -10297,7 +10363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询营销消息是否生效</p>
+     * <p>Queries whether a marketing message is effective.</p>
      * 
      * @param request QueryMMLActiveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10341,7 +10407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询营销消息是否生效</p>
+     * <p>Queries whether a marketing message is effective.</p>
      * 
      * @param request QueryMMLActiveRequest
      * @return QueryMMLActiveResponse
@@ -10486,9 +10552,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this API operation to retrieve the details of a flow. You can also view the flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</li>
-     * <li>Before you call this operation, make sure that you have created a flow.</li>
-     * <li>If you have not created a flow, you can create one in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>You can call this operation to retrieve flow details, or manually view flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</li>
+     * <li>Before calling this operation, ensure that you have a successfully created flow.</li>
+     * <li>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10551,9 +10617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this API operation to retrieve the details of a flow. You can also view the flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</li>
-     * <li>Before you call this operation, make sure that you have created a flow.</li>
-     * <li>If you have not created a flow, you can create one in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>You can call this operation to retrieve flow details, or manually view flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</li>
+     * <li>Before calling this operation, ensure that you have a successfully created flow.</li>
+     * <li>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10570,13 +10636,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you call this operation, ensure that log settings are configured for the flow.</li>
-     * <li>If log settings are not configured for the flow, call the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation to configure them.</li>
-     * <li>You can use the unique ID returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the log settings.</li>
+     * <li>Before calling this operation, make sure that flow log settings have been created for your flow.</li>
+     * <li>If flow log settings have not been created for your flow, first create them by calling the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation.</li>
+     * <li>You can use the unique ID returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log settings.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Views the log settings for a flow.</p>
+     * <p>Queries the flow log settings.</p>
      * 
      * @param request ReadChatFlowLogSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10621,13 +10687,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you call this operation, ensure that log settings are configured for the flow.</li>
-     * <li>If log settings are not configured for the flow, call the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation to configure them.</li>
-     * <li>You can use the unique ID returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the log settings.</li>
+     * <li>Before calling this operation, make sure that flow log settings have been created for your flow.</li>
+     * <li>If flow log settings have not been created for your flow, first create them by calling the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation.</li>
+     * <li>You can use the unique ID returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log settings.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Views the log settings for a flow.</p>
+     * <p>Queries the flow log settings.</p>
      * 
      * @param request ReadChatFlowLogSettingRequest
      * @return ReadChatFlowLogSettingResponse
@@ -10667,6 +10733,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizExtendShrink)) {
             query.put("BizExtend", request.bizExtendShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.draftVersion)) {
+            query.put("DraftVersion", request.draftVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.flowCode)) {
@@ -10731,7 +10801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>当前群组移除单个联系人</p>
+     * <p>Removes a single contact from the current group.</p>
      * 
      * @param request RemoveContactByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10779,7 +10849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>当前群组移除单个联系人</p>
+     * <p>Removes a single contact from the current group.</p>
      * 
      * @param request RemoveContactByIdRequest
      * @return RemoveContactByIdResponse
@@ -11030,13 +11100,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You can call this operation to send a message, or manually send a message on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Send Message</strong> page.</li>
      * <li>Before calling this operation, make sure that you have created a channel and have an approved template.</li>
-     * <li>For the WhatsApp channel type, you must complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</li>
-     * <li>For the Messenger channel type, you must complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</li>
-     * <li>For the Instagram channel type, you must complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
-     * &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, you must complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</li>
+     * <li>For WhatsApp channels, you must complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</li>
+     * <li>For Messenger channels, you must complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</li>
+     * <li>For Instagram channels, you must complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
+     * &lt;props=&quot;intl&quot;&gt;- For Viber channels, you must complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</li>
      * </ul>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 250 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
+     * <p>The single-user QPS limit for this operation is 250 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * <h3>Status changes</h3>
      * <p>You can monitor message delivery status through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</p>
      * 
@@ -11226,13 +11296,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You can call this operation to send a message, or manually send a message on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Send Message</strong> page.</li>
      * <li>Before calling this operation, make sure that you have created a channel and have an approved template.</li>
-     * <li>For the WhatsApp channel type, you must complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</li>
-     * <li>For the Messenger channel type, you must complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</li>
-     * <li>For the Instagram channel type, you must complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
-     * &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, you must complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</li>
+     * <li>For WhatsApp channels, you must complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</li>
+     * <li>For Messenger channels, you must complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</li>
+     * <li>For Instagram channels, you must complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
+     * &lt;props=&quot;intl&quot;&gt;- For Viber channels, you must complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</li>
      * </ul>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 250 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
+     * <p>The single-user QPS limit for this operation is 250 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * <h3>Status changes</h3>
      * <p>You can monitor message delivery status through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</p>
      * 
@@ -11373,7 +11443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步flow</p>
+     * <p>Syncs a WhatsApp flow.</p>
      * 
      * @param request SyncFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11417,7 +11487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步flow</p>
+     * <p>Syncs a WhatsApp flow.</p>
      * 
      * @param request SyncFlowRequest
      * @return SyncFlowResponse
@@ -11655,7 +11725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑邮件账号</p>
+     * <p>Unbinds an email account.</p>
      * 
      * @param request UnbindDmAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11699,7 +11769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑邮件账号</p>
+     * <p>Unbinds an email account.</p>
      * 
      * @param request UnbindDmAccountRequest
      * @return UnbindDmAccountResponse
@@ -11860,9 +11930,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to update the basic information of a flow, or update it manually on the <strong>Basic Information</strong> page under <strong>Settings</strong> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>.</li>
-     * <li>Before calling this operation, make sure that you have created a flow.</li>
-     * <li>If you have not created a flow, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> and click <strong>Create Flow</strong> to create one.</li>
+     * <li>You can call this operation to update the basic information of a flow, or manually update it in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong> &gt; <strong>Basic Information</strong>.</li>
+     * <li>Before calling this operation, make sure you have a successfully created flow.</li>
+     * <li>If you do not have a successfully created flow, click <strong>Create Flow</strong> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> to manually create one.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -11933,9 +12003,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to update the basic information of a flow, or update it manually on the <strong>Basic Information</strong> page under <strong>Settings</strong> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a>.</li>
-     * <li>Before calling this operation, make sure that you have created a flow.</li>
-     * <li>If you have not created a flow, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> and click <strong>Create Flow</strong> to create one.</li>
+     * <li>You can call this operation to update the basic information of a flow, or manually update it in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> &gt; <strong>Settings</strong> &gt; <strong>Basic Information</strong>.</li>
+     * <li>Before calling this operation, make sure you have a successfully created flow.</li>
+     * <li>If you do not have a successfully created flow, click <strong>Create Flow</strong> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Builder</strong></a> to manually create one.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12205,7 +12275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改联系人</p>
+     * <p>Modifies a contact.</p>
      * 
      * @param tmpReq UpdateContactByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12283,7 +12353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改联系人</p>
+     * <p>Modifies a contact.</p>
      * 
      * @param request UpdateContactByIdRequest
      * @return UpdateContactByIdResponse
@@ -12458,13 +12528,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to update the DSL data of a flow version. You can also update the DSL data on the orchestration canvas in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>. To access the canvas, click the name of the flow.</li>
-     * <li>Before calling this operation, make sure that you have created a flow and its status is Unpublished.</li>
-     * <li>If you have not created a flow, you can manually create one in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>You can call this operation to update the DSL data of a flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and update the DSL data of the flow version.</li>
+     * <li>Before calling this operation, make sure that you have created a flow and the flow status is offline.</li>
+     * <li>If you have not created a flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the Domain-Specific Language (DSL) data of a flow version on the canvas.</p>
+     * <p>Updates the DSL data of a flow version, used for updating the flow version on the canvas.</p>
      * 
      * @param tmpReq UpdateFlowVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12515,6 +12585,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -12535,13 +12609,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to update the DSL data of a flow version. You can also update the DSL data on the orchestration canvas in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>. To access the canvas, click the name of the flow.</li>
-     * <li>Before calling this operation, make sure that you have created a flow and its status is Unpublished.</li>
-     * <li>If you have not created a flow, you can manually create one in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
+     * <li>You can call this operation to update the DSL data of a flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and update the DSL data of the flow version.</li>
+     * <li>Before calling this operation, make sure that you have created a flow and the flow status is offline.</li>
+     * <li>If you have not created a flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the Domain-Specific Language (DSL) data of a flow version on the canvas.</p>
+     * <p>Updates the DSL data of a flow version, used for updating the flow version on the canvas.</p>
      * 
      * @param request UpdateFlowVersionRequest
      * @return UpdateFlowVersionResponse
@@ -12553,7 +12627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>群组改名</p>
+     * <p>Renames a group.</p>
      * 
      * @param request UpdateGroupNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12601,7 +12675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>群组改名</p>
+     * <p>Renames a group.</p>
      * 
      * @param request UpdateGroupNameRequest
      * @return UpdateGroupNameResponse
@@ -13171,7 +13245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Places, answers, or ends WhatsApp voice calls.</p>
+     * <p>Calls, answers, or hangs up a WhatsApp voice call. The WhatsApp voice call feature is currently in an invite-only phase. To use this feature, contact your account manager or customer service representative to request allowlisting. This feature cannot be used without allowlisting.</p>
      * 
      * @param tmpReq WhatsappCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13241,7 +13315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Places, answers, or ends WhatsApp voice calls.</p>
+     * <p>Calls, answers, or hangs up a WhatsApp voice call. The WhatsApp voice call feature is currently in an invite-only phase. To use this feature, contact your account manager or customer service representative to request allowlisting. This feature cannot be used without allowlisting.</p>
      * 
      * @param request WhatsappCallRequest
      * @return WhatsappCallResponse

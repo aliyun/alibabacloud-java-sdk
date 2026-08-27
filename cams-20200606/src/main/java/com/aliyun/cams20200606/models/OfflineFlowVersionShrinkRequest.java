@@ -14,7 +14,7 @@ public class OfflineFlowVersionShrinkRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>The business extension information. The default value is an empty collection.</p>
+     * <p>The business extension information. Default value: an empty collection.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class OfflineFlowVersionShrinkRequest extends TeaModel {
     public String bizExtendShrink;
 
     /**
-     * <p>The code of the flow. View the code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow code. View it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>9ccc41**************************</p>
@@ -32,7 +32,7 @@ public class OfflineFlowVersionShrinkRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>The version of the flow. View the version on the orchestration canvas in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow version. Click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the flow editor canvas page and view the flow version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,10 +44,10 @@ public class OfflineFlowVersionShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The remarks for the flow. View the remarks in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow remark. View it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>不再需要此版本</p>
+     * <p>No longer need this version.</p>
      */
     @NameInMap("Remark")
     public String remark;

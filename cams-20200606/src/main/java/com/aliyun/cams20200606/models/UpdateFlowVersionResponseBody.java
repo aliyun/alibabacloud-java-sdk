@@ -41,7 +41,7 @@ public class UpdateFlowVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The content of the returned data.</p>
+     * <p>The response content.</p>
      * 
      * <strong>example:</strong>
      * <p>436489</p>

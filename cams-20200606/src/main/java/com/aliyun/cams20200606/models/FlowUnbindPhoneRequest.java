@@ -14,10 +14,7 @@ public class FlowUnbindPhoneRequest extends TeaModel {
      * <li><p>MESSENGER</p>
      * </li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>VIBER</li>
-     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;- VIBER</p>
      * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>
@@ -26,7 +23,7 @@ public class FlowUnbindPhoneRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +33,7 @@ public class FlowUnbindPhoneRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>The flow version. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the flow name to go to the orchestration canvas and view the flow version.</p>
+     * <p>The flow version. You can view the flow version by going to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, clicking the flow name, and entering the flow editor canvas page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +45,7 @@ public class FlowUnbindPhoneRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>A list of phone numbers, Page IDs, Account IDs, or Service IDs for the channel instance.</p>
+     * <p>The list of phone numbers, PageIds, AccountIds,&lt;props=&quot;intl&quot;&gt; or ServiceIds under the channel instance.</p>
      */
     @NameInMap("PhoneNumbers")
     public java.util.List<String> phoneNumbers;

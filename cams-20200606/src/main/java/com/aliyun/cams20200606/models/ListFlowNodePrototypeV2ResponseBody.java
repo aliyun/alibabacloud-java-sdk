@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -38,17 +38,20 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The call was successful.</p>
+     * <li><p>true: The operation was successful.</p>
      * </li>
-     * <li><p>false: The call failed.</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 
@@ -113,7 +116,7 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
 
     public static class ListFlowNodePrototypeV2ResponseBodyDataModel extends TeaModel {
         /**
-         * <p>The code of the component prototype.</p>
+         * <p>The component prototype code.</p>
          * 
          * <strong>example:</strong>
          * <p>SendWhatsAppMessageNode</p>
@@ -122,7 +125,7 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The code of the component group.</p>
+         * <p>The component group code.</p>
          * 
          * <strong>example:</strong>
          * <p>Core</p>
@@ -131,25 +134,25 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
         public String groupCode;
 
         /**
-         * <p>The public extension information. This is a JSON string that contains extension information for the frontend to display the flow component. The fields are described as follows:</p>
+         * <p>The public extension information. This is used by the frontend to display extended information of flow components. The value is a JSON string. The first parameter in the string represents the flow component title. The following section describes the other fields:</p>
          * <ul>
-         * <li><p>en: The English information about the flow component.</p>
+         * <li><p>en: the English information of the flow component.</p>
          * </li>
-         * <li><p>zh: The Chinese information about the flow component.</p>
+         * <li><p>zh: the Chinese information of the flow component.</p>
          * </li>
-         * <li><p>name: The name of the flow component.</p>
+         * <li><p>name: the name of the flow component.</p>
          * </li>
-         * <li><p>remark: The remarks on the flow component.</p>
+         * <li><p>remark: the remarks of the flow component.</p>
          * </li>
-         * <li><p>order: The display order of the flow component.</p>
+         * <li><p>order: the display order of the flow component.</p>
          * </li>
-         * <li><p>style: The style of the flow component.</p>
+         * <li><p>style: the style of the flow component.</p>
          * </li>
-         * <li><p>svg: The URL of the flow component icon.</p>
+         * <li><p>svg: the icon URL of the flow component.</p>
          * </li>
-         * <li><p>icon: This field is deprecated.</p>
+         * <li><p>icon: a deprecated field.</p>
          * </li>
-         * <li><p>bgcolor: The background color of the icon.</p>
+         * <li><p>bgcolor: the background color of the icon.</p>
          * </li>
          * </ul>
          * 
@@ -160,7 +163,7 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
         public String publicExtend;
 
         /**
-         * <p>The status of the component prototype. The default value is NORMAL.</p>
+         * <p>The component prototype status. Default value: NORMAL.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -209,7 +212,7 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
 
     public static class ListFlowNodePrototypeV2ResponseBodyData extends TeaModel {
         /**
-         * <p>A list of the returned data.</p>
+         * <p>The list of request result data.</p>
          */
         @NameInMap("Model")
         public java.util.List<ListFlowNodePrototypeV2ResponseBodyDataModel> model;

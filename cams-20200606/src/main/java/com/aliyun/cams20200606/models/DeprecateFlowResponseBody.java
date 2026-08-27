@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeprecateFlowResponseBody extends TeaModel {
     /**
-     * <p>The reason why access was denied.</p>
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>OK indicates that the request was successful.</p>
+     * <p>The response code. OK indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

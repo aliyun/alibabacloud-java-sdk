@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowVersionShrinkRequest extends TeaModel {
     /**
-     * <p>The tenant code. Default value: ALICOM_OPAAS.</p>
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
      * 
      * <strong>example:</strong>
      * <p>ALICOM_OPAAS</p>
@@ -14,7 +14,7 @@ public class UpdateFlowVersionShrinkRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>The extended business information. The default value is an empty collection.</p>
+     * <p>The business extension information. Default value: an empty collection.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class UpdateFlowVersionShrinkRequest extends TeaModel {
     public String bizExtendShrink;
 
     /**
-     * <p>The code of the flow. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>9ccc41**************************</p>
@@ -32,7 +32,7 @@ public class UpdateFlowVersionShrinkRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>The version of the flow. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the flow name to open the canvas and view the flow version.</p>
+     * <p>The flow version. You can click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the flow editor canvas page and view the flow version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class UpdateFlowVersionShrinkRequest extends TeaModel {
     public String flowVersion;
 
     /**
-     * <p>The DSL data of the flow version, in JSON format. To obtain this data, orchestrate the components on the canvas in the Flow Editor. After you save the flow, click <strong>Settings</strong> &gt; <strong>Export</strong> in the upper-right corner of the canvas to export the flow as a JSON data file.</p>
+     * <p>The DSL data of the flow version. This is a JSON-formatted data string. You can orchestrate flow components on the flow editor canvas in advance, save the flow, and then click <strong>Settings</strong> &gt; <strong>Export</strong> in the upper-right corner of the canvas orchestration page to export a JSON-formatted data file for viewing.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -63,10 +63,10 @@ public class UpdateFlowVersionShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The remarks for the version.</p>
+     * <p>The version remarks.</p>
      * 
      * <strong>example:</strong>
-     * <p>修复发送WhatsApp消息错误</p>
+     * <p>Fix WhatsApp message sending error</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -76,6 +76,15 @@ public class UpdateFlowVersionShrinkRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    /**
+     * <p>The save type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample value</p>
+     */
+    @NameInMap("Type")
+    public String type;
 
     public static UpdateFlowVersionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFlowVersionShrinkRequest self = new UpdateFlowVersionShrinkRequest();
@@ -152,6 +161,14 @@ public class UpdateFlowVersionShrinkRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public UpdateFlowVersionShrinkRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

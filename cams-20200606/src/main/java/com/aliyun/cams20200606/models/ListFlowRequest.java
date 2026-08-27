@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListFlowRequest extends TeaModel {
     /**
+     * <p>The SpaceId of the ISV sub-customer.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-sa2ksj21jksd</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The Flow name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>flow-21101</p>
      */
     @NameInMap("FlowName")
     public String flowName;
@@ -21,6 +25,9 @@ public class ListFlowRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("Page")
     public ListFlowRequestPage page;
 
@@ -84,9 +91,21 @@ public class ListFlowRequest extends TeaModel {
     }
 
     public static class ListFlowRequestPage extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Size")
         public Integer size;
 

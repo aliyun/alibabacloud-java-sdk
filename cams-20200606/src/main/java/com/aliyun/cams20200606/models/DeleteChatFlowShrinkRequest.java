@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatFlowShrinkRequest extends TeaModel {
     /**
-     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
      * 
      * <strong>example:</strong>
      * <p>ALICOM_OPAAS</p>
@@ -14,7 +14,7 @@ public class DeleteChatFlowShrinkRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>The extended business information. The default value is an empty collection.</p>
+     * <p>The business extension information. Default value: an empty collection.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class DeleteChatFlowShrinkRequest extends TeaModel {
     public String bizExtendShrink;
 
     /**
-     * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>9ccc41**************************</p>

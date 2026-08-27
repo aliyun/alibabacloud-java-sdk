@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddMarketingFlowResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,34 +14,48 @@ public class AddMarketingFlowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Example value example value.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Example value example value.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>The message returned with the result.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example value.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example value.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

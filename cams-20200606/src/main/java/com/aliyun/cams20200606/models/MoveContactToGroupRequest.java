@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class MoveContactToGroupRequest extends TeaModel {
     /**
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 
     /**
+     * <p>The list of contacts whose group associations are to be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +33,8 @@ public class MoveContactToGroupRequest extends TeaModel {
     public String contacts;
 
     /**
+     * <p>The list of existing group IDs to associate with.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;id&quot;:1}]</p>
      */
@@ -31,6 +42,8 @@ public class MoveContactToGroupRequest extends TeaModel {
     public String linkExistGroups;
 
     /**
+     * <p>The list of new group names to associate with.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;groupName&quot;:&quot;aaa&quot;}]</p>
      */

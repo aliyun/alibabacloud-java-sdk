@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateWhatsappConversionApiShrinkRequest extends TeaModel {
     /**
+     * <p>The embedded code.</p>
+     * 
      * <strong>example:</strong>
      * <p>code</p>
      */
@@ -12,6 +14,8 @@ public class CreateWhatsappConversionApiShrinkRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>131</p>
      */
@@ -21,6 +25,9 @@ public class CreateWhatsappConversionApiShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The list of embedded permissions.</p>
+     */
     @NameInMap("Permissions")
     public String permissionsShrink;
 

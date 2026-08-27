@@ -32,7 +32,7 @@ public class GetChatFlowMetricShrinkRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to open the canvas and view the flow version.</p>
+     * <p>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the flow editor canvas page and view the flow version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -66,13 +66,13 @@ public class GetChatFlowMetricShrinkRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The extended parameter for the metric query. When MetricName is set to nodeErrorDetails, pass in a JSON string. Valid values for the JSON fields:</p>
+     * <p>The extended parameter for the metric query. When MetricName is set to nodeErrorDetails, pass in a JSON string. Valid JSON fields:</p>
      * <ul>
      * <li><p>pageNo: the current page number.</p>
      * </li>
      * <li><p>pageSize: the number of entries per page.</p>
      * </li>
-     * <li><p>nodeId: the node ID. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to open the canvas and copy the node ID.</p>
+     * <li><p>nodeId: the node ID. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the canvas orchestration page and copy the node ID.</p>
      * </li>
      * </ul>
      * 

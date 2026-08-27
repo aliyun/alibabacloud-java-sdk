@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChatFlowRequest extends TeaModel {
     /**
-     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
      * 
      * <strong>example:</strong>
      * <p>ALICOM_OPAAS</p>
@@ -14,7 +14,7 @@ public class CreateChatFlowRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>Business extension information. The default value is an empty collection.</p>
+     * <p>The business extension information. Default value: an empty collection.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,18 +23,31 @@ public class CreateChatFlowRequest extends TeaModel {
     public java.util.Map<String, ?> bizExtend;
 
     /**
-     * <p>The trigger type for the flow. Valid values:</p>
+     * <p>The source flowCode for creation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
+    @NameInMap("CreateFromFlowCode")
+    public String createFromFlowCode;
+
+    /**
+     * <p>The source flowVersion for creation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
+    @NameInMap("CreateFromFlowVersion")
+    public String createFromFlowVersion;
+
+    /**
+     * <p>The flow trigger type. Valid values:</p>
      * <ul>
-     * <li><p>TriggeredManually</p>
-     * </li>
-     * <li><p>TriggeredByWhatsApp</p>
-     * </li>
-     * <li><p>TriggeredByMessenger</p>
-     * </li>
-     * <li><p>TriggeredByInstagram</p>
-     * </li>
-     * <li><p>TriggeredByViber</p>
-     * </li>
+     * <li>TriggeredManually</li>
+     * <li>TriggeredByWhatsApp</li>
+     * <li>TriggeredByMessenger</li>
+     * <li>TriggeredByInstagram</li>
+     * <li>TriggeredByViber</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,14 +56,20 @@ public class CreateChatFlowRequest extends TeaModel {
     @NameInMap("FlowTriggerType")
     public String flowTriggerType;
 
+    /**
+     * <p>The lifecycle extension input parameters.</p>
+     */
+    @NameInMap("LifeCycleExtendData")
+    public java.util.Map<String, String> lifeCycleExtendData;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The remarks for the flow.</p>
+     * <p>The flow remarks.</p>
      * 
      * <strong>example:</strong>
-     * <p>通过API触发下发验证模板</p>
+     * <p>Send verification template triggered by API</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -62,10 +81,10 @@ public class CreateChatFlowRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The title of the flow.</p>
+     * <p>The flow title.</p>
      * 
      * <strong>example:</strong>
-     * <p>WhatsApp自动回复</p>
+     * <p>WhatsApp auto-reply</p>
      */
     @NameInMap("Title")
     public String title;
@@ -91,12 +110,36 @@ public class CreateChatFlowRequest extends TeaModel {
         return this.bizExtend;
     }
 
+    public CreateChatFlowRequest setCreateFromFlowCode(String createFromFlowCode) {
+        this.createFromFlowCode = createFromFlowCode;
+        return this;
+    }
+    public String getCreateFromFlowCode() {
+        return this.createFromFlowCode;
+    }
+
+    public CreateChatFlowRequest setCreateFromFlowVersion(String createFromFlowVersion) {
+        this.createFromFlowVersion = createFromFlowVersion;
+        return this;
+    }
+    public String getCreateFromFlowVersion() {
+        return this.createFromFlowVersion;
+    }
+
     public CreateChatFlowRequest setFlowTriggerType(String flowTriggerType) {
         this.flowTriggerType = flowTriggerType;
         return this;
     }
     public String getFlowTriggerType() {
         return this.flowTriggerType;
+    }
+
+    public CreateChatFlowRequest setLifeCycleExtendData(java.util.Map<String, String> lifeCycleExtendData) {
+        this.lifeCycleExtendData = lifeCycleExtendData;
+        return this;
+    }
+    public java.util.Map<String, String> getLifeCycleExtendData() {
+        return this.lifeCycleExtendData;
     }
 
     public CreateChatFlowRequest setOwnerId(Long ownerId) {

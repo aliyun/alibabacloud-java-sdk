@@ -5,54 +5,68 @@ import com.aliyun.tea.*;
 
 public class UpdateContactByIdShrinkRequest extends TeaModel {
     /**
+     * <p>The business code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value.</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
+     * <p>The description of the contact.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value sample value.</p>
      */
     @NameInMap("ContactDetails")
     public String contactDetails;
 
     /**
+     * <p>The ID of the contact.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Sample value sample value sample value.</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
+     * <p>The name of the contact.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value sample value.</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
+     * <p>The country code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value sample value.</p>
      */
     @NameInMap("Country")
     public String country;
 
     /**
+     * <p>The email address.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value.</p>
      */
     @NameInMap("Email")
     public String email;
@@ -61,6 +75,8 @@ public class UpdateContactByIdShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMessengerPageRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class DeleteMessengerPageRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The PageId of the Messenger page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

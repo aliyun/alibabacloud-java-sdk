@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PauseMarketingFLowRequest extends TeaModel {
     /**
+     * <p>The activity code.</p>
+     * 
      * <strong>example:</strong>
      * <p>439859845**234</p>
      */
@@ -12,6 +14,8 @@ public class PauseMarketingFLowRequest extends TeaModel {
     public String activityCode;
 
     /**
+     * <p>The activity ID (deprecated).</p>
+     * 
      * <strong>example:</strong>
      * <p>N/A</p>
      */

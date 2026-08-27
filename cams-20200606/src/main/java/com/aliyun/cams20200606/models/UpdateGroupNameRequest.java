@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateGroupNameRequest extends TeaModel {
     /**
+     * <p>The group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Sample value sample value sample value.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
+     * <p>The group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value sample value.</p>
      */
     @NameInMap("GroupName")
     public String groupName;

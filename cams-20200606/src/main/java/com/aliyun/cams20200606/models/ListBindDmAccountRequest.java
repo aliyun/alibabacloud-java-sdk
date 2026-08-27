@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListBindDmAccountRequest extends TeaModel {
     /**
+     * <p>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

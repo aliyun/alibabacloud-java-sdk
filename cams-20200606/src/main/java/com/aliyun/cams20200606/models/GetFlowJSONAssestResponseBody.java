@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetFlowJSONAssestResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -99,7 +102,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         public String filePath;
 
         /**
-         * <p>The flow ID.</p>
+         * <p>Flow ID。</p>
          * 
          * <strong>example:</strong>
          * <p>92675332812643****</p>

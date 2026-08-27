@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReadChatFlowLogSettingRequest extends TeaModel {
     /**
-     * <p>The code of the flow. You can find the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>9ccc41**************************</p>

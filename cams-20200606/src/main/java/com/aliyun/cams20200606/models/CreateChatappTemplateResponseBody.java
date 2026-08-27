@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChatappTemplateResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,11 +14,11 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code of the request.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p>An \<code>OK\\</code> response indicates that the request was successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>For other error codes, see <a href="https://www.alibabacloud.com/help/en/cams/latest/api-error-codes">API error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -54,6 +54,13 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
 
     public static CreateChatappTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateChatappTemplateResponseBody self = new CreateChatappTemplateResponseBody();
@@ -98,6 +105,14 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateChatappTemplateResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class CreateChatappTemplateResponseBodyData extends TeaModel {

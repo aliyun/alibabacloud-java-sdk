@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class FlowBindPhoneShrinkRequest extends TeaModel {
     /**
-     * <p>The message channel code. This is the channel ID. View the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
-     * <p>This parameter is required.</p>
+     * <p>The message channel code, which is the channel ID. View the channel ID in the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>cams-8c8*********</p>
@@ -17,17 +16,11 @@ public class FlowBindPhoneShrinkRequest extends TeaModel {
     /**
      * <p>The message channel type. Valid values:</p>
      * <ul>
-     * <li><p>INSTAGRAM</p>
-     * </li>
-     * <li><p>WHATSAPP</p>
-     * </li>
-     * <li><p>MESSENGER</p>
-     * </li>
+     * <li>INSTAGRAM</li>
+     * <li>WHATSAPP</li>
+     * <li>MESSENGER</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>VIBER</li>
-     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;- VIBER</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +30,7 @@ public class FlowBindPhoneShrinkRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The flow code. View the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
+     * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +40,7 @@ public class FlowBindPhoneShrinkRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to go to the flow editor canvas and view the flow version.</p>
+     * <p>The flow version. Click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page to enter the flow builder canvas and view the flow version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,11 +48,17 @@ public class FlowBindPhoneShrinkRequest extends TeaModel {
     @NameInMap("FlowVersion")
     public String flowVersion;
 
+    /**
+     * <p>The multi-WABA binding configuration.</p>
+     */
+    @NameInMap("MultiWabaPhoneNumbers")
+    public String multiWabaPhoneNumbersShrink;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>A list of phone numbers, PageIds, AccountIds&lt;props=&quot;intl&quot;&gt;, or ServiceIds for the channel instance.</p>
+     * <p>The list of phone numbers, PageIds, or AccountIds&lt;props=&quot;intl&quot;&gt;, or ServiceIds under the channel instance.</p>
      */
     @NameInMap("PhoneNumbers")
     public String phoneNumbersShrink;
@@ -71,14 +70,13 @@ public class FlowBindPhoneShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The WABA account ID, PageId, AccountId&lt;props=&quot;intl&quot;&gt;, or ServiceId.</p>
+     * <p>The WABA account ID, PageId, or AccountId&lt;props=&quot;intl&quot;&gt;, or ServiceId.</p>
      * <ul>
-     * <li><p>If \<code>ChannelType\\</code> is \<code>WHATSAPP\\</code>, pass the WABA account ID. View the WABA account ID on the <strong>WABA Management</strong> page by navigating to <strong>Channel Management</strong> &gt; <strong>Manage</strong>.</p>
+     * <li><p>If the ChannelType parameter is set to WHATSAPP, specify the WABA account ID. View the WABA account ID in <a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong>.</p>
      * </li>
-     * <li><p>If \<code>ChannelType\\</code> is not \<code>WHATSAPP\\</code>, pass the PageId for \<code>MESSENGER\\</code> or the AccountId for \<code>INSTAGRAM\\</code>&lt;props=&quot;intl&quot;&gt;. For \<code>VIBER\\</code>, pass the ServiceId.</p>
+     * <li><p>If the ChannelType parameter is not set to WHATSAPP, specify the PageId for MESSENGER, the AccountId for INSTAGRAM&lt;props=&quot;intl&quot;&gt;, or the ServiceId for VIBER.</p>
      * </li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1952************</p>
@@ -121,6 +119,14 @@ public class FlowBindPhoneShrinkRequest extends TeaModel {
     }
     public String getFlowVersion() {
         return this.flowVersion;
+    }
+
+    public FlowBindPhoneShrinkRequest setMultiWabaPhoneNumbersShrink(String multiWabaPhoneNumbersShrink) {
+        this.multiWabaPhoneNumbersShrink = multiWabaPhoneNumbersShrink;
+        return this;
+    }
+    public String getMultiWabaPhoneNumbersShrink() {
+        return this.multiWabaPhoneNumbersShrink;
     }
 
     public FlowBindPhoneShrinkRequest setOwnerId(Long ownerId) {

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
     /**
      * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -13,7 +16,7 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the request was successful.</p>
+     * <li><p>OK: The request was successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -96,7 +99,12 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
 
     public static class GetPhoneNumberVerificationStatusResponseBodyData extends TeaModel {
         /**
-         * <p>The verification status.</p>
+         * <p>The verification status of the phone number. Valid values:</p>
+         * <ul>
+         * <li>NOT_VERIFIED: Not verified.</li>
+         * <li>VERIFIED: Verified.</li>
+         * <li>EXPIRED: Verification expired.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>VERIFIED</p>
@@ -105,7 +113,7 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
         public String codeVerificationStatus;
 
         /**
-         * <p>The ID of the phone number.</p>
+         * <p>The phone number ID.</p>
          * 
          * <strong>example:</strong>
          * <p>222434****</p>

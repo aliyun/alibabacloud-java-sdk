@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class ListFlowResponseBody extends TeaModel {
     /**
      * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>A value of OK indicates that the request was successful.</p>
+     * <p>The result. OK indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +32,7 @@ public class ListFlowResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
@@ -96,7 +99,7 @@ public class ListFlowResponseBody extends TeaModel {
         public java.util.List<String> categories;
 
         /**
-         * <p>The flow ID.</p>
+         * <p>Flow ID。</p>
          * 
          * <strong>example:</strong>
          * <p>92675332812643****</p>
@@ -105,7 +108,7 @@ public class ListFlowResponseBody extends TeaModel {
         public String flowId;
 
         /**
-         * <p>The name of the flow.</p>
+         * <p>The Flow name.</p>
          * 
          * <strong>example:</strong>
          * <p>flow-02020</p>

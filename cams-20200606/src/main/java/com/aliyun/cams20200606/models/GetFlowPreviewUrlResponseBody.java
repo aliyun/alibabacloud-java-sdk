@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetFlowPreviewUrlResponseBody extends TeaModel {
     /**
      * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -90,7 +93,7 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
 
     public static class GetFlowPreviewUrlResponseBodyData extends TeaModel {
         /**
-         * <p>The flow ID.</p>
+         * <p>Flow ID。</p>
          * 
          * <strong>example:</strong>
          * <p>92675332812643****</p>
