@@ -23,7 +23,7 @@ public class ListServiceRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of ticket operation records.</p>
+     * <p>The list of operation records.</p>
      */
     @NameInMap("records")
     public java.util.List<ListServiceRecordsResponseBodyRecords> records;
@@ -127,6 +127,15 @@ public class ListServiceRecordsResponseBody extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentrun-ai-customer-sales-test-qa</p>
+         */
+        @NameInMap("serviceName")
+        public String serviceName;
+
+        /**
          * <p>The workspace.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +171,14 @@ public class ListServiceRecordsResponseBody extends TeaModel {
         }
         public String getServiceId() {
             return this.serviceId;
+        }
+
+        public ListServiceRecordsResponseBodyRecords setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
         public ListServiceRecordsResponseBodyRecords setWorkspace(String workspace) {

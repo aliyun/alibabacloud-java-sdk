@@ -127,7 +127,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The dimension description.</p>
+         * <p>The dimension information description.</p>
          */
         @NameInMap("dimensionDescription")
         public java.util.List<DescribeMetricMetaListResponseBodyResourcesDimensionDescription> dimensionDescription;
@@ -145,8 +145,8 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         public java.util.Map<String, String> labels;
 
         /**
-         * <p>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics. PROM_BASIC indicates Prometheus CloudMonitor basic monitoring metrics.</p>
-         * <p>Sample value:
+         * <p>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics. PROM_BASIC indicates Prometheus CloudMonitor Basic monitoring metrics.</p>
+         * <p>Example value:
          * CMS
          * Valid values:
          * CMS

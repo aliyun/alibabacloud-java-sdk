@@ -5,10 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListShrinkRequest extends TeaModel {
     /**
+     * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
+    @NameInMap("aliyunLang")
+    public String aliyunLang;
+
+    /**
+     * <p>The category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
+    @NameInMap("category")
+    public String category;
+
+    /**
      * <p>The keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>实例理论</p>
+     * <p>Instance theory</p>
      */
     @NameInMap("keywords")
     public String keywords;
@@ -21,7 +39,7 @@ public class DescribeMetricMetaListShrinkRequest extends TeaModel {
      * <li>alertUnit: the recommended alert unit.</li>
      * <li>unitFactor: the unit conversion factor.</li>
      * <li>minAlertPeriod: the minimum alert period.</li>
-     * <li>productCategory: the service type category.</li>
+     * <li>productCategory: the product type category.</li>
      * </ul>
      */
     @NameInMap("labels")
@@ -31,7 +49,7 @@ public class DescribeMetricMetaListShrinkRequest extends TeaModel {
      * <p>The metadata source. Valid values:</p>
      * <ul>
      * <li>CMS: CloudMonitor Basic monitoring metrics.</li>
-     * <li>PROM_BASIC: Prometheus CloudMonitor basic monitoring metrics.</li>
+     * <li>PROM_BASIC: Prometheus CloudMonitor Basic monitoring metrics.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,6 +97,22 @@ public class DescribeMetricMetaListShrinkRequest extends TeaModel {
     public static DescribeMetricMetaListShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricMetaListShrinkRequest self = new DescribeMetricMetaListShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetricMetaListShrinkRequest setAliyunLang(String aliyunLang) {
+        this.aliyunLang = aliyunLang;
+        return this;
+    }
+    public String getAliyunLang() {
+        return this.aliyunLang;
+    }
+
+    public DescribeMetricMetaListShrinkRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
     public DescribeMetricMetaListShrinkRequest setKeywords(String keywords) {

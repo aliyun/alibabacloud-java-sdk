@@ -1,3 +1,9 @@
+2026-08-27 Version: 10.4.3
+- Update API DescribeMetricMetaList: add request parameters aliyunLang.
+- Update API DescribeMetricMetaList: add request parameters category.
+- Update API ListServiceRecords: add response parameters Body.records.$.serviceName.
+
+
 2026-08-26 Version: 10.4.2
 - Update API GetPrometheusInstance: add response parameters Body.prometheusInstance.storeConfig.
 - Update API UpdatePrometheusInstance: add request parameters body.storeConfig.
