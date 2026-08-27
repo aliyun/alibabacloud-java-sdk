@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SilenceTimeoutRequest extends TeaModel {
     /**
-     * <p>The ID of the conversation.</p>
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SilenceTimeoutRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The context of the conversation.</p>
+     * <p>The session information context.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -24,7 +24,7 @@ public class SilenceTimeoutRequest extends TeaModel {
     public String initialContext;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

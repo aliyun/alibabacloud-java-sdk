@@ -96,7 +96,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Previews a TTS voice.</p>
+     * <p>Auditions a TTS voice.</p>
      * 
      * @param request AuditTTSVoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -123,6 +123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nlsServiceType)) {
+            query.put("NlsServiceType", request.nlsServiceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pitchRate)) {
@@ -168,7 +172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Previews a TTS voice.</p>
+     * <p>Auditions a TTS voice.</p>
      * 
      * @param request AuditTTSVoiceRequest
      * @return AuditTTSVoiceResponse
@@ -180,7 +184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a conversation.</p>
+     * <p>Starts a session.</p>
      * 
      * @param request BeginDialogueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -232,7 +236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a conversation.</p>
+     * <p>Starts a session.</p>
      * 
      * @param request BeginDialogueRequest
      * @return BeginDialogueResponse
@@ -472,7 +476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Debugs the number collection process.</p>
+     * <p>Collects digits in the debug environment.</p>
      * 
      * @param request DebugCollectedNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -512,7 +516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Debugs the number collection process.</p>
+     * <p>Collects digits in the debug environment.</p>
      * 
      * @param request DebugCollectedNumberRequest
      * @return DebugCollectedNumberResponse
@@ -664,7 +668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the context of a specified conversation.</p>
+     * <p>Queries the context data of a session.</p>
      * 
      * @param request DescribeConversationContextRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -692,7 +696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the context of a specified conversation.</p>
+     * <p>Queries the context data of a session.</p>
      * 
      * @param request DescribeConversationContextRequest
      * @return DescribeConversationContextResponse
@@ -2144,7 +2148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Handles the silence timeout event in a conversation.</p>
+     * <p>Triggers a silence timeout.</p>
      * 
      * @param request SilenceTimeoutRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2188,7 +2192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Handles the silence timeout event in a conversation.</p>
+     * <p>Triggers a silence timeout.</p>
      * 
      * @param request SilenceTimeoutRequest
      * @return SilenceTimeoutResponse

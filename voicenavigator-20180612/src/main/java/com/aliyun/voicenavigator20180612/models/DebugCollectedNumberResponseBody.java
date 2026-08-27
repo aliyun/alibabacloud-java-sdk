@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DebugCollectedNumberResponseBody extends TeaModel {
     /**
-     * <p>The next action that Voice Navigator performs.</p>
+     * <p>The action.</p>
      * 
      * <strong>example:</strong>
      * <p>Broadcast</p>
@@ -14,7 +14,7 @@ public class DebugCollectedNumberResponseBody extends TeaModel {
     public String action;
 
     /**
-     * <p>The parameters for the next action.</p>
+     * <p>The action parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class DebugCollectedNumberResponseBody extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>Indicates whether the voice response can be interrupted.</p>
+     * <p>Indicates whether the IVR announcement can be interrupted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class DebugCollectedNumberResponseBody extends TeaModel {
     public Boolean interruptible;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>abb4aa26-3a8e-43dd-82f8-0c3898c9c67f</p>
@@ -41,10 +41,10 @@ public class DebugCollectedNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The text that Voice Navigator plays to the user.</p>
+     * <p>The text content of the announcement.</p>
      * 
      * <strong>example:</strong>
-     * <p>您好，欢迎致电智能助手</p>
+     * <p>Hello, welcome to the intelligent assistant</p>
      */
     @NameInMap("TextResponse")
     public String textResponse;

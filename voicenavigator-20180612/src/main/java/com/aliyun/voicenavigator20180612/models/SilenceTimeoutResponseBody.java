@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SilenceTimeoutResponseBody extends TeaModel {
     /**
-     * <p>The system\&quot;s next action.</p>
+     * <p>The action.</p>
      * 
      * <strong>example:</strong>
      * <p>TransferToAgent</p>
@@ -14,7 +14,7 @@ public class SilenceTimeoutResponseBody extends TeaModel {
     public String action;
 
     /**
-     * <p>Parameters for the action defined in the Action parameter.</p>
+     * <p>The action parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;skillGroupId&quot;: &quot;ABC&quot;}</p>
@@ -23,7 +23,7 @@ public class SilenceTimeoutResponseBody extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>Indicates whether the action is interruptible.</p>
+     * <p>Indicates whether the action can be interrupted.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,10 +41,10 @@ public class SilenceTimeoutResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The text response to play to the user.</p>
+     * <p>The text response.</p>
      * 
      * <strong>example:</strong>
-     * <p>正在为你转接人工坐席</p>
+     * <p>Transferring you to a human agent</p>
      */
     @NameInMap("TextResponse")
     public String textResponse;

@@ -24,7 +24,7 @@ public class BeginDialogueRequest extends TeaModel {
     public String callingNumber;
 
     /**
-     * <p>The conversation ID.</p>
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class BeginDialogueRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The conversation context.</p>
+     * <p>The session context.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;channelId\&quot;:\&quot;fe2559d3-5fc9-4fa5-8314-32b9f762791d\&quot;}</p>

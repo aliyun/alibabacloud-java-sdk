@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DebugCollectedNumberRequest extends TeaModel {
     /**
-     * <p>The ID of the conversation.</p>
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DebugCollectedNumberRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The ID of the Voice Navigator instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DebugCollectedNumberRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The collected number.</p>
+     * <p>The collected digit input.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

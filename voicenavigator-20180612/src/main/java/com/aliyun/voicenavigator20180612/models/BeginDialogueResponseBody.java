@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BeginDialogueResponseBody extends TeaModel {
     /**
-     * <p>The action to perform.</p>
+     * <p>The action.</p>
      * 
      * <strong>example:</strong>
      * <p>Broadcast</p>
@@ -23,7 +23,7 @@ public class BeginDialogueResponseBody extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>Specifies whether the IVR playback can be interrupted.</p>
+     * <p>Indicates whether the IVR announcement can be interrupted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,7 +44,7 @@ public class BeginDialogueResponseBody extends TeaModel {
      * <p>The text response.</p>
      * 
      * <strong>example:</strong>
-     * <p>您好，欢迎致电智能助手</p>
+     * <p>Hello, welcome to the intelligent assistant</p>
      */
     @NameInMap("TextResponse")
     public String textResponse;

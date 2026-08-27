@@ -1,3 +1,7 @@
+2026-08-27 Version: 2.0.5
+- Update API AuditTTSVoice: add request parameters NlsServiceType.
+
+
 2026-08-13 Version: 2.0.4
 - Update API DescribeTTSConfig: add response parameters Body.BackgroundMusicName.
 - Update API ModifyTTSConfig: add request parameters BackgroundMusicName.

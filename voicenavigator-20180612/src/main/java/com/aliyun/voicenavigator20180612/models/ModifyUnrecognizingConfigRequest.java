@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyUnrecognizingConfigRequest extends TeaModel {
     /**
-     * <p>The rejection action performed after the final rejection prompt is played.</p>
+     * <p>The rejection action.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyUnrecognizingConfigRequest extends TeaModel {
     public String finalAction;
 
     /**
-     * <p>The action parameters for the rejection action, in JSON format.</p>
+     * <p>The action parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -24,11 +24,11 @@ public class ModifyUnrecognizingConfigRequest extends TeaModel {
     public String finalActionParams;
 
     /**
-     * <p>The final rejection prompt. The service plays this prompt when the rejection threshold is met.</p>
+     * <p>The final rejection prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>再见</p>
+     * <p>Goodbye</p>
      */
     @NameInMap("FinalPrompt")
     public String finalPrompt;
@@ -44,17 +44,17 @@ public class ModifyUnrecognizingConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The rejection prompt played when the service fails to recognize user input.</p>
+     * <p>The rejection prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>我不理解您的意思，请再说一遍</p>
+     * <p>I don\&quot;t understand what you mean, please say it again</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
-     * <p>The rejection threshold. The maximum number of consecutive rejections before the service triggers the rejection action.</p>
+     * <p>The maximum number of rejections.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

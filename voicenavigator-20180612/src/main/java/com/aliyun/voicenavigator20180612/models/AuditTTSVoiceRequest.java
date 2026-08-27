@@ -50,6 +50,9 @@ public class AuditTTSVoiceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NlsServiceType")
+    public String nlsServiceType;
+
     /**
      * <strong>example:</strong>
      * <p>0</p>
@@ -77,11 +80,11 @@ public class AuditTTSVoiceRequest extends TeaModel {
     public String speechRate;
 
     /**
-     * <p>The preview text.</p>
+     * <p>The audition text.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>你好</p>
+     * <p>Hello</p>
      */
     @NameInMap("Text")
     public String text;
@@ -149,6 +152,14 @@ public class AuditTTSVoiceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public AuditTTSVoiceRequest setNlsServiceType(String nlsServiceType) {
+        this.nlsServiceType = nlsServiceType;
+        return this;
+    }
+    public String getNlsServiceType() {
+        return this.nlsServiceType;
     }
 
     public AuditTTSVoiceRequest setPitchRate(String pitchRate) {
