@@ -4,27 +4,75 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ListModelsResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of models.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListModelsResponseBodyItems> items;
 
+    /**
+     * <p>The maximum number of entries to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nt-xxx</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -98,30 +146,84 @@ public class ListModelsResponseBody extends TeaModel {
     }
 
     public static class ListModelsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my model</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-xxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-model</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of protocols supported by the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;openai&quot;]</p>
+         */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
+        /**
+         * <p>The provider identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openai</p>
+         */
         @NameInMap("Provider")
         public String provider;
 
+        /**
+         * <p>The model provider ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-xxx</p>
+         */
         @NameInMap("ProviderId")
         public String providerId;
 
+        /**
+         * <p>The model provider name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-provider</p>
+         */
         @NameInMap("ProviderName")
         public String providerName;
 
+        /**
+         * <p>The number of associated workers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("WorkerNum")
         public Long workerNum;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMcpToolsRequest extends TeaModel {
     /**
+     * <p>Optional. The exact match filter for instance status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,11 @@ public class ListMcpToolsRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The AgentTeams instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ins-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

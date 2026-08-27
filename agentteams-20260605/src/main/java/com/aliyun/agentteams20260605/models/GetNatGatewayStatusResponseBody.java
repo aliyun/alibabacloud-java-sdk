@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetNatGatewayStatusResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The NAT gateway configuration status information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetNatGatewayStatusResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +32,8 @@ public class GetNatGatewayStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +41,8 @@ public class GetNatGatewayStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req-xxx</p>
      */
@@ -36,6 +50,8 @@ public class GetNatGatewayStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,15 +112,42 @@ public class GetNatGatewayStatusResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayStatusResponseBodyDataNatGateways extends TeaModel {
+        /**
+         * <p>The NAT gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-xxx</p>
+         */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
+        /**
+         * <p>Indicates whether the SNAT rule is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SnatConfigured")
         public Boolean snatConfigured;
 
+        /**
+         * <p>The SNAT table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stb-xxx</p>
+         */
         @NameInMap("SnatTableId")
         public String snatTableId;
 
+        /**
+         * <p>The status of the NAT gateway. Valid values:</p>
+         * <ul>
+         * <li>Available: available</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -148,24 +191,66 @@ public class GetNatGatewayStatusResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayStatusResponseBodyDataZoneCidrs extends TeaModel {
+        /**
+         * <p>The CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>Indicates whether the CIDR block is covered by a SNAT rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Covered")
         public Boolean covered;
 
+        /**
+         * <p>The associated NAT gateway ID. This value is null if not configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-xxx</p>
+         */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
+        /**
+         * <p>The SNAT entry ID. This value is null if not configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-xxx</p>
+         */
         @NameInMap("SnatEntryId")
         public String snatEntryId;
 
+        /**
+         * <p>The SNAT source CIDR. This value is null if not configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
+         */
         @NameInMap("SnatSourceCidr")
         public String snatSourceCidr;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxx</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -233,27 +318,80 @@ public class GetNatGatewayStatusResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inst-1</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Indicates whether the NAT gateway is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NatGatewayConfigured")
         public Boolean natGatewayConfigured;
 
+        /**
+         * <p>The list of NAT gateway details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("NatGateways")
         public java.util.List<GetNatGatewayStatusResponseBodyDataNatGateways> natGateways;
 
+        /**
+         * <p>Indicates whether the SNAT rule is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SnatConfigured")
         public Boolean snatConfigured;
 
+        /**
+         * <p>The status of the NAT gateway. Valid values:</p>
+         * <ul>
+         * <li>READY: The NAT gateway exists, and the zone/vSwitch CIDR selected by the current instance is covered by SNAT.</li>
+         * <li>NEED_CONFIGURE_NAT_GATEWAY: No NAT gateway exists in the VPC associated with the current instance. You need to purchase or configure a NAT gateway.</li>
+         * <li>NEED_CONFIGURE_SNAT_RULE: The NAT gateway exists, but the zone/vSwitch CIDR selected by the current instance is not fully added to SNAT. You need to add SNAT rules.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>READY</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>Indicates whether the selected zone/vSwitch CIDR is covered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ZoneCidrCovered")
         public Boolean zoneCidrCovered;
 
+        /**
+         * <p>The CIDR blocks and SNAT configuration status of each zone/vSwitch in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("ZoneCidrs")
         public java.util.List<GetNatGatewayStatusResponseBodyDataZoneCidrs> zoneCidrs;
 

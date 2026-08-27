@@ -4,30 +4,84 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ListCredentialsResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of credential summaries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListCredentialsResponseBodyItems> items;
 
+    /**
+     * <p>The maximum number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination token for the next page. An empty value indicates that the last page has been reached.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records that match the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,21 +163,57 @@ public class ListCredentialsResponseBody extends TeaModel {
     }
 
     public static class ListCredentialsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The number of bound Workers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BoundWorkerCount")
         public Integer boundWorkerCount;
 
+        /**
+         * <p>The creation time in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-13T12:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The credential description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAI API key for the team</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ami-2ze8x9c6f</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The credential key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPENAI_API_KEY</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The update time in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-13T12:00:00Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

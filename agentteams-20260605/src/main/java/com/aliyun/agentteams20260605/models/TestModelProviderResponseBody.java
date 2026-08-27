@@ -4,18 +4,48 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class TestModelProviderResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public TestModelProviderResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +95,66 @@ public class TestModelProviderResponseBody extends TeaModel {
     }
 
     public static class TestModelProviderResponseBodyData extends TeaModel {
+        /**
+         * <p>The error message. This parameter is returned when the test fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The model provider returned an error</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The number of input tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("InputTokens")
         public Long inputTokens;
 
+        /**
+         * <p>The call latency, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("LatencyMs")
         public Long latencyMs;
 
+        /**
+         * <p>The number of output tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("OutputTokens")
         public Long outputTokens;
 
+        /**
+         * <p>The response content returned by the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I am fine, thank you!</p>
+         */
         @NameInMap("Response")
         public String response;
 
+        /**
+         * <p>The test status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Indicates whether the test was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

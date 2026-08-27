@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceEndpointRequest extends TeaModel {
     /**
+     * <p>The new SSL certificate identifier. If this parameter is not specified, the existing certificate is retained.</p>
+     * 
      * <strong>example:</strong>
      * <p>22584627-cn-hangzhou</p>
      */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
+    /**
+     * <p>The idempotency token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-token-xxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The new domain name. If this parameter is not specified, the existing domain name is retained.</p>
+     * 
      * <strong>example:</strong>
      * <p>api.example.com</p>
      */
@@ -22,6 +32,7 @@ public class UpdateServiceEndpointRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The globally unique endpoint ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +42,11 @@ public class UpdateServiceEndpointRequest extends TeaModel {
     public String endpointId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agentteams-demo</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

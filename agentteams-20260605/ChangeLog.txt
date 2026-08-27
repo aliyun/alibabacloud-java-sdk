@@ -1,3 +1,7 @@
+2026-08-27 Version: 1.0.1
+- Update API GetInstance: add response parameters Body.Data.AiRegistryNamespaceId.
+
+
 2026-07-13 Version: 1.0.0
 - Generated java 2026-06-05 for AgentTeams.
 

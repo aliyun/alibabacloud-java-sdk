@@ -4,12 +4,30 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class GetModelInvocationSummaryRequest extends TeaModel {
+    /**
+     * <p>The end time of the query. Unit: milliseconds (UNIX timestamp).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1718086400000</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-xxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The start time of the query. Unit: milliseconds (UNIX timestamp).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1718000000000</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

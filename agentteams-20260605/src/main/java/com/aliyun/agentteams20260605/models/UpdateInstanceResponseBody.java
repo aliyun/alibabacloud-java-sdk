@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
     /**
+     * <p>The status code in the successful response.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the updated instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public UpdateInstanceResponseBodyData data;
 
     /**
+     * <p><strong>The HTTP status code.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +32,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p><strong>The response message.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +41,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p><strong>The request ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>request-xxx</p>
      */
@@ -36,6 +50,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,9 +112,21 @@ public class UpdateInstanceResponseBody extends TeaModel {
     }
 
     public static class UpdateInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the AgentTeams instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-abc123</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The new instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>New instance name.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 

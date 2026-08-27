@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkerBootstrapTokenResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public CreateWorkerBootstrapTokenResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-XX-XX-XX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +112,30 @@ public class CreateWorkerBootstrapTokenResponseBody extends TeaModel {
     }
 
     public static class CreateWorkerBootstrapTokenResponseBodyDataCms extends TeaModel {
+        /**
+         * <p>The access endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cms-demo">https://cms-demo</a></p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The license key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lk-xxx</p>
+         */
         @NameInMap("LicenseKey")
         public String licenseKey;
 
+        /**
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-demo</p>
+         */
         @NameInMap("Workspace")
         public String workspace;
 
@@ -117,21 +171,57 @@ public class CreateWorkerBootstrapTokenResponseBody extends TeaModel {
     }
 
     public static class CreateWorkerBootstrapTokenResponseBodyData extends TeaModel {
+        /**
+         * <p>The bootstrap token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bt-xxx</p>
+         */
         @NameInMap("BootstrapToken")
         public String bootstrapToken;
 
+        /**
+         * <p>The CMS configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Cms")
         public CreateWorkerBootstrapTokenResponseBodyDataCms cms;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inst-demo</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The Worker name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker-demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INTRANET</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The token fingerprint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256:xxx</p>
+         */
         @NameInMap("TokenFingerprint")
         public String tokenFingerprint;
 

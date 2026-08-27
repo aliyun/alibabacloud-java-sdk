@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class GetModelInvocationSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetModelInvocationSummaryResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +112,30 @@ public class GetModelInvocationSummaryResponseBody extends TeaModel {
     }
 
     public static class GetModelInvocationSummaryResponseBodyDataProviderDistribution extends TeaModel {
+        /**
+         * <p>The number of calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>455</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.65</p>
+         */
         @NameInMap("Percentage")
         public Double percentage;
 
+        /**
+         * <p>The provider name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-provider</p>
+         */
         @NameInMap("ProviderName")
         public String providerName;
 
@@ -117,21 +171,57 @@ public class GetModelInvocationSummaryResponseBody extends TeaModel {
     }
 
     public static class GetModelInvocationSummaryResponseBodyData extends TeaModel {
+        /**
+         * <p>The call frequency. Unit: calls per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("CallFrequency")
         public Double callFrequency;
 
+        /**
+         * <p>The provider call distribution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("ProviderDistribution")
         public java.util.List<GetModelInvocationSummaryResponseBodyDataProviderDistribution> providerDistribution;
 
+        /**
+         * <p>The number of calls made today.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TodayCallCount")
         public Integer todayCallCount;
 
+        /**
+         * <p>The change rate of calls made today.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.15</p>
+         */
         @NameInMap("TodayChangeRate")
         public Double todayChangeRate;
 
+        /**
+         * <p>The number of calls made this week.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700</p>
+         */
         @NameInMap("WeekCallCount")
         public Integer weekCallCount;
 
+        /**
+         * <p>The change rate of calls made this week.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.05</p>
+         */
         @NameInMap("WeekChangeRate")
         public Double weekChangeRate;
 

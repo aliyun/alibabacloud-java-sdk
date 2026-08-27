@@ -4,18 +4,48 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class UpdateTeamRequest extends TeaModel {
+    /**
+     * <p>The idempotency token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-token-xxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The team description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Updated team description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agentteams-test-001</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>worker-demo</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The team member list. If specified, this overwrites the existing members entirely.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("TeamMembers")
     public java.util.List<UpdateTeamRequestTeamMembers> teamMembers;
 
@@ -65,6 +95,12 @@ public class UpdateTeamRequest extends TeaModel {
     }
 
     public static class UpdateTeamRequestTeamMembers extends TeaModel {
+        /**
+         * <p>The member name. The name must be an existing user under the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>member-user</p>
+         */
         @NameInMap("Name")
         public String name;
 

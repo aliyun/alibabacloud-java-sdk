@@ -4,54 +4,156 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkerRequest extends TeaModel {
+    /**
+     * <p>The Agent runtime type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Qwenpaw</p>
+     */
     @NameInMap("AgentType")
     public String agentType;
 
+    /**
+     * <p>The Agents configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agents-demo</p>
+     */
     @NameInMap("Agents")
     public String agents;
 
+    /**
+     * <p>The list of channel configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Channels")
     public java.util.List<CreateWorkerRequestChannels> channels;
 
+    /**
+     * <p>The idempotency token that ensures the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-token-demo</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of credential bindings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Credentials")
     public java.util.List<CreateWorkerRequestCredentials> credentials;
 
+    /**
+     * <p>The deployment type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SelfHosted</p>
+     */
     @NameInMap("DeployType")
     public String deployType;
 
+    /**
+     * <p>The list of team groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Groups")
     public java.util.List<CreateWorkerRequestGroups> groups;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inst-demo</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The quota configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("LimitConfig")
     public CreateWorkerRequestLimitConfig limitConfig;
 
+    /**
+     * <p>The list of MCP servers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("McpServers")
     public java.util.List<CreateWorkerRequestMcpServers> mcpServers;
 
+    /**
+     * <p>The model configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Model")
     public CreateWorkerRequestModel model;
 
+    /**
+     * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>worker-demo</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The list of skills.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Skills")
     public java.util.List<CreateWorkerRequestSkills> skills;
 
+    /**
+     * <p>The Soul configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>soul-demo</p>
+     */
     @NameInMap("Soul")
     public String soul;
 
+    /**
+     * <p>The list of sub-agents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Subagents")
     public java.util.List<CreateWorkerRequestSubagents> subagents;
 
+    /**
+     * <p>The template configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Template")
     public CreateWorkerRequestTemplate template;
 
+    /**
+     * <p>The Worker version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1.0.0</p>
+     */
     @NameInMap("VersionCode")
     public String versionCode;
 
@@ -197,27 +299,75 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestChannelsConfig extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpl-demo</p>
+         */
         @NameInMap("CardTemplateId")
         public String cardTemplateId;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cli-demo</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extension-demo</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>markdown</p>
+         */
         @NameInMap("MessageType")
         public String messageType;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>robot-demo</p>
+         */
         @NameInMap("RobotCode")
         public String robotCode;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ShowThinking")
         public Boolean showThinking;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ShowToolCalls")
         public Boolean showToolCalls;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("StreamingEnabled")
         public Boolean streamingEnabled;
 
@@ -293,6 +443,12 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestChannelsSecrets extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret-demo</p>
+         */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
@@ -312,15 +468,39 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestChannels extends TeaModel {
+        /**
+         * <p>The channel configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Config")
         public CreateWorkerRequestChannelsConfig config;
 
+        /**
+         * <p>Specifies whether the channel is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The channel secrets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Secrets")
         public CreateWorkerRequestChannelsSecrets secrets;
 
+        /**
+         * <p>The channel type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -364,6 +544,12 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestCredentials extends TeaModel {
+        /**
+         * <p>The credential name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cred-demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -383,12 +569,30 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestGroups extends TeaModel {
+        /**
+         * <p>The group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team-demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The group role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>member</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The group type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -425,6 +629,8 @@ public class CreateWorkerRequest extends TeaModel {
 
     public static class CreateWorkerRequestLimitConfig extends TeaModel {
         /**
+         * <p>The quota type.</p>
+         * 
          * <strong>example:</strong>
          * <p>token</p>
          */
@@ -432,12 +638,20 @@ public class CreateWorkerRequest extends TeaModel {
         public String limitType;
 
         /**
+         * <p>The period type.</p>
+         * 
          * <strong>example:</strong>
          * <p>day</p>
          */
         @NameInMap("PeriodType")
         public String periodType;
 
+        /**
+         * <p>The quota limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
         @NameInMap("UsageLimit")
         public Long usageLimit;
 
@@ -473,6 +687,12 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestMcpServers extends TeaModel {
+        /**
+         * <p>The MCP server name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp-server-demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -492,9 +712,21 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestModel extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("ModelProvider")
         public String modelProvider;
 
@@ -522,12 +754,30 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestSkills extends TeaModel {
+        /**
+         * <p>The skill label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Code Review.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The skill name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-review</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The skill version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -563,12 +813,30 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestSubagentsSkills extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Label.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker-demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -604,12 +872,30 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestSubagents extends TeaModel {
+        /**
+         * <p>The sub-agent configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agents-demo</p>
+         */
         @NameInMap("Agents")
         public String agents;
 
+        /**
+         * <p>The list of sub-agent skills.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("Skills")
         public java.util.List<CreateWorkerRequestSubagentsSkills> skills;
 
+        /**
+         * <p>The sub-agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sub-demo</p>
+         */
         @NameInMap("SubagentId")
         public String subagentId;
 
@@ -645,12 +931,30 @@ public class CreateWorkerRequest extends TeaModel {
     }
 
     public static class CreateWorkerRequestTemplate extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Label.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker-demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("Version")
         public String version;
 

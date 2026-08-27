@@ -4,10 +4,17 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceShrinkRequest extends TeaModel {
+    /**
+     * <p>The idempotency token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-token-xxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p><strong>The ID of the AgentTeams instance.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,15 +24,29 @@ public class UpdateInstanceShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p><strong>The new instance name. This parameter cannot be empty.</strong></p>
+     * 
      * <strong>example:</strong>
-     * <p>新的实例名称</p>
+     * <p>New instance name.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The network type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrivateNet</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The list of zones and vSwitches.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Zones")
     public String zonesShrink;
 

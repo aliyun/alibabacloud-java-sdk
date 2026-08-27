@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListServiceEndpointsRequest extends TeaModel {
     /**
+     * <p>The endpoint component. Valid values: ELEMENT, MATRIX, WORKER, and TUNNEL.</p>
+     * 
      * <strong>example:</strong>
      * <p>MATRIX</p>
      */
@@ -12,6 +14,8 @@ public class ListServiceEndpointsRequest extends TeaModel {
     public String component;
 
     /**
+     * <p>The domain name type. Valid values: BUILTIN and CUSTOM.</p>
+     * 
      * <strong>example:</strong>
      * <p>CUSTOM</p>
      */
@@ -19,6 +23,7 @@ public class ListServiceEndpointsRequest extends TeaModel {
     public String domainType;
 
     /**
+     * <p>The AgentTeams instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,26 +32,48 @@ public class ListServiceEndpointsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum number of records to return in this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>The network type. Valid values: INTRANET and INTERNET.</p>
+     * 
      * <strong>example:</strong>
      * <p>INTERNET</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The pagination token used to retrieve the next page of data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The service name. Exact match is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>matrix-service</p>
      */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <p>The number of records to skip.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Skip")
     public String skip;
 

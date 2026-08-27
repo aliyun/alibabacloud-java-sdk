@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class GetTokenTrendResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetTokenTrendResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +112,21 @@ public class GetTokenTrendResponseBody extends TeaModel {
     }
 
     public static class GetTokenTrendResponseBodyDataSeries extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Data")
         public java.util.List<?> data;
 
+        /**
+         * <p>The series name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>input_tokens</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -106,9 +154,21 @@ public class GetTokenTrendResponseBody extends TeaModel {
     }
 
     public static class GetTokenTrendResponseBodyData extends TeaModel {
+        /**
+         * <p>The grouping dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
         @NameInMap("GroupBy")
         public String groupBy;
 
+        /**
+         * <p>The trend data series.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("Series")
         public java.util.List<GetTokenTrendResponseBodyDataSeries> series;
 

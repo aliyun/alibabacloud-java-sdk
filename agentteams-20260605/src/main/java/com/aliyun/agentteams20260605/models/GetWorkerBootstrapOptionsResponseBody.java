@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class GetWorkerBootstrapOptionsResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetWorkerBootstrapOptionsResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-XX-XX-XX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +112,21 @@ public class GetWorkerBootstrapOptionsResponseBody extends TeaModel {
     }
 
     public static class GetWorkerBootstrapOptionsResponseBodyDataNetworkOptions extends TeaModel {
+        /**
+         * <p>Indicates whether the network type is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Available")
         public Boolean available;
 
+        /**
+         * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INTRANET</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
@@ -106,12 +154,30 @@ public class GetWorkerBootstrapOptionsResponseBody extends TeaModel {
     }
 
     public static class GetWorkerBootstrapOptionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inst-demo</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The Worker name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker-demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of network options.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("NetworkOptions")
         public java.util.List<GetWorkerBootstrapOptionsResponseBodyDataNetworkOptions> networkOptions;
 

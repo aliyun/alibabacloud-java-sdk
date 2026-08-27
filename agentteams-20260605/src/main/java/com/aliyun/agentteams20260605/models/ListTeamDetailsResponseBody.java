@@ -4,30 +4,84 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ListTeamDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of team statistical details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListTeamDetailsResponseBodyItems> items;
 
+    /**
+     * <p>The maximum number of records to return in this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination token for the next page. This parameter is empty if no more data is available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-list-team-details-001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records that meet the conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,24 +163,66 @@ public class ListTeamDetailsResponseBody extends TeaModel {
     }
 
     public static class ListTeamDetailsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The URL of the team avatar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></p>
+         */
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
+        /**
+         * <p>The running status of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deleting</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task success rate. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95.5</p>
+         */
         @NameInMap("SuccessRate")
         public Double successRate;
 
+        /**
+         * <p>The number of tasks for the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("TaskCount")
         public Integer taskCount;
 
+        /**
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-team</p>
+         */
         @NameInMap("TeamName")
         public String teamName;
 
+        /**
+         * <p>The token usage within the time interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
+         */
         @NameInMap("TokenUsage")
         public Long tokenUsage;
 
+        /**
+         * <p>The number of workers associated with the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("WorkerCount")
         public Integer workerCount;
 

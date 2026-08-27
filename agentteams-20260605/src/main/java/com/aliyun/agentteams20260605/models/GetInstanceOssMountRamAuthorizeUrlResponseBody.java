@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetInstanceOssMountRamAuthorizeUrlResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The RAM authorization URL information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetInstanceOssMountRamAuthorizeUrlResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +32,8 @@ public class GetInstanceOssMountRamAuthorizeUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +41,8 @@ public class GetInstanceOssMountRamAuthorizeUrlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-1</p>
      */
@@ -36,6 +50,8 @@ public class GetInstanceOssMountRamAuthorizeUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,6 +112,12 @@ public class GetInstanceOssMountRamAuthorizeUrlResponseBody extends TeaModel {
     }
 
     public static class GetInstanceOssMountRamAuthorizeUrlResponseBodyData extends TeaModel {
+        /**
+         * <p>The RAM console authorization URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ram.console.aliyun.com/authorize?requestId=xxx">https://ram.console.aliyun.com/authorize?requestId=xxx</a></p>
+         */
         @NameInMap("AuthorizeUrl")
         public String authorizeUrl;
 

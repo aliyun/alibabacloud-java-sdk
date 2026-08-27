@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class GetIdentityProviderResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetIdentityProviderResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,27 +112,75 @@ public class GetIdentityProviderResponseBody extends TeaModel {
     }
 
     public static class GetIdentityProviderResponseBodyData extends TeaModel {
+        /**
+         * <p>The event subscription callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/callback">https://example.com/callback</a></p>
+         */
         @NameInMap("EventSubscriptionCallbackUrl")
         public String eventSubscriptionCallbackUrl;
 
+        /**
+         * <p>The identity provider type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
+         */
         @NameInMap("IdentityProviderType")
         public String identityProviderType;
 
+        /**
+         * <p>The identity provider metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("IdpMetadata")
         public java.util.Map<String, String> idpMetadata;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-demo</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The logon callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/login">https://example.com/login</a></p>
+         */
         @NameInMap("LoginCallbackUrl")
         public String loginCallbackUrl;
 
+        /**
+         * <p>Indicates whether logon is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("LoginEnabled")
         public Boolean loginEnabled;
 
+        /**
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Indicates whether synchronization is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SyncEnabled")
         public Boolean syncEnabled;
 

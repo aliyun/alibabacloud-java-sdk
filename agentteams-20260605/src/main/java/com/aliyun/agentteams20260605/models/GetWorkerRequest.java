@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetWorkerRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inst-demo</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>worker-demo</p>
      */
     @NameInMap("Name")
     public String name;

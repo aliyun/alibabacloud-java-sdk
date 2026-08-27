@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
+     * <ul>
+     * <li><strong>Description</strong>: The instance name. Supports fuzzy match.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AgentTeams</p>
      */
@@ -12,6 +16,12 @@ public class ListInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <ul>
+     * <li><strong>Description</strong>: The page size.</li>
+     * <li><strong>Default value</strong>: 20</li>
+     * <li><strong>Current implementation limit</strong>: 1 to 100</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,16 +29,33 @@ public class ListInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <ul>
+     * <li><strong>Description</strong>: The pagination token for the next page.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <ul>
+     * <li><strong>Description</strong>: The number of records to skip.</li>
+     * <li><strong>Default value</strong>: 0</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Skip")
     public Integer skip;
 
     /**
+     * <ul>
+     * <li><strong>Description</strong>: The instance status.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

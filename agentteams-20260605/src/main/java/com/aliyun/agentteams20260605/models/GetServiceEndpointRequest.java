@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceEndpointRequest extends TeaModel {
     /**
+     * <p><strong>Endpoint ID</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,11 @@ public class GetServiceEndpointRequest extends TeaModel {
     public String endpointId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agentteams-demo</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

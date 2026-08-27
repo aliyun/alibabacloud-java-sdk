@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetModelProviderRequest extends TeaModel {
     /**
+     * <p>The ID of the model provider.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-xxx</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>Optional. Fuzzy matches by instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

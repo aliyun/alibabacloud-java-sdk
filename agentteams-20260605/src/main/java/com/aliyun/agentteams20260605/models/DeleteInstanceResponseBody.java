@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The object that contains the released instance ID and the asynchronous release task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public DeleteInstanceResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +32,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req-xxx</p>
      */
@@ -29,6 +41,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +96,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
 
     public static class DeleteInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the released instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>inst-xxx</p>
          */
@@ -89,6 +105,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The ID of the asynchronous release task. You can use this ID to query the task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-xxx</p>
          */

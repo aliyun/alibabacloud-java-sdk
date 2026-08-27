@@ -5,25 +5,49 @@ import com.aliyun.tea.*;
 
 public class UpdateCredentialRequest extends TeaModel {
     /**
+     * <p>The credential value.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sk-yyyyyyyyyyyy</p>
      */
     @NameInMap("ApiKey")
     public String apiKey;
 
+    /**
+     * <p>The idempotency token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1b2c3d4-e5f6-7890-1234-567890abcdef</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The credential description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenAI API key for the team</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The AgentTeams instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ami-2ze8x9c6f</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>worker-demo</p>
      */
     @NameInMap("Name")
     public String name;

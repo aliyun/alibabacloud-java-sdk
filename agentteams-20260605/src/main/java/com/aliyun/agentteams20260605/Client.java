@@ -8,7 +8,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-beijing", "agentteams.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "agentteams.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "agentteams.cn-hangzhou.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("agentteams", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -27,8 +32,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This is an asynchronous operation that immediately returns binding task information after the call.</li>
+     * <li>Use <code>GetInstanceAsyncTask</code> to poll for the asynchronous task result. The default polling interval is 30 seconds, with a maximum of 20 attempts.</li>
+     * <li>The <code>IdpMetadata</code> parameter contains sensitive information. Ensure secure transmission.</li>
+     * <li>The default values of <code>LoginEnabled</code> and <code>SyncEnabled</code> are <code>true</code> and <code>false</code>, respectively. If not explicitly specified, the default values are used.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>绑定上游身份提供商</p>
+     * <p>Binds an upstream identity provider to a specified instance and triggers a synchronization task.</p>
      * 
      * @param request BindIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -81,8 +95,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This is an asynchronous operation that immediately returns binding task information after the call.</li>
+     * <li>Use <code>GetInstanceAsyncTask</code> to poll for the asynchronous task result. The default polling interval is 30 seconds, with a maximum of 20 attempts.</li>
+     * <li>The <code>IdpMetadata</code> parameter contains sensitive information. Ensure secure transmission.</li>
+     * <li>The default values of <code>LoginEnabled</code> and <code>SyncEnabled</code> are <code>true</code> and <code>false</code>, respectively. If not explicitly specified, the default values are used.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>绑定上游身份提供商</p>
+     * <p>Binds an upstream identity provider to a specified instance and triggers a synchronization task.</p>
      * 
      * @param request BindIdentityProviderRequest
      * @return BindIdentityProviderResponse
@@ -94,18 +117,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>本接口用于为特定的AgentTeams实例创建公网NAT网关，并自动完成EIP申请、绑定以及SNAT规则的设置。</li>
-     * <li>接口调用后将返回一个异步任务ID，实际的NAT网关、EIP及SNAT资源ID会在异步任务完成后通过任务结果提供。</li>
-     * <li>NAT网关名称由系统自动生成，格式为<code>magic-create-for-vpc-{vpcId}</code>。</li>
-     * <li>支持GET和POST方法进行请求。</li>
-     * <li><code>eipBandwidth</code>参数指定了自动申请EIP时的带宽大小，默认值为5Mbps，范围在1-200Mbps之间。</li>
-     * <li>如果<code>instanceId</code>为空或无效，或者提供的<code>eipBandwidth</code>不在允许范围内，API将返回错误响应。</li>
+     * <li>This operation creates an Internet NAT gateway and automatically applies for an elastic IP address (EIP), bindS the EIP, and configures SNAT rules.</li>
+     * <li>An asynchronous task ID is returned after the call. The actual resource ID is provided in the task result.</li>
+     * <li>NAT gateway name format: <code>magic-create-for-vpc-{vpcId}</code>.</li>
+     * <li>GET and POST methods are supported.</li>
+     * <li>The <code>eipBandwidth</code> parameter ranges from 1 to 200 Mbit/s. Default value: 5 Mbit/s.</li>
+     * <li>If <code>InstanceId</code> is invalid or <code>eipBandwidth</code> is out of range, the API returns an error response.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>为指定AgentTeams实例异步开通并配置阿里云公网NAT网关。</p>
+     * <p>Activates and configures an Internet NAT gateway for a specified AgentTeams instance.</p>
      * 
      * @param request ConfigureNatGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -159,18 +182,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>本接口用于为特定的AgentTeams实例创建公网NAT网关，并自动完成EIP申请、绑定以及SNAT规则的设置。</li>
-     * <li>接口调用后将返回一个异步任务ID，实际的NAT网关、EIP及SNAT资源ID会在异步任务完成后通过任务结果提供。</li>
-     * <li>NAT网关名称由系统自动生成，格式为<code>magic-create-for-vpc-{vpcId}</code>。</li>
-     * <li>支持GET和POST方法进行请求。</li>
-     * <li><code>eipBandwidth</code>参数指定了自动申请EIP时的带宽大小，默认值为5Mbps，范围在1-200Mbps之间。</li>
-     * <li>如果<code>instanceId</code>为空或无效，或者提供的<code>eipBandwidth</code>不在允许范围内，API将返回错误响应。</li>
+     * <li>This operation creates an Internet NAT gateway and automatically applies for an elastic IP address (EIP), bindS the EIP, and configures SNAT rules.</li>
+     * <li>An asynchronous task ID is returned after the call. The actual resource ID is provided in the task result.</li>
+     * <li>NAT gateway name format: <code>magic-create-for-vpc-{vpcId}</code>.</li>
+     * <li>GET and POST methods are supported.</li>
+     * <li>The <code>eipBandwidth</code> parameter ranges from 1 to 200 Mbit/s. Default value: 5 Mbit/s.</li>
+     * <li>If <code>InstanceId</code> is invalid or <code>eipBandwidth</code> is out of range, the API returns an error response.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>为指定AgentTeams实例异步开通并配置阿里云公网NAT网关。</p>
+     * <p>Activates and configures an Internet NAT gateway for a specified AgentTeams instance.</p>
      * 
      * @param request ConfigureNatGatewayRequest
      * @return ConfigureNatGatewayResponse
@@ -181,8 +204,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li><code>ApiKey</code> is a sensitive field and is not returned in plaintext.</li>
+     * <li><code>ClientToken</code> is used to ensure idempotence of the request. This parameter is optional but recommended.</li>
+     * <li>The credential name (Name) must match the regular expression <code>^[A-Z_][A-Z0-9_]*$</code>.</li>
+     * <li>If the specified credential name already exists in the specified instance, the error code <code>Credential.Name.AlreadyExists</code> is returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建凭证</p>
+     * <p>Creates a new key-value credential under a specified AgentTeams instance.</p>
      * 
      * @param request CreateCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -231,8 +263,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li><code>ApiKey</code> is a sensitive field and is not returned in plaintext.</li>
+     * <li><code>ClientToken</code> is used to ensure idempotence of the request. This parameter is optional but recommended.</li>
+     * <li>The credential name (Name) must match the regular expression <code>^[A-Z_][A-Z0-9_]*$</code>.</li>
+     * <li>If the specified credential name already exists in the specified instance, the error code <code>Credential.Name.AlreadyExists</code> is returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建凭证</p>
+     * <p>Creates a new key-value credential under a specified AgentTeams instance.</p>
      * 
      * @param request CreateCredentialRequest
      * @return CreateCredentialResponse
@@ -244,17 +285,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>本接口支持通过表单参数或 query 参数传递请求信息。</li>
-     * <li><code>instanceSpec</code> 和 <code>networkType</code> 等部分参数有默认值，若未指定则使用默认值。</li>
-     * <li>必须提供 <code>instanceName</code>, <code>regionId</code>, <code>vpcId</code>, 和 <code>vSwitchId</code> 参数。</li>
-     * <li><code>networkType</code> 支持三种选项：<code>PRIVATE_PUBNET</code>, <code>PRIVATE_NET</code>, <code>PUB_NET</code>，默认为 <code>PRIVATE_NET</code>。</li>
-     * <li>如果指定了 <code>zoneId</code>，则会尝试在该可用区创建实例；否则将根据系统策略选择合适的可用区。</li>
+     * <li>This is an asynchronous operation. After a successful call, the instance status changes to CREATING.</li>
+     * <li>The actual resource creation is completed asynchronously in the background. Poll the creation result by calling the <code>GetInstance</code> operation.</li>
+     * <li>You can pass request information by using form parameters or query parameters.</li>
+     * <li>If optional parameters are not provided, default values are used.</li>
+     * <li>Use <code>ClientToken</code> to ensure the idempotence of the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于创建指定配置的集群实例。</p>
+     * <p>Asynchronously creates a cluster instance with the specified configurations.</p>
      * 
      * @param tmpReq CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -318,17 +359,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>本接口支持通过表单参数或 query 参数传递请求信息。</li>
-     * <li><code>instanceSpec</code> 和 <code>networkType</code> 等部分参数有默认值，若未指定则使用默认值。</li>
-     * <li>必须提供 <code>instanceName</code>, <code>regionId</code>, <code>vpcId</code>, 和 <code>vSwitchId</code> 参数。</li>
-     * <li><code>networkType</code> 支持三种选项：<code>PRIVATE_PUBNET</code>, <code>PRIVATE_NET</code>, <code>PUB_NET</code>，默认为 <code>PRIVATE_NET</code>。</li>
-     * <li>如果指定了 <code>zoneId</code>，则会尝试在该可用区创建实例；否则将根据系统策略选择合适的可用区。</li>
+     * <li>This is an asynchronous operation. After a successful call, the instance status changes to CREATING.</li>
+     * <li>The actual resource creation is completed asynchronously in the background. Poll the creation result by calling the <code>GetInstance</code> operation.</li>
+     * <li>You can pass request information by using form parameters or query parameters.</li>
+     * <li>If optional parameters are not provided, default values are used.</li>
+     * <li>Use <code>ClientToken</code> to ensure the idempotence of the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于创建指定配置的集群实例。</p>
+     * <p>Asynchronously creates a cluster instance with the specified configurations.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -340,17 +381,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
+     * <li>You must specify the <code>InstanceId</code>, <code>Name</code>, and <code>Addresses</code> parameters when you create an MCP server.</li>
+     * <li>The <code>CreateType</code> parameter defaults to <code>DIRECT_PROXY</code>. If you select the <code>HTTP_TO_MCP</code> mode, you must also specify <code>SwaggerConfig</code>.</li>
+     * <li>Set <code>AuthEnabled</code> to enable or disable authentication. If authentication is enabled, you must specify <code>AuthConfig</code>.</li>
+     * <li>Use <code>ClientToken</code> to ensure the idempotence of the request.</li>
+     * <li>Custom protocol types are supported. The <code>streamable</code> protocol is used by default.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建MCP</p>
+     * <p>Creates an MCP server.</p>
      * 
      * @param tmpReq CreateMcpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -426,17 +467,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
+     * <li>You must specify the <code>InstanceId</code>, <code>Name</code>, and <code>Addresses</code> parameters when you create an MCP server.</li>
+     * <li>The <code>CreateType</code> parameter defaults to <code>DIRECT_PROXY</code>. If you select the <code>HTTP_TO_MCP</code> mode, you must also specify <code>SwaggerConfig</code>.</li>
+     * <li>Set <code>AuthEnabled</code> to enable or disable authentication. If authentication is enabled, you must specify <code>AuthConfig</code>.</li>
+     * <li>Use <code>ClientToken</code> to ensure the idempotence of the request.</li>
+     * <li>Custom protocol types are supported. The <code>streamable</code> protocol is used by default.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建MCP</p>
+     * <p>Creates an MCP server.</p>
      * 
      * @param request CreateMcpRequest
      * @return CreateMcpResponse
@@ -448,17 +489,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建模型</p>
+     * <p>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</p>
      * 
      * @param tmpReq CreateModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -524,17 +558,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建模型</p>
+     * <p>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</p>
      * 
      * @param request CreateModelRequest
      * @return CreateModelResponse
@@ -546,17 +573,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建模型</p>
+     * <p>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</p>
      * 
      * @param tmpReq CreateModelProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -626,17 +646,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建模型</p>
+     * <p>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</p>
      * 
      * @param request CreateModelProviderRequest
      * @return CreateModelProviderResponse
@@ -648,16 +661,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</p>
      * <ul>
-     * <li>当前controller使用的是普通参数绑定，不是<code>@RequestBody</code>，因此参数更适合按query/form方式传递。</li>
-     * <li><code>domain</code>字段会在服务端进行<code>trim + lowerCase</code>处理。</li>
-     * <li><code>query</code>和<code>headers</code>必须是JSON object字符串格式，不能为数组。</li>
-     * <li>创建操作仅将数据保存到数据库；只有在更新时，如果满足<code>ELEMENT/MATRIX + AI_GATEWAY + INTERNET</code>且域名或证书发生变化，才会触发AI Gateway域名同步逻辑。</li>
+     * <li>The current controller uses standard parameter binding instead of @RequestBody, so parameters are better suited for query/form-based transmission.</li>
+     * <li>The domain field is trimmed and converted to lowercase on the server side.</li>
+     * <li>The query and headers must be in JSON object string format and cannot be arrays.</li>
+     * <li>The create operation only saves data to the database. The AI Gateway domain name synchronization logic is triggered only during an update when the conditions ELEMENT/MATRIX + AI_GATEWAY + INTERNET are met and the domain name or certificate has changed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于创建指定实例的Endpoint，支持多种组件和网关类型。</p>
+     * <p>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</p>
      * 
      * @param request CreateServiceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -711,16 +724,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</p>
      * <ul>
-     * <li>当前controller使用的是普通参数绑定，不是<code>@RequestBody</code>，因此参数更适合按query/form方式传递。</li>
-     * <li><code>domain</code>字段会在服务端进行<code>trim + lowerCase</code>处理。</li>
-     * <li><code>query</code>和<code>headers</code>必须是JSON object字符串格式，不能为数组。</li>
-     * <li>创建操作仅将数据保存到数据库；只有在更新时，如果满足<code>ELEMENT/MATRIX + AI_GATEWAY + INTERNET</code>且域名或证书发生变化，才会触发AI Gateway域名同步逻辑。</li>
+     * <li>The current controller uses standard parameter binding instead of @RequestBody, so parameters are better suited for query/form-based transmission.</li>
+     * <li>The domain field is trimmed and converted to lowercase on the server side.</li>
+     * <li>The query and headers must be in JSON object string format and cannot be arrays.</li>
+     * <li>The create operation only saves data to the database. The AI Gateway domain name synchronization logic is triggered only during an update when the conditions ELEMENT/MATRIX + AI_GATEWAY + INTERNET are met and the domain name or certificate has changed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于创建指定实例的Endpoint，支持多种组件和网关类型。</p>
+     * <p>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</p>
      * 
      * @param request CreateServiceEndpointRequest
      * @return CreateServiceEndpointResponse
@@ -731,8 +744,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建团队</p>
+     * <p>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</p>
      * 
      * @param tmpReq CreateTeamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -791,8 +807,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建团队</p>
+     * <p>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</p>
      * 
      * @param request CreateTeamRequest
      * @return CreateTeamResponse
@@ -803,8 +822,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建用户</p>
+     * <p>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</p>
      * 
      * @param request CreateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -865,8 +887,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建用户</p>
+     * <p>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</p>
      * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
@@ -877,8 +902,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Worker</p>
+     * <p>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</p>
      * 
      * @param tmpReq CreateWorkerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1013,8 +1041,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Worker</p>
+     * <p>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</p>
      * 
      * @param request CreateWorkerRequest
      * @return CreateWorkerResponse
@@ -1025,8 +1056,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Worker本地纳管启动Token</p>
+     * <p>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</p>
      * 
      * @param request CreateWorkerBootstrapTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1065,8 +1099,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Worker本地纳管启动Token</p>
+     * <p>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</p>
      * 
      * @param request CreateWorkerBootstrapTokenRequest
      * @return CreateWorkerBootstrapTokenResponse
@@ -1077,8 +1114,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除凭证</p>
+     * <p>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</p>
      * 
      * @param request DeleteCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1119,8 +1159,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除凭证</p>
+     * <p>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</p>
      * 
      * @param request DeleteCredentialRequest
      * @return DeleteCredentialResponse
@@ -1132,16 +1175,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>本API支持<code>GET</code>和<code>POST</code>方法，两者语义相同。</li>
-     * <li>使用<code>POST</code>方法时，参数通过<code>application/x-www-form-urlencoded</code>格式提交。</li>
-     * <li>当前实例状态为<code>CREATING</code>、<code>DELETING</code>或<code>DELETED</code>时，请求将被拒绝。</li>
-     * <li>成功调用后，实例状态将首先更改为<code>DELETING</code>，实际的资源清理过程由后台异步执行。</li>
-     * </ul>
+     * <p>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于释放指定的AgentTeams实例，并清理相关资源。</p>
+     * <p>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</p>
      * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1173,16 +1210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>本API支持<code>GET</code>和<code>POST</code>方法，两者语义相同。</li>
-     * <li>使用<code>POST</code>方法时，参数通过<code>application/x-www-form-urlencoded</code>格式提交。</li>
-     * <li>当前实例状态为<code>CREATING</code>、<code>DELETING</code>或<code>DELETED</code>时，请求将被拒绝。</li>
-     * <li>成功调用后，实例状态将首先更改为<code>DELETING</code>，实际的资源清理过程由后台异步执行。</li>
-     * </ul>
+     * <p>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于释放指定的AgentTeams实例，并清理相关资源。</p>
+     * <p>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</p>
      * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -1194,17 +1225,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除MCP</p>
+     * <p>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</p>
      * 
      * @param request DeleteMcpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1240,17 +1264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除MCP</p>
+     * <p>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</p>
      * 
      * @param request DeleteMcpRequest
      * @return DeleteMcpResponse
@@ -1262,17 +1279,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除模型</p>
+     * <p>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</p>
      * 
      * @param request DeleteModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1312,17 +1322,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除模型</p>
+     * <p>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</p>
      * 
      * @param request DeleteModelRequest
      * @return DeleteModelResponse
@@ -1334,17 +1337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除模型供应商</p>
+     * <p>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</p>
      * 
      * @param request DeleteModelProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1380,17 +1376,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除模型供应商</p>
+     * <p>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</p>
      * 
      * @param request DeleteModelProviderRequest
      * @return DeleteModelProviderResponse
@@ -1402,16 +1391,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</p>
      * <ul>
-     * <li>该接口支持通过GET或POST方法调用。</li>
-     * <li>如果目标endpoint是<code>WORKER</code>类型，系统将自动清理与之关联的APIG/AI Gateway云资源及KubeOne worker service配置。</li>
-     * <li>请求参数必须包含<code>instanceId</code>和<code>endpointId</code>，且不能为空。</li>
-     * <li>成功响应会返回HTTP状态码200以及成功标志；错误响应则根据具体情况返回相应的HTTP状态码（如400、404、409）及错误信息。</li>
+     * <li>This operation supports GET or POST methods.</li>
+     * <li>If the target endpoint is of the WORKER type, the system automatically cleans up associated APIG/AI Gateway cloud resources and KubeOne worker service configurations.</li>
+     * <li>The request parameters must include instanceId and endpointId, and neither can be empty.</li>
+     * <li>A successful response returns HTTP status code 200 and a success flag. An error response returns the corresponding HTTP status code (such as 400, 404, or 409) and an error message.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除指定AgentTeams实例下的endpoint，并清理相关资源。</p>
+     * <p>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</p>
      * 
      * @param request DeleteServiceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1449,16 +1438,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</p>
      * <ul>
-     * <li>该接口支持通过GET或POST方法调用。</li>
-     * <li>如果目标endpoint是<code>WORKER</code>类型，系统将自动清理与之关联的APIG/AI Gateway云资源及KubeOne worker service配置。</li>
-     * <li>请求参数必须包含<code>instanceId</code>和<code>endpointId</code>，且不能为空。</li>
-     * <li>成功响应会返回HTTP状态码200以及成功标志；错误响应则根据具体情况返回相应的HTTP状态码（如400、404、409）及错误信息。</li>
+     * <li>This operation supports GET or POST methods.</li>
+     * <li>If the target endpoint is of the WORKER type, the system automatically cleans up associated APIG/AI Gateway cloud resources and KubeOne worker service configurations.</li>
+     * <li>The request parameters must include instanceId and endpointId, and neither can be empty.</li>
+     * <li>A successful response returns HTTP status code 200 and a success flag. An error response returns the corresponding HTTP status code (such as 400, 404, or 409) and an error message.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除指定AgentTeams实例下的endpoint，并清理相关资源。</p>
+     * <p>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</p>
      * 
      * @param request DeleteServiceEndpointRequest
      * @return DeleteServiceEndpointResponse
@@ -1469,8 +1458,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除团队</p>
+     * <p>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</p>
      * 
      * @param request DeleteTeamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1505,8 +1497,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除团队</p>
+     * <p>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</p>
      * 
      * @param request DeleteTeamRequest
      * @return DeleteTeamResponse
@@ -1517,8 +1512,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除用户</p>
+     * <p>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</p>
      * 
      * @param request DeleteUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1553,8 +1551,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除用户</p>
+     * <p>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</p>
      * 
      * @param request DeleteUserRequest
      * @return DeleteUserResponse
@@ -1565,8 +1566,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a Worker under a specified instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Worker</p>
+     * <p>Deletes a Worker under a specified instance.</p>
      * 
      * @param request DeleteWorkerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1601,8 +1605,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a Worker under a specified instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Worker</p>
+     * <p>Deletes a Worker under a specified instance.</p>
      * 
      * @param request DeleteWorkerRequest
      * @return DeleteWorkerResponse
@@ -1613,8 +1620,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询凭证详情</p>
+     * <p>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</p>
      * 
      * @param request GetCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1649,8 +1659,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询凭证详情</p>
+     * <p>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</p>
      * 
      * @param request GetCredentialRequest
      * @return GetCredentialResponse
@@ -1661,8 +1674,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定类型的上游身份提供商详情</p>
+     * <p>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</p>
      * 
      * @param request GetIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1697,8 +1713,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定类型的上游身份提供商详情</p>
+     * <p>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</p>
      * 
      * @param request GetIdentityProviderRequest
      * @return GetIdentityProviderResponse
@@ -1710,18 +1729,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口支持<code>GET</code>和<code>POST</code>方法。</li>
-     * <li>请求时必须在头部包含<code>X-User-Id</code>，用于校验实例归属。</li>
-     * <li><code>X-Acs-Request-Id</code>为可选项，如果提供，则响应中的<code>requestId</code>将优先使用此值。</li>
-     * <li>必须通过<code>instanceId</code>参数指定要查询的实例。</li>
-     * <li>成功响应会返回实例的详细配置信息及状态。</li>
-     * <li>如果请求失败，根据错误类型返回相应的HTTP状态码及错误消息。</li>
-     * </ul>
+     * <p>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>通过实例ID查询指定实例的详细信息。</p>
+     * <p>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</p>
      * 
      * @param request GetInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1753,18 +1764,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口支持<code>GET</code>和<code>POST</code>方法。</li>
-     * <li>请求时必须在头部包含<code>X-User-Id</code>，用于校验实例归属。</li>
-     * <li><code>X-Acs-Request-Id</code>为可选项，如果提供，则响应中的<code>requestId</code>将优先使用此值。</li>
-     * <li>必须通过<code>instanceId</code>参数指定要查询的实例。</li>
-     * <li>成功响应会返回实例的详细配置信息及状态。</li>
-     * <li>如果请求失败，根据错误类型返回相应的HTTP状态码及错误消息。</li>
-     * </ul>
+     * <p>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>通过实例ID查询指定实例的详细信息。</p>
+     * <p>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</p>
      * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
@@ -1776,18 +1779,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with paging support.</p>
      * <ul>
-     * <li>本接口用于查询特定AgentTeams实例下的异步任务执行状态。</li>
-     * <li>目前仅支持查询与实例生命周期相关的创建实例任务。</li>
-     * <li>可通过<code>taskCode</code>参数指定要查询的任务类型，默认为创建实例任务。</li>
-     * <li>支持使用<code>maxResults</code>和<code>nextToken</code>进行结果分页。</li>
-     * <li>当任务处于暂停(<code>PAUSED</code>)状态时，会返回用户需要采取行动的信息(<code>recoveryMessage</code>)。</li>
-     * <li>注意：当前不支持通过<code>taskId</code>直接查询任务状态。</li>
+     * <li>This operation queries the execution status of asynchronous tasks under a specific AgentTeams instance.</li>
+     * <li>Currently, only instance creation tasks related to the instance lifecycle are supported.</li>
+     * <li>Use the taskCode parameter to specify the task type to query. The default is the instance creation task.</li>
+     * <li>Use maxResults and nextToken for result paging.</li>
+     * <li>When a task is in the PAUSED state, the response includes information about the action the user needs to take (recoveryMessage).</li>
+     * <li>Querying task status directly by taskId is not currently supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询指定AgentTeams实例关联的异步任务状态，支持分页。</p>
+     * <p>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with pagination support.</p>
      * 
      * @param request GetInstanceAsyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1835,18 +1838,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with paging support.</p>
      * <ul>
-     * <li>本接口用于查询特定AgentTeams实例下的异步任务执行状态。</li>
-     * <li>目前仅支持查询与实例生命周期相关的创建实例任务。</li>
-     * <li>可通过<code>taskCode</code>参数指定要查询的任务类型，默认为创建实例任务。</li>
-     * <li>支持使用<code>maxResults</code>和<code>nextToken</code>进行结果分页。</li>
-     * <li>当任务处于暂停(<code>PAUSED</code>)状态时，会返回用户需要采取行动的信息(<code>recoveryMessage</code>)。</li>
-     * <li>注意：当前不支持通过<code>taskId</code>直接查询任务状态。</li>
+     * <li>This operation queries the execution status of asynchronous tasks under a specific AgentTeams instance.</li>
+     * <li>Currently, only instance creation tasks related to the instance lifecycle are supported.</li>
+     * <li>Use the taskCode parameter to specify the task type to query. The default is the instance creation task.</li>
+     * <li>Use maxResults and nextToken for result paging.</li>
+     * <li>When a task is in the PAUSED state, the response includes information about the action the user needs to take (recoveryMessage).</li>
+     * <li>Querying task status directly by taskId is not currently supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询指定AgentTeams实例关联的异步任务状态，支持分页。</p>
+     * <p>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with pagination support.</p>
      * 
      * @param request GetInstanceAsyncTaskRequest
      * @return GetInstanceAsyncTaskResponse
@@ -1858,16 +1861,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</p>
      * <ul>
-     * <li>该接口支持<code>GET</code>和<code>POST</code>方法。</li>
-     * <li>请求时必须在头部包含<code>X-User-Id</code>，用于校验实例归属。</li>
-     * <li>必须通过<code>instanceId</code>参数指定实例，后端会根据实例信息生成授权链接。</li>
-     * <li>成功响应会返回 RAM 控制台授权链接，不会创建 RAM 角色或策略。</li>
+     * <li>This operation supports GET and POST methods.</li>
+     * <li>The X-User-Id header must be included in the request to verify instance ownership.</li>
+     * <li>The InstanceId parameter is required to specify the instance. The backend generates the authorization URL based on the instance information.</li>
+     * <li>A successful response returns the RAM console authorization URL without creating a RAM role or policy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>获取实例 OSS 挂载到 ACS 所需的 RAM 授权链接。</p>
+     * <p>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</p>
      * 
      * @param request GetInstanceOssMountRamAuthorizeUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1899,16 +1902,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</p>
      * <ul>
-     * <li>该接口支持<code>GET</code>和<code>POST</code>方法。</li>
-     * <li>请求时必须在头部包含<code>X-User-Id</code>，用于校验实例归属。</li>
-     * <li>必须通过<code>instanceId</code>参数指定实例，后端会根据实例信息生成授权链接。</li>
-     * <li>成功响应会返回 RAM 控制台授权链接，不会创建 RAM 角色或策略。</li>
+     * <li>This operation supports GET and POST methods.</li>
+     * <li>The X-User-Id header must be included in the request to verify instance ownership.</li>
+     * <li>The InstanceId parameter is required to specify the instance. The backend generates the authorization URL based on the instance information.</li>
+     * <li>A successful response returns the RAM console authorization URL without creating a RAM role or policy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>获取实例 OSS 挂载到 ACS 所需的 RAM 授权链接。</p>
+     * <p>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</p>
      * 
      * @param request GetInstanceOssMountRamAuthorizeUrlRequest
      * @return GetInstanceOssMountRamAuthorizeUrlResponse
@@ -1920,17 +1923,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询MCP详情</p>
+     * <p>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</p>
      * 
      * @param request GetMcpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1966,17 +1962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询MCP详情</p>
+     * <p>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</p>
      * 
      * @param request GetMcpRequest
      * @return GetMcpResponse
@@ -1987,8 +1976,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>模型调用摘要</p>
+     * <p>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</p>
      * 
      * @param request GetModelInvocationSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2027,8 +2019,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>模型调用摘要</p>
+     * <p>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</p>
      * 
      * @param request GetModelInvocationSummaryRequest
      * @return GetModelInvocationSummaryResponse
@@ -2040,17 +2035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询模型供应商详情</p>
+     * <p>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</p>
      * 
      * @param request GetModelProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2086,17 +2074,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询模型供应商详情</p>
+     * <p>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</p>
      * 
      * @param request GetModelProviderRequest
      * @return GetModelProviderResponse
@@ -2108,17 +2089,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过此API，您可以获取特定实例关联的NAT网关配置详情及SNAT规则的状态。该接口支持GET或POST方法调用，并需要提供<code>instanceId</code>作为请求参数来指定要查询的实例。</p>
-     * <h3>注意事项</h3>
+     * <p>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</p>
      * <ul>
-     * <li>确保提供的<code>instanceId</code>是有效的且属于您的账户。</li>
-     * <li>根据返回的状态值（如<code>READY</code>, <code>NEED_CONFIGURE_NAT_GATEWAY</code>, <code>NEED_CONFIGURE_SNAT_RULE</code>），采取相应的操作以完成NAT网关或SNAT规则的配置。</li>
-     * <li>当状态为<code>NEED_CONFIGURE_NAT_GATEWAY</code>时，表示当前VPC下没有可用的NAT网关；而<code>NEED_CONFIGURE_SNAT_RULE</code>则意味着虽然存在NAT网关但某些子网CIDR未被SNAT规则覆盖。</li>
+     * <li>This API allows you to retrieve the NAT gateway configuration details and SNAT rule status associated with a specific instance. This operation supports GET or POST method calls and requires the instanceId as a request parameter to specify the instance to query.</li>
+     * <li>Ensure that the provided instanceId is valid and belongs to your account.</li>
+     * <li>Based on the returned status values (such as READY, NEED_CONFIGURE_NAT_GATEWAY, or NEED_CONFIGURE_SNAT_RULE), take the corresponding actions to complete the NAT gateway or SNAT rule configuration.</li>
+     * <li>When the status is NEED_CONFIGURE_NAT_GATEWAY, it indicates that no available NAT gateway exists in the current VPC. NEED_CONFIGURE_SNAT_RULE means that a NAT gateway exists but some subnet CIDRs are not covered by SNAT rules.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询指定实例的NAT网关及其SNAT规则的配置状态。</p>
+     * <p>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</p>
      * 
      * @param request GetNatGatewayStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2150,17 +2130,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过此API，您可以获取特定实例关联的NAT网关配置详情及SNAT规则的状态。该接口支持GET或POST方法调用，并需要提供<code>instanceId</code>作为请求参数来指定要查询的实例。</p>
-     * <h3>注意事项</h3>
+     * <p>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</p>
      * <ul>
-     * <li>确保提供的<code>instanceId</code>是有效的且属于您的账户。</li>
-     * <li>根据返回的状态值（如<code>READY</code>, <code>NEED_CONFIGURE_NAT_GATEWAY</code>, <code>NEED_CONFIGURE_SNAT_RULE</code>），采取相应的操作以完成NAT网关或SNAT规则的配置。</li>
-     * <li>当状态为<code>NEED_CONFIGURE_NAT_GATEWAY</code>时，表示当前VPC下没有可用的NAT网关；而<code>NEED_CONFIGURE_SNAT_RULE</code>则意味着虽然存在NAT网关但某些子网CIDR未被SNAT规则覆盖。</li>
+     * <li>This API allows you to retrieve the NAT gateway configuration details and SNAT rule status associated with a specific instance. This operation supports GET or POST method calls and requires the instanceId as a request parameter to specify the instance to query.</li>
+     * <li>Ensure that the provided instanceId is valid and belongs to your account.</li>
+     * <li>Based on the returned status values (such as READY, NEED_CONFIGURE_NAT_GATEWAY, or NEED_CONFIGURE_SNAT_RULE), take the corresponding actions to complete the NAT gateway or SNAT rule configuration.</li>
+     * <li>When the status is NEED_CONFIGURE_NAT_GATEWAY, it indicates that no available NAT gateway exists in the current VPC. NEED_CONFIGURE_SNAT_RULE means that a NAT gateway exists but some subnet CIDRs are not covered by SNAT rules.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询指定实例的NAT网关及其SNAT规则的配置状态。</p>
+     * <p>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</p>
      * 
      * @param request GetNatGatewayStatusRequest
      * @return GetNatGatewayStatusResponse
@@ -2172,17 +2151,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</p>
      * <ul>
-     * <li>该API用于根据<code>endpointId</code>查询单个Endpoint的具体配置与状态信息。</li>
-     * <li>可选参数<code>instanceId</code>用于验证Endpoint是否属于特定实例。</li>
-     * <li>请求方式支持<code>GET</code>和<code>POST</code>，其中<code>GET</code>使用query string传递参数，而<code>POST</code>则可以通过form参数提交。</li>
-     * <li>如果<code>endpointId</code>缺失或为空，则会返回<code>InvalidParameter</code>错误。</li>
-     * <li>当请求的Endpoint不存在、不属于提供的实例或者不属于当前用户时，将收到相应的资源不存在类错误响应。</li>
+     * <li>This API operation queries the configuration and status information of a single endpoint based on the endpointId.</li>
+     * <li>The optional parameter instanceId is used to verify whether the endpoint belongs to a specific instance.</li>
+     * <li>The request supports both GET and POST methods. GET passes parameters through the query string, while POST submits parameters through form data.</li>
+     * <li>If endpointId is missing or empty, an InvalidParameter error is returned.</li>
+     * <li>If the requested endpoint does not exist, does not belong to the specified instance, or does not belong to the current user, a resource-not-found error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询指定ID的Endpoint详细信息，支持通过实例ID进行校验。</p>
+     * <p>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</p>
      * 
      * @param request GetServiceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2218,17 +2197,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</p>
      * <ul>
-     * <li>该API用于根据<code>endpointId</code>查询单个Endpoint的具体配置与状态信息。</li>
-     * <li>可选参数<code>instanceId</code>用于验证Endpoint是否属于特定实例。</li>
-     * <li>请求方式支持<code>GET</code>和<code>POST</code>，其中<code>GET</code>使用query string传递参数，而<code>POST</code>则可以通过form参数提交。</li>
-     * <li>如果<code>endpointId</code>缺失或为空，则会返回<code>InvalidParameter</code>错误。</li>
-     * <li>当请求的Endpoint不存在、不属于提供的实例或者不属于当前用户时，将收到相应的资源不存在类错误响应。</li>
+     * <li>This API operation queries the configuration and status information of a single endpoint based on the endpointId.</li>
+     * <li>The optional parameter instanceId is used to verify whether the endpoint belongs to a specific instance.</li>
+     * <li>The request supports both GET and POST methods. GET passes parameters through the query string, while POST submits parameters through form data.</li>
+     * <li>If endpointId is missing or empty, an InvalidParameter error is returned.</li>
+     * <li>If the requested endpoint does not exist, does not belong to the specified instance, or does not belong to the current user, a resource-not-found error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询指定ID的Endpoint详细信息，支持通过实例ID进行校验。</p>
+     * <p>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</p>
      * 
      * @param request GetServiceEndpointRequest
      * @return GetServiceEndpointResponse
@@ -2239,8 +2218,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>任务统计摘要</p>
+     * <p>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</p>
      * 
      * @param request GetTaskStatsSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2279,8 +2261,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>任务统计摘要</p>
+     * <p>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</p>
      * 
      * @param request GetTaskStatsSummaryRequest
      * @return GetTaskStatsSummaryResponse
@@ -2291,8 +2276,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询团队详情</p>
+     * <p>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</p>
      * 
      * @param request GetTeamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2327,8 +2315,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询团队详情</p>
+     * <p>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</p>
      * 
      * @param request GetTeamRequest
      * @return GetTeamResponse
@@ -2339,8 +2330,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Token趋势统计</p>
+     * <p>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</p>
      * 
      * @param request GetTokenTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2383,8 +2377,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Token趋势统计</p>
+     * <p>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</p>
      * 
      * @param request GetTokenTrendRequest
      * @return GetTokenTrendResponse
@@ -2395,8 +2392,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</p>
+     * 
      * <b>summary</b> : 
-     * <p>工具调用分布</p>
+     * <p>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</p>
      * 
      * @param request GetToolCallDistributionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2435,8 +2435,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</p>
+     * 
      * <b>summary</b> : 
-     * <p>工具调用分布</p>
+     * <p>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</p>
      * 
      * @param request GetToolCallDistributionRequest
      * @return GetToolCallDistributionResponse
@@ -2447,8 +2450,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户详情</p>
+     * <p>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</p>
      * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2483,8 +2489,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户详情</p>
+     * <p>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -2495,8 +2504,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用户初始密码</p>
+     * <p>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</p>
      * 
      * @param request GetUserPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2531,8 +2543,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用户初始密码</p>
+     * <p>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</p>
      * 
      * @param request GetUserPasswordRequest
      * @return GetUserPasswordResponse
@@ -2543,8 +2558,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Worker详情</p>
+     * <p>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</p>
      * 
      * @param request GetWorkerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2579,8 +2597,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Worker详情</p>
+     * <p>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</p>
      * 
      * @param request GetWorkerRequest
      * @return GetWorkerResponse
@@ -2591,8 +2612,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the startup options for local Worker management and returns available network types.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Worker本地纳管启动选项</p>
+     * <p>Queries the startup options for local Worker management and returns available network types.</p>
      * 
      * @param request GetWorkerBootstrapOptionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2627,8 +2651,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the startup options for local Worker management and returns available network types.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Worker本地纳管启动选项</p>
+     * <p>Queries the startup options for local Worker management and returns available network types.</p>
      * 
      * @param request GetWorkerBootstrapOptionsRequest
      * @return GetWorkerBootstrapOptionsResponse
@@ -2639,8 +2666,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the maximum upgradable version of a worker.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Worker最大可升级版本</p>
+     * <p>Queries the maximum upgradable version of a worker.</p>
      * 
      * @param request GetWorkerMaxVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2671,8 +2701,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the maximum upgradable version of a worker.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Worker最大可升级版本</p>
+     * <p>Queries the maximum upgradable version of a worker.</p>
      * 
      * @param request GetWorkerMaxVersionRequest
      * @return GetWorkerMaxVersionResponse
@@ -2683,8 +2716,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Worker统计摘要</p>
+     * <p>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</p>
      * 
      * @param request GetWorkerStatsSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2723,8 +2759,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Worker统计摘要</p>
+     * <p>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</p>
      * 
      * @param request GetWorkerStatsSummaryRequest
      * @return GetWorkerStatsSummaryResponse
@@ -2735,8 +2774,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询凭证列表</p>
+     * <p>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</p>
      * 
      * @param request ListCredentialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2779,8 +2821,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询凭证列表</p>
+     * <p>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</p>
      * 
      * @param request ListCredentialsRequest
      * @return ListCredentialsResponse
@@ -2791,8 +2836,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询上游身份提供商绑定列表</p>
+     * <p>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</p>
      * 
      * @param request ListIdentityProvidersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2831,8 +2879,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询上游身份提供商绑定列表</p>
+     * <p>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</p>
      * 
      * @param request ListIdentityProvidersRequest
      * @return ListIdentityProvidersResponse
@@ -2844,29 +2895,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li><strong>分页规则</strong>：<ul>
-     * <li>如果传了 <code>NextToken</code>，优先按 <code>NextToken</code> 解析 offset。</li>
-     * <li>如果没传 <code>NextToken</code>，则使用 <code>skip</code>。</li>
-     * <li><code>MaxResults</code> 的取值范围为 1 到 100，非法值会返回 <code>400</code> 错误。</li>
-     * <li><code>NextToken</code> 必须是有效的整数，否则会返回 <code>400</code> 错误。</li>
-     * <li><code>skip</code> 的值不能小于 0，否则会返回 <code>400</code> 错误。</li>
-     * </ul>
-     * </li>
-     * <li><strong>排序规则</strong>：列表按创建时间倒序返回。</li>
-     * <li><strong>请求参数</strong>：<ul>
-     * <li><code>instanceName</code>：实例名称，支持模糊匹配。</li>
-     * <li><code>status</code>：实例状态。</li>
-     * <li><code>MaxResults</code>：分页大小，默认值为 20。</li>
-     * <li><code>NextToken</code>：下一页游标。</li>
-     * <li><code>skip</code>：跳过的记录数，默认值为 0。</li>
-     * </ul>
-     * </li>
-     * </ul>
+     * <p>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于查询符合条件的实例列表，并支持分页和模糊匹配。</p>
+     * <p>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</p>
      * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2914,29 +2946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li><strong>分页规则</strong>：<ul>
-     * <li>如果传了 <code>NextToken</code>，优先按 <code>NextToken</code> 解析 offset。</li>
-     * <li>如果没传 <code>NextToken</code>，则使用 <code>skip</code>。</li>
-     * <li><code>MaxResults</code> 的取值范围为 1 到 100，非法值会返回 <code>400</code> 错误。</li>
-     * <li><code>NextToken</code> 必须是有效的整数，否则会返回 <code>400</code> 错误。</li>
-     * <li><code>skip</code> 的值不能小于 0，否则会返回 <code>400</code> 错误。</li>
-     * </ul>
-     * </li>
-     * <li><strong>排序规则</strong>：列表按创建时间倒序返回。</li>
-     * <li><strong>请求参数</strong>：<ul>
-     * <li><code>instanceName</code>：实例名称，支持模糊匹配。</li>
-     * <li><code>status</code>：实例状态。</li>
-     * <li><code>MaxResults</code>：分页大小，默认值为 20。</li>
-     * <li><code>NextToken</code>：下一页游标。</li>
-     * <li><code>skip</code>：跳过的记录数，默认值为 0。</li>
-     * </ul>
-     * </li>
-     * </ul>
+     * <p>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于查询符合条件的实例列表，并支持分页和模糊匹配。</p>
+     * <p>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -2948,17 +2961,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有Magic实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</p>
      * 
      * <b>summary</b> : 
-     * <p>测试模型供应商和模型</p>
+     * <p>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</p>
      * 
      * @param request ListMcpToolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2994,17 +3000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有Magic实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</p>
      * 
      * <b>summary</b> : 
-     * <p>测试模型供应商和模型</p>
+     * <p>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</p>
      * 
      * @param request ListMcpToolsRequest
      * @return ListMcpToolsResponse
@@ -3016,17 +3015,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the MCP server list under a specified AgentTeams instance by using paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询MCP列表</p>
+     * <p>Queries the MCP server list under a specified AgentTeams instance by using paging.</p>
      * 
      * @param request ListMcpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3066,17 +3058,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the MCP server list under a specified AgentTeams instance by using paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询MCP列表</p>
+     * <p>Queries the MCP server list under a specified AgentTeams instance by using paging.</p>
      * 
      * @param request ListMcpsRequest
      * @return ListMcpsResponse
@@ -3088,17 +3073,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询模型供应商列表</p>
+     * <p>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</p>
      * 
      * @param request ListModelProvidersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3138,17 +3116,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询模型供应商列表</p>
+     * <p>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</p>
      * 
      * @param request ListModelProvidersRequest
      * @return ListModelProvidersResponse
@@ -3160,17 +3131,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询模型列表</p>
+     * <p>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</p>
      * 
      * @param request ListModelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3222,17 +3186,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询模型列表</p>
+     * <p>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</p>
      * 
      * @param request ListModelsRequest
      * @return ListModelsResponse
@@ -3244,15 +3201,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>This API queries the list of AI gateway endpoints under a specified instance.</p>
      * <ul>
-     * <li><code>instanceId</code> 是必填参数，用来指定 AgentTeams 实例 ID。</li>
-     * <li>可选参数包括 <code>component</code>, <code>serviceName</code>, <code>networkType</code>, 和 <code>domainType</code>，用于进一步筛选返回的端点列表。</li>
-     * <li>不支持通过 <code>status</code> 参数进行筛选。</li>
+     * <li>instanceId is a required parameter that specifies the AgentTeams instance ID.</li>
+     * <li>Optional parameters include component, serviceName, networkType, and domainType, which are used to further filter the returned endpoint list.</li>
+     * <li>Filtering by the status parameter is not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>此API用于查询指定实例下的AI网关端点列表。</p>
+     * <p>Queries the list of AI gateway endpoints under a specified instance.</p>
      * 
      * @param request ListServiceEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3312,15 +3269,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>This API queries the list of AI gateway endpoints under a specified instance.</p>
      * <ul>
-     * <li><code>instanceId</code> 是必填参数，用来指定 AgentTeams 实例 ID。</li>
-     * <li>可选参数包括 <code>component</code>, <code>serviceName</code>, <code>networkType</code>, 和 <code>domainType</code>，用于进一步筛选返回的端点列表。</li>
-     * <li>不支持通过 <code>status</code> 参数进行筛选。</li>
+     * <li>instanceId is a required parameter that specifies the AgentTeams instance ID.</li>
+     * <li>Optional parameters include component, serviceName, networkType, and domainType, which are used to further filter the returned endpoint list.</li>
+     * <li>Filtering by the status parameter is not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>此API用于查询指定实例下的AI网关端点列表。</p>
+     * <p>Queries the list of AI gateway endpoints under a specified instance.</p>
      * 
      * @param request ListServiceEndpointsRequest
      * @return ListServiceEndpointsResponse
@@ -3332,16 +3289,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Queries the list of SSL certificates available to the user in APIG.</p>
      * <ul>
-     * <li>该API用于获取与指定AgentTeams实例相关的SSL证书列表。</li>
-     * <li>可通过<code>certNameLike</code>和<code>domainName</code>参数进行模糊搜索或精确匹配证书名称及绑定域名。</li>
-     * <li>分页参数<code>pageNumber</code>和<code>pageSize</code>允许客户端控制返回结果的数量和页码，默认每页显示10条记录。</li>
-     * <li>成功响应将包含请求ID、是否成功标志、错误代码（如果有的话）、HTTP状态码、本次请求的最大结果数、下一页标记（如果有更多数据的话）、总证书数量以及具体的证书详情列表。</li>
+     * <li>This API retrieves the list of SSL certificates associated with a specified AgentTeams instance.</li>
+     * <li>The pagination parameters MaxResults and NextToken allow the client to control the number of returned results and retrieve the next page of data.</li>
+     * <li>A successful response includes the request ID, success flag, error code, next page token, total certificate count, and the certificate details list.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询用户侧APIG可用的SSL证书列表</p>
+     * <p>Queries the list of SSL certificates available to the user in APIG.</p>
      * 
      * @param request ListSslCertsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3381,16 +3337,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Queries the list of SSL certificates available to the user in APIG.</p>
      * <ul>
-     * <li>该API用于获取与指定AgentTeams实例相关的SSL证书列表。</li>
-     * <li>可通过<code>certNameLike</code>和<code>domainName</code>参数进行模糊搜索或精确匹配证书名称及绑定域名。</li>
-     * <li>分页参数<code>pageNumber</code>和<code>pageSize</code>允许客户端控制返回结果的数量和页码，默认每页显示10条记录。</li>
-     * <li>成功响应将包含请求ID、是否成功标志、错误代码（如果有的话）、HTTP状态码、本次请求的最大结果数、下一页标记（如果有更多数据的话）、总证书数量以及具体的证书详情列表。</li>
+     * <li>This API retrieves the list of SSL certificates associated with a specified AgentTeams instance.</li>
+     * <li>The pagination parameters MaxResults and NextToken allow the client to control the number of returned results and retrieve the next page of data.</li>
+     * <li>A successful response includes the request ID, success flag, error code, next page token, total certificate count, and the certificate details list.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询用户侧APIG可用的SSL证书列表</p>
+     * <p>Queries the list of SSL certificates available to the user in APIG.</p>
      * 
      * @param request ListSslCertsRequest
      * @return ListSslCertsResponse
@@ -3401,8 +3356,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</p>
+     * 
      * <b>summary</b> : 
-     * <p>团队详情列表</p>
+     * <p>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</p>
      * 
      * @param request ListTeamDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3449,8 +3407,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</p>
+     * 
      * <b>summary</b> : 
-     * <p>团队详情列表</p>
+     * <p>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</p>
      * 
      * @param request ListTeamDetailsRequest
      * @return ListTeamDetailsResponse
@@ -3461,8 +3422,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Team任务列表</p>
+     * <p>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</p>
      * 
      * @param request ListTeamTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3505,8 +3469,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Team任务列表</p>
+     * <p>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</p>
      * 
      * @param request ListTeamTasksRequest
      * @return ListTeamTasksResponse
@@ -3517,8 +3484,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询团队列表</p>
+     * <p>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</p>
      * 
      * @param request ListTeamsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3561,8 +3531,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询团队列表</p>
+     * <p>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</p>
      * 
      * @param request ListTeamsRequest
      * @return ListTeamsResponse
@@ -3573,8 +3546,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户列表</p>
+     * <p>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</p>
      * 
      * @param request ListUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3617,8 +3593,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户列表</p>
+     * <p>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -3629,8 +3608,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Worker统计详情列表</p>
+     * <p>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</p>
      * 
      * @param request ListWorkerStatsDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3677,8 +3659,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Worker统计详情列表</p>
+     * <p>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</p>
      * 
      * @param request ListWorkerStatsDetailsRequest
      * @return ListWorkerStatsDetailsResponse
@@ -3689,8 +3674,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Worker列表</p>
+     * <p>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</p>
      * 
      * @param tmpReq ListWorkersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3775,8 +3763,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Worker列表</p>
+     * <p>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</p>
      * 
      * @param request ListWorkersRequest
      * @return ListWorkersResponse
@@ -3787,8 +3778,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates or updates a CMS workspace.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建或更新CMS工作空间</p>
+     * <p>Creates or updates a CMS workspace.</p>
      * 
      * @param request PutCmsWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3819,8 +3813,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates or updates a CMS workspace.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建或更新CMS工作空间</p>
+     * <p>Creates or updates a CMS workspace.</p>
      * 
      * @param request PutCmsWorkspaceRequest
      * @return PutCmsWorkspaceResponse
@@ -3832,18 +3829,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Queries the feature status of a specified instance, worker, team, or individual.</p>
      * <ul>
-     * <li>该接口用于查询特定<code>instanceId</code>下的不同目标（如<code>INSTANCE</code>、<code>WORKER</code>、<code>TEAM</code>、<code>HUMAN</code>）的功能特性状态。</li>
-     * <li><code>targetScope</code>参数定义了查询的目标类型，根据不同的<code>targetScope</code>值，可能需要提供额外的<code>resourceName</code>参数来指定具体的资源名称。</li>
-     * <li>如果提供了<code>featureCodes</code>列表，则返回这些特定功能特性的状态；否则，将返回指定<code>targetScope</code>下所有功能特性的状态。</li>
-     * <li>当使用<code>WORKER</code>、<code>TEAM</code>或<code>HUMAN</code>作为<code>targetScope</code>时，请确保正确填写对应的<code>resourceName</code>。</li>
-     * <li>对于<code>INSTANCE</code>级别的查询，无需提供<code>resourceName</code>。</li>
-     * <li>特性支持情况受基础版本、工作器版本等因素影响，并通过<code>unsupportedReasonCode</code>和<code>unsupportedReason</code>字段给出不支持的具体原因。</li>
+     * <li>This operation queries the feature status of different targets (such as INSTANCE, WORKER, TEAM, or HUMAN) under a specific instanceId.</li>
+     * <li>The targetScope parameter defines the target type for the query. Depending on the targetScope value, you may need to provide an additional resourceName parameter to specify the resource name.</li>
+     * <li>If a featureCodes list is provided, the status of those specific features is returned. Otherwise, the status of all features under the specified targetScope is returned.</li>
+     * <li>When using WORKER, TEAM, or HUMAN as the targetScope, make sure to correctly specify the corresponding resourceName.</li>
+     * <li>For INSTANCE-level queries, resourceName is not required.</li>
+     * <li>Feature support is affected by factors such as the base version and worker version. The unsupportedReasonCode and unsupportedReason fields provide the specific reason why a feature is not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询指定实例、worker、团队或个人的功能特性状态。</p>
+     * <p>Queries the attribute status of a specified instance, worker, team, or individual.</p>
      * 
      * @param request QueryFeaturesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3883,18 +3880,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Queries the feature status of a specified instance, worker, team, or individual.</p>
      * <ul>
-     * <li>该接口用于查询特定<code>instanceId</code>下的不同目标（如<code>INSTANCE</code>、<code>WORKER</code>、<code>TEAM</code>、<code>HUMAN</code>）的功能特性状态。</li>
-     * <li><code>targetScope</code>参数定义了查询的目标类型，根据不同的<code>targetScope</code>值，可能需要提供额外的<code>resourceName</code>参数来指定具体的资源名称。</li>
-     * <li>如果提供了<code>featureCodes</code>列表，则返回这些特定功能特性的状态；否则，将返回指定<code>targetScope</code>下所有功能特性的状态。</li>
-     * <li>当使用<code>WORKER</code>、<code>TEAM</code>或<code>HUMAN</code>作为<code>targetScope</code>时，请确保正确填写对应的<code>resourceName</code>。</li>
-     * <li>对于<code>INSTANCE</code>级别的查询，无需提供<code>resourceName</code>。</li>
-     * <li>特性支持情况受基础版本、工作器版本等因素影响，并通过<code>unsupportedReasonCode</code>和<code>unsupportedReason</code>字段给出不支持的具体原因。</li>
+     * <li>This operation queries the feature status of different targets (such as INSTANCE, WORKER, TEAM, or HUMAN) under a specific instanceId.</li>
+     * <li>The targetScope parameter defines the target type for the query. Depending on the targetScope value, you may need to provide an additional resourceName parameter to specify the resource name.</li>
+     * <li>If a featureCodes list is provided, the status of those specific features is returned. Otherwise, the status of all features under the specified targetScope is returned.</li>
+     * <li>When using WORKER, TEAM, or HUMAN as the targetScope, make sure to correctly specify the corresponding resourceName.</li>
+     * <li>For INSTANCE-level queries, resourceName is not required.</li>
+     * <li>Feature support is affected by factors such as the base version and worker version. The unsupportedReasonCode and unsupportedReason fields provide the specific reason why a feature is not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询指定实例、worker、团队或个人的功能特性状态。</p>
+     * <p>Queries the attribute status of a specified instance, worker, team, or individual.</p>
      * 
      * @param request QueryFeaturesRequest
      * @return QueryFeaturesResponse
@@ -3906,10 +3903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取当前AgentTeams Resource Pool配置支持的所有可用区ID。</p>
+     * <p>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</p>
      * 
      * @param request QuerySupportedZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3945,10 +3942,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取当前AgentTeams Resource Pool配置支持的所有可用区ID。</p>
+     * <p>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</p>
      * 
      * @param request QuerySupportedZonesRequest
      * @return QuerySupportedZonesResponse
@@ -3959,8 +3956,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</p>
+     * 
      * <b>summary</b> : 
-     * <p>设置用户密码</p>
+     * <p>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</p>
      * 
      * @param request ResetUserPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3999,8 +3999,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</p>
+     * 
      * <b>summary</b> : 
-     * <p>设置用户密码</p>
+     * <p>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</p>
      * 
      * @param request ResetUserPasswordRequest
      * @return ResetUserPasswordResponse
@@ -4012,17 +4015,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</p>
      * 
      * <b>summary</b> : 
-     * <p>测试模型供应商和模型</p>
+     * <p>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</p>
      * 
      * @param request TestModelProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4070,17 +4066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</p>
      * 
      * <b>summary</b> : 
-     * <p>测试模型供应商和模型</p>
+     * <p>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</p>
      * 
      * @param request TestModelProviderRequest
      * @return TestModelProviderResponse
@@ -4091,8 +4080,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>解绑上游身份提供商</p>
+     * <p>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</p>
      * 
      * @param request UnbindIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4127,8 +4119,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>解绑上游身份提供商</p>
+     * <p>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</p>
      * 
      * @param request UnbindIdentityProviderRequest
      * @return UnbindIdentityProviderResponse
@@ -4140,15 +4135,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Updates the plaintext key of an existing credential in an AgentTeams instance.</p>
      * <ul>
-     * <li>该接口用于更新 AgentTeams 实例下已有 Credential 的密钥明文。</li>
-     * <li>仅更新 Agent Identity TokenVault 中同名 APIKeyCredentialProvider 的密钥值，不修改本地元数据（description、createTime、updateTime、status）。</li>
-     * <li>响应不包含 apiKey 明文；如需绑定 Worker 明细请调用 GetCredential。</li>
+     * <li>This operation updates the plaintext key of an existing Credential in an AgentTeams instance.</li>
+     * <li>Only the key value of the APIKeyCredentialProvider with the same name in the Agent Identity TokenVault is updated. Local metadata (description, createTime, updateTime, and status) is not modified.</li>
+     * <li>The response does not contain the apiKey plaintext. To obtain Worker details, call GetCredential.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新凭证密钥</p>
+     * <p>Updates the plaintext key of an existing credential in an AgentTeams instance.</p>
      * 
      * @param request UpdateCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4198,15 +4193,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Updates the plaintext key of an existing credential in an AgentTeams instance.</p>
      * <ul>
-     * <li>该接口用于更新 AgentTeams 实例下已有 Credential 的密钥明文。</li>
-     * <li>仅更新 Agent Identity TokenVault 中同名 APIKeyCredentialProvider 的密钥值，不修改本地元数据（description、createTime、updateTime、status）。</li>
-     * <li>响应不包含 apiKey 明文；如需绑定 Worker 明细请调用 GetCredential。</li>
+     * <li>This operation updates the plaintext key of an existing Credential in an AgentTeams instance.</li>
+     * <li>Only the key value of the APIKeyCredentialProvider with the same name in the Agent Identity TokenVault is updated. Local metadata (description, createTime, updateTime, and status) is not modified.</li>
+     * <li>The response does not contain the apiKey plaintext. To obtain Worker details, call GetCredential.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新凭证密钥</p>
+     * <p>Updates the plaintext key of an existing credential in an AgentTeams instance.</p>
      * 
      * @param request UpdateCredentialRequest
      * @return UpdateCredentialResponse
@@ -4217,8 +4212,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新上游身份提供商绑定</p>
+     * <p>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</p>
      * 
      * @param request UpdateIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4271,8 +4269,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新上游身份提供商绑定</p>
+     * <p>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</p>
      * 
      * @param request UpdateIdentityProviderRequest
      * @return UpdateIdentityProviderResponse
@@ -4284,16 +4285,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>推荐使用<code>POST</code>方法，并以表单形式提交参数。</li>
-     * <li>当前实现不支持JSON格式的请求体，请勿尝试使用<code>@RequestBody</code>方式调用。</li>
-     * <li>必须提供有效的<code>instanceId</code>和非空的<code>instanceName</code>作为参数。</li>
-     * <li>该接口仅允许修改实例名称(<code>instanceName</code>)，不允许通过此接口变更命名空间(<code>namespace</code>)。</li>
-     * </ul>
+     * <p>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于更改指定AgentTeams实例的名称，支持通过GET或POST方法调用。</p>
+     * <p>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</p>
      * 
      * @param tmpReq UpdateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4349,16 +4344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>推荐使用<code>POST</code>方法，并以表单形式提交参数。</li>
-     * <li>当前实现不支持JSON格式的请求体，请勿尝试使用<code>@RequestBody</code>方式调用。</li>
-     * <li>必须提供有效的<code>instanceId</code>和非空的<code>instanceName</code>作为参数。</li>
-     * <li>该接口仅允许修改实例名称(<code>instanceName</code>)，不允许通过此接口变更命名空间(<code>namespace</code>)。</li>
-     * </ul>
+     * <p>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于更改指定AgentTeams实例的名称，支持通过GET或POST方法调用。</p>
+     * <p>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</p>
      * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
@@ -4370,16 +4359,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Restarts a paused asynchronous task for creating an instance.</p>
      * <ul>
-     * <li>该接口用于重新启动一个处于暂停状态的创建实例任务。</li>
-     * <li>目前仅支持 <code>agentteams:pay-order:create</code> 类型的任务。</li>
-     * <li>确保提供的 <code>instanceId</code>、<code>taskCode</code> 和 <code>taskId</code> 参数准确无误，否则可能导致请求失败。</li>
-     * <li>如果任务不是暂停状态（PAUSED），则不允许调用此接口进行更新。</li>
+     * <li>This operation restarts a create-instance task that is in the paused state.</li>
+     * <li>Only tasks of the agentteams:pay-order:create type are supported.</li>
+     * <li>Ensure that the InstanceId, TaskCode, and TaskId parameters are accurate. Otherwise, the request may fail.</li>
+     * <li>If the task is not in the paused state (PAUSED), you cannot call this operation to update the task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>重启暂停中的创建实例异步任务。</p>
+     * <p>Restarts a paused asynchronous task for creating an instance.</p>
      * 
      * @param request UpdateInstanceAsyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4423,16 +4412,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Restarts a paused asynchronous task for creating an instance.</p>
      * <ul>
-     * <li>该接口用于重新启动一个处于暂停状态的创建实例任务。</li>
-     * <li>目前仅支持 <code>agentteams:pay-order:create</code> 类型的任务。</li>
-     * <li>确保提供的 <code>instanceId</code>、<code>taskCode</code> 和 <code>taskId</code> 参数准确无误，否则可能导致请求失败。</li>
-     * <li>如果任务不是暂停状态（PAUSED），则不允许调用此接口进行更新。</li>
+     * <li>This operation restarts a create-instance task that is in the paused state.</li>
+     * <li>Only tasks of the agentteams:pay-order:create type are supported.</li>
+     * <li>Ensure that the InstanceId, TaskCode, and TaskId parameters are accurate. Otherwise, the request may fail.</li>
+     * <li>If the task is not in the paused state (PAUSED), you cannot call this operation to update the task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>重启暂停中的创建实例异步任务。</p>
+     * <p>Restarts a paused asynchronous task for creating an instance.</p>
      * 
      * @param request UpdateInstanceAsyncTaskRequest
      * @return UpdateInstanceAsyncTaskResponse
@@ -4444,17 +4433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新MCP</p>
+     * <p>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</p>
      * 
      * @param tmpReq UpdateMcpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4524,17 +4506,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新MCP</p>
+     * <p>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</p>
      * 
      * @param request UpdateMcpRequest
      * @return UpdateMcpResponse
@@ -4546,17 +4521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Updates the description and other information of an AI model in a specified AgentTeams instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新模型</p>
+     * <p>Updates the description and other information of an AI model in a specified AgentTeams instance.</p>
      * 
      * @param request UpdateModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4600,17 +4568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Updates the description and other information of an AI model in a specified AgentTeams instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新模型</p>
+     * <p>Updates the description and other information of an AI model in a specified AgentTeams instance.</p>
      * 
      * @param request UpdateModelRequest
      * @return UpdateModelResponse
@@ -4622,17 +4583,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新模型供应商</p>
+     * <p>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</p>
      * 
      * @param tmpReq UpdateModelProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4698,17 +4652,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</li>
-     * <li>用户身份通过请求头<code>X-User-Id</code>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</li>
-     * <li>支持使用<code>instanceName</code>进行模糊匹配以及通过<code>status</code>参数精确匹配实例状态来过滤查询结果。</li>
-     * <li>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<code>limit</code>和<code>offset</code>参数来进行分页控制，默认每页显示20条记录。</li>
-     * <li>如果请求中缺少<code>X-User-Id</code>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</li>
-     * </ul>
+     * <p>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新模型供应商</p>
+     * <p>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</p>
      * 
      * @param request UpdateModelProviderRequest
      * @return UpdateModelProviderResponse
@@ -4720,18 +4667,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Updates the domain name and SSL certificate information for a specified endpoint.</p>
      * <ul>
-     * <li>本API支持更新<code>ELEMENT</code>、<code>MATRIX</code>类型的Endpoint。</li>
-     * <li>如果尝试更新其他类型的Endpoint，将返回400错误。</li>
-     * <li>当<code>endpointId</code>不存在或不属于当前用户实例时，将返回404错误。</li>
-     * <li>更新域名时，系统会创建或复用新的HTTPS domain，并将其绑定到原endpoint route上，同时解绑旧domain，但不会删除旧domain。</li>
-     * <li>若不提供<code>domain</code>或<code>certIdentifier</code>参数，则保持原有设置不变。</li>
-     * <li>其他如<code>component</code>、<code>gatewayType</code>等字段即使传入也不会被更新。</li>
+     * <li>This API operation supports updating endpoints of the ELEMENT or MATRIX type.</li>
+     * <li>If you attempt to update an endpoint of another type, a 400 error is returned.</li>
+     * <li>If the endpointId does not exist or does not belong to the current user instance, a 404 error is returned.</li>
+     * <li>When updating a domain name, the system creates or reuses a new HTTPS domain and binds it to the original endpoint route. The old domain is unbound but not deleted.</li>
+     * <li>If the domain or certIdentifier parameter is not specified, the existing settings are retained.</li>
+     * <li>Other fields such as component and gatewayType are not updated even if they are specified in the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于更新指定Endpoint的域名和SSL证书信息。</p>
+     * <p>Updates the domain name and SSL certificate information for a specified endpoint.</p>
      * 
      * @param request UpdateServiceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4781,18 +4728,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Updates the domain name and SSL certificate information for a specified endpoint.</p>
      * <ul>
-     * <li>本API支持更新<code>ELEMENT</code>、<code>MATRIX</code>类型的Endpoint。</li>
-     * <li>如果尝试更新其他类型的Endpoint，将返回400错误。</li>
-     * <li>当<code>endpointId</code>不存在或不属于当前用户实例时，将返回404错误。</li>
-     * <li>更新域名时，系统会创建或复用新的HTTPS domain，并将其绑定到原endpoint route上，同时解绑旧domain，但不会删除旧domain。</li>
-     * <li>若不提供<code>domain</code>或<code>certIdentifier</code>参数，则保持原有设置不变。</li>
-     * <li>其他如<code>component</code>、<code>gatewayType</code>等字段即使传入也不会被更新。</li>
+     * <li>This API operation supports updating endpoints of the ELEMENT or MATRIX type.</li>
+     * <li>If you attempt to update an endpoint of another type, a 400 error is returned.</li>
+     * <li>If the endpointId does not exist or does not belong to the current user instance, a 404 error is returned.</li>
+     * <li>When updating a domain name, the system creates or reuses a new HTTPS domain and binds it to the original endpoint route. The old domain is unbound but not deleted.</li>
+     * <li>If the domain or certIdentifier parameter is not specified, the existing settings are retained.</li>
+     * <li>Other fields such as component and gatewayType are not updated even if they are specified in the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于更新指定Endpoint的域名和SSL证书信息。</p>
+     * <p>Updates the domain name and SSL certificate information for a specified endpoint.</p>
      * 
      * @param request UpdateServiceEndpointRequest
      * @return UpdateServiceEndpointResponse
@@ -4803,8 +4750,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新团队</p>
+     * <p>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</p>
      * 
      * @param tmpReq UpdateTeamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4859,8 +4809,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新团队</p>
+     * <p>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</p>
      * 
      * @param request UpdateTeamRequest
      * @return UpdateTeamResponse
@@ -4871,8 +4824,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新用户信息</p>
+     * <p>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</p>
      * 
      * @param request UpdateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4929,8 +4885,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新用户信息</p>
+     * <p>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</p>
      * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse
@@ -4941,8 +4900,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Worker</p>
+     * <p>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</p>
      * 
      * @param tmpReq UpdateWorkerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5053,8 +5015,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Worker</p>
+     * <p>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</p>
      * 
      * @param request UpdateWorkerRequest
      * @return UpdateWorkerResponse

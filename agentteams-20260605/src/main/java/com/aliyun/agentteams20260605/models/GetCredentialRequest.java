@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetCredentialRequest extends TeaModel {
     /**
+     * <p>The AgentTeams instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ami-2ze8x9c6f</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>worker-demo</p>
      */
     @NameInMap("Name")
     public String name;

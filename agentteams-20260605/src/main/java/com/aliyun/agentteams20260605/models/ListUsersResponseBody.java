@@ -4,30 +4,84 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of users on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListUsersResponseBodyItems> items;
 
+    /**
+     * <p>The page size used in this response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination token for the next page. This parameter is null if no more pages exist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-list-users-001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,21 +163,57 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyItems extends TeaModel {
+        /**
+         * <p>The authentication method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
+         */
         @NameInMap("AuthMethod")
         public String authMethod;
 
+        /**
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Demo User</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:demo@example.com">demo@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-test-001</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-user</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The user status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,48 +4,122 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkerRequest extends TeaModel {
+    /**
+     * <p>The Agents configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agents-demo</p>
+     */
     @NameInMap("Agents")
     public String agents;
 
+    /**
+     * <p>The list of channel configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Channels")
     public java.util.List<UpdateWorkerRequestChannels> channels;
 
+    /**
+     * <p>The idempotency token that ensures the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-token-demo</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of credential bindings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Credentials")
     public java.util.List<UpdateWorkerRequestCredentials> credentials;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inst-demo</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The quota configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("LimitConfig")
     public UpdateWorkerRequestLimitConfig limitConfig;
 
+    /**
+     * <p>The list of MCP servers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("McpServers")
     public java.util.List<UpdateWorkerRequestMcpServers> mcpServers;
 
+    /**
+     * <p>The model configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Model")
     public UpdateWorkerRequestModel model;
 
     /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>worker-demo</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The list of skills.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Skills")
     public java.util.List<UpdateWorkerRequestSkills> skills;
 
+    /**
+     * <p>The Soul configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>soul-demo</p>
+     */
     @NameInMap("Soul")
     public String soul;
 
+    /**
+     * <p>The template configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Template")
     public UpdateWorkerRequestTemplate template;
 
+    /**
+     * <p>The Worker version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1.0.0</p>
+     */
     @NameInMap("VersionCode")
     public String versionCode;
 
@@ -159,27 +233,75 @@ public class UpdateWorkerRequest extends TeaModel {
     }
 
     public static class UpdateWorkerRequestChannelsConfig extends TeaModel {
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpl-demo</p>
+         */
         @NameInMap("CardTemplateId")
         public String cardTemplateId;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cli-demo</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extension-demo</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>markdown</p>
+         */
         @NameInMap("MessageType")
         public String messageType;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>robot-demo</p>
+         */
         @NameInMap("RobotCode")
         public String robotCode;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ShowThinking")
         public Boolean showThinking;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ShowToolCalls")
         public Boolean showToolCalls;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("StreamingEnabled")
         public Boolean streamingEnabled;
 
@@ -255,6 +377,12 @@ public class UpdateWorkerRequest extends TeaModel {
     }
 
     public static class UpdateWorkerRequestChannelsSecrets extends TeaModel {
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret-demo</p>
+         */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
@@ -274,15 +402,39 @@ public class UpdateWorkerRequest extends TeaModel {
     }
 
     public static class UpdateWorkerRequestChannels extends TeaModel {
+        /**
+         * <p>The channel configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Config")
         public UpdateWorkerRequestChannelsConfig config;
 
+        /**
+         * <p>Specifies whether the channel is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The channel secrets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Secrets")
         public UpdateWorkerRequestChannelsSecrets secrets;
 
+        /**
+         * <p>The channel type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -326,6 +478,12 @@ public class UpdateWorkerRequest extends TeaModel {
     }
 
     public static class UpdateWorkerRequestCredentials extends TeaModel {
+        /**
+         * <p>The credential name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cred-demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -345,12 +503,30 @@ public class UpdateWorkerRequest extends TeaModel {
     }
 
     public static class UpdateWorkerRequestLimitConfig extends TeaModel {
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token</p>
+         */
         @NameInMap("LimitType")
         public String limitType;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
         @NameInMap("PeriodType")
         public String periodType;
 
+        /**
+         * <p>The usage limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
         @NameInMap("UsageLimit")
         public Long usageLimit;
 
@@ -386,6 +562,12 @@ public class UpdateWorkerRequest extends TeaModel {
     }
 
     public static class UpdateWorkerRequestMcpServers extends TeaModel {
+        /**
+         * <p>The MCP server name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp-server-demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -405,9 +587,21 @@ public class UpdateWorkerRequest extends TeaModel {
     }
 
     public static class UpdateWorkerRequestModel extends TeaModel {
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dashscope</p>
+         */
         @NameInMap("ModelProvider")
         public String modelProvider;
 
@@ -435,12 +629,30 @@ public class UpdateWorkerRequest extends TeaModel {
     }
 
     public static class UpdateWorkerRequestSkills extends TeaModel {
+        /**
+         * <p>The skill label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Code Review.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The skill name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-review</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The skill version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -476,12 +688,30 @@ public class UpdateWorkerRequest extends TeaModel {
     }
 
     public static class UpdateWorkerRequestTemplate extends TeaModel {
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Label.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker-demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("Version")
         public String version;
 

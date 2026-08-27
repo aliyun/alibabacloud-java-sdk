@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class PutCmsWorkspaceRequest extends TeaModel {
     /**
+     * <p>The AgentTeams instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>at-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

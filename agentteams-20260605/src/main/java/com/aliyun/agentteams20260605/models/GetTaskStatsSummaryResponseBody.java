@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class GetTaskStatsSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetTaskStatsSummaryResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +112,21 @@ public class GetTaskStatsSummaryResponseBody extends TeaModel {
     }
 
     public static class GetTaskStatsSummaryResponseBodyDataStatusDistribution extends TeaModel {
+        /**
+         * <p>The number of tasks in this status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -106,15 +154,39 @@ public class GetTaskStatsSummaryResponseBody extends TeaModel {
     }
 
     public static class GetTaskStatsSummaryResponseBodyData extends TeaModel {
+        /**
+         * <p>The average task duration. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000.5</p>
+         */
         @NameInMap("AverageTaskDuration")
         public Double averageTaskDuration;
 
+        /**
+         * <p>The task status distribution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("StatusDistribution")
         public java.util.List<GetTaskStatsSummaryResponseBodyDataStatusDistribution> statusDistribution;
 
+        /**
+         * <p>The total token consumption of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500000</p>
+         */
         @NameInMap("TaskTokenConsumption")
         public Long taskTokenConsumption;
 
+        /**
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("TotalTasks")
         public Integer totalTasks;
 

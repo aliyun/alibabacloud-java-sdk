@@ -4,19 +4,36 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class CreateModelRequest extends TeaModel {
+    /**
+     * <p>The idempotency token that ensures the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ct-xxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The model description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my model</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>Optional. Fuzzy matches instances by name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,22 +43,40 @@ public class CreateModelRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The list of protocols supported by the model, in JSON format.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;openai&quot;]</p>
      */
     @NameInMap("Protocols")
     public java.util.List<String> protocols;
 
+    /**
+     * <p>The provider identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>openai</p>
+     */
     @NameInMap("Provider")
     public String provider;
 
     /**
+     * <p>The ID of the model provider.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-xxx</p>
      */
     @NameInMap("ProviderId")
     public String providerId;
 
     /**
+     * <p>The name of the model provider.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-provider</p>
      */
     @NameInMap("ProviderName")
     public String providerName;

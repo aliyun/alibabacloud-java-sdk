@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class CreateTeamResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public CreateTeamResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-create-team-001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +112,12 @@ public class CreateTeamResponseBody extends TeaModel {
     }
 
     public static class CreateTeamResponseBodyDataTeamMembers extends TeaModel {
+        /**
+         * <p>The member name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>member-user</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -95,18 +137,48 @@ public class CreateTeamResponseBody extends TeaModel {
     }
 
     public static class CreateTeamResponseBodyData extends TeaModel {
+        /**
+         * <p>The team administrator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin-user</p>
+         */
         @NameInMap("AdminName")
         public String adminName;
 
+        /**
+         * <p>The team description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a team.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-test-001</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-team</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The team member list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("TeamMembers")
         public java.util.List<CreateTeamResponseBodyDataTeamMembers> teamMembers;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMcpsRequest extends TeaModel {
     /**
+     * <p>Optional. Fuzzy matches by instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,9 +14,21 @@ public class ListMcpsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum number of records per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token for the next page, used for paginated queries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>next-token-xxx</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

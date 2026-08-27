@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderRequest extends TeaModel {
     /**
+     * <p>The identity provider type. Currently, only DingTalk is supported.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DingTalk</p>
      */
     @NameInMap("IdentityProviderType")
     public String identityProviderType;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agentteams-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

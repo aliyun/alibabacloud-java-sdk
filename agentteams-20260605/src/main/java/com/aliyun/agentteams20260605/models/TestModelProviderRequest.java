@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class TestModelProviderRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The model name. Optional. Filters by fuzzy match on instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,12 +25,17 @@ public class TestModelProviderRequest extends TeaModel {
     public String modelName;
 
     /**
+     * <p>The content of the test prompt.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello, how are you?</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>The provider ID. Optional. Filters by exact match on instance status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +45,11 @@ public class TestModelProviderRequest extends TeaModel {
     public String providerId;
 
     /**
+     * <p>The name of the model provider.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-provider</p>
      */
     @NameInMap("ProviderName")
     public String providerName;

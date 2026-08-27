@@ -5,17 +5,39 @@ import com.aliyun.tea.*;
 
 public class ListCredentialsRequest extends TeaModel {
     /**
+     * <p>The AgentTeams instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ami-2ze8x9c6f</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The keyword for fuzzy match of the credential name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OPENAI</p>
+     */
     @NameInMap("NameLike")
     public String nameLike;
 
+    /**
+     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, use the NextToken value returned in the previous response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

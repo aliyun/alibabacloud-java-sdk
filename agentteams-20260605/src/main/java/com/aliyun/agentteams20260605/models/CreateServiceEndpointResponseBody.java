@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateServiceEndpointResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data returned after the endpoint is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public CreateServiceEndpointResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +32,8 @@ public class CreateServiceEndpointResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +41,8 @@ public class CreateServiceEndpointResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2b7f1c2d-xxx</p>
      */
@@ -36,6 +50,8 @@ public class CreateServiceEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,9 +112,25 @@ public class CreateServiceEndpointResponseBody extends TeaModel {
     }
 
     public static class CreateServiceEndpointResponseBodyData extends TeaModel {
+        /**
+         * <p>Endpoint ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-xxx</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>CONFIGURED: Configured.</li>
+         * <li>DELETED: Deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CONFIGURED</p>
+         */
         @NameInMap("Status")
         public String status;
 

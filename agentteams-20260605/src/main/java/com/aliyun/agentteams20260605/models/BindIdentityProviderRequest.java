@@ -4,27 +4,59 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class BindIdentityProviderRequest extends TeaModel {
+    /**
+     * <p>The client idempotency token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ct-1234abcd</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The identity provider type. Currently, only DingTalk is supported.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DingTalk</p>
      */
     @NameInMap("IdentityProviderType")
     public String identityProviderType;
 
+    /**
+     * <p>The identity provider metadata. In the DingTalk scenario, this is a JSON object string that contains the <code>appKey</code>, <code>appSecret</code>, <code>corpId</code>, <code>encryptKey</code>, and <code>verificationToken</code> fields. This is a sensitive parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;appKey&quot;:&quot;dingxxxx&quot;,&quot;appSecret&quot;:&quot;xxxxx&quot;,&quot;corpId&quot;:&quot;dingxxxx&quot;,&quot;encryptKey&quot;:&quot;xxxxx&quot;,&quot;verificationToken&quot;:&quot;xxxxx&quot;}</p>
+     */
     @NameInMap("IdpMetadata")
     public String idpMetadata;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agentteams-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to enable logon. Default value: <code>true</code>. This default value is used if the parameter is not specified or is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("LoginEnabled")
     public Boolean loginEnabled;
 
+    /**
+     * <p>Specifies whether to enable user synchronization. Default value: <code>false</code>. User synchronization is enabled only when this parameter is explicitly set to <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SyncEnabled")
     public Boolean syncEnabled;
 

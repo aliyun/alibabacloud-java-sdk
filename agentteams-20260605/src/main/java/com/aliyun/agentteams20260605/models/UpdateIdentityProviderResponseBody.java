@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class UpdateIdentityProviderResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public UpdateIdentityProviderResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +112,48 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
     }
 
     public static class UpdateIdentityProviderResponseBodyData extends TeaModel {
+        /**
+         * <p>The binding ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>binding-xxx</p>
+         */
         @NameInMap("BindingId")
         public Long bindingId;
 
+        /**
+         * <p>The identity provider type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
+         */
         @NameInMap("IdentityProviderType")
         public String identityProviderType;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-demo</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Indicates whether logon is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("LoginEnabled")
         public Boolean loginEnabled;
 
+        /**
+         * <p>Indicates whether synchronization is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SyncEnabled")
         public Boolean syncEnabled;
 

@@ -4,10 +4,17 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    /**
+     * <p>The idempotency token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-token-xxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p><code>instanceName</code>: <code>string</code>, required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p><code>instanceSpec</code>: <code>string</code>, optional, default <code>SMALL_X1</code></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,12 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceSpec;
 
     /**
+     * <p><code>networkType</code>: <code>string</code>, optional, default <code>PRIVATE_NET</code><br>Valid values:</p>
+     * <ul>
+     * <li><code>PRIVATE_PUBNET</code></li>
+     * <li><code>PRIVATE_NET</code></li>
+     * <li><code>PUB_NET</code></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +48,17 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The billing method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Subscription</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
     /**
+     * <p><code>vpcId</code>: <code>string</code>, required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +67,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The zones.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("Zones")
     public java.util.List<CreateInstanceRequestZones> zones;
 
@@ -111,9 +138,21 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestZones extends TeaModel {
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1xxxx</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

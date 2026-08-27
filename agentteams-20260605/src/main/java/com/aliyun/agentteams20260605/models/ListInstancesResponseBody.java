@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
+     * <p><strong>Business code</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of data on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListInstancesResponseBodyItems> items;
 
     /**
+     * <p><strong>The page size used in this response</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +32,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p><strong>Response message</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +41,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token for the next page. This value is typically <code>null</code> when no more pages are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +50,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>request-1</p>
      */
@@ -43,6 +59,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p><strong>Indicates whether the request is successful</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +68,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>23</p>
      */
@@ -126,9 +146,21 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyItemsZones extends TeaModel {
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1xxxx</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -156,30 +188,90 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-1</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AgentTeams-demo</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The instance specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>small.x1</p>
+         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <p>The OSS bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-bucket</p>
+         */
         @NameInMap("OssBucketName")
         public String ossBucketName;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1xxxx</p>
+         */
         @NameInMap("SecurityGroup")
         public String securityGroup;
 
+        /**
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li>RUNNING: running</li>
+         * <li>STOPPED: stopped</li>
+         * <li>PENDING: being created</li>
+         * <li>ERROR: error</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1xxxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The list of vSwitch IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("Zones")
         public java.util.List<ListInstancesResponseBodyItemsZones> zones;
 

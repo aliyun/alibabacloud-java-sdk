@@ -4,27 +4,59 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class UpdateIdentityProviderRequest extends TeaModel {
+    /**
+     * <p>The client idempotency token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ct-1234abcd</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The identity provider type. Currently, only DingTalk is supported.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DingTalk</p>
      */
     @NameInMap("IdentityProviderType")
     public String identityProviderType;
 
+    /**
+     * <p>The identity provider metadata. In the DingTalk scenario, this is a JSON object string that contains the appKey, appSecret, corpId, encryptKey, and verificationToken fields.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;appKey&quot;:&quot;dingxxxx&quot;,&quot;appSecret&quot;:&quot;xxxxx&quot;,&quot;corpId&quot;:&quot;dingxxxx&quot;,&quot;encryptKey&quot;:&quot;xxxxx&quot;,&quot;verificationToken&quot;:&quot;xxxxx&quot;}</p>
+     */
     @NameInMap("IdpMetadata")
     public String idpMetadata;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agentteams-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to enable logon. If this parameter is not specified, the existing configuration is retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("LoginEnabled")
     public Boolean loginEnabled;
 
+    /**
+     * <p>Specifies whether to enable user synchronization. If this parameter is not specified, the existing configuration is retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SyncEnabled")
     public Boolean syncEnabled;
 

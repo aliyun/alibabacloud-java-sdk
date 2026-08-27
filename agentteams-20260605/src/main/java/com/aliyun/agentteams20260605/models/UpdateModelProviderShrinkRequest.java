@@ -5,37 +5,69 @@ import com.aliyun.tea.*;
 
 public class UpdateModelProviderShrinkRequest extends TeaModel {
     /**
+     * <p>The address of the model provider.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://api.example.com">https://api.example.com</a></p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
+     * <p>The list of API keys for the model provider, in JSON format.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;sk-xxx&quot;]</p>
      */
     @NameInMap("ApiKeys")
     public String apiKeysShrink;
 
+    /**
+     * <p>The idempotency token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ct-xxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the model provider.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>updated provider</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The model provider ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-xxx</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The list of protocols supported by the model provider, in JSON format.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;openai&quot;]</p>
      */
     @NameInMap("Protocols")
     public String protocolsShrink;

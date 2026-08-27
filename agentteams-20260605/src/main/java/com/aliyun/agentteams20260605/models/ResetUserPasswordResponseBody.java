@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ResetUserPasswordResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public ResetUserPasswordResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-reset-password-001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +112,48 @@ public class ResetUserPasswordResponseBody extends TeaModel {
     }
 
     public static class ResetUserPasswordResponseBodyData extends TeaModel {
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-test-001</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-user</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The password after the reset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewP@ssw0rd456</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <p>The user principal identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sub-xxx</p>
+         */
         @NameInMap("Subject")
         public String subject;
 
+        /**
+         * <p>The user pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool-xxx</p>
+         */
         @NameInMap("UserPoolId")
         public String userPoolId;
 

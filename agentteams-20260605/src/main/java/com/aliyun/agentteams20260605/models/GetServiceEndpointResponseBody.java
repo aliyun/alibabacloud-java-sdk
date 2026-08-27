@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetServiceEndpointResponseBody extends TeaModel {
     /**
+     * <p>The response code returned on success.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetServiceEndpointResponseBodyData data;
 
     /**
+     * <p><strong>message</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +32,8 @@ public class GetServiceEndpointResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p><strong>requestId</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>req-xxx</p>
      */
@@ -29,6 +41,8 @@ public class GetServiceEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,39 +95,126 @@ public class GetServiceEndpointResponseBody extends TeaModel {
     }
 
     public static class GetServiceEndpointResponseBodyData extends TeaModel {
+        /**
+         * <p>The certificate identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-xxx</p>
+         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
+        /**
+         * <p>The component type. Valid values:</p>
+         * <ul>
+         * <li>ELEMENT: element</li>
+         * <li>TUNNEL: tunnel</li>
+         * <li>MATRIX: matrix</li>
+         * <li>WORKER: worker</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WORKER</p>
+         */
         @NameInMap("Component")
         public String component;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>matrix.example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The domain name type. Valid values:</p>
+         * <ul>
+         * <li>BUILTIN: built-in</li>
+         * <li>CUSTOM: custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
+         */
         @NameInMap("DomainType")
         public String domainType;
 
+        /**
+         * <p>Endpoint ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mep-test0001</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>matrix-service</p>
+         */
         @NameInMap("EndpointName")
         public String endpointName;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-demo</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li>NONE: none</li>
+         * <li>INTRANET: internal network</li>
+         * <li>INTERNET: Internet</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INTERNET</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONFIGURED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

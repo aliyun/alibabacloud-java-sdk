@@ -4,20 +4,36 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class QuerySupportedZonesResponseBody extends TeaModel {
+    /**
+     * <p>The response code, which is <code>SUCCESS</code> when the operation succeeds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The HTTP status code, which is <code>200</code> when the operation succeeds.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of zones.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Items")
     public java.util.List<QuerySupportedZonesResponseBodyItems> items;
 
     /**
+     * <p>The number of entries returned in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -25,22 +41,44 @@ public class QuerySupportedZonesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message, which is <code>success</code> when the operation succeeds.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The token for the next page, which is <code>null</code> because this operation does not support pagination.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID, which is <code>null</code> when the operation succeeds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
+     * <p>The total number of zones.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -125,6 +163,12 @@ public class QuerySupportedZonesResponseBody extends TeaModel {
     }
 
     public static class QuerySupportedZonesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,18 +4,48 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ListWorkerStatsDetailsRequest extends TeaModel {
+    /**
+     * <p>The end time for statistics. This value is a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1720054400000</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inst-demo</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum number of entries to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token used to query the next page of data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The start time for statistics. This value is a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1719504000000</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

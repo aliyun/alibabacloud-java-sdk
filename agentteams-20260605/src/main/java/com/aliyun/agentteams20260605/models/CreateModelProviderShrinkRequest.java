@@ -5,30 +5,55 @@ import com.aliyun.tea.*;
 
 public class CreateModelProviderShrinkRequest extends TeaModel {
     /**
+     * <p>The address of the model provider.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://api.example.com">https://api.example.com</a></p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
+     * <p>The list of API keys for the model provider, in JSON format.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;sk-xxx&quot;]</p>
      */
     @NameInMap("ApiKeys")
     public String apiKeysShrink;
 
+    /**
+     * <p>The idempotency token that ensures the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ct-xxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the model provider.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my provider</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>Optional. The instance name for fuzzy matching.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,12 +63,17 @@ public class CreateModelProviderShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The list of protocols supported by the model provider, in JSON format.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;openai&quot;]</p>
      */
     @NameInMap("Protocols")
     public String protocolsShrink;
 
     /**
+     * <p>Optional. The instance status for exact matching.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceAsyncTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the AgentTeams instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,19 +15,37 @@ public class GetInstanceAsyncTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page size. Default value: <code>100</code>. Valid values: <code>1</code> to <code>100</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token for the next page. Do not specify this parameter for the first request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The task status filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PAUSED</p>
+     */
     @NameInMap("Status")
     public String status;
 
     /**
+     * <p>The task code. If not specified, all asynchronous tasks are queried. You can pass in a <code>TaskCode</code> to filter results. To query multiple task types, submit separate requests.</p>
+     * <p>Currently supported <code>taskCode</code> values include: <code>CreateInstance</code>, <code>RenewInstance</code>, <code>UpdateInstance</code>, <code>ReleaseInstance</code>, <code>ConfigureNatGateway</code>, <code>UpgradeInstance</code>, <code>CreateWorkerEndpoint</code>, and <code>DeleteWorkerEndpoint</code>.</p>
+     * <p>Legacy task codes such as <code>LIFECYCLE_MAGIC_PAY_ORDER_CALLBACK_CREATE</code> are supported for backward compatibility, but <code>CreateInstance</code> is recommended.</p>
+     * 
      * <strong>example:</strong>
      * <p>LIFECYCLE_MAGIC_PAY_ORDER_CALLBACK_CREATE</p>
      */

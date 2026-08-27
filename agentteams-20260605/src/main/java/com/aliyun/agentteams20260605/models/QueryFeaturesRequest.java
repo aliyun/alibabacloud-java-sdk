@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryFeaturesRequest extends TeaModel {
     /**
+     * <p>The AgentTeams instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class QueryFeaturesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The target resource name. Required for <code>WORKER</code>, <code>TEAM</code>, and <code>HUMAN</code>. Not required for <code>INSTANCE</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>worker-a</p>
      */
@@ -21,6 +24,7 @@ public class QueryFeaturesRequest extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The query target type: <code>INSTANCE</code> / <code>WORKER</code> / <code>TEAM</code> / <code>HUMAN</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

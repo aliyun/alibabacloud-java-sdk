@@ -4,20 +4,40 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelRequest extends TeaModel {
+    /**
+     * <p>The idempotency token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ct-xxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The model description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>updated model</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The model ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-xxx</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

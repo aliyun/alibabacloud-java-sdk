@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class QueryFeaturesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The queried feature information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public QueryFeaturesResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +32,8 @@ public class QueryFeaturesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +41,8 @@ public class QueryFeaturesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -36,6 +50,8 @@ public class QueryFeaturesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,21 +112,67 @@ public class QueryFeaturesResponseBody extends TeaModel {
     }
 
     public static class QueryFeaturesResponseBodyDataFeatures extends TeaModel {
+        /**
+         * <p>The feature description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Supports mounting an OSS bucket to an Agent container.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The feature display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS Mount.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The feature code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS_MOUNT</p>
+         */
         @NameInMap("FeatureCode")
         public String featureCode;
 
+        /**
+         * <p>Indicates whether the feature is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Supported")
         public Boolean supported;
 
+        /**
+         * <p>The detailed reason why the feature is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The current base version does not support this feature.</p>
+         */
         @NameInMap("UnsupportedReason")
         public String unsupportedReason;
 
+        /**
+         * <p>The reason code for why the feature is not supported. Valid values:</p>
+         * <ul>
+         * <li>BASE_VERSION_UNSUPPORTED: The base version does not support this feature.</li>
+         * <li>WORKER_VERSION_UNSUPPORTED: The worker version does not support this feature.</li>
+         * <li>FEATURE_DISABLED: The feature is disabled.</li>
+         * <li>FEATURE_DEPRECATED: The feature is deprecated.</li>
+         * <li>OVERRIDDEN_DENY: The feature is denied by an override.</li>
+         * <li>CUSTOM_RULE_UNSUPPORTED: A custom rule does not support this feature.</li>
+         * <li>VERSION_METADATA_MISSING: The version metadata is missing.</li>
+         * <li>RULE_NOT_MATCHED: No rule is matched.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BASE_VERSION_UNSUPPORTED</p>
+         */
         @NameInMap("UnsupportedReasonCode")
         public String unsupportedReasonCode;
 
@@ -170,15 +232,45 @@ public class QueryFeaturesResponseBody extends TeaModel {
     }
 
     public static class QueryFeaturesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of features.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("Features")
         public java.util.List<QueryFeaturesResponseBodyDataFeatures> features;
 
+        /**
+         * <p>The AgentTeams instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-xxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The target resource name. Required for <code>WORKER</code>, <code>TEAM</code>, and <code>HUMAN</code>. Not required for <code>INSTANCE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The query target type. Valid values:</p>
+         * <ul>
+         * <li>INSTANCE: instance level</li>
+         * <li>WORKER: worker level</li>
+         * <li>TEAM: team level</li>
+         * <li>HUMAN: human level</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
+         */
         @NameInMap("TargetScope")
         public String targetScope;
 

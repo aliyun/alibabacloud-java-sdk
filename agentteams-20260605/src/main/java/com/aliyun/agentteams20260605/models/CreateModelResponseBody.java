@@ -4,18 +4,48 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class CreateModelResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public CreateModelResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +95,84 @@ public class CreateModelResponseBody extends TeaModel {
     }
 
     public static class CreateModelResponseBodyData extends TeaModel {
+        /**
+         * <p>The creation time, in millisecond timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1718000000000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my model</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-xxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-model</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of protocols supported by the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;openai&quot;]</p>
+         */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
+        /**
+         * <p>The provider identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openai</p>
+         */
         @NameInMap("Provider")
         public String provider;
 
+        /**
+         * <p>The name of the model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-provider</p>
+         */
         @NameInMap("ProviderName")
         public String providerName;
 
+        /**
+         * <p>The update time, in millisecond timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1718000000000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

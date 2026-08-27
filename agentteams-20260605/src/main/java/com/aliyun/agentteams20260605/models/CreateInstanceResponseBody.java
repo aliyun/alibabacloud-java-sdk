@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
+     * <p><strong>The response code.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public CreateInstanceResponseBodyData data;
 
     /**
+     * <p><strong>The HTTP status code.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,12 +32,17 @@ public class CreateInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>InstanceId</p>
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agentteams-test-001</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -35,6 +50,8 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req-create-001</p>
      */
@@ -42,6 +59,8 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p><strong>Indicates whether the request was successful.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -111,6 +130,8 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     public static class CreateInstanceResponseBodyData extends TeaModel {
         /**
+         * <p><strong>The instance ID.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>agentteams-test-001</p>
          */
@@ -118,6 +139,8 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p><strong>The order ID.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>open-create-agentteams-test-001-req-create-001</p>
          */

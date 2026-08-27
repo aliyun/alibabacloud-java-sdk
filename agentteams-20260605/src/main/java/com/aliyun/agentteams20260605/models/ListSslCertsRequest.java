@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSslCertsRequest extends TeaModel {
     /**
+     * <p>The AgentTeams instance ID. This parameter is used to verify the ownership of the current user\&quot;s instance and to query certificates by the instance region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,9 +14,21 @@ public class ListSslCertsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum number of records to return in this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token used to retrieve the next page of data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

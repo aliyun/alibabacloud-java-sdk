@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class PutCmsWorkspaceResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public PutCmsWorkspaceResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +112,21 @@ public class PutCmsWorkspaceResponseBody extends TeaModel {
     }
 
     public static class PutCmsWorkspaceResponseBodyData extends TeaModel {
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req-xxx</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>magic-workspace-at-xxx</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListServiceEndpointsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListServiceEndpointsResponseBodyItems> items;
 
     /**
+     * <p>The maximum number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,16 +32,26 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>nextToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -39,6 +59,8 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -46,6 +68,8 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>totalCount</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -122,9 +146,21 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListServiceEndpointsResponseBodyItemsEndpointConfigAuth extends TeaModel {
+        /**
+         * <p>API Key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("ApiKey")
         public String apiKey;
 
+        /**
+         * <p>The API key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authorization</p>
+         */
         @NameInMap("ApiKeyName")
         public String apiKeyName;
 
@@ -152,6 +188,12 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListServiceEndpointsResponseBodyItemsEndpointConfig extends TeaModel {
+        /**
+         * <p>The authentication configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Auth")
         public ListServiceEndpointsResponseBodyItemsEndpointConfigAuth auth;
 
@@ -172,6 +214,8 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
 
     public static class ListServiceEndpointsResponseBodyItems extends TeaModel {
         /**
+         * <p>The certificate identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>cert-xxx</p>
          */
@@ -179,16 +223,26 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String certIdentifier;
 
         /**
+         * <p>The endpoint component. Valid values: <code>ELEMENT</code>, <code>MATRIX</code>, <code>WORKER</code>, and <code>TUNNEL</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>MATRIX</p>
          */
         @NameInMap("Component")
         public String component;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>matrix.example.com</p>
          */
@@ -196,29 +250,53 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The domain name type. Valid values: <code>BUILTIN</code> and <code>CUSTOM</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */
         @NameInMap("DomainType")
         public String domainType;
 
+        /**
+         * <p>The configuration information of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("EndpointConfig")
         public ListServiceEndpointsResponseBodyItemsEndpointConfig endpointConfig;
 
+        /**
+         * <p>Endpoint ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-xxx</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
         /**
+         * <p>The service name. Exact match is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>matrix-service</p>
          */
         @NameInMap("EndpointName")
         public String endpointName;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-cn-xxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
+         * <p>The network type. Valid values: <code>INTRANET</code> and <code>INTERNET</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
          */
@@ -226,12 +304,20 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String networkType;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>CONFIGURED</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

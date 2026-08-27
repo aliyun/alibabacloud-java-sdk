@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class UpdateTeamResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public UpdateTeamResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-update-team-001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +112,12 @@ public class UpdateTeamResponseBody extends TeaModel {
     }
 
     public static class UpdateTeamResponseBodyDataTeamMembers extends TeaModel {
+        /**
+         * <p>The member name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>member-user</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -95,30 +137,84 @@ public class UpdateTeamResponseBody extends TeaModel {
     }
 
     public static class UpdateTeamResponseBodyData extends TeaModel {
+        /**
+         * <p>The team administrator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin-user</p>
+         */
         @NameInMap("AdminName")
         public String adminName;
 
+        /**
+         * <p>The time when the team was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-01T12:00:00</p>
+         */
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>The team description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Updated team description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-test-001</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The team leader name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>leader-user</p>
+         */
         @NameInMap("LeaderName")
         public String leaderName;
 
+        /**
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-team</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The team member list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("TeamMembers")
         public java.util.List<UpdateTeamResponseBodyDataTeamMembers> teamMembers;
 
+        /**
+         * <p>The time when the team was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-10T12:00:00</p>
+         */
         @NameInMap("UpdatedAt")
         public String updatedAt;
 
+        /**
+         * <p>The list of Worker names associated with the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;worker-1&quot;]</p>
+         */
         @NameInMap("WorkerNames")
         public java.util.List<String> workerNames;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceAsyncTaskRequest extends TeaModel {
     /**
+     * <p>The AgentTeams instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class UpdateInstanceAsyncTaskRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to resume the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsResume")
     public Boolean isResume;
 
     /**
+     * <p>The asynchronous task code. Only <code>agentteams:pay-order:create</code> is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,7 @@ public class UpdateInstanceAsyncTaskRequest extends TeaModel {
     public String taskCode;
 
     /**
+     * <p>The asynchronous task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

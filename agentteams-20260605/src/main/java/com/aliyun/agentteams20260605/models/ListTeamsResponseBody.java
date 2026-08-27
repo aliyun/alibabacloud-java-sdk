@@ -4,30 +4,84 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ListTeamsResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of team summaries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListTeamsResponseBodyItems> items;
 
+    /**
+     * <p>The maximum number of records returned in this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination token for the next page. This parameter is empty if no more data is available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-list-teams-001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records that match the specified conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,6 +163,12 @@ public class ListTeamsResponseBody extends TeaModel {
     }
 
     public static class ListTeamsResponseBodyItemsTeamMembers extends TeaModel {
+        /**
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-team</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -128,30 +188,84 @@ public class ListTeamsResponseBody extends TeaModel {
     }
 
     public static class ListTeamsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The name of the team administrator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin-user</p>
+         */
         @NameInMap("AdminName")
         public String adminName;
 
+        /**
+         * <p>The time when the team was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-01T12:00:00</p>
+         */
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>The team description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a team.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-test-001</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the team leader.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>leader-user</p>
+         */
         @NameInMap("LeaderName")
         public String leaderName;
 
+        /**
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-team</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The running status of the team. This parameter is empty when the team is running normally.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deleting</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of team members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[...]</p>
+         */
         @NameInMap("TeamMembers")
         public java.util.List<ListTeamsResponseBodyItemsTeamMembers> teamMembers;
 
+        /**
+         * <p>The list of Worker names associated with the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;worker-1&quot;]</p>
+         */
         @NameInMap("WorkerNames")
         public java.util.List<String> workerNames;
 

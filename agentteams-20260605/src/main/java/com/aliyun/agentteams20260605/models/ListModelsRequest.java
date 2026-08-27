@@ -4,10 +4,17 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ListModelsRequest extends TeaModel {
+    /**
+     * <p>The model ID used to query a specific model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-xxx</p>
+     */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>Optional. Fuzzy match by instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,15 +23,39 @@ public class ListModelsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum number of entries to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>worker-demo</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The pagination token used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nt-xxx</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The model provider name used for filtering.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-provider</p>
+     */
     @NameInMap("ProviderName")
     public String providerName;
 

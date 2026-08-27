@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceAsyncTaskResponseBody extends TeaModel {
     /**
+     * <p>SUCCESS</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -12,16 +14,26 @@ public class GetInstanceAsyncTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned list. The <code>items</code> array may contain multiple tasks with the same <code>taskCode</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Items")
     public java.util.List<GetInstanceAsyncTaskResponseBodyItems> items;
 
     /**
+     * <p>The page size. Default value: 100. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -29,19 +41,35 @@ public class GetInstanceAsyncTaskResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>success</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The token for the next page. This parameter is not returned for the first request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -49,6 +77,8 @@ public class GetInstanceAsyncTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -133,24 +163,75 @@ public class GetInstanceAsyncTaskResponseBody extends TeaModel {
     }
 
     public static class GetInstanceAsyncTaskResponseBodyItemsRecoveryMessage extends TeaModel {
+        /**
+         * <p>The error code. Valid values:</p>
+         * <ul>
+         * <li>CMS_WORKSPACE_QUOTA_EXCEEDED: CMS workspace quota exceeded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CMS_WORKSPACE_QUOTA_EXCEEDED</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The specific error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CMS workspace quota exceeded</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The time when the error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-01T12:00:00Z</p>
+         */
         @NameInMap("OccurredAt")
         public String occurredAt;
 
+        /**
+         * <p>The suggested recovery action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Please increase the CMS workspace quota or clean up unused workspaces.</p>
+         */
         @NameInMap("RecoverySuggestion")
         public String recoverySuggestion;
 
+        /**
+         * <p>Indicates whether the task can be retried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Retryable")
         public Boolean retryable;
 
+        /**
+         * <p>The error source. Valid values:</p>
+         * <ul>
+         * <li>CMS: content management system.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CMS</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The recovery type. Valid values:</p>
+         * <ul>
+         * <li>ERROR_RECOVERY: error recovery.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR_RECOVERY</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -218,21 +299,67 @@ public class GetInstanceAsyncTaskResponseBody extends TeaModel {
     }
 
     public static class GetInstanceAsyncTaskResponseBodyItems extends TeaModel {
+        /**
+         * <p>The current step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create-cms-workspace</p>
+         */
         @NameInMap("CurrentStep")
         public String currentStep;
 
+        /**
+         * <p>The recovery message returned to the user when the task status is paused.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("RecoveryMessage")
         public GetInstanceAsyncTaskResponseBodyItemsRecoveryMessage recoveryMessage;
 
+        /**
+         * <p>The task code. Valid values:</p>
+         * <ul>
+         * <li>LIFECYCLE_MAGIC_PAY_ORDER_CALLBACK_CREATE: instance creation task.</li>
+         * <li>MAGIC_BIND_IDENTITY_PROVIDER: upstream identity provider binding task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LIFECYCLE_MAGIC_PAY_ORDER_CALLBACK_CREATE</p>
+         */
         @NameInMap("TaskCode")
         public String taskCode;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-xxx</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>PAUSED: paused.</li>
+         * <li>RUNNING: running.</li>
+         * <li>SUCCEEDED: succeeded.</li>
+         * <li>FAILED: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAUSED</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <p>Indicates whether the task is waiting for user action. When <code>taskStatus = PAUSED</code>, this value is true and <code>recoveryMessage</code> is returned to display recovery instructions to the user. When the task is not paused, this value is false and <code>recoveryMessage</code> is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("WaitingForUserAction")
         public Boolean waitingForUserAction;
 

@@ -4,12 +4,30 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class GetWorkerStatsSummaryRequest extends TeaModel {
+    /**
+     * <p>The end time for statistics collection. This value is a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1720054400000</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inst-demo</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The start time for statistics collection. This value is a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1719504000000</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

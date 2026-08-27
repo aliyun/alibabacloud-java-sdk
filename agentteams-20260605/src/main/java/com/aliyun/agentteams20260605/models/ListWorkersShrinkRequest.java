@@ -4,42 +4,112 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ListWorkersShrinkRequest extends TeaModel {
+    /**
+     * <p>The Agent runtime type filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Qwenpaw</p>
+     */
     @NameInMap("AgentType")
     public String agentType;
 
+    /**
+     * <p>The credential name filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cred-demo</p>
+     */
     @NameInMap("Credential")
     public String credential;
 
+    /**
+     * <p>The team group filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Group")
     public String groupShrink;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inst-demo</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The MCP server name filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mcp-demo</p>
+     */
     @NameInMap("Mcp")
     public String mcp;
 
+    /**
+     * <p>The model name filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qwen-max</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>The model provider filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dashscope</p>
+     */
     @NameInMap("ModelProvider")
     public String modelProvider;
 
+    /**
+     * <p>The fuzzy match filter for the Worker name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>worker</p>
+     */
     @NameInMap("NameLike")
     public String nameLike;
 
+    /**
+     * <p>The pagination token used to query the next page of data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The template filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Template")
     public String templateShrink;
 
+    /**
+     * <p>The Worker version number filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1.0.0</p>
+     */
     @NameInMap("VersionCode")
     public String versionCode;
 

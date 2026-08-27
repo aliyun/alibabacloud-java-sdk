@@ -4,18 +4,48 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class GetModelProviderResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetModelProviderResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,36 +95,102 @@ public class GetModelProviderResponseBody extends TeaModel {
     }
 
     public static class GetModelProviderResponseBodyData extends TeaModel {
+        /**
+         * <p>The address of the model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://api.example.com">https://api.example.com</a></p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The list of API keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sk-xxx&quot;]</p>
+         */
         @NameInMap("ApiKeys")
         public java.util.List<String> apiKeys;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-11T10:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The deployment status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEPLOYED</p>
+         */
         @NameInMap("DeployStatus")
         public String deployStatus;
 
+        /**
+         * <p>The description of the model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my provider</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-xxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-provider</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of protocols supported by the model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;openai&quot;]</p>
+         */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
+        /**
+         * <p>The provider identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openai</p>
+         */
         @NameInMap("Provider")
         public String provider;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

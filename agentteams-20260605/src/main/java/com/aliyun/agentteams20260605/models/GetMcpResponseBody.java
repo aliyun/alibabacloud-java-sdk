@@ -4,18 +4,48 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class GetMcpResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetMcpResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,39 +95,111 @@ public class GetMcpResponseBody extends TeaModel {
     }
 
     public static class GetMcpResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of MCP server addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<a href="https://example.com/mcp%22%5D">https://example.com/mcp&quot;]</a></p>
+         */
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
+        /**
+         * <p>The authentication information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;bearer&quot;,&quot;token&quot;:&quot;xxx&quot;}</p>
+         */
         @NameInMap("AuthConfig")
         public String authConfig;
 
+        /**
+         * <p>Indicates whether authentication is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AuthEnabled")
         public Boolean authEnabled;
 
+        /**
+         * <p>The creation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECT_PROXY</p>
+         */
         @NameInMap("CreateType")
         public String createType;
 
+        /**
+         * <p>The deployment status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEPLOYED</p>
+         */
         @NameInMap("DeployStatus")
         public String deployStatus;
 
+        /**
+         * <p>The MCP server description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an MCP server.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The MCP server ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp-xxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The MCP server configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("McpServerConfig")
         public String mcpServerConfig;
 
+        /**
+         * <p>The MCP server name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-mcp-server</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>streamable</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The Swagger configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;url&quot;:&quot;<a href="https://example.com/swagger.json%22%7D">https://example.com/swagger.json&quot;}</a></p>
+         */
         @NameInMap("SwaggerConfig")
         public String swaggerConfig;
 
+        /**
+         * <p>The MCP server access URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

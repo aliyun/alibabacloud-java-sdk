@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceAsyncTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code in the success response.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the asynchronous task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public UpdateInstanceAsyncTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +32,26 @@ public class UpdateInstanceAsyncTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p><strong>message</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p><strong>requestId</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -92,24 +112,76 @@ public class UpdateInstanceAsyncTaskResponseBody extends TeaModel {
     }
 
     public static class UpdateInstanceAsyncTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-01T12:00:00Z</p>
+         */
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>The current step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create-cms-workspace</p>
+         */
         @NameInMap("CurrentStep")
         public String currentStep;
 
+        /**
+         * <p>The time when the task was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-01T12:05:00Z</p>
+         */
         @NameInMap("ModifiedAt")
         public String modifiedAt;
 
+        /**
+         * <p>The asynchronous task code. Only \&quot;agentteams:pay-order:create\&quot; is supported. Valid values:</p>
+         * <ul>
+         * <li>agentteams:pay-order:create: create instance task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams:pay-order:create</p>
+         */
         @NameInMap("TaskCode")
         public String taskCode;
 
+        /**
+         * <p>The asynchronous task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-xxx</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The asynchronous task status. Valid values:</p>
+         * <ul>
+         * <li>PENDING: pending.</li>
+         * <li>RUNNING: running.</li>
+         * <li>PAUSED: paused.</li>
+         * <li>COMPLETED: completed.</li>
+         * <li>FAILED: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <p>Indicates whether the task is waiting for user action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("WaitingForUserAction")
         public Boolean waitingForUserAction;
 

@@ -4,54 +4,156 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkerShrinkRequest extends TeaModel {
+    /**
+     * <p>The Agent runtime type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Qwenpaw</p>
+     */
     @NameInMap("AgentType")
     public String agentType;
 
+    /**
+     * <p>The Agents configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agents-demo</p>
+     */
     @NameInMap("Agents")
     public String agents;
 
+    /**
+     * <p>The list of channel configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Channels")
     public String channelsShrink;
 
+    /**
+     * <p>The idempotency token that ensures the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-token-demo</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of credential bindings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Credentials")
     public String credentialsShrink;
 
+    /**
+     * <p>The deployment type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SelfHosted</p>
+     */
     @NameInMap("DeployType")
     public String deployType;
 
+    /**
+     * <p>The list of team groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Groups")
     public String groupsShrink;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inst-demo</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The quota configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("LimitConfig")
     public String limitConfigShrink;
 
+    /**
+     * <p>The list of MCP servers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("McpServers")
     public String mcpServersShrink;
 
+    /**
+     * <p>The model configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Model")
     public String modelShrink;
 
+    /**
+     * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>worker-demo</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The list of skills.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Skills")
     public String skillsShrink;
 
+    /**
+     * <p>The Soul configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>soul-demo</p>
+     */
     @NameInMap("Soul")
     public String soul;
 
+    /**
+     * <p>The list of sub-agents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Subagents")
     public String subagentsShrink;
 
+    /**
+     * <p>The template configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Template")
     public String templateShrink;
 
+    /**
+     * <p>The Worker version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1.0.0</p>
+     */
     @NameInMap("VersionCode")
     public String versionCode;
 

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetMcpRequest extends TeaModel {
     /**
+     * <p>The MCP server ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mcp-xxx</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>Optional. The instance name for fuzzy matching.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

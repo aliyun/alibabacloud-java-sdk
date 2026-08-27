@@ -4,27 +4,75 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ListMcpToolsResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of tools.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListMcpToolsResponseBodyItems> items;
 
+    /**
+     * <p>The maximum number of records per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The token for the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>next-token-xxx</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -98,15 +146,39 @@ public class ListMcpToolsResponseBody extends TeaModel {
     }
 
     public static class ListMcpToolsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The tool description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Perform a search operation.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The input parameter schema of the tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;query&quot;:{&quot;type&quot;:&quot;string&quot;}}}</p>
+         */
         @NameInMap("InputSchema")
         public String inputSchema;
 
+        /**
+         * <p>The tool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>search</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The tool title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Search tool.</p>
+         */
         @NameInMap("Title")
         public String title;
 

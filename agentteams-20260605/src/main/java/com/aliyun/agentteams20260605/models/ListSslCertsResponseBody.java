@@ -4,19 +4,45 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class ListSslCertsResponseBody extends TeaModel {
+    /**
+     * <p>The error code. This field is typically empty when the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of certificates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[...]</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListSslCertsResponseBodyItems> items;
 
+    /**
+     * <p>The maximum number of records to return in this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The pagination token for the next page. The value is <code>null</code> if no more pages are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -24,6 +50,8 @@ public class ListSslCertsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req-123</p>
      */
@@ -31,6 +59,8 @@ public class ListSslCertsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -38,6 +68,8 @@ public class ListSslCertsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of certificates.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -115,6 +147,8 @@ public class ListSslCertsResponseBody extends TeaModel {
 
     public static class ListSslCertsResponseBodyItems extends TeaModel {
         /**
+         * <p>The certificate algorithm.</p>
+         * 
          * <strong>example:</strong>
          * <p>RSA</p>
          */
@@ -122,6 +156,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public String algorithm;
 
         /**
+         * <p>The certificate ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -129,6 +165,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public Long certId;
 
         /**
+         * <p>The certificate identifier used by APIG. Pass this value when creating or updating an HTTPS domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>22584627-cn-hangzhou</p>
          */
@@ -136,6 +174,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public String certIdentifier;
 
         /**
+         * <p>The certificate name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example-cert</p>
          */
@@ -143,6 +183,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public String certName;
 
         /**
+         * <p>Indicates whether the certificate chain is complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -150,6 +192,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public Boolean chainCompleted;
 
         /**
+         * <p>The certificate common name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -157,6 +201,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public String commonName;
 
         /**
+         * <p>The certificate domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -164,6 +210,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The certificate issuer.</p>
+         * 
          * <strong>example:</strong>
          * <p>DigiCert</p>
          */
@@ -171,6 +219,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public String issuer;
 
         /**
+         * <p>The expiration timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1893456000000</p>
          */
@@ -178,6 +228,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public Long notAfterTimestamp;
 
         /**
+         * <p>The effective period UNIX timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1704067200000</p>
          */

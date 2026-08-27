@@ -4,18 +4,48 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class CreateMcpResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public CreateMcpResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,27 +95,75 @@ public class CreateMcpResponseBody extends TeaModel {
     }
 
     public static class CreateMcpResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of MCP server addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<a href="https://example.com/mcp%22%5D">https://example.com/mcp&quot;]</a></p>
+         */
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
+        /**
+         * <p>The creation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("CreateType")
         public String createType;
 
+        /**
+         * <p>The deployment status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEPLOYED</p>
+         */
         @NameInMap("DeployStatus")
         public String deployStatus;
 
+        /**
+         * <p>The description of the MCP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an MCP server.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The export task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>418273109406496841-cn-shenzhen</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The MCP server configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("McpServerConfig")
         public String mcpServerConfig;
 
+        /**
+         * <p>The MCP server name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-mcp-server</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>streamable</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceEndpointResponseBody extends TeaModel {
     /**
+     * <p>The business response code. The value is <code>SUCCESS</code> upon success.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -12,6 +14,8 @@ public class DeleteServiceEndpointResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The value is <code>true</code> when the deletion is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class DeleteServiceEndpointResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p><strong>Response message</strong>, which is fixed to <code>success</code> upon success.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class DeleteServiceEndpointResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p><strong>Request ID</strong>, which preferentially uses the <code>requestId</code> from the request context, and then the <code>traceId</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -33,6 +41,8 @@ public class DeleteServiceEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -4,19 +4,45 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The error code. This parameter is null if the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The updated endpoint information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public UpdateServiceEndpointResponseBodyData data;
 
+    /**
+     * <p>The error message. This parameter is null if the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,27 +95,79 @@ public class UpdateServiceEndpointResponseBody extends TeaModel {
     }
 
     public static class UpdateServiceEndpointResponseBodyData extends TeaModel {
+        /**
+         * <p>The SSL certificate identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-xxx</p>
+         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
+        /**
+         * <p>The component type. Valid values:</p>
+         * <ul>
+         * <li>ELEMENT: element type.</li>
+         * <li>MATRIX: matrix type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MATRIX</p>
+         */
         @NameInMap("Component")
         public String component;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>matrix.example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The domain name type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
+         */
         @NameInMap("DomainType")
         public String domainType;
 
+        /**
+         * <p>The globally unique endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mep-abc123</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>matrix-service</p>
+         */
         @NameInMap("EndpointName")
         public String endpointName;
 
+        /**
+         * <p>The AgentTeams instance ID, which is used to verify endpoint ownership and current user permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentteams-demo</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INTERNET</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 

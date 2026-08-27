@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteModelProviderRequest extends TeaModel {
     /**
+     * <p>The ID of the model provider.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-xxx</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

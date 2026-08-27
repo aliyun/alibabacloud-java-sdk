@@ -4,21 +4,57 @@ package com.aliyun.agentteams20260605.models;
 import com.aliyun.tea.*;
 
 public class GetCredentialResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public GetCredentialResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +112,30 @@ public class GetCredentialResponseBody extends TeaModel {
     }
 
     public static class GetCredentialResponseBodyDataBoundWorkers extends TeaModel {
+        /**
+         * <p>The Worker name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker-xxx</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The Worker status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The binding update time in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-13T12:00:00Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -117,27 +171,75 @@ public class GetCredentialResponseBody extends TeaModel {
     }
 
     public static class GetCredentialResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of bound Workers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("BoundWorkers")
         public java.util.List<GetCredentialResponseBodyDataBoundWorkers> boundWorkers;
 
+        /**
+         * <p>The creation time in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-13T12:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The credential description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAI API key for the team</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ami-2ze8x9c6f</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The credential key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPENAI_API_KEY</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resource status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The update time in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-13T12:00:00Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

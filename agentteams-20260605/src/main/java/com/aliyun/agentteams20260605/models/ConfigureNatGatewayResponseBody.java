@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ConfigureNatGatewayResponseBody extends TeaModel {
     /**
+     * <p>The business status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data object that contains the AgentTeams instance ID and the asynchronous task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +32,8 @@ public class ConfigureNatGatewayResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req-xxxx</p>
      */
@@ -29,6 +41,8 @@ public class ConfigureNatGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

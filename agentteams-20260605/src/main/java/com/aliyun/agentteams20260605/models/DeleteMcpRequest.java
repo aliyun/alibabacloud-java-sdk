@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMcpRequest extends TeaModel {
     /**
+     * <p>Optional. Fuzzy matches by instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,11 @@ public class DeleteMcpRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The ID of the AgentTeams instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ins-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
