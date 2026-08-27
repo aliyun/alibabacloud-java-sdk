@@ -4,18 +4,45 @@ package com.aliyun.realtranslationagent20260622.models;
 import com.aliyun.tea.*;
 
 public class CancelTranslationTaskResponseBody extends TeaModel {
+    /**
+     * <p>The return code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public CancelTranslationTaskResponseBodyData data;
 
+    /**
+     * <p>The return message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F22CA868-601F-50D1-99B2-520491F25EB7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +92,21 @@ public class CancelTranslationTaskResponseBody extends TeaModel {
     }
 
     public static class CancelTranslationTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CANCEL</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f9c35b0453b</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

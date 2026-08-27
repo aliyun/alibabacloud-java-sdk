@@ -14,7 +14,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("public", "realtranslationagent.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("realtranslationagent", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -132,8 +135,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Billing description</em>*
+     * After the task is successfully canceled, the Credits frozen for this translation task will be fully refunded to your account.
+     * <strong>Before you begin</strong></p>
+     * <ul>
+     * <li>This operation only supports canceling translation tasks that are in the processing state. Tasks that are completed or failed cannot be canceled.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>取消翻译任务</p>
+     * <p>Cancels a translation task that is currently running.</p>
      * 
      * @param request CancelTranslationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -170,8 +181,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Billing description</em>*
+     * After the task is successfully canceled, the Credits frozen for this translation task will be fully refunded to your account.
+     * <strong>Before you begin</strong></p>
+     * <ul>
+     * <li>This operation only supports canceling translation tasks that are in the processing state. Tasks that are completed or failed cannot be canceled.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>取消翻译任务</p>
+     * <p>Cancels a translation task that is currently running.</p>
      * 
      * @param request CancelTranslationTaskRequest
      * @return CancelTranslationTaskResponse
@@ -183,7 +202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取原文文件下载URL</p>
+     * <p>Retrieves the download URL of the original file for a translation task.</p>
      * 
      * @param request GetOriginalFileUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -221,7 +240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取原文文件下载URL</p>
+     * <p>Retrieves the download URL of the original file for a translation task.</p>
      * 
      * @param request GetOriginalFileUrlRequest
      * @return GetOriginalFileUrlResponse
@@ -233,7 +252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取译文文件下载URL</p>
+     * <p>Retrieves the download URL of the translated file for a translation task.</p>
      * 
      * @param request GetTranslatedFileUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -271,7 +290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取译文文件下载URL</p>
+     * <p>Retrieves the download URL of the translated file for a translation task.</p>
      * 
      * @param request GetTranslatedFileUrlRequest
      * @return GetTranslatedFileUrlResponse
@@ -283,7 +302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取翻译任务详情</p>
+     * <p>Retrieves the details of a translation task.</p>
      * 
      * @param request GetTranslationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -321,7 +340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取翻译任务详情</p>
+     * <p>Retrieves the details of a translation task.</p>
      * 
      * @param request GetTranslationTaskRequest
      * @return GetTranslationTaskResponse
@@ -333,7 +352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取翻译任务列表</p>
+     * <p>Queries translation tasks by paging.</p>
      * 
      * @param request ListTranslationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -401,7 +420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取翻译任务列表</p>
+     * <p>Queries translation tasks by paging.</p>
      * 
      * @param request ListTranslationTasksRequest
      * @return ListTranslationTasksResponse
@@ -412,8 +431,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Billing</em>*
+     * This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <code>UploadTranslationFile</code>, you can check the <code>CreditsAvailable</code> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <code>CreditBreakdown</code> field.
+     * <strong>Task submission</strong></p>
+     * <ul>
+     * <li>To submit a new translation task, pass in the <code>TaskId</code> returned by the <code>UploadTranslationFile</code> operation.</li>
+     * <li>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <code>BaseTaskId</code>.</li>
+     * <li>You must pass in either <code>TaskId</code> or <code>BaseTaskId</code>. You cannot pass in both at the same time.
+     * <strong>Precautions</strong></li>
+     * <li>The <code>Style</code> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</li>
+     * <li>For new tasks, you can obtain the list of available fonts from the <code>Fonts</code> field in the response of <code>UploadTranslationFile</code>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <code>GetTranslationTask</code> operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交翻译任务</p>
+     * <p>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</p>
      * 
      * @param tmpReq SubmitTranslationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -472,8 +504,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Billing</em>*
+     * This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <code>UploadTranslationFile</code>, you can check the <code>CreditsAvailable</code> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <code>CreditBreakdown</code> field.
+     * <strong>Task submission</strong></p>
+     * <ul>
+     * <li>To submit a new translation task, pass in the <code>TaskId</code> returned by the <code>UploadTranslationFile</code> operation.</li>
+     * <li>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <code>BaseTaskId</code>.</li>
+     * <li>You must pass in either <code>TaskId</code> or <code>BaseTaskId</code>. You cannot pass in both at the same time.
+     * <strong>Precautions</strong></li>
+     * <li>The <code>Style</code> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</li>
+     * <li>For new tasks, you can obtain the list of available fonts from the <code>Fonts</code> field in the response of <code>UploadTranslationFile</code>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <code>GetTranslationTask</code> operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交翻译任务</p>
+     * <p>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</p>
      * 
      * @param request SubmitTranslationTaskRequest
      * @return SubmitTranslationTaskResponse
@@ -484,8 +529,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>This operation only involves document upload and information estimation. <strong>No fees are incurred.</strong> Credits consumption starts only after you <strong>officially submit the translation</strong> task.
+     * <strong>Language detection</strong>
+     * The system automatically detects the language type of the uploaded document. Currently, Chinese is supported.
+     * <strong>Sensitive information detection</strong>
+     * The system performs sensitive information detection on the uploaded document. If sensitive information is detected, the <code>SensitiveDetected</code> field in the response is set to <code>true</code>, and the <code>SensitiveTags</code> field returns the list of matched keywords.</li>
+     * <li>You can decide whether to proceed with submitting the translation task based on your actual needs.</li>
+     * <li>If the translation quality setting is set to ultimate mode when you submit the task, the system automatically switches the <strong>portions containing sensitive information</strong> to auto mode.
+     * <strong>Notes</strong></li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>Make sure the uploaded document format is supported by the system. Otherwise, parsing may fail.</li>
+     * <li>The <code>EstimatedCostCredits</code> value in the response is the estimated Credits consumption. The actual consumption is based on the settlement after the translation task is officially submitted.</li>
+     * <li>The <code>EstimatedTime</code> value in the response is the estimated translation duration in milliseconds. The actual translation duration may vary depending on document complexity.</li>
+     * <li>The <code>Fonts</code> field in the response contains the languages that support font modification and the corresponding font lists. You can select an appropriate font based on the target language.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>解析文档</p>
+     * <p>Uploads a document, parses document-related information, and generates a translation task. After a successful upload, the task ID and document parsing results are returned, including word count, page count, estimated Credits consumption, estimated translation time, detected language type, and font list. The system also performs sensitive information detection on the uploaded document, and you can decide whether to proceed with submitting the translation task based on the detection results.</p>
      * 
      * @param request UploadTranslationFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -524,8 +589,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>This operation only involves document upload and information estimation. <strong>No fees are incurred.</strong> Credits consumption starts only after you <strong>officially submit the translation</strong> task.
+     * <strong>Language detection</strong>
+     * The system automatically detects the language type of the uploaded document. Currently, Chinese is supported.
+     * <strong>Sensitive information detection</strong>
+     * The system performs sensitive information detection on the uploaded document. If sensitive information is detected, the <code>SensitiveDetected</code> field in the response is set to <code>true</code>, and the <code>SensitiveTags</code> field returns the list of matched keywords.</li>
+     * <li>You can decide whether to proceed with submitting the translation task based on your actual needs.</li>
+     * <li>If the translation quality setting is set to ultimate mode when you submit the task, the system automatically switches the <strong>portions containing sensitive information</strong> to auto mode.
+     * <strong>Notes</strong></li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>Make sure the uploaded document format is supported by the system. Otherwise, parsing may fail.</li>
+     * <li>The <code>EstimatedCostCredits</code> value in the response is the estimated Credits consumption. The actual consumption is based on the settlement after the translation task is officially submitted.</li>
+     * <li>The <code>EstimatedTime</code> value in the response is the estimated translation duration in milliseconds. The actual translation duration may vary depending on document complexity.</li>
+     * <li>The <code>Fonts</code> field in the response contains the languages that support font modification and the corresponding font lists. You can select an appropriate font based on the target language.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>解析文档</p>
+     * <p>Uploads a document, parses document-related information, and generates a translation task. After a successful upload, the task ID and document parsing results are returned, including word count, page count, estimated Credits consumption, estimated translation time, detected language type, and font list. The system also performs sensitive information detection on the uploaded document, and you can decide whether to proceed with submitting the translation task based on the detection results.</p>
      * 
      * @param request UploadTranslationFileRequest
      * @return UploadTranslationFileResponse

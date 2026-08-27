@@ -4,18 +4,45 @@ package com.aliyun.realtranslationagent20260622.models;
 import com.aliyun.tea.*;
 
 public class ListTranslationTasksResponseBody extends TeaModel {
+    /**
+     * <p>The return code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public ListTranslationTasksResponseBodyData data;
 
+    /**
+     * <p>The return message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50ABF118-2F9D-51DF-B1FB-1E389817DC47</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,69 +92,215 @@ public class ListTranslationTasksResponseBody extends TeaModel {
     }
 
     public static class ListTranslationTasksResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The task completion time, in 13-digit timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782459562000</p>
+         */
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        /**
+         * <p>The credits consumed by this task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81.2992</p>
+         */
         @NameInMap("CostCredits")
         public Double costCredits;
 
+        /**
+         * <p>The time consumed, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>196</p>
+         */
         @NameInMap("CostTime")
         public Long costTime;
 
+        /**
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acc_93****c936</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The creator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:tes_account@test.com">tes_account@test.com</a></p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
+        /**
+         * <p>The error message when the task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device offline</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The parsed file format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PPTX</p>
+         */
         @NameInMap("FileFormat")
         public String fileFormat;
 
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>translated_a_file.pptx</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The task creation time, in 13-digit timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782459562000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org_c6******cdc2ce7</p>
+         */
         @NameInMap("OrgId")
         public String orgId;
 
+        /**
+         * <p>The source file address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>translated_a_file.pptx</p>
+         */
         @NameInMap("OriginalFileName")
         public String originalFileName;
 
+        /**
+         * <p>The page count of the uploaded file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
+         */
         @NameInMap("PageCount")
         public Long pageCount;
 
+        /**
+         * <p>The task progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>The language of the source file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
         @NameInMap("SourceLanguage")
         public String sourceLanguage;
 
+        /**
+         * <p>The task start time, in 13-digit timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782459562000</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>CANCELLED: Cancelled.</li>
+         * <li>COMPLETED: Completed.</li>
+         * <li>FAILED: Failed.</li>
+         * <li>PROCESSING: Processing.</li>
+         * <li>PENDING: Pending.</li>
+         * <li>ANALYZED: Analyzed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CANCELLED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The target language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
+         */
         @NameInMap("TargetLanguage")
         public String targetLanguage;
 
+        /**
+         * <p>The translation task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f9c35b0453b</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>DOCUMENT: document type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DOCUMENT</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The translation template. Valid values:</p>
+         * <ul>
+         * <li>common: General.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The word count of the uploaded file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600</p>
+         */
         @NameInMap("WordCount")
         public Long wordCount;
 
+        /**
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6458351*****0cc5</p>
+         */
         @NameInMap("WorkSpaceId")
         public String workSpaceId;
 
@@ -315,15 +488,40 @@ public class ListTranslationTasksResponseBody extends TeaModel {
     }
 
     public static class ListTranslationTasksResponseBodyData extends TeaModel {
+        /**
+         * <p>The data list.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListTranslationTasksResponseBodyDataList> list;
 
+        /**
+         * <p>The maximum number of results returned per request when using the NextToken-based pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>Indicates whether a token exists for the next query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> has a value, the value is the token for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAVpfrV4aVmra0dxbtRB74lmSGzegoejeIqxIET/WdX50</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Total")
         public Long total;
 

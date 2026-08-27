@@ -4,11 +4,25 @@ package com.aliyun.realtranslationagent20260622.models;
 import com.aliyun.tea.*;
 
 public class CancelTranslationTaskRequest extends TeaModel {
+    /**
+     * <p>The API key, the identity of member accounts. You can obtain it from the RuiYiBao console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sk-5****7</p>
+     */
     @NameInMap("APIKey")
     public String APIKey;
 
     /**
+     * <p>The task ID.</p>
+     * <ul>
+     * <li>The TaskId is returned after a task is submitted by calling SubmitTranslationTask.</li>
+     * <li>Only running tasks can be canceled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f9c35b0453b</p>
      */
     @NameInMap("TaskId")
     public String taskId;
