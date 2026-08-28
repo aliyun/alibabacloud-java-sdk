@@ -20,6 +20,18 @@ public class DescribeAIDBClusterTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     */
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    /**
+     * <p>The number of items per page.</p>
+     */
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    /**
      * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +82,22 @@ public class DescribeAIDBClusterTasksRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeAIDBClusterTasksRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAIDBClusterTasksRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeAIDBClusterTasksRequest setRegionId(String regionId) {

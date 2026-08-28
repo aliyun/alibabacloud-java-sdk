@@ -7,9 +7,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li>vnode: managed by ACK</li>
-     * <li>container: loginable container</li>
-     * <li>maas: model service</li>
+     * <li>vnode: ACK-managed.</li>
+     * <li>container: loginable container.</li>
+     * <li>maas: model service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,13 +57,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The cluster status. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: being created.</li>
-     * <li><strong>Running</strong>: running.</li>
-     * <li><strong>Deleting</strong>: being released.</li>
-     * <li><strong>DBNodeCreating</strong>: a node is being added.</li>
-     * <li><strong>DBNodeDeleting</strong>: a node is being deleted.</li>
-     * <li><strong>ClassChanging</strong>: node specifications are being changed.</li>
-     * <li><strong>Deleted</strong>: released.</li>
+     * <li><strong>Creating</strong>: Being created.</li>
+     * <li><strong>Running</strong>: Running.</li>
+     * <li><strong>Deleting</strong>: Being released.</li>
+     * <li><strong>DBNodeCreating</strong>: Adding a node.</li>
+     * <li><strong>DBNodeDeleting</strong>: Deleting a node.</li>
+     * <li><strong>ClassChanging</strong>: Changing node specifications. </li>
+     * <li><strong>Deleted</strong>: Released.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,6 +83,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The cluster version. Valid values:</p>
+     * <p><strong>1.0</strong></p>
+     * <p><strong>2.0</strong></p>
+     * <p><strong>3.0</strong></p>
      * 
      * <strong>example:</strong>
      * <p>1.0</p>
@@ -109,9 +112,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public java.util.List<DescribeAIDBClusterAttributeResponseBodyEndpointList> endpointList;
 
     /**
-     * <p>The expiration time of the cluster.</p>
+     * <p>The cluster expiration time.</p>
      * <blockquote>
-     * <p>Only clusters whose billing method is <strong>Prepaid</strong> (subscription) return a specific value for this parameter. <strong>Postpaid</strong> (pay-as-you-go) clusters return an empty value.</p>
+     * <p>Only clusters with the billing method set to <strong>Prepaid</strong> (subscription) return a specific value. <strong>Postpaid</strong> (pay-as-you-go) clusters return an empty value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,6 +125,12 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the cluster has expired. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -131,6 +140,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     @NameInMap("GatewayId")
     public String gatewayId;
+
+    @NameInMap("InferenceEngine")
+    public String inferenceEngine;
 
     /**
      * <p>The internal IP address.</p>
@@ -243,6 +255,10 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The architecture type. Valid values:</p>
+     * <ul>
+     * <li>container: AI container.</li>
+     * <li>ainode: AI node.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>container</p>
@@ -252,6 +268,18 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The storage type for Enterprise Edition. Valid values:</p>
+     * <ul>
+     * <li><strong>PSL5</strong></li>
+     * <li><strong>PSL4</strong></li>
+     * </ul>
+     * <p>The storage type for Standard Edition. Valid values:</p>
+     * <ul>
+     * <li><strong>ESSDPL0</strong></li>
+     * <li><strong>ESSDPL1</strong></li>
+     * <li><strong>ESSDPL2</strong></li>
+     * <li><strong>ESSDPL3</strong></li>
+     * <li><strong>ESSDAUTOPL</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>essdpl1</p>
@@ -276,6 +304,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The vSwitch ID.</p>
+     * <blockquote>
+     * <p>If VPCId is specified, VSwitchId is required.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vsw-*********************</p>
@@ -302,7 +333,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The zone IDs.</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i,cn-hangzhou-g</p>
@@ -433,6 +464,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    public DescribeAIDBClusterAttributeResponseBody setInferenceEngine(String inferenceEngine) {
+        this.inferenceEngine = inferenceEngine;
+        return this;
+    }
+    public String getInferenceEngine() {
+        return this.inferenceEngine;
     }
 
     public DescribeAIDBClusterAttributeResponseBody setInternalIp(String internalIp) {
@@ -639,7 +678,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The storage disk size.</p>
+         * <p>The storage size.</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -828,16 +867,16 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         /**
          * <p>The node status. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>: Being created.</li>
-         * <li><strong>Running</strong>: Running.</li>
-         * <li><strong>Deleting</strong>: Being deleted.</li>
-         * <li><strong>Rebooting</strong>: Being restarted.</li>
-         * <li><strong>DBNodeCreating</strong>: A node is being added.</li>
-         * <li><strong>DBNodeDeleting</strong>: A node is being deleted.</li>
-         * <li><strong>ClassChanging</strong>: The node specifications are being changed.</li>
-         * <li><strong>MinorVersionUpgrading</strong>: A minor engine version update is in progress.</li>
-         * <li><strong>Maintaining</strong>: The instance is under maintenance.</li>
-         * <li><strong>Switching</strong>: A switchover is in progress.</li>
+         * <li><strong>Creating</strong>: Being created. </li>
+         * <li><strong>Running</strong>: Running. </li>
+         * <li><strong>Deleting</strong>: Being deleted.  </li>
+         * <li><strong>Rebooting</strong>: Restarting.  </li>
+         * <li><strong>DBNodeCreating</strong>: Adding a node.  </li>
+         * <li><strong>DBNodeDeleting</strong>: Deleting a node. </li>
+         * <li><strong>ClassChanging</strong>: Changing node specifications.  </li>
+         * <li><strong>MinorVersionUpgrading</strong>: Performing a minor version upgrade.</li>
+         * <li><strong>Maintaining</strong>: Under maintenance.  </li>
+         * <li><strong>Switching</strong>: Switching.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1072,7 +1111,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems extends TeaModel {
         /**
-         * <p>The database endpoint.</p>
+         * <p>The database connection address.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-**********.rwlb.rds.aliyuncs.com</p>
@@ -1081,7 +1120,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The network type of the endpoint. Valid values:</p>
+         * <p>The network type of the connection string. Valid values:</p>
          * <ul>
          * <li><strong>Public</strong>: public endpoint.</li>
          * <li><strong>Private</strong>: private endpoint.</li>
@@ -1308,7 +1347,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterAttributeResponseBodyVolumes extends TeaModel {
         /**
-         * <p>The mount path in the container.</p>
+         * <p>The mount path inside the container.</p>
          * 
          * <strong>example:</strong>
          * <p>/var/run/secrets/kubernetes.io/serviceaccount</p>

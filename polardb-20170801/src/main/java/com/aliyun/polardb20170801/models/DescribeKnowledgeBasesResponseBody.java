@@ -130,6 +130,19 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
         public String knowledgeBaseId;
 
         /**
+         * <p>The type of the knowledge base. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: public.</li>
+         * <li>PERSONAL: personal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
+         */
+        @NameInMap("KnowledgeBaseType")
+        public String knowledgeBaseType;
+
+        /**
          * <p>The ID of the knowledge space.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +222,14 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
         }
         public String getKnowledgeBaseId() {
             return this.knowledgeBaseId;
+        }
+
+        public DescribeKnowledgeBasesResponseBodyItems setKnowledgeBaseType(String knowledgeBaseType) {
+            this.knowledgeBaseType = knowledgeBaseType;
+            return this;
+        }
+        public String getKnowledgeBaseType() {
+            return this.knowledgeBaseType;
         }
 
         public DescribeKnowledgeBasesResponseBodyItems setKnowledgeSpaceId(String knowledgeSpaceId) {

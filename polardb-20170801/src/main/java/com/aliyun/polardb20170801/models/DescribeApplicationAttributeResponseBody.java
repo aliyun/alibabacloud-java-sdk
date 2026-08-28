@@ -34,6 +34,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    /**
+     * <p>Indicates whether SNAT can be disabled.</p>
+     */
     @NameInMap("CanDisableSnat")
     public Boolean canDisableSnat;
 
@@ -71,14 +74,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The list of endpoints of the application.</p>
+     * <p>The list of endpoints for the application.</p>
      */
     @NameInMap("Endpoints")
     public java.util.List<DescribeApplicationAttributeResponseBodyEndpoints> endpoints;
 
     /**
      * <p>The expiration time.</p>
-     * <p>This value is empty when the billing method is Postpaid.</p>
+     * <p>This value is empty when the billing type is Postpaid.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-06-25T09:37:10Z</p>
@@ -96,7 +99,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public Boolean expired;
 
     /**
-     * <p>Indicates whether the current version is the latest version.</p>
+     * <p>Indicates whether this is the latest version.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +130,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String lockMode;
 
     /**
-     * <p>The end time of the maintenance window.</p>
+     * <p>The maintenance end time.</p>
      * 
      * <strong>example:</strong>
      * <p>19:00Z</p>
@@ -136,7 +139,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the maintenance window.</p>
+     * <p>The maintenance start time.</p>
      * 
      * <strong>example:</strong>
      * <p>18:00Z</p>
@@ -160,6 +163,8 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String minorVersion;
 
     /**
+     * <p>The NAT gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-xxx</p>
      */
@@ -167,7 +172,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The billing method.</p>
+     * <p>The billing type.</p>
      * 
      * <strong>example:</strong>
      * <p>Postpaid</p>
@@ -182,7 +187,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute;
 
     /**
-     * <p>The instance ID of PolarFS cold storage or high-performance edition.</p>
+     * <p>The instance ID of PolarFS Cold Storage Edition or High Performance Edition.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-**************</p>
@@ -209,13 +214,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of security groups at the application level.</p>
+     * <p>The list of application-level security groups.</p>
      */
     @NameInMap("SecurityGroups")
     public java.util.List<DescribeApplicationAttributeResponseBodySecurityGroups> securityGroups;
 
     /**
-     * <p>The list of whitelists at the application level.</p>
+     * <p>The list of application-level whitelists.</p>
      */
     @NameInMap("SecurityIPArrays")
     public java.util.List<DescribeApplicationAttributeResponseBodySecurityIPArrays> securityIPArrays;
@@ -234,6 +239,8 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String serverlessType;
 
     /**
+     * <p>The SNAT status. Valid values: on and off.</p>
+     * 
      * <strong>example:</strong>
      * <p>off</p>
      */
@@ -246,12 +253,12 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
      * <li>Creating: Being created.</li>
      * <li>Activated: Running.</li>
      * <li>Maintaining: Under maintenance.</li>
-     * <li>ClassChanging: Changing specifications.</li>
+     * <li>ClassChanging: Configuration is being changed.</li>
      * <li>Transing: Being migrated.</li>
-     * <li>MinorVersionUpgrading: Minor version being upgraded.</li>
-     * <li>NetCreating: Endpoint being created.</li>
-     * <li>NetDeleting: Endpoint being deleted.</li>
-     * <li>NetModifying: Endpoint being modified.</li>
+     * <li>MinorVersionUpgrading: Minor version is being upgraded.</li>
+     * <li>NetCreating: Endpoint is being created.</li>
+     * <li>NetDeleting: Endpoint is being deleted.</li>
+     * <li>NetModifying: Endpoint is being modified.</li>
      * <li>Restarting: Being restarted.</li>
      * <li>Locking: Being locked.</li>
      * <li>Locked: Locked.</li>
@@ -624,7 +631,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-*******************</p>
@@ -700,7 +707,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String securityIPArrayTag;
 
         /**
-         * <p>The IP addresses in the whitelist, separated by commas (,).</p>
+         * <p>The whitelisted IP addresses, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -775,7 +782,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     public static class DescribeApplicationAttributeResponseBodyComponentsTopology extends TeaModel {
         /**
-         * <p>The list of child node IDs or child node component types in the topology of the current application subcomponent.</p>
+         * <p>The list of topology child node IDs or child node subcomponent types of the current application subcomponent.</p>
          */
         @NameInMap("Children")
         public java.util.List<String> children;
@@ -790,7 +797,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String layer;
 
         /**
-         * <p>The list of parent node IDs or parent node component types in the topology of the current application subcomponent.</p>
+         * <p>The list of topology parent node IDs or parent node subcomponent types of the current application subcomponent.</p>
          */
         @NameInMap("Parents")
         public java.util.List<String> parents;
@@ -891,15 +898,15 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String componentType;
 
         /**
-         * <p>The list of security groups at the subcomponent level.</p>
-         * <p>If the security groups at the subcomponent level are the same as those at the application level, this response element is omitted.</p>
+         * <p>The list of subcomponent-level security groups.</p>
+         * <p>If the subcomponent-level security groups are the same as the application-level security groups, this response element is omitted.</p>
          */
         @NameInMap("SecurityGroups")
         public java.util.List<DescribeApplicationAttributeResponseBodyComponentsSecurityGroups> securityGroups;
 
         /**
-         * <p>The list of whitelists at the subcomponent level.</p>
-         * <p>If the whitelists at the subcomponent level are the same as those at the application level, this response element is omitted.</p>
+         * <p>The list of subcomponent-level whitelist addresses.</p>
+         * <p>If the subcomponent-level whitelists are the same as the application-level whitelists, this response element is omitted.</p>
          */
         @NameInMap("SecurityIPArrays")
         public java.util.List<DescribeApplicationAttributeResponseBodyComponentsSecurityIPArrays> securityIPArrays;
@@ -1139,6 +1146,82 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore extends TeaModel {
+        /**
+         * <p>The account source. Valid values: reuse_vector and existing. This parameter is returned only when the status is ENABLED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>existing</p>
+         */
+        @NameInMap("AccountMode")
+        public String accountMode;
+
+        /**
+         * <p>The PolarDB cluster ID used for session storage. This parameter is returned only when the status is ENABLED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxx</p>
+         */
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
+        /**
+         * <p>The session database name. This parameter is returned only when the status is ENABLED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contextdb_example</p>
+         */
+        @NameInMap("DBName")
+        public String DBName;
+
+        /**
+         * <p>The session storage status. Valid values: DISABLED, ENABLING, ENABLED, and DISABLING.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore self = new DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore setAccountMode(String accountMode) {
+            this.accountMode = accountMode;
+            return this;
+        }
+        public String getAccountMode() {
+            return this.accountMode;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore setDBName(String DBName) {
+            this.DBName = DBName;
+            return this;
+        }
+        public String getDBName() {
+            return this.DBName;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class DescribeApplicationAttributeResponseBodyMemApplicationAttribute extends TeaModel {
         /**
          * <p>The database name.</p>
@@ -1159,6 +1242,8 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String embedderModelName;
 
         /**
+         * <p>The graph LLM model support.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3-max</p>
          */
@@ -1191,6 +1276,12 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         @NameInMap("RerankerModelName")
         public String rerankerModelName;
+
+        /**
+         * <p>The Mem0 full session information storage configuration.</p>
+         */
+        @NameInMap("SessionStore")
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore sessionStore;
 
         /**
          * <p>The username.</p>
@@ -1252,6 +1343,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
         public String getRerankerModelName() {
             return this.rerankerModelName;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setSessionStore(DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore sessionStore) {
+            this.sessionStore = sessionStore;
+            return this;
+        }
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore getSessionStore() {
+            return this.sessionStore;
         }
 
         public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setUserName(String userName) {
@@ -1340,7 +1439,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-**************</p>
@@ -1416,7 +1515,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String securityIPArrayTag;
 
         /**
-         * <p>The IP addresses in the whitelist, separated by commas (,).</p>
+         * <p>The whitelisted IP addresses, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>

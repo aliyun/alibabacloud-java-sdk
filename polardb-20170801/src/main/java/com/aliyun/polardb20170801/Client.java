@@ -10785,14 +10785,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports filtering and returning the list of model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>This operation supports filtering and returning the list of template operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
      * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of model operators for a specified PolarDB database instance.</p>
+     * <p>Retrieves the list of template operators for a specified PolarDB database instance.</p>
      * 
      * @param request DescribeAIDBClusterTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10811,6 +10811,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -10848,14 +10856,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports filtering and returning the list of model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>This operation supports filtering and returning the list of template operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
      * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of model operators for a specified PolarDB database instance.</p>
+     * <p>Retrieves the list of template operators for a specified PolarDB database instance.</p>
      * 
      * @param request DescribeAIDBClusterTasksRequest
      * @return DescribeAIDBClusterTasksResponse
@@ -12129,10 +12137,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is used to query all related information of a specific PolarDB application, including but not limited to component details and endpoints.</p>
+     * <p>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the detailed information of a specified PolarDB application.</p>
+     * <p>Retrieves the details of a specified PolarDB instance application.</p>
      * 
      * @param request DescribeApplicationAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12164,10 +12172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is used to query all related information of a specific PolarDB application, including but not limited to component details and endpoints.</p>
+     * <p>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the detailed information of a specified PolarDB application.</p>
+     * <p>Retrieves the details of a specified PolarDB instance application.</p>
      * 
      * @param request DescribeApplicationAttributeRequest
      * @return DescribeApplicationAttributeResponse
@@ -12475,6 +12483,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeApplicationPromptsResponse describeApplicationPrompts(DescribeApplicationPromptsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeApplicationPromptsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the SSL configuration of an application.</p>
+     * 
+     * @param request DescribeApplicationSSLRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationSSLResponse
+     */
+    public DescribeApplicationSSLResponse describeApplicationSSLWithOptions(DescribeApplicationSSLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationSSL"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationSSLResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the SSL configuration of an application.</p>
+     * 
+     * @param request DescribeApplicationSSLRequest
+     * @return DescribeApplicationSSLResponse
+     */
+    public DescribeApplicationSSLResponse describeApplicationSSL(DescribeApplicationSSLRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationSSLWithOptions(request, runtime);
     }
 
     /**
@@ -18115,7 +18167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of knowledge bases.</p>
+     * <p>Queries the list of knowledge bases.</p>
      * 
      * @param request DescribeKnowledgeBasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18167,7 +18219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of knowledge bases.</p>
+     * <p>Queries the list of knowledge bases.</p>
      * 
      * @param request DescribeKnowledgeBasesRequest
      * @return DescribeKnowledgeBasesResponse
@@ -21548,7 +21600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries one or more vSwitches.</p>
+     * <p>查询交换机</p>
      * 
      * @param request DescribeVSwitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21624,7 +21676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries one or more vSwitches.</p>
+     * <p>查询交换机</p>
      * 
      * @param request DescribeVSwitchesRequest
      * @return DescribeVSwitchesResponse

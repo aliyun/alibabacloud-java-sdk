@@ -29,6 +29,24 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public java.util.List<DescribeAIDBClusterTasksResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     */
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    /**
+     * <p>The total number of records on the current page.</p>
+     */
+    @NameInMap("PageRecordCount")
+    public String pageRecordCount;
+
+    /**
+     * <p>The number of records per page.</p>
+     */
+    @NameInMap("PageSize")
+    public String pageSize;
+
+    /**
      * <p>The ID of the PolarDB cluster.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +72,12 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
      */
     @NameInMap("TaskType")
     public String taskType;
+
+    /**
+     * <p>The total number of records.</p>
+     */
+    @NameInMap("TotalRecordCount")
+    public String totalRecordCount;
 
     public static DescribeAIDBClusterTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAIDBClusterTasksResponseBody self = new DescribeAIDBClusterTasksResponseBody();
@@ -84,6 +108,30 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeAIDBClusterTasksResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAIDBClusterTasksResponseBody setPageRecordCount(String pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public String getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeAIDBClusterTasksResponseBody setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeAIDBClusterTasksResponseBody setRelativeDBClusterId(String relativeDBClusterId) {
         this.relativeDBClusterId = relativeDBClusterId;
         return this;
@@ -106,6 +154,14 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     }
     public String getTaskType() {
         return this.taskType;
+    }
+
+    public DescribeAIDBClusterTasksResponseBody setTotalRecordCount(String totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public String getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeAIDBClusterTasksResponseBodyItems extends TeaModel {
@@ -137,7 +193,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String DBNodeDescription;
 
         /**
-         * <p>The instance ID of the model operator.</p>
+         * <p>The template operator instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pm-2ze***</p>
@@ -253,6 +309,9 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         @NameInMap("TrainType")
         public String trainType;
 
+        /**
+         * <p>The tuning framework.</p>
+         */
         @NameInMap("TuneArch")
         public String tuneArch;
 

@@ -1,3 +1,16 @@
+2026-08-28 Version: 8.1.0
+- Support API DescribeApplicationSSL.
+- Update API DescribeAIDBClusterAttribute: add response parameters Body.InferenceEngine.
+- Update API DescribeAIDBClusterTasks: add request parameters PageNumber.
+- Update API DescribeAIDBClusterTasks: add request parameters PageSize.
+- Update API DescribeAIDBClusterTasks: add response parameters Body.PageNumber.
+- Update API DescribeAIDBClusterTasks: add response parameters Body.PageRecordCount.
+- Update API DescribeAIDBClusterTasks: add response parameters Body.PageSize.
+- Update API DescribeAIDBClusterTasks: add response parameters Body.TotalRecordCount.
+- Update API DescribeApplicationAttribute: add response parameters Body.MemApplicationAttribute.SessionStore.
+- Update API DescribeKnowledgeBases: add response parameters Body.Items.$.KnowledgeBaseType.
+
+
 2026-08-26 Version: 8.0.0
 - Support API CreateKnowledgeBase.
 - Support API CreateKnowledgeSpace.
