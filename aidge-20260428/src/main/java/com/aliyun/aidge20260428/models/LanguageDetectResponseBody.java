@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LanguageDetectResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates success. For other response codes, refer to the error code documentation.</p>
+     * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class LanguageDetectResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The language detection result data, including the detected language and usage information.</p>
+     * <p>The language identification result data, including the detected language and usage information.</p>
      */
     @NameInMap("Data")
     public LanguageDetectResponseBodyData data;
 
     /**
-     * <p>The error message. Returns &quot;Success&quot; for successful calls. Returns a specific error message for failed calls, such as &quot;The parameters contain sensitive information. Try other input.&quot;.</p>
+     * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,11 +38,7 @@ public class LanguageDetectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
-     * </ul>
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

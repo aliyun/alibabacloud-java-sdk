@@ -14,7 +14,7 @@ public class MaterialInspectionRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>The URL of the reference image. When this parameter is not empty, multi-image comparison mode is used.</p>
+     * <p>The URL of the reference image. Optional. When this parameter is not empty, the system performs multi-image differential comparison.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/reference.jpg">https://example.com/reference.jpg</a></p>
@@ -23,7 +23,7 @@ public class MaterialInspectionRequest extends TeaModel {
     public String imageRefer;
 
     /**
-     * <p>The URL of the target image to inspect.</p>
+     * <p>The URL of the target image to be inspected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class MaterialInspectionRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The business request identity. This value is returned as-is in the response for Tracing Analysis purposes.</p>
+     * <p>The business request identity. Optional. This value is returned as-is in the response for Tracing Analysis purposes.</p>
      * 
      * <strong>example:</strong>
      * <p>req-2026-06-04-001</p>
@@ -42,10 +42,10 @@ public class MaterialInspectionRequest extends TeaModel {
     public String reqId;
 
     /**
-     * <p>The rule prompt in natural language that defines the inspection criteria.</p>
+     * <p>The rule prompt in natural language that describes the inspection criteria.</p>
      * 
      * <strong>example:</strong>
-     * <p>门型展架必须摆放在入口区域；功能台卡必须摆放在中柜台面</p>
+     * <p>The door-shaped display stand must be placed in the entrance area; the functional display card must be placed on the counter surface</p>
      */
     @NameInMap("Rules")
     public String rules;

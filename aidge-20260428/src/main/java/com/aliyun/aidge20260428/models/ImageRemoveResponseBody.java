@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ImageRemoveResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>&quot;success&quot;</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The intelligent erasure result.</p>
+     * <p>The intelligent removal result.</p>
      */
     @NameInMap("Data")
     public ImageRemoveResponseBodyData data;
@@ -23,7 +23,7 @@ public class ImageRemoveResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>“The parameters contain sensitive information, please try other inputs”</p>
      */
     @NameInMap("Message")
     public String message;
@@ -93,7 +93,7 @@ public class ImageRemoveResponseBody extends TeaModel {
 
     public static class ImageRemoveResponseBodyData extends TeaModel {
         /**
-         * <p>The height of the result image, in pixels.</p>
+         * <p>The height of the result image in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -102,10 +102,11 @@ public class ImageRemoveResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The URL of the result image after erasure.</p>
+         * <p>The URL of the result image after removal.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></p>
+         * <p>“<a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a>
+         * ”</p>
          */
         @NameInMap("ImageUrl")
         public String imageUrl;
@@ -120,7 +121,7 @@ public class ImageRemoveResponseBody extends TeaModel {
         public java.util.Map<String, Long> usageMap;
 
         /**
-         * <p>The width of the result image, in pixels.</p>
+         * <p>The width of the result image in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>

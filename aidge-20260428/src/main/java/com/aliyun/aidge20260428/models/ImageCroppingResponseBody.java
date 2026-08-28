@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageCroppingResponseBody extends TeaModel {
     /**
-     * <p>Response code</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class ImageCroppingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Crop result</p>
+     * <p>The cropping result.</p>
      */
     @NameInMap("Data")
     public ImageCroppingResponseBodyData data;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,11 @@ public class ImageCroppingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the call was successful: true indicates success, false indicates failure</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +97,7 @@ public class ImageCroppingResponseBody extends TeaModel {
 
     public static class ImageCroppingResponseBodyData extends TeaModel {
         /**
-         * <p>Image height</p>
+         * <p>The image height.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -102,7 +106,7 @@ public class ImageCroppingResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>URL of the cropped image</p>
+         * <p>The URL of the cropped image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/cropped.jpg">https://example.com/cropped.jpg</a></p>
@@ -111,7 +115,7 @@ public class ImageCroppingResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>Usage information</p>
+         * <p>The usage information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessedImageCount&quot;:1}</p>
@@ -120,7 +124,7 @@ public class ImageCroppingResponseBody extends TeaModel {
         public java.util.Map<String, Long> usageMap;
 
         /**
-         * <p>Image width</p>
+         * <p>The image width.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>

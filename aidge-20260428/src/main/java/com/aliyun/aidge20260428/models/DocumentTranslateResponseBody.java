@@ -20,7 +20,8 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public DocumentTranslateResponseBodyData data;
 
     /**
-     * <p>The error message. Not returned for successful calls.</p>
+     * <p>The error message, such as &quot;The parameters contain sensitive information. Try other input.&quot;
+     * This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +30,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique request identity, used for troubleshooting and tracing.</p>
      * 
      * <strong>example:</strong>
      * <p>39E8A74B-F99E-1195-A5FF-3ECC5F94F304</p>
@@ -38,7 +39,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. true: successful. false: failed.</p>
+     * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

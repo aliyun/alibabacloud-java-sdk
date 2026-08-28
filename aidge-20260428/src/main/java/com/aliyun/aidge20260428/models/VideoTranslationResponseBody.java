@@ -14,13 +14,13 @@ public class VideoTranslationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The asynchronous task submit status.</p>
+     * <p>The asynchronous task submit result.</p>
      */
     @NameInMap("Data")
     public VideoTranslationResponseBodyData data;
 
     /**
-     * <p>The description message.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>Translation processing</p>
@@ -38,7 +38,7 @@ public class VideoTranslationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</p>
+     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

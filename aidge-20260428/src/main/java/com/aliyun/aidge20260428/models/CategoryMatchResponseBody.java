@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CategoryMatchResponseBody extends TeaModel {
     /**
-     * <p>The status code. The value &quot;success&quot; is returned for a successful call.</p>
+     * <p>The status code. The value &quot;success&quot; is returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class CategoryMatchResponseBody extends TeaModel {
     public CategoryMatchResponseBodyData data;
 
     /**
-     * <p>The error message. The value &quot;Success&quot; is returned for a successful call.</p>
+     * <p>The error message. The value &quot;Success&quot; is returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class CategoryMatchResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The request ID, which uniquely identifies the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>2157065A-D6C8-1F3E-A4D0-B1234567890</p>
@@ -38,7 +38,7 @@ public class CategoryMatchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class CategoryMatchResponseBody extends TeaModel {
 
     public static class CategoryMatchResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the matched category.</p>
+         * <p>The matched category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1522</p>
@@ -102,7 +102,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         public String categoryId;
 
         /**
-         * <p>The name of the matched category.</p>
+         * <p>The matched category name.</p>
          * 
          * <strong>example:</strong>
          * <p>位置和活动跟踪器</p>
@@ -111,7 +111,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         public String categoryName;
 
         /**
-         * <p>The full path of the category, separated by forward slashes (/).</p>
+         * <p>The full path of the category, separated by &quot;/&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>宠物用品/猫用品/猫挂饰、项圈、牵引带/位置和活动跟踪器</p>
@@ -129,7 +129,7 @@ public class CategoryMatchResponseBody extends TeaModel {
         public Integer confidence;
 
         /**
-         * <p>Indicates whether the match is successful.</p>
+         * <p>Indicates whether the matching is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -138,10 +138,10 @@ public class CategoryMatchResponseBody extends TeaModel {
         public Boolean matchSuccessful;
 
         /**
-         * <p>The reason for the match.</p>
+         * <p>The explanation of the matching reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>商品核心为带 AirTag 定位功能的猫项圈，属\&quot;位置和活动跟踪器\&quot;类目，叶子节点语义精准匹配其追踪功能与猫用属性。</p>
+         * <p>The product core is a cat collar with AirTag positioning function, belonging to the \&quot;Location and Activity Trackers\&quot; category, with leaf node semantics precisely matching its tracking function and cat-use attributes</p>
          */
         @NameInMap("Reason")
         public String reason;

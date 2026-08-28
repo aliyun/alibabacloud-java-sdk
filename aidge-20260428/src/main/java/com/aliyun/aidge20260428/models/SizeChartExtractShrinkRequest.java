@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SizeChartExtractShrinkRequest extends TeaModel {
     /**
-     * <p>The list of column names to extract, such as Size, Bust, and Length.</p>
+     * <p>The list of column names (such as Size, Bust, Length).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;Size&quot;,&quot;Bust&quot;,&quot;Length&quot;]</p>
@@ -24,7 +24,7 @@ public class SizeChartExtractShrinkRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The language model that controls the output language, such as en and cn.</p>
+     * <p>The language model for output (such as en, cn). Set this parameter to cn for Chinese or en for English. If not specified, the original language is preserved.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

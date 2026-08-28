@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MaterialInspectionResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned for successful calls.</p>
+     * <p>The error code. This parameter is not returned if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
     public MaterialInspectionResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned for successful calls.</p>
+     * <p>The error message. This parameter is not returned if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,7 +38,11 @@ public class MaterialInspectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +97,12 @@ public class MaterialInspectionResponseBody extends TeaModel {
 
     public static class MaterialInspectionResponseBodyDataResultSteps extends TeaModel {
         /**
-         * <p>The step result. Valid values: PASS, FAIL, and UNABLE_TO_JUDGE.</p>
+         * <p>The determination result of the step. Valid values:</p>
+         * <ul>
+         * <li>PASS: The step is compliant.</li>
+         * <li>FAIL: The step is non-compliant.</li>
+         * <li>UNABLE_TO_JUDGE: The system cannot determine the result.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PASS</p>
@@ -135,7 +144,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
 
     public static class MaterialInspectionResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The natural language summary, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</p>
+         * <p>The natural language summary of the inspection result, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</p>
          * 
          * <strong>example:</strong>
          * <p>1项规则：1 PASS，所有检测项合规</p>
@@ -144,7 +153,11 @@ public class MaterialInspectionResponseBody extends TeaModel {
         public String evidence;
 
         /**
-         * <p>The overall result. Valid values: PASS and FAIL.</p>
+         * <p>The overall determination result. Valid values:</p>
+         * <ul>
+         * <li>PASS: All inspection items are compliant.</li>
+         * <li>FAIL: One or more inspection items are non-compliant.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PASS</p>
@@ -168,7 +181,7 @@ public class MaterialInspectionResponseBody extends TeaModel {
         public java.util.List<MaterialInspectionResponseBodyDataResultSteps> steps;
 
         /**
-         * <p>The detection type.</p>
+         * <p>The detection type that indicates the identified material category.</p>
          * 
          * <strong>example:</strong>
          * <p>Stamp</p>

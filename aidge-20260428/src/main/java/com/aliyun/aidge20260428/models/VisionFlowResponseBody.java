@@ -14,7 +14,7 @@ public class VisionFlowResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The submit status data of the asynchronous task, which contains the asynchronous task ID.</p>
+     * <p>The asynchronous task submit status data, which contains the asynchronous task ID.</p>
      */
     @NameInMap("Data")
     public VisionFlowResponseBodyData data;
@@ -29,7 +29,7 @@ public class VisionFlowResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the API call.</p>
+     * <p>The request ID, used to uniquely identify a single API call.</p>
      * 
      * <strong>example:</strong>
      * <p>F3E65785-0180-1227-91B0-2F5F52F679FB</p>
@@ -38,7 +38,7 @@ public class VisionFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class VisionFlowResponseBody extends TeaModel {
 
     public static class VisionFlowResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID. Use this ID to query the processing result through QueryAsyncTaskResult.</p>
+         * <p>The asynchronous task ID, used to query processing results later through QueryAsyncTaskResult.</p>
          * 
          * <strong>example:</strong>
          * <p>e4c48e88-3c34-91e3-ab8a-08484dc4d402</p>

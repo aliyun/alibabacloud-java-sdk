@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextCorrectResponseBody extends TeaModel {
     /**
-     * <p>Response code. Returns &quot;success&quot; during normal calls.</p>
+     * <p>The response code. The value &quot;success&quot; is returned if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class TextCorrectResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Intelligent error correction result data.</p>
+     * <p>The intelligent correction result data.</p>
      */
     @NameInMap("Data")
     public TextCorrectResponseBodyData data;
 
     /**
-     * <p>Error message. Returns &quot;Success&quot; during normal calls. Returns specific error information during exceptions, such as &quot;The parameters contain sensitive information. Please try a different input.&quot;</p>
+     * <p>The error message. The value &quot;Success&quot; is returned if the call is successful. A specific error message is returned if an exception occurs, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class TextCorrectResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, used to identify a unique request call.</p>
+     * <p>The request ID, which uniquely identifies the request.</p>
      * 
      * <strong>example:</strong>
      * <p>32882AD0-50D1-1D90-A221-3987325EC03E</p>
@@ -38,7 +38,7 @@ public class TextCorrectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the call was successful. true indicates success, false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,7 +102,7 @@ public class TextCorrectResponseBody extends TeaModel {
         public String correctedText;
 
         /**
-         * <p>Usage information, including the number of input characters.</p>
+         * <p>The usage information, including the number of input characters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;InputCharacterCount&quot;:9}</p>

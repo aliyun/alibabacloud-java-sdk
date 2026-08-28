@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MerchandisePlacementDetectionResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * <p>The error code. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
     public MerchandisePlacementDetectionResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,9 +38,9 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
+     * <li>true: The call was successful.</li>
      * <li>false: The call failed.</li>
      * </ul>
      * 
@@ -118,7 +118,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
          * <p>The name of the recalled product.</p>
          * 
          * <strong>example:</strong>
-         * <p>Bright Milk 500ml.</p>
+         * <p>光明牛奶500ml</p>
          */
         @NameInMap("SkuName")
         public String skuName;
@@ -186,7 +186,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
          * <p>The name of the recalled product.</p>
          * 
          * <strong>example:</strong>
-         * <p>Bright Milk 500ml.</p>
+         * <p>光明牛奶500ml</p>
          */
         @NameInMap("SkuName")
         public String skuName;
@@ -232,7 +232,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
 
     public static class MerchandisePlacementDetectionResponseBodyDataData extends TeaModel {
         /**
-         * <p>The position coordinates of the detection box in the format [x1,y1,x2,y2].</p>
+         * <p>The position coordinates of the detection box in the format [x1, y1, x2, y2].</p>
          */
         @NameInMap("Bbox")
         public java.util.List<Float> bbox;
@@ -331,7 +331,7 @@ public class MerchandisePlacementDetectionResponseBody extends TeaModel {
         public java.util.List<MerchandisePlacementDetectionResponseBodyDataData> data;
 
         /**
-         * <p>The usage information. The key is the usage metric name, and the value is the count.</p>
+         * <p>The usage information. The key is the usage name and the value is the count.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessingCount&quot;:1}</p>

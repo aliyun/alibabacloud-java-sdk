@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationStandardRequest extends TeaModel {
     /**
-     * <p>The glossary ID. Optional. Create a glossary in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+     * <p>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -16,6 +16,9 @@ public class ImageTranslationStandardRequest extends TeaModel {
     /**
      * <ul>
      * <li>Image URL: Must be publicly accessible.</li>
+     * <li>Format: png, jpeg, jpg, bmp, webp</li>
+     * <li>Pixels: Width and height must not exceed 4000</li>
+     * <li>File size: Original file ≤ 10 MB</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -26,7 +29,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the main subject of the image. Optional. Default value: false. This helps you protect information by avoiding translation of embedded information such as product names.</p>
+     * <p>Specifies whether to translate text on the product area. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -35,7 +38,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>The source language code. Required. For supported language pairs, see the supported language pair list.</p>
+     * <p>The source language code. Required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +48,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The target language code. Required. For supported language pairs, see the supported language pair list.</p>
+     * <p>The target language code. Required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +58,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Specifies whether to translate brand names on the image. Optional. Default value: false. This helps you protect brand name information from being translated.</p>
+     * <p>Specifies whether to translate brand names on images. Optional. Default value: false. This helps protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -64,7 +67,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public Boolean translatingBrandInTheProduct;
 
     /**
-     * <p>Specifies whether to return layer information such as text position, font, and color. When set to true, layer information is returned for integration with image editors for secondary editing. Default value: false.</p>
+     * <p>Specifies whether to return layer information such as text position, font, and color. If set to true, layer information is returned for secondary editing through an image editor. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

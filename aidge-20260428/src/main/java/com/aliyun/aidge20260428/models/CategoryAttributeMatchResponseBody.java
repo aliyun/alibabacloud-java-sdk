@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CategoryAttributeMatchResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * <p>The error code. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CategoryAttributeMatchResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -102,7 +102,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         public Integer attrId;
 
         /**
-         * <p>The matching confidence score. Valid values: 0 to 100.</p>
+         * <p>The matching confidence score, ranging from 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -111,7 +111,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         public Integer confidence;
 
         /**
-         * <p>The input type of the attribute.</p>
+         * <p>The attribute input type.</p>
          * 
          * <strong>example:</strong>
          * <p>单选下拉</p>
@@ -147,7 +147,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         public String nameEn;
 
         /**
-         * <p>The reason for the matching result.</p>
+         * <p>The explanation for the matching result.</p>
          * 
          * <strong>example:</strong>
          * <p>a_reason</p>
@@ -333,7 +333,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         public Integer totalAttributes;
 
         /**
-         * <p>The usage fields.</p>
+         * <p>The usage information.</p>
          */
         @NameInMap("UsageMap")
         public CategoryAttributeMatchResponseBodyDataUsageMap usageMap;

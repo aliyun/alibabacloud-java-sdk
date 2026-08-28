@@ -14,7 +14,7 @@ public class AssetOptimizeProResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result data of the asynchronous task submission, which contains the asynchronous task ID.</p>
+     * <p>The asynchronous task submission result data, which contains the asynchronous task ID.</p>
      */
     @NameInMap("Data")
     public AssetOptimizeProResponseBodyData data;
@@ -29,7 +29,7 @@ public class AssetOptimizeProResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the API call.</p>
+     * <p>The request ID, used to uniquely identify a single API call.</p>
      * 
      * <strong>example:</strong>
      * <p>4FCCA90A-A7A4-1D37-88C3-C17549886E70</p>
@@ -38,7 +38,7 @@ public class AssetOptimizeProResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the call was successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class AssetOptimizeProResponseBody extends TeaModel {
 
     public static class AssetOptimizeProResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID, which is used to query the processing result by calling QueryAsyncTaskResult.</p>
+         * <p>The asynchronous task ID, used to query processing results through QueryAsyncTaskResult.</p>
          * 
          * <strong>example:</strong>
          * <p>8080345d-b28a-9e2e-9ad7-370f8e236949</p>

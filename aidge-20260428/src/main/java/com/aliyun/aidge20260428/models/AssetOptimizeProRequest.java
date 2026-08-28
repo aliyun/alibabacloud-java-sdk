@@ -8,13 +8,13 @@ public class AssetOptimizeProRequest extends TeaModel {
      * <p>The list of column names to recognize in size chart images. Optional.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;胸围&quot;,&quot;腰围&quot;,&quot;臀围&quot;]</p>
+     * <p>[&quot;Bust&quot;,&quot;Waist&quot;,&quot;Hip&quot;]</p>
      */
     @NameInMap("ColumnNameList")
     public java.util.List<String> columnNameList;
 
     /**
-     * <p>The glossary ID. Optional. Create a glossary in the console and provide its ID. If left empty, translation results are not modified by any glossary.</p>
+     * <p>The glossary ID. Optional. Create a glossary separately in the console and provide its ID. If empty, translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -23,7 +23,7 @@ public class AssetOptimizeProRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>Specifies whether to translate text on the product subject area of images. Setting this to false helps protect embedded information such as product names from being translated. Default value: false.</p>
+     * <p>Specifies whether to translate text on the product subject area in images. Setting this to false helps protect embedded information such as product names from being translated. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -61,7 +61,7 @@ public class AssetOptimizeProRequest extends TeaModel {
     public String productUrl;
 
     /**
-     * <p>The source language code. Optional. For supported language pairs, refer to the supported translation language list. This parameter is required if NeedTrans is set to true.</p>
+     * <p>The source language code. Optional. Refer to the supported language pairs list for available language directions. Required if NeedTrans is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -80,7 +80,7 @@ public class AssetOptimizeProRequest extends TeaModel {
     public String sourcePlatform;
 
     /**
-     * <p>The target language code. Optional. For supported language pairs, refer to the supported translation language list. This parameter is required if NeedTrans is set to true.</p>
+     * <p>The target language code. Optional. Refer to the supported language pairs list for available language directions. Required if NeedTrans is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -108,7 +108,7 @@ public class AssetOptimizeProRequest extends TeaModel {
     public Double threshold;
 
     /**
-     * <p>Specifies whether to translate brand names on images. Optional. Default value: false. Setting this to false helps protect brand name information from being translated.</p>
+     * <p>Specifies whether to translate brand names in images. Optional. Default value: false. Setting this to false helps protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

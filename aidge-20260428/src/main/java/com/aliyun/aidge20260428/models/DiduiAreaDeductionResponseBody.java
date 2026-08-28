@@ -210,7 +210,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Long latencyMs;
 
         /**
-         * <p>The workflow description.</p>
+         * <p>The workflow description message.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PackageWeightSizeCheckResponseBody extends TeaModel {
     /**
-     * <p>The response code. 200 indicates a successful call. For other response codes, refer to the error code information.</p>
+     * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The asynchronous submission result data, which contains the asynchronous task ID.</p>
+     * <p>The submit status result data, which contains the asynchronous task ID.</p>
      */
     @NameInMap("Data")
     public PackageWeightSizeCheckResponseBodyData data;
 
     /**
-     * <p>The error message. &quot;Success&quot; is returned for normal calls, and specific error information is returned for exceptions.</p>
+     * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, used to identify a unique request call.</p>
+     * <p>The request ID, which uniquely identifies the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>F93D82E4-D0B6-1043-AC58-282597BC3C10</p>
@@ -38,7 +38,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the call was successful. true indicates success, and false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
 
     public static class PackageWeightSizeCheckResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID, used to query the audit result later through QueryAsyncTaskResult.</p>
+         * <p>The asynchronous task ID, which is used to query the review result by calling QueryAsyncTaskResult.</p>
          * 
          * <strong>example:</strong>
          * <p>a8323ada-a196-9061-976f-90e38b27323a</p>

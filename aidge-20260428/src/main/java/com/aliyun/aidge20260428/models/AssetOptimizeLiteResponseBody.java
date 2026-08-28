@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssetOptimizeLiteResponseBody extends TeaModel {
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Asynchronous task submission result</p>
+     * <p>The submit result of the asynchronous task.</p>
      */
     @NameInMap("Data")
     public AssetOptimizeLiteResponseBodyData data;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,7 +38,7 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the call was successful</p>
+     * <p>Indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
 
     public static class AssetOptimizeLiteResponseBodyData extends TeaModel {
         /**
-         * <p>Asynchronous task ID, used for subsequent result queries</p>
+         * <p>The asynchronous task ID, used to query results later.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxxxxx</p>

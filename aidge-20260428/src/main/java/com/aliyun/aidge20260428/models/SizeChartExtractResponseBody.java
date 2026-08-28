@@ -93,7 +93,7 @@ public class SizeChartExtractResponseBody extends TeaModel {
 
     public static class SizeChartExtractResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID, which is used to query the result later.</p>
+         * <p>The asynchronous task ID, used to query the result later.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxxxx</p>

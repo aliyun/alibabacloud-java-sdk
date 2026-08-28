@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CategoryMatchRequest extends TeaModel {
     /**
-     * <p>The product details.</p>
+     * <p>The product description.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>真丝，春季新款</p>
+     * <p>Silk, new spring style</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The product attributes that describe the characteristics of the product, such as material. Specify the attribute names and attribute values.</p>
+     * <p>The product attributes that describe the characteristics of the product, such as material. Provide the attribute names and values.</p>
      * 
      * <strong>example:</strong>
      * <p>材质:涤纶,适用对象:通用,品牌:艾马逊AMASON PET</p>
@@ -24,7 +24,7 @@ public class CategoryMatchRequest extends TeaModel {
     public String itemSpec;
 
     /**
-     * <p>The SKU title of the product.</p>
+     * <p>The product SKU title.</p>
      * 
      * <strong>example:</strong>
      * <p>0:0:颜色:黑(不含定位器);0:1:颜色:智能定位(不含项圈);0:2:颜色:范围定位(不含项圈);0:3:颜色:蓝(不含定位器);0:4:颜色:橙(不含定位器);0:5:颜色:粉(不含定位器);0:6:颜色:红(不含定位器);0:7:颜色:黄(不含定位器);0:8:颜色:紫(不含定位器)</p>
@@ -37,13 +37,13 @@ public class CategoryMatchRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>衣服</p>
+     * <p>Clothing</p>
      */
     @NameInMap("SourceCategory")
     public String sourceCategory;
 
     /**
-     * <p>The source platform from which products are sourced.</p>
+     * <p>The source platform where products are sourced from.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CategoryMatchRequest extends TeaModel {
     public String sourcePlatform;
 
     /**
-     * <p>The target listing platform. Currently, only temu is supported.</p>
+     * <p>The target listing platform. Currently only temu is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class CategoryMatchRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>女士春季新款衣服</p>
+     * <p>Women\&quot;s new spring clothing</p>
      */
     @NameInMap("Title")
     public String title;

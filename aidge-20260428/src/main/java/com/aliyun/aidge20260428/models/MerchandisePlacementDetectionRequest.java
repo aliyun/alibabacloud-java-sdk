@@ -14,7 +14,7 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>The URL of the shelf or floor-stack image to be recognized (accessible via the public network or OSS).</p>
+     * <p>The URL of the shelf or floor-stack image to be recognized (accessible over the public network or from OSS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The customer-specific SKU vector library ID that determines which library to retrieve from. The library must be created in advance through the library creation process.</p>
+     * <p>The ID of the customer\&quot;s dedicated SKU vector library, which determines which library is used for retrieval. The library must be created in advance through the library creation process.</p>
      * 
      * <strong>example:</strong>
      * <p>rag_xxx</p>
@@ -33,10 +33,10 @@ public class MerchandisePlacementDetectionRequest extends TeaModel {
     public String ragId;
 
     /**
-     * <p>The business type (reserved for future routing by business line). The current release supports skincare &amp; lotion.</p>
+     * <p>The business type (reserved for future routing by business line). The current phase supports skincare &amp; lotion.</p>
      * 
      * <strong>example:</strong>
-     * <p>Lotion.</p>
+     * <p>水乳</p>
      */
     @NameInMap("Type")
     public String type;

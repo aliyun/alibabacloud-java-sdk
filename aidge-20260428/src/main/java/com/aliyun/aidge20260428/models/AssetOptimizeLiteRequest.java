@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class AssetOptimizeLiteRequest extends TeaModel {
     /**
-     * <p>Custom glossary</p>
+     * <p>The custom glossary for term intervention.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试</p>
+     * <p>test</p>
      */
     @NameInMap("Glossary")
     public String glossary;
 
     /**
-     * <p>Whether to include product region translation</p>
+     * <p>Specifies whether product area translation is included.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,7 +23,7 @@ public class AssetOptimizeLiteRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>Whether translation is required</p>
+     * <p>Specifies whether translation is needed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class AssetOptimizeLiteRequest extends TeaModel {
     public Boolean needTrans;
 
     /**
-     * <p>Product Link URL</p>
+     * <p>The product URL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class AssetOptimizeLiteRequest extends TeaModel {
     public String productUrl;
 
     /**
-     * <p>Source language code, e.g., zh</p>
+     * <p>The source language code, such as zh.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -52,7 +52,7 @@ public class AssetOptimizeLiteRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>Source platform, e.g., 1688</p>
+     * <p>The source platform, such as 1688.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class AssetOptimizeLiteRequest extends TeaModel {
     public String sourcePlatform;
 
     /**
-     * <p>Target language code, e.g., en</p>
+     * <p>The target language code, such as en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -71,7 +71,7 @@ public class AssetOptimizeLiteRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Target platform, e.g., temu</p>
+     * <p>The target platform, such as temu.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class AssetOptimizeLiteRequest extends TeaModel {
     public String targetPlatform;
 
     /**
-     * <p>Whether to translate brand names in images, default false</p>
+     * <p>Specifies whether to translate brand names in images. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
