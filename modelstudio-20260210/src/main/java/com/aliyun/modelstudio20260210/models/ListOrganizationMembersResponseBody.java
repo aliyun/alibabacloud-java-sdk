@@ -47,7 +47,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -125,6 +125,283 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class ListOrganizationMembersResponseBodyDataPackLimitInfo extends TeaModel {
+        @NameInMap("AvailableLimit")
+        public Double availableLimit;
+
+        @NameInMap("CycleEndTime")
+        public Long cycleEndTime;
+
+        @NameInMap("CycleStartTime")
+        public Long cycleStartTime;
+
+        @NameInMap("FrozenCredits")
+        public Double frozenCredits;
+
+        @NameInMap("HasShareLimit")
+        public Boolean hasShareLimit;
+
+        @NameInMap("IsAvailable")
+        public Boolean isAvailable;
+
+        @NameInMap("LastConfirmedTime")
+        public Long lastConfirmedTime;
+
+        @NameInMap("UpperLimit")
+        public Double upperLimit;
+
+        @NameInMap("UsedCredits")
+        public Double usedCredits;
+
+        public static ListOrganizationMembersResponseBodyDataPackLimitInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListOrganizationMembersResponseBodyDataPackLimitInfo self = new ListOrganizationMembersResponseBodyDataPackLimitInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo setAvailableLimit(Double availableLimit) {
+            this.availableLimit = availableLimit;
+            return this;
+        }
+        public Double getAvailableLimit() {
+            return this.availableLimit;
+        }
+
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo setCycleEndTime(Long cycleEndTime) {
+            this.cycleEndTime = cycleEndTime;
+            return this;
+        }
+        public Long getCycleEndTime() {
+            return this.cycleEndTime;
+        }
+
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo setCycleStartTime(Long cycleStartTime) {
+            this.cycleStartTime = cycleStartTime;
+            return this;
+        }
+        public Long getCycleStartTime() {
+            return this.cycleStartTime;
+        }
+
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo setFrozenCredits(Double frozenCredits) {
+            this.frozenCredits = frozenCredits;
+            return this;
+        }
+        public Double getFrozenCredits() {
+            return this.frozenCredits;
+        }
+
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo setHasShareLimit(Boolean hasShareLimit) {
+            this.hasShareLimit = hasShareLimit;
+            return this;
+        }
+        public Boolean getHasShareLimit() {
+            return this.hasShareLimit;
+        }
+
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo setIsAvailable(Boolean isAvailable) {
+            this.isAvailable = isAvailable;
+            return this;
+        }
+        public Boolean getIsAvailable() {
+            return this.isAvailable;
+        }
+
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo setLastConfirmedTime(Long lastConfirmedTime) {
+            this.lastConfirmedTime = lastConfirmedTime;
+            return this;
+        }
+        public Long getLastConfirmedTime() {
+            return this.lastConfirmedTime;
+        }
+
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo setUpperLimit(Double upperLimit) {
+            this.upperLimit = upperLimit;
+            return this;
+        }
+        public Double getUpperLimit() {
+            return this.upperLimit;
+        }
+
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo setUsedCredits(Double usedCredits) {
+            this.usedCredits = usedCredits;
+            return this;
+        }
+        public Double getUsedCredits() {
+            return this.usedCredits;
+        }
+
+    }
+
+    public static class ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList extends TeaModel {
+        @NameInMap("CycleEndTime")
+        public Long cycleEndTime;
+
+        @NameInMap("CycleStartTime")
+        public Long cycleStartTime;
+
+        @NameInMap("CycleSurplusValue")
+        public Double cycleSurplusValue;
+
+        @NameInMap("CycleTotalValue")
+        public Double cycleTotalValue;
+
+        @NameInMap("EquityType")
+        public String equityType;
+
+        @NameInMap("EquityUnit")
+        public String equityUnit;
+
+        public static ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList build(java.util.Map<String, ?> map) throws Exception {
+            ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList self = new ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList setCycleEndTime(Long cycleEndTime) {
+            this.cycleEndTime = cycleEndTime;
+            return this;
+        }
+        public Long getCycleEndTime() {
+            return this.cycleEndTime;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList setCycleStartTime(Long cycleStartTime) {
+            this.cycleStartTime = cycleStartTime;
+            return this;
+        }
+        public Long getCycleStartTime() {
+            return this.cycleStartTime;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList setCycleSurplusValue(Double cycleSurplusValue) {
+            this.cycleSurplusValue = cycleSurplusValue;
+            return this;
+        }
+        public Double getCycleSurplusValue() {
+            return this.cycleSurplusValue;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList setCycleTotalValue(Double cycleTotalValue) {
+            this.cycleTotalValue = cycleTotalValue;
+            return this;
+        }
+        public Double getCycleTotalValue() {
+            return this.cycleTotalValue;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList setEquityType(String equityType) {
+            this.equityType = equityType;
+            return this;
+        }
+        public String getEquityType() {
+            return this.equityType;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList setEquityUnit(String equityUnit) {
+            this.equityUnit = equityUnit;
+            return this;
+        }
+        public String getEquityUnit() {
+            return this.equityUnit;
+        }
+
+    }
+
+    public static class ListOrganizationMembersResponseBodyDataSubscriptionInfo extends TeaModel {
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("EquityList")
+        public java.util.List<ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList> equityList;
+
+        @NameInMap("InstanceCode")
+        public String instanceCode;
+
+        @NameInMap("PayMode")
+        public String payMode;
+
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("SpecType")
+        public String specType;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static ListOrganizationMembersResponseBodyDataSubscriptionInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListOrganizationMembersResponseBodyDataSubscriptionInfo self = new ListOrganizationMembersResponseBodyDataSubscriptionInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfo setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfo setEquityList(java.util.List<ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList> equityList) {
+            this.equityList = equityList;
+            return this;
+        }
+        public java.util.List<ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList> getEquityList() {
+            return this.equityList;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfo setInstanceCode(String instanceCode) {
+            this.instanceCode = instanceCode;
+            return this;
+        }
+        public String getInstanceCode() {
+            return this.instanceCode;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfo setPayMode(String payMode) {
+            this.payMode = payMode;
+            return this;
+        }
+        public String getPayMode() {
+            return this.payMode;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfo setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfo setSpecType(String specType) {
+            this.specType = specType;
+            return this;
+        }
+        public String getSpecType() {
+            return this.specType;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfo setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class ListOrganizationMembersResponseBodyData extends TeaModel {
         /**
          * <p>The member business ID.</p>
@@ -136,7 +413,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public String accountBizId;
 
         /**
-         * <p>The ID of the member account.</p>
+         * <p>The ID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>acc_123456789</p>
@@ -145,7 +422,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the member account.</p>
+         * <p>The name of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>test_001</p>
@@ -163,7 +440,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public String apiKeyId;
 
         /**
-         * <p>The email address of the member.</p>
+         * <p>The member email address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@email.com">test@email.com</a></p>
@@ -198,6 +475,9 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         @NameInMap("OrgId")
         public String orgId;
 
+        @NameInMap("PackLimitInfo")
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo packLimitInfo;
+
         /**
          * <p>The list of member roles.</p>
          */
@@ -205,7 +485,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public java.util.List<String> roles;
 
         /**
-         * <p>The ID used to allocate the seat resource.</p>
+         * <p>The seat resource allocate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>seat_123456</p>
@@ -218,7 +498,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
          * <ul>
          * <li>standard: Standard seat.</li>
          * <li>pro: Pro seat.</li>
-         * <li>max: Premium seat.</li>
+         * <li>max: Max seat.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,6 +515,9 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("SubscriptionInfo")
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfo subscriptionInfo;
 
         public static ListOrganizationMembersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListOrganizationMembersResponseBodyData self = new ListOrganizationMembersResponseBodyData();
@@ -305,6 +588,14 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             return this.orgId;
         }
 
+        public ListOrganizationMembersResponseBodyData setPackLimitInfo(ListOrganizationMembersResponseBodyDataPackLimitInfo packLimitInfo) {
+            this.packLimitInfo = packLimitInfo;
+            return this;
+        }
+        public ListOrganizationMembersResponseBodyDataPackLimitInfo getPackLimitInfo() {
+            return this.packLimitInfo;
+        }
+
         public ListOrganizationMembersResponseBodyData setRoles(java.util.List<String> roles) {
             this.roles = roles;
             return this;
@@ -335,6 +626,14 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListOrganizationMembersResponseBodyData setSubscriptionInfo(ListOrganizationMembersResponseBodyDataSubscriptionInfo subscriptionInfo) {
+            this.subscriptionInfo = subscriptionInfo;
+            return this;
+        }
+        public ListOrganizationMembersResponseBodyDataSubscriptionInfo getSubscriptionInfo() {
+            return this.subscriptionInfo;
         }
 
     }

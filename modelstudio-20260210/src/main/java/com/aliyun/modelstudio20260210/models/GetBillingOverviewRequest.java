@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class GetBillingOverviewRequest extends TeaModel {
     /**
+     * <p>The billing month. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08</p>
      */
     @NameInMap("billMonth")
     public String billMonth;
 
+    /**
+     * <p>The filter condition.</p>
+     */
     @NameInMap("filter")
     public GetBillingOverviewRequestFilter filter;
 
+    /**
+     * <p>The list of grouping conditions. Currently, you must specify exactly one grouping dimension.</p>
+     */
     @NameInMap("groupBy")
     public java.util.List<GetBillingOverviewRequestGroupBy> groupBy;
 
     /**
+     * <p>The response language. Default value: en-US.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -25,6 +35,8 @@ public class GetBillingOverviewRequest extends TeaModel {
     public String locale;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -32,6 +44,8 @@ public class GetBillingOverviewRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -39,6 +53,8 @@ public class GetBillingOverviewRequest extends TeaModel {
     public Integer topNum;
 
     /**
+     * <p>Specifies whether to filter out groups with a zero amount. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -108,6 +124,8 @@ public class GetBillingOverviewRequest extends TeaModel {
 
     public static class GetBillingOverviewRequestFilterDimensions extends TeaModel {
         /**
+         * <p>The filter field. For more information, see the &quot;Additional information&quot; section below.</p>
+         * 
          * <strong>example:</strong>
          * <p>CHARGE_TYPE</p>
          */
@@ -115,12 +133,17 @@ public class GetBillingOverviewRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>The filter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
         @NameInMap("selectType")
         public String selectType;
 
+        /**
+         * <p>The list of filter values.</p>
+         */
         @NameInMap("values")
         public java.util.List<String> values;
 
@@ -156,6 +179,9 @@ public class GetBillingOverviewRequest extends TeaModel {
     }
 
     public static class GetBillingOverviewRequestFilter extends TeaModel {
+        /**
+         * <p>The list of dimension filters.</p>
+         */
         @NameInMap("dimensions")
         public java.util.List<GetBillingOverviewRequestFilterDimensions> dimensions;
 
@@ -176,6 +202,8 @@ public class GetBillingOverviewRequest extends TeaModel {
 
     public static class GetBillingOverviewRequestGroupBy extends TeaModel {
         /**
+         * <p>The grouping dimension code. For more information, see the &quot;Additional information&quot; section below.</p>
+         * 
          * <strong>example:</strong>
          * <p>BASE_MODEL</p>
          */

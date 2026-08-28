@@ -4,20 +4,30 @@ package com.aliyun.modelstudio20260210.models;
 import com.aliyun.tea.*;
 
 public class GetBillingTrendShrinkRequest extends TeaModel {
+    /**
+     * <p>The dimension filter conditions.</p>
+     */
     @NameInMap("filter")
     public String filterShrink;
 
     /**
+     * <p>The query granularity. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>DAY</p>
      */
     @NameInMap("granularity")
     public String granularity;
 
+    /**
+     * <p>The grouping conditions. This parameter must contain one and only one element.</p>
+     */
     @NameInMap("groupBy")
     public String groupByShrink;
 
     /**
+     * <p>The response language. Default value: en-US.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -25,16 +35,23 @@ public class GetBillingTrendShrinkRequest extends TeaModel {
     public String locale;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>The query time range, including the start time and end time. This parameter is required.</p>
+     */
     @NameInMap("timePeriod")
     public String timePeriodShrink;
 
     /**
+     * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20. The remaining groups are merged into &quot;Others&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -42,6 +59,8 @@ public class GetBillingTrendShrinkRequest extends TeaModel {
     public Integer topNum;
 
     /**
+     * <p>Specifies whether to filter out groups with a zero amount. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

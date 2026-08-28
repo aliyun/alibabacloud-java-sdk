@@ -14,10 +14,10 @@ public class ListOrganizationMembersRequest extends TeaModel {
     public Boolean hasSeat;
 
     /**
-     * <p>Fuzzy filter by member name. Matches accountName or email and is case-insensitive.</p>
+     * <p>Fuzzy filter by member name. Matches accountName or email, case-insensitive.</p>
      * 
      * <strong>example:</strong>
-     * <p>成员名称</p>
+     * <p>MemberName</p>
      */
     @NameInMap("Name")
     public String name;
@@ -41,7 +41,7 @@ public class ListOrganizationMembersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters by member status, such as ACTIVE or FROZEN. Set to null to disable filtering.</p>
+     * <p>Filters by member status, such as ACTIVE or FROZEN. A value of null indicates no filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>

@@ -4,20 +4,30 @@ package com.aliyun.modelstudio20260210.models;
 import com.aliyun.tea.*;
 
 public class GetBillingTrendRequest extends TeaModel {
+    /**
+     * <p>The dimension filter conditions.</p>
+     */
     @NameInMap("filter")
     public GetBillingTrendRequestFilter filter;
 
     /**
+     * <p>The query granularity. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>DAY</p>
      */
     @NameInMap("granularity")
     public String granularity;
 
+    /**
+     * <p>The grouping conditions. This parameter must contain one and only one element.</p>
+     */
     @NameInMap("groupBy")
     public java.util.List<GetBillingTrendRequestGroupBy> groupBy;
 
     /**
+     * <p>The response language. Default value: en-US.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -25,16 +35,23 @@ public class GetBillingTrendRequest extends TeaModel {
     public String locale;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>The query time range, including the start time and end time. This parameter is required.</p>
+     */
     @NameInMap("timePeriod")
     public GetBillingTrendRequestTimePeriod timePeriod;
 
     /**
+     * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20. The remaining groups are merged into &quot;Others&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -42,6 +59,8 @@ public class GetBillingTrendRequest extends TeaModel {
     public Integer topNum;
 
     /**
+     * <p>Specifies whether to filter out groups with a zero amount. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -119,6 +138,8 @@ public class GetBillingTrendRequest extends TeaModel {
 
     public static class GetBillingTrendRequestFilterDimensions extends TeaModel {
         /**
+         * <p>The filter dimension code. For more information, see the &quot;Additional information&quot; section below.</p>
+         * 
          * <strong>example:</strong>
          * <p>CHARGE_TYPE</p>
          */
@@ -126,12 +147,17 @@ public class GetBillingTrendRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>The filter method.</p>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
         @NameInMap("selectType")
         public String selectType;
 
+        /**
+         * <p>The filter value list.</p>
+         */
         @NameInMap("values")
         public java.util.List<String> values;
 
@@ -167,6 +193,9 @@ public class GetBillingTrendRequest extends TeaModel {
     }
 
     public static class GetBillingTrendRequestFilter extends TeaModel {
+        /**
+         * <p>The dimension filter list.</p>
+         */
         @NameInMap("dimensions")
         public java.util.List<GetBillingTrendRequestFilterDimensions> dimensions;
 
@@ -187,6 +216,8 @@ public class GetBillingTrendRequest extends TeaModel {
 
     public static class GetBillingTrendRequestGroupBy extends TeaModel {
         /**
+         * <p>The grouping dimension code. For more information, see the &quot;Additional information&quot; section below.</p>
+         * 
          * <strong>example:</strong>
          * <p>BASE_MODEL</p>
          */
@@ -210,6 +241,8 @@ public class GetBillingTrendRequest extends TeaModel {
 
     public static class GetBillingTrendRequestTimePeriod extends TeaModel {
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-25</p>
          */
@@ -217,6 +250,8 @@ public class GetBillingTrendRequest extends TeaModel {
         public String end;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-01</p>
          */

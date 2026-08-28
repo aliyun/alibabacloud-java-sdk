@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBillingOverviewResponseBody extends TeaModel {
     /**
+     * <p>The request result code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The bill overview data.</p>
+     */
     @NameInMap("data")
     public GetBillingOverviewResponseBodyData data;
 
     /**
+     * <p>The request result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetBillingOverviewResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>BB521414-5D38-5E66-AA66-963B2B4200E2</p>
      */
@@ -29,6 +38,8 @@ public class GetBillingOverviewResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,16 +93,23 @@ public class GetBillingOverviewResponseBody extends TeaModel {
 
     public static class GetBillingOverviewResponseBodyDataGroups extends TeaModel {
         /**
+         * <p>The amount of the current group.</p>
+         * 
          * <strong>example:</strong>
          * <p>3000</p>
          */
         @NameInMap("amount")
         public String amount;
 
+        /**
+         * <p>The list of commodity codes associated with the current group.</p>
+         */
         @NameInMap("articleCodes")
         public java.util.List<String> articleCodes;
 
         /**
+         * <p>The grouping dimension value. A null value is returned as DIMENSION_FILTER_NULL_VALUE.</p>
+         * 
          * <strong>example:</strong>
          * <p>inference</p>
          */
@@ -99,13 +117,17 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The display name of the group, which is affected by the locale parameter. A null value is displayed as -.</p>
+         * 
          * <strong>example:</strong>
-         * <p>模型调用</p>
+         * <p>Model invocation</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
+         * <p>The ratio of the group amount to the total amount of the top N groups.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.10</p>
          */
@@ -161,16 +183,23 @@ public class GetBillingOverviewResponseBody extends TeaModel {
 
     public static class GetBillingOverviewResponseBodyData extends TeaModel {
         /**
+         * <p>The currency of the amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
         @NameInMap("currency")
         public String currency;
 
+        /**
+         * <p>The top N groups sorted by amount in descending order.</p>
+         */
         @NameInMap("groups")
         public java.util.List<GetBillingOverviewResponseBodyDataGroups> groups;
 
         /**
+         * <p>The total pretax amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>28729.32</p>
          */
@@ -178,6 +207,8 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         public String pretaxAmount;
 
         /**
+         * <p>The total tax amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>2499.28</p>
          */
@@ -185,6 +216,8 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         public String taxAmount;
 
         /**
+         * <p>The total amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>31228.60</p>
          */

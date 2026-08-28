@@ -659,7 +659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账单概览</p>
+     * <p>Queries the bill overview.</p>
      * 
      * @param tmpReq GetBillingOverviewRequest
      * @param headers map
@@ -727,7 +727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账单概览</p>
+     * <p>Queries the bill overview.</p>
      * 
      * @param request GetBillingOverviewRequest
      * @return GetBillingOverviewResponse
@@ -740,7 +740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账单趋势</p>
+     * <p>Queries bill trends.</p>
      * 
      * @param tmpReq GetBillingTrendRequest
      * @param headers map
@@ -816,7 +816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账单趋势</p>
+     * <p>Queries bill trends.</p>
      * 
      * @param request GetBillingTrendRequest
      * @return GetBillingTrendResponse
@@ -1484,7 +1484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of organization members including seat information. Supports filtering by name, status, and seat assignment, and supports pagination.</p>
+     * <p>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</p>
      * 
      * @param request ListOrganizationMembersRequest
      * @param headers map
@@ -1534,7 +1534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of organization members including seat information. Supports filtering by name, status, and seat assignment, and supports pagination.</p>
+     * <p>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</p>
      * 
      * @param request ListOrganizationMembersRequest
      * @return ListOrganizationMembersResponse

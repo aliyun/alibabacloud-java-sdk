@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBillingTrendResponseBody extends TeaModel {
     /**
+     * <p>The request result code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetBillingTrendResponseBodyData data;
 
     /**
+     * <p>The request result description.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>099A671E-FA21-5A36-8A73-918572DDEF53</p>
      */
@@ -29,6 +38,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
 
     public static class GetBillingTrendResponseBodyDataCostTotals extends TeaModel {
         /**
+         * <p>The total amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -89,6 +102,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The currency of the amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -96,6 +111,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The pretax amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>94.34</p>
          */
@@ -103,6 +120,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String pretaxAmount;
 
         /**
+         * <p>The tax amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.66</p>
          */
@@ -150,6 +169,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
 
     public static class GetBillingTrendResponseBodyDataGroupByTotal extends TeaModel {
         /**
+         * <p>The total amount of the current group.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -157,6 +178,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The grouping dimension value.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
@@ -164,6 +187,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The display name of the group. This value is affected by the locale parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
@@ -171,6 +196,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The pretax amount of the current group.</p>
+         * 
          * <strong>example:</strong>
          * <p>56.60</p>
          */
@@ -178,6 +205,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String pretaxAmount;
 
         /**
+         * <p>The tax amount of the current group.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.40</p>
          */
@@ -233,6 +262,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
 
     public static class GetBillingTrendResponseBodyDataResultByTimePeriodDetails extends TeaModel {
         /**
+         * <p>The amount of the group within the current period.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -240,6 +271,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The grouping dimension value. Data beyond the top N uses DIMENSION_GROUP_OTHERS_VALUE.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
@@ -247,6 +280,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The display name of the group. This value is affected by the locale parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
@@ -254,6 +289,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ratio of the current group amount to the total amount of the current period.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6667</p>
          */
@@ -261,6 +298,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String percentage;
 
         /**
+         * <p>The pretax amount of the group within the current period.</p>
+         * 
          * <strong>example:</strong>
          * <p>18.87</p>
          */
@@ -268,6 +307,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String pretaxAmount;
 
         /**
+         * <p>The tax amount of the group within the current period.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.13</p>
          */
@@ -331,6 +372,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
 
     public static class GetBillingTrendResponseBodyDataResultByTimeTotal extends TeaModel {
         /**
+         * <p>The total amount for the current period.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -338,6 +381,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The currency of the amount for the current period.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -345,6 +390,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The pretax amount for the current period.</p>
+         * 
          * <strong>example:</strong>
          * <p>28.30</p>
          */
@@ -352,6 +399,8 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String pretaxAmount;
 
         /**
+         * <p>The tax amount for the current period.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.70</p>
          */
@@ -399,15 +448,23 @@ public class GetBillingTrendResponseBody extends TeaModel {
 
     public static class GetBillingTrendResponseBodyDataResultByTime extends TeaModel {
         /**
+         * <p>The statistical period. DAY returns yyyyMMdd. MONTH returns yyyyMM.</p>
+         * 
          * <strong>example:</strong>
          * <p>20260801</p>
          */
         @NameInMap("period")
         public String period;
 
+        /**
+         * <p>The cost groups that actually exist in the current period.</p>
+         */
         @NameInMap("periodDetails")
         public java.util.List<GetBillingTrendResponseBodyDataResultByTimePeriodDetails> periodDetails;
 
+        /**
+         * <p>The total cost for the current period.</p>
+         */
         @NameInMap("total")
         public GetBillingTrendResponseBodyDataResultByTimeTotal total;
 
@@ -443,12 +500,21 @@ public class GetBillingTrendResponseBody extends TeaModel {
     }
 
     public static class GetBillingTrendResponseBodyData extends TeaModel {
+        /**
+         * <p>The total cost for the entire query time range, including the top N groups and &quot;Others&quot;.</p>
+         */
         @NameInMap("costTotals")
         public GetBillingTrendResponseBodyDataCostTotals costTotals;
 
+        /**
+         * <p>The total cost of the top N groups and the optional &quot;Others&quot; group within the period.</p>
+         */
         @NameInMap("groupByTotal")
         public java.util.List<GetBillingTrendResponseBodyDataGroupByTotal> groupByTotal;
 
+        /**
+         * <p>The cost trend list sorted by time in ascending order.</p>
+         */
         @NameInMap("resultByTime")
         public java.util.List<GetBillingTrendResponseBodyDataResultByTime> resultByTime;
 
