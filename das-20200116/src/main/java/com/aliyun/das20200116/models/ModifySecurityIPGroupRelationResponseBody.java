@@ -14,7 +14,7 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>ListResult<InstanceSSL></p>
      */
     @NameInMap("Data")
     public ModifySecurityIPGroupRelationResponseBodyData data;
@@ -22,7 +22,7 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request is successful, Successful is returned. If the request fails, an error message, such as an error code, is returned.</p>
+     * <p>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,10 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +102,7 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
         /**
          * <p>The IP addresses in the whitelist template.</p>
          * <blockquote>
-         * <p>Separate multiple IP addresses with commas (,). A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP address whitelists.</p>
+         * <p>Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks across all IP whitelists.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -114,13 +112,13 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
         public String GIpList;
 
         /**
-         * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
+         * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
          * <ul>
-         * <li><p>It must consist of lowercase letters, digits, and underscores (_).</p>
+         * <li><p>Contains only lowercase letters, digits, and underscores (_).</p>
          * </li>
-         * <li><p>It must start with a letter and end with a letter or a digit.</p>
+         * <li><p>Starts with a letter and ends with a letter or digit.</p>
          * </li>
-         * <li><p>It must be 2 to 120 characters in length.</p>
+         * <li><p>Contains 2 to 120 characters in length.</p>
          * </li>
          * </ul>
          * 
@@ -131,7 +129,7 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
         public String globalIgName;
 
         /**
-         * <p>The ID of the IP address whitelist template.</p>
+         * <p>The ID of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>g-v8kwereyd6u7kx****</p>
@@ -189,7 +187,7 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
 
     public static class ModifySecurityIPGroupRelationResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the cross-product IP address whitelist template that is attached to the instance.</p>
+         * <p>The binding information of the cross-engine IP whitelist template.</p>
          */
         @NameInMap("GlobalSecurityIPGroupRel")
         public java.util.List<ModifySecurityIPGroupRelationResponseBodyDataGlobalSecurityIPGroupRel> globalSecurityIPGroupRel;

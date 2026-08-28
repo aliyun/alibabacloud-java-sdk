@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDasAgentSSEResponseBody extends TeaModel {
     /**
-     * <p>The content of the response.</p>
+     * <p>The answer content.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-xxxx</p>
@@ -14,7 +14,7 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
     public String answer;
 
     /**
-     * <p>The type of the response message.</p>
+     * <p>The type of the returned answer information.</p>
      * 
      * <strong>example:</strong>
      * <p>summary</p>
@@ -23,7 +23,7 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
     public String event;
 
     /**
-     * <p>The session ID. This is the same as the SessionId in the request.</p>
+     * <p>The session ID, which is the same as the SessionId in the request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
@@ -76,7 +76,7 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
 
     public static class GetDasAgentSSEResponseBodyMetadata extends TeaModel {
         /**
-         * <p>The number of characters in the response.</p>
+         * <p>The number of characters in the answer.</p>
          * 
          * <strong>example:</strong>
          * <p>1403</p>
@@ -85,7 +85,7 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
         public Long charCount;
 
         /**
-         * <p>The error code. This parameter is empty if no exception occurs.</p>
+         * <p>The error type returned when an exception occurs. This field is empty when no exception occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>-1810001</p>
@@ -103,7 +103,7 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The name of the tool used.</p>
+         * <p>The tool command that is called.</p>
          * 
          * <strong>example:</strong>
          * <p>SqlFilter</p>

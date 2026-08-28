@@ -1924,6 +1924,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Before you call this operation, take note of the following prerequisites:</p>
+     * <ul>
+     * <li>If you use the China site (aliyun.com) or China site International (Chinese) SDK, use the latest version.</li>
+     * <li>When you call a DAS operation by using the SDK, set the region to cn-shanghai.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the enabled items of the Alibaba Cloud Managed Services.</p>
+     * 
+     * @param request DescribeDasOpsConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDasOpsConfigResponse
+     */
+    public DescribeDasOpsConfigResponse describeDasOpsConfigWithOptions(DescribeDasOpsConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDasOpsConfig"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDasOpsConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following prerequisites:</p>
+     * <ul>
+     * <li>If you use the China site (aliyun.com) or China site International (Chinese) SDK, use the latest version.</li>
+     * <li>When you call a DAS operation by using the SDK, set the region to cn-shanghai.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the enabled items of the Alibaba Cloud Managed Services.</p>
+     * 
+     * @param request DescribeDasOpsConfigRequest
+     * @return DescribeDasOpsConfigResponse
+     */
+    public DescribeDasOpsConfigResponse describeDasOpsConfig(DescribeDasOpsConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDasOpsConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
      * <li>If you use an Alibaba Cloud SDK or a Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.</li>
@@ -2698,17 +2756,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, make sure that you understand the <a href="https://help.aliyun.com/document_detail/156195.html">billing methods and pricing</a> of Database Autonomy Service (DAS).</em>*
-     * Before you call this operation, make sure that the following requirements are met:</p>
+     * <p><em>Before you use this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/156195.html">billing</a> of DAS.</em>*
+     * Before you invoke this operation, make sure that the following requirements are met:</p>
      * <ul>
      * <li>Alibaba Cloud Managed Services is enabled for the instance.</li>
-     * <li>Use the latest version of the Alibaba Cloud SDK or DAS SDK.</li>
-     * <li>When you use an SDK to call the DAS service, set the region to cn-shanghai.
-     * This operation is asynchronous and does not return the complete result immediately. If the \<code>isFinish\\</code> parameter in the response is \<code>false\\</code>, wait 1 second and send the request again. Repeat the request until the \<code>isFinish\\</code> parameter is \<code>true\\</code> to retrieve the complete result.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When you invoke DAS operations by using the SDK, set the region to cn-shanghai.
+     * This is an asynchronous operation. After a call is made, the complete result is not immediately returned. If the value of isFinish in the response is false, wait 1 second and invoke the operation again. The complete result is returned only when the value of isFinish is true.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves slow query log statistics.</p>
+     * <p>Queries slow query log statistics information.</p>
      * 
      * @param request DescribeSlowLogStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2780,17 +2838,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, make sure that you understand the <a href="https://help.aliyun.com/document_detail/156195.html">billing methods and pricing</a> of Database Autonomy Service (DAS).</em>*
-     * Before you call this operation, make sure that the following requirements are met:</p>
+     * <p><em>Before you use this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/156195.html">billing</a> of DAS.</em>*
+     * Before you invoke this operation, make sure that the following requirements are met:</p>
      * <ul>
      * <li>Alibaba Cloud Managed Services is enabled for the instance.</li>
-     * <li>Use the latest version of the Alibaba Cloud SDK or DAS SDK.</li>
-     * <li>When you use an SDK to call the DAS service, set the region to cn-shanghai.
-     * This operation is asynchronous and does not return the complete result immediately. If the \<code>isFinish\\</code> parameter in the response is \<code>false\\</code>, wait 1 second and send the request again. Repeat the request until the \<code>isFinish\\</code> parameter is \<code>true\\</code> to retrieve the complete result.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When you invoke DAS operations by using the SDK, set the region to cn-shanghai.
+     * This is an asynchronous operation. After a call is made, the complete result is not immediately returned. If the value of isFinish in the response is false, wait 1 second and invoke the operation again. The complete result is returned only when the value of isFinish is true.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves slow query log statistics.</p>
+     * <p>Queries slow query log statistics information.</p>
      * 
      * @param request DescribeSlowLogStatisticRequest
      * @return DescribeSlowLogStatisticResponse
@@ -3006,14 +3064,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Note the following before you call this operation:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>We recommend using the latest version of the Alibaba Cloud SDK or DAS SDK.</li>
-     * <li>When calling the DAS service with an SDK, set the region to cn-shanghai.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Call the <code>DescribeSqlLogTask</code> operation to query the details of an offline task in DAS enterprise edition.</p>
+     * <p>Queries the details of a DAS Enterprise Edition batch task by calling the DescribeSqlLogTask operation.</p>
      * 
      * @param request DescribeSqlLogTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3057,14 +3115,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Note the following before you call this operation:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>We recommend using the latest version of the Alibaba Cloud SDK or DAS SDK.</li>
-     * <li>When calling the DAS service with an SDK, set the region to cn-shanghai.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Call the <code>DescribeSqlLogTask</code> operation to query the details of an offline task in DAS enterprise edition.</p>
+     * <p>Queries the details of a DAS Enterprise Edition batch task by calling the DescribeSqlLogTask operation.</p>
      * 
      * @param request DescribeSqlLogTaskRequest
      * @return DescribeSqlLogTaskResponse
@@ -3076,14 +3134,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The following prerequisites must be met to call this operation:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>We recommend that you use the latest version of the Alibaba Cloud SDK or the DAS SDK.</li>
-     * <li>When you use an SDK to call the DAS service, you must set the region to <code>cn-shanghai</code>.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the audit log tasks for an instance.</p>
+     * <p>Queries the list of audit log tasks for an instance.</p>
      * 
      * @param request DescribeSqlLogTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3139,14 +3197,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The following prerequisites must be met to call this operation:</p>
+     * <p>Before you begin:</p>
      * <ul>
-     * <li>We recommend that you use the latest version of the Alibaba Cloud SDK or the DAS SDK.</li>
-     * <li>When you use an SDK to call the DAS service, you must set the region to <code>cn-shanghai</code>.</li>
+     * <li>Use the latest version of the Alibaba Cloud or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the audit log tasks for an instance.</p>
+     * <p>Queries the list of audit log tasks for an instance.</p>
      * 
      * @param request DescribeSqlLogTasksRequest
      * @return DescribeSqlLogTasksResponse
@@ -4616,10 +4674,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is a paid API. You are charged based on the number of output characters. Before you use this API, ensure that you understand the billing methods and <a href="https://help.aliyun.com/zh/das/product-overview/billing-details-of-the-previous-version?spm=a2c4g.11186623.help-menu-63907.d_0_1_0.b7203b87MDNqHO%5C&scm=20140722.H_156195._.OR_help-T_cn~zh-V_1#cad160563fbkd">pricing</a> of the DAS Agent product.</p>
+     * <p>This is a paid API that is billed based on the number of output characters. Before using this API, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/das/product-overview/billing-details-of-the-previous-version#cad160563fbkd">pricing</a> of the DAS Agent product.</p>
      * 
      * <b>summary</b> : 
-     * <p>This API uses Server-Sent Events (SSE) to interact with the DAS agent. You can use this API for features such as Q&amp;A and performance diagnostics.</p>
+     * <p>Provides a DAS large model interactive SSE interface. Supports features such as AI chat and performance diagnostics.</p>
      * 
      * @param request GetDasAgentSSERequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4663,10 +4721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is a paid API. You are charged based on the number of output characters. Before you use this API, ensure that you understand the billing methods and <a href="https://help.aliyun.com/zh/das/product-overview/billing-details-of-the-previous-version?spm=a2c4g.11186623.help-menu-63907.d_0_1_0.b7203b87MDNqHO%5C&scm=20140722.H_156195._.OR_help-T_cn~zh-V_1#cad160563fbkd">pricing</a> of the DAS Agent product.</p>
+     * <p>This is a paid API that is billed based on the number of output characters. Before using this API, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/das/product-overview/billing-details-of-the-previous-version#cad160563fbkd">pricing</a> of the DAS Agent product.</p>
      * 
      * <b>summary</b> : 
-     * <p>This API uses Server-Sent Events (SSE) to interact with the DAS agent. You can use this API for features such as Q&amp;A and performance diagnostics.</p>
+     * <p>Provides a DAS large model interactive SSE interface. Supports features such as AI chat and performance diagnostics.</p>
      * 
      * @param request GetDasAgentSSERequest
      * @return GetDasAgentSSEResponse
@@ -5693,13 +5751,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Enabling the automated operations report feature for DAS Agent allows the system to perform periodic inspections on target instances and generate reports. Currently, only daily reports are supported. This operation is used to query report details.
-     * Before using this operation, ensure that the following prerequisites are met:</p>
+     * Before you begin:</p>
      * <ul>
-     * <li>DAS Agent is activated and the agent is still within its validity period.</li>
-     * <li>The daily report feature is enabled on the DAS Agent configuration page.</li>
-     * <li>When using the Alibaba Cloud SDK, ensure that the version of aliyun-sdk-core is later than 4.3.3. We recommend that you use the latest version.</li>
-     * <li>The version of the DAS SDK is 1.0.3 or later.</li>
-     * <li>When using the SDK to call DAS, set the region to cn-shanghai.</li>
+     * <li>Activate DAS Agent and ensure that the agent is still within its validity period.</li>
+     * <li>Enable the daily report feature on the DAS Agent configuration page.</li>
+     * <li>When using the Alibaba Cloud SDK, ensure that the version of aliyun-sdk-core is later than 4.3.3. Use the latest version.</li>
+     * <li>Use DAS SDK 1.0.3 or later.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5746,13 +5804,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Enabling the automated operations report feature for DAS Agent allows the system to perform periodic inspections on target instances and generate reports. Currently, only daily reports are supported. This operation is used to query report details.
-     * Before using this operation, ensure that the following prerequisites are met:</p>
+     * Before you begin:</p>
      * <ul>
-     * <li>DAS Agent is activated and the agent is still within its validity period.</li>
-     * <li>The daily report feature is enabled on the DAS Agent configuration page.</li>
-     * <li>When using the Alibaba Cloud SDK, ensure that the version of aliyun-sdk-core is later than 4.3.3. We recommend that you use the latest version.</li>
-     * <li>The version of the DAS SDK is 1.0.3 or later.</li>
-     * <li>When using the SDK to call DAS, set the region to cn-shanghai.</li>
+     * <li>Activate DAS Agent and ensure that the agent is still within its validity period.</li>
+     * <li>Enable the daily report feature on the DAS Agent configuration page.</li>
+     * <li>When using the Alibaba Cloud SDK, ensure that the version of aliyun-sdk-core is later than 4.3.3. Use the latest version.</li>
+     * <li>Use DAS SDK 1.0.3 or later.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8228,6 +8286,148 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Before you begin:</p>
+     * <ul>
+     * <li>Use the latest version of Alibaba Cloud SDK or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>This operation enables the latest supported version by default. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a configuration item of Alibaba Cloud Managed Services.</p>
+     * 
+     * @param request ModifyDasOpsConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDasOpsConfigResponse
+     */
+    public ModifyDasOpsConfigResponse modifyDasOpsConfigWithOptions(ModifyDasOpsConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            query.put("Filters", request.filters);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDasOpsConfig"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDasOpsConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you begin:</p>
+     * <ul>
+     * <li>Use the latest version of Alibaba Cloud SDK or DAS SDK.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>This operation enables the latest supported version by default. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a configuration item of Alibaba Cloud Managed Services.</p>
+     * 
+     * @param request ModifyDasOpsConfigRequest
+     * @return ModifyDasOpsConfigResponse
+     */
+    public ModifyDasOpsConfigResponse modifyDasOpsConfig(ModifyDasOpsConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDasOpsConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following prerequisites:</p>
+     * <ul>
+     * <li>If you use the Alibaba Cloud SDK or DAS SDK, use the latest version.</li>
+     * <li>When you call DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>This operation enables the latest supported version by default. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the audit log forwarding configuration.</p>
+     * 
+     * @param request ModifyForwardSqlLogConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyForwardSqlLogConfigResponse
+     */
+    public ModifyForwardSqlLogConfigResponse modifyForwardSqlLogConfigWithOptions(ModifyForwardSqlLogConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            body.put("Service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("Source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyForwardSqlLogConfig"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyForwardSqlLogConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following prerequisites:</p>
+     * <ul>
+     * <li>If you use the Alibaba Cloud SDK or DAS SDK, use the latest version.</li>
+     * <li>When you call DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>This operation enables the latest supported version by default. For information about the databases and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">DAS editions and supported features</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the audit log forwarding configuration.</p>
+     * 
+     * @param request ModifyForwardSqlLogConfigRequest
+     * @return ModifyForwardSqlLogConfigResponse
+     */
+    public ModifyForwardSqlLogConfigResponse modifyForwardSqlLogConfig(ModifyForwardSqlLogConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyForwardSqlLogConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Before you call this operation, note the following:</p>
      * <ul>
      * <li>Use the latest version of the Alibaba Cloud SDK or DAS SDK.</li>
@@ -8301,14 +8501,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use the latest version of the Alibaba Cloud or DAS software development kit (SDK).</li>
-     * <li>When you use the SDK to call the DAS service, set the region to cn-shanghai.</li>
-     * <li>For more information about the supported database instances, see <a href="https://help.aliyun.com/document_detail/92561.html">Overview of features</a> for SQL Insight and Audit.</li>
-     * <li>The SQL Insight and Audit (Legacy) feature is enabled for the destination database instance. For more information about how to enable this feature, see <a href="https://help.aliyun.com/document_detail/92561.html">Enable SQL Insight and Audit</a>.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>For information about the supported database instances, see the <a href="https://help.aliyun.com/document_detail/92561.html">feature overview</a> of SQL Explorer.</li>
+     * <li>SQL Explorer (original version) must be enabled for the target database instance. For more information, see <a href="https://help.aliyun.com/document_detail/92561.html">Enable SQL Explorer and Audit</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches or detaches a cross-product whitelist template.</p>
+     * <p>Attaches or detaches a cross-engine whitelist template to or from a user.</p>
      * 
      * @param request ModifySecurityIPGroupRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8349,14 +8549,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use the latest version of the Alibaba Cloud or DAS software development kit (SDK).</li>
-     * <li>When you use the SDK to call the DAS service, set the region to cn-shanghai.</li>
-     * <li>For more information about the supported database instances, see <a href="https://help.aliyun.com/document_detail/92561.html">Overview of features</a> for SQL Insight and Audit.</li>
-     * <li>The SQL Insight and Audit (Legacy) feature is enabled for the destination database instance. For more information about how to enable this feature, see <a href="https://help.aliyun.com/document_detail/92561.html">Enable SQL Insight and Audit</a>.</li>
+     * <li>When using the Alibaba Cloud or DAS SDK, use the latest version.</li>
+     * <li>When calling DAS by using the SDK, set the region to cn-shanghai.</li>
+     * <li>For information about the supported database instances, see the <a href="https://help.aliyun.com/document_detail/92561.html">feature overview</a> of SQL Explorer.</li>
+     * <li>SQL Explorer (original version) must be enabled for the target database instance. For more information, see <a href="https://help.aliyun.com/document_detail/92561.html">Enable SQL Explorer and Audit</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches or detaches a cross-product whitelist template.</p>
+     * <p>Attaches or detaches a cross-engine whitelist template to or from a user.</p>
      * 
      * @param request ModifySecurityIPGroupRelationRequest
      * @return ModifySecurityIPGroupRelationResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogTasksRequest extends TeaModel {
     /**
-     * <p>The end time of the query range. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end time of the query. Specify a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1608888296000</p>
@@ -14,13 +14,13 @@ public class DescribeSqlLogTasksRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>An array of filter conditions.</p>
+     * <p>The list of query filter conditions.</p>
      */
     @NameInMap("Filters")
     public java.util.List<DescribeSqlLogTasksRequestFilters> filters;
 
     /**
-     * <p>The ID of the database instance.</p>
+     * <p>The database instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1nti25tc7bq5****</p>
@@ -31,7 +31,7 @@ public class DescribeSqlLogTasksRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p>For cluster instances only. You can specify a node ID to query its offline tasks. If this parameter is omitted, the offline tasks of the primary node are returned by default.</p>
+     * <p>This parameter is applicable only to Cluster Edition instances. You can specify a node to query its batch tasks. If you do not specify this parameter, the batch tasks of the primary node are returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeSqlLogTasksRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+     * <p>The page number for the paging query. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class DescribeSqlLogTasksRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+     * <p>The maximum number of records per page. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class DescribeSqlLogTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time of the query range. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time of the query. Specify a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1596177993000</p>
@@ -132,7 +132,7 @@ public class DescribeSqlLogTasksRequest extends TeaModel {
         /**
          * <p>The filter parameter.</p>
          * <blockquote>
-         * <p>See <strong>Additional information about request parameters</strong> for the supported filter parameters and their valid values.</p>
+         * <p>For supported filter parameters and their values, refer to <strong>Supplementary description of request parameters</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

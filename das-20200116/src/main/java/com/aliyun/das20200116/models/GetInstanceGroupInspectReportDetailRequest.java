@@ -14,7 +14,7 @@ public class GetInstanceGroupInspectReportDetailRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The ID of the automated operations report.</p>
+     * <p>The ID of the operations report.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

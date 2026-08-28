@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogTaskResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,9 +20,9 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
     public DescribeSqlLogTaskResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, exception information such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,10 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful.</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +102,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         /**
          * <p>The name of the filter parameter.</p>
          * <blockquote>
-         * <p>For more information about the supported filter parameters and their valid values, see the &quot;Additional information about response parameters&quot; section.</p>
+         * <p>For supported filter parameters and their values, refer to <strong>Supplementary description of response parameters</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -165,7 +163,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String affectColumns;
 
         /**
-         * <p>The client IP address.</p>
+         * <p>The client IP address in the query.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.1xx</p>
@@ -174,7 +172,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>The client port.</p>
+         * <p>The client port number in the query.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -183,7 +181,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long clientPort;
 
         /**
-         * <p>This parameter is reserved.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -192,7 +190,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String collection;
 
         /**
-         * <p>The connection ID.</p>
+         * <p>The connection ID used in the query.</p>
          * 
          * <strong>example:</strong>
          * <p>ld-******</p>
@@ -201,7 +199,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String connectionId;
 
         /**
-         * <p>The execution duration. Unit: milliseconds.</p>
+         * <p>The execution duration in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>58</p>
@@ -210,7 +208,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long consume;
 
         /**
-         * <p>The CPU execution time. Unit: microseconds.</p>
+         * <p>The CPU execution time in microseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -228,7 +226,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The time when the SQL statement was executed. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * <p>The execution time in UTC format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-07T02:15:32Z</p>
@@ -237,7 +235,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String executeTime;
 
         /**
-         * <p>Reserved for future use.</p>
+         * <p>The extended information field. This is a reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -246,7 +244,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String ext;
 
         /**
-         * <p>The number of rows that are fetched by the compute nodes of a PolarDB-X 2.0 instance.</p>
+         * <p>The number of rows fetched by the PolarDB-X 2.0 compute node (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -264,7 +262,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String hostAddress;
 
         /**
-         * <p>The lock wait time. Unit: milliseconds.</p>
+         * <p>The lock wait time in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -282,7 +280,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long logicRead;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The child node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-bp1o58x3ib7e6****</p>
@@ -291,7 +289,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The time when the SQL statement was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The execution timestamp. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1701886532000</p>
@@ -300,7 +298,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long originTime;
 
         /**
-         * <p>The degree of parallelism (DOP) for the PolarDB for MySQL instance.</p>
+         * <p>The parallel queue time of the PolarDB for MySQL instance in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -309,7 +307,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String parallelDegree;
 
         /**
-         * <p>The parallel queuing time for the PolarDB for MySQL instance. Unit: milliseconds.</p>
+         * <p>The parallel degree of the PolarDB for MySQL instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -318,7 +316,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String parallelQueueTime;
 
         /**
-         * <p>The query parameters.</p>
+         * <p>The list of query parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>[1, &quot;das&quot;]</p>
@@ -354,7 +352,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long physicSyncRead;
 
         /**
-         * <p>Indicates whether the query is protected.</p>
+         * <p>Indicates whether the query item is protected.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -372,7 +370,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long returnRows;
 
         /**
-         * <p>The row key.</p>
+         * <p>The row key in the query.</p>
          * 
          * <strong>example:</strong>
          * <p>23</p>
@@ -381,7 +379,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String rowKey;
 
         /**
-         * <p>The total number of rows that are updated or returned by the compute nodes of a PolarDB-X 2.0 instance.</p>
+         * <p>The total number of rows updated or returned by the PolarDB-X 2.0 compute node.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -399,7 +397,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long scanRows;
 
         /**
-         * <p>The number of requests that are sent from compute nodes (CNs) to data nodes (DNs) for a PolarDB-X 2.0 instance.</p>
+         * <p>The number of DN requests from the PolarDB-X 2.0 compute node (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -417,7 +415,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long sqlCommand;
 
         /**
-         * <p>The SQL ID.</p>
+         * <p>SQL ID。</p>
          * 
          * <strong>example:</strong>
          * <p>a4111670e80596c5bf42cf5154438a91</p>
@@ -426,7 +424,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String sqlId;
 
         /**
-         * <p>The SQL statement.</p>
+         * <p>The SQL statement details.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT @@session.transaction_read_only</p>
@@ -437,12 +435,9 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         /**
          * <p>The type of the SQL statement. Valid values:</p>
          * <ul>
-         * <li><p><strong>SELECT</strong></p>
-         * </li>
-         * <li><p><strong>UPDATE</strong></p>
-         * </li>
-         * <li><p><strong>DELETE</strong></p>
-         * </li>
+         * <li><strong>SELECT</strong></li>
+         * <li><strong>UPDATE</strong></li>
+         * <li><strong>DELETE</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -452,12 +447,10 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String sqlType;
 
         /**
-         * <p>The execution state. Valid values:</p>
+         * <p>The execution result.</p>
          * <ul>
-         * <li><p><strong>0</strong>: The execution was successful.</p>
-         * </li>
-         * <li><p><strong>1</strong>: The execution failed.</p>
-         * </li>
+         * <li><strong>0</strong>: Execution succeeded.</li>
+         * <li><strong>1</strong>: Execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -467,7 +460,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The table name.</p>
+         * <p>The table name used in the query.</p>
          * 
          * <strong>example:</strong>
          * <p>das</p>
@@ -485,7 +478,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long threadId;
 
         /**
-         * <p>The trace ID of a PolarDB-X 2.0 instance. The trace ID is the execution ID of the SQL statement on data nodes.</p>
+         * <p>The trace ID of PolarDB-X 2.0, which is the execution ID of the SQL statement on the data node.</p>
          * 
          * <strong>example:</strong>
          * <p>14c93b7c7bf00000</p>
@@ -512,12 +505,10 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long updateRows;
 
         /**
-         * <p>Indicates whether an In-Memory Column Index (IMCI) is used for the PolarDB for MySQL instance. Valid values:</p>
+         * <p>Indicates whether the PolarDB for MySQL instance uses the In-Memory Column Index.</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: The IMCI is used.</li>
+         * <li><strong>false</strong>: The IMCI is not used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -527,7 +518,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String useImciEngine;
 
         /**
-         * <p>The IP address that the query endpoint resolves to.</p>
+         * <p>The endpoint resolution address of the query link.</p>
          * 
          * <strong>example:</strong>
          * <p>10.146.XX.XX</p>
@@ -536,7 +527,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String vip;
 
         /**
-         * <p>The number of writes for the ApsaraDB RDS for SQL Server instance.</p>
+         * <p>The number of writes for the RDS SQL Server engine.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -889,7 +880,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
 
     public static class DescribeSqlLogTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the task was created, which is a UNIX timestamp in milliseconds.</p>
+         * <p>The task creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1681363254423</p>
@@ -898,7 +889,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The end of the query time range, which is a UNIX timestamp in milliseconds.</p>
+         * <p>The query end time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1608888296000</p>
@@ -907,12 +898,10 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Long end;
 
         /**
-         * <p>Indicates whether the task has expired. Valid values:</p>
+         * <p>Indicates whether the task has expired.</p>
          * <ul>
-         * <li><p><strong>true</strong>: The task has expired.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The task has not expired.</p>
-         * </li>
+         * <li><strong>true</strong>: The task has expired.</li>
+         * <li><strong>false</strong>: The task has not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -922,7 +911,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public Boolean expire;
 
         /**
-         * <p>The download URL of the exported file. This parameter is returned only if the value of <code>TaskType</code> is <code>Export</code>.</p>
+         * <p>The download URL of the export task. This value is returned only when TaskType is set to Export.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;<a href="https://das-sqllog-download-cn-hongkong.oss-cn-hongkong.aliyuncs.com/">https://das-sqllog-download-cn-hongkong.oss-cn-hongkong.aliyuncs.com/</a>****&quot;</p>
@@ -946,13 +935,13 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The results of the offline query task. This parameter is returned only if the value of <code>TaskType</code> is <code>Query</code>.</p>
+         * <p>The task result of the offline query node. This value is returned only when TaskType is set to Query.</p>
          */
         @NameInMap("Queries")
         public java.util.List<DescribeSqlLogTaskResponseBodyDataQueries> queries;
 
         /**
-         * <p>The beginning of the query time range, which is a UNIX timestamp in milliseconds.</p>
+         * <p>The query start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1596177993000</p>
@@ -963,20 +952,15 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p><strong>INIT</strong>: The task is pending.</p>
-         * </li>
-         * <li><p><strong>RUNNING</strong>: The task is running.</p>
-         * </li>
-         * <li><p><strong>FAILED</strong>: The task failed.</p>
-         * </li>
-         * <li><p><strong>CANCELED</strong>: The task was canceled.</p>
-         * </li>
-         * <li><p><strong>COMPLETED</strong>: The task is complete.</p>
+         * <li><strong>INIT</strong>: Pending scheduling.</li>
+         * <li><strong>RUNNING</strong>: Running.</li>
+         * <li><strong>FAILED</strong>: Failed.</li>
+         * <li><strong>CANCELED</strong>: Canceled.</li>
+         * <li><strong>COMPLETED</strong>: Completed.<blockquote>
+         * <p>When the task is in the <strong>COMPLETED</strong> state, you can view the results of the offline task.</p>
+         * </blockquote>
          * </li>
          * </ul>
-         * <blockquote>
-         * <p>The results of an offline task are available only when the status is <strong>COMPLETED</strong>.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -996,10 +980,8 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><p><strong>Export</strong>: an export task.</p>
-         * </li>
-         * <li><p><strong>Query</strong>: a query task.</p>
-         * </li>
+         * <li><strong>Export</strong>: export task.</li>
+         * <li><strong>Query</strong>: custom query task.</li>
          * </ul>
          * 
          * <strong>example:</strong>

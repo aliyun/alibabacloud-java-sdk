@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogStatisticResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,15 +14,15 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>AsyncResult\&lt;DBLogRecords\<SlowLogStat>&gt;</p>
+     * <p>AsyncResult&lt;DBLogRecords<SlowLogStat>&gt;</p>
      */
     @NameInMap("Data")
     public DescribeSlowLogStatisticResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the request.</p>
      * <blockquote>
-     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message, such as an error code, is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, exception information (such as an error code) is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +41,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +100,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
 
     public static class DescribeSlowLogStatisticResponseBodyDataDataLogsHistogramItem extends TeaModel {
         /**
-         * <p>The number of slow query logs.</p>
+         * <p>The number of slow logs.</p>
          */
         @NameInMap("Count")
         public java.util.List<Long> count;
@@ -141,19 +139,19 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
 
     public static class DescribeSlowLogStatisticResponseBodyDataDataLogsHistogram extends TeaModel {
         /**
-         * <p>The average lock wait time in seconds.</p>
+         * <p>The average lock wait time. Unit: seconds.</p>
          */
         @NameInMap("AvgLockTime")
         public java.util.List<Double> avgLockTime;
 
         /**
-         * <p>The average number of scanned rows.</p>
+         * <p>The average number of rows examined.</p>
          */
         @NameInMap("AvgRowsExamined")
         public java.util.List<Double> avgRowsExamined;
 
         /**
-         * <p>The average number of returned rows.</p>
+         * <p>The average number of rows returned.</p>
          */
         @NameInMap("AvgRowsSent")
         public java.util.List<Double> avgRowsSent;
@@ -165,7 +163,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public java.util.List<Double> avgRt;
 
         /**
-         * <p>The number of slow query logs.</p>
+         * <p>The number of slow logs.</p>
          */
         @NameInMap("Count")
         public java.util.List<Long> count;
@@ -177,58 +175,58 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public java.util.List<DescribeSlowLogStatisticResponseBodyDataDataLogsHistogramItem> item;
 
         /**
-         * <p>The lock wait time in milliseconds.</p>
+         * <p>The lock wait time. Unit: milliseconds.</p>
          */
         @NameInMap("LockTime")
         public java.util.List<Double> lockTime;
 
         /**
-         * <p>The maximum lock wait time in seconds.</p>
+         * <p>The maximum lock wait time. Unit: seconds.</p>
          */
         @NameInMap("MaxLockTime")
         public java.util.List<Double> maxLockTime;
 
         /**
-         * <p>The maximum number of scanned rows.</p>
+         * <p>The maximum number of rows examined.</p>
          */
         @NameInMap("MaxRowsExamined")
         public java.util.List<Long> maxRowsExamined;
 
         /**
-         * <p>The maximum number of returned rows.</p>
+         * <p>The maximum number of rows returned.</p>
          */
         @NameInMap("MaxRowsSent")
         public java.util.List<Long> maxRowsSent;
 
         /**
-         * <p>The maximum response time (RT) in milliseconds.</p>
+         * <p>The maximum response time. Unit: ms.</p>
          */
         @NameInMap("MaxRt")
         public java.util.List<Double> maxRt;
 
         /**
-         * <p>The total number of scanned rows.</p>
+         * <p>The total number of rows examined.</p>
          * <blockquote>
-         * <p>This parameter is supported by ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
+         * <p>Databases that currently support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
          * </blockquote>
          */
         @NameInMap("RowsExamined")
         public java.util.List<Long> rowsExamined;
 
         /**
-         * <p>The number of returned rows.</p>
+         * <p>The number of rows returned.</p>
          */
         @NameInMap("RowsSent")
         public java.util.List<Long> rowsSent;
 
         /**
-         * <p>The execution duration in seconds.</p>
+         * <p>The execution duration. Unit: seconds.</p>
          */
         @NameInMap("Rt")
         public java.util.List<Double> rt;
 
         /**
-         * <p>The total number of entries returned for the query.</p>
+         * <p>The total number of queried records.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -243,7 +241,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public java.util.List<Long> ts;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          */
         @NameInMap("TsEnd")
         public java.util.List<Long> tsEnd;
@@ -394,16 +392,16 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
     public static class DescribeSlowLogStatisticResponseBodyDataDataLogsSqlTag extends TeaModel {
         /**
          * <p>The remarks.</p>
-         * <p>The value can be 1 to 300 characters in length.</p>
+         * <p>The value must be 1 to 300 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>dba 归档</p>
+         * <p>dba archiving</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
-         * <p>The SQL ID.</p>
+         * <p>SQL ID。</p>
          * 
          * <strong>example:</strong>
          * <p>a3931d8c3a9315dd5ed016d71cf*****</p>
@@ -412,7 +410,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String sqlId;
 
         /**
-         * <p>The tags. Multiple tags are separated by commas (,).</p>
+         * <p>Multiple tags separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>DAS_IN_PLAN</p>
@@ -453,7 +451,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
 
     public static class DescribeSlowLogStatisticResponseBodyDataDataLogsTrend extends TeaModel {
         /**
-         * <p>The execution time. This value is a UNIX timestamp. Unit: milliseconds (ms).</p>
+         * <p>The execution time, in UNIX timestamp format. Unit: milliseconds (ms).</p>
          * 
          * <strong>example:</strong>
          * <p>1723775362</p>
@@ -504,7 +502,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -515,7 +513,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgCPUTime;
 
         /**
-         * <p>The average CPU time for the query in seconds.</p>
+         * <p>The average CPU query time. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>456</p>
@@ -524,9 +522,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgCPUTimeSeconds;
 
         /**
-         * <p>The average number of scanned documents.</p>
+         * <p>The average number of documents scanned.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -536,7 +534,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgDocExamined;
 
         /**
-         * <p>The average number of pulled rows.</p>
+         * <p>The average number of rows fetched.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -547,7 +545,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of I/O writes.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -557,9 +555,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgIOWrites;
 
         /**
-         * <p>The average number of index scans.</p>
+         * <p>The average number of rows scanned by the index.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -571,7 +569,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of rows affected by the last statement.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -581,7 +579,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgLastRowsCountAffected;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -592,7 +590,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgLockTime;
 
         /**
-         * <p>The average lock wait time in seconds.</p>
+         * <p>The average lock wait time. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -603,7 +601,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of logical reads.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -615,7 +613,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of physical reads.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -625,7 +623,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgPhysicalIOReads;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -636,7 +634,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgQueryTime;
 
         /**
-         * <p>The average query duration in seconds.</p>
+         * <p>The average query execution duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>6.211</p>
@@ -645,21 +643,21 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgQueryTimeSeconds;
 
         /**
-         * <p>The average size of the request in bytes. This parameter is valid only for Redis.</p>
+         * <p>The average size of the request, in bytes. This parameter is valid only for Redis.</p>
          */
         @NameInMap("AvgRequestSize")
         public Double avgRequestSize;
 
         /**
-         * <p>The average size of the response in bytes. This parameter is valid only for Redis.</p>
+         * <p>The average response size, in bytes. This parameter is valid only for Redis.</p>
          */
         @NameInMap("AvgResponseSize")
         public Double avgResponseSize;
 
         /**
-         * <p>The average number of returned rows.</p>
+         * <p>The average number of rows returned.</p>
          * <blockquote>
-         * <p>This parameter is supported only by MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -678,9 +676,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgRows;
 
         /**
-         * <p>The average number of affected rows.</p>
+         * <p>The average number of rows affected.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -690,7 +688,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgRowsCountAffected;
 
         /**
-         * <p>The average number of scanned rows.</p>
+         * <p>The average number of rows examined.</p>
          * 
          * <strong>example:</strong>
          * <p>53421.0</p>
@@ -699,7 +697,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgRowsExamined;
 
         /**
-         * <p>The average number of returned rows.</p>
+         * <p>The average number of rows returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -723,7 +721,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double avgScnt;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -734,9 +732,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double CPUTime;
 
         /**
-         * <p>The CPU time for the query in seconds.</p>
+         * <p>The CPU query time. Unit: seconds.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -746,7 +744,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double CPUTimeSeconds;
 
         /**
-         * <p>The client\&quot;s IP address.</p>
+         * <p>The client IP address in the query.</p>
          * 
          * <strong>example:</strong>
          * <p>10.57.84.109</p>
@@ -755,7 +753,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>The executed command. This parameter is valid only for Redis.</p>
+         * <p>The command that was executed. This parameter is valid only for Redis.</p>
          * 
          * <strong>example:</strong>
          * <p>systemctl restart nginx.service</p>
@@ -766,7 +764,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The slow query statement.</p>
          * <blockquote>
-         * <p>This parameter is supported only by Tair (Redis OSS-compatible) instances.</p>
+         * <p>This field is supported only for ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -776,7 +774,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String command;
 
         /**
-         * <p>The number of elements that correspond to the key.</p>
+         * <p>The number of elements in the key.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -785,7 +783,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The execution ratio.</p>
+         * <p>The proportion of executions.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2034</p>
@@ -830,9 +828,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String dbInstanceName;
 
         /**
-         * <p>The number of scanned documents.</p>
+         * <p>The number of documents scanned.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -842,7 +840,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long docExamined;
 
         /**
-         * <p>The number of documents scanned during the operation on the ApsaraDB for MongoDB instance.</p>
+         * <p>The number of documents scanned during the MongoDB operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -851,9 +849,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long docsExamined;
 
         /**
-         * <p>The number of rows pulled by the compute nodes (CNs) of the PolarDB-X 2.0 instance.</p>
+         * <p>The number of rows fetched by the compute node (CN) of the ApsaraDB for PolarDB-X 2.0 database instance.</p>
          * <blockquote>
-         * <p>This parameter is supported only by PolarDB-X 2.0 instances.</p>
+         * <p>This field is supported only for ApsaraDB for PolarDB-X 2.0 instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -869,7 +867,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public DescribeSlowLogStatisticResponseBodyDataDataLogsHistogram histogram;
 
         /**
-         * <p>The client IP address.</p>
+         * <p>The IP address of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>172.23.142.178</p>
@@ -878,9 +876,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String hostAddress;
 
         /**
-         * <p>The ID of the host instance.</p>
+         * <p>The host instance ID.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -892,7 +890,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The number of I/O writes.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -913,7 +911,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The instance role.</p>
          * <blockquote>
-         * <p>This parameter is supported only by MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -923,7 +921,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String insRole;
 
         /**
-         * <p>The number of index scans on the ApsaraDB for MongoDB instance.</p>
+         * <p>The number of rows scanned by the MongoDB index.</p>
          * 
          * <strong>example:</strong>
          * <p>20000</p>
@@ -934,7 +932,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The number of rows affected by the last statement.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -944,7 +942,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long lastRowsCountAffected;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -955,7 +953,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double lockTime;
 
         /**
-         * <p>The lock wait time in seconds.</p>
+         * <p>The lock wait time. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -966,7 +964,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The number of logical reads.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -976,7 +974,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long logicalIOReads;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -987,7 +985,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double maxCPUTime;
 
         /**
-         * <p>The longest CPU time for the query in seconds.</p>
+         * <p>The maximum CPU query time. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>456</p>
@@ -996,9 +994,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double maxCPUTimeSeconds;
 
         /**
-         * <p>The maximum number of scanned documents.</p>
+         * <p>The maximum number of documents scanned.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1008,7 +1006,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long maxDocExamined;
 
         /**
-         * <p>The maximum number of pulled rows.</p>
+         * <p>The maximum number of rows fetched.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1019,7 +1017,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The maximum number of I/O writes.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1029,9 +1027,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long maxIOWrites;
 
         /**
-         * <p>The maximum number of index scans.</p>
+         * <p>The maximum number of rows scanned by the index.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1043,7 +1041,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The maximum number of rows affected by the last statement.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1053,7 +1051,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long maxLastRowsCountAffected;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1064,7 +1062,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double maxLockTime;
 
         /**
-         * <p>The maximum lock wait time in seconds.</p>
+         * <p>The maximum lock wait time. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -1075,7 +1073,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The maximum number of logical reads.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1087,7 +1085,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The maximum number of physical reads.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1097,7 +1095,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long maxPhysicalIOReads;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1108,7 +1106,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double maxQueryTime;
 
         /**
-         * <p>The maximum query duration in seconds.</p>
+         * <p>The maximum query execution duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>14.402</p>
@@ -1117,21 +1115,21 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double maxQueryTimeSeconds;
 
         /**
-         * <p>The maximum size of the request in bytes. This parameter is valid only for Redis.</p>
+         * <p>The maximum size of the request, in bytes. This parameter is valid only for Redis.</p>
          */
         @NameInMap("MaxRequestSize")
         public Double maxRequestSize;
 
         /**
-         * <p>The maximum size of the response in bytes. This parameter is valid only for Redis.</p>
+         * <p>The maximum response size, in bytes. This parameter is valid only for Redis.</p>
          */
         @NameInMap("MaxResponseSize")
         public Double maxResponseSize;
 
         /**
-         * <p>The maximum number of returned rows.</p>
+         * <p>The maximum number of rows returned.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1150,9 +1148,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long maxRows;
 
         /**
-         * <p>The maximum number of affected rows.</p>
+         * <p>The maximum number of rows affected.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1162,7 +1160,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long maxRowsCountAffected;
 
         /**
-         * <p>The maximum number of scanned rows.</p>
+         * <p>The maximum number of rows examined.</p>
          * 
          * <strong>example:</strong>
          * <p>318613</p>
@@ -1171,7 +1169,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long maxRowsExamined;
 
         /**
-         * <p>The maximum number of returned rows.</p>
+         * <p>The maximum number of rows returned.</p>
          * 
          * <strong>example:</strong>
          * <p>256</p>
@@ -1180,7 +1178,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long maxRowsSent;
 
         /**
-         * <p>The maximum execution duration in seconds.</p>
+         * <p>The maximum execution duration, in seconds.</p>
          */
         @NameInMap("MaxRt")
         public Double maxRt;
@@ -1197,7 +1195,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The namespace.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1209,7 +1207,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The node type.</p>
          * <blockquote>
-         * <p>This parameter is supported by MongoDB and Tair (Redis-compatible).</p>
+         * <p>Databases that support this field: ApsaraDB for MongoDB and Tair (Redis® OSS-Compatible).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1221,7 +1219,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The operation type.</p>
          * <blockquote>
-         * <p>This parameter is supported only by MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1231,7 +1229,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String opType;
 
         /**
-         * <p>The alias of the source.</p>
+         * <p>The source alias.</p>
          * 
          * <strong>example:</strong>
          * <p>order-1</p>
@@ -1242,7 +1240,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The number of physical reads.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1263,7 +1261,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The query ID.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1273,7 +1271,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String queryId;
 
         /**
-         * <p>The time when the query started. The time is in the yyyy-MM-dd hh:mm:ss format and is in UTC.</p>
+         * <p>The time when the query started. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-25T03:00:00Z</p>
@@ -1282,7 +1280,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String queryStartTime;
 
         /**
-         * <p>The threshold for the query execution time. Unit: milliseconds (ms).</p>
+         * <p>The query execution time threshold. Unit: milliseconds (ms).</p>
          * 
          * <strong>example:</strong>
          * <p>272.444</p>
@@ -1291,7 +1289,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long queryTime;
 
         /**
-         * <p>The ratio of the query duration.</p>
+         * <p>The proportion of query duration.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1018</p>
@@ -1300,7 +1298,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double queryTimeRate;
 
         /**
-         * <p>The query duration in seconds.</p>
+         * <p>The query execution duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>25.472</p>
@@ -1309,7 +1307,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Double queryTimeSeconds;
 
         /**
-         * <p>The number of items returned.</p>
+         * <p>The return item numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>暂无</p>
@@ -1318,9 +1316,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String returnItemNumbers;
 
         /**
-         * <p>The number of returned rows.</p>
+         * <p>The number of rows returned.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1330,9 +1328,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long returnNum;
 
         /**
-         * <p>The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 instance.</p>
+         * <p>The total number of rows updated or returned by the compute nodes of the ApsaraDB for PolarDB-X 2.0 database instance.</p>
          * <blockquote>
-         * <p>This parameter is supported only by PolarDB-X 2.0 instances.</p>
+         * <p>This field is supported only for ApsaraDB for PolarDB-X 2.0 instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1342,9 +1340,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long rows;
 
         /**
-         * <p>The number of affected rows.</p>
+         * <p>The number of rows affected.</p>
          * <blockquote>
-         * <p>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</p>
+         * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1354,9 +1352,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long rowsCountAffected;
 
         /**
-         * <p>The total number of scanned rows.</p>
+         * <p>The total number of rows examined.</p>
          * <blockquote>
-         * <p>This parameter is supported by ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
+         * <p>Databases that currently support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1366,7 +1364,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long rowsExamined;
 
         /**
-         * <p>The number of returned rows.</p>
+         * <p>The number of rows returned.</p>
          * 
          * <strong>example:</strong>
          * <p>772</p>
@@ -1402,9 +1400,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String scheme;
 
         /**
-         * <p>The number of requests sent from the compute nodes (CNs) to data nodes (DNs) in the PolarDB-X 2.0 instance.</p>
+         * <p>The number of DN requests from the compute node (CN) of the ApsaraDB for PolarDB-X 2.0 database instance.</p>
          * <blockquote>
-         * <p>This parameter is supported only by PolarDB-X 2.0 instances.</p>
+         * <p>This field is supported only for ApsaraDB for PolarDB-X 2.0 instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1414,7 +1412,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long scnt;
 
         /**
-         * <p>The SQL ID.</p>
+         * <p>SQL ID。</p>
          * 
          * <strong>example:</strong>
          * <p>2dca88762ec6b3812504ab8a4b******</p>
@@ -1423,7 +1421,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String sqlId;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag.</p>
          */
         @NameInMap("SqlTag")
         public DescribeSlowLogStatisticResponseBodyDataDataLogsSqlTag sqlTag;
@@ -1438,7 +1436,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String sqlType;
 
         /**
-         * <p>The ID of the sub-instance.</p>
+         * <p>The child instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-8vba51c588ba3a94</p>
@@ -1456,7 +1454,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The thread ID. This parameter is returned only for PolarDB for MySQL instances.</p>
+         * <p>The thread_id. This field is available only for PolarDB for MySQL.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1465,7 +1463,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String threadId;
 
         /**
-         * <p>The execution time. This value is a UNIX timestamp. Unit: milliseconds (ms).</p>
+         * <p>The execution time, in UNIX timestamp format. Unit: milliseconds (ms).</p>
          * 
          * <strong>example:</strong>
          * <p>1708568930</p>
@@ -1474,7 +1472,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
-         * <p>The total number of records. This parameter is valid only for Redis engines.</p>
+         * <p>The total number of records. This parameter is valid only for the Redis engine.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2332,9 +2330,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String dbInstanceName;
 
         /**
-         * <p>The end time of the query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The end time of the query task, in UNIX timestamp format. Unit: milliseconds.</p>
          * <blockquote>
-         * <p>The end time must be later than the start time.</p>
+         * <p>The end time of the query task must be later than the start time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2344,7 +2342,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The number of items in the slow query log list on the current page.</p>
+         * <p>The number of items in the log list on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -2359,7 +2357,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public java.util.List<DescribeSlowLogStatisticResponseBodyDataDataLogs> logs;
 
         /**
-         * <p>The maximum number of entries to return on each page. Valid values: 5 to 100.</p>
+         * <p>The maximum number of records per page for the paged query. Valid values: 5 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -2369,17 +2367,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
 
         /**
          * <p>The node ID.</p>
-         * <p>For MongoDB instances, use this parameter to specify a node for storage analysis. Call the <a href="https://help.aliyun.com/document_detail/123802.html">DescribeRoleZoneInfo</a> operation to query the details of the nodes in a MongoDB instance.</p>
+         * <p>For MongoDB instances, specify a node for storage analysis by using this parameter. Call the <a href="https://help.aliyun.com/document_detail/123802.html">DescribeRoleZoneInfo</a> operation to query the details of each node in a MongoDB instance.</p>
          * <ul>
-         * <li><p>If you specify the <strong>InsName</strong> (node ID) of the destination node, such as <code>d-bp1872fa24d5****</code>, the system analyzes the corresponding hidden node.</p>
-         * </li>
-         * <li><p>If you specify <code>InsName#RoleId</code> of the destination node, such as <code>d-bp1872fa24d5****#299****5</code>, the system analyzes the specified node.</p>
-         * </li>
+         * <li>If you specify the <strong>InsName</strong> (node ID) of the target node, such as <code>d-bp1872fa24d5****</code>, this operation analyzes the corresponding Hidden node.</li>
+         * <li>If you specify the <code>InsName#RoleId</code> of the target node, such as <code>d-bp1872fa24d5****#299****5</code>, this operation analyzes the specified node.</li>
          * </ul>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice: For MongoDB replica set instances, if you do not specify this parameter, this operation analyzes the only Hidden node by default. For MongoDB sharded cluster instances, specify this parameter to designate the target node.</notice></p>
          * </blockquote>
-         * <p>For a MongoDB replica set instance, if you do not specify this parameter, the system analyzes the only hidden node by default. For a MongoDB sharded cluster instance, specify this parameter to select a destination node.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-wz99g5rn7w1x8h0sf</p>
@@ -2388,7 +2383,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The page number of the paged query. Pages start from 1. The default value is 1.</p>
+         * <p>The page number for the paged query. The value starts from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2397,7 +2392,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Integer pageNumbers;
 
         /**
-         * <p>The start time. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The start time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-08T02:01:00Z</p>
@@ -2406,7 +2401,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -2518,7 +2513,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public Integer errorCode;
 
         /**
-         * <p>Indicates whether the asynchronous request is complete.</p>
+         * <p>Indicates whether the task is finished.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -2554,10 +2549,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String resultId;
 
         /**
-         * <p>The status of the asynchronous request. Valid values:</p>
-         * <p>-<strong>RUNNING</strong>: The request is in progress.</p>
-         * <p>-<strong>SUCCESS</strong>: The request is successful.</p>
-         * <p>-<strong>FAIL</strong>: The request failed.</p>
+         * <p>The current status. Valid values:</p>
+         * <ul>
+         * <li><strong>RUNNING</strong>: running.</li>
+         * <li><strong>SUCCESS</strong>: succeeded.</li>
+         * <li><strong>FAIL</strong>: failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -2566,7 +2563,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The timestamp of the request.</p>
+         * <p>The request time.</p>
          * 
          * <strong>example:</strong>
          * <p>1735104224250</p>

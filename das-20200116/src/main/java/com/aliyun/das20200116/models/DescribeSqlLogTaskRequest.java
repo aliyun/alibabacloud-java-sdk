@@ -14,7 +14,7 @@ public class DescribeSqlLogTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Pages are numbered starting from 1. Default value: 1.</p>
+     * <p>The page number for the paging query. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeSqlLogTaskRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The page size. Maximum value: 100. Default value: 10.</p>
+     * <p>The maximum number of records per page for the paging query. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

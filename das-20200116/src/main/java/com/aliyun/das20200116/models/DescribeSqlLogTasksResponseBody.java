@@ -20,7 +20,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
     public DescribeSqlLogTasksResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * <blockquote>
      * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned.</p>
      * </blockquote>
@@ -41,12 +41,10 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +102,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         /**
          * <p>The filter parameter.</p>
          * <blockquote>
-         * <p>For information about the supported filter parameters and their valid values, see <strong>Additional information about request parameters</strong>.</p>
+         * <p>For supported filter parameters and their values, refer to <strong>Supplementary description of request parameters</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -147,7 +145,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
 
     public static class DescribeSqlLogTasksResponseBodyDataList extends TeaModel {
         /**
-         * <p>The analysis completion time, represented as a unix timestamp in milliseconds.</p>
+         * <p>The analysis task completion time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1712751923000</p>
@@ -156,9 +154,9 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public Long analysisTaskFinishTime;
 
         /**
-         * <p>The status of the analysis task.</p>
+         * <p>The analysis task status.</p>
          * <blockquote>
-         * <p>This is an internal parameter. You can ignore it.</p>
+         * <p>This is an internal system parameter. You do not need to pay attention to it.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -168,7 +166,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public String analysisTaskStatus;
 
         /**
-         * <p>The task creation time, represented as a unix timestamp in milliseconds.</p>
+         * <p>The task creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1681363254423</p>
@@ -177,7 +175,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The task end time, represented as a unix timestamp in milliseconds.</p>
+         * <p>The task end time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1705975320000</p>
@@ -188,10 +186,8 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the task has expired. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The task has expired.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The task has not expired.</p>
-         * </li>
+         * <li><strong>true</strong>: The task has expired.</li>
+         * <li><strong>false</strong>: The task has not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,13 +197,13 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public Boolean expire;
 
         /**
-         * <p>A list of filter conditions.</p>
+         * <p>The list of query filter conditions.</p>
          */
         @NameInMap("Filters")
         public java.util.List<DescribeSqlLogTasksResponseBodyDataListFilters> filters;
 
         /**
-         * <p>The VPC-internal URL for accessing the task result.</p>
+         * <p>The VPC internal endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://das-sqllog-download-oss-cn-shanghai-internal.aliyuncs.com">https://das-sqllog-download-oss-cn-shanghai-internal.aliyuncs.com</a>
@@ -217,7 +213,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public String innerResult;
 
         /**
-         * <p>The ID of the database instance.</p>
+         * <p>The database instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1nti25tc7bq5****</p>
@@ -235,7 +231,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public Long logCount;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL audit export 1</p>
@@ -244,7 +240,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The progress of the task.</p>
+         * <p>The task progress.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -253,7 +249,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public Integer progress;
 
         /**
-         * <p>The URL that is returned when <strong>TaskType</strong> is set to <strong>Export</strong>.</p>
+         * <p>The link address when the task type is <strong>Export</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://das-sqllog-download-cn-shanghai.oss-cn-shanghai.aliyuncs.com/la">https://das-sqllog-download-cn-shanghai.oss-cn-shanghai.aliyuncs.com/la</a></p>
@@ -262,7 +258,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The total size of the scanned files, in bytes.</p>
+         * <p>The number of scanned files.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -271,7 +267,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public Long scanFileSize;
 
         /**
-         * <p>The task start time, represented as a unix timestamp in milliseconds.</p>
+         * <p>The task start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683859555482</p>
@@ -282,19 +278,14 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p><strong>INIT</strong>: pending scheduling.</p>
-         * </li>
-         * <li><p><strong>RUNNING</strong>: running.</p>
-         * </li>
-         * <li><p><strong>FAILED</strong>: failed.</p>
-         * </li>
-         * <li><p><strong>CANCELED</strong>: canceled.</p>
-         * </li>
-         * <li><p><strong>COMPLETED</strong>: completed.</p>
-         * </li>
+         * <li><strong>INIT</strong>: Pending scheduling.</li>
+         * <li><strong>RUNNING</strong>: Running.</li>
+         * <li><strong>FAILED</strong>: Failed.</li>
+         * <li><strong>CANCELED</strong>: Canceled.</li>
+         * <li><strong>COMPLETED</strong>: Completed.</li>
          * </ul>
          * <blockquote>
-         * <p>You can view the result of an offline task only when its status is <strong>COMPLETED</strong>.</p>
+         * <p>When the task is in the <strong>COMPLETED</strong> state, you can view the results of the batch task.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -315,10 +306,8 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><p><strong>Export</strong>: an export task.</p>
-         * </li>
-         * <li><p><strong>Query</strong>: a query task.</p>
-         * </li>
+         * <li><strong>Export</strong>: export task.</li>
+         * <li><strong>Query</strong>: query task.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -472,7 +461,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
 
     public static class DescribeSqlLogTasksResponseBodyData extends TeaModel {
         /**
-         * <p>The list of tasks.</p>
+         * <p>The list of returned information.</p>
          */
         @NameInMap("List")
         public java.util.List<DescribeSqlLogTasksResponseBodyDataList> list;
@@ -487,7 +476,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

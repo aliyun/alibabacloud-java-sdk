@@ -100,10 +100,10 @@ public class GetInstanceGroupInspectReportDetailResponseBody extends TeaModel {
 
     public static class GetInstanceGroupInspectReportDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The content of the automated operations report, including the report date and diagnostic details of managed instances.</p>
+         * <p>The content of the operations report, which mainly includes the report date and diagnostic details of managed instances.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;### 概要\n\n报告日期：2025-12-10  \n对比周期：[昨日日期] → 2025-12-10 以下省略&quot;</p>
+         * <p>&quot;### Summary\n\nReport date: 2025-12-10  \nComparison period: [previous day] → 2025-12-10 The rest is omitted&quot;</p>
          */
         @NameInMap("ReportDetail")
         public String reportDetail;
