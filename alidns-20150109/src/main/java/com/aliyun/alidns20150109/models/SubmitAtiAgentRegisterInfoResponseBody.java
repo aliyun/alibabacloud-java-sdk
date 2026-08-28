@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SubmitAtiAgentRegisterInfoResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This field is returned only when the RAM authentication fails.</p>
+     * <p>The access denied details. This field is returned only when RAM authentication fails.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public SubmitAtiAgentRegisterInfoResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -22,12 +22,12 @@ public class SubmitAtiAgentRegisterInfoResponseBody extends TeaModel {
     /**
      * <p>The Agent status. Valid values:</p>
      * <ul>
-     * <li>Draft: The Agent registration form is being filled out and has not been formally submitted. In the Draft state, only modification and detail viewing are supported. Other operations are not supported.</li>
-     * <li>Private CA Pending Issuance: The Agent registration has been formally submitted. Alibaba Cloud has completed the ACME DNS-01 pre-check and submitted the registration information along with the generated DNS records to CNNIC. The system is waiting for CNNIC to approve and issue the Private CA certificate and complete the TL sealing.</li>
-     * <li>DNS Pending Verification: CNNIC has approved and issued the Private CA certificate and completed the TL sealing, but the DNS records of the user have not been verified. The user needs to add the corresponding DNS records in the domain name resolution and complete the verification.</li>
-     * <li>Active: All processes are complete. The Private CA certificate has been issued, the TL has been sealed, and the DNS records have been verified. The Agent is activated and can be discovered and trusted across the network.</li>
-     * <li>Expired: The Agent identity certificate has expired because the user did not complete the certificate renewal within the validity period.</li>
-     * <li>Revoked: The Agent certificate has been revoked, the DNS records have been cleaned up, and the Agent can no longer be discovered or trusted. The Agent cannot be restored to the Active state.</li>
+     * <li>Draft: The Agent registration form is being filled in and has not been formally submitted. In the Draft state, only modification and detail viewing operations are supported. Other operations are not supported.</li>
+     * <li>Private CA Pending Issuance: The Agent registration has been formally submitted. Alibaba Cloud has completed the ACME DNS-01 pre-check and submitted the registration information and generated DNS records to CNNIC. The system is waiting for CNNIC to approve and issue the Private CA and complete TL sealing.</li>
+     * <li>DNS Pending Verification: CNNIC has approved the request, issued the Private CA certificate, and completed TL sealing, but the DNS records of the user have not been verified. The user needs to add the corresponding DNS records in domain name resolution and complete verification.</li>
+     * <li>Active: All processes are complete. The Private CA certificate has been issued, TL has been sealed, and DNS records have been verified. The Agent is activated and can be discovered and trusted across the network.</li>
+     * <li>Expired: The Agent identity certificate has expired, and the user did not complete certificate renewal within the validity period.</li>
+     * <li>Revoked: The Agent certificate has been revoked, DNS records have been cleaned up, and the Agent cannot be discovered or trusted. It cannot be restored to the Active state.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class SubmitAtiAgentRegisterInfoResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authorized principal.</p>
+         * <p>The display name of the authorization principal.</p>
          * 
          * <strong>example:</strong>
          * <p>2015555733387XXXX</p>
@@ -85,7 +85,7 @@ public class SubmitAtiAgentRegisterInfoResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authorized principal.</p>
+         * <p>The owner ID of the authorization principal.</p>
          * 
          * <strong>example:</strong>
          * <p>10469733312XXX</p>
@@ -103,7 +103,7 @@ public class SubmitAtiAgentRegisterInfoResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encrypted diagnostic message.</p>
+         * <p>The encrypted complete diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</p>
@@ -112,10 +112,10 @@ public class SubmitAtiAgentRegisterInfoResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The reason why the authentication failed. Valid values:</p>
+         * <p>The reason for the authentication failure. Valid values:</p>
          * <ul>
-         * <li>ExplicitDeny: Explicit denial.</li>
-         * <li>ImplicitDeny: Implicit denial.</li>
+         * <li>ExplicitDeny: explicit deny.</li>
+         * <li>ImplicitDeny: implicit deny.</li>
          * </ul>
          * 
          * <strong>example:</strong>

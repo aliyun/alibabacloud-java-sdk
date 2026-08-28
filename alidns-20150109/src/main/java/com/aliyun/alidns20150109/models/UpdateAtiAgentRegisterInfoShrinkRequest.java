@@ -40,6 +40,9 @@ public class UpdateAtiAgentRegisterInfoShrinkRequest extends TeaModel {
     @NameInMap("AgentRegisterInfoId")
     public String agentRegisterInfoId;
 
+    @NameInMap("AgentSubHost")
+    public String agentSubHost;
+
     /**
      * <p>The version of the Agent.</p>
      * 
@@ -58,6 +61,9 @@ public class UpdateAtiAgentRegisterInfoShrinkRequest extends TeaModel {
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("DomainMode")
+    public String domainMode;
 
     /**
      * <p>The endpoints for each protocol.</p>
@@ -114,6 +120,14 @@ public class UpdateAtiAgentRegisterInfoShrinkRequest extends TeaModel {
         return this.agentRegisterInfoId;
     }
 
+    public UpdateAtiAgentRegisterInfoShrinkRequest setAgentSubHost(String agentSubHost) {
+        this.agentSubHost = agentSubHost;
+        return this;
+    }
+    public String getAgentSubHost() {
+        return this.agentSubHost;
+    }
+
     public UpdateAtiAgentRegisterInfoShrinkRequest setAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -128,6 +142,14 @@ public class UpdateAtiAgentRegisterInfoShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateAtiAgentRegisterInfoShrinkRequest setDomainMode(String domainMode) {
+        this.domainMode = domainMode;
+        return this;
+    }
+    public String getDomainMode() {
+        return this.domainMode;
     }
 
     public UpdateAtiAgentRegisterInfoShrinkRequest setEndpointsShrink(String endpointsShrink) {

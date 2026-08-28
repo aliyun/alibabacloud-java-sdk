@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateAtiRegistrantRequest extends TeaModel {
     /**
-     * <p>The country or region of the registrant. Specify a 2-character country or region code in compliance with GB/T 2659.1-2022.</p>
+     * <p>The country or region of the registrant. Specify a 2-character country or region code (refer to GB/T 2659.1-2022).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>中国</p>
+     * <p>CN</p>
      */
     @NameInMap("Cc")
     public String cc;
@@ -19,15 +19,15 @@ public class CreateAtiRegistrantRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>杭州市</p>
+     * <p>Hangzhou</p>
      */
     @NameInMap("City")
     public String city;
 
     /**
-     * <p>Ensures the idempotency of the request. Generate a unique parameter value from your client to ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CreateAtiRegistrantRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The document number of the registrant. The value cannot exceed 50 characters in length.</p>
+     * <p>The document number of the registrant. The number cannot exceed 50 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,11 +47,11 @@ public class CreateAtiRegistrantRequest extends TeaModel {
     public String documentCode;
 
     /**
-     * <p>The document image of the registrant in Base64 encoding. The original file size must be between 50 KB and 3 MB.</p>
+     * <p>The document image of the registrant (base64-encoded). The original file size must be between 50 KB and 3 MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>证件图片</p>
+     * <p>Document image</p>
      */
     @NameInMap("DocumentImage")
     public String documentImage;
@@ -175,27 +175,27 @@ public class CreateAtiRegistrantRequest extends TeaModel {
      * </tr>
      * <tr>
      * <td>BJWSXX</td>
-     * <td>Beijing operating license for schools for children of foreign embassy staff</td>
+     * <td>Operating license for schools for children of foreign embassy staff in Beijing</td>
      * </tr>
      * <tr>
      * <td>JWJG</td>
-     * <td>Overseas institution certificate</td>
+     * <td>Certificate of overseas institution</td>
      * </tr>
      * <tr>
      * <td>JWFZFDBJ</td>
-     * <td>Overseas non-governmental organization representative office registration certificate</td>
+     * <td>Registration certificate for representative offices of overseas non-governmental organizations</td>
      * </tr>
      * <tr>
      * <td>WGCZJG</td>
-     * <td>Foreign enterprise permanent representative office registration certificate</td>
+     * <td>Registration certificate for permanent representative offices of foreign enterprises</td>
      * </tr>
      * <tr>
      * <td>WGZHWH</td>
-     * <td>Foreign cultural center registration certificate in China</td>
+     * <td>Registration certificate for foreign cultural centers in China</td>
      * </tr>
      * <tr>
      * <td>WGZHXWJG</td>
-     * <td>Foreign news agency certificate in China</td>
+     * <td>Certificate for foreign news agencies in China</td>
      * </tr>
      * <tr>
      * <td>WJLSFZ</td>
@@ -203,7 +203,7 @@ public class CreateAtiRegistrantRequest extends TeaModel {
      * </tr>
      * <tr>
      * <td>WLCZJG</td>
-     * <td>Approval registration certificate for permanent representative offices of foreign government tourism departments</td>
+     * <td>Registration certificate for permanent representative offices of foreign government tourism departments</td>
      * </tr>
      * <tr>
      * <td>QT</td>
@@ -219,7 +219,7 @@ public class CreateAtiRegistrantRequest extends TeaModel {
     public String documentType;
 
     /**
-     * <p>The email address. The value cannot exceed 300 characters in length.</p>
+     * <p>The email address. The address cannot exceed 300 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -229,11 +229,11 @@ public class CreateAtiRegistrantRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The name of the registrant. The value cannot exceed 255 characters in length.</p>
+     * <p>The name of the registrant. The name cannot exceed 255 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>张xx</p>
+     * <p>Zhang XX</p>
      */
     @NameInMap("Name")
     public String name;
@@ -253,7 +253,7 @@ public class CreateAtiRegistrantRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>浙江省</p>
+     * <p>Zhejiang</p>
      */
     @NameInMap("State")
     public String state;
@@ -262,7 +262,7 @@ public class CreateAtiRegistrantRequest extends TeaModel {
      * <p>The address of the registrant. The value cannot exceed 255 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>xx区xx街道</p>
+     * <p>XX District, XX Street</p>
      */
     @NameInMap("Street")
     public String street;

@@ -20,16 +20,16 @@ public class CreateAtiRegistrantResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The name of the real-name verified registrant.</p>
+     * <p>The name of the real-name registrant.</p>
      * 
      * <strong>example:</strong>
-     * <p>张xx</p>
+     * <p>Zhang XX</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the real-name verified registrant.</p>
+     * <p>The ID of the real-name registrant.</p>
      * 
      * <strong>example:</strong>
      * <p>2072277378616354816</p>
@@ -50,12 +50,12 @@ public class CreateAtiRegistrantResponseBody extends TeaModel {
      * <p>The real-name verification status. Valid values:</p>
      * <ul>
      * <li>Approved.</li>
-     * <li>Under review.</li>
+     * <li>Pending review.</li>
      * <li>Rejected.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>审核通过</p>
+     * <p>Approved</p>
      */
     @NameInMap("Status")
     public String status;
@@ -151,7 +151,7 @@ public class CreateAtiRegistrantResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encrypted complete diagnostic message.</p>
+         * <p>The encrypted diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</p>
@@ -162,8 +162,8 @@ public class CreateAtiRegistrantResponseBody extends TeaModel {
         /**
          * <p>The reason for the authentication failure. Valid values:</p>
          * <ul>
-         * <li>ExplicitDeny: Explicit deny.</li>
-         * <li>ImplicitDeny: Implicit deny.</li>
+         * <li>ExplicitDeny: explicit deny.</li>
+         * <li>ImplicitDeny: implicit deny.</li>
          * </ul>
          * 
          * <strong>example:</strong>

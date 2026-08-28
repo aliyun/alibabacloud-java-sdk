@@ -8,7 +8,7 @@ public class UpdateAtiRegistrantRequest extends TeaModel {
      * <p>The country.</p>
      * 
      * <strong>example:</strong>
-     * <p>中国</p>
+     * <p>China</p>
      */
     @NameInMap("Cc")
     public String cc;
@@ -17,14 +17,14 @@ public class UpdateAtiRegistrantRequest extends TeaModel {
      * <p>The city.</p>
      * 
      * <strong>example:</strong>
-     * <p>杭州市</p>
+     * <p>Hangzhou</p>
      */
     @NameInMap("City")
     public String city;
 
     /**
-     * <p>Ensures the idempotency of the request. Generate a unique parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
+     * <p>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhbGciOiJIUzI1NiIsInR5cC.....</p>
@@ -33,7 +33,7 @@ public class UpdateAtiRegistrantRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The document number of the registrant. Maximum length: 50 characters.</p>
+     * <p>The document number of the registrant. The number cannot exceed 50 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>11011239900307663x</p>
@@ -45,7 +45,7 @@ public class UpdateAtiRegistrantRequest extends TeaModel {
      * <p>The document image of the registrant (Base64-encoded). The original file size must be between 50 KB and 3 MB.</p>
      * 
      * <strong>example:</strong>
-     * <p>证件图片</p>
+     * <p>Document image</p>
      */
     @NameInMap("DocumentImage")
     public String documentImage;
@@ -60,7 +60,7 @@ public class UpdateAtiRegistrantRequest extends TeaModel {
     public String documentType;
 
     /**
-     * <p>The email address. Maximum length: 300 characters.</p>
+     * <p>The email address. The address cannot exceed 300 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:example@example.com">example@example.com</a></p>
@@ -69,16 +69,16 @@ public class UpdateAtiRegistrantRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The name of the registrant. Maximum length: 255 characters.</p>
+     * <p>The name of the registrant. The name cannot exceed 255 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>张xx</p>
+     * <p>Zhang XX</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The phone number of the registrant. Maximum length: 128 characters. If the country is China, the area code of a non-mobile phone number must match the city.</p>
+     * <p>The phone number of the registrant. The number cannot exceed 128 characters in length. If the country is China and the number is not a mobile phone number, the area code must match the city.</p>
      * 
      * <strong>example:</strong>
      * <p>13112345678</p>
@@ -87,7 +87,7 @@ public class UpdateAtiRegistrantRequest extends TeaModel {
     public String phone;
 
     /**
-     * <p>The ID of the registrant profile.</p>
+     * <p>The ID of the real-name registrant.</p>
      * 
      * <strong>example:</strong>
      * <p>2072277378616354816</p>
@@ -99,16 +99,16 @@ public class UpdateAtiRegistrantRequest extends TeaModel {
      * <p>The state or province.</p>
      * 
      * <strong>example:</strong>
-     * <p>浙江省</p>
+     * <p>Zhejiang</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
-     * <p>The street.</p>
+     * <p>The street address.</p>
      * 
      * <strong>example:</strong>
-     * <p>xx区xx街道</p>
+     * <p>XX District, XX Street</p>
      */
     @NameInMap("Street")
     public String street;

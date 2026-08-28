@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListAtiRegistrantsRequest extends TeaModel {
     /**
+     * <p>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>eyJhbGciOiJIUzI1NiIsInR5cC.....</p>
      */
@@ -12,6 +17,8 @@ public class ListAtiRegistrantsRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The maximum number of records to return in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -19,13 +26,17 @@ public class ListAtiRegistrantsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The name of the real-name verified registrant.</p>
+     * 
      * <strong>example:</strong>
-     * <p>张xx</p>
+     * <p>John Doe</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>4698691</p>
      */
@@ -33,6 +44,7 @@ public class ListAtiRegistrantsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The current page number. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +54,7 @@ public class ListAtiRegistrantsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of rows per page in a paged query. Maximum value: 100. Default value: 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,8 +64,15 @@ public class ListAtiRegistrantsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The real-name verification status. Valid values:</p>
+     * <ul>
+     * <li>Approved</li>
+     * <li>Pending</li>
+     * <li>Rejected</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>审核通过</p>
+     * <p>Approved</p>
      */
     @NameInMap("Status")
     public String status;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAtiRegistrantResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This field is returned only when RAM authentication fails.</p>
+     * <p>The details of the access denial. This field is returned only when RAM authentication fails.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public UpdateAtiRegistrantResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -99,7 +99,7 @@ public class UpdateAtiRegistrantResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The encoded complete diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</p>

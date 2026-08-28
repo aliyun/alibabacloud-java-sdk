@@ -14,7 +14,7 @@ public class DescribeAtiRegistrantResponseBody extends TeaModel {
      * <p>The country.</p>
      * 
      * <strong>example:</strong>
-     * <p>中国</p>
+     * <p>China</p>
      */
     @NameInMap("Cc")
     public String cc;
@@ -23,13 +23,13 @@ public class DescribeAtiRegistrantResponseBody extends TeaModel {
      * <p>The city. Default value: Hangzhou.</p>
      * 
      * <strong>example:</strong>
-     * <p>杭州市</p>
+     * <p>Hangzhou</p>
      */
     @NameInMap("City")
     public String city;
 
     /**
-     * <p>The creation time (timestamp).</p>
+     * <p>The creation time (UNIX timestamp).</p>
      * 
      * <strong>example:</strong>
      * <p>1533773400000</p>
@@ -68,7 +68,7 @@ public class DescribeAtiRegistrantResponseBody extends TeaModel {
      * <p>The name of the registrant. The name can be up to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>张xx</p>
+     * <p>Zhang xx</p>
      */
     @NameInMap("Name")
     public String name;
@@ -95,13 +95,13 @@ public class DescribeAtiRegistrantResponseBody extends TeaModel {
      * <p>The reason why the real-name verification was rejected.</p>
      * 
      * <strong>example:</strong>
-     * <p>以实际返回为准</p>
+     * <p>Subject to the actual response</p>
      */
     @NameInMap("RejectReason")
     public String rejectReason;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
@@ -110,10 +110,10 @@ public class DescribeAtiRegistrantResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the public recursive service.</p>
+     * <p>The state or province.</p>
      * 
      * <strong>example:</strong>
-     * <p>浙江省</p>
+     * <p>Zhejiang</p>
      */
     @NameInMap("State")
     public String state;
@@ -136,13 +136,13 @@ public class DescribeAtiRegistrantResponseBody extends TeaModel {
      * <p>The street address.</p>
      * 
      * <strong>example:</strong>
-     * <p>xx区xx街道</p>
+     * <p>xx District, xx Street</p>
      */
     @NameInMap("Street")
     public String street;
 
     /**
-     * <p>The update time (timestamp).</p>
+     * <p>The update time (UNIX timestamp).</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
@@ -321,7 +321,7 @@ public class DescribeAtiRegistrantResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encrypted diagnostic message.</p>
+         * <p>The encrypted complete diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</p>

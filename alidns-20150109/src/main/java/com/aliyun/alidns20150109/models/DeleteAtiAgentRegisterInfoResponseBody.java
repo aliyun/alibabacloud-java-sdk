@@ -20,7 +20,7 @@ public class DeleteAtiAgentRegisterInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful:</p>
      * <ul>
      * <li><p>true: The operation was successful.</p>
      * </li>

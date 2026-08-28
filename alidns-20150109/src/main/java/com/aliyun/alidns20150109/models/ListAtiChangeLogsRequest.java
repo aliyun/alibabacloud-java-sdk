@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAtiChangeLogsRequest extends TeaModel {
     /**
-     * <p>The agent ID that is assigned by CNNIC after real-name verification. The AgentID serves as the unique identifier that binds the agent to the real-name registered contact.</p>
+     * <p>The agent ID assigned by CNNIC after real-name authentication. The AgentID serves as the unique identifier that binds the agent to the real-name authenticated registrant.</p>
      * 
      * <strong>example:</strong>
      * <p>Justin@underarmour</p>
@@ -14,9 +14,9 @@ public class ListAtiChangeLogsRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>Ensures the idempotency of the request. Generate a unique parameter value from your client to ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters.</p>
      * <ul>
-     * <li>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</li>
+     * <li>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,10 +82,10 @@ public class ListAtiChangeLogsRequest extends TeaModel {
     public Long startTimestamp;
 
     /**
-     * <p>Ignored.</p>
+     * <p>Ignore.</p>
      * 
      * <strong>example:</strong>
-     * <p>忽略</p>
+     * <p>Ignore</p>
      */
     @NameInMap("TimeRange")
     public String timeRange;

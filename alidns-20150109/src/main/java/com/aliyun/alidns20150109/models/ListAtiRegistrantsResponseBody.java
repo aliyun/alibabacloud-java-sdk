@@ -4,10 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ListAtiRegistrantsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the access denial. This field is returned only when RAM authentication fails.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public ListAtiRegistrantsResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
+     * <p>The maximum number of records to return in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -15,6 +20,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>4698691</p>
      */
@@ -22,6 +29,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The current page number. Minimum value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of rows per page in a paged query. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -39,6 +50,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
     public ListAtiRegistrantsResponseBodyRegistrants registrants;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B57C121B-A45F-44D8-A9B2-XXXXXXX</p>
      */
@@ -46,6 +59,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>224</p>
      */
@@ -53,6 +68,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -138,6 +155,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
 
     public static class ListAtiRegistrantsResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The unauthorized operation that was attempted.</p>
+         * 
          * <strong>example:</strong>
          * <p>AddRspDomainServerHoldStatusForGatewayOte</p>
          */
@@ -145,6 +164,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The display name of the authorization principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>2015555733387XXXX</p>
          */
@@ -152,6 +173,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The owner ID of the authorization principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>10469733312XXX</p>
          */
@@ -159,6 +182,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The identity type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -166,6 +191,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encrypted complete diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</p>
          */
@@ -173,6 +200,12 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The reason for the authentication failure. Valid values:</p>
+         * <ul>
+         * <li>ExplicitDeny: explicit deny.</li>
+         * <li>ImplicitDeny: implicit deny.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -180,6 +213,8 @@ public class ListAtiRegistrantsResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */

@@ -24,6 +24,9 @@ public class VerifyAtiAgentDnsRecordsRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("TrustLevel")
+    public String trustLevel;
+
     public static VerifyAtiAgentDnsRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         VerifyAtiAgentDnsRecordsRequest self = new VerifyAtiAgentDnsRecordsRequest();
         return TeaModel.build(map, self);
@@ -43,6 +46,14 @@ public class VerifyAtiAgentDnsRecordsRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public VerifyAtiAgentDnsRecordsRequest setTrustLevel(String trustLevel) {
+        this.trustLevel = trustLevel;
+        return this;
+    }
+    public String getTrustLevel() {
+        return this.trustLevel;
     }
 
 }

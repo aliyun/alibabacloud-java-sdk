@@ -14,7 +14,7 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
     public ListAtiAgentRegisterInfosResponseBodyAgentRegisterInfos agentRegisterInfos;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of records to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -32,7 +32,7 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The current page number. Minimum value: 1. Default value: 1.</p>
+     * <p>The current page number. The start value is 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page set for the paged query. This is the paging size. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>. Settings determine how many rows are displayed per page.</p>
+     * <p>The number of entries per page in the Settings for the paging query. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -59,7 +59,7 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>
@@ -191,7 +191,7 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encrypted diagnostic message.</p>
+         * <p>The encrypted complete diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</p>
@@ -200,10 +200,10 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The cause of the authentication failure. Valid values:</p>
+         * <p>The reason for the authentication failure. Valid values:</p>
          * <ul>
-         * <li>ExplicitDeny: Explicit denial.</li>
-         * <li>ImplicitDeny: Implicit denial.</li>
+         * <li>ExplicitDeny: explicit denial.</li>
+         * <li>ImplicitDeny: implicit denial.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,6 +350,9 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TrustLevel")
+        public String trustLevel;
+
         @NameInMap("UpdateTimestamp")
         public String updateTimestamp;
 
@@ -428,6 +431,14 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListAtiAgentRegisterInfosResponseBodyAgentRegisterInfosAgentRegisterInfo setTrustLevel(String trustLevel) {
+            this.trustLevel = trustLevel;
+            return this;
+        }
+        public String getTrustLevel() {
+            return this.trustLevel;
         }
 
         public ListAtiAgentRegisterInfosResponseBodyAgentRegisterInfosAgentRegisterInfo setUpdateTimestamp(String updateTimestamp) {

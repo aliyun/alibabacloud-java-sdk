@@ -4,10 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateAtiAlertSettingsResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial. This parameter is returned only when RAM authentication fails.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public UpdateAtiAlertSettingsResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
@@ -15,6 +20,12 @@ public class UpdateAtiAlertSettingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class UpdateAtiAlertSettingsResponseBody extends TeaModel {
 
     public static class UpdateAtiAlertSettingsResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The unauthorized operation that was attempted.</p>
+         * 
          * <strong>example:</strong>
          * <p>RemoveRspDomainServerHoldStatusForGateway</p>
          */
@@ -59,6 +72,8 @@ public class UpdateAtiAlertSettingsResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The display name of the authorization principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>2015555733387XXXX</p>
          */
@@ -66,6 +81,8 @@ public class UpdateAtiAlertSettingsResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The ID of the authorization principal owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>10469733312XXX</p>
          */
@@ -73,6 +90,8 @@ public class UpdateAtiAlertSettingsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The identity type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -80,6 +99,8 @@ public class UpdateAtiAlertSettingsResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</p>
          */
@@ -87,6 +108,12 @@ public class UpdateAtiAlertSettingsResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The reason for the authentication failure. Valid values:</p>
+         * <ul>
+         * <li>ExplicitDeny: explicit deny.</li>
+         * <li>ImplicitDeny: implicit deny.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -94,6 +121,8 @@ public class UpdateAtiAlertSettingsResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */

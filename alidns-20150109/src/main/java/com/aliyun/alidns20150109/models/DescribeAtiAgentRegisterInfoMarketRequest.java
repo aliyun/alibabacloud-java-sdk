@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAtiAgentRegisterInfoMarketRequest extends TeaModel {
     /**
+     * <p>The endpoint domain name through which the agent provides services externally.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAtiAgentRegisterInfoMarketRequest extends TeaModel {
     public String agentHost;
 
     /**
+     * <p>The agent version.</p>
+     * 
      * <strong>example:</strong>
      * <p>5.0.1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAtiAgentRegisterInfoMarketRequest extends TeaModel {
     public String agentVersion;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJhbGciOiJIUzI1NiIsInR5cC.....</p>
      */
@@ -26,6 +32,8 @@ public class DescribeAtiAgentRegisterInfoMarketRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The maximum number of entries to return in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -33,11 +41,16 @@ public class DescribeAtiAgentRegisterInfoMarketRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>4698691</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("TrustLevel")
+    public String trustLevel;
 
     public static DescribeAtiAgentRegisterInfoMarketRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAtiAgentRegisterInfoMarketRequest self = new DescribeAtiAgentRegisterInfoMarketRequest();
@@ -82,6 +95,14 @@ public class DescribeAtiAgentRegisterInfoMarketRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeAtiAgentRegisterInfoMarketRequest setTrustLevel(String trustLevel) {
+        this.trustLevel = trustLevel;
+        return this;
+    }
+    public String getTrustLevel() {
+        return this.trustLevel;
     }
 
 }

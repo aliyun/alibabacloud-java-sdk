@@ -64,6 +64,9 @@ public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody extends T
     @NameInMap("RecordValue")
     public String recordValue;
 
+    @NameInMap("Records")
+    public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecords records;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -141,6 +144,14 @@ public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody extends T
     }
     public String getRecordValue() {
         return this.recordValue;
+    }
+
+    public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody setRecords(CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecords records) {
+        this.records = records;
+        return this;
+    }
+    public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecords getRecords() {
+        return this.records;
     }
 
     public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody setRequestId(String requestId) {
@@ -286,6 +297,77 @@ public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody extends T
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+    }
+
+    public static class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord extends TeaModel {
+        @NameInMap("DomainScope")
+        public String domainScope;
+
+        @NameInMap("RecordName")
+        public String recordName;
+
+        @NameInMap("RecordType")
+        public String recordType;
+
+        @NameInMap("RecordValue")
+        public String recordValue;
+
+        public static CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord build(java.util.Map<String, ?> map) throws Exception {
+            CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord self = new CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord setDomainScope(String domainScope) {
+            this.domainScope = domainScope;
+            return this;
+        }
+        public String getDomainScope() {
+            return this.domainScope;
+        }
+
+        public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord setRecordName(String recordName) {
+            this.recordName = recordName;
+            return this;
+        }
+        public String getRecordName() {
+            return this.recordName;
+        }
+
+        public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord setRecordType(String recordType) {
+            this.recordType = recordType;
+            return this;
+        }
+        public String getRecordType() {
+            return this.recordType;
+        }
+
+        public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord setRecordValue(String recordValue) {
+            this.recordValue = recordValue;
+            return this;
+        }
+        public String getRecordValue() {
+            return this.recordValue;
+        }
+
+    }
+
+    public static class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecords extends TeaModel {
+        @NameInMap("Record")
+        public java.util.List<CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord> record;
+
+        public static CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecords build(java.util.Map<String, ?> map) throws Exception {
+            CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecords self = new CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecords();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecords setRecord(java.util.List<CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord> record) {
+            this.record = record;
+            return this;
+        }
+        public java.util.List<CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord> getRecord() {
+            return this.record;
         }
 
     }

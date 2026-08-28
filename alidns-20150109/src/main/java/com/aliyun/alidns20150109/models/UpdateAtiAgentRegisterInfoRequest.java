@@ -40,6 +40,9 @@ public class UpdateAtiAgentRegisterInfoRequest extends TeaModel {
     @NameInMap("AgentRegisterInfoId")
     public String agentRegisterInfoId;
 
+    @NameInMap("AgentSubHost")
+    public String agentSubHost;
+
     /**
      * <p>The version of the Agent.</p>
      * 
@@ -58,6 +61,9 @@ public class UpdateAtiAgentRegisterInfoRequest extends TeaModel {
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("DomainMode")
+    public String domainMode;
 
     /**
      * <p>The endpoints for each protocol.</p>
@@ -114,6 +120,14 @@ public class UpdateAtiAgentRegisterInfoRequest extends TeaModel {
         return this.agentRegisterInfoId;
     }
 
+    public UpdateAtiAgentRegisterInfoRequest setAgentSubHost(String agentSubHost) {
+        this.agentSubHost = agentSubHost;
+        return this;
+    }
+    public String getAgentSubHost() {
+        return this.agentSubHost;
+    }
+
     public UpdateAtiAgentRegisterInfoRequest setAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -128,6 +142,14 @@ public class UpdateAtiAgentRegisterInfoRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateAtiAgentRegisterInfoRequest setDomainMode(String domainMode) {
+        this.domainMode = domainMode;
+        return this;
+    }
+    public String getDomainMode() {
+        return this.domainMode;
     }
 
     public UpdateAtiAgentRegisterInfoRequest setEndpoints(java.util.List<UpdateAtiAgentRegisterInfoRequestEndpoints> endpoints) {

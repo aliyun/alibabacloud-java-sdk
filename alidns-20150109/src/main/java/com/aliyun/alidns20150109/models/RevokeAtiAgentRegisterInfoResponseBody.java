@@ -11,7 +11,7 @@ public class RevokeAtiAgentRegisterInfoResponseBody extends TeaModel {
     public RevokeAtiAgentRegisterInfoResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -20,11 +20,7 @@ public class RevokeAtiAgentRegisterInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <p>Indicates whether the request was successful. Valid values: <code>true</code>: The request was successful. <code>false</code>: The request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -72,7 +68,7 @@ public class RevokeAtiAgentRegisterInfoResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authorized principal.</p>
+         * <p>The display name of the authorization principal.</p>
          * 
          * <strong>example:</strong>
          * <p>2015555733387XXXX</p>
@@ -81,7 +77,7 @@ public class RevokeAtiAgentRegisterInfoResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authorized principal.</p>
+         * <p>The owner ID of the authorization principal.</p>
          * 
          * <strong>example:</strong>
          * <p>10469733312XXX</p>
@@ -99,7 +95,7 @@ public class RevokeAtiAgentRegisterInfoResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The encrypted complete diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</p>

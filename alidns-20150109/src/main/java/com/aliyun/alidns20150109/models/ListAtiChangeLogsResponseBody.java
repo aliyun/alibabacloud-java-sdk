@@ -32,7 +32,7 @@ public class ListAtiChangeLogsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
@@ -157,7 +157,7 @@ public class ListAtiChangeLogsResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encrypted diagnostic message.</p>
+         * <p>The encrypted complete diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</p>
@@ -168,8 +168,8 @@ public class ListAtiChangeLogsResponseBody extends TeaModel {
         /**
          * <p>The reason for the authentication failure. Valid values:</p>
          * <ul>
-         * <li>ExplicitDeny: explicit deny.</li>
-         * <li>ImplicitDeny: implicit deny.</li>
+         * <li>ExplicitDeny: explicit deny</li>
+         * <li>ImplicitDeny: implicit deny</li>
          * </ul>
          * 
          * <strong>example:</strong>

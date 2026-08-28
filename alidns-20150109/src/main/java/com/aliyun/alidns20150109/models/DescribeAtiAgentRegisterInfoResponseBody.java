@@ -11,10 +11,10 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
     public DescribeAtiAgentRegisterInfoResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The description of the Agent capabilities.</p>
+     * <p>The capability description of the Agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>支付服务</p>
+     * <p>Payment service</p>
      */
     @NameInMap("AgentDescription")
     public String agentDescription;
@@ -23,13 +23,13 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
      * <p>The display name of the Agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试Agent</p>
+     * <p>TestAgent</p>
      */
     @NameInMap("AgentDisplayName")
     public String agentDisplayName;
 
     /**
-     * <p>The endpoint domain name through which the Agent provides services.</p>
+     * <p>The endpoint domain name through which the Agent provides external services.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -38,7 +38,7 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
     public String agentHost;
 
     /**
-     * <p>The Agent ID, which is uniformly assigned by CNNIC after real-name verification. The AgentId serves as the unique identifier that binds the Agent to the verified registrant.</p>
+     * <p>The Agent ID, which is uniformly assigned by CNNIC after real-name authentication. The Agent ID serves as the unique identifier that binds the Agent to the authenticated registrant.</p>
      * 
      * <strong>example:</strong>
      * <p>019f3672-9705-7a7a-88fd-9a6a211aa5f2</p>
@@ -54,6 +54,9 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
      */
     @NameInMap("AgentRegisterInfoId")
     public String agentRegisterInfoId;
+
+    @NameInMap("AgentSubHost")
+    public String agentSubHost;
 
     /**
      * <p>The version of the Agent.</p>
@@ -87,6 +90,9 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
+    @NameInMap("DomainMode")
+    public String domainMode;
+
     @NameInMap("Endpoints")
     public DescribeAtiAgentRegisterInfoResponseBodyEndpoints endpoints;
 
@@ -94,13 +100,13 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
      * <p>Ignore.</p>
      * 
      * <strong>example:</strong>
-     * <p>忽略</p>
+     * <p>Ignore</p>
      */
     @NameInMap("IdentityCertSerialNumber")
     public String identityCertSerialNumber;
 
     /**
-     * <p>The ID of the verified registrant.</p>
+     * <p>The ID of the authenticated registrant.</p>
      * 
      * <strong>example:</strong>
      * <p>2072277378616354816</p>
@@ -112,13 +118,13 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
      * <p>The name of the registrant.</p>
      * 
      * <strong>example:</strong>
-     * <p>张xx</p>
+     * <p>Zhang xx</p>
      */
     @NameInMap("RegistrantName")
     public String registrantName;
 
     /**
-     * <p>The reason why the Agent registration review failed.</p>
+     * <p>The reason for Agent registration review failure.</p>
      */
     @NameInMap("RejectReason")
     public DescribeAtiAgentRegisterInfoResponseBodyRejectReason rejectReason;
@@ -136,24 +142,24 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
      * <p>Ignore.</p>
      * 
      * <strong>example:</strong>
-     * <p>忽略</p>
+     * <p>Ignore</p>
      */
     @NameInMap("ServerCertSerialNumber")
     public String serverCertSerialNumber;
 
     /**
-     * <p>The status of the Agent. Valid values:</p>
+     * <p>The Agent status. Valid values:</p>
      * <ul>
-     * <li>Draft: The Agent registration form is being filled out and has not been formally submitted. In the Draft state, only modification and detail viewing operations are supported.</li>
-     * <li>Private CA Pending Issuance: The Agent registration has been formally submitted. Alibaba Cloud has completed the ACME DNS-01 pre-check and submitted the registration information along with the generated DNS records to CNNIC. The system is waiting for CNNIC to approve and issue the Private CA and complete the TL sealing.</li>
-     * <li>DNS Pending Verification: CNNIC has approved the registration, issued the Private CA certificate, and completed the TL sealing, but the DNS records of the user have not been verified. The user needs to add the corresponding DNS records in the domain name resolution and complete verification.</li>
-     * <li>Active: All processes are complete. The Private CA certificate has been issued, the TL has been sealed, and the DNS records have been verified. The Agent is activated and can be discovered and trusted across the network.</li>
-     * <li>Expired: The Agent identity certificate has expired because the user did not renew the certificate within the validity period.</li>
-     * <li>Revoked: The Agent certificate has been revoked, the DNS records have been cleaned up, and the Agent can no longer be discovered or trusted. The Agent cannot be restored to the Active state.</li>
+     * <li>Draft: The Agent registration form is being filled out and has not been formally submitted. In draft status, only modification and detail viewing operations are supported.</li>
+     * <li>Private CA Pending Issuance: The Agent registration has been formally submitted. Alibaba Cloud has completed the ACME DNS-01 pre-check and submitted the registration information and generated DNS records to CNNIC. Currently waiting for CNNIC to approve and issue the Private CA and complete TL sealing.</li>
+     * <li>DNS Pending Verification: CNNIC has approved and issued the Private CA certificate and completed TL sealing, but the DNS records of the user have not been verified. Waiting for the user to add the corresponding DNS records in domain name resolution and complete verification.</li>
+     * <li>Active: All processes are complete. The Private CA certificate has been issued, TL has been sealed, and DNS records have been verified. The Agent is activated and can be discovered and trust-verified across the network.</li>
+     * <li>Expired: The Agent identity certificate has expired, and the user did not complete certificate renewal within the validity period.</li>
+     * <li>Revoked: The Agent certificate has been revoked, DNS records have been cleaned up, and the Agent cannot be discovered or trust-verified. It cannot be restored to active status.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>活跃</p>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
@@ -162,19 +168,22 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
      * <p>Ignore.</p>
      * 
      * <strong>example:</strong>
-     * <p>忽略</p>
+     * <p>Ignore</p>
      */
     @NameInMap("TrustCard")
     public String trustCard;
 
     /**
-     * <p>Deprecated.</p>
+     * <p><strong>[Deprecated]</strong></p>
      * 
      * <strong>example:</strong>
-     * <p>已废弃</p>
+     * <p>Deprecated</p>
      */
     @NameInMap("TrustCardUrl")
     public String trustCardUrl;
+
+    @NameInMap("TrustLevel")
+    public String trustLevel;
 
     /**
      * <p>The update time (timestamp).</p>
@@ -238,6 +247,14 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
         return this.agentRegisterInfoId;
     }
 
+    public DescribeAtiAgentRegisterInfoResponseBody setAgentSubHost(String agentSubHost) {
+        this.agentSubHost = agentSubHost;
+        return this;
+    }
+    public String getAgentSubHost() {
+        return this.agentSubHost;
+    }
+
     public DescribeAtiAgentRegisterInfoResponseBody setAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -260,6 +277,14 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
     }
     public Long getCreateTimestamp() {
         return this.createTimestamp;
+    }
+
+    public DescribeAtiAgentRegisterInfoResponseBody setDomainMode(String domainMode) {
+        this.domainMode = domainMode;
+        return this;
+    }
+    public String getDomainMode() {
+        return this.domainMode;
     }
 
     public DescribeAtiAgentRegisterInfoResponseBody setEndpoints(DescribeAtiAgentRegisterInfoResponseBodyEndpoints endpoints) {
@@ -342,6 +367,14 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
         return this.trustCardUrl;
     }
 
+    public DescribeAtiAgentRegisterInfoResponseBody setTrustLevel(String trustLevel) {
+        this.trustLevel = trustLevel;
+        return this;
+    }
+    public String getTrustLevel() {
+        return this.trustLevel;
+    }
+
     public DescribeAtiAgentRegisterInfoResponseBody setUpdateTimestamp(Long updateTimestamp) {
         this.updateTimestamp = updateTimestamp;
         return this;
@@ -397,10 +430,10 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The cause of the authentication failure. Valid values:</p>
+         * <p>The reason for the authentication failure. Valid values:</p>
          * <ul>
-         * <li>ExplicitDeny: explicit deny.</li>
-         * <li>ImplicitDeny: implicit deny.</li>
+         * <li>ExplicitDeny: Explicit deny.</li>
+         * <li>ImplicitDeny: Implicit deny.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -576,13 +609,13 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
          * <p>The detailed information about the Agent registration failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>非法状态</p>
+         * <p>Invalid status</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The type of the review failure. Valid values:</p>
+         * <p>The type of review failure. Valid values:</p>
          * <ul>
          * <li>ACME_VERIFY_FAILED: ACME verification failed.  </li>
          * <li>INFO_AUDIT_FAILED: Agent information review failed.</li>

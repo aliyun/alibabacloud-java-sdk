@@ -10,6 +10,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-hangzhou", "alidns.aliyuncs.com"),
             new TeaPair("public", "alidns.aliyuncs.com")
         );
         this.checkConfig(config);
@@ -1528,12 +1529,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AgentHost", request.agentHost);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.agentSubHost)) {
+            query.put("AgentSubHost", request.agentSubHost);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
             query.put("AgentVersion", request.agentVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainMode)) {
+            query.put("DomainMode", request.domainMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endpointsShrink)) {
@@ -3117,7 +3126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an Agent registration.</p>
+     * <p>Queries the details of Agent registration information.</p>
      * 
      * @param request DescribeAtiAgentRegisterInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3153,7 +3162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an Agent registration.</p>
+     * <p>Queries the details of Agent registration information.</p>
      * 
      * @param request DescribeAtiAgentRegisterInfoRequest
      * @return DescribeAtiAgentRegisterInfoResponse
@@ -3165,7 +3174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为sdk查询agent信息功能</p>
+     * <p>Queries agent information from the Agent marketplace for the SDK.</p>
      * 
      * @param request DescribeAtiAgentRegisterInfoMarketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3194,6 +3203,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.trustLevel)) {
+            query.put("TrustLevel", request.trustLevel);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3213,7 +3226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为sdk查询agent信息功能</p>
+     * <p>Queries agent information from the Agent marketplace for the SDK.</p>
      * 
      * @param request DescribeAtiAgentRegisterInfoMarketRequest
      * @return DescribeAtiAgentRegisterInfoMarketResponse
@@ -9266,7 +9279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of real-name registered contacts.</p>
+     * <p>Queries the list of real-name registrants.</p>
      * 
      * @param request ListAtiChangeLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9330,7 +9343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of real-name registered contacts.</p>
+     * <p>Queries the list of real-name registrants.</p>
      * 
      * @param request ListAtiChangeLogsRequest
      * @return ListAtiChangeLogsResponse
@@ -9342,7 +9355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实名注册人列表</p>
+     * <p>Queries the list of real-name verified registrants.</p>
      * 
      * @param request ListAtiRegistrantsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9398,7 +9411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实名注册人列表</p>
+     * <p>Queries the list of real-name verified registrants.</p>
      * 
      * @param request ListAtiRegistrantsRequest
      * @return ListAtiRegistrantsResponse
@@ -12703,12 +12716,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AgentRegisterInfoId", request.agentRegisterInfoId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.agentSubHost)) {
+            query.put("AgentSubHost", request.agentSubHost);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
             query.put("AgentVersion", request.agentVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainMode)) {
+            query.put("DomainMode", request.domainMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endpointsShrink)) {
@@ -12750,7 +12771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新告警设置</p>
+     * <p>Updates alert settings.</p>
      * 
      * @param request UpdateAtiAlertSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12790,7 +12811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新告警设置</p>
+     * <p>Updates alert settings.</p>
      * 
      * @param request UpdateAtiAlertSettingsRequest
      * @return UpdateAtiAlertSettingsResponse
@@ -12802,7 +12823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a registrant profile.</p>
+     * <p>Modifies a real-name registrant.</p>
      * 
      * @param request UpdateAtiRegistrantRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12878,7 +12899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a registrant profile.</p>
+     * <p>Modifies a real-name registrant.</p>
      * 
      * @param request UpdateAtiRegistrantRequest
      * @return UpdateAtiRegistrantResponse
@@ -15929,6 +15950,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.trustLevel)) {
+            query.put("TrustLevel", request.trustLevel);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -15960,7 +15985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>触发 ACME 预检</p>
+     * <p>Triggers an ACME pre-check.</p>
      * 
      * @param request VerifyAtiAgentRegisterInfoAcmeChallengeRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15996,7 +16021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>触发 ACME 预检</p>
+     * <p>Triggers an ACME pre-check.</p>
      * 
      * @param request VerifyAtiAgentRegisterInfoAcmeChallengeRecordRequest
      * @return VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse

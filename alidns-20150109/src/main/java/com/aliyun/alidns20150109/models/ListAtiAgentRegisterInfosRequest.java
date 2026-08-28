@@ -8,7 +8,7 @@ public class ListAtiAgentRegisterInfosRequest extends TeaModel {
      * <p>The display name of the Agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试Agent</p>
+     * <p>TestAgent</p>
      */
     @NameInMap("AgentDisplayName")
     public String agentDisplayName;
@@ -23,7 +23,7 @@ public class ListAtiAgentRegisterInfosRequest extends TeaModel {
     public String agentHost;
 
     /**
-     * <p>The Agent ID, which is uniformly assigned by CNNIC after real-name verification through CNNIC. The AgentID serves as the unique identifier that binds the Agent to the real-name verified registrant.</p>
+     * <p>The Agent ID, which is uniformly assigned by CNNIC after real-name verification. The AgentID serves as the unique identifier that binds the Agent to the verified registrant.</p>
      * 
      * <strong>example:</strong>
      * <p>liuq@azt400</p>
@@ -41,7 +41,7 @@ public class ListAtiAgentRegisterInfosRequest extends TeaModel {
     public String agentVersion;
 
     /**
-     * <p>Ensures the idempotency of the request. Generate a unique parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhbGciOiJIUzI1NiIsInR5cC.....</p>
@@ -50,7 +50,7 @@ public class ListAtiAgentRegisterInfosRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of records to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -68,7 +68,7 @@ public class ListAtiAgentRegisterInfosRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The current page number. Minimum value: 1. Default value: 1.</p>
+     * <p>The current page number. The start value is 1. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class ListAtiAgentRegisterInfosRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size for the paged query. This parameter specifies the number of entries per page for paging.</p>
+     * <p>The page size for the paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class ListAtiAgentRegisterInfosRequest extends TeaModel {
      * <p>The status of the Agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>活跃</p>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
