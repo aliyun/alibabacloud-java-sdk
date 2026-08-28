@@ -1,3 +1,7 @@
+2026-08-28 Version: 1.0.2
+- Update API SubmitTranslationTask: add request parameters Config.AgentId.
+
+
 2026-08-27 Version: 1.0.1
 - Update API SubmitTranslationTask: add request parameters Config.Agent.
 

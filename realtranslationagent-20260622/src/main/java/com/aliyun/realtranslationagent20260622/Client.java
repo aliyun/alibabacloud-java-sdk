@@ -432,20 +432,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Billing</em>*
+     * <p><em>Billing description</em>*
      * This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <code>UploadTranslationFile</code>, you can check the <code>CreditsAvailable</code> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <code>CreditBreakdown</code> field.
-     * <strong>Task submission</strong></p>
+     * <strong>Task submission description</strong></p>
      * <ul>
      * <li>To submit a new translation task, pass in the <code>TaskId</code> returned by the <code>UploadTranslationFile</code> operation.</li>
-     * <li>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <code>BaseTaskId</code>.</li>
+     * <li>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task, which is the <code>BaseTaskId</code>.</li>
      * <li>You must pass in either <code>TaskId</code> or <code>BaseTaskId</code>. You cannot pass in both at the same time.
      * <strong>Precautions</strong></li>
-     * <li>The <code>Style</code> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</li>
+     * <li>The <code>Style</code> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for files in other formats has no effect.</li>
      * <li>For new tasks, you can obtain the list of available fonts from the <code>Fonts</code> field in the response of <code>UploadTranslationFile</code>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <code>GetTranslationTask</code> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</p>
+     * <p>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query translation progress and results.</p>
      * 
      * @param tmpReq SubmitTranslationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -505,20 +505,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Billing</em>*
+     * <p><em>Billing description</em>*
      * This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <code>UploadTranslationFile</code>, you can check the <code>CreditsAvailable</code> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <code>CreditBreakdown</code> field.
-     * <strong>Task submission</strong></p>
+     * <strong>Task submission description</strong></p>
      * <ul>
      * <li>To submit a new translation task, pass in the <code>TaskId</code> returned by the <code>UploadTranslationFile</code> operation.</li>
-     * <li>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <code>BaseTaskId</code>.</li>
+     * <li>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task, which is the <code>BaseTaskId</code>.</li>
      * <li>You must pass in either <code>TaskId</code> or <code>BaseTaskId</code>. You cannot pass in both at the same time.
      * <strong>Precautions</strong></li>
-     * <li>The <code>Style</code> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</li>
+     * <li>The <code>Style</code> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for files in other formats has no effect.</li>
      * <li>For new tasks, you can obtain the list of available fonts from the <code>Fonts</code> field in the response of <code>UploadTranslationFile</code>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <code>GetTranslationTask</code> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</p>
+     * <p>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query translation progress and results.</p>
      * 
      * @param request SubmitTranslationTaskRequest
      * @return SubmitTranslationTaskResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTranslationTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The API key that is the identity of the member accounts. You can obtain this from the RuiYiBao console.</p>
+     * <p>The API key that identifies the identity of the member account. You can obtain this from the RuiYiBao console.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -14,7 +14,7 @@ public class SubmitTranslationTaskShrinkRequest extends TeaModel {
     public String APIKey;
 
     /**
-     * <p>The task ID of a previously submitted translation task. Pass in this parameter when resubmitting a translation task.</p>
+     * <p>The translation task ID of a previously submitted translation task. Pass in this parameter when resubmitting a translation task.</p>
      * <ul>
      * <li>You must pass in either this parameter or TaskId.</li>
      * </ul>
@@ -43,7 +43,7 @@ public class SubmitTranslationTaskShrinkRequest extends TeaModel {
     /**
      * <p>The custom terms.</p>
      * <blockquote>
-     * <p>Notice: Custom terms are for reference only. The actual translation results may differ. Refer to the final output as the definitive result.</notice></p>
+     * <p>Notice: Custom terms are for reference only. Actual translation results may differ. Refer to the final output for the definitive result.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
