@@ -5774,6 +5774,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询节点组件在节点上的状态</p>
+     * 
+     * @param tmpReq ListNodePoolComponentInstanceNodesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNodePoolComponentInstanceNodesResponse
+     */
+    public ListNodePoolComponentInstanceNodesResponse listNodePoolComponentInstanceNodesWithOptions(String clusterId, String nodepoolId, String name, ListNodePoolComponentInstanceNodesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListNodePoolComponentInstanceNodesShrinkRequest request = new ListNodePoolComponentInstanceNodesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeNames)) {
+            request.nodeNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeNames, "node_names", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configRevision)) {
+            query.put("config_revision", request.configRevision);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("max_results", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("next_token", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeNamesShrink)) {
+            query.put("node_names", request.nodeNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNodePoolComponentInstanceNodes"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId) + "/component_instances/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/nodes"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNodePoolComponentInstanceNodesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询节点组件在节点上的状态</p>
+     * 
+     * @param request ListNodePoolComponentInstanceNodesRequest
+     * @return ListNodePoolComponentInstanceNodesResponse
+     */
+    public ListNodePoolComponentInstanceNodesResponse listNodePoolComponentInstanceNodes(String clusterId, String nodepoolId, String name, ListNodePoolComponentInstanceNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listNodePoolComponentInstanceNodesWithOptions(clusterId, nodepoolId, name, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询节点组件实例列表</p>
      * 
      * @param request ListNodePoolComponentInstancesRequest
