@@ -5,6 +5,19 @@ import com.aliyun.tea.*;
 
 public class CredentialSubmitIntlRequest extends TeaModel {
     /**
+     * <p>The field validation rule configuration in JSON string format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;address_rule&quot;: &quot;Includes Address Hangzhou***&quot;,
+     *     &quot;name_rule&quot;: &quot;Includes Name Zhang*&quot;,
+     *     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
+     * }</p>
+     */
+    @NameInMap("CheckRuleConfig")
+    public String checkRuleConfig;
+
+    /**
      * <p>The Base64-encoded image. If you use this method to submit a photo, check the photo size and do not submit an excessively large photo.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +38,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     /**
      * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>02: vehicle registration certificate.</li>
+     * <li>02: vehicle registration certificate</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,8 +51,8 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable tampering detection. Valid values:</p>
      * <ul>
-     * <li>true: Enable.</li>
-     * <li>false: Disable.</li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -50,7 +63,20 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String fraudCheck;
 
     /**
-     * <p>The merchant-side custom business unique identifier, used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
+     * <p>Specifies whether to enable quality detection. Valid values:</p>
+     * <ul>
+     * <li>Y: Enabled.</li>
+     * <li>N: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("IdQuality")
+    public String idQuality;
+
+    /**
+     * <p>The merchant-defined unique business identifier, used for subsequent troubleshooting. The value can be a combination of letters and numbers with a maximum length of 32 characters. Ensure that the value is unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +88,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     /**
      * <p>The extraction type. Valid values:</p>
      * <ul>
-     * <li>0201: Thailand vehicle registration certificate.</li>
+     * <li>0201: Thailand vehicle registration certificate</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -73,7 +99,33 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String ocrArea;
 
     /**
-     * <p>The product solution to use. Set this parameter to CREDENTIAL_RECOGNITION.</p>
+     * <p>Specifies whether to enable translation. Valid values:</p>
+     * <ul>
+     * <li>0: Disabled.</li>
+     * <li>1: Enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("OcrTranslation")
+    public String ocrTranslation;
+
+    /**
+     * <p>Specifies whether to enable OCR result standardization. Valid values:</p>
+     * <ul>
+     * <li>0: Disabled.</li>
+     * <li>1: Enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("OcrValueStandard")
+    public String ocrValueStandard;
+
+    /**
+     * <p>The product solution to use. Set this to CREDENTIAL_RECOGNITION.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +135,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The custom authentication scenario ID. You can use this scenario ID to query related records in the console. The value can be a combination of letters, digits, or underscores with a maximum length of 10 characters.</p>
+     * <p>The custom authentication scenario ID. You can use this ID to query related records in the console. The value can be a combination of letters, numbers, or underscores with a maximum length of 10 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,6 +147,14 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public static CredentialSubmitIntlRequest build(java.util.Map<String, ?> map) throws Exception {
         CredentialSubmitIntlRequest self = new CredentialSubmitIntlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CredentialSubmitIntlRequest setCheckRuleConfig(String checkRuleConfig) {
+        this.checkRuleConfig = checkRuleConfig;
+        return this;
+    }
+    public String getCheckRuleConfig() {
+        return this.checkRuleConfig;
     }
 
     public CredentialSubmitIntlRequest setCredentialOcrPictureBase64(String credentialOcrPictureBase64) {
@@ -129,6 +189,14 @@ public class CredentialSubmitIntlRequest extends TeaModel {
         return this.fraudCheck;
     }
 
+    public CredentialSubmitIntlRequest setIdQuality(String idQuality) {
+        this.idQuality = idQuality;
+        return this;
+    }
+    public String getIdQuality() {
+        return this.idQuality;
+    }
+
     public CredentialSubmitIntlRequest setMerchantBizId(String merchantBizId) {
         this.merchantBizId = merchantBizId;
         return this;
@@ -143,6 +211,22 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     }
     public String getOcrArea() {
         return this.ocrArea;
+    }
+
+    public CredentialSubmitIntlRequest setOcrTranslation(String ocrTranslation) {
+        this.ocrTranslation = ocrTranslation;
+        return this;
+    }
+    public String getOcrTranslation() {
+        return this.ocrTranslation;
+    }
+
+    public CredentialSubmitIntlRequest setOcrValueStandard(String ocrValueStandard) {
+        this.ocrValueStandard = ocrValueStandard;
+        return this;
+    }
+    public String getOcrValueStandard() {
+        return this.ocrValueStandard;
     }
 
     public CredentialSubmitIntlRequest setProductCode(String productCode) {

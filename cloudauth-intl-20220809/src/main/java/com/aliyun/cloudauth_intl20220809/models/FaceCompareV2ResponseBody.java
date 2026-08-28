@@ -121,18 +121,48 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         @NameInMap("SharpnessScore")
         public Double sharpnessScore;
 
+        /**
+         * <p>The overall quality score of the target reference face image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.04</p>
+         */
         @NameInMap("TargetFaceQualityScore")
         public Double targetFaceQualityScore;
 
+        /**
+         * <p>The illumination score of the target reference face image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
         @NameInMap("TargetIlluminationScore")
         public Double targetIlluminationScore;
 
+        /**
+         * <p>The key area occlusion score of the target reference face image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TargetKaOcclusionScore")
         public Double targetKaOcclusionScore;
 
+        /**
+         * <p>The occlusion score of the target reference face image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50.26</p>
+         */
         @NameInMap("TargetOcclusionScore")
         public Double targetOcclusionScore;
 
+        /**
+         * <p>The sharpness score of the target reference face image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86.47</p>
+         */
         @NameInMap("TargetSharpnessScore")
         public Double targetSharpnessScore;
 
@@ -225,13 +255,13 @@ public class FaceCompareV2ResponseBody extends TeaModel {
 
     public static class FaceCompareV2ResponseBodyResult extends TeaModel {
         /**
-         * <p>The additional result information.</p>
+         * <p>The related result information.</p>
          */
         @NameInMap("ExtFaceInfo")
         public FaceCompareV2ResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
-         * <p>The comparison score between the submitted face image and the reference face image during the verification process. Valid values: 0 to 100.</p>
+         * <p>The comparison score between the submitted face photo and the target reference face image during verification. Value range: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>98</p>
@@ -240,7 +270,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public Double faceComparisonScore;
 
         /**
-         * <p>Indicates whether the verification is passed. Valid values:</p>
+         * <p>Indicates whether the verification passed.</p>
          * <ul>
          * <li>Y: Passed.</li>
          * <li>N: Not passed.</li>
@@ -253,7 +283,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public String passed;
 
         /**
-         * <p>The unique ID of the verification request.</p>
+         * <p>The unique identifier of the verification request.</p>
          * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>

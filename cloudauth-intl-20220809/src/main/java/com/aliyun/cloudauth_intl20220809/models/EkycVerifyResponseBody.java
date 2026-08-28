@@ -32,7 +32,7 @@ public class EkycVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public EkycVerifyResponseBodyResult result;
@@ -76,7 +76,7 @@ public class EkycVerifyResponseBody extends TeaModel {
 
     public static class EkycVerifyResponseBodyResult extends TeaModel {
         /**
-         * <p>The face verification result.</p>
+         * <p>The face verification result information.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -90,12 +90,12 @@ public class EkycVerifyResponseBody extends TeaModel {
         public String extFaceInfo;
 
         /**
-         * <p>The document recognition result. This field is returned only when the API response is successful.</p>
+         * <p>The document recognition result. Returned only when the API response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>{
          *  &quot;ocrIdInfo&quot;: {
-         *  &quot;firstName&quot;: &quot;<strong>龙&quot;,
+         *  &quot;firstName&quot;: &quot;<strong>Long&quot;,
          *  &quot;lastName&quot;: &quot;</strong>&quot;,
          *  &quot;countryCode&quot;: &quot;CHN&quot;,
          *  &quot;docType&quot;: &quot;01560001&quot;,
@@ -112,7 +112,7 @@ public class EkycVerifyResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
-         * <p>Indicates whether the verification is passed. Valid values: T (passed) and F (not passed).</p>
+         * <p>Indicates whether the verification is passed. T indicates passed, and F indicates not passed.</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>

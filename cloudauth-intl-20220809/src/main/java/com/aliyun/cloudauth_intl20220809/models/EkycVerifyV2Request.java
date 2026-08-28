@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EkycVerifyV2Request extends TeaModel {
     /**
-     * <p>Specifies whether to enable authoritative identity verification. Currently, this feature is applicable only to second-generation ID cards of mainland China.</p>
+     * <p>Specifies whether to enable authoritative identity verification. Currently, this parameter applies only to second-generation mainland China ID cards.</p>
      * 
      * <strong>example:</strong>
      * <p>T</p>
@@ -14,10 +14,10 @@ public class EkycVerifyV2Request extends TeaModel {
     public String authorize;
 
     /**
-     * <p>Specifies whether cropping is allowed. Not allowed by default. Valid values: T and F.</p>
+     * <p>Specifies whether cropping is allowed. By default, cropping is not allowed. Valid values:</p>
      * <ul>
-     * <li>T: Cropping is allowed.</li>
-     * <li>F: Cropping is not allowed. (Default: F)</li>
+     * <li>T: Detection is required.</li>
+     * <li>F: Detection is required (default value: F).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,16 +27,16 @@ public class EkycVerifyV2Request extends TeaModel {
     public String crop;
 
     /**
-     * <p>The real name of the user. When Authorize=\&quot;T\&quot; and the document type is a mainland China ID card, at least one of the following groups must be provided: document key information (DocName, DocNo) or document image (IdOcrPictureBase64/URL). Note: Supports combinations of Chinese characters with a length of at least 1 character. Special characters are not supported, except for the middle dot (·) used in ethnic minority names.</p>
+     * <p>The real name of the user. When Authorize=\&quot;T\&quot; and the document type is a mainland China ID card, you must provide at least one of the following: key document information (DocName, DocNo) or document images (IdOcrPictureBase64/URL). Note: Supports a combination of Chinese characters with a minimum length of 1 character. No special characters are allowed, except for the middle dot (·) used in ethnic minority names.</p>
      * 
      * <strong>example:</strong>
-     * <p>张**</p>
+     * <p>Zhang**</p>
      */
     @NameInMap("DocName")
     public String docName;
 
     /**
-     * <p>The document number of the user. When Authorize=\&quot;T\&quot; and the document type is a mainland China ID card, at least one of the following groups must be provided: document key information (DocName, DocNo) or document image (IdOcrPictureBase64/URL). Note: Supports a combination of letters and digits with a length of 18 characters.</p>
+     * <p>The document number of the user. When Authorize=\&quot;T\&quot; and the document type is a mainland China ID card, you must provide at least one of the following: key document information (DocName, DocNo) or document images (IdOcrPictureBase64/URL). Note: Supports a combination of letters and numbers with a length of 18 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>410***************</p>
@@ -57,8 +57,8 @@ public class EkycVerifyV2Request extends TeaModel {
      * <p>The Base64-encoded face image.</p>
      * <p>Note:</p>
      * <ul>
-     * <li>If you use this method to pass the face image, check the photo size and do not pass an overly large photo.</li>
-     * <li>You can only specify one of FacePictureBase64, FacePictureUrl, and FacePictureFile.</li>
+     * <li>If you choose this method to pass in the face image, check the photo size and do not pass in an excessively large photo.</li>
+     * <li>Specify one of the following parameters: FacePictureBase64, FacePictureUrl, or FacePictureFile.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,14 +85,20 @@ public class EkycVerifyV2Request extends TeaModel {
     @NameInMap("FacePictureUrl")
     public String facePictureUrl;
 
+    /**
+     * <p>Specifies whether to enable face quality detection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("FaceQualityCheck")
     public String faceQualityCheck;
 
     /**
-     * <p>The Base64-encoded document image. Note:</p>
+     * <p>The Base64-encoded identity document image. Note:</p>
      * <ul>
-     * <li>If you use this method to pass the document image, check the photo size and do not pass an overly large photo.</li>
-     * <li>You can only specify one of IdOcrPictureBase64, IdOcrPictureUrl, and IdOcrPictureFile.</li>
+     * <li>If you choose this method to pass in the document image, check the photo size and do not pass in an excessively large photo.</li>
+     * <li>Specify one of the following parameters: IdOcrPictureBase64, IdOcrPictureUrl, or IdOcrPictureFile.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +108,7 @@ public class EkycVerifyV2Request extends TeaModel {
     public String idOcrPictureBase64;
 
     /**
-     * <p>The file stream of the front side of the document image.</p>
+     * <p>The file stream of the front side of the identity document image.</p>
      * 
      * <strong>example:</strong>
      * <p>InputStream</p>
@@ -111,7 +117,7 @@ public class EkycVerifyV2Request extends TeaModel {
     public String idOcrPictureFile;
 
     /**
-     * <p>The URL of the front side of the document image.</p>
+     * <p>The URL of the front side of the identity document image.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
@@ -120,12 +126,21 @@ public class EkycVerifyV2Request extends TeaModel {
     public String idOcrPictureUrl;
 
     /**
-     * <p>The custom OCR quality detection threshold mode:</p>
+     * <p>Specifies whether to enable document anti-spoofing.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("IdSpoof")
+    public String idSpoof;
+
+    /**
+     * <p>The custom OCR quality detection threshold mode. Valid values:</p>
      * <ul>
-     * <li>0: System default.</li>
-     * <li>1: Strict mode.</li>
-     * <li>2: Lenient mode.</li>
-     * <li>3 (Default): Quality detection is disabled.</li>
+     * <li>0: system default.</li>
+     * <li>1: strict mode.</li>
+     * <li>2: loose mode.</li>
+     * <li>3 (default): quality detection disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,7 +150,7 @@ public class EkycVerifyV2Request extends TeaModel {
     public String idThreshold;
 
     /**
-     * <p>A unique business identifier customized by the merchant, used for subsequent troubleshooting. Supports a combination of letters and digits with a length of 32 characters. Ensure that the value is unique.</p>
+     * <p>A custom business unique identifier defined by the merchant, used for subsequent issue tracking and troubleshooting. Supports a combination of letters and numbers up to 32 characters in length. Ensure that this value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -260,6 +275,14 @@ public class EkycVerifyV2Request extends TeaModel {
     }
     public String getIdOcrPictureUrl() {
         return this.idOcrPictureUrl;
+    }
+
+    public EkycVerifyV2Request setIdSpoof(String idSpoof) {
+        this.idSpoof = idSpoof;
+        return this;
+    }
+    public String getIdSpoof() {
+        return this.idSpoof;
     }
 
     public EkycVerifyV2Request setIdThreshold(String idThreshold) {

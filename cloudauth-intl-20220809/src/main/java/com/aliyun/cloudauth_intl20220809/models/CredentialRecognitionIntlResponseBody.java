@@ -99,7 +99,7 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
         /**
          * <p>The extraction result. Valid values:</p>
          * <ul>
-         * <li>S: Succeeded.</li>
+         * <li>S: Successful.</li>
          * <li>F: Failed.</li>
          * </ul>
          * 

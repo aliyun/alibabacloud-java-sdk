@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialSubmitIntlResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -32,7 +32,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public CredentialSubmitIntlResponseBodyResult result;

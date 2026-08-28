@@ -845,10 +845,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</p>
+     * <p>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</p>
      * 
      * <b>summary</b> : 
-     * <p>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name from the credential.</p>
+     * <p>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</p>
      * 
      * @param request CredentialRecognitionIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -865,8 +865,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FraudCheck", request.fraudCheck);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.idQuality)) {
+            query.put("IdQuality", request.idQuality);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ocrArea)) {
             query.put("OcrArea", request.ocrArea);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrTranslation)) {
+            query.put("OcrTranslation", request.ocrTranslation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrValueStandard)) {
+            query.put("OcrValueStandard", request.ocrValueStandard);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
@@ -874,6 +886,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkRuleConfig)) {
+            body.put("CheckRuleConfig", request.checkRuleConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureBase64)) {
             body.put("CredentialOcrPictureBase64", request.credentialOcrPictureBase64);
         }
@@ -902,10 +918,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</p>
+     * <p>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</p>
      * 
      * <b>summary</b> : 
-     * <p>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name from the credential.</p>
+     * <p>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</p>
      * 
      * @param request CredentialRecognitionIntlRequest
      * @return CredentialRecognitionIntlResponse
@@ -917,7 +933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initializes the credential recognition OCR operation and retrieves a transactionId.</p>
+     * <p>Initializes the credential recognition OCR operation and returns a transactionId.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits credential recognition information.</p>
@@ -937,12 +953,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FraudCheck", request.fraudCheck);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.idQuality)) {
+            query.put("IdQuality", request.idQuality);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
             query.put("MerchantBizId", request.merchantBizId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ocrArea)) {
             query.put("OcrArea", request.ocrArea);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrTranslation)) {
+            query.put("OcrTranslation", request.ocrTranslation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrValueStandard)) {
+            query.put("OcrValueStandard", request.ocrValueStandard);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
@@ -954,6 +982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkRuleConfig)) {
+            body.put("CheckRuleConfig", request.checkRuleConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureBase64)) {
             body.put("CredentialOcrPictureBase64", request.credentialOcrPictureBase64);
         }
@@ -982,7 +1014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initializes the credential recognition OCR operation and retrieves a transactionId.</p>
+     * <p>Initializes the credential recognition OCR operation and returns a transactionId.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits credential recognition information.</p>
@@ -2228,6 +2260,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IdOcrPictureUrl", request.idOcrPictureUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.idSpoof)) {
+            query.put("IdSpoof", request.idSpoof);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.idThreshold)) {
             query.put("IdThreshold", request.idThreshold);
         }
@@ -2285,7 +2321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The eKYC solution server-side API.</p>
+     * <p>Provides a server-side-only API for the eKYC solution.</p>
      * 
      * @param request EkycVerifyV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -2324,6 +2360,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.idOcrPictureUrl)) {
             query.put("IdOcrPictureUrl", request.idOcrPictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idSpoof)) {
+            query.put("IdSpoof", request.idSpoof);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.idThreshold)) {
@@ -2379,7 +2419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The eKYC solution server-side API.</p>
+     * <p>Provides a server-side-only API for the eKYC solution.</p>
      * 
      * @param request EkycVerifyV2Request
      * @return EkycVerifyV2Response
@@ -2573,7 +2613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Compares two face images by using face recognition technology and returns the comparison result and a similarity score.</p>
+     * <p>Compares two face images using face recognition technology and returns the comparison result and similarity score.</p>
      * 
      * @param request FaceCompareV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -2639,7 +2679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Compares two face images by using face recognition technology and returns the comparison result and a similarity score.</p>
+     * <p>Compares two face images using face recognition technology and returns the comparison result and similarity score.</p>
      * 
      * @param request FaceCompareV2Request
      * @return FaceCompareV2Response

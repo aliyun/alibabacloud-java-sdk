@@ -5,6 +5,19 @@ import com.aliyun.tea.*;
 
 public class CredentialRecognitionIntlRequest extends TeaModel {
     /**
+     * <p>The field check rule configuration, in JSON string format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;address_rule&quot;: &quot;Includes Adrress 杭州市***&quot;,
+     *     &quot;name_rule&quot;: &quot;Includes Name  张*&quot;,
+     *     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
+     * }</p>
+     */
+    @NameInMap("CheckRuleConfig")
+    public String checkRuleConfig;
+
+    /**
      * <p>The Base64-encoded image. If you choose to pass in the image by using IdOcrPictureBase64 (Base64-encoded photo), check the photo size and do not pass in an excessively large photo.</p>
      * 
      * <strong>example:</strong>
@@ -23,9 +36,9 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String credentialOcrPictureUrl;
 
     /**
-     * <p>The credential type. Valid values:</p>
+     * <p>The credential type.</p>
      * <ul>
-     * <li>01: transaction credential (including electronic bill images for water, electricity, gas, credit cards, and other types).</li>
+     * <li>Transaction credential: 01 (includes various electronic bill images such as water, electricity, gas, and credit card bills)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -50,9 +63,18 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String fraudCheck;
 
     /**
-     * <p>The extraction type. Valid values:</p>
+     * <p>Specifies whether to enable quality detection. Valid values: Y (enabled) and N (disabled).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("IdQuality")
+    public String idQuality;
+
+    /**
+     * <p>The extraction type:</p>
      * <ul>
-     * <li>0101: electronic bill address and name module (extracts the address and name module through intelligent analysis).</li>
+     * <li>0101: Electronic bill address and name module (extracts address and name through intelligent analysis)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,6 +83,24 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
      */
     @NameInMap("OcrArea")
     public String ocrArea;
+
+    /**
+     * <p>Specifies whether to enable translation. Valid values: 0 (disabled) and 1 (enabled).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("OcrTranslation")
+    public String ocrTranslation;
+
+    /**
+     * <p>Specifies whether to enable OCR result standardization. Valid values: 0 (disabled) and 1 (enabled).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("OcrValueStandard")
+    public String ocrValueStandard;
 
     /**
      * <p>The product solution to use. Set this to CREDENTIAL_RECOGNITION.</p>
@@ -75,6 +115,14 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public static CredentialRecognitionIntlRequest build(java.util.Map<String, ?> map) throws Exception {
         CredentialRecognitionIntlRequest self = new CredentialRecognitionIntlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CredentialRecognitionIntlRequest setCheckRuleConfig(String checkRuleConfig) {
+        this.checkRuleConfig = checkRuleConfig;
+        return this;
+    }
+    public String getCheckRuleConfig() {
+        return this.checkRuleConfig;
     }
 
     public CredentialRecognitionIntlRequest setCredentialOcrPictureBase64(String credentialOcrPictureBase64) {
@@ -109,12 +157,36 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
         return this.fraudCheck;
     }
 
+    public CredentialRecognitionIntlRequest setIdQuality(String idQuality) {
+        this.idQuality = idQuality;
+        return this;
+    }
+    public String getIdQuality() {
+        return this.idQuality;
+    }
+
     public CredentialRecognitionIntlRequest setOcrArea(String ocrArea) {
         this.ocrArea = ocrArea;
         return this;
     }
     public String getOcrArea() {
         return this.ocrArea;
+    }
+
+    public CredentialRecognitionIntlRequest setOcrTranslation(String ocrTranslation) {
+        this.ocrTranslation = ocrTranslation;
+        return this;
+    }
+    public String getOcrTranslation() {
+        return this.ocrTranslation;
+    }
+
+    public CredentialRecognitionIntlRequest setOcrValueStandard(String ocrValueStandard) {
+        this.ocrValueStandard = ocrValueStandard;
+        return this;
+    }
+    public String getOcrValueStandard() {
+        return this.ocrValueStandard;
     }
 
     public CredentialRecognitionIntlRequest setProductCode(String productCode) {
