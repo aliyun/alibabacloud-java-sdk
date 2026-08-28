@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class StartSqlExecutionResponseBody extends TeaModel {
     /**
-     * <p>The complete information of the SQL script returned upon success. This parameter is valid when success is true.</p>
+     * <p>The complete SQL script information returned upon success. This parameter is valid when success is true.</p>
      * 
      * <strong>example:</strong>
-     * <p>如返回示例所示</p>
+     * <p>See the response example</p>
      */
     @NameInMap("data")
     public StartSqlExecutionResult data;
 
     /**
-     * <p>The business error code. This parameter is not empty when success is false. This parameter is empty when success is true.</p>
+     * <p>The business error code. This parameter is not empty when success is false, and is empty when success is true.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,7 @@ public class StartSqlExecutionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The business error message. This parameter is not empty when success is false. This parameter is empty when success is true.</p>
+     * <p>The business error message. This parameter is not empty when success is false, and is empty when success is true.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -32,7 +32,7 @@ public class StartSqlExecutionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The business status code, which is always 200. Use success to determine whether the request was successful.</p>
+     * <p>The business status code, which is always 200. Use success to determine whether the business request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,7 +50,7 @@ public class StartSqlExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the business request was successful.</p>
+     * <p>Indicates whether the business request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

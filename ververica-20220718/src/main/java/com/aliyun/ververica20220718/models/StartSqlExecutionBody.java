@@ -4,12 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class StartSqlExecutionBody extends TeaModel {
+    /**
+     * <p>The execution description.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The ID of the associated query script. This is a required parameter. It provides the execution environment configuration (Session Cluster, Flink configuration, etc.) and also serves as the parentResourceId for deduplication.</p>
+     */
     @NameInMap("sqlFileId")
     public String sqlFileId;
 
+    /**
+     * <p>The SQL script content to execute.</p>
+     */
     @NameInMap("sqlScript")
     public String sqlScript;
 

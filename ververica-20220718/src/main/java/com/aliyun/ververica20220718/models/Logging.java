@@ -35,7 +35,7 @@ public class Logging extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>default</p>
+     * <p>oss</p>
      */
     @NameInMap("loggingProfile")
     public String loggingProfile;

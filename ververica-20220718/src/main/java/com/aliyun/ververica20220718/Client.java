@@ -10,24 +10,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-qingdao", "ververica.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "ververica.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ververica.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "ververica.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ververica.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ververica.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ververica.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ververica.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ververica.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "ververica.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ververica.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ververica.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ververica.cn-hangzhou.aliyuncs.com"),
             new TeaPair("us-west-1", "ververica.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "ververica.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "ververica.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "ververica.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "ververica.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "ververica.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "ververica.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "ververica.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "ververica.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "ververica.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "ververica.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "ververica.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "ververica.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "ververica.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "ververica.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "ververica.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "ververica.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ververica.ap-northeast-1.aliyuncs.com")
+            new TeaPair("eu-west-1", "ververica.eu-west-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "ververica.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ververica", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1656,7 +1656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes Data Definition Language (DDL) and Data Manipulation Language (DML) statements on metadata. Data Query Language (DQL) is not supported.</p>
+     * <p>Runs metadata-related SQL statements. Only DDL and DML statements are supported. DQL statements are not supported.</p>
      * 
      * @param request ExecuteSqlStatementRequest
      * @param headers ExecuteSqlStatementHeaders
@@ -1694,7 +1694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes Data Definition Language (DDL) and Data Manipulation Language (DML) statements on metadata. Data Query Language (DQL) is not supported.</p>
+     * <p>Runs metadata-related SQL statements. Only DDL and DML statements are supported. DQL statements are not supported.</p>
      * 
      * @param request ExecuteSqlStatementRequest
      * @return ExecuteSqlStatementResponse
@@ -1996,7 +1996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</p>
+     * <p>Retrieves the Autopilot tuning configuration.</p>
      * 
      * @param request GetAutopilotPolicyRequest
      * @param headers GetAutopilotPolicyHeaders
@@ -2033,7 +2033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</p>
+     * <p>Retrieves the Autopilot tuning configuration.</p>
      * 
      * @param request GetAutopilotPolicyRequest
      * @return GetAutopilotPolicyResponse
@@ -2102,7 +2102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about one or more databases in a specified catalog.</p>
+     * <p>Retrieves information about a specified database or lists all databases under a specified catalog.</p>
      * 
      * @param request GetDatabasesRequest
      * @param headers GetDatabasesHeaders
@@ -2145,7 +2145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about one or more databases in a specified catalog.</p>
+     * <p>Retrieves information about a specified database or lists all databases under a specified catalog.</p>
      * 
      * @param request GetDatabasesRequest
      * @return GetDatabasesResponse
@@ -2636,7 +2636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves specific folder information.</p>
+     * <p>Retrieves the details of a specific folder.</p>
      * 
      * @param request GetFolderRequest
      * @param headers GetFolderHeaders
@@ -2683,7 +2683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves specific folder information.</p>
+     * <p>Retrieves the details of a specific folder.</p>
      * 
      * @param request GetFolderRequest
      * @return GetFolderResponse
@@ -3023,6 +3023,120 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves the inspection configuration.</p>
+     * 
+     * @param request GetPatrolConfigRequest
+     * @param headers GetPatrolConfigHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPatrolConfigResponse
+     */
+    public GetPatrolConfigResponse getPatrolConfigWithOptions(String namespace, GetPatrolConfigRequest request, GetPatrolConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPatrolConfig"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/autopilot/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/patrol-config"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPatrolConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the inspection configuration.</p>
+     * 
+     * @param request GetPatrolConfigRequest
+     * @return GetPatrolConfigResponse
+     */
+    public GetPatrolConfigResponse getPatrolConfig(String namespace, GetPatrolConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetPatrolConfigHeaders headers = new GetPatrolConfigHeaders();
+        return this.getPatrolConfigWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of an inspection report.</p>
+     * 
+     * @param request GetPatrolReportDetailRequest
+     * @param headers GetPatrolReportDetailHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPatrolReportDetailResponse
+     */
+    public GetPatrolReportDetailResponse getPatrolReportDetailWithOptions(String namespace, GetPatrolReportDetailRequest request, GetPatrolReportDetailHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("date", request.date);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportId)) {
+            query.put("reportId", request.reportId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
+            query.put("timezone", request.timezone);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPatrolReportDetail"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/autopilot/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/patrol-reports/details"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPatrolReportDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of an inspection report.</p>
+     * 
+     * @param request GetPatrolReportDetailRequest
+     * @return GetPatrolReportDetailResponse
+     */
+    public GetPatrolReportDetailResponse getPatrolReportDetail(String namespace, GetPatrolReportDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetPatrolReportDetailHeaders headers = new GetPatrolReportDetailHeaders();
+        return this.getPatrolReportDetailWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取上传文件URL</p>
      * 
      * @param request GetPreSignedUrlForPutObjectRequest
@@ -3221,7 +3335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific table or all tables in a database within a specified catalog.</p>
+     * <p>Retrieves the details of a specific table or information about all tables under a specified database in a catalog.</p>
      * 
      * @param request GetTablesRequest
      * @param headers GetTablesHeaders
@@ -3264,7 +3378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific table or all tables in a database within a specified catalog.</p>
+     * <p>Retrieves the details of a specific table or information about all tables under a specified database in a catalog.</p>
      * 
      * @param request GetTablesRequest
      * @return GetTablesResponse
@@ -3996,6 +4110,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the list of inspection reports.</p>
+     * 
+     * @param request ListPatrolReportsRequest
+     * @param headers ListPatrolReportsHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPatrolReportsResponse
+     */
+    public ListPatrolReportsResponse listPatrolReportsWithOptions(String namespace, ListPatrolReportsRequest request, ListPatrolReportsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            query.put("scopeType", request.scopeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("startDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerType)) {
+            query.put("triggerType", request.triggerType);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPatrolReports"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/autopilot/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/patrol-reports"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPatrolReportsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of inspection reports.</p>
+     * 
+     * @param request ListPatrolReportsRequest
+     * @return ListPatrolReportsResponse
+     */
+    public ListPatrolReportsResponse listPatrolReports(String namespace, ListPatrolReportsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListPatrolReportsHeaders headers = new ListPatrolReportsHeaders();
+        return this.listPatrolReportsWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Obtains a list of savepoints or checkpoints.</p>
      * 
      * @param request ListSavepointsRequest
@@ -4570,7 +4764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes an SQL query script task.</p>
+     * <p>Executes an SQL data query script task.</p>
      * 
      * @param request StartSqlExecutionRequest
      * @param headers StartSqlExecutionHeaders
@@ -4608,7 +4802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes an SQL query script task.</p>
+     * <p>Executes an SQL data query script task.</p>
      * 
      * @param request StartSqlExecutionRequest
      * @return StartSqlExecutionResponse
@@ -4867,6 +5061,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         SubmitSqlPreviewHeaders headers = new SubmitSqlPreviewHeaders();
         return this.submitSqlPreviewWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Triggers an inspection.</p>
+     * 
+     * @param request TriggerPatrolRequest
+     * @param headers TriggerPatrolHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TriggerPatrolResponse
+     */
+    public TriggerPatrolResponse triggerPatrolWithOptions(String namespace, TriggerPatrolRequest request, TriggerPatrolHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeConfig)) {
+            body.put("scopeConfig", request.scopeConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            body.put("scopeType", request.scopeType);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TriggerPatrol"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/autopilot/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/patrol-reports/trigger"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TriggerPatrolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Triggers an inspection.</p>
+     * 
+     * @param request TriggerPatrolRequest
+     * @return TriggerPatrolResponse
+     */
+    public TriggerPatrolResponse triggerPatrol(String namespace, TriggerPatrolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TriggerPatrolHeaders headers = new TriggerPatrolHeaders();
+        return this.triggerPatrolWithOptions(namespace, request, headers, runtime);
     }
 
     /**
@@ -5296,6 +5550,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         UpdateMemberHeaders headers = new UpdateMemberHeaders();
         return this.updateMemberWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the inspection configuration.</p>
+     * 
+     * @param request UpdatePatrolConfigRequest
+     * @param headers UpdatePatrolConfigHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePatrolConfigResponse
+     */
+    public UpdatePatrolConfigResponse updatePatrolConfigWithOptions(String namespace, UpdatePatrolConfigRequest request, UpdatePatrolConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cron)) {
+            body.put("cron", request.cron);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            body.put("enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeConfig)) {
+            body.put("scopeConfig", request.scopeConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            body.put("scopeType", request.scopeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
+            body.put("timezone", request.timezone);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePatrolConfig"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/autopilot/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/patrol-config"),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePatrolConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the inspection configuration.</p>
+     * 
+     * @param request UpdatePatrolConfigRequest
+     * @return UpdatePatrolConfigResponse
+     */
+    public UpdatePatrolConfigResponse updatePatrolConfig(String namespace, UpdatePatrolConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdatePatrolConfigHeaders headers = new UpdatePatrolConfigHeaders();
+        return this.updatePatrolConfigWithOptions(namespace, request, headers, runtime);
     }
 
     /**

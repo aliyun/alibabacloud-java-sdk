@@ -14,7 +14,7 @@ public class UpdateSqlFileResponseBody extends TeaModel {
     public SqlFile data;
 
     /**
-     * <p>The business error code. This value is not empty when success is false, and is empty when success is true.</p>
+     * <p>The business error code. This value is not empty when success is false. This value is empty when success is true.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,7 @@ public class UpdateSqlFileResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The business error message. This value is not empty when success is false, and is empty when success is true.</p>
+     * <p>The business error message. This value is not empty when success is false. This value is empty when success is true.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -32,7 +32,7 @@ public class UpdateSqlFileResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The business status code, which is always 200. Use success to determine whether the request was successful.</p>
+     * <p>The business status code, which is uniformly 200. Use success to determine whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

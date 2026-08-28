@@ -11,7 +11,7 @@ public class GetAutopilotPolicyResponseBody extends TeaModel {
     public GetAutopilotPolicyResponseBodyData data;
 
     /**
-     * <p>The business error code. This field is not empty when success is false. This field is empty when success is true.</p>
+     * <p>The error code. This field is not empty when success is false. This field is empty when success is true.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -20,7 +20,7 @@ public class GetAutopilotPolicyResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The business error message. This field is not empty when success is false. This field is empty when success is true.</p>
+     * <p>The error message. This field is not empty when success is false. This field is empty when success is true.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -29,7 +29,7 @@ public class GetAutopilotPolicyResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The business status code, which is always 200. Use the success field to determine whether the request was successful.</p>
+     * <p>The business status code, which is always 200. Use the success field to determine whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,7 +47,7 @@ public class GetAutopilotPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetAutopilotPolicyResponseBody extends TeaModel {
 
     public static class GetAutopilotPolicyResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether automatic tuning is enabled. A value of true indicates that automatic tuning is in the ACTIVE state. A value of false indicates that tuning is not enabled.</p>
+         * <p>Indicates whether automatic tuning is enabled. A value of true indicates that automatic tuning is active (ACTIVE). A value of false indicates that tuning is not enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartJobRequestBody extends TeaModel {
     /**
-     * <p>The deployment ID.</p>
+     * <p>The ID of the deployed job.</p>
      * 
      * <strong>example:</strong>
      * <p>5a19a71b-1c42-4f34-94fd-86cf6078****</p>
@@ -14,13 +14,13 @@ public class StartJobRequestBody extends TeaModel {
     public String deploymentId;
 
     /**
-     * <p>The resource configuration of the deployment.</p>
+     * <p>The job resource settings.</p>
      */
     @NameInMap("resourceSettingSpec")
     public BriefResourceSetting resourceSettingSpec;
 
     /**
-     * <p>The start offset of the job.</p>
+     * <p>The startup position settings for the job instance.</p>
      */
     @NameInMap("restoreStrategy")
     public DeploymentRestoreStrategy restoreStrategy;

@@ -3,7 +3,7 @@ package com.aliyun.ververica20220718.models;
 
 import com.aliyun.tea.*;
 
-public class GetDatabasesHeaders extends TeaModel {
+public class GetPatrolConfigHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
@@ -17,12 +17,12 @@ public class GetDatabasesHeaders extends TeaModel {
     @NameInMap("workspace")
     public String workspace;
 
-    public static GetDatabasesHeaders build(java.util.Map<String, ?> map) throws Exception {
-        GetDatabasesHeaders self = new GetDatabasesHeaders();
+    public static GetPatrolConfigHeaders build(java.util.Map<String, ?> map) throws Exception {
+        GetPatrolConfigHeaders self = new GetPatrolConfigHeaders();
         return TeaModel.build(map, self);
     }
 
-    public GetDatabasesHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public GetPatrolConfigHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -30,7 +30,7 @@ public class GetDatabasesHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public GetDatabasesHeaders setWorkspace(String workspace) {
+    public GetPatrolConfigHeaders setWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }

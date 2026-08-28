@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class StreamingResourceSetting extends TeaModel {
     /**
-     * <p>The resource parameters in basic mode.</p>
+     * <p>The resource settings for basic mode.</p>
      */
     @NameInMap("basicResourceSetting")
     public BasicResourceSetting basicResourceSetting;
 
     /**
-     * <p>The resource parameters in expert mode.</p>
+     * <p>The resource settings for expert mode.</p>
      */
     @NameInMap("expertResourceSetting")
     public ExpertResourceSetting expertResourceSetting;
 
     /**
-     * <p>The resource configuration mode used by a deployment that runs in streaming mode. Valid values:</p>
+     * <p>The resource mode used in stream mode. Valid values:</p>
      * <ul>
-     * <li>EXPERT</li>
-     * <li>BASIC</li>
+     * <li>EXPERT: expert mode.</li>
+     * <li>BASIC: basic mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>

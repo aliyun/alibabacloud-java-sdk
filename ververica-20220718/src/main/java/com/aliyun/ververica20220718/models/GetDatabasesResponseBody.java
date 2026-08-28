@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetDatabasesResponseBody extends TeaModel {
     /**
-     * <p>The list of databases. This parameter is returned only if the request is successful. If the request fails, this parameter is empty.</p>
+     * <p>The list of databases that meet the specified conditions when success is true. This value is empty when success is false.</p>
      */
     @NameInMap("data")
     public java.util.List<Database> data;
 
     /**
      * <ul>
-     * <li><p>If \<code>success\\</code> is \<code>false\\</code>, an error code is returned.</p>
+     * <li><p>If success is false, a business error code is returned.</p>
      * </li>
-     * <li><p>If \<code>success\\</code> is \<code>true\\</code>, this parameter is empty.</p>
+     * <li><p>If success is true, an empty value is returned.</p>
      * </li>
      * </ul>
      * 
@@ -26,9 +26,9 @@ public class GetDatabasesResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>If \<code>success\\</code> is \<code>false\\</code>, an error message is returned.</p>
+     * <li><p>If success is false, a business error message is returned.</p>
      * </li>
-     * <li><p>If \<code>success\\</code> is \<code>true\\</code>, this parameter is empty.</p>
+     * <li><p>If success is true, an empty value is returned.</p>
      * </li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class GetDatabasesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code. A value of 200 is always returned. To determine whether the request was successful, check the value of the \<code>success\\</code> parameter.</p>
+     * <p>The HTTP status code, which is always 200. Use the success field to determine whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -48,7 +48,7 @@ public class GetDatabasesResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>

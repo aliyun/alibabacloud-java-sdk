@@ -17,7 +17,7 @@ public class BriefDeploymentTarget extends TeaModel {
      * <p>The name of the queue used for the deployment.</p>
      * 
      * <strong>example:</strong>
-     * <p>default-queue</p>
+     * <p>vvp-workload</p>
      */
     @NameInMap("name")
     public String name;

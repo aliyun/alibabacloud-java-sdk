@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BasicResourceSetting extends TeaModel {
     /**
-     * <p>The resource configuration of the JobManager.</p>
+     * <p>The JobManager resource settings.</p>
      */
     @NameInMap("jobmanagerResourceSettingSpec")
     public BasicResourceSettingSpec jobmanagerResourceSettingSpec;
 
     /**
-     * <p>The parallelism for a deployment.</p>
+     * <p>The concurrency.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -20,7 +20,7 @@ public class BasicResourceSetting extends TeaModel {
     public Long parallelism;
 
     /**
-     * <p>The resource configuration of a TaskManager.</p>
+     * <p>The TaskManager resource settings.</p>
      */
     @NameInMap("taskmanagerResourceSettingSpec")
     public BasicResourceSettingSpec taskmanagerResourceSettingSpec;

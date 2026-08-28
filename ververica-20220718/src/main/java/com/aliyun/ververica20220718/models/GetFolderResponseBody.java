@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetFolderResponseBody extends TeaModel {
     /**
-     * <p>Folder data structure.</p>
+     * <p>The folder information data structure.</p>
      */
     @NameInMap("data")
     public Folder data;
 
     /**
      * <ul>
-     * <li><p>If success is false, the business error code is returned.</p>
+     * <li><p>When success is false, a business error code is returned.</p>
      * </li>
-     * <li><p>If success is true, an empty value is returned.</p>
+     * <li><p>When success is true, an empty value is returned.</p>
      * </li>
      * </ul>
      * 
@@ -26,9 +26,9 @@ public class GetFolderResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>If success is false, the business error message is returned.</p>
+     * <li><p>When success is false, a business error message is returned.</p>
      * </li>
-     * <li><p>If success is true, an empty value is returned.</p>
+     * <li><p>When success is true, an empty value is returned.</p>
      * </li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class GetFolderResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Indicates task success or failure. If the parameter is not empty and not 200, it means failure.</p>
+     * <p>The business status code. If this value is not empty and is not 200, the business request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -48,7 +48,7 @@ public class GetFolderResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
@@ -57,7 +57,7 @@ public class GetFolderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the business request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

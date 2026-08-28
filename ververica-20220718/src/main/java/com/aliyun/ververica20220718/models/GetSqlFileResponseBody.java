@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetSqlFileResponseBody extends TeaModel {
     /**
-     * <p>The complete SQL script information returned when the request is successful. This field is valid when success is true.</p>
+     * <p>The complete SQL script information returned when the request succeeds. This field is valid when success is true.</p>
      * 
      * <strong>example:</strong>
-     * <p>See the response example.</p>
+     * <p>See the response example</p>
      */
     @NameInMap("data")
     public SqlFile data;

@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class HotUpdateJobResult extends TeaModel {
+    /**
+     * <p>The hot update parameters.</p>
+     */
     @NameInMap("hotUpdateParams")
     public HotUpdateJobParams hotUpdateParams;
 
     /**
+     * <p>The hot update ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123hashd****</p>
      */
@@ -15,15 +20,23 @@ public class HotUpdateJobResult extends TeaModel {
     public String jobHotUpdateId;
 
     /**
+     * <p>The job instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5af678c0-7db0-4650-94c2-d2604f0a****</p>
      */
     @NameInMap("jobId")
     public String jobId;
 
+    /**
+     * <p>The hot update status.</p>
+     */
     @NameInMap("status")
     public HotUpdateJobStatus status;
 
+    /**
+     * <p>The target job resource configuration.</p>
+     */
     @NameInMap("targetResourceSetting")
     public BriefResourceSetting targetResourceSetting;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSqlFileResponseBody extends TeaModel {
     /**
-     * <p>The basic information about the deleted file returned after a successful deletion. Only metadata is included. The content field is not returned. This field is valid when success is set to true.</p>
+     * <p>The basic information about the deleted file returned after a successful deletion. Only metadata is included. The content field is not returned. This field is valid when success is true.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;jobs&quot;: [ { &quot;jid&quot;: &quot;4df35f8e54554b23bf7dcd38a151****&quot;, &quot;name&quot;: &quot;69d001d5-419a-4bfc-9c2e-849cacd3****&quot;, &quot;state&quot;: &quot;RUNNING&quot;, &quot;start-time&quot;: 1659154942068, &quot;end-time&quot;: -1, &quot;duration&quot;: 188161756, &quot;last-modification&quot;: 1659154968305, &quot;tasks&quot;: { &quot;total&quot;: 2, &quot;created&quot;: 0, &quot;scheduled&quot;: 0, &quot;deploying&quot;: 0, &quot;running&quot;: 2, &quot;finished&quot;: 0, &quot;canceling&quot;: 0, &quot;canceled&quot;: 0, &quot;failed&quot;: 0, &quot;reconciling&quot;: 0, &quot;initializing&quot;: 0 } } ] }</p>

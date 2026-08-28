@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ExecuteSqlStatementResponseBody extends TeaModel {
     /**
-     * <p>The result of the SQL statement execution for metadata.</p>
+     * <p>The execution result of the metadata SQL statement.</p>
      */
     @NameInMap("data")
     public SqlStatementExecuteResult data;
 
     /**
      * <ul>
-     * <li><p>If \<code>success\\</code> is \<code>false\\</code>, an error code is returned.</p>
+     * <li><p>If success is false, a business error code is returned.</p>
      * </li>
-     * <li><p>If \<code>success\\</code> is \<code>true\\</code>, this parameter is empty.</p>
+     * <li><p>If success is true, an empty value is returned.</p>
      * </li>
      * </ul>
      * 
@@ -26,9 +26,9 @@ public class ExecuteSqlStatementResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>If \<code>success\\</code> is \<code>false\\</code>, an error message is returned.</p>
+     * <li><p>If success is false, a business error message is returned.</p>
      * </li>
-     * <li><p>If \<code>success\\</code> is \<code>true\\</code>, this parameter is empty.</p>
+     * <li><p>If success is true, an empty value is returned.</p>
      * </li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class ExecuteSqlStatementResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The status code. The value is always 200. Use the \<code>success\\</code> parameter to determine whether the request was successful.</p>
+     * <p>The HTTP status code, which is always 200. Use the success field to determine whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

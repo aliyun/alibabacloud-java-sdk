@@ -14,7 +14,7 @@ public class CreateSqlFileResponseBody extends TeaModel {
     public SqlFile data;
 
     /**
-     * <p>The error code returned when success is false. This value is empty when success is true.</p>
+     * <p>The business error code returned when success is false. This value is empty when success is true.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,7 @@ public class CreateSqlFileResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when success is false. This value is empty when success is true.</p>
+     * <p>The business error message returned when success is false. This value is empty when success is true.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>

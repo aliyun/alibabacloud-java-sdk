@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatabasesRequest extends TeaModel {
     /**
-     * <p>The name of the database. If you do not specify this parameter, information about all databases in the catalog is returned.</p>
+     * <p>The database name. If this parameter is left empty, information about all databases is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>paimon-ods</p>

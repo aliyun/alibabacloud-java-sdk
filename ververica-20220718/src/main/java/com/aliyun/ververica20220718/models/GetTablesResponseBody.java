@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetTablesResponseBody extends TeaModel {
     /**
-     * <p>If success is true, a list of tables that meet the criteria and their details are returned. If success is false, this parameter is empty.</p>
+     * <p>The list and details of tables that meet the conditions when success is true. This value is empty when success is false.</p>
      */
     @NameInMap("data")
     public java.util.List<Table> data;
 
     /**
      * <ul>
-     * <li><p>If success is false, an error code is returned.</p>
+     * <li><p>If success is false, a business error code is returned.</p>
      * </li>
-     * <li><p>If success is true, this parameter is empty.</p>
+     * <li><p>If success is true, an empty value is returned.</p>
      * </li>
      * </ul>
      * 
@@ -26,9 +26,9 @@ public class GetTablesResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>If success is false, an error message is returned.</p>
+     * <li><p>If success is false, a business error message is returned.</p>
      * </li>
-     * <li><p>If success is true, this parameter is empty.</p>
+     * <li><p>If success is true, an empty value is returned.</p>
      * </li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class GetTablesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The business status code. This is always 200. Use the success parameter to determine whether the request was successful.</p>
+     * <p>The HTTP status code, which is always 200. Use the success field to determine whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

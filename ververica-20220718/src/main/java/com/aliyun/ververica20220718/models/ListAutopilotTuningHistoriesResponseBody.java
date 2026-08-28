@@ -29,7 +29,7 @@ public class ListAutopilotTuningHistoriesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The business status code, which is always 200. Use success to determine whether the business request is successful.</p>
+     * <p>The business status code, which is always 200. Use success to determine whether the business request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,7 +47,7 @@ public class ListAutopilotTuningHistoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the business request is successful.</p>
+     * <p>Indicates whether the business request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

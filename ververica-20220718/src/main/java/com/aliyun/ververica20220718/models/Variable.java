@@ -8,7 +8,7 @@ public class Variable extends TeaModel {
      * <p>The description of the variable.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>This is a variable description</p>
      */
     @NameInMap("description")
     public String description;
@@ -18,7 +18,7 @@ public class Variable extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Encrypted</p>
+     * <p>Plain</p>
      */
     @NameInMap("kind")
     public String kind;
@@ -28,7 +28,7 @@ public class Variable extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>mysqlPassword</p>
+     * <p>variableName</p>
      */
     @NameInMap("name")
     public String name;
@@ -38,7 +38,7 @@ public class Variable extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>myPassword</p>
+     * <p>variableValue</p>
      */
     @NameInMap("value")
     public String value;

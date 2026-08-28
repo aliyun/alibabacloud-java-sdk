@@ -176,7 +176,7 @@ public class Job extends TeaModel {
      * <p>If the job instance runs on a Session cluster, this shows the Session cluster name; otherwise, it is null.</p>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>preview</p>
      */
     @NameInMap("sessionClusterName")
     public String sessionClusterName;
