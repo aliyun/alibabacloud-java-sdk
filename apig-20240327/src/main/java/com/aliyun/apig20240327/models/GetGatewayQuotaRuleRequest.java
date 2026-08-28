@@ -15,7 +15,7 @@ public class GetGatewayQuotaRuleRequest extends TeaModel {
     public String consumerPageNumber;
 
     /**
-     * <p>The number of consumers per page.</p>
+     * <p>The page size of the consumer list.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -25,10 +25,16 @@ public class GetGatewayQuotaRuleRequest extends TeaModel {
     public String consumerPageSize;
 
     /**
-     * <p>Specifies whether to include the consumer list in the response.</p>
+     * <p>Specifies whether to return the consumer list.</p>
      */
     @NameInMap("withConsumers")
     public Boolean withConsumers;
+
+    /**
+     * <p>Specifies whether to return the general subject list. This parameter applies to both consumer and consumer group rules.</p>
+     */
+    @NameInMap("withSubjects")
+    public Boolean withSubjects;
 
     public static GetGatewayQuotaRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         GetGatewayQuotaRuleRequest self = new GetGatewayQuotaRuleRequest();
@@ -59,6 +65,14 @@ public class GetGatewayQuotaRuleRequest extends TeaModel {
     }
     public Boolean getWithConsumers() {
         return this.withConsumers;
+    }
+
+    public GetGatewayQuotaRuleRequest setWithSubjects(Boolean withSubjects) {
+        this.withSubjects = withSubjects;
+        return this;
+    }
+    public Boolean getWithSubjects() {
+        return this.withSubjects;
     }
 
 }

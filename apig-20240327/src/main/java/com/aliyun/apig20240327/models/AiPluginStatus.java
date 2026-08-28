@@ -20,7 +20,7 @@ public class AiPluginStatus extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Indicates whether the backend service that the plug-in depends on is healthy.</p>
+     * <p>Indicates whether the backend service that the plugin depends on is healthy.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -32,7 +32,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -79,7 +79,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems extends TeaModel {
         /**
-         * <p>The period type of the existing conflicting rule on the consumer. A value of day, week, or month indicates that the conflicting rule uses a daily, weekly, or monthly period respectively.</p>
+         * <p>The period type of the existing conflicting rule on the consumer. A value of day, week, or month indicates the conflicting rule has a daily, weekly, or monthly period respectively.</p>
          * 
          * <strong>example:</strong>
          * <p>week</p>
@@ -88,7 +88,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictPeriodType;
 
         /**
-         * <p>The type of the existing conflicting rule on the consumer. A value of calendar indicates that the conflicting rule uses a calendar period. A value of epoch indicates that the conflicting rule uses a custom period.</p>
+         * <p>The type of the existing conflicting rule on the consumer. A value of calendar indicates the conflicting rule uses a calendar period. A value of epoch indicates the conflicting rule uses an epoch period.</p>
          * 
          * <strong>example:</strong>
          * <p>calendar</p>
@@ -113,6 +113,33 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
          */
         @NameInMap("consumerName")
         public String consumerName;
+
+        /**
+         * <p>The ID of the conflicting subject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-xxx</p>
+         */
+        @NameInMap("subjectId")
+        public String subjectId;
+
+        /**
+         * <p>The name of the conflicting subject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-a</p>
+         */
+        @NameInMap("subjectName")
+        public String subjectName;
+
+        /**
+         * <p>The type of the conflicting subject. Valid values: consumer and consumer_group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer</p>
+         */
+        @NameInMap("subjectType")
+        public String subjectType;
 
         public static AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems build(java.util.Map<String, ?> map) throws Exception {
             AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems self = new AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems();
@@ -151,11 +178,35 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             return this.consumerName;
         }
 
+        public AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems setSubjectId(String subjectId) {
+            this.subjectId = subjectId;
+            return this;
+        }
+        public String getSubjectId() {
+            return this.subjectId;
+        }
+
+        public AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems setSubjectName(String subjectName) {
+            this.subjectName = subjectName;
+            return this;
+        }
+        public String getSubjectName() {
+            return this.subjectName;
+        }
+
+        public AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems setSubjectType(String subjectType) {
+            this.subjectType = subjectType;
+            return this;
+        }
+        public String getSubjectType() {
+            return this.subjectType;
+        }
+
     }
 
     public static class AddGatewayQuotaRuleResponseBodyDataConflictPreview extends TeaModel {
         /**
-         * <p>The hash of the conflict snapshot.</p>
+         * <p>The conflict hash.</p>
          * 
          * <strong>example:</strong>
          * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -164,7 +215,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictHash;
 
         /**
-         * <p>The list of conflicting entities (consumers).</p>
+         * <p>The list of conflicting subjects (consumers).</p>
          */
         @NameInMap("items")
         public java.util.List<AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems> items;
@@ -211,7 +262,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</p>
+         * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

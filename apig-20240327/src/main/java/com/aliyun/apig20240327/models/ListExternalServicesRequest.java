@@ -14,7 +14,7 @@ public class ListExternalServicesRequest extends TeaModel {
     public Boolean importableOnly;
 
     /**
-     * <p>The maximum number of entries to return. Valid range: (0, 100]. Default value: 10.</p>
+     * <p>The maximum number of results to return. Valid range: (0, 100]. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,7 +23,7 @@ public class ListExternalServicesRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The API name for fuzzy match.</p>
+     * <p>Fuzzy search by API name.</p>
      * 
      * <strong>example:</strong>
      * <p>imah</p>
@@ -41,14 +41,7 @@ public class ListExternalServicesRequest extends TeaModel {
     public String paiWorkspaceId;
 
     /**
-     * <p>The service source type used to filter results. Valid values:</p>
-     * <ul>
-     * <li>MSE_NACOS: services from MSE Nacos.</li>
-     * <li>K8S: services from a Kubernetes cluster in Container Service.</li>
-     * <li>FC3: services from Function Compute.</li>
-     * <li>VIP: services from a fixed address.</li>
-     * <li>DNS: services from a domain name.</li>
-     * </ul>
+     * <p>The service source type used to query services. This parameter is essentially required. If not provided, the API returns 400 InvalidParameter.WithValue. Valid values: SAE_K8S_SERVICE, PAI_EAS_SERVICE, CloudFlow, K8S, FC3, PAI_WORKSPACE, and MSE_NACOS.</p>
      * 
      * <strong>example:</strong>
      * <p>FC3</p>

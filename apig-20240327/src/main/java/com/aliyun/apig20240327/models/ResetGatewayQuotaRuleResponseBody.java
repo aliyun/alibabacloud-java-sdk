@@ -26,7 +26,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
      * <p>The message content.</p>
      * 
      * <strong>example:</strong>
-     * <p>你好，世界！</p>
+     * <p>Hello, World!</p>
      */
     @NameInMap("message")
     public String message;
@@ -81,9 +81,9 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         /**
          * <p>The period type of the existing conflicting rule on the consumer. Valid values:</p>
          * <ul>
-         * <li>day: daily period.</li>
-         * <li>week: weekly period.</li>
-         * <li>month: monthly period.</li>
+         * <li>day: daily.</li>
+         * <li>week: weekly.</li>
+         * <li>month: monthly.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,8 +95,8 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         /**
          * <p>The type of the existing conflicting rule on the consumer. Valid values:</p>
          * <ul>
-         * <li>calendar: The existing conflicting rule uses a calendar period.</li>
-         * <li>epoch: The existing conflicting rule uses a custom period.</li>
+         * <li>calendar: the existing conflicting rule uses a calendar period.</li>
+         * <li>epoch: the existing conflicting rule uses a custom period.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,6 +122,33 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
          */
         @NameInMap("consumerName")
         public String consumerName;
+
+        /**
+         * <p>The ID of the conflicting subject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-xxx</p>
+         */
+        @NameInMap("subjectId")
+        public String subjectId;
+
+        /**
+         * <p>The name of the conflicting subject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-a</p>
+         */
+        @NameInMap("subjectName")
+        public String subjectName;
+
+        /**
+         * <p>The conflict subject type. Valid values: consumer and consumer_group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer</p>
+         */
+        @NameInMap("subjectType")
+        public String subjectType;
 
         public static ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems build(java.util.Map<String, ?> map) throws Exception {
             ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems self = new ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems();
@@ -160,11 +187,35 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             return this.consumerName;
         }
 
+        public ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems setSubjectId(String subjectId) {
+            this.subjectId = subjectId;
+            return this;
+        }
+        public String getSubjectId() {
+            return this.subjectId;
+        }
+
+        public ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems setSubjectName(String subjectName) {
+            this.subjectName = subjectName;
+            return this;
+        }
+        public String getSubjectName() {
+            return this.subjectName;
+        }
+
+        public ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems setSubjectType(String subjectType) {
+            this.subjectType = subjectType;
+            return this;
+        }
+        public String getSubjectType() {
+            return this.subjectType;
+        }
+
     }
 
     public static class ResetGatewayQuotaRuleResponseBodyDataConflictPreview extends TeaModel {
         /**
-         * <p>The hash of the conflict snapshot.</p>
+         * <p>The conflict hash.</p>
          * 
          * <strong>example:</strong>
          * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -173,7 +224,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictHash;
 
         /**
-         * <p>The list of conflicting entities (consumers).</p>
+         * <p>The list of conflicting subjects (consumers).</p>
          */
         @NameInMap("items")
         public java.util.List<ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems> items;
@@ -220,7 +271,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class ResetGatewayQuotaRuleResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</p>
+         * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -235,7 +286,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         public ResetGatewayQuotaRuleResponseBodyDataConflictPreview conflictPreview;
 
         /**
-         * <p>Indicates whether this is a dry run.</p>
+         * <p>Indicates whether the request is a dry run.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -244,7 +295,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         public Boolean dryRun;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>qr-d8j7fpmm1hks65xxxx</p>

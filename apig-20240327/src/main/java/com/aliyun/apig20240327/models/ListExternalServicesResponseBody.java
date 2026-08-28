@@ -29,7 +29,7 @@ public class ListExternalServicesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D9B03B59-B2D6-51B0-A7E9-AF8466E320CA</p>

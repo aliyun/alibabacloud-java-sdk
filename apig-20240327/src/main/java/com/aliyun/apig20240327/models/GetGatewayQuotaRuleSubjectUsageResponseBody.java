@@ -88,6 +88,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long cachedAmount;
 
         /**
+         * <p>The consumer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-a</p>
+         */
+        @NameInMap("consumer")
+        public String consumer;
+
+        /**
          * <p>The input token consumption.</p>
          * 
          * <strong>example:</strong>
@@ -113,6 +122,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
          */
         @NameInMap("outputAmount")
         public Long outputAmount;
+
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req-123456</p>
+         */
+        @NameInMap("requestId")
+        public String requestId;
 
         /**
          * <p>The consumption (request) time in the format of YYYY-MM-DD.</p>
@@ -145,6 +163,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             return this.cachedAmount;
         }
 
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setConsumer(String consumer) {
+            this.consumer = consumer;
+            return this;
+        }
+        public String getConsumer() {
+            return this.consumer;
+        }
+
         public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setInputAmount(Long inputAmount) {
             this.inputAmount = inputAmount;
             return this;
@@ -167,6 +193,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
         public Long getOutputAmount() {
             return this.outputAmount;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setRequestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+        public String getRequestId() {
+            return this.requestId;
         }
 
         public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setStartTime(String startTime) {
@@ -301,13 +335,26 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long outputAmount;
 
         /**
-         * <p>Indicates whether the limit is exceeded.</p>
+         * <p>Indicates whether the quota limit is exceeded.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("overLimit")
         public Boolean overLimit;
+
+        /**
+         * <p>The subject type. Valid values:</p>
+         * <ul>
+         * <li>consumer</li>
+         * <li>consumer_group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer_group</p>
+         */
+        @NameInMap("subjectType")
+        public String subjectType;
 
         /**
          * <p>The total quota of the subject.</p>
@@ -319,7 +366,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long totalQuota;
 
         /**
-         * <p>The total used amount of the subject.</p>
+         * <p>The total used quota of the subject.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -370,6 +417,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
         public Boolean getOverLimit() {
             return this.overLimit;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyData setSubjectType(String subjectType) {
+            this.subjectType = subjectType;
+            return this;
+        }
+        public String getSubjectType() {
+            return this.subjectType;
         }
 
         public GetGatewayQuotaRuleSubjectUsageResponseBodyData setTotalQuota(Long totalQuota) {

@@ -79,7 +79,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleResponseBodyDataConsumers extends TeaModel {
         /**
-         * <p>The ID of the principal (consumer).</p>
+         * <p>The subject (consumer) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-aaa</p>
@@ -88,7 +88,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the principal (consumer).</p>
+         * <p>The subject (consumer) name.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-a</p>
@@ -119,9 +119,68 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
 
     }
 
+    public static class GetGatewayQuotaRuleResponseBodyDataSubjects extends TeaModel {
+        /**
+         * <p>The subject ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-xxx</p>
+         */
+        @NameInMap("id")
+        public String id;
+
+        /**
+         * <p>The subject name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-a</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The subject type. Valid values: consumer or consumer_group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer</p>
+         */
+        @NameInMap("subjectType")
+        public String subjectType;
+
+        public static GetGatewayQuotaRuleResponseBodyDataSubjects build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayQuotaRuleResponseBodyDataSubjects self = new GetGatewayQuotaRuleResponseBodyDataSubjects();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayQuotaRuleResponseBodyDataSubjects setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public GetGatewayQuotaRuleResponseBodyDataSubjects setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetGatewayQuotaRuleResponseBodyDataSubjects setSubjectType(String subjectType) {
+            this.subjectType = subjectType;
+            return this;
+        }
+        public String getSubjectType() {
+            return this.subjectType;
+        }
+
+    }
+
     public static class GetGatewayQuotaRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The base timestamp of the period.</p>
+         * <p>The period base timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1745846400000</p>
@@ -139,7 +198,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public Long consumerCount;
 
         /**
-         * <p>The list of principals (consumers) bound to this rule.</p>
+         * <p>The list of subjects (consumers) bound to this rule.</p>
          */
         @NameInMap("consumers")
         public java.util.List<GetGatewayQuotaRuleResponseBodyDataConsumers> consumers;
@@ -199,7 +258,31 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>The time zone for the calendar period, in UTC+x format.</p>
+         * <p>The number of associated subjects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
+        @NameInMap("subjectCount")
+        public Long subjectCount;
+
+        /**
+         * <p>The rule subject type. Valid values: consumer or consumer_group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer_group</p>
+         */
+        @NameInMap("subjectType")
+        public String subjectType;
+
+        /**
+         * <p>The general subject list bound to this rule. Returned only when withSubjects is set to true.</p>
+         */
+        @NameInMap("subjects")
+        public java.util.List<GetGatewayQuotaRuleResponseBodyDataSubjects> subjects;
+
+        /**
+         * <p>The time zone corresponding to the calendar period, in UTC+x format.</p>
          * 
          * <strong>example:</strong>
          * <p>GMT+8</p>
@@ -291,6 +374,30 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         }
         public String getRuleStatus() {
             return this.ruleStatus;
+        }
+
+        public GetGatewayQuotaRuleResponseBodyData setSubjectCount(Long subjectCount) {
+            this.subjectCount = subjectCount;
+            return this;
+        }
+        public Long getSubjectCount() {
+            return this.subjectCount;
+        }
+
+        public GetGatewayQuotaRuleResponseBodyData setSubjectType(String subjectType) {
+            this.subjectType = subjectType;
+            return this;
+        }
+        public String getSubjectType() {
+            return this.subjectType;
+        }
+
+        public GetGatewayQuotaRuleResponseBodyData setSubjects(java.util.List<GetGatewayQuotaRuleResponseBodyDataSubjects> subjects) {
+            this.subjects = subjects;
+            return this;
+        }
+        public java.util.List<GetGatewayQuotaRuleResponseBodyDataSubjects> getSubjects() {
+            return this.subjects;
         }
 
         public GetGatewayQuotaRuleResponseBodyData setTimezone(String timezone) {

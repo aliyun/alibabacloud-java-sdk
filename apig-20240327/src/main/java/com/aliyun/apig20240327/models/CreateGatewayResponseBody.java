@@ -29,7 +29,7 @@ public class CreateGatewayResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9CDE3E69-69C2-5402-83AD-ACA80B1AF35B</p>

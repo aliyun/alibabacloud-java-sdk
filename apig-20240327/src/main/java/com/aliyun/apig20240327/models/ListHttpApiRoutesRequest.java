@@ -32,7 +32,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String deployStatuses;
 
     /**
-     * <p>The domain name ID used to filter route information.</p>
+     * <p>Filters route information by domain name ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-xxx</p>
@@ -95,7 +95,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The page size. Valid range: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -113,7 +113,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String pathLike;
 
     /**
-     * <p>Specifies whether to include consumer authorization information in the response.</p>
+     * <p>Includes consumer authorization information in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -122,7 +122,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Boolean withAuthPolicyInfo;
 
     /**
-     * <p>Specifies a consumer ID so that the response includes the authorization rule list for the specified consumer in each route.</p>
+     * <p>Includes the authorization rule list of the specified consumer ID for each route in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-xxx</p>
@@ -131,7 +131,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String withConsumerInfoById;
 
     /**
-     * <p>Specifies a plug-in ID so that the response includes the mount information of the specified plug-in in each route.</p>
+     * <p>Includes the plug-in attachment information of the specified plug-in ID for each route in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-xxx</p>

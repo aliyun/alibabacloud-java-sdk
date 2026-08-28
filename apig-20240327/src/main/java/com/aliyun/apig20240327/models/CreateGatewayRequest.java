@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayRequest extends TeaModel {
     /**
-     * <p>The billing method. Required for the Serverless edition and must be set to POSTPAY.</p>
+     * <p>The billing method. This parameter is required for the Serverless edition and must be set to POSTPAY.</p>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
@@ -18,9 +18,9 @@ public class CreateGatewayRequest extends TeaModel {
      * <ul>
      * <li><p>Professional: standard instance.</p>
      * </li>
-     * <li><p>Serverless: Serverless.</p>
+     * <li><p>Serverless: Serverless instance.</p>
      * </li>
-     * <li><p>MultiTenantServerless: multi-tenant Serverless.</p>
+     * <li><p>MultiTenantServerless: multi-tenant Serverless instance.</p>
      * </li>
      * <li><p>Unknown: unknown.</p>
      * </li>
@@ -33,7 +33,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String gatewayEdition;
 
     /**
-     * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter can be specified only when gatewayType is AI and gatewayEdition is MultiTenantServerless.</p>
+     * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter is allowed only when gatewayType is AI and gatewayEdition is MultiTenantServerless.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -42,7 +42,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String gatewayMode;
 
     /**
-     * <p>The gateway type. Must be explicitly set to AI for AI Serverless or multi-tenant editions.</p>
+     * <p>The gateway type. This parameter must be explicitly set to AI for AI Serverless or multi-tenant gateways.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -57,7 +57,7 @@ public class CreateGatewayRequest extends TeaModel {
     public CreateGatewayRequestLogConfig logConfig;
 
     /**
-     * <p>The gateway name. Required for all editions.</p>
+     * <p>The gateway name. This parameter is required for all gateway editions.</p>
      * 
      * <strong>example:</strong>
      * <p>test-ceshi</p>
@@ -66,7 +66,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The network access configuration.</p>
+     * <p>The network access configuration. This parameter is required. If not provided, the service returns InvalidParameter.IsEmpty (400).</p>
      */
     @NameInMap("networkAccessConfig")
     public CreateGatewayRequestNetworkAccessConfig networkAccessConfig;
@@ -81,7 +81,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The node specifications. Required for the Serverless edition.</p>
+     * <p>The node specifications. This parameter is required for the Serverless edition.</p>
      * 
      * <strong>example:</strong>
      * <p>apigw.dev.x1</p>
@@ -96,7 +96,7 @@ public class CreateGatewayRequest extends TeaModel {
     public java.util.List<CreateGatewayRequestTag> tag;
 
     /**
-     * <p>The VPC ID. Required for all editions.</p>
+     * <p>The VPC ID. This parameter is required for all gateway editions.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-zm0x16tomfiat1mk9f6rs</p>
@@ -105,7 +105,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone configuration. Required for all editions.</p>
+     * <p>The zone configuration. This parameter is required for all gateway editions.</p>
      */
     @NameInMap("zoneConfig")
     public CreateGatewayRequestZoneConfig zoneConfig;
@@ -213,7 +213,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestLogConfigSls extends TeaModel {
         /**
-         * <p>Specifies whether to enable SLS log collection.</p>
+         * <p>Specifies whether to enable log collection.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
