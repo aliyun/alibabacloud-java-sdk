@@ -17,19 +17,22 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
     public String messageId;
 
     /**
-     * <p>The array of nodes that constitute the Q\&amp;A workflow.</p>
+     * <p>The information about the entire Q&amp;A pipeline.</p>
      */
     @NameInMap("Pipeline")
     public java.util.List<TongyiChatDebugInfoResponseBodyPipeline> pipeline;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>E3E5C779-A630-45AC-B0F2-A4506A4212F1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SessionId")
+    public String sessionId;
 
     public static TongyiChatDebugInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TongyiChatDebugInfoResponseBody self = new TongyiChatDebugInfoResponseBody();
@@ -66,6 +69,14 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public TongyiChatDebugInfoResponseBody setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public static class TongyiChatDebugInfoResponseBodyAnswerInfoAnswerReferenceInfoItemList extends TeaModel {
@@ -305,7 +316,7 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
 
     public static class TongyiChatDebugInfoResponseBodyPipeline extends TeaModel {
         /**
-         * <p>The input data for the node.</p>
+         * <p>The debugging input information.</p>
          * 
          * <strong>example:</strong>
          * <p>用户问句：转人工\n命中规则：[转]人工[客服|服务|坐席]</p>
@@ -314,16 +325,13 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
         public Object input;
 
         /**
-         * <p>The name of the strategy. Possible values include:</p>
+         * <p>The Policy Name. Valid values:</p>
          * <ul>
-         * <li><p>FAQ</p>
-         * </li>
-         * <li><p>Hit Keywords</p>
-         * </li>
-         * <li><p>Global Sensitive Words</p>
-         * </li>
+         * <li>High-frequency Q&amp;A direct response</li>
+         * <li>Keyword-based transfer to agent</li>
+         * <li>Global sensitive words</li>
          * </ul>
-         * <p>This parameter is returned only when <code>NodeType</code> is set to <code>system_strategy</code>.</p>
+         * <p>This field is returned only when NodeType is system_strategy.</p>
          * 
          * <strong>example:</strong>
          * <p>关键词转人工</p>
@@ -334,14 +342,10 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><p><strong>system_strategy</strong>: system strategy.</p>
-         * </li>
-         * <li><p><strong>rewrite_query</strong>: retrieval query.</p>
-         * </li>
-         * <li><p><strong>invoke_llm</strong>: LLM invocation.</p>
-         * </li>
-         * <li><p><strong>invoke_tools</strong>: tool invocation.</p>
-         * </li>
+         * <li><strong>system_strategy</strong>: system strategy.</li>
+         * <li><strong>rewrite_query</strong>: retrieval query.</li>
+         * <li><strong>invoke_llm</strong>: LLM invocation.</li>
+         * <li><strong>invoke_tools</strong>: tool calling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -351,7 +355,7 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The output data from the node.</p>
+         * <p>The output information.</p>
          * 
          * <strong>example:</strong>
          * <p>commands:{\&quot;sysToAgent\&quot;:\&quot;{\\\&quot;skillGroup\\\&quot;:\\\&quot;\\\&quot;,\\\&quot;ext\\\&quot;:\\\&quot;\\\&quot;,\\\&quot;toAgentReason\\\&quot;:\\\&quot;HitKeywords\\\&quot;}\&quot;}\nresponse:正在为您转接人工客服</p>

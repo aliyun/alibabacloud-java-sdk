@@ -8,7 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shanghai", "chatbot.cn-shanghai.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("chatbot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -4690,10 +4693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only the latest version of chatbots and can query data from only the last 90 days.</p>
+     * <p>Only supported for new version chatbots. Only data within the last 90 days can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation returns debugging information for the large language model (LLM) Q&amp;A process.</p>
+     * <p>Debugging information for large language model Q&amp;A.</p>
      * 
      * @param request TongyiChatDebugInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4733,10 +4736,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only the latest version of chatbots and can query data from only the last 90 days.</p>
+     * <p>Only supported for new version chatbots. Only data within the last 90 days can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation returns debugging information for the large language model (LLM) Q&amp;A process.</p>
+     * <p>Debugging information for large language model Q&amp;A.</p>
      * 
      * @param request TongyiChatDebugInfoRequest
      * @return TongyiChatDebugInfoResponse

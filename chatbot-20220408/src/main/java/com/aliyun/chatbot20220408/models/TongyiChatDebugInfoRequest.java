@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TongyiChatDebugInfoRequest extends TeaModel {
     /**
-     * <p>The key of the business space. If you do not specify this parameter, the default business space is used. You can get the key from the Business Management page of your main account.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the primary account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class TongyiChatDebugInfoRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the chatbot.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
