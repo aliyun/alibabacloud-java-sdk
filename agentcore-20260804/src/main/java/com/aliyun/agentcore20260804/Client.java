@@ -86,6 +86,254 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</p>
+     * 
+     * @param tmpReq BatchUploadSkillsViaOssRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchUploadSkillsViaOssResponse
+     */
+    public BatchUploadSkillsViaOssResponse batchUploadSkillsViaOssWithOptions(String workspaceId, BatchUploadSkillsViaOssRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchUploadSkillsViaOssShrinkRequest request = new BatchUploadSkillsViaOssShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchUploadSkillsViaOss"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skill-actions/batch-upload-via-oss"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchUploadSkillsViaOssResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</p>
+     * 
+     * @param request BatchUploadSkillsViaOssRequest
+     * @return BatchUploadSkillsViaOssResponse
+     */
+    public BatchUploadSkillsViaOssResponse batchUploadSkillsViaOss(String workspaceId, BatchUploadSkillsViaOssRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchUploadSkillsViaOssWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</p>
+     * 
+     * @param tmpReq CreateAgentIMChannelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgentIMChannelResponse
+     */
+    public CreateAgentIMChannelResponse createAgentIMChannelWithOptions(String workspaceId, String agentId, CreateAgentIMChannelRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAgentIMChannelShrinkRequest request = new CreateAgentIMChannelShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgentIMChannel"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + "/im-channels"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgentIMChannelResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</p>
+     * 
+     * @param request CreateAgentIMChannelRequest
+     * @return CreateAgentIMChannelResponse
+     */
+    public CreateAgentIMChannelResponse createAgentIMChannel(String workspaceId, String agentId, CreateAgentIMChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAgentIMChannelWithOptions(workspaceId, agentId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</p>
+     * 
+     * @param tmpReq CreateAgentSpecRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgentSpecResponse
+     */
+    public CreateAgentSpecResponse createAgentSpecWithOptions(String workspaceId, CreateAgentSpecRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAgentSpecShrinkRequest request = new CreateAgentSpecShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgentSpec"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgentSpecResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</p>
+     * 
+     * @param request CreateAgentSpecRequest
+     * @return CreateAgentSpecResponse
+     */
+    public CreateAgentSpecResponse createAgentSpec(String workspaceId, CreateAgentSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAgentSpecWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</p>
+     * 
+     * @param tmpReq CreateAgentSpecVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgentSpecVersionResponse
+     */
+    public CreateAgentSpecVersionResponse createAgentSpecVersionWithOptions(String workspaceId, String agentSpecName, CreateAgentSpecVersionRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAgentSpecVersionShrinkRequest request = new CreateAgentSpecVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgentSpecVersion"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecName) + "/versions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgentSpecVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</p>
+     * 
+     * @param request CreateAgentSpecVersionRequest
+     * @return CreateAgentSpecVersionResponse
+     */
+    public CreateAgentSpecVersionResponse createAgentSpecVersion(String workspaceId, String agentSpecName, CreateAgentSpecVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAgentSpecVersionWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>创建凭证</p>
      * 
@@ -142,6 +390,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createCredentialWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an external agent in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an external agent in a specified workspace.</p>
+     * 
+     * @param tmpReq CreateExternalAgentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateExternalAgentResponse
+     */
+    public CreateExternalAgentResponse createExternalAgentWithOptions(String workspaceId, CreateExternalAgentRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateExternalAgentShrinkRequest request = new CreateExternalAgentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateExternalAgent"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/external-agents"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateExternalAgentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an external agent in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an external agent in a specified workspace.</p>
+     * 
+     * @param request CreateExternalAgentRequest
+     * @return CreateExternalAgentResponse
+     */
+    public CreateExternalAgentResponse createExternalAgent(String workspaceId, CreateExternalAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createExternalAgentWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</p>
+     * 
+     * @param request CreateExternalAgentBootstrapTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateExternalAgentBootstrapTokenResponse
+     */
+    public CreateExternalAgentBootstrapTokenResponse createExternalAgentBootstrapTokenWithOptions(String workspaceId, String agentId, CreateExternalAgentBootstrapTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            query.put("networkType", request.networkType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateExternalAgentBootstrapToken"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/external-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + "/bootstrap/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateExternalAgentBootstrapTokenResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</p>
+     * 
+     * @param request CreateExternalAgentBootstrapTokenRequest
+     * @return CreateExternalAgentBootstrapTokenResponse
+     */
+    public CreateExternalAgentBootstrapTokenResponse createExternalAgentBootstrapToken(String workspaceId, String agentId, CreateExternalAgentBootstrapTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createExternalAgentBootstrapTokenWithOptions(workspaceId, agentId, request, headers, runtime);
     }
 
     /**
@@ -254,6 +620,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createManagedAgentWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</p>
+     * 
+     * @param tmpReq CreateMcpRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMcpResponse
+     */
+    public CreateMcpResponse createMcpWithOptions(String workspaceId, CreateMcpRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateMcpShrinkRequest request = new CreateMcpShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMcp"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-servers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMcpResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</p>
+     * 
+     * @param request CreateMcpRequest
+     * @return CreateMcpResponse
+     */
+    public CreateMcpResponse createMcp(String workspaceId, CreateMcpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMcpWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -372,6 +805,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createModelConnectionWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</p>
+     * 
+     * @param tmpReq CreateSkillDraftRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSkillDraftResponse
+     */
+    public CreateSkillDraftResponse createSkillDraftWithOptions(String workspaceId, CreateSkillDraftRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateSkillDraftShrinkRequest request = new CreateSkillDraftShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSkillDraft"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSkillDraftResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</p>
+     * 
+     * @param request CreateSkillDraftRequest
+     * @return CreateSkillDraftResponse
+     */
+    public CreateSkillDraftResponse createSkillDraft(String workspaceId, CreateSkillDraftRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createSkillDraftWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -611,6 +1105,157 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an IM channel of a specified agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an IM channel of a specified agent.</p>
+     * 
+     * @param request DeleteAgentIMChannelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentIMChannelResponse
+     */
+    public DeleteAgentIMChannelResponse deleteAgentIMChannelWithOptions(String workspaceId, String agentId, String imChannelId, DeleteAgentIMChannelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgentIMChannel"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + "/im-channels/" + com.aliyun.openapiutil.Client.getEncodeParam(imChannelId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentIMChannelResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an IM channel of a specified agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an IM channel of a specified agent.</p>
+     * 
+     * @param request DeleteAgentIMChannelRequest
+     * @return DeleteAgentIMChannelResponse
+     */
+    public DeleteAgentIMChannelResponse deleteAgentIMChannel(String workspaceId, String agentId, String imChannelId, DeleteAgentIMChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAgentIMChannelWithOptions(workspaceId, agentId, imChannelId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</p>
+     * 
+     * @param request DeleteAgentSpecRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentSpecResponse
+     */
+    public DeleteAgentSpecResponse deleteAgentSpecWithOptions(String workspaceId, String agentSpecName, DeleteAgentSpecRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgentSpec"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentSpecResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</p>
+     * 
+     * @param request DeleteAgentSpecRequest
+     * @return DeleteAgentSpecResponse
+     */
+    public DeleteAgentSpecResponse deleteAgentSpec(String workspaceId, String agentSpecName, DeleteAgentSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAgentSpecWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</p>
+     * 
+     * @param request DeleteAgentSpecVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentSpecVersionResponse
+     */
+    public DeleteAgentSpecVersionResponse deleteAgentSpecVersionWithOptions(String workspaceId, String agentSpecName, DeleteAgentSpecVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgentSpecVersion"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecName) + "/draft"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentSpecVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</p>
+     * 
+     * @param request DeleteAgentSpecVersionRequest
+     * @return DeleteAgentSpecVersionResponse
+     */
+    public DeleteAgentSpecVersionResponse deleteAgentSpecVersion(String workspaceId, String agentSpecName, DeleteAgentSpecVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAgentSpecVersionWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>删除凭证</p>
      * 
@@ -655,6 +1300,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteCredentialWithOptions(workspaceId, credentialId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a specified external agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified external agent.</p>
+     * 
+     * @param request DeleteExternalAgentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteExternalAgentResponse
+     */
+    public DeleteExternalAgentResponse deleteExternalAgentWithOptions(String workspaceId, String agentId, DeleteExternalAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteExternalAgent"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/external-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteExternalAgentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a specified external agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified external agent.</p>
+     * 
+     * @param request DeleteExternalAgentRequest
+     * @return DeleteExternalAgentResponse
+     */
+    public DeleteExternalAgentResponse deleteExternalAgent(String workspaceId, String agentId, DeleteExternalAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteExternalAgentWithOptions(workspaceId, agentId, request, headers, runtime);
     }
 
     /**
@@ -743,6 +1435,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteManagedAgentWithOptions(workspaceId, agentId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
+     * 
+     * @param request DeleteMcpRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMcpResponse
+     */
+    public DeleteMcpResponse deleteMcpWithOptions(String mcpServerId, String workspaceId, DeleteMcpRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMcp"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMcpResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
+     * 
+     * @param request DeleteMcpRequest
+     * @return DeleteMcpResponse
+     */
+    public DeleteMcpResponse deleteMcp(String mcpServerId, String workspaceId, DeleteMcpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMcpWithOptions(mcpServerId, workspaceId, request, headers, runtime);
     }
 
     /**
@@ -837,6 +1578,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteModelConnectionWithOptions(workspaceId, connectionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</p>
+     * 
+     * @param request DeleteSkillRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSkillResponse
+     */
+    public DeleteSkillResponse deleteSkillWithOptions(String workspaceId, String skillName, DeleteSkillRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSkill"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSkillResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</p>
+     * 
+     * @param request DeleteSkillRequest
+     * @return DeleteSkillResponse
+     */
+    public DeleteSkillResponse deleteSkill(String workspaceId, String skillName, DeleteSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteSkillWithOptions(workspaceId, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes the draft version currently being edited for a specified Skill.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the draft version currently being edited for a specified Skill.</p>
+     * 
+     * @param request DeleteSkillDraftRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSkillDraftResponse
+     */
+    public DeleteSkillDraftResponse deleteSkillDraftWithOptions(String workspaceId, String skillName, DeleteSkillDraftRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSkillDraft"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/draft"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSkillDraftResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes the draft version currently being edited for a specified Skill.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the draft version currently being edited for a specified Skill.</p>
+     * 
+     * @param request DeleteSkillDraftRequest
+     * @return DeleteSkillDraftResponse
+     */
+    public DeleteSkillDraftResponse deleteSkillDraft(String workspaceId, String skillName, DeleteSkillDraftRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteSkillDraftWithOptions(workspaceId, skillName, request, headers, runtime);
     }
 
     /**
@@ -981,6 +1820,420 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</p>
+     * 
+     * @param request DownloadAgentSpecViaOssRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DownloadAgentSpecViaOssResponse
+     */
+    public DownloadAgentSpecViaOssResponse downloadAgentSpecViaOssWithOptions(String workspaceId, String agentSpecName, DownloadAgentSpecViaOssRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentSpecVersion)) {
+            query.put("agentSpecVersion", request.agentSpecVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DownloadAgentSpecViaOss"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecName) + "/actions/download-via-oss"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DownloadAgentSpecViaOssResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</p>
+     * 
+     * @param request DownloadAgentSpecViaOssRequest
+     * @return DownloadAgentSpecViaOssResponse
+     */
+    public DownloadAgentSpecViaOssResponse downloadAgentSpecViaOss(String workspaceId, String agentSpecName, DownloadAgentSpecViaOssRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.downloadAgentSpecViaOssWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</p>
+     * 
+     * @param request DownloadSkillVersionViaOssRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DownloadSkillVersionViaOssResponse
+     */
+    public DownloadSkillVersionViaOssResponse downloadSkillVersionViaOssWithOptions(String workspaceId, String skillName, String skillVersion, DownloadSkillVersionViaOssRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DownloadSkillVersionViaOss"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(skillVersion) + "/actions/download-via-oss"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DownloadSkillVersionViaOssResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</p>
+     * 
+     * @param request DownloadSkillVersionViaOssRequest
+     * @return DownloadSkillVersionViaOssResponse
+     */
+    public DownloadSkillVersionViaOssResponse downloadSkillVersionViaOss(String workspaceId, String skillName, String skillVersion, DownloadSkillVersionViaOssRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.downloadSkillVersionViaOssWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Skips the regular review process and forcibly publishes the specified Skill version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Skips the regular review process and forcibly publishes the specified Skill version.</p>
+     * 
+     * @param tmpReq ForcePublishSkillVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ForcePublishSkillVersionResponse
+     */
+    public ForcePublishSkillVersionResponse forcePublishSkillVersionWithOptions(String workspaceId, String skillName, String skillVersion, ForcePublishSkillVersionRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ForcePublishSkillVersionShrinkRequest request = new ForcePublishSkillVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ForcePublishSkillVersion"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(skillVersion) + "/actions/force-publish"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ForcePublishSkillVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Skips the regular review process and forcibly publishes the specified Skill version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Skips the regular review process and forcibly publishes the specified Skill version.</p>
+     * 
+     * @param request ForcePublishSkillVersionRequest
+     * @return ForcePublishSkillVersionResponse
+     */
+    public ForcePublishSkillVersionResponse forcePublishSkillVersion(String workspaceId, String skillName, String skillVersion, ForcePublishSkillVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.forcePublishSkillVersionWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified agent IM channel.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified agent IM channel.</p>
+     * 
+     * @param request GetAgentIMChannelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentIMChannelResponse
+     */
+    public GetAgentIMChannelResponse getAgentIMChannelWithOptions(String workspaceId, String agentId, String imChannelId, GetAgentIMChannelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentIMChannel"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + "/im-channels/" + com.aliyun.openapiutil.Client.getEncodeParam(imChannelId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentIMChannelResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified agent IM channel.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified agent IM channel.</p>
+     * 
+     * @param request GetAgentIMChannelRequest
+     * @return GetAgentIMChannelResponse
+     */
+    public GetAgentIMChannelResponse getAgentIMChannel(String workspaceId, String agentId, String imChannelId, GetAgentIMChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentIMChannelWithOptions(workspaceId, agentId, imChannelId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</p>
+     * 
+     * @param request GetAgentSpecRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentSpecResponse
+     */
+    public GetAgentSpecResponse getAgentSpecWithOptions(String workspaceId, String agentSpecName, GetAgentSpecRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentSpec"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentSpecResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</p>
+     * 
+     * @param request GetAgentSpecRequest
+     * @return GetAgentSpecResponse
+     */
+    public GetAgentSpecResponse getAgentSpec(String workspaceId, String agentSpecName, GetAgentSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentSpecWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
+     * 
+     * @param request GetAgentSpecImportFileUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentSpecImportFileUrlResponse
+     */
+    public GetAgentSpecImportFileUrlResponse getAgentSpecImportFileUrlWithOptions(String workspaceId, GetAgentSpecImportFileUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            query.put("contentType", request.contentType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentSpecImportFileUrl"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-spec-actions/get-import-file-url"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentSpecImportFileUrlResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
+     * 
+     * @param request GetAgentSpecImportFileUrlRequest
+     * @return GetAgentSpecImportFileUrlResponse
+     */
+    public GetAgentSpecImportFileUrlResponse getAgentSpecImportFileUrl(String workspaceId, GetAgentSpecImportFileUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentSpecImportFileUrlWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</p>
+     * 
+     * @param request GetAgentSpecLatestRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentSpecLatestResponse
+     */
+    public GetAgentSpecLatestResponse getAgentSpecLatestWithOptions(String workspaceId, String agentSpecName, GetAgentSpecLatestRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentSpecLatest"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecName) + "/latest"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentSpecLatestResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</p>
+     * 
+     * @param request GetAgentSpecLatestRequest
+     * @return GetAgentSpecLatestResponse
+     */
+    public GetAgentSpecLatestResponse getAgentSpecLatest(String workspaceId, String agentSpecName, GetAgentSpecLatestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentSpecLatestWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</p>
+     * 
+     * @param request GetAgentSpecVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentSpecVersionResponse
+     */
+    public GetAgentSpecVersionResponse getAgentSpecVersionWithOptions(String workspaceId, String agentSpecName, String agentSpecVersion, GetAgentSpecVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentSpecVersion"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecVersion) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentSpecVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</p>
+     * 
+     * @param request GetAgentSpecVersionRequest
+     * @return GetAgentSpecVersionResponse
+     */
+    public GetAgentSpecVersionResponse getAgentSpecVersion(String workspaceId, String agentSpecName, String agentSpecVersion, GetAgentSpecVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentSpecVersionWithOptions(workspaceId, agentSpecName, agentSpecVersion, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>查询凭证</p>
      * 
@@ -1019,6 +2272,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getCredentialWithOptions(workspaceId, credentialId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified external agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified external agent.</p>
+     * 
+     * @param request GetExternalAgentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetExternalAgentResponse
+     */
+    public GetExternalAgentResponse getExternalAgentWithOptions(String workspaceId, String agentId, GetExternalAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetExternalAgent"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/external-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetExternalAgentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified external agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified external agent.</p>
+     * 
+     * @param request GetExternalAgentRequest
+     * @return GetExternalAgentResponse
+     */
+    public GetExternalAgentResponse getExternalAgent(String workspaceId, String agentId, GetExternalAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getExternalAgentWithOptions(workspaceId, agentId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the available network types for a specified external agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available network types for a specified external agent.</p>
+     * 
+     * @param request GetExternalAgentBootstrapOptionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetExternalAgentBootstrapOptionsResponse
+     */
+    public GetExternalAgentBootstrapOptionsResponse getExternalAgentBootstrapOptionsWithOptions(String workspaceId, String agentId, GetExternalAgentBootstrapOptionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetExternalAgentBootstrapOptions"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/external-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + "/bootstrap/options"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetExternalAgentBootstrapOptionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the available network types for a specified external agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available network types for a specified external agent.</p>
+     * 
+     * @param request GetExternalAgentBootstrapOptionsRequest
+     * @return GetExternalAgentBootstrapOptionsResponse
+     */
+    public GetExternalAgentBootstrapOptionsResponse getExternalAgentBootstrapOptions(String workspaceId, String agentId, GetExternalAgentBootstrapOptionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getExternalAgentBootstrapOptionsWithOptions(workspaceId, agentId, request, headers, runtime);
     }
 
     /**
@@ -1104,6 +2451,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</p>
+     * 
+     * @param request GetMcpRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMcpResponse
+     */
+    public GetMcpResponse getMcpWithOptions(String workspaceId, String mcpServerId, GetMcpRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMcp"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMcpResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</p>
+     * 
+     * @param request GetMcpRequest
+     * @return GetMcpResponse
+     */
+    public GetMcpResponse getMcp(String workspaceId, String mcpServerId, GetMcpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMcpWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the detailed configuration and region of a model in a specified workspace.</p>
      * 
@@ -1183,6 +2579,253 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getModelConnectionWithOptions(workspaceId, connectionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description\nQueries the details of a specified service endpoint. A service endpoint (ServiceEndpoint) provides a stable access URL for a specific agent version (AgentVersion) or workspace collaboration component. The response includes target routing, access URL list, authentication configuration, and current lifecycle status.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified service endpoint, including target routing, access URLs, authentication configuration, and current status.</p>
+     * 
+     * @param request GetServiceEndpointRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServiceEndpointResponse
+     */
+    public GetServiceEndpointResponse getServiceEndpointWithOptions(String workspaceId, String serviceEndpointId, GetServiceEndpointRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServiceEndpoint"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/service-endpoints/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceEndpointId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceEndpointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description\nQueries the details of a specified service endpoint. A service endpoint (ServiceEndpoint) provides a stable access URL for a specific agent version (AgentVersion) or workspace collaboration component. The response includes target routing, access URL list, authentication configuration, and current lifecycle status.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified service endpoint, including target routing, access URLs, authentication configuration, and current status.</p>
+     * 
+     * @param request GetServiceEndpointRequest
+     * @return GetServiceEndpointResponse
+     */
+    public GetServiceEndpointResponse getServiceEndpoint(String workspaceId, String serviceEndpointId, GetServiceEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getServiceEndpointWithOptions(workspaceId, serviceEndpointId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the currently active API Key for a specified service endpoint. The call succeeds only when the service endpoint has API_KEY authentication enabled and the gateway consumer and credentials are ready. The service reads the API Key from the gateway in real time. AgentCore does not persist the plaintext. Keep the returned API Key secure and avoid logging it or exposing it in public configurations.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the currently active API Key and its invocation method for a specified service endpoint within a workspace.</p>
+     * 
+     * @param request GetServiceEndpointApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServiceEndpointApiKeyResponse
+     */
+    public GetServiceEndpointApiKeyResponse getServiceEndpointApiKeyWithOptions(String workspaceId, String serviceEndpointId, GetServiceEndpointApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServiceEndpointApiKey"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/service-endpoints/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceEndpointId) + "/api-key/get"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceEndpointApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the currently active API Key for a specified service endpoint. The call succeeds only when the service endpoint has API_KEY authentication enabled and the gateway consumer and credentials are ready. The service reads the API Key from the gateway in real time. AgentCore does not persist the plaintext. Keep the returned API Key secure and avoid logging it or exposing it in public configurations.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the currently active API Key and its invocation method for a specified service endpoint within a workspace.</p>
+     * 
+     * @param request GetServiceEndpointApiKeyRequest
+     * @return GetServiceEndpointApiKeyResponse
+     */
+    public GetServiceEndpointApiKeyResponse getServiceEndpointApiKey(String workspaceId, String serviceEndpointId, GetServiceEndpointApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getServiceEndpointApiKeyWithOptions(workspaceId, serviceEndpointId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</p>
+     * 
+     * @param request GetSkillDetailRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSkillDetailResponse
+     */
+    public GetSkillDetailResponse getSkillDetailWithOptions(String workspaceId, String skillName, GetSkillDetailRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSkillDetail"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillDetailResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</p>
+     * 
+     * @param request GetSkillDetailRequest
+     * @return GetSkillDetailResponse
+     */
+    public GetSkillDetailResponse getSkillDetail(String workspaceId, String skillName, GetSkillDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSkillDetailWithOptions(workspaceId, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</p>
+     * 
+     * @param request GetSkillImportFileUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSkillImportFileUrlResponse
+     */
+    public GetSkillImportFileUrlResponse getSkillImportFileUrlWithOptions(String workspaceId, GetSkillImportFileUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            query.put("contentType", request.contentType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSkillImportFileUrl"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skill-actions/get-import-file-url"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillImportFileUrlResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</p>
+     * 
+     * @param request GetSkillImportFileUrlRequest
+     * @return GetSkillImportFileUrlResponse
+     */
+    public GetSkillImportFileUrlResponse getSkillImportFileUrl(String workspaceId, GetSkillImportFileUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSkillImportFileUrlWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</p>
+     * 
+     * @param request GetSkillVersionDetailRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSkillVersionDetailResponse
+     */
+    public GetSkillVersionDetailResponse getSkillVersionDetailWithOptions(String workspaceId, String skillName, String skillVersion, GetSkillVersionDetailRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSkillVersionDetail"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(skillVersion) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSkillVersionDetailResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</p>
+     * 
+     * @param request GetSkillVersionDetailRequest
+     * @return GetSkillVersionDetailResponse
+     */
+    public GetSkillVersionDetailResponse getSkillVersionDetail(String workspaceId, String skillName, String skillVersion, GetSkillVersionDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSkillVersionDetailWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
     }
 
     /**
@@ -1315,6 +2958,323 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the plug-in status of a specified workspace.</p>
+     * 
+     * @param request GetWorkspacePluginRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspacePluginResponse
+     */
+    public GetWorkspacePluginResponse getWorkspacePluginWithOptions(String workspaceId, String pluginName, GetWorkspacePluginRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspacePlugin"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/plugins/" + com.aliyun.openapiutil.Client.getEncodeParam(pluginName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspacePluginResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the plug-in status of a specified workspace.</p>
+     * 
+     * @param request GetWorkspacePluginRequest
+     * @return GetWorkspacePluginResponse
+     */
+    public GetWorkspacePluginResponse getWorkspacePlugin(String workspaceId, String pluginName, GetWorkspacePluginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkspacePluginWithOptions(workspaceId, pluginName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description\nInstalls a plugin for a specified AgentCore workspace. Currently supports the <code>collaboration</code> plugin. Plugin configuration is passed through the <code>Config</code> parameter, and different plugins can define their own configuration structures. The <code>collaboration</code> plugin uses <code>Config.NetworkConfiguration</code> to specify VPC and public network access policies. The installation process is executed asynchronously. When you repeatedly call this operation for a plugin with the same name that is being installed or already installed, the operation returns the current status with idempotent semantics if the configuration is the same. If the configuration is different, the operation returns an operation conflict error.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs a plugin for a specified AgentCore workspace. Currently supports the collaboration plugin. The installation process is executed asynchronously.</p>
+     * 
+     * @param tmpReq InstallWorkspacePluginRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallWorkspacePluginResponse
+     */
+    public InstallWorkspacePluginResponse installWorkspacePluginWithOptions(String workspaceId, String pluginName, InstallWorkspacePluginRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        InstallWorkspacePluginShrinkRequest request = new InstallWorkspacePluginShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstallWorkspacePlugin"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/plugins/" + com.aliyun.openapiutil.Client.getEncodeParam(pluginName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallWorkspacePluginResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description\nInstalls a plugin for a specified AgentCore workspace. Currently supports the <code>collaboration</code> plugin. Plugin configuration is passed through the <code>Config</code> parameter, and different plugins can define their own configuration structures. The <code>collaboration</code> plugin uses <code>Config.NetworkConfiguration</code> to specify VPC and public network access policies. The installation process is executed asynchronously. When you repeatedly call this operation for a plugin with the same name that is being installed or already installed, the operation returns the current status with idempotent semantics if the configuration is the same. If the configuration is different, the operation returns an operation conflict error.\n.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs a plugin for a specified AgentCore workspace. Currently supports the collaboration plugin. The installation process is executed asynchronously.</p>
+     * 
+     * @param request InstallWorkspacePluginRequest
+     * @return InstallWorkspacePluginResponse
+     */
+    public InstallWorkspacePluginResponse installWorkspacePlugin(String workspaceId, String pluginName, InstallWorkspacePluginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.installWorkspacePluginWithOptions(workspaceId, pluginName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the IM channel list of a specified agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the IM channel list of a specified agent.</p>
+     * 
+     * @param request ListAgentIMChannelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgentIMChannelsResponse
+     */
+    public ListAgentIMChannelsResponse listAgentIMChannelsWithOptions(String workspaceId, String agentId, ListAgentIMChannelsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelType)) {
+            query.put("channelType", request.channelType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgentIMChannels"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + "/im-channels"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentIMChannelsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the IM channel list of a specified agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the IM channel list of a specified agent.</p>
+     * 
+     * @param request ListAgentIMChannelsRequest
+     * @return ListAgentIMChannelsResponse
+     */
+    public ListAgentIMChannelsResponse listAgentIMChannels(String workspaceId, String agentId, ListAgentIMChannelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAgentIMChannelsWithOptions(workspaceId, agentId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * 
+     * @param request ListAgentSpecsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgentSpecsResponse
+     */
+    public ListAgentSpecsResponse listAgentSpecsWithOptions(String workspaceId, ListAgentSpecsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentSpecName)) {
+            query.put("agentSpecName", request.agentSpecName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizTag)) {
+            query.put("bizTag", request.bizTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("orderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("pageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.search)) {
+            query.put("search", request.search);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withCapabilities)) {
+            query.put("withCapabilities", request.withCapabilities);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgentSpecs"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentSpecsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * 
+     * @param request ListAgentSpecsRequest
+     * @return ListAgentSpecsResponse
+     */
+    public ListAgentSpecsResponse listAgentSpecs(String workspaceId, ListAgentSpecsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAgentSpecsWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</p>
+     * 
+     * @param tmpReq ListAgentTeamsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgentTeamsResponse
+     */
+    public ListAgentTeamsResponse listAgentTeamsWithOptions(String workspaceId, ListAgentTeamsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAgentTeamsShrinkRequest request = new ListAgentTeamsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgentTeams"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-team-memberships"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentTeamsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</p>
+     * 
+     * @param request ListAgentTeamsRequest
+     * @return ListAgentTeamsResponse
+     */
+    public ListAgentTeamsResponse listAgentTeams(String workspaceId, ListAgentTeamsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAgentTeamsWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>查询凭证列表</p>
      * 
@@ -1371,6 +3331,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listCredentialsWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of external agents in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of external agents in a specified workspace.</p>
+     * 
+     * @param request ListExternalAgentsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListExternalAgentsResponse
+     */
+    public ListExternalAgentsResponse listExternalAgentsWithOptions(String workspaceId, ListExternalAgentsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListExternalAgents"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/external-agents"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListExternalAgentsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of external agents in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of external agents in a specified workspace.</p>
+     * 
+     * @param request ListExternalAgentsRequest
+     * @return ListExternalAgentsResponse
+     */
+    public ListExternalAgentsResponse listExternalAgents(String workspaceId, ListExternalAgentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listExternalAgentsWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -1479,6 +3496,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listManagedAgentsWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</p>
+     * 
+     * @param request ListMcpToolsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMcpToolsResponse
+     */
+    public ListMcpToolsResponse listMcpToolsWithOptions(String workspaceId, String mcpServerId, ListMcpToolsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMcpTools"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + "/tools"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMcpToolsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</p>
+     * 
+     * @param request ListMcpToolsRequest
+     * @return ListMcpToolsResponse
+     */
+    public ListMcpToolsResponse listMcpTools(String workspaceId, String mcpServerId, ListMcpToolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMcpToolsWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</p>
+     * 
+     * @param request ListMcpsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMcpsResponse
+     */
+    public ListMcpsResponse listMcpsWithOptions(String workspaceId, ListMcpsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMcps"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-servers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMcpsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</p>
+     * 
+     * @param request ListMcpsRequest
+     * @return ListMcpsResponse
+     */
+    public ListMcpsResponse listMcps(String workspaceId, ListMcpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMcpsWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -1690,6 +3825,174 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries service endpoints in a specified workspace by using paging. Supports filtering by target type, agent, collaboration component, and status.</p>
+     * 
+     * @param request ListServiceEndpointsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServiceEndpointsResponse
+     */
+    public ListServiceEndpointsResponse listServiceEndpointsWithOptions(String workspaceId, ListServiceEndpointsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("agentVersion", request.agentVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationComponent)) {
+            query.put("collaborationComponent", request.collaborationComponent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceBindingId)) {
+            query.put("resourceBindingId", request.resourceBindingId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("targetType", request.targetType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServiceEndpoints"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/service-endpoints"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceEndpointsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries service endpoints in a specified workspace by using paging. Supports filtering by target type, agent, collaboration component, and status.</p>
+     * 
+     * @param request ListServiceEndpointsRequest
+     * @return ListServiceEndpointsResponse
+     */
+    public ListServiceEndpointsResponse listServiceEndpoints(String workspaceId, ListServiceEndpointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listServiceEndpointsWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</p>
+     * 
+     * @param request ListSkillsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSkillsResponse
+     */
+    public ListSkillsResponse listSkillsWithOptions(String workspaceId, ListSkillsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("orderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("pageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.search)) {
+            query.put("search", request.search);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
+            query.put("skillName", request.skillName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSkills"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSkillsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</p>
+     * 
+     * @param request ListSkillsRequest
+     * @return ListSkillsResponse
+     */
+    public ListSkillsResponse listSkills(String workspaceId, ListSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSkillsWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>查询团队列表</p>
      * 
@@ -1865,6 +4168,311 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</p>
+     * 
+     * @param tmpReq OfflineSkillRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OfflineSkillResponse
+     */
+    public OfflineSkillResponse offlineSkillWithOptions(String workspaceId, String skillName, OfflineSkillRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        OfflineSkillShrinkRequest request = new OfflineSkillShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OfflineSkill"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/actions/offline"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OfflineSkillResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</p>
+     * 
+     * @param request OfflineSkillRequest
+     * @return OfflineSkillResponse
+     */
+    public OfflineSkillResponse offlineSkill(String workspaceId, String skillName, OfflineSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.offlineSkillWithOptions(workspaceId, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Sets a specified Skill version as the online version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets a specified Skill version as the online version.</p>
+     * 
+     * @param tmpReq OnlineSkillRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OnlineSkillResponse
+     */
+    public OnlineSkillResponse onlineSkillWithOptions(String workspaceId, String skillName, OnlineSkillRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        OnlineSkillShrinkRequest request = new OnlineSkillShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OnlineSkill"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/actions/online"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OnlineSkillResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Sets a specified Skill version as the online version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets a specified Skill version as the online version.</p>
+     * 
+     * @param request OnlineSkillRequest
+     * @return OnlineSkillResponse
+     */
+    public OnlineSkillResponse onlineSkill(String workspaceId, String skillName, OnlineSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.onlineSkillWithOptions(workspaceId, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</p>
+     * 
+     * @param tmpReq PrecheckSkillUploadViaOssRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PrecheckSkillUploadViaOssResponse
+     */
+    public PrecheckSkillUploadViaOssResponse precheckSkillUploadViaOssWithOptions(String workspaceId, PrecheckSkillUploadViaOssRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PrecheckSkillUploadViaOssShrinkRequest request = new PrecheckSkillUploadViaOssShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PrecheckSkillUploadViaOss"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skill-actions/precheck-upload-via-oss"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PrecheckSkillUploadViaOssResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</p>
+     * 
+     * @param request PrecheckSkillUploadViaOssRequest
+     * @return PrecheckSkillUploadViaOssResponse
+     */
+    public PrecheckSkillUploadViaOssResponse precheckSkillUploadViaOss(String workspaceId, PrecheckSkillUploadViaOssRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.precheckSkillUploadViaOssWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Publishes a specified Skill version to change its state to published.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes a specified Skill version to change its state to published.</p>
+     * 
+     * @param tmpReq PublishSkillVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PublishSkillVersionResponse
+     */
+    public PublishSkillVersionResponse publishSkillVersionWithOptions(String workspaceId, String skillName, String skillVersion, PublishSkillVersionRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PublishSkillVersionShrinkRequest request = new PublishSkillVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishSkillVersion"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(skillVersion) + "/actions/publish"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishSkillVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Publishes a specified Skill version to change its state to published.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes a specified Skill version to change its state to published.</p>
+     * 
+     * @param request PublishSkillVersionRequest
+     * @return PublishSkillVersionResponse
+     */
+    public PublishSkillVersionResponse publishSkillVersion(String workspaceId, String skillName, String skillVersion, PublishSkillVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.publishSkillVersionWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Converts a specified Skill version back into an editable draft for further modifications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Converts a specified Skill version back into an editable draft for further modifications.</p>
+     * 
+     * @param tmpReq RedraftSkillVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RedraftSkillVersionResponse
+     */
+    public RedraftSkillVersionResponse redraftSkillVersionWithOptions(String workspaceId, String skillName, String skillVersion, RedraftSkillVersionRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RedraftSkillVersionShrinkRequest request = new RedraftSkillVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RedraftSkillVersion"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(skillVersion) + "/actions/redraft"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RedraftSkillVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Converts a specified Skill version back into an editable draft for further modifications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Converts a specified Skill version back into an editable draft for further modifications.</p>
+     * 
+     * @param request RedraftSkillVersionRequest
+     * @return RedraftSkillVersionResponse
+     */
+    public RedraftSkillVersionResponse redraftSkillVersion(String workspaceId, String skillName, String skillVersion, RedraftSkillVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.redraftSkillVersionWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>重置用户密码</p>
      * 
@@ -1915,6 +4523,319 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.resetUserPasswordWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</p>
+     * 
+     * @param tmpReq SubmitAgentSpecVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitAgentSpecVersionResponse
+     */
+    public SubmitAgentSpecVersionResponse submitAgentSpecVersionWithOptions(String workspaceId, String agentSpecName, String agentSpecVersion, SubmitAgentSpecVersionRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitAgentSpecVersionShrinkRequest request = new SubmitAgentSpecVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitAgentSpecVersion"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecVersion) + "/actions/submit"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitAgentSpecVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</p>
+     * 
+     * @param request SubmitAgentSpecVersionRequest
+     * @return SubmitAgentSpecVersionResponse
+     */
+    public SubmitAgentSpecVersionResponse submitAgentSpecVersion(String workspaceId, String agentSpecName, String agentSpecVersion, SubmitAgentSpecVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitAgentSpecVersionWithOptions(workspaceId, agentSpecName, agentSpecVersion, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Submits a specified draft version of a skill for review.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a specified draft version of a skill for review.</p>
+     * 
+     * @param tmpReq SubmitSkillVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitSkillVersionResponse
+     */
+    public SubmitSkillVersionResponse submitSkillVersionWithOptions(String workspaceId, String skillName, String skillVersion, SubmitSkillVersionRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitSkillVersionShrinkRequest request = new SubmitSkillVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitSkillVersion"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(skillVersion) + "/actions/submit"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSkillVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Submits a specified draft version of a skill for review.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a specified draft version of a skill for review.</p>
+     * 
+     * @param request SubmitSkillVersionRequest
+     * @return SubmitSkillVersionResponse
+     */
+    public SubmitSkillVersionResponse submitSkillVersion(String workspaceId, String skillName, String skillVersion, SubmitSkillVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitSkillVersionWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</p>
+     * 
+     * @param tmpReq UpdateAgentIMChannelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentIMChannelResponse
+     */
+    public UpdateAgentIMChannelResponse updateAgentIMChannelWithOptions(String workspaceId, String agentId, String imChannelId, UpdateAgentIMChannelRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAgentIMChannelShrinkRequest request = new UpdateAgentIMChannelShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgentIMChannel"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + "/im-channels/" + com.aliyun.openapiutil.Client.getEncodeParam(imChannelId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentIMChannelResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</p>
+     * 
+     * @param request UpdateAgentIMChannelRequest
+     * @return UpdateAgentIMChannelResponse
+     */
+    public UpdateAgentIMChannelResponse updateAgentIMChannel(String workspaceId, String agentId, String imChannelId, UpdateAgentIMChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAgentIMChannelWithOptions(workspaceId, agentId, imChannelId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</p>
+     * 
+     * @param tmpReq UpdateAgentIMChannelCredentialRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentIMChannelCredentialResponse
+     */
+    public UpdateAgentIMChannelCredentialResponse updateAgentIMChannelCredentialWithOptions(String workspaceId, String agentId, String imChannelId, UpdateAgentIMChannelCredentialRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAgentIMChannelCredentialShrinkRequest request = new UpdateAgentIMChannelCredentialShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgentIMChannelCredential"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + "/im-channels/" + com.aliyun.openapiutil.Client.getEncodeParam(imChannelId) + "/actions/update-credential"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentIMChannelCredentialResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</p>
+     * 
+     * @param request UpdateAgentIMChannelCredentialRequest
+     * @return UpdateAgentIMChannelCredentialResponse
+     */
+    public UpdateAgentIMChannelCredentialResponse updateAgentIMChannelCredential(String workspaceId, String agentId, String imChannelId, UpdateAgentIMChannelCredentialRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAgentIMChannelCredentialWithOptions(workspaceId, agentId, imChannelId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</p>
+     * 
+     * @param tmpReq UpdateAgentSpecRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentSpecResponse
+     */
+    public UpdateAgentSpecResponse updateAgentSpecWithOptions(String workspaceId, String agentSpecName, UpdateAgentSpecRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAgentSpecShrinkRequest request = new UpdateAgentSpecShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgentSpec"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-specs/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpecName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentSpecResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</p>
+     * 
+     * @param request UpdateAgentSpecRequest
+     * @return UpdateAgentSpecResponse
+     */
+    public UpdateAgentSpecResponse updateAgentSpec(String workspaceId, String agentSpecName, UpdateAgentSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAgentSpecWithOptions(workspaceId, agentSpecName, request, headers, runtime);
     }
 
     /**
@@ -1974,6 +4895,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateCredentialWithOptions(workspaceId, credentialId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified external agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a specified external agent.</p>
+     * 
+     * @param tmpReq UpdateExternalAgentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateExternalAgentResponse
+     */
+    public UpdateExternalAgentResponse updateExternalAgentWithOptions(String workspaceId, String agentId, UpdateExternalAgentRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateExternalAgentShrinkRequest request = new UpdateExternalAgentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateExternalAgent"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/external-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateExternalAgentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified external agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a specified external agent.</p>
+     * 
+     * @param request UpdateExternalAgentRequest
+     * @return UpdateExternalAgentResponse
+     */
+    public UpdateExternalAgentResponse updateExternalAgent(String workspaceId, String agentId, UpdateExternalAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateExternalAgentWithOptions(workspaceId, agentId, request, headers, runtime);
     }
 
     /**
@@ -2066,7 +5052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2026-08-04"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/managed-agents/" + com.aliyun.openapiutil.Client.getEncodeParam(agentId) + ""),
-            new TeaPair("method", "PATCH"),
+            new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "formData"),
@@ -2086,6 +5072,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateManagedAgentWithOptions(workspaceId, agentId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</p>
+     * 
+     * @param tmpReq UpdateMcpRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMcpResponse
+     */
+    public UpdateMcpResponse updateMcpWithOptions(String workspaceId, String mcpServerId, UpdateMcpRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMcpShrinkRequest request = new UpdateMcpShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMcp"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMcpResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</p>
+     * 
+     * @param request UpdateMcpRequest
+     * @return UpdateMcpResponse
+     */
+    public UpdateMcpResponse updateMcp(String workspaceId, String mcpServerId, UpdateMcpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMcpWithOptions(workspaceId, mcpServerId, request, headers, runtime);
     }
 
     /**
@@ -2125,7 +5178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2026-08-04"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/models/" + com.aliyun.openapiutil.Client.getEncodeParam(modelId) + ""),
-            new TeaPair("method", "PATCH"),
+            new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "formData"),
@@ -2149,7 +5202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新模型连接</p>
+     * <p>Updates the mutable configuration of a specified model connection and resubmits the publish task. The protocol cannot be modified after the model connection is created.</p>
      * 
      * @param tmpReq UpdateModelConnectionRequest
      * @param headers map
@@ -2184,7 +5237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2026-08-04"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/model-connections/" + com.aliyun.openapiutil.Client.getEncodeParam(connectionId) + ""),
-            new TeaPair("method", "PATCH"),
+            new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "formData"),
@@ -2195,7 +5248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新模型连接</p>
+     * <p>Updates the mutable configuration of a specified model connection and resubmits the publish task. The protocol cannot be modified after the model connection is created.</p>
      * 
      * @param request UpdateModelConnectionRequest
      * @return UpdateModelConnectionResponse
@@ -2204,6 +5257,189 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateModelConnectionWithOptions(workspaceId, connectionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</p>
+     * 
+     * @param tmpReq UpdateSkillBizTagsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSkillBizTagsResponse
+     */
+    public UpdateSkillBizTagsResponse updateSkillBizTagsWithOptions(String workspaceId, String skillName, UpdateSkillBizTagsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateSkillBizTagsShrinkRequest request = new UpdateSkillBizTagsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSkillBizTags"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/biz-tags"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSkillBizTagsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</p>
+     * 
+     * @param request UpdateSkillBizTagsRequest
+     * @return UpdateSkillBizTagsResponse
+     */
+    public UpdateSkillBizTagsResponse updateSkillBizTags(String workspaceId, String skillName, UpdateSkillBizTagsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateSkillBizTagsWithOptions(workspaceId, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Updates the version labels and their mappings for a specified Skill.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the version labels and their mappings for a specified Skill.</p>
+     * 
+     * @param tmpReq UpdateSkillLabelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSkillLabelsResponse
+     */
+    public UpdateSkillLabelsResponse updateSkillLabelsWithOptions(String workspaceId, String skillName, UpdateSkillLabelsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateSkillLabelsShrinkRequest request = new UpdateSkillLabelsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSkillLabels"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/labels"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSkillLabelsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Updates the version labels and their mappings for a specified Skill.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the version labels and their mappings for a specified Skill.</p>
+     * 
+     * @param request UpdateSkillLabelsRequest
+     * @return UpdateSkillLabelsResponse
+     */
+    public UpdateSkillLabelsResponse updateSkillLabels(String workspaceId, String skillName, UpdateSkillLabelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateSkillLabelsWithOptions(workspaceId, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Updates the visibility scope of a specified skill.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the visibility scope of a specified skill.</p>
+     * 
+     * @param tmpReq UpdateSkillScopeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSkillScopeResponse
+     */
+    public UpdateSkillScopeResponse updateSkillScopeWithOptions(String workspaceId, String skillName, UpdateSkillScopeRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateSkillScopeShrinkRequest request = new UpdateSkillScopeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSkillScope"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skills/" + com.aliyun.openapiutil.Client.getEncodeParam(skillName) + "/scope"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSkillScopeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Updates the visibility scope of a specified skill.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the visibility scope of a specified skill.</p>
+     * 
+     * @param request UpdateSkillScopeRequest
+     * @return UpdateSkillScopeResponse
+     */
+    public UpdateSkillScopeResponse updateSkillScope(String workspaceId, String skillName, UpdateSkillScopeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateSkillScopeWithOptions(workspaceId, skillName, request, headers, runtime);
     }
 
     /**
@@ -2387,5 +5623,127 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateWorkspaceWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</p>
+     * 
+     * @param tmpReq UploadAgentSpecViaOssRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadAgentSpecViaOssResponse
+     */
+    public UploadAgentSpecViaOssResponse uploadAgentSpecViaOssWithOptions(String workspaceId, UploadAgentSpecViaOssRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UploadAgentSpecViaOssShrinkRequest request = new UploadAgentSpecViaOssShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadAgentSpecViaOss"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/agent-spec-actions/upload-via-oss"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadAgentSpecViaOssResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</p>
+     * 
+     * @param request UploadAgentSpecViaOssRequest
+     * @return UploadAgentSpecViaOssResponse
+     */
+    public UploadAgentSpecViaOssResponse uploadAgentSpecViaOss(String workspaceId, UploadAgentSpecViaOssRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.uploadAgentSpecViaOssWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</p>
+     * 
+     * @param tmpReq UploadSkillViaOssRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadSkillViaOssResponse
+     */
+    public UploadSkillViaOssResponse uploadSkillViaOssWithOptions(String workspaceId, UploadSkillViaOssRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UploadSkillViaOssShrinkRequest request = new UploadSkillViaOssShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadSkillViaOss"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/skill-actions/upload-via-oss"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadSkillViaOssResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</p>
+     * 
+     * @param request UploadSkillViaOssRequest
+     * @return UploadSkillViaOssResponse
+     */
+    public UploadSkillViaOssResponse uploadSkillViaOss(String workspaceId, UploadSkillViaOssRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.uploadSkillViaOssWithOptions(workspaceId, request, headers, runtime);
     }
 }

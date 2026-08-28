@@ -4,21 +4,51 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelConnectionResponseBody extends TeaModel {
+    /**
+     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The updated model connection information.</p>
+     */
     @NameInMap("data")
     public UpdateModelConnectionResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request processing result message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request-1</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,42 +106,117 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
     }
 
     public static class UpdateModelConnectionResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of API keys configured in the model connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("apiKeyCount")
         public Integer apiKeyCount;
 
+        /**
+         * <p>The model connection ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mc-1</p>
+         */
         @NameInMap("connectionId")
         public String connectionId;
 
+        /**
+         * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-09T00:00:00Z</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <p>Indicates whether access credentials have been configured for the model connection.</p>
+         */
         @NameInMap("credentialConfigured")
         public Boolean credentialConfigured;
 
+        /**
+         * <p>The description of the model connection. The description can be up to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The absolute HTTP or HTTPS address of the upstream model service. The address can be up to 1024 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The model invocation protocol. Currently, only OpenAI/v1 is supported. If not specified in Settings when the model connection is created, this default value is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAI/v1</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
+        /**
+         * <p>The model provider type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen</p>
+         */
         @NameInMap("providerType")
         public String providerType;
 
+        /**
+         * <p>The resource status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The failure summary returned when the model connection fails to be published or fails to be deleted but remains in the Deleting state. This value is empty for other states.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GatewayOperationException</p>
+         */
         @NameInMap("statusReason")
         public String statusReason;
 
+        /**
+         * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-09T00:00:00Z</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        /**
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-1</p>
+         */
         @NameInMap("workspaceId")
         public String workspaceId;
 

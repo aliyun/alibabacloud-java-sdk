@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>agentcore20260804</artifactId>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <packaging>jar</packaging>
   <name>agentcore20260804</name>
   <description>Alibaba Cloud AgentCore (20260804) SDK for Java
