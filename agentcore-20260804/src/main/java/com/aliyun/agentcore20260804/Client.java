@@ -3577,8 +3577,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("maxResults", request.maxResults);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchType)) {
+            query.put("searchType", request.searchType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3617,6 +3625,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询指定 AgentCore 工作空间中的模型连接。支持通过 <code>Name</code> 按名称筛选，并通过 <code>SearchType</code> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</p>
+     * 
      * <b>summary</b> : 
      * <p>查询模型连接列表</p>
      * 
@@ -3652,6 +3663,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("providerType", request.providerType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.searchType)) {
+            query.put("searchType", request.searchType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -3671,6 +3686,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询指定 AgentCore 工作空间中的模型连接。支持通过 <code>Name</code> 按名称筛选，并通过 <code>SearchType</code> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</p>
+     * 
      * <b>summary</b> : 
      * <p>查询模型连接列表</p>
      * 

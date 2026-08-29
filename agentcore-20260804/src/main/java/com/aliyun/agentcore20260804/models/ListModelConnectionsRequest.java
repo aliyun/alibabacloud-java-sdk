@@ -4,6 +4,10 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class ListModelConnectionsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("includeModels")
     public Boolean includeModels;
 
@@ -41,6 +45,13 @@ public class ListModelConnectionsRequest extends TeaModel {
      */
     @NameInMap("providerType")
     public String providerType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>blur</p>
+     */
+    @NameInMap("searchType")
+    public String searchType;
 
     public static ListModelConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListModelConnectionsRequest self = new ListModelConnectionsRequest();
@@ -93,6 +104,14 @@ public class ListModelConnectionsRequest extends TeaModel {
     }
     public String getProviderType() {
         return this.providerType;
+    }
+
+    public ListModelConnectionsRequest setSearchType(String searchType) {
+        this.searchType = searchType;
+        return this;
+    }
+    public String getSearchType() {
+        return this.searchType;
     }
 
 }
