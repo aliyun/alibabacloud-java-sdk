@@ -482,6 +482,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Associates user labels.</p>
+     * 
+     * @param request BindSaseUserTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindSaseUserTagResponse
+     */
+    public BindSaseUserTagResponse bindSaseUserTagWithOptions(BindSaseUserTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.saseUserIds)) {
+            bodyFlat.put("SaseUserIds", request.saseUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIds)) {
+            bodyFlat.put("TagIds", request.tagIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindSaseUserTag"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindSaseUserTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Associates user labels.</p>
+     * 
+     * @param request BindSaseUserTagRequest
+     * @return BindSaseUserTagResponse
+     */
+    public BindSaseUserTagResponse bindSaseUserTag(BindSaseUserTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bindSaseUserTagWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</p>
      * 
      * @param request CancelVirusScanTasksRequest
@@ -1952,6 +2005,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateRegistrationPolicyResponse createRegistrationPolicy(CreateRegistrationPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRegistrationPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a user tag.</p>
+     * 
+     * @param request CreateSaseUserTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSaseUserTagResponse
+     */
+    public CreateSaseUserTagResponse createSaseUserTagWithOptions(CreateSaseUserTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSaseUserTag"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSaseUserTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a user tag.</p>
+     * 
+     * @param request CreateSaseUserTagRequest
+     * @return CreateSaseUserTagResponse
+     */
+    public CreateSaseUserTagResponse createSaseUserTag(CreateSaseUserTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSaseUserTagWithOptions(request, runtime);
     }
 
     /**
@@ -4026,6 +4127,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes user tags.</p>
+     * 
+     * @param request DeleteSaseUserTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSaseUserTagResponse
+     */
+    public DeleteSaseUserTagResponse deleteSaseUserTagWithOptions(DeleteSaseUserTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIds)) {
+            bodyFlat.put("TagIds", request.tagIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSaseUserTag"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSaseUserTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes user tags.</p>
+     * 
+     * @param request DeleteSaseUserTagRequest
+     * @return DeleteSaseUserTagResponse
+     */
+    public DeleteSaseUserTagResponse deleteSaseUserTag(DeleteSaseUserTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSaseUserTagWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can delete up to 100 devices at a time. Each device must be in a non-online status. If some device IDs in the specified collection do not meet the status requirement, only the devices that meet the requirement are deleted, and the operation still returns a success response.</p>
      * 
@@ -5444,6 +5594,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves a single user tag.</p>
+     * 
+     * @param request GetSaseUserTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSaseUserTagResponse
+     */
+    public GetSaseUserTagResponse getSaseUserTagWithOptions(GetSaseUserTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tagId)) {
+            body.put("TagId", request.tagId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSaseUserTag"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSaseUserTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a single user tag.</p>
+     * 
+     * @param request GetSaseUserTagRequest
+     * @return GetSaseUserTagResponse
+     */
+    public GetSaseUserTagResponse getSaseUserTag(GetSaseUserTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSaseUserTagWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of a user endpoint device under the current Alibaba Cloud account.</p>
      * 
      * @param request GetUserDeviceRequest
@@ -6354,6 +6548,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDevicesForVulnerabilityResponse listDevicesForVulnerability(ListDevicesForVulnerabilityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDevicesForVulnerabilityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists DLP outbound file transfer logs.</p>
+     * 
+     * @param request ListDlpOutboundLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDlpOutboundLogsResponse
+     */
+    public ListDlpOutboundLogsResponse listDlpOutboundLogsWithOptions(ListDlpOutboundLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logId)) {
+            body.put("LogId", request.logId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyAction)) {
+            body.put("PolicyAction", request.policyAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcFileName)) {
+            body.put("SrcFileName", request.srcFileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subChannelType)) {
+            body.put("SubChannelType", request.subChannelType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDlpOutboundLogs"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDlpOutboundLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists DLP outbound file transfer logs.</p>
+     * 
+     * @param request ListDlpOutboundLogsRequest
+     * @return ListDlpOutboundLogsResponse
+     */
+    public ListDlpOutboundLogsResponse listDlpOutboundLogs(ListDlpOutboundLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDlpOutboundLogsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the Internet access logs of endpoints under the current tenant by using paging. The logs contain full records of Internet access behavior.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Internet access logs of endpoints by using paging.</p>
+     * 
+     * @param request ListDomainAccessLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDomainAccessLogsResponse
+     */
+    public ListDomainAccessLogsResponse listDomainAccessLogsWithOptions(ListDomainAccessLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDomainAccessLogs"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDomainAccessLogsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the Internet access logs of endpoints under the current tenant by using paging. The logs contain full records of Internet access behavior.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Internet access logs of endpoints by using paging.</p>
+     * 
+     * @param request ListDomainAccessLogsRequest
+     * @return ListDomainAccessLogsResponse
+     */
+    public ListDomainAccessLogsResponse listDomainAccessLogs(ListDomainAccessLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDomainAccessLogsWithOptions(request, runtime);
     }
 
     /**
@@ -9377,6 +9693,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Unbinds user labels.</p>
+     * 
+     * @param request UnbindSaseUserTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindSaseUserTagResponse
+     */
+    public UnbindSaseUserTagResponse unbindSaseUserTagWithOptions(UnbindSaseUserTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.saseUserIds)) {
+            bodyFlat.put("SaseUserIds", request.saseUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIds)) {
+            bodyFlat.put("TagIds", request.tagIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnbindSaseUserTag"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindSaseUserTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Unbinds user labels.</p>
+     * 
+     * @param request UnbindSaseUserTagRequest
+     * @return UnbindSaseUserTagResponse
+     */
+    public UnbindSaseUserTagResponse unbindSaseUserTag(UnbindSaseUserTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unbindSaseUserTagWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Configures the real-time anti-virus defense policy for the current Alibaba Cloud account. The first call creates the policy, and subsequent calls update it. The complete updated configuration is returned. When configuring for the first time, Status, MatchMode, HighRiskOperation, MidRiskOperation, LowRiskOperation, and ScanTargets are all required. ScanTargets and Whitelist are full replacements. The collection you pass in replaces the existing configuration. When MatchMode is set to UserGroupNormal, you must pass in the complete UserGroupIds on every call. When Status is not set to Disabled, the system validates the endpoint hardening license count. The call fails if the count exceeds the purchased licenses.</p>
      * 
      * @param request UpdateAntiVirusRealTimeDefenceStrategyRequest
@@ -11133,6 +11502,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRiskStatusResponse updateRiskStatus(UpdateRiskStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRiskStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a user tag.</p>
+     * 
+     * @param request UpdateSaseUserTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSaseUserTagResponse
+     */
+    public UpdateSaseUserTagResponse updateSaseUserTagWithOptions(UpdateSaseUserTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagId)) {
+            body.put("TagId", request.tagId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSaseUserTag"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSaseUserTagResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a user tag.</p>
+     * 
+     * @param request UpdateSaseUserTagRequest
+     * @return UpdateSaseUserTagResponse
+     */
+    public UpdateSaseUserTagResponse updateSaseUserTag(UpdateSaseUserTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSaseUserTagWithOptions(request, runtime);
     }
 
     /**
