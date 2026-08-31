@@ -38,7 +38,7 @@ public class ModifyAgenticSpaceRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to perform a dry run for this request.</p>
-     * <p>A dry run checks parameter validity and resource availability without actually creating or modifying the instance, and does not incur fees.</p>
+     * <p>A dry run checks parameter validity and resource availability without actually creating or modifying the instance, and no fees are incurred.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>true: Sends a check request without modifying the instance. The check items include whether required parameters are specified, request format, business limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</li>

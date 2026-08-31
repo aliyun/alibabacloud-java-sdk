@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCpfsAccessPointResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>70EACC9C-D07A-4A34-ADA4-77506C42B023</p>
      */

@@ -28,10 +28,10 @@ public class SetAgenticSpaceQuotaRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run for this request. A dry run checks parameter validity and dependencies without actually modifying the instance or incurring charges.</p>
+     * <p>Specifies whether to perform a dry run for this request. A dry run checks parameter validity and dependencies without actually modifying the instance or incurring fees.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: Sends a dry run request without modifying the protocol service. The check items include required parameters, request format, and business dependency conditions. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</li>
+     * <li>true: Sends a check request without modifying the protocol service. The check items include whether required parameters are specified, request format, and business limit dependencies. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</li>
      * <li>false (default): Sends a normal request. After the check passes, the protocol service is directly modified.</li>
      * </ul>
      * 

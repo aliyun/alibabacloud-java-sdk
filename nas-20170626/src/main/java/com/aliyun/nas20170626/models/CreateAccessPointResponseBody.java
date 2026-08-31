@@ -42,7 +42,7 @@ public class CreateAccessPointResponseBody extends TeaModel {
 
     public static class CreateAccessPointResponseBodyAccessPoint extends TeaModel {
         /**
-         * <p>The domain name of the access point.</p>
+         * <p>The access point domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>

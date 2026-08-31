@@ -24,7 +24,7 @@ public class DescribeFilesetsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The filter information for the filesets to query.</p>
+     * <p>The filter key information for the filesets to query.</p>
      */
     @NameInMap("Filters")
     public java.util.List<DescribeFilesetsRequestFilters> filters;
@@ -64,7 +64,7 @@ public class DescribeFilesetsRequest extends TeaModel {
     public String orderByField;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>The sort order.</p>
      * <ul>
      * <li>asc (default): ascending order, which sorts results from smallest to largest.</li>
      * <li>desc: descending order, which sorts results from largest to smallest.<blockquote>
@@ -154,10 +154,10 @@ public class DescribeFilesetsRequest extends TeaModel {
         /**
          * <p>The value of the filter key. Wildcards are not supported for this parameter.</p>
          * <ul>
-         * <li>If Key is set to FsetIds, Value is a fileset ID. You can specify one or more fileset IDs, up to a maximum of 10. Separate multiple values with commas (,). Example: <code>fset-1902718ea0ae****</code> or <code>fset-1902718ea0ae****,fset-3212718ea0ae****</code>.</li>
-         * <li>If Key is set to FileSystemPath, Value is the path or a partial path of the fileset in the CPFS file system. The value must be 2 to 1,024 characters in length and encoded in UTF-8.</li>
-         * <li>If Key is set to Description, Value is the description or a partial description of the fileset.</li>
-         * <li>If Key is set to QuotaExists, Value is true or false. If this parameter is left empty, all filesets are returned.</li>
+         * <li>If Key is set to FsetIds, Value is set to a fileset ID. You can specify one or more fileset IDs, up to a maximum of 10. Separate multiple values with commas (,). Example: <code>fset-1902718ea0ae****</code> or <code>fset-1902718ea0ae****,fset-3212718ea0ae****</code>.</li>
+         * <li>If Key is set to FileSystemPath, Value is set to the path or a partial path of the fileset in the CPFS file system. The value must be 2 to 1,024 characters in length and encoded in UTF-8.</li>
+         * <li>If Key is set to Description, Value is set to the description or a partial description of the fileset.</li>
+         * <li>If Key is set to QuotaExists, Value is set to true or false. If this parameter is left empty, all filesets are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>

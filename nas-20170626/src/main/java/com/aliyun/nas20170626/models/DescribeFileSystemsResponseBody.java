@@ -17,7 +17,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of file systems on each page.</p>
+     * <p>The number of file systems per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

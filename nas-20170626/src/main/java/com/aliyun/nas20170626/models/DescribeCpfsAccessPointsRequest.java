@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCpfsAccessPointsRequest extends TeaModel {
     /**
+     * <p>The access point ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-ie15yd****</p>
      */
@@ -12,6 +14,13 @@ public class DescribeCpfsAccessPointsRequest extends TeaModel {
     public String accessPointId;
 
     /**
+     * <p>The file system ID.</p>
+     * <ul>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-099394bd928c****.</p>
+     * </li>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +30,8 @@ public class DescribeCpfsAccessPointsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The page number of the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +39,10 @@ public class DescribeCpfsAccessPointsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results per query.
+     * Valid values: 1 to 100.
+     * Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +50,7 @@ public class DescribeCpfsAccessPointsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCpfsAccessPointMountedClientsRequest extends TeaModel {
     /**
+     * <p>The access point ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends TeaModel {
     public String accessPointId;
 
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The page number of the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +34,9 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results on each page. Valid values: 1 to 100.
+     * Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -37,6 +44,7 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

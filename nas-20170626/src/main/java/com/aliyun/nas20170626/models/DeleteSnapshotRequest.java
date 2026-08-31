@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
     /**
-     * <p>The snapshot ID. After a snapshot is successfully created on an Advanced Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createsnapshot">CreateSnapshot</a>, call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describesnapshots">DescribeSnapshots</a> (with FileSystemType set to extreme) to query the snapshot list and obtain the snapshot ID.</p>
+     * <p>The snapshot ID. After you successfully create a snapshot for an Advanced Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createsnapshot">CreateSnapshot</a>, call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describesnapshots">DescribeSnapshots</a> (with FileSystemType set to extreme) to query the snapshot list and obtain the snapshot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

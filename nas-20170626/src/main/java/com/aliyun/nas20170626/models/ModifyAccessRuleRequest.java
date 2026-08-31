@@ -68,7 +68,7 @@ public class ModifyAccessRuleRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The read and write permission that the authorized object has on the file system.</p>
+     * <p>The read and write permissions of the authorized object on the file system.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>RDWR (default): read and write.</li>
@@ -95,7 +95,7 @@ public class ModifyAccessRuleRequest extends TeaModel {
     public String sourceCidrIp;
 
     /**
-     * <p>The access permissions that the system user of the authorization object has on the file system.</p>
+     * <p>The authorization of the system user of the authorized object on the file system.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>no_squash: allows access to the file system as the root user.</li>

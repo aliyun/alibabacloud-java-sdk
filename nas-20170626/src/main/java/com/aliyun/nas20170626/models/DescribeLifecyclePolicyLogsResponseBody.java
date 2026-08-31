@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
     /**
-     * <p>The execution logs of the lifecycle policy.</p>
+     * <p>The execution logs of the lifecycle management policy.</p>
      */
     @NameInMap("LifecyclePolicyLogs")
     public java.util.List<DescribeLifecyclePolicyLogsResponseBodyLifecyclePolicyLogs> lifecyclePolicyLogs;
@@ -38,8 +38,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request status.</p>
-     * <p>Valid values:</p>
+     * <p>The request status. Valid values:</p>
      * <ul>
      * <li>true: The request was successful.</li>
      * <li>false: The request failed.</li>
@@ -118,8 +117,11 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
          * <p>The attribute of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the access time of the file.</li>
+         * <li>Atime: the last access time of the file.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Atime</p>
          */
         @NameInMap("Attribute")
         public String attribute;
@@ -130,6 +132,9 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
          * <ul>
          * <li>If Attribute is set to Atime, this parameter specifies the number of days since the file was last accessed. Valid values: 1 to 365.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Threshold")
         public String threshold;
@@ -214,7 +219,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
          * <p>The attribute of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the access time of the file.</li>
+         * <li>Atime: the last access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>

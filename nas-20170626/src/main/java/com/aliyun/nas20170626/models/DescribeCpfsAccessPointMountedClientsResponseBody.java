@@ -4,10 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel {
+    /**
+     * <p>The clients mounted to the access point.</p>
+     */
     @NameInMap("MountedClient")
     public java.util.List<DescribeCpfsAccessPointMountedClientsResponseBodyMountedClient> mountedClient;
 
     /**
+     * <p>The page number of the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
     public Integer pageNumber;
 
     /**
+     * <p>The number of results on each page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
@@ -29,6 +38,8 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>The total number of clients mounted to the access point.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +93,12 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
 
     public static class DescribeCpfsAccessPointMountedClientsResponseBodyMountedClient extends TeaModel {
         /**
+         * <p>The type of the client mounted to the access point. Valid values:</p>
+         * <ul>
+         * <li>vsc</li>
+         * <li>tcp</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>vsc</p>
          */
@@ -89,6 +106,8 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
         public String channelType;
 
         /**
+         * <p>The ID of the client mounted to the access point.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsc-8vb864o3ppwfvh****</p>
          */
@@ -96,6 +115,8 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
         public String clientId;
 
         /**
+         * <p>The IP address of the client mounted to the access point.</p>
+         * 
          * <strong>example:</strong>
          * <p>219.145.34.210</p>
          */

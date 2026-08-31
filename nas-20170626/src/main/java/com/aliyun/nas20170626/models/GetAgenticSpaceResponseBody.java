@@ -114,8 +114,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String azone;
 
         /**
-         * <p>The time when the AgenticSpace was created.
-         * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The time when the AgenticSpace was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T10:08:08Z</p>
@@ -187,8 +186,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the AgenticSpace was last updated.
-         * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The time when the AgenticSpace was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T10:08:08Z</p>

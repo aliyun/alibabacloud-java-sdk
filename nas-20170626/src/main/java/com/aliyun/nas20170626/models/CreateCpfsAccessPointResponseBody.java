@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCpfsAccessPointResponseBody extends TeaModel {
     /**
+     * <p>The access point ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-ie15yd****</p>
      */
@@ -12,6 +14,8 @@ public class CreateCpfsAccessPointResponseBody extends TeaModel {
     public String accessPointId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
      */

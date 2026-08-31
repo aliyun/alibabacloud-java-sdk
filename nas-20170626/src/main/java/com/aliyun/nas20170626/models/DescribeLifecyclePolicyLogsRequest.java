@@ -15,7 +15,7 @@ public class DescribeLifecyclePolicyLogsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The ID of the lifecycle policy.</p>
+     * <p>The ID of the lifecycle management policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeLifecyclePolicyLogsRequest extends TeaModel {
     public String lifecyclePolicyId;
 
     /**
-     * <p>The page number of the list.</p>
+     * <p>The page number.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>

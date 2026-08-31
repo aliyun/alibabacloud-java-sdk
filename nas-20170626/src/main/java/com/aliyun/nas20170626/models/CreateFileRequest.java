@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFileRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,8 @@ public class CreateFileRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The ID of the portable account. The ID must be a 16-digit string. The string can contain digits and lowercase letters.</p>
+     * <p>The portable account ID.
+     * Limit: The value is a 16-character string that supports digits and lowercase letters.</p>
      * 
      * <strong>example:</strong>
      * <p>378cc7630f26****</p>
@@ -24,17 +25,17 @@ public class CreateFileRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>Specifies whether to share the directory. Valid values:</p>
+     * <p>Specifies whether to share directory permissions. Valid values:</p>
      * <ul>
-     * <li>false (default): does not share the directory.</li>
-     * <li>true: shares the directory.</li>
-     * </ul>
-     * <blockquote>
+     * <li>false (default): does not share directory permissions.</li>
+     * <li>true: shares directory permissions.<blockquote>
      * <ul>
-     * <li>This parameter takes effect only if the Type parameter is set to Directory and the Owner parameter is not empty.</li>
-     * <li>The permissions on a directory can be inherited by the owner. The owner has read and write permissions on the subdirectories and subfiles created in the directory, even if they are created by others.</li>
+     * <li>This parameter takes effect only when Type is set to Directory and Owner is not empty.</li>
+     * <li>The directory has inheritable Owner permissions. The Owner has read and write permissions on subdirectories and files created under this directory, even if they are created by other users.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -43,7 +44,12 @@ public class CreateFileRequest extends TeaModel {
     public Boolean ownerAccessInheritable;
 
     /**
-     * <p>The absolute path of the directory or file. The path must start and end with a forward slash (/) and must be 2 to 1024 characters in length.</p>
+     * <p>The absolute path of the directory or file.</p>
+     * <ul>
+     * <li>The path must start and end with a forward slash (/).</li>
+     * <li>The path must be 1 to 1,023 characters in length.</li>
+     * <li>The path must be encoded in UTF-8.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,10 +59,10 @@ public class CreateFileRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The type of the object. Valid values:</p>
+     * <p>The object type. Valid values:</p>
      * <ul>
-     * <li>File</li>
-     * <li>Directory</li>
+     * <li>File: file.</li>
+     * <li>Directory: directory.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

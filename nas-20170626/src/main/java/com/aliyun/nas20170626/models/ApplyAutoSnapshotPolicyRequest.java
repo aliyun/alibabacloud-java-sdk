@@ -15,12 +15,12 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The IDs of Advanced Extreme NAS file systems.</p>
+     * <p>The IDs of the Advanced Extreme NAS file systems.</p>
      * <p>You can specify up to 100 file system IDs in a single request. Separate multiple file system IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>extreme-233e6****,extreme -23vbp****,extreme -23vas****</p>
+     * <p>extreme-233e6****,extreme-23vbp****,extreme-23vas****</p>
      */
     @NameInMap("FileSystemIds")
     public String fileSystemIds;

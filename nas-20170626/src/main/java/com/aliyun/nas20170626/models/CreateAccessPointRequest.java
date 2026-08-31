@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccessPointRequest extends TeaModel {
     /**
-     * <p>The name of the permission group.</p>
+     * <p>The permission group name.</p>
      * <p>This parameter is required if the file system is a General-purpose NAS file system.</p>
      * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</p>
      * <blockquote>
@@ -19,7 +19,7 @@ public class CreateAccessPointRequest extends TeaModel {
     public String accessGroup;
 
     /**
-     * <p>The name of the access point.</p>
+     * <p>The access point name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -40,14 +40,14 @@ public class CreateAccessPointRequest extends TeaModel {
     public String agenticSpaceId;
 
     /**
-     * <p>Specifies whether to enable access point policy.
+     * <p>Specifies whether to enable the RAM policy.
      * Valid values:</p>
      * <ul>
      * <li>true: enabled.</li>
      * <li>false (default): not enabled.</li>
      * </ul>
      * <blockquote>
-     * <p>After you enable access point policy for the access point, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant the corresponding access permissions through authorization and then mount and access the file system through the access point. After you disable access point policy, the access point allows anonymity mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure access point policies</a>.</p>
+     * <p>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant the corresponding access permissions through authorization and mount the file system through the access point. After you disable the RAM policy, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure an access point policy</a>.</p>
      * </blockquote>
      * <blockquote>
      * <p>For Agentic file systems, this parameter must be set to true.</p>
@@ -96,8 +96,8 @@ public class CreateAccessPointRequest extends TeaModel {
     public Integer ownerUserId;
 
     /**
-     * <p>The POSIX permission. Default value: &quot;0755&quot;. The value must be a four-digit octal number that starts with 0.</p>
-     * <p>This parameter takes effect only after you specify the OwnerUserId and OwnerGroupId parameters.</p>
+     * <p>The POSIX permission. Default value: &quot;0755&quot;. Limit: The value must be a four-digit octal number that starts with 0.</p>
+     * <p>This parameter takes effect after you specify the OwnerUserId and OwnerGroupId parameters.</p>
      * <blockquote>
      * <p>Not supported for Agentic file systems.</p>
      * </blockquote>
@@ -148,7 +148,7 @@ public class CreateAccessPointRequest extends TeaModel {
      * <p>The root directory of the access point.
      * Default value: &quot;/&quot;. If the access point directory does not exist, you must also specify the OwnerUserId and OwnerGroupId parameters.</p>
      * <blockquote>
-     * <p>Supported only for Agentic file systems.</p>
+     * <p>Not supported for Agentic file systems.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -313,10 +313,10 @@ public class CreateAccessPointRequest extends TeaModel {
          * <p>The tag key.
          * Limits:</p>
          * <ul>
-         * <li>Cannot be empty or an empty string.</li>
-         * <li>Can be up to 128 characters in length.</li>
-         * <li>Cannot start with aliyun or acs:.</li>
-         * <li>Cannot contain http:// or https://.</li>
+         * <li>The tag key cannot be empty or an empty string.</li>
+         * <li>The tag key can be up to 128 characters in length.</li>
+         * <li>The tag key cannot start with aliyun or acs:.</li>
+         * <li>The tag key cannot contain http:// or https://.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,9 +329,9 @@ public class CreateAccessPointRequest extends TeaModel {
          * <p>The tag value.
          * Limits:</p>
          * <ul>
-         * <li>Cannot be empty or an empty string.</li>
-         * <li>Can be up to 128 characters in length.</li>
-         * <li>Cannot contain http:// or https://.</li>
+         * <li>The tag value cannot be empty or an empty string.</li>
+         * <li>The tag value can be up to 128 characters in length.</li>
+         * <li>The tag value cannot contain http:// or https://.</li>
          * </ul>
          * 
          * <strong>example:</strong>

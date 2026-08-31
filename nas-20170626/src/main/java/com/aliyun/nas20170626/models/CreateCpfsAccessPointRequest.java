@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateCpfsAccessPointRequest extends TeaModel {
     /**
+     * <p>The description of the access point.</p>
+     * <p>Limits:</p>
+     * <ul>
+     * <li>The description must be 2 to 128 characters in length.</li>
+     * <li>The description must start with a letter.It cannot start with http:// or https://.</li>
+     * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Description</p>
      */
@@ -12,6 +20,13 @@ public class CreateCpfsAccessPointRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The file system ID.</p>
+     * <ul>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +36,7 @@ public class CreateCpfsAccessPointRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +45,9 @@ public class CreateCpfsAccessPointRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The root directory of the access point. Default value: &quot;/&quot;.</p>
+     */
     @NameInMap("RootDirectory")
     public CreateCpfsAccessPointRequestRootDirectory rootDirectory;
 
@@ -71,6 +90,8 @@ public class CreateCpfsAccessPointRequest extends TeaModel {
 
     public static class CreateCpfsAccessPointRequestRootDirectory extends TeaModel {
         /**
+         * <p>The root directory of the access point. The value must start and end with a forward slash (/).</p>
+         * 
          * <strong>example:</strong>
          * <p>/test/</p>
          */

@@ -21,7 +21,7 @@ public class DescribeAgenticSpacesRequest extends TeaModel {
     public java.util.List<DescribeAgenticSpacesRequestFilters> filters;
 
     /**
-     * <p>The number of results for each query.</p>
+     * <p>The number of results per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class DescribeAgenticSpacesRequest extends TeaModel {
         /**
          * <p>The value of the filter key. This parameter does not support wildcards.</p>
          * <ul>
-         * <li>AgenticSpaceIds: Only a single ID can be specified.</li>
+         * <li>AgenticSpaceIds: Only one ID can be specified.</li>
          * </ul>
          * 
          * <strong>example:</strong>

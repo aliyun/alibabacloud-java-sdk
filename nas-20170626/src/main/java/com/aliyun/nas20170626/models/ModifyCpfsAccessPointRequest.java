@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCpfsAccessPointRequest extends TeaModel {
     /**
+     * <p>The access point ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyCpfsAccessPointRequest extends TeaModel {
     public String accessPointId;
 
     /**
+     * <p>The description of the access point.</p>
+     * 
      * <strong>example:</strong>
      * <p>Description</p>
      */
@@ -21,6 +24,13 @@ public class ModifyCpfsAccessPointRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The file system ID.</p>
+     * <ul>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, for example, bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,7 @@ public class ModifyCpfsAccessPointRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

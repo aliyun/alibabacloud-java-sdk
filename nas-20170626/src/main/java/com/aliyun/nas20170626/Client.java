@@ -42,38 +42,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhengzhou-nebula-1", "nas.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "nas.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "nas.aliyuncs.com"),
-            new TeaPair("us-west-1", "nas.us-west-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "nas.us-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "nas.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "nas.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "nas.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "nas.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "nas.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "nas.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "nas.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "nas.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "nas.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "nas.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "nas.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "nas.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "nas.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "nas.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "nas.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "nas.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "nas.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "nas.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "nas.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "nas.ap-southeast-8.aliyuncs.com"),
             new TeaPair("us-east-1", "nas.us-east-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "nas.us-southeast-1.aliyuncs.com"),
+            new TeaPair("sa-east-1", "nas.sa-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "nas.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "nas.eu-west-2.aliyuncs.com"),
+            new TeaPair("us-west-1", "nas.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "nas.eu-central-1.aliyuncs.com"),
             new TeaPair("na-south-1", "nas.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "nas.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "nas.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "nas.eu-west-2.aliyuncs.com"),
-            new TeaPair("eu-west-1", "nas.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "nas.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "nas.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "nas.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "nas.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "nas.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "nas.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "nas.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "nas.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "nas.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "nas.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "nas.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "nas.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "nas.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "nas.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "nas.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "nas.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "nas.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "nas.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "nas.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "nas.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "nas.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "nas.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "nas.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "nas.ap-northeast-1.aliyuncs.com")
+            new TeaPair("cn-shanghai-finance-1", "nas.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("nas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -164,20 +165,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p><em>Before you begin</em>*
+     * Only Advanced Extreme NAS file systems support this operation. Before you call this operation, complete the following preparations:</p>
      * <ul>
+     * <li>An Advanced Extreme NAS file system is created. When you invoke the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createfilesystem">CreateFileSystem</a> operation to create a file system, set the following parameters:<ul>
+     * <li>FileSystemType: extreme</li>
+     * <li>StorageType: advance</li>
+     * </ul>
+     * </li>
+     * <li>An automatic snapshot policy is created. For more information, see <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createautosnapshotpolicy">CreateAutoSnapshotPolicy</a>.</li>
+     * <li>The AliyunNASManageENIRole console authorization is completed. Before you create an Extreme NAS file system, associate the service-linked role AliyunNASManageENIRole with File Storage NAS to allow NAS to manage elastic network interfaces (ENIs), which are network interface controller (NIC) resources. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage NAS service-linked roles</a>.
+     * <strong>Usage notes</strong>
+     * &lt;props=&quot;china&quot;&gt;</li>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</li>
-     * <li>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</li>
      * <li>Each file system can have only one automatic snapshot policy applied.</li>
-     * <li>One automatic snapshot policy can be applied to multiple file systems.</li>
+     * <li>An automatic snapshot policy can be applied to multiple file systems.</li>
      * <li>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.
      * &lt;props=&quot;intl&quot;&gt;</li>
-     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</li>
-     * <li>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</li>
+     * <li>This feature is in free public preview.</li>
      * <li>Each file system can have only one automatic snapshot policy applied.</li>
-     * <li>One automatic snapshot policy can be applied to multiple file systems.</li>
+     * <li>An automatic snapshot policy can be applied to multiple file systems.</li>
      * <li>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.</li>
      * </ul>
      * 
@@ -218,20 +225,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p><em>Before you begin</em>*
+     * Only Advanced Extreme NAS file systems support this operation. Before you call this operation, complete the following preparations:</p>
      * <ul>
+     * <li>An Advanced Extreme NAS file system is created. When you invoke the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createfilesystem">CreateFileSystem</a> operation to create a file system, set the following parameters:<ul>
+     * <li>FileSystemType: extreme</li>
+     * <li>StorageType: advance</li>
+     * </ul>
+     * </li>
+     * <li>An automatic snapshot policy is created. For more information, see <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createautosnapshotpolicy">CreateAutoSnapshotPolicy</a>.</li>
+     * <li>The AliyunNASManageENIRole console authorization is completed. Before you create an Extreme NAS file system, associate the service-linked role AliyunNASManageENIRole with File Storage NAS to allow NAS to manage elastic network interfaces (ENIs), which are network interface controller (NIC) resources. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage NAS service-linked roles</a>.
+     * <strong>Usage notes</strong>
+     * &lt;props=&quot;china&quot;&gt;</li>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</li>
-     * <li>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</li>
      * <li>Each file system can have only one automatic snapshot policy applied.</li>
-     * <li>One automatic snapshot policy can be applied to multiple file systems.</li>
+     * <li>An automatic snapshot policy can be applied to multiple file systems.</li>
      * <li>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.
      * &lt;props=&quot;intl&quot;&gt;</li>
-     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</li>
-     * <li>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</li>
+     * <li>This feature is in free public preview.</li>
      * <li>Each file system can have only one automatic snapshot policy applied.</li>
-     * <li>One automatic snapshot policy can be applied to multiple file systems.</li>
+     * <li>An automatic snapshot policy can be applied to multiple file systems.</li>
      * <li>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.</li>
      * </ul>
      * 
@@ -415,16 +428,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
      * <li>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.
      * &lt;props=&quot;intl&quot;&gt;</li>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
      * <li>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels the automatic snapshot policy that is created for a file system.</p>
+     * <p>Cancels the automatic snapshot policy that has been created for a file system.</p>
      * 
      * @param request CancelAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -459,16 +472,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
      * <li>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.
      * &lt;props=&quot;intl&quot;&gt;</li>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
      * <li>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels the automatic snapshot policy that is created for a file system.</p>
+     * <p>Cancels the automatic snapshot policy that has been created for a file system.</p>
      * 
      * @param request CancelAutoSnapshotPolicyRequest
      * @return CancelAutoSnapshotPolicyResponse
@@ -556,15 +569,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><em>Prerequisite resource creation process</em>*
+     * Before canceling a data flow streaming subtask, create resources in the following order:</p>
+     * <ol>
+     * <li>Create a data flow: Call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-createdataflow-bmcpfs">CreateDataFlow</a> to create a data flow.</li>
+     * <li>Create a data flow task: Call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-createdataflowtask-bmcpfs">CreateDataFlowTask</a> to create a StreamImport or StreamExport task.</li>
+     * <li>Create a data flow streaming subtask: Call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-createdataflowsubtask-bmcpfs">CreateDataFlowSubTask</a> to create a streaming subtask.<blockquote>
+     * <p>CPFS for Lingjun file systems must be created in the console.
+     * <strong>Operation description</strong></p>
+     * </blockquote>
+     * </li>
+     * </ol>
      * <ul>
-     * <li>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</li>
+     * <li>Only CPFS for Lingjun 2.6.0 and later are supported. You can view the version information on the file system details page in the console.</li>
      * <li>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, the DataFlowTask is in the Executing state, and the DataFlowSubTask is in the CREATED or RUNNING state.</li>
      * <li>You can cancel a data flow streaming subtask only when it is in the CREATED or RUNNING state.</li>
-     * <li>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of a streaming task.</li>
+     * <li>Data flow streaming tasks are executed asynchronously. You can call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-describedataflowtasks-bmcpfs">DescribeDataFlowSubTasks</a> to query the execution status of a streaming task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a data flow streaming task.</p>
+     * <p>Cancels a data flow streaming subtask.</p>
      * 
      * @param request CancelDataFlowSubTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -616,15 +640,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><em>Prerequisite resource creation process</em>*
+     * Before canceling a data flow streaming subtask, create resources in the following order:</p>
+     * <ol>
+     * <li>Create a data flow: Call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-createdataflow-bmcpfs">CreateDataFlow</a> to create a data flow.</li>
+     * <li>Create a data flow task: Call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-createdataflowtask-bmcpfs">CreateDataFlowTask</a> to create a StreamImport or StreamExport task.</li>
+     * <li>Create a data flow streaming subtask: Call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-createdataflowsubtask-bmcpfs">CreateDataFlowSubTask</a> to create a streaming subtask.<blockquote>
+     * <p>CPFS for Lingjun file systems must be created in the console.
+     * <strong>Operation description</strong></p>
+     * </blockquote>
+     * </li>
+     * </ol>
      * <ul>
-     * <li>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</li>
+     * <li>Only CPFS for Lingjun 2.6.0 and later are supported. You can view the version information on the file system details page in the console.</li>
      * <li>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, the DataFlowTask is in the Executing state, and the DataFlowSubTask is in the CREATED or RUNNING state.</li>
      * <li>You can cancel a data flow streaming subtask only when it is in the CREATED or RUNNING state.</li>
-     * <li>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of a streaming task.</li>
+     * <li>Data flow streaming tasks are executed asynchronously. You can call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-describedataflowtasks-bmcpfs">DescribeDataFlowSubTasks</a> to query the execution status of a streaming task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a data flow streaming task.</p>
+     * <p>Cancels a data flow streaming subtask.</p>
      * 
      * @param request CancelDataFlowSubTaskRequest
      * @return CancelDataFlowSubTaskResponse
@@ -636,9 +671,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><em>Prerequisites</em>*
+     * Before you call this operation, create resources in the following order and make sure that the resources at each layer are in the required state:</p>
+     * <ol>
+     * <li>Create a file system: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a CPFS file system.<ul>
+     * <li>State requirement: The file system is in the Running state.</li>
+     * </ul>
+     * </li>
+     * <li>Create a mount target: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createmounttarget-cpfs">CreateMountTarget</a> to create a mount target.<ul>
+     * <li>State requirement: The mount target is in the Active state.</li>
+     * </ul>
+     * </li>
+     * <li>Create a fileset: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfileset-cpfs">CreateFileset</a> to create a fileset.<ul>
+     * <li>State requirement: The fileset is created.</li>
+     * </ul>
+     * </li>
+     * <li>Create a data flow: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createdataflow-cpfs">CreateDataFlow</a> to create a data flow.<ul>
+     * <li>State requirement: The data flow is in the Running state.</li>
+     * </ul>
+     * </li>
+     * <li>Create a data flow task: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createdataflowtask-cpfs">CreateDataFlowTask</a> to create a data flow task.
+     * <strong>Operation description</strong></li>
+     * </ol>
      * <ul>
      * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</li>
-     * <li>Before you begin: A CPFS file system is created, the mount target is in the Active state, a fileset is created, and the data flow is in the Running state.</li>
      * <li>Only data flow tasks in the <code>Pending</code> state can be canceled.</li>
      * <li>Canceling a data flow task typically takes 5 to 10 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status.</li>
      * <li>If a streaming task contains running streaming subtasks, the streaming task cannot be canceled. Otherwise, the InvalidStatus.ResourceMismatch error is returned.</li>
@@ -693,9 +749,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><em>Prerequisites</em>*
+     * Before you call this operation, create resources in the following order and make sure that the resources at each layer are in the required state:</p>
+     * <ol>
+     * <li>Create a file system: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a CPFS file system.<ul>
+     * <li>State requirement: The file system is in the Running state.</li>
+     * </ul>
+     * </li>
+     * <li>Create a mount target: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createmounttarget-cpfs">CreateMountTarget</a> to create a mount target.<ul>
+     * <li>State requirement: The mount target is in the Active state.</li>
+     * </ul>
+     * </li>
+     * <li>Create a fileset: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfileset-cpfs">CreateFileset</a> to create a fileset.<ul>
+     * <li>State requirement: The fileset is created.</li>
+     * </ul>
+     * </li>
+     * <li>Create a data flow: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createdataflow-cpfs">CreateDataFlow</a> to create a data flow.<ul>
+     * <li>State requirement: The data flow is in the Running state.</li>
+     * </ul>
+     * </li>
+     * <li>Create a data flow task: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createdataflowtask-cpfs">CreateDataFlowTask</a> to create a data flow task.
+     * <strong>Operation description</strong></li>
+     * </ol>
      * <ul>
      * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</li>
-     * <li>Before you begin: A CPFS file system is created, the mount target is in the Active state, a fileset is created, and the data flow is in the Running state.</li>
      * <li>Only data flow tasks in the <code>Pending</code> state can be canceled.</li>
      * <li>Canceling a data flow task typically takes 5 to 10 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status.</li>
      * <li>If a streaming task contains running streaming subtasks, the streaming task cannot be canceled. Otherwise, the InvalidStatus.ResourceMismatch error is returned.</li>
@@ -776,10 +853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅CPFS智算版2.7.0及以上版本支持取消配额。</p>
+     * <p>Only CPFS for Lingjun 2.7.0 and later support quota cancellation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels the quota set for a fileset.</p>
+     * <p>Cancels the quota configured for a fileset.</p>
      * 
      * @param request CancelFilesetQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -823,10 +900,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅CPFS智算版2.7.0及以上版本支持取消配额。</p>
+     * <p>Only CPFS for Lingjun 2.7.0 and later support quota cancellation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels the quota set for a fileset.</p>
+     * <p>Cancels the quota configured for a fileset.</p>
      * 
      * @param request CancelFilesetQuotaRequest
      * @return CancelFilesetQuotaResponse
@@ -1071,8 +1148,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <strong>Active</strong>. Otherwise, the mount operation may fail.</li>
-     * <li>Only General-purpose NAS NFS file systems support this feature.</li>
+     * <li>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, invoke the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <strong>Active</strong>. Otherwise, the mount operation may fail.</li>
+     * <li>Only General-purpose NAS file systems that use the NFS protocol support this feature.</li>
      * <li>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</li>
      * </ul>
      * 
@@ -1166,8 +1243,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <strong>Active</strong>. Otherwise, the mount operation may fail.</li>
-     * <li>Only General-purpose NAS NFS file systems support this feature.</li>
+     * <li>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, invoke the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <strong>Active</strong>. Otherwise, the mount operation may fail.</li>
+     * <li>Only General-purpose NAS file systems that use the NFS protocol support this feature.</li>
      * <li>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</li>
      * </ul>
      * 
@@ -1332,31 +1409,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.</li>
-     * <li>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</li>
-     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
-     * <li>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
-     * <li>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</li>
-     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Each Alibaba Cloud account can create up to 100 automatic snapshot policies in a region.</li>
+     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the automatic snapshot time points. Because the file system contains a large amount of data, the snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
+     * <li>Each file system supports up to 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
+     * <li>When you modify the retention period of an automatic snapshot policy, the modification takes effect only on new snapshots. Existing snapshots retain their original retention period.</li>
+     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is completed before you can manually create a snapshot.</li>
      * <li>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</li>
-     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, distinguishing it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
+     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, which distinguishes it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
      * <li>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
-     * .
-     * &lt;props=&quot;intl&quot;&gt;.</li>
-     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.</li>
-     * <li>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</li>
-     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
-     * <li>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
-     * <li>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</li>
-     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</li>
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This feature is in free public preview.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Each Alibaba Cloud account can create up to 100 automatic snapshot policies in a region.</li>
+     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the automatic snapshot time points. Because the file system contains a large amount of data, the snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
+     * <li>Each file system supports up to 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
+     * <li>When you modify the retention period of an automatic snapshot policy, the modification takes effect only on new snapshots. Existing snapshots retain their original retention period.</li>
+     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is completed before you can manually create a snapshot.</li>
      * <li>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</li>
-     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, distinguishing it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
-     * <li>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
-     * .</li>
+     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, which distinguishes it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
+     * <li>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1408,31 +1483,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.</li>
-     * <li>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</li>
-     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
-     * <li>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
-     * <li>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</li>
-     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Each Alibaba Cloud account can create up to 100 automatic snapshot policies in a region.</li>
+     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the automatic snapshot time points. Because the file system contains a large amount of data, the snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
+     * <li>Each file system supports up to 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
+     * <li>When you modify the retention period of an automatic snapshot policy, the modification takes effect only on new snapshots. Existing snapshots retain their original retention period.</li>
+     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is completed before you can manually create a snapshot.</li>
      * <li>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</li>
-     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, distinguishing it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
+     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, which distinguishes it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
      * <li>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
-     * .
-     * &lt;props=&quot;intl&quot;&gt;.</li>
-     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.</li>
-     * <li>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</li>
-     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
-     * <li>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
-     * <li>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</li>
-     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</li>
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This feature is in free public preview.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Each Alibaba Cloud account can create up to 100 automatic snapshot policies in a region.</li>
+     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the automatic snapshot time points. Because the file system contains a large amount of data, the snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
+     * <li>Each file system supports up to 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
+     * <li>When you modify the retention period of an automatic snapshot policy, the modification takes effect only on new snapshots. Existing snapshots retain their original retention period.</li>
+     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is completed before you can manually create a snapshot.</li>
      * <li>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</li>
-     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, distinguishing it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
-     * <li>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
-     * .</li>
+     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, which distinguishes it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
+     * <li>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1448,10 +1521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建 CPFS 智算版 AccessPoint</p>
+     * <p>Creates an access point for a CPFS for Lingjun file system.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于智算cpfs创建接入点</p>
+     * <p>Creates an access point for a CPFS for Lingjun file system.</p>
      * 
      * @param request CreateCpfsAccessPointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1495,10 +1568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建 CPFS 智算版 AccessPoint</p>
+     * <p>Creates an access point for a CPFS for Lingjun file system.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于智算cpfs创建接入点</p>
+     * <p>Creates an access point for a CPFS for Lingjun file system.</p>
      * 
      * @param request CreateCpfsAccessPointRequest
      * @return CreateCpfsAccessPointResponse
@@ -1834,12 +1907,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><em>Before you begin</em>*
+     * Before you call this operation, create resources in the following order and make sure that the resources at each level are in the required state:</p>
+     * <ol>
+     * <li>Create a file system: Create a CPFS for Lingjun file system in the console.<ul>
+     * <li>State requirement: The file system is in the Running state.</li>
+     * </ul>
+     * </li>
+     * <li>Create a data flow: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createdataflow-cpfs">CreateDataFlow</a> to create a data flow.<ul>
+     * <li>State requirement: The data flow is in the Running state.</li>
+     * </ul>
+     * </li>
+     * <li>Create a data flow task: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createdataflowtask-cpfs">CreateDataFlowTask</a> to create a streaming import (StreamImport) or streaming export (StreamExport) task.<ul>
+     * <li>State requirement: The data flow task is in the Executing state.
+     * <strong>Operation description</strong></li>
+     * </ul>
+     * </li>
+     * </ol>
      * <ul>
      * <li>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</li>
-     * <li>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, and the DataFlowTask is in the Executing state.</li>
-     * <li>You can create subtasks only for data flow streaming tasks in the Executing state.</li>
-     * <li>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of streaming tasks.</li>
-     * <li>When the data flow task type is a streaming task, the Running state only indicates that you can create streaming import tasks or streaming export tasks. It does not indicate that the import or export tasks are running.</li>
+     * <li>You can create subtasks only for data flow streaming tasks that are in the Executing state.</li>
+     * <li>Data flow streaming tasks are executed asynchronously. You can call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-describedataflowsubtasks-bmcpfs">DescribeDataFlowSubTasks</a> to query the execution status of a streaming task.</li>
+     * <li>When the data flow task type is a streaming task, the Executing state only indicates that you can create streaming import or streaming export tasks. It does not indicate that the import or export task is running.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1903,12 +1992,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><em>Before you begin</em>*
+     * Before you call this operation, create resources in the following order and make sure that the resources at each level are in the required state:</p>
+     * <ol>
+     * <li>Create a file system: Create a CPFS for Lingjun file system in the console.<ul>
+     * <li>State requirement: The file system is in the Running state.</li>
+     * </ul>
+     * </li>
+     * <li>Create a data flow: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createdataflow-cpfs">CreateDataFlow</a> to create a data flow.<ul>
+     * <li>State requirement: The data flow is in the Running state.</li>
+     * </ul>
+     * </li>
+     * <li>Create a data flow task: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createdataflowtask-cpfs">CreateDataFlowTask</a> to create a streaming import (StreamImport) or streaming export (StreamExport) task.<ul>
+     * <li>State requirement: The data flow task is in the Executing state.
+     * <strong>Operation description</strong></li>
+     * </ul>
+     * </li>
+     * </ol>
      * <ul>
      * <li>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</li>
-     * <li>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, and the DataFlowTask is in the Executing state.</li>
-     * <li>You can create subtasks only for data flow streaming tasks in the Executing state.</li>
-     * <li>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of streaming tasks.</li>
-     * <li>When the data flow task type is a streaming task, the Running state only indicates that you can create streaming import tasks or streaming export tasks. It does not indicate that the import or export tasks are running.</li>
+     * <li>You can create subtasks only for data flow streaming tasks that are in the Executing state.</li>
+     * <li>Data flow streaming tasks are executed asynchronously. You can call <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-describedataflowsubtasks-bmcpfs">DescribeDataFlowSubTasks</a> to query the execution status of a streaming task.</li>
+     * <li>When the data flow task type is a streaming task, the Executing state only indicates that you can create streaming import or streaming export tasks. It does not indicate that the import or export task is running.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2130,10 +2235,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is only available to some users.</p>
      * <ul>
-     * <li>This operation supports only General-purpose NAS file systems that use the Server Message Block (SMB) protocol and have Resource Access Management (RAM) enabled.</li>
+     * <li>This operation is available only to specific users.</li>
+     * <li>Only General-purpose NAS file systems that use the SMB Protocol Type and have access control enabled are supported. Alibaba Cloud Key Management Service (KMS) must also be activated.</li>
      * </ul>
+     * <h2>Prerequisites</h2>
+     * <p>Before calling this API to create a file, complete the following four steps:</p>
+     * <ol>
+     * <li><strong>Create an SMB General-purpose NAS file system</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createfilesystem">CreateFileSystem</a> operation with ProtocolType set to SMB to create a General-purpose NAS file system that supports the SMB protocol.</li>
+     * <li><strong>Activate KMS</strong>: Activate KMS by using one of the following methods:<ul>
+     * <li>Call the Kms.OpenKmsService API operation.</li>
+     * <li>Go to the <a href="https://common-buy.aliyun.com/?commodityCode=kms#/open">console activation page</a>.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Enable SMB ACL</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-enablesmbacl">EnableSmbAcl</a> operation to enable the SMB ACL feature. Recommended configuration:<ul>
+     * <li>AuthMethod=NTLM</li>
+     * <li>AuthCenter=EDS</li>
+     * <li>This configuration does not require an AD domain Keytab and is easier to use.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Call CreateFile</strong>: After completing the preceding steps, call this operation to create a directory or file.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
      * <p>Creates a directory or file.</p>
@@ -2184,10 +2306,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is only available to some users.</p>
      * <ul>
-     * <li>This operation supports only General-purpose NAS file systems that use the Server Message Block (SMB) protocol and have Resource Access Management (RAM) enabled.</li>
+     * <li>This operation is available only to specific users.</li>
+     * <li>Only General-purpose NAS file systems that use the SMB Protocol Type and have access control enabled are supported. Alibaba Cloud Key Management Service (KMS) must also be activated.</li>
      * </ul>
+     * <h2>Prerequisites</h2>
+     * <p>Before calling this API to create a file, complete the following four steps:</p>
+     * <ol>
+     * <li><strong>Create an SMB General-purpose NAS file system</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createfilesystem">CreateFileSystem</a> operation with ProtocolType set to SMB to create a General-purpose NAS file system that supports the SMB protocol.</li>
+     * <li><strong>Activate KMS</strong>: Activate KMS by using one of the following methods:<ul>
+     * <li>Call the Kms.OpenKmsService API operation.</li>
+     * <li>Go to the <a href="https://common-buy.aliyun.com/?commodityCode=kms#/open">console activation page</a>.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Enable SMB ACL</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-enablesmbacl">EnableSmbAcl</a> operation to enable the SMB ACL feature. Recommended configuration:<ul>
+     * <li>AuthMethod=NTLM</li>
+     * <li>AuthCenter=EDS</li>
+     * <li>This configuration does not require an AD domain Keytab and is easier to use.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Call CreateFile</strong>: After completing the preceding steps, call this operation to create a directory or file.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
      * <p>Creates a directory or file.</p>
@@ -3556,10 +3695,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除 CPFS 智算版 AccessPoint。</p>
+     * <p>Deletes a CPFS for Lingjun access point.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于删除智算cpfs接入点</p>
+     * <p>Deletes a CPFS for Lingjun access point.</p>
      * 
      * @param request DeleteCpfsAccessPointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3599,10 +3738,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除 CPFS 智算版 AccessPoint。</p>
+     * <p>Deletes a CPFS for Lingjun access point.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于删除智算cpfs接入点</p>
+     * <p>Deletes a CPFS for Lingjun access point.</p>
      * 
      * @param request DeleteCpfsAccessPointRequest
      * @return DeleteCpfsAccessPointResponse
@@ -4171,14 +4310,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.
+     * <li>Only Advanced Extreme NAS file systems support this feature.
      * &lt;props=&quot;intl&quot;&gt;</li>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified snapshot or cancels a snapshot task that is being created.</p>
+     * <p>Deletes a specified snapshot or cancels a snapshot that is being created.</p>
      * 
      * @param request DeleteSnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4213,14 +4352,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.
+     * <li>Only Advanced Extreme NAS file systems support this feature.
      * &lt;props=&quot;intl&quot;&gt;</li>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified snapshot or cancels a snapshot task that is being created.</p>
+     * <p>Deletes a specified snapshot or cancels a snapshot that is being created.</p>
      * 
      * @param request DeleteSnapshotRequest
      * @return DeleteSnapshotResponse
@@ -4480,7 +4619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic-type file systems.</p>
+     * <p>Applies to agentic-type file systems.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries Agentic spaces.</p>
@@ -4527,7 +4666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic-type file systems.</p>
+     * <p>Applies to agentic-type file systems.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries Agentic spaces.</p>
@@ -4764,10 +4903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询 CPFS 智算版 AccessPoint 已挂载客户端列表。</p>
+     * <p>Queries the list of clients mounted to an access point of a CPFS for Lingjun file system.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于查询智算cpfs AP 已挂载客户端列表</p>
+     * <p>Queries the list of clients mounted to an access point of a CPFS for Lingjun file system.</p>
      * 
      * @param request DescribeCpfsAccessPointMountedClientsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4815,10 +4954,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询 CPFS 智算版 AccessPoint 已挂载客户端列表。</p>
+     * <p>Queries the list of clients mounted to an access point of a CPFS for Lingjun file system.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于查询智算cpfs AP 已挂载客户端列表</p>
+     * <p>Queries the list of clients mounted to an access point of a CPFS for Lingjun file system.</p>
      * 
      * @param request DescribeCpfsAccessPointMountedClientsRequest
      * @return DescribeCpfsAccessPointMountedClientsResponse
@@ -4830,10 +4969,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询 CPFS 智算版 AccessPoint。</p>
+     * <p>Queries access points of CPFS for Lingjun.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于查询指定文件系统下的智算CPFS接入点信息</p>
+     * <p>Queries access points of CPFS for Lingjun.</p>
      * 
      * @param request DescribeCpfsAccessPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4881,10 +5020,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询 CPFS 智算版 AccessPoint。</p>
+     * <p>Queries access points of CPFS for Lingjun.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于查询指定文件系统下的智算CPFS接入点信息</p>
+     * <p>Queries access points of CPFS for Lingjun.</p>
      * 
      * @param request DescribeCpfsAccessPointsRequest
      * @return DescribeCpfsAccessPointsResponse
@@ -5287,7 +5426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</li>
      * <li>For filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</li>
-     * <li>Combined queries are supported.</li>
+     * <li>Combination queries are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5346,7 +5485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</li>
      * <li>For filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</li>
-     * <li>Combined queries are supported.</li>
+     * <li>Combination queries are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5542,10 +5681,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</p>
+     * <p>Queries the execution logs of a lifecycle management policy. You can query logs from the last 90 days, with a maximum of 1000 log entries. Only CPFS for Lingjun is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</p>
+     * <p>Queries the execution logs of a lifecycle management policy. You can query logs from the last 90 days, with a maximum of 1000 log entries. Only CPFS for Lingjun is supported.</p>
      * 
      * @param request DescribeLifecyclePolicyLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5589,10 +5728,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</p>
+     * <p>Queries the execution logs of a lifecycle management policy. You can query logs from the last 90 days, with a maximum of 1000 log entries. Only CPFS for Lingjun is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</p>
+     * <p>Queries the execution logs of a lifecycle management policy. You can query logs from the last 90 days, with a maximum of 1000 log entries. Only CPFS for Lingjun is supported.</p>
      * 
      * @param request DescribeLifecyclePolicyLogsRequest
      * @return DescribeLifecyclePolicyLogsResponse
@@ -6411,11 +6550,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * <li>This operation is currently in invitational preview. To use this feature, submit a ticket.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>关闭数据洞察</p>
+     * <p>Disables EBS Lens.</p>
      * 
      * @param request DisableDataInsightRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6448,11 +6587,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * <li>This operation is currently in invitational preview. To use this feature, submit a ticket.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>关闭数据洞察</p>
+     * <p>Disables EBS Lens.</p>
      * 
      * @param request DisableDataInsightRequest
      * @return DisableDataInsightResponse
@@ -6515,7 +6654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you begin: Before calling this API, ensure that the Key Management Service (KMS) is activated in the target region. You can activate KMS by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. The file system protocol type must be SMB. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to verify the file system protocol type.</li>
+     * <li>Before you begin: Before calling this API, ensure that Key Management Service (KMS) is activated in the target region. You can activate KMS by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. The file system protocol type must be SMB. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to verify the file system protocol type.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6552,7 +6691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you begin: Before calling this API, ensure that the Key Management Service (KMS) is activated in the target region. You can activate KMS by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. The file system protocol type must be SMB. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to verify the file system protocol type.</li>
+     * <li>Before you begin: Before calling this API, ensure that Key Management Service (KMS) is activated in the target region. You can activate KMS by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. The file system protocol type must be SMB. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to verify the file system protocol type.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6569,11 +6708,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * <li>This feature is currently in invitational preview. To use this feature, submit a ticket.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>开启数据洞察</p>
+     * <p>Enables EBS Lens.</p>
      * 
      * @param request EnableDataInsightRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6606,11 +6745,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * <li>This feature is currently in invitational preview. To use this feature, submit a ticket.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>开启数据洞察</p>
+     * <p>Enables EBS Lens.</p>
      * 
      * @param request EnableDataInsightRequest
      * @return EnableDataInsightResponse
@@ -6727,7 +6866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>By connecting the mount target of an SMB file system to an AD domain, you can implement user identity authentication management and file-level access permissions control in the AD domain. Before you mount and use an SMB file system as an AD domain user, you must register the service for the SMB file system in the AD domain, generate a Keytab file, and upload it to the File Storage NAS console to enable the SMB ACL feature. <a href="https://help.aliyun.com/document_detail/154930.html">Generate a Keytab file</a>.</li>
+     * <li>By connecting the mount target of an SMB file system to an AD domain, you can implement user identity authentication management and file-level access permissions control in the AD domain. Before you mount and use an SMB file system as an AD domain user, you must register the service for the SMB file system in the AD domain, generate a Keytab file, and upload it to the NAS console to enable the SMB ACL feature. <a href="https://help.aliyun.com/document_detail/154930.html">Generate a Keytab file</a>.</li>
      * <li>Before you begin: Before invoking this API, confirm that Key Management Service (KMS) is activated in the target area. You can invoke the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or activate it in the console.</li>
      * </ul>
      * 
@@ -6773,7 +6912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>By connecting the mount target of an SMB file system to an AD domain, you can implement user identity authentication management and file-level access permissions control in the AD domain. Before you mount and use an SMB file system as an AD domain user, you must register the service for the SMB file system in the AD domain, generate a Keytab file, and upload it to the File Storage NAS console to enable the SMB ACL feature. <a href="https://help.aliyun.com/document_detail/154930.html">Generate a Keytab file</a>.</li>
+     * <li>By connecting the mount target of an SMB file system to an AD domain, you can implement user identity authentication management and file-level access permissions control in the AD domain. Before you mount and use an SMB file system as an AD domain user, you must register the service for the SMB file system in the AD domain, generate a Keytab file, and upload it to the NAS console to enable the SMB ACL feature. <a href="https://help.aliyun.com/document_detail/154930.html">Generate a Keytab file</a>.</li>
      * <li>Before you begin: Before invoking this API, confirm that Key Management Service (KMS) is activated in the target area. You can invoke the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or activate it in the console.</li>
      * </ul>
      * 
@@ -6790,7 +6929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic-type file systems.</p>
+     * <p>Applies to agentic-type file systems.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries an Agentic space.</p>
@@ -6829,7 +6968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic-type file systems.</p>
+     * <p>Applies to agentic-type file systems.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries an Agentic space.</p>
@@ -6844,10 +6983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only for general-purpose NAS file systems.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks if a specified directory contains infrequent access or archive storage files, or if a specified file is an infrequent access or archive storage file.</p>
+     * <p>Queries whether a specified directory contains Infrequent Access (IA) storage class or Archive storage class files, or queries whether a specified file is an IA storage class or Archive storage class file.</p>
      * 
      * @param request GetDirectoryOrFilePropertiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6883,10 +7022,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only for general-purpose NAS file systems.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks if a specified directory contains infrequent access or archive storage files, or if a specified file is an infrequent access or archive storage file.</p>
+     * <p>Queries whether a specified directory contains Infrequent Access (IA) storage class or Archive storage class files, or queries whether a specified file is an IA storage class or Archive storage class file.</p>
      * 
      * @param request GetDirectoryOrFilePropertiesRequest
      * @return GetDirectoryOrFilePropertiesResponse
@@ -7125,11 +7264,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * <li>This feature is currently in invitational preview. To use this feature, submit a ticket.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>获取数据洞察目录结构</p>
+     * <p>Retrieves the directory structure of EBS Lens.</p>
      * 
      * @param request ListDataInsightDirectoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7174,11 +7313,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * <li>This feature is currently in invitational preview. To use this feature, submit a ticket.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>获取数据洞察目录结构</p>
+     * <p>Retrieves the directory structure of EBS Lens.</p>
      * 
      * @param request ListDataInsightDirectoriesRequest
      * @return ListDataInsightDirectoriesResponse
@@ -7728,7 +7867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic file systems.</p>
+     * <p>Applicable to agentic-type file systems.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies an Agentic space.</p>
@@ -7779,7 +7918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic file systems.</p>
+     * <p>Applicable to agentic-type file systems.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies an Agentic space.</p>
@@ -7866,10 +8005,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>修改 CPFS 智算版 AccessPoint。</p>
+     * <p>Modifies an access point of a CPFS for Lingjun file system.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于智算cpfs修改接入点</p>
+     * <p>Modifies an access point of a CPFS for Lingjun file system.</p>
      * 
      * @param request ModifyCpfsAccessPointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7913,10 +8052,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>修改 CPFS 智算版 AccessPoint。</p>
+     * <p>Modifies an access point of a CPFS for Lingjun file system.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于智算cpfs修改接入点</p>
+     * <p>Modifies an access point of a CPFS for Lingjun file system.</p>
      * 
      * @param request ModifyCpfsAccessPointRequest
      * @return ModifyCpfsAccessPointResponse
@@ -8574,7 +8713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you begin: Make sure that Key Management Service (KMS) is activated in the target region before you call this operation. Call sequence: Activate KMS → Call EnableSmbAcl to initialize → Call ModifySmbAcl.</p>
+     * <p>Before you begin: Make sure that Key Management Service (KMS) is activated in the target region. Call sequence: Activate KMS → Call EnableSmbAcl to initialize → Call ModifySmbAcl.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the SMB AD ACL feature.</p>
@@ -8637,7 +8776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you begin: Make sure that Key Management Service (KMS) is activated in the target region before you call this operation. Call sequence: Activate KMS → Call EnableSmbAcl to initialize → Call ModifySmbAcl.</p>
+     * <p>Before you begin: Make sure that Key Management Service (KMS) is activated in the target region. Call sequence: Activate KMS → Call EnableSmbAcl to initialize → Call ModifySmbAcl.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the SMB AD ACL feature.</p>
@@ -8909,7 +9048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic file systems.</p>
+     * <p>Applies to agentic-type file systems.</p>
      * 
      * <b>summary</b> : 
      * <p>Sets the quota for an Agentic space.</p>
@@ -8964,7 +9103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic file systems.</p>
+     * <p>Applies to agentic-type file systems.</p>
      * 
      * <b>summary</b> : 
      * <p>Sets the quota for an Agentic space.</p>

@@ -4,10 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class ListDataInsightDirectoriesResponseBody extends TeaModel {
+    /**
+     * <p>The directory information.</p>
+     */
     @NameInMap("Directory")
     public ListDataInsightDirectoriesResponseBodyDirectory directory;
 
     /**
+     * <p>The file system ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>bmcpfs-370lx1ev9ss27o0****</p>
      */
@@ -15,6 +20,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The maximum number of directories returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token returned in this call.</p>
+     * 
      * <strong>example:</strong>
      * <p>/subDir</p>
      */
@@ -29,6 +38,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
      */
@@ -82,6 +93,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
 
     public static class ListDataInsightDirectoriesResponseBodyDirectorySubDirectories extends TeaModel {
         /**
+         * <p>The time when the directory was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-23T12:47:14Z</p>
          */
@@ -89,6 +102,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The capacity of the subdirectory.</p>
+         * 
          * <strong>example:</strong>
          * <p>345518080</p>
          */
@@ -96,6 +111,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long dirCapacity;
 
         /**
+         * <p>The capacity of IA files in the subdirectory.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -103,6 +120,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long dirCapacityOffline;
 
         /**
+         * <p>The capacity of standard files in the subdirectory.</p>
+         * 
          * <strong>example:</strong>
          * <p>345518080</p>
          */
@@ -110,6 +129,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long dirCapacityOnline;
 
         /**
+         * <p>The subdirectory level.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,6 +138,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Integer dirLevel;
 
         /**
+         * <p>The subdirectory name.</p>
+         * 
          * <strong>example:</strong>
          * <p>/dir_l1_n000</p>
          */
@@ -124,6 +147,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public String dirName;
 
         /**
+         * <p>The number of files in the subdirectory.</p>
+         * 
          * <strong>example:</strong>
          * <p>84846</p>
          */
@@ -131,6 +156,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long fileCount;
 
         /**
+         * <p>The number of IA files in the subdirectory.</p>
+         * 
          * <strong>example:</strong>
          * <p>2343</p>
          */
@@ -138,6 +165,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long fileCountOffline;
 
         /**
+         * <p>The number of standard files in the subdirectory.</p>
+         * 
          * <strong>example:</strong>
          * <p>84355</p>
          */
@@ -145,6 +174,17 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long fileCountOnline;
 
         /**
+         * <p>The inode number of the subdirectory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140288</p>
+         */
+        @NameInMap("Inode")
+        public Long inode;
+
+        /**
+         * <p>The time when the database directory data record was last updated. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-29T03:41:12Z</p>
          */
@@ -152,6 +192,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public String lastAccessTime;
 
         /**
+         * <p>The time when the directory was last accessed. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-29T03:41:12Z</p>
          */
@@ -235,6 +277,14 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             return this.fileCountOnline;
         }
 
+        public ListDataInsightDirectoriesResponseBodyDirectorySubDirectories setInode(Long inode) {
+            this.inode = inode;
+            return this;
+        }
+        public Long getInode() {
+            return this.inode;
+        }
+
         public ListDataInsightDirectoriesResponseBodyDirectorySubDirectories setLastAccessTime(String lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
             return this;
@@ -255,6 +305,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
 
     public static class ListDataInsightDirectoriesResponseBodyDirectory extends TeaModel {
         /**
+         * <p>The directory capacity.</p>
+         * 
          * <strong>example:</strong>
          * <p>10240</p>
          */
@@ -262,6 +314,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long dirCapacity;
 
         /**
+         * <p>The capacity of IA files.</p>
+         * 
          * <strong>example:</strong>
          * <p>10240</p>
          */
@@ -269,6 +323,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long dirCapacityOffline;
 
         /**
+         * <p>The capacity of standard files.</p>
+         * 
          * <strong>example:</strong>
          * <p>10240</p>
          */
@@ -276,6 +332,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long dirCapacityOnline;
 
         /**
+         * <p>The number of files.</p>
+         * 
          * <strong>example:</strong>
          * <p>2343232</p>
          */
@@ -283,6 +341,8 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long fileCount;
 
         /**
+         * <p>The number of Infrequent Access (IA) files.</p>
+         * 
          * <strong>example:</strong>
          * <p>204800</p>
          */
@@ -290,12 +350,26 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         public Long fileCountOffline;
 
         /**
+         * <p>The number of standard files.</p>
+         * 
          * <strong>example:</strong>
          * <p>204800</p>
          */
         @NameInMap("FileCountOnline")
         public Long fileCountOnline;
 
+        /**
+         * <p>The inode number of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2343</p>
+         */
+        @NameInMap("Inode")
+        public Long inode;
+
+        /**
+         * <p>The subdirectory information.</p>
+         */
         @NameInMap("SubDirectories")
         public java.util.List<ListDataInsightDirectoriesResponseBodyDirectorySubDirectories> subDirectories;
 
@@ -350,6 +424,14 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         }
         public Long getFileCountOnline() {
             return this.fileCountOnline;
+        }
+
+        public ListDataInsightDirectoriesResponseBodyDirectory setInode(Long inode) {
+            this.inode = inode;
+            return this;
+        }
+        public Long getInode() {
+            return this.inode;
         }
 
         public ListDataInsightDirectoriesResponseBodyDirectory setSubDirectories(java.util.List<ListDataInsightDirectoriesResponseBodyDirectorySubDirectories> subDirectories) {
