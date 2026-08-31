@@ -11,9 +11,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-shenzhen", "vs.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "vs.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-qingdao", "vs.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-beijing", "vs.cn-beijing.aliyuncs.com")
+            new TeaPair("cn-beijing", "vs.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "vs.cn-shanghai.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("vs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -4091,7 +4091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This query does not support pagination. Only iterative retrieval is supported. Use the extStartTime value from the response as the StartTime parameter in a new request to retrieve the next page.</p>
+     * <p>Currently, screenshot queries do not support pagination. Only iterative queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4144,7 +4144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This query does not support pagination. Only iterative retrieval is supported. Use the extStartTime value from the response as the StartTime parameter in a new request to retrieve the next page.</p>
+     * <p>Currently, screenshot queries do not support pagination. Only iterative queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 

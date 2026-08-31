@@ -157,6 +157,12 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String hiveId;
 
         /**
+         * <p>The task status.</p>
+         */
+        @NameInMap("TaskErrorMessage")
+        public String taskErrorMessage;
+
+        /**
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +179,12 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
          */
         @NameInMap("TaskState")
         public String taskState;
+
+        /**
+         * <p>The task status.</p>
+         */
+        @NameInMap("TaskStateMessage")
+        public String taskStateMessage;
 
         /**
          * <p>The last modified time.</p>
@@ -221,6 +233,14 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             return this.hiveId;
         }
 
+        public DescribeComfyTasksResponseBodyTasks setTaskErrorMessage(String taskErrorMessage) {
+            this.taskErrorMessage = taskErrorMessage;
+            return this;
+        }
+        public String getTaskErrorMessage() {
+            return this.taskErrorMessage;
+        }
+
         public DescribeComfyTasksResponseBodyTasks setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
@@ -235,6 +255,14 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         }
         public String getTaskState() {
             return this.taskState;
+        }
+
+        public DescribeComfyTasksResponseBodyTasks setTaskStateMessage(String taskStateMessage) {
+            this.taskStateMessage = taskStateMessage;
+            return this;
+        }
+        public String getTaskStateMessage() {
+            return this.taskStateMessage;
         }
 
         public DescribeComfyTasksResponseBodyTasks setUpdatedTime(String updatedTime) {

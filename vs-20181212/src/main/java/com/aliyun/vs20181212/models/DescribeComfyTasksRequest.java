@@ -14,7 +14,7 @@ public class DescribeComfyTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records displayed per page.</p>
+     * <p>The number of records to display per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -22,6 +22,9 @@ public class DescribeComfyTasksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The Comfy workflow ID used as a filter condition.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
