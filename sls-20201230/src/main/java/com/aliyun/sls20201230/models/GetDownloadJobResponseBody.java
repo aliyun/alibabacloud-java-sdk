@@ -11,7 +11,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
     public GetDownloadJobResponseBodyConfiguration configuration;
 
     /**
-     * <p>The time when the task was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1722411060</p>
@@ -20,7 +20,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The description of the task.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>a download job</p>
@@ -124,7 +124,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
 
     public static class GetDownloadJobResponseBodyConfigurationSink extends TeaModel {
         /**
-         * <p>The Object Storage Service (OSS) bucket.</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>ali-test-oss-bucket</p>
@@ -142,7 +142,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public String compressionType;
 
         /**
-         * <p>The file format.</p>
+         * <p>The format of the downloaded file.</p>
          * 
          * <strong>example:</strong>
          * <p>csv</p>
@@ -151,7 +151,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The prefix of the file that is saved to the bucket.</p>
+         * <p>The file prefix used when downloading logs to the user\&quot;s bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>download/</p>
@@ -160,7 +160,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public String prefix;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used for the download.</p>
+         * <p>The ARN of the RAM role used for the download.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::0123456789:role/aliyunlogdefaultrole</p>
@@ -169,7 +169,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The value is fixed to AliyunOSS.</p>
+         * <p>Fixed value: AliyunOSS.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunOSS</p>
@@ -243,7 +243,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public Boolean allowInComplete;
 
         /**
-         * <p>The start time of the download task. The value is a UNIX timestamp in seconds.</p>
+         * <p>The start timestamp, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1722409860</p>
@@ -270,7 +270,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public Boolean powerSql;
 
         /**
-         * <p>The search statement.</p>
+         * <p>The query statement.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -287,7 +287,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public GetDownloadJobResponseBodyConfigurationSink sink;
 
         /**
-         * <p>The end time of the download task. The value is a UNIX timestamp in seconds.</p>
+         * <p>The end timestamp, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1722411060</p>
@@ -369,7 +369,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public String checkSum;
 
         /**
-         * <p>The error message if the download fails.</p>
+         * <p>The error message of the download.</p>
          * 
          * <strong>example:</strong>
          * <p>timeout</p>
@@ -378,7 +378,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The duration of the download task in seconds.</p>
+         * <p>The execution time of the download.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -387,7 +387,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public Long executeTime;
 
         /**
-         * <p>The URL of the download result.</p>
+         * <p>The download result link.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.csv.zst?xxx">https://xxx.csv.zst?xxx</a></p>
@@ -396,7 +396,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public String filePath;
 
         /**
-         * <p>The size of the downloaded file in bytes.</p>
+         * <p>The size of the downloaded file.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -414,7 +414,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public Long logCount;
 
         /**
-         * <p>Notification text.</p>
+         * <p>The notification text.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

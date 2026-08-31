@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class AzureBlobIngestion extends TeaModel {
     /**
+     * <p>The Azure Blob file import configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public AzureBlobIngestionConfiguration configuration;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1714360481</p>
      */
@@ -18,6 +21,8 @@ public class AzureBlobIngestion extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>job description</p>
+     * 
      * <strong>example:</strong>
      * <p>azure blob ingestion</p>
      */
@@ -25,6 +30,7 @@ public class AzureBlobIngestion extends TeaModel {
     public String description;
 
     /**
+     * <p>job displayName</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +40,8 @@ public class AzureBlobIngestion extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The last modified time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1714360481</p>
      */
@@ -41,6 +49,7 @@ public class AzureBlobIngestion extends TeaModel {
     public Long lastModifiedTime;
 
     /**
+     * <p>The name of the import task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +59,8 @@ public class AzureBlobIngestion extends TeaModel {
     public String name;
 
     /**
+     * <p>The write processor ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ingest-processor-1756802123-953901</p>
      */
@@ -57,12 +68,15 @@ public class AzureBlobIngestion extends TeaModel {
     public String processorId;
 
     /**
+     * <p>The scheduling configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
     public Schedule schedule;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c7f01719d9feb105fc9d8df92af62010</p>
      */
@@ -70,6 +84,8 @@ public class AzureBlobIngestion extends TeaModel {
     public String scheduleId;
 
     /**
+     * <p>The import status.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

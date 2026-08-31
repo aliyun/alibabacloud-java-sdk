@@ -5,26 +5,38 @@ import com.aliyun.tea.*;
 
 public class MLServiceParam extends TeaModel {
     /**
+     * <p>The microservice description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>某某服务</p>
+     * <p>SampleService</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The model configuration that the microservice depends on.</p>
+     */
     @NameInMap("model")
     public MLServiceParamModel model;
 
     /**
+     * <p>The microservice name.</p>
+     * 
      * <strong>example:</strong>
      * <p>service_name</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The microservice EPS resource configuration.</p>
+     */
     @NameInMap("resource")
     public MLServiceParamResource resource;
 
     /**
+     * <p>The microservice type.</p>
+     * 
      * <strong>example:</strong>
      * <p>sls_builtin</p>
      */
@@ -32,6 +44,8 @@ public class MLServiceParam extends TeaModel {
     public String serviceType;
 
     /**
+     * <p>The microservice status.</p>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
@@ -39,6 +53,8 @@ public class MLServiceParam extends TeaModel {
     public String status;
 
     /**
+     * <p>The microservice update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1695090077</p>
      */
@@ -108,6 +124,8 @@ public class MLServiceParam extends TeaModel {
 
     public static class MLServiceParamModel extends TeaModel {
         /**
+         * <p>The model resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -115,6 +133,8 @@ public class MLServiceParam extends TeaModel {
         public String modelResourceId;
 
         /**
+         * <p>The model resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx_type</p>
          */
@@ -146,6 +166,8 @@ public class MLServiceParam extends TeaModel {
 
     public static class MLServiceParamResource extends TeaModel {
         /**
+         * <p>The maximum CPU resource limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -153,6 +175,8 @@ public class MLServiceParam extends TeaModel {
         public Integer cpuLimit;
 
         /**
+         * <p>The required GPU memory size.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -160,6 +184,8 @@ public class MLServiceParam extends TeaModel {
         public Integer gpu;
 
         /**
+         * <p>The maximum memory resources limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>64</p>
          */
@@ -167,6 +193,8 @@ public class MLServiceParam extends TeaModel {
         public Integer memoryLimit;
 
         /**
+         * <p>The number of microservice replicas.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

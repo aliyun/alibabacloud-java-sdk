@@ -35,7 +35,7 @@ public class Machine extends TeaModel {
      * <p>The unique identifier of the machine.</p>
      * 
      * <strong>example:</strong>
-     * <p>3B70F4F1-80F7-46C4-A6C1-100****EE647</p>
+     * <p>3B70F4F1-80F7-46C4-A6C1-100***CEE647</p>
      */
     @NameInMap("machine-uniqueid")
     public String machineUniqueid;

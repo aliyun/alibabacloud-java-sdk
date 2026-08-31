@@ -31,15 +31,12 @@ public class CreateDownloadJobRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The name of the job. The name must meet the following requirements:</p>
-     * <p>The job name must be unique within a project.</p>
+     * <p>The job name. The naming rules are as follows:</p>
+     * <p>Job names must be unique within the same project.</p>
      * <ul>
-     * <li><p>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
-     * </li>
-     * <li><p>It must start and end with a lowercase letter or a digit.</p>
-     * </li>
-     * <li><p>The name must be 2 to 64 characters in length.</p>
-     * </li>
+     * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name must start and end with a lowercase letter or digit.</li>
+     * <li>The name must be 2 to 64 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -88,7 +85,7 @@ public class CreateDownloadJobRequest extends TeaModel {
 
     public static class CreateDownloadJobRequestConfigurationSink extends TeaModel {
         /**
-         * <p>The destination Object Storage Service (OSS) bucket.</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-test-bucket</p>
@@ -97,7 +94,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The compression format of the file. Valid values: \<code>zstd\\</code>, \<code>lz4\\</code>, \<code>gzip\\</code>, and \<code>none\\</code>.</p>
+         * <p>The compression format. Valid values: zstd, lz4, gzip, none.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -107,7 +104,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String compressionType;
 
         /**
-         * <p>The format of the downloaded file. Valid values: \<code>csv\\</code> and \<code>json\\</code>.</p>
+         * <p>The download file format. Valid values: csv, json.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +114,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The prefix of the path in the destination OSS bucket.</p>
+         * <p>The path prefix for downloading data to the user\&quot;s OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>download/</p>
@@ -126,7 +123,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String prefix;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role to use for the download.</p>
+         * <p>The ARN of the RAM role used for the download.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::0123456789:role/aliyunlogdefaultrole</p>
@@ -135,7 +132,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The type of the destination. Set the value to \<code>AliyunOSS\\</code>.</p>
+         * <p>Fixed value: AliyunOSS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +198,7 @@ public class CreateDownloadJobRequest extends TeaModel {
 
     public static class CreateDownloadJobRequestConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to allow the download of incomplete results. Valid values: \<code>true\\</code> and \<code>false\\</code>.</p>
+         * <p>Specifies whether to allow downloading imprecise results. Valid values: true, false.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +208,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public Boolean allowInComplete;
 
         /**
-         * <p>The start time. This is a UNIX timestamp that is accurate to the second.</p>
+         * <p>The start timestamp, in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +228,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>Specifies whether to enable PowerSQL. Valid values: \<code>true\\</code> and \<code>false\\</code>.</p>
+         * <p>Specifies whether to enable PowerSQL. Valid values: true, false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +237,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public Boolean powerSql;
 
         /**
-         * <p>The search statement.</p>
+         * <p>The query statement.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +256,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public CreateDownloadJobRequestConfigurationSink sink;
 
         /**
-         * <p>The end time. This is a UNIX timestamp that is accurate to the second.</p>
+         * <p>The end timestamp, in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

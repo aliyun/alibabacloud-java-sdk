@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ShardingPolicy extends TeaModel {
+    @NameInMap("enabled")
+    public Boolean enabled;
+
     /**
      * <strong>example:</strong>
      * <p>1764659409</p>
@@ -14,15 +17,20 @@ public class ShardingPolicy extends TeaModel {
     @NameInMap("shardGroup")
     public ShardingPolicyShardGroup shardGroup;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("shardHash")
     public ShardingPolicyShardHash shardHash;
 
     public static ShardingPolicy build(java.util.Map<String, ?> map) throws Exception {
         ShardingPolicy self = new ShardingPolicy();
         return TeaModel.build(map, self);
+    }
+
+    public ShardingPolicy setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
     public ShardingPolicy setQueryActiveTime(Long queryActiveTime) {

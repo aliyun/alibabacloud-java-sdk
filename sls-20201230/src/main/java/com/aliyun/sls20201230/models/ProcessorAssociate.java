@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProcessorAssociate extends TeaModel {
     /**
+     * <p>Processor ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

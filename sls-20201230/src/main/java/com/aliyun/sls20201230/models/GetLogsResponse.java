@@ -11,7 +11,7 @@ public class GetLogsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public java.util.List<java.util.Map<String, ?>> body;
+    public GetLogsResponseBody body;
 
     public static GetLogsResponse build(java.util.Map<String, ?> map) throws Exception {
         GetLogsResponse self = new GetLogsResponse();
@@ -34,11 +34,11 @@ public class GetLogsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetLogsResponse setBody(java.util.List<java.util.Map<String, ?>> body) {
+    public GetLogsResponse setBody(GetLogsResponseBody body) {
         this.body = body;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getBody() {
+    public GetLogsResponseBody getBody() {
         return this.body;
     }
 

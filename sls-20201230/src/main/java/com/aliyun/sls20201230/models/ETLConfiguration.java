@@ -51,7 +51,7 @@ public class ETLConfiguration extends TeaModel {
      * <p>Advanced parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>config.vpc.vpc_id.test1：vpc-uf6mskb0b****n9yj</p>
+     * <p>config.vpc.vpc_id.test1:vpc-uf6mskb0b****n9yj</p>
      */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
@@ -71,9 +71,7 @@ public class ETLConfiguration extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li>| extend key=\&quot;value\&quot;</li>
-     * </ul>
+     * <p>e_set(&quot;key&quot;,&quot;value&quot;)</p>
      */
     @NameInMap("script")
     public String script;

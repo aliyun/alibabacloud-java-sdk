@@ -11,7 +11,7 @@ public class CreateS3IngestionRequest extends TeaModel {
     public S3IngestionConfiguration configuration;
 
     /**
-     * <p>The description of the job.</p>
+     * <p>The task description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -30,15 +30,12 @@ public class CreateS3IngestionRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The name of the job. Follow these naming rules:</p>
-     * <p>Each job in the same project must have a unique name.</p>
+     * <p>The job name. The naming rules are as follows:</p>
+     * <p>Job names must be unique within the same project.</p>
      * <ul>
-     * <li><p>Use only lowercase letters, digits, hyphens (-), and underscores (_).</p>
-     * </li>
-     * <li><p>Start and end with a lowercase letter or digit.</p>
-     * </li>
-     * <li><p>Be 2 to 64 characters long.</p>
-     * </li>
+     * <li>Can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>Must start and end with a lowercase letter or digit.</li>
+     * <li>Must be 2 to 64 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,6 +45,9 @@ public class CreateS3IngestionRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The scheduling structure.</p>
+     */
     @NameInMap("schedule")
     public Schedule schedule;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Ticket extends TeaModel {
     /**
+     * <p>The UID of the caller when the ticket was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000000</p>
      */
@@ -12,6 +14,8 @@ public class Ticket extends TeaModel {
     public Long callerUid;
 
     /**
+     * <p>The time when the ticket was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-09-06 14:57:07</p>
      */
@@ -19,6 +23,8 @@ public class Ticket extends TeaModel {
     public String createDate;
 
     /**
+     * <p>The expiration time of the ticket, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +32,8 @@ public class Ticket extends TeaModel {
     public Long expirationTime;
 
     /**
+     * <p>The expiration time of the ticket.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-09-06 14:58:07</p>
      */
@@ -33,6 +41,8 @@ public class Ticket extends TeaModel {
     public String expireDate;
 
     /**
+     * <p>The extension field.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;xx&quot;:&quot;yy&quot;}</p>
      */
@@ -40,13 +50,17 @@ public class Ticket extends TeaModel {
     public String extra;
 
     /**
+     * <p>The name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>测试</p>
+     * <p>Test</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The maximum number of times the ticket can be used.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +68,8 @@ public class Ticket extends TeaModel {
     public Integer number;
 
     /**
+     * <p>The target to which the ticket is shared.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;type&quot;:&quot;aliyun&quot;,&quot;ids&quot;:[1,2]}</p>
      */
@@ -61,6 +77,8 @@ public class Ticket extends TeaModel {
     public String sharingTo;
 
     /**
+     * <p>ticket</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
      */
@@ -68,6 +86,8 @@ public class Ticket extends TeaModel {
     public String ticket;
 
     /**
+     * <p>The unique ID of the ticket.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
      */
@@ -75,6 +95,8 @@ public class Ticket extends TeaModel {
     public String ticketId;
 
     /**
+     * <p>The number of times the ticket has been used.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +104,8 @@ public class Ticket extends TeaModel {
     public Integer usedNumber;
 
     /**
+     * <p>Indicates whether the ticket is disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

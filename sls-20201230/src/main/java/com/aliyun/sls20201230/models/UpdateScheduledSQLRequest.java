@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateScheduledSQLRequest extends TeaModel {
     /**
-     * <p>The configuration of the task.</p>
+     * <p>The task configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")

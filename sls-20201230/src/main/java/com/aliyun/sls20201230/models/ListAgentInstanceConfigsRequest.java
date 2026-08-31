@@ -14,7 +14,7 @@ public class ListAgentInstanceConfigsRequest extends TeaModel {
     public String configType;
 
     /**
-     * <p>The number of entries to skip. The default value is 0.</p>
+     * <p>The start row of the query. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,7 +23,7 @@ public class ListAgentInstanceConfigsRequest extends TeaModel {
     public Long offset;
 
     /**
-     * <p>The number of entries to return. The default value is 500.</p>
+     * <p>The number of entries to return. Default value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

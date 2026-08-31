@@ -7,6 +7,12 @@ public class GetMaterializedViewHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>The content type of the response. Simple Log Service supports application/json and application/x-protobuf response types.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>application/json</p>
+     */
     @NameInMap("Content-Type")
     public String contentType;
 

@@ -48,7 +48,7 @@ public class SavedSearch extends TeaModel {
      * <p>The topic of the log. The default value is an empty string (&quot;&quot;).</p>
      * 
      * <strong>example:</strong>
-     * <p>topic-test</p>
+     * <p>topic</p>
      */
     @NameInMap("topic")
     public String topic;

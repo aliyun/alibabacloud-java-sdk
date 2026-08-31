@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDownloadJobsResponseBody extends TeaModel {
     /**
-     * <p>The number of log download jobs returned in the current response.</p>
+     * <p>The number of log download tasks returned in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>An array that contains the list of log download jobs.</p>
+     * <p>The list of log download tasks.</p>
      */
     @NameInMap("results")
     public java.util.List<ListDownloadJobsResponseBodyResults> results;
@@ -59,7 +59,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
 
     public static class ListDownloadJobsResponseBodyResultsConfigurationSink extends TeaModel {
         /**
-         * <p>The destination OSS bucket.</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>ali-test-oss-bucket</p>
@@ -77,7 +77,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String compressionType;
 
         /**
-         * <p>The file format of the downloaded file.</p>
+         * <p>The download file format.</p>
          * 
          * <strong>example:</strong>
          * <p>csv</p>
@@ -86,7 +86,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The prefix of the object that is downloaded to the destination OSS bucket.</p>
+         * <p>The file prefix used when downloading to the user\&quot;s OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>download/</p>
@@ -95,7 +95,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String prefix;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used for the download.</p>
+         * <p>The ARN of the RAM role used for the download.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456:role/aliyunlogimportossrole</p>
@@ -104,7 +104,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The type of the sink. The value is fixed as AliyunOSS.</p>
+         * <p>Fixed value: AliyunOSS.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunOSS</p>
@@ -169,7 +169,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
 
     public static class ListDownloadJobsResponseBodyResultsConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to allow the download of incomplete results.</p>
+         * <p>Specifies whether to allow downloading incomplete results.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -178,7 +178,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String allowInComplete;
 
         /**
-         * <p>The start time of the query. This is a UNIX timestamp that is accurate to the second.</p>
+         * <p>The start timestamp, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1722409260</p>
@@ -196,7 +196,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String logstore;
 
         /**
-         * <p>Specifies whether to enable PowerSQL.</p>
+         * <p>Indicates whether PowerSQL is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,13 +216,13 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String query;
 
         /**
-         * <p>The sink configuration.</p>
+         * <p>The log download task configuration.</p>
          */
         @NameInMap("sink")
         public ListDownloadJobsResponseBodyResultsConfigurationSink sink;
 
         /**
-         * <p>The end time of the query. This is a UNIX timestamp that is accurate to the second.</p>
+         * <p>The end timestamp, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1722411060</p>
@@ -295,7 +295,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
 
     public static class ListDownloadJobsResponseBodyResultsExecutionDetails extends TeaModel {
         /**
-         * <p>The ETag of the file.</p>
+         * <p>The file ETag.</p>
          * 
          * <strong>example:</strong>
          * <p>ETASFGASDASQWDasd</p>
@@ -304,7 +304,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String checkSum;
 
         /**
-         * <p>The error message that is returned if the job fails.</p>
+         * <p>The download error message.</p>
          * 
          * <strong>example:</strong>
          * <p>timeout</p>
@@ -313,7 +313,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The running time of the download.</p>
+         * <p>The download execution time.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -322,7 +322,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public Long executeTime;
 
         /**
-         * <p>The URL of the downloaded file.</p>
+         * <p>The download result link.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://sls-downloaded-xxxx.csv.gzip?Expiresxxx">https://sls-downloaded-xxxx.csv.gzip?Expiresxxx</a></p>
@@ -331,7 +331,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String filePath;
 
         /**
-         * <p>The size of the downloaded file in bytes.</p>
+         * <p>The download file size.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -349,7 +349,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public Long logCount;
 
         /**
-         * <p>The notification message.</p>
+         * <p>The notification information.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -358,7 +358,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String notice;
 
         /**
-         * <p>The download progress as a percentage.</p>
+         * <p>The download progress.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -445,7 +445,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public ListDownloadJobsResponseBodyResultsConfiguration configuration;
 
         /**
-         * <p>The time when the log download job was created. This is a UNIX timestamp in seconds.</p>
+         * <p>The creation time of the log download task.</p>
          * 
          * <strong>example:</strong>
          * <p>1722411060</p>
@@ -454,7 +454,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the log download job.</p>
+         * <p>The description of the log download task.</p>
          * 
          * <strong>example:</strong>
          * <p>a download job</p>
@@ -463,7 +463,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Display name</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
          * <p>download-123</p>
@@ -472,13 +472,13 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The execution details of the job.</p>
+         * <p>The execution details.</p>
          */
         @NameInMap("executionDetails")
         public ListDownloadJobsResponseBodyResultsExecutionDetails executionDetails;
 
         /**
-         * <p>The name of the log download job.</p>
+         * <p>The name of the log download task.</p>
          * 
          * <strong>example:</strong>
          * <p>download-123</p>
@@ -487,7 +487,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the Job.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>STARTING、RUNNING、SUCCEEDED、ERROR</p>

@@ -15,7 +15,7 @@ public class MachineGroup extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>machineGroup-test</p>
+     * <p>machineGroup-1</p>
      */
     @NameInMap("groupName")
     public String groupName;

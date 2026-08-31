@@ -22,7 +22,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>none</p>
+     * <p>none,snappy,gzip</p>
      */
     @NameInMap("compressionCodec")
     public String compressionCodec;

@@ -11,7 +11,7 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
     public java.util.List<ListAgentInstanceConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>The number of data entries.</p>
+     * <p>The number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
     public Long size;
 
     /**
-     * <p>The total number of data entries that meet the query conditions.</p>
+     * <p>The total number of entries that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

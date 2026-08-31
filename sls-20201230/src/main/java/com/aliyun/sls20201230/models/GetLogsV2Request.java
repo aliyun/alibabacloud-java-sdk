@@ -44,7 +44,7 @@ public class GetLogsV2Request extends TeaModel {
     public Boolean isAccurate;
 
     /**
-     * <p>The maximum number of logs to return in the request. This parameter is valid only when the query parameter is a query statement (not an analytic statement). Minimum value: 0. Maximum value: 100. Default value: 100.</p>
+     * <p>The maximum number of logs to return. This parameter is valid only when the query parameter is a query statement (not an analytic statement). Minimum value: 0. Maximum value: 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -53,7 +53,7 @@ public class GetLogsV2Request extends TeaModel {
     public Long line;
 
     /**
-     * <p>The start row of the query. This parameter is valid only when the query parameter is a query statement (not an analytic statement). The value starts from 0. Default value: 0.</p>
+     * <p>The row from which the query starts. This parameter is valid only when the query parameter is a query statement (not an analytic statement). The value starts from 0. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -71,7 +71,7 @@ public class GetLogsV2Request extends TeaModel {
     public Boolean powerSql;
 
     /**
-     * <p>The query statement or analytic statement. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Query overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Analysis overview</a>.</p>
+     * <p>The query statement or analytic statement. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">query overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">analysis overview</a>.</p>
      * <p>Add set session parallel_sql=true; to the analytic statement in the query parameter to use Dedicated SQL. Example: * | set session parallel_sql=true; select count(*) as pv.</p>
      * <p>Note: When the query parameter contains an analytic statement (SQL statement), the line and offset parameters of this API are invalid. Set them to 0. Use the LIMIT syntax in the SQL statement for pagination. For more information, see Display query and analysis results by page.</p>
      * 
@@ -82,12 +82,12 @@ public class GetLogsV2Request extends TeaModel {
     public String query;
 
     /**
-     * <p>Specifies whether to return logs in descending order of log timestamps, accurate to the minute level. This parameter is valid only when the query parameter is a query statement (not an analytic statement).</p>
+     * <p>Specifies whether to return logs in reverse chronological order of log timestamps, accurate to the minute level. This parameter is valid only when the query parameter is a query statement (not an analytic statement).</p>
      * <ul>
      * <li>true: Returns logs in descending order of log timestamps.</li>
      * <li>false (default): Returns logs in ascending order of log timestamps.</li>
      * </ul>
-     * <p>To sort results in an analytic statement, use the ORDER BY syntax. If ORDER BY is set to asc (default), the results are sorted in ascending order. If ORDER BY is set to desc, the results are sorted in descending order.</p>
+     * <p>To sort results in an analytic statement, use the ORDER BY syntax. If ORDER BY is set to asc (default), logs are returned in ascending order. If ORDER BY is set to desc, logs are returned in descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

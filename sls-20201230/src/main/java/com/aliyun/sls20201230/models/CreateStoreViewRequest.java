@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateStoreViewRequest extends TeaModel {
     /**
-     * <p>The name of the dataset.</p>
+     * <p>The name of the storeview.</p>
      * <ul>
-     * <li><p>The name can contain only lowercase letters, digits, and underscores (_).</p>
-     * </li>
-     * <li><p>The name must start with a lowercase letter.</p>
-     * </li>
-     * <li><p>The name must be 3 to 62 characters in length.</p>
-     * </li>
+     * <li>The name can contain only lowercase letters, digits, and underscores (_).</li>
+     * <li>The name must start with a lowercase letter.</li>
+     * <li>The name must be 3 to 62 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,7 +20,11 @@ public class CreateStoreViewRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The type of the dataset. Set this parameter to metricstore to create a Metricstore dataset. Set this parameter to logstore to create a Logstore dataset.</p>
+     * <p>The type of the storeview. Valid values:</p>
+     * <ul>
+     * <li>metricstore: storeview for Metricstore.</li>
+     * <li>logstore: storeview for Logstore.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +34,7 @@ public class CreateStoreViewRequest extends TeaModel {
     public String storeType;
 
     /**
-     * <p>A list of Logstores or Metricstores.</p>
+     * <p>The list of Logstores or Metricstores.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("stores")

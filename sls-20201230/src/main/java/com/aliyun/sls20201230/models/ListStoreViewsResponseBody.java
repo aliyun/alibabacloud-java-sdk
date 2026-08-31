@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStoreViewsResponseBody extends TeaModel {
     /**
-     * <p>The number of returned datasets.</p>
+     * <p>The number of storeviews returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,13 +14,13 @@ public class ListStoreViewsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The dataset names.</p>
+     * <p>The list of storeview names.</p>
      */
     @NameInMap("storeviews")
     public java.util.List<String> storeviews;
 
     /**
-     * <p>The total number of datasets in the project.</p>
+     * <p>The total number of storeviews in the project.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

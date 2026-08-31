@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScheduledSQLConfiguration extends TeaModel {
     /**
-     * <p>The data format. Valid values: log2log, log2metric, and metric2metric.</p>
+     * <p>The write mode. Three configurations are supported: log2log, log2metric, and metric2metric.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String dataFormat;
 
     /**
-     * <p>The endpoint.</p>
+     * <p>The destination endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String destEndpoint;
 
     /**
-     * <p>The destination Logstore.</p>
+     * <p>The destination logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String destProject;
 
     /**
-     * <p>The ARN of the RAM role that is assumed to write data to the destination Logstore.</p>
+     * <p>The ARN of the role used to write data to the destination.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +55,8 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String destRoleArn;
 
     /**
+     * <p>Specifies whether to ensure accurate computation results.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -62,7 +64,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Boolean forceComplete;
 
     /**
-     * <p>The start time. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">Process and store data from a Logstore to a Metricstore</a>.</p>
+     * <p>The start time. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">From Logstore to MetricStore</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +74,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Long fromTime;
 
     /**
-     * <p>The start time of the SQL time window.</p>
+     * <p>The start of the SQL time window.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +84,8 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String fromTimeExpr;
 
     /**
+     * <p>The concurrency.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -89,7 +93,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Long maxConcurrency;
 
     /**
-     * <p>The maximum number of SQL timeouts allowed. Valid values: 1 to 100.</p>
+     * <p>The maximum number of retries upon SQL timeout. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,7 +103,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Long maxRetries;
 
     /**
-     * <p>The maximum timeout period of SQL analysis. Unit: seconds. Valid values: 60 to 1800.</p>
+     * <p>The maximum timeout period for SQL execution. Unit: seconds. Valid values: 60 to 1800.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,7 +113,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Long maxRunTimeInSeconds;
 
     /**
-     * <p>The SQL configurations. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">Process and store data from a Logstore to a Metricstore</a>.</p>
+     * <p>The SQL configuration. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">From Logstore to MetricStore</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,7 +130,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public java.util.Map<String, ?> parameters;
 
     /**
-     * <p>The type of the resource pool. The value enhanced specifies an enhanced resource pool.</p>
+     * <p>The resource pool type. A value of enhanced indicates the enhanced resource pool.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,7 +140,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String resourcePool;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that is assigned to the Scheduled SQL job.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the role used to execute the SQL statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -146,7 +150,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>The query statement of the Scheduled SQL job.</p>
+     * <p>The analytic statement of the scheduled query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -158,7 +162,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String script;
 
     /**
-     * <p>The source Logstore.</p>
+     * <p>The source logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -168,7 +172,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String sourceLogstore;
 
     /**
-     * <p>The type of the query statement.</p>
+     * <p>The SQL type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -178,7 +182,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public String sqlType;
 
     /**
-     * <p>The end time. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">Process and store data from a Logstore to a Metricstore</a>.</p>
+     * <p>The end time. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">From Logstore to MetricStore</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -188,7 +192,7 @@ public class ScheduledSQLConfiguration extends TeaModel {
     public Long toTime;
 
     /**
-     * <p>The end time of the SQL time window.</p>
+     * <p>The end of the SQL time window.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -196,6 +200,12 @@ public class ScheduledSQLConfiguration extends TeaModel {
      */
     @NameInMap("toTimeExpr")
     public String toTimeExpr;
+
+    /**
+     * <p>Specifies whether to use the Exactly-Once write protocol.</p>
+     */
+    @NameInMap("usingExactlyOnce")
+    public Boolean usingExactlyOnce;
 
     public static ScheduledSQLConfiguration build(java.util.Map<String, ?> map) throws Exception {
         ScheduledSQLConfiguration self = new ScheduledSQLConfiguration();
@@ -352,6 +362,14 @@ public class ScheduledSQLConfiguration extends TeaModel {
     }
     public String getToTimeExpr() {
         return this.toTimeExpr;
+    }
+
+    public ScheduledSQLConfiguration setUsingExactlyOnce(Boolean usingExactlyOnce) {
+        this.usingExactlyOnce = usingExactlyOnce;
+        return this;
+    }
+    public Boolean getUsingExactlyOnce() {
+        return this.usingExactlyOnce;
     }
 
 }

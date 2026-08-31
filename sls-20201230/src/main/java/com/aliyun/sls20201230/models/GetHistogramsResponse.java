@@ -44,8 +44,8 @@ public class GetHistogramsResponse extends TeaModel {
 
     public static class GetHistogramsResponseBody extends TeaModel {
         /**
-         * <p>The beginning of the time range for the subinterval. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 1970-01-01 00:00:00 UTC.</p>
-         * <p>The time range is a left-closed, right-open interval. This means that the subinterval includes the start time but not the end time. If the values of from and to are the same, the interval is invalid and an error is returned.</p>
+         * <p>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time interval follows the left-closed, right-open principle. The interval includes the start time but excludes the end time. If the values of from and to are the same, the interval is invalid and the function returns an error.</p>
          * 
          * <strong>example:</strong>
          * <p>1409529600</p>
@@ -54,8 +54,8 @@ public class GetHistogramsResponse extends TeaModel {
         public Long from;
 
         /**
-         * <p>The end of the time range for the subinterval. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 1970-01-01 00:00:00 UTC.</p>
-         * <p>The time range is a left-closed, right-open interval. This means that the subinterval includes the start time but not the end time. If the values of from and to are the same, the interval is invalid and an error is returned.</p>
+         * <p>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time interval follows the left-closed, right-open principle. The interval includes the start time but excludes the end time. If the values of from and to are the same, the interval is invalid and the function returns an error.</p>
          * 
          * <strong>example:</strong>
          * <p>1409569200</p>
@@ -64,7 +64,7 @@ public class GetHistogramsResponse extends TeaModel {
         public Long to;
 
         /**
-         * <p>The number of logs that are found in the subinterval.</p>
+         * <p>The number of logs queried in the subinterval.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -73,9 +73,9 @@ public class GetHistogramsResponse extends TeaModel {
         public Long count;
 
         /**
-         * <p>Indicates whether the query result in the subinterval is complete.</p>
-         * <p>Complete: The query is complete and the result is complete.</p>
-         * <p>Incomplete: The query is complete but the result is incomplete. Send the request again to obtain the complete result.</p>
+         * <p>Indicates whether the query results in the subinterval are complete.</p>
+         * <p>Complete: The query is complete and the returned results are complete.</p>
+         * <p>Incomplete: The query is complete but the returned results are incomplete. Repeat the request to obtain complete results.</p>
          * 
          * <strong>example:</strong>
          * <p>Complete</p>

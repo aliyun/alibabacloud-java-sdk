@@ -8,7 +8,7 @@ public class OSSExportConfiguration extends TeaModel {
      * <p>The start time for the export, specified as a Unix timestamp. Set to 1 to export from the earliest available data in the Logstore.</p>
      * 
      * <strong>example:</strong>
-     * <p>1718380800</p>
+     * <p>123456789</p>
      */
     @NameInMap("fromTime")
     public Long fromTime;
@@ -17,7 +17,7 @@ public class OSSExportConfiguration extends TeaModel {
      * <p>The name of the source Logstore.</p>
      * 
      * <strong>example:</strong>
-     * <p>my-logstore</p>
+     * <p>logstore-demo</p>
      */
     @NameInMap("logstore")
     public String logstore;
@@ -26,7 +26,7 @@ public class OSSExportConfiguration extends TeaModel {
      * <p>The ARN of the Resource Access Management (RAM) role that Log Service assumes to read data from the Logstore. You must specify the ARN of your role.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::1234567890:role/aliyunlogdefaultrole</p>
+     * <p>acs:ram::123456789:role/aliyunlogdefaultrole</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
@@ -44,7 +44,7 @@ public class OSSExportConfiguration extends TeaModel {
      * <p>The end time for the export, specified as a Unix timestamp. Set to 0 to run the task continuously until it is stopped.</p>
      * 
      * <strong>example:</strong>
-     * <p>1718380800</p>
+     * <p>123456789</p>
      */
     @NameInMap("toTime")
     public Long toTime;
@@ -108,7 +108,7 @@ public class OSSExportConfiguration extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>my-bucket</p>
+         * <p>test-bucket</p>
          */
         @NameInMap("bucket")
         public String bucket;
@@ -135,7 +135,7 @@ public class OSSExportConfiguration extends TeaModel {
          * <p>The compression type for the exported files. Valid values: <code>snappy</code>, <code>gzip</code>, <code>zstd</code>, and <code>none</code> (no compression).</p>
          * 
          * <strong>example:</strong>
-         * <p>snappy</p>
+         * <p>snappy/gizp/zstd/none</p>
          */
         @NameInMap("compressionType")
         public String compressionType;
@@ -150,7 +150,7 @@ public class OSSExportConfiguration extends TeaModel {
          * <p>The format of the files stored in OSS. Valid values: <code>json</code>, <code>parquet</code>, <code>csv</code>, and <code>orc</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>csv</p>
+         * <p>json/parquet/csv/orc</p>
          */
         @NameInMap("contentType")
         public String contentType;
@@ -189,7 +189,7 @@ public class OSSExportConfiguration extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://oss-cn-hangzhou-internal.aliyuncs.com">https://oss-cn-hangzhou-internal.aliyuncs.com</a></p>
+         * <p><a href="http://xxxxxxxx">http://xxxxxxxx</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
@@ -199,7 +199,7 @@ public class OSSExportConfiguration extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>%Y/%m/%d/%H/%M</p>
+         * <p>%Y_%m_%d/good/bad</p>
          */
         @NameInMap("pathFormat")
         public String pathFormat;
@@ -209,7 +209,7 @@ public class OSSExportConfiguration extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>time</p>
+         * <p>only support time</p>
          */
         @NameInMap("pathFormatType")
         public String pathFormatType;
@@ -218,7 +218,7 @@ public class OSSExportConfiguration extends TeaModel {
          * <p>The prefix for files exported to the OSS bucket.</p>
          * 
          * <strong>example:</strong>
-         * <p>prefix-demo/</p>
+         * <p>prefixxxx/</p>
          */
         @NameInMap("prefix")
         public String prefix;
@@ -228,7 +228,7 @@ public class OSSExportConfiguration extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:ram::1234567890:role/aliyunlogdefaultrole</p>
+         * <p>acs:ram::xxxxxxx</p>
          */
         @NameInMap("roleArn")
         public String roleArn;

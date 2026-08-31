@@ -196,7 +196,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public java.util.List<String> keys;
 
         /**
-         * <p>The limit on the number of rows. Returned when an SQL statement does not include a LIMIT clause.</p>
+         * <p>The limit on the number of rows. Returned when the SQL statement does not contain a LIMIT clause.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -205,11 +205,13 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Integer limited;
 
         /**
-         * <p>The query mode. Valid values:
-         * 0: standard query (including SQL)
-         * 1: phrase query
-         * 2: SCAN
-         * 3: SCAN SQL.</p>
+         * <p>The query mode. Valid values:</p>
+         * <ul>
+         * <li>0: standard query (including SQL)</li>
+         * <li>1: phrase query</li>
+         * <li>2: SCAN</li>
+         * <li>3: SCAN SQL</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -224,7 +226,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public GetLogsV2ResponseBodyMetaPhraseQueryInfo phraseQueryInfo;
 
         /**
-         * <p>The volume of logs processed by the query.</p>
+         * <p>The volume of logs processed by the query, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -245,7 +247,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
          * <p>Indicates whether the query results are complete. Valid values:</p>
          * <ul>
          * <li>Complete: The query is complete and the results are complete.</li>
-         * <li>Incomplete: The query is complete but the results are incomplete. Resend the request to obtain complete results.</li>
+         * <li>Incomplete: The query is complete but the results are incomplete. Repeat the request to obtain complete results.</li>
          * </ul>
          * 
          * <strong>example:</strong>

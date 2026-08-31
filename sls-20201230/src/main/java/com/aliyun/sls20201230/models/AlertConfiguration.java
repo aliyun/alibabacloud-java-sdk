@@ -30,7 +30,7 @@ public class AlertConfiguration extends TeaModel {
      * <p>The ID of the dashboard to which the alert is attached.</p>
      * 
      * <strong>example:</strong>
-     * <p>DasnboardExample</p>
+     * <p>dasnboardExample</p>
      */
     @NameInMap("dashboard")
     public String dashboard;

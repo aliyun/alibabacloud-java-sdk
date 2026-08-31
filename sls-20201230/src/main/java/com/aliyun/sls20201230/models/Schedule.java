@@ -26,7 +26,7 @@ public class Schedule extends TeaModel {
      * <p>The fixed interval.</p>
      * 
      * <strong>example:</strong>
-     * <p>60s</p>
+     * <p>1m/1h</p>
      */
     @NameInMap("interval")
     public String interval;
@@ -44,7 +44,7 @@ public class Schedule extends TeaModel {
      * <p>The time zone of the cron expression. If this parameter is left empty, the default time zone UTC+8 is used.</p>
      * 
      * <strong>example:</strong>
-     * <p>+0800</p>
+     * <p>&quot;+0800&quot;</p>
      */
     @NameInMap("timeZone")
     public String timeZone;
@@ -54,7 +54,7 @@ public class Schedule extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>FixedRate</p>
+     * <p>Cron</p>
      */
     @NameInMap("type")
     public String type;

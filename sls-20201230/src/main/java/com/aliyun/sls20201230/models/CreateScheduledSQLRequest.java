@@ -31,15 +31,12 @@ public class CreateScheduledSQLRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The job name. The name must be unique within a project.</p>
-     * <p>The naming convention is as follows:</p>
+     * <p>The name of the job. The naming rules are as follows:</p>
+     * <p>Job names must be unique within the same project.</p>
      * <ul>
-     * <li><p>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
-     * </li>
-     * <li><p>The name must start and end with a lowercase letter or a digit.</p>
-     * </li>
-     * <li><p>The name must be 2 to 64 characters in length.</p>
-     * </li>
+     * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name must start and end with a lowercase letter or digit.</li>
+     * <li>The name must be 2 to 64 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -50,7 +47,7 @@ public class CreateScheduledSQLRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The scheduling configuration for the job.</p>
+     * <p>The scheduling configuration of the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")

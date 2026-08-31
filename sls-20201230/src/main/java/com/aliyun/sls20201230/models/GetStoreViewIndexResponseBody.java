@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStoreViewIndexResponseBody extends TeaModel {
     /**
-     * <p>The index configurations.</p>
+     * <p>The list of index configurations.</p>
      */
     @NameInMap("indexes")
     public java.util.List<GetStoreViewIndexResponseBodyIndexes> indexes;
@@ -25,7 +25,7 @@ public class GetStoreViewIndexResponseBody extends TeaModel {
 
     public static class GetStoreViewIndexResponseBodyIndexes extends TeaModel {
         /**
-         * <p>The index configurations of the Logstore.</p>
+         * <p>The index configuration of the Logstore.</p>
          */
         @NameInMap("index")
         public Index index;

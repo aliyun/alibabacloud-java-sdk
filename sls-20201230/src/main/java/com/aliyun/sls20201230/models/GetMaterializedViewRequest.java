@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetMaterializedViewRequest extends TeaModel {
     /**
+     * <p>Specifies whether to return the materialized view status information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
