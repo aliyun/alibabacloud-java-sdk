@@ -3134,7 +3134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants permissions to Threat Analysis and creates the AliyunServiceRoleForSasCloudSiem service-linked role.</p>
+     * <p>Authorizes the user and creates the threat detection and response service-linked role AliyunServiceRoleForSasCloudSiem.</p>
      * 
      * @param request EnableAccessForCloudSiemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3145,6 +3145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoSubmit)) {
             body.put("AutoSubmit", request.autoSubmit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3178,7 +3182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants permissions to Threat Analysis and creates the AliyunServiceRoleForSasCloudSiem service-linked role.</p>
+     * <p>Authorizes the user and creates the threat detection and response service-linked role AliyunServiceRoleForSasCloudSiem.</p>
      * 
      * @param request EnableAccessForCloudSiemRequest
      * @return EnableAccessForCloudSiemResponse
@@ -5275,6 +5279,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PostEventDisposeAndWhiteruleListResponse postEventDisposeAndWhiteruleListWithOptions(PostEventDisposeAndWhiteruleListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.disposeStrategyIds)) {
             body.put("DisposeStrategyIds", request.disposeStrategyIds);
         }

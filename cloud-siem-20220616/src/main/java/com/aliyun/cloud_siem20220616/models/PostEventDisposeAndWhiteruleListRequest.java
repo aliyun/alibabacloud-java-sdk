@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     /**
+     * <p>幂等令牌。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426614174000</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>A comma-separated list of response strategy IDs.</p>
      * 
      * <strong>example:</strong>
@@ -173,6 +182,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     public static PostEventDisposeAndWhiteruleListRequest build(java.util.Map<String, ?> map) throws Exception {
         PostEventDisposeAndWhiteruleListRequest self = new PostEventDisposeAndWhiteruleListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PostEventDisposeAndWhiteruleListRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public PostEventDisposeAndWhiteruleListRequest setDisposeStrategyIds(String disposeStrategyIds) {
