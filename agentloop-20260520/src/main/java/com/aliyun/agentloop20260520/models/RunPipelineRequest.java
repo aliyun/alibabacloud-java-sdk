@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RunPipelineRequest extends TeaModel {
     /**
+     * <p>The start of the data processing window, in UNIX seconds. This parameter is required for SQL Pipeline and time window-based WorkItem Source. This parameter is optional for checkpoint-based WorkItem Source types such as Dataset and Logstore Pull.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735660800</p>
      */
     @NameInMap("fromTime")
     public Long fromTime;
 
+    /**
+     * <p>The output control settings. SQL Pipeline supports overriding. WorkItem Pipeline uses the saved Sink configuration and must keep the default value.</p>
+     */
     @NameInMap("output")
     public RunPipelineRequestOutput output;
 
     /**
+     * <p>The end of the data processing window, in UNIX seconds. This parameter must be provided together with fromTime and must be greater than fromTime. This parameter is optional for checkpoint-based WorkItem Source types.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735747200</p>
      */
@@ -52,6 +59,8 @@ public class RunPipelineRequest extends TeaModel {
 
     public static class RunPipelineRequestOutput extends TeaModel {
         /**
+         * <p>Specifies whether to write to the target Dataset. Default value: true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -59,6 +68,8 @@ public class RunPipelineRequest extends TeaModel {
         public Boolean dataset;
 
         /**
+         * <p>Specifies whether to return inline results in the response. Default value: false.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

@@ -82,7 +82,7 @@ public class PreviewPipelineRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The node parameters in key-value structure. The parameters vary depending on the node type.</p>
+         * <p>The node parameters in key-value format. The parameters vary based on the node type.</p>
          */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
@@ -145,6 +145,90 @@ public class PreviewPipelineRequest extends TeaModel {
         }
         public java.util.List<PreviewPipelineRequestPipelineNodes> getNodes() {
             return this.nodes;
+        }
+
+    }
+
+    public static class PreviewPipelineRequestSourceDataset extends TeaModel {
+        /**
+         * <p>The name of the source dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-dataset</p>
+         */
+        @NameInMap("dataset")
+        public String dataset;
+
+        /**
+         * <p>The filter condition for dataset data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status = \&quot;pending\&quot;</p>
+         */
+        @NameInMap("filter")
+        public String filter;
+
+        public static PreviewPipelineRequestSourceDataset build(java.util.Map<String, ?> map) throws Exception {
+            PreviewPipelineRequestSourceDataset self = new PreviewPipelineRequestSourceDataset();
+            return TeaModel.build(map, self);
+        }
+
+        public PreviewPipelineRequestSourceDataset setDataset(String dataset) {
+            this.dataset = dataset;
+            return this;
+        }
+        public String getDataset() {
+            return this.dataset;
+        }
+
+        public PreviewPipelineRequestSourceDataset setFilter(String filter) {
+            this.filter = filter;
+            return this;
+        }
+        public String getFilter() {
+            return this.filter;
+        }
+
+    }
+
+    public static class PreviewPipelineRequestSourceInputFields extends TeaModel {
+        /**
+         * <p>The field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>question</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The field type. Valid values: text, long, double, and json.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static PreviewPipelineRequestSourceInputFields build(java.util.Map<String, ?> map) throws Exception {
+            PreviewPipelineRequestSourceInputFields self = new PreviewPipelineRequestSourceInputFields();
+            return TeaModel.build(map, self);
+        }
+
+        public PreviewPipelineRequestSourceInputFields setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public PreviewPipelineRequestSourceInputFields setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -212,13 +296,25 @@ public class PreviewPipelineRequest extends TeaModel {
 
     public static class PreviewPipelineRequestSource extends TeaModel {
         /**
+         * <p>The Dataset datasource config under the current AgentSpace.</p>
+         */
+        @NameInMap("dataset")
+        public PreviewPipelineRequestSourceDataset dataset;
+
+        /**
+         * <p>The input fields and field types. This parameter applies to all data source types.</p>
+         */
+        @NameInMap("inputFields")
+        public java.util.List<PreviewPipelineRequestSourceInputFields> inputFields;
+
+        /**
          * <p>The SLS Logstore datasource config.</p>
          */
         @NameInMap("logstore")
         public PreviewPipelineRequestSourceLogstore logstore;
 
         /**
-         * <p>The data source type. Currently, only Simple Log Service (SLS) is supported.</p>
+         * <p>The data source type. Currently, Simple Log Service (SLS) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SLS</p>
@@ -229,6 +325,22 @@ public class PreviewPipelineRequest extends TeaModel {
         public static PreviewPipelineRequestSource build(java.util.Map<String, ?> map) throws Exception {
             PreviewPipelineRequestSource self = new PreviewPipelineRequestSource();
             return TeaModel.build(map, self);
+        }
+
+        public PreviewPipelineRequestSource setDataset(PreviewPipelineRequestSourceDataset dataset) {
+            this.dataset = dataset;
+            return this;
+        }
+        public PreviewPipelineRequestSourceDataset getDataset() {
+            return this.dataset;
+        }
+
+        public PreviewPipelineRequestSource setInputFields(java.util.List<PreviewPipelineRequestSourceInputFields> inputFields) {
+            this.inputFields = inputFields;
+            return this;
+        }
+        public java.util.List<PreviewPipelineRequestSourceInputFields> getInputFields() {
+            return this.inputFields;
         }
 
         public PreviewPipelineRequestSource setLogstore(PreviewPipelineRequestSourceLogstore logstore) {

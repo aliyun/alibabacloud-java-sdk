@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetExperimentPlanResponseBody extends TeaModel {
     /**
-     * <p>The creation time. This value is a millisecond-level UNIX timestamp.</p>
+     * <p>The creation time, in millisecond-level UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1782816000000</p>
@@ -26,7 +26,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Compare the checkout Agent baseline with the optimized version.</p>
+     * <p>Compare the checkout Agent baseline with the optimized version</p>
      */
     @NameInMap("description")
     public String description;
@@ -67,6 +67,9 @@ public class GetExperimentPlanResponseBody extends TeaModel {
     @NameInMap("input")
     public java.util.Map<String, ?> input;
 
+    /**
+     * <p>The name of the associated data processing pipeline. This value is empty if no pipeline is associated.</p>
+     */
     @NameInMap("pipelineName")
     public String pipelineName;
 
@@ -107,7 +110,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of selected data item IDs in partial dataset mode.</p>
+     * <p>The list of data item IDs selected in partial dataset mode.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;019ef4d5-a0f0-7114-832d-5542d771cd8c&quot;]</p>
@@ -125,7 +128,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The update time. This value is a millisecond-level UNIX timestamp.</p>
+     * <p>The update time, in millisecond-level UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1782816600000</p>

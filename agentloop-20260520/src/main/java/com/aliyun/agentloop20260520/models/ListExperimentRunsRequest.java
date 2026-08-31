@@ -59,7 +59,7 @@ public class ListExperimentRunsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters results by fuzzy match on experiment plan name.</p>
+     * <p>Filters results by fuzzy match on the experiment plan name.</p>
      * 
      * <strong>example:</strong>
      * <p>arms_agent_experiment</p>

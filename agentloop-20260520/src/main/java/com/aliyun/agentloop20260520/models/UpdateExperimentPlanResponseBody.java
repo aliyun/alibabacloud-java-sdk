@@ -8,13 +8,13 @@ public class UpdateExperimentPlanResponseBody extends TeaModel {
      * <p>The prompt message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Experiment plan updated successfully.</p>
+     * <p>Experiment plan updated successfully</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>The experiment plan ID.</p>
+     * <p>The ID of the experiment plan.</p>
      * 
      * <strong>example:</strong>
      * <p>exp-plan-e95bff54685a4ae29ff3a834c1008a71</p>
@@ -32,7 +32,7 @@ public class UpdateExperimentPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The update result. The value is updated if the operation is successful.</p>
+     * <p>The update result. A value of updated indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>updated</p>

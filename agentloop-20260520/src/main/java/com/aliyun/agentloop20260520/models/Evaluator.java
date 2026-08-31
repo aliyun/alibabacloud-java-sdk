@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Evaluator extends TeaModel {
     /**
-     * <p>The evaluator runtime configuration. For inline LLM evaluators, this must include configurations such as prompt. When referencing an existing evaluator, this parameter is typically not required and is only specified when runtime parameters such as version need to be set.</p>
+     * <p>The runtime configuration of the evaluator. For inline LLM evaluators, this must include configurations such as prompt. When referencing an existing evaluator, this parameter is typically not required and should only be specified when runtime parameters such as version need to be set.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;version&quot;:&quot;1.0.0&quot;}</p>
@@ -50,7 +50,7 @@ public class Evaluator extends TeaModel {
     public String resultName;
 
     /**
-     * <p>The evaluation result type. Required for inline evaluators. Defaults to score when referencing an existing evaluator and this parameter is not specified.</p>
+     * <p>The evaluation result type. Required for inline evaluators. When referencing an existing evaluator, defaults to score if not specified.</p>
      * 
      * <strong>example:</strong>
      * <p>score</p>
@@ -59,13 +59,19 @@ public class Evaluator extends TeaModel {
     public String resultType;
 
     /**
-     * <p>The evaluator type. Defaults to LLM if not specified. Inline CODE evaluators are currently not supported. For CODE type evaluators, reference a previously created evaluator by using evaluatorRef.</p>
+     * <p>The evaluator type. Defaults to LLM if not specified. Inline CODE evaluators are not currently supported. For the CODE type, reference a previously created evaluator by using evaluatorRef.</p>
      * 
      * <strong>example:</strong>
      * <p>AGENT</p>
      */
     @NameInMap("type")
     public String type;
+
+    /**
+     * <p>The variable extraction rule mapping that maps evaluator variables to a portion of the content within an evaluation data field. This is applicable when the variable value is not the entire field but a subset of the field content. This parameter shares the same variable name key space as variableMapping. Each variable can use only one of the two. Duplicate configurations cause an error. When referencing an existing evaluator, the variable names must exist in the evaluator definition. Call ListTraceFieldExtractionsPreview to perform a trial run for validation before saving.</p>
+     */
+    @NameInMap("variableExtractorMapping")
+    public java.util.Map<String, EvaluatorVariableExtractorMappingValue> variableExtractorMapping;
 
     /**
      * <p>The variable mapping that maps evaluator variables to evaluation data fields. Required for LLM/AGENT inline evaluators. When referencing an existing evaluator, the variable names must exist in the evaluator definition.</p>
@@ -135,6 +141,14 @@ public class Evaluator extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public Evaluator setVariableExtractorMapping(java.util.Map<String, EvaluatorVariableExtractorMappingValue> variableExtractorMapping) {
+        this.variableExtractorMapping = variableExtractorMapping;
+        return this;
+    }
+    public java.util.Map<String, EvaluatorVariableExtractorMappingValue> getVariableExtractorMapping() {
+        return this.variableExtractorMapping;
     }
 
     public Evaluator setVariableMapping(java.util.Map<String, String> variableMapping) {

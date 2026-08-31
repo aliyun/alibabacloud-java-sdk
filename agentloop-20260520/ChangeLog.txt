@@ -1,3 +1,18 @@
+2026-08-31 Version: 2.3.3
+- Update API CreatePipeline: add request parameters body.sink.condition.
+- Update API CreatePipeline: add request parameters body.source.dataset.
+- Update API CreatePipeline: add request parameters body.source.inputFields.
+- Update API GetPipeline: add response parameters Body.sink.condition.
+- Update API GetPipeline: add response parameters Body.source.dataset.
+- Update API GetPipeline: add response parameters Body.source.inputFields.
+- Update API PreviewPipeline: add request parameters body.source.dataset.
+- Update API PreviewPipeline: add request parameters body.source.inputFields.
+- Update API UpdatePipeline: add request parameters body.sink.condition.
+- Update API UpdatePipeline: add request parameters body.source.dataset.
+- Update API UpdatePipeline: add request parameters body.source.inputFields.
+- Update API UpdatePipeline: add request parameters body.source.logstore.project.
+
+
 2026-08-18 Version: 2.3.2
 - Update API CreateAgentSpace: add request parameters body.mseNamespaceId.
 - Update API GetAgentSpace: add response parameters Body.mseNamespace.bindType.

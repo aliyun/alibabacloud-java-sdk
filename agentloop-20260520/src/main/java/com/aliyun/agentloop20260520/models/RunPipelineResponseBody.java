@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunPipelineResponseBody extends TeaModel {
     /**
+     * <p>The name of the AgentSpace.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-agent-space</p>
      */
@@ -12,6 +14,8 @@ public class RunPipelineResponseBody extends TeaModel {
     public String agentSpaceName;
 
     /**
+     * <p>The pipeline name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-pipeline</p>
      */
@@ -19,6 +23,8 @@ public class RunPipelineResponseBody extends TeaModel {
     public String pipelineName;
 
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
      */
@@ -26,6 +32,8 @@ public class RunPipelineResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The run ID created by this trigger.</p>
+     * 
      * <strong>example:</strong>
      * <p>run-20260101-0001</p>
      */
@@ -33,6 +41,8 @@ public class RunPipelineResponseBody extends TeaModel {
     public String runId;
 
     /**
+     * <p>The current status of the run. The status is typically Pending after the run is queued.</p>
+     * 
      * <strong>example:</strong>
      * <p>Pending</p>
      */

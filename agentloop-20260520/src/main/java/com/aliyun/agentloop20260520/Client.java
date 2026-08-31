@@ -381,7 +381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls the CreateEvaluationTask operation to create an evaluation task in a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
+     * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
      * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
      * 
      * <b>summary</b> : 
@@ -461,7 +461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls the CreateEvaluationTask operation to create an evaluation task in a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
+     * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
      * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
      * 
      * <b>summary</b> : 
@@ -640,7 +640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an experiment plan.</p>
@@ -713,7 +713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an experiment plan.</p>
@@ -2653,7 +2653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <code>page</code>/<code>pageSize</code> for pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of experiment run records.</p>
+     * <p>Queries a list of experiment run records.</p>
      * 
      * @param request ListExperimentRunsRequest
      * @param headers map
@@ -2718,7 +2718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <code>page</code>/<code>pageSize</code> for pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of experiment run records.</p>
+     * <p>Queries a list of experiment run records.</p>
      * 
      * @param request ListExperimentRunsRequest
      * @return ListExperimentRunsResponse
@@ -2908,17 +2908,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
      * <li><strong>agentSpace</strong> must be an AgentSpace instance that has been created under the current account.</li>
      * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and located in the same region.</li>
      * <li><strong>pipeline.nodes</strong> must contain at least one node of the <code>Source</code> type and cannot be empty.</li>
-     * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be less than <strong>toTime</strong>.</li>
-     * <li>A maximum of 5 records are returned, and internal system fields of the data source are automatically filtered out.</li>
+     * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be earlier than <strong>toTime</strong>.</li>
+     * <li>A maximum of 5 records are returned. Internal fields of the data source system are automatically filtered out.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Previews a pipeline. Without creating pipeline resources, performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records for authenticating parameter settings and previewing processing results.</p>
+     * <p>Previews a pipeline. Without creating pipeline resources, this operation performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records to authenticate parameter settings and preview processing results.</p>
      * 
      * @param request PreviewPipelineRequest
      * @param headers map
@@ -2964,17 +2964,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
      * <li><strong>agentSpace</strong> must be an AgentSpace instance that has been created under the current account.</li>
      * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and located in the same region.</li>
      * <li><strong>pipeline.nodes</strong> must contain at least one node of the <code>Source</code> type and cannot be empty.</li>
-     * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be less than <strong>toTime</strong>.</li>
-     * <li>A maximum of 5 records are returned, and internal system fields of the data source are automatically filtered out.</li>
+     * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be earlier than <strong>toTime</strong>.</li>
+     * <li>A maximum of 5 records are returned. Internal fields of the data source system are automatically filtered out.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Previews a pipeline. Without creating pipeline resources, performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records for authenticating parameter settings and previewing processing results.</p>
+     * <p>Previews a pipeline. Without creating pipeline resources, this operation performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records to authenticate parameter settings and preview processing results.</p>
      * 
      * @param request PreviewPipelineRequest
      * @return PreviewPipelineResponse
@@ -3646,7 +3646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. Only plans created by the current account can be updated.</p>
+     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an experiment plan.</p>
@@ -3723,7 +3723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. Only plans created by the current account can be updated.</p>
+     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an experiment plan.</p>

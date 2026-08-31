@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateExperimentPlanRequest extends TeaModel {
     /**
-     * <p>The associated dataset ID.</p>
+     * <p>The ID of the associated dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>rca_benckmark_eval</p>
@@ -26,13 +26,13 @@ public class UpdateExperimentPlanRequest extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>rca_benchmark_eval_experiment offline experiment.</p>
+     * <p>rca_benchmark_eval_experiment offline experiment</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The evaluator list. Omitting this field indicates no modification. Passing an empty array clears the list.</p>
+     * <p>The list of evaluators. Omitting this field indicates no modification. Passing an empty array clears the list.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</p>
@@ -50,7 +50,7 @@ public class UpdateExperimentPlanRequest extends TeaModel {
     public String experimentType;
 
     /**
-     * <p>The experiment configuration list. When specified, the entire list is replaced. The number of items must be 1 to 5.</p>
+     * <p>The list of experiment configurations. When specified, the entire list is replaced. The number of configurations must be 1 to 5.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;label&quot;: &quot;A&quot;, &quot;name&quot;: &quot;baseline&quot;, &quot;modelName&quot;: &quot;qwen-max&quot;}]</p>
@@ -62,16 +62,19 @@ public class UpdateExperimentPlanRequest extends TeaModel {
      * <p>Optional.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;question&quot;: &quot;How do I get a refund?&quot;}</p>
+     * <p>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</p>
      */
     @NameInMap("input")
     public java.util.Map<String, ?> input;
 
+    /**
+     * <p>The name of the associated data processing pipeline. This parameter is optional. If not specified, the value is not updated. If an empty character string is specified, the association is dissociated. After association, when an experiment under this plan finishes execution and writes results to the experiment result Logstore, the system filters by the traceId of the experiment trace and calls PreviewPipeline. The pipeline-processed results are then written together.</p>
+     */
     @NameInMap("pipelineName")
     public String pipelineName;
 
     /**
-     * <p>The experiment plan name.</p>
+     * <p>The name of the experiment plan.</p>
      * 
      * <strong>example:</strong>
      * <p>rca_benchmark_eval_experiment</p>

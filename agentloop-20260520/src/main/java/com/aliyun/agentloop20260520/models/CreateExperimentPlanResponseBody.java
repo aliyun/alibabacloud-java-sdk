@@ -8,7 +8,7 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
      * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Experiment plan created successfully.</p>
+     * <p>Experiment plan created successfully</p>
      */
     @NameInMap("message")
     public String message;
@@ -32,7 +32,7 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The creation result. The value is <code>created</code> upon success.</p>
+     * <p>The creation result. A value of <code>created</code> indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>created</p>

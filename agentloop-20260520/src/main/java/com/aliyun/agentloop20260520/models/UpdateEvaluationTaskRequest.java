@@ -14,7 +14,7 @@ public class UpdateEvaluationTaskRequest extends TeaModel {
     public java.util.Map<String, String> config;
 
     /**
-     * <p>The filter condition for evaluation data. A JSON object or JSON string is supported.</p>
+     * <p>The filter conditions for evaluation data. JSON objects and JSON strings are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot; AND status=\&quot;OK\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:50}</p>
@@ -26,7 +26,7 @@ public class UpdateEvaluationTaskRequest extends TeaModel {
      * <p>The description of the evaluation task.</p>
      * 
      * <strong>example:</strong>
-     * <p>更新后的链路 Trace 任务完成度评估</p>
+     * <p>Updated trace link task completion evaluation</p>
      */
     @NameInMap("description")
     public String description;
@@ -41,13 +41,13 @@ public class UpdateEvaluationTaskRequest extends TeaModel {
     public java.util.List<Evaluator> evaluators;
 
     /**
-     * <p>The new task execution strategies. A JSON object or JSON string is supported. If the task is in <code>Completed</code>, <code>Terminated</code>, or <code>Failed</code> status and the new strategy enables backfill or continuous mode, the backend resets the task to <code>Pending</code> and triggers orchestration.</p>
+     * <p>The new task execution strategies. JSON objects and JSON strings are supported. If the task is in the <code>Completed</code>, <code>Terminated</code>, or <code>Failed</code> state and the new strategy enables backfill or continuous mode, the backend restores the task to the <code>Pending</code> state and triggers orchestration.</p>
      */
     @NameInMap("runStrategies")
     public RunStrategies runStrategies;
 
     /**
-     * <p>The task status. Currently the backend only allows users to explicitly set this to <code>Terminated</code>. Other statuses are managed by the system.</p>
+     * <p>The task status. Currently, the backend only allows users to manually set this to <code>Terminated</code>. Other statuses are managed by the system.</p>
      * 
      * <strong>example:</strong>
      * <p>Terminated</p>
@@ -65,7 +65,7 @@ public class UpdateEvaluationTaskRequest extends TeaModel {
     public java.util.Map<String, String> tags;
 
     /**
-     * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</p>
+     * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</p>
      * 
      * <strong>example:</strong>
      * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>

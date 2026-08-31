@@ -286,7 +286,7 @@ public class GetPipelineResponseBody extends TeaModel {
     public static class GetPipelineResponseBodyExecutePolicy extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>Scheduled</p>
+         * <p>scheduled</p>
          */
         @NameInMap("mode")
         public String mode;
@@ -396,6 +396,246 @@ public class GetPipelineResponseBody extends TeaModel {
 
     }
 
+    public static class GetPipelineResponseBodySinkConditionDefaultSinkDataset extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
+         */
+        @NameInMap("agentSpace")
+        public String agentSpace;
+
+        /**
+         * <strong>example:</strong>
+         * <p>other-result</p>
+         */
+        @NameInMap("dataset")
+        public String dataset;
+
+        public static GetPipelineResponseBodySinkConditionDefaultSinkDataset build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineResponseBodySinkConditionDefaultSinkDataset self = new GetPipelineResponseBodySinkConditionDefaultSinkDataset();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPipelineResponseBodySinkConditionDefaultSinkDataset setAgentSpace(String agentSpace) {
+            this.agentSpace = agentSpace;
+            return this;
+        }
+        public String getAgentSpace() {
+            return this.agentSpace;
+        }
+
+        public GetPipelineResponseBodySinkConditionDefaultSinkDataset setDataset(String dataset) {
+            this.dataset = dataset;
+            return this;
+        }
+        public String getDataset() {
+            return this.dataset;
+        }
+
+    }
+
+    public static class GetPipelineResponseBodySinkConditionDefaultSink extends TeaModel {
+        @NameInMap("dataset")
+        public GetPipelineResponseBodySinkConditionDefaultSinkDataset dataset;
+
+        /**
+         * <strong>example:</strong>
+         * <p>dataset</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static GetPipelineResponseBodySinkConditionDefaultSink build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineResponseBodySinkConditionDefaultSink self = new GetPipelineResponseBodySinkConditionDefaultSink();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPipelineResponseBodySinkConditionDefaultSink setDataset(GetPipelineResponseBodySinkConditionDefaultSinkDataset dataset) {
+            this.dataset = dataset;
+            return this;
+        }
+        public GetPipelineResponseBodySinkConditionDefaultSinkDataset getDataset() {
+            return this.dataset;
+        }
+
+        public GetPipelineResponseBodySinkConditionDefaultSink setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetPipelineResponseBodySinkConditionRoutesSinkDataset extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
+         */
+        @NameInMap("agentSpace")
+        public String agentSpace;
+
+        /**
+         * <strong>example:</strong>
+         * <p>refund-result</p>
+         */
+        @NameInMap("dataset")
+        public String dataset;
+
+        public static GetPipelineResponseBodySinkConditionRoutesSinkDataset build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineResponseBodySinkConditionRoutesSinkDataset self = new GetPipelineResponseBodySinkConditionRoutesSinkDataset();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPipelineResponseBodySinkConditionRoutesSinkDataset setAgentSpace(String agentSpace) {
+            this.agentSpace = agentSpace;
+            return this;
+        }
+        public String getAgentSpace() {
+            return this.agentSpace;
+        }
+
+        public GetPipelineResponseBodySinkConditionRoutesSinkDataset setDataset(String dataset) {
+            this.dataset = dataset;
+            return this;
+        }
+        public String getDataset() {
+            return this.dataset;
+        }
+
+    }
+
+    public static class GetPipelineResponseBodySinkConditionRoutesSink extends TeaModel {
+        @NameInMap("dataset")
+        public GetPipelineResponseBodySinkConditionRoutesSinkDataset dataset;
+
+        /**
+         * <strong>example:</strong>
+         * <p>dataset</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static GetPipelineResponseBodySinkConditionRoutesSink build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineResponseBodySinkConditionRoutesSink self = new GetPipelineResponseBodySinkConditionRoutesSink();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPipelineResponseBodySinkConditionRoutesSink setDataset(GetPipelineResponseBodySinkConditionRoutesSinkDataset dataset) {
+            this.dataset = dataset;
+            return this;
+        }
+        public GetPipelineResponseBodySinkConditionRoutesSinkDataset getDataset() {
+            return this.dataset;
+        }
+
+        public GetPipelineResponseBodySinkConditionRoutesSink setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetPipelineResponseBodySinkConditionRoutes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li>| where intent = \&quot;refund\&quot;</li>
+         * </ul>
+         */
+        @NameInMap("expression")
+        public String expression;
+
+        /**
+         * <strong>example:</strong>
+         * <p>refund</p>
+         */
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("sink")
+        public GetPipelineResponseBodySinkConditionRoutesSink sink;
+
+        public static GetPipelineResponseBodySinkConditionRoutes build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineResponseBodySinkConditionRoutes self = new GetPipelineResponseBodySinkConditionRoutes();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPipelineResponseBodySinkConditionRoutes setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public GetPipelineResponseBodySinkConditionRoutes setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public GetPipelineResponseBodySinkConditionRoutes setSink(GetPipelineResponseBodySinkConditionRoutesSink sink) {
+            this.sink = sink;
+            return this;
+        }
+        public GetPipelineResponseBodySinkConditionRoutesSink getSink() {
+            return this.sink;
+        }
+
+    }
+
+    public static class GetPipelineResponseBodySinkCondition extends TeaModel {
+        @NameInMap("defaultSink")
+        public GetPipelineResponseBodySinkConditionDefaultSink defaultSink;
+
+        /**
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
+        @NameInMap("matchMode")
+        public String matchMode;
+
+        @NameInMap("routes")
+        public java.util.List<GetPipelineResponseBodySinkConditionRoutes> routes;
+
+        public static GetPipelineResponseBodySinkCondition build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineResponseBodySinkCondition self = new GetPipelineResponseBodySinkCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPipelineResponseBodySinkCondition setDefaultSink(GetPipelineResponseBodySinkConditionDefaultSink defaultSink) {
+            this.defaultSink = defaultSink;
+            return this;
+        }
+        public GetPipelineResponseBodySinkConditionDefaultSink getDefaultSink() {
+            return this.defaultSink;
+        }
+
+        public GetPipelineResponseBodySinkCondition setMatchMode(String matchMode) {
+            this.matchMode = matchMode;
+            return this;
+        }
+        public String getMatchMode() {
+            return this.matchMode;
+        }
+
+        public GetPipelineResponseBodySinkCondition setRoutes(java.util.List<GetPipelineResponseBodySinkConditionRoutes> routes) {
+            this.routes = routes;
+            return this;
+        }
+        public java.util.List<GetPipelineResponseBodySinkConditionRoutes> getRoutes() {
+            return this.routes;
+        }
+
+    }
+
     public static class GetPipelineResponseBodySinkDataset extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -435,12 +675,15 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodySink extends TeaModel {
+        @NameInMap("condition")
+        public GetPipelineResponseBodySinkCondition condition;
+
         @NameInMap("dataset")
         public GetPipelineResponseBodySinkDataset dataset;
 
         /**
          * <strong>example:</strong>
-         * <p>Dataset</p>
+         * <p>condition</p>
          */
         @NameInMap("type")
         public String type;
@@ -448,6 +691,14 @@ public class GetPipelineResponseBody extends TeaModel {
         public static GetPipelineResponseBodySink build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineResponseBodySink self = new GetPipelineResponseBodySink();
             return TeaModel.build(map, self);
+        }
+
+        public GetPipelineResponseBodySink setCondition(GetPipelineResponseBodySinkCondition condition) {
+            this.condition = condition;
+            return this;
+        }
+        public GetPipelineResponseBodySinkCondition getCondition() {
+            return this.condition;
         }
 
         public GetPipelineResponseBodySink setDataset(GetPipelineResponseBodySinkDataset dataset) {
@@ -459,6 +710,82 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         public GetPipelineResponseBodySink setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetPipelineResponseBodySourceDataset extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>my-dataset</p>
+         */
+        @NameInMap("dataset")
+        public String dataset;
+
+        /**
+         * <strong>example:</strong>
+         * <p>status = \&quot;pending\&quot;</p>
+         */
+        @NameInMap("filter")
+        public String filter;
+
+        public static GetPipelineResponseBodySourceDataset build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineResponseBodySourceDataset self = new GetPipelineResponseBodySourceDataset();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPipelineResponseBodySourceDataset setDataset(String dataset) {
+            this.dataset = dataset;
+            return this;
+        }
+        public String getDataset() {
+            return this.dataset;
+        }
+
+        public GetPipelineResponseBodySourceDataset setFilter(String filter) {
+            this.filter = filter;
+            return this;
+        }
+        public String getFilter() {
+            return this.filter;
+        }
+
+    }
+
+    public static class GetPipelineResponseBodySourceInputFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>question</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static GetPipelineResponseBodySourceInputFields build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineResponseBodySourceInputFields self = new GetPipelineResponseBodySourceInputFields();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPipelineResponseBodySourceInputFields setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetPipelineResponseBodySourceInputFields setType(String type) {
             this.type = type;
             return this;
         }
@@ -524,12 +851,18 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodySource extends TeaModel {
+        @NameInMap("dataset")
+        public GetPipelineResponseBodySourceDataset dataset;
+
+        @NameInMap("inputFields")
+        public java.util.List<GetPipelineResponseBodySourceInputFields> inputFields;
+
         @NameInMap("logstore")
         public GetPipelineResponseBodySourceLogstore logstore;
 
         /**
          * <strong>example:</strong>
-         * <p>SLS</p>
+         * <p>dataset</p>
          */
         @NameInMap("type")
         public String type;
@@ -537,6 +870,22 @@ public class GetPipelineResponseBody extends TeaModel {
         public static GetPipelineResponseBodySource build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineResponseBodySource self = new GetPipelineResponseBodySource();
             return TeaModel.build(map, self);
+        }
+
+        public GetPipelineResponseBodySource setDataset(GetPipelineResponseBodySourceDataset dataset) {
+            this.dataset = dataset;
+            return this;
+        }
+        public GetPipelineResponseBodySourceDataset getDataset() {
+            return this.dataset;
+        }
+
+        public GetPipelineResponseBodySource setInputFields(java.util.List<GetPipelineResponseBodySourceInputFields> inputFields) {
+            this.inputFields = inputFields;
+            return this;
+        }
+        public java.util.List<GetPipelineResponseBodySourceInputFields> getInputFields() {
+            return this.inputFields;
         }
 
         public GetPipelineResponseBodySource setLogstore(GetPipelineResponseBodySourceLogstore logstore) {

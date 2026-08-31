@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PreviewPipelineResponseBody extends TeaModel {
     /**
-     * <p>The <code>data</code> field is a collection of sample rows (an array of maps) that contains only the first N rows (up to 5 by default) and does not reflect the complete write plan.</p>
+     * <p><code>data</code> is a collection of sample rows (maps within an array) that contains only the first N rows (up to 5 by default) and does not reflect the complete write plan.</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.Map<String, String>> data;
@@ -67,7 +67,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public String aggQuery;
 
         /**
-         * <p>The <code>meta.columnTypes</code> field provides a mapping from column names to data types (string / long / double / json).</p>
+         * <p><code>meta.columnTypes</code> provides the mapping from column names to data types (string / long / double / json).</p>
          */
         @NameInMap("columnTypes")
         public java.util.List<String> columnTypes;
@@ -127,7 +127,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public java.util.List<String> keys;
 
         /**
-         * <p>The maximum number of result rows returned.</p>
+         * <p>The maximum number of rows that can be returned.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -145,7 +145,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Integer mode;
 
         /**
-         * <p>The number of processed data bytes.</p>
+         * <p>The number of data bytes processed.</p>
          * 
          * <strong>example:</strong>
          * <p>524288</p>
@@ -163,7 +163,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Long processedRows;
 
         /**
-         * <p>The SLS query progress. A value of Complete indicates that the query is complete.</p>
+         * <p>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>Complete</p>
@@ -181,7 +181,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
         public Long scanBytes;
 
         /**
-         * <p>The column type and aggregation information.</p>
+         * <p>The type and aggregation information of columns.</p>
          */
         @NameInMap("terms")
         public java.util.List<java.util.Map<String, ?>> terms;

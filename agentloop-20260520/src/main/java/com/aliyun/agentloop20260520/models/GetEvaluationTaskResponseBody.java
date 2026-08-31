@@ -23,7 +23,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String channel;
 
     /**
-     * <p>The data source and execution configuration. Tasks with <code>dataType=trace</code> typically include <code>project</code>, <code>storeName</code>, and <code>dataScope</code> fields populated by the backend.</p>
+     * <p>The data source and execution configuration. Tasks with <code>dataType=trace</code> typically contain <code>project</code>, <code>storeName</code>, and <code>dataScope</code> fields that are populated by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;project&quot;:&quot;agentspace-project&quot;,&quot;storeName&quot;:&quot;logstore-tracing&quot;,&quot;dataScope&quot;:&quot;trace&quot;}</p>
@@ -41,7 +41,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The filter conditions for evaluation data, returned by the backend as a JSON string.</p>
+     * <p>The evaluation data filter condition, returned by the backend as a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</p>
@@ -62,7 +62,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
      * <p>The evaluation task description.</p>
      * 
      * <strong>example:</strong>
-     * <p>评估线上 Agent 链路任务完成度</p>
+     * <p>Evaluate the task completion rate of the online Agent pipeline</p>
      */
     @NameInMap("description")
     public String description;
