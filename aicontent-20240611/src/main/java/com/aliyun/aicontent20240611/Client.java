@@ -4585,6 +4585,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a pre-signed URL for downloading a Migu source file.</p>
+     * 
+     * @param request ModelRouterMiguDownloadSourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterMiguDownloadSourceResponse
+     */
+    public ModelRouterMiguDownloadSourceResponse modelRouterMiguDownloadSourceWithOptions(ModelRouterMiguDownloadSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("sourceId", request.sourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterMiguDownloadSource"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/pipeline/api/aigc/source/download"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterMiguDownloadSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a pre-signed URL for downloading a Migu source file.</p>
+     * 
+     * @param request ModelRouterMiguDownloadSourceRequest
+     * @return ModelRouterMiguDownloadSourceResponse
+     */
+    public ModelRouterMiguDownloadSourceResponse modelRouterMiguDownloadSource(ModelRouterMiguDownloadSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterMiguDownloadSourceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Manages Migu source files and retrieves a pre-signed URL for source file upload.</p>
+     * 
+     * @param request ModelRouterMiguUploadSourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterMiguUploadSourceResponse
+     */
+    public ModelRouterMiguUploadSourceResponse modelRouterMiguUploadSourceWithOptions(ModelRouterMiguUploadSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            body.put("fileType", request.fileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            body.put("serviceName", request.serviceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterMiguUploadSource"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/pipeline/api/aigc/source/upload"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterMiguUploadSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Manages Migu source files and retrieves a pre-signed URL for source file upload.</p>
+     * 
+     * @param request ModelRouterMiguUploadSourceRequest
+     * @return ModelRouterMiguUploadSourceResponse
+     */
+    public ModelRouterMiguUploadSourceResponse modelRouterMiguUploadSource(ModelRouterMiguUploadSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterMiguUploadSourceWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves the details of an API key.</p>
      * 

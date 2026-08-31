@@ -1,3 +1,8 @@
+2026-08-31 Version: 7.10.0
+- Support API ModelRouterMiguDownloadSource.
+- Support API ModelRouterMiguUploadSource.
+
+
 2026-08-19 Version: 7.9.0
 - Support API ModelRouterQueryBillingDetails.
 
