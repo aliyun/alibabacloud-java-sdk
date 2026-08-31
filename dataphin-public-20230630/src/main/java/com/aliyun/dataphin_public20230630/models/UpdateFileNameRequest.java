@@ -35,6 +35,13 @@ public class UpdateFileNameRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -71,6 +78,14 @@ public class UpdateFileNameRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public UpdateFileNameRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public UpdateFileNameRequest setProjectId(Long projectId) {

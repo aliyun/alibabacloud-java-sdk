@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPipelinesResponseBody extends TeaModel {
     /**
-     * <p>The error code. OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ListPipelinesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -116,10 +116,10 @@ public class ListPipelinesResponseBody extends TeaModel {
         public java.util.List<String> developOwners;
 
         /**
-         * <p>The directory in which the task resides.</p>
+         * <p>The directory where the node is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>/dwd/Finance/</p>
+         * <p>/dwd/finance_domain/</p>
          */
         @NameInMap("Directory")
         public String directory;
@@ -134,7 +134,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>The scheduling node ID.</p>
+         * <p>The schedule node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n_6793582765516849152</p>
@@ -181,13 +181,13 @@ public class ListPipelinesResponseBody extends TeaModel {
         public Integer scheduleType;
 
         /**
-         * <p>The list of task tag names.</p>
+         * <p>The list of node tag names.</p>
          */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The node status. Valid values:</p>
          * <ul>
          * <li>DRAFT: draft.</li>
          * <li>SUBMITTING: being submitted.</li>
@@ -202,7 +202,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
-         * <p>The task type. Valid values:</p>
+         * <p>The node type. Valid values:</p>
          * <ul>
          * <li>0: offline integration.</li>
          * <li>1: real-time integration.</li>
@@ -314,7 +314,7 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     public static class ListPipelinesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of task information on the current page.</p>
+         * <p>The list of node information on the current page.</p>
          */
         @NameInMap("List")
         public java.util.List<ListPipelinesResponseBodyDataList> list;
@@ -347,7 +347,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of records that match the conditions. On the first page request, the actual total is returned. On subsequent page requests (when nextCursor is passed in), if totalCount is included in the request, the same value is returned. Otherwise, this field is not returned. The total value is a snapshot taken at the time of the first page query and is not updated in real time as data changes during pagination.</p>
+         * <p>The total number of records that match the conditions. For the first page request, the actual total count is returned. For subsequent page requests (when nextCursor is passed in), if totalCount is included in the request, the same value is returned. Otherwise, this field is not returned. The total value is a snapshot taken at the time of the first page query and is not updated in real time as data changes during pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>105</p>

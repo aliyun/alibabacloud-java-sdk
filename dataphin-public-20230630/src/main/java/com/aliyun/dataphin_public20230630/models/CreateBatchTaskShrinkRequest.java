@@ -21,6 +21,15 @@ public class CreateBatchTaskShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateBatchTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBatchTaskShrinkRequest self = new CreateBatchTaskShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +49,14 @@ public class CreateBatchTaskShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateBatchTaskShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

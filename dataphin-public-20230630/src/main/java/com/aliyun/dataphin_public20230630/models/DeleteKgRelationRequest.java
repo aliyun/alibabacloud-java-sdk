@@ -15,6 +15,15 @@ public class DeleteKgRelationRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The relationship record ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -55,6 +64,14 @@ public class DeleteKgRelationRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public DeleteKgRelationRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public DeleteKgRelationRequest setRelationId(String relationId) {

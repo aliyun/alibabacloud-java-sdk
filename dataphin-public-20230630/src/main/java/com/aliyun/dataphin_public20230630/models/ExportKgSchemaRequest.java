@@ -15,6 +15,13 @@ public class ExportKgSchemaRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The format of the exported content. Valid values: json and yaml. Default value: yaml.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +60,14 @@ public class ExportKgSchemaRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ExportKgSchemaRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public ExportKgSchemaRequest setOutputFormat(String outputFormat) {

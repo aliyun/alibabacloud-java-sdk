@@ -29,7 +29,7 @@ public class CreateStandardRelationsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -113,7 +113,7 @@ public class CreateStandardRelationsResponseBody extends TeaModel {
         public java.util.List<Long> notExistStandardIdList;
 
         /**
-         * <p>The number of successfully added items.</p>
+         * <p>The number of successfully added associations.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

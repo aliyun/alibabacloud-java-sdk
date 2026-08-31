@@ -15,6 +15,13 @@ public class UpsertQualityTemplateShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>Upsert command.</p>
      * <p>This parameter is required.</p>
      */
@@ -32,6 +39,14 @@ public class UpsertQualityTemplateShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public UpsertQualityTemplateShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public UpsertQualityTemplateShrinkRequest setUpsertCommandShrink(String upsertCommandShrink) {

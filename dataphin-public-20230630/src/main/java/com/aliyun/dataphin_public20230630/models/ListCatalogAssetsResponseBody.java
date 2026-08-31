@@ -29,7 +29,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend response exception.</p>
+     * <p>The backend response exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -107,7 +107,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
 
     public static class ListCatalogAssetsResponseBodyDataAssetListDirectories extends TeaModel {
         /**
-         * <p>The directory ID.</p>
+         * <p>The ID of the directory.</p>
          * 
          * <strong>example:</strong>
          * <p>102260</p>
@@ -116,16 +116,16 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long directoryId;
 
         /**
-         * <p>The directory name.</p>
+         * <p>The name of the directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>线上电商平台</p>
+         * <p>Online E-commerce Platform</p>
          */
         @NameInMap("DirectoryName")
         public String directoryName;
 
         /**
-         * <p>The topic ID.</p>
+         * <p>The ID of the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>101676</p>
@@ -134,10 +134,10 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long topicId;
 
         /**
-         * <p>The topic name.</p>
+         * <p>The name of the topic.</p>
          * 
          * <strong>example:</strong>
-         * <p>全渠道数据专题</p>
+         * <p>Omni-channel Data Topic</p>
          */
         @NameInMap("TopicName")
         public String topicName;
@@ -185,8 +185,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         /**
          * <p>The API call mode. Returned when the asset type is API. Valid values:</p>
          * <ul>
-         * <li>1: synchronous call.</li>
-         * <li>2: asynchronous call.</li>
+         * <li>1: Synchronous call.</li>
+         * <li>2: Asynchronous call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
          * <p>The API group name. Returned when the asset type is API.</p>
          * 
          * <strong>example:</strong>
-         * <p>默认API分组</p>
+         * <p>Default API Group</p>
          */
         @NameInMap("ApiGroupName")
         public String apiGroupName;
@@ -230,7 +230,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String apiRequestMethod;
 
         /**
-         * <p>The asset description.</p>
+         * <p>The description of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -239,25 +239,25 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String assetDescription;
 
         /**
-         * <p>The asset display name. Returned when the asset type is TABLE, INDEX, or BIZ_INDEX.</p>
+         * <p>The display name of the asset. This parameter is returned when the asset type is TABLE, INDEX, or BIZ_INDEX.</p>
          * 
          * <strong>example:</strong>
-         * <p>abc表</p>
+         * <p>abc table</p>
          */
         @NameInMap("AssetDisplayName")
         public String assetDisplayName;
 
         /**
-         * <p>The asset source. For TABLE (physical table), the value is in the format &quot;Dataphin-workspace type-project Chinese name (project English name)&quot;. For TABLE (logical table), the value is in the format &quot;Dataphin-workspace type-data domain Chinese name (data domain English name)&quot;. For TABLE (data source table), the value is in the format &quot;source system name-data source name-database/schema name&quot;. For INDEX (standard modeling metric), the value is the asset source of the associated aggregate table. For INDEX (custom metric), the value is the asset source of the source table. For API, the value is the data service project name. For PAGE, the value is the application system name.</p>
+         * <p>The source of the asset. For TABLE (physical table), the value is returned in the format of &quot;Dataphin-Workspace Type-Project Chinese Name (Project English Name)&quot;. For TABLE (logical table), the value is returned in the format of &quot;Dataphin-Workspace Type-Data Domain Chinese Name (Data Domain English Name)&quot;. For TABLE (data source table), the value is returned in the format of &quot;Source System Name-Data Source Name-Database/Schema Name&quot;. For INDEX (standard modeling metric), the value is the asset source of the associated aggregate table. For INDEX (custom metric), the value is the asset source of the source table. For API, the value is the data service project name. For PAGE, the value is the application system name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Dataphin-中间层-服饰零售 (LD_Fashion)</p>
+         * <p>Dataphin-Middle Layer-Fashion Retail (LD_Fashion)</p>
          */
         @NameInMap("AssetFrom")
         public String assetFrom;
 
         /**
-         * <p>The asset full name. Returned when the asset type is TABLE or INDEX.</p>
+         * <p>The full name of the asset. This parameter is returned when the asset type is TABLE or INDEX.</p>
          * 
          * <strong>example:</strong>
          * <p>dwd_all.abc</p>
@@ -266,7 +266,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String assetFullName;
 
         /**
-         * <p>The asset name.</p>
+         * <p>The name of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -275,13 +275,20 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String assetName;
 
         /**
-         * <p>The asset tags.</p>
+         * <p>The tags of the asset.</p>
          */
         @NameInMap("AssetTags")
         public java.util.List<String> assetTags;
 
         /**
-         * <p>The asset type. Valid values: TABLE (table, including views and materialized views), INDEX (technical metric), BIZ_INDEX (business metric), API, and PAGE (dashboard).</p>
+         * <p>The asset type. Valid values:</p>
+         * <ul>
+         * <li>TABLE: table, including views and materialized views.</li>
+         * <li>INDEX: technical metric.</li>
+         * <li>BIZ_INDEX: business metric.</li>
+         * <li>API: API.</li>
+         * <li>PAGE: dashboard.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TABLE</p>
@@ -290,16 +297,16 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String assetType;
 
         /**
-         * <p>The BI workspace or directory to which the asset belongs. Returned when the asset type is PAGE (dashboard).</p>
+         * <p>The BI space or folder to which the asset belongs. Returned when the asset type is PAGE (dashboard).</p>
          * 
          * <strong>example:</strong>
-         * <p>dataphin演示空间</p>
+         * <p>dataphin demo space</p>
          */
         @NameInMap("BiCatalog")
         public String biCatalog;
 
         /**
-         * <p>The ID of the business unit to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+         * <p>The ID of the business unit to which the asset belongs. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
          * 
          * <strong>example:</strong>
          * <p>6865277495315392</p>
@@ -308,10 +315,10 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
-         * <p>The name of the business unit to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+         * <p>The name of the business unit to which the asset belongs. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
          * 
          * <strong>example:</strong>
-         * <p>服饰零售（LD_Fashion）</p>
+         * <p>Fashion Retail (LD_Fashion)</p>
          */
         @NameInMap("BizUnitName")
         public String bizUnitName;
@@ -326,7 +333,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long chartCount;
 
         /**
-         * <p>The ID of the subject domain to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+         * <p>The ID of the data domain to which the asset belongs. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
          * 
          * <strong>example:</strong>
          * <p>49837403</p>
@@ -335,16 +342,16 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String dataCellId;
 
         /**
-         * <p>The name of the subject domain to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+         * <p>The name of the data domain to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
          * 
          * <strong>example:</strong>
-         * <p>课程域</p>
+         * <p>Course Domain</p>
          */
         @NameInMap("DataCellName")
         public String dataCellName;
 
         /**
-         * <p>The name of the data source to which the asset belongs. Returned when the asset type is TABLE (data source tables only) or INDEX (technical metrics whose source table is a data source table only).</p>
+         * <p>The name of the data source to which the asset belongs. This parameter is returned when the asset type is TABLE (data source tables only) or INDEX (technical metrics whose source table is a data source table only).</p>
          * 
          * <strong>example:</strong>
          * <p>demo_mysql</p>
@@ -353,7 +360,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
-         * <p>The ID of the data source to which the asset belongs. Returned when the asset type is TABLE (data source tables only) or INDEX (technical metrics whose source table is a data source table only).</p>
+         * <p>The ID of the data source to which the asset belongs. This parameter is returned when the asset type is TABLE (data source tables only) or INDEX (technical metrics whose source table is a data source table only).</p>
          * 
          * <strong>example:</strong>
          * <p>7305549302863001856</p>
@@ -368,16 +375,16 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public java.util.List<ListCatalogAssetsResponseBodyDataAssetListDirectories> directories;
 
         /**
-         * <p>The statistical granularity name of the technical metric. Returned when the asset type is INDEX.</p>
+         * <p>The statistical granularity name of the technical metric. This parameter is returned when the asset type is INDEX.</p>
          * 
          * <strong>example:</strong>
-         * <p>课程</p>
+         * <p>Course</p>
          */
         @NameInMap("Granularity")
         public String granularity;
 
         /**
-         * <p>The asset GUID, which serves as the unique identifier of the asset.</p>
+         * <p>The GUID of the asset, which serves as the unique identifier of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>dp_ds_table.300023201.7311626611751680256.load_test.abc</p>
@@ -392,7 +399,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Boolean isDeleted;
 
         /**
-         * <p>The highest sensitivity level. Returned when the asset type is TABLE.</p>
+         * <p>The maximum sensitivity level. This parameter is returned when the asset type is TABLE.</p>
          * 
          * <strong>example:</strong>
          * <p>L3</p>
@@ -401,7 +408,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String maxSecurityLevel;
 
         /**
-         * <p>The ID of the project to which the asset belongs. Returned when the asset type is TABLE (physical tables only) or INDEX (technical metrics whose source table is a physical table only).</p>
+         * <p>The ID of the project to which the asset belongs. This parameter is returned when the asset type is TABLE (physical tables only) or INDEX (technical metrics whose source table is a physical table only).</p>
          * 
          * <strong>example:</strong>
          * <p>6865331517728384</p>
@@ -410,7 +417,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The name of the project to which the asset belongs. Returned when the asset type is TABLE (physical tables only) or INDEX (technical metrics whose source table is a physical table only).</p>
+         * <p>The name of the project to which the asset belongs. This parameter is returned when the asset type is TABLE (physical tables only) or INDEX (technical metrics whose source table is a physical table only).</p>
          * 
          * <strong>example:</strong>
          * <p>train</p>
@@ -419,7 +426,23 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The subtype. Valid values: DIM_NORMAL (common logical dimension table), DIM_ENUM (enumeration logical dimension table), DIM_VIRTUAL (virtual logical dimension table), SUM_BIZ_UNIT (aggregate logical table), FACT_EVENT (event fact logical table), FACT_SNAPSHOT (snapshot fact logical table), DATASOURCE_TABLE (data source table), PHYSICAL_TABLE (physical table), DATASOURCE_VIEW (view - data source view), PHYSICAL_VIEW (physical view), MATERIALIZED_VIEW (materialized view), BIZ_INDEX (business metric), INDEX (technical metric - standard modeling metric), and CUSTOM_INDEX (technical metric - custom metric).</p>
+         * <p>The subtype of the asset. Valid values:</p>
+         * <ul>
+         * <li>DIM_NORMAL: common logical dimension table.</li>
+         * <li>DIM_ENUM: enumeration logical dimension table.</li>
+         * <li>DIM_VIRTUAL: virtual logical dimension table.</li>
+         * <li>SUM_BIZ_UNIT: aggregate table.</li>
+         * <li>FACT_EVENT: event fact logical table.</li>
+         * <li>FACT_SNAPSHOT: snapshot fact logical table.</li>
+         * <li>DATASOURCE_TABLE: data source table.</li>
+         * <li>PHYSICAL_TABLE: physical table.</li>
+         * <li>DATASOURCE_VIEW: view (data source view).</li>
+         * <li>PHYSICAL_VIEW: physical view.</li>
+         * <li>MATERIALIZED_VIEW: materialized view.</li>
+         * <li>BIZ_INDEX: business metric.</li>
+         * <li>INDEX: technical metric (standard modeling metric).</li>
+         * <li>CUSTOM_INDEX: technical metric (custom metric).</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DIM_NORMAL</p>
@@ -428,7 +451,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String subType;
 
         /**
-         * <p>The GUID of the aggregate table to which the asset belongs. Returned when the asset type is INDEX.</p>
+         * <p>The GUID of the aggregate table to which the asset belongs. This parameter is returned when the asset type is INDEX.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.300023201.test.ads_gross</p>
@@ -437,7 +460,7 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String sumTableGuid;
 
         /**
-         * <p>The name of the aggregate table to which the asset belongs. Returned when the asset type is INDEX.</p>
+         * <p>The name of the aggregate table to which the asset belongs. This parameter is returned when the asset type is INDEX.</p>
          * 
          * <strong>example:</strong>
          * <p>ads_gross</p>

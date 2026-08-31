@@ -23,7 +23,7 @@ public class AddDataServiceAppMemberResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error details returned by the backend.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>

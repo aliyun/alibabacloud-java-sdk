@@ -44,6 +44,13 @@ public class GetNodeUpDownStreamShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The project ID.</p>
      * 
      * <strong>example:</strong>
@@ -96,6 +103,14 @@ public class GetNodeUpDownStreamShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetNodeUpDownStreamShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetNodeUpDownStreamShrinkRequest setProjectId(Long projectId) {

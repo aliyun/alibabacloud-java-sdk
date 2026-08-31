@@ -15,6 +15,13 @@ public class UpdateDataServiceAppMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The command to update regular members of a data service application.</p>
      * <p>This parameter is required.</p>
      */
@@ -32,6 +39,14 @@ public class UpdateDataServiceAppMemberRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public UpdateDataServiceAppMemberRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public UpdateDataServiceAppMemberRequest setUpdateCommand(UpdateDataServiceAppMemberRequestUpdateCommand updateCommand) {

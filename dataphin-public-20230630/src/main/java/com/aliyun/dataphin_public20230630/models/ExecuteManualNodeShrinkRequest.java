@@ -34,6 +34,13 @@ public class ExecuteManualNodeShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static ExecuteManualNodeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteManualNodeShrinkRequest self = new ExecuteManualNodeShrinkRequest();
         return TeaModel.build(map, self);
@@ -61,6 +68,14 @@ public class ExecuteManualNodeShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ExecuteManualNodeShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

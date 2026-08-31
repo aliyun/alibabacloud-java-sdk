@@ -15,6 +15,15 @@ public class GetTableLineageByTaskIdRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The data structure for querying table lineage.</p>
      * <p>This parameter is required.</p>
      */
@@ -34,6 +43,14 @@ public class GetTableLineageByTaskIdRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public GetTableLineageByTaskIdRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public GetTableLineageByTaskIdRequest setTableLineageByTaskIdQuery(GetTableLineageByTaskIdRequestTableLineageByTaskIdQuery tableLineageByTaskIdQuery) {
         this.tableLineageByTaskIdQuery = tableLineageByTaskIdQuery;
         return this;
@@ -50,7 +67,7 @@ public class GetTableLineageByTaskIdRequest extends TeaModel {
         public Boolean needNotExistObject;
 
         /**
-         * <p>The environment of the task to query: DEV or PROD.</p>
+         * <p>The environment of the node used to filter the query. Valid values: DEV and PROD.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -59,7 +76,7 @@ public class GetTableLineageByTaskIdRequest extends TeaModel {
         public String taskEnv;
 
         /**
-         * <p>The task (node) ID used to filter the query.</p>
+         * <p>The ID of the node used to filter the query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

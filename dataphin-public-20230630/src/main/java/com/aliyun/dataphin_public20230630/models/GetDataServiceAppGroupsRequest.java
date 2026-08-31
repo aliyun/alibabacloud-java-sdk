@@ -15,6 +15,13 @@ public class GetDataServiceAppGroupsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The data service project ID.</p>
      * <blockquote>
      * <p>Notice: This field is deprecated.</notice>.</p>
@@ -38,6 +45,14 @@ public class GetDataServiceAppGroupsRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetDataServiceAppGroupsRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     @Deprecated

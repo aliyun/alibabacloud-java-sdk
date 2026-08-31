@@ -21,6 +21,13 @@ public class GetTableColumnLineagesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The GUID of the table, which is the unique identifier of the asset.</p>
      * <p>This parameter is required.</p>
      * 
@@ -49,6 +56,14 @@ public class GetTableColumnLineagesRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetTableColumnLineagesRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetTableColumnLineagesRequest setTableGuid(String tableGuid) {

@@ -15,6 +15,13 @@ public class RevokeDataServiceApiRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -42,6 +49,14 @@ public class RevokeDataServiceApiRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public RevokeDataServiceApiRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public RevokeDataServiceApiRequest setProjectId(Integer projectId) {

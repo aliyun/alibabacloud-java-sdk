@@ -15,6 +15,15 @@ public class UpdateComputeSourceShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The edit command.</p>
      * <p>This parameter is required.</p>
      */
@@ -32,6 +41,14 @@ public class UpdateComputeSourceShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public UpdateComputeSourceShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public UpdateComputeSourceShrinkRequest setUpdateCommandShrink(String updateCommandShrink) {

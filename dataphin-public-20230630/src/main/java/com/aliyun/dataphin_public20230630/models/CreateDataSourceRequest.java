@@ -20,6 +20,13 @@ public class CreateDataSourceRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateDataSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataSourceRequest self = new CreateDataSourceRequest();
         return TeaModel.build(map, self);
@@ -39,6 +46,14 @@ public class CreateDataSourceRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateDataSourceRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class CreateDataSourceRequestCreateCommandDevDataSourceCreateDataSourceCreateConfigItemList extends TeaModel {

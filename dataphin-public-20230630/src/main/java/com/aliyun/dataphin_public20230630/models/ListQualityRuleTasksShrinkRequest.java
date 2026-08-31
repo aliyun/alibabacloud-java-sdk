@@ -20,6 +20,13 @@ public class ListQualityRuleTasksShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static ListQualityRuleTasksShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQualityRuleTasksShrinkRequest self = new ListQualityRuleTasksShrinkRequest();
         return TeaModel.build(map, self);
@@ -39,6 +46,14 @@ public class ListQualityRuleTasksShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ListQualityRuleTasksShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

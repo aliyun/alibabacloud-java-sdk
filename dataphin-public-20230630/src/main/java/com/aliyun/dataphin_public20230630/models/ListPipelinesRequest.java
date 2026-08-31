@@ -28,6 +28,15 @@ public class ListPipelinesRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The user ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static ListPipelinesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPipelinesRequest self = new ListPipelinesRequest();
         return TeaModel.build(map, self);
@@ -55,6 +64,14 @@ public class ListPipelinesRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ListPipelinesRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class ListPipelinesRequestContext extends TeaModel {
@@ -107,13 +124,13 @@ public class ListPipelinesRequest extends TeaModel {
 
     public static class ListPipelinesRequestListCommand extends TeaModel {
         /**
-         * <p>The list of creator user IDs for filtering. If left empty, no filtering is applied. Multiple values have an OR relationship.</p>
+         * <p>The list of creator user IDs for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</p>
          */
         @NameInMap("CreatorList")
         public java.util.List<String> creatorList;
 
         /**
-         * <p>The list of development owner user IDs for filtering. If left empty, no filtering is applied. Multiple values have an OR relationship.</p>
+         * <p>The list of development owner user IDs for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</p>
          */
         @NameInMap("DevelopOwnerList")
         public java.util.List<String> developOwnerList;
@@ -131,13 +148,13 @@ public class ListPipelinesRequest extends TeaModel {
         public Boolean exactMatch;
 
         /**
-         * <p>The list of node name keywords. This parameter is optional. If left empty, no filtering by name is applied. For exact match, this is a list of full names. For fuzzy match, this is a list of keywords. Multiple values have an OR relationship.</p>
+         * <p>The list of node name keywords. This parameter is optional. If left empty, no filtering by name is applied. For exact match, specify full names. For fuzzy match, specify keywords. Multiple values are evaluated with an OR relationship.</p>
          */
         @NameInMap("Keywords")
         public java.util.List<String> keywords;
 
         /**
-         * <p>The cursor-based pagination parameter (an opaque cursor that callers do not need to interpret). This parameter is optional. If not specified, the request is treated as a first-page request and returns the actual total count. If specified, the request is treated as a subsequent-page request. Pass the NextCursor value from the previous page response as-is. The SQL layer automatically filters by incrementing ID to query the next page without re-querying the total count. No OFFSET is used throughout, which avoids performance degradation in deep paging scenarios.</p>
+         * <p>The cursor-based pagination parameter (an opaque cursor that callers do not need to interpret). This parameter is optional. If not specified, the request is treated as a first-page request and returns the actual total count. If specified, the request is treated as a subsequent-page request. Pass the NextCursor value returned from the previous page as-is. The SQL layer automatically filters by incrementing ID to query the next page without re-querying the total count. No OFFSET is used throughout, which avoids performance degradation in deep paging scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -146,13 +163,13 @@ public class ListPipelinesRequest extends TeaModel {
         public Long nextCursor;
 
         /**
-         * <p>The list of O&amp;M owner user IDs for filtering. If left empty, no filtering is applied. Multiple values have an OR relationship.</p>
+         * <p>The list of O&amp;M owner user IDs for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</p>
          */
         @NameInMap("OpsOwnerList")
         public java.util.List<String> opsOwnerList;
 
         /**
-         * <p>The page number. Default value: 1. Starts from 1.</p>
+         * <p>The page number. Default value: 1. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -170,16 +187,16 @@ public class ListPipelinesRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The list of node types. Valid values:</p>
+         * <p>The list of node types. Default value: [0] (batch integration). Valid values:</p>
          * <ul>
-         * <li>0: offline integration.</li>
+         * <li>0: batch integration.</li>
          * <li>1: real-time integration.</li>
          * <li>13: data aggregation.</li>
          * <li>14: offline unstructured workflow.</li>
          * <li>15: real-time unstructured workflow.</li>
          * <li>16: online unstructured workflow.</li>
          * </ul>
-         * <p>Default value: [0]. If null or an empty list is passed, the default value [0] is used.</p>
+         * <p>If null or an empty list is passed, the default value [0] is used.</p>
          */
         @NameInMap("PipelineTypeList")
         public java.util.List<Integer> pipelineTypeList;
@@ -218,13 +235,13 @@ public class ListPipelinesRequest extends TeaModel {
         public java.util.List<String> submitStatusList;
 
         /**
-         * <p>The list of label names for filtering. If left empty, no filtering is applied. Multiple values have an OR relationship.</p>
+         * <p>The list of label names for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</p>
          */
         @NameInMap("TagList")
         public java.util.List<String> tagList;
 
         /**
-         * <p>The total number of records for cursor-based pagination. This parameter is optional and takes effect only when NextCursor is not empty. After the first-page request returns the actual total count, pass this value back as-is for subsequent pages. The server does not re-query the total count and directly returns this value, which avoids redundant count overhead. If not specified, the system falls back to querying one extra record to determine whether a next page exists.</p>
+         * <p>The total number of records for cursor-based pagination. This parameter is optional and takes effect only when NextCursor is not empty. After the first-page request returns the actual total count, pass this value back as-is for subsequent pages. The server does not re-query the total count and directly echoes the value, which avoids redundant count overhead. If not specified, the system falls back to querying one extra record to determine whether a next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>1233</p>

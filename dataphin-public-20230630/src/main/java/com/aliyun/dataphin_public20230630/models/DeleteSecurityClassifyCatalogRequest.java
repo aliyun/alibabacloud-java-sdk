@@ -21,6 +21,13 @@ public class DeleteSecurityClassifyCatalogRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static DeleteSecurityClassifyCatalogRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSecurityClassifyCatalogRequest self = new DeleteSecurityClassifyCatalogRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class DeleteSecurityClassifyCatalogRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public DeleteSecurityClassifyCatalogRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class DeleteSecurityClassifyCatalogRequestDeleteCommand extends TeaModel {

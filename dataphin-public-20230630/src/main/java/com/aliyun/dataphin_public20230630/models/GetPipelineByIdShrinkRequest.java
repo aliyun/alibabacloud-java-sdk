@@ -22,7 +22,16 @@ public class GetPipelineByIdShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The query ID used to query the pipeline node.</p>
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
+     * <p>The ID used to query the pipeline node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("QueryId")
@@ -47,6 +56,14 @@ public class GetPipelineByIdShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetPipelineByIdShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetPipelineByIdShrinkRequest setQueryIdShrink(String queryIdShrink) {

@@ -15,6 +15,13 @@ public class UpdateUserGroupShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The command to edit the user group.</p>
      */
     @NameInMap("UpdateCommand")
@@ -31,6 +38,14 @@ public class UpdateUserGroupShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public UpdateUserGroupShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public UpdateUserGroupShrinkRequest setUpdateCommandShrink(String updateCommandShrink) {

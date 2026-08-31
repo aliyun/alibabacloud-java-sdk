@@ -29,7 +29,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesResponseBody extends TeaMod
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>

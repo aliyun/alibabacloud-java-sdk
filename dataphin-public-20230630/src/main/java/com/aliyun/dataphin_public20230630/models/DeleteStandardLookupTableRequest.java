@@ -24,6 +24,13 @@ public class DeleteStandardLookupTableRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static DeleteStandardLookupTableRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStandardLookupTableRequest self = new DeleteStandardLookupTableRequest();
         return TeaModel.build(map, self);
@@ -43,6 +50,14 @@ public class DeleteStandardLookupTableRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public DeleteStandardLookupTableRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

@@ -150,6 +150,533 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     }
 
+    public static class ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>yyyyMMdd</p>
+         */
+        @NameInMap("DateFormat")
+        public String dateFormat;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Descr")
+        public String descr;
+
+        @NameInMap("IsUrl")
+        public Boolean isUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>col02</p>
+         */
+        @NameInMap("MappingColumn")
+        public String mappingColumn;
+
+        @NameInMap("Must")
+        public Boolean must;
+
+        /**
+         * <strong>example:</strong>
+         * <p>=</p>
+         */
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Optional")
+        public Boolean optional;
+
+        /**
+         * <strong>example:</strong>
+         * <p>colx</p>
+         */
+        @NameInMap("OriginalColumn")
+        public String originalColumn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>p1</p>
+         */
+        @NameInMap("ParamName")
+        public String paramName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>int</p>
+         */
+        @NameInMap("ParamType")
+        public String paramType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Sample")
+        public String sample;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("SeqNum")
+        public Integer seqNum;
+
+        public static ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList build(java.util.Map<String, ?> map) throws Exception {
+            ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList self = new ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setDateFormat(String dateFormat) {
+            this.dateFormat = dateFormat;
+            return this;
+        }
+        public String getDateFormat() {
+            return this.dateFormat;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setDescr(String descr) {
+            this.descr = descr;
+            return this;
+        }
+        public String getDescr() {
+            return this.descr;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setIsUrl(Boolean isUrl) {
+            this.isUrl = isUrl;
+            return this;
+        }
+        public Boolean getIsUrl() {
+            return this.isUrl;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setMappingColumn(String mappingColumn) {
+            this.mappingColumn = mappingColumn;
+            return this;
+        }
+        public String getMappingColumn() {
+            return this.mappingColumn;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setMust(Boolean must) {
+            this.must = must;
+            return this;
+        }
+        public Boolean getMust() {
+            return this.must;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setOptional(Boolean optional) {
+            this.optional = optional;
+            return this;
+        }
+        public Boolean getOptional() {
+            return this.optional;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setOriginalColumn(String originalColumn) {
+            this.originalColumn = originalColumn;
+            return this;
+        }
+        public String getOriginalColumn() {
+            return this.originalColumn;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setParamName(String paramName) {
+            this.paramName = paramName;
+            return this;
+        }
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setSample(String sample) {
+            this.sample = sample;
+            return this;
+        }
+        public String getSample() {
+            return this.sample;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList setSeqNum(Integer seqNum) {
+            this.seqNum = seqNum;
+            return this;
+        }
+        public Integer getSeqNum() {
+            return this.seqNum;
+        }
+
+    }
+
+    public static class ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>yyyyMMdd</p>
+         */
+        @NameInMap("DateFormat")
+        public String dateFormat;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Descr")
+        public String descr;
+
+        @NameInMap("IsUrl")
+        public Boolean isUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>col1</p>
+         */
+        @NameInMap("MappingColumn")
+        public String mappingColumn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>colx</p>
+         */
+        @NameInMap("OriginalColumn")
+        public String originalColumn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>p2</p>
+         */
+        @NameInMap("ParamName")
+        public String paramName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>int</p>
+         */
+        @NameInMap("ParamType")
+        public String paramType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Sample")
+        public String sample;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("SeqNum")
+        public String seqNum;
+
+        public static ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList build(java.util.Map<String, ?> map) throws Exception {
+            ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList self = new ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList setDateFormat(String dateFormat) {
+            this.dateFormat = dateFormat;
+            return this;
+        }
+        public String getDateFormat() {
+            return this.dateFormat;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList setDescr(String descr) {
+            this.descr = descr;
+            return this;
+        }
+        public String getDescr() {
+            return this.descr;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList setIsUrl(Boolean isUrl) {
+            this.isUrl = isUrl;
+            return this;
+        }
+        public Boolean getIsUrl() {
+            return this.isUrl;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList setMappingColumn(String mappingColumn) {
+            this.mappingColumn = mappingColumn;
+            return this;
+        }
+        public String getMappingColumn() {
+            return this.mappingColumn;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList setOriginalColumn(String originalColumn) {
+            this.originalColumn = originalColumn;
+            return this;
+        }
+        public String getOriginalColumn() {
+            return this.originalColumn;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList setParamName(String paramName) {
+            this.paramName = paramName;
+            return this;
+        }
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList setSample(String sample) {
+            this.sample = sample;
+            return this;
+        }
+        public String getSample() {
+            return this.sample;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList setSeqNum(String seqNum) {
+            this.seqNum = seqNum;
+            return this;
+        }
+        public String getSeqNum() {
+            return this.seqNum;
+        }
+
+    }
+
+    public static class ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1012</p>
+         */
+        @NameInMap("ApiNo")
+        public Long apiNo;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("ExecTimeout")
+        public Integer execTimeout;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ExecuteMode")
+        public Integer executeMode;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1011</p>
+         */
+        @NameInMap("OsApiGroup")
+        public Integer osApiGroup;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("OsApiGroupName")
+        public String osApiGroupName;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1012</p>
+         */
+        @NameInMap("OsProject")
+        public Integer osProject;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("OsProjectName")
+        public String osProjectName;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Protocol")
+        public Integer protocol;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RequestMethod")
+        public Integer requestMethod;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("RequestParamList")
+        public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList> requestParamList;
+
+        @NameInMap("ResponseParamList")
+        public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList> responseParamList;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("Timeout")
+        public Integer timeout;
+
+        public static ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo self = new ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setApiNo(Long apiNo) {
+            this.apiNo = apiNo;
+            return this;
+        }
+        public Long getApiNo() {
+            return this.apiNo;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setExecTimeout(Integer execTimeout) {
+            this.execTimeout = execTimeout;
+            return this;
+        }
+        public Integer getExecTimeout() {
+            return this.execTimeout;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setExecuteMode(Integer executeMode) {
+            this.executeMode = executeMode;
+            return this;
+        }
+        public Integer getExecuteMode() {
+            return this.executeMode;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setOsApiGroup(Integer osApiGroup) {
+            this.osApiGroup = osApiGroup;
+            return this;
+        }
+        public Integer getOsApiGroup() {
+            return this.osApiGroup;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setOsApiGroupName(String osApiGroupName) {
+            this.osApiGroupName = osApiGroupName;
+            return this;
+        }
+        public String getOsApiGroupName() {
+            return this.osApiGroupName;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setOsProject(Integer osProject) {
+            this.osProject = osProject;
+            return this;
+        }
+        public Integer getOsProject() {
+            return this.osProject;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setOsProjectName(String osProjectName) {
+            this.osProjectName = osProjectName;
+            return this;
+        }
+        public String getOsProjectName() {
+            return this.osProjectName;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setProtocol(Integer protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public Integer getProtocol() {
+            return this.protocol;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setRequestMethod(Integer requestMethod) {
+            this.requestMethod = requestMethod;
+            return this;
+        }
+        public Integer getRequestMethod() {
+            return this.requestMethod;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setRequestParamList(java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList> requestParamList) {
+            this.requestParamList = requestParamList;
+            return this;
+        }
+        public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList> getRequestParamList() {
+            return this.requestParamList;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setResponseParamList(java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList> responseParamList) {
+            this.responseParamList = responseParamList;
+            return this;
+        }
+        public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList> getResponseParamList() {
+            return this.responseParamList;
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo setTimeout(Integer timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
+    }
+
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigFileStorageConfig extends TeaModel {
         /**
          * <p>The data source ID.</p>
@@ -1055,6 +1582,9 @@ public class ListDatasetsResponseBody extends TeaModel {
     }
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionList extends TeaModel {
+        @NameInMap("ApiInfo")
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo apiInfo;
+
         /**
          * <p>The creator ID.</p>
          * 
@@ -1118,6 +1648,14 @@ public class ListDatasetsResponseBody extends TeaModel {
         public static ListDatasetsResponseBodyPageResultResultDataVersionList build(java.util.Map<String, ?> map) throws Exception {
             ListDatasetsResponseBodyPageResultResultDataVersionList self = new ListDatasetsResponseBodyPageResultResultDataVersionList();
             return TeaModel.build(map, self);
+        }
+
+        public ListDatasetsResponseBodyPageResultResultDataVersionList setApiInfo(ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo apiInfo) {
+            this.apiInfo = apiInfo;
+            return this;
+        }
+        public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo getApiInfo() {
+            return this.apiInfo;
         }
 
         public ListDatasetsResponseBodyPageResultResultDataVersionList setCreator(String creator) {

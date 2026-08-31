@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableColumnsResponseBody extends TeaModel {
     /**
-     * <p>Backend response code.</p>
+     * <p>The backend response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class GetTableColumnsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>List of asset table columns.</p>
+     * <p>The list of asset table columns.</p>
      */
     @NameInMap("ColumnList")
     public java.util.List<GetTableColumnsResponseBodyColumnList> columnList;
 
     /**
-     * <p>HTTP response code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Backend response exception details.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
 
     public static class GetTableColumnsResponseBodyColumnList extends TeaModel {
         /**
-         * <p>Data classification ID.</p>
+         * <p>The ID of the data classification.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -116,7 +116,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public Long classifyId;
 
         /**
-         * <p>Data classification name.</p>
+         * <p>The name of the data classification.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -125,7 +125,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String classifyName;
 
         /**
-         * <p>Column comment.</p>
+         * <p>The comment of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -134,7 +134,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -143,7 +143,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Creator.</p>
+         * <p>The creator of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -152,7 +152,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Data source ID.</p>
+         * <p>The ID of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>3301</p>
@@ -161,7 +161,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public Long dataSourceId;
 
         /**
-         * <p>Data source type.</p>
+         * <p>The type of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
@@ -170,7 +170,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String dataSourceType;
 
         /**
-         * <p>Data type.</p>
+         * <p>The data type of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>varchar</p>
@@ -179,7 +179,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>Default value.</p>
+         * <p>The default value of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -188,16 +188,16 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>Column display name.</p>
+         * <p>The display name of the field.</p>
          * 
          * <strong>example:</strong>
-         * <p>年龄</p>
+         * <p>Age</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>Environment: dev or prod.</p>
+         * <p>The environment to which the column belongs. Valid values: dev and prod.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -206,7 +206,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String env;
 
         /**
-         * <p>Column GUID.</p>
+         * <p>The GUID of the column.</p>
          * 
          * <strong>example:</strong>
          * <p>1121.col1</p>
@@ -215,25 +215,25 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String guid;
 
         /**
-         * <p>Whether this is a foreign key.</p>
+         * <p>Indicates whether the field is a foreign key.</p>
          */
         @NameInMap("IsForeignKey")
         public Boolean isForeignKey;
 
         /**
-         * <p>Whether this is a partition column.</p>
+         * <p>Indicates whether the field is a partition key.</p>
          */
         @NameInMap("IsPartitionColumn")
         public Boolean isPartitionColumn;
 
         /**
-         * <p>Whether this is a primary key.</p>
+         * <p>Indicates whether the field is a primary key.</p>
          */
         @NameInMap("IsPrimaryKey")
         public Boolean isPrimaryKey;
 
         /**
-         * <p>Last modifier.</p>
+         * <p>The last modifier of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -242,7 +242,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
-         * <p>Data level abbreviation.</p>
+         * <p>The abbreviation of the data level.</p>
          * 
          * <strong>example:</strong>
          * <p>L1</p>
@@ -251,7 +251,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String levelAbbreviation;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -260,7 +260,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>Column name.</p>
+         * <p>The name of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -269,13 +269,13 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Whether null values are allowed.</p>
+         * <p>Indicates whether the field allows null values.</p>
          */
         @NameInMap("Nullable")
         public Boolean nullable;
 
         /**
-         * <p>Sequence number.</p>
+         * <p>The sequence number of the column.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -284,7 +284,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public Integer seqNumber;
 
         /**
-         * <p>Table GUID.</p>
+         * <p>The GUID of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>1121</p>
@@ -293,7 +293,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String tableGuid;
 
         /**
-         * <p>Table name.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>t_test</p>
@@ -302,7 +302,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>Query count in the last 30 days.</p>
+         * <p>The number of queries in the last 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>

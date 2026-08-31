@@ -116,7 +116,7 @@ public class ListKgRelationResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (float), BOOLEAN (boolean), DATE (date), LIST (list), and others.</p>
+         * <p>The data type of the property. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), and LIST (list).</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -166,7 +166,7 @@ public class ListKgRelationResponseBody extends TeaModel {
 
     public static class ListKgRelationResponseBodyPageResultRelationList extends TeaModel {
         /**
-         * <p>The relationship record property list.</p>
+         * <p>The list of properties for the relationship record.</p>
          */
         @NameInMap("PropertyList")
         public java.util.List<ListKgRelationResponseBodyPageResultRelationListPropertyList> propertyList;
@@ -256,7 +256,7 @@ public class ListKgRelationResponseBody extends TeaModel {
 
     public static class ListKgRelationResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The paged relationship record list.</p>
+         * <p>The list of paged relationship records.</p>
          */
         @NameInMap("RelationList")
         public java.util.List<ListKgRelationResponseBodyPageResultRelationList> relationList;

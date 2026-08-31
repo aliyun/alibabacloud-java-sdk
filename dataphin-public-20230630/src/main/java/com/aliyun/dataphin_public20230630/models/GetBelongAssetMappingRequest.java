@@ -20,6 +20,13 @@ public class GetBelongAssetMappingRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static GetBelongAssetMappingRequest build(java.util.Map<String, ?> map) throws Exception {
         GetBelongAssetMappingRequest self = new GetBelongAssetMappingRequest();
         return TeaModel.build(map, self);
@@ -39,6 +46,14 @@ public class GetBelongAssetMappingRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetBelongAssetMappingRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class GetBelongAssetMappingRequestAssetMappingQuery extends TeaModel {

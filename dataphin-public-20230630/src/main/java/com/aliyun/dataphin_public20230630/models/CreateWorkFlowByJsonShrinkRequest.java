@@ -28,6 +28,15 @@ public class CreateWorkFlowByJsonShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateWorkFlowByJsonShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWorkFlowByJsonShrinkRequest self = new CreateWorkFlowByJsonShrinkRequest();
         return TeaModel.build(map, self);
@@ -55,6 +64,14 @@ public class CreateWorkFlowByJsonShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateWorkFlowByJsonShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

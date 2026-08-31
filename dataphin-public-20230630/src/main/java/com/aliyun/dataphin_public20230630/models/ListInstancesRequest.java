@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>Environment identifier</p>
+     * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: Development environment</li>
-     * <li>PROD (default): Production environment</li>
+     * <li>DEV: Development environment. </li>
+     * <li>PROD (default): Production environment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class ListInstancesRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>Query Request</p>
+     * <p>The query request.</p>
      */
     @NameInMap("ListQuery")
     public ListInstancesRequestListQuery listQuery;
 
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +32,15 @@ public class ListInstancesRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The operator user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
@@ -62,12 +71,20 @@ public class ListInstancesRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public ListInstancesRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static class ListInstancesRequestListQuery extends TeaModel {
         /**
-         * <p>Business Type</p>
+         * <p>The business type. Valid values:</p>
          * <ul>
-         * <li>SCRIPT: Script Instance</li>
-         * <li>LOGICAL_TABLE: Logical Table</li>
+         * <li>SCRIPT: Script instance.</li>
+         * <li>LOGICAL_TABLE: Logical table.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -77,7 +94,7 @@ public class ListInstancesRequest extends TeaModel {
         public String bizType;
 
         /**
-         * <p>Business unit ID. Required when querying summary logical tables.</p>
+         * <p>The business unit ID. Required when querying aggregate logical tables.</p>
          * 
          * <strong>example:</strong>
          * <p>6232322111</p>
@@ -86,7 +103,7 @@ public class ListInstancesRequest extends TeaModel {
         public Long bizUnitId;
 
         /**
-         * <p>Workflow ID</p>
+         * <p>The workflow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1021</p>
@@ -95,7 +112,7 @@ public class ListInstancesRequest extends TeaModel {
         public String flowId;
 
         /**
-         * <p>End business date and time. The time format must conform to the partition format specified by the business unit.</p>
+         * <p>The end business date and time. The time format must match the partition format specified by the business unit.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-31</p>
@@ -104,7 +121,7 @@ public class ListInstancesRequest extends TeaModel {
         public String maxBizDate;
 
         /**
-         * <p>Maximum instance run time</p>
+         * <p>The maximum instance run time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-31</p>
@@ -113,7 +130,7 @@ public class ListInstancesRequest extends TeaModel {
         public String maxRunDate;
 
         /**
-         * <p>Start business date and time. The time format must conform to the partition format specified by the business unit.</p>
+         * <p>The start business date and time. The time format must match the partition format specified by the business unit.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-30</p>
@@ -122,7 +139,7 @@ public class ListInstancesRequest extends TeaModel {
         public String minBizDate;
 
         /**
-         * <p>Minimum instance run time</p>
+         * <p>The minimum instance run time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-30</p>
@@ -131,7 +148,7 @@ public class ListInstancesRequest extends TeaModel {
         public String minRunDate;
 
         /**
-         * <p>Node ID</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n_23131</p>
@@ -140,13 +157,13 @@ public class ListInstancesRequest extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>Node Owner</p>
+         * <p>The node owners.</p>
          */
         @NameInMap("OwnerList")
         public java.util.List<String> ownerList;
 
         /**
-         * <p>Page Number</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +173,7 @@ public class ListInstancesRequest extends TeaModel {
         public Integer page;
 
         /**
-         * <p>Page Size</p>
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +183,7 @@ public class ListInstancesRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Priority</p>
+         * <p>The priority. Valid values:</p>
          * <ul>
          * <li>HIGHEST</li>
          * <li>HIGH</li>
@@ -179,7 +196,7 @@ public class ListInstancesRequest extends TeaModel {
         public java.util.List<String> priorityList;
 
         /**
-         * <p>Project ID</p>
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,29 +206,29 @@ public class ListInstancesRequest extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Running status</p>
+         * <p>The run status. Valid values:</p>
          * <ul>
-         * <li>INIT: Initialized</li>
-         * <li>WAIT_SUBMISSION: Waiting for Submission</li>
-         * <li>WAIT_SCHEDULE: Waiting for Schedule Time</li>
-         * <li>DISPATCH_BLOCKED: Throttled</li>
-         * <li>WAIT_RESOURCE: Waiting for Scheduling Resources</li>
-         * <li>RUNNING: Running</li>
-         * <li>SUCCESS: Succeeded</li>
-         * <li>FAILED: Failed</li>
+         * <li>INIT: Init.</li>
+         * <li>WAIT_SUBMISSION: Waiting for submission.</li>
+         * <li>WAIT_SCHEDULE: Waiting for schedule time.</li>
+         * <li>DISPATCH_BLOCKED: Throttled.</li>
+         * <li>WAIT_RESOURCE: Waiting for schedule resource.</li>
+         * <li>RUNNING: Running.</li>
+         * <li>SUCCESS: Succeeded.</li>
+         * <li>FAILED: Failed.</li>
          * </ul>
          */
         @NameInMap("RunStatusList")
         public java.util.List<String> runStatusList;
 
         /**
-         * <p>Whether scheduling is paused</p>
+         * <p>Specifies whether scheduling is paused.</p>
          */
         @NameInMap("SchedulePaused")
         public Boolean schedulePaused;
 
         /**
-         * <p>Schedule Period</p>
+         * <p>The scheduling period. Valid values:</p>
          * <ul>
          * <li>YEARLY</li>
          * <li>MONTHLY</li>
@@ -225,10 +242,10 @@ public class ListInstancesRequest extends TeaModel {
         public java.util.List<String> schedulePeriodList;
 
         /**
-         * <p>Instance schedule type</p>
+         * <p>The instance scheduling type. Valid values:</p>
          * <ul>
-         * <li>NORMAL (Periodic Instance)</li>
-         * <li>MANUAL (Manual Instance)</li>
+         * <li>NORMAL: Periodic instance.</li>
+         * <li>MANUAL: Manual instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -239,7 +256,7 @@ public class ListInstancesRequest extends TeaModel {
         public String scheduleType;
 
         /**
-         * <p>Fuzzy match by node name or exact match by node ID</p>
+         * <p>Fuzzy match by node name or exact match by node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -248,7 +265,7 @@ public class ListInstancesRequest extends TeaModel {
         public String searchText;
 
         /**
-         * <p>Sub-business Type</p>
+         * <p>The sub-business type. Valid values:</p>
          * <ul>
          * <li>MAX_COMPUTE_SQL</li>
          * <li>HIVE_SQL</li>
@@ -260,6 +277,12 @@ public class ListInstancesRequest extends TeaModel {
          */
         @NameInMap("SubBizTypeList")
         public java.util.List<String> subBizTypeList;
+
+        /**
+         * <p>The node tag filter list. Each element is a numeric string of a node tag ID (such as &quot;123&quot;). Filters the instance list by node tags. If not specified or empty, no filtering is applied and all instances are returned. Multiple tags use OR logic. Invalid elements (non-numeric or overflow) are ignored.</p>
+         */
+        @NameInMap("TagList")
+        public java.util.List<String> tagList;
 
         public static ListInstancesRequestListQuery build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesRequestListQuery self = new ListInstancesRequestListQuery();
@@ -416,6 +439,14 @@ public class ListInstancesRequest extends TeaModel {
         }
         public java.util.List<String> getSubBizTypeList() {
             return this.subBizTypeList;
+        }
+
+        public ListInstancesRequestListQuery setTagList(java.util.List<String> tagList) {
+            this.tagList = tagList;
+            return this;
+        }
+        public java.util.List<String> getTagList() {
+            return this.tagList;
         }
 
     }

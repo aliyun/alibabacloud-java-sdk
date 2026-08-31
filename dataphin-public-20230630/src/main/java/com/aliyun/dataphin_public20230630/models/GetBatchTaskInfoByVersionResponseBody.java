@@ -47,7 +47,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The node details.</p>
+     * <p>The task details.</p>
      */
     @NameInMap("TaskInfo")
     public GetBatchTaskInfoByVersionResponseBodyTaskInfo taskInfo;
@@ -242,7 +242,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
 
     public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoSparkClientInfo extends TeaModel {
         /**
-         * <p>The Spark client version.</p>
+         * <p>The Spark client version name.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -281,7 +281,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          * <li>CURRENT_PERIOD</li>
          * <li>LAST_PERIOD</li>
          * <li>LAST_N_PERIOD</li>
-         * <li>LAST_24_HOUR.</li>
+         * <li>LAST_24_HOUR</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,7 +330,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dependStrategy;
 
         /**
-         * <p>The fields of the dependent logical table.</p>
+         * <p>The dependent logical table fields.</p>
          */
         @NameInMap("FieldList")
         public java.util.List<String> fieldList;
@@ -349,7 +349,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The period difference. A value of 0 indicates a same-period dependency. A positive number indicates a dependency on the previous N periods.</p>
+         * <p>The period difference. A value of 0 indicates a same-cycle dependency. A positive number indicates a dependency on the previous N cycles.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -394,7 +394,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          * <p>The username of the upstream node owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         @NameInMap("SourceNodeUserName")
         public String sourceNodeUserName;
@@ -505,7 +505,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
 
     public static class GetBatchTaskInfoByVersionResponseBodyTaskInfo extends TeaModel {
         /**
-         * <p>The node code.</p>
+         * <p>The task code.</p>
          * 
          * <strong>example:</strong>
          * <p>show tables;</p>
@@ -514,7 +514,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The cron expression for automatic scheduling. For more information, refer to the Linux cron expression syntax.</p>
+         * <p>The cron expression for automatic scheduling. Refer to the Linux cron expression syntax.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 1 * * ?</p>
@@ -529,7 +529,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public GetBatchTaskInfoByVersionResponseBodyTaskInfoCustomScheduleConfig customScheduleConfig;
 
         /**
-         * <p>The ID of the DAG to which the node belongs.</p>
+         * <p>The ID of the DAG to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>dag_102121211</p>
@@ -565,7 +565,19 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dataSourceSchema;
 
         /**
-         * <p>The node ID in the node directory tree.</p>
+         * <p>The list of development owner IDs.</p>
+         */
+        @NameInMap("DevelopOwnerIdList")
+        public java.util.List<String> developOwnerIdList;
+
+        /**
+         * <p>The list of development owner names.</p>
+         */
+        @NameInMap("DevelopOwnerNameList")
+        public java.util.List<String> developOwnerNameList;
+
+        /**
+         * <p>The node ID in the directory tree.</p>
          * 
          * <strong>example:</strong>
          * <p>12113111</p>
@@ -574,31 +586,31 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>Indicates whether the node has a development environment node.</p>
+         * <p>Indicates whether the task has a development environment node.</p>
          */
         @NameInMap("HasDevNode")
         public Boolean hasDevNode;
 
         /**
-         * <p>The node name.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试任务1</p>
+         * <p>TestTask1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Indicates whether the node needs to be published.</p>
+         * <p>Indicates whether the task needs to be published.</p>
          */
         @NameInMap("NeedPublish")
         public Boolean needPublish;
 
         /**
-         * <p>The node description.</p>
+         * <p>The task description.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xxTest</p>
          */
         @NameInMap("NodeDescription")
         public String nodeDescription;
@@ -625,7 +637,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          * <p>The node name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试任务1</p>
+         * <p>TestTask1</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -660,10 +672,22 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String operatorUserId;
 
         /**
+         * <p>The list of O&amp;M owner IDs.</p>
+         */
+        @NameInMap("OpsOwnerIdList")
+        public java.util.List<String> opsOwnerIdList;
+
+        /**
+         * <p>The list of O&amp;M owner names.</p>
+         */
+        @NameInMap("OpsOwnerNameList")
+        public java.util.List<String> opsOwnerNameList;
+
+        /**
          * <p>The name of the node owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -678,13 +702,13 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
-         * <p>The list of custom node parameters.</p>
+         * <p>The list of custom parameters for the node.</p>
          */
         @NameInMap("ParamList")
         public java.util.List<GetBatchTaskInfoByVersionResponseBodyTaskInfoParamList> paramList;
 
         /**
-         * <p>Indicates whether the node scheduling is paused.</p>
+         * <p>Indicates whether the node is paused for scheduling.</p>
          */
         @NameInMap("Paused")
         public Boolean paused;
@@ -708,7 +732,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Indicates whether the node has been published.</p>
+         * <p>Indicates whether the task is published.</p>
          */
         @NameInMap("Published")
         public Boolean published;
@@ -736,7 +760,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          * <li>WEEKLY</li>
          * <li>DAILY</li>
          * <li>HOURLY</li>
-         * <li>MINUTELY.</li>
+         * <li>MINUTELY</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -746,7 +770,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String schedulePeriod;
 
         /**
-         * <p>The scheduling type. Valid values:</p>
+         * <p>The node type. Valid values:</p>
          * <ul>
          * <li>1: periodic node.</li>
          * <li>3: manual node.</li>
@@ -765,7 +789,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public GetBatchTaskInfoByVersionResponseBodyTaskInfoSparkClientInfo sparkClientInfo;
 
         /**
-         * <p>The publish status. Valid values:</p>
+         * <p>The submit status. Valid values:</p>
          * <ul>
          * <li>0: draft.</li>
          * <li>1: submitted.</li>
@@ -773,13 +797,13 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>测试任务1</p>
+         * <p>TestTask1</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The node type. For more information, see the API operation for creating a batch task.</p>
+         * <p>The task type. For more information, refer to the API operation for creating batch tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -852,6 +876,22 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
         public String getDataSourceSchema() {
             return this.dataSourceSchema;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setDevelopOwnerIdList(java.util.List<String> developOwnerIdList) {
+            this.developOwnerIdList = developOwnerIdList;
+            return this;
+        }
+        public java.util.List<String> getDevelopOwnerIdList() {
+            return this.developOwnerIdList;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setDevelopOwnerNameList(java.util.List<String> developOwnerNameList) {
+            this.developOwnerNameList = developOwnerNameList;
+            return this;
+        }
+        public java.util.List<String> getDevelopOwnerNameList() {
+            return this.developOwnerNameList;
         }
 
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo setFileId(Long fileId) {
@@ -940,6 +980,22 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
         public String getOperatorUserId() {
             return this.operatorUserId;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setOpsOwnerIdList(java.util.List<String> opsOwnerIdList) {
+            this.opsOwnerIdList = opsOwnerIdList;
+            return this;
+        }
+        public java.util.List<String> getOpsOwnerIdList() {
+            return this.opsOwnerIdList;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setOpsOwnerNameList(java.util.List<String> opsOwnerNameList) {
+            this.opsOwnerNameList = opsOwnerNameList;
+            return this;
+        }
+        public java.util.List<String> getOpsOwnerNameList() {
+            return this.opsOwnerNameList;
         }
 
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo setOwnerName(String ownerName) {

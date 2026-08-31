@@ -29,7 +29,7 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -107,13 +107,13 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
 
     public static class DeleteSecurityClassifyCatalogResponseBodyData extends TeaModel {
         /**
-         * <p>The list of full paths of child catalogs that were also deleted.</p>
+         * <p>The list of full paths of child catalogs that were deleted as a result of the cascading deletion.</p>
          */
         @NameInMap("ChildCatalogFullPathList")
         public java.util.List<String> childCatalogFullPathList;
 
         /**
-         * <p>The list of classification IDs that were also deleted.</p>
+         * <p>The list of classification IDs that were deleted as a result of the cascading deletion.</p>
          */
         @NameInMap("ClassifyIdList")
         public java.util.List<Long> classifyIdList;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBatchTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -107,7 +107,7 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
 
     public static class UpdateBatchTaskResponseBodyUpdateResult extends TeaModel {
         /**
-         * <p>The ID of the node in the folder tree.</p>
+         * <p>The node ID in the folder tree.</p>
          * 
          * <strong>example:</strong>
          * <p>12113111</p>

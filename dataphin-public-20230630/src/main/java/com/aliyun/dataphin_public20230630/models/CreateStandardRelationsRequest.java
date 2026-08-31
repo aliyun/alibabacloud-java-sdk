@@ -21,6 +21,13 @@ public class CreateStandardRelationsRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateStandardRelationsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStandardRelationsRequest self = new CreateStandardRelationsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class CreateStandardRelationsRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateStandardRelationsRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class CreateStandardRelationsRequestCreateCommandStandardRefList extends TeaModel {
@@ -70,7 +85,7 @@ public class CreateStandardRelationsRequest extends TeaModel {
 
     public static class CreateStandardRelationsRequestCreateCommand extends TeaModel {
         /**
-         * <p>The standard association type: RELATIVE.</p>
+         * <p>The standard association relationship type: RELATIVE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

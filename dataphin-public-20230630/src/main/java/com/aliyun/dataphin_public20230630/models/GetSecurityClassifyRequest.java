@@ -24,6 +24,13 @@ public class GetSecurityClassifyRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static GetSecurityClassifyRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSecurityClassifyRequest self = new GetSecurityClassifyRequest();
         return TeaModel.build(map, self);
@@ -43,6 +50,14 @@ public class GetSecurityClassifyRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetSecurityClassifyRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

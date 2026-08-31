@@ -22,7 +22,16 @@ public class GetPipelineByIdRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The query ID used to query the pipeline node.</p>
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
+     * <p>The ID used to query the pipeline node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("QueryId")
@@ -49,6 +58,14 @@ public class GetPipelineByIdRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public GetPipelineByIdRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public GetPipelineByIdRequest setQueryId(GetPipelineByIdRequestQueryId queryId) {
         this.queryId = queryId;
         return this;
@@ -73,7 +90,7 @@ public class GetPipelineByIdRequest extends TeaModel {
         public String env;
 
         /**
-         * <p>The project ID to which the integration pipeline node belongs.</p>
+         * <p>The ID of the project to which the integration pipeline node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

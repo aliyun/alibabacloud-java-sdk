@@ -36,6 +36,13 @@ public class GetStandardTemplateShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static GetStandardTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStandardTemplateShrinkRequest self = new GetStandardTemplateShrinkRequest();
         return TeaModel.build(map, self);
@@ -71,6 +78,14 @@ public class GetStandardTemplateShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetStandardTemplateShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

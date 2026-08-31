@@ -107,7 +107,7 @@ public class CreateBatchTaskResponseBody extends TeaModel {
 
     public static class CreateBatchTaskResponseBodyCreateResult extends TeaModel {
         /**
-         * <p>The node ID in the node directory tree.</p>
+         * <p>The node ID in the folder tree.</p>
          * 
          * <strong>example:</strong>
          * <p>12113111</p>

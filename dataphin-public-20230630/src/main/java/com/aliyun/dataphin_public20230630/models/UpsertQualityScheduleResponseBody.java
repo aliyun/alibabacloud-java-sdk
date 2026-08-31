@@ -14,7 +14,7 @@ public class UpsertQualityScheduleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the schedule resource.</p>
+     * <p>The schedule object ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class UpsertQualityScheduleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>

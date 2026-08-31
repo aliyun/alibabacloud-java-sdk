@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends TeaModel {
     /**
-     * <p>The assignment binding instruction.</p>
+     * <p>The assignment binding command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AssignCommand")
@@ -20,6 +20,15 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static AssignQualityRuleOfAllRuleScopeSchedulesRequest build(java.util.Map<String, ?> map) throws Exception {
         AssignQualityRuleOfAllRuleScopeSchedulesRequest self = new AssignQualityRuleOfAllRuleScopeSchedulesRequest();
@@ -42,23 +51,31 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public AssignQualityRuleOfAllRuleScopeSchedulesRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static class AssignQualityRuleOfAllRuleScopeSchedulesRequestAssignCommand extends TeaModel {
         /**
-         * <p>The rule IDs.</p>
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RuleIdList")
         public java.util.List<Long> ruleIdList;
 
         /**
-         * <p>The schedule IDs.</p>
+         * <p>The schedule ID.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ScheduleIdList")
         public java.util.List<Long> scheduleIdList;
 
         /**
-         * <p>The ID of the monitored object.</p>
+         * <p>The monitored object ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

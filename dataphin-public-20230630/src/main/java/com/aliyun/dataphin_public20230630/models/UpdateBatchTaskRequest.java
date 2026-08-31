@@ -15,6 +15,15 @@ public class UpdateBatchTaskRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The update request.</p>
      * <p>This parameter is required.</p>
      */
@@ -32,6 +41,14 @@ public class UpdateBatchTaskRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public UpdateBatchTaskRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public UpdateBatchTaskRequest setUpdateCommand(UpdateBatchTaskRequestUpdateCommand updateCommand) {
@@ -66,7 +83,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         /**
          * <p>The interval unit. Valid values:</p>
          * <ul>
-         * <li>MINUTE: minute</li>
+         * <li>MINUTE: minute.</li>
          * <li>HOUR: hour.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -78,14 +95,14 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String intervalUnit;
 
         /**
-         * <p>The scheduling period. Valid values:</p>
+         * <p>The schedule period. Valid values:</p>
          * <ul>
          * <li>YEARLY</li>
          * <li>MONTHLY</li>
          * <li>WEEKLY</li>
          * <li>DAILY</li>
          * <li>HOURLY</li>
-         * <li>MINUTELY.</li>
+         * <li>MINUTELY</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -233,7 +250,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Integer periodOffset;
 
         /**
-         * <p>The dependency period type. Valid values:</p>
+         * <p>The type of the dependency period. Valid values:</p>
          * <ul>
          * <li>CURRENT_PERIOD: current period.</li>
          * <li>LAST_PERIOD: previous period.</li>
@@ -313,7 +330,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The period offset. A value of 0 indicates a same-period dependency. A positive integer indicates a dependency on the previous N periods.</p>
+         * <p>The period difference. A value of 0 indicates same-period dependency. A positive number indicates dependency on the previous N periods.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,7 +340,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Integer periodDiff;
 
         /**
-         * <p>Specifies whether the upstream node is enabled.</p>
+         * <p>Indicates whether the upstream node is enabled.</p>
          */
         @NameInMap("SourceNodeEnabled")
         public Boolean sourceNodeEnabled;
@@ -437,7 +454,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
 
     public static class UpdateBatchTaskRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The node code.</p>
+         * <p>The code of the node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -447,7 +464,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String code;
 
         /**
-         * <p>The cron expression for automatic scheduling. Refer to the Linux cron expression syntax.</p>
+         * <p>The cron expression for automatic scheduling. Refer to Linux cron expressions.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 1 * * ?</p>
@@ -456,13 +473,13 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The custom scheduling interval configuration.</p>
+         * <p>The custom schedule interval configuration.</p>
          */
         @NameInMap("CustomScheduleConfig")
         public UpdateBatchTaskRequestUpdateCommandCustomScheduleConfig customScheduleConfig;
 
         /**
-         * <p>The catalog for database SQL nodes. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
+         * <p>The catalog for database SQL nodes. This parameter applies only to datasource types that require a catalog, such as Presto.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_catalog</p>
@@ -471,7 +488,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String dataSourceCatalog;
 
         /**
-         * <p>The data source ID for database SQL nodes.</p>
+         * <p>The datasource ID for database SQL nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>12131111</p>
@@ -480,7 +497,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The schema for database SQL nodes. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
+         * <p>The schema for database SQL nodes. This parameter applies only to datasource types that require a schema, such as Oracle.</p>
          * 
          * <strong>example:</strong>
          * <p>erp</p>
@@ -489,11 +506,17 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String dataSourceSchema;
 
         /**
-         * <p>The execution engine for the node, such as a Python node. Valid values:</p>
+         * <p>The list of development owner IDs.</p>
+         */
+        @NameInMap("DevelopOwnerIdList")
+        public java.util.List<String> developOwnerIdList;
+
+        /**
+         * <p>The execution engine for the node, such as for Python nodes. Valid values:</p>
          * <ul>
          * <li>PYTHON2_7</li>
          * <li>PYTHON3_7</li>
-         * <li>PYTHON3_11.</li>
+         * <li>PYTHON3_11</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -503,7 +526,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String engine;
 
         /**
-         * <p>The ID of the node in the folder tree.</p>
+         * <p>The node ID in the folder tree.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -526,7 +549,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
          * <p>The description of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>Test_description</p>
          */
         @NameInMap("NodeDescription")
         public String nodeDescription;
@@ -577,20 +600,20 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The third-party Python packages that the node depends on.</p>
+         * <p>The third-party Python packages required by the node.</p>
          */
         @NameInMap("PythonModuleList")
         public java.util.List<String> pythonModuleList;
 
         /**
-         * <p>The scheduling period. Valid values:</p>
+         * <p>The schedule period. Valid values:</p>
          * <ul>
          * <li>YEARLY</li>
          * <li>MONTHLY</li>
          * <li>WEEKLY</li>
          * <li>DAILY</li>
          * <li>HOURLY</li>
-         * <li>MINUTELY.</li>
+         * <li>MINUTELY</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -678,6 +701,14 @@ public class UpdateBatchTaskRequest extends TeaModel {
         }
         public String getDataSourceSchema() {
             return this.dataSourceSchema;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setDevelopOwnerIdList(java.util.List<String> developOwnerIdList) {
+            this.developOwnerIdList = developOwnerIdList;
+            return this;
+        }
+        public java.util.List<String> getDevelopOwnerIdList() {
+            return this.developOwnerIdList;
         }
 
         public UpdateBatchTaskRequestUpdateCommand setEngine(String engine) {

@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateNodeSupplementShrinkRequest extends TeaModel {
     /**
-     * <p>Create backfill request</p>
+     * <p>The data backfill request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public String createCommandShrink;
 
     /**
-     * <p>Environment identifier.</p>
+     * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment.</li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: Development environment. </li>
+     * <li>PROD (default): Production environment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateNodeSupplementShrinkRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +33,15 @@ public class CreateNodeSupplementShrinkRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static CreateNodeSupplementShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNodeSupplementShrinkRequest self = new CreateNodeSupplementShrinkRequest();
@@ -61,6 +70,14 @@ public class CreateNodeSupplementShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateNodeSupplementShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

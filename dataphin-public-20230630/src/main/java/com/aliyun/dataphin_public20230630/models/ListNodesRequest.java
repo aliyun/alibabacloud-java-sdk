@@ -7,8 +7,8 @@ public class ListNodesRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment </li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: Development environment. </li>
+     * <li>PROD (default): Production environment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,6 +33,15 @@ public class ListNodesRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static ListNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodesRequest self = new ListNodesRequest();
@@ -63,6 +72,14 @@ public class ListNodesRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public ListNodesRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static class ListNodesRequestListQuery extends TeaModel {
         /**
          * <p>Specifies whether to perform a dry run.</p>
@@ -76,7 +93,7 @@ public class ListNodesRequest extends TeaModel {
         /**
          * <p>The node business type. Valid values:</p>
          * <ul>
-         * <li>SCRIPT: script</li>
+         * <li>SCRIPT: script.</li>
          * <li>LOGICAL_TABLE: logical table.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -88,14 +105,14 @@ public class ListNodesRequest extends TeaModel {
         public String nodeBizType;
 
         /**
-         * <p>The sub-business types. Valid values:</p>
+         * <p>The sub-business type. Valid values:</p>
          * <ul>
          * <li>MAX_COMPUTE_SQL</li>
          * <li>HIVE_SQL</li>
          * <li>SHELL</li>
          * <li>PYTHON</li>
          * <li>ONE_SERVICE_SQL</li>
-         * <li>DATABASE_SQL.</li>
+         * <li>DATABASE_SQL, etc.</li>
          * </ul>
          * <p>This parameter is required.</p>
          */
@@ -118,7 +135,7 @@ public class ListNodesRequest extends TeaModel {
         public Integer page;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -127,13 +144,13 @@ public class ListNodesRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The node priorities. Valid values:</p>
+         * <p>The node priority. Valid values:</p>
          * <ul>
          * <li>HIGHEST</li>
          * <li>HIGH</li>
          * <li>MIDDLE</li>
          * <li>LOW</li>
-         * <li>LOWEST.</li>
+         * <li>LOWEST</li>
          * </ul>
          */
         @NameInMap("PriorityList")
@@ -159,14 +176,14 @@ public class ListNodesRequest extends TeaModel {
         public Boolean schedulePaused;
 
         /**
-         * <p>The scheduling periods. Valid values:</p>
+         * <p>The scheduling period. Valid values:</p>
          * <ul>
          * <li>YEARLY</li>
          * <li>MONTHLY</li>
          * <li>WEEKLY</li>
          * <li>DAILY</li>
          * <li>HOURLY</li>
-         * <li>MINUTELY.</li>
+         * <li>MINUTELY</li>
          * </ul>
          */
         @NameInMap("SchedulePeriodList")
@@ -175,9 +192,9 @@ public class ListNodesRequest extends TeaModel {
         /**
          * <p>The node scheduling type. Valid values:</p>
          * <ul>
-         * <li>NORMAL: periodic scheduling</li>
-         * <li>SUPPLEMENT: data backfill</li>
-         * <li>MANUAL: manual scheduling.</li>
+         * <li>NORMAL: Periodic.</li>
+         * <li>SUPPLEMENT: Data backfill.</li>
+         * <li>MANUAL: Manual.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +204,7 @@ public class ListNodesRequest extends TeaModel {
         public String scheduleType;
 
         /**
-         * <p>The search keyword. Fuzzy search by node name and exact search by node ID are supported.</p>
+         * <p>The search keyword. Supports fuzzy match by node name and exact match by node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>

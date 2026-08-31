@@ -37,6 +37,13 @@ public class GetPhysicalNodeOperationLogRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static GetPhysicalNodeOperationLogRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPhysicalNodeOperationLogRequest self = new GetPhysicalNodeOperationLogRequest();
         return TeaModel.build(map, self);
@@ -64,6 +71,14 @@ public class GetPhysicalNodeOperationLogRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetPhysicalNodeOperationLogRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

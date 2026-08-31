@@ -20,6 +20,13 @@ public class ListAlertNotificationsShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static ListAlertNotificationsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlertNotificationsShrinkRequest self = new ListAlertNotificationsShrinkRequest();
         return TeaModel.build(map, self);
@@ -39,6 +46,14 @@ public class ListAlertNotificationsShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ListAlertNotificationsShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

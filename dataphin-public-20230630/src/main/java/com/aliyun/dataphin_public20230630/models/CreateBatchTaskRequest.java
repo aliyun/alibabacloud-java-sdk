@@ -21,6 +21,15 @@ public class CreateBatchTaskRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateBatchTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBatchTaskRequest self = new CreateBatchTaskRequest();
         return TeaModel.build(map, self);
@@ -42,9 +51,17 @@ public class CreateBatchTaskRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public CreateBatchTaskRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static class CreateBatchTaskRequestCreateCommand extends TeaModel {
         /**
-         * <p>The catalog for a database SQL node. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
+         * <p>The catalog for database SQL nodes. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_catalog</p>
@@ -53,7 +70,7 @@ public class CreateBatchTaskRequest extends TeaModel {
         public String dataSourceCatalog;
 
         /**
-         * <p>The data source ID for a database SQL node.</p>
+         * <p>The data source ID for database SQL nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>12131111</p>
@@ -62,7 +79,7 @@ public class CreateBatchTaskRequest extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The schema for a database SQL node. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
+         * <p>The schema for database SQL nodes. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
          * 
          * <strong>example:</strong>
          * <p>erp</p>
@@ -81,6 +98,12 @@ public class CreateBatchTaskRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The list of development owner IDs.</p>
+         */
+        @NameInMap("DevelopOwnerIdList")
+        public java.util.List<String> developOwnerIdList;
+
+        /**
          * <p>The folder path in the menu tree to which the node belongs.</p>
          * <p>This parameter is required.</p>
          * 
@@ -91,11 +114,20 @@ public class CreateBatchTaskRequest extends TeaModel {
         public String directory;
 
         /**
-         * <p>The execution engine for the node, such as a Python node. Valid values:</p>
+         * <p>The execution engine for the node, such as for Python nodes. Valid values:</p>
          * <ul>
-         * <li>1: PYTHON2_7</li>
-         * <li>2: PYTHON3_7</li>
-         * <li>3: PYTHON3_11.</li>
+         * <li><ol>
+         * <li>PYTHON2_7</li>
+         * </ol>
+         * </li>
+         * <li><ol start="2">
+         * <li>PYTHON3_7</li>
+         * </ol>
+         * </li>
+         * <li><ol start="3">
+         * <li>PYTHON3_11</li>
+         * </ol>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,6 +147,12 @@ public class CreateBatchTaskRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The list of O&amp;M owner IDs.</p>
+         */
+        @NameInMap("OpsOwnerIdList")
+        public java.util.List<String> opsOwnerIdList;
+
+        /**
          * <p>The ID of the project to which the node belongs.</p>
          * <p>This parameter is required.</p>
          * 
@@ -125,13 +163,13 @@ public class CreateBatchTaskRequest extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The list of third-party Python packages that the node depends on.</p>
+         * <p>The list of Python third-party packages that the node depends on.</p>
          */
         @NameInMap("PythonModuleList")
         public java.util.List<String> pythonModuleList;
 
         /**
-         * <p>The scheduling type. Valid values:</p>
+         * <p>The schedule type. Valid values:</p>
          * <ul>
          * <li>1: periodic node.</li>
          * <li>3: manual node.</li>
@@ -190,7 +228,7 @@ public class CreateBatchTaskRequest extends TeaModel {
          * <li>SPARK_SQL: 80</li>
          * <li>GAUSS_SQL: 81</li>
          * <li>DATABASE_SQL: 998</li>
-         * <li>EXTERNAL_TRIGGER: 997.</li>
+         * <li>EXTERNAL_TRIGGER: 997</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -237,6 +275,14 @@ public class CreateBatchTaskRequest extends TeaModel {
             return this.description;
         }
 
+        public CreateBatchTaskRequestCreateCommand setDevelopOwnerIdList(java.util.List<String> developOwnerIdList) {
+            this.developOwnerIdList = developOwnerIdList;
+            return this;
+        }
+        public java.util.List<String> getDevelopOwnerIdList() {
+            return this.developOwnerIdList;
+        }
+
         public CreateBatchTaskRequestCreateCommand setDirectory(String directory) {
             this.directory = directory;
             return this;
@@ -259,6 +305,14 @@ public class CreateBatchTaskRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateBatchTaskRequestCreateCommand setOpsOwnerIdList(java.util.List<String> opsOwnerIdList) {
+            this.opsOwnerIdList = opsOwnerIdList;
+            return this;
+        }
+        public java.util.List<String> getOpsOwnerIdList() {
+            return this.opsOwnerIdList;
         }
 
         public CreateBatchTaskRequestCreateCommand setProjectId(Long projectId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCatalogAssetDetailsRequest extends TeaModel {
     /**
-     * <p>The paging query for the listing asset catalog list.</p>
+     * <p>The paged query for the listed asset catalog.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GetCatalogAssetDetailsQuery")
@@ -20,6 +20,15 @@ public class GetCatalogAssetDetailsRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static GetCatalogAssetDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCatalogAssetDetailsRequest self = new GetCatalogAssetDetailsRequest();
@@ -40,6 +49,14 @@ public class GetCatalogAssetDetailsRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetCatalogAssetDetailsRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class GetCatalogAssetDetailsRequestGetCatalogAssetDetailsQuery extends TeaModel {

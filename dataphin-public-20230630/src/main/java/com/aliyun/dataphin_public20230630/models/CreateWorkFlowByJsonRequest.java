@@ -28,6 +28,15 @@ public class CreateWorkFlowByJsonRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateWorkFlowByJsonRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWorkFlowByJsonRequest self = new CreateWorkFlowByJsonRequest();
         return TeaModel.build(map, self);
@@ -55,6 +64,14 @@ public class CreateWorkFlowByJsonRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateWorkFlowByJsonRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class CreateWorkFlowByJsonRequestContext extends TeaModel {
@@ -108,7 +125,7 @@ public class CreateWorkFlowByJsonRequest extends TeaModel {
 
     public static class CreateWorkFlowByJsonRequestCreateCommand extends TeaModel {
         /**
-         * <p>The description of the node.</p>
+         * <p>The node description.</p>
          * 
          * <strong>example:</strong>
          * <p>cooment</p>
@@ -126,7 +143,7 @@ public class CreateWorkFlowByJsonRequest extends TeaModel {
         public String directory;
 
         /**
-         * <p>The schedule configuration. This parameter is required for periodic nodes. The value is a JSON string. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method.</p>
+         * <p>The schedule configuration (required for periodic nodes). The value is a JSON string. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;cronExpression&quot;:&quot;0 0 0 * * ?&quot;}</p>
@@ -141,7 +158,7 @@ public class CreateWorkFlowByJsonRequest extends TeaModel {
         public Boolean submit;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The node name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +168,7 @@ public class CreateWorkFlowByJsonRequest extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The scheduling type of the node. Valid values:</p>
+         * <p>The node scheduling type. Valid values:</p>
          * <ul>
          * <li>1: periodic scheduling.</li>
          * <li>3: manual scheduling.</li>

@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineRequest extends TeaModel {
     /**
-     * <p>Request context information</p>
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public CreatePipelineRequestContext context;
 
     /**
-     * <p>Pipeline/workflow task creation configuration</p>
+     * <p>The configuration for creating a pipeline or workflow node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreatePipelineRequestCreateCommand createCommand;
 
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,15 @@ public class CreatePipelineRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static CreatePipelineRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePipelineRequest self = new CreatePipelineRequest();
@@ -57,9 +66,22 @@ public class CreatePipelineRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public CreatePipelineRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static class CreatePipelineRequestContext extends TeaModel {
         /**
-         * <p>Current operating environment: DEV indicates the development environment, PROD indicates the production environment (for workflows, only PROD is currently supported)</p>
+         * <p>The current operating environment. Valid values:</p>
+         * <ul>
+         * <li>DEV: the development environment.</li>
+         * <li>PROD: the production environment.</li>
+         * </ul>
+         * <p>For workflow nodes, only PROD is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,7 +91,7 @@ public class CreatePipelineRequest extends TeaModel {
         public String env;
 
         /**
-         * <p>Project ID to which the integration pipeline/workflow task belongs</p>
+         * <p>The ID of the project to which the integration pipeline or workflow node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +125,7 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestCreateCommandNodeInfo extends TeaModel {
         /**
-         * <p>Directory of the integration pipeline/workflow task node (defaults to root directory). The directory must exist. If it does not exist, call the relevant API to create a directory of type offlinePipeline (or unstructuredPipeline for workflows)</p>
+         * <p>The folder of the integration pipeline or workflow node. Default value: root folder. The folder must already exist. If it does not exist, call the relevant API operation to create a folder of type offlinePipeline (or unstructuredPipeline for workflows).</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -112,7 +134,7 @@ public class CreatePipelineRequest extends TeaModel {
         public String directory;
 
         /**
-         * <p>Pipeline/workflow file ID. Leave empty for initial creation. When updating a pipeline/workflow task, at least one of pipelineId, fileId, or nodeId must be specified</p>
+         * <p>The pipeline or workflow file ID. Leave this parameter empty for initial creation. When updating a pipeline or workflow node, specify at least one of pipelineId, fileId, or nodeId.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -121,7 +143,7 @@ public class CreatePipelineRequest extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>Scheduling node ID of the pipeline/workflow task. Leave empty for initial creation. When updating a pipeline/workflow task, at least one of pipelineId, fileId, or nodeId must be specified</p>
+         * <p>The scheduling node ID of the pipeline or workflow node. Leave this parameter empty for initial creation. When updating a pipeline or workflow node, specify at least one of pipelineId, fileId, or nodeId.</p>
          * 
          * <strong>example:</strong>
          * <p>n_123</p>
@@ -130,7 +152,7 @@ public class CreatePipelineRequest extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>Integration pipeline/workflow task name</p>
+         * <p>The name of the integration pipeline or workflow node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +162,7 @@ public class CreatePipelineRequest extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>Pipeline/workflow task ID. Leave empty for initial creation. When updating a pipeline/workflow task, at least one of pipelineId, fileId, or nodeId must be specified</p>
+         * <p>The pipeline or workflow node ID. Leave this parameter empty for initial creation. When updating a pipeline or workflow node, specify at least one of pipelineId, fileId, or nodeId.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -197,14 +219,13 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestCreateCommandPipelineConfigHops extends TeaModel {
         /**
-         * <p>For conditional distribution components, set to true when the downstream condition is true, otherwise set to false.
-         * For workflow tasks, this can be ignored.</p>
+         * <p>Specifies the downstream condition for a conditional distribution component. Set this parameter to true if the downstream condition is true, or false otherwise. If the node is a workflow node, you can ignore this parameter.</p>
          */
         @NameInMap("SendTo")
         public Boolean sendTo;
 
         /**
-         * <p>Input step name, i.e., Steps[*].StepName</p>
+         * <p>The name of the input step, which corresponds to Steps[*].StepName.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +235,7 @@ public class CreatePipelineRequest extends TeaModel {
         public String source;
 
         /**
-         * <p>Output step name, i.e., Steps[*].StepName</p>
+         * <p>The name of the output step, which corresponds to Steps[*].StepName.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,16 +277,18 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestCreateCommandPipelineConfigSteps extends TeaModel {
         /**
-         * <p>Indicates the data distribution method when the current component has multiple downstream components:
-         * true indicates that data from the current component is sent to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. The default value is true.
-         * false indicates that data from the current component is sent in full to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive all 100 records.
-         * For workflow tasks, this value can be ignored.</p>
+         * <p>Specifies the data distribution mode when the current component has multiple downstream components. Valid values:</p>
+         * <ul>
+         * <li>true: The data of the current component is distributed to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. Default value: true.</li>
+         * <li>false: The full data of the current component is sent to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive 100 records.</li>
+         * </ul>
+         * <p>If the node is a workflow node, you can ignore this parameter.</p>
          */
         @NameInMap("IsDistribute")
         public Boolean isDistribute;
 
         /**
-         * <p>Plugin/operator ID. Each plugin/operator has a unique identifier. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepKey. Developers should inherit this component/operator configuration class and implement the corresponding component/operator configuration. Each component/operator configuration has the same structure as the configuration created on the Dataphin page</p>
+         * <p>The plugin ID. Each plugin or operator has a unique identifier. Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepKey. Developers should inherit the component or operator configuration class and implement the corresponding component or operator configuration. Each component or operator configuration has the same structure as the configuration created on the Dataphin console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +298,7 @@ public class CreatePipelineRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Specific component configuration in JSON string format. Refer to the utility class: subclasses of com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig (for workflow operators, use com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.unstructured.BaseOAUnstructuredNeuronConfig) and their toJsonString method. Developers should inherit this component/operator configuration class and implement the corresponding component/operator configuration. Each component/operator configuration has the same structure as the task configuration created on the Dataphin page</p>
+         * <p>The specific component configuration in JSON string format. Refer to the toJsonString method of the relevant subclasses of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig (for workflow operators, use com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.unstructured.BaseOAUnstructuredNeuronConfig). Developers should inherit the component or operator configuration class and implement the corresponding component or operator configuration. Each component or operator configuration has the same structure as the node configuration created on the Dataphin console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +308,7 @@ public class CreatePipelineRequest extends TeaModel {
         public String pluginConfig;
 
         /**
-         * <p>Step name. Step names must be unique within the same pipeline task</p>
+         * <p>The step name. Step names must be unique within the same pipeline node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +318,14 @@ public class CreatePipelineRequest extends TeaModel {
         public String stepName;
 
         /**
-         * <p>Component type: input indicates an input component, output indicates an output component, transfrom indicates a transform component, process indicates a flow control component. For workflow tasks, this indicates the operator type, such as image for image, text for text. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepType. Developers should inherit this component/operator configuration class and implement the corresponding component/operator configuration. Each component/operator configuration has the same structure as the configuration created on the Dataphin page</p>
+         * <p>The component type. Valid values:</p>
+         * <ul>
+         * <li>input: an input component.</li>
+         * <li>output: an output component.</li>
+         * <li>transfrom: a transform component.</li>
+         * <li>process: a flow control component.</li>
+         * </ul>
+         * <p>For workflow nodes, this parameter specifies the operator type, such as image or text. Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepType. Developers should inherit the component or operator configuration class and implement the corresponding component or operator configuration. Each component or operator configuration has the same structure as the configuration created on the Dataphin console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -353,14 +383,14 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestCreateCommandPipelineConfig extends TeaModel {
         /**
-         * <p>DAG (directed acyclic graph) link configuration: describes the connections between all components/operators</p>
+         * <p>The directed acyclic graph (DAG) link configuration that describes the connections between all components or operators.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Hops")
         public java.util.List<CreatePipelineRequestCreateCommandPipelineConfigHops> hops;
 
         /**
-         * <p>Component/operator configuration: contains detailed configuration of all components/operators used</p>
+         * <p>The component or operator configurations, which contain the detailed configurations of all components or operators used.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Steps")
@@ -391,7 +421,7 @@ public class CreatePipelineRequest extends TeaModel {
 
     public static class CreatePipelineRequestCreateCommand extends TeaModel {
         /**
-         * <p>Comment</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -400,8 +430,12 @@ public class CreatePipelineRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>Integration pipeline configuration mode: PIPELINE indicates pipeline mode (default), JSON indicates script mode.
-         * For workflows, this can be ignored.</p>
+         * <p>The integration pipeline configuration mode. Valid values:</p>
+         * <ul>
+         * <li>PIPELINE: pipeline mode. This is the default value.</li>
+         * <li>JSON: script mode.</li>
+         * </ul>
+         * <p>If the node is a workflow node, you can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>PIPELINE</p>
@@ -410,22 +444,21 @@ public class CreatePipelineRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>Integration pipeline/workflow task basic information</p>
+         * <p>The basic information of the integration pipeline or workflow node.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NodeInfo")
         public CreatePipelineRequestCreateCommandNodeInfo nodeInfo;
 
         /**
-         * <p>Integration pipeline component/workflow operator configuration</p>
+         * <p>The integration pipeline component or workflow operator configuration.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("PipelineConfig")
         public CreatePipelineRequestCreateCommandPipelineConfig pipelineConfig;
 
         /**
-         * <p>In script mode: integration pipeline configuration (in JSON string format).
-         * Workflow tasks do not support script mode</p>
+         * <p>The integration pipeline configuration in JSON string format for script mode. Workflow nodes do not support script mode.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -434,7 +467,13 @@ public class CreatePipelineRequest extends TeaModel {
         public String pipelineJson;
 
         /**
-         * <p>Task type: 0 indicates offline integration (default), 1 indicates real-time integration, 14 indicates a workflow task</p>
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>0: offline integration. Default value: 0.</li>
+         * <li>1: real-time integration.</li>
+         * <li>14: offline workflow node.</li>
+         * <li>15: real-time workflow.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -443,7 +482,7 @@ public class CreatePipelineRequest extends TeaModel {
         public Integer pipelineType;
 
         /**
-         * <p>Scheduling configuration in JSON string format. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method</p>
+         * <p>The scheduling configuration in JSON string format. Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -453,7 +492,7 @@ public class CreatePipelineRequest extends TeaModel {
         public String scheduleConfig;
 
         /**
-         * <p>Channel configuration in JSON string format. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting#toJsonString method</p>
+         * <p>The channel configuration in JSON string format. Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting#toJsonString method.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -462,7 +501,7 @@ public class CreatePipelineRequest extends TeaModel {
         public String settings;
 
         /**
-         * <p>Whether to submit. Submitted by default</p>
+         * <p>Specifies whether to submit the node. The node is submitted by default.</p>
          */
         @NameInMap("Submit")
         public Boolean submit;

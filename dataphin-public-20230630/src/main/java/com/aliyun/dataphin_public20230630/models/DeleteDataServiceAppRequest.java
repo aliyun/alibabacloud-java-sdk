@@ -24,6 +24,13 @@ public class DeleteDataServiceAppRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static DeleteDataServiceAppRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDataServiceAppRequest self = new DeleteDataServiceAppRequest();
         return TeaModel.build(map, self);
@@ -43,6 +50,14 @@ public class DeleteDataServiceAppRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public DeleteDataServiceAppRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

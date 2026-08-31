@@ -21,6 +21,15 @@ public class CreateDataServiceAppRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateDataServiceAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataServiceAppRequest self = new CreateDataServiceAppRequest();
         return TeaModel.build(map, self);
@@ -40,6 +49,14 @@ public class CreateDataServiceAppRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateDataServiceAppRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class CreateDataServiceAppRequestCreateCommand extends TeaModel {
@@ -69,13 +86,13 @@ public class CreateDataServiceAppRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>默认应用</p>
+         * <p>Default application</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The app secret.
+         * <p>The application secret.
          * If this parameter is not specified, the system automatically generates a new AppSecret value.
          * The secret must be 8 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-).
          * This parameter can be customized only when using Alibaba Cloud API Gateway or the built-in gateway. This parameter is ignored when using a dedicated cloud gateway.</p>
@@ -94,11 +111,11 @@ public class CreateDataServiceAppRequest extends TeaModel {
         public java.util.List<String> ownerIds;
 
         /**
-         * <p>Common scenarios.</p>
+         * <p>The common scenarios.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>数据分析</p>
+         * <p>Data analytics</p>
          */
         @NameInMap("Scenarios")
         public String scenarios;

@@ -21,6 +21,13 @@ public class DeleteStandardValidMappingRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static DeleteStandardValidMappingRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStandardValidMappingRequest self = new DeleteStandardValidMappingRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class DeleteStandardValidMappingRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public DeleteStandardValidMappingRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class DeleteStandardValidMappingRequestDeleteCommand extends TeaModel {

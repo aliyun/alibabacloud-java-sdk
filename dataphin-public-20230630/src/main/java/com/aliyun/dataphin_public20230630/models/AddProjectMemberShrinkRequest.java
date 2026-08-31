@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddProjectMemberShrinkRequest extends TeaModel {
     /**
-     * <p>The command to add members.</p>
+     * <p>The command for adding members.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddCommand")
@@ -30,6 +30,15 @@ public class AddProjectMemberShrinkRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static AddProjectMemberShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AddProjectMemberShrinkRequest self = new AddProjectMemberShrinkRequest();
@@ -58,6 +67,14 @@ public class AddProjectMemberShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public AddProjectMemberShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

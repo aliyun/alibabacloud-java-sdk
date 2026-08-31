@@ -22,6 +22,15 @@ public class ApplyDataServiceAppRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -52,6 +61,14 @@ public class ApplyDataServiceAppRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public ApplyDataServiceAppRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public ApplyDataServiceAppRequest setProjectId(Integer projectId) {
         this.projectId = projectId;
         return this;
@@ -72,7 +89,7 @@ public class ApplyDataServiceAppRequest extends TeaModel {
         public Integer appId;
 
         /**
-         * <p>The expiration date in the format of yyyy-MM-dd.</p>
+         * <p>The expiration date in yyyy-MM-dd format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

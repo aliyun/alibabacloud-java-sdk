@@ -34,6 +34,13 @@ public class FixDataShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static FixDataShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         FixDataShrinkRequest self = new FixDataShrinkRequest();
         return TeaModel.build(map, self);
@@ -61,6 +68,14 @@ public class FixDataShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public FixDataShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

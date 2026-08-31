@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpsertQualityRuleResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The backend response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class UpsertQualityRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The rule ID.</p>
+     * <p>The task rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class UpsertQualityRuleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>

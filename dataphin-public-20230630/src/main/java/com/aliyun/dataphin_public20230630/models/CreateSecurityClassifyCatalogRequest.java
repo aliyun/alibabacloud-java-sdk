@@ -21,6 +21,13 @@ public class CreateSecurityClassifyCatalogRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateSecurityClassifyCatalogRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecurityClassifyCatalogRequest self = new CreateSecurityClassifyCatalogRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class CreateSecurityClassifyCatalogRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateSecurityClassifyCatalogRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class CreateSecurityClassifyCatalogRequestCreateCommand extends TeaModel {

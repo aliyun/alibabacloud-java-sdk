@@ -30,6 +30,13 @@ public class ListKgEntityShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -66,6 +73,14 @@ public class ListKgEntityShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ListKgEntityShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public ListKgEntityShrinkRequest setWorkspaceId(String workspaceId) {

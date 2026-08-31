@@ -29,7 +29,7 @@ public class CreateWorkFlowByJsonResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error details returned by the backend.</p>
+     * <p>The error message returned by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -116,7 +116,7 @@ public class CreateWorkFlowByJsonResponseBody extends TeaModel {
         public String hostMachine;
 
         /**
-         * <p>The scheduling node ID of the workflow node after successful creation.</p>
+         * <p>The scheduling node ID of the workflow node created.</p>
          * 
          * <strong>example:</strong>
          * <p>n_123</p>
@@ -125,7 +125,7 @@ public class CreateWorkFlowByJsonResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The workflow ID after successful creation.</p>
+         * <p>The workflow ID generated after successful creation.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -134,7 +134,7 @@ public class CreateWorkFlowByJsonResponseBody extends TeaModel {
         public Long pipelineId;
 
         /**
-         * <p>The submit ID generated for the pending publish list after submission. Use this ID to publish through the publish domain. You can ignore this value for BASIC projects.</p>
+         * <p>The submit ID of the pending publish list generated after a successful submission. Use this ID to publish through the publish domain. You can ignore this value for BASIC projects.</p>
          * 
          * <strong>example:</strong>
          * <p>7891</p>

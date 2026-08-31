@@ -14,7 +14,7 @@ public class UpdateSecurityClassifyCatalogResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The full path of the folder after the update.</p>
+     * <p>The full path of the updated folder.</p>
      * 
      * <strong>example:</strong>
      * <p>/d1/d3/</p>
@@ -32,7 +32,7 @@ public class UpdateSecurityClassifyCatalogResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>

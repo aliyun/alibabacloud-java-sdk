@@ -35,6 +35,13 @@ public class DeleteBizEntityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The type of the business entity. For more information, refer to the create business entity operation.</p>
      * <p>This parameter is required.</p>
      * 
@@ -71,6 +78,14 @@ public class DeleteBizEntityRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public DeleteBizEntityRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public DeleteBizEntityRequest setType(String type) {

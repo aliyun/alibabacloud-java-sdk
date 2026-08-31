@@ -24,6 +24,13 @@ public class DeleteProjectRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static DeleteProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteProjectRequest self = new DeleteProjectRequest();
         return TeaModel.build(map, self);
@@ -43,6 +50,14 @@ public class DeleteProjectRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public DeleteProjectRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

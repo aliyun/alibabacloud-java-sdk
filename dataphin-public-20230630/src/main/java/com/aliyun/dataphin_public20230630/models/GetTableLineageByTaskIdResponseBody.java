@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableLineageByTaskIdResponseBody extends TeaModel {
     /**
-     * <p>The error code. OK indicates a successful request.</p>
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The query results.</p>
+     * <p>The query result.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetTableLineageByTaskIdResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code returned by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -110,7 +110,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
 
     public static class GetTableLineageByTaskIdResponseBodyData extends TeaModel {
         /**
-         * <p>The business unit ID of the input table.</p>
+         * <p>The ID of the business unit to which the input table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -119,7 +119,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public Long inputBizUnitId;
 
         /**
-         * <p>The data source ID of the input table.</p>
+         * <p>The ID of the data source to which the input table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -128,7 +128,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public Long inputDataSourceId;
 
         /**
-         * <p>The storage type of the input table.</p>
+         * <p>The storage format of the input table.</p>
          * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
@@ -137,7 +137,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputDataSourceType;
 
         /**
-         * <p>The data source type of the input table.</p>
+         * <p>The type of the input data source.</p>
          * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
@@ -146,7 +146,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputDbType;
 
         /**
-         * <p>The environment of the input table: DEV or PROD.</p>
+         * <p>The environment to which the input table belongs. Valid values: DEV and PROD.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -155,7 +155,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputEnv;
 
         /**
-         * <p>The project ID of the input table.</p>
+         * <p>The ID of the project to which the input table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -164,7 +164,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public Long inputProjectId;
 
         /**
-         * <p>Indicates whether the input table is deleted.</p>
+         * <p>Indicates whether the input table has been deleted.</p>
          */
         @NameInMap("InputTableDeleted")
         public Boolean inputTableDeleted;
@@ -193,19 +193,19 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputTableName;
 
         /**
-         * <p>The type of the input table. </p>
+         * <p>The type of the input table. Valid values: </p>
          * <ul>
-         * <li>PHYSICAL_TABLE Physical table (compute source)</li>
-         * <li>DIM_LOGIC_TABLE Dimension logical table</li>
-         * <li>FACT_LOGIC_TABLE Fact logical table</li>
-         * <li>SUM_LOGIC_TABLE Aggregate logical table</li>
-         * <li>REAL_TIME_LOGIC_TABLE Real-time meta table</li>
-         * <li>REAL_TIME_MIRROR_TABLE Real-time mirror table</li>
-         * <li>PHYSICAL_VIEW Physical view</li>
-         * <li>LOGICAL_VIEW Logical view</li>
-         * <li>DATA_SOURCE_PHYSICAL_TABLE Data source table</li>
-         * <li>DATA_SOURCE_VIEW Data source view</li>
-         * <li>DATA_SOURCE_MATERIALIZED_VIEW Data source materialized view</li>
+         * <li>PHYSICAL_TABLE: physical table (compute source).</li>
+         * <li>DIM_LOGIC_TABLE: logical dimension table.</li>
+         * <li>FACT_LOGIC_TABLE: fact logical table.</li>
+         * <li>SUM_LOGIC_TABLE: aggregate logical table.</li>
+         * <li>REAL_TIME_LOGIC_TABLE: real-time meta table.</li>
+         * <li>REAL_TIME_MIRROR_TABLE: real-time mirror table.</li>
+         * <li>PHYSICAL_VIEW: physical view.</li>
+         * <li>LOGICAL_VIEW: logical view.</li>
+         * <li>DATA_SOURCE_PHYSICAL_TABLE: data source table.</li>
+         * <li>DATA_SOURCE_VIEW: data source view.</li>
+         * <li>DATA_SOURCE_MATERIALIZED_VIEW: data source materialized view.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputTableType;
 
         /**
-         * <p>The business unit ID of the output table.</p>
+         * <p>The ID of the business unit to which the output table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -224,7 +224,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public Long outputBizUnitId;
 
         /**
-         * <p>The data source ID of the output table.</p>
+         * <p>The ID of the data source to which the output table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -233,7 +233,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public Long outputDataSourceId;
 
         /**
-         * <p>The storage type of the output table.</p>
+         * <p>The storage format of the output table.</p>
          * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
@@ -242,7 +242,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String outputDataSourceType;
 
         /**
-         * <p>The data source type of the output table.</p>
+         * <p>The type of the output data source.</p>
          * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
@@ -251,7 +251,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String outputDbType;
 
         /**
-         * <p>The environment of the output table: DEV or PROD.</p>
+         * <p>The environment to which the output table belongs. Valid values: DEV and PROD.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV/PROD</p>
@@ -260,7 +260,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String outputEnv;
 
         /**
-         * <p>The project ID of the output table.</p>
+         * <p>The ID of the project to which the output table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -269,7 +269,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public Long outputProjectId;
 
         /**
-         * <p>Indicates whether the output table is deleted.</p>
+         * <p>Indicates whether the output table has been deleted.</p>
          */
         @NameInMap("OutputTableDeleted")
         public Boolean outputTableDeleted;
@@ -302,7 +302,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String outputTableType;
 
         /**
-         * <p>The environment of the task (node) associated with the lineage: DEV or PROD.</p>
+         * <p>The environment of the node associated with the lineage. Valid values: DEV and PROD.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -311,7 +311,7 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String taskEnv;
 
         /**
-         * <p>The task (node) ID associated with the lineage.</p>
+         * <p>The ID of the node associated with the lineage.</p>
          * 
          * <strong>example:</strong>
          * <p>n_123</p>

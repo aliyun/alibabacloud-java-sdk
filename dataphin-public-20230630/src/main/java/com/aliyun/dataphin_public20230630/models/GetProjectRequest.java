@@ -37,6 +37,13 @@ public class GetProjectRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static GetProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         GetProjectRequest self = new GetProjectRequest();
         return TeaModel.build(map, self);
@@ -64,6 +71,14 @@ public class GetProjectRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetProjectRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualityWatchRequest extends TeaModel {
     /**
-     * <p>The monitor ID.</p>
+     * <p>The watchtask ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +23,15 @@ public class GetQualityWatchRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static GetQualityWatchRequest build(java.util.Map<String, ?> map) throws Exception {
         GetQualityWatchRequest self = new GetQualityWatchRequest();
@@ -43,6 +52,14 @@ public class GetQualityWatchRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetQualityWatchRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

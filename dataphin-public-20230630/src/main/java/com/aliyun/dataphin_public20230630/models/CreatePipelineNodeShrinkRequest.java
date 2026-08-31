@@ -21,6 +21,13 @@ public class CreatePipelineNodeShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreatePipelineNodeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePipelineNodeShrinkRequest self = new CreatePipelineNodeShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class CreatePipelineNodeShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreatePipelineNodeShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

@@ -20,6 +20,13 @@ public class GetMyTenantsShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static GetMyTenantsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMyTenantsShrinkRequest self = new GetMyTenantsShrinkRequest();
         return TeaModel.build(map, self);
@@ -39,6 +46,14 @@ public class GetMyTenantsShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetMyTenantsShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

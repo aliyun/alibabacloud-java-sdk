@@ -23,7 +23,7 @@ public class GetUserBySourceIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -113,7 +113,7 @@ public class GetUserBySourceIdResponseBody extends TeaModel {
          * <p>The display name of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx_test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

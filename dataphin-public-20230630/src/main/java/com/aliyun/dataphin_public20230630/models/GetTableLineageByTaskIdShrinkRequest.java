@@ -15,6 +15,15 @@ public class GetTableLineageByTaskIdShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The data structure for querying table lineage.</p>
      * <p>This parameter is required.</p>
      */
@@ -32,6 +41,14 @@ public class GetTableLineageByTaskIdShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetTableLineageByTaskIdShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetTableLineageByTaskIdShrinkRequest setTableLineageByTaskIdQueryShrink(String tableLineageByTaskIdQueryShrink) {

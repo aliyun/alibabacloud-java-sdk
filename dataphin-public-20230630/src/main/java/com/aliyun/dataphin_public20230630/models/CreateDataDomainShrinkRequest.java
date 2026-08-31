@@ -21,6 +21,15 @@ public class CreateDataDomainShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateDataDomainShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataDomainShrinkRequest self = new CreateDataDomainShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +49,14 @@ public class CreateDataDomainShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateDataDomainShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

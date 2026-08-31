@@ -23,7 +23,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The backend exception details.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -32,7 +32,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The paging query result.</p>
+     * <p>The paged query result.</p>
      */
     @NameInMap("PageResult")
     public ListSecurityIdentifyRecordsResponseBodyPageResult pageResult;
@@ -134,7 +134,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String bizUnitDisplayName;
 
         /**
-         * <p>The business unit ID.</p>
+         * <p>The ID of the business unit.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -143,7 +143,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
-         * <p>The business unit name.</p>
+         * <p>The name of the business unit.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -152,7 +152,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String bizUnitName;
 
         /**
-         * <p>The classification abbreviation.</p>
+         * <p>The abbreviation of the classification.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -161,7 +161,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String classifyAbbreviation;
 
         /**
-         * <p>The classification ID.</p>
+         * <p>The ID of the classification.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,7 +170,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public Long classifyId;
 
         /**
-         * <p>The classification name.</p>
+         * <p>The name of the classification.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -179,10 +179,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String classifyName;
 
         /**
-         * <p>The classification effective status. Valid values:</p>
+         * <p>The status of the classification. Valid values:</p>
          * <ul>
-         * <li>ENABLE: enabled.</li>
-         * <li>DISABLE: disabled.</li>
+         * <li>ENABLE: Enabled.</li>
+         * <li>DISABLE: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String classifyStatus;
 
         /**
-         * <p>The datasource ID.</p>
+         * <p>The ID of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -201,7 +201,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public Long datasourceId;
 
         /**
-         * <p>The datasource name.</p>
+         * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -210,7 +210,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String datasourceName;
 
         /**
-         * <p>The field description.</p>
+         * <p>The description of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -219,7 +219,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String fieldDescription;
 
         /**
-         * <p>The field ID.</p>
+         * <p>The ID of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>t_test.col1</p>
@@ -237,7 +237,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>The identification record ID.</p>
+         * <p>The ID of the identification record.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -264,7 +264,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public Boolean isLocked;
 
         /**
-         * <p>The classification level abbreviation.</p>
+         * <p>The abbreviated name of the level.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -273,7 +273,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String levelAbbreviation;
 
         /**
-         * <p>The classification level index.</p>
+         * <p>The level index.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -282,7 +282,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public Long levelIndex;
 
         /**
-         * <p>The classification level name.</p>
+         * <p>The name of the level.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -300,7 +300,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String projectDisplayName;
 
         /**
-         * <p>The project ID.</p>
+         * <p>The ID of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -309,7 +309,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The project name.</p>
+         * <p>The name of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -318,7 +318,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The table description.</p>
+         * <p>The description of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -336,7 +336,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String tableEnv;
 
         /**
-         * <p>The table ID.</p>
+         * <p>The ID of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -354,12 +354,12 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The table type. Valid values:</p>
+         * <p>The type of the table. Valid values:</p>
          * <ul>
          * <li>LOGIC_TABLE: logical table.</li>
          * <li>LOGIC_DIM_TABLE: logical dimension table.</li>
          * <li>LOGIC_FACT_TABLE: logical fact table.</li>
-         * <li>LOGIC_SUM_TABLE: logical aggregate table.</li>
+         * <li>LOGIC_SUM_TABLE: logical summary table.</li>
          * <li>LOGIC_ODM_SOURCE: source table.</li>
          * <li>LOGIC_LABEL_TABLE: logical label table.</li>
          * <li>PHYSICAL_TABLE: physical table.</li>

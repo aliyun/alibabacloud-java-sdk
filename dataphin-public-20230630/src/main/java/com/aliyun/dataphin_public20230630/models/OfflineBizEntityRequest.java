@@ -21,6 +21,13 @@ public class OfflineBizEntityRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static OfflineBizEntityRequest build(java.util.Map<String, ?> map) throws Exception {
         OfflineBizEntityRequest self = new OfflineBizEntityRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class OfflineBizEntityRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public OfflineBizEntityRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class OfflineBizEntityRequestOfflineCommand extends TeaModel {

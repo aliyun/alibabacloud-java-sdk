@@ -15,6 +15,13 @@ public class GetFileStorageCredentialRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The project ID. This parameter is required when the temporary authorization is used to create resource files.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +62,14 @@ public class GetFileStorageCredentialRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetFileStorageCredentialRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetFileStorageCredentialRequest setProjectId(Long projectId) {

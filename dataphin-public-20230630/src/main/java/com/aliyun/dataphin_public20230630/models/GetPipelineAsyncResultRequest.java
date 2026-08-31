@@ -31,6 +31,13 @@ public class GetPipelineAsyncResultRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static GetPipelineAsyncResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPipelineAsyncResultRequest self = new GetPipelineAsyncResultRequest();
         return TeaModel.build(map, self);
@@ -58,6 +65,14 @@ public class GetPipelineAsyncResultRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetPipelineAsyncResultRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class GetPipelineAsyncResultRequestContext extends TeaModel {

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>Environment identifier</p>
+     * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: Development environment</li>
-     * <li>PROD (default): Production environment</li>
+     * <li>DEV: Development environment. </li>
+     * <li>PROD (default): Production environment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>Query Request</p>
+     * <p>The query request.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +32,15 @@ public class ListInstancesShrinkRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The operator user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static ListInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesShrinkRequest self = new ListInstancesShrinkRequest();
@@ -60,6 +69,14 @@ public class ListInstancesShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ListInstancesShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

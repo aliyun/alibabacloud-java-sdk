@@ -21,6 +21,13 @@ public class CheckComputeSourceConnectivityShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CheckComputeSourceConnectivityShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckComputeSourceConnectivityShrinkRequest self = new CheckComputeSourceConnectivityShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class CheckComputeSourceConnectivityShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CheckComputeSourceConnectivityShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

@@ -21,6 +21,15 @@ public class CreateComputeSourceRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateComputeSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateComputeSourceRequest self = new CreateComputeSourceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +49,14 @@ public class CreateComputeSourceRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateComputeSourceRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class CreateComputeSourceRequestCreateCommandConfigList extends TeaModel {
@@ -88,11 +105,33 @@ public class CreateComputeSourceRequest extends TeaModel {
 
     public static class CreateComputeSourceRequestCreateCommand extends TeaModel {
         /**
+         * <p>The ID of the associated cluster. This parameter takes effect only when CreateType is not specified or is set to COMPUTE_SOURCE, which creates a compute source that references a cluster. This parameter is mutually exclusive with CreateType=CLUSTER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102311</p>
+         */
+        @NameInMap("ClusterId")
+        public Long clusterId;
+
+        /**
          * <p>The connection configuration items.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ConfigList")
         public java.util.List<CreateComputeSourceRequestCreateCommandConfigList> configList;
+
+        /**
+         * <p>The type of entity to create. Valid values:</p>
+         * <ul>
+         * <li>CLUSTER: Creates a cluster. ClusterId cannot be specified.</li>
+         * <li>COMPUTE_SOURCE: Creates a compute source. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
+         */
+        @NameInMap("CreateType")
+        public String createType;
 
         /**
          * <p>The description.</p>
@@ -123,9 +162,26 @@ public class CreateComputeSourceRequest extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The version of the compute source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDH6</p>
+         */
+        @NameInMap("TypeVersion")
+        public String typeVersion;
+
         public static CreateComputeSourceRequestCreateCommand build(java.util.Map<String, ?> map) throws Exception {
             CreateComputeSourceRequestCreateCommand self = new CreateComputeSourceRequestCreateCommand();
             return TeaModel.build(map, self);
+        }
+
+        public CreateComputeSourceRequestCreateCommand setClusterId(Long clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public Long getClusterId() {
+            return this.clusterId;
         }
 
         public CreateComputeSourceRequestCreateCommand setConfigList(java.util.List<CreateComputeSourceRequestCreateCommandConfigList> configList) {
@@ -134,6 +190,14 @@ public class CreateComputeSourceRequest extends TeaModel {
         }
         public java.util.List<CreateComputeSourceRequestCreateCommandConfigList> getConfigList() {
             return this.configList;
+        }
+
+        public CreateComputeSourceRequestCreateCommand setCreateType(String createType) {
+            this.createType = createType;
+            return this;
+        }
+        public String getCreateType() {
+            return this.createType;
         }
 
         public CreateComputeSourceRequestCreateCommand setDescription(String description) {
@@ -158,6 +222,14 @@ public class CreateComputeSourceRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public CreateComputeSourceRequestCreateCommand setTypeVersion(String typeVersion) {
+            this.typeVersion = typeVersion;
+            return this;
+        }
+        public String getTypeVersion() {
+            return this.typeVersion;
         }
 
     }

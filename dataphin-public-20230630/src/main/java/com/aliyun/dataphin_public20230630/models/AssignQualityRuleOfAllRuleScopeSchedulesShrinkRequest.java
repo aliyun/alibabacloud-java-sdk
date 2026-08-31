@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest extends TeaModel {
     /**
-     * <p>The assignment binding instruction.</p>
+     * <p>The assignment binding command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AssignCommand")
@@ -20,6 +20,15 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest extends TeaMo
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest self = new AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest();
@@ -40,6 +49,14 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest extends TeaMo
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

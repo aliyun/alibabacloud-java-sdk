@@ -21,6 +21,13 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResourceRequest self = new CreateResourceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class CreateResourceRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateResourceRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class CreateResourceRequestCreateCommand extends TeaModel {

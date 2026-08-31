@@ -15,6 +15,13 @@ public class GetKgSchemaPublishResultRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The version number. If this parameter is left empty, the most recent publish record is returned.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +51,14 @@ public class GetKgSchemaPublishResultRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetKgSchemaPublishResultRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetKgSchemaPublishResultRequest setVersionId(Integer versionId) {

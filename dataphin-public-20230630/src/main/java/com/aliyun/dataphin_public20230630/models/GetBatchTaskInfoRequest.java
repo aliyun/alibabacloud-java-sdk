@@ -45,6 +45,15 @@ public class GetBatchTaskInfoRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The ID of the project to which the node belongs.</p>
      * <p>This parameter is required.</p>
      * 
@@ -89,6 +98,14 @@ public class GetBatchTaskInfoRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetBatchTaskInfoRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetBatchTaskInfoRequest setProjectId(Long projectId) {

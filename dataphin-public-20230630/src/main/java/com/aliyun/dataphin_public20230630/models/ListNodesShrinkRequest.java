@@ -7,8 +7,8 @@ public class ListNodesShrinkRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment </li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: Development environment. </li>
+     * <li>PROD (default): Production environment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,6 +33,15 @@ public class ListNodesShrinkRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static ListNodesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodesShrinkRequest self = new ListNodesShrinkRequest();
@@ -61,6 +70,14 @@ public class ListNodesShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ListNodesShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

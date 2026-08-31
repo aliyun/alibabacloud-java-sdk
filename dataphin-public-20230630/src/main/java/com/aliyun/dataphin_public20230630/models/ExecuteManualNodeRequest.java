@@ -34,6 +34,13 @@ public class ExecuteManualNodeRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static ExecuteManualNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteManualNodeRequest self = new ExecuteManualNodeRequest();
         return TeaModel.build(map, self);
@@ -61,6 +68,14 @@ public class ExecuteManualNodeRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ExecuteManualNodeRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class ExecuteManualNodeRequestExecuteCommandParamList extends TeaModel {

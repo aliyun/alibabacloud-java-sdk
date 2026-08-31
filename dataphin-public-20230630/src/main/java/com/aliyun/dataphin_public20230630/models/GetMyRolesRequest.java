@@ -14,6 +14,13 @@ public class GetMyRolesRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static GetMyRolesRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMyRolesRequest self = new GetMyRolesRequest();
         return TeaModel.build(map, self);
@@ -25,6 +32,14 @@ public class GetMyRolesRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetMyRolesRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

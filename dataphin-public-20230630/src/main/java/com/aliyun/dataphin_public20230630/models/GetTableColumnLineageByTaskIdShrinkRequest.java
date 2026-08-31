@@ -15,6 +15,13 @@ public class GetTableColumnLineageByTaskIdShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>Data structure for querying table column lineage.</p>
      * <p>This parameter is required.</p>
      */
@@ -32,6 +39,14 @@ public class GetTableColumnLineageByTaskIdShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetTableColumnLineageByTaskIdShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetTableColumnLineageByTaskIdShrinkRequest setTableColumnLineageByTaskIdQueryShrink(String tableColumnLineageByTaskIdQueryShrink) {

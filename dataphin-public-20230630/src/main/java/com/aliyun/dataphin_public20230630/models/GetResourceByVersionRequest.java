@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceByVersionRequest extends TeaModel {
     /**
-     * <p>Resource file name.</p>
+     * <p>The name of the resource file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetResourceByVersionRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,16 @@ public class GetResourceByVersionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>Project ID.</p>
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +44,7 @@ public class GetResourceByVersionRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Version ID.</p>
+     * <p>The version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +72,14 @@ public class GetResourceByVersionRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetResourceByVersionRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetResourceByVersionRequest setProjectId(Long projectId) {

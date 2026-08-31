@@ -21,6 +21,15 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static ListSecurityIdentifyRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSecurityIdentifyRecordsRequest self = new ListSecurityIdentifyRecordsRequest();
         return TeaModel.build(map, self);
@@ -42,9 +51,17 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public ListSecurityIdentifyRecordsRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static class ListSecurityIdentifyRecordsRequestListQuery extends TeaModel {
         /**
-         * <p>The datasource environment identifier. This parameter is required only for datasource tables.</p>
+         * <p>The data source environment identifier. This parameter is required only for data source tables.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -53,7 +70,7 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         public String datasourceEnv;
 
         /**
-         * <p>The datasource name. This parameter is required only for datasource tables.</p>
+         * <p>The data source name. This parameter is required only for data source tables.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -72,13 +89,13 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>Specifies whether the table is a datasource table. Default value: false (treated as a Dataphin table).</p>
+         * <p>Specifies whether the table is a data source table. Default value: false (treated as a Dataphin table).</p>
          */
         @NameInMap("IsDatasourceTable")
         public Boolean isDatasourceTable;
 
         /**
-         * <p>The search keyword. The search scope is the field name.</p>
+         * <p>The search keyword. The search scope is field names.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -105,7 +122,7 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The table catalog. For datasource tables, specify the database or schema name. For Dataphin physical tables, specify the project name in English. For Dataphin logical tables, specify the business unit name in English.</p>
+         * <p>The table catalog. For data source tables, specify the database or schema name. For Dataphin physical tables, specify the project name in English. For Dataphin logical tables, specify the business unit name in English.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

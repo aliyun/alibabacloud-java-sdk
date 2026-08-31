@@ -36,6 +36,13 @@ public class GetPhysicalInstanceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>Project ID</p>
      * <p>This parameter is required.</p>
      * 
@@ -72,6 +79,14 @@ public class GetPhysicalInstanceRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetPhysicalInstanceRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetPhysicalInstanceRequest setProjectId(Long projectId) {

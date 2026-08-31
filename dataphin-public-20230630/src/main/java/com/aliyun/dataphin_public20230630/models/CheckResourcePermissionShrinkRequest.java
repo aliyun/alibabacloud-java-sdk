@@ -21,6 +21,13 @@ public class CheckResourcePermissionShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CheckResourcePermissionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckResourcePermissionShrinkRequest self = new CheckResourcePermissionShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class CheckResourcePermissionShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CheckResourcePermissionShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceAppResponseBody extends TeaModel {
     /**
-     * <p>The response code returned by the backend.</p>
+     * <p>The backend response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,7 +32,7 @@ public class CreateDataServiceAppResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error details returned by the backend.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>

@@ -29,7 +29,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The error message returned by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -110,7 +110,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
 
     public static class GetPipelineByIdResponseBodyDataNodeInfo extends TeaModel {
         /**
-         * <p>The node description.</p>
+         * <p>The description of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -119,7 +119,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The folder of the integration pipeline node. The default value is the root folder. This folder must exist. If it does not exist, call the relevant API operation to create a folder of the offlinePipeline type.</p>
+         * <p>The folder of the integration pipeline node. The default value is the root folder. The folder must already exist. If it does not exist, call the relevant API operation to create a folder of the offlinePipeline type.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -128,7 +128,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String directory;
 
         /**
-         * <p>The pipeline file ID. This value is empty during initial creation. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</p>
+         * <p>The pipeline file ID. This value is empty when the node is first created. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -137,7 +137,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>The scheduling node ID of the pipeline node. This value is empty during initial creation. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</p>
+         * <p>The scheduling node ID of the pipeline node. This value is empty when the node is first created. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>n_123</p>
@@ -155,7 +155,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The pipeline node ID. This value is empty during initial creation. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</p>
+         * <p>The pipeline node ID. This value is empty when the node is first created. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -220,13 +220,13 @@ public class GetPipelineByIdResponseBody extends TeaModel {
 
     public static class GetPipelineByIdResponseBodyDataPipelineConfigHops extends TeaModel {
         /**
-         * <p>Specifies the conditional distribution setting. Set this parameter to true when the downstream condition is true for a conditional distribution component. Otherwise, set it to false.</p>
+         * <p>Specifies the condition for a conditional distribution component. Set this parameter to true when the downstream connection condition is true, or false otherwise.</p>
          */
         @NameInMap("SendTo")
         public Boolean sendTo;
 
         /**
-         * <p>The input step name, which corresponds to Steps[*].StepName.</p>
+         * <p>The name of the input step, which corresponds to Steps[*].StepName.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_reader</p>
@@ -235,7 +235,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The output step name, which corresponds to Steps[*].StepName.</p>
+         * <p>The name of the output step, which corresponds to Steps[*].StepName.</p>
          * 
          * <strong>example:</strong>
          * <p>odps_writer</p>
@@ -276,10 +276,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
 
     public static class GetPipelineByIdResponseBodyDataPipelineConfigSteps extends TeaModel {
         /**
-         * <p>Specifies the data distribution mode when the current component has multiple downstream components. Valid values:</p>
+         * <p>Specifies the data distribution method when the current component has multiple downstream components. Valid values:</p>
          * <ul>
-         * <li>true: the data of the current component is distributed to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. Default value: true.</li>
-         * <li>false: the full data of the current component is sent to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive 100 records.</li>
+         * <li>true: The data of the current component is sent to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. Default value: true.</li>
+         * <li>false: The full data of the current component is sent to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive 100 records.</li>
          * </ul>
          */
         @NameInMap("IsDistribute")
@@ -295,7 +295,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The specific component configuration in JSON string format. Refer to the toJsonString method of the subclasses of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</p>
+         * <p>The specific component configuration. The value is a JSON string. Refer to the toJsonString method of the subclasses of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -377,7 +377,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
 
     public static class GetPipelineByIdResponseBodyDataPipelineConfig extends TeaModel {
         /**
-         * <p>The directed acyclic graph (DAG) link configuration that describes the connections between all components.</p>
+         * <p>The DAG (directed acyclic graph) link configuration that describes the connections between all components.</p>
          */
         @NameInMap("Hops")
         public java.util.List<GetPipelineByIdResponseBodyDataPipelineConfigHops> hops;
@@ -413,7 +413,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
 
     public static class GetPipelineByIdResponseBodyData extends TeaModel {
         /**
-         * <p>The integration pipeline configuration mode.</p>
+         * <p>The configuration mode of the integration pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>PIPELINE</p>
@@ -428,13 +428,13 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public GetPipelineByIdResponseBodyDataNodeInfo nodeInfo;
 
         /**
-         * <p>The integration pipeline component configuration.</p>
+         * <p>The component configuration of the integration pipeline.</p>
          */
         @NameInMap("PipelineConfig")
         public GetPipelineByIdResponseBodyDataPipelineConfig pipelineConfig;
 
         /**
-         * <p>The integration pipeline script mode configuration.</p>
+         * <p>The script mode configuration of the integration pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -443,7 +443,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String pipelineJson;
 
         /**
-         * <p>The pipeline node type.</p>
+         * <p>The type of the pipeline node.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -452,7 +452,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public Integer pipelineType;
 
         /**
-         * <p>The integration pipeline scheduling configuration. The value is a JSON string. You can use the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.vo.OAScheduleConfigVO to deserialize it.</p>
+         * <p>The scheduling configuration of the integration pipeline. The value is a JSON string. You can deserialize it by using the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.vo.OAScheduleConfigVO.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -461,7 +461,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String scheduleConfig;
 
         /**
-         * <p>The integration pipeline channel configuration. The value is a JSON string. You can use the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting to deserialize it.</p>
+         * <p>The channel configuration of the integration pipeline. The value is a JSON string. You can deserialize it by using the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

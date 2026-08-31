@@ -15,6 +15,13 @@ public class RemoveTenantMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
@@ -32,6 +39,14 @@ public class RemoveTenantMemberRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public RemoveTenantMemberRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public RemoveTenantMemberRequest setRemoveCommand(RemoveTenantMemberRequestRemoveCommand removeCommand) {
@@ -53,6 +68,13 @@ public class RemoveTenantMemberRequest extends TeaModel {
         @NameInMap("SourceId")
         public String sourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aliyun</p>
+         */
+        @NameInMap("SourceType")
+        public String sourceType;
+
         public static RemoveTenantMemberRequestRemoveCommand build(java.util.Map<String, ?> map) throws Exception {
             RemoveTenantMemberRequestRemoveCommand self = new RemoveTenantMemberRequestRemoveCommand();
             return TeaModel.build(map, self);
@@ -64,6 +86,14 @@ public class RemoveTenantMemberRequest extends TeaModel {
         }
         public String getSourceId() {
             return this.sourceId;
+        }
+
+        public RemoveTenantMemberRequestRemoveCommand setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
         }
 
     }

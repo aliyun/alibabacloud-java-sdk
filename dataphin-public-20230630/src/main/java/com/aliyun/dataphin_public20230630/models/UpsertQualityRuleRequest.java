@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpsertQualityRuleRequest extends TeaModel {
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,16 @@ public class UpsertQualityRuleRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The upsert command.</p>
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpsertCommand")
@@ -34,6 +43,14 @@ public class UpsertQualityRuleRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public UpsertQualityRuleRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public UpsertQualityRuleRequest setUpsertCommand(UpsertQualityRuleRequestUpsertCommand upsertCommand) {
         this.upsertCommand = upsertCommand;
         return this;
@@ -44,19 +61,19 @@ public class UpsertQualityRuleRequest extends TeaModel {
 
     public static class UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeInfoValueConfigDefaultValue extends TeaModel {
         /**
-         * <p>Specifies whether to include the maximum value.</p>
+         * <p>Indicates whether the maximum value is included.</p>
          */
         @NameInMap("IncludeMaxValue")
         public Boolean includeMaxValue;
 
         /**
-         * <p>Specifies whether to include the minimum value.</p>
+         * <p>Indicates whether the minimum value is included.</p>
          */
         @NameInMap("IncludeMinValue")
         public Boolean includeMinValue;
 
         /**
-         * <p>The maximum value. Applicable to range interval attributes.</p>
+         * <p>The maximum value. This parameter applies to range interval properties.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -65,7 +82,7 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String maxValue;
 
         /**
-         * <p>The minimum value. Applicable to range interval attributes.</p>
+         * <p>The minimum value. This parameter applies to range interval properties.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -74,7 +91,7 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String minValue;
 
         /**
-         * <p>The attribute value list. Applicable to attributes with the custom input, single-select dropdown, or multi-select dropdown input method.</p>
+         * <p>The property value list. This parameter applies to properties whose input method is custom input, single-select dropdown, or multi-select dropdown.</p>
          */
         @NameInMap("ValueList")
         public java.util.List<String> valueList;
@@ -128,7 +145,15 @@ public class UpsertQualityRuleRequest extends TeaModel {
 
     public static class UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeInfoValueConfig extends TeaModel {
         /**
-         * <p>The attribute field type. Valid values: STRING (Text), BIGINT (Integer), DOUBLE (Floating-point), BOOLEAN (Boolean), DATE (Date), DATETIME (Datetime).</p>
+         * <p>The property field data type. Valid values:</p>
+         * <ul>
+         * <li>STRING: text.</li>
+         * <li>BIGINT: integer.</li>
+         * <li>DOUBLE: floating-point.</li>
+         * <li>BOOLEAN: Boolean.</li>
+         * <li>DATE: date.</li>
+         * <li>DATETIME: datetime.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -137,13 +162,13 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The attribute default value.</p>
+         * <p>The property default value.</p>
          */
         @NameInMap("DefaultValue")
         public UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeInfoValueConfigDefaultValue defaultValue;
 
         /**
-         * <p>The attribute field length. Used to constrain the maximum length of text-type attribute values.</p>
+         * <p>The property field length. You can use this parameter to constrain the maximum length of text-type property values.</p>
          * 
          * <strong>example:</strong>
          * <p>986992</p>
@@ -152,7 +177,13 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public Integer length;
 
         /**
-         * <p>The attribute value input method. Valid values: CUSTOMIZED (Custom input), SINGLE_ENUM (Single-select dropdown), MULTIPLE_ENUMS (Multi-select dropdown), RANGE (Range interval).</p>
+         * <p>The property value input method. Valid values:</p>
+         * <ul>
+         * <li>CUSTOMIZED: custom input.</li>
+         * <li>SINGLE_ENUM: single-select dropdown.</li>
+         * <li>MULTIPLE_ENUMS: multi-select dropdown.</li>
+         * <li>RANGE: range interval.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CUSTOMIZED</p>
@@ -161,7 +192,7 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The attribute option values. Only applicable to attributes with the single-select dropdown or multi-select dropdown input method.</p>
+         * <p>The property option values. This parameter applies only to properties whose input method is single-select dropdown or multi-select dropdown.</p>
          */
         @NameInMap("ValueEnumList")
         public java.util.List<String> valueEnumList;
@@ -224,13 +255,13 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether to enable the attribute.</p>
+         * <p>Indicates whether the property is enabled.</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
-         * <p>The attribute ID.</p>
+         * <p>The property ID.</p>
          * 
          * <strong>example:</strong>
          * <p>711484689131</p>
@@ -239,7 +270,7 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>The attribute name.</p>
+         * <p>The property name.</p>
          * 
          * <strong>example:</strong>
          * <p>attr01</p>
@@ -248,19 +279,19 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether the attribute is required.</p>
+         * <p>Indicates whether the property is required.</p>
          */
         @NameInMap("Required")
         public Boolean required;
 
         /**
-         * <p>Specifies whether the attribute is searchable.</p>
+         * <p>Indicates whether the property is searchable.</p>
          */
         @NameInMap("Searchable")
         public Boolean searchable;
 
         /**
-         * <p>The attribute value configuration details.</p>
+         * <p>The property value configuration details.</p>
          */
         @NameInMap("ValueConfig")
         public UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeInfoValueConfig valueConfig;
@@ -330,19 +361,19 @@ public class UpsertQualityRuleRequest extends TeaModel {
 
     public static class UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeValue extends TeaModel {
         /**
-         * <p>Specifies whether to include the maximum value.</p>
+         * <p>Indicates whether the maximum value is included.</p>
          */
         @NameInMap("IncludeMaxValue")
         public Boolean includeMaxValue;
 
         /**
-         * <p>Specifies whether to include the minimum value.</p>
+         * <p>Indicates whether the minimum value is included.</p>
          */
         @NameInMap("IncludeMinValue")
         public Boolean includeMinValue;
 
         /**
-         * <p>The maximum value. Applicable to range interval attributes.</p>
+         * <p>The maximum value. This parameter applies to range interval properties.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -351,7 +382,7 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String maxValue;
 
         /**
-         * <p>The minimum value. Applicable to range interval attributes.</p>
+         * <p>The minimum value. This parameter applies to range interval properties.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -360,7 +391,7 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String minValue;
 
         /**
-         * <p>The attribute value list. Applicable to attributes with the custom input, single-select dropdown, or multi-select dropdown input method.</p>
+         * <p>The property value list. This parameter applies to properties whose input method is custom input, single-select dropdown, or multi-select dropdown.</p>
          */
         @NameInMap("ValueList")
         public java.util.List<String> valueList;
@@ -414,13 +445,13 @@ public class UpsertQualityRuleRequest extends TeaModel {
 
     public static class UpsertQualityRuleRequestUpsertCommandAttributeWithValueList extends TeaModel {
         /**
-         * <p>The attribute details.</p>
+         * <p>The property details.</p>
          */
         @NameInMap("AttributeInfo")
         public UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeInfo attributeInfo;
 
         /**
-         * <p>The attribute value.</p>
+         * <p>The property value.</p>
          */
         @NameInMap("AttributeValue")
         public UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeValue attributeValue;
@@ -450,7 +481,7 @@ public class UpsertQualityRuleRequest extends TeaModel {
 
     public static class UpsertQualityRuleRequestUpsertCommandFormPropertyList extends TeaModel {
         /**
-         * <p>The component type.</p>
+         * <p>The control type.</p>
          * 
          * <strong>example:</strong>
          * <p>expression</p>
@@ -509,7 +540,7 @@ public class UpsertQualityRuleRequest extends TeaModel {
 
     public static class UpsertQualityRuleRequestUpsertCommandValidateConditionList extends TeaModel {
         /**
-         * <p>The ID of the condition node.</p>
+         * <p>The condition node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>268</p>
@@ -527,7 +558,17 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String metric;
 
         /**
-         * <p>The operator. Valid values: EQUAL, NOT_EQUAL, LARGER, SMALLER, LARGE_OR_EQUAL, SMALLER_OR_EQUAL, AND, OR.</p>
+         * <p>The operator. Valid values:</p>
+         * <ul>
+         * <li>EQUAL</li>
+         * <li>NOT_EQUAL</li>
+         * <li>LARGER</li>
+         * <li>SMALLER</li>
+         * <li>LARGE_OR_EQUAL</li>
+         * <li>SMALLER_OR_EQUAL</li>
+         * <li>AND</li>
+         * <li>OR</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AND</p>
@@ -536,7 +577,7 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String operator;
 
         /**
-         * <p>The ID of the parent condition node.</p>
+         * <p>The parent condition node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -545,7 +586,11 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String parentId;
 
         /**
-         * <p>The condition type. Valid values: RELATION, EXPRESSION.</p>
+         * <p>The condition type. Valid values:</p>
+         * <ul>
+         * <li>RELATION: relationship.</li>
+         * <li>EXPRESSION: expression.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RELATION</p>
@@ -619,20 +664,58 @@ public class UpsertQualityRuleRequest extends TeaModel {
 
     public static class UpsertQualityRuleRequestUpsertCommand extends TeaModel {
         /**
-         * <p>The rule business attribute configuration.</p>
+         * <p>The exception archive mode. Valid values:</p>
+         * <ul>
+         * <li>ONLY_ERROR_FIELD: Archives only the exception fields.</li>
+         * <li>FULL_RECORD: Archives the complete record.</li>
+         * </ul>
+         * <p>Default value: ONLY_ERROR_FIELD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLY_ERROR_FIELD</p>
+         */
+        @NameInMap("ArchiveMode")
+        public String archiveMode;
+
+        /**
+         * <p>The exception archive storage type. Valid values:</p>
+         * <ul>
+         * <li>FILE_SYSTEM: File system.</li>
+         * <li>CUSTOM_TABLE: Custom table.</li>
+         * </ul>
+         * <p>Default value: FILE_SYSTEM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE_SYSTEM</p>
+         */
+        @NameInMap("ArchiveStoreType")
+        public String archiveStoreType;
+
+        /**
+         * <p>The rule business property configuration.</p>
          */
         @NameInMap("AttributeWithValueList")
         public java.util.List<UpsertQualityRuleRequestUpsertCommandAttributeWithValueList> attributeWithValueList;
 
         /**
-         * <p>The rule category. Valid values: CONSISTENT (Consistency), EFFECTIVE (Effectiveness), TIMELINESE (Timeliness), ACCURATE (Accuracy), UNIQUENESS (Uniqueness), COMPLETENESS (Completeness), STABILITY (Stability), CUSTOM (Custom).</p>
+         * <p>The rule catalog. Valid values:</p>
+         * <ul>
+         * <li>CONSISTENT: consistency.</li>
+         * <li>EFFECTIVE: validity.</li>
+         * <li>TIMELINESE: timeliness.</li>
+         * <li>ACCURATE: accuracy.</li>
+         * <li>UNIQUENESS: uniqueness.</li>
+         * <li>COMPLETENESS: completeness.</li>
+         * <li>STABILITY: stability.</li>
+         * <li>CUSTOM: custom.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         @NameInMap("CatalogList")
         public java.util.List<String> catalogList;
 
         /**
-         * <p>The description of the quality rule.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -647,13 +730,13 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public Boolean enableErrorArchive;
 
         /**
-         * <p>The rule configuration key-value pairs. The configuration varies based on the template type. Different template types return different form key-value pair configurations.</p>
+         * <p>The rule configuration key-value pairs. These are related to the templatetype. Different template types return different form key-value pair configurations.</p>
          */
         @NameInMap("FormPropertyList")
         public java.util.List<UpsertQualityRuleRequestUpsertCommandFormPropertyList> formPropertyList;
 
         /**
-         * <p>Rule ID. A non-empty value indicates a modification, and an empty value indicates a creation.</p>
+         * <p>The rule ID. If this parameter is not empty, the operation updates the rule. If this parameter is empty, the operation creates a rule.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -672,7 +755,11 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The rule strength. Valid values: STRONG, WEAK.</p>
+         * <p>The rule strength. Valid values:</p>
+         * <ul>
+         * <li>STRONG</li>
+         * <li>WEAK</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -692,39 +779,39 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public Long templateId;
 
         /**
-         * <p>The template type. Valid values:</p>
+         * <p>The templatetype. Valid values:</p>
          * <ul>
-         * <li>FIELD_NULL_VALUE_VALIDATE: Field null value validation</li>
-         * <li>FIELD_EMPTY_STRING_VALIDATE: Field empty string validation</li>
-         * <li>FIELD_UNIQUE_VALIDATE: Field uniqueness validation</li>
-         * <li>FIELD_GROUP_COUNT_VALIDATE: Field unique value count validation</li>
-         * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: Field duplicate value count validation</li>
-         * <li>FUNCTION_TIME_COMPARE: Time function comparison</li>
-         * <li>SINGLE_TABLE_TIME_COMPARE: Single-table time field comparison</li>
-         * <li>DOUBLE_TABLE_TIME_COMPARE: Cross-table time field comparison</li>
-         * <li>FIELD_FORMAT_VALIDATE: Field format validation</li>
-         * <li>FIELD_LENGTH_VALIDATE: Field length validation</li>
-         * <li>FIELD_VALUE_RANGE_VALIDATE: Field value range validation</li>
-         * <li>CODE_TABLE_COMPARE: Code table reference comparison</li>
-         * <li>STANDARD_CODE_TABLE_COMPARE: Data standard code table reference comparison</li>
-         * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: Single-table field value consistency comparison</li>
-         * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: Single-table field statistical value consistency comparison</li>
-         * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: Single-table field business logic consistency comparison</li>
-         * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: Cross-table field value consistency comparison</li>
-         * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: Cross-table field statistical value consistency comparison</li>
-         * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: Cross-source cross-table field statistical value consistency comparison</li>
-         * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: Cross-table field business logic consistency comparison</li>
-         * <li>TABLE_STABILITY_VALIDATE: Table stability validation</li>
-         * <li>TABLE_FLUCTUATION_VALIDATE: Table fluctuation validation</li>
-         * <li>FIELD_STABILITY_VALIDATE: Field stability validation</li>
-         * <li>FIELD_FLUCTUATION_VALIDATE: Field fluctuation validation</li>
-         * <li>CUSTOM_STATISTICAL_VALIDATE: Custom statistical metric validation</li>
-         * <li>CUSTOM_DATA_DETAILS_VALIDATE: Custom data details validation</li>
-         * <li>DATASOURCE_AVAILABLE_CHECK: Data source connectivity check</li>
-         * <li>TABLE_SCHEMA_CHECK: Table schema change monitoring</li>
-         * <li>REAL_TIME_OFFLINE_COMPARE: Real-time offline comparison</li>
-         * <li>REAL_TIME_STATISTICAL_VALIDATE: Real-time statistical value monitoring</li>
-         * <li>REAL_TIME_MULTI_CHAIN_COMPARE: Real-time multi-chain comparison, etc.</li>
+         * <li>FIELD_NULL_VALUE_VALIDATE: field null value check.</li>
+         * <li>FIELD_EMPTY_STRING_VALIDATE: field empty string check.</li>
+         * <li>FIELD_UNIQUE_VALIDATE: field uniqueness check.</li>
+         * <li>FIELD_GROUP_COUNT_VALIDATE: field unique value count check.</li>
+         * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check.</li>
+         * <li>FUNCTION_TIME_COMPARE: time function comparison.</li>
+         * <li>SINGLE_TABLE_TIME_COMPARE: single-table time field comparison.</li>
+         * <li>DOUBLE_TABLE_TIME_COMPARE: two-table time field comparison.</li>
+         * <li>FIELD_FORMAT_VALIDATE: field format check.</li>
+         * <li>FIELD_LENGTH_VALIDATE: field length check.</li>
+         * <li>FIELD_VALUE_RANGE_VALIDATE: field value range check.</li>
+         * <li>CODE_TABLE_COMPARE: lookup table reference comparison.</li>
+         * <li>STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison.</li>
+         * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: single-table field value consistency comparison.</li>
+         * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: single-table field statistical value consistency comparison.</li>
+         * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: single-table field business logic consistency comparison.</li>
+         * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: two-table field value consistency comparison.</li>
+         * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: two-table field statistical value consistency comparison.</li>
+         * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source two-table field statistical value consistency comparison.</li>
+         * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: two-table field business logic consistency comparison.</li>
+         * <li>TABLE_STABILITY_VALIDATE: table stability check.</li>
+         * <li>TABLE_FLUCTUATION_VALIDATE: table fluctuation check.</li>
+         * <li>FIELD_STABILITY_VALIDATE: field stability check.</li>
+         * <li>FIELD_FLUCTUATION_VALIDATE: field fluctuation check.</li>
+         * <li>CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check.</li>
+         * <li>CUSTOM_DATA_DETAILS_VALIDATE: custom data details check.</li>
+         * <li>DATASOURCE_AVAILABLE_CHECK: datasource connectivity monitoring.</li>
+         * <li>TABLE_SCHEMA_CHECK: table schema change monitoring.</li>
+         * <li>REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison.</li>
+         * <li>REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value monitoring.</li>
+         * <li>REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -741,7 +828,7 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public java.util.List<UpsertQualityRuleRequestUpsertCommandValidateConditionList> validateConditionList;
 
         /**
-         * <p>The ID of the associated monitor.</p>
+         * <p>The ID of the associated watch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -753,6 +840,22 @@ public class UpsertQualityRuleRequest extends TeaModel {
         public static UpsertQualityRuleRequestUpsertCommand build(java.util.Map<String, ?> map) throws Exception {
             UpsertQualityRuleRequestUpsertCommand self = new UpsertQualityRuleRequestUpsertCommand();
             return TeaModel.build(map, self);
+        }
+
+        public UpsertQualityRuleRequestUpsertCommand setArchiveMode(String archiveMode) {
+            this.archiveMode = archiveMode;
+            return this;
+        }
+        public String getArchiveMode() {
+            return this.archiveMode;
+        }
+
+        public UpsertQualityRuleRequestUpsertCommand setArchiveStoreType(String archiveStoreType) {
+            this.archiveStoreType = archiveStoreType;
+            return this;
+        }
+        public String getArchiveStoreType() {
+            return this.archiveStoreType;
         }
 
         public UpsertQualityRuleRequestUpsertCommand setAttributeWithValueList(java.util.List<UpsertQualityRuleRequestUpsertCommandAttributeWithValueList> attributeWithValueList) {

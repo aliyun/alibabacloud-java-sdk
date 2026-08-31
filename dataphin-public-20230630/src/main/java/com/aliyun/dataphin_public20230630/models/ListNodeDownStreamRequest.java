@@ -34,6 +34,15 @@ public class ListNodeDownStreamRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static ListNodeDownStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodeDownStreamRequest self = new ListNodeDownStreamRequest();
         return TeaModel.build(map, self);
@@ -63,6 +72,14 @@ public class ListNodeDownStreamRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public ListNodeDownStreamRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static class ListNodeDownStreamRequestListQueryFilterList extends TeaModel {
         /**
          * <p>Specifies whether to exclude the matched results. Default value: false.</p>
@@ -78,7 +95,7 @@ public class ListNodeDownStreamRequest extends TeaModel {
          * <ul>
          * <li>PROJECT: project</li>
          * <li>PHYSICAL_NODE_ID: physical node ID</li>
-         * <li>LOGICAL_TABLE_NODE_ID: logical table ID.</li>
+         * <li>LOGICAL_TABLE_NODE_ID: logical table ID</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -126,7 +143,7 @@ public class ListNodeDownStreamRequest extends TeaModel {
 
     public static class ListNodeDownStreamRequestListQueryNodeIdList extends TeaModel {
         /**
-         * <p>The list of field IDs. This parameter can be specified when the node ID is a logical table node ID. If this parameter is not specified, all fields in the table are used by default.</p>
+         * <p>The list of field IDs. This parameter can be specified when the node ID is a logical table node ID. If this parameter is not specified, the full table is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>112</p>
@@ -168,7 +185,7 @@ public class ListNodeDownStreamRequest extends TeaModel {
 
     public static class ListNodeDownStreamRequestListQuery extends TeaModel {
         /**
-         * <p>The depth. Default value: 3.</p>
+         * <p>The depth of the downstream query. Default value: 3.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -177,7 +194,7 @@ public class ListNodeDownStreamRequest extends TeaModel {
         public Integer downStreamDepth;
 
         /**
-         * <p>The filters. You can include or exclude results based on projects or nodes. Default value: empty.</p>
+         * <p>The list of filters. You can include or exclude results based on projects and nodes. Default value: empty.</p>
          */
         @NameInMap("FilterList")
         public java.util.List<ListNodeDownStreamRequestListQueryFilterList> filterList;

@@ -137,7 +137,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
          * <p>The node name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xxTest</p>
          */
         @NameInMap("Name")
         public String name;

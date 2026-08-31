@@ -23,7 +23,7 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -110,7 +110,7 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
 
     public static class GetPhysicalInstanceLogResponseBodyTaskrunLogList extends TeaModel {
         /**
-         * <p>The execution duration of the task. Unit: seconds.</p>
+         * <p>The task execution duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60s</p>
@@ -128,7 +128,7 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The execution log content. This value is empty if the task has not been run.</p>
+         * <p>The run log content. This value is empty if the task has not been run.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -146,7 +146,7 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The execution status.</p>
+         * <p>The run status.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>

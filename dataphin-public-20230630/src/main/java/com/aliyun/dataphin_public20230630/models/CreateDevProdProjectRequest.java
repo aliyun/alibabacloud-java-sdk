@@ -21,6 +21,13 @@ public class CreateDevProdProjectRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateDevProdProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDevProdProjectRequest self = new CreateDevProdProjectRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class CreateDevProdProjectRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateDevProdProjectRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class CreateDevProdProjectRequestCreateCommandWhiteLists extends TeaModel {

@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineShrinkRequest extends TeaModel {
     /**
-     * <p>Request context information</p>
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public String contextShrink;
 
     /**
-     * <p>Pipeline/workflow task creation configuration</p>
+     * <p>The configuration for creating a pipeline or workflow node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public String createCommandShrink;
 
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,15 @@ public class CreatePipelineShrinkRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static CreatePipelineShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePipelineShrinkRequest self = new CreatePipelineShrinkRequest();
@@ -55,6 +64,14 @@ public class CreatePipelineShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreatePipelineShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

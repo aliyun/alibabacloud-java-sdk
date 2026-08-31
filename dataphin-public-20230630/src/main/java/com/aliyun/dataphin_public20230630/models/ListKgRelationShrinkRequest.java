@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKgRelationShrinkRequest extends TeaModel {
     /**
-     * <p>The paged search filter conditions.</p>
+     * <p>The paged query filter conditions.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
@@ -19,6 +19,15 @@ public class ListKgRelationShrinkRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     /**
      * <p>The relationship type code.</p>
@@ -59,6 +68,14 @@ public class ListKgRelationShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ListKgRelationShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public ListKgRelationShrinkRequest setRelationType(String relationType) {

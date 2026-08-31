@@ -14,7 +14,7 @@ public class CreateSecurityClassifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data classification ID.</p>
+     * <p>The data category ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -149,7 +149,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
 
     public static class BatchCreateKgEntityResponseBodyCreateResult extends TeaModel {
         /**
-         * <p>The number of failed records.</p>
+         * <p>The number of entity records that failed to be created.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -158,7 +158,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         public Integer failCount;
 
         /**
-         * <p>The number of successfully created records.</p>
+         * <p>The number of successfully created entity records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

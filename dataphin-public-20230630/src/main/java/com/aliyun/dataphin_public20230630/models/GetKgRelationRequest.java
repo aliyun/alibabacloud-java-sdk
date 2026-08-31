@@ -15,6 +15,13 @@ public class GetKgRelationRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The relationship record ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -55,6 +62,14 @@ public class GetKgRelationRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetKgRelationRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetKgRelationRequest setRelationId(String relationId) {

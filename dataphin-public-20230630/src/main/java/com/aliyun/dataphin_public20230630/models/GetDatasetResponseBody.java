@@ -150,6 +150,533 @@ public class GetDatasetResponseBody extends TeaModel {
 
     }
 
+    public static class GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>yyyyMMdd</p>
+         */
+        @NameInMap("DateFormat")
+        public String dateFormat;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Descr")
+        public String descr;
+
+        @NameInMap("IsUrl")
+        public Boolean isUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>col01</p>
+         */
+        @NameInMap("MappingColumn")
+        public String mappingColumn;
+
+        @NameInMap("Must")
+        public Boolean must;
+
+        /**
+         * <strong>example:</strong>
+         * <p>=</p>
+         */
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Optional")
+        public Boolean optional;
+
+        /**
+         * <strong>example:</strong>
+         * <p>col01</p>
+         */
+        @NameInMap("OriginalColumn")
+        public String originalColumn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>col01</p>
+         */
+        @NameInMap("ParamName")
+        public String paramName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>int</p>
+         */
+        @NameInMap("ParamType")
+        public String paramType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Sample")
+        public String sample;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("SeqNum")
+        public Integer seqNum;
+
+        public static GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList build(java.util.Map<String, ?> map) throws Exception {
+            GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList self = new GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setDateFormat(String dateFormat) {
+            this.dateFormat = dateFormat;
+            return this;
+        }
+        public String getDateFormat() {
+            return this.dateFormat;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setDescr(String descr) {
+            this.descr = descr;
+            return this;
+        }
+        public String getDescr() {
+            return this.descr;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setIsUrl(Boolean isUrl) {
+            this.isUrl = isUrl;
+            return this;
+        }
+        public Boolean getIsUrl() {
+            return this.isUrl;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setMappingColumn(String mappingColumn) {
+            this.mappingColumn = mappingColumn;
+            return this;
+        }
+        public String getMappingColumn() {
+            return this.mappingColumn;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setMust(Boolean must) {
+            this.must = must;
+            return this;
+        }
+        public Boolean getMust() {
+            return this.must;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setOptional(Boolean optional) {
+            this.optional = optional;
+            return this;
+        }
+        public Boolean getOptional() {
+            return this.optional;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setOriginalColumn(String originalColumn) {
+            this.originalColumn = originalColumn;
+            return this;
+        }
+        public String getOriginalColumn() {
+            return this.originalColumn;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setParamName(String paramName) {
+            this.paramName = paramName;
+            return this;
+        }
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setSample(String sample) {
+            this.sample = sample;
+            return this;
+        }
+        public String getSample() {
+            return this.sample;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList setSeqNum(Integer seqNum) {
+            this.seqNum = seqNum;
+            return this;
+        }
+        public Integer getSeqNum() {
+            return this.seqNum;
+        }
+
+    }
+
+    public static class GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>yyyyMMdd</p>
+         */
+        @NameInMap("DateFormat")
+        public String dateFormat;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Descr")
+        public String descr;
+
+        @NameInMap("IsUrl")
+        public Boolean isUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>col01</p>
+         */
+        @NameInMap("MappingColumn")
+        public String mappingColumn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>col01</p>
+         */
+        @NameInMap("OriginalColumn")
+        public String originalColumn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>col01</p>
+         */
+        @NameInMap("ParamName")
+        public String paramName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>int</p>
+         */
+        @NameInMap("ParamType")
+        public String paramType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Sample")
+        public String sample;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("SeqNum")
+        public String seqNum;
+
+        public static GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList build(java.util.Map<String, ?> map) throws Exception {
+            GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList self = new GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList setDateFormat(String dateFormat) {
+            this.dateFormat = dateFormat;
+            return this;
+        }
+        public String getDateFormat() {
+            return this.dateFormat;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList setDescr(String descr) {
+            this.descr = descr;
+            return this;
+        }
+        public String getDescr() {
+            return this.descr;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList setIsUrl(Boolean isUrl) {
+            this.isUrl = isUrl;
+            return this;
+        }
+        public Boolean getIsUrl() {
+            return this.isUrl;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList setMappingColumn(String mappingColumn) {
+            this.mappingColumn = mappingColumn;
+            return this;
+        }
+        public String getMappingColumn() {
+            return this.mappingColumn;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList setOriginalColumn(String originalColumn) {
+            this.originalColumn = originalColumn;
+            return this;
+        }
+        public String getOriginalColumn() {
+            return this.originalColumn;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList setParamName(String paramName) {
+            this.paramName = paramName;
+            return this;
+        }
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList setSample(String sample) {
+            this.sample = sample;
+            return this;
+        }
+        public String getSample() {
+            return this.sample;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList setSeqNum(String seqNum) {
+            this.seqNum = seqNum;
+            return this;
+        }
+        public String getSeqNum() {
+            return this.seqNum;
+        }
+
+    }
+
+    public static class GetDatasetResponseBodyDatasetDTOVersionListApiInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1011</p>
+         */
+        @NameInMap("ApiNo")
+        public Long apiNo;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("ExecTimeout")
+        public Integer execTimeout;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ExecuteMode")
+        public Integer executeMode;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1011</p>
+         */
+        @NameInMap("OsApiGroup")
+        public Integer osApiGroup;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("OsApiGroupName")
+        public String osApiGroupName;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1060</p>
+         */
+        @NameInMap("OsProject")
+        public Integer osProject;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1012</p>
+         */
+        @NameInMap("OsProjectName")
+        public String osProjectName;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Protocol")
+        public Integer protocol;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RequestMethod")
+        public Integer requestMethod;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("RequestParamList")
+        public java.util.List<GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList> requestParamList;
+
+        @NameInMap("ResponseParamList")
+        public java.util.List<GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList> responseParamList;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("Timeout")
+        public Integer timeout;
+
+        public static GetDatasetResponseBodyDatasetDTOVersionListApiInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetDatasetResponseBodyDatasetDTOVersionListApiInfo self = new GetDatasetResponseBodyDatasetDTOVersionListApiInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setApiNo(Long apiNo) {
+            this.apiNo = apiNo;
+            return this;
+        }
+        public Long getApiNo() {
+            return this.apiNo;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setExecTimeout(Integer execTimeout) {
+            this.execTimeout = execTimeout;
+            return this;
+        }
+        public Integer getExecTimeout() {
+            return this.execTimeout;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setExecuteMode(Integer executeMode) {
+            this.executeMode = executeMode;
+            return this;
+        }
+        public Integer getExecuteMode() {
+            return this.executeMode;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setOsApiGroup(Integer osApiGroup) {
+            this.osApiGroup = osApiGroup;
+            return this;
+        }
+        public Integer getOsApiGroup() {
+            return this.osApiGroup;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setOsApiGroupName(String osApiGroupName) {
+            this.osApiGroupName = osApiGroupName;
+            return this;
+        }
+        public String getOsApiGroupName() {
+            return this.osApiGroupName;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setOsProject(Integer osProject) {
+            this.osProject = osProject;
+            return this;
+        }
+        public Integer getOsProject() {
+            return this.osProject;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setOsProjectName(String osProjectName) {
+            this.osProjectName = osProjectName;
+            return this;
+        }
+        public String getOsProjectName() {
+            return this.osProjectName;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setProtocol(Integer protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public Integer getProtocol() {
+            return this.protocol;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setRequestMethod(Integer requestMethod) {
+            this.requestMethod = requestMethod;
+            return this;
+        }
+        public Integer getRequestMethod() {
+            return this.requestMethod;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setRequestParamList(java.util.List<GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList> requestParamList) {
+            this.requestParamList = requestParamList;
+            return this;
+        }
+        public java.util.List<GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList> getRequestParamList() {
+            return this.requestParamList;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setResponseParamList(java.util.List<GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList> responseParamList) {
+            this.responseParamList = responseParamList;
+            return this;
+        }
+        public java.util.List<GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList> getResponseParamList() {
+            return this.responseParamList;
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo setTimeout(Integer timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
+    }
+
     public static class GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigFileStorageConfig extends TeaModel {
         /**
          * <p>The data source ID.</p>
@@ -1058,6 +1585,9 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     public static class GetDatasetResponseBodyDatasetDTOVersionList extends TeaModel {
+        @NameInMap("ApiInfo")
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo apiInfo;
+
         /**
          * <p>The creator ID.</p>
          * 
@@ -1121,6 +1651,14 @@ public class GetDatasetResponseBody extends TeaModel {
         public static GetDatasetResponseBodyDatasetDTOVersionList build(java.util.Map<String, ?> map) throws Exception {
             GetDatasetResponseBodyDatasetDTOVersionList self = new GetDatasetResponseBodyDatasetDTOVersionList();
             return TeaModel.build(map, self);
+        }
+
+        public GetDatasetResponseBodyDatasetDTOVersionList setApiInfo(GetDatasetResponseBodyDatasetDTOVersionListApiInfo apiInfo) {
+            this.apiInfo = apiInfo;
+            return this;
+        }
+        public GetDatasetResponseBodyDatasetDTOVersionListApiInfo getApiInfo() {
+            return this.apiInfo;
         }
 
         public GetDatasetResponseBodyDatasetDTOVersionList setCreator(String creator) {

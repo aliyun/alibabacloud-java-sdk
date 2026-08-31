@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRegisterLineageShrinkRequest extends TeaModel {
     /**
-     * <p>The command for deleting registered lineage.</p>
+     * <p>The command for deleting registered data lineage.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteRegisterLineageCommand")
@@ -20,6 +20,13 @@ public class DeleteRegisterLineageShrinkRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static DeleteRegisterLineageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRegisterLineageShrinkRequest self = new DeleteRegisterLineageShrinkRequest();
@@ -40,6 +47,14 @@ public class DeleteRegisterLineageShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public DeleteRegisterLineageShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

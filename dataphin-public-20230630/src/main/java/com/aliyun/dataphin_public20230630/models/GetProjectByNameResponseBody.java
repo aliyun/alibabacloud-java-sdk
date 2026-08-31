@@ -23,7 +23,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -110,7 +110,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx 白名单</p>
+         * <p>xx whitelist</p>
          */
         @NameInMap("Description")
         public String description;
@@ -169,7 +169,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
          * <p>The display name of the business unit to which the project belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("BizUnitDisplayName")
         public String bizUnitDisplayName;
@@ -184,7 +184,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
-         * <p>The ID of the associated compute source.</p>
+         * <p>The ID of the bound compute source.</p>
          * 
          * <strong>example:</strong>
          * <p>101711</p>
@@ -193,7 +193,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public Long computeSourceId;
 
         /**
-         * <p>The name of the associated compute source.</p>
+         * <p>The name of the bound compute source.</p>
          * 
          * <strong>example:</strong>
          * <p>ds1</p>
@@ -205,7 +205,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
          * <p>The project description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
@@ -229,7 +229,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String env;
 
         /**
-         * <p>The creation time, in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The creation time, in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
@@ -238,7 +238,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time, in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The modification time, in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
@@ -276,8 +276,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         /**
          * <p>The namespace type. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: public type</li>
-         * <li>APPLICATION: application type</li>
+         * <li>PUBLIC: common pattern.</li>
+         * <li>APPLICATION: application type.</li>
          * <li>BASE: base type.</li>
          * </ul>
          * 
@@ -300,13 +300,13 @@ public class GetProjectByNameResponseBody extends TeaModel {
          * <p>The project owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
-         * <p>The ID of the associated real-time compute source.</p>
+         * <p>The ID of the bound streaming compute source.</p>
          * 
          * <strong>example:</strong>
          * <p>201711</p>
@@ -315,7 +315,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public Long streamComputeSourceId;
 
         /**
-         * <p>The name of the associated real-time compute source.</p>
+         * <p>The name of the bound streaming compute source.</p>
          * 
          * <strong>example:</strong>
          * <p>ds2</p>
@@ -326,7 +326,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
         /**
          * <p>The project type. Valid values:</p>
          * <ul>
-         * <li>DISTILL: distillation project</li>
+         * <li>DISTILL: distillation project.</li>
          * <li>GENERAL: general project.</li>
          * </ul>
          * 

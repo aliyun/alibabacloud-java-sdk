@@ -15,6 +15,15 @@ public class UpdateComputeSourceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The edit command.</p>
      * <p>This parameter is required.</p>
      */
@@ -34,6 +43,14 @@ public class UpdateComputeSourceRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public UpdateComputeSourceRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public UpdateComputeSourceRequest setUpdateCommand(UpdateComputeSourceRequestUpdateCommand updateCommand) {
         this.updateCommand = updateCommand;
         return this;
@@ -44,7 +61,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
 
     public static class UpdateComputeSourceRequestUpdateCommandConfigList extends TeaModel {
         /**
-         * <p>The key of the configuration item.</p>
+         * <p>The configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,7 +71,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the configuration item.</p>
+         * <p>The configuration item value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,11 +105,33 @@ public class UpdateComputeSourceRequest extends TeaModel {
 
     public static class UpdateComputeSourceRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The associated cluster ID. This parameter takes effect only when CreateType is left empty or set to COMPUTE_SOURCE (to create a compute source that references a cluster). This parameter is mutually exclusive with CreateType=CLUSTER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102311</p>
+         */
+        @NameInMap("ClusterId")
+        public Long clusterId;
+
+        /**
          * <p>The connection configuration items.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ConfigList")
         public java.util.List<UpdateComputeSourceRequestUpdateCommandConfigList> configList;
+
+        /**
+         * <p>The creation entity type. Valid values:</p>
+         * <ul>
+         * <li>CLUSTER: Creates the entity as a cluster. ClusterId cannot be specified.</li>
+         * <li>COMPUTE_SOURCE: Creates the entity as a compute source. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
+         */
+        @NameInMap("CreateType")
+        public String createType;
 
         /**
          * <p>The description.</p>
@@ -105,7 +144,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the compute source.</p>
+         * <p>The compute source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +154,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the compute source.</p>
+         * <p>The compute source name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +164,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the compute source.</p>
+         * <p>The compute source type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,9 +173,26 @@ public class UpdateComputeSourceRequest extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The compute source type version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDH6</p>
+         */
+        @NameInMap("TypeVersion")
+        public String typeVersion;
+
         public static UpdateComputeSourceRequestUpdateCommand build(java.util.Map<String, ?> map) throws Exception {
             UpdateComputeSourceRequestUpdateCommand self = new UpdateComputeSourceRequestUpdateCommand();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateComputeSourceRequestUpdateCommand setClusterId(Long clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public Long getClusterId() {
+            return this.clusterId;
         }
 
         public UpdateComputeSourceRequestUpdateCommand setConfigList(java.util.List<UpdateComputeSourceRequestUpdateCommandConfigList> configList) {
@@ -145,6 +201,14 @@ public class UpdateComputeSourceRequest extends TeaModel {
         }
         public java.util.List<UpdateComputeSourceRequestUpdateCommandConfigList> getConfigList() {
             return this.configList;
+        }
+
+        public UpdateComputeSourceRequestUpdateCommand setCreateType(String createType) {
+            this.createType = createType;
+            return this;
+        }
+        public String getCreateType() {
+            return this.createType;
         }
 
         public UpdateComputeSourceRequestUpdateCommand setDescription(String description) {
@@ -177,6 +241,14 @@ public class UpdateComputeSourceRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public UpdateComputeSourceRequestUpdateCommand setTypeVersion(String typeVersion) {
+            this.typeVersion = typeVersion;
+            return this;
+        }
+        public String getTypeVersion() {
+            return this.typeVersion;
         }
 
     }

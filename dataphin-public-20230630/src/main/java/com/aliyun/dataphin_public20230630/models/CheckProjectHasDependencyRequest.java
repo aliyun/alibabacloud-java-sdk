@@ -24,6 +24,13 @@ public class CheckProjectHasDependencyRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CheckProjectHasDependencyRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckProjectHasDependencyRequest self = new CheckProjectHasDependencyRequest();
         return TeaModel.build(map, self);
@@ -43,6 +50,14 @@ public class CheckProjectHasDependencyRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CheckProjectHasDependencyRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

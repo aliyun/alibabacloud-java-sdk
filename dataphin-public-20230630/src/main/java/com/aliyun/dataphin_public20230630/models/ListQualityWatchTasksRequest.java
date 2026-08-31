@@ -20,6 +20,15 @@ public class ListQualityWatchTasksRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static ListQualityWatchTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQualityWatchTasksRequest self = new ListQualityWatchTasksRequest();
         return TeaModel.build(map, self);
@@ -41,6 +50,14 @@ public class ListQualityWatchTasksRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public ListQualityWatchTasksRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static class ListQualityWatchTasksRequestListQuery extends TeaModel {
         /**
          * <p>The business date filter.</p>
@@ -52,31 +69,31 @@ public class ListQualityWatchTasksRequest extends TeaModel {
         public String bizDate;
 
         /**
-         * <p>The business unit names.</p>
+         * <p>The name of the business unit to which the object belongs.</p>
          */
         @NameInMap("BizUnitNameList")
         public java.util.List<String> bizUnitNameList;
 
         /**
-         * <p>Specifies whether to query only the quality monitoring node objects owned by the current user.</p>
+         * <p>Specifies whether to query only the watchtask objects owned by the current user.</p>
          */
         @NameInMap("CurrentUserOwned")
         public Boolean currentUserOwned;
 
         /**
-         * <p>The data source IDs.</p>
+         * <p>The data source ID.</p>
          */
         @NameInMap("DataSourceIdList")
         public java.util.List<String> dataSourceIdList;
 
         /**
-         * <p>The data source owners.</p>
+         * <p>The data source owner.</p>
          */
         @NameInMap("DataSourceOwnerList")
         public java.util.List<String> dataSourceOwnerList;
 
         /**
-         * <p>The data source scopes. Valid values:</p>
+         * <p>The data source scope. Valid values:</p>
          * <ul>
          * <li>STREAMING: real-time only.</li>
          * <li>OFFLINE: offline only.</li>
@@ -87,13 +104,13 @@ public class ListQualityWatchTasksRequest extends TeaModel {
         public java.util.List<String> dataSourceScopeList;
 
         /**
-         * <p>The data source types, such as MAX_COMPUTE, HADOOP, and MYSQL.</p>
+         * <p>The data source type, such as MAX_COMPUTE, HADOOP, or MYSQL.</p>
          */
         @NameInMap("DataSourceTypeList")
         public java.util.List<String> dataSourceTypeList;
 
         /**
-         * <p>The rule exception types. Valid values:</p>
+         * <p>The rule exception type. Valid values:</p>
          * <ul>
          * <li>STRONG: strong.</li>
          * <li>WEAK: weak.</li>
@@ -103,7 +120,7 @@ public class ListQualityWatchTasksRequest extends TeaModel {
         public java.util.List<String> errorRuleStrengthList;
 
         /**
-         * <p>The search keyword, which is the name of the monitored table.</p>
+         * <p>The search keyword. This parameter specifies the name of the monitored table.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -130,19 +147,19 @@ public class ListQualityWatchTasksRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The project names.</p>
+         * <p>The name of the project to which the object belongs.</p>
          */
         @NameInMap("ProjectNameList")
         public java.util.List<String> projectNameList;
 
         /**
-         * <p>The quality owners.</p>
+         * <p>The quality owner.</p>
          */
         @NameInMap("QualityOwnerList")
         public java.util.List<String> qualityOwnerList;
 
         /**
-         * <p>The task statuses. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
          * <li>NOT_RUN: not executed.</li>
          * <li>WAITING: waiting.</li>
@@ -158,13 +175,13 @@ public class ListQualityWatchTasksRequest extends TeaModel {
         public java.util.List<String> statusList;
 
         /**
-         * <p>The table owners.</p>
+         * <p>The table owner.</p>
          */
         @NameInMap("TableOwnerList")
         public java.util.List<String> tableOwnerList;
 
         /**
-         * <p>The table types. Valid values:</p>
+         * <p>The table type. Valid values:</p>
          * <ul>
          * <li>LOGIC_DIM_TABLE: logical dimension table.</li>
          * <li>LOGIC_FACT_TABLE: logical fact table.</li>
@@ -178,10 +195,10 @@ public class ListQualityWatchTasksRequest extends TeaModel {
         public java.util.List<String> tableTypeList;
 
         /**
-         * <p>The monitored object types. Valid values:</p>
+         * <p>The monitored object type. Valid values:</p>
          * <ul>
          * <li>TABLE: Dataphin table.</li>
-         * <li>DATASOURCE_TABLE: global table.</li>
+         * <li>DATASOURCE_TABLE: global domain table.</li>
          * <li>DATASOURCE: data source.</li>
          * <li>INDEX: metric.</li>
          * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>

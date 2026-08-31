@@ -15,6 +15,13 @@ public class UpdateSecurityClassifyCatalogRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
@@ -32,6 +39,14 @@ public class UpdateSecurityClassifyCatalogRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public UpdateSecurityClassifyCatalogRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public UpdateSecurityClassifyCatalogRequest setUpdateCommand(UpdateSecurityClassifyCatalogRequestUpdateCommand updateCommand) {
@@ -79,12 +94,12 @@ public class UpdateSecurityClassifyCatalogRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The visibility scope of the classification folder. This parameter takes effect only when the parent folder is the root folder. Valid values:</p>
+         * <p>The visibility scope of the classification. Valid values:</p>
          * <ul>
          * <li>PUBLIC: visible to all users.</li>
-         * <li>PRIVATE: visible only to administrators.
-         * Default value: PUBLIC.</li>
+         * <li>PRIVATE: visible only to administrators.</li>
          * </ul>
+         * <p>Default value: PUBLIC. This parameter takes effect only when the parent folder is the root folder.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>

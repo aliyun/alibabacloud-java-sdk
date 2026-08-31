@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportKgSchemaRequest extends TeaModel {
     /**
-     * <p>The instruction for importing the knowledge graph definition.</p>
+     * <p>The command for importing the knowledge graph definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +23,15 @@ public class ImportKgSchemaRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     /**
      * <p>The workspace ID.</p>
@@ -53,6 +62,14 @@ public class ImportKgSchemaRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public ImportKgSchemaRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public ImportKgSchemaRequest setWorkspaceId(String workspaceId) {

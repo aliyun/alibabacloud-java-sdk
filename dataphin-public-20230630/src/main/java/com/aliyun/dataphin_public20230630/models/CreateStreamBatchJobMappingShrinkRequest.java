@@ -15,6 +15,13 @@ public class CreateStreamBatchJobMappingShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The stream-batch integrated node information.</p>
      * <p>This parameter is required.</p>
      */
@@ -32,6 +39,14 @@ public class CreateStreamBatchJobMappingShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateStreamBatchJobMappingShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public CreateStreamBatchJobMappingShrinkRequest setStreamBatchJobMappingCreateCommandShrink(String streamBatchJobMappingCreateCommandShrink) {

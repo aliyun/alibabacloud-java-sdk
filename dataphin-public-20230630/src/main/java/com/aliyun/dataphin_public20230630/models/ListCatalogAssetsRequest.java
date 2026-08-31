@@ -21,6 +21,15 @@ public class ListCatalogAssetsRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static ListCatalogAssetsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCatalogAssetsRequest self = new ListCatalogAssetsRequest();
         return TeaModel.build(map, self);
@@ -42,15 +51,23 @@ public class ListCatalogAssetsRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public ListCatalogAssetsRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static class ListCatalogAssetsRequestListCatalogAssetsQuery extends TeaModel {
         /**
          * <p>The asset type. Default value: TABLE. Valid values:</p>
          * <ul>
-         * <li>TABLE: table, including views and materialized views.</li>
-         * <li>INDEX: technical metric.</li>
-         * <li>BIZ_INDEX: business metric.</li>
-         * <li>API: API.</li>
-         * <li>PAGE: dashboard.</li>
+         * <li>TABLE: tables, including views and materialized views.</li>
+         * <li>INDEX: technical metrics.</li>
+         * <li>BIZ_INDEX: business metrics.</li>
+         * <li>API</li>
+         * <li>PAGE: dashboards.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -60,7 +77,7 @@ public class ListCatalogAssetsRequest extends TeaModel {
         public String assetType;
 
         /**
-         * <p>The search keyword. Used when queryMode is set to ASSET_SEARCH. Supports keyword matching against the asset full name, asset name, asset display name, and asset description. If this parameter is not specified, all assets are queried.</p>
+         * <p>The search keyword. Used when queryMode is set to ASSET_SEARCH. Supports keyword matching against the asset full name, asset name, asset display name, and asset description. If not specified, all assets are returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -69,7 +86,7 @@ public class ListCatalogAssetsRequest extends TeaModel {
         public String keyword;
 
         /**
-         * <p>The asset name. Used when queryMode is set to EXACT_MATCH. If this parameter is not specified, all assets are queried.</p>
+         * <p>The asset name. Used when queryMode is set to EXACT_MATCH. If not specified, all assets are returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -96,7 +113,7 @@ public class ListCatalogAssetsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The query type. Determines whether to use name for exact matching or keyword for fuzzy search. Default value: EXACT_MATCH. Valid values:</p>
+         * <p>The query type. Determines whether to use name for exact match or keyword for fuzzy search. Default value: EXACT_MATCH. Valid values:</p>
          * <ul>
          * <li>EXACT_MATCH: exact match.</li>
          * <li>ASSET_SEARCH: fuzzy search.</li>
@@ -107,6 +124,12 @@ public class ListCatalogAssetsRequest extends TeaModel {
          */
         @NameInMap("QueryMode")
         public String queryMode;
+
+        /**
+         * <p>The list of folder IDs to which the assets belong. Multiple folders are matched with OR logic. Only the specified folders are matched, and subfolders are not included.</p>
+         */
+        @NameInMap("ShelveDirectoryIds")
+        public java.util.List<Long> shelveDirectoryIds;
 
         public static ListCatalogAssetsRequestListCatalogAssetsQuery build(java.util.Map<String, ?> map) throws Exception {
             ListCatalogAssetsRequestListCatalogAssetsQuery self = new ListCatalogAssetsRequestListCatalogAssetsQuery();
@@ -159,6 +182,14 @@ public class ListCatalogAssetsRequest extends TeaModel {
         }
         public String getQueryMode() {
             return this.queryMode;
+        }
+
+        public ListCatalogAssetsRequestListCatalogAssetsQuery setShelveDirectoryIds(java.util.List<Long> shelveDirectoryIds) {
+            this.shelveDirectoryIds = shelveDirectoryIds;
+            return this;
+        }
+        public java.util.List<Long> getShelveDirectoryIds() {
+            return this.shelveDirectoryIds;
         }
 
     }

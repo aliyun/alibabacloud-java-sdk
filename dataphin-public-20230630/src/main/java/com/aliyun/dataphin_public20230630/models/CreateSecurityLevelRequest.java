@@ -21,6 +21,15 @@ public class CreateSecurityLevelRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateSecurityLevelRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecurityLevelRequest self = new CreateSecurityLevelRequest();
         return TeaModel.build(map, self);
@@ -40,6 +49,14 @@ public class CreateSecurityLevelRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateSecurityLevelRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class CreateSecurityLevelRequestCreateCommand extends TeaModel {
@@ -62,7 +79,7 @@ public class CreateSecurityLevelRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The sort order of the classification level. If this parameter is not specified, the current maximum order ID is used by default.</p>
+         * <p>The order of the classification level. If this parameter is not specified, the current maximum order ID is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

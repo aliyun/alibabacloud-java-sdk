@@ -15,6 +15,13 @@ public class RemoveQualityRuleSchedulesShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The unbinding instruction.</p>
      * <p>This parameter is required.</p>
      */
@@ -32,6 +39,14 @@ public class RemoveQualityRuleSchedulesShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public RemoveQualityRuleSchedulesShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public RemoveQualityRuleSchedulesShrinkRequest setRemoveCommandShrink(String removeCommandShrink) {

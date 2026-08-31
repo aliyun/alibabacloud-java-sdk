@@ -24,6 +24,13 @@ public class DeleteStandardSetRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static DeleteStandardSetRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStandardSetRequest self = new DeleteStandardSetRequest();
         return TeaModel.build(map, self);
@@ -43,6 +50,14 @@ public class DeleteStandardSetRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public DeleteStandardSetRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

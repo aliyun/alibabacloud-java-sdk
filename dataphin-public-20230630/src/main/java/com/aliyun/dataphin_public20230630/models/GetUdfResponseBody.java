@@ -23,7 +23,7 @@ public class GetUdfResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -110,11 +110,11 @@ public class GetUdfResponseBody extends TeaModel {
          * <p>The category. Valid values:</p>
          * <ul>
          * <li>1: window function.</li>
-         * <li>2: aggregate function.</li>
-         * <li>3: numeric function.</li>
+         * <li>2: statistical function.</li>
+         * <li>3: numerical function.</li>
          * <li>4: string function.</li>
          * <li>5: time function.</li>
-         * <li>6: IP address utility function.</li>
+         * <li>6: IP address helper function.</li>
          * <li>7: URL-related function.</li>
          * <li>8: encoding and decoding function.</li>
          * <li>9: business-related function.</li>
@@ -146,7 +146,7 @@ public class GetUdfResponseBody extends TeaModel {
         public String commandHelp;
 
         /**
-         * <p>The compute engine. Valid values: HADOOP, MAX_COMPUTE, and FLINK.</p>
+         * <p>The compute engine type. Valid values: HADOOP, MAX_COMPUTE, and FLINK.</p>
          * 
          * <strong>example:</strong>
          * <p>HADOOP</p>
@@ -173,7 +173,7 @@ public class GetUdfResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The directory where the function is stored.</p>
+         * <p>The storage folder.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -182,7 +182,7 @@ public class GetUdfResponseBody extends TeaModel {
         public String directory;
 
         /**
-         * <p>The creation time, in the yyyy-MM-d HH:mm:ss format.</p>
+         * <p>The creation time. Format: yyyy-MM-d HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
@@ -191,7 +191,7 @@ public class GetUdfResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The last modification time, in the yyyy-MM-d HH:mm:ss format.</p>
+         * <p>The update time. Format: yyyy-MM-d HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>

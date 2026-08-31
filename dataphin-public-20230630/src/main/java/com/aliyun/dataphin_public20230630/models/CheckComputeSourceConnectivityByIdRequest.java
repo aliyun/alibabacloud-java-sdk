@@ -24,6 +24,15 @@ public class CheckComputeSourceConnectivityByIdRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CheckComputeSourceConnectivityByIdRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckComputeSourceConnectivityByIdRequest self = new CheckComputeSourceConnectivityByIdRequest();
         return TeaModel.build(map, self);
@@ -43,6 +52,14 @@ public class CheckComputeSourceConnectivityByIdRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CheckComputeSourceConnectivityByIdRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }

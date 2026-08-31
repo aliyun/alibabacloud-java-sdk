@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateKgEntityRequest extends TeaModel {
     /**
-     * <p>The create instruction.</p>
+     * <p>The create command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -20,6 +20,15 @@ public class BatchCreateKgEntityRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     /**
      * <p>The workspace ID.</p>
@@ -50,6 +59,14 @@ public class BatchCreateKgEntityRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public BatchCreateKgEntityRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public BatchCreateKgEntityRequest setWorkspaceId(String workspaceId) {

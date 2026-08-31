@@ -21,6 +21,13 @@ public class CreateSecurityIdentifyResultRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateSecurityIdentifyResultRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecurityIdentifyResultRequest self = new CreateSecurityIdentifyResultRequest();
         return TeaModel.build(map, self);
@@ -40,6 +47,14 @@ public class CreateSecurityIdentifyResultRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public CreateSecurityIdentifyResultRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class CreateSecurityIdentifyResultRequestCreateCommand extends TeaModel {

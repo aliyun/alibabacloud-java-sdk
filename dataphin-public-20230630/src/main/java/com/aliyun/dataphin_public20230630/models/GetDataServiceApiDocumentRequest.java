@@ -25,6 +25,13 @@ public class GetDataServiceApiDocumentRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The version.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +59,14 @@ public class GetDataServiceApiDocumentRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public GetDataServiceApiDocumentRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public GetDataServiceApiDocumentRequest setVersionId(String versionId) {

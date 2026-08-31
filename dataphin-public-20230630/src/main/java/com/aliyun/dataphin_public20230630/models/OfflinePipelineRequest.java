@@ -28,6 +28,13 @@ public class OfflinePipelineRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static OfflinePipelineRequest build(java.util.Map<String, ?> map) throws Exception {
         OfflinePipelineRequest self = new OfflinePipelineRequest();
         return TeaModel.build(map, self);
@@ -55,6 +62,14 @@ public class OfflinePipelineRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public OfflinePipelineRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
     public static class OfflinePipelineRequestContext extends TeaModel {

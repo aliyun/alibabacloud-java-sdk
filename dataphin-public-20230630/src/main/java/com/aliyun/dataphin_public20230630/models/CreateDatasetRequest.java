@@ -22,6 +22,13 @@ public class CreateDatasetRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
      * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -52,12 +59,339 @@ public class CreateDatasetRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public CreateDatasetRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public CreateDatasetRequest setProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public static class CreateDatasetRequestCreateCommandApiInfoRequestParamList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Descr")
+        public String descr;
+
+        @NameInMap("IsUrl")
+        public Boolean isUrl;
+
+        @NameInMap("Must")
+        public Boolean must;
+
+        /**
+         * <strong>example:</strong>
+         * <p>col01</p>
+         */
+        @NameInMap("ParamName")
+        public String paramName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>int</p>
+         */
+        @NameInMap("ParamType")
+        public String paramType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Sample")
+        public String sample;
+
+        public static CreateDatasetRequestCreateCommandApiInfoRequestParamList build(java.util.Map<String, ?> map) throws Exception {
+            CreateDatasetRequestCreateCommandApiInfoRequestParamList self = new CreateDatasetRequestCreateCommandApiInfoRequestParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoRequestParamList setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoRequestParamList setDescr(String descr) {
+            this.descr = descr;
+            return this;
+        }
+        public String getDescr() {
+            return this.descr;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoRequestParamList setIsUrl(Boolean isUrl) {
+            this.isUrl = isUrl;
+            return this;
+        }
+        public Boolean getIsUrl() {
+            return this.isUrl;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoRequestParamList setMust(Boolean must) {
+            this.must = must;
+            return this;
+        }
+        public Boolean getMust() {
+            return this.must;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoRequestParamList setParamName(String paramName) {
+            this.paramName = paramName;
+            return this;
+        }
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoRequestParamList setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoRequestParamList setSample(String sample) {
+            this.sample = sample;
+            return this;
+        }
+        public String getSample() {
+            return this.sample;
+        }
+
+    }
+
+    public static class CreateDatasetRequestCreateCommandApiInfoResponseParamList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Descr")
+        public String descr;
+
+        @NameInMap("IsUrl")
+        public Boolean isUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>col01</p>
+         */
+        @NameInMap("ParamName")
+        public String paramName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>int</p>
+         */
+        @NameInMap("ParamType")
+        public String paramType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Sample")
+        public String sample;
+
+        public static CreateDatasetRequestCreateCommandApiInfoResponseParamList build(java.util.Map<String, ?> map) throws Exception {
+            CreateDatasetRequestCreateCommandApiInfoResponseParamList self = new CreateDatasetRequestCreateCommandApiInfoResponseParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoResponseParamList setDescr(String descr) {
+            this.descr = descr;
+            return this;
+        }
+        public String getDescr() {
+            return this.descr;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoResponseParamList setIsUrl(Boolean isUrl) {
+            this.isUrl = isUrl;
+            return this;
+        }
+        public Boolean getIsUrl() {
+            return this.isUrl;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoResponseParamList setParamName(String paramName) {
+            this.paramName = paramName;
+            return this;
+        }
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoResponseParamList setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfoResponseParamList setSample(String sample) {
+            this.sample = sample;
+            return this;
+        }
+        public String getSample() {
+            return this.sample;
+        }
+
+    }
+
+    public static class CreateDatasetRequestCreateCommandApiInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("ExecTimeout")
+        public Integer execTimeout;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ExecuteMode")
+        public Integer executeMode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1011</p>
+         */
+        @NameInMap("OsApiGroup")
+        public Integer osApiGroup;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1022</p>
+         */
+        @NameInMap("OsProject")
+        public Integer osProject;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Protocol")
+        public Integer protocol;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RequestMethod")
+        public Integer requestMethod;
+
+        @NameInMap("RequestParamList")
+        public java.util.List<CreateDatasetRequestCreateCommandApiInfoRequestParamList> requestParamList;
+
+        @NameInMap("ResponseParamList")
+        public java.util.List<CreateDatasetRequestCreateCommandApiInfoResponseParamList> responseParamList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("Timeout")
+        public Integer timeout;
+
+        public static CreateDatasetRequestCreateCommandApiInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateDatasetRequestCreateCommandApiInfo self = new CreateDatasetRequestCreateCommandApiInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfo setExecTimeout(Integer execTimeout) {
+            this.execTimeout = execTimeout;
+            return this;
+        }
+        public Integer getExecTimeout() {
+            return this.execTimeout;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfo setExecuteMode(Integer executeMode) {
+            this.executeMode = executeMode;
+            return this;
+        }
+        public Integer getExecuteMode() {
+            return this.executeMode;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfo setOsApiGroup(Integer osApiGroup) {
+            this.osApiGroup = osApiGroup;
+            return this;
+        }
+        public Integer getOsApiGroup() {
+            return this.osApiGroup;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfo setOsProject(Integer osProject) {
+            this.osProject = osProject;
+            return this;
+        }
+        public Integer getOsProject() {
+            return this.osProject;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfo setProtocol(Integer protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public Integer getProtocol() {
+            return this.protocol;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfo setRequestMethod(Integer requestMethod) {
+            this.requestMethod = requestMethod;
+            return this;
+        }
+        public Integer getRequestMethod() {
+            return this.requestMethod;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfo setRequestParamList(java.util.List<CreateDatasetRequestCreateCommandApiInfoRequestParamList> requestParamList) {
+            this.requestParamList = requestParamList;
+            return this;
+        }
+        public java.util.List<CreateDatasetRequestCreateCommandApiInfoRequestParamList> getRequestParamList() {
+            return this.requestParamList;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfo setResponseParamList(java.util.List<CreateDatasetRequestCreateCommandApiInfoResponseParamList> responseParamList) {
+            this.responseParamList = responseParamList;
+            return this;
+        }
+        public java.util.List<CreateDatasetRequestCreateCommandApiInfoResponseParamList> getResponseParamList() {
+            return this.responseParamList;
+        }
+
+        public CreateDatasetRequestCreateCommandApiInfo setTimeout(Integer timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
     }
 
     public static class CreateDatasetRequestCreateCommandVersionConfigFileStorageConfig extends TeaModel {
@@ -973,6 +1307,9 @@ public class CreateDatasetRequest extends TeaModel {
     }
 
     public static class CreateDatasetRequestCreateCommand extends TeaModel {
+        @NameInMap("ApiInfo")
+        public CreateDatasetRequestCreateCommandApiInfo apiInfo;
+
         /**
          * <p>The dataset content type. Valid values: GENERAL, TEXT, AUDIO, VIDEO, IMAGE, TABLE, INDEX.</p>
          * <p>This parameter is required.</p>
@@ -1099,6 +1436,14 @@ public class CreateDatasetRequest extends TeaModel {
         public static CreateDatasetRequestCreateCommand build(java.util.Map<String, ?> map) throws Exception {
             CreateDatasetRequestCreateCommand self = new CreateDatasetRequestCreateCommand();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDatasetRequestCreateCommand setApiInfo(CreateDatasetRequestCreateCommandApiInfo apiInfo) {
+            this.apiInfo = apiInfo;
+            return this;
+        }
+        public CreateDatasetRequestCreateCommandApiInfo getApiInfo() {
+            return this.apiInfo;
         }
 
         public CreateDatasetRequestCreateCommand setContentType(String contentType) {

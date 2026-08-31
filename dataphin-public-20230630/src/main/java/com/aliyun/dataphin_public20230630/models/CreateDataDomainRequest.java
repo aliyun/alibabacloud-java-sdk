@@ -21,6 +21,15 @@ public class CreateDataDomainRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The ID of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
     public static CreateDataDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataDomainRequest self = new CreateDataDomainRequest();
         return TeaModel.build(map, self);
@@ -42,6 +51,14 @@ public class CreateDataDomainRequest extends TeaModel {
         return this.opTenantId;
     }
 
+    public CreateDataDomainRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static class CreateDataDomainRequestCreateCommand extends TeaModel {
         /**
          * <p>The abbreviation of the data domain.</p>
@@ -54,7 +71,7 @@ public class CreateDataDomainRequest extends TeaModel {
         public String abbreviation;
 
         /**
-         * <p>The ID of the data unit to which the data domain belongs.</p>
+         * <p>The ID of the business unit to which the data domain belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -77,7 +94,7 @@ public class CreateDataDomainRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>主题域测试</p>
+         * <p>DataDomainTest</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

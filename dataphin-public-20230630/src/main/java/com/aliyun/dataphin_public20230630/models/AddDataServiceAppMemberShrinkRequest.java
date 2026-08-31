@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDataServiceAppMemberShrinkRequest extends TeaModel {
     /**
-     * <p>The regular member to add to the data service application.</p>
+     * <p>The command to add a regular member to a data service application.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddCommand")
@@ -20,6 +20,15 @@ public class AddDataServiceAppMemberShrinkRequest extends TeaModel {
      */
     @NameInMap("OpTenantId")
     public Long opTenantId;
+
+    /**
+     * <p>The ID of the operator user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
 
     public static AddDataServiceAppMemberShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AddDataServiceAppMemberShrinkRequest self = new AddDataServiceAppMemberShrinkRequest();
@@ -40,6 +49,14 @@ public class AddDataServiceAppMemberShrinkRequest extends TeaModel {
     }
     public Long getOpTenantId() {
         return this.opTenantId;
+    }
+
+    public AddDataServiceAppMemberShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
     }
 
 }
