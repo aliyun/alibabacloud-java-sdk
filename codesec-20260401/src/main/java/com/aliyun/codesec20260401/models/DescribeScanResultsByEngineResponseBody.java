@@ -4,27 +4,76 @@ package com.aliyun.codesec20260401.models;
 import com.aliyun.tea.*;
 
 public class DescribeScanResultsByEngineResponseBody extends TeaModel {
+    /**
+     * <p>The engine type. Valid values:</p>
+     * <ul>
+     * <li>sast</li>
+     * <li>sca</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sca</p>
+     */
     @NameInMap("engine")
     public String engine;
 
+    /**
+     * <p>The result list.</p>
+     */
     @NameInMap("items")
     public java.util.List<DescribeScanResultsByEngineResponseBodyItems> items;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <p>The pagination token. Do not pass nextToken or pass an empty string for the first page. To retrieve the next page, pass the nextToken value from the previous response without any modification. When the nextToken in the response is empty, you have reached the last page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76851f2b5bf0187fbc29e8bca4</p>
+     */
     @NameInMap("projectId")
     public Long projectId;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3088795</p>
+     */
     @NameInMap("scanId")
     public Long scanId;
 
+    /**
+     * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -98,21 +147,60 @@ public class DescribeScanResultsByEngineResponseBody extends TeaModel {
     }
 
     public static class DescribeScanResultsByEngineResponseBodyItemsScaComponentCveDetails extends TeaModel {
+        /**
+         * <p>The associated CWE ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2021-44228</p>
+         */
         @NameInMap("cveId")
         public String cveId;
 
+        /**
+         * <p>The CVSS score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cvss")
         public Double cvss;
 
+        /**
+         * <p>The CVSS version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2.0</p>
+         */
         @NameInMap("cvssVersion")
         public String cvssVersion;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apache Log4j2 JNDI features do not protect against attacker-controlled LDAP and other JNDI-related endpoints.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The reference information.</p>
+         */
         @NameInMap("references")
         public java.util.List<String> references;
 
+        /**
+         * <p>The severity level. Valid values:</p>
+         * <ul>
+         * <li>critical</li>
+         * <li>high</li>
+         * <li>medium</li>
+         * <li>low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>critical</p>
+         */
         @NameInMap("severity")
         public String severity;
 
@@ -172,24 +260,60 @@ public class DescribeScanResultsByEngineResponseBody extends TeaModel {
     }
 
     public static class DescribeScanResultsByEngineResponseBodyItemsScaComponent extends TeaModel {
+        /**
+         * <p>The number of CVEs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cveCount")
         public Long cveCount;
 
+        /**
+         * <p>The list of CVE details associated with a component in the SCA finding.</p>
+         */
         @NameInMap("cveDetails")
         public java.util.List<DescribeScanResultsByEngineResponseBodyItemsScaComponentCveDetails> cveDetails;
 
+        /**
+         * <p>The list of dependency introduction paths in the SCA component information. This field is returned only when engine is set to sca.</p>
+         */
         @NameInMap("introPaths")
         public java.util.List<String> introPaths;
 
+        /**
+         * <p>Indicates whether the component is a direct dependency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isDirect")
         public Boolean isDirect;
 
+        /**
+         * <p>The component coordinate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.logging.log4j:log4j-core</p>
+         */
         @NameInMap("packageName")
         public String packageName;
 
+        /**
+         * <p>The component-level remediation suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Upgrade log4j-core to version 2.17.1 or later</p>
+         */
         @NameInMap("remediation")
         public String remediation;
 
+        /**
+         * <p>The component version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.14.1</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -257,21 +381,63 @@ public class DescribeScanResultsByEngineResponseBody extends TeaModel {
     }
 
     public static class DescribeScanResultsByEngineResponseBodyItemsTaintFlow extends TeaModel {
+        /**
+         * <p>The code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stmt.executeQuery(sql);</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src/main/java/com/example/UserService.java</p>
+         */
         @NameInMap("file")
         public String file;
 
+        /**
+         * <p>The role type in the taint propagation chain. Valid values:</p>
+         * <ul>
+         * <li>source: taint source.</li>
+         * <li>propagator: propagation node.	</li>
+         * <li>validation: validation or scrubbing center.	</li>
+         * <li>sink: dangerous sink.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>source</p>
+         */
         @NameInMap("kind")
         public String kind;
 
+        /**
+         * <p>The line number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("line")
         public Integer line;
 
+        /**
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sink: SQL query executed</p>
+         */
         @NameInMap("note")
         public String note;
 
+        /**
+         * <p>The step number, starting from 0 and incrementing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("step")
         public Integer step;
 
@@ -331,81 +497,233 @@ public class DescribeScanResultsByEngineResponseBody extends TeaModel {
     }
 
     public static class DescribeScanResultsByEngineResponseBodyItems extends TeaModel {
+        /**
+         * <p>Filters results by incremental scan baseline status. Valid values: new, unchanged, absent, updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new</p>
+         */
         @NameInMap("baselineState")
         public String baselineState;
 
+        /**
+         * <p>The category. The system classifies files based on file name extensions and MIME types. Common categories include doc, image, audio, and video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL Injection</p>
+         */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <p>The code snippet near the primary location (SAST).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("codeSnippet")
         public String codeSnippet;
 
+        /**
+         * <p>The rule confidence level, ranging from 0 to 1. This field is common in SAST results and is omitted if not applicable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("confidence")
         public Double confidence;
 
         /**
-         * <p>发现记录创建时间（RFC3339）</p>
+         * <p>The time when the finding record was created (RFC 3339 format).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-28T03:36:31.573Z</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <p>The associated CWE ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CWE-601</p>
+         */
         @NameInMap("cweId")
         public String cweId;
 
+        /**
+         * <p>The issue description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User input is directly concatenated into an SQL statement, which may lead to SQL injection.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The end line number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("endLine")
         public Long endLine;
 
+        /**
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aone2/2247063/1767838276141/Artifacts_EBookingApps_Pipeline_V2_Staging_131.tgz</p>
+         */
         @NameInMap("filePath")
         public String filePath;
 
+        /**
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>934</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The brief summary of the finding. Unlike description, this field is more of a conclusion statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User input is used to construct SQL queries without sanitization</p>
+         */
         @NameInMap("itemSummary")
         public String itemSummary;
 
+        /**
+         * <p>The OWASP category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A01:2021-Broken Access Control</p>
+         */
         @NameInMap("owaspCategory")
         public String owaspCategory;
 
+        /**
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdp2cdl_cdp_sha_nprd</p>
+         */
         @NameInMap("projectName")
         public String projectName;
 
+        /**
+         * <p>The remediation code example.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String sql = \&quot;SELECT * FROM users WHERE name = ?\&quot;;\nPreparedStatement ps = conn.prepareStatement(sql);\nps.setString(1, username);\nResultSet rs = ps.executeQuery();</p>
+         */
         @NameInMap("remediationCodeExample")
         public String remediationCodeExample;
 
+        /**
+         * <p>The remediation suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Use PreparedStatement with parameterized queries instead of string concatenation</p>
+         */
         @NameInMap("remediationSuggestion")
         public String remediationSuggestion;
 
+        /**
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java-sqli-001</p>
+         */
         @NameInMap("ruleId")
         public String ruleId;
 
+        /**
+         * <p>The SCA component information. This field is returned only when engine is set to sca.</p>
+         */
         @NameInMap("scaComponent")
         public DescribeScanResultsByEngineResponseBodyItemsScaComponent scaComponent;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3176</p>
+         */
         @NameInMap("scanId")
         public Long scanId;
 
+        /**
+         * <p>The severity level. Valid values:</p>
+         * <ul>
+         * <li>critical </li>
+         * <li>high </li>
+         * <li>medium </li>
+         * <li>low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("severity")
         public String severity;
 
+        /**
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>todo_open_dingoj06pvqfeayy3lkr</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The start line number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("startLine")
         public Long startLine;
 
+        /**
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>running: Running.</li>
+         * <li>completed: Completed.</li>
+         * <li>failed: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The SAST taint analysis call chain that describes the complete propagation path of sensitive data from the taint source to the dangerous sink. This field is returned only when engine is set to sast.</p>
+         */
         @NameInMap("taintFlow")
         public java.util.List<DescribeScanResultsByEngineResponseBodyItemsTaintFlow> taintFlow;
 
+        /**
+         * <p>The text summary of the taint call chain. This field is returned only when engine is set to sast.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User input flows from HTTP parameter into SQL query executio</p>
+         */
         @NameInMap("taintFlowSummary")
         public String taintFlowSummary;
 
+        /**
+         * <p>The issue title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL Injection Risk</p>
+         */
         @NameInMap("title")
         public String title;
 

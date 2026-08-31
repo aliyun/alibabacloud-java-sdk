@@ -4,18 +4,48 @@ package com.aliyun.codesec20260401.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectsResponseBody extends TeaModel {
+    /**
+     * <p>The list of projects.</p>
+     */
     @NameInMap("items")
     public java.util.List<DescribeProjectsResponseBodyItems> items;
 
+    /**
+     * <p>The page size.</p>
+     * <blockquote>
+     * <p>If not specified, all projects are displayed.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token. An empty value indicates the last page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -65,9 +95,21 @@ public class DescribeProjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectsResponseBodyItemsEngines extends TeaModel {
+        /**
+         * <p>Indicates whether SAST is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("sast")
         public Boolean sast;
 
+        /**
+         * <p>Indicates whether SCA is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("sca")
         public Boolean sca;
 
@@ -95,6 +137,12 @@ public class DescribeProjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectsResponseBodyItemsSource extends TeaModel {
+        /**
+         * <p>The project type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manual_upload</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -114,38 +162,86 @@ public class DescribeProjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The project configuration version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("configRevision")
         public Long configRevision;
 
         /**
-         * <p>扫描项目创建时间（RFC3339）</p>
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-28T03:36:31.573Z</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <p>The user ID of the project creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
+         */
         @NameInMap("createdBy")
         public String createdBy;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The engine switches for the project or scan snapshot (SAST and SCA only).</p>
+         */
         @NameInMap("engines")
         public DescribeProjectsResponseBodyItemsEngines engines;
 
+        /**
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>934</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The natural language prompt provided by the user that describes scanning or result processing preferences, such as ignoring low-risk vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("instructionPrompt")
         public String instructionPrompt;
 
+        /**
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manual-hDecBn</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The project source.</p>
+         */
         @NameInMap("source")
         public DescribeProjectsResponseBodyItemsSource source;
 
         /**
-         * <p>扫描项目更新时间（RFC3339）</p>
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-28T03:36:31.573Z</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;

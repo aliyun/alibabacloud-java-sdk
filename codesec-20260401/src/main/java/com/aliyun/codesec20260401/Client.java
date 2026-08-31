@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-southeast-1", "codesec.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "codesec.cn-hangzhou.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("codesec", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List projects for tenant</p>
+     * <p>Lists projects under the tenant with pagination, supporting fuzzy search by name or prompt.</p>
      * 
      * @param request DescribeProjectsRequest
      * @param headers map
@@ -70,7 +74,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List projects for tenant</p>
+     * <p>Lists projects under the tenant with pagination, supporting fuzzy search by name or prompt.</p>
      * 
      * @param request DescribeProjectsRequest
      * @return DescribeProjectsResponse
@@ -83,7 +87,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List findings for one engine (SAST / SCA)</p>
+     * <p>Queries the task result list to retrieve detailed SAST or SCA results for a specific scan.</p>
      * 
      * @param request DescribeScanResultsByEngineRequest
      * @param headers map
@@ -133,7 +137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List findings for one engine (SAST / SCA)</p>
+     * <p>Queries the task result list to retrieve detailed SAST or SCA results for a specific scan.</p>
      * 
      * @param request DescribeScanResultsByEngineRequest
      * @return DescribeScanResultsByEngineResponse
@@ -146,7 +150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List scans for project</p>
+     * <p>Lists scan tasks under a specified project with pagination.</p>
      * 
      * @param request DescribeScansRequest
      * @param headers map
@@ -192,7 +196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List scans for project</p>
+     * <p>Lists scan tasks under a specified project with pagination.</p>
      * 
      * @param request DescribeScansRequest
      * @return DescribeScansResponse

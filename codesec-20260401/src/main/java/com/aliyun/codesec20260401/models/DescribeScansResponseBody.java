@@ -4,18 +4,45 @@ package com.aliyun.codesec20260401.models;
 import com.aliyun.tea.*;
 
 public class DescribeScansResponseBody extends TeaModel {
+    /**
+     * <p>The task list.</p>
+     */
     @NameInMap("items")
     public java.util.List<DescribeScansResponseBodyItems> items;
 
+    /**
+     * <p>The page size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <p>The pagination token. An empty value indicates the last page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -65,9 +92,21 @@ public class DescribeScansResponseBody extends TeaModel {
     }
 
     public static class DescribeScansResponseBodyItemsEngineSnapshot extends TeaModel {
+        /**
+         * <p>Indicates whether SAST is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("sast")
         public Boolean sast;
 
+        /**
+         * <p>Indicates whether SCA is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("sca")
         public Boolean sca;
 
@@ -95,15 +134,39 @@ public class DescribeScansResponseBody extends TeaModel {
     }
 
     public static class DescribeScansResponseBodyItemsScanMetrics extends TeaModel {
+        /**
+         * <p>The number of credits consumed by the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.25</p>
+         */
         @NameInMap("credit")
         public Float credit;
 
+        /**
+         * <p>The number of files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>459</p>
+         */
         @NameInMap("fileCount")
         public Long fileCount;
 
+        /**
+         * <p>The number of lines of code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("linesOfCode")
         public Long linesOfCode;
 
+        /**
+         * <p>Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tokenTotal")
         public Long tokenTotal;
 
@@ -147,60 +210,159 @@ public class DescribeScansResponseBody extends TeaModel {
     }
 
     public static class DescribeScansResponseBodyItems extends TeaModel {
+        /**
+         * <p>The code bundle ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("codeBundleId")
         public Long codeBundleId;
 
         /**
-         * <p>扫描任务创建时间（RFC3339）</p>
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-28T03:36:31.573Z</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <p>The user ID of the task creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
+         */
         @NameInMap("createdBy")
         public String createdBy;
 
+        /**
+         * <p>The scan phase. Valid values:</p>
+         * <ul>
+         * <li>threat_model: Threat modeling.</li>
+         * <li>discovery: Vulnerability discovery.</li>
+         * <li>panel: Vulnerability review.</li>
+         * <li>adversarial: Adversarial verification.</li>
+         * <li>finalize: Report generation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finalize</p>
+         */
+        @NameInMap("currentPhase")
+        public String currentPhase;
+
+        /**
+         * <p>The supported scan types.</p>
+         */
         @NameInMap("engineSnapshot")
         public DescribeScansResponseBodyItemsEngineSnapshot engineSnapshot;
 
         /**
-         * <p>扫描结束时间（RFC3339）</p>
+         * <p>The time when the scan finished.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-28T03:36:31.573Z</p>
          */
         @NameInMap("finishedAt")
         public String finishedAt;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>934</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The scan type. Valid values:</p>
+         * <ul>
+         * <li>full: Full scan.</li>
+         * <li>incremental: Incremental scan.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>full</p>
+         */
         @NameInMap("kind")
         public String kind;
 
+        /**
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-n72k9yrkq81ny7z</p>
+         */
         @NameInMap("projectId")
         public Long projectId;
 
+        /**
+         * <p>The scan result statistics information.</p>
+         */
         @NameInMap("scanMetrics")
         public DescribeScansResponseBodyItemsScanMetrics scanMetrics;
 
+        /**
+         * <p>The task progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("scanProgress")
         public Long scanProgress;
 
         /**
-         * <p>扫描开始时间（RFC3339）</p>
+         * <p>The time when the task started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-28T03:36:31.573Z</p>
          */
         @NameInMap("startedAt")
         public String startedAt;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>running: Running.</li>
+         * <li>completed: Completed.</li>
+         * <li>failed: Failed.</li>
+         * <li>canceling: Being canceled. </li>
+         * <li>canceled: Canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648622222394847-ha-cn-lm64p7tby01_dsl_kb_video_1773817008236_full</p>
+         */
         @NameInMap("taskName")
         public String taskName;
 
         /**
-         * <p>扫描任务更新时间（RFC3339）</p>
+         * <p>The time when the task was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-28T03:36:31.573Z</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        /**
+         * <p>Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("workerId")
         public String workerId;
 
@@ -231,6 +393,14 @@ public class DescribeScansResponseBody extends TeaModel {
         }
         public String getCreatedBy() {
             return this.createdBy;
+        }
+
+        public DescribeScansResponseBodyItems setCurrentPhase(String currentPhase) {
+            this.currentPhase = currentPhase;
+            return this;
+        }
+        public String getCurrentPhase() {
+            return this.currentPhase;
         }
 
         public DescribeScansResponseBodyItems setEngineSnapshot(DescribeScansResponseBodyItemsEngineSnapshot engineSnapshot) {
