@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CustomerNoteListResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denied error returned by the POP API when the caller does not have the required RAM permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,16 +14,23 @@ public class CustomerNoteListResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The result code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CustomerNoteListResponseBodyData data;
 
     /**
+     * <p>The HTTP status code returned by the POP API.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The prompt message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The prompt message, same as message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -43,6 +56,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
      */
@@ -112,6 +127,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
 
     public static class CustomerNoteListResponseBodyDataData extends TeaModel {
         /**
+         * <p>The name of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -119,6 +136,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String contactName;
 
         /**
+         * <p>The UID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1757916424103619</p>
          */
@@ -126,6 +145,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public Long creator;
 
         /**
+         * <p>The logon name of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -133,6 +154,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String creatorName;
 
         /**
+         * <p>The creation time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-17 12:18:23</p>
          */
@@ -140,6 +163,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The content of the note.</p>
+         * 
          * <strong>example:</strong>
          * <p>讨论技术方案</p>
          */
@@ -147,6 +172,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String noteContent;
 
         /**
+         * <p>The ID of the note.</p>
+         * 
          * <strong>example:</strong>
          * <p>2932252</p>
          */
@@ -154,6 +181,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public Long noteId;
 
         /**
+         * <p>The type of the note (CUSTOMER).</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMER</p>
          */
@@ -161,6 +190,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String noteType;
 
         /**
+         * <p>The label of the note type.</p>
+         * 
          * <strong>example:</strong>
          * <p>客户</p>
          */
@@ -168,6 +199,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String noteTypeLabel;
 
         /**
+         * <p>The touch date (timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1784266662000</p>
          */
@@ -255,6 +288,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
 
     public static class CustomerNoteListResponseBodyDataPageInfo extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -262,6 +297,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -269,6 +306,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -308,6 +347,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
 
     public static class CustomerNoteListResponseBodyData extends TeaModel {
         /**
+         * <p>The details of the access denied error returned by the POP API when the caller does not have the required RAM permissions.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -315,16 +356,23 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String accessDeniedDetail;
 
         /**
+         * <p>The result code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("Data")
         public java.util.List<CustomerNoteListResponseBodyDataData> data;
 
         /**
+         * <p>The HTTP status code returned by the POP API.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -332,6 +380,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public Integer httpStatusCode;
 
         /**
+         * <p>The prompt message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -339,16 +389,23 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The prompt message, same as message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
         @NameInMap("Msg")
         public String msg;
 
+        /**
+         * <p>The pagination information compatible with the legacy interface (deprecated).</p>
+         */
         @NameInMap("PageInfo")
         public CustomerNoteListResponseBodyDataPageInfo pageInfo;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -356,6 +413,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -363,6 +422,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
@@ -370,6 +431,8 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CustomerNoteListRequest extends TeaModel {
     /**
+     * <p>The UID of the customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>5625862916391497</p>
      */
@@ -12,6 +14,8 @@ public class CustomerNoteListRequest extends TeaModel {
     public String customerUid;
 
     /**
+     * <p>The page number. Pages start from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class CustomerNoteListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

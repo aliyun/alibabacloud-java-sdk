@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CustomerNoteCreateResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denial returned by the POP API when the caller does not have RAM permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class CustomerNoteCreateResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CustomerNoteCreateResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class CustomerNoteCreateResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The HTTP status code returned by the POP API.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class CustomerNoteCreateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned with the result.</p>
+     * 
      * <strong>example:</strong>
      * <p>成功</p>
      */
@@ -40,6 +50,8 @@ public class CustomerNoteCreateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Same as Message.</p>
+     * 
      * <strong>example:</strong>
      * <p>成功</p>
      */
@@ -47,6 +59,8 @@ public class CustomerNoteCreateResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A9B725C7-3DBD-576B-AC91-F6F22AB99A77</p>
      */

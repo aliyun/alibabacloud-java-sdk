@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CustomerNoteCreateRequest extends TeaModel {
     /**
+     * <p>The contact information.</p>
+     * 
      * <strong>example:</strong>
      * <p>13833333333</p>
      */
@@ -12,6 +14,8 @@ public class CustomerNoteCreateRequest extends TeaModel {
     public String contactInformation;
 
     /**
+     * <p>The name of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>张三</p>
      */
@@ -19,6 +23,8 @@ public class CustomerNoteCreateRequest extends TeaModel {
     public String contactName;
 
     /**
+     * <p>The name of the customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXXX有限公司</p>
      */
@@ -26,6 +32,8 @@ public class CustomerNoteCreateRequest extends TeaModel {
     public String customerName;
 
     /**
+     * <p>The UID of the customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>1647796581073291</p>
      */
@@ -33,6 +41,8 @@ public class CustomerNoteCreateRequest extends TeaModel {
     public String customerUid;
 
     /**
+     * <p>The content of the note.</p>
+     * 
      * <strong>example:</strong>
      * <p>日常拜访客户，讨论客户agent建设方案</p>
      */
@@ -40,6 +50,8 @@ public class CustomerNoteCreateRequest extends TeaModel {
     public String noteContent;
 
     /**
+     * <p>The touch time. This value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1784266662000</p>
      */

@@ -87,7 +87,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建客户小记</p>
+     * <p>Creates a customer note.</p>
      * 
      * @param request CustomerNoteCreateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -139,7 +139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建客户小记</p>
+     * <p>Creates a customer note.</p>
      * 
      * @param request CustomerNoteCreateRequest
      * @return CustomerNoteCreateResponse
@@ -151,7 +151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑客户小记</p>
+     * <p>Edits a customer note.</p>
      * 
      * @param request CustomerNoteEditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -199,7 +199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑客户小记</p>
+     * <p>Edits a customer note.</p>
      * 
      * @param request CustomerNoteEditRequest
      * @return CustomerNoteEditResponse
@@ -211,7 +211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询客户小记列表</p>
+     * <p>Queries a paged query list of customer notes with paging support.</p>
      * 
      * @param request CustomerNoteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -251,7 +251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询客户小记列表</p>
+     * <p>Queries a paged query list of customer notes with paging support.</p>
      * 
      * @param request CustomerNoteListRequest
      * @return CustomerNoteListResponse
@@ -263,7 +263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询客户小记详情</p>
+     * <p>Queries the details of a customer note.</p>
      * 
      * @param request CustomerNoteListDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -295,7 +295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询客户小记详情</p>
+     * <p>Queries the details of a customer note.</p>
      * 
      * @param request CustomerNoteListDetailRequest
      * @return CustomerNoteListDetailResponse

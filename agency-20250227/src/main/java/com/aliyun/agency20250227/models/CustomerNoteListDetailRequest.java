@@ -4,6 +4,12 @@ package com.aliyun.agency20250227.models;
 import com.aliyun.tea.*;
 
 public class CustomerNoteListDetailRequest extends TeaModel {
+    /**
+     * <p>The note ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1620737</p>
+     */
     @NameInMap("NoteId")
     public Long noteId;
 
