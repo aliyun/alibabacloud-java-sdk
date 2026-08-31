@@ -69,6 +69,13 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>[&quot;WITHIN_15_SECONDS&quot;, &quot;FROM_1_TO_3_MINUTES&quot;]</p>
+     */
+    @NameInMap("DurationRangeList")
+    public java.util.List<String> durationRangeList;
+
+    /**
+     * <strong>example:</strong>
      * <p>[&quot;有意向&quot;, &quot;高净值&quot;]</p>
      */
     @NameInMap("LabelTags")
@@ -184,6 +191,14 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
     }
     public java.util.List<String> getDisplayStatusList() {
         return this.displayStatusList;
+    }
+
+    public ReadOutboundTaskCallListRequest setDurationRangeList(java.util.List<String> durationRangeList) {
+        this.durationRangeList = durationRangeList;
+        return this;
+    }
+    public java.util.List<String> getDurationRangeList() {
+        return this.durationRangeList;
     }
 
     public ReadOutboundTaskCallListRequest setLabelTags(java.util.List<String> labelTags) {

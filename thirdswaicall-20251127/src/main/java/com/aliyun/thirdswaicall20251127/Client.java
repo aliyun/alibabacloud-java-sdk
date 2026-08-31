@@ -174,6 +174,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.displayStatusListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.displayStatusList, "DisplayStatusList", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.durationRangeList)) {
+            request.durationRangeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.durationRangeList, "DurationRangeList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelTags)) {
             request.labelTagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelTags, "LabelTags", "json");
         }
@@ -213,6 +217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.displayStatusListShrink)) {
             body.put("DisplayStatusList", request.displayStatusListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.durationRangeListShrink)) {
+            body.put("DurationRangeList", request.durationRangeListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.labelTagsShrink)) {

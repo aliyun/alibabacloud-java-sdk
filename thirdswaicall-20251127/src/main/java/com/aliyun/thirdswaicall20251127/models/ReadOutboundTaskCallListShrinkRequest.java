@@ -69,6 +69,13 @@ public class ReadOutboundTaskCallListShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>[&quot;WITHIN_15_SECONDS&quot;, &quot;FROM_1_TO_3_MINUTES&quot;]</p>
+     */
+    @NameInMap("DurationRangeList")
+    public String durationRangeListShrink;
+
+    /**
+     * <strong>example:</strong>
      * <p>[&quot;有意向&quot;, &quot;高净值&quot;]</p>
      */
     @NameInMap("LabelTags")
@@ -184,6 +191,14 @@ public class ReadOutboundTaskCallListShrinkRequest extends TeaModel {
     }
     public String getDisplayStatusListShrink() {
         return this.displayStatusListShrink;
+    }
+
+    public ReadOutboundTaskCallListShrinkRequest setDurationRangeListShrink(String durationRangeListShrink) {
+        this.durationRangeListShrink = durationRangeListShrink;
+        return this;
+    }
+    public String getDurationRangeListShrink() {
+        return this.durationRangeListShrink;
     }
 
     public ReadOutboundTaskCallListShrinkRequest setLabelTagsShrink(String labelTagsShrink) {
