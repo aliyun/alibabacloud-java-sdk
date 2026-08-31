@@ -14,10 +14,10 @@ public class DescribeCommandsRequest extends TeaModel {
     public String commandId;
 
     /**
-     * <p>The encoding mode of the CommandContent and Output fields in the response. Valid values:</p>
+     * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> fields in the response. Valid values:</p>
      * <ul>
-     * <li>PlainText: returns the original script content and output.</li>
-     * <li>Base64: returns Base64-encoded script content and output.</li>
+     * <li>PlainText: Returns the original script content and output.</li>
+     * <li>Base64: Returns the Base64-encoded script content and output.</li>
      * </ul>
      * <p>Default value: Base64.</p>
      * 
@@ -30,9 +30,9 @@ public class DescribeCommandsRequest extends TeaModel {
     /**
      * <p>The description of the command.</p>
      * <ul>
-     * <li><p>If the Provider parameter is specified parameter query public commands, fuzzy match is supported by default.</p>
+     * <li><p>When the <code>Provider</code> parameter is specified parameter query public commands, fuzzy match is supported by default.</p>
      * </li>
-     * <li><p>If the Provider parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <code>test*</code> to search for all commands whose descriptions start with <code>test</code>, enter <code>*test</code> to search for all commands whose descriptions end with <code>test</code>, or enter <code>*test*</code> to search for all commands whose descriptions contain <code>test</code>.</p>
+     * <li><p>When the <code>Provider</code> parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <code>test*</code> to search for all commands whose descriptions start with <code>test</code>, enter <code>*test</code> to search for all commands whose descriptions end with <code>test</code>, or enter <code>*test*</code> to search for all commands whose descriptions contain <code>test</code>.</p>
      * </li>
      * </ul>
      * 
@@ -45,9 +45,9 @@ public class DescribeCommandsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query only the latest version of public commands when the query results include public commands. This parameter does not affect the query of private commands.</p>
      * <ul>
-     * <li><p>true: queries only the latest version of public commands.</p>
+     * <li><p>true: Queries only the latest version of public commands.</p>
      * </li>
-     * <li><p>false: queries all versions of public commands.</p>
+     * <li><p>false: Queries all versions of public commands.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -59,7 +59,7 @@ public class DescribeCommandsRequest extends TeaModel {
     public Boolean latest;
 
     /**
-     * <p>The maximum number of entries per page for paging queries.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -72,9 +72,9 @@ public class DescribeCommandsRequest extends TeaModel {
     /**
      * <p>The name of the command.</p>
      * <ul>
-     * <li><p>If the Provider parameter is specified parameter query public commands, fuzzy match is supported by default.</p>
+     * <li><p>When the <code>Provider</code> parameter is specified parameter query public commands, fuzzy match is supported by default.</p>
      * </li>
-     * <li><p>If the Provider parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <code>command*</code> to search for all commands whose names start with <code>command</code>, enter <code>*command</code> to search for all commands whose names end with <code>command</code>, or enter <code>*command*</code> to search for all commands whose names contain <code>command</code>.</p>
+     * <li><p>When the <code>Provider</code> parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <code>command*</code> to search for all commands whose names start with <code>command</code>, enter <code>*command</code> to search for all commands whose names end with <code>command</code>, or enter <code>*command*</code> to search for all commands whose names contain <code>command</code>.</p>
      * </li>
      * </ul>
      * 
@@ -101,7 +101,7 @@ public class DescribeCommandsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</p>
+     * <p>This parameter is about to go offline. Use NextToken and MaxResults to complete paged query operations. For paging, use NextToken and MaxResults instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class DescribeCommandsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</p>
+     * <p>This parameter is about to go offline. Use NextToken and MaxResults to complete paged query operations. For paging, use NextToken and MaxResults instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,11 +124,11 @@ public class DescribeCommandsRequest extends TeaModel {
     /**
      * <p>The provider of the public command. Valid values:</p>
      * <ul>
-     * <li>If you do not specify this parameter, all Cloud Assistant commands that you manually created are queried by default.</li>
-     * <li>If you set this parameter to <code>AlibabaCloud</code>, all public commands provided by Alibaba Cloud are queried.</li>
-     * <li>If you set this parameter to a specific public command provider, all public commands provided by the provider are queried. Examples:<ul>
-     * <li>If you set Provider to <code>AlibabaCloud.ECS.GuestOS</code>, all public commands provided by <code>AlibabaCloud.ECS.GuestOS</code> are queried.</li>
-     * <li>If you set Provider to <code>AlibabaCloud.ECS.GuestOSDiagnose</code>, all public commands provided by <code>AlibabaCloud.ECS.GuestOSDiagnose</code> are queried.</li>
+     * <li>If this parameter is not specified, all Cloud Assistant commands that you manually created are queried by default.</li>
+     * <li>If this parameter is set to <code>AlibabaCloud</code>, all public commands provided by Alibaba Cloud are queried.</li>
+     * <li>If this parameter is set to a specific public command provider, all public commands provided by that provider are queried. Examples:<ul>
+     * <li>If <code>Provider=AlibabaCloud.ECS.GuestOS</code>, public commands provided by <code>AlibabaCloud.ECS.GuestOS</code> are queried.</li>
+     * <li>If <code>Provider=AlibabaCloud.ECS.GuestOSDiagnose</code>, public commands provided by <code>AlibabaCloud.ECS.GuestOSDiagnose</code> are queried.</li>
      * </ul>
      * </li>
      * </ul>
@@ -175,7 +175,7 @@ public class DescribeCommandsRequest extends TeaModel {
      * <ul>
      * <li>RunBatScript: Bat script that runs on Windows instances.</li>
      * <li>RunPowerShellScript: PowerShell script that runs on Windows instances.</li>
-     * <li>RunShellScript: shell script that runs on Linux instances.</li>
+     * <li>RunShellScript: Shell script that runs on Linux instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -336,8 +336,8 @@ public class DescribeCommandsRequest extends TeaModel {
     public static class DescribeCommandsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

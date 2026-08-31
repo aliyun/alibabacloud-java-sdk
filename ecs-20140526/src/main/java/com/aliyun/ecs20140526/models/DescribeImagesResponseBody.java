@@ -8,7 +8,7 @@ public class DescribeImagesResponseBody extends TeaModel {
     public DescribeImagesResponseBodyImages images;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeImagesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

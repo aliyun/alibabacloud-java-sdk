@@ -262,6 +262,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice extends TeaModel {
         /**
+         * <p>The currency unit.</p>
+         * <p>China site: CNY.</p>
+         * <p>International site: USD.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -269,6 +273,8 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -276,6 +282,8 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public Float discountPrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -283,6 +291,8 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -329,6 +339,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Marketplace image price.</p>
+         */
         @NameInMap("MarketplaceImagePrice")
         public DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice marketplaceImagePrice;
 
@@ -403,6 +416,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         @NameInMap("Price")
         public DescribeRenewalPriceResponseBodyPriceInfoPrice price;
 
+        /**
+         * <p>The related price.</p>
+         */
         @NameInMap("RelatedPrice")
         public DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice relatedPrice;
 

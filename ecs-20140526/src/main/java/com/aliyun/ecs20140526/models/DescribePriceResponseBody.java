@@ -174,6 +174,8 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
          * <p>The currency unit.</p>
+         * <p>China site: CNY.</p>
+         * <p>International site: USD.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -278,6 +280,8 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice extends TeaModel {
         /**
          * <p>The currency unit.</p>
+         * <p>China site: CNY.</p>
+         * <p>International site: USD.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>

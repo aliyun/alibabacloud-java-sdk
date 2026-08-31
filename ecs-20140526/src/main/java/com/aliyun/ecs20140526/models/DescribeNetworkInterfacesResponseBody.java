@@ -17,7 +17,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The paging query parameter.</p>
+     * <p>The paging parameter.</p>
+     * <blockquote>
+     * <p>This parameter is being deprecated. Use NextToken and MaxResults for paging.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +29,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The paging query parameter.</p>
+     * <p>The paging parameter.</p>
+     * <blockquote>
+     * <p>This parameter is being deprecated. Use NextToken and MaxResults for paging.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,6 +51,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of Elastic Network Interfaces (ENIs) returned.</p>
+     * <blockquote>
+     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paging, the returned <code>TotalCount</code> value is meaningless.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -28,6 +28,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The collection of network connectivity tracking configuration information.</p>
+     * <p>Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</p>
+     * <blockquote>
+     * <p>This parameter is returned only when the <code>Attribute</code> input parameter is set to <code>connectionTrackingConfiguration</code>.</p>
+     * </blockquote>
      */
     @NameInMap("ConnectionTrackingConfiguration")
     public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration connectionTrackingConfiguration;
@@ -43,6 +47,12 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the ENI is retained when the associated instance is released. Valid values:</p>
+     * <ul>
+     * <li><p>true: The ENI is not retained.</p>
+     * </li>
+     * <li><p>false: The ENI is retained.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -67,6 +77,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the instance to which the network interface controller (NIC) is attached.</p>
+     * <blockquote>
+     * <p>Network interface controllers (NICs) that are managed and controlled by other Alibaba Cloud services do not return an instance ID.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>i-bp1e2l6djkndyuli****</p>
@@ -117,7 +130,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
 
     /**
-     * <p>The communication mode of the network interface controller (NIC). Valid values:</p>
+     * <p>The communication pattern of the network interface controller (NIC). Valid values:</p>
+     * <ul>
+     * <li>Standard: uses the TCP communication pattern.</li>
+     * <li>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication pattern.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The HighPerformance parameter value is supported only by the c7re RDMA enhanced instance family.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -135,7 +155,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The private network IP address of the network interface controller (NIC).</p>
+     * <p>The private IP address of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p><code>10.1.**.**</code></p>
@@ -147,13 +167,31 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets privateIpSets;
 
     /**
-     * <p>The QoS rate limiting settings.</p>
+     * <p>The QoS rate limit settings.</p>
      */
     @NameInMap("QoSConfig")
     public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig qoSConfig;
 
     /**
-     * <p>The number of queues supported by the network interface controller (NIC).</p>
+     * <p>The number of queues for the Elastic Network Interface (ENI).</p>
+     * <ul>
+     * <li><p>If the Elastic Network Interface (ENI) is a primary network interface controller (NIC): the default number of queues for the primary network interface controller (NIC) based on the instance type is returned.</p>
+     * </li>
+     * <li><p>If the Elastic Network Interface (ENI) is a secondary ENI:</p>
+     * <ul>
+     * <li>If the secondary ENI is in the InUse state:<ul>
+     * <li>If the number of queues has not been modified, the default number of queues for the secondary ENI based on the instance type is returned.</li>
+     * <li>If the number of queues has been modified, the modified number of queues is returned.</li>
+     * </ul>
+     * </li>
+     * <li>If the secondary ENI is in the active (Available) state:<ul>
+     * <li>If the number of queues has not been modified, an empty value is returned.</li>
+     * <li>If the number of queues has been modified, the modified number of queues is returned.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -182,7 +220,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
+     * <p>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+     * <blockquote>
+     * <p>Filtering by the default resource group is not supported.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -194,7 +235,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds securityGroupIds;
 
     /**
-     * <p>The ID of the Virtual Network Operator (VNO) to which the network interface controller (NIC) belongs.</p>
+     * <p>The Virtual Network Operator (VNO) ID associated with the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>12345678910</p>
@@ -230,6 +271,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The status of the network interface controller (NIC). Valid values:</p>
+     * <ul>
+     * <li>Available: active.</li>
+     * <li>Attaching: being attached.</li>
+     * <li>InUse: in use.</li>
+     * <li>Detaching: being detached.</li>
+     * <li>Deleting: being deleted.</li>
+     * </ul>
+     * <p>Default value: empty, which indicates that network interface controllers (NICs) in all statuses are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -252,7 +301,11 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String tcpOptionAddressEnabled;
 
     /**
-     * <p>The type of the network interface controller (NIC). Valid values:</p>
+     * <p>The type of the Elastic Network Interface (ENI). Valid values:</p>
+     * <ul>
+     * <li>Primary: primary network interface controller (NIC).</li>
+     * <li>Secondary: secondary Elastic Network Interface (ENI).</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Secondary</p>
@@ -677,6 +730,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The index of the network card to which the ENI is attached.</p>
+         * <ul>
+         * <li>If the ENI is in the Available state or the index was not specified during attachment, this value is not returned.</li>
+         * <li>If the ENI is in the InUse state and the index was specified during attachment, this value indicates the index of the network card to which the ENI is attached.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -842,7 +899,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration extends TeaModel {
         /**
-         * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSED state. Unit: seconds. Valid values: an integer from 3 to 15.</p>
+         * <p>The timeout period for TCP connections in the TIME_WAIT and CLOSED states. Unit: seconds. Valid values: an integer from 3 to 15.</p>
+         * <blockquote>
+         * <p>If your ECS instance is used with NLB or CLB, the default timeout period for connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -851,7 +911,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Integer tcpClosedAndTimeWaitTimeout;
 
         /**
-         * <p>The timeout period for established TCP connections. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</p>
+         * <p>The timeout period for TCP connections in the established state. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</p>
          * 
          * <strong>example:</strong>
          * <p>910</p>
@@ -861,6 +921,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The timeout period for UDP flows. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</p>
+         * <blockquote>
+         * <p>If your ECS instance is used with NLB or CLB, the default value is 100 seconds.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -905,7 +968,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not yet available for use.</p>
+         * <p>This parameter is not available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1103,7 +1166,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig extends TeaModel {
         /**
-         * <p>The communication mode of the network interface controller (NIC).</p>
+         * <p>The communication pattern of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>HighPerformance</p>
@@ -1112,7 +1175,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public String networkInterfaceTrafficMode;
 
         /**
-         * <p>The number of queues supported by the network interface controller (NIC).</p>
+         * <p>The number of queues for the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -1121,7 +1184,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Integer queueNumber;
 
         /**
-         * <p>The number of queues supported by the RDMA network interface.</p>
+         * <p>The number of RDMA queue pairs.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -1351,7 +1414,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Boolean enableQoS;
 
         /**
-         * <p>The QoS rate limiting settings.</p>
+         * <p>The QoS rate limit settings.</p>
          */
         @NameInMap("QoS")
         public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS qoS;

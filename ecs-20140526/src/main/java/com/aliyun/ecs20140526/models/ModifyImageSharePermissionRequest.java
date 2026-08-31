@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyImageSharePermissionRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account ID for which you want to grant authorization to share the image. Valid values of N: 1 to 10. If you submit more than 10 Alibaba Cloud accounts in a single request, the system processes only the first 10 and ignores the rest.</p>
+     * <p>The Alibaba Cloud account ID to which you want to grant authorization for the shared image. Valid values of N: 1 to 10. If you submit more than 10 Alibaba Cloud accounts in a single request, the system processes only the first 10 and ignores the rest.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -19,7 +19,7 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     /**
      * <p>The ID of the custom image to be shared.</p>
      * <blockquote>
-     * <p>Notice: Images encrypted with a service key can no longer be shared. Only images encrypted with a customer master key (CMK) can be shared. An error is returned if you attempt to share an image that uses service key encryption.</p>
+     * <p>Notice: Images encrypted with a service key can no longer be shared. Only images encrypted with a customer master key (CMK) can be shared. An error is returned if you attempt to share an image that is encrypted with a service key.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,7 +30,7 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>Specifies whether to publish or delist the community image. Valid values:</p>
+     * <p>Specifies whether to publish or delist the image as a community image. Valid values:</p>
      * <ul>
      * <li>true: Publishes the image as a community image.</li>
      * <li>false: Delists the image to a regular image. If the image is already a regular image, no change is made.</li>
