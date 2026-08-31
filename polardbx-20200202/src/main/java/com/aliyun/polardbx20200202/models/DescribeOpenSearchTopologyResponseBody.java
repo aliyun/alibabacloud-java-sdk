@@ -4,13 +4,21 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
+    /**
+     * <p>The details of the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public DescribeOpenSearchTopologyResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The data struct.</p>
+     */
     @NameInMap("Data")
     public DescribeOpenSearchTopologyResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
      */
@@ -48,6 +56,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
 
     public static class DescribeOpenSearchTopologyResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The authentication action.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -55,6 +65,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The display name of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -62,6 +74,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The owner ID of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -69,6 +83,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The authentication principal type.</p>
+         * 
          * <strong>example:</strong>
          * <p>222</p>
          */
@@ -76,6 +92,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
          */
@@ -83,6 +101,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>NoPermissionType</p>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -90,6 +110,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
          */
@@ -161,6 +183,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
 
     public static class DescribeOpenSearchTopologyResponseBodyDataNodes extends TeaModel {
         /**
+         * <p>The zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>t1222576965886205</p>
          */
@@ -168,6 +192,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public String availabilityZone;
 
         /**
+         * <p>The total number of CPU cores in the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -175,16 +201,23 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The Origin Domain Name that you configured in the DCDN console, including IPv4 addresses, IPv6 addresses, common domain names, and OSS domain names.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com">https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com</a></p>
          */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>Indicates whether the current node is the primary node.</p>
+         */
         @NameInMap("IsLeader")
         public Boolean isLeader;
 
         /**
+         * <p>The memory size.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -192,6 +225,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public Integer memoryGB;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-c-jf0pivh2dt</p>
          */
@@ -199,6 +234,13 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The role of a node in the three-node RDS cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>leader</strong>: primary node</li>
+         * <li><strong>follower</strong>: secondary node</li>
+         * <li><strong>logger</strong>: logger node</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>polarx_cn</p>
          */
@@ -206,6 +248,17 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>The node status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Running</li>
+         * <li><strong>1</strong>: Creating</li>
+         * <li><strong>2</strong>: Abnormal</li>
+         * <li><strong>3</strong>: Expired</li>
+         * <li><strong>4</strong>: Releasing</li>
+         * <li><strong>5</strong>: Released</li>
+         * <li><strong>6</strong>: Locked</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -285,6 +338,11 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
 
     public static class DescribeOpenSearchTopologyResponseBodyDataStorage extends TeaModel {
         /**
+         * <p>The number of secondary nodes in the primary zone.</p>
+         * <blockquote>
+         * <p>The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters apply only to cloud-native instances. If the instance uses the cluster architecture, these parameters indicate the number of secondary nodes of a <strong>single shard</strong> in the primary and secondary zones.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -292,6 +350,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public Integer replicaCount;
 
         /**
+         * <p>The total storage capacity of the node. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -299,6 +359,8 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
         public Integer storageTotalGB;
 
         /**
+         * <p>The storage type.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_auto</p>
          */
@@ -337,9 +399,15 @@ public class DescribeOpenSearchTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeOpenSearchTopologyResponseBodyData extends TeaModel {
+        /**
+         * <p>The node IDs.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<DescribeOpenSearchTopologyResponseBodyDataNodes> nodes;
 
+        /**
+         * <p>The configuration of the automatic storage scaling feature for the instance.</p>
+         */
         @NameInMap("Storage")
         public DescribeOpenSearchTopologyResponseBodyDataStorage storage;
 

@@ -17,7 +17,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
     public DeleteServiceAccountResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is empty if the request is successful.</p>
+     * <p>The error message returned if the request failed. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -99,7 +99,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The authentication principal type.</p>
+         * <p>The type of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -117,7 +117,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The type of the missing permission.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -210,7 +210,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The service account type.</p>
+         * <p>The type of the service account.</p>
          * 
          * <strong>example:</strong>
          * <p>METADATA_READONLY</p>

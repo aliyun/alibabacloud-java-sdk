@@ -4,13 +4,21 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DeleteOpenSearchResponseBody extends TeaModel {
+    /**
+     * <p>The details of the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public DeleteOpenSearchResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("Data")
     public DeleteOpenSearchResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>173CA69A-3513-591D-8A09-C1EA37CBE2D9</p>
      */
@@ -48,6 +56,8 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
 
     public static class DeleteOpenSearchResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The authentication action.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -55,6 +65,8 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The display name of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -62,6 +74,8 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The owner ID of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -69,6 +83,8 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The type of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>222</p>
          */
@@ -76,6 +92,8 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
          */
@@ -83,6 +101,8 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The type of the permission denial.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -90,6 +110,8 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
          */
@@ -161,6 +183,8 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
 
     public static class DeleteOpenSearchResponseBodyData extends TeaModel {
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-*********</p>
          */
@@ -168,6 +192,8 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */

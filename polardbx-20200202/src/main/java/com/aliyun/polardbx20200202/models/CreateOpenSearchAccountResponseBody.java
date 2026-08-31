@@ -4,13 +4,21 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateOpenSearchAccountResponseBody extends TeaModel {
+    /**
+     * <p>The details of the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public CreateOpenSearchAccountResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The details of the returned policy.</p>
+     */
     @NameInMap("Data")
     public CreateOpenSearchAccountResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>9B2F3840-****-475C-B269-2D5C3A31797C</p>
      */
@@ -48,6 +56,8 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
 
     public static class CreateOpenSearchAccountResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The description is as above.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -55,6 +65,8 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The display name of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -62,6 +74,8 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The owner ID of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -69,6 +83,8 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The type of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>222</p>
          */
@@ -76,6 +92,8 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
          */
@@ -83,6 +101,8 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The type of the permission denial.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -90,6 +110,8 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
          */
@@ -161,6 +183,8 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
 
     public static class CreateOpenSearchAccountResponseBodyData extends TeaModel {
         /**
+         * <p>The account name.</p>
+         * 
          * <strong>example:</strong>
          * <p>polardbx_meta_ro</p>
          */
@@ -168,6 +192,8 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2209883</p>
          */

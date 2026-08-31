@@ -4,13 +4,21 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeContext0ConfigResponseBody extends TeaModel {
+    /**
+     * <p>The details of the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public DescribeContext0ConfigResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The paginated result of the instance list.</p>
+     */
     @NameInMap("Data")
     public DescribeContext0ConfigResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</p>
      */
@@ -48,6 +56,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
 
     public static class DescribeContext0ConfigResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The authentication action.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -55,6 +65,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The identity used for authentication in the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -62,6 +74,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The owner ID of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -69,6 +83,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The type of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>222</p>
          */
@@ -76,6 +92,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
          */
@@ -83,6 +101,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>NoPermissionType</p>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -90,6 +110,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
          */
@@ -161,6 +183,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
 
     public static class DescribeContext0ConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The administrator key of the context service.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin-key-example</p>
          */
@@ -168,6 +192,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String context0AdminKey;
 
         /**
+         * <p>The name of the context service instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>context0-example</p>
          */
@@ -175,6 +201,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String context0InstanceName;
 
         /**
+         * <p>The owner key of the context service.</p>
+         * 
          * <strong>example:</strong>
          * <p>owner-key-example</p>
          */
@@ -182,6 +210,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String context0OwnerKey;
 
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxsp-*********</p>
          */
@@ -189,6 +219,8 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The name of the PolarDB-X Search instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxs-*********</p>
          */

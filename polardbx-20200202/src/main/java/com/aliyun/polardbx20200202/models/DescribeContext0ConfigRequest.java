@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeContext0ConfigRequest extends TeaModel {
     /**
-     * <p>关联的 PolarDB-X 实例名（pxc- 前缀）</p>
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class DescribeContext0ConfigRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
+     * <p>The region in which the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

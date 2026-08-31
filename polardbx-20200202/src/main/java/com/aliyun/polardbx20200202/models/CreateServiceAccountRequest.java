@@ -25,7 +25,7 @@ public class CreateServiceAccountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The service account type.</p>
+     * <p>The type of the service account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

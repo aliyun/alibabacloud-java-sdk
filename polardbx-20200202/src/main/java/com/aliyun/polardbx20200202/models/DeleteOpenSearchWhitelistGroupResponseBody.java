@@ -4,13 +4,21 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
+    /**
+     * <p>The details of the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public DeleteOpenSearchWhitelistGroupResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The monitoring data.</p>
+     */
     @NameInMap("Data")
     public DeleteOpenSearchWhitelistGroupResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>B87E2AB3-B7C9-4394-9160-7F639F732031</p>
      */
@@ -48,6 +56,8 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
 
     public static class DeleteOpenSearchWhitelistGroupResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The authentication action.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -55,6 +65,8 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The display name of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -62,6 +74,8 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The owner ID of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -69,6 +83,8 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The type of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>222</p>
          */
@@ -76,6 +92,8 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The diagnostic information.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
          */
@@ -83,6 +101,8 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The type of the permission denial.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -90,6 +110,8 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
          */
@@ -161,6 +183,8 @@ public class DeleteOpenSearchWhitelistGroupResponseBody extends TeaModel {
 
     public static class DeleteOpenSearchWhitelistGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>get app list success</p>
          */

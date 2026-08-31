@@ -1992,10 +1992,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建OpenSearch实例账号</p>
+     * <p>Creates an account for a PolarDB-X Search instance.</p>
      * 
      * @param request CreateOpenSearchAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2039,10 +2039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建OpenSearch实例账号</p>
+     * <p>Creates an account for a PolarDB-X Search instance.</p>
      * 
      * @param request CreateOpenSearchAccountRequest
      * @return CreateOpenSearchAccountResponse
@@ -3340,10 +3340,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定数据库实例的自定义连接地址，关闭该域名的访问入口。</p>
+     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
      * 
      * <b>summary</b> : 
-     * <p>释放OpenSearch实例</p>
+     * <p>Releases a PolarDB-X Search instance.</p>
      * 
      * @param request DeleteOpenSearchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3379,10 +3379,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除指定数据库实例的自定义连接地址，关闭该域名的访问入口。</p>
+     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
      * 
      * <b>summary</b> : 
-     * <p>释放OpenSearch实例</p>
+     * <p>Releases a PolarDB-X Search instance.</p>
      * 
      * @param request DeleteOpenSearchRequest
      * @return DeleteOpenSearchResponse
@@ -3394,10 +3394,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除OpenSearch实例账号</p>
+     * <p>Deletes a PolarDB-X Search instance account.</p>
      * 
      * @param request DeleteOpenSearchAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3437,10 +3437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</p>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除OpenSearch实例账号</p>
+     * <p>Deletes a PolarDB-X Search instance account.</p>
      * 
      * @param request DeleteOpenSearchAccountRequest
      * @return DeleteOpenSearchAccountResponse
@@ -3453,13 +3453,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>binlog文件默认保存15天。</li>
-     * <li>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</li>
-     * <li>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</li>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list contains all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>删除OpenSearch实例白名单分组</p>
+     * <p>Deletes a PolarDB-X Search whitelist group.</p>
      * 
      * @param request DeleteOpenSearchWhitelistGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3500,13 +3500,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>binlog文件默认保存15天。</li>
-     * <li>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</li>
-     * <li>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</li>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list contains all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>删除OpenSearch实例白名单分组</p>
+     * <p>Deletes a PolarDB-X Search whitelist group.</p>
      * 
      * @param request DeleteOpenSearchWhitelistGroupRequest
      * @return DeleteOpenSearchWhitelistGroupResponse
@@ -4806,12 +4806,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>PolarDB-X 2.0 SQL审计与分析功能本身免费使用，但日志服务会对存储空间、读取流量、请求数量、数据加工、数据投递等进行收费，更多关于SQL审计功能的详情，请参见<a href="https://help.aliyun.com/document_detail/184619.html">开启SQL审计与分析</a>。</li>
+     * <li>PolarDB-X 2.0 SQL audit and analysis feature is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>查询Context0管理凭证</p>
+     * <p>Queries the management credentials of the context service.</p>
      * 
      * @param request DescribeContext0ConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4849,12 +4849,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>PolarDB-X 2.0 SQL审计与分析功能本身免费使用，但日志服务会对存储空间、读取流量、请求数量、数据加工、数据投递等进行收费，更多关于SQL审计功能的详情，请参见<a href="https://help.aliyun.com/document_detail/184619.html">开启SQL审计与分析</a>。</li>
+     * <li>PolarDB-X 2.0 SQL audit and analysis feature is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>查询Context0管理凭证</p>
+     * <p>Queries the management credentials of the context service.</p>
      * 
      * @param request DescribeContext0ConfigRequest
      * @return DescribeContext0ConfigResponse
@@ -6594,10 +6594,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</p>
+     * <p>Queries the list of custom endpoints that you have configured. This operation helps you manage and view the settings of private connections or VPC endpoint services.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询OpenSearch实例列表</p>
+     * <p>Queries the list of PolarDBX Search instances.</p>
      * 
      * @param request DescribeOpenSearchInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6649,10 +6649,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</p>
+     * <p>Queries the list of custom endpoints that you have configured. This operation helps you manage and view the settings of private connections or VPC endpoint services.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询OpenSearch实例列表</p>
+     * <p>Queries the list of PolarDBX Search instances.</p>
      * 
      * @param request DescribeOpenSearchInstancesRequest
      * @return DescribeOpenSearchInstancesResponse
@@ -6773,13 +6773,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>binlog文件默认保存15天。</li>
-     * <li>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</li>
-     * <li>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</li>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list contains all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询OpenSearch实例拓扑</p>
+     * <p>Queries the node topology of a PolarDB-X Search cluster.</p>
      * 
      * @param request DescribeOpenSearchTopologyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6816,13 +6816,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>binlog文件默认保存15天。</li>
-     * <li>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</li>
-     * <li>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</li>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list contains all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询OpenSearch实例拓扑</p>
+     * <p>Queries the node topology of a PolarDB-X Search cluster.</p>
      * 
      * @param request DescribeOpenSearchTopologyRequest
      * @return DescribeOpenSearchTopologyResponse
@@ -8849,6 +8849,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceName", request.DBInstanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResultRows)) {
+            query.put("MaxResultRows", request.maxResultRows);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -10802,6 +10806,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries column store audit logs.</p>
+     * 
+     * @param request QueryColumnarLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryColumnarLogResponse
+     */
+    public QueryColumnarLogResponse queryColumnarLogWithOptions(QueryColumnarLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResultRows)) {
+            query.put("MaxResultRows", request.maxResultRows);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SQL)) {
+            query.put("SQL", request.SQL);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryColumnarLog"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryColumnarLogResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries column store audit logs.</p>
+     * 
+     * @param request QueryColumnarLogRequest
+     * @return QueryColumnarLogResponse
+     */
+    public QueryColumnarLogResponse queryColumnarLog(QueryColumnarLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryColumnarLogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries complete column store audit logs by using streaming.</p>
+     * 
+     * @param request QueryColumnarLogSSERequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryColumnarLogSSEResponse
+     */
+    public QueryColumnarLogSSEResponse queryColumnarLogSSEWithOptions(QueryColumnarLogSSERequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResultRows)) {
+            query.put("MaxResultRows", request.maxResultRows);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SQL)) {
+            query.put("SQL", request.SQL);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryColumnarLogSSE"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryColumnarLogSSEResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries complete column store audit logs by using streaming.</p>
+     * 
+     * @param request QueryColumnarLogSSERequest
+     * @return QueryColumnarLogSSEResponse
+     */
+    public QueryColumnarLogSSEResponse queryColumnarLogSSE(QueryColumnarLogSSERequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryColumnarLogSSEWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Refreshes the metadata of an import task.</p>
      * 
@@ -11498,7 +11626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>重启OpenSearch实例</p>
+     * <p>Restarts a PolarDB-X Search instance.</p>
      * 
      * @param request RestartOpenSearchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11537,7 +11665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>重启OpenSearch实例</p>
+     * <p>Restarts a PolarDB-X Search instance.</p>
      * 
      * @param request RestartOpenSearchRequest
      * @return RestartOpenSearchResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteMetaQueryResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details about the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ExecuteMetaQueryResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -17,7 +17,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
     public ExecuteMetaQueryResponseBodyData data;
 
     /**
-     * <p>The additional information returned. If the request is successful, <strong>success</strong> is returned. If the request fails, the corresponding error code is returned.</p>
+     * <p>The additional information returned by the operation. success is returned if the request is successful. Otherwise, an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -182,11 +182,26 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
     }
 
     public static class ExecuteMetaQueryResponseBodyData extends TeaModel {
+        @NameInMap("AppliedOffset")
+        public Long appliedOffset;
+
+        @NameInMap("AppliedRowLimit")
+        public Long appliedRowLimit;
+
         /**
          * <p>The column names.</p>
          */
         @NameInMap("Columns")
         public java.util.List<String> columns;
+
+        @NameInMap("HasMore")
+        public Boolean hasMore;
+
+        @NameInMap("RecordsSizeBytes")
+        public Long recordsSizeBytes;
+
+        @NameInMap("ReturnedRowCount")
+        public Long returnedRowCount;
 
         /**
          * <p>The total number of data rows.</p>
@@ -208,12 +223,52 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ExecuteMetaQueryResponseBodyData setAppliedOffset(Long appliedOffset) {
+            this.appliedOffset = appliedOffset;
+            return this;
+        }
+        public Long getAppliedOffset() {
+            return this.appliedOffset;
+        }
+
+        public ExecuteMetaQueryResponseBodyData setAppliedRowLimit(Long appliedRowLimit) {
+            this.appliedRowLimit = appliedRowLimit;
+            return this;
+        }
+        public Long getAppliedRowLimit() {
+            return this.appliedRowLimit;
+        }
+
         public ExecuteMetaQueryResponseBodyData setColumns(java.util.List<String> columns) {
             this.columns = columns;
             return this;
         }
         public java.util.List<String> getColumns() {
             return this.columns;
+        }
+
+        public ExecuteMetaQueryResponseBodyData setHasMore(Boolean hasMore) {
+            this.hasMore = hasMore;
+            return this;
+        }
+        public Boolean getHasMore() {
+            return this.hasMore;
+        }
+
+        public ExecuteMetaQueryResponseBodyData setRecordsSizeBytes(Long recordsSizeBytes) {
+            this.recordsSizeBytes = recordsSizeBytes;
+            return this;
+        }
+        public Long getRecordsSizeBytes() {
+            return this.recordsSizeBytes;
+        }
+
+        public ExecuteMetaQueryResponseBodyData setReturnedRowCount(Long returnedRowCount) {
+            this.returnedRowCount = returnedRowCount;
+            return this;
+        }
+        public Long getReturnedRowCount() {
+            return this.returnedRowCount;
         }
 
         public ExecuteMetaQueryResponseBodyData setRowCount(Integer rowCount) {

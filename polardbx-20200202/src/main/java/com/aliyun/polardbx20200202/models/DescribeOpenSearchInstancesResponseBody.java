@@ -4,13 +4,21 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public DescribeOpenSearchInstancesResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The operation result.</p>
+     */
     @NameInMap("Data")
     public DescribeOpenSearchInstancesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A501A191-BD70-5E50-98A9-C2A486A82****</p>
      */
@@ -48,6 +56,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
 
     public static class DescribeOpenSearchInstancesResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The authentication action.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -55,6 +65,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The display name of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -62,6 +74,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The owner ID of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -69,6 +83,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The type of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>222</p>
          */
@@ -76,6 +92,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
          */
@@ -83,6 +101,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The type of the permission denial.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -90,6 +110,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
          */
@@ -161,6 +183,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
 
     public static class DescribeOpenSearchInstancesResponseBodyDataInstances extends TeaModel {
         /**
+         * <p>The zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>t1222576965886205</p>
          */
@@ -168,6 +192,12 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String availabilityZone;
 
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
@@ -175,6 +205,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The number of CPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4000</p>
          */
@@ -182,6 +214,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-08T07:19:05.000+0000</p>
          */
@@ -189,6 +223,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The number of data nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -196,13 +232,17 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public Integer dataNodeCount;
 
         /**
+         * <p>The instance description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>我的 Supabase 项目</p>
+         * <p>My Supabase project</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The DPI engine version. Default value: 2.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>8.0</p>
          */
@@ -210,6 +250,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pxc-shrdb7a2t8w3c1</p>
          */
@@ -217,6 +259,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The memory size. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -224,6 +268,13 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public Integer memoryGB;
 
         /**
+         * <p>The network type of the connection string. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong>: public endpoint.</li>
+         * <li><strong>Private</strong>: private endpoint.</li>
+         * <li><strong>Inner</strong>: private endpoint (classic network).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -231,6 +282,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String netType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -238,13 +291,17 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The display name of the instance specifications.</p>
+         * 
          * <strong>example:</strong>
-         * <p>8 核 32 GB</p>
+         * <p>8 cores 32 GB</p>
          */
         @NameInMap("SpecDisplay")
         public String specDisplay;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -252,6 +309,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The storage size of a single data node. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -378,10 +437,15 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeOpenSearchInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("Instances")
         public java.util.List<DescribeOpenSearchInstancesResponseBodyDataInstances> instances;
 
         /**
+         * <p>The maximum number of entries per page for a paging query. Maximum value: 100. Default value: If you do not specify a value or the value is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -389,6 +453,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token for the next query.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kmMV9kamx92yNWehxph5Fw</p>
          */
@@ -396,6 +462,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -403,6 +471,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -410,6 +480,8 @@ public class DescribeOpenSearchInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>130</p>
          */

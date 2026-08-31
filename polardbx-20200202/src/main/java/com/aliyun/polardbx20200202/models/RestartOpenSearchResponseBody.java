@@ -4,13 +4,21 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class RestartOpenSearchResponseBody extends TeaModel {
+    /**
+     * <p>The details of the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public RestartOpenSearchResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public RestartOpenSearchResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>AE4F6C34-065F-45AA-B5DC-4B8D816F6305</p>
      */
@@ -48,6 +56,8 @@ public class RestartOpenSearchResponseBody extends TeaModel {
 
     public static class RestartOpenSearchResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The authentication action.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -55,6 +65,8 @@ public class RestartOpenSearchResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The display name of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -62,6 +74,8 @@ public class RestartOpenSearchResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The owner ID of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -69,6 +83,8 @@ public class RestartOpenSearchResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The type of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>222</p>
          */
@@ -76,6 +92,8 @@ public class RestartOpenSearchResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
          */
@@ -83,6 +101,8 @@ public class RestartOpenSearchResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>NoPermissionType</p>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -90,6 +110,8 @@ public class RestartOpenSearchResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>System</p>
          */
@@ -161,6 +183,8 @@ public class RestartOpenSearchResponseBody extends TeaModel {
 
     public static class RestartOpenSearchResponseBodyData extends TeaModel {
         /**
+         * <p>The backend task ID.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
