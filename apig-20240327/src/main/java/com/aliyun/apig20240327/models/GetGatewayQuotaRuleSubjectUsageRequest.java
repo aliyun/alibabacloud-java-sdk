@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     /**
-     * <p>Specifies whether to filter zero values.</p>
+     * <p>Specifies whether to filter out zero values.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     public Boolean filterFailedRequests;
 
     /**
-     * <p>The page number of the detailed consumption (request) records of the consumer within the cycle.</p>
+     * <p>The page number of the detailed consumption (request) records of the subject within the cycle.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of detailed consumption (request) records per page for the consumer within the cycle. Maximum value: 10.</p>
+     * <p>The number of detailed consumption (request) records per page for the subject within the cycle. Maximum value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

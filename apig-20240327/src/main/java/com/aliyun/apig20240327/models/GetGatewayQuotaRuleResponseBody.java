@@ -79,7 +79,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleResponseBodyDataConsumers extends TeaModel {
         /**
-         * <p>The subject (consumer) ID.</p>
+         * <p>The subject (API consumer) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-aaa</p>
@@ -88,7 +88,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The subject (consumer) name.</p>
+         * <p>The subject (API consumer) name.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-a</p>
@@ -189,7 +189,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public Long baseTimestamp;
 
         /**
-         * <p>The number of consumers associated with the rule.</p>
+         * <p>The number of API consumers associated with the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -198,7 +198,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public Long consumerCount;
 
         /**
-         * <p>The list of subjects (consumers) bound to this rule.</p>
+         * <p>The list of subjects (API consumers) bound to this rule.</p>
          */
         @NameInMap("consumers")
         public java.util.List<GetGatewayQuotaRuleResponseBodyDataConsumers> consumers;

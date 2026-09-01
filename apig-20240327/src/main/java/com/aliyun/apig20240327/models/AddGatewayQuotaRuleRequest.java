@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddGatewayQuotaRuleRequest extends TeaModel {
     /**
-     * <p>The conflict snapshot hash, used to prevent concurrent dirty overwrites during confirmation. Obtain this value from the response of a previous dryRun=true request.</p>
-     * <p>This parameter is not required in the following cases: no conflicts exist, the request is a dry run (dryRun=true), or overwrite=false (no overwrite confirmation).</p>
-     * <p>When dryRun=false and overwrite=true, if this parameter is not provided or the value has expired and no longer matches, the backend returns accepted=false with a new conflict preview. Perform a dry run again to confirm the new conflicts.</p>
+     * <p>The conflict snapshot hash used to prevent concurrent dirty overwrites during confirmation. Obtain this value from the response of a previous dry run (dryRun=true).</p>
+     * <p>This parameter is not required in the following cases: no conflicts exist, the request is a dry run (dryRun=true), or overwrite is set to false.</p>
+     * <p>When dryRun is set to false and overwrite is set to true, if this parameter is not provided or the value has expired and no longer matches, the backend returns accepted=false with a new conflict preview. In this case, perform a new dry run to confirm the latest conflicts.</p>
      * 
      * <strong>example:</strong>
      * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -16,7 +16,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String conflictHash;
 
     /**
-     * <p>The list of consumer group IDs (not supported currently).</p>
+     * <p>The list of API consumer group IDs to bind to the rule. This parameter is used when subjectType is set to consumer_group and cannot be specified together with consumerIds.</p>
      * 
      * <strong>example:</strong>
      * <p>group1,group2</p>
@@ -25,7 +25,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public java.util.List<String> consumerGroupIds;
 
     /**
-     * <p>The list of consumer IDs to bind to the rule. A maximum of 1000 consumers can be specified in a single request.</p>
+     * <p>The list of API consumer IDs to bind to the rule. A maximum of 1,000 consumers can be specified in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>1001,1002,1003</p>
@@ -34,7 +34,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public java.util.List<String> consumerIds;
 
     /**
-     * <p>Specifies whether to perform only a dry run without applying the configuration. A dry run checks whether conflicting rules exist on the bound consumers. For example, a consumer that already has a calendar-day quota cannot have another calendar-day quota rule added.</p>
+     * <p>Specifies whether to perform only a dry run without persisting or applying the configuration. A dry run checks whether conflicting rules exist on the bound consumer subjects. For example, a consumer subject that already has a calendar-day quota rule cannot have another calendar-day quota rule added.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -43,7 +43,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to allow overwriting when conflicts exist. If overwriting is allowed, the conflicting subjects (consumers) are unbound from the old rule and bound to the new rule.</p>
+     * <p>Specifies whether to allow overwriting when conflicts exist. If overwriting is allowed, the conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -52,7 +52,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public Boolean overwrite;
 
     /**
-     * <p>The period multiplier. This parameter applies to epoch period rules.</p>
+     * <p>The period multiplier, which specifies the number of periods after which the quota resets. This parameter is required for custom (epoch) period rules. Minimum value: 1. Maximum value: 60.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -61,7 +61,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public Long periodMultiplier;
 
     /**
-     * <p>The period type. For calendar periods, statistics are collected by day, week, or month. Valid values: day, week, and month. For epoch periods, only day is supported.</p>
+     * <p>The period type. For calendar periods, the quota can be calculated by day, week, or month. Valid values: day, week, and month. For custom (epoch) periods, only day is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String periodType;
 
     /**
-     * <p>The quota dimension or throttling type. Valid values: token and credit. The credit quota applies only to dedicated instances running version 2.1.19 or later.</p>
+     * <p>The quota dimension or throttling type. Valid values: token and credit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String quotaDimension;
 
     /**
-     * <p>The total available quota per period (limit).</p>
+     * <p>The total available quota per period.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,12 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The rule subject type. Valid values: consumer (a consumer) and consumer_group (a consumer group). Default value: consumer.</p>
+     * <p>The type of the rule subject. Valid values:</p>
+     * <ul>
+     * <li>consumer: API consumer.</li>
+     * <li>consumer_group: API consumer group.</li>
+     * </ul>
+     * <p>Default value: consumer.</p>
      * 
      * <strong>example:</strong>
      * <p>consumer_group</p>
@@ -110,7 +115,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String subjectType;
 
     /**
-     * <p>The time zone for the calendar period, in UTC+x format.</p>
+     * <p>The time zone for calendar periods, in UTC+x format.</p>
      * 
      * <strong>example:</strong>
      * <p>UTC+8</p>
@@ -119,7 +124,11 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The reset period type. Valid values: calendar (the period starts from the beginning of a calendar day, week, or month) and epoch (the period starts from when the rule is applied). The epoch type applies only to dedicated instances running version 2.1.19 or later.</p>
+     * <p>The reset period alignment type. Valid values:</p>
+     * <ul>
+     * <li>calendar: The quota resets at the beginning of a calendar day, week, or month.</li>
+     * <li>epoch: The quota resets based on a custom period that starts when the rule takes effect.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>calendar</p>

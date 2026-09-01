@@ -7,8 +7,8 @@ public class GetDashboardShrinkRequest extends TeaModel {
     /**
      * <p>The language. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese.</li>
-     * <li>en: English.</li>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,8 +35,8 @@ public class GetDashboardShrinkRequest extends TeaModel {
     /**
      * <p>The dashboard name. Valid values:</p>
      * <ul>
-     * <li>LOG: access log.</li>
-     * <li>PLUGIN: plugin log.</li>
+     * <li>LOG: access log</li>
+     * <li>PLUGIN: plugin log</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class GetDashboardShrinkRequest extends TeaModel {
     /**
      * <p>The dashboard source. Valid values:</p>
      * <ul>
-     * <li>SLS: log dashboard.</li>
+     * <li>SLS: log dashboard</li>
      * </ul>
      * 
      * <strong>example:</strong>

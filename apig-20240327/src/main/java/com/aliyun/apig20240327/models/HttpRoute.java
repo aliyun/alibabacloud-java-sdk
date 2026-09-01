@@ -11,7 +11,7 @@ public class HttpRoute extends TeaModel {
     public Backend backend;
 
     /**
-     * <p>Indicates whether the route is a built-in system route.</p>
+     * <p>Indicates whether the route is a system built-in route.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -273,6 +273,8 @@ public class HttpRoute extends TeaModel {
 
     public static class HttpRouteEnvironmentInfoGatewayInfo extends TeaModel {
         /**
+         * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
+         * 
          * <strong>example:</strong>
          * <p>MultiTenantServerless</p>
          */

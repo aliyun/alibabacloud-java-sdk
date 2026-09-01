@@ -23,7 +23,7 @@ public class GetDashboardResponseBody extends TeaModel {
      * <p>The backend error code.</p>
      * 
      * <strong>example:</strong>
-     * <p>Ok</p>
+     * <p>CloudProductInactive.LogDeliveryNotEnabled</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
@@ -32,7 +32,7 @@ public class GetDashboardResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>SLS log delivery configuration is not enabled.</p>
      */
     @NameInMap("message")
     public String message;

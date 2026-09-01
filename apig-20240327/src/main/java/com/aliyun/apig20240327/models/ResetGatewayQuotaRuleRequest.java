@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ResetGatewayQuotaRuleRequest extends TeaModel {
     /**
-     * <p>The conflict snapshot hash, used to prevent concurrent dirty overwrites when confirming an overwrite. Obtain this value from the response of a dryRun=true request.</p>
-     * <p>This parameter is not required in the following cases: no conflict exists, the request is a dry run (dryRun=true), or overwrite=false (overwrite not confirmed).</p>
-     * <p>When dryRun=false and overwrite=true, if this parameter is not provided or the value has expired and does not match, the backend returns accepted=false with a new conflict preview. You must perform a dry run again to confirm the new conflict.</p>
+     * <p>The conflict snapshot hash, used to prevent concurrent dirty overwrites when confirming an overwrite. Obtain this value from the response of a previous dryRun=true call.</p>
+     * <p>You do not need to specify this parameter in the following cases: no conflicts exist, you are performing a dry run (dryRun=true), or you are not confirming an overwrite (overwrite=false).</p>
+     * <p>When dryRun is set to false and overwrite is set to true, if this parameter is not specified or the value has expired and no longer matches, the backend returns accepted=false with a new conflict preview. You must perform the dry run again to confirm the new conflicts.</p>
      * 
      * <strong>example:</strong>
      * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -16,7 +16,7 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
     public String conflictHash;
 
     /**
-     * <p>Specifies whether to perform only a dry run without delivering the actual configuration. A dry run checks whether conflicting rules exist on the bound consumers. For example, a consumer that already has a calendar-day quota cannot have another calendar-day quota rule added.</p>
+     * <p>Specifies whether to perform only a dry run without persisting or applying the configuration. A dry run checks whether conflicting rules exist on the bound subjects. The same subject cannot have two calendar-period quotas with the same period. For example, a subject that already has a daily calendar quota cannot have another daily calendar quota rule added.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -25,7 +25,7 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to allow overwriting on conflict. If overwriting is allowed, the conflicting subject (consumer) is unbound from the old rule and bound to the new rule.</p>
+     * <p>Specifies whether to allow overwriting when conflicts exist. If you allow overwriting, the conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,7 +34,7 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
     public Boolean overwrite;
 
     /**
-     * <p>The period multiplier. Specifies how many periods elapse before the quota resets. Returned when the rule uses a custom period. Minimum value: 1. Maximum value: 60.</p>
+     * <p>The period multiplier, which specifies the number of periods after which the quota is reset. This parameter is returned when the rule uses a custom period. Minimum value: 1. Maximum value: 60.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,7 +61,7 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
     public Long quotaLimit;
 
     /**
-     * <p>The time zone for the calendar period in UTC+x format.</p>
+     * <p>The time zone for the calendar period, in UTC+x format.</p>
      * 
      * <strong>example:</strong>
      * <p>UTC+8</p>
@@ -70,10 +70,10 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The period type after the reset. Valid values:</p>
+     * <p>The period alignment type after the reset. Valid values:</p>
      * <ul>
      * <li>calendar: calendar period.</li>
-     * <li>epoch: custom period. Custom periods are supported only on dedicated instances with version 2.1.19 or later.</li>
+     * <li>epoch: custom period.</li>
      * </ul>
      * 
      * <strong>example:</strong>

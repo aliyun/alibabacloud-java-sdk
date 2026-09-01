@@ -55,32 +55,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a consumer-based quota rule for an AI gateway. This operation applies only to AI gateways running version 2.1.19 or later.</p>
+     * <p>Creates a consumer-based or consumer group-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.21 or later.</p>
      * <blockquote>
-     * <p> Recommended call logic:</p>
+     * <p> Recommended call sequence:</p>
      * <ul>
-     * <li><ol>
-     * <li>Perform a dry run to check for rule conflicts.</li>
-     * </ol>
-     * </li>
+     * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
      * <li><ul>
-     * <li>Set dryRun=true.</li>
+     * <li>Set dryRun to true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response contains a conflict preview with conflictHash.</li>
+     * <li>The response returns a conflict preview that contains the conflictHash value.</li>
      * </ul>
      * </li>
-     * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
-     * </ol>
-     * </li>
+     * <li>Step 2: Submit the request after confirmation.</li>
      * <li><ul>
-     * <li>No conflicts: dryRun=false, overwrite=false.</li>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflicts exist and you confirm overwrite: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></li>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
@@ -169,32 +163,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a consumer-based quota rule for an AI gateway. This operation applies only to AI gateways running version 2.1.19 or later.</p>
+     * <p>Creates a consumer-based or consumer group-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.21 or later.</p>
      * <blockquote>
-     * <p> Recommended call logic:</p>
+     * <p> Recommended call sequence:</p>
      * <ul>
-     * <li><ol>
-     * <li>Perform a dry run to check for rule conflicts.</li>
-     * </ol>
-     * </li>
+     * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
      * <li><ul>
-     * <li>Set dryRun=true.</li>
+     * <li>Set dryRun to true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response contains a conflict preview with conflictHash.</li>
+     * <li>The response returns a conflict preview that contains the conflictHash value.</li>
      * </ul>
      * </li>
-     * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
-     * </ol>
-     * </li>
+     * <li>Step 2: Submit the request after confirmation.</li>
      * <li><ul>
-     * <li>No conflicts: dryRun=false, overwrite=false.</li>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflicts exist and you confirm overwrite: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></li>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
@@ -2832,7 +2820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a consumer-based quota rule from an AI gateway. This operation takes effect only for AI gateways of version 2.1.19 or later.</p>
+     * <p>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a quota throttling rule from a gateway.</p>
@@ -2863,7 +2851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a consumer-based quota rule from an AI gateway. This operation takes effect only for AI gateways of version 2.1.19 or later.</p>
+     * <p>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a quota throttling rule from a gateway.</p>
@@ -4226,10 +4214,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a consumer quota rule on an AI gateway.</p>
+     * <p>Queries a specific API consumer quota rule on an AI gateway.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a gateway quota rate limiting rule.</p>
+     * <p>Queries the details of a gateway quota throttling rule.</p>
      * 
      * @param request GetGatewayQuotaRuleRequest
      * @param headers map
@@ -4275,10 +4263,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a consumer quota rule on an AI gateway.</p>
+     * <p>Queries a specific API consumer quota rule on an AI gateway.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a gateway quota rate limiting rule.</p>
+     * <p>Queries the details of a gateway quota throttling rule.</p>
      * 
      * @param request GetGatewayQuotaRuleRequest
      * @return GetGatewayQuotaRuleResponse
@@ -4291,7 +4279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the usage details of a specific consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</p>
+     * <p>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
@@ -4336,7 +4324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the usage details of a specific consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</p>
+     * <p>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
@@ -5607,6 +5595,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询消费者组配额限流规则列表</p>
+     * 
+     * @param request ListConsumerGroupQuotaRulesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConsumerGroupQuotaRulesResponse
+     */
+    public ListConsumerGroupQuotaRulesResponse listConsumerGroupQuotaRulesWithOptions(String consumerGroupId, ListConsumerGroupQuotaRulesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConsumerGroupQuotaRules"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerGroupId) + "/quota-rules"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConsumerGroupQuotaRulesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询消费者组配额限流规则列表</p>
+     * 
+     * @param request ListConsumerGroupQuotaRulesRequest
+     * @return ListConsumerGroupQuotaRulesResponse
+     */
+    public ListConsumerGroupQuotaRulesResponse listConsumerGroupQuotaRules(String consumerGroupId, ListConsumerGroupQuotaRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConsumerGroupQuotaRulesWithOptions(consumerGroupId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the list of consumer groups.</p>
      * 
@@ -6271,10 +6324,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of consumer quota rules bound to a gateway.</p>
+     * <p>Queries the list of FinOps quota rules bound to a gateway.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of consumer quota rules bound to a gateway.</p>
+     * <p>Queries the list of FinOps quota rules bound to a gateway.</p>
      * 
      * @param request ListGatewayQuotaRulesRequest
      * @param headers map
@@ -6324,10 +6377,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of consumer quota rules bound to a gateway.</p>
+     * <p>Queries the list of FinOps quota rules bound to a gateway.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of consumer quota rules bound to a gateway.</p>
+     * <p>Queries the list of FinOps quota rules bound to a gateway.</p>
      * 
      * @param request ListGatewayQuotaRulesRequest
      * @return ListGatewayQuotaRulesResponse
@@ -8309,7 +8362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resets a quota throttling rule on a gateway. This operation only takes effect for AI gateways with versions later than 2.1.19. Resetting clears the historical usage of consumers on the rule.</p>
+     * <p>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways of version 2.1.21 or later. Resetting clears the historical usage of consumption subjects on the rule.</p>
      * <blockquote>
      * <p> Recommended call logic:</p>
      * <ul>
@@ -8318,23 +8371,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * </li>
      * <li><ul>
-     * <li>Set dryRun=true.</li>
+     * <li>Set dryRun to true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response contains a conflict preview with conflictHash.</li>
+     * <li>The response contains a conflict preview with a conflictHash value.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
+     * <li>Confirm and submit the request.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>No conflict: dryRun=false, overwrite=false.</li>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></li>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
@@ -8403,7 +8456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resets a quota throttling rule on a gateway. This operation only takes effect for AI gateways with versions later than 2.1.19. Resetting clears the historical usage of consumers on the rule.</p>
+     * <p>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways of version 2.1.21 or later. Resetting clears the historical usage of consumption subjects on the rule.</p>
      * <blockquote>
      * <p> Recommended call logic:</p>
      * <ul>
@@ -8412,23 +8465,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * </li>
      * <li><ul>
-     * <li>Set dryRun=true.</li>
+     * <li>Set dryRun to true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response contains a conflict preview with conflictHash.</li>
+     * <li>The response contains a conflict preview with a conflictHash value.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
+     * <li>Confirm and submit the request.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>No conflict: dryRun=false, overwrite=false.</li>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></li>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
@@ -9660,39 +9713,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Edits a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. Editing preserves the historical usage of consumers on the rule.</p>
+     * <p>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</p>
      * <blockquote>
-     * <p> Recommended call logic:</p>
+     * <p> Recommended call sequence:</p>
      * <ul>
-     * <li><ol>
-     * <li>Perform a dry run to check for rule conflicts.</li>
-     * </ol>
-     * </li>
+     * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
      * <li><ul>
      * <li>Set dryRun to true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response contains a conflict preview with conflictHash.</li>
+     * <li>The response returns a conflict preview that contains conflictHash.</li>
      * </ul>
      * </li>
-     * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
-     * </ol>
-     * </li>
+     * <li>Step 2: Confirm and submit the request.</li>
      * <li><ul>
-     * <li>No conflict: Set dryRun to false and overwrite to false.</li>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflict exists and overwrite confirmed: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Edits a quota rate-limiting rule on a gateway.</p>
+     * <p>Edits a quota throttling rule on a gateway.</p>
      * 
      * @param request UpdateGatewayQuotaRuleRequest
      * @param headers map
@@ -9754,39 +9801,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Edits a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. Editing preserves the historical usage of consumers on the rule.</p>
+     * <p>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</p>
      * <blockquote>
-     * <p> Recommended call logic:</p>
+     * <p> Recommended call sequence:</p>
      * <ul>
-     * <li><ol>
-     * <li>Perform a dry run to check for rule conflicts.</li>
-     * </ol>
-     * </li>
+     * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
      * <li><ul>
      * <li>Set dryRun to true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response contains a conflict preview with conflictHash.</li>
+     * <li>The response returns a conflict preview that contains conflictHash.</li>
      * </ul>
      * </li>
-     * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
-     * </ol>
-     * </li>
+     * <li>Step 2: Confirm and submit the request.</li>
      * <li><ul>
-     * <li>No conflict: Set dryRun to false and overwrite to false.</li>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflict exists and overwrite confirmed: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Edits a quota rate-limiting rule on a gateway.</p>
+     * <p>Edits a quota throttling rule on a gateway.</p>
      * 
      * @param request UpdateGatewayQuotaRuleRequest
      * @return UpdateGatewayQuotaRuleResponse
@@ -9799,7 +9840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables or disables a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
+     * <p>Enables or disables a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables or disables a quota throttling rule for a gateway.</p>
@@ -9840,7 +9881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables or disables a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
+     * <p>Enables or disables a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables or disables a quota throttling rule for a gateway.</p>

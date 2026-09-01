@@ -366,7 +366,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long totalQuota;
 
         /**
-         * <p>The total used quota of the subject.</p>
+         * <p>The total used amount of the subject.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>

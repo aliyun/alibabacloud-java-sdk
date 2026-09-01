@@ -23,7 +23,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
     public AddGatewayQuotaRuleResponseBodyData data;
 
     /**
-     * <p>The message content.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -79,7 +79,12 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems extends TeaModel {
         /**
-         * <p>The period type of the existing conflicting rule on the consumer. A value of day, week, or month indicates the conflicting rule has a daily, weekly, or monthly period respectively.</p>
+         * <p>The period type of the existing conflicting rule on the consumer subject. Valid values:</p>
+         * <ul>
+         * <li>day: The existing conflicting rule has a daily period.</li>
+         * <li>week: The existing conflicting rule has a weekly period.</li>
+         * <li>month: The existing conflicting rule has a monthly period.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>week</p>
@@ -88,7 +93,11 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictPeriodType;
 
         /**
-         * <p>The type of the existing conflicting rule on the consumer. A value of calendar indicates the conflicting rule uses a calendar period. A value of epoch indicates the conflicting rule uses an epoch period.</p>
+         * <p>The type of the existing conflicting rule on the consumer subject. Valid values:</p>
+         * <ul>
+         * <li>calendar: The existing conflicting rule uses a calendar period.</li>
+         * <li>epoch: The existing conflicting rule uses a custom period.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>calendar</p>
@@ -97,7 +106,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictType;
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>The conflicting consumer ID. You can use subjectId instead.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxxxxx</p>
@@ -106,7 +115,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The consumer name.</p>
+         * <p>The conflicting consumer name. You can use subjectName instead.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-a</p>
@@ -206,7 +215,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyDataConflictPreview extends TeaModel {
         /**
-         * <p>The conflict hash.</p>
+         * <p>The conflict snapshot hash.</p>
          * 
          * <strong>example:</strong>
          * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -215,7 +224,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictHash;
 
         /**
-         * <p>The list of conflicting subjects (consumers).</p>
+         * <p>The list of conflicting subjects (consumers or consumer groups).</p>
          */
         @NameInMap("items")
         public java.util.List<AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems> items;
@@ -262,7 +271,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</p>
+         * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -32,7 +32,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String basePath;
 
     /**
-     * <p>The API operation publish status.</p>
+     * <p>The API operation deployment status.</p>
      */
     @NameInMap("deployCntMap")
     public java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap;
