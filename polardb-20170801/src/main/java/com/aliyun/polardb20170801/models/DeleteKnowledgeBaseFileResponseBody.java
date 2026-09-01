@@ -1,0 +1,27 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.polardb20170801.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteKnowledgeBaseFileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static DeleteKnowledgeBaseFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteKnowledgeBaseFileResponseBody self = new DeleteKnowledgeBaseFileResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteKnowledgeBaseFileResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}
