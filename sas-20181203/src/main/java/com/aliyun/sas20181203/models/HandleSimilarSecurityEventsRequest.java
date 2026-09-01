@@ -68,6 +68,9 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -128,6 +131,14 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public HandleSimilarSecurityEventsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public HandleSimilarSecurityEventsRequest setResourceOwnerId(Long resourceOwnerId) {

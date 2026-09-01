@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateBucketScanTaskRequest extends TeaModel {
     /**
-     * <p>The name of the bucket.</p>
+     * <p>The bucket name.</p>
      * 
      * <strong>example:</strong>
      * <p>iboxpublic****</p>
@@ -14,9 +14,9 @@ public class OperateBucketScanTaskRequest extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The operation that you want to perform on the bucket. Valid value:</p>
+     * <p>The operation to perform on the bucket. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: cancels the bucket check.</li>
+     * <li><strong>1</strong>: Cancel detection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,6 +24,19 @@ public class OperateBucketScanTaskRequest extends TeaModel {
      */
     @NameInMap("OperateCode")
     public Integer operateCode;
+
+    /**
+     * <p>The business source. Valid values:</p>
+     * <ul>
+     * <li><strong>OSS</strong>: OSS</li>
+     * <li><strong>NAS</strong>: NAS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
+    @NameInMap("Source")
+    public String source;
 
     public static OperateBucketScanTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateBucketScanTaskRequest self = new OperateBucketScanTaskRequest();
@@ -44,6 +57,14 @@ public class OperateBucketScanTaskRequest extends TeaModel {
     }
     public Integer getOperateCode() {
         return this.operateCode;
+    }
+
+    public OperateBucketScanTaskRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

@@ -28,6 +28,9 @@ public class DescribeCustomizeReportConfigDetailRequest extends TeaModel {
     @NameInMap("ReportId")
     public Long reportId;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The IP address of the access source.</p>
      * 
@@ -56,6 +59,14 @@ public class DescribeCustomizeReportConfigDetailRequest extends TeaModel {
     }
     public Long getReportId() {
         return this.reportId;
+    }
+
+    public DescribeCustomizeReportConfigDetailRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeCustomizeReportConfigDetailRequest setSourceIp(String sourceIp) {

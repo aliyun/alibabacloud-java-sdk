@@ -94,6 +94,9 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The tag for querying vulnerabilities.</p>
      * 
@@ -238,6 +241,14 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public DescribeUuidsByVulNamesRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeUuidsByVulNamesRequest setSearchTags(String searchTags) {

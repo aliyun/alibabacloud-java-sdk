@@ -13,6 +13,9 @@ public class OperationCancelIgnoreSuspEventRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The IDs of alert events.</p>
      * <p>This parameter is required.</p>
@@ -31,6 +34,14 @@ public class OperationCancelIgnoreSuspEventRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public OperationCancelIgnoreSuspEventRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public OperationCancelIgnoreSuspEventRequest setSecurityEventIds(java.util.List<Long> securityEventIds) {

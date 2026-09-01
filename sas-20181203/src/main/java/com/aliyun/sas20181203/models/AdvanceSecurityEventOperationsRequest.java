@@ -48,6 +48,9 @@ public class AdvanceSecurityEventOperationsRequest extends TeaModel {
     @NameInMap("EventType")
     public String eventType;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -79,6 +82,14 @@ public class AdvanceSecurityEventOperationsRequest extends TeaModel {
     }
     public String getEventType() {
         return this.eventType;
+    }
+
+    public AdvanceSecurityEventOperationsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public AdvanceSecurityEventOperationsRequest setResourceOwnerId(Long resourceOwnerId) {

@@ -13,6 +13,9 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     @NameInMap("AllKeyPrefix")
     public Boolean allKeyPrefix;
 
+    @NameInMap("AutoAdd")
+    public Integer autoAdd;
+
     /**
      * <p>The list of bucket names.</p>
      */
@@ -20,7 +23,7 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public java.util.List<String> bucketNameList;
 
     /**
-     * <p>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. If the maximum number of decompressed files is exceeded, the decompression operation stops. The detection of already decompressed files is not affected.</p>
+     * <p>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. When the maximum number of decompressed files is exceeded, the decompression operation ends immediately. The detection of files that have already been decompressed is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -29,7 +32,7 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public Integer decompressMaxFileCount;
 
     /**
-     * <p>The maximum number of decompression layers for nested compressed files. Minimum value: 1. Maximum value: 5. If the maximum number of decompression layers is exceeded, the decompression operation stops. The detection of already decompressed files is not affected.</p>
+     * <p>The maximum number of decompression layers when multiple levels of nested compressed files exist. Minimum value: 1. Maximum value: 5. When the maximum number of decompression layers is exceeded, the decompression operation ends immediately. The detection of files that have already been decompressed is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,10 +47,10 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public java.util.List<String> decryptionList;
 
     /**
-     * <p>Specifies whether to enable the scan policy. Valid values:</p>
+     * <p>Specifies whether to enable the policy. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Enable.</li>
-     * <li><strong>0</strong>: Disable.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +60,7 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public Integer enable;
 
     /**
-     * <p>The scan end time in the HH:mm:ss format.</p>
+     * <p>The scan stop time in the HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00:01</p>
@@ -87,7 +90,7 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public java.util.List<String> keySuffixList;
 
     /**
-     * <p>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</p>
+     * <p>Specifies that only files whose last modification time is after the specified timestamp are scanned. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1724301769834</p>
@@ -105,7 +108,7 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether to enable real-time incremental detection. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</p>
+     * <p>Specifies whether to enable real-time incremental detection. When this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -118,6 +121,19 @@ public class UpdateOssScanConfigRequest extends TeaModel {
      */
     @NameInMap("ScanDayList")
     public java.util.List<Integer> scanDayList;
+
+    /**
+     * <p>The business source. Valid values:</p>
+     * <ul>
+     * <li><strong>OSS</strong>: OSS</li>
+     * <li><strong>NAS</strong>: NAS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
+    @NameInMap("Source")
+    public String source;
 
     /**
      * <p>The scan start time in the HH:mm:ss format.</p>
@@ -139,6 +155,14 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     }
     public Boolean getAllKeyPrefix() {
         return this.allKeyPrefix;
+    }
+
+    public UpdateOssScanConfigRequest setAutoAdd(Integer autoAdd) {
+        this.autoAdd = autoAdd;
+        return this;
+    }
+    public Integer getAutoAdd() {
+        return this.autoAdd;
     }
 
     public UpdateOssScanConfigRequest setBucketNameList(java.util.List<String> bucketNameList) {
@@ -243,6 +267,14 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     }
     public java.util.List<Integer> getScanDayList() {
         return this.scanDayList;
+    }
+
+    public UpdateOssScanConfigRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public UpdateOssScanConfigRequest setStartTime(String startTime) {

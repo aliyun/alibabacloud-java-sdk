@@ -593,6 +593,12 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
         @NameInMap("PathEventNodeList")
         public java.util.List<GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList> pathEventNodeList;
 
+        @NameInMap("PathInterpretationStatus")
+        public String pathInterpretationStatus;
+
+        @NameInMap("PathInterpretationUrl")
+        public String pathInterpretationUrl;
+
         /**
          * <p>The path name.</p>
          * 
@@ -695,6 +701,22 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
         }
         public java.util.List<GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList> getPathEventNodeList() {
             return this.pathEventNodeList;
+        }
+
+        public GetAttackPathEventDetailResponseBodyAttackPathEvent setPathInterpretationStatus(String pathInterpretationStatus) {
+            this.pathInterpretationStatus = pathInterpretationStatus;
+            return this;
+        }
+        public String getPathInterpretationStatus() {
+            return this.pathInterpretationStatus;
+        }
+
+        public GetAttackPathEventDetailResponseBodyAttackPathEvent setPathInterpretationUrl(String pathInterpretationUrl) {
+            this.pathInterpretationUrl = pathInterpretationUrl;
+            return this;
+        }
+        public String getPathInterpretationUrl() {
+            return this.pathInterpretationUrl;
         }
 
         public GetAttackPathEventDetailResponseBodyAttackPathEvent setPathName(String pathName) {

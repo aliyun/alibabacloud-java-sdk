@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyVulConfigRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>Specifies whether to enable or disable vulnerability detection. Valid values:</p>
      * <ul>
      * <li><strong>on</strong>: Enable vulnerability detection.</li>
@@ -27,13 +33,13 @@ public class ModifyVulConfigRequest extends TeaModel {
     /**
      * <p>The type of vulnerability to modify. Valid values:</p>
      * <ul>
-     * <li><strong>cve</strong>: Linux vulnerability</li>
-     * <li><strong>sys</strong>: Windows vulnerability</li>
-     * <li><strong>cms</strong>: WebCMS vulnerability</li>
+     * <li><strong>cve</strong>: Linux software vulnerability</li>
+     * <li><strong>sys</strong>: Windows system vulnerability</li>
+     * <li><strong>cms</strong>: Web-CMS vulnerability</li>
      * <li><strong>emg</strong>: emergency vulnerability</li>
      * <li><strong>app</strong>: application vulnerability</li>
      * <li><strong>yum</strong>: YUM/APT source configuration</li>
-     * <li><strong>scanMode</strong>: real risk.</li>
+     * <li><strong>scanMode</strong>: real risk</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,6 +51,14 @@ public class ModifyVulConfigRequest extends TeaModel {
     public static ModifyVulConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVulConfigRequest self = new ModifyVulConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyVulConfigRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyVulConfigRequest setConfig(String config) {

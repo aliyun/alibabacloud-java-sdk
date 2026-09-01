@@ -10,7 +10,7 @@ public class ListClusterInterceptionConfigRequest extends TeaModel {
      * <li><strong>-1</strong>: unknown</li>
      * <li><strong>0</strong>: abnormal</li>
      * <li><strong>1</strong>: normal</li>
-     * <li><strong>2</strong>: normal pending confirmation.</li>
+     * <li><strong>2</strong>: normal pending confirmation</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,13 @@ public class ListClusterInterceptionConfigRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The maximum number of entries per page in a paged query. Default value: 20.</p>
+     * <p>The list of excluded cluster types.</p>
+     */
+    @NameInMap("ExcludeClusterTypes")
+    public java.util.List<String> excludeClusterTypes;
+
+    /**
+     * <p>The maximum number of entries per page in a paging query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,6 +99,14 @@ public class ListClusterInterceptionConfigRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListClusterInterceptionConfigRequest setExcludeClusterTypes(java.util.List<String> excludeClusterTypes) {
+        this.excludeClusterTypes = excludeClusterTypes;
+        return this;
+    }
+    public java.util.List<String> getExcludeClusterTypes() {
+        return this.excludeClusterTypes;
     }
 
     public ListClusterInterceptionConfigRequest setPageSize(Integer pageSize) {

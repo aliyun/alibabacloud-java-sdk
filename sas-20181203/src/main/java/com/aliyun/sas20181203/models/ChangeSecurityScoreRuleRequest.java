@@ -26,6 +26,9 @@ public class ChangeSecurityScoreRuleRequest extends TeaModel {
     @NameInMap("ResetSecurityScoreRule")
     public Boolean resetSecurityScoreRule;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The information about the new version of the security score rule.</p>
      */
@@ -57,6 +60,14 @@ public class ChangeSecurityScoreRuleRequest extends TeaModel {
     }
     public Boolean getResetSecurityScoreRule() {
         return this.resetSecurityScoreRule;
+    }
+
+    public ChangeSecurityScoreRuleRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ChangeSecurityScoreRuleRequest setSecurityScoreCategoryList(java.util.List<ChangeSecurityScoreRuleRequestSecurityScoreCategoryList> securityScoreCategoryList) {

@@ -24,6 +24,9 @@ public class CreateSuspEventNoteRequest extends TeaModel {
     @NameInMap("Note")
     public String note;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static CreateSuspEventNoteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSuspEventNoteRequest self = new CreateSuspEventNoteRequest();
         return TeaModel.build(map, self);
@@ -43,6 +46,14 @@ public class CreateSuspEventNoteRequest extends TeaModel {
     }
     public String getNote() {
         return this.note;
+    }
+
+    public CreateSuspEventNoteRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

@@ -240,6 +240,9 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The scan scope. Valid values:</p>
      * <ul>
@@ -459,6 +462,14 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     }
     public String getRepoRegionId() {
         return this.repoRegionId;
+    }
+
+    public DescribeCanFixVulListRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeCanFixVulListRequest setScanRange(java.util.List<String> scanRange) {

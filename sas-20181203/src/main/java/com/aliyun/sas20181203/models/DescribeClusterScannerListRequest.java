@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterScannerListRequest extends TeaModel {
     /**
-     * <p>List of cluster IDs.</p>
+     * <p>The list of cluster IDs.</p>
      */
     @NameInMap("ClusterIdList")
     public java.util.List<String> clusterIdList;
 
     /**
-     * <p>The language type for requests and responses.</p>
+     * <p>The language type for the request and response messages.</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -24,11 +24,11 @@ public class DescribeClusterScannerListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>List of scanner statuses. Values:</p>
+     * <p>The list of scanner statuses. Valid values:</p>
      * <ul>
-     * <li><strong>online</strong>: Running</li>
-     * <li><strong>offline</strong>: Offline</li>
-     * <li><strong>not_installed</strong>: Not Installed</li>
+     * <li><strong>online</strong>: running</li>
+     * <li><strong>offline</strong>: offline</li>
+     * <li><strong>not_installed</strong>: not installed</li>
      * </ul>
      */
     @NameInMap("StatusList")

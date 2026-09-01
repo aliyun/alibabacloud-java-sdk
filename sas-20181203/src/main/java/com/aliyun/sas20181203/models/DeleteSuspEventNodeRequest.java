@@ -17,6 +17,9 @@ public class DeleteSuspEventNodeRequest extends TeaModel {
     @NameInMap("NoteId")
     public Long noteId;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static DeleteSuspEventNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSuspEventNodeRequest self = new DeleteSuspEventNodeRequest();
         return TeaModel.build(map, self);
@@ -28,6 +31,14 @@ public class DeleteSuspEventNodeRequest extends TeaModel {
     }
     public Long getNoteId() {
         return this.noteId;
+    }
+
+    public DeleteSuspEventNodeRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

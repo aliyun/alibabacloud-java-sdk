@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventsRequest extends TeaModel {
     /**
-     * <p>The ID of the alert event.</p>
+     * <p>The unique ID of the alert event.</p>
      * <blockquote>
-     * <p>To query the details of an alert event, you must specify the ID of the alert event. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the IDs of alert events.</p>
+     * <p>To query the exception information of a single alert event, provide the unique ID of the alert event. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain the ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,13 +17,13 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String alarmUniqueInfo;
 
     /**
-     * <p>The types of the assets.</p>
+     * <p>The collection of asset types.</p>
      */
     @NameInMap("AssetsTypeList")
     public java.util.List<String> assetsTypeList;
 
     /**
-     * <p>The ID of the cluster of whose alert events you want to query.</p>
+     * <p>The ID of the cluster for which you want to query alert events.</p>
      * 
      * <strong>example:</strong>
      * <p>c4af4fdf38a98496a9b63c2be5dae****</p>
@@ -32,20 +32,20 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The key of the condition that is used to query alert events on containers. Valid values:</p>
+     * <p>The container search field. Valid values:</p>
      * <ul>
-     * <li><strong>instanceId</strong>: the ID of the asset</li>
-     * <li><strong>appName</strong>: the name of the application</li>
-     * <li><strong>clusterId</strong>: the ID of the cluster</li>
-     * <li><strong>regionId</strong>: the ID of the region</li>
-     * <li><strong>nodeName</strong>: the name of the node</li>
-     * <li><strong>namespace</strong>: the namespace</li>
-     * <li><strong>clusterName</strong>: the name of the cluster</li>
-     * <li><strong>image</strong>: the name of the image</li>
-     * <li><strong>imageRepoName</strong>: the name of the image repository</li>
-     * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
-     * <li><strong>imageRepoTag</strong>: the tag that is added to the image</li>
-     * <li><strong>imageDigest</strong>: the digest of the image</li>
+     * <li><strong>instanceId</strong>: instance ID</li>
+     * <li><strong>appName</strong>: application name</li>
+     * <li><strong>clusterId</strong>: cluster ID</li>
+     * <li><strong>regionId</strong>: region</li>
+     * <li><strong>nodeName</strong>: node name</li>
+     * <li><strong>namespace</strong>: namespace</li>
+     * <li><strong>clusterName</strong>: cluster name</li>
+     * <li><strong>image</strong>: image name</li>
+     * <li><strong>imageRepoName</strong>: image repository name</li>
+     * <li><strong>imageRepoNamespace</strong>: image repository namespace</li>
+     * <li><strong>imageRepoTag</strong>: image tag</li>
+     * <li><strong>imageDigest</strong>: image digest</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String containerFieldName;
 
     /**
-     * <p>The value of the condition that is used to query alert events on containers.</p>
+     * <p>The value of the container search field.</p>
      * 
      * <strong>example:</strong>
      * <p>ccf9769c22b844ff9b8d57417683b****</p>
@@ -64,7 +64,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String containerFieldValue;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the results to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -73,11 +73,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>Specifies whether the alert event is handled. Valid values:</p>
-     * <ul>
-     * <li><strong>N</strong>: unhandled</li>
-     * <li><strong>Y</strong>: handled</li>
-     * </ul>
+     * <p>Specifies whether the alert events to query have been handled. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>N</p>
@@ -86,7 +82,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String dealed;
 
     /**
-     * <p>Source of discovery (invalid field)</p>
+     * <p>The discovery source. This parameter is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>linux</p>
@@ -95,7 +91,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String detectSource;
 
     /**
-     * <p>The subtype of the alert event. Separate multiple subtypes with commas (,).</p>
+     * <p>The subtypes of the alert events. Separate multiple subtypes with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>WEBSHELL</p>
@@ -104,7 +100,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String eventNames;
 
     /**
-     * <p>The data source of the alert event. Set the value to sas.</p>
+     * <p>The data source identifier of the alert event. The value is fixed as sas.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -113,7 +109,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The ID of the asset group to which the affected asset belongs.</p>
+     * <p>The group ID of the asset affected by the alert event.</p>
      * 
      * <strong>example:</strong>
      * <p>18768</p>
@@ -122,7 +118,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The ID of the alert event.</p>
+     * <p>The unique ID that identifies the alert event record.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -131,7 +127,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -144,11 +140,11 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The severity of the alert event. Separate multiple severities with commas (,). Valid values:</p>
+     * <p>The severity levels of the security alerts that you want to query. Separate multiple severity levels with commas (,). The severity levels are listed in descending order. Valid values:</p>
      * <ul>
-     * <li><strong>serious</strong></li>
-     * <li><strong>suspicious</strong></li>
-     * <li><strong>remind</strong></li>
+     * <li><strong>serious</strong>: Critical.</li>
+     * <li><strong>suspicious</strong>: Suspicious.</li>
+     * <li><strong>remind</strong>: Informational.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,10 +154,10 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String levels;
 
     /**
-     * <p>The type of the accounts that you want to query. Default value: <strong>0</strong>. Valid values:</p>
+     * <p>The multi-account query type. Default value: <strong>0</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: the current account.</li>
-     * <li><strong>1</strong>: all accounts.</li>
+     * <li><strong>0</strong>: Queries data of the current account.</li>
+     * <li><strong>1</strong>: Queries data of all accounts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -171,7 +167,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public Integer multiAccountActionType;
 
     /**
-     * <p>The name of the asset that is affected by the alert event.</p>
+     * <p>The name of the asset affected by the alert event.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs-xxx</p>
@@ -180,13 +176,13 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>An array that consists of the handling result codes of alert events.</p>
+     * <p>The collection of alert event handling result codes.</p>
      */
     @NameInMap("OperateErrorCodeList")
     public java.util.List<String> operateErrorCodeList;
 
     /**
-     * <p>The timestamp when the handling operation ends.</p>
+     * <p>The end timestamp of the handling time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-06 13:50:38</p>
@@ -195,7 +191,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String operateTimeEnd;
 
     /**
-     * <p>The timestamp when the handling operation starts.</p>
+     * <p>The start timestamp of the handling time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-05 13:50:38</p>
@@ -204,7 +200,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String operateTimeStart;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: 100.</p>
+     * <p>The number of alert events to display on each page in a paged query. Default value: <strong>20</strong>. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -213,32 +209,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The alert type of the alert event. Valid values:</p>
-     * <ul>
-     * <li><strong>Suspicious process</strong></li>
-     * <li><strong>Webshell</strong></li>
-     * <li><strong>Unusual logon</strong></li>
-     * <li><strong>Exception</strong></li>
-     * <li><strong>Sensitive file tampering</strong></li>
-     * <li><strong>Malicious process (cloud threat detection)</strong></li>
-     * <li><strong>Suspicious network connection</strong></li>
-     * <li><strong>Suspicious account</strong></li>
-     * <li><strong>Application intrusion event</strong></li>
-     * <li><strong>Cloud threat detection</strong></li>
-     * <li><strong>Precise defense</strong></li>
-     * <li><strong>Application whitelist</strong></li>
-     * <li><strong>Persistent webshell</strong></li>
-     * <li><strong>Web application threat detection</strong></li>
-     * <li><strong>Malicious script</strong></li>
-     * <li><strong>Threat intelligence</strong></li>
-     * <li><strong>Malicious network activity</strong></li>
-     * <li><strong>Cluster exception</strong></li>
-     * <li><strong>Webshell (on-premises threat detection)</strong></li>
-     * <li><strong>Vulnerability exploitation</strong></li>
-     * <li><strong>Malicious process (on-premises threat detection)</strong></li>
-     * <li><strong>Trusted exception</strong></li>
-     * <li><strong>Others</strong></li>
-     * </ul>
+     * <p>The Alarm Metric of the alerting events to query. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>other</p>
@@ -247,10 +218,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String parentEventTypes;
 
     /**
-     * <p>The name of the alert or the information about the asset.</p>
-     * <blockquote>
-     * <p> Fuzzy search is supported. The asset information includes the name, public IP address, and private IP address of an asset.</p>
-     * </blockquote>
+     * <p>The alert name or asset information to query.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -259,9 +227,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The China site (Chinese mainland) account ID of the member account in the resource directory.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the ID.</p>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -271,13 +239,13 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The custom sorting field. Default value: <strong>operateTime</strong>. Valid values:</p>
+     * <p>The custom sort field. Default value: <strong>operateTime</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>lastTime</strong>: the latest occurrence time.</li>
-     * <li><strong>operateTime</strong>: the handling time.</li>
+     * <li><strong>lastTime</strong>: the most recent occurrence time.</li>
+     * <li><strong>operateTime</strong>: the processing time.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect if you set the <strong>Dealed</strong> parameter to Y.</p>
+     * <p>This field takes effect only when <strong>Dealed</strong> is set to Y.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -287,13 +255,13 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String sortColumn;
 
     /**
-     * <p>The custom sorting order. Default value: <strong>desc</strong>. Valid values:</p>
+     * <p>The custom sort type. Default value: <strong>desc</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong>: the ascending order</li>
-     * <li><strong>desc</strong>: the descending order</li>
+     * <li><strong>asc</strong>: ascending order.</li>
+     * <li><strong>desc</strong>: descending order.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect if you set the <strong>Dealed</strong> parameter to Y.</p>
+     * <p>This parameter takes effect only when <strong>Dealed</strong> is set to Y.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -303,7 +271,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String sortType;
 
     /**
-     * <p>The source of the alert.</p>
+     * <p>The alert source.</p>
      * 
      * <strong>example:</strong>
      * <p>aegis_suspicious_file_v2</p>
@@ -312,13 +280,13 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The IDs of the Alibaba Cloud accounts within which alerts are generated.</p>
+     * <p>The list of Alibaba Cloud account IDs that generated the alerts.</p>
      */
     @NameInMap("SourceAliUids")
     public java.util.List<Long> sourceAliUids;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -327,20 +295,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The status of the alert event. Valid values:</p>
-     * <ul>
-     * <li><strong>0</strong>: all</li>
-     * <li><strong>1</strong>: pending handling</li>
-     * <li><strong>2</strong>: ignored</li>
-     * <li><strong>4</strong>: confirmed</li>
-     * <li><strong>8</strong>: marked as a false positive</li>
-     * <li><strong>16</strong>: handling</li>
-     * <li><strong>32</strong>: handled</li>
-     * <li><strong>64</strong>: expired</li>
-     * <li><strong>128</strong>: deleted</li>
-     * <li><strong>512</strong>: automatically blocking</li>
-     * <li><strong>513</strong>: automatically blocked</li>
-     * </ul>
+     * <p>The status of the alert events to query. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -349,11 +304,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Specifies whether to enable the strict alerting mode.</p>
-     * <ul>
-     * <li>N: no</li>
-     * <li>Y: Yes</li>
-     * </ul>
+     * <p>Specifies whether the alert is identified in strict mode.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -362,13 +313,13 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String strictMode;
 
     /**
-     * <p>List of supported alarm operation types</p>
+     * <p>The list of operation types supported by the alert.</p>
      */
     @NameInMap("SupportOperateCodeList")
     public java.util.List<String> supportOperateCodeList;
 
     /**
-     * <p>The tactic ID of ATT\&amp;CK.</p>
+     * <p>The tactic ID in ATT&amp;CK.</p>
      * 
      * <strong>example:</strong>
      * <p>TA0001</p>
@@ -377,11 +328,11 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String tacticId;
 
     /**
-     * <p>The item that is used to search for the container. Valid values:</p>
+     * <p>The type of the container search target. Valid values:</p>
      * <ul>
-     * <li><strong>containerId</strong>: the ID of the container</li>
-     * <li><strong>uuid</strong>: the UUID of the server</li>
-     * <li><strong>imageUuid</strong>: the UUID of the image</li>
+     * <li><strong>containerId</strong>: container ID.</li>
+     * <li><strong>uuid</strong>: server UUID.</li>
+     * <li><strong>imageUuid</strong>: image UUID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -391,7 +342,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The end time when the alert event was last detected.</p>
+     * <p>The end time of the latest occurrence time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-06 13:50:38</p>
@@ -400,7 +351,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String timeEnd;
 
     /**
-     * <p>The start time when the alert event was last detected.</p>
+     * <p>The start time of the latest occurrence time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-05 13:50:38</p>
@@ -409,7 +360,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String timeStart;
 
     /**
-     * <p>The unique key of the alert.</p>
+     * <p>The unique key of the security alert.</p>
      * 
      * <strong>example:</strong>
      * <p>73fc06fb175a7405697e402f52864****</p>
@@ -418,7 +369,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String uniqueInfo;
 
     /**
-     * <p>The UUID of the server on which the alert is detected. Separate multiple UUIDs with commas (,).</p>
+     * <p>The UUIDs of the servers for which you want to query alerts. Separate multiple UUIDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>bb5d2484-f10e-450d-8917-3e79667e****,0e7c2fcd-7100-42c7-a21a-db6e4f32****</p>

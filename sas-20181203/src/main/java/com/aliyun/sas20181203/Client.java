@@ -69,7 +69,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Select an operation for assets.</p>
+     * <p>Adds assets to an asset selection operation.</p>
      * 
      * @param request AddAssetSelectionCriteriaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -78,6 +78,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddAssetSelectionCriteriaResponse addAssetSelectionCriteriaWithOptions(AddAssetSelectionCriteriaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.criteria)) {
             query.put("Criteria", request.criteria);
         }
@@ -113,7 +117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Select an operation for assets.</p>
+     * <p>Adds assets to an asset selection operation.</p>
      * 
      * @param request AddAssetSelectionCriteriaRequest
      * @return AddAssetSelectionCriteriaResponse
@@ -185,7 +189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds instances on which risks are detected based on check items of the configuration assessment feature to a whitelist.</p>
+     * <p>Adds instances to the whitelist at the check item level for cloud platform configuration checks.</p>
      * 
      * @param request AddCheckInstanceResultWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -200,6 +204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.checkId)) {
             query.put("CheckId", request.checkId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
@@ -237,7 +245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds instances on which risks are detected based on check items of the configuration assessment feature to a whitelist.</p>
+     * <p>Adds instances to the whitelist at the check item level for cloud platform configuration checks.</p>
      * 
      * @param request AddCheckInstanceResultWhiteListRequest
      * @return AddCheckInstanceResultWhiteListResponse
@@ -249,7 +257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds the check items of the configuration assessment feature to the whitelist.</p>
+     * <p>Adds check items to the whitelist for cloud platform configuration checks.</p>
      * 
      * @param request AddCheckResultWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -260,6 +268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.checkIds)) {
             query.put("CheckIds", request.checkIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
@@ -293,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds the check items of the configuration assessment feature to the whitelist.</p>
+     * <p>Adds check items to the whitelist for cloud platform configuration checks.</p>
      * 
      * @param request AddCheckResultWhiteListRequest
      * @return AddCheckResultWhiteListResponse
@@ -305,7 +317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a custom defense rule.</p>
+     * <p>Creates a user-defined defense rule.</p>
      * 
      * @param request AddClientUserDefineRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -405,7 +417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a custom defense rule.</p>
+     * <p>Creates a user-defined defense rule.</p>
      * 
      * @param request AddClientUserDefineRuleRequest
      * @return AddClientUserDefineRuleResponse
@@ -1447,7 +1459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more processes for intelligent behavior analysis.</p>
+     * <p>Adds processes for intelligent behavior analytics.</p>
      * 
      * @param request AddUnknownThreatDetectProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1458,6 +1470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.eventIdList)) {
             query.put("EventIdList", request.eventIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.handleRemark)) {
+            query.put("HandleRemark", request.handleRemark);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.processList)) {
@@ -1487,7 +1503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more processes for intelligent behavior analysis.</p>
+     * <p>Adds processes for intelligent behavior analytics.</p>
      * 
      * @param request AddUnknownThreatDetectProcessRequest
      * @return AddUnknownThreatDetectProcessResponse
@@ -1558,6 +1574,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventType)) {
             query.put("EventType", request.eventType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
@@ -1804,6 +1824,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BindAll", request.bindAll);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.criteria)) {
             query.put("Criteria", request.criteria);
         }
@@ -1822,6 +1846,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.preBindOrderId)) {
             query.put("PreBindOrderId", request.preBindOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
@@ -2003,7 +2031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration items of the configuration assessment feature.</p>
+     * <p>Modifies the configuration of a cloud platform configuration check.</p>
      * 
      * @param tmpReq ChangeCheckConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2024,6 +2052,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.addedCheck)) {
             query.put("AddedCheck", request.addedCheck);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.configRequirementIdsShrink)) {
@@ -2101,7 +2133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration items of the configuration assessment feature.</p>
+     * <p>Modifies the configuration of a cloud platform configuration check.</p>
      * 
      * @param request ChangeCheckConfigRequest
      * @return ChangeCheckConfigResponse
@@ -2169,6 +2201,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Modifies the configuration instance of a check scope.</p>
+     * 
+     * @param request ChangeCheckScopeConfigInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeCheckScopeConfigInstanceResponse
+     */
+    public ChangeCheckScopeConfigInstanceResponse changeCheckScopeConfigInstanceWithOptions(ChangeCheckScopeConfigInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addAssetUuids)) {
+            query.put("AddAssetUuids", request.addAssetUuids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteAssetUuids)) {
+            query.put("DeleteAssetUuids", request.deleteAssetUuids);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeCheckScopeConfigInstance"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeCheckScopeConfigInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the configuration instance of a check scope.</p>
+     * 
+     * @param request ChangeCheckScopeConfigInstanceRequest
+     * @return ChangeCheckScopeConfigInstanceResponse
+     */
+    public ChangeCheckScopeConfigInstanceResponse changeCheckScopeConfigInstance(ChangeCheckScopeConfigInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeCheckScopeConfigInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the details of the deduction modules of the security score feature, including custom settings.</p>
      * 
      * @param request ChangeSecurityScoreRuleRequest
@@ -2184,6 +2268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resetSecurityScoreRule)) {
             query.put("ResetSecurityScoreRule", request.resetSecurityScoreRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityScoreCategoryList)) {
@@ -2577,6 +2665,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoDeleteDays", request.autoDeleteDays);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.releaseAfterScan)) {
             query.put("ReleaseAfterScan", request.releaseAfterScan);
         }
@@ -2706,7 +2802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create asset selection configurations.</p>
+     * <p>Creates an asset selection configuration.</p>
      * 
      * @param request CreateAssetSelectionConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2717,6 +2813,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
             query.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
@@ -2746,7 +2846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create asset selection configurations.</p>
+     * <p>Creates an asset selection configuration.</p>
      * 
      * @param request CreateAssetSelectionConfigRequest
      * @return CreateAssetSelectionConfigResponse
@@ -3494,7 +3594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a periodic scan task. The task can be an image scan task, urgent vulnerability scan task, or virus scan task.</p>
+     * <p>Creates a periodic scan task, including image scan, emergency vulnerability scanning, and virus scan.</p>
      * 
      * @param request CreateCycleTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3503,6 +3603,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCycleTaskResponse createCycleTaskWithOptions(CreateCycleTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
             query.put("Enable", request.enable);
         }
@@ -3562,7 +3666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a periodic scan task. The task can be an image scan task, urgent vulnerability scan task, or virus scan task.</p>
+     * <p>Creates a periodic scan task, including image scan, emergency vulnerability scanning, and virus scan.</p>
      * 
      * @param request CreateCycleTaskRequest
      * @return CreateCycleTaskResponse
@@ -3630,25 +3734,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this operation to submit a file to the cloud for detection. It supports two scenarios: malicious file detection and Skill archive detection.</p>
-     * <h3>File submission methods</h3>
-     * <p>Submit a file by either pre-uploading it or providing a download link.
-     * If you use the pre-upload method, ensure the file is uploaded successfully before you call this operation. For details on how to upload a file, see the CreateFileDetectUploadUrl operation.
-     * If you use a download link, specify a publicly accessible URL in the <code>DownloadUrl</code> parameter.
-     * The malicious file detection scenario supports both methods. For the Skill archive detection scenario (when <code>Type</code> is <code>6</code>), the pre-upload method is not supported, and you must provide a download link.</p>
-     * <h3>Unique identifier</h3>
-     * <p>All API operations related to file detection include the <code>HashKey</code> parameter. This parameter specifies the file\&quot;s unique identifier for a detection task, which you use to query the results.
-     * For Skill archive detection (when <code>Type</code> is <code>6</code>), you do not need to calculate the <code>HashKey</code> in advance. This operation returns a globally unique UUID as the file\&quot;s identifier, which you can use to query the results.
-     * For malicious file detection (when <code>Type</code> is <code>0</code>), you must calculate the <code>HashKey</code> before you call this operation. The <code>HashKey</code> value must be the MD5 or SHA-256 hash of the entire file.
-     * To calculate the MD5 or SHA-256 hash of a file, follow these steps:</p>
+     * <p>Pushes a file to the cloud for detection.</p>
+     * <h3>File upload methods</h3>
+     * <p>Two file upload methods are supported: pre-upload and download URL.
+     * If you use the pre-upload method, confirm that the file is uploaded before you invoke this operation. For information about how to upload a file, refer to the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.
+     * If you use the download URL method, pass in a download URL that supports public network access by using the DownloadUrl parameter.</p>
+     * <h3>File unique identifier</h3>
+     * <p>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results.
+     * Calculate the HashKey before calling the operation. Only the MD5 or SHA-256 of the complete file content is supported.
+     * To calculate the MD5 or SHA-256 value of the file content, follow these two steps:</p>
      * <ol>
-     * <li>Use the MD5 or SHA-256 algorithm to generate a 128-bit or 256-bit hash value. You can use common libraries such as <code>MessageDigest</code> in Java or the <code>hashlib</code> library in Python.</li>
-     * <li>Encode the hash value into a hexadecimal string. You can use tools such as the <code>Codec</code> utility in Java or the <code>hex()</code> function in Python. Ensure that the final string consists of only digits and lowercase letters. An MD5 hash is 32 characters long, and a SHA-256 hash is 64 characters long.
-     * Note: You must use the same <code>HashKey</code> value when you submit a file for detection and when you query the results. Otherwise, both the submission and the query will fail.</li>
+     * <li>Use the MD5 or SHA-256 algorithm to encrypt the data and generate a 128-bit or 256-bit hash value. Available libraries include Java MessageDigest and Python hashlib.</li>
+     * <li>Encode the generated hash value as a hexadecimal string. Available libraries include Java Codec and Python hex function. Make sure the final string is a combination of digits and lowercase letters. The MD5 string is 32 characters, and the SHA-256 string is 64 characters.
+     * Note: The push and query operations for a single detection must use the same HashKey. Otherwise, the detection cannot be correctly pushed and the results cannot be queried.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Submits a file to the cloud for detection.</p>
+     * <p>Pushes a file to the cloud for detection.</p>
      * 
      * @param request CreateFileDetectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3708,25 +3810,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this operation to submit a file to the cloud for detection. It supports two scenarios: malicious file detection and Skill archive detection.</p>
-     * <h3>File submission methods</h3>
-     * <p>Submit a file by either pre-uploading it or providing a download link.
-     * If you use the pre-upload method, ensure the file is uploaded successfully before you call this operation. For details on how to upload a file, see the CreateFileDetectUploadUrl operation.
-     * If you use a download link, specify a publicly accessible URL in the <code>DownloadUrl</code> parameter.
-     * The malicious file detection scenario supports both methods. For the Skill archive detection scenario (when <code>Type</code> is <code>6</code>), the pre-upload method is not supported, and you must provide a download link.</p>
-     * <h3>Unique identifier</h3>
-     * <p>All API operations related to file detection include the <code>HashKey</code> parameter. This parameter specifies the file\&quot;s unique identifier for a detection task, which you use to query the results.
-     * For Skill archive detection (when <code>Type</code> is <code>6</code>), you do not need to calculate the <code>HashKey</code> in advance. This operation returns a globally unique UUID as the file\&quot;s identifier, which you can use to query the results.
-     * For malicious file detection (when <code>Type</code> is <code>0</code>), you must calculate the <code>HashKey</code> before you call this operation. The <code>HashKey</code> value must be the MD5 or SHA-256 hash of the entire file.
-     * To calculate the MD5 or SHA-256 hash of a file, follow these steps:</p>
+     * <p>Pushes a file to the cloud for detection.</p>
+     * <h3>File upload methods</h3>
+     * <p>Two file upload methods are supported: pre-upload and download URL.
+     * If you use the pre-upload method, confirm that the file is uploaded before you invoke this operation. For information about how to upload a file, refer to the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.
+     * If you use the download URL method, pass in a download URL that supports public network access by using the DownloadUrl parameter.</p>
+     * <h3>File unique identifier</h3>
+     * <p>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results.
+     * Calculate the HashKey before calling the operation. Only the MD5 or SHA-256 of the complete file content is supported.
+     * To calculate the MD5 or SHA-256 value of the file content, follow these two steps:</p>
      * <ol>
-     * <li>Use the MD5 or SHA-256 algorithm to generate a 128-bit or 256-bit hash value. You can use common libraries such as <code>MessageDigest</code> in Java or the <code>hashlib</code> library in Python.</li>
-     * <li>Encode the hash value into a hexadecimal string. You can use tools such as the <code>Codec</code> utility in Java or the <code>hex()</code> function in Python. Ensure that the final string consists of only digits and lowercase letters. An MD5 hash is 32 characters long, and a SHA-256 hash is 64 characters long.
-     * Note: You must use the same <code>HashKey</code> value when you submit a file for detection and when you query the results. Otherwise, both the submission and the query will fail.</li>
+     * <li>Use the MD5 or SHA-256 algorithm to encrypt the data and generate a 128-bit or 256-bit hash value. Available libraries include Java MessageDigest and Python hashlib.</li>
+     * <li>Encode the generated hash value as a hexadecimal string. Available libraries include Java Codec and Python hex function. Make sure the final string is a combination of digits and lowercase letters. The MD5 string is 32 characters, and the SHA-256 string is 64 characters.
+     * Note: The push and query operations for a single detection must use the same HashKey. Otherwise, the detection cannot be correctly pushed and the results cannot be queried.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Submits a file to the cloud for detection.</p>
+     * <p>Pushes a file to the cloud for detection.</p>
      * 
      * @param request CreateFileDetectRequest
      * @return CreateFileDetectResponse
@@ -5246,7 +5346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a bucket check task.</p>
+     * <p>Creates a bucket detection task.</p>
      * 
      * @param request CreateOssBucketScanTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5295,6 +5395,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScanMode", request.scanMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5314,7 +5418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a bucket check task.</p>
+     * <p>Creates a bucket detection task.</p>
      * 
      * @param request CreateOssBucketScanTaskRequest
      * @return CreateOssBucketScanTaskResponse
@@ -5325,8 +5429,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a policy for detecting malicious Object Storage Service (OSS) objects by using the SDK for malicious file detection feature.</p>
+     * <p>Creates a scan policy for detecting malicious files in OSS under the malicious file detection feature.</p>
      * 
      * @param request CreateOssScanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5339,8 +5446,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AllKeyPrefix", request.allKeyPrefix);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoAdd)) {
+            query.put("AutoAdd", request.autoAdd);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bucketNameList)) {
             query.put("BucketNameList", request.bucketNameList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.decompressMaxFileCount)) {
@@ -5387,6 +5502,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScanDayList", request.scanDayList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -5409,8 +5528,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a policy for detecting malicious Object Storage Service (OSS) objects by using the SDK for malicious file detection feature.</p>
+     * <p>Creates a scan policy for detecting malicious files in OSS under the malicious file detection feature.</p>
      * 
      * @param request CreateOssScanConfigRequest
      * @return CreateOssScanConfigResponse
@@ -5544,7 +5666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for a trial of Security Center.</p>
+     * <p>Starts a trial of Security Center.</p>
      * 
      * @param tmpReq CreateSasTrialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5556,6 +5678,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.requestForm)) {
             request.requestFormShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.requestForm, "RequestForm", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5580,6 +5707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5598,7 +5726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for a trial of Security Center.</p>
+     * <p>Starts a trial of Security Center.</p>
      * 
      * @param request CreateSasTrialRequest
      * @return CreateSasTrialResponse
@@ -5622,6 +5750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateServiceLinkedRoleResponse createServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceLinkedRole)) {
             query.put("ServiceLinkedRole", request.serviceLinkedRole);
         }
@@ -5716,7 +5848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node to query alert events triggered by the same rule or Alarm Metric through alerting.</p>
+     * <p>Creates a node to query alerting events triggered by the same rule hits or Alarm Metric.</p>
      * 
      * @param request CreateSimilarSecurityEventsQueryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5725,6 +5857,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSimilarSecurityEventsQueryTaskResponse createSimilarSecurityEventsQueryTaskWithOptions(CreateSimilarSecurityEventsQueryTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
@@ -5760,7 +5900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node to query alert events triggered by the same rule or Alarm Metric through alerting.</p>
+     * <p>Creates a node to query alerting events triggered by the same rule hits or Alarm Metric.</p>
      * 
      * @param request CreateSimilarSecurityEventsQueryTaskRequest
      * @return CreateSimilarSecurityEventsQueryTaskResponse
@@ -5853,6 +5993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.note)) {
             query.put("Note", request.note);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6052,7 +6196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an intelligent behavior analysis strategy.</p>
+     * <p>Creates an intelligent behavior analytics policy.</p>
      * 
      * @param request CreateUnknownThreatDetectStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6100,7 +6244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an intelligent behavior analysis strategy.</p>
+     * <p>Creates an intelligent behavior analytics policy.</p>
      * 
      * @param request CreateUnknownThreatDetectStrategyRequest
      * @return CreateUnknownThreatDetectStrategyResponse
@@ -6164,7 +6308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a one-time virus scan task that is immediately executed.</p>
+     * <p>Creates a one-time virus scan task.</p>
      * 
      * @param request CreateVirusScanOnceTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6173,6 +6317,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateVirusScanOnceTaskResponse createVirusScanOnceTaskWithOptions(CreateVirusScanOnceTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.param)) {
             query.put("Param", request.param);
         }
@@ -6208,7 +6356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a one-time virus scan task that is immediately executed.</p>
+     * <p>Creates a one-time virus scan task.</p>
      * 
      * @param request CreateVirusScanOnceTaskRequest
      * @return CreateVirusScanOnceTaskResponse
@@ -8529,6 +8677,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Ids", request.ids);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
@@ -8725,6 +8877,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.noteId)) {
             query.put("NoteId", request.noteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -9055,6 +9211,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.whitelist)) {
@@ -9538,6 +9698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
@@ -9785,6 +9949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
             query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
@@ -11022,6 +11190,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RepoRegionId", request.repoRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scanRange)) {
             query.put("ScanRange", request.scanRange);
         }
@@ -11129,6 +11301,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.reportId)) {
             query.put("ReportId", request.reportId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeEnd)) {
@@ -11879,10 +12055,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set the logical relationship between multiple search conditions to search for assets that meet multiple conditions.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries asset information that meets specified search conditions. For example, you can search for assets by instance name or region. Two pagination methods are supported: page-based pagination and NextToken-based pagination. We recommend that you use NextToken-based pagination.</p>
+     * <p>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</p>
      * 
      * @param request DescribeCloudCenterInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11962,10 +12138,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set the logical relationship between multiple search conditions to search for assets that meet multiple conditions.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries asset information that meets specified search conditions. For example, you can search for assets by instance name or region. Two pagination methods are supported: page-based pagination and NextToken-based pagination. We recommend that you use NextToken-based pagination.</p>
+     * <p>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</p>
      * 
      * @param request DescribeCloudCenterInstancesRequest
      * @return DescribeCloudCenterInstancesResponse
@@ -12422,7 +12598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about the network topology edge by cluster.</p>
+     * <p>Queries the network topology edge information at the cluster level.</p>
      * 
      * @param request DescribeClusterNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12458,7 +12634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about the network topology edge by cluster.</p>
+     * <p>Queries the network topology edge information at the cluster level.</p>
      * 
      * @param request DescribeClusterNetworkRequest
      * @return DescribeClusterNetworkResponse
@@ -12470,7 +12646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the status of cluster scanning components.</p>
+     * <p>Queries the scanner status information for a Kubernetes cluster.</p>
      * 
      * @param request DescribeClusterScannerListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12510,7 +12686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the status of cluster scanning components.</p>
+     * <p>Queries the scanner status information for a Kubernetes cluster.</p>
      * 
      * @param request DescribeClusterScannerListRequest
      * @return DescribeClusterScannerListResponse
@@ -13436,6 +13612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MachineTypes", request.machineTypes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.supportAutoTag)) {
             query.put("SupportAutoTag", request.supportAutoTag);
         }
@@ -13616,6 +13796,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ReportId", request.reportId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
@@ -13678,6 +13862,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.reportVersion)) {
             query.put("ReportVersion", request.reportVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {
@@ -14361,6 +14549,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
@@ -14790,6 +14982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MultiAccountActionType", request.multiAccountActionType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
             query.put("TargetType", request.targetType);
         }
@@ -14836,6 +15032,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -15670,6 +15870,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.saleVersionCheckCode)) {
@@ -17357,6 +17561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RepoRegionId", request.repoRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ruleTag)) {
             query.put("RuleTag", request.ruleTag);
         }
@@ -18447,6 +18655,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.repoRegionId)) {
             query.put("RepoRegionId", request.repoRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ruleTag)) {
@@ -19579,7 +19791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of client tasks.</p>
+     * <p>Queries a list of client tasks.</p>
      * 
      * @param request DescribeOnceTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19639,7 +19851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of client tasks.</p>
+     * <p>Queries a list of client tasks.</p>
      * 
      * @param request DescribeOnceTaskRequest
      * @return DescribeOnceTaskResponse
@@ -19850,6 +20062,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
             query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
@@ -20243,7 +20459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries detailed information about the middleware list on the Asset Fingerprints investigation page.</p>
+     * <p>Queries the details of the middleware list on the Asset Fingerprints investigation page.</p>
      * 
      * @param request DescribePropertyScaDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20298,6 +20514,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
             query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scaName)) {
@@ -20363,7 +20583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries detailed information about the middleware list on the Asset Fingerprints investigation page.</p>
+     * <p>Queries the details of the middleware list on the Asset Fingerprints investigation page.</p>
      * 
      * @param request DescribePropertyScaDetailRequest
      * @return DescribePropertyScaDetailResponse
@@ -20842,6 +21062,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Remark", request.remark);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.useNextToken)) {
             query.put("UseNextToken", request.useNextToken);
         }
@@ -21004,6 +21228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -21868,6 +22096,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
@@ -22019,10 +22251,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is phased out. You can use the GetCheckConfig operation.</p>
+     * <p>This operation is deprecated. Use the GetCheckConfig operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the day of a week when custom check tasks are performed and the time range during which the custom check tasks are performed.</p>
+     * <p>Queries the custom check cycle and time period configured by the user.</p>
      * 
      * @deprecated OpenAPI DescribeSecurityCheckScheduleConfig is deprecated
      * 
@@ -22066,10 +22298,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is phased out. You can use the GetCheckConfig operation.</p>
+     * <p>This operation is deprecated. Use the GetCheckConfig operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the day of a week when custom check tasks are performed and the time range during which the custom check tasks are performed.</p>
+     * <p>Queries the custom check cycle and time period configured by the user.</p>
      * 
      * @deprecated OpenAPI DescribeSecurityCheckScheduleConfig is deprecated
      * 
@@ -23563,7 +23795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of alert events that are generated without aggregation.</p>
+     * <p>Queries the list of security alert events that have not been aggregated.</p>
      * 
      * @param tmpReq DescribeSuspEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23747,7 +23979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of alert events that are generated without aggregation.</p>
+     * <p>Queries the list of security alert events that have not been aggregated.</p>
      * 
      * @param request DescribeSuspEventsRequest
      * @return DescribeSuspEventsResponse
@@ -24744,6 +24976,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Remark", request.remark);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.searchTags)) {
             query.put("SearchTags", request.searchTags);
         }
@@ -25088,6 +25324,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVulCheckTaskStatusDetailResponse describeVulCheckTaskStatusDetailWithOptions(DescribeVulCheckTaskStatusDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
             query.put("TaskIds", request.taskIds);
         }
@@ -25750,6 +25990,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -27409,6 +27653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ReportId", request.reportId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -27579,6 +27827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Remark", request.remark);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
@@ -27638,13 +27890,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API exports vulnerabilities, including Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
-     * Use this API to create a <code>vulnerability export task</code>. Then, call <code>DescribeVulExportInfo</code> with the task\&quot;s ID to check its progress.</p>
+     * <p>Exports a vulnerability list. You can export vulnerability lists for Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
+     * This operation is used together with the DescribeVulExportInfo operation. After you call this operation to create a vulnerability export task, call the <a href="~~DescribeVulExportInfo~~">DescribeVulExportInfo</a> operation with the export task ID to check the progress of the export task.</p>
      * <h3>QPS limit</h3>
-     * <p>The QPS limit for a single user is 10. If you exceed this limit, API calls are throttled. This can affect your service. Plan your API calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Export vulnerability list</p>
+     * <p>Exports a vulnerability list.</p>
      * 
      * @param request ExportVulRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27655,6 +27907,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aliasName)) {
             query.put("AliasName", request.aliasName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assetType)) {
+            query.put("AssetType", request.assetType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.attachTypes)) {
@@ -27748,13 +28004,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API exports vulnerabilities, including Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
-     * Use this API to create a <code>vulnerability export task</code>. Then, call <code>DescribeVulExportInfo</code> with the task\&quot;s ID to check its progress.</p>
+     * <p>Exports a vulnerability list. You can export vulnerability lists for Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
+     * This operation is used together with the DescribeVulExportInfo operation. After you call this operation to create a vulnerability export task, call the <a href="~~DescribeVulExportInfo~~">DescribeVulExportInfo</a> operation with the export task ID to check the progress of the export task.</p>
      * <h3>QPS limit</h3>
-     * <p>The QPS limit for a single user is 10. If you exceed this limit, API calls are throttled. This can affect your service. Plan your API calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Export vulnerability list</p>
+     * <p>Exports a vulnerability list.</p>
      * 
      * @param request ExportVulRequest
      * @return ExportVulResponse
@@ -28312,7 +28568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains account tags.</p>
+     * <p>Retrieves account labels.</p>
      * 
      * @param request GetAccountLabelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28348,7 +28604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains account tags.</p>
+     * <p>Retrieves account labels.</p>
      * 
      * @param request GetAccountLabelRequest
      * @return GetAccountLabelResponse
@@ -28514,7 +28770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the estimated volume for agentless detection.</p>
+     * <p>Retrieves the estimated scan volume for agentless detection.</p>
      * 
      * @param request GetAgentlessTaskUsedSizeEstimateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28546,7 +28802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the estimated volume for agentless detection.</p>
+     * <p>Retrieves the estimated scan volume for agentless detection.</p>
      * 
      * @param request GetAgentlessTaskUsedSizeEstimateRequest
      * @return GetAgentlessTaskUsedSizeEstimateResponse
@@ -28569,6 +28825,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             query.put("From", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -29422,11 +29682,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Retrieves the check item configurations for cloud platform configuration checks.</p>
      * 
+     * @param request GetCheckConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCheckConfigResponse
      */
-    public GetCheckConfigResponse getCheckConfigWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public GetCheckConfigResponse getCheckConfigWithOptions(GetCheckConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetCheckConfig"),
             new TeaPair("version", "2018-12-03"),
@@ -29444,11 +29713,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Retrieves the check item configurations for cloud platform configuration checks.</p>
+     * 
+     * @param request GetCheckConfigRequest
      * @return GetCheckConfigResponse
      */
-    public GetCheckConfigResponse getCheckConfig() throws Exception {
+    public GetCheckConfigResponse getCheckConfig(GetCheckConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getCheckConfigWithOptions(runtime);
+        return this.getCheckConfigWithOptions(request, runtime);
     }
 
     /**
@@ -29570,6 +29841,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCheckProcessResponse getCheckProcessWithOptions(GetCheckProcessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("TaskId", request.taskId);
         }
@@ -29697,6 +29972,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCheckSaleResponse getCheckSale(GetCheckSaleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCheckSaleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the check scope configuration.</p>
+     * 
+     * @param request GetCheckScopeConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCheckScopeConfigResponse
+     */
+    public GetCheckScopeConfigResponse getCheckScopeConfigWithOptions(GetCheckScopeConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCheckScopeConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCheckScopeConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the check scope configuration.</p>
+     * 
+     * @param request GetCheckScopeConfigRequest
+     * @return GetCheckScopeConfigResponse
+     */
+    public GetCheckScopeConfigResponse getCheckScopeConfig(GetCheckScopeConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCheckScopeConfigWithOptions(request, runtime);
     }
 
     /**
@@ -29838,6 +30161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endTimeStamp)) {
             query.put("EndTimeStamp", request.endTimeStamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTimeStamp)) {
@@ -30087,7 +30414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the summary of cloud assets.</p>
+     * <p>Retrieves the summary of cloud assets.</p>
      * 
      * @param request GetCloudAssetSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30102,6 +30429,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.isSaleData)) {
             query.put("IsSaleData", request.isSaleData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vendors)) {
@@ -30127,7 +30458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the summary of cloud assets.</p>
+     * <p>Retrieves the summary of cloud assets.</p>
      * 
      * @param request GetCloudAssetSummaryRequest
      * @return GetCloudAssetSummaryResponse
@@ -30540,7 +30871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the publish details of the Security Center agent.</p>
+     * <p>Retrieves the release information of the current client version.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCurrentVersionPublishResponse
@@ -30563,7 +30894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the publish details of the Security Center agent.</p>
+     * <p>Retrieves the release information of the current client version.</p>
      * @return GetCurrentVersionPublishResponse
      */
     public GetCurrentVersionPublishResponse getCurrentVersionPublish() throws Exception {
@@ -30592,6 +30923,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
             query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTimestamp)) {
@@ -30843,17 +31178,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can retrieve detection results only for submitted files. Results are retained for 5 hours and can be queried multiple times during this period. To submit a file for detection, call the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.</p>
-     * <h3>Unique file identifier</h3>
-     * <p>All file detection operations use the <code>HashKey</code> parameter. <code>HashKey</code> is a unique file identifier used to query the corresponding file detection result.
-     * For Skill compressed package detection (when Type is 6), obtain the <code>HashKey</code> from the response of the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.
-     * For malicious file detection (when Type is 0), the <code>HashKey</code> must be the MD5 or SHA-256 hash of the entire file.</p>
+     * <p>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</p>
+     * <h3>File unique identifier</h3>
+     * <p>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</p>
      * <h3>Query detection results</h3>
-     * <p>In a malicious file detection scenario (when <code>Type</code> is <code>0</code>), you can filter files by their attributes using the <code>FileLabel</code> field in the <code>Ext</code> field. For example, you can combine the <code>encrypted</code> and <code>Zip</code> attributes to filter for encrypted compressed packages. Supported file tags for compressed packages include: <code>Zip</code>, <code>RAR</code>, <code>7-Zip</code>, <code>XAR</code>, <code>ZLib</code>, <code>GZip</code>, and <code>tar</code>. You can also use the <code>Highlight</code> field in the <code>Ext</code> field to locate malicious code segments in <code>WebShell</code> files. The <code>Highlight</code> field is a list in which each element represents a code range. The numbers indicate the character offset from the beginning of the file.
-     * In a Skill compressed package detection scenario (when <code>Type</code> is <code>6</code>), you can retrieve the detection report from the <code>Ext</code> field. This report includes results from deep intent analysis, prompt injection detection, sensitive information recognition, and malicious script detection. To query the details of an individual file within the compressed package, call the <a href="~~ListCompressFileDetectResult~~">ListCompressFileDetectResult</a> operation.</p>
+     * <p>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves file detection results in batches using <code>HashKey</code> values.</p>
+     * <p>Retrieves file detection results in batches by HashKey.</p>
      * 
      * @param request GetFileDetectResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30893,17 +31225,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can retrieve detection results only for submitted files. Results are retained for 5 hours and can be queried multiple times during this period. To submit a file for detection, call the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.</p>
-     * <h3>Unique file identifier</h3>
-     * <p>All file detection operations use the <code>HashKey</code> parameter. <code>HashKey</code> is a unique file identifier used to query the corresponding file detection result.
-     * For Skill compressed package detection (when Type is 6), obtain the <code>HashKey</code> from the response of the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.
-     * For malicious file detection (when Type is 0), the <code>HashKey</code> must be the MD5 or SHA-256 hash of the entire file.</p>
+     * <p>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</p>
+     * <h3>File unique identifier</h3>
+     * <p>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</p>
      * <h3>Query detection results</h3>
-     * <p>In a malicious file detection scenario (when <code>Type</code> is <code>0</code>), you can filter files by their attributes using the <code>FileLabel</code> field in the <code>Ext</code> field. For example, you can combine the <code>encrypted</code> and <code>Zip</code> attributes to filter for encrypted compressed packages. Supported file tags for compressed packages include: <code>Zip</code>, <code>RAR</code>, <code>7-Zip</code>, <code>XAR</code>, <code>ZLib</code>, <code>GZip</code>, and <code>tar</code>. You can also use the <code>Highlight</code> field in the <code>Ext</code> field to locate malicious code segments in <code>WebShell</code> files. The <code>Highlight</code> field is a list in which each element represents a code range. The numbers indicate the character offset from the beginning of the file.
-     * In a Skill compressed package detection scenario (when <code>Type</code> is <code>6</code>), you can retrieve the detection report from the <code>Ext</code> field. This report includes results from deep intent analysis, prompt injection detection, sensitive information recognition, and malicious script detection. To query the details of an individual file within the compressed package, call the <a href="~~ListCompressFileDetectResult~~">ListCompressFileDetectResult</a> operation.</p>
+     * <p>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves file detection results in batches using <code>HashKey</code> values.</p>
+     * <p>Retrieves file detection results in batches by HashKey.</p>
      * 
      * @param request GetFileDetectResultRequest
      * @return GetFileDetectResultResponse
@@ -31919,6 +32248,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("From", request.from);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
             query.put("Uuid", request.uuid);
         }
@@ -31954,7 +32287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Instance Authorization Value Range</p>
+     * <p>Retrieves the valid value ranges for instance authorization.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceAuthRangeResponse
@@ -31977,7 +32310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Instance Authorization Value Range</p>
+     * <p>Retrieves the valid value ranges for instance authorization.</p>
      * @return GetInstanceAuthRangeResponse
      */
     public GetInstanceAuthRangeResponse getInstanceAuthRange() throws Exception {
@@ -32035,7 +32368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics of the container firewall feature.</p>
+     * <p>Queries the micro-segmentation defense overview.</p>
      * 
      * @param request GetInterceptionSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32046,6 +32379,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeClusterTypes)) {
+            query.put("ExcludeClusterTypes", request.excludeClusterTypes);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -32067,7 +32404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics of the container firewall feature.</p>
+     * <p>Queries the micro-segmentation defense overview.</p>
      * 
      * @param request GetInterceptionSummaryRequest
      * @return GetInterceptionSummaryResponse
@@ -33310,6 +33647,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -33642,6 +33983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupIdList", request.groupIdList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
@@ -33828,7 +34173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Valid Resource Package Instances</p>
+     * <p>Retrieves active resource plan instances.</p>
      * 
      * @param request GetValidDeductInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33868,7 +34213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Valid Resource Package Instances</p>
+     * <p>Retrieves active resource plan instances.</p>
      * 
      * @param request GetValidDeductInstancesRequest
      * @return GetValidDeductInstancesResponse
@@ -34396,6 +34741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Remark", request.remark);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
@@ -34450,6 +34799,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.eventIdList)) {
             query.put("EventIdList", request.eventIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.handleRemark)) {
+            query.put("HandleRemark", request.handleRemark);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -35055,10 +35408,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</p>
+     * <p>Appelez cette opération à l\&quot;aide du compte de gestion du répertoire de ressources ou du compte administrateur délégué de Security Center.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of managed accounts for multi-account governance.</p>
+     * <p>Obtient la liste des comptes gérés pour la gouvernance multi-comptes.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAccountsInResourceDirectoryResponse
@@ -35081,10 +35434,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</p>
+     * <p>Appelez cette opération à l\&quot;aide du compte de gestion du répertoire de ressources ou du compte administrateur délégué de Security Center.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of managed accounts for multi-account governance.</p>
+     * <p>Obtient la liste des comptes gérés pour la gouvernance multi-comptes.</p>
      * @return ListAccountsInResourceDirectoryResponse
      */
     public ListAccountsInResourceDirectoryResponse listAccountsInResourceDirectory() throws Exception {
@@ -35874,7 +36227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Attack Analysis Event List</p>
+     * <p>Retrieves the list of attack analysis events.</p>
      * 
      * @param request ListAttackEventInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35938,7 +36291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Attack Analysis Event List</p>
+     * <p>Retrieves the list of attack analysis events.</p>
      * 
      * @param request ListAttackEventInfoRequest
      * @return ListAttackEventInfoResponse
@@ -36452,7 +36805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the check items that can be customized.</p>
+     * <p>Retrieves the list of check items that can be configured with custom settings.</p>
      * 
      * @param request ListCheckItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36496,7 +36849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the check items that can be customized.</p>
+     * <p>Retrieves the list of check items that can be configured with custom settings.</p>
      * 
      * @param request ListCheckItemRequest
      * @return ListCheckItemResponse
@@ -37286,6 +37639,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -37618,6 +37975,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeClusterTypes)) {
+            query.put("ExcludeClusterTypes", request.excludeClusterTypes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
@@ -39858,10 +40219,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can also search for assets that meet multiple search conditions by setting the logical relationship between different search conditions.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Multi-Account Authorization Allocation List</p>
+     * <p>Queries the multi-account authorization assignment list under multi-account authorization management.</p>
      * 
      * @param request ListMultiUserInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -39897,10 +40258,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can also search for assets that meet multiple search conditions by setting the logical relationship between different search conditions.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Multi-Account Authorization Allocation List</p>
+     * <p>Queries the multi-account authorization assignment list under multi-account authorization management.</p>
      * 
      * @param request ListMultiUserInstancesRequest
      * @return ListMultiUserInstancesResponse
@@ -40327,6 +40688,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -40379,6 +40744,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FuzzBucketName", request.fuzzBucketName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.fuzzFileSystemName)) {
+            query.put("FuzzFileSystemName", request.fuzzFileSystemName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hasRisk)) {
             query.put("HasRisk", request.hasRisk);
         }
@@ -40389,6 +40758,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -40426,7 +40799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of an Object Storage Service (OSS) file detection policy.</p>
+     * <p>Queries the list of OSS file scan policy configurations.</p>
      * 
      * @param request ListOssScanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -40454,7 +40827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of an Object Storage Service (OSS) file detection policy.</p>
+     * <p>Queries the list of OSS file scan policy configurations.</p>
      * 
      * @param request ListOssScanConfigRequest
      * @return ListOssScanConfigResponse
@@ -41490,7 +41863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View instances identified by intelligent behavior analytics.</p>
+     * <p>Queries the list of machines for intelligent behavior analytics.</p>
      * 
      * @param request ListUnknownThreatDetectMachineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -41501,6 +41874,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventStatus)) {
+            query.put("EventStatus", request.eventStatus);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
@@ -41550,7 +41927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View instances identified by intelligent behavior analytics.</p>
+     * <p>Queries the list of machines for intelligent behavior analytics.</p>
      * 
      * @param request ListUnknownThreatDetectMachineRequest
      * @return ListUnknownThreatDetectMachineResponse
@@ -41646,7 +42023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the strategies for intelligent behavior analytics.</p>
+     * <p>Queries the list of intelligent behavior analysis policies.</p>
      * 
      * @param request ListUnknownThreatDetectStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -41694,7 +42071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the strategies for intelligent behavior analytics.</p>
+     * <p>Queries the list of intelligent behavior analysis policies.</p>
      * 
      * @param request ListUnknownThreatDetectStrategyRequest
      * @return ListUnknownThreatDetectStrategyResponse
@@ -41926,7 +42303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries virus alerts detected by virus scanning on a specific server.</p>
+     * <p>Queries virus alerts detected by a virus scan on a specific server.</p>
      * 
      * @param request ListVirusScanMachineEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -41974,7 +42351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries virus alerts detected by virus scanning on a specific server.</p>
+     * <p>Queries virus alerts detected by a virus scan on a specific server.</p>
      * 
      * @param request ListVirusScanMachineEventRequest
      * @return ListVirusScanMachineEventResponse
@@ -43708,7 +44085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds vulnerabilities to the whitelist. After you add the vulnerabilities to the whitelist, Security Center no longer generates alerts for the vulnerabilities.</p>
+     * <p>Adds a vulnerability whitelist. Vulnerabilities added to the whitelist are no longer displayed in the alert list.</p>
      * 
      * @param request ModifyCreateVulWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43717,8 +44094,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyCreateVulWhitelistResponse modifyCreateVulWhitelistWithOptions(ModifyCreateVulWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
             query.put("Reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetInfo)) {
@@ -43748,7 +44133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds vulnerabilities to the whitelist. After you add the vulnerabilities to the whitelist, Security Center no longer generates alerts for the vulnerabilities.</p>
+     * <p>Adds a vulnerability whitelist. Vulnerabilities added to the whitelist are no longer displayed in the alert list.</p>
      * 
      * @param request ModifyCreateVulWhitelistRequest
      * @return ModifyCreateVulWhitelistResponse
@@ -43963,6 +44348,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyEmgVulSubmitResponse modifyEmgVulSubmitWithOptions(ModifyEmgVulSubmitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -44783,6 +45172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizType", request.bizType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.focusLevel)) {
             query.put("FocusLevel", request.focusLevel);
         }
@@ -44898,7 +45291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Handles detected vulnerabilities. You can fix, check, or ignore the vulnerabilities.</p>
+     * <p>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</p>
      * 
      * @param request ModifyOperateVulRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -44907,6 +45300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyOperateVulResponse modifyOperateVulWithOptions(ModifyOperateVulRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             query.put("From", request.from);
         }
@@ -44921,6 +45318,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
             query.put("Reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -44946,7 +45347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Handles detected vulnerabilities. You can fix, check, or ignore the vulnerabilities.</p>
+     * <p>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</p>
      * 
      * @param request ModifyOperateVulRequest
      * @return ModifyOperateVulResponse
@@ -44968,11 +45369,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyPostPayModuleSwitchShrinkRequest request = new ModifyPostPayModuleSwitchShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.edrModuleSwitch)) {
+            request.edrModuleSwitchShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.edrModuleSwitch, "EdrModuleSwitch", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.postPayModuleSwitchObj)) {
             request.postPayModuleSwitchObjShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.postPayModuleSwitchObj, "PostPayModuleSwitchObj", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edrModuleSwitchShrink)) {
+            query.put("EdrModuleSwitch", request.edrModuleSwitchShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.postPaidHostAutoBind)) {
             query.put("PostPaidHostAutoBind", request.postPaidHostAutoBind);
         }
@@ -45342,10 +45755,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is phased out. You can use the ChangeCheckConfig operation.</p>
+     * <p>This operation is deprecated. Use the ChangeCheckConfig operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Specifies the time when an automatic configuration check on cloud services runs.</p>
+     * <p>Sets the automatic detection time for cloud platform configuration check items.</p>
      * 
      * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated, please use Sas::2018-12-03::ChangeCheckConfig instead.
      * 
@@ -45401,10 +45814,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is phased out. You can use the ChangeCheckConfig operation.</p>
+     * <p>This operation is deprecated. Use the ChangeCheckConfig operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Specifies the time when an automatic configuration check on cloud services runs.</p>
+     * <p>Sets the automatic detection time for cloud platform configuration check items.</p>
      * 
      * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated, please use Sas::2018-12-03::ChangeCheckConfig instead.
      * 
@@ -45429,6 +45842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifySecurityEventMarkMissIndividuallyResponse modifySecurityEventMarkMissIndividuallyWithOptions(ModifySecurityEventMarkMissIndividuallyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
@@ -45517,6 +45934,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bindUuidList)) {
             query.put("BindUuidList", request.bindUuidList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.criteria)) {
@@ -45636,7 +46057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the one-click scan feature on the vulnerability management page of the console.</p>
+     * <p>Starts the one-click scan feature on the vulnerability management page of the console.</p>
      * 
      * @param request ModifyStartVulScanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -45645,6 +46066,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyStartVulScanResponse modifyStartVulScanWithOptions(ModifyStartVulScanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.types)) {
             query.put("Types", request.types);
         }
@@ -45672,7 +46101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the one-click scan feature on the vulnerability management page of the console.</p>
+     * <p>Starts the one-click scan feature on the vulnerability management page of the console.</p>
      * 
      * @param request ModifyStartVulScanRequest
      * @return ModifyStartVulScanResponse
@@ -46035,6 +46464,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyVulConfigResponse modifyVulConfigWithOptions(ModifyVulConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.config)) {
             query.put("Config", request.config);
         }
@@ -47054,7 +47487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manages an Object Storage Service (OSS) bucket check task.</p>
+     * <p>Operates on a bucket detection task.</p>
      * 
      * @param request OperateBucketScanTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -47069,6 +47502,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.operateCode)) {
             query.put("OperateCode", request.operateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -47090,7 +47527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manages an Object Storage Service (OSS) bucket check task.</p>
+     * <p>Operates on a bucket detection task.</p>
      * 
      * @param request OperateBucketScanTaskRequest
      * @return OperateBucketScanTaskResponse
@@ -47102,7 +47539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables a feature by type.</p>
+     * <p>Sets a global switch by type.</p>
      * 
      * @param request OperateCommonOverallConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -47111,6 +47548,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OperateCommonOverallConfigResponse operateCommonOverallConfigWithOptions(OperateCommonOverallConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.config)) {
             query.put("Config", request.config);
         }
@@ -47146,7 +47587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables a feature by type.</p>
+     * <p>Sets a global switch by type.</p>
      * 
      * @param request OperateCommonOverallConfigRequest
      * @return OperateCommonOverallConfigResponse
@@ -47619,6 +48060,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OperateType", request.operateType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("Type", request.type);
         }
@@ -47727,6 +48172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Remark", request.remark);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityEventIds)) {
             query.put("SecurityEventIds", request.securityEventIds);
         }
@@ -47825,6 +48274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
             query.put("Operation", request.operation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
@@ -48265,6 +48718,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryAttackCountResponse queryAttackCountWithOptions(QueryAttackCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
@@ -48732,6 +49189,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CloudAssetType", request.cloudAssetType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vendor)) {
             query.put("Vendor", request.vendor);
         }
@@ -48813,11 +49274,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Refreshes the bucket list.</p>
      * 
+     * @param request RefreshOssBucketScanInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RefreshOssBucketScanInfoResponse
      */
-    public RefreshOssBucketScanInfoResponse refreshOssBucketScanInfoWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public RefreshOssBucketScanInfoResponse refreshOssBucketScanInfoWithOptions(RefreshOssBucketScanInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RefreshOssBucketScanInfo"),
             new TeaPair("version", "2018-12-03"),
@@ -48835,11 +49305,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Refreshes the bucket list.</p>
+     * 
+     * @param request RefreshOssBucketScanInfoRequest
      * @return RefreshOssBucketScanInfoResponse
      */
-    public RefreshOssBucketScanInfoResponse refreshOssBucketScanInfo() throws Exception {
+    public RefreshOssBucketScanInfoResponse refreshOssBucketScanInfo(RefreshOssBucketScanInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.refreshOssBucketScanInfoWithOptions(runtime);
+        return this.refreshOssBucketScanInfoWithOptions(request, runtime);
     }
 
     /**
@@ -49249,6 +49721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("QuaraFileId", request.quaraFileId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
@@ -49389,6 +49865,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ReportVersion", request.reportVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sendEndTime)) {
             query.put("SendEndTime", request.sendEndTime);
         }
@@ -49527,6 +50007,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.levelsOn)) {
             query.put("LevelsOn", request.levelsOn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -49697,6 +50181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.reportId)) {
             query.put("ReportId", request.reportId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -50424,7 +50912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a configuration assessment task.</p>
+     * <p>Submits a cloud service configuration check.</p>
      * 
      * @param request SubmitCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -50433,6 +50921,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitCheckResponse submitCheckWithOptions(SubmitCheckRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scanRange)) {
             query.put("ScanRange", request.scanRange);
         }
@@ -50460,7 +50952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a configuration assessment task.</p>
+     * <p>Submits a cloud service configuration check.</p>
      * 
      * @param request SubmitCheckRequest
      * @return SubmitCheckResponse
@@ -50862,6 +51354,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateAlarmEventResponse updateAlarmEventWithOptions(UpdateAlarmEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.alarmEventIdList)) {
             body.put("AlarmEventIdList", request.alarmEventIdList);
@@ -50876,6 +51373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -51252,6 +51750,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCheckPolicyResponse updateCheckPolicy(UpdateCheckPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCheckPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the check scope configuration.</p>
+     * 
+     * @param request UpdateCheckScopeConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCheckScopeConfigResponse
+     */
+    public UpdateCheckScopeConfigResponse updateCheckScopeConfigWithOptions(UpdateCheckScopeConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoConfig)) {
+            query.put("AutoConfig", request.autoConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoType)) {
+            query.put("AutoType", request.autoType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCheckScopeConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCheckScopeConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the check scope configuration.</p>
+     * 
+     * @param request UpdateCheckScopeConfigRequest
+     * @return UpdateCheckScopeConfigResponse
+     */
+    public UpdateCheckScopeConfigResponse updateCheckScopeConfig(UpdateCheckScopeConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCheckScopeConfigWithOptions(request, runtime);
     }
 
     /**
@@ -52644,7 +53202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Multi-Account Instance Configuration</p>
+     * <p>Manages authorization assignments for member accounts in multi-account authorization management.</p>
      * 
      * @param request UpdateMultiUserInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -52676,7 +53234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Multi-Account Instance Configuration</p>
+     * <p>Manages authorization assignments for member accounts in multi-account authorization management.</p>
      * 
      * @param request UpdateMultiUserInstancesRequest
      * @return UpdateMultiUserInstancesResponse
@@ -52790,7 +53348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the scan policy configuration for OSS file detection under the malicious file detection feature.</p>
+     * <p>Updates the OSS file scan policy configuration for the malicious file detection feature.</p>
      * 
      * @param request UpdateOssScanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -52801,6 +53359,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.allKeyPrefix)) {
             query.put("AllKeyPrefix", request.allKeyPrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoAdd)) {
+            query.put("AutoAdd", request.autoAdd);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bucketNameList)) {
@@ -52855,6 +53417,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScanDayList", request.scanDayList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -52878,7 +53444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the scan policy configuration for OSS file detection under the malicious file detection feature.</p>
+     * <p>Updates the OSS file scan policy configuration for the malicious file detection feature.</p>
      * 
      * @param request UpdateOssScanConfigRequest
      * @return UpdateOssScanConfigResponse
@@ -52890,7 +53456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Change Postpaid Asset Authorization Version</p>
+     * <p>Changes the protection edition bound to a server after you activate the pay-as-you-go billing method for host and container security.</p>
      * 
      * @param request UpdatePostPaidBindRelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -52909,6 +53475,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bindAction)) {
             query.put("BindAction", request.bindAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.updateIfNecessary)) {
@@ -52934,7 +53508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Change Postpaid Asset Authorization Version</p>
+     * <p>Changes the protection edition bound to a server after you activate the pay-as-you-go billing method for host and container security.</p>
      * 
      * @param request UpdatePostPaidBindRelRequest
      * @return UpdatePostPaidBindRelResponse
@@ -53152,7 +53726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the key that corresponds to a specified type.</p>
+     * <p>Modifies the key corresponding to a specified type.</p>
      * 
      * @param request UpdateSelectionKeyByTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -53163,6 +53737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
             query.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.selectionKey)) {
@@ -53188,7 +53766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the key that corresponds to a specified type.</p>
+     * <p>Modifies the key corresponding to a specified type.</p>
      * 
      * @param request UpdateSelectionKeyByTypeRequest
      * @return UpdateSelectionKeyByTypeResponse
@@ -53348,7 +53926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the unknown threat detection strategy.</p>
+     * <p>Updates an intelligent behavior analytics policy.</p>
      * 
      * @param request UpdateUnknownThreatDetectStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -53396,7 +53974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the unknown threat detection strategy.</p>
+     * <p>Updates an intelligent behavior analytics policy.</p>
      * 
      * @param request UpdateUnknownThreatDetectStrategyRequest
      * @return UpdateUnknownThreatDetectStrategyResponse
@@ -53852,7 +54430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the instance dimensions under a check item.</p>
+     * <p>Verifies instances under a check item.</p>
      * 
      * @param request VerifyCheckInstanceResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -53867,6 +54445,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.checkIds)) {
             query.put("CheckIds", request.checkIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
@@ -53896,7 +54478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the instance dimensions under a check item.</p>
+     * <p>Verifies instances under a check item.</p>
      * 
      * @param request VerifyCheckInstanceResultRequest
      * @return VerifyCheckInstanceResultResponse
@@ -53908,7 +54490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs check item-level validation.</p>
+     * <p>Validates check items.</p>
      * 
      * @param request VerifyCheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -53919,6 +54501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.checkIds)) {
             query.put("CheckIds", request.checkIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
@@ -53948,7 +54534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs check item-level validation.</p>
+     * <p>Validates check items.</p>
      * 
      * @param request VerifyCheckResultRequest
      * @return VerifyCheckResultResponse

@@ -5,10 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateCycleTaskRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>Specifies whether to enable the task. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +25,7 @@ public class CreateCycleTaskRequest extends TeaModel {
     public Integer enable;
 
     /**
-     * <p>The first time when the task is performed.</p>
+     * <p>The first execution time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +35,7 @@ public class CreateCycleTaskRequest extends TeaModel {
     public Long firstDateStr;
 
     /**
-     * <p>The interval of the task.</p>
+     * <p>The interval period.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +45,7 @@ public class CreateCycleTaskRequest extends TeaModel {
     public Integer intervalPeriod;
 
     /**
-     * <p>The additional information.</p>
+     * <p>The extended information field.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -63,8 +69,8 @@ public class CreateCycleTaskRequest extends TeaModel {
     /**
      * <p>The unit of the scan interval. Valid values:</p>
      * <ul>
-     * <li><strong>day</strong>: days</li>
-     * <li><strong>hour</strong>: hours</li>
+     * <li><strong>day</strong>: day.</li>
+     * <li><strong>hour</strong>: hour.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -75,7 +81,7 @@ public class CreateCycleTaskRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The additional source for the task.</p>
+     * <p>The source from which the task is added.</p>
      * 
      * <strong>example:</strong>
      * <p>console_batch</p>
@@ -84,7 +90,7 @@ public class CreateCycleTaskRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The time when the task ends. Unit: hours.</p>
+     * <p>The task end time, in hours.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,7 +100,7 @@ public class CreateCycleTaskRequest extends TeaModel {
     public Integer targetEndTime;
 
     /**
-     * <p>The time when the task is started. Unit: hours.</p>
+     * <p>The task start time, in hours.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,11 +110,11 @@ public class CreateCycleTaskRequest extends TeaModel {
     public Integer targetStartTime;
 
     /**
-     * <p>The name of the task. Valid values:</p>
+     * <p>The task name. Valid values:</p>
      * <ul>
-     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
-     * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
-     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan.</li>
+     * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
+     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scanning.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -119,11 +125,11 @@ public class CreateCycleTaskRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
-     * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
-     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan.</li>
+     * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
+     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scanning.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -136,6 +142,14 @@ public class CreateCycleTaskRequest extends TeaModel {
     public static CreateCycleTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCycleTaskRequest self = new CreateCycleTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCycleTaskRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateCycleTaskRequest setEnable(Integer enable) {

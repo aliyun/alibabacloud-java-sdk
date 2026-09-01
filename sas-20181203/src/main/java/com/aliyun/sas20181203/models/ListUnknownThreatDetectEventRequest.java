@@ -8,7 +8,7 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public String analyzeResult;
 
     /**
-     * <p>The page number of the current page in a paged query. This parameter is used for paging.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return on each page in a paged query. This parameter is used for paging.</p>
+     * <p>The maximum number of entries to return on each page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,7 +56,7 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public String processPath;
 
     /**
-     * <p>The filter condition. You can filter by instance name or IP address.</p>
+     * <p>The filter condition based on instance name or IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>10.167.XX.XX</p>

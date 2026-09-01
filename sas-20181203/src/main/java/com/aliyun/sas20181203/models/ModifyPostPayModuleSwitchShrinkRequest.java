@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically bind newly added assets for host and container protection. Valid values:</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("EdrModuleSwitch")
+    public String edrModuleSwitchShrink;
+
+    /**
+     * <p>Specifies whether to automatically bind new assets for host and container protection. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Disabled.</li>
      * <li><strong>1</strong>: Enabled.</li>
@@ -18,7 +27,7 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     public Integer postPaidHostAutoBind;
 
     /**
-     * <p>The version to which newly added assets are automatically bound for host and container protection. Valid values:</p>
+     * <p>The edition to which new assets are automatically bound for host and container protection. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: Free Edition. </li>
      * <li><strong>3</strong>: Enterprise Edition.</li>
@@ -49,7 +58,7 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
      * <p>The switch status of pay-as-you-go modules in JSON string format. Valid values:</p>
      * <ul>
      * <li>Key:<ul>
-     * <li><strong>VUL</strong>: vulnerability fix module</li>
+     * <li><strong>VUL</strong>: vulnerability management module</li>
      * <li><strong>CSPM</strong>: Cloud Security Posture Management (CSPM) module</li>
      * <li><strong>AGENTLESS</strong>: agentless detection module</li>
      * <li><strong>SERVERLESS</strong>: serverless security module</li>
@@ -66,7 +75,7 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
      * <blockquote>
      * <p>Modules for which no value is specified remain unchanged.</p>
      * </blockquote>
-     * <p><notice>This parameter has the same meaning as PostPayModuleSwitchObj. If both parameters are specified, the value of PostPayModuleSwitch takes precedence..</p>
+     * <p><notice>This parameter has the same meaning as PostPayModuleSwitchObj. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;VUL&quot;:1,&quot;CSPM&quot;:0}</p>
@@ -77,7 +86,7 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     /**
      * <p>The pay-as-you-go module switch.</p>
      * <blockquote>
-     * <p>Notice: This parameter has the same meaning as PostPayModuleSwitch. If both parameters are specified, the value of PostPayModuleSwitch takes precedence..</p>
+     * <p>Notice: This parameter has the same meaning as PostPayModuleSwitch. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
      * </blockquote>
      */
     @NameInMap("PostPayModuleSwitchObj")
@@ -86,6 +95,22 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     public static ModifyPostPayModuleSwitchShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPostPayModuleSwitchShrinkRequest self = new ModifyPostPayModuleSwitchShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyPostPayModuleSwitchShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyPostPayModuleSwitchShrinkRequest setEdrModuleSwitchShrink(String edrModuleSwitchShrink) {
+        this.edrModuleSwitchShrink = edrModuleSwitchShrink;
+        return this;
+    }
+    public String getEdrModuleSwitchShrink() {
+        return this.edrModuleSwitchShrink;
     }
 
     public ModifyPostPayModuleSwitchShrinkRequest setPostPaidHostAutoBind(Integer postPaidHostAutoBind) {

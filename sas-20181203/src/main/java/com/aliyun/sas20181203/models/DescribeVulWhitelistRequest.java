@@ -35,6 +35,9 @@ public class DescribeVulWhitelistRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static DescribeVulWhitelistRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVulWhitelistRequest self = new DescribeVulWhitelistRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DescribeVulWhitelistRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeVulWhitelistRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

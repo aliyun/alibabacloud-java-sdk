@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetValidDeductInstancesRequest extends TeaModel {
     /**
-     * <p>Resource package instance ID, can be queried through <a href="">QueryResourcePackageInstances</a>.</p>
+     * <p>Instance ID of the resource plan instance. You can call <a href="">QueryResourcePackageInstances</a> to query instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sas_cspm_dp_cn-***80001</p>
@@ -14,11 +14,11 @@ public class GetValidDeductInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Resource package name code, values:</p>
+     * <p>The code of the resource plan. Valid values:</p>
      * <ul>
-     * <li>Vulnerability resource package: <strong>sas_vul_dp_cn</strong></li>
-     * <li>CSPM resource package: <strong>sas_cspm_dp_cn</strong></li>
-     * <li>Anti-virus resource package: <strong>sas_viruspackage_dp_cn</strong></li>
+     * <li>Vulnerability resource plan: <strong>sas_vul_dp_cn</strong></li>
+     * <li>CSPM resource plan: <strong>sas_cspm_dp_cn</strong></li>
+     * <li>Anti-virus Edition resource plan: <strong>sas_viruspackage_dp_cn</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class GetValidDeductInstancesRequest extends TeaModel {
     public String modules;
 
     /**
-     * <p>Resource package status, default is valid (valid), not modifiable.</p>
+     * <p>The status of the resource plan. The default value is valid. This parameter does not support modification.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>

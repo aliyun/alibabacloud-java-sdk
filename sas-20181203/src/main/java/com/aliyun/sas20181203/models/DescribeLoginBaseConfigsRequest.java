@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoginBaseConfigsRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeLoginBaseConfigsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Settings for paged query. The number of logon configuration entries to display on each page when paging is used. Default value: <strong>5</strong>.</p>
+     * <p>Settings for paged query. The number of logon configuration entries to display on each page during paging. Default value: <strong>5</strong>, which indicates that five logon configuration entries are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -25,13 +25,13 @@ public class DescribeLoginBaseConfigsRequest extends TeaModel {
     /**
      * <p>The selection mode for the assets on which the policy takes effect. This parameter is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><strong>Target</strong>: The UUID of the server to add or delete, or the ID of the server group.</li>
+     * <li><strong>Target</strong>: the UUID of the server to add or delete, or the ID of the server group.</li>
      * </ul>
      * <blockquote>
-     * <p>If the targetType parameter is set to uuid, this parameter specifies the UUID of the server. If the targetType parameter is set to groupId, this parameter specifies the ID of the server group. If the targetType parameter is set to global, set this parameter to a hyphen (-).</p>
+     * <p>If the targetType parameter is set to uuid, this parameter specifies the UUID of the server. If the targetType parameter is set to groupId, this parameter specifies the ID of the server group. If the targetType parameter is set to global, this parameter is set to a hyphen (-).</p>
      * </blockquote>
      * <ul>
-     * <li><strong>targetType</strong>: The selection mode for the assets on which the policy takes effect. Valid values:<ul>
+     * <li><strong>targetType</strong>: the selection mode for the assets on which the policy takes effect. Valid values:<ul>
      * <li><strong>uuid</strong>: queries by individual server.</li>
      * <li><strong>groupId</strong>: queries by server group.</li>
      * <li><strong>global</strong>: queries all servers.</li>

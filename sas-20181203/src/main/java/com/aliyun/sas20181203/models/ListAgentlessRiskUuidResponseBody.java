@@ -11,13 +11,13 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
     public java.util.List<ListAgentlessRiskUuidResponseBodyList> list;
 
     /**
-     * <p>The paging information for the query.</p>
+     * <p>The paging information.</p>
      */
     @NameInMap("PageInfo")
     public ListAgentlessRiskUuidResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>05AE6B16-741A-5A75-9BF0-BC747DD9****</p>
@@ -108,6 +108,15 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
          */
         @NameInMap("MaliciousCount")
         public Integer maliciousCount;
+
+        /**
+         * <p>The URL of the latest parallel sandbox HTML report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket.oss.region.aliyuncs.com/report/html">https://bucket.oss.region.aliyuncs.com/report/html</a></p>
+         */
+        @NameInMap("ReportUrlHtml")
+        public String reportUrlHtml;
 
         /**
          * <p>The timestamp of the scan. Unit: milliseconds.</p>
@@ -207,6 +216,14 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             return this.maliciousCount;
         }
 
+        public ListAgentlessRiskUuidResponseBodyList setReportUrlHtml(String reportUrlHtml) {
+            this.reportUrlHtml = reportUrlHtml;
+            return this;
+        }
+        public String getReportUrlHtml() {
+            return this.reportUrlHtml;
+        }
+
         public ListAgentlessRiskUuidResponseBodyList setScanTime(Long scanTime) {
             this.scanTime = scanTime;
             return this;
@@ -251,7 +268,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
 
     public static class ListAgentlessRiskUuidResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the current page when using paging.</p>
+         * <p>The current page number when using paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

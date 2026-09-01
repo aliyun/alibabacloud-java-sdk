@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetAccountLabelRequest extends TeaModel {
     /**
-     * <p>The tags.</p>
+     * <p>The labels.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LabelList")
     public java.util.List<String> labelList;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>

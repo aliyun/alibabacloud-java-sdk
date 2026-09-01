@@ -5,9 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateVirusScanOnceTaskRequest extends TeaModel {
     /**
-     * <p>Additional information fields: </p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The extended information field:</p>
      * <ul>
-     * <li><strong>additionType</strong>: The type of extended scan</li>
+     * <li><strong>additionType</strong>: the extended scan type</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,15 +23,15 @@ public class CreateVirusScanOnceTaskRequest extends TeaModel {
     public String param;
 
     /**
-     * <p>The information about the scan path that is required for a custom scan.</p>
+     * <p>The scan path information to be transmitted if the scan type is custom scan.</p>
      */
     @NameInMap("ScanPath")
     public java.util.List<String> scanPath;
 
     /**
-     * <p>The type of the virus scan. Valid values:</p>
+     * <p>The scan type of the virus scan. Valid values:</p>
      * <ul>
-     * <li><strong>system</strong>: system scan.</li>
+     * <li><strong>system</strong>: system scan</li>
      * <li><strong>user</strong>: custom scan.</li>
      * </ul>
      * 
@@ -36,9 +42,9 @@ public class CreateVirusScanOnceTaskRequest extends TeaModel {
     public String scanType;
 
     /**
-     * <p>The key that stores the asset information.</p>
+     * <p>The key that stores asset information.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain the key value.</p>
+     * <p>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,6 +56,14 @@ public class CreateVirusScanOnceTaskRequest extends TeaModel {
     public static CreateVirusScanOnceTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVirusScanOnceTaskRequest self = new CreateVirusScanOnceTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVirusScanOnceTaskRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateVirusScanOnceTaskRequest setParam(String param) {

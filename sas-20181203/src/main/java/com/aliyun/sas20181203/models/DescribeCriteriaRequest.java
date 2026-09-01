@@ -16,6 +16,9 @@ public class DescribeCriteriaRequest extends TeaModel {
     @NameInMap("MachineTypes")
     public String machineTypes;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>Specifies whether the keyword that you specify for fuzzy search can be automatically matched. Default value: <strong>false</strong>. Valid values:</p>
      * <ul>
@@ -49,6 +52,14 @@ public class DescribeCriteriaRequest extends TeaModel {
     }
     public String getMachineTypes() {
         return this.machineTypes;
+    }
+
+    public DescribeCriteriaRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeCriteriaRequest setSupportAutoTag(Boolean supportAutoTag) {

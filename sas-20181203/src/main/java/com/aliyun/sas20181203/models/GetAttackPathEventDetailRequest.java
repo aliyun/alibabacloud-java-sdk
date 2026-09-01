@@ -20,7 +20,7 @@ public class GetAttackPathEventDetailRequest extends TeaModel {
      * <p>The data source. Default value: <strong>default</strong>. Valid values:</p>
      * <ul>
      * <li><strong>caasm</strong>: attack surface</li>
-     * <li><strong>default</strong>: attack path.</li>
+     * <li><strong>default</strong>: attack path</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GetAttackPathEventDetailRequest extends TeaModel {
      * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>

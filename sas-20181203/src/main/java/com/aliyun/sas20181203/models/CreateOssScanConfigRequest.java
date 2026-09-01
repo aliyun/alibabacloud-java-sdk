@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOssScanConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to match the prefixes of all objects.</p>
+     * <p>Specifies whether to match all prefixes. If this parameter is set to true, the KeyPrefixList parameter does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,13 +14,35 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public Boolean allKeyPrefix;
 
     /**
-     * <p>The names of buckets.</p>
+     * <p>Specifies whether OSS buckets are automatically added to this policy. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("AutoAdd")
+    public Integer autoAdd;
+
+    /**
+     * <p>The list of bucket names.</p>
      */
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
 
     /**
-     * <p>The maximum number of objects that can be extracted during decompression. Valid values: 1 to 1000. If the maximum number of objects that can be extracted is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. When the maximum number of decompressed files is exceeded, the decompression operation stops. The detection of files that have already been decompressed is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -29,7 +51,7 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public Integer decompressMaxFileCount;
 
     /**
-     * <p>The maximum number of decompression levels when multi-level packages are decompressed. Valid values: 1 to 5. If the maximum number of decompression levels is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</p>
+     * <p>The maximum number of decompression layers when multiple levels of nested compressed files exist. Minimum value: 1. Maximum value: 5. When the maximum number of decompression layers is exceeded, the decompression operation stops. The detection of files that have already been decompressed is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +60,7 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public Integer decompressMaxLayer;
 
     /**
-     * <p>The decryption methods.</p>
+     * <p>The list of decryption types.</p>
      */
     @NameInMap("DecryptionList")
     public java.util.List<String> decryptionList;
@@ -46,8 +68,8 @@ public class CreateOssScanConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the policy. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +79,7 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public Integer enable;
 
     /**
-     * <p>The time when the scan ends. The time must be in the HH:mm:ss format.</p>
+     * <p>The scan stop time, in the HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>01:01:00</p>
@@ -66,19 +88,19 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The prefixes of the objects.</p>
+     * <p>The file prefix list.</p>
      */
     @NameInMap("KeyPrefixList")
     public java.util.List<String> keyPrefixList;
 
     /**
-     * <p>The suffixes of the files to scan.</p>
+     * <p>The list of file suffixes to scan.</p>
      */
     @NameInMap("KeySuffixList")
     public java.util.List<String> keySuffixList;
 
     /**
-     * <p>The timestamp when the object was last modified. The time must be later than the timestamp that you specify. Unit: milliseconds.</p>
+     * <p>Specifies that only files whose last modification time is after the specified timestamp are scanned. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1724301769834</p>
@@ -96,7 +118,7 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</p>
+     * <p>Specifies whether to enable real-time incremental detection. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -105,13 +127,26 @@ public class CreateOssScanConfigRequest extends TeaModel {
     public Boolean realTimeIncr;
 
     /**
-     * <p>The days on which the scan is executed in a week.</p>
+     * <p>The scan schedule. The number represents the day of the week.</p>
      */
     @NameInMap("ScanDayList")
     public java.util.List<Integer> scanDayList;
 
     /**
-     * <p>The time when the scan starts. The time must be in the HH:mm:ss format.</p>
+     * <p>The business source. Valid values:</p>
+     * <ul>
+     * <li><strong>OSS</strong>: OSS.</li>
+     * <li><strong>NAS</strong>: NAS.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
+    @NameInMap("Source")
+    public String source;
+
+    /**
+     * <p>The scan start time, in the HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00:00</p>
@@ -132,12 +167,28 @@ public class CreateOssScanConfigRequest extends TeaModel {
         return this.allKeyPrefix;
     }
 
+    public CreateOssScanConfigRequest setAutoAdd(Integer autoAdd) {
+        this.autoAdd = autoAdd;
+        return this;
+    }
+    public Integer getAutoAdd() {
+        return this.autoAdd;
+    }
+
     public CreateOssScanConfigRequest setBucketNameList(java.util.List<String> bucketNameList) {
         this.bucketNameList = bucketNameList;
         return this;
     }
     public java.util.List<String> getBucketNameList() {
         return this.bucketNameList;
+    }
+
+    public CreateOssScanConfigRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateOssScanConfigRequest setDecompressMaxFileCount(Integer decompressMaxFileCount) {
@@ -226,6 +277,14 @@ public class CreateOssScanConfigRequest extends TeaModel {
     }
     public java.util.List<Integer> getScanDayList() {
         return this.scanDayList;
+    }
+
+    public CreateOssScanConfigRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public CreateOssScanConfigRequest setStartTime(String startTime) {

@@ -5,16 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateFileDetectRequest extends TeaModel {
     /**
-     * <p>Specifies whether to decompress the archive for detection. Valid values:</p>
+     * <p>Specifies whether to identify and decompress compressed files. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Yes.</p>
-     * </li>
-     * <li><p><strong>false</strong>: No.</p>
-     * </li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is not supported when <code>Type</code> is set to <code>6</code>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,11 +18,8 @@ public class CreateFileDetectRequest extends TeaModel {
     public Boolean decompress;
 
     /**
-     * <p>The maximum number of files that can be decompressed from an archive. The maximum value is 1000.</p>
-     * <p>This parameter is required if you set <code>Decompress</code> to <code>true</code>.</p>
-     * <blockquote>
-     * <p>This parameter is not supported when <code>Type</code> is set to <code>6</code>.</p>
-     * </blockquote>
+     * <p>The maximum number of files to decompress. Maximum value: 1000.</p>
+     * <p>This parameter is required when Decompress is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -36,11 +28,8 @@ public class CreateFileDetectRequest extends TeaModel {
     public Integer decompressMaxFileCount;
 
     /**
-     * <p>The maximum number of decompression layers for nested archives. The maximum value is 5.</p>
-     * <p>This parameter is required if you set <code>Decompress</code> to <code>true</code>.</p>
-     * <blockquote>
-     * <p>This parameter is not supported when <code>Type</code> is set to <code>6</code>.</p>
-     * </blockquote>
+     * <p>The maximum number of decompression layers when compressed files are nested within a compressed package. Maximum value: 5.</p>
+     * <p>This parameter is required when Decompress is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,10 +38,7 @@ public class CreateFileDetectRequest extends TeaModel {
     public Integer decompressMaxLayer;
 
     /**
-     * <p>The download link for the file. You can provide a public URL to trigger file detection without uploading the file.</p>
-     * <blockquote>
-     * <p>Skill archives can be submitted only by providing a download link. Therefore, this parameter is required when <code>Type</code> is set to <code>6</code>.</p>
-     * </blockquote>
+     * <p>The download URL of the file. You can pass in a file download URL (public URL) to directly trigger file detection without uploading the file in advance.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&OSSAccessKeyId=xxx">https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&amp;OSSAccessKeyId=xxx</a></p>
@@ -61,9 +47,7 @@ public class CreateFileDetectRequest extends TeaModel {
     public String downloadUrl;
 
     /**
-     * <p>The unique identifier of the file.</p>
-     * <p>This parameter is required if <code>Type</code> is <code>0</code>. Its value must be the MD5 or SHA-256 hash of the file.</p>
-     * <p>If you set <code>Type</code> to <code>6</code>, you do not need to specify this parameter. The operation returns the file\&quot;s unique identifier in the response.</p>
+     * <p>The unique identifier of the file. This parameter is required and must be the MD5 or SHA-256 of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>0a212417e65c26ff133cfff28f6c****</p>
@@ -72,11 +56,8 @@ public class CreateFileDetectRequest extends TeaModel {
     public String hashKey;
 
     /**
-     * <p>The storage key of the file in an Object Storage Service (OSS) bucket.</p>
-     * <p>If you submit the file by using the <code>DownloadUrl</code> parameter, you can leave this parameter empty. To obtain the value of this parameter, call the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.</p>
-     * <blockquote>
-     * <p>This parameter is not supported when <code>Type</code> is set to <code>6</code>.</p>
-     * </blockquote>
+     * <p>The storage key of the file in the OSS bucket.</p>
+     * <p>If you push the file for detection by using DownloadUrl, this parameter is optional. This parameter is obtained from the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</p>
@@ -85,7 +66,7 @@ public class CreateFileDetectRequest extends TeaModel {
     public String ossKey;
 
     /**
-     * <p>The IP address of the source.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>115.213.XX.XX</p>
@@ -94,12 +75,9 @@ public class CreateFileDetectRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The type of the file to detect. Valid values:</p>
+     * <p>The type of file to detect. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Malicious file detection</p>
-     * </li>
-     * <li><p><strong>6</strong>: Skill archive detection</p>
-     * </li>
+     * <li><strong>0</strong>: malicious file detection</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

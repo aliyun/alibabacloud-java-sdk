@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOssScanConfigResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListOssScanConfigResponseBodyData> data;
@@ -17,7 +17,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
     public ListOssScanConfigResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E10BAF1C-A6C5-51E2-866C-76D5922E****</p>
@@ -56,13 +56,19 @@ public class ListOssScanConfigResponseBody extends TeaModel {
 
     public static class ListOssScanConfigResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the prefixes of all objects are matched.</p>
+         * <p>Indicates whether all prefixes are matched.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("AllKeyPrefix")
         public Boolean allKeyPrefix;
+
+        @NameInMap("AutoAdd")
+        public Integer autoAdd;
+
+        @NameInMap("AutoAddConfigName")
+        public String autoAddConfigName;
 
         /**
          * <p>The number of buckets.</p>
@@ -74,13 +80,13 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         public Integer bucketCount;
 
         /**
-         * <p>The names of the buckets.</p>
+         * <p>The list of bucket names.</p>
          */
         @NameInMap("BucketNameList")
         public java.util.List<String> bucketNameList;
 
         /**
-         * <p>The maximum number of objects that can be extracted during decompression. Valid values: 1 to 1000. If the maximum number of objects that can be extracted is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</p>
+         * <p>The maximum number of files to decompress. The minimum value is 1 and the maximum value is 1000. When the maximum number of decompressed files is exceeded, the decompression operation ends immediately. The scan of already decompressed files is not affected.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -89,7 +95,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         public Integer decompressMaxFileCount;
 
         /**
-         * <p>The maximum number of decompression levels when multi-level packages are decompressed. Valid values: 1 to 5. If the maximum number of decompression levels is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</p>
+         * <p>The maximum number of decompression layers when nested compressed files exist. The minimum value is 1 and the maximum value is 5. When the maximum decompression layer is exceeded, the decompression operation ends immediately. The scan of already decompressed files is not affected.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -98,16 +104,16 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         public Integer decompressMaxLayer;
 
         /**
-         * <p>The decryption methods.</p>
+         * <p>The list of decryption types.</p>
          */
         @NameInMap("DecryptionList")
         public java.util.List<String> decryptionList;
 
         /**
-         * <p>Indicates whether the policy is enabled. Valid values:</p>
+         * <p>Indicates whether the configuration is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +123,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         public Integer enable;
 
         /**
-         * <p>The time when the scan ends. The time is in the HH:mm:ss format.</p>
+         * <p>The scan end time, in the HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>06:00:00</p>
@@ -135,19 +141,19 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The prefixes of the objects that are scanned.</p>
+         * <p>The list of file directories to scan.</p>
          */
         @NameInMap("KeyPrefixList")
         public java.util.List<String> keyPrefixList;
 
         /**
-         * <p>The suffixes of the objects that are scanned.</p>
+         * <p>The list of file suffixes to scan.</p>
          */
         @NameInMap("KeySuffixList")
         public java.util.List<String> keySuffixList;
 
         /**
-         * <p>The timestamp when the object was last modified. The time must be later than the timestamp that you specify. Unit: milliseconds.</p>
+         * <p>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1724301769834</p>
@@ -156,7 +162,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         public Long lastModifiedStartTime;
 
         /**
-         * <p>The timestamp when the configuration was last modified.</p>
+         * <p>The timestamp of the last update.</p>
          * 
          * <strong>example:</strong>
          * <p>1698388233883</p>
@@ -174,7 +180,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</p>
+         * <p>Indicates whether real-time incremental scan is enabled. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime do not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -183,13 +189,26 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         public Boolean realTimeIncr;
 
         /**
-         * <p>The days on which the scan is executed in a week.</p>
+         * <p>The scan days. The number represents the day of the week.</p>
          */
         @NameInMap("ScanDayList")
         public java.util.List<Integer> scanDayList;
 
         /**
-         * <p>The time when the scan starts. The time is in the HH:mm:ss format.</p>
+         * <p>The business source. Valid values:</p>
+         * <ul>
+         * <li><strong>OSS</strong>: OSS</li>
+         * <li><strong>NAS</strong>: NAS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
+        @NameInMap("Source")
+        public String source;
+
+        /**
+         * <p>The scan start time, in the HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -208,6 +227,22 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         }
         public Boolean getAllKeyPrefix() {
             return this.allKeyPrefix;
+        }
+
+        public ListOssScanConfigResponseBodyData setAutoAdd(Integer autoAdd) {
+            this.autoAdd = autoAdd;
+            return this;
+        }
+        public Integer getAutoAdd() {
+            return this.autoAdd;
+        }
+
+        public ListOssScanConfigResponseBodyData setAutoAddConfigName(String autoAddConfigName) {
+            this.autoAddConfigName = autoAddConfigName;
+            return this;
+        }
+        public String getAutoAddConfigName() {
+            return this.autoAddConfigName;
         }
 
         public ListOssScanConfigResponseBodyData setBucketCount(Integer bucketCount) {
@@ -330,6 +365,14 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             return this.scanDayList;
         }
 
+        public ListOssScanConfigResponseBodyData setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
         public ListOssScanConfigResponseBodyData setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
@@ -342,7 +385,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
 
     public static class ListOssScanConfigResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -351,7 +394,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -360,7 +403,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

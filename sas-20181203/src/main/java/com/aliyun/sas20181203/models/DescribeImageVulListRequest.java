@@ -206,6 +206,9 @@ public class DescribeImageVulListRequest extends TeaModel {
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The vulnerability tag. Valid values:</p>
      * <ul>
@@ -437,6 +440,14 @@ public class DescribeImageVulListRequest extends TeaModel {
     }
     public String getRepoRegionId() {
         return this.repoRegionId;
+    }
+
+    public DescribeImageVulListRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeImageVulListRequest setRuleTag(String ruleTag) {

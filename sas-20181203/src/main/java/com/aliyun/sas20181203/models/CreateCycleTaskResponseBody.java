@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCycleTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the task configuration.</p>
+     * <p>The ID of the configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>00cfa8161da093089e6804ba6a33****</p>
@@ -14,7 +14,7 @@ public class CreateCycleTaskResponseBody extends TeaModel {
     public String configId;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>86CFF42E-E00A-57A3-8656-22291EFB****</p>

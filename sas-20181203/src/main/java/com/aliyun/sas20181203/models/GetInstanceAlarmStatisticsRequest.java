@@ -18,6 +18,9 @@ public class GetInstanceAlarmStatisticsRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The UUID of the server to be queried.</p>
      * <blockquote>
@@ -41,6 +44,14 @@ public class GetInstanceAlarmStatisticsRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
+    }
+
+    public GetInstanceAlarmStatisticsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public GetInstanceAlarmStatisticsRequest setUuid(String uuid) {

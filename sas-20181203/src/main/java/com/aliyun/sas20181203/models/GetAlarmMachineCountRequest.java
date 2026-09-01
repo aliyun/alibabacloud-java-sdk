@@ -13,6 +13,9 @@ public class GetAlarmMachineCountRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static GetAlarmMachineCountRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAlarmMachineCountRequest self = new GetAlarmMachineCountRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class GetAlarmMachineCountRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
+    }
+
+    public GetAlarmMachineCountRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

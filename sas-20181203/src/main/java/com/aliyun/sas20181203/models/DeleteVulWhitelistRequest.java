@@ -16,6 +16,9 @@ public class DeleteVulWhitelistRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The vulnerability whitelist information to delete. The value is a JSON string that contains the following fields:</p>
      * <ul>
@@ -57,6 +60,14 @@ public class DeleteVulWhitelistRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public DeleteVulWhitelistRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DeleteVulWhitelistRequest setWhitelist(String whitelist) {

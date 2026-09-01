@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOssScanConfigRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,13 +23,26 @@ public class ListOssScanConfigRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    /**
+     * <p>The business source. Valid values:</p>
+     * <ul>
+     * <li><strong>OSS</strong>: OSS</li>
+     * <li><strong>NAS</strong>: NAS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
+    @NameInMap("Source")
+    public String source;
 
     public static ListOssScanConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOssScanConfigRequest self = new ListOssScanConfigRequest();
@@ -58,6 +71,14 @@ public class ListOssScanConfigRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListOssScanConfigRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

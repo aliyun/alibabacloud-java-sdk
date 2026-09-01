@@ -81,6 +81,9 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The edition filter for querying assets. Valid values:</p>
      * <ul>
@@ -188,6 +191,14 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeGroupedInstancesRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeGroupedInstancesRequest setSaleVersionCheckCode(String saleVersionCheckCode) {

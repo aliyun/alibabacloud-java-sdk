@@ -5,10 +5,18 @@ import com.aliyun.tea.*;
 
 public class ModifyEmgVulSubmitRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,9 +36,9 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
+     * <p>The ID of the member accounts in the resource directory (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,8 +50,10 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform vulnerability detection. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong>: Perform vulnerability detection.</li>
-     * <li><strong>no</strong>: Do not perform vulnerability detection.</li>
+     * <li><p><strong>yes</strong>: Perform vulnerability detection.</p>
+     * </li>
+     * <li><p><strong>no</strong>: Do not perform vulnerability detection.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,6 +66,14 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     public static ModifyEmgVulSubmitRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyEmgVulSubmitRequest self = new ModifyEmgVulSubmitRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyEmgVulSubmitRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyEmgVulSubmitRequest setLang(String lang) {

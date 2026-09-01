@@ -40,6 +40,9 @@ public class DescribeAlarmEventDetailRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The source IP address of the request.</p>
      * 
@@ -76,6 +79,14 @@ public class DescribeAlarmEventDetailRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeAlarmEventDetailRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeAlarmEventDetailRequest setSourceIp(String sourceIp) {

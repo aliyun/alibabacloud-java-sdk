@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
     /**
-     * <p>The response for creating a task to query similar alert events.</p>
+     * <p>The response information of the task for querying similar security alerts.</p>
      */
     @NameInMap("CreateSimilarSecurityEventsQueryTaskResponse")
     public CreateSimilarSecurityEventsQueryTaskResponseBodyCreateSimilarSecurityEventsQueryTaskResponse createSimilarSecurityEventsQueryTaskResponse;

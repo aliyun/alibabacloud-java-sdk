@@ -80,6 +80,9 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static ListCloudAssetInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCloudAssetInstancesRequest self = new ListCloudAssetInstancesRequest();
         return TeaModel.build(map, self);
@@ -147,6 +150,14 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListCloudAssetInstancesRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public static class ListCloudAssetInstancesRequestCloudAssetQueryData extends TeaModel {

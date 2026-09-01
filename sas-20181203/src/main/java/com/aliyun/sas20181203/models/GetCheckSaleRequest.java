@@ -7,8 +7,8 @@ public class GetCheckSaleRequest extends TeaModel {
     /**
      * <p>The region of the Security Center instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> the Chinese mainland</li>
-     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * <li><strong>cn-hangzhou:</strong> China</li>
+     * <li><strong>ap-southeast-1:</strong> outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>

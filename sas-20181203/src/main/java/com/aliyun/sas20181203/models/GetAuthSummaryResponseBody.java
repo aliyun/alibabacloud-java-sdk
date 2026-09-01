@@ -31,7 +31,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     public Integer allowUpgradePartialBuy;
 
     /**
-     * <p>Indicates whether you can immediately unbind all bound assets. Valid values:</p>
+     * <p>Indicates whether immediate unbinding of all bound assets is allowed. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No.</li>
      * <li><strong>1</strong>: Yes.</li>
@@ -57,7 +57,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     public Integer autoBind;
 
     /**
-     * <p>Indicates whether the cluster node requires machine version verification. Valid values:</p>
+     * <p>Indicates whether cluster nodes require agent version verification. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Not required.</li>
      * <li><strong>1</strong>: Required.</li>
@@ -82,11 +82,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     @NameInMap("DefaultAuthToAll")
     public Integer defaultAuthToAll;
 
+    @NameInMap("EdrSummary")
+    public GetAuthSummaryResponseBodyEdrSummary edrSummary;
+
     /**
-     * <p>Indicates whether a pre-bindingasset configuration exists. Pre-binding refers to the asset binding configuration that is selected in advance during purchase. Valid values:</p>
+     * <p>Indicates whether a pre-bindingasset configuration exists. Pre-binding refers to the asset binding configuration selected in advance during purchase. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: No.</li>
-     * <li><strong>1</strong>: Yes.</li>
+     * <li><strong>0</strong>: Does not exist.</li>
+     * <li><strong>1</strong>: Exists.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,15 +99,15 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     public Boolean hasPreBindSetting;
 
     /**
-     * <p>The highest edition of Security Center that is purchased. Valid values:</p>
+     * <p>The highest purchased edition of Security Center. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: Free Edition.</li>
      * <li><strong>3</strong>: Enterprise Edition.</li>
      * <li><strong>5</strong>: Premium Edition.</li>
      * <li><strong>6</strong>: Anti-virus Edition.</li>
      * <li><strong>7</strong>: Ultimate Edition.</li>
-     * <li><strong>10</strong>: Only value-added services are purchased.<blockquote>
-     * <p>If a single edition is purchased, this value indicates the corresponding edition. If multiple editions are purchased, this value indicates the highest edition among the sub-editions.</p>
+     * <li><strong>10</strong>: Value-added services only.<blockquote>
+     * <p>If a single edition is purchased, this value indicates the corresponding edition. If multiple editions are purchased, this value indicates the highest sub-edition.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -118,8 +121,8 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     /**
      * <p>The binding validity status. Valid values:</p>
      * <ul>
-     * <li><strong>NORMAL</strong>: valid.</li>
-     * <li><strong>INVALID_NODE_VERSION</strong>: invalid.</li>
+     * <li><strong>NORMAL</strong>: Valid.</li>
+     * <li><strong>INVALID_NODE_VERSION</strong>: Invalid.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -148,7 +151,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     public GetAuthSummaryResponseBodyMachine machine;
 
     /**
-     * <p>The protection edition of the host and container security pay-as-you-go service. This value indicates the highest protection edition among all bound hosts. Valid values:  </p>
+     * <p>The protection edition of the host and container security pay-as-you-go service. This is the highest protection edition among all bound hosts. Valid values:  </p>
      * <ul>
      * <li><strong>1</strong>: Free Edition. </li>
      * <li><strong>3</strong>: Enterprise Edition.</li>
@@ -164,7 +167,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     public String postPaidHighestVersion;
 
     /**
-     * <p>Indicates whether new hosts are automatically bound for the host and container security pay-as-you-go service. Valid values:</p>
+     * <p>Indicates whether automatic binding of new hosts is enabled for the host and container security pay-as-you-go service. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Disabled.</li>
      * <li><strong>1</strong>: Enabled.</li>
@@ -266,6 +269,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         return this.defaultAuthToAll;
     }
 
+    public GetAuthSummaryResponseBody setEdrSummary(GetAuthSummaryResponseBodyEdrSummary edrSummary) {
+        this.edrSummary = edrSummary;
+        return this;
+    }
+    public GetAuthSummaryResponseBodyEdrSummary getEdrSummary() {
+        return this.edrSummary;
+    }
+
     public GetAuthSummaryResponseBody setHasPreBindSetting(Boolean hasPreBindSetting) {
         this.hasPreBindSetting = hasPreBindSetting;
         return this;
@@ -354,6 +365,47 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         return this.versionSummary;
     }
 
+    public static class GetAuthSummaryResponseBodyEdrSummary extends TeaModel {
+        @NameInMap("BoundCount")
+        public String boundCount;
+
+        @NameInMap("HybridPaidAutoBind")
+        public String hybridPaidAutoBind;
+
+        @NameInMap("PostPaidAutoBind")
+        public String postPaidAutoBind;
+
+        public static GetAuthSummaryResponseBodyEdrSummary build(java.util.Map<String, ?> map) throws Exception {
+            GetAuthSummaryResponseBodyEdrSummary self = new GetAuthSummaryResponseBodyEdrSummary();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAuthSummaryResponseBodyEdrSummary setBoundCount(String boundCount) {
+            this.boundCount = boundCount;
+            return this;
+        }
+        public String getBoundCount() {
+            return this.boundCount;
+        }
+
+        public GetAuthSummaryResponseBodyEdrSummary setHybridPaidAutoBind(String hybridPaidAutoBind) {
+            this.hybridPaidAutoBind = hybridPaidAutoBind;
+            return this;
+        }
+        public String getHybridPaidAutoBind() {
+            return this.hybridPaidAutoBind;
+        }
+
+        public GetAuthSummaryResponseBodyEdrSummary setPostPaidAutoBind(String postPaidAutoBind) {
+            this.postPaidAutoBind = postPaidAutoBind;
+            return this;
+        }
+        public String getPostPaidAutoBind() {
+            return this.postPaidAutoBind;
+        }
+
+    }
+
     public static class GetAuthSummaryResponseBodyMachine extends TeaModel {
         /**
          * <p>The number of cores of assets that are bound with authorization.</p>
@@ -374,7 +426,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         public Integer bindEcsCount;
 
         /**
-         * <p>The number of cores of assets that are bound with pay-as-you-go authorization.</p>
+         * <p>The number of cores of assets bound with pay-as-you-go authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -383,7 +435,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         public Integer postPaidBindCoreCount;
 
         /**
-         * <p>The number of assets that are bound with pay-as-you-go authorization.</p>
+         * <p>The number of assets bound with pay-as-you-go authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -547,8 +599,17 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         @NameInMap("AuthBindType")
         public String authBindType;
 
+        @NameInMap("FreeCoreCount")
+        public Integer freeCoreCount;
+
+        @NameInMap("FreeEcsCount")
+        public Integer freeEcsCount;
+
+        @NameInMap("FreeType")
+        public String freeType;
+
         /**
-         * <p>The index of the current edition. A larger value indicates a higher edition. This parameter is used for sorting. Valid values:</p>
+         * <p>The index of the current edition. A larger value indicates a higher edition. This field is used for sorting. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: Free Edition. </li>
          * <li><strong>2</strong>: Anti-virus Edition.    </li>
@@ -564,7 +625,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         public Integer index;
 
         /**
-         * <p>The number of authorized cores that are used.</p>
+         * <p>The number of authorized cores that have been used.</p>
          * <blockquote>
          * <p>This parameter is valid only when AuthBindType is set to CORE or ASSET_AND_CORE.</p>
          * </blockquote>
@@ -576,7 +637,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         public Long usedCoreCount;
 
         /**
-         * <p>The number of authorized assets that are used.</p>
+         * <p>The number of authorized assets that have been used.</p>
          * <blockquote>
          * <p>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
          * </blockquote>
@@ -588,7 +649,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         public Long usedEcsCount;
 
         /**
-         * <p>The pay-as-you-go edition that is bound to host assets. Valid values:  </p>
+         * <p>The pay-as-you-go edition bound to host assets. Valid values:  </p>
          * <ul>
          * <li><strong>1</strong>: Free Edition. </li>
          * <li><strong>3</strong>: Enterprise Edition.</li>
@@ -614,6 +675,30 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
         public String getAuthBindType() {
             return this.authBindType;
+        }
+
+        public GetAuthSummaryResponseBodyPostPaidVersionSummary setFreeCoreCount(Integer freeCoreCount) {
+            this.freeCoreCount = freeCoreCount;
+            return this;
+        }
+        public Integer getFreeCoreCount() {
+            return this.freeCoreCount;
+        }
+
+        public GetAuthSummaryResponseBodyPostPaidVersionSummary setFreeEcsCount(Integer freeEcsCount) {
+            this.freeEcsCount = freeEcsCount;
+            return this;
+        }
+        public Integer getFreeEcsCount() {
+            return this.freeEcsCount;
+        }
+
+        public GetAuthSummaryResponseBodyPostPaidVersionSummary setFreeType(String freeType) {
+            this.freeType = freeType;
+            return this;
+        }
+        public String getFreeType() {
+            return this.freeType;
         }
 
         public GetAuthSummaryResponseBodyPostPaidVersionSummary setIndex(Integer index) {
@@ -666,7 +751,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         public String authBindType;
 
         /**
-         * <p>The index of the current edition. A larger value indicates a higher edition. This parameter is used for sorting. Valid values:</p>
+         * <p>The index of the current edition. A larger value indicates a higher edition. This field is used for sorting. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: Free Edition. </li>
          * <li><strong>2</strong>: Anti-virus Edition.    </li>
@@ -754,7 +839,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         public Integer unusedEcsAuthCount;
 
         /**
-         * <p>The number of authorized cores that are used.</p>
+         * <p>The number of authorized cores that have been used.</p>
          * <blockquote>
          * <p>This parameter is valid only when AuthBindType is set to CORE or ASSET_AND_CORE.</p>
          * </blockquote>
@@ -766,7 +851,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         public Integer usedCoreCount;
 
         /**
-         * <p>The number of authorized assets that are used.</p>
+         * <p>The number of authorized assets that have been used.</p>
          * <blockquote>
          * <p>This parameter is valid only when AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
          * </blockquote>
@@ -786,7 +871,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
          * <li><strong>6</strong>: Anti-virus Edition.    </li>
          * <li><strong>7</strong>: Ultimate Edition.   </li>
          * <li><strong>8</strong>: Multi-version.   </li>
-         * <li><strong>10</strong>: Only value-added services are purchased.</li>
+         * <li><strong>10</strong>: Value-added services only.</li>
          * </ul>
          * 
          * <strong>example:</strong>

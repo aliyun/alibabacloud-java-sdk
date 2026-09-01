@@ -7,7 +7,7 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</p>
+     * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the check item ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,21 +17,27 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     public Long checkId;
 
     /**
-     * <p>The list of IDs of the check items.</p>
+     * <p>The list of check item IDs.</p>
      */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
     /**
-     * <p>The list of instance IDs of the assets affected by the check item.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The list of instance IDs of the affected assets under the check item.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The source of the task. Valid values:</p>
+     * <p>The task source. Valid values:</p>
      * <ul>
-     * <li><strong>YAO_CHI</strong>: YaoChi console.</li>
+     * <li><strong>YAO_CHI</strong>: ApsaraDB console.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,6 +65,14 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     }
     public java.util.List<Long> getCheckIds() {
         return this.checkIds;
+    }
+
+    public VerifyCheckInstanceResultRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public VerifyCheckInstanceResultRequest setInstanceIds(java.util.List<String> instanceIds) {

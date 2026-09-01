@@ -38,6 +38,9 @@ public class DescribeAllRegionsStatisticsRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The source IP address of the request.</p>
      * 
@@ -74,6 +77,14 @@ public class DescribeAllRegionsStatisticsRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public DescribeAllRegionsStatisticsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeAllRegionsStatisticsRequest setSourceIp(String sourceIp) {

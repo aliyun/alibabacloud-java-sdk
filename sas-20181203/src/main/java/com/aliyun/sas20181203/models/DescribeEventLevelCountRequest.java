@@ -79,6 +79,9 @@ public class DescribeEventLevelCountRequest extends TeaModel {
     @NameInMap("MultiAccountActionType")
     public Integer multiAccountActionType;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The type of the query condition. Valid values:</p>
      * <ul>
@@ -143,6 +146,14 @@ public class DescribeEventLevelCountRequest extends TeaModel {
     }
     public Integer getMultiAccountActionType() {
         return this.multiAccountActionType;
+    }
+
+    public DescribeEventLevelCountRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeEventLevelCountRequest setTargetType(String targetType) {

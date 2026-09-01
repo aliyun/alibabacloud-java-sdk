@@ -82,7 +82,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <ul>
          * <li><strong>text</strong>: plain text</li>
-         * <li><strong>html</strong>: rich text.</li>
+         * <li><strong>html</strong>: rich text</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
 
         /**
          * <p>The additional attribute information of the exception event.
-         * For example, the logon time or logon location of an unusual logon alert, or the trojan file path or trojan type of an alert.</p>
+         * For example, the logon time or logon location for an unusual logon alert, or the trojan file path or trojan type for a trojan alert.</p>
          * 
          * <strong>example:</strong>
          * <p>getopt</p>
@@ -160,7 +160,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
          * <p>The name (subtype) of the alert event.</p>
          * 
          * <strong>example:</strong>
-         * <p>恶意脚本代码执行</p>
+         * <p>Malicious Software-Trojan</p>
          */
         @NameInMap("EventName")
         public String eventName;

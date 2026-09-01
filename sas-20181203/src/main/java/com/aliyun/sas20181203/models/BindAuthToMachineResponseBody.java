@@ -44,7 +44,7 @@ public class BindAuthToMachineResponseBody extends TeaModel {
      * <p>The status code of the binding result. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Succeeded.</li>
-     * <li><strong>1</strong>: Invalid parameters.</li>
+     * <li><strong>1</strong>: Parameter error.</li>
      * <li><strong>2</strong>: Insufficient server authorization quota.</li>
      * <li><strong>3</strong>: Insufficient server core authorization quota.</li>
      * </ul>

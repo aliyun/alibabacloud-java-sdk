@@ -44,6 +44,9 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
      * 
@@ -88,6 +91,14 @@ public class ModifySecurityEventMarkMissIndividuallyRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ModifySecurityEventMarkMissIndividuallyRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ModifySecurityEventMarkMissIndividuallyRequest setSourceIp(String sourceIp) {

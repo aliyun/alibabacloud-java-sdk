@@ -178,6 +178,9 @@ public class SaveCustomizeReportConfigRequest extends TeaModel {
     @NameInMap("ReportVersion")
     public String reportVersion;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The end time at which the report is sent. The value is in the HH:mm:ss format.</p>
      * <blockquote>
@@ -372,6 +375,14 @@ public class SaveCustomizeReportConfigRequest extends TeaModel {
     }
     public String getReportVersion() {
         return this.reportVersion;
+    }
+
+    public SaveCustomizeReportConfigRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public SaveCustomizeReportConfigRequest setSendEndTime(String sendEndTime) {

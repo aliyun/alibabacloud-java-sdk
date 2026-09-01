@@ -7,20 +7,26 @@ public class AddCheckResultWhiteListRequest extends TeaModel {
     /**
      * <p>The IDs of the check items.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of the check items.</p>
+     * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain this parameter.</p>
      * </blockquote>
      */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
     /**
-     * <p>IDs of the cloud product instances that need to be whitelisted. Separate multiple IDs with a comma (,).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The instance IDs of the cloud service instances to add to the whitelist. Separate multiple instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The description. The value of this parameter can be up to 65,535 bytes in length.</p>
+     * <p>The remarks. Maximum length: 65,535 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -29,9 +35,9 @@ public class AddCheckResultWhiteListRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The type of the rule. Default value: <strong>WHITE</strong>. Valid value:</p>
+     * <p>The rule type. Default value: <strong>WHITE</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>WHITE</strong>: Add check items to the whitelist.</li>
+     * <li><strong>WHITE</strong>: adds to the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,6 +57,14 @@ public class AddCheckResultWhiteListRequest extends TeaModel {
     }
     public java.util.List<Long> getCheckIds() {
         return this.checkIds;
+    }
+
+    public AddCheckResultWhiteListRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public AddCheckResultWhiteListRequest setInstanceIds(java.util.List<String> instanceIds) {

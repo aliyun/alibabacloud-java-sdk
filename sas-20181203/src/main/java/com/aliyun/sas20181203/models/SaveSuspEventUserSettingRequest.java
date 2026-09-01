@@ -27,6 +27,9 @@ public class SaveSuspEventUserSettingRequest extends TeaModel {
     @NameInMap("LevelsOn")
     public String levelsOn;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static SaveSuspEventUserSettingRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveSuspEventUserSettingRequest self = new SaveSuspEventUserSettingRequest();
         return TeaModel.build(map, self);
@@ -46,6 +49,14 @@ public class SaveSuspEventUserSettingRequest extends TeaModel {
     }
     public String getLevelsOn() {
         return this.levelsOn;
+    }
+
+    public SaveSuspEventUserSettingRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

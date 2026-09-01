@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class AddUnknownThreatDetectProcessRequest extends TeaModel {
     /**
-     * <p>A list of associated event IDs.</p>
+     * <p>The list of specified event IDs.</p>
      */
     @NameInMap("EventIdList")
     public java.util.List<Long> eventIdList;
 
+    @NameInMap("HandleRemark")
+    public String handleRemark;
+
     /**
-     * <p>The list of processes to add.</p>
+     * <p>The list of processes.</p>
      */
     @NameInMap("ProcessList")
     public java.util.List<AddUnknownThreatDetectProcessRequestProcessList> processList;
 
     /**
-     * <p>The UUIDs of assets on which the processes are located.</p>
+     * <p>The list of asset UUIDs for which processes are to be added.</p>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
@@ -33,6 +36,14 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
     }
     public java.util.List<Long> getEventIdList() {
         return this.eventIdList;
+    }
+
+    public AddUnknownThreatDetectProcessRequest setHandleRemark(String handleRemark) {
+        this.handleRemark = handleRemark;
+        return this;
+    }
+    public String getHandleRemark() {
+        return this.handleRemark;
     }
 
     public AddUnknownThreatDetectProcessRequest setProcessList(java.util.List<AddUnknownThreatDetectProcessRequestProcessList> processList) {
@@ -53,7 +64,7 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
 
     public static class AddUnknownThreatDetectProcessRequestProcessList extends TeaModel {
         /**
-         * <p>The MD5 hash of the process file.</p>
+         * <p>The MD5 hash of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>e59b63ae983377f131ab20ec0d******</p>
@@ -62,7 +73,7 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
         public String md5;
 
         /**
-         * <p>The path to the process executable.</p>
+         * <p>The process path.</p>
          * 
          * <strong>example:</strong>
          * <p>/bin/rm</p>
@@ -71,7 +82,7 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
         public String processPath;
 
         /**
-         * <p>A remark for the process.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>1330</p>
@@ -80,7 +91,7 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
         public String remark;
 
         /**
-         * <p>The SHA-256 hash of the process file.</p>
+         * <p>The SHA-256 hash of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>f204693a7d2ce99d6c4434e550d985ee1c7be7cb5dd9a76094369af0d2******</p>

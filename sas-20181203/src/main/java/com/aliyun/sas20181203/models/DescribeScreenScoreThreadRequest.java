@@ -14,6 +14,9 @@ public class DescribeScreenScoreThreadRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The source of the security score. If left empty, the default value is Security Center. Valid values:</p>
      * <p>0: Security Center.</p>
@@ -46,6 +49,14 @@ public class DescribeScreenScoreThreadRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeScreenScoreThreadRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeScreenScoreThreadRequest setSource(Integer source) {

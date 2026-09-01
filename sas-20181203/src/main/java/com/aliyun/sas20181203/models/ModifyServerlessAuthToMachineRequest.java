@@ -28,8 +28,8 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic binding. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Disabled.</li>
-     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disable automatic binding.</li>
+     * <li><strong>1</strong>: Enable automatic binding.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
      * <p>The list of application IDs to bind.</p>
      * <blockquote>
-     * <p>Retrieve the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</p>
+     * <p>Obtain the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</p>
      * </blockquote>
      */
     @NameInMap("BindAppList")
@@ -63,8 +63,8 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
      * <p>The Asset Type for the operation. Valid values:</p>
      * <ul>
-     * <li><strong>INSTANCE</strong>: instance.</li>
-     * <li><strong>APP</strong>: application.</li>
+     * <li><strong>INSTANCE</strong>: Instance.</li>
+     * <li><strong>APP</strong>: Application.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,9 +80,15 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public java.util.List<String> bindUuidList;
 
     /**
-     * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when specifying this parameter.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</p>
      * <blockquote>
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query supported search conditions.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -114,13 +120,13 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public String ntmVersion;
 
     /**
-     * <p>Specifies whether to perform a pre-binding operation. Valid values:</p>
+     * <p>Specifies whether to enable pre-binding. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No.</li>
      * <li><strong>1</strong>: Yes.</li>
      * </ul>
      * <blockquote>
-     * <p>After pre-binding is enabled, the corresponding edition authorization quota is automatically bound to the specified servers after the purchase is completed.</p>
+     * <p>After pre-binding is enabled, the corresponding authorization quota is automatically bound to the specified servers after the purchase is completed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -150,7 +156,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
      * <p>The list of application IDs to unbind.</p>
      * <blockquote>
-     * <p>Retrieve the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</p>
+     * <p>Obtain the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</p>
      * </blockquote>
      */
     @NameInMap("UnBindAppList")
@@ -221,6 +227,14 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     }
     public java.util.List<String> getBindUuidList() {
         return this.bindUuidList;
+    }
+
+    public ModifyServerlessAuthToMachineRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyServerlessAuthToMachineRequest setCriteria(String criteria) {

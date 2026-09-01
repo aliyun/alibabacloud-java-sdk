@@ -53,6 +53,9 @@ public class DescribeChartDataRequest extends TeaModel {
     @NameInMap("ReportId")
     public Long reportId;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The end timestamp for statistics. Unit: milliseconds.</p>
      * 
@@ -106,6 +109,14 @@ public class DescribeChartDataRequest extends TeaModel {
     }
     public Long getReportId() {
         return this.reportId;
+    }
+
+    public DescribeChartDataRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeChartDataRequest setTimeEnd(Long timeEnd) {

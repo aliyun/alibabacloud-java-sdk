@@ -7,7 +7,7 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.&gt;Notice: When this parameter is specified, the Uuid parameter is required..</p>
+     * <p>You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.&gt;Notice: When this parameter is specified, the Uuid parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
      * <p>The alert ID of the check item.</p>
      * <blockquote>
      * <p>To query the details of a specified check item, provide the alert ID of the check item. You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to obtain this ID.
-     * Notice: This parameter is required when both Uuid and CheckId are empty..</p>
+     * Notice: This parameter is required when both Uuid and CheckId are empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the Alibaba Cloud account of the member accounts in the resource folder.</p>
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
      * <blockquote>
      * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
@@ -75,7 +75,7 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     /**
      * <p>The UUID of the server to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.&gt;Notice: When this parameter is specified, the CheckId parameter is required..</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.&gt;Notice: When this parameter is specified, the CheckId parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ModifyPostPayModuleSwitchResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code of the request.</p>
+     * <p>The HTTP status code of the request result.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ModifyPostPayModuleSwitchResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The returned message of the request result.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

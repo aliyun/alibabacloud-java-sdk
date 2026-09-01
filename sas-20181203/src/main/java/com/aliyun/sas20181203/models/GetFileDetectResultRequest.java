@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileDetectResultRequest extends TeaModel {
     /**
-     * <p>An array of up to 100 unique file identifiers.</p>
+     * <p>The list of file identifiers. A maximum of 100 elements can be specified.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HashKeyList")
@@ -23,10 +23,7 @@ public class GetFileDetectResultRequest extends TeaModel {
     /**
      * <p>The type of file to detect. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: malicious file detection</p>
-     * </li>
-     * <li><p><strong>6</strong>: Skill compressed package detection</p>
-     * </li>
+     * <li><strong>0</strong>: malicious file detection</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

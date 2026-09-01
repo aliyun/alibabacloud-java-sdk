@@ -197,6 +197,9 @@ public class ExportSuspEventsRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
      * 
@@ -407,6 +410,14 @@ public class ExportSuspEventsRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public ExportSuspEventsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ExportSuspEventsRequest setSourceIp(String sourceIp) {

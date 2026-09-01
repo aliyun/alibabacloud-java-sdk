@@ -17,6 +17,9 @@ public class GetSuspiciousStatisticsRequest extends TeaModel {
     @NameInMap("GroupIdList")
     public String groupIdList;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The IP address of the access source.</p>
      * 
@@ -37,6 +40,14 @@ public class GetSuspiciousStatisticsRequest extends TeaModel {
     }
     public String getGroupIdList() {
         return this.groupIdList;
+    }
+
+    public GetSuspiciousStatisticsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public GetSuspiciousStatisticsRequest setSourceIp(String sourceIp) {

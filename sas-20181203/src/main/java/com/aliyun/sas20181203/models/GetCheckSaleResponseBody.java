@@ -11,7 +11,7 @@ public class GetCheckSaleResponseBody extends TeaModel {
     public GetCheckSaleResponseBodyCheckSale checkSale;
 
     /**
-     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
+     * <p>The ID of the request. The China Cloud generates a unique identifier for the request, which can be used for troubleshooting and diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
@@ -63,7 +63,7 @@ public class GetCheckSaleResponseBody extends TeaModel {
         public Long instancePurchaseCount;
 
         /**
-         * <p>Indicates whether the user is an existing user who used the cloud service configuration check feature before the sales feature was released on July 7, 2023. Valid values:</p>
+         * <p>Indicates whether the user is an existing user who used the cloud service configuration check feature before the sales feature was released (July 7, 2023). Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The user is an existing user.</li>
          * <li><strong>false</strong>: The user is not an existing user.</li>
@@ -85,11 +85,11 @@ public class GetCheckSaleResponseBody extends TeaModel {
         public Long purchaseCount;
 
         /**
-         * <p>The type of the sales user. Valid values:</p>
+         * <p>The sales user type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: full-feature user who can use all check items.</li>
-         * <li><strong>2</strong>: user who needs to upgrade and can only use check items that were available before the sales feature was released on July 7, 2023.</li>
-         * <li><strong>3</strong>: user who needs to purchase the feature and cannot use the cloud service configuration check feature.</li>
+         * <li><strong>1</strong>: Full-feature user. The user can use all check items.</li>
+         * <li><strong>2</strong>: Upgrade-required user. The user can use only the check items that were available before the sales feature was released (July 7, 2023).</li>
+         * <li><strong>3</strong>: Purchase-required user. The user cannot use the cloud service configuration check feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>

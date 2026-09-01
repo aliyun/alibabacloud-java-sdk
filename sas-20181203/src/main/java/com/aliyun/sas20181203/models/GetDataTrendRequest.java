@@ -45,6 +45,9 @@ public class GetDataTrendRequest extends TeaModel {
     @NameInMap("Interval")
     public Integer interval;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The start timestamp of the query. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
@@ -82,6 +85,14 @@ public class GetDataTrendRequest extends TeaModel {
     }
     public Integer getInterval() {
         return this.interval;
+    }
+
+    public GetDataTrendRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public GetDataTrendRequest setStartTimestamp(Long startTimestamp) {

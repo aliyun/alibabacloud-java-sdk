@@ -26,6 +26,9 @@ public class GetSecurityScoreRuleRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static GetSecurityScoreRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSecurityScoreRuleRequest self = new GetSecurityScoreRuleRequest();
         return TeaModel.build(map, self);
@@ -45,6 +48,14 @@ public class GetSecurityScoreRuleRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public GetSecurityScoreRuleRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

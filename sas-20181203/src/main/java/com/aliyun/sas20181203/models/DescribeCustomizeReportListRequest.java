@@ -71,6 +71,9 @@ public class DescribeCustomizeReportListRequest extends TeaModel {
     @NameInMap("ReportVersion")
     public String reportVersion;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The name of the report.</p>
      * 
@@ -123,6 +126,14 @@ public class DescribeCustomizeReportListRequest extends TeaModel {
     }
     public String getReportVersion() {
         return this.reportVersion;
+    }
+
+    public DescribeCustomizeReportListRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeCustomizeReportListRequest setTitle(String title) {

@@ -4,11 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the alert event.</p>
+     * <p>The ID of the security alert.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +47,22 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
     public static CreateSimilarSecurityEventsQueryTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSimilarSecurityEventsQueryTaskRequest self = new CreateSimilarSecurityEventsQueryTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSimilarSecurityEventsQueryTaskRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateSimilarSecurityEventsQueryTaskRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public CreateSimilarSecurityEventsQueryTaskRequest setResourceOwnerId(Long resourceOwnerId) {

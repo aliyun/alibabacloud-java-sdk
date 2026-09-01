@@ -23,14 +23,15 @@ public class GetCheckProcessResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code of the Cloud Security Posture Management (CSPM) check task. Valid values:</p>
+     * <p>The status code of the CSPM check task. Valid values:</p>
      * <ul>
      * <li>0: The task is being initialized and the total number of tasks is being calculated.</li>
      * <li>1: The task is running. You can query the total number of tasks and the number of completed tasks.</li>
      * <li>2: The task is completed.</li>
      * <li>3: The task timed out.</li>
-     * <li>4: The task is invalid. Check whether valid assets exist for detection.</li>
+     * <li>4: The task is invalid. Check whether valid assets exist for the check.</li>
      * <li>5: No task record exists. Check whether the TaskId is correct.</li>
+     * <li>6: The task is running and data is being prepared. You cannot query the total number of tasks or the number of completed tasks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +41,7 @@ public class GetCheckProcessResponseBody extends TeaModel {
     public String statusCode;
 
     /**
-     * <p>The ID of the cloud service configuration check task to query.</p>
+     * <p>The ID of the cloud service configuration check task.</p>
      * 
      * <strong>example:</strong>
      * <p>5347c7b6-c85c-4070-846a-3029e08e****</p>
@@ -49,7 +50,7 @@ public class GetCheckProcessResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The total number of assets to check.</p>
+     * <p>The total number of assets to be checked.</p>
      * 
      * <strong>example:</strong>
      * <p>113</p>

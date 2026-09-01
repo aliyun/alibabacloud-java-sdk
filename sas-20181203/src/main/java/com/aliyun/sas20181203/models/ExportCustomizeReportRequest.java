@@ -33,6 +33,9 @@ public class ExportCustomizeReportRequest extends TeaModel {
     @NameInMap("ReportId")
     public Long reportId;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static ExportCustomizeReportRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportCustomizeReportRequest self = new ExportCustomizeReportRequest();
         return TeaModel.build(map, self);
@@ -52,6 +55,14 @@ public class ExportCustomizeReportRequest extends TeaModel {
     }
     public Long getReportId() {
         return this.reportId;
+    }
+
+    public ExportCustomizeReportRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

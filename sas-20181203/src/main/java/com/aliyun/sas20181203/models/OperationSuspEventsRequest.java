@@ -31,6 +31,9 @@ public class OperationSuspEventsRequest extends TeaModel {
     @NameInMap("Operation")
     public String operation;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The IP address of the access source.</p>
      * 
@@ -99,6 +102,14 @@ public class OperationSuspEventsRequest extends TeaModel {
     }
     public String getOperation() {
         return this.operation;
+    }
+
+    public OperationSuspEventsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public OperationSuspEventsRequest setSourceIp(String sourceIp) {

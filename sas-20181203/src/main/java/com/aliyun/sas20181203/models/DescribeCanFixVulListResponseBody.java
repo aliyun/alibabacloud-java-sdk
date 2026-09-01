@@ -60,7 +60,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String layer;
 
         /**
-         * <p>The details of the vulnerability match.</p>
+         * <p>The detailed information about the vulnerability match.</p>
          * 
          * <strong>example:</strong>
          * <p>python-perf version less than 0:3.10.0-693.21.1.el7</p>
@@ -93,7 +93,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The command to fix the vulnerability.</p>
+         * <p>The command used to fix the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>apt-get update &amp;&amp; apt-get install libseccomp2  --only-upgrade</p>
@@ -307,7 +307,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public DescribeCanFixVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
         /**
-         * <p>The timestamp when the vulnerability was first detected. Unit: milliseconds.</p>
+         * <p>The timestamp when the vulnerability was first detected, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620752053000</p>
@@ -362,7 +362,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
+         * <p>The timestamp when the vulnerability was last detected, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620404763000</p>
@@ -391,7 +391,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String maliciousSource;
 
         /**
-         * <p>The timestamp when the vulnerability status was modified. Unit: milliseconds.</p>
+         * <p>The timestamp when the vulnerability status was modified, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620404763000</p>
@@ -480,7 +480,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String repoNamespace;
 
         /**
-         * <p>The timestamp of the scan. Unit: milliseconds.</p>
+         * <p>The timestamp of the scan, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649814050000</p>

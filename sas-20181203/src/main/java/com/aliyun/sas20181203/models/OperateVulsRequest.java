@@ -14,6 +14,9 @@ public class OperateVulsRequest extends TeaModel {
     @NameInMap("OperateType")
     public String operateType;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The type of vulnerability to fix. Set the value to <strong>cve</strong>, which indicates a Linux software vulnerability.</p>
      * <p>This parameter is required.</p>
@@ -49,6 +52,14 @@ public class OperateVulsRequest extends TeaModel {
     }
     public String getOperateType() {
         return this.operateType;
+    }
+
+    public OperateVulsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public OperateVulsRequest setType(String type) {

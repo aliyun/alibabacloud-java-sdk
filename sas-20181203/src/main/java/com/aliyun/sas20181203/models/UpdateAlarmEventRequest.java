@@ -37,6 +37,9 @@ public class UpdateAlarmEventRequest extends TeaModel {
     @NameInMap("OperationCode")
     public String operationCode;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static UpdateAlarmEventRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAlarmEventRequest self = new UpdateAlarmEventRequest();
         return TeaModel.build(map, self);
@@ -64,6 +67,14 @@ public class UpdateAlarmEventRequest extends TeaModel {
     }
     public String getOperationCode() {
         return this.operationCode;
+    }
+
+    public UpdateAlarmEventRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

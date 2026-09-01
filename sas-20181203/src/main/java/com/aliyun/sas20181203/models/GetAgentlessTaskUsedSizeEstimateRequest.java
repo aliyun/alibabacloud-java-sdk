@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentlessTaskUsedSizeEstimateRequest extends TeaModel {
     /**
-     * <p>Asset selection identifier.</p>
+     * <p>The asset selection identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

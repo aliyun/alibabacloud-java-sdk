@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
     /**
-     * <p>The data returned. This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> The result of adding instances to the whitelist. This field is deprecated and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -14,7 +14,7 @@ public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>
@@ -23,7 +23,7 @@ public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the whitelist rule.</p>
+     * <p>The rule ID of the whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>381049</p>

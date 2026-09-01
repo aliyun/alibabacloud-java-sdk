@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOnceTaskRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeOnceTaskRequest extends TeaModel {
     public Long endTimeQuery;
 
     /**
-     * <p>The number of client tasks per page in a paged query. Default value: <strong>20</strong>.</p>
+     * <p>Settings for the number of client tasks on each page in a paged query. Default value: <strong>20</strong>, which indicates that each page contains 20 client tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -80,7 +80,8 @@ public class DescribeOnceTaskRequest extends TeaModel {
      * <li><strong>VUL_CHECK_TASK</strong>: vulnerability scanning node</li>
      * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client node</li>
      * <li><strong>CLIENT_DEV_OPS</strong>: cloud O&amp;M node</li>
-     * <li><strong>ASSET_SECURITY_CHECK</strong>: asset information collection node<blockquote>
+     * <li><strong>ASSET_SECURITY_CHECK</strong>: asset information collection node</li>
+     * <li><strong>ASSET_REFRESH_HOST</strong>: host asset synchronization node<blockquote>
      * <p><strong>TaskType</strong> and <strong>RootTaskId</strong> cannot both be empty.</p>
      * </blockquote>
      * </li>

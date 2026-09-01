@@ -10,6 +10,9 @@ public class HandleUnknownThreatDetectEventRequest extends TeaModel {
     @NameInMap("EventIdList")
     public java.util.List<String> eventIdList;
 
+    @NameInMap("HandleRemark")
+    public String handleRemark;
+
     /**
      * <p>The event handling status. Valid values:</p>
      * <ul>
@@ -35,6 +38,14 @@ public class HandleUnknownThreatDetectEventRequest extends TeaModel {
     }
     public java.util.List<String> getEventIdList() {
         return this.eventIdList;
+    }
+
+    public HandleUnknownThreatDetectEventRequest setHandleRemark(String handleRemark) {
+        this.handleRemark = handleRemark;
+        return this;
+    }
+    public String getHandleRemark() {
+        return this.handleRemark;
     }
 
     public HandleUnknownThreatDetectEventRequest setStatus(Integer status) {

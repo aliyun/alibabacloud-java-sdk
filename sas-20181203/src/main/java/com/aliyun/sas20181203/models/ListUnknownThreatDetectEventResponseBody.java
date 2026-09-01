@@ -97,6 +97,9 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         @NameInMap("FirstTime")
         public Long firstTime;
 
+        @NameInMap("HandleRemark")
+        public String handleRemark;
+
         @NameInMap("HandleType")
         public String handleType;
 
@@ -293,6 +296,14 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             return this.firstTime;
         }
 
+        public ListUnknownThreatDetectEventResponseBodyData setHandleRemark(String handleRemark) {
+            this.handleRemark = handleRemark;
+            return this;
+        }
+        public String getHandleRemark() {
+            return this.handleRemark;
+        }
+
         public ListUnknownThreatDetectEventResponseBodyData setHandleType(String handleType) {
             this.handleType = handleType;
             return this;
@@ -425,7 +436,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectEventResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of alerting events displayed on the current page in a paged query. This parameter is used for paging.</p>
+         * <p>The number of alerting events displayed on the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -434,7 +445,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the current page in a paged query. This parameter is used for paging.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -443,7 +454,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries displayed on each page in a paged query. This parameter is used for paging.</p>
+         * <p>The maximum number of entries displayed on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

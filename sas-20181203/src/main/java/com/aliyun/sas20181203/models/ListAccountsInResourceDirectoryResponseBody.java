@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The list of member accounts in the resource directory.</p>
+     * <p>La liste des comptes membres dans le répertoire de ressources.</p>
      */
     @NameInMap("Accounts")
     public java.util.List<ListAccountsInResourceDirectoryResponseBodyAccounts> accounts;
 
     /**
-     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
+     * <p>L\&quot;identifiant de la requête. Il s\&quot;agit d\&quot;un identifiant unique généré par Alibaba Cloud pour la requête. Vous pouvez l\&quot;utiliser pour le dépannage.</p>
      * 
      * <strong>example:</strong>
      * <p>B7A839E8-70AE-591D-8D9E-C5419A2240DB</p>
@@ -42,7 +42,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
 
     public static class ListAccountsInResourceDirectoryResponseBodyAccounts extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID of the member.</p>
+         * <p>L\&quot;identifiant de compte Alibaba Cloud du membre.</p>
          * 
          * <strong>example:</strong>
          * <p>180803538814****</p>
@@ -51,33 +51,33 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>This parameter is deprecated and does not need to be used.</p>
+         * <p>Ce paramètre est obsolète et ne doit plus être utilisé.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>true.</p>
          */
         @NameInMap("BuySas")
         @Deprecated
         public Integer buySas;
 
         /**
-         * <p>Indicates whether a Security Center subscription instance is purchased. Valid values:</p>
+         * <p>Indique si une instance Security Center en abonnement a été souscrite. Valeurs valides :</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>true.</p>
          */
         @NameInMap("BuySasNew")
         public Boolean buySasNew;
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>Le mode de facturation de l\&quot;abonnement. Valeurs valides :</p>
          * <ul>
-         * <li><strong>0</strong>: upfront</li>
-         * <li><strong>1</strong>: pay-as-you-go.</li>
+         * <li><strong>0</strong> : prépayé</li>
+         * <li><strong>1</strong> : paiement à l\&quot;usage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public Integer chargeType;
 
         /**
-         * <p>The account name.</p>
+         * <p>Le nom du compte.</p>
          * 
          * <strong>example:</strong>
          * <p>abc**</p>
@@ -96,7 +96,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The ID of the folder in the resource directory.</p>
+         * <p>L\&quot;identifiant du dossier dans le répertoire de ressources.</p>
          * 
          * <strong>example:</strong>
          * <p>fd-cE2SQP****</p>
@@ -105,10 +105,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>The instance purchase type. Valid values:</p>
+         * <p>Le type d\&quot;achat de l\&quot;instance. Valeurs valides :</p>
          * <ul>
-         * <li><strong>0</strong>: self-purchased</li>
-         * <li><strong>1</strong>: allocated through multi-account management.</li>
+         * <li><strong>0</strong> : achat direct</li>
+         * <li><strong>1</strong> : alloué via la gestion multi-comptes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public Integer instanceBuyType;
 
         /**
-         * <p>Indicates whether the account is the management account of the resource directory. Valid values:</p>
+         * <p>Indique si le compte est le compte de gestion du répertoire de ressources. Valeurs valides :</p>
          * <ul>
          * <li><p><strong>yes</strong></p>
          * </li>
@@ -133,7 +133,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String isMaAccount;
 
         /**
-         * <p>Indicates whether the account is marked as followed.</p>
+         * <p>Indique si le compte est marqué comme suivi.</p>
          * 
          * <strong>example:</strong>
          * <p>no</p>
@@ -142,7 +142,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String isMarked;
 
         /**
-         * <p>Indicates whether the account is a delegated administrator account of Security Center. Valid values:</p>
+         * <p>Indique si le compte est un compte administrateur délégué de Security Center. Valeurs valides :</p>
          * <ul>
          * <li><p><strong>yes</strong></p>
          * </li>
@@ -157,7 +157,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String isSasDaAccount;
 
         /**
-         * <p>Indicates whether the account is a management account of Cloud Threat Detection and Response (CTDR). Valid values:</p>
+         * <p>Indique si le compte est un compte de gestion de Cloud Threat Detection and Response (CTDR). Valeurs valides :</p>
          * <ul>
          * <li><p><strong>yes</strong></p>
          * </li>
@@ -172,7 +172,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String isSiemControlAccount;
 
         /**
-         * <p>Indicates whether the account is a delegated administrator account of Cloud Threat Detection and Response (CTDR). Valid values:</p>
+         * <p>Indique si le compte est un compte administrateur délégué de Cloud Threat Detection and Response (CTDR). Valeurs valides :</p>
          * <ul>
          * <li><p><strong>yes</strong></p>
          * </li>
@@ -187,10 +187,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String isSiemDaAccount;
 
         /**
-         * <p>The pay-as-you-go module switch. Valid values:</p>
+         * <p>Le commutateur de module à paiement à l\&quot;usage. Valeurs valides :</p>
          * <ul>
-         * <li><strong>0</strong>: disabled</li>
-         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>0</strong> : désactivé</li>
+         * <li><strong>1</strong> : activé.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,20 +200,20 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public Integer postBasicService;
 
         /**
-         * <p>The status of pay-as-you-go module switches, in JsonString format. Valid values:</p>
+         * <p>L\&quot;état des commutateurs de modules à paiement à l\&quot;usage, au format JsonString. Valeurs valides :</p>
          * <ul>
-         * <li>Key:<ul>
-         * <li><strong>VUL</strong>: vulnerability management module</li>
-         * <li><strong>CSPM</strong>: Cloud Security Posture Management (CSPM) module</li>
-         * <li><strong>AGENTLESS</strong>: agentless detection module</li>
-         * <li><strong>SERVERLESS</strong>: serverless asset module</li>
-         * <li><strong>CTDR</strong>: Cloud Threat Detection and Response (CTDR) module</li>
-         * <li><strong>RASP</strong>: Runtime Application Self-Protection (RASP) module</li>
-         * <li><strong>SDK</strong>: malicious file detection SDK module</li>
-         * <li><strong>POST_HOST</strong>: host and container security module</li>
+         * <li>Clé :<ul>
+         * <li><strong>VUL</strong> : module de gestion des vulnérabilités</li>
+         * <li><strong>CSPM</strong> : module Cloud Security Posture Management (CSPM)</li>
+         * <li><strong>AGENTLESS</strong> : module de détection sans agent</li>
+         * <li><strong>SERVERLESS</strong> : module de ressources serverless</li>
+         * <li><strong>CTDR</strong> : module Cloud Threat Detection and Response (CTDR)</li>
+         * <li><strong>RASP</strong> : module Runtime Application Self-Protection (RASP)</li>
+         * <li><strong>SDK</strong> : module SDK de détection de fichiers malveillants</li>
+         * <li><strong>POST_HOST</strong> : module de sécurité des hôtes et des conteneurs</li>
          * </ul>
          * </li>
-         * <li>Value: 0 indicates disabled. 1 indicates enabled.</li>
+         * <li>Valeur : 0 indique désactivé. 1 indique activé.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String postPayModuleSwitch;
 
         /**
-         * <p>The Security Center instance ID.</p>
+         * <p>L\&quot;identifiant de l\&quot;instance Security Center.</p>
          * 
          * <strong>example:</strong>
          * <p>postpay-sas-x5x3hy1ly***</p>
@@ -232,13 +232,13 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String saleInstance;
 
         /**
-         * <p>The purchased edition of Security Center. Valid values:</p>
+         * <p>L\&quot;édition souscrite de Security Center. Valeurs valides :</p>
          * <ul>
-         * <li><strong>0</strong> or <strong>1</strong>: Free Edition</li>
-         * <li><strong>2</strong> or <strong>3</strong>: Enterprise Edition  </li>
-         * <li><strong>5</strong>: Premium Edition  </li>
-         * <li><strong>6</strong>: Anti-virus Edition </li>
-         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * <li><strong>0</strong> ou <strong>1</strong> : Édition gratuite</li>
+         * <li><strong>2</strong> ou <strong>3</strong> : Édition Enterprise  </li>
+         * <li><strong>5</strong> : Édition Premium  </li>
+         * <li><strong>6</strong> : Édition Anti-virus </li>
+         * <li><strong>7</strong> : Édition Ultimate.</li>
          * </ul>
          * 
          * <strong>example:</strong>

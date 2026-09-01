@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
     /**
-     * <p>An array of strategies.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListUnknownThreatDetectStrategyResponseBodyData> data;
@@ -17,7 +17,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
     public ListUnknownThreatDetectStrategyResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>898F7AA7-CECD-5EC7-AF4D-664C601B****</p>
@@ -65,7 +65,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public String assetSelectionType;
 
         /**
-         * <p>The duration, in days, of the learning phase after model creation.</p>
+         * <p>The number of days after the model is initially created before learning ends.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -74,7 +74,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer durationDaysAfterInit;
 
         /**
-         * <p>The number of consecutive days without new process detections before the learning phase automatically ends.</p>
+         * <p>The number of days after which the model ends when no new processes are added.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -83,7 +83,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer durationDaysAfterStop;
 
         /**
-         * <p>The strategy ID.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -101,7 +101,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer machineCount;
 
         /**
-         * <p>The strategy name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>test****</p>
@@ -112,10 +112,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         /**
          * <p>The whitelist mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>hash</strong>: process hash</p>
-         * </li>
-         * <li><p><strong>path</strong>: process path</p>
-         * </li>
+         * <li><strong>hash</strong>: process hash</li>
+         * <li><strong>path</strong>: process path</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +187,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectStrategyResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries displayed on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -198,7 +196,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -207,7 +205,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries displayed on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -216,7 +214,7 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of matching entries.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>69</p>

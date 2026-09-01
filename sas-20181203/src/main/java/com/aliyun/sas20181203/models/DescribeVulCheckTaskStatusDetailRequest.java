@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulCheckTaskStatusDetailRequest extends TeaModel {
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The task IDs.</p>
      */
@@ -28,6 +31,14 @@ public class DescribeVulCheckTaskStatusDetailRequest extends TeaModel {
     public static DescribeVulCheckTaskStatusDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVulCheckTaskStatusDetailRequest self = new DescribeVulCheckTaskStatusDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVulCheckTaskStatusDetailRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeVulCheckTaskStatusDetailRequest setTaskIds(java.util.List<String> taskIds) {

@@ -63,6 +63,9 @@ public class RefreshAssetsRequest extends TeaModel {
     @NameInMap("CloudAssetType")
     public Integer cloudAssetType;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The type of the server. Valid values:</p>
      * <ul>
@@ -106,6 +109,14 @@ public class RefreshAssetsRequest extends TeaModel {
     }
     public Integer getCloudAssetType() {
         return this.cloudAssetType;
+    }
+
+    public RefreshAssetsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public RefreshAssetsRequest setVendor(Integer vendor) {

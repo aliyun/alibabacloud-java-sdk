@@ -49,6 +49,9 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The path to the scheduled task.</p>
      * 
@@ -132,6 +135,14 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public DescribePropertyCronDetailRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribePropertyCronDetailRequest setSource(String source) {

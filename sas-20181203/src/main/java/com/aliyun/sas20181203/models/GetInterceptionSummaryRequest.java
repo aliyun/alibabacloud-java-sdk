@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetInterceptionSummaryRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the cluster to query. This parameter takes effect only on the InterceptionCountInDays response parameter.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/421736.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,12 @@ public class GetInterceptionSummaryRequest extends TeaModel {
      */
     @NameInMap("ClusterId")
     public String clusterId;
+
+    /**
+     * <p>The list of cluster types to exclude.</p>
+     */
+    @NameInMap("ExcludeClusterTypes")
+    public java.util.List<String> excludeClusterTypes;
 
     public static GetInterceptionSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInterceptionSummaryRequest self = new GetInterceptionSummaryRequest();
@@ -27,6 +33,14 @@ public class GetInterceptionSummaryRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public GetInterceptionSummaryRequest setExcludeClusterTypes(java.util.List<String> excludeClusterTypes) {
+        this.excludeClusterTypes = excludeClusterTypes;
+        return this;
+    }
+    public java.util.List<String> getExcludeClusterTypes() {
+        return this.excludeClusterTypes;
     }
 
 }

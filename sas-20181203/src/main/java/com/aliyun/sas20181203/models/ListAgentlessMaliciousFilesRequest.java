@@ -49,7 +49,7 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     public String fuzzyMaliciousName;
 
     /**
-     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
@@ -85,7 +85,7 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     public String maliciousMd5;
 
     /**
-     * <p>The alert type.</p>
+     * <p>The Alarm Metric.</p>
      * <p>If Lang is set to zh, valid values:</p>
      * <ul>
      * <li>WebShell: WebShell</li>
@@ -116,7 +116,7 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The asset information for the vulnerability query. You can set this parameter to the asset name, public IP address, or private IP address. Fuzzy match is supported.</p>
+     * <p>The asset information to query. You can set this parameter to the asset name, public IP address, or private IP address. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>

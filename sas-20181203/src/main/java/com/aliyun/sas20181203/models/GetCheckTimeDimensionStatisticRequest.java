@@ -13,6 +13,9 @@ public class GetCheckTimeDimensionStatisticRequest extends TeaModel {
     @NameInMap("EndTimeStamp")
     public Long endTimeStamp;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The start time in timestamp format.</p>
      * 
@@ -52,6 +55,14 @@ public class GetCheckTimeDimensionStatisticRequest extends TeaModel {
     }
     public Long getEndTimeStamp() {
         return this.endTimeStamp;
+    }
+
+    public GetCheckTimeDimensionStatisticRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public GetCheckTimeDimensionStatisticRequest setStartTimeStamp(Long startTimeStamp) {

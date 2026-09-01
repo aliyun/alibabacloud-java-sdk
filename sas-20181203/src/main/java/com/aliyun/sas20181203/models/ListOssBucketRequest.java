@@ -17,7 +17,7 @@ public class ListOssBucketRequest extends TeaModel {
      * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,19 @@ public class ListOssBucketRequest extends TeaModel {
      */
     @NameInMap("Lang")
     public String lang;
+
+    /**
+     * <p>The business source. Valid values:</p>
+     * <ul>
+     * <li><strong>OSS</strong>: OSS</li>
+     * <li><strong>NAS</strong>: NAS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
+    @NameInMap("Source")
+    public String source;
 
     public static ListOssBucketRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOssBucketRequest self = new ListOssBucketRequest();
@@ -45,6 +58,14 @@ public class ListOssBucketRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ListOssBucketRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

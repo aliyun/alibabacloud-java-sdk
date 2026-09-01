@@ -14,7 +14,7 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The page number of the current page in a paging query.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +33,15 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     public String fuzzBucketName;
 
     /**
+     * <p>The NAS file system name for fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
+    @NameInMap("FuzzFileSystemName")
+    public String fuzzFileSystemName;
+
+    /**
      * <p>Specifies whether risky files are detected. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No risks detected.</li>
@@ -46,10 +55,10 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     public Integer hasRisk;
 
     /**
-     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +68,7 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return on each page in a paging query.</p>
+     * <p>The maximum number of entries to return on each page in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +76,19 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    /**
+     * <p>The business source. Valid values:</p>
+     * <ul>
+     * <li><strong>OSS</strong>: OSS</li>
+     * <li><strong>NAS</strong>: NAS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
+    @NameInMap("Source")
+    public String source;
 
     /**
      * <p>The detection status. Valid values:</p>
@@ -112,6 +134,14 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
         return this.fuzzBucketName;
     }
 
+    public ListOssBucketScanInfoRequest setFuzzFileSystemName(String fuzzFileSystemName) {
+        this.fuzzFileSystemName = fuzzFileSystemName;
+        return this;
+    }
+    public String getFuzzFileSystemName() {
+        return this.fuzzFileSystemName;
+    }
+
     public ListOssBucketScanInfoRequest setHasRisk(Integer hasRisk) {
         this.hasRisk = hasRisk;
         return this;
@@ -134,6 +164,14 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListOssBucketScanInfoRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public ListOssBucketScanInfoRequest setStatus(Integer status) {

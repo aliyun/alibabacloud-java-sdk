@@ -7,11 +7,11 @@ public class BindAuthToMachineRequest extends TeaModel {
     /**
      * <p>The authorization version of the asset. Valid values:</p>
      * <ul>
-     * <li><strong>6</strong>: Anti-virus Edition</li>
-     * <li><strong>5</strong>: Advanced Edition</li>
-     * <li><strong>3</strong>: Enterprise Edition</li>
-     * <li><strong>7</strong>: Ultimate Edition</li>
-     * <li><strong>10</strong>: Value-added Service Edition.</li>
+     * <li><strong>6</strong>: Anti-virus Edition.</li>
+     * <li><strong>5</strong>: Premium Edition.</li>
+     * <li><strong>3</strong>: Enterprise Edition.</li>
+     * <li><strong>7</strong>: Ultimate Edition.</li>
+     * <li><strong>10</strong>: Value-added service Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,8 +23,8 @@ public class BindAuthToMachineRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic binding. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Disabled.</li>
-     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disable automatic binding.</li>
+     * <li><strong>1</strong>: Enable automatic binding.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class BindAuthToMachineRequest extends TeaModel {
     public Integer autoBind;
 
     /**
-     * <p>The UUIDs of the servers to bind.</p>
+     * <p>The collection of UUIDs to bind.</p>
      * <blockquote>
      * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot both be empty.</p>
      * </blockquote>
@@ -56,7 +56,13 @@ public class BindAuthToMachineRequest extends TeaModel {
     public Boolean bindAll;
 
     /**
-     * <p>The search conditions for assets. This parameter is in JSON format. Note that the parameter values are case-sensitive.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The conditions for searching assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</p>
      * <blockquote>
      * <p>You can search for assets by instance ID, instance name, VPC ID, region, or public IP address. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
      * </blockquote>
@@ -86,8 +92,8 @@ public class BindAuthToMachineRequest extends TeaModel {
     /**
      * <p>The logical relationship among multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>OR</strong>: The search conditions are evaluated with a logical OR.</li>
-     * <li><strong>AND</strong>: The search conditions are evaluated with a logical AND.</li>
+     * <li><strong>OR</strong>: The search conditions are evaluated using a logical OR.</li>
+     * <li><strong>AND</strong>: The search conditions are evaluated using a logical AND.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,12 +103,12 @@ public class BindAuthToMachineRequest extends TeaModel {
     public String logicalExp;
 
     /**
-     * <p>The order version associated with the pre-binding. Valid values:</p>
+     * <p>The order version associated with the pre-binding operation. Valid values:</p>
      * <ul>
-     * <li><strong>level7</strong>: Anti-virus Edition</li>
-     * <li><strong>level3</strong>: Advanced Edition</li>
-     * <li><strong>level2</strong>: Enterprise Edition</li>
-     * <li><strong>level8</strong>: Ultimate Edition</li>
+     * <li><strong>level7</strong>: Anti-virus Edition.</li>
+     * <li><strong>level3</strong>: Premium Edition.</li>
+     * <li><strong>level2</strong>: Enterprise Edition.</li>
+     * <li><strong>level8</strong>: Ultimate Edition.</li>
      * <li><strong>level10</strong>: Value-added service only.</li>
      * </ul>
      * 
@@ -113,7 +119,7 @@ public class BindAuthToMachineRequest extends TeaModel {
     public String ntmVersion;
 
     /**
-     * <p>The order ID associated with the pre-binding.</p>
+     * <p>The order ID associated with the pre-binding operation.</p>
      * 
      * <strong>example:</strong>
      * <p>233016**0482</p>
@@ -121,10 +127,13 @@ public class BindAuthToMachineRequest extends TeaModel {
     @NameInMap("PreBindOrderId")
     public Long preBindOrderId;
 
+    @NameInMap("ProductCode")
+    public String productCode;
+
     /**
-     * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
+     * <p>The ID of the member accounts (Alibaba Cloud account) in the resource directory.</p>
      * <blockquote>
-     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -134,7 +143,7 @@ public class BindAuthToMachineRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The UUIDs of the servers to unbind.</p>
+     * <p>The collection of UUIDs to unbind.</p>
      * <blockquote>
      * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot both be empty.</p>
      * </blockquote>
@@ -179,6 +188,14 @@ public class BindAuthToMachineRequest extends TeaModel {
         return this.bindAll;
     }
 
+    public BindAuthToMachineRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public BindAuthToMachineRequest setCriteria(String criteria) {
         this.criteria = criteria;
         return this;
@@ -217,6 +234,14 @@ public class BindAuthToMachineRequest extends TeaModel {
     }
     public Long getPreBindOrderId() {
         return this.preBindOrderId;
+    }
+
+    public BindAuthToMachineRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
     }
 
     public BindAuthToMachineRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {

@@ -25,6 +25,9 @@ public class RollbackSuspEventQuaraFileRequest extends TeaModel {
     @NameInMap("QuaraFileId")
     public Integer quaraFileId;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The source IP address of the request.</p>
      * 
@@ -53,6 +56,14 @@ public class RollbackSuspEventQuaraFileRequest extends TeaModel {
     }
     public Integer getQuaraFileId() {
         return this.quaraFileId;
+    }
+
+    public RollbackSuspEventQuaraFileRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public RollbackSuspEventQuaraFileRequest setSourceIp(String sourceIp) {

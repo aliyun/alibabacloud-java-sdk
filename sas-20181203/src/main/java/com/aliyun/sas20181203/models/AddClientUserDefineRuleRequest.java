@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddClientUserDefineRuleRequest extends TeaModel {
     /**
-     * <p>The action of the custom defense rule. Valid values:</p>
+     * <p>The action type. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: allow</li>
      * <li><strong>1</strong>: block</li>
@@ -55,7 +55,7 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
     public String IP;
 
     /**
-     * <p>The hash values of processes.</p>
+     * <p>The list of process hashes.</p>
      * 
      * <strong>example:</strong>
      * <p>0c9045b5bec90f9825f1f3f64dd4****</p>
@@ -64,17 +64,17 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
     public String md5List;
 
     /**
-     * <p>The name of the custom defense rule.</p>
+     * <p>The name of the custom rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>规则1</p>
+     * <p>Rule1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The new file path after the file is renamed.</p>
+     * <p>The new file path for file rename.</p>
      * 
      * <strong>example:</strong>
      * <p>/etc/pam****</p>
@@ -92,7 +92,7 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
     public String parentCmdline;
 
     /**
-     * <p>The path to the parent process.</p>
+     * <p>The parent process path.</p>
      * 
      * <strong>example:</strong>
      * <p>c:/windows/system32/i****</p>
@@ -101,11 +101,11 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
     public String parentProcPath;
 
     /**
-     * <p>The type of the operating system. Valid values:</p>
+     * <p>The operating system type. Valid values:</p>
      * <ul>
      * <li><strong>windows</strong>: Windows</li>
      * <li><strong>linux</strong>: Linux</li>
-     * <li><strong>all</strong>: all types</li>
+     * <li><strong>all</strong>: all</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
     public String portStr;
 
     /**
-     * <p>The path to the process.</p>
+     * <p>The process path.</p>
      * 
      * <strong>example:</strong>
      * <p>c:/windows/system32/i****</p>
@@ -160,10 +160,10 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
     public String registryKey;
 
     /**
-     * <p>Whether machines are automatically added to the rule. Default value: add. Valid values:  </p>
+     * <p>Specifies whether machines are automatically added to the rule. Default value: add. Valid values:</p>
      * <ul>
-     * <li><strong>add</strong>: Added by default  </li>
-     * <li><strong>del</strong>: Not added by default</li>
+     * <li><strong>add</strong>: Automatically added by default.</li>
+     * <li><strong>del</strong>: Not automatically added by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,18 +173,18 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
     public String targetDefault;
 
     /**
-     * <p>The type of the custom defense rule. Valid values:</p>
+     * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Process hash</li>
-     * <li><strong>2</strong>: Command line</li>
-     * <li><strong>3</strong>: Process Network</li>
-     * <li><strong>4</strong>: File Read and Write</li>
-     * <li><strong>5</strong>: Operation on Registry</li>
-     * <li><strong>6</strong>: Dynamic-link Library Loading</li>
-     * <li><strong>7</strong>: File Renaming</li>
-     * <li><strong>8</strong>: Network domain name</li>
-     * <li><strong>9</strong>: Network ip</li>
-     * <li><strong>10</strong>: File Path</li>
+     * <li><strong>1</strong>: process hash</li>
+     * <li><strong>2</strong>: command line</li>
+     * <li><strong>3</strong>: process network</li>
+     * <li><strong>4</strong>: file read/write</li>
+     * <li><strong>5</strong>: registry operation</li>
+     * <li><strong>6</strong>: dynamic-link library loading</li>
+     * <li><strong>7</strong>: file rename</li>
+     * <li><strong>8</strong>: network domain name</li>
+     * <li><strong>9</strong>: network IP</li>
+     * <li><strong>10</strong>: file path</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

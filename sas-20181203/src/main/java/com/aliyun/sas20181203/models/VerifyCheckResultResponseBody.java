@@ -64,7 +64,7 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The rate limit duration. Unit: seconds.</p>
+         * <p>The throttling duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>

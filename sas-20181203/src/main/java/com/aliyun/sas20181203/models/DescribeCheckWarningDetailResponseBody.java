@@ -20,7 +20,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     public java.util.List<java.util.Map<String, String>> checkDetailAssetInfo;
 
     /**
-     * <p>The details of the check content.</p>
+     * <p>The check content details.</p>
      */
     @NameInMap("CheckDetailColumns")
     public java.util.List<DescribeCheckWarningDetailResponseBodyCheckDetailColumns> checkDetailColumns;
@@ -192,7 +192,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The display name that corresponds to the key of the check content.</p>
+         * <p>The display name corresponding to the check content key.</p>
          * 
          * <strong>example:</strong>
          * <p>UserName</p>
@@ -203,8 +203,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         /**
          * <p>The display type. Valid values:</p>
          * <ul>
-         * <li><strong>grid</strong>: grid</li>
-         * <li><strong>text</strong>: text.</li>
+         * <li><strong>grid</strong>: check grid</li>
+         * <li><strong>text</strong>: text</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The display name that corresponds to the key of the check content.</p>
+         * <p>The display name corresponding to the check content key.</p>
          * 
          * <strong>example:</strong>
          * <p>ContainerName</p>
@@ -272,8 +272,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         /**
          * <p>The display type. Valid values:</p>
          * <ul>
-         * <li><strong>grid</strong>: grid</li>
-         * <li><strong>text</strong>: text.</li>
+         * <li><strong>grid</strong>: check grid</li>
+         * <li><strong>text</strong>: text</li>
          * </ul>
          * 
          * <strong>example:</strong>

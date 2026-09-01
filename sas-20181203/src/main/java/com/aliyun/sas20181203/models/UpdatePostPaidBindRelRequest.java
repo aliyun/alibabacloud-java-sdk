@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdatePostPaidBindRelRequest extends TeaModel {
     /**
-     * <p>Enable automatic binding for new assets. Values:</p>
+     * <p>Specifies whether to enable automatic binding for new assets. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Off</li>
-     * <li><strong>1</strong>: On</li>
+     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: enabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     public Integer autoBind;
 
     /**
-     * <p>Version to automatically bind when adding new assets. Values:</p>
+     * <p>The edition to automatically bind when new assets are added. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Basic Edition </li>
+     * <li><strong>1</strong>: Free Edition </li>
      * <li><strong>3</strong>: Enterprise Edition</li>
      * <li><strong>5</strong>: Advanced Edition</li>
-     * <li><strong>6</strong>: Antivirus Edition    </li>
-     * <li><strong>7</strong>: Container Edition</li>
+     * <li><strong>6</strong>: Anti-virus Edition    </li>
+     * <li><strong>7</strong>: Ultimate Edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,13 +34,22 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     public Integer autoBindVersion;
 
     /**
-     * <p>Parameters for the binding action.</p>
+     * <p>The binding action parameter.</p>
      */
     @NameInMap("BindAction")
     public java.util.List<UpdatePostPaidBindRelRequestBindAction> bindAction;
 
     /**
-     * <p>Whether to force upgrade the version.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("ProductCode")
+    public String productCode;
+
+    /**
+     * <p>Specifies whether to forcibly upgrade the edition.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -77,6 +86,22 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
         return this.bindAction;
     }
 
+    public UpdatePostPaidBindRelRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public UpdatePostPaidBindRelRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+
     public UpdatePostPaidBindRelRequest setUpdateIfNecessary(Boolean updateIfNecessary) {
         this.updateIfNecessary = updateIfNecessary;
         return this;
@@ -87,10 +112,10 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
 
     public static class UpdatePostPaidBindRelRequestBindAction extends TeaModel {
         /**
-         * <p>Whether to bind all. Default is <strong>false</strong>. Values:</p>
+         * <p>Specifies whether to bind all servers. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Yes</li>
-         * <li><strong>false</strong>: No</li>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,20 +124,23 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
         @NameInMap("BindAll")
         public Boolean bindAll;
 
+        @NameInMap("FreeType")
+        public String freeType;
+
         /**
-         * <p>List of specified server UUIDs.</p>
+         * <p>The list of server UUIDs.</p>
          */
         @NameInMap("UuidList")
         public java.util.List<String> uuidList;
 
         /**
-         * <p>The Cloud Security Center protection version that needs to be bound. Values:  </p>
+         * <p>The protection edition of Security Center to bind. Valid values:  </p>
          * <ul>
-         * <li><strong>1</strong>: Basic Edition </li>
+         * <li><strong>1</strong>: Free Edition </li>
          * <li><strong>3</strong>: Enterprise Edition</li>
          * <li><strong>5</strong>: Advanced Edition</li>
-         * <li><strong>6</strong>: Antivirus Edition    </li>
-         * <li><strong>7</strong>: Container Edition</li>
+         * <li><strong>6</strong>: Anti-virus Edition    </li>
+         * <li><strong>7</strong>: Ultimate Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,6 +160,14 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
         }
         public Boolean getBindAll() {
             return this.bindAll;
+        }
+
+        public UpdatePostPaidBindRelRequestBindAction setFreeType(String freeType) {
+            this.freeType = freeType;
+            return this;
+        }
+        public String getFreeType() {
+            return this.freeType;
         }
 
         public UpdatePostPaidBindRelRequestBindAction setUuidList(java.util.List<String> uuidList) {

@@ -12,7 +12,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
      * <li><strong>sca_web</strong>: web service</li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is not set, the default value <strong>sca</strong> is used, which queries Asset Fingerprints information of the middleware type.</p>
+     * <p>If you do not settings this parameter, the default value <strong>sca</strong> is used, which indicates that middleware Asset Fingerprints information is queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public String biz;
 
     /**
-     * <p>The type of middleware, database, or web service to query. Valid values:  </p>
+     * <p>The type of the middleware, database, or web service to query. Valid values:  </p>
      * <ul>
      * <li><strong>system_service</strong>: system service</li>
      * <li><strong>software_library</strong>: software library</li>
@@ -30,7 +30,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
      * <li><strong>database</strong>: database</li>
      * <li><strong>web_container</strong>: web container</li>
      * <li><strong>jar</strong>: JAR package</li>
-     * <li><strong>web_framework</strong>: web framework.</li>
+     * <li><strong>web_framework</strong>: web framework</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The page number of the page to return in the query results. Default value: <strong>1</strong>, which indicates that the results are displayed starting from page 1.</p>
+     * <p>The page number of the page to return in the query results. Default value: <strong>1</strong>, which indicates that the results start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +52,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
      * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     /**
      * <p>The name of the middleware, database, or web service.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
+     * <p>This parameter is deprecated. You do not need to configure it.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,9 +74,9 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public Long name;
 
     /**
-     * <p>The token that marks the current position from which to start reading. Leave this parameter empty to start reading from the beginning.</p>
+     * <p>The token that marks the current position from which to start reading. Leave this parameter empty to start from the beginning.</p>
      * <blockquote>
-     * <p>Do not specify this parameter for the first call. The response includes the NextToken value for the second call. Each subsequent response contains the NextToken value for the next call.</p>
+     * <p>You do not need to set this parameter for the first call. The response includes the NextToken value for the next call. Each subsequent response contains the NextToken value for the following call.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Sets the number of Asset Fingerprints entries per page in a paged query. Default value: <strong>10</strong>, which indicates that 10 Asset Fingerprints entries are displayed per page.</p>
+     * <p>Settings the number of entries per page in a paged query for Asset Fingerprints information. Default value: <strong>10</strong>, which indicates that 10 entries of Asset Fingerprints information are displayed per page.</p>
      * <blockquote>
      * <p>Do not leave PageSize empty.</p>
      * </blockquote>
@@ -116,7 +116,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>The end of the time range for querying the process start timestamp. Unit: seconds.</p>
+     * <p>The end of the time range to query for process startup timestamps. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1641110965</p>
@@ -125,7 +125,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public Long processStartedEnd;
 
     /**
-     * <p>The start of the time range for querying the process start timestamp. Unit: seconds.</p>
+     * <p>The start of the time range to query for process startup timestamps. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1641024565</p>
@@ -145,8 +145,11 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
-     * <p>The name of the Asset Fingerprints entry to query.</p>
+     * <p>The name of the Asset Fingerprints to query.</p>
      * 
      * <strong>example:</strong>
      * <p>openssl</p>
@@ -179,10 +182,10 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public java.util.List<DescribePropertyScaDetailRequestSearchCriteriaList> searchCriteriaList;
 
     /**
-     * <p>The content to query. Depending on the value of <strong>SearchItem</strong>, you need to enter different query content:</p>
+     * <p>The content to query. The content varies based on the value of <strong>SearchItem</strong>:</p>
      * <ul>
-     * <li>If <strong>SearchItem</strong> is set to <strong>name</strong>, enter the name of the asset fingerprint as the query condition.</li>
-     * <li>If <strong>SearchItem</strong> is set to <strong>type</strong>, select the type of asset fingerprint to query. Valid values:   <ul>
+     * <li>If <strong>SearchItem</strong> is settings to <strong>name</strong>, enter the name of the Asset Fingerprints.</li>
+     * <li>If <strong>SearchItem</strong> is settings to <strong>type</strong>, select the type of the Asset Fingerprints. Valid values:   <ul>
      * <li><strong>system_service</strong>: system service</li>
      * <li><strong>software_library</strong>: software library</li>
      * <li><strong>docker_component</strong>: container component</li>
@@ -194,7 +197,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The <strong>SearchItem</strong> and <strong>SearchInfo</strong> parameters must be used together. Setting only one of them has no effect. By setting both parameters, you can view all data for asset fingerprints of a specified name or type.</p>
+     * <p>The <strong>SearchItem</strong> and <strong>SearchInfo</strong> parameters must be used together. You must settings both parameters for the query to take effect (settings only one is invalid). This allows you to view all data of the specified Asset Fingerprints by name or type.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -204,12 +207,12 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public String searchInfo;
 
     /**
-     * <p>The content of the sub-query condition. Depending on the value of <strong>SearchItemSub</strong>, you need to enter different query content:</p>
+     * <p>The content of the sub-query condition. The content varies based on the value of <strong>SearchItemSub</strong>:</p>
      * <ul>
-     * <li>If <strong>SearchItemSub</strong> is set to <strong>port</strong>, enter the port as the sub-query condition.</li>
-     * <li>If <strong>SearchItemSub</strong> is set to <strong>pid</strong>, enter the process ID as the sub-query condition.</li>
-     * <li>If <strong>SearchItemSub</strong> is set to <strong>version</strong>, enter the middleware, database, or web service version as the sub-query condition.</li>
-     * <li>If <strong>SearchItemSub</strong> is set to <strong>user</strong>, enter the username as the sub-query condition.</li>
+     * <li>If <strong>SearchItemSub</strong> is set to <strong>port</strong>, enter the port number.</li>
+     * <li>If <strong>SearchItemSub</strong> is set to <strong>pid</strong>, enter the process ID.</li>
+     * <li>If <strong>SearchItemSub</strong> is set to <strong>version</strong>, enter the version of the middleware, database, or web service.</li>
+     * <li>If <strong>SearchItemSub</strong> is set to <strong>user</strong>, enter the username.</li>
      * </ul>
      * <blockquote>
      * <p>Sub-query conditions help you search for the data list of a specific middleware, database, or web service.</p>
@@ -222,13 +225,13 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public String searchInfoSub;
 
     /**
-     * <p>The type of query condition. Valid values:</p>
+     * <p>Settings the type of the conditional query. Valid values:</p>
      * <ul>
      * <li><strong>name</strong>: the name of the middleware, database, or web service.</li>
      * <li><strong>type</strong>: the type of the middleware, database, or web service.</li>
      * </ul>
      * <blockquote>
-     * <p>The <strong>SearchItem</strong> and <strong>SearchInfo</strong> parameters must be used together. Setting only one of them has no effect. By setting both parameters, you can view all data for asset fingerprints of a specified name or type.</p>
+     * <p>The <strong>SearchItem</strong> and <strong>SearchInfo</strong> parameters must be used together. You must settings both parameters for the query to take effect (settings only one is invalid). This allows you to view all data of the specified Asset Fingerprints by name or type.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -238,12 +241,12 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public String searchItem;
 
     /**
-     * <p>The type of sub-query condition. Valid values:</p>
+     * <p>The type of the sub-query condition. Valid values:</p>
      * <ul>
      * <li><strong>port</strong>: port</li>
      * <li><strong>pid</strong>: process ID</li>
      * <li><strong>version</strong>: version</li>
-     * <li><strong>user</strong>: user.</li>
+     * <li><strong>user</strong>: user</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -382,6 +385,14 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public DescribePropertyScaDetailRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribePropertyScaDetailRequest setScaName(String scaName) {

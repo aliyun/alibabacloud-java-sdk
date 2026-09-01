@@ -4,11 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SubmitCheckRequest extends TeaModel {
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
-     * <p>The check items that are scanned. Valid values:</p>
+     * <p>The scan range. Valid values:</p>
      * <ul>
-     * <li><strong>FULL</strong>: All check items are scanned.</li>
-     * <li><strong>FULL</strong>: Only the check items that are configured are scanned.</li>
+     * <li><strong>FULL</strong>: scans all check items</li>
+     * <li><strong>POLICY</strong>: scans custom-configured check items</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +21,10 @@ public class SubmitCheckRequest extends TeaModel {
     public String scanRange;
 
     /**
-     * <p>The source of task.</p>
+     * <p>The task source. Valid values:</p>
+     * <ul>
+     * <li><strong>YAO_CHI</strong>: Alibaba Cloud ApsaraDB console.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>YAO_CHI</p>
@@ -29,6 +35,14 @@ public class SubmitCheckRequest extends TeaModel {
     public static SubmitCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitCheckRequest self = new SubmitCheckRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitCheckRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public SubmitCheckRequest setScanRange(String scanRange) {

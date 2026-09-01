@@ -10,6 +10,9 @@ public class DeleteSecurityEventMarkMissListRequest extends TeaModel {
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -24,6 +27,14 @@ public class DeleteSecurityEventMarkMissListRequest extends TeaModel {
     }
     public java.util.List<Long> getIds() {
         return this.ids;
+    }
+
+    public DeleteSecurityEventMarkMissListRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DeleteSecurityEventMarkMissListRequest setResourceOwnerId(Long resourceOwnerId) {

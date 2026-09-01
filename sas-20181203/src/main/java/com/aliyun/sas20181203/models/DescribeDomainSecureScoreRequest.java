@@ -17,6 +17,9 @@ public class DescribeDomainSecureScoreRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The source IP address of the visitor.</p>
      * 
@@ -37,6 +40,14 @@ public class DescribeDomainSecureScoreRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDomainSecureScoreRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeDomainSecureScoreRequest setSourceIp(String sourceIp) {

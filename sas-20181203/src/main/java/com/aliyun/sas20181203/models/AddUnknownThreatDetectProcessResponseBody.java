@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddUnknownThreatDetectProcessResponseBody extends TeaModel {
     /**
-     * <p>A list of results for the added processes.</p>
+     * <p>The list of process IDs.</p>
      */
     @NameInMap("IdList")
     public java.util.List<AddUnknownThreatDetectProcessResponseBodyIdList> idList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>
@@ -42,7 +42,7 @@ public class AddUnknownThreatDetectProcessResponseBody extends TeaModel {
 
     public static class AddUnknownThreatDetectProcessResponseBodyIdList extends TeaModel {
         /**
-         * <p>The ID generated for the added process.</p>
+         * <p>The process ID.</p>
          * 
          * <strong>example:</strong>
          * <p>92666883</p>

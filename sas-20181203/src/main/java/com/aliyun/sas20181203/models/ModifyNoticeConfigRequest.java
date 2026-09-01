@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNoticeConfigRequest extends TeaModel {
     /**
-     * <p>The notification configuration type. By default, notifications are sent by SMS, email, or internal message. Valid values:</p>
+     * <p>The notification configuration type. By default, notifications are sent through SMS, email, or internal message. Valid values:</p>
      * <ul>
      * <li><strong>cms</strong>: CloudMonitor push.</li>
      * </ul>
@@ -17,13 +17,19 @@ public class ModifyNoticeConfigRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>The focus level. Separate multiple levels with commas (,).</p>
      * <p>When <strong>Project</strong> is <strong>yundun_soar_incident_generate</strong> or <strong>yundun_soar_incident_update</strong>, valid values:</p>
      * <ul>
      * <li><strong>CRITICAL</strong>: Critical.</li>
-     * <li><strong>HIGH</strong>: High-risk.</li>
-     * <li><strong>MEDIUM</strong>: Medium-risk.</li>
-     * <li><strong>LOW</strong>: Low-risk.</li>
+     * <li><strong>HIGH</strong>: High.</li>
+     * <li><strong>MEDIUM</strong>: Medium.</li>
+     * <li><strong>LOW</strong>: Low.</li>
      * <li><strong>INFO</strong>: Informational.</li>
      * </ul>
      * <p>When <strong>Project</strong> is <strong>yundun_sas_antiransomware_task</strong>, valid values:</p>
@@ -44,8 +50,8 @@ public class ModifyNoticeConfigRequest extends TeaModel {
      * <ul>
      * <li><strong>yundun_security_Weekreport</strong>: Security weekly report (email only)</li>
      * <li><strong>sas_healthcheck</strong>: Baseline check</li>
-     * <li><strong>yundun_defennce_antiRansomware_overflow</strong>: Anti-ransomware storage space exceeded</li>
-     * <li><strong>yundun_sas_cloudsiem_log</strong>: Cloud Threat Detection and Response (CTDR) log excess notification</li>
+     * <li><strong>yundun_defennce_antiRansomware_overflow</strong>: Anti-ransomware storage exceeded</li>
+     * <li><strong>yundun_sas_cloudsiem_log</strong>: Threat analysis log excess notification</li>
      * <li><strong>sas_suspicious</strong>: Security alert</li>
      * <li><strong>yundun_aegis_AV_true</strong>: Precise defense</li>
      * <li><strong>yundun_sas_ak_leakage AccessKey</strong>: AccessKey leak intelligence</li>
@@ -56,12 +62,12 @@ public class ModifyNoticeConfigRequest extends TeaModel {
      * <li><strong>yundun_sas_cloud_native_firewall_Defense</strong>: Container firewall active defense notification (email only)</li>
      * <li><strong>yundun_IP_Blocking</strong>: Malicious IP blocking alerting notification</li>
      * <li><strong>yundun_sas_anti_virus_config</strong>: Virus scan notification</li>
-     * <li><strong>yundun_sas_log</strong>: Log storage exceeded</li>
+     * <li><strong>yundun_sas_log</strong>: Log excess</li>
      * <li><strong>yundun_honeypot_alarm</strong>: Cloud honeypot alerting</li>
      * <li><strong>aliyun_rasp_alarm</strong>: Application protection alerting</li>
      * <li><strong>yundun_soar_incident_generate</strong>: New security incident</li>
      * <li><strong>yundun_soar_incident_update</strong>: Updated security incident<blockquote>
-     * <p><strong>yundun_security_Weekreport</strong> sends a weekly report to notify you of unresolved vulnerabilities.</p>
+     * <p><strong>yundun_security_Weekreport</strong> sends a weekly report to notify about unresolved vulnerabilities.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -74,7 +80,7 @@ public class ModifyNoticeConfigRequest extends TeaModel {
      * <li><strong>Vul_summary</strong>: Vulnerability result summary</li>
      * <li><strong>Agentless_event</strong>: Agentless detection result details</li>
      * <li><strong>Filedetect_event</strong>: Malicious file SDK result details</li>
-     * <li><strong>Rasp_event</strong>: Application protection result details.</li>
+     * <li><strong>Rasp_event</strong>: Application protection result details</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +105,7 @@ public class ModifyNoticeConfigRequest extends TeaModel {
      * <h4>When BizType is <code>cms</code></h4>
      * <ul>
      * <li>0: CloudMonitor push disabled</li>
-     * <li>1: CloudMonitor push enabled.</li>
+     * <li>1: CloudMonitor push enabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,11 +127,11 @@ public class ModifyNoticeConfigRequest extends TeaModel {
      * <h3>Notification time limit</h3>
      * <h4>When the BizType field is empty: valid values</h4>
      * <ul>
-     * <li><strong>0</strong>: No limit.</li>
-     * <li><strong>1</strong>: Notifications are sent only between 08:00 and 22:00.</li>
+     * <li><strong>0</strong>: No limit</li>
+     * <li><strong>1</strong>: Notifications are sent only during 08:00-22:00</li>
      * </ul>
-     * <h4>When the BizType field is <code>cms</code></h4>
-     * <p>Specifies the push frequency limit, in seconds. The minimum value is <strong>60</strong>.</p>
+     * <h4>When the BizType field is <code>cms</code>: description</h4>
+     * <p>Specifies the push frequency limit in seconds. The minimum value is <strong>60</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -144,6 +150,14 @@ public class ModifyNoticeConfigRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public ModifyNoticeConfigRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyNoticeConfigRequest setFocusLevel(String focusLevel) {

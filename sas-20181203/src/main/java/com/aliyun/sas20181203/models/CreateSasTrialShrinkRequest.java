@@ -5,10 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateSasTrialShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether the request is redirected from the Elastic Compute Service (ECS) console. Valid values:</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>Specifies whether the request is from the ECS console. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +24,10 @@ public class CreateSasTrialShrinkRequest extends TeaModel {
     public Boolean fromEcs;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +37,7 @@ public class CreateSasTrialShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The reason why you apply for the trial. You must specify the reason for the second trial.</p>
+     * <p>The reason for applying for a trial. This parameter is required for a second trial.</p>
      */
     @NameInMap("RequestForm")
     public String requestFormShrink;
@@ -39,12 +45,12 @@ public class CreateSasTrialShrinkRequest extends TeaModel {
     /**
      * <p>The trial type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: trial prohibited</li>
-     * <li><strong>1</strong>: first trial</li>
-     * <li><strong>2</strong>: second trial</li>
+     * <li><strong>0</strong>: trial not allowed.</li>
+     * <li><strong>1</strong>: first trial.</li>
+     * <li><strong>2</strong>: second trial.</li>
      * </ul>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain the trial type. You can start a trial only if this parameter is not set to 0.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter. A trial can be started only when the value is not 0.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,13 +60,13 @@ public class CreateSasTrialShrinkRequest extends TeaModel {
     public Integer tryType;
 
     /**
-     * <p>The trial edition. Valid values:</p>
+     * <p>The trial version. Valid values:</p>
      * <ul>
-     * <li><strong>3</strong>: Enterprise</li>
-     * <li><strong>7</strong>: Ultimate</li>
+     * <li><strong>3</strong>: Enterprise Edition.</li>
+     * <li><strong>7</strong>: Ultimate Edition.</li>
      * </ul>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain the trial edition.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,6 +78,14 @@ public class CreateSasTrialShrinkRequest extends TeaModel {
     public static CreateSasTrialShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSasTrialShrinkRequest self = new CreateSasTrialShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSasTrialShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateSasTrialShrinkRequest setFromEcs(Boolean fromEcs) {

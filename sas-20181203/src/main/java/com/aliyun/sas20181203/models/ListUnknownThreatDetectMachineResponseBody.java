@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
     /**
-     * <p>An array of instance details.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListUnknownThreatDetectMachineResponseBodyData> data;
@@ -17,7 +17,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
     public ListUnknownThreatDetectMachineResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>A4EB8B1C-1DEC-5E18-BCD0-XXXXXXXXX</p>
@@ -85,11 +85,18 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        @NameInMap("MaliciousProcessCount")
+        public Long maliciousProcessCount;
+
+        @NameInMap("NormalEventCount")
+        @Deprecated
+        public Long normalEventCount;
+
         @NameInMap("PluginStatus")
         public String pluginStatus;
 
         /**
-         * <p>The process count.</p>
+         * <p>The number of processes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -97,15 +104,15 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         @NameInMap("ProcessCount")
         public Integer processCount;
 
+        @NameInMap("RecentDeviationBehaviorCount")
+        public Long recentDeviationBehaviorCount;
+
         /**
-         * <p>The instance status. Valid values:</p>
+         * <p>The running status of the machine. Valid values:</p>
          * <ul>
-         * <li><p><strong>monitoring</strong>: The instance is being monitored for threats.</p>
-         * </li>
-         * <li><p><strong>blocking</strong>: The instance is blocking unauthorized processes.</p>
-         * </li>
-         * <li><p><strong>studying</strong>: The instance is in a learning phase.</p>
-         * </li>
+         * <li><strong>monitoring</strong>: Warning.</li>
+         * <li><strong>blocking</strong>: Blocking.</li>
+         * <li><strong>studying</strong>: Learning.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,10 +124,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         /**
          * <p>The whitelist mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>hash</strong>: process hash</p>
-         * </li>
-         * <li><p><strong>path</strong>: process path</p>
-         * </li>
+         * <li><strong>hash</strong>: process hash</li>
+         * <li><strong>path</strong>: process path</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +138,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Long studyRemainDays;
 
         /**
-         * <p>The timestamp when the learning phase started. Unit: seconds.</p>
+         * <p>The timestamp when learning started.</p>
          * 
          * <strong>example:</strong>
          * <p>1766988192</p>
@@ -187,6 +192,23 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             return this.intranetIp;
         }
 
+        public ListUnknownThreatDetectMachineResponseBodyData setMaliciousProcessCount(Long maliciousProcessCount) {
+            this.maliciousProcessCount = maliciousProcessCount;
+            return this;
+        }
+        public Long getMaliciousProcessCount() {
+            return this.maliciousProcessCount;
+        }
+
+        @Deprecated
+        public ListUnknownThreatDetectMachineResponseBodyData setNormalEventCount(Long normalEventCount) {
+            this.normalEventCount = normalEventCount;
+            return this;
+        }
+        public Long getNormalEventCount() {
+            return this.normalEventCount;
+        }
+
         public ListUnknownThreatDetectMachineResponseBodyData setPluginStatus(String pluginStatus) {
             this.pluginStatus = pluginStatus;
             return this;
@@ -201,6 +223,14 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         }
         public Integer getProcessCount() {
             return this.processCount;
+        }
+
+        public ListUnknownThreatDetectMachineResponseBodyData setRecentDeviationBehaviorCount(Long recentDeviationBehaviorCount) {
+            this.recentDeviationBehaviorCount = recentDeviationBehaviorCount;
+            return this;
+        }
+        public Long getRecentDeviationBehaviorCount() {
+            return this.recentDeviationBehaviorCount;
         }
 
         public ListUnknownThreatDetectMachineResponseBodyData setStatus(String status) {
@@ -247,7 +277,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectMachineResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of entries on the current page when using paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -256,7 +286,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number of the current page when using paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -265,7 +295,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page when using paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -59,7 +59,7 @@ public class ListAgentlessRiskUuidRequest extends TeaModel {
     public String machineName;
 
     /**
-     * <p>The maximum number of entries per page when using paging.</p>
+     * <p>The maximum number of entries to return per page when using paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
