@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class CreateApiKeyResponseBody extends TeaModel {
     /**
      * <p>API Key。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{\&quot;gmtCreate\&quot;: 1776997128000, \&quot;workspaceId\&quot;: \&quot;ws-3w77kird5sblwwfk\&quot;, \&quot;apiKeyId\&quot;: 4808780, \&quot;createdBy\&quot;: \&quot;AssumedRoleUser300873166069492100\&quot;, \&quot;apiKeyValue\&quot;: \&quot;sk-110ff0028ad64a24b9453c8955c4c191\&quot;}</p>
      */
     @NameInMap("apiKey")
     public ApiKey apiKey;

@@ -25,6 +25,9 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     @NameInMap("ipBlacklist")
     public java.util.List<IPConfig> ipBlacklist;
 
+    /**
+     * <p>The IP whitelist.</p>
+     */
     @NameInMap("ipWhitelist")
     public java.util.List<IPConfig> ipWhitelist;
 
