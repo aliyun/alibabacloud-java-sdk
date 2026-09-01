@@ -81,6 +81,13 @@ public class ListImagesRequest extends TeaModel {
     public String name;
 
     /**
+     * <strong>example:</strong>
+     * <p>ExactMatchName</p>
+     */
+    @NameInMap("Options")
+    public String options;
+
+    /**
      * <p>The order in which to sort the results of a paged query. This parameter is used with SortBy. The default value is ASC.</p>
      * <ul>
      * <li><p>ASC: ascending order.</p>
@@ -190,6 +197,14 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ListImagesRequest setOptions(String options) {
+        this.options = options;
+        return this;
+    }
+    public String getOptions() {
+        return this.options;
     }
 
     public ListImagesRequest setOrder(String order) {

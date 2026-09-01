@@ -5066,6 +5066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.options)) {
+            query.put("Options", request.options);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
             query.put("Order", request.order);
         }
