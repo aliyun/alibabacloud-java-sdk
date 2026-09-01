@@ -20,8 +20,8 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: sends a check request without creating the reserved CIDR block for a vSwitch. The system checks whether the required parameters are specified, the request format is valid, and the service limits are not exceeded. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends a Normal request. After the check passes, an HTTP 2xx status code is returned and the reserved CIDR block for a vSwitch is created.</li>
+     * <li><strong>true</strong>: sends a check request without creating the reserved CIDR block for a vSwitch. The system checks whether the required parameters are specified, the request format is valid, and the service limits are not exceeded. If the check fails, the corresponding error message is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a Normal request. After the check passes, an HTTP 2xx status code is returned and the vSwitch reserved CIDR block for a vSwitch is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,6 +29,15 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    /**
+     * <p>The expected number of IP prefixes to reserve. Valid values: 1 to 32.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("IpPrefixNumber")
+    public Integer ipPrefixNumber;
 
     /**
      * <p>The IP version of the reserved CIDR block for a vSwitch. Valid values:</p>
@@ -84,7 +93,7 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>You must specify either the <strong>VSwitchCidrReservationMask</strong> parameter or the <strong>VSwitchCidrReservationCidr</strong> parameter.</li>
-     * <li>A reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.</li>
+     * <li>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch.</li>
      * </ul>
      * </blockquote>
      * 
@@ -113,7 +122,7 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>You must specify either the <strong>VSwitchCidrReservationMask</strong> parameter or the <strong>VSwitchCidrReservationCidr</strong> parameter.</li>
-     * <li>A reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.</li>
+     * <li>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch.</li>
      * </ul>
      * </blockquote>
      * 
@@ -134,9 +143,9 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
     public String vSwitchCidrReservationName;
 
     /**
-     * <p>The type of the reserved CIDR block for a vSwitch. Valid values: <strong>prefix</strong>, which indicates that addresses are allocated by CIDR block.</p>
+     * <p>The type of the reserved CIDR block for a vSwitch. Valid values: <strong>prefix</strong>, which indicates that IP addresses are allocated by CIDR block.</p>
      * <blockquote>
-     * <p>When users or cloud services automatically assign CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR block. If the addresses in the reserved CIDR block are exhausted, the system returns an error.</p>
+     * <p>When users or cloud services automatically assign CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR block for a vSwitch. If the IP addresses in the reserved CIDR block for a vSwitch are exhausted, the system returns an error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -146,7 +155,7 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
     public String vSwitchCidrReservationType;
 
     /**
-     * <p>The ID of the vSwitch for which you want to create the reserved CIDR block for a vSwitch.</p>
+     * <p>The ID of the vSwitch for which you want to create a reserved CIDR block for a vSwitch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -174,6 +183,14 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateVSwitchCidrReservationRequest setIpPrefixNumber(Integer ipPrefixNumber) {
+        this.ipPrefixNumber = ipPrefixNumber;
+        return this;
+    }
+    public Integer getIpPrefixNumber() {
+        return this.ipPrefixNumber;
     }
 
     public CreateVSwitchCidrReservationRequest setIpVersion(String ipVersion) {

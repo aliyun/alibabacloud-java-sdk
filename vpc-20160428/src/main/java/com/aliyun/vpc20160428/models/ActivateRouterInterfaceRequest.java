@@ -9,7 +9,7 @@ public class ActivateRouterInterfaceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the router interface.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,10 @@ public class ActivateRouterInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the router interface.</p>
+     * <p>The ID of the router interface. </p>
+     * <blockquote>
+     * <p>The ID of the router interface. This operation supports only interfaces in the Inactive state. If the state does not match, the IncorrectRIStatus error is returned. Newly created interfaces are not in the Inactive state and cannot be directly activated: interfaces created in express connect mode are automatically connected and in the Active state. You must first call DeactivateRouterInterface to change them to the Inactive state. Interfaces created in non-express connect mode are in the Idle state. You must first configure peer information and call ConnectRouterInterface to establish the connection to the Active state, and then call DeactivateRouterInterface. State transition: Active --DeactivateRouterInterface--&gt; Inactive --ActivateRouterInterface--&gt; Active. If the interface is in an intermediate state such as Connecting, Activating, or Deactivating, poll DescribeRouterInterfaceAttribute until the state stabilizes.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

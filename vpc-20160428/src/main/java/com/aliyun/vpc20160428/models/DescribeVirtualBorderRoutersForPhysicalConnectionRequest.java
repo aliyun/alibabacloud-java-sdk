@@ -42,7 +42,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     public String physicalConnectionId;
 
     /**
-     * <p>The region where the Express Connect circuit is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region where the Express Connect circuit resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
 
     public static class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter extends TeaModel {
         /**
-         * <p>The filter condition. You can specify up to five filter conditions. The following filter conditions are supported:</p>
+         * <p>The filter condition. You can specify up to 5 filter conditions. The following filter conditions are supported:</p>
          * <ul>
          * <li><p><strong>PhysicalConnectionId</strong>: instance ID of the Express Connect circuit instance.</p>
          * </li>
@@ -153,7 +153,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
         public String key;
 
         /**
-         * <p>The filter value based on the specified Key. You can specify multiple filter values for a Key. The relationship between filter values is OR, which means that a match with any filter value is considered a match for the filter condition.</p>
+         * <p>The filter values based on the specified Key. You can specify multiple filter values for a single Key. The relationship between multiple filter values is OR, which means that a match with any one of the filter values is considered a match for the filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

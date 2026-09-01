@@ -49,7 +49,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
 
     /**
      * <p>The hostname suffix, such as example.com.</p>
-     * <p>After you attach the DHCP options set to an associate VPC, the hostname suffix is automatically synchronized to ECS instances in the VPC.</p>
+     * <p>After you attach the DHCP options set to associate VPC, the hostname suffix is automatically subject to synchronization to ECS instances in the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -70,9 +70,9 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
     public String domainNameServers;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <p><strong>true</strong>: performs a dry run without modifying the DHCP options set configuration. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * <p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set configuration is modified.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set configuration is modified.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -83,9 +83,9 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
     /**
      * <p>The lease time of the IPv6 DHCP options set.</p>
      * <ul>
-     * <li><p>If the lease time is set in hours, the unit is h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>24h</strong>.</p>
+     * <li><p>When the lease time is set in hours: Unit: h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>24h</strong>.</p>
      * </li>
-     * <li><p>If the lease time is set in days, the unit is d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>1d</strong>.</p>
+     * <li><p>When the lease time is set in days: Unit: d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>1d</strong>.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -101,9 +101,9 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
     /**
      * <p>The lease time of the IPv4 DHCP options set.</p>
      * <ul>
-     * <li><p>If the lease time is set in hours, the unit is h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</p>
+     * <li><p>When the lease time is set in hours: Unit: h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</p>
      * </li>
-     * <li><p>If the lease time is set in days, the unit is d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</p>
+     * <li><p>When the lease time is set in days: Unit: d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</p>
      * </li>
      * </ul>
      * <blockquote>

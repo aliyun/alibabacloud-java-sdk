@@ -20,7 +20,7 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,8 +38,8 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the IPsec-VPN connection. </p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</p>
+     * <p>The region ID of the IPsec-VPN connection.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the IPsec-VPN connection belongs.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>
@@ -66,7 +66,6 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
 
     /**
      * <p>The list of tags bound to the IPsec-VPN connection.</p>
-     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeVpnConnectionsRequestTag> tag;
@@ -192,8 +191,8 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
 
     public static class DescribeVpnConnectionsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. If you specify this parameter, the value cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. This value cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +203,7 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be up to 128 characters in length and can be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length and can be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>

@@ -7,8 +7,8 @@ public class CreateVpconnFromVbrRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: sends a check request without transforming the shared Express Connect circuits mode. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the request ID is returned.</li>
-     * <li><strong>false</strong> (default): sends a Normal request and transforms the shared Express Connect circuits mode after the check succeeds.</li>
+     * <li><strong>true</strong>: performs a dry run without transforming the shared Express Connect circuits mode. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</li>
+     * <li><strong>false</strong> (default): sends a Normal request. After the request passes the check, the shared Express Connect circuits mode is transformed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -7,8 +7,8 @@ public class DescribeVSwitchesRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page when using paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging queries. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -77,7 +77,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region to which the vSwitch belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The ID of the region to which the vSwitch belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <blockquote>
      * <p>Specify at least one of the <strong>RegionId</strong> and <strong>VpcId</strong> parameters.</p>
      * </blockquote>
@@ -119,7 +119,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public java.util.List<DescribeVSwitchesRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch to query.</p>
+     * <p>The ID of the vSwitch that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-23dscddcffvf3****</p>
@@ -147,7 +147,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Long vSwitchOwnerId;
 
     /**
-     * <p>The ID of the VPC to which the vSwitch belongs. </p>
+     * <p>The ID of the VPC to which the vSwitches that you want to query belong. </p>
      * <blockquote>
      * <p>Specify at least one of the <strong>RegionId</strong> and <strong>VpcId</strong> parameters.</p>
      * </blockquote>
@@ -159,7 +159,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the vSwitch belongs. You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</p>
+     * <p>The ID of the zone to which the vSwitch belongs. You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-d</p>

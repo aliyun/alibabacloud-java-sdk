@@ -32,11 +32,11 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
      * <ul>
-     * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, valid values for <strong>Bandwidth</strong> are <strong>1</strong> to <strong>500</strong>.</p>
+     * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>500</strong>.</p>
      * </li>
-     * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>, valid values for <strong>Bandwidth</strong> are <strong>1</strong> to <strong>200</strong>.</p>
+     * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>200</strong>.</p>
      * </li>
-     * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, valid values for <strong>Bandwidth</strong> are <strong>1</strong> to <strong>1000</strong>.</p>
+     * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>1000</strong>.</p>
      * </li>
      * </ul>
      * <p>Default value: <strong>5</strong> Mbit/s.</p>
@@ -49,9 +49,9 @@ public class AllocateEipAddressRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters.</p>
+     * <p>Generate a value from your client to ensure uniqueness across different requests. <strong>ClientToken</strong> supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,10 +76,10 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default): BGP (multi-ISP) line. All regions support BGP (multi-ISP) EIPs.</li>
-     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) Pro line. Only Hong Kong (China), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions support BGP (multi-ISP) Pro EIPs.</li>
+     * <li><strong>BGP</strong> (default): BGP (multi-ISP) line. All regions support BGP (multi-ISP) line EIPs.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) Pro line. Only the following regions support BGP (multi-ISP) Pro line EIPs: Hong Kong (China), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</li>
      * </ul>
-     * <p>For more information about BGP (multi-ISP) and BGP (multi-ISP) Pro, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
+     * <p>For more information about BGP (multi-ISP) lines and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
      * <ul>
      * <li>If you are a whitelist user of single-ISP bandwidth, you can also select the following types:<ul>
      * <li><strong>ChinaTelecom</strong>: China Telecom</li>
@@ -90,7 +90,7 @@ public class AllocateEipAddressRequest extends TeaModel {
      * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
      * </ul>
      * </li>
-     * <li>If you are a China (Hangzhou) Finance Cloud user, this parameter is required and must be set to <strong>BGP_FinanceCloud</strong>.</li>
+     * <li>If you are a China (Hangzhou) Finance Cloud user, this field is required. Set the value to <strong>BGP_FinanceCloud</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class AllocateEipAddressRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The network type. The value is set to <strong>public</strong> (default), which indicates the public network.</p>
+     * <p>The network type. The value is set to <strong>public</strong> (default), which specifies the public network.</p>
      * 
      * <strong>example:</strong>
      * <p>public</p>
@@ -182,8 +182,8 @@ public class AllocateEipAddressRequest extends TeaModel {
 
     /**
      * <p>The subscription duration.</p>
-     * <p>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, valid values for <strong>Period</strong> are <strong>1</strong> to <strong>9</strong>.</p>
-     * <p>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, valid values for <strong>Period</strong> are <strong>1</strong> to <strong>5</strong>.</p>
+     * <p>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, valid values of <strong>Period</strong> are <strong>1</strong> to <strong>9</strong>.</p>
+     * <p>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, valid values of <strong>Period</strong> are <strong>1</strong> to <strong>5</strong>.</p>
      * <p>This parameter is required if <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>. This parameter is not required if <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the IP address pool.</p>
      * <p>The EIP is allocated from the specified IP address pool.</p>
-     * <p>The IP address pool feature is not available by default. To use this feature, apply for the IP address pool privilege quota in Quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase a quota in Quota Center</a>.</p>
+     * <p>The IP address pool feature is not enabled by default. To use this feature, apply for the IP address pool privilege quota in Quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase a quota in Quota Center</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>pippool-2vc0kxcedhquybdsz****</p>
@@ -248,7 +248,7 @@ public class AllocateEipAddressRequest extends TeaModel {
      * <ul>
      * <li><p>If this parameter is left empty, the default value is Anti-DDoS Basic.</p>
      * </li>
-     * <li><p>If this parameter is set to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS (Enhanced) is used.</p>
+     * <li><p>If this parameter is set to <strong>AntiDDoS_Enhanced</strong>, the value indicates Anti-DDoS (Enhanced).</p>
      * </li>
      * </ul>
      * <p>You can specify at most one security protection level.</p>

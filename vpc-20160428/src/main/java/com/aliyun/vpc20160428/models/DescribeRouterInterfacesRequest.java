@@ -38,7 +38,7 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging queries. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page when paging is performed. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -174,7 +174,7 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
          * </li>
          * <li><p><strong>RouterType</strong>: the router type. Valid values: <strong>VRouter</strong> and <strong>VBR</strong>.</p>
          * </li>
-         * <li><p><strong>RouterInterfaceOwnerId</strong>: the ID of the account that owns the router interface.</p>
+         * <li><p><strong>RouterInterfaceOwnerId</strong>: the ID of the account to which the router interface belongs.</p>
          * </li>
          * <li><p><strong>OppositeInterfaceId</strong>: the peer router interface ID.</p>
          * </li>
@@ -182,7 +182,7 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
          * </li>
          * <li><p><strong>OppositeRouterId</strong>: the peer router interface ID.</p>
          * </li>
-         * <li><p><strong>OppositeInterfaceOwnerId</strong>: the ID of the account that owns the peer router interface.</p>
+         * <li><p><strong>OppositeInterfaceOwnerId</strong>: the ID of the account to which the peer router interface belongs.</p>
          * </li>
          * <li><p><strong>Status</strong>: the router interface status.</p>
          * </li>
@@ -190,7 +190,7 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
          * </li>
          * </ul>
          * <blockquote>
-         * <p>Multiple values for a filter condition are evaluated by using the OR operator. A result is returned if any of the values match. Filter conditions are evaluated by using the AND operator. A result is returned only if all filter conditions are matched.</p>
+         * <p>The multiple values of each filter condition have an OR relationship. A router interface is returned as long as it matches one of the values. The filter conditions have an AND relationship. A router interface is returned only when it matches all specified filter conditions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter value based on the specified Key. You can specify multiple filter values for a Key. Multiple filter values are evaluated by using the OR operator. A result is returned if any of the filter values match.</p>
+         * <p>The filter value based on the specified Key. You can specify multiple filter values for a Key. The filter values have an OR relationship. A router interface is returned as long as it matches one of the filter values.</p>
          * 
          * <strong>example:</strong>
          * <p>Filter.1.Active 1</p>
@@ -234,7 +234,7 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     public static class DescribeRouterInterfacesRequestTags extends TeaModel {
         /**
          * <p>The tag key of the resource. You must specify at least 1 tag key and can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -244,7 +244,7 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

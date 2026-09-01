@@ -72,6 +72,9 @@ public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
      * <li><strong>ROUTERINTERFACE</strong>: VBR uplink.</li>
      * <li><strong>TRAFFICQOS</strong>: QoS policy.</li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is essentially required. If it is not specified, the service returns MissingParameter (400).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>PHYSICALCONNECTION</p>

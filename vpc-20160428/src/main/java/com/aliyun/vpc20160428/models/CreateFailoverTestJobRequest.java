@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateFailoverTestJobRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: sends the request without creating the failover test node. The system checks the request for potential issues, including whether the AccessKey is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</li>
-     * <li><strong>false</strong> (default): sends a Normal request, and the failover test job is created after the check passes. A 2xx HTTP status code is returned.</li>
+     * <li><strong>true</strong>: sends the request without creating the failover test node. The system checks the AccessKey validity, Resource Access Management (RAM) user authorization, and required parameters. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a Normal request. After the check passes, a 2xx HTTP status code is returned and the failover test job is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,11 +51,11 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public Integer jobDuration;
 
     /**
-     * <p>The type of the failover test job. Valid values:</p>
+     * <p>The failover test job type. Valid values:</p>
      * <ul>
-     * <li><p><strong>StartNow</strong>: The failover test starts immediately after the job is created.</p>
+     * <li><p><strong>StartNow</strong>: starts immediately. The test job starts executing immediately after it is created.</p>
      * </li>
-     * <li><p><strong>StartLater</strong>: Only the job is created. The failover test does not start.</p>
+     * <li><p><strong>StartLater</strong>: does not start. Only creates the test job without executing it.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -84,7 +84,7 @@ public class CreateFailoverTestJobRequest extends TeaModel {
 
     /**
      * <p>The region ID of the failover test job.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -93,7 +93,7 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of resource IDs to test. You can add up to 16 resources.</p>
+     * <p>The list of test resource IDs. You can add up to 16 test resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -103,7 +103,7 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The type of the resource to test. Valid values: <strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</p>
+     * <p>The type of the test resource. Valid values: <strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

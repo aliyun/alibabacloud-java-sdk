@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateCustomerGatewayRequest extends TeaModel {
     /**
-     * <p>The Autonomous System Number (ASN) of the gateway device in the on-premises data center. This parameter is required if you plan to enable Border Gateway Protocol (BGP) dynamic routing for the IPsec-VPN connection. Valid values: 1 to 4294967295. The value 45104 is not supported.</p>
-     * <p><strong>Asn</strong> is a 4-byte number that can be entered in the two-segment format: the first 16 bits.the last 16 bits. Each segment is entered in decimal notation.</p>
+     * <p>If you plan to enable the BGP dynamic routing protocol for the IPsec-VPN connection, you need to allocate the Autonomous System Number (ASN) of the gateway device in the on-premises data center. Valid values: 1 to 4294967295. The value 45104 is not supported.</p>
+     * <p><strong>Asn</strong> is a 4-byte number. You can enter the number in two-segment format: the first 16 bits.the last 16 bits. Each segment is entered in decimal format.</p>
      * <p>For example, if you enter 123.456, the ASN is 123 × 65536 + 456 = 8061384.</p>
      * <blockquote>
      * <ul>
      * <li>Use a private ASN to establish a BGP connection with Alibaba Cloud. For more information about the range of private ASNs, refer to the relevant documentation.</li>
-     * <li>45104 is a unique identity allocated to Alibaba Cloud Computing Co., Ltd. by the Internet Assigned Numbers Authority (IANA). It is used to identify Alibaba Cloud in global Internet routing and data transmission.</li>
+     * <li>45104 is a unique identity allocated to Alibaba Cloud Computing Co., Ltd. by the Internet Assigned Numbers Authority (IANA). It is used as an identity for Alibaba Cloud in global Internet routing and data transmission.</li>
      * </ul>
      * </blockquote>
      * 
@@ -109,7 +109,7 @@ public class CreateCustomerGatewayRequest extends TeaModel {
      * <p>The ID of the resource group to which the customer gateway belongs.</p>
      * <ul>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group ID.</li>
-     * <li>If you do not specify a resource group, the customer gateway is added to the default resource group after it is created.</li>
+     * <li>If you do not specify a resource group, the customer gateway belongs to the default resource group after it is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>

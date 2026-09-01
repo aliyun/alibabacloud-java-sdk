@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     /**
-     * <p>The scope of VBR instances to be granted authorization. Valid values:</p>
+     * <p>The scope of the VBR instances to be authorized. Valid values:</p>
      * <ul>
      * <li><strong>All</strong>: Grants authorization of the VPC-connected instance to all VBR instances in the specified region under the specified Alibaba Cloud account. In this case, the <strong>VbrInstanceIds</strong> parameter can be left empty.</li>
      * <li><strong>Specify</strong>: Grants authorization of the VPC-connected instance to the specified VBR instances. In this case, the <strong>VbrInstanceIds</strong> parameter is required.</li>
@@ -19,7 +19,7 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public String grantType;
 
     /**
-     * <p>The ID of the VPC-connected instance for which to grant authorization.</p>
+     * <p>The ID of the VPC-connected instance for which authorization is to be granted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the VPC-connected instance for which to grant authorization.</p>
+     * <p>The region ID of the VPC-connected instance for which authorization is to be granted.</p>
      * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of VBR instances to be granted authorization.</p>
+     * <p>The list of VBR instances to be authorized.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -49,7 +49,7 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public String vbrInstanceIdsShrink;
 
     /**
-     * <p>The Alibaba Cloud account ID that owns the VBR instance to be granted authorization.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the VBR instance to be authorized. This account must be different from the caller\&quot;s account. You cannot specify the caller\&quot;s own account ID. This operation is used for cross-account authorization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public Long vbrOwnerUid;
 
     /**
-     * <p>The region ID of the VBR instance to be granted authorization.</p>
+     * <p>The region ID of the VBR instance to be authorized.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

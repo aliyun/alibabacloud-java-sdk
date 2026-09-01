@@ -32,7 +32,7 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
     public Integer newWeight;
 
     /**
-     * <p>The next hop of the destination route entry to modify.</p>
+     * <p>The next hop of the destination route entry to be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
 
     /**
      * <p>The region ID of the IPsec-VPN connection.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The destination CIDR block of the destination route entry to modify.</p>
+     * <p>The destination CIDR block of the destination route entry to be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
     public String vpnConnectionId;
 
     /**
-     * <p>The current weight of the destination route entry to modify. Valid values:</p>
+     * <p>The current weight of the destination route entry to be modified. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: low priority.</li>
      * <li><strong>100</strong>: high priority.</li>

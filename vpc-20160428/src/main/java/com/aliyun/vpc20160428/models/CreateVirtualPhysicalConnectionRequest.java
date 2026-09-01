@@ -17,7 +17,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without creating the shared Express Connect circuits. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check passes, <code>DRYRUN.SUCCESS</code> is returned.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the shared Express Connect circuits. The system checks required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check passes, <code>DRYRUN.SUCCESS</code> is returned.</li>
      * <li><strong>false</strong> (default): sends a Normal request. After the check passes, the shared Express Connect circuits are created.</li>
      * </ul>
      * 
@@ -41,7 +41,10 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
      * <p>The payer of the shared Express Connect circuits. Valid values:</p>
      * <ul>
      * <li><strong>PayByPhysicalConnectionOwner</strong>: The partner pays.</li>
-     * <li><strong>PayByVirtualPhysicalConnectionOwner</strong>: The tenant pays.</li>
+     * <li><strong>PayByVirtualPhysicalConnectionOwner</strong>: The tenant pays.<blockquote>
+     * <p>Default value: PayByVirtualPhysicalConnectionOwner (tenant pays).</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -53,6 +56,9 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The ID of the Express Connect circuit associated with the shared Express Connect circuits.</p>
+     * <blockquote>
+     * <p>The Express Connect circuit must be in the Enabled state and must be an Express Connect circuit (shared Express Connect circuits IDs are not supported). Otherwise, ResourceNotFound.PhysicalConnectionId or IncorrectStatus.PhysicalConnection is returned. You can invoke DescribePhysicalConnections to query the status of the Express Connect circuit. The caller must be the account (partner) that owns the Express Connect circuit.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +69,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The region ID of the shared Express Connect circuits.</p>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +98,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
      * <blockquote>
      * <p>The bandwidth values <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong> are not available by default. To use these values, contact your account manager.</p>
      * </blockquote>
-     * <p>Unit: <strong>M</strong> indicates Mbit/s, and <strong>G</strong> indicates Gbit/s.</p>
+     * <p>Unit: <strong>M</strong> indicates Mbit/s and <strong>G</strong> indicates Gbit/s.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +108,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVirtualPhysicalConnectionRequestTag> tag;
@@ -123,8 +129,8 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The VLAN ID of the shared Express Connect circuits. Valid values: <strong>0</strong> to <strong>2999</strong>.</p>
      * <ul>
-     * <li>If the VLAN ID is set to <strong>0</strong>, the physical vSwitch port of the Virtual Border Router (VBR) uses Layer 3 routing interface mode instead of VLAN mode. In Layer 3 routing interface mode, each Express Connect circuit corresponds to one VBR.</li>
-     * <li>If the VLAN ID is set to a value from <strong>1</strong> to <strong>2999</strong>, the physical vSwitch port of the VBR uses VLAN-based Layer 3 sub-interfaces. In Layer 3 sub-interface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can connect to VPCs under multiple accounts. VBRs in different VLANs have network isolation at Layer 2 and cannot communicate with each other.</li>
+     * <li>If the VLAN ID is <strong>0</strong>, the physical switch port of the Virtual Border Router (VBR) does not use VLAN mode but uses Layer 3 routing interface mode. In Layer 3 routing interface mode, each Express Connect circuit corresponds to one VBR.</li>
+     * <li>If the VLAN ID is <strong>1</strong> to <strong>2999</strong>, the physical switch port of the VBR uses VLAN-based Layer 3 sub-interfaces. In Layer 3 sub-interface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can connect to VPCs under multiple accounts. VBRs in different VLANs have network isolation at Layer 2 and cannot communicate with each other.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -135,7 +141,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     public Long vlanId;
 
     /**
-     * <p>The Alibaba Cloud account ID of the tenant.</p>
+     * <p>The ID of the tenant\&quot;s Alibaba Cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -18,7 +18,7 @@ public class DescribeFailoverTestJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the failover test job.</p>
+     * <p>The failover test job ID. Before calling this operation, use CreateFailoverTestJob to create a job and obtain this ID. If the test resource is an Express Connect circuit, the circuit must be in the <strong>Enabled</strong> state and its business status must be <strong>Normal</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeFailoverTestJobRequest extends TeaModel {
 
     /**
      * <p>The region ID of the failover test job. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

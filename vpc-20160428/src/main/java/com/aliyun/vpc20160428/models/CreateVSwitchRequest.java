@@ -9,11 +9,11 @@ public class CreateVSwitchRequest extends TeaModel {
      * <ul>
      * <li><p>The mask length of the vSwitch CIDR block must be 16 to 29 bits.  </p>
      * </li>
-     * <li><p>The vSwitch CIDR block must be a subset of the VPC CIDR block to which the vSwitch belongs. </p>
+     * <li><p>The CIDR block of the vSwitch must be a subset of the CIDR block of the VPC to which the vSwitch belongs. </p>
      * </li>
-     * <li><p>The vSwitch CIDR block cannot be the same as the destination CIDR block of a route in the VPC, but it can be a subset of the destination CIDR block. </p>
+     * <li><p>The CIDR block of the vSwitch cannot be the same as the destination CIDR block of a route in the VPC, but can be a subset of the destination CIDR block. </p>
      * </li>
-     * <li><p>The vSwitch CIDR block cannot be 100.64.0.0/10 or its subnets.</p>
+     * <li><p>The CIDR block of the vSwitch cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -29,9 +29,9 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The last 8 bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.
-     * You can specify this parameter only when the VPC to which the vSwitch belongs has IPv6 enabled. This parameter allows you to assign an IPv6 CIDR block to the vSwitch. After the IPv6 CIDR block is assigned, it cannot be changed. Make sure that the CIDR block does not overlap with those of other vSwitches in the VPC.</p>
+     * You can specify this parameter only when the VPC to which the vSwitch belongs has IPv6 enabled. This allows you to assign an IPv6 CIDR block to the vSwitch. After the IPv6 CIDR block is allocated, it cannot be changed. Make sure that the CIDR block does not overlap with those of other vSwitches in the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -67,8 +67,8 @@ public class CreateVSwitchRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the vSwitch to create.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region IDs.</p>
+     * <p>The region ID of the vSwitch that you want to create.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -119,7 +119,7 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The ID of the zone in which to create the vSwitch.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the zone IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

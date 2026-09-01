@@ -14,7 +14,7 @@ public class AssociateVpcCidrBlockResponseBody extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>The IP address type of the secondary CIDR block.</p>
+     * <p>The IP address version of the secondary CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>IPV4</p>

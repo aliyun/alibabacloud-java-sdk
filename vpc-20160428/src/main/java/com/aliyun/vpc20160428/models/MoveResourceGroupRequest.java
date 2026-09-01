@@ -59,7 +59,7 @@ public class MoveResourceGroupRequest extends TeaModel {
      * <li><strong>PrefixList</strong>: prefix list</li>
      * <li><strong>PublicIpAddressPool</strong>: IPAM pool</li>
      * <li><strong>FlowLog</strong>: flow log</li>
-     * <li><strong>HaVip</strong>: high-availability (HA) virtual IP address</li>
+     * <li><strong>HaVip</strong>: high-availability virtual IP address</li>
      * <li><strong>TrafficMirrorFilter</strong>: traffic mirror filter</li>
      * <li><strong>TrafficMirrorSession</strong>: traffic mirror session</li>
      * <li><strong>IPv4Gateway</strong>: IPv4 gateway</li>

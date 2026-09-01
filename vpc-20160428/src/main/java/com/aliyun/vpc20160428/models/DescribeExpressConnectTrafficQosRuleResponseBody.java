@@ -14,7 +14,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The QoS rules.</p>
+     * <p>The list of QoS rules.</p>
      */
     @NameInMap("RuleList")
     public java.util.List<DescribeExpressConnectTrafficQosRuleResponseBodyRuleList> ruleList;
@@ -42,9 +42,9 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
 
     public static class DescribeExpressConnectTrafficQosRuleResponseBodyRuleList extends TeaModel {
         /**
-         * <p>The destination IP address IPv4 CIDR block for QoS rule traffic matching.</p>
+         * <p>The destination IP address IPv4 CIDR block for traffic matching of the QoS rule.</p>
          * <blockquote>
-         * <p>You cannot specify this parameter together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
+         * <p>This parameter cannot be specified together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -54,9 +54,9 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         public String dstCidr;
 
         /**
-         * <p>The destination IP address IPv6 CIDR block for QoS rule traffic matching.</p>
+         * <p>The destination IP address IPv6 CIDR block for traffic matching of the QoS rule.</p>
          * <blockquote>
-         * <p>You cannot specify this parameter together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
+         * <p>This parameter cannot be specified together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         public String dstIPv6Cidr;
 
         /**
-         * <p>The destination port range for QoS rule traffic matching. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates no match. Currently, only a single port number can be specified, and the start and end port numbers must be the same. The destination port range is fixed for each protocol type. Valid values:</p>
+         * <p>The destination port range for traffic matching of the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates no match. Currently, only a single port number can be specified, and the start and end port numbers must be the same. The destination port range is fixed for different protocol types. Valid values:</p>
          * <ul>
          * <li><p><strong>ALL</strong>: -1/-1. Not editable.</p>
          * </li>
@@ -109,7 +109,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         public String dstPortRange;
 
         /**
-         * <p>The DSCP value for QoS rule traffic matching. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates no match.</p>
+         * <p>The DSCP value for traffic matching of the QoS rule. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates no match.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -118,7 +118,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         public Integer matchDscp;
 
         /**
-         * <p>The priority of the QoS rule. Valid values: <strong>1</strong> to <strong>9000</strong>. A larger value indicates a higher priority. QoS rule priorities must be unique within the same QoS policy.</p>
+         * <p>The priority of the QoS rule. Valid values: <strong>1</strong> to <strong>9000</strong>. A larger value indicates a higher priority. The priority must be unique within the same QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +188,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         public String queueId;
 
         /**
-         * <p>The remarked DSCP value in the traffic. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates no remarking.</p>
+         * <p>The DSCP value to remark in the traffic. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates no remarking.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -198,7 +198,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
 
         /**
          * <p>The description of the QoS rule.</p>
-         * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description is 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-rule-test</p>
@@ -217,7 +217,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the QoS rule.</p>
-         * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name is 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-rule-test</p>
@@ -226,9 +226,9 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The source IPv4 CIDR block for QoS rule traffic matching.</p>
+         * <p>The source IPv4 CIDR block for traffic matching of the QoS rule.</p>
          * <blockquote>
-         * <p>You cannot specify this parameter together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
+         * <p>This parameter cannot be specified together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -238,9 +238,9 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         public String srcCidr;
 
         /**
-         * <p>The source IPv6 CIDR block for QoS rule traffic matching.</p>
+         * <p>The source IPv6 CIDR block for traffic matching of the QoS rule.</p>
          * <blockquote>
-         * <p>You cannot specify this parameter together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
+         * <p>This parameter cannot be specified together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         public String srcIPv6Cidr;
 
         /**
-         * <p>The source port range for QoS rule traffic matching. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates no match. Currently, only a single port number can be specified, and the start and end port numbers must be the same.</p>
+         * <p>The source port range for traffic matching of the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates no match. Currently, only a single port number can be specified, and the start and end port numbers must be the same.</p>
          * 
          * <strong>example:</strong>
          * <p>-1/-1</p>

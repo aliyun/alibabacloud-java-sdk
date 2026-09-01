@@ -8,7 +8,7 @@ public class GetVpnGatewayDiagnoseResultRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the client token. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class GetVpnGatewayDiagnoseResultRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The diagnostic ID.</p>
-     * <p>The diagnostic ID is returned when you call the <a href="https://help.aliyun.com/document_detail/469751.html">DiagnoseVpnGateway</a> operation.</p>
+     * <p>The diagnosis ID.</p>
+     * <p>When you call the <a href="https://help.aliyun.com/document_detail/469751.html">DiagnoseVpnGateway</a> operation, the system returns the corresponding diagnosis ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpndgn-uf6kuxbe3iv028k3s****</p>

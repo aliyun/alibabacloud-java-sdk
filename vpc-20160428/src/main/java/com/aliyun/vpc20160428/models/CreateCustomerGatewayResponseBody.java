@@ -15,7 +15,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The instance ID of the customer gateway instance.</p>
+     * <p>The instance ID of the customer gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>cgw-bp1jrawp82av6bws9****</p>

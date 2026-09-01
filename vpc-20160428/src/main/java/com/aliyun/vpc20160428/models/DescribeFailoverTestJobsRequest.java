@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeFailoverTestJobsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
     public java.util.List<DescribeFailoverTestJobsRequestFilter> filter;
 
     /**
-     * <p>The number of entries per page for paginated queries. Valid values: <strong>1 to 100</strong>. Default value: 20.</p>
+     * <p>The number of entries per page for a paginated query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,11 +33,11 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li><p>Leave this parameter empty for the first query or if no next query exists.</p>
+     * <li><p>Leave this parameter empty for the first query or if no subsequent query is required.</p>
      * </li>
-     * <li><p>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <li><p>If a subsequent query is required, set this parameter to the NextToken value returned in the previous API call.</p>
      * </li>
      * </ul>
      * 
@@ -153,7 +153,7 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
          * </li>
          * </ul>
          * <blockquote>
-         * <p>Specify up to 5 unique filter conditions. If you specify a resource ID or resource name, you must also specify the resource type. All filter conditions must be met to return accurate query results.</p>
+         * <p>You can specify up to 5 unique filter conditions. If you specify a resource ID or resource name, you must also specify the resource type. All filter conditions must be met to return accurate query results.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
         /**
          * <p>The filter values that correspond to the filter condition.</p>
          * <blockquote>
-         * <p>Each filter condition can contain up to 5 filter values. These filter values have an OR relationship. A record is considered a match if it matches any one of the filter values.</p>
+         * <p>Each filter condition can contain up to 5 filter values. These filter values use the OR logic. A record is considered a match if it matches any one of the filter values.</p>
          * </blockquote>
          */
         @NameInMap("Value")

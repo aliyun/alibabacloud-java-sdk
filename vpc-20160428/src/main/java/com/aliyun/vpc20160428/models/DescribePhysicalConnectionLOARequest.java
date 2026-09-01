@@ -8,7 +8,7 @@ public class DescribePhysicalConnectionLOARequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,10 @@ public class DescribePhysicalConnectionLOARequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID of the Express Connect circuit.</p>
+     * <p>The ID of the Express Connect circuit instance.</p>
+     * <blockquote>
+     * <p>The Express Connect circuit instance ID is obtained through the Alibaba Cloud Express Connect circuit access application process. For more information, refer to the Express Connect circuit access documentation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

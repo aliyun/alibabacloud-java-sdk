@@ -42,7 +42,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
 
     public static class DescribeExpressConnectTrafficQosQueueResponseBodyQueueListRuleList extends TeaModel {
         /**
-         * <p>The destination IP address IPv4 CIDR block that the QoS rule matches for traffic.</p>
+         * <p>The destination IP address IPv4 CIDR block for traffic matching in the QoS rule.</p>
          * <blockquote>
          * <p>You cannot specify this parameter together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
          * </blockquote>
@@ -54,7 +54,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String dstCidr;
 
         /**
-         * <p>The destination IP address IPv6 CIDR block that the QoS rule matches for traffic.</p>
+         * <p>The destination IP address IPv6 CIDR block for traffic matching in the QoS rule.</p>
          * <blockquote>
          * <p>You cannot specify this parameter together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
          * </blockquote>
@@ -66,7 +66,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String dstIPv6Cidr;
 
         /**
-         * <p>The destination port range that the QoS rule matches. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates that no match is applied. Only a single port number can be specified. The start and end port numbers must be the same. The destination port range is fixed for different protocol types. Valid values:</p>
+         * <p>The destination port range for traffic matching in the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates that no matching is performed. Only a single port number can be specified. The start and end port numbers must be the same. The destination port range is fixed for different protocol types. Valid values:</p>
          * <ul>
          * <li><p><strong>ALL</strong>: -1/-1, not editable.</p>
          * </li>
@@ -109,7 +109,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String dstPortRange;
 
         /**
-         * <p>The DSCP value that the QoS rule matches. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates that no match is applied.</p>
+         * <p>The DSCP value for traffic matching in the QoS rule. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates that no matching is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -118,7 +118,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public Integer matchDscp;
 
         /**
-         * <p>The priority of the QoS rule. Valid values: <strong>1</strong> to <strong>9000</strong>. A larger value indicates a higher priority. QoS rule priorities must be unique within the same QoS policy.</p>
+         * <p>The priority of the QoS rule. Valid values: <strong>1</strong> to <strong>9000</strong>. A larger value indicates a higher priority. The priority of each QoS rule must be unique within the same QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +188,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String queueId;
 
         /**
-         * <p>The remarked DSCP value in the traffic. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates that the DSCP value is not modified.</p>
+         * <p>The DSCP value to remark in the traffic. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates that no remarking is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,7 +226,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String ruleName;
 
         /**
-         * <p>The source IPv4 CIDR block that the QoS rule matches.</p>
+         * <p>The source IPv4 CIDR block for traffic matching in the QoS rule.</p>
          * <blockquote>
          * <p>You cannot specify this parameter together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
          * </blockquote>
@@ -238,7 +238,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String srcCidr;
 
         /**
-         * <p>The source IPv6 CIDR block that the QoS rule matches.</p>
+         * <p>The source IPv6 CIDR block for traffic matching in the QoS rule.</p>
          * <blockquote>
          * <p>You cannot specify this parameter together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
          * </blockquote>
@@ -250,7 +250,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String srcIPv6Cidr;
 
         /**
-         * <p>The source port range that the QoS rule matches. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates that no match is applied. Only a single port number can be specified. The start and end port numbers must be the same.</p>
+         * <p>The source port range for traffic matching in the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates that no matching is performed. Only a single port number can be specified. The start and end port numbers must be the same.</p>
          * 
          * <strong>example:</strong>
          * <p>-1/-1</p>
@@ -261,7 +261,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         /**
          * <p>The status of the QoS rule. Valid values:</p>
          * <ul>
-         * <li><p><strong>Normal</strong>: active.</p>
+         * <li><p><strong>Normal</strong>: available.</p>
          * </li>
          * <li><p><strong>Configuring</strong>: being configured.</p>
          * </li>
@@ -465,7 +465,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String queueName;
 
         /**
-         * <p>The type of the QoS queue. Valid values:</p>
+         * <p>The QoS queue type. Valid values:</p>
          * <ul>
          * <li><p><strong>High</strong>: high-priority queue.</p>
          * </li>
@@ -493,7 +493,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         /**
          * <p>The status of the QoS queue. Valid values:</p>
          * <ul>
-         * <li><p><strong>Normal</strong>: active.</p>
+         * <li><p><strong>Normal</strong>: available.</p>
          * </li>
          * <li><p><strong>Configuring</strong>: being configured.</p>
          * </li>

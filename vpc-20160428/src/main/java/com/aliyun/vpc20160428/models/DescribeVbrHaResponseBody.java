@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVbrHaResponseBody extends TeaModel {
     /**
-     * <p>The time when the VBR was created.</p>
+     * <p>The time when the VBR was created. The time is displayed in the ISO 8601 standard in UTC. The format is YYYY-MM-DDThh:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-08T12:20:55</p>
@@ -45,7 +45,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
      * <p>The region ID of the VBR.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

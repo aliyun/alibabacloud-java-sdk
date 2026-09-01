@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionRequest extends TeaModel {
     /**
-     * <p>The ID of the access point for the Express Connect circuit.</p>
+     * <p>The ID of the access point where the Express Connect circuit is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The description of the Express Connect circuit. </p>
-     * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 2 to 256 characters in length and must start with a letter or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>description</p>
@@ -47,13 +47,13 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The list of advanced device capabilities.</p>
+     * <p>The list of device advanced capabilities.</p>
      */
     @NameInMap("DeviceAdvancedCapacity")
     public java.util.List<String> deviceAdvancedCapacity;
 
     /**
-     * <p>The carrier that provides the Express Connect circuit. Valid values:</p>
+     * <p>The carrier that provides the physical line for the Express Connect circuit. Valid values:</p>
      * <ul>
      * <li><p><strong>CT</strong>: China Telecom.</p>
      * </li>
@@ -78,7 +78,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The name of the Express Connect circuit.  </p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -87,7 +87,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The optical module model supported by the Express Connect circuit access point. Valid values:</p>
+     * <p>The optical module model supported at the access point of the Express Connect circuit. Valid values:</p>
      * <ul>
      * <li>1000Base-LX : <ul>
      * <li><code>SFP-GE-LR-SM1310,10KM</code></li>
@@ -154,8 +154,9 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
      * <li><p><strong>100GBase-LR</strong>: 100 GE single-mode optical port.</p>
      * </li>
      * </ul>
+     * <p>Different access points support different port types. Before you call this operation, call ListBusinessAccessPoints to query the <strong>SupportPortTypes</strong> of the target access point. For optical ports, also verify the <strong>OpticalModuleModels</strong>.</p>
      * <blockquote>
-     * <p>40GBase-LR and 100GBase-LR are subject to the availability of backend ports. Contact your account manager for more information.</p>
+     * <p>40GBase-LR and 100GBase-LR ports are created based on the actual backend port availability. Contact your account manager for details.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -391,7 +392,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
 
     public static class CreatePhysicalConnectionRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, the value cannot be an empty string.</p>
          * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -401,7 +402,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, the value can be an empty string.</p>
          * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

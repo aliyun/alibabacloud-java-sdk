@@ -17,8 +17,8 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): disables automatic payment.</li>
-     * <li><strong>true</strong>: enables automatic payment.</li>
+     * <li><strong>false</strong> (default): Automatic payment is disabled.</li>
+     * <li><strong>true</strong>: Automatic payment is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,11 +49,11 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
      * </li>
      * <li><p><strong>CM</strong>: China Mobile</p>
      * </li>
-     * <li><p><strong>CO</strong>: other carriers in the Chinese mainland</p>
+     * <li><p><strong>CO</strong>: Other carriers in the Chinese mainland</p>
      * </li>
      * <li><p><strong>Equinix</strong>: Equinix</p>
      * </li>
-     * <li><p><strong>Other</strong>: other carriers outside the Chinese mainland</p>
+     * <li><p><strong>Other</strong>: Other carriers outside the Chinese mainland</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -75,11 +75,11 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
      * <ul>
      * <li><p><strong>100Base-T</strong>: 100M Ethernet port.</p>
      * </li>
-     * <li><p><strong>1000Base-T</strong> (default): 1 GE port.</p>
+     * <li><p><strong>1000Base-T</strong> (default): 1 GE electrical port.</p>
      * </li>
      * <li><p><strong>1000Base-LX</strong>: GE single-mode optical port (10 km).</p>
      * </li>
-     * <li><p><strong>10GBase-T</strong>: 10 GE port.</p>
+     * <li><p><strong>10GBase-T</strong>: 10 GE electrical port.</p>
      * </li>
      * <li><p><strong>10GBase-LR</strong>: 10 GE single-mode optical port (10 km).</p>
      * </li>
@@ -88,8 +88,9 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
      * <li><p><strong>100GBase-LR</strong>: 100 GE single-mode optical port.</p>
      * </li>
      * </ul>
+     * <p>The default value <strong>1000Base-T</strong> is available only at access points that support this port type. Before calling this operation, call ListBusinessAccessPoints to query the <strong>SupportPortTypes</strong> of the target access point. For optical ports, also verify the <strong>OpticalModuleModels</strong>.</p>
      * <blockquote>
-     * <p>40GBase-LR and 100GBase-LR ports are created based on the actual port availability. Contact your account manager for details.</p>
+     * <p>40GBase-LR and 100GBase-LR must be created based on the actual backend port availability. Contact your account manager for details.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,7 +110,7 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Express Connect circuit. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

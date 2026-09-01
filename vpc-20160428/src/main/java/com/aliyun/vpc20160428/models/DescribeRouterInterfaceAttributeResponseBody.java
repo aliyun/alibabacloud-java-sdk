@@ -25,7 +25,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The business status of the router interface. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: Normal.</p>
+     * <li><p><strong>Normal</strong>: normal.</p>
      * </li>
      * <li><p><strong>FinancialLocked</strong>: locked due to overdue payment.</p>
      * </li>
@@ -62,7 +62,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the connection was established.</p>
+     * <p>The time when the connection was established. The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-14T08:58:04Z</p>
@@ -71,7 +71,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String connectedTime;
 
     /**
-     * <p>The time when the router interface was created.</p>
+     * <p>The time when the router interface was created. The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-14T08:57:24Z</p>
@@ -80,11 +80,11 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>Indicates whether the connection is a cross-border connection. Valid values:</p>
+     * <p>Indicates whether this is a cross-border connection. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong>: The connection is not a cross-border connection.</p>
+     * <li><p><strong>false</strong>: No.</p>
      * </li>
-     * <li><p><strong>true</strong>: The connection is a cross-border connection.</p>
+     * <li><p><strong>true</strong>: Yes.</p>
      * </li>
      * </ul>
      * 
@@ -98,13 +98,13 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
      * <p>The description of the router interface.</p>
      * 
      * <strong>example:</strong>
-     * <p>对端接口</p>
+     * <p>Peer interface</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The end time of the data retrieval.</p>
+     * <p>The end time of the data retrieval. The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2999-09-08T16:00:00Z</p>
@@ -113,10 +113,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Indicates whether the router interface on the VBR was created in fast link mode. Fast link mode allows the router interfaces on the VBR and VPC to be automatically connected after they are created. Valid values:</p>
+     * <p>Indicates whether the router interface on the VBR was created in fast link mode. Fast link mode allows the router interfaces on both the VBR and VPC sides to automatically connect after creation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The router interface was created in fast link mode.</li>
-     * <li><strong>false</strong> (default): The router interface was not created in fast link mode.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong> (default): No.</li>
      * </ul>
      * <blockquote>
      * <ul>
@@ -145,9 +145,9 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether renewal data exists. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong>: No renewal data exists.</p>
+     * <li><p><strong>false</strong>: No.</p>
      * </li>
-     * <li><p><strong>true</strong>: Renewal data exists.</p>
+     * <li><p><strong>true</strong>: Yes.</p>
      * </li>
      * </ul>
      * 
@@ -176,7 +176,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public Integer hcThreshold;
 
     /**
-     * <p>The source IP address of the health check.</p>
+     * <p>The health check source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
@@ -188,7 +188,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
      * <p>The health check status. Valid values:</p>
      * <ul>
      * <li><strong>Abnormal</strong>: abnormal.</li>
-     * <li><strong>Normal</strong>: Normal.</li>
+     * <li><strong>Normal</strong>: normal.</li>
      * <li><strong>NoRedundantRoute</strong>: no redundant route configured.</li>
      * <li><strong>NoHealthCheckConfig</strong>: no health check configured.</li>
      * </ul>
@@ -200,7 +200,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String healthCheckStatus;
 
     /**
-     * <p>The target IP address of the health check.</p>
+     * <p>The health check target IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>2.2.XX.XX</p>
@@ -209,7 +209,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String healthCheckTargetIp;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -221,7 +221,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
      * <p>The name of the router interface.</p>
      * 
      * <strong>example:</strong>
-     * <p>路由器接口1</p>
+     * <p>RouterInterface1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -247,7 +247,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The business status of the peer router interface. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: Normal.</li>
+     * <li><strong>Normal</strong>: normal.</li>
      * <li><strong>FinancialLocked</strong>: locked due to overdue payment.</li>
      * <li><strong>SecurityLocked</strong>: locked due to security risk control.</li>
      * </ul>
@@ -371,7 +371,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The renewal active time.</p>
+     * <p>The renewal active time. The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-11T16:00:00Z</p>
@@ -398,7 +398,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String reservationInternetChargeType;
 
     /**
-     * <p>The type of the renewal order. Valid values: <strong>RENEW</strong>, which indicates a renewal order.</p>
+     * <p>The renewal order type. Valid values: <strong>RENEW</strong>, which indicates a renewal order.</p>
      * 
      * <strong>example:</strong>
      * <p>RENEW</p>
@@ -514,7 +514,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public DescribeRouterInterfaceAttributeResponseBodyTags tags;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the routing interface belongs.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the router interface belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1b49rqrybk45nio****</p>

@@ -36,11 +36,17 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The port down delay time of the Express Connect circuit, in milliseconds. When a physical link Down event is detected, the access device waits for this duration before setting the port to the down state. This prevents transient disconnections from affecting your services. Valid values: 0 to 10000. The step size is 100. A value of 0 indicates that the port goes down immediately after the link goes down (default).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("DownDelayTime")
     public Integer downDelayTime;
 
     /**
-     * <p>The carrier that provides the access to the physical connection. Valid values:</p>
+     * <p>The carrier that provides the access to the physical line. Valid values:</p>
      * <ul>
      * <li><strong>CT</strong>: China Telecom</li>
      * <li><strong>CU</strong>: China Unicom</li>
@@ -73,7 +79,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The geographical location of the on-premises data center.</p>
+     * <p>The geographic location of the on-premises data center.</p>
      * 
      * <strong>example:</strong>
      * <p>No. XX, XX Road, XX District, Hangzhou City, Zhejiang Province</p>
@@ -103,7 +109,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
      * <li><strong>100GBase-LR</strong>: 100 GE single-mode optical port.</li>
      * </ul>
      * <blockquote>
-     * <p>To create 40GBase-LR or 100GBase-LR ports, check the actual port availability on the backend. Contact your account manager for details.</p>
+     * <p>40GBase-LR and 100GBase-LR are subject to the availability of backend port resources. Contact your account manager for more information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

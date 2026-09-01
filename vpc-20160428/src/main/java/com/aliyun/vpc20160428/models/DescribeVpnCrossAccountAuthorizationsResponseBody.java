@@ -93,7 +93,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
 
     public static class DescribeVpnCrossAccountAuthorizationsResponseBodyCrossAccountAuthorizations extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the IPsec-VPN connection.</p>
          * 
          * <strong>example:</strong>
          * <p>1250123456123456</p>
@@ -102,7 +102,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         public Long aliUid;
 
         /**
-         * <p>The instance ID of the CEN instance to which the IPsec-VPN connection grants authorization.</p>
+         * <p>The instance ID of the CEN instance to which the IPsec-VPN connection authorization is granted.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-vv8h0t3klfpaae****</p>
@@ -112,7 +112,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
 
         /**
          * <p>The type of resource to which the IPsec-VPN connection is authorized.</p>
-         * <p>The value is <strong>CEN</strong> only, which indicates that the IPsec-VPN connection is authorized to a cross-account Cloud Enterprise Network (CEN) instance. The IPsec-VPN connection can be attached to a transit router instance under the cross-account CEN instance.</p>
+         * <p>The value is <strong>CEN</strong> only, which indicates that the IPsec-VPN connection is authorized to a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account. The IPsec-VPN connection can be attached to a transit router instance under the cross-account CEN instance.</p>
          * 
          * <strong>example:</strong>
          * <p>CEN</p>
@@ -130,8 +130,8 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         public Long bindUid;
 
         /**
-         * <p>The timestamp when the cross-account authorization of the IPsec-VPN connection was created.</p>
-         * <p>The timestamp is in the UNIX format and represents the total number of seconds that have elapsed since January 1, 1970, 00:00:00 (UTC) to the time when the cross-account authorization was created.</p>
+         * <p>The timestamp when the cross-account authorization was created for the IPsec-VPN connection.</p>
+         * <p>The timestamp is in the UNIX format and represents the total number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the cross-account authorization was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1658201810000</p>

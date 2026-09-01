@@ -8,7 +8,7 @@ public class ConnectRouterInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the router interface resides. </p>
+     * <p>The region where the router interface is located. </p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRouteTargetGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId value as the ClientToken value. The RequestId value is different for each API request.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe6****</p>
@@ -200,8 +200,8 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
         /**
          * <p>The weight of the route target group member. Valid values:</p>
          * <ul>
-         * <li><strong>100</strong>: The member is the active instance.</li>
-         * <li><strong>0</strong>: The member is the standby instance.</li>
+         * <li><strong>100</strong>: The member is the primary instance.</li>
+         * <li><strong>0</strong>: The member is the secondary instance.</li>
          * </ul>
          * <p>The weight can only be set during creation and cannot be modified.</p>
          * <p>This parameter is required.</p>

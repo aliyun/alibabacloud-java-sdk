@@ -142,7 +142,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public String companyName;
 
         /**
-         * <p>The time when the construction crew enters the site.</p>
+         * <p>The time when the construction starts. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-26T08:00:00Z</p>
@@ -150,6 +150,12 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         @NameInMap("ConstructionTime")
         public String constructionTime;
 
+        /**
+         * <p>The LOA error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IllegalParam.CardId</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -181,7 +187,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public String lineLabel;
 
         /**
-         * <p>The contact information of the line O&amp;M personnel.</p>
+         * <p>The contact information for line O&amp;M.</p>
          * 
          * <strong>example:</strong>
          * <p>1388888****</p>
@@ -192,10 +198,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         /**
          * <p>The telecommunications service provider. Valid values:</p>
          * <ul>
-         * <li><strong>China Telecom</strong></li>
-         * <li><strong>China Unicom</strong></li>
-         * <li><strong>China Mobile</strong></li>
-         * <li><strong>China Other</strong></li>
+         * <li><strong>中国电信</strong></li>
+         * <li><strong>中国联通</strong></li>
+         * <li><strong>中国移动</strong></li>
+         * <li><strong>中国其他</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +238,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOATypePMInfo PMInfo;
 
         /**
-         * <p>The construction company that enters the site.</p>
+         * <p>The construction company.</p>
          * 
          * <strong>example:</strong>
          * <p>ctcu</p>

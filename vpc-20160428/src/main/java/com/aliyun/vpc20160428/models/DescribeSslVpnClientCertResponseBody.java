@@ -61,7 +61,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
 
     /**
      * <p>The timestamp when the SSL client certificate was created. Unit: milliseconds.</p>
-     * <p>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp is in the Unix format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC, to the time when the SSL client certificate was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1552550980000</p>
@@ -71,7 +71,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
 
     /**
      * <p>The timestamp when the SSL client certificate expires. Unit: milliseconds.</p>
-     * <p>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp is in the Unix format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC, to the time when the SSL client certificate expires.</p>
      * 
      * <strong>example:</strong>
      * <p>1647158980000</p>
@@ -126,7 +126,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     public String sslVpnClientCertId;
 
     /**
-     * <p>The ID of the SSL server.</p>
+     * <p>The SSL server ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vss-bp155e9yclsg1xgq4****</p>

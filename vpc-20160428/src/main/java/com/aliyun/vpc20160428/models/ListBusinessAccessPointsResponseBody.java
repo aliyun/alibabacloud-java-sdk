@@ -41,9 +41,40 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     }
 
     public static class ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels extends TeaModel {
+        /**
+         * <p>The optical module model supported by the Express Connect circuit access point. Valid values:
+         * 1000Base-LX : 
+         * SFP-GE-LR-SM1310,10KM
+         * SFP-GE-ER-SM1310,40KM
+         * SFP-GE-ZR-SM1550,80KM 
+         * 10GBase-LR : 
+         * SFP-10G-LR-SM1310,10KM
+         * SFP-10G-ER-SM1550,40KM 
+         * SFP-10G-ZR-SM1550,80KM<br>40GBase-LR : 
+         * QSFP-40G-LR4-WDM1300,10KM
+         * QSFP-40G-ER4-WDM1300,40KM
+         * QSFP-40G-ZR4-WDM1300,80KM
+         * 100GBase-LR : 
+         * QSFP28-100G-LR4-WDM1300,10KM
+         * QSFP28-100G-ER4-WDM1300,40KM
+         * QSFP28-100G-ZR4-WDM1300,80KM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SFP-GE-LR-SM1310,10KM</p>
+         */
         @NameInMap("OpticalModuleModel")
         public String opticalModuleModel;
 
+        /**
+         * <p>The port type supported by the optical module at the Express Connect circuit access point. Valid values:
+         * ● 1000Base-LX: GE single-mode optical port.
+         * ● 10GBase-LR: 10 GE single-mode optical port.
+         * ● 40GBase-LR: 40 GE single-mode optical port.
+         * ● 100GBase-LR: 100 GE single-mode optical port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000Base-LX</p>
+         */
         @NameInMap("PortType")
         public String portType;
 
@@ -92,7 +123,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         /**
          * <p>The CloudBox instance ID.</p>
          * <blockquote>
-         * <p>This parameter is available when the queried Express Connect circuit and access point are CloudBox Express Connect circuits and CloudBox access points.</p>
+         * <p>This parameter is available only when the queried Express Connect circuit and access point are CloudBox Express Connect circuits and CloudBox access points.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -119,6 +150,9 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         @NameInMap("Longitude")
         public Double longitude;
 
+        /**
+         * <p>The collection of optical module models supported by the current access point.</p>
+         */
         @NameInMap("OpticalModuleModels")
         public java.util.List<ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels> opticalModuleModels;
 
@@ -151,7 +185,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
          * <li><strong>100GBase-LR</strong>: 100 GE single-mode optical port.</li>
          * </ul>
          * <blockquote>
-         * <p> 40GBase-LR and 100GBase-LR ports are created based on actual backend port availability. Contact your account manager for details.</p>
+         * <p> The creation of 40GBase-LR and 100GBase-LR ports depends on the actual backend port availability. Contact your account manager for details.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -61,7 +61,7 @@ public class CreateIpsecServerRequest extends TeaModel {
     public Boolean effectImmediately;
 
     /**
-     * <p>The Phase 1 negotiation parameter settings. Valid values:</p>
+     * <p>The parameter settings of Phase 1 negotiations. Valid values:</p>
      * <ul>
      * <li><p><strong>IkeVersion</strong>: The version of the IKE protocol. Valid values: <strong>ikev1</strong> and <strong>ikev2</strong>. Default value: <strong>ikev2</strong>.</p>
      * </li>
@@ -98,7 +98,7 @@ public class CreateIpsecServerRequest extends TeaModel {
     public String ipSecServerName;
 
     /**
-     * <p>The Phase 2 negotiation parameter settings. Valid values:</p>
+     * <p>The parameter settings of Phase 2 negotiations. Valid values:</p>
      * <ul>
      * <li><p><strong>IpsecEncAlg</strong>: The encryption algorithm used in Phase 2 negotiations. Default value: <strong>aes</strong>.</p>
      * </li>

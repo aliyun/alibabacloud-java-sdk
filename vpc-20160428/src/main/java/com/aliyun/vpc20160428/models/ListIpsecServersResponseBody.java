@@ -22,7 +22,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
     /**
      * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li><p>If <strong>NextToken</strong> is empty, no subsequent query is to be sent.</p>
+     * <li><p>If <strong>NextToken</strong> is empty, no subsequent query exists.</p>
      * </li>
      * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</p>
      * </li>
@@ -126,7 +126,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public Long ikeLifetime;
 
         /**
-         * <p>The IKE negotiation mode. Valid values:</p>
+         * <p>The IKE version negotiation mode. Valid values:</p>
          * <p><strong>main</strong>: main mode. Negotiations are highly secure.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public String ikeVersion;
 
         /**
-         * <p>The identifier of the IPsec server. FQDN and IP address formats are supported. The default value is the public IP address of the selected VPN gateway.</p>
+         * <p>The identifier of the IPsec server. The value can be in the FQDN or IP address format. The default value is the public IP address of the selected VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>116.64.XX.XX</p>
@@ -163,7 +163,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public String localId;
 
         /**
-         * <p>The identifier of the peer. FQDN and IP address formats are supported. The default value is empty.</p>
+         * <p>The identifier of the peer. The value can be in the FQDN or IP address format. The default value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>139.67.XX.XX</p>
@@ -330,7 +330,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
         /**
          * <p>The time when the IPsec server was created.</p>
-         * <p>T is the delimiter. Z indicates UTC.</p>
+         * <p>T is the delimiter and Z indicates UTC (Coordinated Universal Time).</p>
          * 
          * <strong>example:</strong>
          * <p>2018-12-03T10:11:55Z</p>
@@ -413,7 +413,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         /**
          * <p>The maximum number of SSL-VPN connections supported by the VPN gateway.</p>
          * <blockquote>
-         * <p>SSL-VPN and the IPsec server share SSL-VPN connections. For example, if the maximum number of SSL-VPN connections is 5 and three SSL clients are already connected to SSL-VPN, only two more clients can connect to the IPsec server.</p>
+         * <p>SSL-VPN and the IPsec server share the SSL-VPN connections. For example, if the maximum number of SSL-VPN connections is 5 and three SSL clients are already connected to SSL-VPN, only two more clients can connect to the IPsec server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -474,7 +474,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the IPsec server belongs.</p>
+         * <p>The resource group ID of the IPsec server.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
          * 
          * <strong>example:</strong>

@@ -72,7 +72,7 @@ public class UpdateIpsecServerRequest extends TeaModel {
      * </li>
      * <li><p><strong>IkePfs</strong>: The Diffie-Hellman key exchange algorithm used in Phase 1 negotiations. Default value: <strong>group2</strong>.</p>
      * </li>
-     * <li><p><strong>IkeLifetime</strong>: The epoch of the SA negotiated in Phase 1. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</p>
+     * <li><p><strong>IkeLifetime</strong>: The lifetime of the SA negotiated in Phase 1. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>. The parameter specifies the SA epoch.</p>
      * </li>
      * <li><p><strong>LocalId</strong>: The identity of the IPsec server. FQDN and IP address formats are supported.</p>
      * </li>

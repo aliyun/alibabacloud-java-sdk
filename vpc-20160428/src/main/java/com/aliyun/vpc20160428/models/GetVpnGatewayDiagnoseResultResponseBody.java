@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     /**
-     * <p>The time when the diagnostic started.</p>
+     * <p>The time when the diagnosis started.</p>
      * <p>The time is displayed in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public String beginTime;
 
     /**
-     * <p>The diagnostic ID.</p>
+     * <p>The diagnosis ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpndgn-uf6sgneym02lxyuv4****</p>
@@ -24,13 +24,13 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public String diagnoseId;
 
     /**
-     * <p>The list of diagnostic items.</p>
+     * <p>The list of diagnosis items.</p>
      */
     @NameInMap("DiagnoseResult")
     public java.util.List<GetVpnGatewayDiagnoseResultResponseBodyDiagnoseResult> diagnoseResult;
 
     /**
-     * <p>The time when the diagnostic ended.</p>
+     * <p>The time when the diagnosis ended.</p>
      * <p>The time is displayed in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public String finishTime;
 
     /**
-     * <p>The number of diagnostic items that have been completed.</p>
+     * <p>The number of diagnosis items that have been completed.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -77,7 +77,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The total number of diagnostic items.</p>
+     * <p>The total number of diagnosis items.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -181,7 +181,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
 
     public static class GetVpnGatewayDiagnoseResultResponseBodyDiagnoseResult extends TeaModel {
         /**
-         * <p>The diagnostic item.</p>
+         * <p>The diagnosis item.</p>
          * <ul>
          * <li><strong>RouteEntryConflict</strong>: route conflict.</li>
          * <li><strong>VpnRouteQuota</strong>: VPN gateway destination route quota.</li>
@@ -191,7 +191,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
          * <li><strong>VcoUserInternetIpConnectivity</strong>: public network connectivity of the customer gateway.</li>
          * <li><strong>VcoPrivateConnectivity</strong>: private network connectivity.</li>
          * </ul>
-         * <p>For more information about each diagnostic item, see <a href="https://help.aliyun.com/document_detail/190330.html">One-click diagnostics background information</a>.</p>
+         * <p>For more information about each diagnosis item, see <a href="https://help.aliyun.com/document_detail/190330.html">Background information about one-click diagnosis</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>RouteEntryConflict</p>
@@ -200,8 +200,8 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         public String diagnoseName;
 
         /**
-         * <p>The diagnostic result of the diagnostic item.</p>
-         * <p>The operation returns different information for each diagnostic item:</p>
+         * <p>The diagnosis result of the diagnosis item.</p>
+         * <p>The operation returns different information for each diagnosis item:</p>
          * <ul>
          * <li><strong>RouteEntryConflict</strong>: The system returns information about the route conflict.</li>
          * <li><strong>VpnRouteQuota</strong>:<ul>
@@ -251,13 +251,13 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         public String diagnoseResultDescription;
 
         /**
-         * <p>The diagnostic result level of the diagnostic item.</p>
+         * <p>The diagnosis result level of the diagnosis item.</p>
          * <ul>
          * <li><strong>normal</strong>: Normal.</li>
          * <li><strong>warning</strong>: Warning.</li>
          * <li><strong>error</strong>: Error.</li>
          * </ul>
-         * <p>For more information about the diagnostic result levels of each diagnostic item, see <a href="https://help.aliyun.com/document_detail/190330.html">One-click diagnostics background information</a>.</p>
+         * <p>For more information about the diagnosis result levels of each diagnosis item, see <a href="https://help.aliyun.com/document_detail/190330.html">Background information about one-click diagnosis</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>

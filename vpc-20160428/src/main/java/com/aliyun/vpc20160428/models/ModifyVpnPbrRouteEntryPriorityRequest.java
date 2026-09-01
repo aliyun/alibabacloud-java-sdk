@@ -18,8 +18,8 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new policy priority of the policy-based routing entry. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
-     * <p>A smaller value indicates a higher policy priority for the routing entry.</p>
+     * <p>The new policy priority of the policy-based routing. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>A smaller policy priority value indicates a higher priority of the routing.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,8 +45,8 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The original policy priority of the policy-based routing entry. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
-     * <p>A smaller value indicates a higher policy priority for the routing entry.</p>
+     * <p>The original policy priority of the policy-based routing. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>A smaller policy priority value indicates a higher priority of the routing.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -56,7 +56,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPN gateway instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

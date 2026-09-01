@@ -14,7 +14,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging queries.</p>
+     * <p>The number of entries per page in a paged query. This is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

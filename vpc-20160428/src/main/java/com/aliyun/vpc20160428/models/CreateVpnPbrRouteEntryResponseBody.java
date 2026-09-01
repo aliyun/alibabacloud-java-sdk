@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The timestamp when the policy-based route was created. Unit: milliseconds.</p>
-     * <p>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp follows the UNIX time format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1492747187000</p>
@@ -33,7 +33,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling protocol).</p>
+     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunnel protocol).</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -42,7 +42,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String overlayMode;
 
     /**
-     * <p>The policy priority of the policy-based routing entry.</p>
+     * <p>The policy priority of the policy-based route.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -80,9 +80,9 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The publish status of the policy-based route.</p>
      * <ul>
-     * <li><p><strong>published</strong>: The policy-based route has been published to the VPC route table.</p>
+     * <li><p><strong>published</strong>: The policy-based route is published to the VPC route table.</p>
      * </li>
-     * <li><p><strong>normal</strong>: The policy-based route has not been published to the VPC route table.</p>
+     * <li><p><strong>normal</strong>: The policy-based route is not published to the VPC route table.</p>
      * </li>
      * </ul>
      * 
@@ -93,7 +93,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The instance ID of the VPN gateway.</p>
+     * <p>The VPN gateway instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-bp1cmw7jh1nfe43m9****</p>

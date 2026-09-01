@@ -46,41 +46,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhengzhou-nebula-1", "vpc-nebula.cn-qingdao-nebula.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "vpc-nebula.cn-shenzhen-cloudstone.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "vpc.aliyuncs.com"),
-            new TeaPair("us-west-1", "vpc.us-west-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "vpc.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "vpc.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "vpc.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "vpc.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "vpc.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "vpc.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "vpc.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "vpc.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "vpc.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "vpc.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "vpc.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "vpc.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "vpc.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "vpc.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "vpc.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "vpc.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "vpc.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "vpc.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "vpc.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "vpc.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "vpc.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "vpc.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "vpc.cn-huhehaote.aliyuncs.com"),
             new TeaPair("us-southeast-1", "vpc.us-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "vpc.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "vpc.eu-west-2.aliyuncs.com"),
+            new TeaPair("eu-central-1", "vpc.eu-central-1.aliyuncs.com"),
             new TeaPair("us-east-1", "vpc.us-east-1.aliyuncs.com"),
+            new TeaPair("sa-east-1", "vpc.sa-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "vpc.us-west-1.aliyuncs.com"),
             new TeaPair("na-south-1", "vpc.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "vpc.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "vpc.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "vpc.eu-west-2.aliyuncs.com"),
-            new TeaPair("eu-west-1", "vpc.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "vpc.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "vpc.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "vpc.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu-gic-1", "vpc.cn-wulanchabu-gic-1.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "vpc.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "vpc.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "vpc.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "vpc.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "vpc.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "vpc.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "vpc.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "vpc.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "vpc.cn-heyuan-acdr-1.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "vpc.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "vpc.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "vpc.cn-fuzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "vpc.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "vpc.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "vpc.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "vpc.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "vpc.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "vpc.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "vpc.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "vpc.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "vpc.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "vpc.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "vpc.ap-northeast-1.aliyuncs.com")
+            new TeaPair("cn-heyuan-acdr-1", "vpc.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "vpc.cn-wulanchabu-gic-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("vpc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -101,7 +102,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call the ActivateRouterInterface operation, the router interface enters the <strong>Activating</strong> state. After the router interface is activated, it enters the <strong>Active</strong> state. </p>
+     * <p>After you call the ActivateRouterInterface operation, the router interface enters the <strong>Activating</strong> state. After the activation succeeds, the router interface enters the <strong>Active</strong> state.
+     * Before you call this operation, the router interface must be in the <strong>Inactive</strong> state. The initial state of a newly created router interface is <strong>Idle</strong>. In non-express connect mode, you can call CreateRouterInterface to create both ends of the connection, call ModifyRouterInterfaceAttribute to configure peer information for each end, and then call ConnectRouterInterface to establish the connection. When the interface is in the <strong>Active</strong> state, you can call DeactivateRouterInterface to change it to the <strong>Inactive</strong> state, and then call this operation to reactivate it. You can call DescribeRouterInterfaceAttribute to query the current state.</p>
      * <blockquote>
      * <p>You cannot activate a router interface that has an overdue payment.</p>
      * </blockquote>
@@ -155,7 +157,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call the ActivateRouterInterface operation, the router interface enters the <strong>Activating</strong> state. After the router interface is activated, it enters the <strong>Active</strong> state. </p>
+     * <p>After you call the ActivateRouterInterface operation, the router interface enters the <strong>Activating</strong> state. After the activation succeeds, the router interface enters the <strong>Active</strong> state.
+     * Before you call this operation, the router interface must be in the <strong>Inactive</strong> state. The initial state of a newly created router interface is <strong>Idle</strong>. In non-express connect mode, you can call CreateRouterInterface to create both ends of the connection, call ModifyRouterInterfaceAttribute to configure peer information for each end, and then call ConnectRouterInterface to establish the connection. When the interface is in the <strong>Active</strong> state, you can call DeactivateRouterInterface to change it to the <strong>Inactive</strong> state, and then call this operation to reactivate it. You can call DescribeRouterInterfaceAttribute to query the current state.</p>
      * <blockquote>
      * <p>You cannot activate a router interface that has an overdue payment.</p>
      * </blockquote>
@@ -899,8 +902,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of EIPs. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
-     * After you call this operation, an EIP in the <strong>Available</strong> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. EIPs do not support IGMP or SCTP.</p>
+     * <p>Make sure that you are familiar with the billing methods and pricing of EIPs before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
+     * After you call this operation, an EIP in the <strong>Available</strong> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. IGMP and SCTP are not supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Applies for an elastic IP address (EIP).</p>
@@ -1027,8 +1030,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of EIPs. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
-     * After you call this operation, an EIP in the <strong>Available</strong> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. EIPs do not support IGMP or SCTP.</p>
+     * <p>Make sure that you are familiar with the billing methods and pricing of EIPs before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
+     * After you call this operation, an EIP in the <strong>Available</strong> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. IGMP and SCTP are not supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Applies for an elastic IP address (EIP).</p>
@@ -2044,12 +2047,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Only dedicated Express Connect circuits are supported.
      * Other notes:</li>
      * <li>A maximum of three CKN and CAK pairs can be configured.</li>
-     * <li>Associating a key that is currently in the Disassociated state cancels the previously associated key.</li>
+     * <li>Associating a key that is currently in the Disassociated state disassociates the previously active key.</li>
      * <li>Associating a key that is currently in the AssociatedFailed state triggers the device to renegotiate the session.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fiber or Ethernet) to cover all traffic from sender to receiver.</p>
+     * <p>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fibers or Ethernet) to cover all traffic from the sender to the receiver.</p>
      * 
      * @param request AssociateMacSecKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2104,12 +2107,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Only dedicated Express Connect circuits are supported.
      * Other notes:</li>
      * <li>A maximum of three CKN and CAK pairs can be configured.</li>
-     * <li>Associating a key that is currently in the Disassociated state cancels the previously associated key.</li>
+     * <li>Associating a key that is currently in the Disassociated state disassociates the previously active key.</li>
      * <li>Associating a key that is currently in the AssociatedFailed state triggers the device to renegotiate the session.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fiber or Ethernet) to cover all traffic from sender to receiver.</p>
+     * <p>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fibers or Ethernet) to cover all traffic from the sender to the receiver.</p>
      * 
      * @param request AssociateMacSecKeyRequest
      * @return AssociateMacSecKeyResponse
@@ -2729,22 +2732,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you attach a VPN gateway to an SSL certificate, take note of the following information:</p>
+     * <p>Before you associate a VPN gateway with an SSL certificate, take note of the following information:</p>
      * <ul>
-     * <li>Only Chinese SM VPN gateways support SSL certificate attachment. You must attach two SSL certificates to a Chinese SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</li>
-     * <li>The SSL certificates must use Chinese SM algorithms.</li>
+     * <li>Only ShangMi (SM) VPN gateways support SSL certificate binding. You must attach two SSL certificates to an SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</li>
+     * <li>The SSL certificates must use SM algorithms.</li>
      * <li>You cannot specify the same SSL certificate as both the encryption certificate and the signing certificate for the same VPN gateway instance.
      * &lt;props=&quot;china&quot;&gt;</li>
-     * <li>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</li>
-     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The attachment node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the attachment status of the SSL certificate:<ul>
+     * <li>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy named AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</li>
+     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The binding node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the binding status of the SSL certificate:<ul>
      * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL certificate is being attached.</li>
      * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL certificate is attached.</li>
      * </ul>
      * </li>
-     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation does not support concurrent SSL certificate attachment for the same VPN gateway.</li>
+     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation does not support concurrent SSL certificate binding requests for the same VPN gateway.</li>
      * </ul>
      * <h3>Before you begin</h3>
-     * <p>Make sure that you have two SSL certificates that use Chinese SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</p>
+     * <p>Make sure that you have two SSL certificates that use SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Associates a certificate with a VPN gateway by calling the AssociateVpnGatewayWithCertificate operation.</p>
@@ -2799,22 +2802,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you attach a VPN gateway to an SSL certificate, take note of the following information:</p>
+     * <p>Before you associate a VPN gateway with an SSL certificate, take note of the following information:</p>
      * <ul>
-     * <li>Only Chinese SM VPN gateways support SSL certificate attachment. You must attach two SSL certificates to a Chinese SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</li>
-     * <li>The SSL certificates must use Chinese SM algorithms.</li>
+     * <li>Only ShangMi (SM) VPN gateways support SSL certificate binding. You must attach two SSL certificates to an SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</li>
+     * <li>The SSL certificates must use SM algorithms.</li>
      * <li>You cannot specify the same SSL certificate as both the encryption certificate and the signing certificate for the same VPN gateway instance.
      * &lt;props=&quot;china&quot;&gt;</li>
-     * <li>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</li>
-     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The attachment node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the attachment status of the SSL certificate:<ul>
+     * <li>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy named AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</li>
+     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The binding node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the binding status of the SSL certificate:<ul>
      * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL certificate is being attached.</li>
      * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL certificate is attached.</li>
      * </ul>
      * </li>
-     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation does not support concurrent SSL certificate attachment for the same VPN gateway.</li>
+     * <li>The <strong>AssociateVpnGatewayWithCertificate</strong> operation does not support concurrent SSL certificate binding requests for the same VPN gateway.</li>
      * </ul>
      * <h3>Before you begin</h3>
-     * <p>Make sure that you have two SSL certificates that use Chinese SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</p>
+     * <p>Make sure that you have two SSL certificates that use SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Associates a certificate with a VPN gateway by calling the AssociateVpnGatewayWithCertificate operation.</p>
@@ -2925,7 +2928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits.</p>
+     * <p>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits. This API is used to migrate an existing VBR that was pushed cross-account to shared Express Connect circuits (shared port), completing the shared Express Connect circuits form transformation. Only the partner (Express Connect circuit owner) can call this operation.</p>
      * 
      * @param request AttachVbrToVpconnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2973,7 +2976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits.</p>
+     * <p>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits. This API is used to migrate an existing VBR that was pushed cross-account to shared Express Connect circuits (shared port), completing the shared Express Connect circuits form transformation. Only the partner (Express Connect circuit owner) can call this operation.</p>
      * 
      * @param request AttachVbrToVpconnRequest
      * @return AttachVbrToVpconnResponse
@@ -3067,10 +3070,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can cancel access only for Express Connect circuits in the <strong>Initial</strong>, <strong>Approved</strong>, <strong>Allocated</strong>, or <strong>Confirmed</strong> state (not yet activated).</p>
+     * <p>You can cancel the access of an Express Connect circuit only when it is in the <strong>Initial</strong>, <strong>Approved</strong>, <strong>Allocated</strong>, or <strong>Confirmed</strong> state (not enabled). After an Express Connect circuit is created by calling CreatePhysicalConnection, it may briefly be in the <strong>Allocating</strong> state, during which it cannot be canceled. Poll the status by calling DescribePhysicalConnections and call this operation after the state changes to <strong>Allocated</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels access to an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</p>
+     * <p>Cancels the access of an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</p>
      * 
      * @param request CancelPhysicalConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3126,10 +3129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can cancel access only for Express Connect circuits in the <strong>Initial</strong>, <strong>Approved</strong>, <strong>Allocated</strong>, or <strong>Confirmed</strong> state (not yet activated).</p>
+     * <p>You can cancel the access of an Express Connect circuit only when it is in the <strong>Initial</strong>, <strong>Approved</strong>, <strong>Allocated</strong>, or <strong>Confirmed</strong> state (not enabled). After an Express Connect circuit is created by calling CreatePhysicalConnection, it may briefly be in the <strong>Allocating</strong> state, during which it cannot be canceled. Poll the status by calling DescribePhysicalConnections and call this operation after the state changes to <strong>Allocated</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels access to an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</p>
+     * <p>Cancels the access of an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</p>
      * 
      * @param request CancelPhysicalConnectionRequest
      * @return CancelPhysicalConnectionResponse
@@ -3285,7 +3288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the CheckVpnBgpEnabled operation to query whether the region of an IPsec-VPN connection supports the BGP feature.</p>
+     * <p>Calls the CheckVpnBgpEnabled operation to query whether the region to which an IPsec-VPN connection belongs supports the BGP feature.</p>
      * 
      * @param request CheckVpnBgpEnabledRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3333,7 +3336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the CheckVpnBgpEnabled operation to query whether the region of an IPsec-VPN connection supports the BGP feature.</p>
+     * <p>Calls the CheckVpnBgpEnabled operation to query whether the region to which an IPsec-VPN connection belongs supports the BGP feature.</p>
      * 
      * @param request CheckVpnBgpEnabledRequest
      * @return CheckVpnBgpEnabledResponse
@@ -3344,8 +3347,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calls the CompletePhysicalConnectionLOA operation to complete the construction. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. You can call this operation only when the status is <strong>Available</strong> or <strong>Complete</strong>. After an LOA application is submitted, the status changes to <strong>Applying</strong>. After the application is approved, the status changes to <strong>Available</strong>. If the application is rejected, the status changes to <strong>Rejected</strong>. For a rejected application, call SecondApplyPhysicalConnectionLOA to reapply. After the construction is completed, the LOA status changes to <strong>Complete</strong>.
+     * Complete call chain:
+     * CreatePhysicalConnection → ApplyPhysicalConnectionLOA (LOA enters the Applying state) → Wait for approval (Available after approval; Rejected if denied, in which case call SecondApplyPhysicalConnectionLOA or ApplyPhysicalConnectionLOA again to reapply) → CompletePhysicalConnectionLOA (backfill completion information, LOA enters the Completing state) → ConfirmPhysicalConnection (confirm the Express Connect circuit, LOA enters the Complete state).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Calls CompletePhysicalConnectionLOA to complete the construction.</p>
+     * <p>Calls CompletePhysicalConnectionLOA to complete the construction and backfill the completion information after the LOA is approved and the line construction is finished.</p>
      * 
      * @param request CompletePhysicalConnectionLOARequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3424,8 +3432,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calls the CompletePhysicalConnectionLOA operation to complete the construction. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. You can call this operation only when the status is <strong>Available</strong> or <strong>Complete</strong>. After an LOA application is submitted, the status changes to <strong>Applying</strong>. After the application is approved, the status changes to <strong>Available</strong>. If the application is rejected, the status changes to <strong>Rejected</strong>. For a rejected application, call SecondApplyPhysicalConnectionLOA to reapply. After the construction is completed, the LOA status changes to <strong>Complete</strong>.
+     * Complete call chain:
+     * CreatePhysicalConnection → ApplyPhysicalConnectionLOA (LOA enters the Applying state) → Wait for approval (Available after approval; Rejected if denied, in which case call SecondApplyPhysicalConnectionLOA or ApplyPhysicalConnectionLOA again to reapply) → CompletePhysicalConnectionLOA (backfill completion information, LOA enters the Completing state) → ConfirmPhysicalConnection (confirm the Express Connect circuit, LOA enters the Complete state).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Calls CompletePhysicalConnectionLOA to complete the construction.</p>
+     * <p>Calls CompletePhysicalConnectionLOA to complete the construction and backfill the completion information after the LOA is approved and the line construction is finished.</p>
      * 
      * @param request CompletePhysicalConnectionLOARequest
      * @return CompletePhysicalConnectionLOAResponse
@@ -3505,8 +3518,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation, the router interface enters the <strong>Connecting</strong> state. After the connection is established, the router interface enters the <strong>Active</strong> state.
-     * When you call this operation to create a VPC, note the following items: </p>
+     * <p>After you invoke this operation, the router interface enters the <strong>Connecting</strong> state and transitions to the <strong>Active</strong> state after the connection is established.
+     * When you invoke this operation to create a VPC, note the following items: </p>
      * <ul>
      * <li>Only a requester VPC router interface in the <strong>Idle</strong> state can initiate a connection to the accepter VPC. </li>
      * <li>A maximum of one pair of interconnected router interfaces can exist between any two routers. </li>
@@ -3514,7 +3527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiates a connection from the requester VPC router interface to the accepter.</p>
+     * <p>Calls the ConnectRouterInterface operation to initiate a connection from the requester VPC router interface to the accepter.</p>
      * 
      * @param request ConnectRouterInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3562,8 +3575,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation, the router interface enters the <strong>Connecting</strong> state. After the connection is established, the router interface enters the <strong>Active</strong> state.
-     * When you call this operation to create a VPC, note the following items: </p>
+     * <p>After you invoke this operation, the router interface enters the <strong>Connecting</strong> state and transitions to the <strong>Active</strong> state after the connection is established.
+     * When you invoke this operation to create a VPC, note the following items: </p>
      * <ul>
      * <li>Only a requester VPC router interface in the <strong>Idle</strong> state can initiate a connection to the accepter VPC. </li>
      * <li>A maximum of one pair of interconnected router interfaces can exist between any two routers. </li>
@@ -3571,7 +3584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initiates a connection from the requester VPC router interface to the accepter.</p>
+     * <p>Calls the ConnectRouterInterface operation to initiate a connection from the requester VPC router interface to the accepter.</p>
      * 
      * @param request ConnectRouterInterfaceRequest
      * @return ConnectRouterInterfaceResponse
@@ -4983,9 +4996,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot create a failover test job in the following scenarios:</p>
+     * <p>Resource status requirements (prerequisites)</p>
      * <ul>
-     * <li><p>A failover test job is already running in the current region, and the job type of the new failover test job is set to StartNow.</p>
+     * <li><p>Before creating a failover test job, ensure that the test resources and their associated resources are in the following states. Otherwise, the creation fails:</p>
+     * </li>
+     * <li><p>ResourceType set to PHYSICALCONNECTION: The Express Connect circuit (including shared Express Connect circuits) must be in the Enabled state with normal billing status (no overdue payment). Otherwise, IncorrectStatus.ResourceId or IncorrectBusinessStatus.ResourceId is returned.</p>
+     * </li>
+     * <li><p>ResourceType set to VIRTUALBORDERROUTER: The VBR must be in the active state with no overdue payment, and the Express Connect circuit to which the VBR belongs must also be in the Enabled state with no overdue payment.</p>
+     * </li>
+     * <li><p>ResourceType set to BGPPEER: The BGP peer must be in the Available state, the VBR to which it belongs must be in the active state, and the Express Connect circuit to which the VBR belongs must be in the Enabled state, all with no overdue payment.
+     * How to check and advance the Express Connect circuit status</p>
+     * </li>
+     * <li><p>Call DescribePhysicalConnections to query the Status field of the Express Connect circuit. If the circuit is not in the Enabled state (for example, it is in the Allocated or Confirmed state), advance it along the following state transition path:</p>
+     * <ul>
+     * <li>Allocated (port reserved, pending confirmation) → Call ConfirmPhysicalConnection to confirm → Confirmed → Call EnablePhysicalConnection to activate (asynchronous; poll DescribePhysicalConnections after activation to confirm) → Enabled.</li>
+     * <li>Note: EnablePhysicalConnection only supports activating Express Connect circuits in the Confirmed state. If the circuit is in the Allocated state, call ConfirmPhysicalConnection first.</li>
+     * </ul>
+     * </li>
+     * <li><p>When JobType is set to StartLater, the status check described above is performed during the job creation phase. When you subsequently call StartFailoverTestJob to start the job, the resource status is checked again. If the resource status does not meet the requirements at that time (for example, the circuit is no longer in the Enabled state), the start operation fails.
+     * The following scenarios do not support creating failover test jobs:</p>
+     * </li>
+     * <li><p>A failover test job is already running in the current region, and the job type of the new failover test job is set to start immediately.</p>
      * </li>
      * <li><p>The Express Connect circuit instance or shared Express Connect circuit instance has not been paid for or has an overdue payment.</p>
      * </li>
@@ -4993,16 +5024,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li><p>The Express Connect circuit instance has more than one shared Express Connect circuit.</p>
      * </li>
-     * <li><p>The Express Connect circuit instance has more than one cross-account Virtual Border Router (VBR).</p>
+     * <li><p>The Express Connect circuit instance has more than one cross-account VBR.</p>
      * </li>
      * <li><p>The shared Express Connect circuit instance is not associated with a VBR.</p>
      * </li>
-     * <li><p>The VLAN of the shared Express Connect circuit instance is set to 0.</p>
+     * <li><p>The VLAN configuration of the shared Express Connect circuit instance is 0.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a failover test job for Express Connect.</p>
+     * <p>Calls the CreateFailoverTestJob operation to create a failover test job for Express Connect.</p>
      * 
      * @param request CreateFailoverTestJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5082,9 +5113,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot create a failover test job in the following scenarios:</p>
+     * <p>Resource status requirements (prerequisites)</p>
      * <ul>
-     * <li><p>A failover test job is already running in the current region, and the job type of the new failover test job is set to StartNow.</p>
+     * <li><p>Before creating a failover test job, ensure that the test resources and their associated resources are in the following states. Otherwise, the creation fails:</p>
+     * </li>
+     * <li><p>ResourceType set to PHYSICALCONNECTION: The Express Connect circuit (including shared Express Connect circuits) must be in the Enabled state with normal billing status (no overdue payment). Otherwise, IncorrectStatus.ResourceId or IncorrectBusinessStatus.ResourceId is returned.</p>
+     * </li>
+     * <li><p>ResourceType set to VIRTUALBORDERROUTER: The VBR must be in the active state with no overdue payment, and the Express Connect circuit to which the VBR belongs must also be in the Enabled state with no overdue payment.</p>
+     * </li>
+     * <li><p>ResourceType set to BGPPEER: The BGP peer must be in the Available state, the VBR to which it belongs must be in the active state, and the Express Connect circuit to which the VBR belongs must be in the Enabled state, all with no overdue payment.
+     * How to check and advance the Express Connect circuit status</p>
+     * </li>
+     * <li><p>Call DescribePhysicalConnections to query the Status field of the Express Connect circuit. If the circuit is not in the Enabled state (for example, it is in the Allocated or Confirmed state), advance it along the following state transition path:</p>
+     * <ul>
+     * <li>Allocated (port reserved, pending confirmation) → Call ConfirmPhysicalConnection to confirm → Confirmed → Call EnablePhysicalConnection to activate (asynchronous; poll DescribePhysicalConnections after activation to confirm) → Enabled.</li>
+     * <li>Note: EnablePhysicalConnection only supports activating Express Connect circuits in the Confirmed state. If the circuit is in the Allocated state, call ConfirmPhysicalConnection first.</li>
+     * </ul>
+     * </li>
+     * <li><p>When JobType is set to StartLater, the status check described above is performed during the job creation phase. When you subsequently call StartFailoverTestJob to start the job, the resource status is checked again. If the resource status does not meet the requirements at that time (for example, the circuit is no longer in the Enabled state), the start operation fails.
+     * The following scenarios do not support creating failover test jobs:</p>
+     * </li>
+     * <li><p>A failover test job is already running in the current region, and the job type of the new failover test job is set to start immediately.</p>
      * </li>
      * <li><p>The Express Connect circuit instance or shared Express Connect circuit instance has not been paid for or has an overdue payment.</p>
      * </li>
@@ -5092,16 +5141,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li><p>The Express Connect circuit instance has more than one shared Express Connect circuit.</p>
      * </li>
-     * <li><p>The Express Connect circuit instance has more than one cross-account Virtual Border Router (VBR).</p>
+     * <li><p>The Express Connect circuit instance has more than one cross-account VBR.</p>
      * </li>
      * <li><p>The shared Express Connect circuit instance is not associated with a VBR.</p>
      * </li>
-     * <li><p>The VLAN of the shared Express Connect circuit instance is set to 0.</p>
+     * <li><p>The VLAN configuration of the shared Express Connect circuit instance is 0.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a failover test job for Express Connect.</p>
+     * <p>Calls the CreateFailoverTestJob operation to create a failover test job for Express Connect.</p>
      * 
      * @param request CreateFailoverTestJobRequest
      * @return CreateFailoverTestJobResponse
@@ -7896,8 +7945,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li><strong>Active/standby pattern</strong>: When you create a routing target group, you must configure primary and secondary instances that are in different zones and of the same type.</li>
-     * <li><strong>Primary instance</strong>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks pass.</li>
-     * <li><strong>Secondary instance</strong>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</li>
+     * <li><strong>Primary instance</strong>: The weight is 100. The primary instance carries all traffic under normal conditions and takes effect when health checks are successful.</li>
+     * <li><strong>Secondary instance</strong>: The weight is 0. The secondary instance takes over traffic after the primary instance fails and serves as disaster recovery and backup.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7972,8 +8021,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li><strong>Active/standby pattern</strong>: When you create a routing target group, you must configure primary and secondary instances that are in different zones and of the same type.</li>
-     * <li><strong>Primary instance</strong>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks pass.</li>
-     * <li><strong>Secondary instance</strong>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</li>
+     * <li><strong>Primary instance</strong>: The weight is 100. The primary instance carries all traffic under normal conditions and takes effect when health checks are successful.</li>
+     * <li><strong>Secondary instance</strong>: The weight is 0. The secondary instance takes over traffic after the primary instance fails and serves as disaster recovery and backup.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8394,7 +8443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CreateSslVpnServer</strong> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<ul>
+     * <li><strong>CreateSslVpnServer</strong> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the SSL-VPN server is being created.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the SSL-VPN server is created.</li>
      * </ul>
@@ -8517,7 +8566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CreateSslVpnServer</strong> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<ul>
+     * <li><strong>CreateSslVpnServer</strong> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the SSL-VPN server is being created.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the SSL-VPN server is created.</li>
      * </ul>
@@ -8879,21 +8928,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you begin:</p>
+     * <p>When you call this operation to create a vSwitch, take note of the following items:</p>
      * <ul>
      * <li>The number of vSwitches in each VPC cannot exceed 150.</li>
-     * <li>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
+     * <li>The first IP address and the last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
      * <li>The number of cloud service instances in a vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</li>
      * <li>A cloud service instance can belong to only one vSwitch.</li>
      * <li>vSwitches do not support multicast or broadcast.</li>
      * <li>After a vSwitch is created, you cannot modify its CIDR block.</li>
-     * <li>The <strong>CreateVSwitch</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the vSwitch is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<ul>
-     * <li>If the vSwitch is in the <strong>Pending</strong> state, the vSwitch is being configured.</li>
-     * <li>If the vSwitch is in the <strong>Available</strong> state, the vSwitch is active.</li>
+     * <li>The <strong>CreateVSwitch</strong> operation is asynchronous. After you send a request, the system returns an instance ID but the vSwitch is not yet created. The background task is still in progress. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<ul>
+     * <li>When the vSwitch is in the <strong>Pending</strong> state, the vSwitch is being configured.</li>
+     * <li>When the vSwitch is in the <strong>Available</strong> state, the vSwitch is available.</li>
      * </ul>
      * </li>
      * <li>The <strong>CreateVSwitch</strong> operation does not support concurrent creation of vSwitches in the same VPC.</li>
-     * <li>The <strong>CreateVSwitch</strong> operation does not support creating vSwitches with the CIDR block 100.64.0.0/10 or its subnets.</li>
+     * <li>When you call the <strong>CreateVSwitch</strong> operation, the CIDR block of the vSwitch cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8981,21 +9030,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you begin:</p>
+     * <p>When you call this operation to create a vSwitch, take note of the following items:</p>
      * <ul>
      * <li>The number of vSwitches in each VPC cannot exceed 150.</li>
-     * <li>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
+     * <li>The first IP address and the last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
      * <li>The number of cloud service instances in a vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</li>
      * <li>A cloud service instance can belong to only one vSwitch.</li>
      * <li>vSwitches do not support multicast or broadcast.</li>
      * <li>After a vSwitch is created, you cannot modify its CIDR block.</li>
-     * <li>The <strong>CreateVSwitch</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the vSwitch is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<ul>
-     * <li>If the vSwitch is in the <strong>Pending</strong> state, the vSwitch is being configured.</li>
-     * <li>If the vSwitch is in the <strong>Available</strong> state, the vSwitch is active.</li>
+     * <li>The <strong>CreateVSwitch</strong> operation is asynchronous. After you send a request, the system returns an instance ID but the vSwitch is not yet created. The background task is still in progress. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<ul>
+     * <li>When the vSwitch is in the <strong>Pending</strong> state, the vSwitch is being configured.</li>
+     * <li>When the vSwitch is in the <strong>Available</strong> state, the vSwitch is available.</li>
      * </ul>
      * </li>
      * <li>The <strong>CreateVSwitch</strong> operation does not support concurrent creation of vSwitches in the same VPC.</li>
-     * <li>The <strong>CreateVSwitch</strong> operation does not support creating vSwitches with the CIDR block 100.64.0.0/10 or its subnets.</li>
+     * <li>When you call the <strong>CreateVSwitch</strong> operation, the CIDR block of the vSwitch cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9019,7 +9068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>IPv6 CIDR block: The first and last nine IP addresses of the vSwitch are system reserved IP addresses.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateVSwitchCidrReservation</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The system continues to run the background node. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<ul>
+     * <li>The <strong>CreateVSwitchCidrReservation</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<ul>
      * <li>If the reserved CIDR block for a vSwitch is in the <strong>Assigning</strong> state, the reserved CIDR block for a vSwitch is being allocated.</li>
      * <li>If the reserved CIDR block for a vSwitch is in the <strong>Assigned</strong> state, the reserved CIDR block for a vSwitch has been allocated.</li>
      * </ul>
@@ -9042,6 +9091,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipPrefixNumber)) {
+            query.put("IpPrefixNumber", request.ipPrefixNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
@@ -9123,7 +9176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>IPv6 CIDR block: The first and last nine IP addresses of the vSwitch are system reserved IP addresses.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateVSwitchCidrReservation</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The system continues to run the background node. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<ul>
+     * <li>The <strong>CreateVSwitchCidrReservation</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<ul>
      * <li>If the reserved CIDR block for a vSwitch is in the <strong>Assigning</strong> state, the reserved CIDR block for a vSwitch is being allocated.</li>
      * <li>If the reserved CIDR block for a vSwitch is in the <strong>Assigned</strong> state, the reserved CIDR block for a vSwitch has been allocated.</li>
      * </ul>
@@ -9143,7 +9196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a VBR failover group by calling the CreateVbrHa operation.</p>
+     * <p>Creates a VBR failover group.</p>
      * 
      * @param request CreateVbrHaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9215,7 +9268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a VBR failover group by calling the CreateVbrHa operation.</p>
+     * <p>Creates a VBR failover group.</p>
      * 
      * @param request CreateVbrHaRequest
      * @return CreateVbrHaResponse
@@ -9230,13 +9283,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>The IPsec-VPN connection must be associated with a transit router instance. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</li>
      * <li>Adding a destination route with a destination CIDR block of 0.0.0.0/0 is not supported.</li>
-     * <li>Do not add a destination route with a destination CIDR block of 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</li>
+     * <li>Do not add a destination route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</li>
      * <li><strong>CreateVcoRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns an instance ID but the destination route entry is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the creation status of the destination route entry:<ul>
      * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the destination route entry is being created.</li>
      * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the destination route entry is created.</li>
      * </ul>
      * </li>
-     * <li><strong>CreateVcoRouteEntry</strong> does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</li>
+     * <li>The <strong>CreateVcoRouteEntry</strong> operation does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9319,13 +9372,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>The IPsec-VPN connection must be associated with a transit router instance. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</li>
      * <li>Adding a destination route with a destination CIDR block of 0.0.0.0/0 is not supported.</li>
-     * <li>Do not add a destination route with a destination CIDR block of 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</li>
+     * <li>Do not add a destination route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</li>
      * <li><strong>CreateVcoRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns an instance ID but the destination route entry is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the creation status of the destination route entry:<ul>
      * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the destination route entry is being created.</li>
      * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the destination route entry is created.</li>
      * </ul>
      * </li>
-     * <li><strong>CreateVcoRouteEntry</strong> does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</li>
+     * <li>The <strong>CreateVcoRouteEntry</strong> operation does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9475,7 +9528,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, understand the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.</p>
+     * <p>Before you call this operation, familiarize yourself with the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.
+     * Before you call this operation, make sure the following conditions are met:</p>
+     * <ul>
+     * <li>The Express Connect circuit specified by PhysicalConnectionId is in the Enabled state. The complete process for an Express Connect circuit to reach the Enabled state includes payment and manual steps that cannot be fully automated through OpenAPI:<ul>
+     * <li>CreatePhysicalConnection: Creates an Express Connect circuit.</li>
+     * <li>LOA construction authorization: If you need to enter the data center for construction, call ApplyPhysicalConnectionLOA → wait for manual LOA approval → CompletePhysicalConnectionLOA (FinishWork=true). LOA approval and construction are manual/offline steps.</li>
+     * <li>ConfirmPhysicalConnection: Reports construction completion. The circuit must be in the Allocated state. After success, it enters the Confirmed state.</li>
+     * <li>After the Confirmed state, port usage fees must be paid before the circuit enters the Enabled state. For automation scenarios, call DescribePhysicalConnections first to confirm the target circuit is in the Enabled state before calling this operation.</li>
+     * </ul>
+     * </li>
+     * <li>The VlanId is not already used by an existing VBR or shared Express Connect circuit on the Express Connect circuit (valid values: 0 to 2999).</li>
+     * <li>The Spec value does not exceed the remaining allocatable bandwidth of the Express Connect circuit or the shared circuit bandwidth limit configured for the account that owns the Express Connect circuit.</li>
+     * <li>VpconnAliUid is the tenant\&quot;s Alibaba Cloud account (RAM users or partner accounts are not supported). Cross-site pushing is not allowed by default.</li>
+     * <li>The number of shared Express Connect circuits on a single Express Connect circuit has not exceeded the quota.</li>
+     * <li>The Express Connect circuit is not bound to a QoS policy, the access device supports MPBGP, and the access point allows the creation of shared Express Connect circuits.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Invokes the CreateVirtualPhysicalConnection operation to create shared Express Connect circuits.</p>
@@ -9554,7 +9622,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, understand the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.</p>
+     * <p>Before you call this operation, familiarize yourself with the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.
+     * Before you call this operation, make sure the following conditions are met:</p>
+     * <ul>
+     * <li>The Express Connect circuit specified by PhysicalConnectionId is in the Enabled state. The complete process for an Express Connect circuit to reach the Enabled state includes payment and manual steps that cannot be fully automated through OpenAPI:<ul>
+     * <li>CreatePhysicalConnection: Creates an Express Connect circuit.</li>
+     * <li>LOA construction authorization: If you need to enter the data center for construction, call ApplyPhysicalConnectionLOA → wait for manual LOA approval → CompletePhysicalConnectionLOA (FinishWork=true). LOA approval and construction are manual/offline steps.</li>
+     * <li>ConfirmPhysicalConnection: Reports construction completion. The circuit must be in the Allocated state. After success, it enters the Confirmed state.</li>
+     * <li>After the Confirmed state, port usage fees must be paid before the circuit enters the Enabled state. For automation scenarios, call DescribePhysicalConnections first to confirm the target circuit is in the Enabled state before calling this operation.</li>
+     * </ul>
+     * </li>
+     * <li>The VlanId is not already used by an existing VBR or shared Express Connect circuit on the Express Connect circuit (valid values: 0 to 2999).</li>
+     * <li>The Spec value does not exceed the remaining allocatable bandwidth of the Express Connect circuit or the shared circuit bandwidth limit configured for the account that owns the Express Connect circuit.</li>
+     * <li>VpconnAliUid is the tenant\&quot;s Alibaba Cloud account (RAM users or partner accounts are not supported). Cross-site pushing is not allowed by default.</li>
+     * <li>The number of shared Express Connect circuits on a single Express Connect circuit has not exceeded the quota.</li>
+     * <li>The Express Connect circuit is not bound to a QoS policy, the access device supports MPBGP, and the access point allows the creation of shared Express Connect circuits.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Invokes the CreateVirtualPhysicalConnection operation to create shared Express Connect circuits.</p>
@@ -9957,17 +10040,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By invoking the CreateVpconnFromVbr operation, a partner can transform the sharing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
-     * Before you execute the transform:
+     * <p>By invoking the CreateVpconnFromVbr operation, a partner can transform the routing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
+     * Before you execute the transform procedure:
      * The partner must notify the tenant about the service upgrade in advance and ensure that the tenant has enabled outbound traffic billing. For information about how to enable outbound traffic billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Enable outbound traffic billing</a>.
-     * After the transform is complete:</p>
+     * After the transform procedure is complete:</p>
      * <ol>
      * <li>A shared port is added to the tenant\&quot;s account. The tenant must invoke the <a href="https://help.aliyun.com/document_detail/324198.html">ConfirmPhysicalConnection</a> operation to accept the shared port.</li>
      * <li>After the tenant accepts the shared port, the partner must invoke the <a href="https://help.aliyun.com/document_detail/324191.html">AttachVbrToVpconn</a> operation to associate the VBR instance with the tenant\&quot;s shared Express Connect circuits instance.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Transforms the sharing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) routing push to cross-account shared port push.</p>
+     * <p>Transforms the routing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) push to cross-account shared port push.</p>
      * 
      * @param request CreateVpconnFromVbrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10015,17 +10098,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By invoking the CreateVpconnFromVbr operation, a partner can transform the sharing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
-     * Before you execute the transform:
+     * <p>By invoking the CreateVpconnFromVbr operation, a partner can transform the routing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
+     * Before you execute the transform procedure:
      * The partner must notify the tenant about the service upgrade in advance and ensure that the tenant has enabled outbound traffic billing. For information about how to enable outbound traffic billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Enable outbound traffic billing</a>.
-     * After the transform is complete:</p>
+     * After the transform procedure is complete:</p>
      * <ol>
      * <li>A shared port is added to the tenant\&quot;s account. The tenant must invoke the <a href="https://help.aliyun.com/document_detail/324198.html">ConfirmPhysicalConnection</a> operation to accept the shared port.</li>
      * <li>After the tenant accepts the shared port, the partner must invoke the <a href="https://help.aliyun.com/document_detail/324191.html">AttachVbrToVpconn</a> operation to associate the VBR instance with the tenant\&quot;s shared Express Connect circuits instance.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Transforms the sharing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) routing push to cross-account shared port push.</p>
+     * <p>Transforms the routing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) push to cross-account shared port push.</p>
      * 
      * @param request CreateVpconnFromVbrRequest
      * @return CreateVpconnFromVbrResponse
@@ -10040,16 +10123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p>Notice: </p>
      * </blockquote>
-     * <ul>
-     * <li>In the transit router binding scenario, IPsec-VPN connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required request parameters, only the following dual-tunnel mode-related request parameters are supported: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>NetworkType</strong>, <strong>EffectImmediately</strong>, <strong>Tags</strong> array, <strong>ResourceGroupId</strong>, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to transit routers</a>.</li>
-     * <li>An IPsec-VPN connection created by calling the <code>CreateVpnAttachment</code> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system allocates a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</li>
-     * </ul>
-     * <h3>Before you begin</h3>
-     * <p>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</p>
-     * <p>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</p>
+     * <h3>Before you begin.</h3>
      * 
      * <b>summary</b> : 
-     * <p>Creates an IPsec-VPN connection for bindng to a transit router instance by calling the CreateVpnAttachment operation.</p>
+     * <p>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</p>
      * 
      * @param request CreateVpnAttachmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10187,16 +10264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p>Notice: </p>
      * </blockquote>
-     * <ul>
-     * <li>In the transit router binding scenario, IPsec-VPN connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required request parameters, only the following dual-tunnel mode-related request parameters are supported: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>NetworkType</strong>, <strong>EffectImmediately</strong>, <strong>Tags</strong> array, <strong>ResourceGroupId</strong>, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to transit routers</a>.</li>
-     * <li>An IPsec-VPN connection created by calling the <code>CreateVpnAttachment</code> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system allocates a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</li>
-     * </ul>
-     * <h3>Before you begin</h3>
-     * <p>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</p>
-     * <p>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</p>
+     * <h3>Before you begin.</h3>
      * 
      * <b>summary</b> : 
-     * <p>Creates an IPsec-VPN connection for bindng to a transit router instance by calling the CreateVpnAttachment operation.</p>
+     * <p>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</p>
      * 
      * @param request CreateVpnAttachmentRequest
      * @return CreateVpnAttachmentResponse
@@ -10211,14 +10282,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>If the VPN gateway instance supports creating IPsec-VPN connections in dual-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <code>CreateVpnConnection</code> operation:
      *   <strong>ClientToken</strong>, <strong>Name</strong>, <strong>EffectImmediately</strong>, <strong>AutoConfigRoute</strong>, <strong>Tags</strong> array, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.
-     *   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</li>
-     * <li>If the VPN gateway instance supports only creating IPsec-VPN connections in single-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <code>CreateVpnConnection</code> operation:
+     *   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.
      *    <strong>ClientToken</strong>, <strong>CustomerGatewayId</strong>, <strong>Name</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>AutoConfigRoute</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, <strong>RemoteCaCertificate</strong>, and <strong>Tags</strong> array.</li>
-     * <li>The <strong>CreateVpnConnection</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the IPsec-VPN connection is being created.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the IPsec-VPN connection is created.</li>
-     * </ul>
-     * </li>
+     * <li>The <strong>CreateVpnConnection</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection.</li>
      * <li>The <strong>CreateVpnConnection</strong> operation does not support concurrent creation of IPsec-VPN connections under the same VPN gateway.</li>
      * </ul>
      * 
@@ -10357,14 +10423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>If the VPN gateway instance supports creating IPsec-VPN connections in dual-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <code>CreateVpnConnection</code> operation:
      *   <strong>ClientToken</strong>, <strong>Name</strong>, <strong>EffectImmediately</strong>, <strong>AutoConfigRoute</strong>, <strong>Tags</strong> array, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.
-     *   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</li>
-     * <li>If the VPN gateway instance supports only creating IPsec-VPN connections in single-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <code>CreateVpnConnection</code> operation:
+     *   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.
      *    <strong>ClientToken</strong>, <strong>CustomerGatewayId</strong>, <strong>Name</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>AutoConfigRoute</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, <strong>RemoteCaCertificate</strong>, and <strong>Tags</strong> array.</li>
-     * <li>The <strong>CreateVpnConnection</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the IPsec-VPN connection is being created.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the IPsec-VPN connection is created.</li>
-     * </ul>
-     * </li>
+     * <li>The <strong>CreateVpnConnection</strong> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection.</li>
      * <li>The <strong>CreateVpnConnection</strong> operation does not support concurrent creation of IPsec-VPN connections under the same VPN gateway.</li>
      * </ul>
      * 
@@ -10382,9 +10443,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>Before you create a VPN gateway, familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</p>
+     * <li><p>Before you create a VPN gateway, we recommend that you familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</p>
      * </li>
-     * <li><p>VPN gateway instances in some regions support only dual-tunnel IPsec-VPN connections by default. When you call the <code>CreateVpnGateway</code> operation to create a VPN gateway instance in these regions, you must specify the <strong>VSwitchId</strong> and <strong>DisasterRecoveryVSwitchId</strong> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</p>
+     * <li><p>VPN gateway instances in some regions support only dual-tunnel mode IPsec-VPN connections by default. When you call the <code>CreateVpnGateway</code> operation to create a VPN gateway instance in these regions, you must specify the <strong>VSwitchId</strong> and <strong>DisasterRecoveryVSwitchId</strong> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel mode IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</p>
      * </li>
      * <li><p>The <strong>CreateVpnGateway</strong> operation is asynchronous. After you call this operation, the system returns an instance ID, but the VPN gateway is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the VPN gateway:</p>
      * <ul>
@@ -10504,9 +10565,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>Before you create a VPN gateway, familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</p>
+     * <li><p>Before you create a VPN gateway, we recommend that you familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</p>
      * </li>
-     * <li><p>VPN gateway instances in some regions support only dual-tunnel IPsec-VPN connections by default. When you call the <code>CreateVpnGateway</code> operation to create a VPN gateway instance in these regions, you must specify the <strong>VSwitchId</strong> and <strong>DisasterRecoveryVSwitchId</strong> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</p>
+     * <li><p>VPN gateway instances in some regions support only dual-tunnel mode IPsec-VPN connections by default. When you call the <code>CreateVpnGateway</code> operation to create a VPN gateway instance in these regions, you must specify the <strong>VSwitchId</strong> and <strong>DisasterRecoveryVSwitchId</strong> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel mode IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</p>
      * </li>
      * <li><p>The <strong>CreateVpnGateway</strong> operation is asynchronous. After you call this operation, the system returns an instance ID, but the VPN gateway is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the VPN gateway:</p>
      * <ul>
@@ -10531,23 +10592,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Before you begin</h3>
      * <ul>
-     * <li>Before creating a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</li>
-     * <li>Before creating a policy-based route, we recommend that you understand the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</li>
+     * <li>Before you create a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</li>
+     * <li>Before you create a policy-based route, we recommend that you familiarize yourself with the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</li>
      * </ul>
      * <h3>Limits</h3>
      * <ul>
-     * <li>Adding a policy-based route whose destination CIDR block is 0.0.0.0/0 is not supported.</li>
-     * <li>Do not add a policy-based route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes cause the console to fail to display instance status of the IPsec-VPN connection or cause IPsec-VPN connection negotiation failures.</li>
-     * <li>The <strong>CreateVpnPbrRouteEntry</strong> operation is asynchronous. After you call this operation, the system returns the information about the policy-based route, but the route has not been created yet. The system creates the route in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<ul>
+     * <li>Policy-based routes whose destination CIDR block is 0.0.0.0/0 are not supported.</li>
+     * <li>Do not add policy-based routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes may cause the console to fail to display instance status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</li>
+     * <li>The <strong>CreateVpnPbrRouteEntry</strong> operation is asynchronous. After you invoke this operation, the system returns the information about the policy-based route, but the routing has not been created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based route is being created.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based route has been created.</li>
+     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based route is created.</li>
      * </ul>
      * </li>
      * <li>The <strong>CreateVpnPbrRouteEntry</strong> operation does not support concurrent creation of policy-based routes for the same VPN gateway instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a policy-based route for a VPN gateway by calling the CreateVpnPbrRouteEntry operation.</p>
+     * <p>Creates a VPN policy-based route by calling the CreateVpnPbrRouteEntry operation.</p>
      * 
      * @param request CreateVpnPbrRouteEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10641,23 +10702,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Before you begin</h3>
      * <ul>
-     * <li>Before creating a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</li>
-     * <li>Before creating a policy-based route, we recommend that you understand the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</li>
+     * <li>Before you create a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</li>
+     * <li>Before you create a policy-based route, we recommend that you familiarize yourself with the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</li>
      * </ul>
      * <h3>Limits</h3>
      * <ul>
-     * <li>Adding a policy-based route whose destination CIDR block is 0.0.0.0/0 is not supported.</li>
-     * <li>Do not add a policy-based route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes cause the console to fail to display instance status of the IPsec-VPN connection or cause IPsec-VPN connection negotiation failures.</li>
-     * <li>The <strong>CreateVpnPbrRouteEntry</strong> operation is asynchronous. After you call this operation, the system returns the information about the policy-based route, but the route has not been created yet. The system creates the route in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<ul>
+     * <li>Policy-based routes whose destination CIDR block is 0.0.0.0/0 are not supported.</li>
+     * <li>Do not add policy-based routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes may cause the console to fail to display instance status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</li>
+     * <li>The <strong>CreateVpnPbrRouteEntry</strong> operation is asynchronous. After you invoke this operation, the system returns the information about the policy-based route, but the routing has not been created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based route is being created.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based route has been created.</li>
+     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based route is created.</li>
      * </ul>
      * </li>
      * <li>The <strong>CreateVpnPbrRouteEntry</strong> operation does not support concurrent creation of policy-based routes for the same VPN gateway instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a policy-based route for a VPN gateway by calling the CreateVpnPbrRouteEntry operation.</p>
+     * <p>Creates a VPN policy-based route by calling the CreateVpnPbrRouteEntry operation.</p>
      * 
      * @param request CreateVpnPbrRouteEntryRequest
      * @return CreateVpnPbrRouteEntryResponse
@@ -10945,7 +11006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified Border Gateway Protocol (BGP) group.</p>
+     * <p>Deletes a specified BGP group.</p>
      * 
      * @param request DeleteBgpGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11001,7 +11062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified Border Gateway Protocol (BGP) group.</p>
+     * <p>Deletes a specified BGP group.</p>
      * 
      * @param request DeleteBgpGroupRequest
      * @return DeleteBgpGroupResponse
@@ -11012,6 +11073,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the BgpNetwork is in the Available state. You can query the Status field by calling DescribeBgpNetworks. After a resource is created by AddBgpNetwork, it enters the Pending state. Wait until the state changes to Available before calling this operation.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes an advertised Border Gateway Protocol (BGP) network.</p>
      * 
@@ -11072,6 +11136,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the BgpNetwork is in the Available state. You can query the Status field by calling DescribeBgpNetworks. After a resource is created by AddBgpNetwork, it enters the Pending state. Wait until the state changes to Available before calling this operation.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes an advertised Border Gateway Protocol (BGP) network.</p>
      * 
@@ -11765,10 +11832,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only failover test jobs in the <strong>Pending</strong> or <strong>Completed</strong> state can be deleted.</p>
+     * <p>Only failover test jobs in the <strong>Pending</strong> or <strong>Completed</strong> state can be deleted. Before calling this operation, create a failover test job by calling CreateFailoverTestJob and obtain the <strong>JobId</strong>. If the test resource is an Express Connect circuit, the circuit must be in the <strong>Enabled</strong> state and its business status must be <strong>Normal</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Express Connect failover test job.</p>
+     * <p>Deletes an Express Connect failover test job by calling the DeleteFailoverTestJob operation.</p>
      * 
      * @param request DeleteFailoverTestJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11824,10 +11891,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only failover test jobs in the <strong>Pending</strong> or <strong>Completed</strong> state can be deleted.</p>
+     * <p>Only failover test jobs in the <strong>Pending</strong> or <strong>Completed</strong> state can be deleted. Before calling this operation, create a failover test job by calling CreateFailoverTestJob and obtain the <strong>JobId</strong>. If the test resource is an Express Connect circuit, the circuit must be in the <strong>Enabled</strong> state and its business status must be <strong>Normal</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Express Connect failover test job.</p>
+     * <p>Deletes an Express Connect failover test job by calling the DeleteFailoverTestJob operation.</p>
      * 
      * @param request DeleteFailoverTestJobRequest
      * @return DeleteFailoverTestJobResponse
@@ -12506,7 +12573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteIpsecServer</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the IPsec server is not yet deleted. The deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the IPsec server:<ul>
+     * <li><strong>DeleteIpsecServer</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec server is not yet deleted. The deletion node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the deletion status of the IPsec server:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the IPsec server is being deleted.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the IPsec server is deleted.</li>
      * </ul>
@@ -12560,7 +12627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteIpsecServer</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the IPsec server is not yet deleted. The deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the IPsec server:<ul>
+     * <li><strong>DeleteIpsecServer</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec server is not yet deleted. The deletion node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the deletion status of the IPsec server:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the IPsec server is being deleted.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the IPsec server is deleted.</li>
      * </ul>
@@ -12963,13 +13030,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway:</p>
+     * <p><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://www.alibabacloud.com/help/en/nat-gateway/developer-reference/api-vpc-2016-04-28-describenatgateways-natgws">DescribeNatGateways</a> to query the status of the NAT gateway:</p>
      * <ul>
      * <li>If the NAT gateway is in the <strong>Deleting</strong> state, the NAT gateway is being deleted. In this state, you can only perform query operations.</li>
      * <li>If the NAT gateway cannot be found, the NAT gateway is deleted.</li>
      * </ul>
      * <blockquote>
-     * <p>The deletion of a NAT gateway is irreversible. Proceed with caution.</p>
+     * <p>Deleting a NAT gateway is irreversible. Proceed with caution.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -13029,13 +13096,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway:</p>
+     * <p><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://www.alibabacloud.com/help/en/nat-gateway/developer-reference/api-vpc-2016-04-28-describenatgateways-natgws">DescribeNatGateways</a> to query the status of the NAT gateway:</p>
      * <ul>
      * <li>If the NAT gateway is in the <strong>Deleting</strong> state, the NAT gateway is being deleted. In this state, you can only perform query operations.</li>
      * <li>If the NAT gateway cannot be found, the NAT gateway is deleted.</li>
      * </ul>
      * <blockquote>
-     * <p>The deletion of a NAT gateway is irreversible. Proceed with caution.</p>
+     * <p>Deleting a NAT gateway is irreversible. Proceed with caution.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -13387,13 +13454,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>Before deleting an IP address pool, make sure that the IP addresses in the pool are not in use.</li>
+     * <li>Before you delete an IP address pool, make sure that the IP addresses in the pool are not in use.</li>
      * <li><strong>DeletePublicIpAddressPool</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a> to query the status of the IP address pool. <ul>
      * <li>If the IP address pool is in the <strong>Deleting</strong> state, the IP address pool is being deleted. In this state, you can only perform query operations.</li>
      * <li>If the IP address pool cannot be found, the IP address pool is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeletePublicIpAddressPool</strong> does not support concurrent deletion of the same IP address pool.</li>
+     * <li>You cannot call <strong>DeletePublicIpAddressPool</strong> to concurrently delete the same IP address pool.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -13459,13 +13526,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>Before deleting an IP address pool, make sure that the IP addresses in the pool are not in use.</li>
+     * <li>Before you delete an IP address pool, make sure that the IP addresses in the pool are not in use.</li>
      * <li><strong>DeletePublicIpAddressPool</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a> to query the status of the IP address pool. <ul>
      * <li>If the IP address pool is in the <strong>Deleting</strong> state, the IP address pool is being deleted. In this state, you can only perform query operations.</li>
      * <li>If the IP address pool cannot be found, the IP address pool is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeletePublicIpAddressPool</strong> does not support concurrent deletion of the same IP address pool.</li>
+     * <li>You cannot call <strong>DeletePublicIpAddressPool</strong> to concurrently delete the same IP address pool.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -13484,7 +13551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, take note of the following information:</p>
      * <ul>
      * <li>Before deleting a CIDR block, make sure that the CIDR block is not in use.</li>
-     * <li><strong>DeletePublicIpAddressPoolCidrBlock</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the CIDR block is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <ul>
+     * <li><strong>DeletePublicIpAddressPoolCidrBlock</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the deletion task in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <ul>
      * <li>If the CIDR block is in the <strong>Deleting</strong> state, the CIDR block is being deleted. In this state, you can only perform query operations.</li>
      * <li>If the CIDR block cannot be found, the CIDR block is deleted.</li>
      * </ul>
@@ -13560,7 +13627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, take note of the following information:</p>
      * <ul>
      * <li>Before deleting a CIDR block, make sure that the CIDR block is not in use.</li>
-     * <li><strong>DeletePublicIpAddressPoolCidrBlock</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the CIDR block is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <ul>
+     * <li><strong>DeletePublicIpAddressPoolCidrBlock</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the deletion task in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <ul>
      * <li>If the CIDR block is in the <strong>Deleting</strong> state, the CIDR block is being deleted. In this state, you can only perform query operations.</li>
      * <li>If the CIDR block cannot be found, the CIDR block is deleted.</li>
      * </ul>
@@ -13584,17 +13651,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call this operation to delete routing entries, note the following items: </p>
      * <ul>
      * <li>Only routing entries in the <strong>Available</strong> state can be deleted.  </li>
-     * <li>Routing entries cannot be deleted if the VPC to which the route table belongs is creating or deleting a vSwitch or routing entries. </li>
-     * <li>The <strong>DeleteRouteEntries</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the custom route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the custom route entry:<ul>
-     * <li>If the custom route entry is in the <strong>Deleting</strong> state, the custom route entry is being deleted.</li>
-     * <li>If the specified custom route entry cannot be found, the custom route entry is deleted.</li>
+     * <li>Routing entries cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or routing entry. </li>
+     * <li>The <strong>DeleteRouteEntries</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the routing entry is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the routing entry:<ul>
+     * <li>If the routing entry is in the <strong>Deleting</strong> state, the routing entry is being deleted.</li>
+     * <li>If the specified routing entry cannot be found, the routing entry is deleted.</li>
      * </ul>
      * </li>
-     * <li>The <strong>DeleteRouteEntries</strong> operation does not support concurrent batch deletion of routing entries from route tables in the same VPC.</li>
+     * <li>The <strong>DeleteRouteEntries</strong> operation does not support concurrent batch deletion of routing entries in route tables within the same VPC.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Batch deletes custom route entries.</p>
+     * <p>Calls DeleteRouteEntries to batch delete custom route entries.</p>
      * 
      * @param request DeleteRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13657,17 +13724,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call this operation to delete routing entries, note the following items: </p>
      * <ul>
      * <li>Only routing entries in the <strong>Available</strong> state can be deleted.  </li>
-     * <li>Routing entries cannot be deleted if the VPC to which the route table belongs is creating or deleting a vSwitch or routing entries. </li>
-     * <li>The <strong>DeleteRouteEntries</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the custom route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the custom route entry:<ul>
-     * <li>If the custom route entry is in the <strong>Deleting</strong> state, the custom route entry is being deleted.</li>
-     * <li>If the specified custom route entry cannot be found, the custom route entry is deleted.</li>
+     * <li>Routing entries cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or routing entry. </li>
+     * <li>The <strong>DeleteRouteEntries</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the routing entry is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the routing entry:<ul>
+     * <li>If the routing entry is in the <strong>Deleting</strong> state, the routing entry is being deleted.</li>
+     * <li>If the specified routing entry cannot be found, the routing entry is deleted.</li>
      * </ul>
      * </li>
-     * <li>The <strong>DeleteRouteEntries</strong> operation does not support concurrent batch deletion of routing entries from route tables in the same VPC.</li>
+     * <li>The <strong>DeleteRouteEntries</strong> operation does not support concurrent batch deletion of routing entries in route tables within the same VPC.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Batch deletes custom route entries.</p>
+     * <p>Calls DeleteRouteEntries to batch delete custom route entries.</p>
      * 
      * @param request DeleteRouteEntriesRequest
      * @return DeleteRouteEntriesResponse
@@ -14228,12 +14295,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteSslVpnServer</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the SSL server has not yet been deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<ul>
+     * <li>The <strong>DeleteSslVpnServer</strong> operation is asynchronous. After you send a request, the system returns a request ID. However, the SSL server is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the SSL server is being deleted.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the SSL server is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteSslVpnServer</strong> does not support concurrent deletion of SSL server instances under the same VPN gateway.</li>
+     * <li>The <strong>DeleteSslVpnServer</strong> operation does not support concurrent deletion of SSL servers under the same VPN gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -14294,12 +14361,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteSslVpnServer</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the SSL server has not yet been deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<ul>
+     * <li>The <strong>DeleteSslVpnServer</strong> operation is asynchronous. After you send a request, the system returns a request ID. However, the SSL server is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the SSL server is being deleted.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the SSL server is deleted.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteSslVpnServer</strong> does not support concurrent deletion of SSL server instances under the same VPN gateway.</li>
+     * <li>The <strong>DeleteSslVpnServer</strong> operation does not support concurrent deletion of SSL servers under the same VPN gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -14783,7 +14850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a VBR failover group.</p>
+     * <p>Calls DeleteVbrHa to delete a VBR failover group.</p>
      * 
      * @param request DeleteVbrHaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14839,7 +14906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a VBR failover group.</p>
+     * <p>Calls DeleteVbrHa to delete a VBR failover group.</p>
      * 
      * @param request DeleteVbrHaRequest
      * @return DeleteVbrHaResponse
@@ -14852,7 +14919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteVcoRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<ul>
+     * <li><strong>DeleteVcoRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<ul>
      * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the destination route entry is being deleted.</li>
      * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the destination route entry is deleted.</li>
      * </ul>
@@ -14930,7 +14997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteVcoRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<ul>
+     * <li><strong>DeleteVcoRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<ul>
      * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the destination route entry is being deleted.</li>
      * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the destination route entry is deleted.</li>
      * </ul>
@@ -15296,12 +15363,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If the IPsec-VPN connection is associated with a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</li>
-     * <li>If the IPsec-VPN connection is not associated with any resource, you can call the <code>DeleteVpnAttachment</code> operation to directly delete the IPsec-VPN connection.</li>
+     * <li>If the IPsec-VPN connection is bindded to a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</li>
+     * <li>If the IPsec-VPN connection is not bindded to any resource, you can call the <code>DeleteVpnAttachment</code> operation to directly delete the IPsec-VPN connection.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an IPsec-VPN connection by calling the DeleteVpnAttachment operation.</p>
+     * <p>Deletes an IPsec-VPN connection.</p>
      * 
      * @param request DeleteVpnAttachmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15354,12 +15421,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If the IPsec-VPN connection is associated with a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</li>
-     * <li>If the IPsec-VPN connection is not associated with any resource, you can call the <code>DeleteVpnAttachment</code> operation to directly delete the IPsec-VPN connection.</li>
+     * <li>If the IPsec-VPN connection is bindded to a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</li>
+     * <li>If the IPsec-VPN connection is not bindded to any resource, you can call the <code>DeleteVpnAttachment</code> operation to directly delete the IPsec-VPN connection.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an IPsec-VPN connection by calling the DeleteVpnAttachment operation.</p>
+     * <p>Deletes an IPsec-VPN connection.</p>
      * 
      * @param request DeleteVpnAttachmentRequest
      * @return DeleteVpnAttachmentResponse
@@ -15372,7 +15439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteVpnConnection</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance and determine the deletion status of the IPsec-VPN connection:<ul>
+     * <li><strong>DeleteVpnConnection</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the IPsec-VPN connection:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the IPsec-VPN connection is being deleted.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the IPsec-VPN connection is deleted.</li>
      * </ul>
@@ -15441,7 +15508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteVpnConnection</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance and determine the deletion status of the IPsec-VPN connection:<ul>
+     * <li><strong>DeleteVpnConnection</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the IPsec-VPN connection:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the IPsec-VPN connection is being deleted.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the IPsec-VPN connection is deleted.</li>
      * </ul>
@@ -15466,7 +15533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You cannot delete a VPN gateway that has existing IPsec-VPN connections.</p>
+     * <p>You cannot delete a VPN gateway that has IPsec-VPN connections.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -15527,7 +15594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You cannot delete a VPN gateway that has existing IPsec-VPN connections.</p>
+     * <p>You cannot delete a VPN gateway that has IPsec-VPN connections.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -15656,7 +15723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteVpnRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the VPN destination routing:<ul>
+     * <li><strong>DeleteVpnRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway, and determine the deletion status of the VPN destination routing:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the VPN destination route is being deleted.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the VPN destination route is deleted.</li>
      * </ul>
@@ -15738,7 +15805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteVpnRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the VPN destination routing:<ul>
+     * <li><strong>DeleteVpnRouteEntry</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway, and determine the deletion status of the VPN destination routing:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the VPN destination route is being deleted.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the VPN destination route is deleted.</li>
      * </ul>
@@ -16519,10 +16586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries information about EIPs created in a specified region, including the bandwidth peak, billing method, and the type of instance currently attached with each EIP.</p>
+     * <p>This operation queries information about EIPs created in a specified region, including the maximum bandwidth, billing method, and the type of instance currently attached to each EIP. If you frequently perform deep paging or page skipping, the <strong>Throttling.DeepPageSkip</strong> error code may be returned. Reduce the query frequency or use sequential pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries Elastic IP Addresses (EIPs) created in a specified region.</p>
+     * <p>Queries elastic IP addresses (EIPs) created in a specified region.</p>
      * 
      * @param request DescribeEipAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16650,10 +16717,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries information about EIPs created in a specified region, including the bandwidth peak, billing method, and the type of instance currently attached with each EIP.</p>
+     * <p>This operation queries information about EIPs created in a specified region, including the maximum bandwidth, billing method, and the type of instance currently attached to each EIP. If you frequently perform deep paging or page skipping, the <strong>Throttling.DeepPageSkip</strong> error code may be returned. Reduce the query frequency or use sequential pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries Elastic IP Addresses (EIPs) created in a specified region.</p>
+     * <p>Queries elastic IP addresses (EIPs) created in a specified region.</p>
      * 
      * @param request DescribeEipAddressesRequest
      * @return DescribeEipAddressesResponse
@@ -16984,6 +17051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, call CreateExpressConnectTrafficQos to create a QoS policy and obtain the <strong>QosId</strong>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries Express Connect QoS queues.</p>
      * 
@@ -17048,6 +17118,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, call CreateExpressConnectTrafficQos to create a QoS policy and obtain the <strong>QosId</strong>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries Express Connect QoS queues.</p>
      * 
@@ -17141,7 +17214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an Express Connect failover test job by calling the DescribeFailoverTestJob operation.</p>
+     * <p>Queries the details of an Express Connect failover test job.</p>
      * 
      * @param request DescribeFailoverTestJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17197,7 +17270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an Express Connect failover test job by calling the DescribeFailoverTestJob operation.</p>
+     * <p>Queries the details of an Express Connect failover test job.</p>
      * 
      * @param request DescribeFailoverTestJobRequest
      * @return DescribeFailoverTestJobResponse
@@ -17209,7 +17282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries failover test jobs of Express Connect in batches.</p>
+     * <p>Queries Express Connect failover test jobs in batches.</p>
      * 
      * @param request DescribeFailoverTestJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17273,7 +17346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries failover test jobs of Express Connect in batches.</p>
+     * <p>Queries Express Connect failover test jobs in batches.</p>
      * 
      * @param request DescribeFailoverTestJobsRequest
      * @return DescribeFailoverTestJobsResponse
@@ -19127,7 +19200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <strong>DescribePhysicalConnections</strong> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <strong>Key</strong> in the <strong>request parameters</strong> section of this topic.</p>
+     * <p>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <strong>DescribePhysicalConnections</strong> operation to query information about specific Express Connect circuits. For the filter options supported by the system, see the description of <strong>Key</strong> in the <strong>request parameters</strong> section of this topic.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries information about Express Connect circuits in a specified region.</p>
@@ -19206,7 +19279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <strong>DescribePhysicalConnections</strong> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <strong>Key</strong> in the <strong>request parameters</strong> section of this topic.</p>
+     * <p>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <strong>DescribePhysicalConnections</strong> operation to query information about specific Express Connect circuits. For the filter options supported by the system, see the description of <strong>Key</strong> in the <strong>request parameters</strong> section of this topic.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries information about Express Connect circuits in a specified region.</p>
@@ -19749,7 +19822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries router interfaces in a specified region by calling the DescribeRouterInterfaces operation.</p>
+     * <p>Queries router interfaces in a specified region.</p>
      * 
      * @param request DescribeRouterInterfacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19817,7 +19890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries router interfaces in a specified region by calling the DescribeRouterInterfaces operation.</p>
+     * <p>Queries router interfaces in a specified region.</p>
      * 
      * @param request DescribeRouterInterfacesRequest
      * @return DescribeRouterInterfacesResponse
@@ -20399,7 +20472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeTagKeysForExpressConnect operation to return the tag list of Express Connect.</p>
+     * <p>Queries the tag list of Express Connect resources by calling the DescribeTagKeysForExpressConnect operation.</p>
      * 
      * @param request DescribeTagKeysForExpressConnectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20467,7 +20540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeTagKeysForExpressConnect operation to return the tag list of Express Connect.</p>
+     * <p>Queries the tag list of Express Connect resources by calling the DescribeTagKeysForExpressConnect operation.</p>
      * 
      * @param request DescribeTagKeysForExpressConnectRequest
      * @return DescribeTagKeysForExpressConnectResponse
@@ -20714,6 +20787,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The <strong>DescribeVSwitches</strong> operation may return the <strong>Throttling.DeepPageSkip</strong> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries networkable information. Internal networking is performed by vSwitch.</p>
      * 
@@ -20814,6 +20890,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The <strong>DescribeVSwitches</strong> operation may return the <strong>Throttling.DeepPageSkip</strong> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries networkable information. Internal networking is performed by vSwitch.</p>
      * 
@@ -20979,7 +21058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Virtual Border Routers (VBRs) that you have created.</p>
+     * <p>Queries Virtual Border Routers (VBRs) that are created.</p>
      * 
      * @param request DescribeVirtualBorderRoutersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21047,7 +21126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Virtual Border Routers (VBRs) that you have created.</p>
+     * <p>Queries Virtual Border Routers (VBRs) that are created.</p>
      * 
      * @param request DescribeVirtualBorderRoutersRequest
      * @return DescribeVirtualBorderRoutersResponse
@@ -21294,6 +21373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The <strong>DescribeVpcs</strong> operation may return the <strong>Throttling.DeepPageSkip</strong> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries created VPCs.</p>
      * 
@@ -21386,6 +21468,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The <strong>DescribeVpcs</strong> operation may return the <strong>Throttling.DeepPageSkip</strong> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries created VPCs.</p>
      * 
@@ -22143,7 +22228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of an SSL server by calling the DescribeVpnSslServerLogs operation.</p>
+     * <p>Queries the logs of an SSL server.</p>
      * 
      * @param request DescribeVpnSslServerLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22219,7 +22304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of an SSL server by calling the DescribeVpnSslServerLogs operation.</p>
+     * <p>Queries the logs of an SSL server.</p>
      * 
      * @param request DescribeVpnSslServerLogsRequest
      * @return DescribeVpnSslServerLogsResponse
@@ -22477,10 +22562,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only VPN gateway instances in specific regions support the one-click diagnostics feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</p>
+     * <p>Only VPN gateway instances in specific regions support the one-click diagnosis feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Diagnoses a specified VPN gateway instance with one click by calling the DiagnoseVpnGateway operation.</p>
+     * <p>Calls the DiagnoseVpnGateway operation to perform a one-click diagnosis on a specified VPN gateway instance.</p>
      * 
      * @param request DiagnoseVpnGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22532,10 +22617,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only VPN gateway instances in specific regions support the one-click diagnostics feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</p>
+     * <p>Only VPN gateway instances in specific regions support the one-click diagnosis feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Diagnoses a specified VPN gateway instance with one click by calling the DiagnoseVpnGateway operation.</p>
+     * <p>Calls the DiagnoseVpnGateway operation to perform a one-click diagnosis on a specified VPN gateway instance.</p>
      * 
      * @param request DiagnoseVpnGatewayRequest
      * @return DiagnoseVpnGatewayResponse
@@ -22848,12 +22933,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DissociateVpnGatewayWithCertificate</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the VPN gateway is not yet dissociated from the SSL certificate, and the dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and check the dissociation status of the SSL certificate:<ul>
+     * <li><strong>DissociateVpnGatewayWithCertificate</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the VPN gateway has not yet been dissociated from the SSL certificate. The dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and confirm the dissociation status of the SSL certificate:<ul>
      * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL certificate is being dissociated.</li>
      * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL certificate is dissociated.</li>
      * </ul>
      * </li>
-     * <li><strong>DissociateVpnGatewayWithCertificate</strong> does not support concurrent SSL certificate dissociation for the same VPN gateway.</li>
+     * <li><strong>DissociateVpnGatewayWithCertificate</strong> does not support concurrent dissociation of SSL certificates from the same VPN gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -22910,12 +22995,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DissociateVpnGatewayWithCertificate</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the VPN gateway is not yet dissociated from the SSL certificate, and the dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and check the dissociation status of the SSL certificate:<ul>
+     * <li><strong>DissociateVpnGatewayWithCertificate</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the VPN gateway has not yet been dissociated from the SSL certificate. The dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and confirm the dissociation status of the SSL certificate:<ul>
      * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL certificate is being dissociated.</li>
      * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL certificate is dissociated.</li>
      * </ul>
      * </li>
-     * <li><strong>DissociateVpnGatewayWithCertificate</strong> does not support concurrent SSL certificate dissociation for the same VPN gateway.</li>
+     * <li><strong>DissociateVpnGatewayWithCertificate</strong> does not support concurrent dissociation of SSL certificates from the same VPN gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -22995,12 +23080,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>When you invoke this operation, note the following items:</p>
      * <ul>
-     * <li>You can enable only an Express Connect circuit that is in the <strong>Confirmed</strong> state.</li>
-     * <li>After the circuit is enabled, it enters the <strong>Enabled</strong> state.</li>
-     * <li><strong>EnablePhysicalConnection</strong> is an asynchronous operation. After you send a request, the system returns an instance ID, but the Express Connect circuit is not yet enabled. The enabling task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2982519.html">DescribePhysicalConnections</a> to query the status of the Express Connect circuit.</li>
-     * <li><strong>EnablePhysicalConnection</strong> does not support concurrent enabling of the same Express Connect circuit that is in the <strong>Confirmed</strong> state.</li>
+     * <li>You can enable only an Express Connect circuit that is in the Confirmed state. After the circuit is enabled, it enters the Enabled state. To reach the Confirmed state, complete the following steps in sequence: call CreatePhysicalConnection to create a circuit (Initial → Allocating), wait for resource allocation to complete (Allocating → Allocated), and then call ConfirmPhysicalConnection after construction is complete (Allocated → Confirmed).</li>
+     * <li>A billing activation step occurs between the Confirmed and Enabled states. By default (if ByPassSp is not specified or ByPassSp is set to false), the system automatically creates a billing order in the sales and billing system when you invoke this operation. The circuit is enabled only after the order is created. To skip the billing order flow and directly enable the circuit, set ByPassSp to true. This capability is available only to whitelist accounts. For more information, see the ByPassSp parameter description.</li>
+     * <li>The EnablePhysicalConnection operation is asynchronous. The system returns a success response, but the Express Connect circuit is not yet fully enabled because the backend enablement task is still in progress. You can invoke DescribePhysicalConnections to query the enablement status of the Express Connect circuit.</li>
+     * <li>The EnablePhysicalConnection operation does not support concurrent enablement of the same Express Connect circuit that is in the Confirmed state. Concurrent invocations return an error.
+     * If the Express Connect circuit is already in the Enabled state, invoking this operation again returns a success response (idempotent).</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -23064,12 +23150,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>When you invoke this operation, note the following items:</p>
      * <ul>
-     * <li>You can enable only an Express Connect circuit that is in the <strong>Confirmed</strong> state.</li>
-     * <li>After the circuit is enabled, it enters the <strong>Enabled</strong> state.</li>
-     * <li><strong>EnablePhysicalConnection</strong> is an asynchronous operation. After you send a request, the system returns an instance ID, but the Express Connect circuit is not yet enabled. The enabling task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2982519.html">DescribePhysicalConnections</a> to query the status of the Express Connect circuit.</li>
-     * <li><strong>EnablePhysicalConnection</strong> does not support concurrent enabling of the same Express Connect circuit that is in the <strong>Confirmed</strong> state.</li>
+     * <li>You can enable only an Express Connect circuit that is in the Confirmed state. After the circuit is enabled, it enters the Enabled state. To reach the Confirmed state, complete the following steps in sequence: call CreatePhysicalConnection to create a circuit (Initial → Allocating), wait for resource allocation to complete (Allocating → Allocated), and then call ConfirmPhysicalConnection after construction is complete (Allocated → Confirmed).</li>
+     * <li>A billing activation step occurs between the Confirmed and Enabled states. By default (if ByPassSp is not specified or ByPassSp is set to false), the system automatically creates a billing order in the sales and billing system when you invoke this operation. The circuit is enabled only after the order is created. To skip the billing order flow and directly enable the circuit, set ByPassSp to true. This capability is available only to whitelist accounts. For more information, see the ByPassSp parameter description.</li>
+     * <li>The EnablePhysicalConnection operation is asynchronous. The system returns a success response, but the Express Connect circuit is not yet fully enabled because the backend enablement task is still in progress. You can invoke DescribePhysicalConnections to query the enablement status of the Express Connect circuit.</li>
+     * <li>The EnablePhysicalConnection operation does not support concurrent enablement of the same Express Connect circuit that is in the Confirmed state. Concurrent invocations return an error.
+     * If the Express Connect circuit is already in the Enabled state, invoking this operation again returns a success response (idempotent).</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -23461,7 +23548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic refers to both types without distinction.</p>
+     * <p>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic does not distinguish between the two types.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about a single NAT gateway instance.</p>
@@ -23520,7 +23607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic refers to both types without distinction.</p>
+     * <p>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic does not distinguish between the two types.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about a single NAT gateway instance.</p>
@@ -24153,10 +24240,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call the <strong>GetVpnGatewayDiagnoseResult</strong> operation, you must specify at least one of the <strong>DiagnoseId</strong> and <strong>VpnGatewayId</strong> parameters in addition to the required parameters.</p>
+     * <p>When you call the <strong>GetVpnGatewayDiagnoseResult</strong> operation, in addition to the required parameters, you must specify at least one of the <strong>DiagnoseId</strong> and <strong>VpnGatewayId</strong> parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the one-click diagnostic result of a VPN gateway instance by calling the GetVpnGatewayDiagnoseResult operation.</p>
+     * <p>Queries the one-click diagnosis result of a VPN gateway instance.</p>
      * 
      * @param request GetVpnGatewayDiagnoseResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24200,10 +24287,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call the <strong>GetVpnGatewayDiagnoseResult</strong> operation, you must specify at least one of the <strong>DiagnoseId</strong> and <strong>VpnGatewayId</strong> parameters in addition to the required parameters.</p>
+     * <p>When you call the <strong>GetVpnGatewayDiagnoseResult</strong> operation, in addition to the required parameters, you must specify at least one of the <strong>DiagnoseId</strong> and <strong>VpnGatewayId</strong> parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the one-click diagnostic result of a VPN gateway instance by calling the GetVpnGatewayDiagnoseResult operation.</p>
+     * <p>Queries the one-click diagnosis result of a VPN gateway instance.</p>
      * 
      * @param request GetVpnGatewayDiagnoseResultRequest
      * @return GetVpnGatewayDiagnoseResultResponse
@@ -24313,7 +24400,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When creating a cross-account VBR uplink connection, you must grant authorization of the VPC-connected instance to the VBR instance.</p>
+     * <p>This operation is used for cross-account scenarios. Before calling this operation, ensure that the following resources are ready:
+     * <strong>Account A (VPC owner, the caller of this operation):</strong></p>
+     * <ul>
+     * <li>A VPC has been created and is in the Available state (CreateVpc).
+     * <strong>Account B (VBR owner, the account specified by VbrOwnerUid):</strong> When GrantType=Specify, the VBRs specified in VbrInstanceIds must already be created. Creating a VBR depends on the complete Express Connect circuit lifecycle:</li>
+     * </ul>
+     * <ol>
+     * <li>Call CreatePhysicalConnection to create an Express Connect circuit.</li>
+     * <li>Apply for a Letter of Authorization (LOA) and complete the construction (ApplyPhysicalConnectionLOA → CompletePhysicalConnectionLOA). The Express Connect circuit enters the Confirmed state.</li>
+     * <li>Call EnablePhysicalConnection to enable the Express Connect circuit (the circuit must be in the Confirmed state).</li>
+     * <li>Call CreateVirtualBorderRouter to create a VBR (the Express Connect circuit must be in the Enabled state. Otherwise, the error InvalidPhysicalConnectionId.NotEnabled is returned).
+     * After the preceding preparations are complete, Account A calls this operation to grant the VPC to the VBR of Account B:</li>
+     * </ol>
+     * <ul>
+     * <li>GrantType=All: Grants authorization to all VBRs under Account B (only the validity of VbrOwnerUid is verified. The VBRs do not need to be created yet).</li>
+     * <li>GrantType=Specify: Grants authorization to specified VBRs. The instances in VbrInstanceIds must already exist in the region specified by VbrRegionNo under the account specified by VbrOwnerUid. Otherwise, the error Instance.NotExist is returned.
+     * Note: VbrOwnerUid cannot be the same as the caller\&quot;s account. Otherwise, the error Parameter.Illegal is returned.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Invokes the GrantInstanceToVbr operation to grant authorization of a VPC-connected instance to a VBR instance for cross-account VBR uplink scenarios.</p>
@@ -24374,7 +24478,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When creating a cross-account VBR uplink connection, you must grant authorization of the VPC-connected instance to the VBR instance.</p>
+     * <p>This operation is used for cross-account scenarios. Before calling this operation, ensure that the following resources are ready:
+     * <strong>Account A (VPC owner, the caller of this operation):</strong></p>
+     * <ul>
+     * <li>A VPC has been created and is in the Available state (CreateVpc).
+     * <strong>Account B (VBR owner, the account specified by VbrOwnerUid):</strong> When GrantType=Specify, the VBRs specified in VbrInstanceIds must already be created. Creating a VBR depends on the complete Express Connect circuit lifecycle:</li>
+     * </ul>
+     * <ol>
+     * <li>Call CreatePhysicalConnection to create an Express Connect circuit.</li>
+     * <li>Apply for a Letter of Authorization (LOA) and complete the construction (ApplyPhysicalConnectionLOA → CompletePhysicalConnectionLOA). The Express Connect circuit enters the Confirmed state.</li>
+     * <li>Call EnablePhysicalConnection to enable the Express Connect circuit (the circuit must be in the Confirmed state).</li>
+     * <li>Call CreateVirtualBorderRouter to create a VBR (the Express Connect circuit must be in the Enabled state. Otherwise, the error InvalidPhysicalConnectionId.NotEnabled is returned).
+     * After the preceding preparations are complete, Account A calls this operation to grant the VPC to the VBR of Account B:</li>
+     * </ol>
+     * <ul>
+     * <li>GrantType=All: Grants authorization to all VBRs under Account B (only the validity of VbrOwnerUid is verified. The VBRs do not need to be created yet).</li>
+     * <li>GrantType=Specify: Grants authorization to specified VBRs. The instances in VbrInstanceIds must already exist in the region specified by VbrRegionNo under the account specified by VbrOwnerUid. Otherwise, the error Instance.NotExist is returned.
+     * Note: VbrOwnerUid cannot be the same as the caller\&quot;s account. Otherwise, the error Parameter.Illegal is returned.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Invokes the GrantInstanceToVbr operation to grant authorization of a VPC-connected instance to a VBR instance for cross-account VBR uplink scenarios.</p>
@@ -24389,7 +24510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the ListBusinessAccessPoints operation to query access point information for Express Connect circuits.</p>
+     * <p>Queries the access point information of Express Connect circuits by calling the ListBusinessAccessPoints operation.</p>
      * 
      * @param request ListBusinessAccessPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24425,7 +24546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the ListBusinessAccessPoints operation to query access point information for Express Connect circuits.</p>
+     * <p>Queries the access point information of Express Connect circuits by calling the ListBusinessAccessPoints operation.</p>
      * 
      * @param request ListBusinessAccessPointsRequest
      * @return ListBusinessAccessPointsResponse
@@ -26186,7 +26307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about shared Express Connect circuits by calling the ListVirtualPhysicalConnections operation.</p>
+     * <p>Queries information about shared Express Connect circuits.</p>
      * 
      * @param request ListVirtualPhysicalConnectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26262,7 +26383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about shared Express Connect circuits by calling the ListVirtualPhysicalConnections operation.</p>
+     * <p>Queries information about shared Express Connect circuits.</p>
      * 
      * @param request ListVirtualPhysicalConnectionsRequest
      * @return ListVirtualPhysicalConnectionsResponse
@@ -26529,7 +26650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call <strong>ListVpnCertificateAssociations</strong>:</p>
      * <ul>
      * <li>If you specify only the <strong>RegionId</strong> parameter, all associations between VPN gateway instances and SSL certificates in the specified region are queried.</li>
-     * <li>If you specify the <strong>RegionId</strong> and <strong>CertificateType</strong> parameters, the associations between VPN gateway instances and SSL certificates of the specified certificate type in the specified region are queried.</li>
+     * <li>If you specify the <strong>RegionId</strong> and <strong>CertificateType</strong> parameters, the associations between VPN gateway instances and SSL certificates of the specified type in the specified region are queried.</li>
      * <li>If you specify the <strong>RegionId</strong> and <strong>VpnGatewayId</strong> parameters, the associations between the specified VPN gateway instances and SSL certificates in the specified region are queried.</li>
      * <li>If you specify the <strong>RegionId</strong> and <strong>CertificateId</strong> parameters, the associations between the specified SSL certificates and VPN gateway instances in the specified region are queried.</li>
      * </ul>
@@ -26590,7 +26711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call <strong>ListVpnCertificateAssociations</strong>:</p>
      * <ul>
      * <li>If you specify only the <strong>RegionId</strong> parameter, all associations between VPN gateway instances and SSL certificates in the specified region are queried.</li>
-     * <li>If you specify the <strong>RegionId</strong> and <strong>CertificateType</strong> parameters, the associations between VPN gateway instances and SSL certificates of the specified certificate type in the specified region are queried.</li>
+     * <li>If you specify the <strong>RegionId</strong> and <strong>CertificateType</strong> parameters, the associations between VPN gateway instances and SSL certificates of the specified type in the specified region are queried.</li>
      * <li>If you specify the <strong>RegionId</strong> and <strong>VpnGatewayId</strong> parameters, the associations between the specified VPN gateway instances and SSL certificates in the specified region are queried.</li>
      * <li>If you specify the <strong>RegionId</strong> and <strong>CertificateId</strong> parameters, the associations between the specified SSL certificates and VPN gateway instances in the specified region are queried.</li>
      * </ul>
@@ -27057,7 +27178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a customer gateway by calling the ModifyCustomerGatewayAttribute operation.</p>
+     * <p>Modifies the configuration of a customer gateway.</p>
      * 
      * @param request ModifyCustomerGatewayAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27136,7 +27257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a customer gateway by calling the ModifyCustomerGatewayAttribute operation.</p>
+     * <p>Modifies the configuration of a customer gateway.</p>
      * 
      * @param request ModifyCustomerGatewayAttributeRequest
      * @return ModifyCustomerGatewayAttributeResponse
@@ -27450,14 +27571,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only dedicated Express Connect circuits that are in the Normal state and do not have overdue payments can be associated. Shared Express Connect circuit ports and Virtual Border Router (VBR) instances are not supported.</li>
-     * <li>When associating dedicated Express Connect circuits, only full operations are supported. To dissociate all circuits, pass an empty string.</li>
-     * <li>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must apply for a whitelist before you can associate it.</li>
+     * <li>When associating dedicated Express Connect circuits, only full replacement is supported. To disassociate all circuits, pass an empty string.</li>
+     * <li>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must be added to the whitelist before you can associate it.</li>
      * <li>The device on which the dedicated Express Connect circuit resides must support the QoS feature before association.</li>
      * <li>If a single VBR is associated with multiple Express Connect circuits, you must associate all Express Connect circuits of the VBR at the same time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the ModifyExpressConnectTrafficQos operation to modify an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits.</p>
+     * <p>Modifies an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits with the policy.</p>
      * 
      * @param request ModifyExpressConnectTrafficQosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27531,14 +27652,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only dedicated Express Connect circuits that are in the Normal state and do not have overdue payments can be associated. Shared Express Connect circuit ports and Virtual Border Router (VBR) instances are not supported.</li>
-     * <li>When associating dedicated Express Connect circuits, only full operations are supported. To dissociate all circuits, pass an empty string.</li>
-     * <li>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must apply for a whitelist before you can associate it.</li>
+     * <li>When associating dedicated Express Connect circuits, only full replacement is supported. To disassociate all circuits, pass an empty string.</li>
+     * <li>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must be added to the whitelist before you can associate it.</li>
      * <li>The device on which the dedicated Express Connect circuit resides must support the QoS feature before association.</li>
      * <li>If a single VBR is associated with multiple Express Connect circuits, you must associate all Express Connect circuits of the VBR at the same time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the ModifyExpressConnectTrafficQos operation to modify an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits.</p>
+     * <p>Modifies an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits with the policy.</p>
      * 
      * @param request ModifyExpressConnectTrafficQosRequest
      * @return ModifyExpressConnectTrafficQosResponse
@@ -29542,11 +29663,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <strong>Initial</strong>, <strong>Enabled</strong>, or <strong>Rejected</strong> state.  </li>
      * <li>You cannot modify Express Connect circuits in the <strong>Canceled</strong>, <strong>Allocating</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state.  </li>
-     * <li>An Express Connect circuit in the <strong>Rejected</strong> state enters the <strong>Initial</strong> state after it is modified.</li>
+     * <li>After an Express Connect circuit in the <strong>Rejected</strong> state is modified, it enters the <strong>Initial</strong> state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of an Express Connect circuit.</p>
+     * <p>Modifies the configurations of an Express Connect circuit.</p>
      * 
      * @param request ModifyPhysicalConnectionAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29646,11 +29767,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <strong>Initial</strong>, <strong>Enabled</strong>, or <strong>Rejected</strong> state.  </li>
      * <li>You cannot modify Express Connect circuits in the <strong>Canceled</strong>, <strong>Allocating</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state.  </li>
-     * <li>An Express Connect circuit in the <strong>Rejected</strong> state enters the <strong>Initial</strong> state after it is modified.</li>
+     * <li>After an Express Connect circuit in the <strong>Rejected</strong> state is modified, it enters the <strong>Initial</strong> state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of an Express Connect circuit.</p>
+     * <p>Modifies the configurations of an Express Connect circuit.</p>
      * 
      * @param request ModifyPhysicalConnectionAttributeRequest
      * @return ModifyPhysicalConnectionAttributeResponse
@@ -30233,18 +30354,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you want to enable two-factor identity authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
-     * <li>When you modify only the <strong>Name</strong> of the SSL-VPN server, this operation is synchronous. If you modify any configuration other than <strong>Name</strong>, this operation is asynchronous.</li>
-     * <li>When <strong>ModifySslVpnServer</strong> is asynchronous, the system returns a request ID first, but the configuration of the SSL-VPN server has not been modified yet. The modification task continues in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<ul>
+     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * <li>When you modify only the <strong>Name</strong> of the SSL-VPN server, this operation is synchronous. If you modify configurations other than <strong>Name</strong>, this operation is asynchronous.</li>
+     * <li>When the <strong>ModifySslVpnServer</strong> operation is asynchronous, the system returns a request ID but the configuration of the SSL-VPN server has not been modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the configuration of the SSL-VPN server is being modified.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the configuration of the SSL-VPN server has been modified.</li>
      * </ul>
      * </li>
-     * <li>The <strong>ModifySslVpnServer</strong> operation does not support concurrent modifications to the configuration of SSL-VPN servers under the same VPN gateway.</li>
+     * <li>The <strong>ModifySslVpnServer</strong> operation does not support concurrent modifications to the SSL-VPN server configuration under the same VPN gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of an SSL-VPN server.</p>
+     * <p>Modifies the configuration of an SSL-VPN server by calling the ModifySslVpnServer operation.</p>
      * 
      * @param request ModifySslVpnServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30353,18 +30474,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you want to enable two-factor identity authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
-     * <li>When you modify only the <strong>Name</strong> of the SSL-VPN server, this operation is synchronous. If you modify any configuration other than <strong>Name</strong>, this operation is asynchronous.</li>
-     * <li>When <strong>ModifySslVpnServer</strong> is asynchronous, the system returns a request ID first, but the configuration of the SSL-VPN server has not been modified yet. The modification task continues in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<ul>
+     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * <li>When you modify only the <strong>Name</strong> of the SSL-VPN server, this operation is synchronous. If you modify configurations other than <strong>Name</strong>, this operation is asynchronous.</li>
+     * <li>When the <strong>ModifySslVpnServer</strong> operation is asynchronous, the system returns a request ID but the configuration of the SSL-VPN server has not been modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<ul>
      * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the configuration of the SSL-VPN server is being modified.</li>
      * <li>If the VPN gateway instance is in the <strong>active</strong> state, the configuration of the SSL-VPN server has been modified.</li>
      * </ul>
      * </li>
-     * <li>The <strong>ModifySslVpnServer</strong> operation does not support concurrent modifications to the configuration of SSL-VPN servers under the same VPN gateway.</li>
+     * <li>The <strong>ModifySslVpnServer</strong> operation does not support concurrent modifications to the SSL-VPN server configuration under the same VPN gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of an SSL-VPN server.</p>
+     * <p>Modifies the configuration of an SSL-VPN server by calling the ModifySslVpnServer operation.</p>
      * 
      * @param request ModifySslVpnServerRequest
      * @return ModifySslVpnServerResponse
@@ -30723,7 +30844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><strong>ModifyVcoRouteEntryWeight</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the weight of the destination route entry has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the destination route entry weight:<ul>
      * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the weight of the destination route entry is being modified.</li>
-     * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the weight of the destination route entry has been modified.</li>
+     * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the weight of the destination route entry is modified.</li>
      * </ul>
      * </li>
      * <li><strong>ModifyVcoRouteEntryWeight</strong> does not support concurrent modifications of destination route entry weights for the same IPsec-VPN connection.</li>
@@ -30805,7 +30926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><strong>ModifyVcoRouteEntryWeight</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the weight of the destination route entry has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the destination route entry weight:<ul>
      * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the weight of the destination route entry is being modified.</li>
-     * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the weight of the destination route entry has been modified.</li>
+     * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the weight of the destination route entry is modified.</li>
      * </ul>
      * </li>
      * <li><strong>ModifyVcoRouteEntryWeight</strong> does not support concurrent modifications of destination route entry weights for the same IPsec-VPN connection.</li>
@@ -31087,6 +31208,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the primary or secondary CIDR block of a VPC.</p>
+     * 
+     * @param request ModifyVpcCidrBlockRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyVpcCidrBlockResponse
+     */
+    public ModifyVpcCidrBlockResponse modifyVpcCidrBlockWithOptions(ModifyVpcCidrBlockRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalCidrBlock)) {
+            query.put("OriginalCidrBlock", request.originalCidrBlock);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetCidrBlock)) {
+            query.put("TargetCidrBlock", request.targetCidrBlock);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyVpcCidrBlock"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVpcCidrBlockResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the primary or secondary CIDR block of a VPC.</p>
+     * 
+     * @param request ModifyVpcCidrBlockRequest
+     * @return ModifyVpcCidrBlockResponse
+     */
+    public ModifyVpcCidrBlockResponse modifyVpcCidrBlock(ModifyVpcCidrBlockRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyVpcCidrBlockWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <ul>
      * <li><strong>ModifyVpcPrefixList</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the prefix list instance configuration has not been modified yet. The modification node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/311535.html">ListPrefixLists</a> to query the status of the prefix list instance.<ul>
@@ -31203,15 +31388,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, the <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.</li>
-     * <li>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, and <strong>CustomerGatewayId</strong>.</li>
-     * <li><strong>ModifyVpnAttachmentAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the operation is still being performed in the system background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection:<ul>
+     * <li>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, the <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.</li>
+     * <li>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, and <strong>CustomerGatewayId</strong>.</li>
+     * <li>The <strong>ModifyVpnAttachmentAttribute</strong> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPsec-VPN connection configuration has not been modified. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection configuration:<ul>
      * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the configuration is being modified.</li>
      * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the configuration has been modified.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVpnAttachmentAttribute</strong> does not support concurrent modification of the IPsec-VPN connection configuration.</li>
-     * <li>When you call <strong>ModifyVpnAttachmentAttribute</strong>, you cannot modify the gateway type of the IPsec-VPN connection.</li>
+     * <li>The <strong>ModifyVpnAttachmentAttribute</strong> operation does not support concurrent modifications to the IPsec-VPN connection configuration.</li>
+     * <li>When you call the <strong>ModifyVpnAttachmentAttribute</strong> operation, you cannot modify the gateway type of the IPsec-VPN connection.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31339,15 +31524,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, the <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.</li>
-     * <li>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, and <strong>CustomerGatewayId</strong>.</li>
-     * <li><strong>ModifyVpnAttachmentAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the operation is still being performed in the system background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection:<ul>
+     * <li>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, the <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.</li>
+     * <li>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, and <strong>CustomerGatewayId</strong>.</li>
+     * <li>The <strong>ModifyVpnAttachmentAttribute</strong> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPsec-VPN connection configuration has not been modified. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection configuration:<ul>
      * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the configuration is being modified.</li>
      * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the configuration has been modified.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVpnAttachmentAttribute</strong> does not support concurrent modification of the IPsec-VPN connection configuration.</li>
-     * <li>When you call <strong>ModifyVpnAttachmentAttribute</strong>, you cannot modify the gateway type of the IPsec-VPN connection.</li>
+     * <li>The <strong>ModifyVpnAttachmentAttribute</strong> operation does not support concurrent modifications to the IPsec-VPN connection configuration.</li>
+     * <li>When you call the <strong>ModifyVpnAttachmentAttribute</strong> operation, you cannot modify the gateway type of the IPsec-VPN connection.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31364,16 +31549,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>To modify a dual-tunnel IPsec-VPN connection, the <code>ModifyVpnConnectionAttribute</code> operation supports the following request parameters in addition to the required parameters:
+     * <li>To modify a dual-tunnel mode IPsec-VPN connection, the <code>ModifyVpnConnectionAttribute</code> operation supports the following request parameters in addition to the required parameters:
      *  <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>AutoConfigRoute</strong>, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.</li>
-     * <li>To modify a single-tunnel IPsec-VPN connection, the <code>ModifyVpnConnectionAttribute</code> operation supports the following request parameters in addition to the required parameters:
+     * <li>To modify a single-tunnel mode IPsec-VPN connection, the <code>ModifyVpnConnectionAttribute</code> operation supports the following request parameters in addition to the required parameters:
      *    <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>AutoConfigRoute</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, and <strong>RemoteCaCertificate</strong>.</li>
-     * <li>The <strong>ModifyVpnConnectionAttribute</strong> operation is asynchronous. After a request is sent, the system returns a request ID. However, the configuration of the IPsec-VPN connection is not yet modified. The modification node runs in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the configuration of the IPsec-VPN connection is being modified.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the configuration of the IPsec-VPN connection is modified.</li>
-     * </ul>
-     * </li>
-     * <li>The <strong>ModifyVpnConnectionAttribute</strong> operation does not support concurrent modifications to IPsec-VPN connection configurations under the same VPN gateway.</li>
+     * <li>The <strong>ModifyVpnConnectionAttribute</strong> operation is asynchronous. After a request is sent, the system returns a request ID, but the configuration of the IPsec-VPN connection has not been modified yet. The modification node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31497,16 +31677,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>To modify a dual-tunnel IPsec-VPN connection, the <code>ModifyVpnConnectionAttribute</code> operation supports the following request parameters in addition to the required parameters:
+     * <li>To modify a dual-tunnel mode IPsec-VPN connection, the <code>ModifyVpnConnectionAttribute</code> operation supports the following request parameters in addition to the required parameters:
      *  <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>AutoConfigRoute</strong>, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.</li>
-     * <li>To modify a single-tunnel IPsec-VPN connection, the <code>ModifyVpnConnectionAttribute</code> operation supports the following request parameters in addition to the required parameters:
+     * <li>To modify a single-tunnel mode IPsec-VPN connection, the <code>ModifyVpnConnectionAttribute</code> operation supports the following request parameters in addition to the required parameters:
      *    <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>AutoConfigRoute</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, and <strong>RemoteCaCertificate</strong>.</li>
-     * <li>The <strong>ModifyVpnConnectionAttribute</strong> operation is asynchronous. After a request is sent, the system returns a request ID. However, the configuration of the IPsec-VPN connection is not yet modified. The modification node runs in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the configuration of the IPsec-VPN connection is being modified.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the configuration of the IPsec-VPN connection is modified.</li>
-     * </ul>
-     * </li>
-     * <li>The <strong>ModifyVpnConnectionAttribute</strong> operation does not support concurrent modifications to IPsec-VPN connection configurations under the same VPN gateway.</li>
+     * <li>The <strong>ModifyVpnConnectionAttribute</strong> operation is asynchronous. After a request is sent, the system returns a request ID, but the configuration of the IPsec-VPN connection has not been modified yet. The modification node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31523,7 +31698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyVpnGatewayAttribute</strong> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<ul>
+     * <li><strong>ModifyVpnGatewayAttribute</strong> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration of the VPN gateway has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<ul>
      * <li>If the VPN gateway is in the <strong>updating</strong> state, the configuration is being modified.</li>
      * <li>If the VPN gateway is in the <strong>active</strong> state, the configuration has been modified.</li>
      * </ul>
@@ -31601,7 +31776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyVpnGatewayAttribute</strong> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<ul>
+     * <li><strong>ModifyVpnGatewayAttribute</strong> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration of the VPN gateway has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<ul>
      * <li>If the VPN gateway is in the <strong>updating</strong> state, the configuration is being modified.</li>
      * <li>If the VPN gateway is in the <strong>active</strong> state, the configuration has been modified.</li>
      * </ul>
@@ -31757,16 +31932,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyVpnPbrRouteEntryPriority</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the policy-based routing entry has not been modified yet. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the modification status of the policy-based routing entry:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based routing entry is being modified.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based routing entry has been modified.</li>
+     * <li><strong>ModifyVpnPbrRouteEntryPriority</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the policy-based routing has not been modified yet because the modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway and determine the modification status of the policy-based routing:<ul>
+     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based routing is being modified.</li>
+     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based routing has been modified.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVpnPbrRouteEntryPriority</strong> does not support concurrent modifications of policy-based routing entries on the same VPN gateway instance.</li>
+     * <li><strong>ModifyVpnPbrRouteEntryPriority</strong> does not support concurrent modifications of policy-based routing on the same VPN gateway instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing entry.</p>
+     * <p>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing.</p>
      * 
      * @param request ModifyVpnPbrRouteEntryPriorityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31847,16 +32022,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyVpnPbrRouteEntryPriority</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the policy-based routing entry has not been modified yet. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the modification status of the policy-based routing entry:<ul>
-     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based routing entry is being modified.</li>
-     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based routing entry has been modified.</li>
+     * <li><strong>ModifyVpnPbrRouteEntryPriority</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the policy-based routing has not been modified yet because the modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway and determine the modification status of the policy-based routing:<ul>
+     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the policy-based routing is being modified.</li>
+     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the policy-based routing has been modified.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVpnPbrRouteEntryPriority</strong> does not support concurrent modifications of policy-based routing entries on the same VPN gateway instance.</li>
+     * <li><strong>ModifyVpnPbrRouteEntryPriority</strong> does not support concurrent modifications of policy-based routing on the same VPN gateway instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing entry.</p>
+     * <p>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing.</p>
      * 
      * @param request ModifyVpnPbrRouteEntryPriorityRequest
      * @return ModifyVpnPbrRouteEntryPriorityResponse
@@ -31993,16 +32168,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if you successfully modify it by calling this operation.</p>
+     * <p>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if it is modified by calling this operation.</p>
      * </blockquote>
      * <ul>
      * <li>If active/standby destination routes exist on a VPN gateway instance and you want to modify the weight of the active destination route, delete the standby destination route first. After the active destination route is modified, reconfigure the standby destination route. If you want to modify the weight of the standby destination route, delete the active destination route first. After the standby destination route is modified, reconfigure the active destination route. To delete a destination route, see <a href="https://help.aliyun.com/document_detail/2526961.html">DeleteVpnRouteEntry</a>.</li>
-     * <li>The <strong>ModifyVpnRouteEntryWeight</strong> operation is asynchronous. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route is not yet modified, and the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<ul>
+     * <li><strong>ModifyVpnRouteEntryWeight</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<ul>
      * <li>If the VPN destination route is in the <strong>updating</strong> state, the weight is being modified.</li>
-     * <li>If the VPN destination route is in the <strong>active</strong> state, the weight is modified.</li>
+     * <li>If the VPN destination route is in the <strong>active</strong> state, the weight has been modified.</li>
      * </ul>
      * </li>
-     * <li>The <strong>ModifyVpnRouteEntryWeight</strong> operation does not support concurrent weight modifications for destination routes on the same VPN gateway.</li>
+     * <li><strong>ModifyVpnRouteEntryWeight</strong> does not support concurrent modification of destination route weights on the same VPN gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -32083,16 +32258,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if you successfully modify it by calling this operation.</p>
+     * <p>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if it is modified by calling this operation.</p>
      * </blockquote>
      * <ul>
      * <li>If active/standby destination routes exist on a VPN gateway instance and you want to modify the weight of the active destination route, delete the standby destination route first. After the active destination route is modified, reconfigure the standby destination route. If you want to modify the weight of the standby destination route, delete the active destination route first. After the standby destination route is modified, reconfigure the active destination route. To delete a destination route, see <a href="https://help.aliyun.com/document_detail/2526961.html">DeleteVpnRouteEntry</a>.</li>
-     * <li>The <strong>ModifyVpnRouteEntryWeight</strong> operation is asynchronous. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route is not yet modified, and the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<ul>
+     * <li><strong>ModifyVpnRouteEntryWeight</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<ul>
      * <li>If the VPN destination route is in the <strong>updating</strong> state, the weight is being modified.</li>
-     * <li>If the VPN destination route is in the <strong>active</strong> state, the weight is modified.</li>
+     * <li>If the VPN destination route is in the <strong>active</strong> state, the weight has been modified.</li>
      * </ul>
      * </li>
-     * <li>The <strong>ModifyVpnRouteEntryWeight</strong> operation does not support concurrent weight modifications for destination routes on the same VPN gateway.</li>
+     * <li><strong>ModifyVpnRouteEntryWeight</strong> does not support concurrent modification of destination route weights on the same VPN gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -32108,7 +32283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ChangeResourceGroup</strong> operation does not support concurrent modifications to the resource group of Express Connect circuit resources within the same Express Connect circuit instance.</p>
+     * <p>The <strong>ChangeResourceGroup</strong> operation does not support concurrent modifications of the resource group for Express Connect circuit resources within the same Express Connect circuit instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the resource group to which a cloud resource belongs.</p>
@@ -32171,7 +32346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ChangeResourceGroup</strong> operation does not support concurrent modifications to the resource group of Express Connect circuit resources within the same Express Connect circuit instance.</p>
+     * <p>The <strong>ChangeResourceGroup</strong> operation does not support concurrent modifications of the resource group for Express Connect circuit resources within the same Express Connect circuit instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the resource group to which a cloud resource belongs.</p>
@@ -32864,23 +33039,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you invoke this operation, take note of the following items:</p>
+     * <p>Before you invoke this operation, take note of the following information:</p>
      * <ul>
-     * <li>Before releasing an EIP, make sure the following conditions are met:<ul>
+     * <li>Before you release an EIP, make sure that the following conditions are met:<ul>
      * <li>Only EIPs in the <strong>Available</strong> state can be released.</li>
      * <li>Only EIPs that use the pay-as-you-go billing method can be released. Subscription EIPs cannot be released.</li>
      * </ul>
      * </li>
-     * <li>The <strong>ReleaseEipAddress</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the EIP instance has not been released yet. The release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<ul>
-     * <li>If the EIP instance is in the <strong>Releasing</strong> state, the EIP instance is being released. In this state, you can only execute query operations.</li>
-     * <li>If the EIP instance cannot be found, the EIP instance has been released.</li>
+     * <li>The <strong>ReleaseEipAddress</strong> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIP instance is not immediately released because the release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<ul>
+     * <li>If the EIP instance is in the <strong>Releasing</strong> state, the EIP instance is being released. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the EIP instance cannot be found, the EIP instance is released.</li>
      * </ul>
      * </li>
      * <li>The <strong>ReleaseEipAddress</strong> operation does not support concurrent release of the same EIP instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a specified Elastic IP Address (EIP).</p>
+     * <p>Releases a specified elastic IP address (EIP).</p>
      * 
      * @param request ReleaseEipAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32932,23 +33107,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you invoke this operation, take note of the following items:</p>
+     * <p>Before you invoke this operation, take note of the following information:</p>
      * <ul>
-     * <li>Before releasing an EIP, make sure the following conditions are met:<ul>
+     * <li>Before you release an EIP, make sure that the following conditions are met:<ul>
      * <li>Only EIPs in the <strong>Available</strong> state can be released.</li>
      * <li>Only EIPs that use the pay-as-you-go billing method can be released. Subscription EIPs cannot be released.</li>
      * </ul>
      * </li>
-     * <li>The <strong>ReleaseEipAddress</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the EIP instance has not been released yet. The release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<ul>
-     * <li>If the EIP instance is in the <strong>Releasing</strong> state, the EIP instance is being released. In this state, you can only execute query operations.</li>
-     * <li>If the EIP instance cannot be found, the EIP instance has been released.</li>
+     * <li>The <strong>ReleaseEipAddress</strong> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIP instance is not immediately released because the release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<ul>
+     * <li>If the EIP instance is in the <strong>Releasing</strong> state, the EIP instance is being released. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the EIP instance cannot be found, the EIP instance is released.</li>
      * </ul>
      * </li>
      * <li>The <strong>ReleaseEipAddress</strong> operation does not support concurrent release of the same EIP instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a specified Elastic IP Address (EIP).</p>
+     * <p>Releases a specified elastic IP address (EIP).</p>
      * 
      * @param request ReleaseEipAddressRequest
      * @return ReleaseEipAddressResponse
@@ -35245,12 +35420,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you delete a secondary CIDR block from a VPC, delete the vSwitches created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</li>
+     * <li>Before deleting a secondary CIDR block from a VPC, delete the vSwitches that are created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</li>
      * <li>The <strong>UnassociateVpcCidrBlock</strong> operation does not support concurrently deleting secondary CIDR blocks from the same VPC.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the UnassociateVpcCidrBlock operation to delete a secondary CIDR block from a VPC.</p>
+     * <p>Invokes UnassociateVpcCidrBlock to delete a secondary CIDR block from a VPC.</p>
      * 
      * @param request UnassociateVpcCidrBlockRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35315,12 +35490,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you delete a secondary CIDR block from a VPC, delete the vSwitches created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</li>
+     * <li>Before deleting a secondary CIDR block from a VPC, delete the vSwitches that are created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</li>
      * <li>The <strong>UnassociateVpcCidrBlock</strong> operation does not support concurrently deleting secondary CIDR blocks from the same VPC.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the UnassociateVpcCidrBlock operation to delete a secondary CIDR block from a VPC.</p>
+     * <p>Invokes UnassociateVpcCidrBlock to delete a secondary CIDR block from a VPC.</p>
      * 
      * @param request UnassociateVpcCidrBlockRequest
      * @return UnassociateVpcCidrBlockResponse
@@ -35408,7 +35583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a DHCP options set by calling the UpdateDhcpOptionsSetAttribute operation.</p>
+     * <p>Modifies the configuration of a DHCP options set.</p>
      * 
      * @param request UpdateDhcpOptionsSetAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35492,7 +35667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a DHCP options set by calling the UpdateDhcpOptionsSetAttribute operation.</p>
+     * <p>Modifies the configuration of a DHCP options set.</p>
      * 
      * @param request UpdateDhcpOptionsSetAttributeRequest
      * @return UpdateDhcpOptionsSetAttributeResponse
@@ -35809,7 +35984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of an IPsec server by calling the UpdateIpsecServer operation.</p>
+     * <p>Calls the UpdateIpsecServer operation to update the configuration of an IPsec server.</p>
      * 
      * @param request UpdateIpsecServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35896,7 +36071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of an IPsec server by calling the UpdateIpsecServer operation.</p>
+     * <p>Calls the UpdateIpsecServer operation to update the configuration of an IPsec server.</p>
      * 
      * @param request UpdateIpsecServerRequest
      * @return UpdateIpsecServerResponse

@@ -14,7 +14,7 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
      * <p>The pagination token for the next query. Valid values:</p>
      * <ul>
      * <li>If <strong>NextToken</strong> is empty, no more results exist.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> has a value, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances returned. Note: The TotalCount parameter is not meaningful when you use the MaxResults and NextToken parameters for a paged query with paging.</p>
+     * <p>The total number of instances returned. Note: The TotalCount parameter is meaningless when you use MaxResults and NextToken for paginated queries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -89,7 +89,7 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The Express Connect Router (ECR) instance ID.</p>
+         * <p>The instance ID of the Express Connect Router (ECR).</p>
          * 
          * <strong>example:</strong>
          * <p>ecr-tz7w3chlaptxr2****</p>
@@ -116,7 +116,7 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the instance in the authorization relationship.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the instance in the queried authorization relationship.</p>
          * 
          * <strong>example:</strong>
          * <p>192745367151****</p>
@@ -125,7 +125,7 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         public Long instanceUid;
 
         /**
-         * <p>The region ID of the instance in the authorization relationship.</p>
+         * <p>The region ID of the instance in the queried authorization relationship.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -134,10 +134,10 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The instance type of the authorization relationship. Valid values:</p>
+         * <p>The type of the instance in the authorization relationship. Valid values:</p>
          * <ul>
-         * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance. Indicates the VPC instances that the VBR instance is authorized to access through the vRouter.</li>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC) instance. Indicates the VBR instances that the VPC instance has authorized through the vRouter.</li>
+         * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance. Indicates the VPC instances for which the VBR instance has been granted authorization.</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC) instance. Indicates the VBR instances to which the VPC instance has granted authorization.</li>
          * </ul>
          * 
          * <strong>example:</strong>

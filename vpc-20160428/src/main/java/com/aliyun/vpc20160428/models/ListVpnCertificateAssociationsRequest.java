@@ -39,11 +39,11 @@ public class ListVpnCertificateAssociationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li><p>If this is the first query or no next query exists, leave this parameter empty.</p>
+     * <li><p>If this is the first query or no subsequent query exists, leave this parameter empty.</p>
      * </li>
-     * <li><p>If a next query exists, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</p>
+     * <li><p>If a subsequent query exists, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</p>
      * </li>
      * </ul>
      * 

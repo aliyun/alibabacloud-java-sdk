@@ -41,14 +41,14 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
      * <p>&lt;props=&quot;china&quot;&gt;<strong>Prepay</strong>: subscription.</p>
      * 
      * <strong>example:</strong>
-     * <p>中国站示例值：Prepay，国际站示例值：POSTPAY</p>
+     * <p>China site example: Prepay, International site example: POSTPAY</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The timestamp when the VPN gateway was created. Unit: milliseconds.</p>
-     * <p>The timestamp follows the UNIX format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp follows the UNIX time format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1495382400000</p>
@@ -102,7 +102,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
     /**
      * <p>The timestamp when the VPN gateway expires. Unit: milliseconds.</p>
-     * <p>The timestamp follows the UNIX format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp follows the UNIX time format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1544666102000</p>
@@ -240,7 +240,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     public String sslVpn;
 
     /**
-     * <p>The IP address of the SSL-VPN connection.</p>
+     * <p>The IP address for SSL-VPN connections.</p>
      * <p>This parameter is returned only when the SSL-VPN feature is enabled on a VPN gateway instance that has a public network type and supports creating dual-tunnel IPsec-VPN connections.</p>
      * 
      * <strong>example:</strong>
@@ -303,7 +303,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;VpnEnableBgp\&quot;:\&quot;true\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;VpnNewImage\&quot;:\&quot;true\&quot;,\&quot;description\&quot;:\&quot;转发1.3.24\&quot;,\&quot;VpnVersion\&quot;:\&quot;v1.2.4\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</p>
+     * <p>{\&quot;VpnEnableBgp\&quot;:\&quot;true\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;VpnNewImage\&quot;:\&quot;true\&quot;,\&quot;description\&quot;:\&quot;Forwarding 1.3.24\&quot;,\&quot;VpnVersion\&quot;:\&quot;v1.2.4\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</p>
      */
     @NameInMap("Tag")
     public String tag;
@@ -613,8 +613,8 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
     public static class DescribeVpnGatewayResponseBodyReservationData extends TeaModel {
         /**
-         * <p>If the pending order type is <strong>TEMP_UPGRADE</strong> (temporary upgrade), this parameter indicates the revert time of the temporary upgrade.</p>
-         * <p>If the pending order type is <strong>RENEWCHANGE</strong> (renewal with Upgrade/Downgrade) or <strong>RENEW</strong> (renewal), this parameter indicates the effective period when the renewal or renewal with specification change takes effect.</p>
+         * <p>If the pending order type is <strong>TEMP_UPGRADE</strong> (temporary upgrade), this parameter indicates the revert time for the temporary upgrade.</p>
+         * <p>If the pending order type is <strong>RENEWCHANGE</strong> (renewal with specification change) or <strong>RENEW</strong> (renewal), this parameter indicates the effective period when the renewal or renewal with specification change takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-07-20T16:00:00Z</p>
@@ -692,7 +692,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>1</strong>: the renewal or renewal with specification change order has not taken effect.</p>
          * </li>
-         * <li><p><strong>2</strong>: the temporary upgrade order has taken effect. After the restoration time is reached, the system restores the VPN gateway to the specification before the temporary upgrade. In this case, <strong>ReservationIpsec</strong>, <strong>ReservationMaxConnections</strong>, <strong>ReservationSpec</strong>, and <strong>ReservationSsl</strong> indicate the specification before the temporary upgrade.</p>
+         * <li><p><strong>2</strong>: the temporary upgrade order has taken effect. After the restoration time is reached, the system restores the VPN gateway to the specification before the temporary upgrade. In this case, <strong>ReservationIpsec</strong>, <strong>ReservationMaxConnections</strong>, <strong>ReservationSpec</strong>, and <strong>ReservationSsl</strong> indicate the specifications before the temporary upgrade.</p>
          * </li>
          * </ul>
          * 

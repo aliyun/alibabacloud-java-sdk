@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReleaseEipAddressRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP to release.</p>
+     * <p>The ID of the EIP to be released.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ReleaseEipAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the EIP to release. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</p>
+     * <p>The region ID of the EIP to be released. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

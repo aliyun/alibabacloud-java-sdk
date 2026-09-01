@@ -14,7 +14,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paging query.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

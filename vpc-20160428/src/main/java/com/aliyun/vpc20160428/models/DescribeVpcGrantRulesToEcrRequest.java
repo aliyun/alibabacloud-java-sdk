@@ -37,8 +37,8 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     /**
      * <p>The type of the instance for which to query the authorization relationship. Valid values:</p>
      * <ul>
-     * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance. Queries the VPC instances that the VBR instance is authorized to access through the vRouter.</li>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC) instance. Queries the VBR instances that the VPC instance has authorized through the vRouter.</li>
+     * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance. Queries the VPC instances for which the VBR instance has been granted authorization.</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC) instance. Queries the VBR instances to which the VPC instance has granted authorization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region in which the network instance to query resides.</p>
+     * <p>The region where the network instance to query resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -219,8 +219,8 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
 
     public static class DescribeVpcGrantRulesToEcrRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the resource. You must specify at least 1 and can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You must specify at least 1 tag key and can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -229,8 +229,8 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

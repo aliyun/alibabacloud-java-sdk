@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     public java.util.List<DescribeFailoverTestJobsResponseBodyFailoverTestJobList> failoverTestJobList;
 
     /**
-     * <p>The number of entries per page for paginated queries. Valid values: <strong>1 to 100</strong>. Default value: 20.</p>
+     * <p>The number of entries per page for a paginated query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,11 +29,11 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li><p>Leave this parameter empty for the first query or if no next query exists.</p>
+     * <li><p>Leave this parameter empty for the first query or if no subsequent query is required.</p>
      * </li>
-     * <li><p>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <li><p>If a subsequent query is required, set this parameter to the NextToken value returned in the previous API call.</p>
      * </li>
      * </ul>
      * 
@@ -53,7 +53,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -126,7 +126,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The test duration. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
+         * <p>The test duration. Unit: minutes. Valid values: <strong>1</strong> to <strong>4320</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -146,9 +146,9 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         /**
          * <p>The failover test type. Valid values:</p>
          * <ul>
-         * <li><p><strong>StartNow</strong>: The test starts immediately after the failover test job is created.</p>
+         * <li><p><strong>StartNow</strong>: starts the test immediately after the failover test job is created.</p>
          * </li>
-         * <li><p><strong>StartLater</strong>: Only the test job is created. The test is not started.</p>
+         * <li><p><strong>StartLater</strong>: creates the failover test job without starting the test.</p>
          * </li>
          * </ul>
          * 
@@ -195,15 +195,15 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         /**
          * <p>The status of the failover test job. Valid values:</p>
          * <ul>
-         * <li><p><strong>Init</strong>: Pending.</p>
+         * <li><p><strong>Init</strong>: pending.</p>
          * </li>
-         * <li><p><strong>Starting</strong>: Starting.</p>
+         * <li><p><strong>Starting</strong>: starting.</p>
          * </li>
-         * <li><p><strong>Testing</strong>: In progress.</p>
+         * <li><p><strong>Testing</strong>: in progress.</p>
          * </li>
-         * <li><p><strong>Stopping</strong>: Stopping.</p>
+         * <li><p><strong>Stopping</strong>: stopping.</p>
          * </li>
-         * <li><p><strong>Stopped</strong>: Completed.</p>
+         * <li><p><strong>Stopped</strong>: completed.</p>
          * </li>
          * </ul>
          * 

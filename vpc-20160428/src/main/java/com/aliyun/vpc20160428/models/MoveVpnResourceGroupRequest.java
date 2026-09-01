@@ -48,10 +48,10 @@ public class MoveVpnResourceGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>The resource type.</p>
      * <ul>
      * <li><p><strong>VpnGateway</strong>: VPN gateway instance.</p>
-     * <p>After you change the resource group of a VPN gateway instance, the resource group of the IPsec server, SSL server, SSL client certificate, and IPsec-VPN connection (an IPsec-VPN connection associated with the VPN gateway instance) under the VPN gateway instance is also changed.</p>
+     * <p>After you change the resource group to which a VPN gateway instance belongs, the resource group of the IPsec server, SSL server, SSL client certificate, and IPsec-VPN connection (the IPsec-VPN connection associated with the VPN gateway instance) under the VPN gateway instance is also changed.</p>
      * </li>
      * <li><p><strong>CustomerGateway</strong>: customer gateway instance.</p>
      * </li>

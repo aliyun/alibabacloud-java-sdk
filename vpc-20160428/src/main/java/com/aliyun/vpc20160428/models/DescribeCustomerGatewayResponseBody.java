@@ -24,7 +24,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
 
     /**
      * <p>The timestamp when the customer gateway was created. Unit: milliseconds.</p>
-     * <p>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the customer gateway was created.</p>
+     * <p>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1492747187000</p>
@@ -79,7 +79,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the customer gateway belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group information.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>

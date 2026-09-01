@@ -14,9 +14,9 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li><p>If <strong>NextToken</strong> is empty, no next query exists.</p>
+     * <li><p>If <strong>NextToken</strong> is empty, no subsequent query exists.</p>
      * </li>
      * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</p>
      * </li>

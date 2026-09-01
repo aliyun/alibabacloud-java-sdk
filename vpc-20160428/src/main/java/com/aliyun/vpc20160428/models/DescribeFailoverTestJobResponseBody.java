@@ -61,7 +61,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         public String jobDuration;
 
         /**
-         * <p>The ID of the failover test job.</p>
+         * <p>The failover test job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ftj-bp1yh6mvi13aq3g8w****</p>
@@ -72,9 +72,9 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         /**
          * <p>The failover test type. Valid values:</p>
          * <ul>
-         * <li><p><strong>StartNow</strong>: starts immediately. The failover test starts immediately after the job is created.</p>
+         * <li><p><strong>StartNow</strong>: start immediately. The test starts immediately after the job is created.</p>
          * </li>
-         * <li><p><strong>StartLater</strong>: starts later. Only the job is created without starting the test.</p>
+         * <li><p><strong>StartLater</strong>: start later. Only the test job is created without starting the test.</p>
          * </li>
          * </ul>
          * 
@@ -101,7 +101,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         public java.util.List<String> resourceId;
 
         /**
-         * <p>The resource type for the failover test. Valid values: <strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</p>
+         * <p>The failover test resource type. Valid values: <strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</p>
          * 
          * <strong>example:</strong>
          * <p>PHYSICALCONNECTION</p>
@@ -110,7 +110,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The start time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</p>
+         * <p>The start time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format as defined by ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-21T14:00:00Z</p>
@@ -140,7 +140,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The end time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</p>
+         * <p>The end time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format as defined by ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-21T15:00:00Z</p>

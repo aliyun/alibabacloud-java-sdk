@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateVcoRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The timestamp when the destination route entry was created. Unit: milliseconds.</p>
-     * <p>The timestamp follows the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the destination route entry was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1658387202664</p>

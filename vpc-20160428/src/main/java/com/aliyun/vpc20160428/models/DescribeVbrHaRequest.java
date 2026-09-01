@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVbrHaRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,9 +20,9 @@ public class DescribeVbrHaRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without starting the instance. The system checks whether required parameters are specified, whether the request format is valid, and whether the instance status is valid. If the check fails, the corresponding error is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, the instance is directly started.</p>
+     * <li><p><strong>false</strong> (default): sends the request. After the request passes the check, the instance is started.</p>
      * </li>
      * </ul>
      * 
@@ -55,7 +55,7 @@ public class DescribeVbrHaRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The VBR failover group instance ID.</p>
+     * <p>The VBR failover group instance ID. You must specify at least one of <strong>VbrHaId</strong> and <strong>VbrId</strong>. If both are omitted, the service returns MissingParam.VbrHaIdOrVbrId (400).</p>
      * 
      * <strong>example:</strong>
      * <p>vbrha-sa1sxheuxtd98****</p>
@@ -64,7 +64,7 @@ public class DescribeVbrHaRequest extends TeaModel {
     public String vbrHaId;
 
     /**
-     * <p>The VBR instance ID.</p>
+     * <p>The VBR instance ID. You must specify at least one of <strong>VbrId</strong> and <strong>VbrHaId</strong>. If both are omitted, the service returns MissingParam.VbrHaIdOrVbrId (400).</p>
      * 
      * <strong>example:</strong>
      * <p>vbr-bp1jcg5cmxjbl9xgc****</p>

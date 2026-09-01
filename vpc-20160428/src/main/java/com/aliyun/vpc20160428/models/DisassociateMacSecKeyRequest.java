@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisassociateMacSecKeyRequest extends TeaModel {
     /**
-     * <p>The key name. Only hexadecimal characters are supported. Lowercase characters are automatically converted to uppercase. When the encryption algorithm is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. When the encryption algorithm is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters.</p>
+     * <p>The key name. Only hexadecimal characters are supported. Lowercase characters are automatically converted to uppercase. When the encryption algorithm is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. When the encryption algorithm is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters. This value must be a key name that has been associated with the target Express Connect circuit by calling AssociateMacSecKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DisassociateMacSecKeyRequest extends TeaModel {
     public String ckn;
 
     /**
-     * <p>The ID of the Express Connect circuit.</p>
+     * <p>The ID of the Express Connect circuit. The Express Connect circuit must be in the <strong>Enabled</strong> state and its <strong>BusinessStatus</strong> must be <strong>Normal</strong>. You can call DescribePhysicalConnections to query the circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

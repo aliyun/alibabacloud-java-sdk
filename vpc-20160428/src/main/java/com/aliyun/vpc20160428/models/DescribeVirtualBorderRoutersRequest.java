@@ -11,11 +11,11 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public java.util.List<DescribeVirtualBorderRoutersRequestFilter> filter;
 
     /**
-     * <p>Specifies whether to include cross-account VBRs.</p>
+     * <p>Specifies whether to include cross-account Virtual Border Routers.</p>
      * <ul>
-     * <li><p><strong>true</strong>: includes cross-account VBRs.</p>
+     * <li><p><strong>true</strong>: Included.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): does not include cross-account VBRs.</p>
+     * <li><p><strong>false</strong> (default): Not included.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -58,7 +58,6 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
-     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -166,22 +165,6 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public static class DescribeVirtualBorderRoutersRequestFilter extends TeaModel {
         /**
          * <p>The filter condition. You can specify up to 5 filter conditions. The following filter conditions are supported:</p>
-         * <ul>
-         * <li><p><strong>PhysicalConnectionId</strong>: the Express Connect circuit ID.</p>
-         * </li>
-         * <li><p><strong>VbrId</strong>: the VBR ID.</p>
-         * </li>
-         * <li><p><strong>Status</strong>: the VBR status.</p>
-         * </li>
-         * <li><p><strong>Name</strong>: the VBR name.</p>
-         * </li>
-         * <li><p><strong>AccessPointId</strong>: the access point ID.</p>
-         * </li>
-         * <li><p><strong>eccId</strong>: the Express Cloud Connect instance ID.</p>
-         * </li>
-         * <li><p><strong>type</strong>: the Express Connect circuit type.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Status</p>
@@ -190,7 +173,7 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter value based on the specified Key. You can specify multiple filter values for a Key. The filter values are evaluated by using a logical OR. A match is found if any of the specified filter values is met.</p>
+         * <p>The filter value based on the specified Key. You can specify multiple filter values for a Key. The relationship between multiple filter values is OR, which means that a match with any one of the filter values is considered a match with the filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -224,7 +207,6 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public static class DescribeVirtualBorderRoutersRequestTags extends TeaModel {
         /**
          * <p>The tag key of the resource. You must specify at least 1 tag key and can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -234,7 +216,6 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

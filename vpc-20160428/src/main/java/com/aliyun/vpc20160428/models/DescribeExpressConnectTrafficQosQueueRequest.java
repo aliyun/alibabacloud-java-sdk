@@ -24,7 +24,10 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The QoS policy ID.</p>
+     * <p>The QoS policy ID returned by the CreateExpressConnectTrafficQos operation.</p>
+     * <blockquote>
+     * <p>This parameter is required. If you do not specify this parameter, the IllegalParam.QosId (400) error is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>qos-2giu0a6vd5x0mv****</p>
@@ -46,7 +49,7 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>The region ID of the QoS policy.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

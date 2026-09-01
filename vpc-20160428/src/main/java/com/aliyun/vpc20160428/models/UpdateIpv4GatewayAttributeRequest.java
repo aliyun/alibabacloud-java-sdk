@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateIpv4GatewayAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class UpdateIpv4GatewayAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without modifying the name or description of the IPv4 gateway. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the name or description of the IPv4 gateway is modified.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the name or description of the IPv4 gateway is directly modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class UpdateIpv4GatewayAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The new description of the IPv4 gateway.</p>
+     * <p>The new description of the IPv4 gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>new</p>
@@ -50,7 +50,7 @@ public class UpdateIpv4GatewayAttributeRequest extends TeaModel {
     public String ipv4GatewayId;
 
     /**
-     * <p>The new name of the IPv4 gateway.</p>
+     * <p>The new name of the IPv4 gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>newname</p>

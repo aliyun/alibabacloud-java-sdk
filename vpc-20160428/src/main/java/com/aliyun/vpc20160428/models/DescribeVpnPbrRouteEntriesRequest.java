@@ -46,7 +46,7 @@ public class DescribeVpnPbrRouteEntriesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The VPN gateway instance ID.</p>
+     * <p>The instance ID of the VPN gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

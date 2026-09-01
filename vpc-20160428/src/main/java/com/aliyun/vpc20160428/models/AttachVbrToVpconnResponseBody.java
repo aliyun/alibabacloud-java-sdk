@@ -14,7 +14,7 @@ public class AttachVbrToVpconnResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The instance ID of the shared Express Connect circuits.</p>
+     * <p>The shared Express Connect circuits instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp1mrgfbtmc9brre7****</p>

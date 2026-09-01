@@ -50,7 +50,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>Indicates whether two-factor identity authentication is enabled.</p>
+     * <p>Indicates whether two-factor authentication is enabled.</p>
      * <ul>
      * <li><p><strong>true</strong>: enabled.</p>
      * </li>

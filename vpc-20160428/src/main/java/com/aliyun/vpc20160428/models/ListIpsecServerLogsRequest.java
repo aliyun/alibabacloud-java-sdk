@@ -39,7 +39,7 @@ public class ListIpsecServerLogsRequest extends TeaModel {
     public Integer minutePeriod;
 
     /**
-     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +48,7 @@ public class ListIpsecServerLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

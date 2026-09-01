@@ -7,7 +7,7 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
     /**
      * <p>The secondary IPv6 CIDR block to delete.</p>
      * <blockquote>
-     * <p>You must specify either <strong>Ipv6CidrBlock</strong> or <strong>SecondaryCidrBlock</strong>, but not both.</p>
+     * <p>You must specify one of the <strong>Ipv6CidrBlock</strong> parameter and the <strong>SecondaryCidrBlock</strong> parameter, but you cannot specify both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC from which you want to delete a secondary CIDR block. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
     /**
      * <p>The secondary IPv4 CIDR block to delete.</p>
      * <blockquote>
-     * <p>You must specify either <strong>SecondaryCidrBlock</strong> or <strong>Ipv6CidrBlock</strong>, but not both.</p>
+     * <p>You must specify one of the <strong>SecondaryCidrBlock</strong> parameter and the <strong>Ipv6CidrBlock</strong> parameter, but you cannot specify both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -22,7 +22,7 @@ public class DescribeCustomerGatewayRequest extends TeaModel {
 
     /**
      * <p>The region ID of the customer gateway. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

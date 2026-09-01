@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     /**
-     * <p>Indicates whether the shared Express Connect circuits have been confirmed and accepted by the tenant. Valid values:</p>
+     * <p>Specifies whether the shared Express Connect circuits have been confirmed and accepted by the tenant. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Yes.</li>
      * <li><strong>false</strong>: No.</li>
@@ -27,10 +27,10 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether a next query token is available. Valid values:</p>
+     * <p>Specifies whether a next query token exists. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first query or if no next query is available.</li>
-     * <li>If a next query is available, set this parameter to the NextToken value returned in the previous API call.</li>
+     * <li>You do not need to specify this parameter for the first query or if no next query exists.</li>
+     * <li>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
      * <p>The business status of the shared Express Connect circuits. Valid values:</p>
      * <ul>
      * <li><strong>Normal</strong>: Normal.</li>
-     * <li><strong>FinancialLocked</strong>: financial lock.</li>
+     * <li><strong>FinancialLocked</strong>: Locked due to overdue payment.</li>
      * <li><strong>SecurityLocked</strong>: Locked for security reasons.</li>
      * </ul>
      * 
@@ -229,7 +229,7 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public static class ListVirtualPhysicalConnectionsRequestTags extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -239,7 +239,7 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag value cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

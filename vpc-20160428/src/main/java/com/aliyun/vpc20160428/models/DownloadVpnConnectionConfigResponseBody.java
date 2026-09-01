@@ -135,7 +135,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig extends TeaModel {
         /**
-         * <p>The IKE phase authentication algorithm.</p>
+         * <p>The authentication algorithm of the IKE phase.</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -144,7 +144,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikeAuthAlg;
 
         /**
-         * <p>The IKE phase encryption algorithm.</p>
+         * <p>The encryption algorithm of the IKE phase.</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -153,7 +153,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikeEncAlg;
 
         /**
-         * <p>The IKE phase lifetime. Unit: seconds.</p>
+         * <p>The lifetime of the IKE phase. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -162,10 +162,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public Long ikeLifetime;
 
         /**
-         * <p>The IKE negotiation mode. Valid values:</p>
+         * <p>The IKE negotiation mode.</p>
          * <ul>
-         * <li><strong>main</strong>: Main mode. This mode provides high security during negotiation.</li>
-         * <li><strong>aggressive</strong>: Aggressive mode. This mode supports fast negotiation and a higher success rate.</li>
+         * <li><strong>main</strong>: Main mode. This mode offers high negotiation security.</li>
+         * <li><strong>aggressive</strong>: Aggressive mode. This mode supports fast negotiation and a high negotiation success rate.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikeMode;
 
         /**
-         * <p>The DH group in the IKE phase.</p>
+         * <p>The DH group of the IKE phase.</p>
          * 
          * <strong>example:</strong>
          * <p>group2</p>
@@ -300,7 +300,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig extends TeaModel {
         /**
-         * <p>The IPsec phase authentication algorithm.</p>
+         * <p>The authentication algorithm of the IPsec phase.</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -309,7 +309,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ipsecAuthAlg;
 
         /**
-         * <p>The IPsec phase encryption algorithm.</p>
+         * <p>The encryption algorithm of the IPsec phase.</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -318,7 +318,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ipsecEncAlg;
 
         /**
-         * <p>The IPsec phase lifetime. Unit: seconds.</p>
+         * <p>The lifetime of the IPsec phase. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -327,7 +327,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public Long ipsecLifetime;
 
         /**
-         * <p>The DH group in the IPsec phase.</p>
+         * <p>The DH group of the IPsec phase.</p>
          * 
          * <strong>example:</strong>
          * <p>group2</p>

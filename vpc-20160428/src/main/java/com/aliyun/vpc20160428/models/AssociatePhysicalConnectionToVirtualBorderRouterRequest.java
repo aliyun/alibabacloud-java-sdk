@@ -45,7 +45,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
     public String enableIpv6;
 
     /**
-     * <p>The Alibaba Cloud-side IP address of the VBR instance.</p>
+     * <p>The Alibaba Cloud-side IP address of the VBR instance. You must specify <strong>LocalGatewayIp</strong>, <strong>PeerGatewayIp</strong>, and <strong>PeeringSubnetMask</strong> together when you call this operation. The request fails if any of these parameters is missing.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -70,12 +70,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
 
     /**
      * <p>The client-side IP address of the VBR instance.</p>
-     * <ul>
-     * <li><p>Only the VBR owner can specify or modify this property.</p>
-     * </li>
-     * <li><p>This parameter is required when you create a VBR instance for the Express Connect circuit owner.</p>
-     * </li>
-     * </ul>
+     * <p>Only the VBR owner can specify or modify this property. You must specify <strong>LocalGatewayIp</strong>, <strong>PeerGatewayIp</strong>, and <strong>PeeringSubnetMask</strong> together when you call this operation. The request fails if any of these parameters is missing.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -110,7 +105,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
 
     /**
      * <p>The subnet mask for the Alibaba Cloud-side and client-side IP addresses of the VBR instance.</p>
-     * <p>The two IP addresses must be in the same subnet.</p>
+     * <p>The two IP addresses must be in the same subnet. You must specify <strong>LocalGatewayIp</strong>, <strong>PeerGatewayIp</strong>, and <strong>PeeringSubnetMask</strong> together when you call this operation. The request fails if any of these parameters is missing.</p>
      * 
      * <strong>example:</strong>
      * <p>255.255.255.0</p>
@@ -130,7 +125,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
 
     /**
      * <p>The region ID of the Express Connect circuit.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -158,7 +153,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
     /**
      * <p>The VLAN ID of the VBR. Valid values: <strong>0 to 2999</strong>. </p>
      * <blockquote>
-     * <p>Only the owner of the Express Connect circuit can specify this parameter. The VLAN IDs of two VBRs on the same Express Connect circuit must be different.</p>
+     * <p>Only the owner of the Express Connect circuit can specify this parameter. Two VBRs on the same Express Connect circuit cannot have the same VLAN ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

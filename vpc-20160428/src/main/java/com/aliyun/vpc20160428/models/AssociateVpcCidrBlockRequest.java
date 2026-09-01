@@ -39,7 +39,7 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public String ipamPoolId;
 
     /**
-     * <p>The mask used to add an IPv6 CIDR block from an IPAM pool to the VPC.</p>
+     * <p>The subnet mask used to add an IPv6 CIDR block from an IPAM pool to the VPC.</p>
      * <blockquote>
      * <p>When you use an IPAM pool to add a secondary IPv6 CIDR block to the VPC, you must specify at least one of IPv6CidrBlock or Ipv6CidrMask.</p>
      * </blockquote>
@@ -59,7 +59,7 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
      * <li><strong>ChinaTelecom</strong>: China Telecom (single ISP).</li>
      * </ul>
      * <blockquote>
-     * <p>If you are a user who has activated the single-ISP bandwidth whitelist, you can set this parameter to <strong>ChinaTelecom</strong> (China Telecom), <strong>ChinaUnicom</strong> (China Unicom), or <strong>ChinaMobile</strong> (China Mobile).</p>
+     * <p>If your account is included in the China single-ISP bandwidth whitelist, you can set this parameter to <strong>ChinaTelecom</strong> (China Telecom), <strong>ChinaUnicom</strong> (China Unicom), or <strong>ChinaMobile</strong> (China Mobile).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC to which you want to add a secondary CIDR block. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>ch-hangzhou</p>
@@ -94,7 +94,7 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
      * <p>The secondary IPv4 CIDR block to add. The CIDR block must meet the following requirements:</p>
      * <ul>
      * <li>Use private IPv4 addresses specified in RFC 1918 as the secondary IPv4 CIDR block of the virtual private cloud (VPC). The subnet mask must be 16 to 28 bits in length. Examples: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</li>
-     * <li>You can use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the secondary IPv4 CIDR block of the virtual private cloud (VPC).</li>
+     * <li>You can use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, or 169.254.0.0/16 and their subnets as the secondary IPv4 CIDR block of the virtual private cloud (VPC).</li>
      * </ul>
      * <p>Configuration limits:</p>
      * <ul>
@@ -114,7 +114,7 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public String secondaryCidrBlock;
 
     /**
-     * <p>The mask used to add a secondary IPv4 CIDR block from an IPAM pool to the VPC.</p>
+     * <p>The subnet mask used to add a secondary IPv4 CIDR block from an IPAM pool to the VPC.</p>
      * <blockquote>
      * <p>When you use an IPAM pool to add a secondary IPv4 CIDR block to the VPC, you must specify at least one of SecondaryCidrBlock or SecondaryCidrMask.</p>
      * </blockquote>

@@ -8,7 +8,7 @@ public class CreateVbrHaRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class CreateVbrHaRequest extends TeaModel {
 
     /**
      * <p>The description of the VBR failover group.</p>
-     * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 2 to 256 characters in length and must start with a letter or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>VBRHa</p>
@@ -30,7 +30,7 @@ public class CreateVbrHaRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without starting the instance. The system checks whether the required parameters are specified, whether the request format is valid, and whether the instance status is Normal. If the check fails, the corresponding error is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</p>
      * </li>
      * <li><p><strong>false</strong> (default): sends the request. After the request passes the check, the instance is started.</p>
      * </li>
@@ -58,7 +58,7 @@ public class CreateVbrHaRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The instance ID of the other VBR in the VBR failover group.</p>
+     * <p>The instance ID of the other VBR in the VBR failover group. The two VBRs must be in the same region, each connected to the on-premises data center through its own Express Connect circuit, added to the same Express Connect Router (ECR) or the same Cloud Enterprise Network (CEN) instance, and both must have BFD enabled. A VBR can be added to only one failover group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class CreateVbrHaRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The VBR instance ID.</p>
+     * <p>The instance ID of the VBR. The two VBRs must be in the same region, each connected to the on-premises data center through its own Express Connect circuit, added to the same Express Connect Router (ECR) or the same Cloud Enterprise Network (CEN) instance, and both must have BFD enabled. A VBR can be added to only one failover group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

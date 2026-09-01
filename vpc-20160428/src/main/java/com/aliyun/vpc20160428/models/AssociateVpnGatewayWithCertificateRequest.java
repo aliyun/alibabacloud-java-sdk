@@ -32,7 +32,7 @@ public class AssociateVpnGatewayWithCertificateRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class AssociateVpnGatewayWithCertificateRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without performing the actual request. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run without actually associating the certificate. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</p>
      * </li>
      * <li><p><strong>false</strong> (default): sends the request. After the request passes the check, the VPN gateway is associated with the certificate.</p>
      * </li>
@@ -70,7 +70,7 @@ public class AssociateVpnGatewayWithCertificateRequest extends TeaModel {
     /**
      * <p>The instance ID of the VPN gateway.</p>
      * <blockquote>
-     * <p>Only Chinese SM VPN gateways support certificate attachment.</p>
+     * <p>Only ShangMi (SM) VPN gateways support attaching certificates.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

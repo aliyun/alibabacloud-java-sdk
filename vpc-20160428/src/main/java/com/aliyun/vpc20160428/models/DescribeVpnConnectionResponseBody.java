@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnConnectionResponseBody extends TeaModel {
     /**
-     * <p>The instance ID of the CEN instance to which the transit router instance belongs.</p>
+     * <p>The instance ID of the Cloud Enterprise Network (CEN) instance to which the transit router instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-lxxpbpalc776qz****</p>
@@ -14,9 +14,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String attachInstanceId;
 
     /**
-     * <p>The type of resource to which the IPsec-VPN connection is attached.</p>
+     * <p>The type of resource attached to the IPsec-VPN connection.</p>
      * <ul>
-     * <li><strong>CEN</strong>: The IPsec-VPN connection is attached to a transit router instance under a Cloud Enterprise Network (CEN) instance.</li>
+     * <li><strong>CEN</strong>: The IPsec-VPN connection is attached to a transit router of a Cloud Enterprise Network (CEN) instance.</li>
      * <li><strong>NO_ASSOCIATED</strong>: The IPsec-VPN connection is not attached to any resource.</li>
      * <li><strong>VPNGW</strong>: The IPsec-VPN connection is attached to a VPN gateway instance.</li>
      * </ul>
@@ -29,7 +29,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     /**
      * <p>The timestamp when the IPsec-VPN connection was created. Unit: milliseconds.</p>
-     * <p>The timestamp follows the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp is in the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 (UTC) to the time when the IPsec-VPN connection was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1492753817000</p>
@@ -38,11 +38,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>Indicates whether the IPsec-VPN connection is attached to a transit router instance that belongs to a different Alibaba Cloud account.</p>
-     * <ul>
-     * <li><strong>true</strong>: The IPsec-VPN connection is attached to a cross-account transit router instance.</li>
-     * <li><strong>false</strong>: The IPsec-VPN connection is not attached to a cross-account transit router instance.</li>
-     * </ul>
+     * <p>Indicates whether the IPsec-VPN connection is bound to a transit router instance under a different account.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -60,11 +56,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String customerGatewayId;
 
     /**
-     * <p>Indicates whether the IPsec-VPN connection configuration takes effect immediately.</p>
+     * <p>Indicates whether the IPsec-VPN connection configurations take effect immediately.</p>
      * <ul>
-     * <li><p><strong>true</strong>: The configuration takes effect immediately. A reconnection is triggered after the configuration is changed.</p>
+     * <li><p><strong>true</strong>: The configurations take effect immediately. A reconnection is triggered after the configuration change is complete.</p>
      * </li>
-     * <li><p><strong>false</strong>: The configuration does not take effect immediately. A reconnection is triggered when traffic is detected.</p>
+     * <li><p><strong>false</strong>: The configurations do not take effect immediately. A reconnection is triggered when traffic is detected.</p>
      * </li>
      * </ul>
      * 
@@ -76,13 +72,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether Dead Peer Detection (DPD) is enabled for the IPsec-VPN connection.</p>
-     * <ul>
-     * <li><p><strong>false</strong>: DPD is disabled.</p>
-     * </li>
-     * <li><p><strong>true</strong>: DPD is enabled.</p>
-     * </li>
-     * </ul>
-     * <p>After DPD is enabled, the IPsec initiator sends DPD packets to check whether the peer device is alive. If no correct response is received within the specified period of time, the peer is considered disconnected. The ISAKMP SA and the corresponding IPsec SA are then deleted, and the security tunnel is also removed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -92,13 +81,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection.</p>
-     * <ul>
-     * <li><p><strong>true</strong>: NAT traversal is enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: NAT traversal is disabled.</p>
-     * </li>
-     * </ul>
-     * <p>After NAT traversal is enabled, the IKE negotiation process removes the verification of the UDP port number and can discover NAT gateway devices along the VPN tunnel.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -107,11 +89,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public Boolean enableNatTraversal;
 
     /**
-     * <p>The enabling status of BGP for the tunnels.</p>
-     * <ul>
-     * <li><strong>true</strong>: BGP is enabled.</li>
-     * <li><strong>false</strong>: BGP is disabled.</li>
-     * </ul>
+     * <p>The enabling status of tunnel BGP.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -142,7 +120,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     /**
      * <p>The CIDR block on the Alibaba Cloud side of the IPsec-VPN connection.</p>
-     * <p>Multiple CIDR blocks are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0/8</p>
@@ -162,8 +139,8 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     /**
      * <p>The network type of the IPsec-VPN connection.</p>
      * <ul>
-     * <li><strong>public</strong>: The IPsec-VPN connection establishes an encrypted communication channel over the Internet.</li>
-     * <li><strong>private</strong>: The IPsec-VPN connection establishes an encrypted communication channel over a private network.</li>
+     * <li><strong>public</strong>: public network. The IPsec-VPN connection establishes an encrypted communication channel over the Internet.</li>
+     * <li><strong>private</strong>: private network. The IPsec-VPN connection establishes an encrypted communication channel over a private network.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -183,7 +160,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     /**
      * <p>The CIDR block on the on-premises data center side.</p>
-     * <p>Multiple CIDR blocks are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/16</p>
@@ -220,19 +196,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String spec;
 
     /**
-     * <p>The binding status of the IPsec-VPN connection and the transit router instance.</p>
-     * <ul>
-     * <li><strong>active</strong>: The IPsec-VPN connection is attached to a VPN gateway instance and is in a normal state.</li>
-     * <li><strong>init</strong>: The IPsec-VPN connection is not attached to any resource and is in the initialization state.</li>
-     * <li><strong>attaching</strong>: The IPsec-VPN connection is being attached to a transit router instance.</li>
-     * <li><strong>attached</strong>: The IPsec-VPN connection is attached to a transit router instance.</li>
-     * <li><strong>detaching</strong>: The IPsec-VPN connection is being detached from a transit router instance.</li>
-     * <li><strong>financialLocked</strong>: Financial lock due to overdue payment.</li>
-     * <li><strong>provisioning</strong>: Resources are being prepared.</li>
-     * <li><strong>updating</strong>: The IPsec-VPN connection is being updated.</li>
-     * <li><strong>upgrading</strong>: The IPsec-VPN connection is being upgraded.</li>
-     * <li><strong>deleted</strong>: The IPsec-VPN connection is deleted.</li>
-     * </ul>
+     * <p>The binding status between the IPsec-VPN connection and the transit router instance.</p>
      * 
      * <strong>example:</strong>
      * <p>attached</p>
@@ -263,7 +227,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public DescribeVpnConnectionResponseBodyTags tags;
 
     /**
-     * <p>The instance ID of the transit router to which the IPsec-VPN connection is attached.</p>
+     * <p>The instance ID of the transit router instance attached to the IPsec-VPN connection.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-p0we2edef9qr44a85****</p>
@@ -282,10 +246,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     /**
      * <p>The bandwidth specification of a single VPN tunnel. Valid values:</p>
-     * <ul>
-     * <li>Standard (default): Standard type with a default bandwidth of 1 Gbps.</li>
-     * <li>Large: Large type with a default bandwidth of 3 Gbps.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -627,10 +587,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
         /**
          * <p>The IKE negotiation mode.</p>
-         * <ul>
-         * <li><strong>main</strong>: Main mode. The negotiation process is more secure.</li>
-         * <li><strong>aggressive</strong>: Aggressive mode. The negotiation is faster and has a higher success rate.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -1319,9 +1275,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         /**
          * <p>Indicates whether health check is enabled for the IPsec-VPN connection.</p>
          * <ul>
-         * <li><p><strong>false</strong>: Health check is disabled.</p>
+         * <li><p><strong>false</strong>: Not enabled.</p>
          * </li>
-         * <li><p><strong>true</strong>: Health check is enabled.</p>
+         * <li><p><strong>true</strong>: Enabled.</p>
          * </li>
          * </ul>
          * 
@@ -1341,11 +1297,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>Specifies whether to withdraw published routes when the health check fails.</p>
-         * <ul>
-         * <li><strong>revoke_route</strong>: Routes are withdrawn.</li>
-         * <li><strong>reserve_route</strong>: Routes are not withdrawn.</li>
-         * </ul>
+         * <p>Indicates whether published routes are withdrawn when the health check fails.</p>
          * 
          * <strong>example:</strong>
          * <p>revoke_route</p>
@@ -1354,7 +1306,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String policy;
 
         /**
-         * <p>The number of retry packets sent for the health check.</p>
+         * <p>The number of health check retries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1373,12 +1325,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
         /**
          * <p>The health check status.</p>
-         * <ul>
-         * <li><p><strong>failed</strong>: Abnormal.</p>
-         * </li>
-         * <li><p><strong>success</strong>: Normal.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>failed</p>
@@ -1461,12 +1407,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
         /**
          * <p>The enabling status of the BGP routing protocol.</p>
-         * <ul>
-         * <li><p><strong>true</strong>: BGP routing is enabled.</p>
-         * </li>
-         * <li><p><strong>false</strong>: BGP routing is disabled.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1484,7 +1424,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public Long localAsn;
 
         /**
-         * <p>The BGP address on the Alibaba Cloud side.</p>
+         * <p>The BGP IP address on the Alibaba Cloud side.</p>
          * 
          * <strong>example:</strong>
          * <p>169.254.11.2</p>
@@ -1502,7 +1442,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public Long peerAsn;
 
         /**
-         * <p>The BGP address of the peer.</p>
+         * <p>The BGP IP address of the peer.</p>
          * 
          * <strong>example:</strong>
          * <p>169.254.11.1</p>
@@ -1512,12 +1452,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
         /**
          * <p>The negotiation status of the BGP routing protocol.</p>
-         * <ul>
-         * <li><p><strong>success</strong>: Normal.</p>
-         * </li>
-         * <li><p><strong>failed</strong>: Abnormal.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -1526,7 +1460,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The BGP CIDR block of the IPsec-VPN connection. The CIDR block is a subnet of 169.254.0.0/16 with a subnet mask length of 30.</p>
+         * <p>The BGP CIDR block of the IPsec-VPN connection. The CIDR block is a subnet with a subnet mask of 30 bits in mask length within 169.254.0.0/16.</p>
          * 
          * <strong>example:</strong>
          * <p>169.254.11.0/30</p>

@@ -14,7 +14,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in paging queries.</p>
+     * <p>The number of entries per page when using paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of IPsec-VPN connections associated with transit router instances.</p>
+     * <p>The list of IPsec-VPN connections that are associated with transit router instances.</p>
      */
     @NameInMap("VpnAttachments")
     public java.util.List<DescribeVpnAttachmentsResponseBodyVpnAttachments> vpnAttachments;
@@ -135,7 +135,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
 
     public static class DescribeVpnAttachmentsResponseBodyVpnAttachments extends TeaModel {
         /**
-         * <p>The type of resource to which the IPsec-VPN connection is associated. The value is <strong>CEN</strong>, which indicates that the IPsec-VPN connection is associated with a transit router instance.</p>
+         * <p>The type of resource to which the IPsec-VPN connection is attached. The value is <strong>CEN</strong>, which indicates that the IPsec-VPN connection is associated with a transit router instance.</p>
          * 
          * <strong>example:</strong>
          * <p>CEN</p>
@@ -146,8 +146,8 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the IPsec-VPN connection is associated with a transit router instance that belongs to a different Alibaba Cloud account.</p>
          * <ul>
-         * <li><strong>true</strong>: Yes.</li>
-         * <li><strong>false</strong>: No.</li>
+         * <li><strong>true</strong>: The IPsec-VPN connection is associated with a cross-account transit router instance.</li>
+         * <li><strong>false</strong>: The IPsec-VPN connection is not associated with a cross-account transit router instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The system tags of the IPsec-VPN connection.</p>
-         * <p>You can use system tags to check whether the IPsec-VPN connection supports BGP. You can ignore other properties.</p>
+         * <p>You can use the system tags to check whether the IPsec-VPN connection supports BGP. You can ignore the other properties.</p>
          * <p><strong>BGPSupport</strong>: indicates whether the IPsec-VPN connection supports BGP.</p>
          * <ul>
          * <li><strong>true</strong>: Supported.</li>
@@ -193,7 +193,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;description\&quot;:\&quot;转发1.7.22\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;BGPSupport\&quot;:\&quot;true\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</p>
+         * <p>{\&quot;description\&quot;:\&quot;forwarding1.7.22\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;BGPSupport\&quot;:\&quot;true\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -224,8 +224,8 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The bandwidth specification of a single VPN tunnel. Valid values:
-         * Standard (default): standard. The default bandwidth is 1 Gbps.
-         * Large: large. The default bandwidth is 3 Gbps.</p>
+         * Standard (default): Standard. The default bandwidth is 1 Gbit/s.
+         * Large: Large. The default bandwidth is 3 Gbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>

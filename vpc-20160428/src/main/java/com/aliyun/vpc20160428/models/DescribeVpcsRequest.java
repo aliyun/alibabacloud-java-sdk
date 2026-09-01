@@ -16,9 +16,9 @@ public class DescribeVpcsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request, and the resource status is directly queried after the request passes the check. An HTTP 2xx status code is returned.</p>
+     * <li><p><strong>false</strong> (default): sends a Normal request, and the resource status is directly queried after the request passes the authorization check. An HTTP 2xx status code is returned.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to query VPCs that have IPv6 CIDR blocks enabled in the specified region. The default value is empty, which means no filtering is applied based on IPv6 enablement. Valid values:</p>
+     * <p>Specifies whether to query VPCs that have IPv6 CIDR blocks enabled in the specified region. The default value is empty, which means no filtering is performed based on IPv6 enablement. Valid values:</p>
      * <ul>
      * <li><strong>false</strong>: IPv6 is not enabled.</li>
      * <li><strong>true</strong>: IPv6 is enabled.</li>
@@ -117,7 +117,7 @@ public class DescribeVpcsRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC. </p>
-     * <p>You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).</p>
+     * <p>You can specify up to 20 VPC IDs. Separate multiple VPC IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1b1xjllp3ve5yze****</p>
@@ -135,7 +135,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public String vpcName;
 
     /**
-     * <p>The Alibaba Cloud account ID of the VPC owner.</p>
+     * <p>The Alibaba Cloud account ID that owns the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>253460731706911258</p>
@@ -279,7 +279,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public static class DescribeVpcsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -289,7 +289,7 @@ public class DescribeVpcsRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

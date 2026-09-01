@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBgpGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the BGP group.</p>
+     * <p>The ID of the BGP group. The BGP group must be in the <strong>Available</strong> state. After you create a BGP group, call DescribeBgpGroups to query the <strong>Status</strong> value. Wait until the status changes to <strong>Available</strong> before you delete the BGP group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteBgpGroupRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
