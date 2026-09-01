@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageShrinkRequest extends TeaModel {
     /**
-     * <p><strong>[Optimized]</strong> This field is now automatically obtained by the backend. You do not need to specify this field.</p>
+     * <p><strong>[Deprecated]</strong> This field is now automatically obtained by the backend. You do not need to specify this field.</p>
      * 
      * <strong>example:</strong>
      * <p>agent_***</p>
@@ -14,7 +14,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p><strong>[Optimized]</strong> This field is now automatically obtained by the backend. You do not need to specify this field when calling the API.</p>
+     * <p><strong>[Deprecated]</strong> This field is now automatically obtained by the backend. You do not need to specify this field when calling the API.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -38,7 +38,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String dataSourcesShrink;
 
     /**
-     * <p>The message content to send to the Agent.</p>
+     * <p>The content of the message to send to the Agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,13 +50,13 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     /**
      * <p>The message type. Default value: <code>[primary]</code>.  </p>
      * <ul>
-     * <li><p>For regular interactions with the Agent, the message type is <code>[primary]</code>.</p>
+     * <li><p>For regular interactions with the Agent, set the message type to <code>[primary]</code>.</p>
      * </li>
-     * <li><p>When the message is a response to the Agent\&quot;s Human-in-Loop question, the type should be <code>[additional]</code>.</p>
+     * <li><p>When the message is a response to the Agent\&quot;s human-in-the-loop question, set the type to <code>[additional]</code>.</p>
      * </li>
-     * <li><p>When the message is intended to trigger a report generation, the type should be <code>[report]</code>.</p>
+     * <li><p>When the message triggers a report generation, set the type to <code>[report]</code>.</p>
      * </li>
-     * <li><p>When the message is intended to cancel the current session, the type should be <code>[cancel]</code>.</p>
+     * <li><p>When the message cancels the current session, set the type to <code>[cancel]</code>.</p>
      * </li>
      * </ul>
      * 
@@ -76,10 +76,10 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String parentSessionId;
 
     /**
-     * <p>This field is required when the message type is <code>additional</code>. Specify the specific question that the Agent asks the user through Human-in-Loop.</p>
+     * <p>This field is required when the message type is <code>additional</code>. Specify the specific question that the Agent asks the user through the human-in-the-loop mechanism.</p>
      * 
      * <strong>example:</strong>
-     * <p>Please provide the criteria for calculating GMV</p>
+     * <p>Provide the criteria for calculating GMV</p>
      */
     @NameInMap("Question")
     public String question;
@@ -95,8 +95,8 @@ public class SendChatMessageShrinkRequest extends TeaModel {
 
     /**
      * <p><strong>Important</strong></p>
-     * <p>When this message is a reply to an Agent message (for example, the Agent asks a clarification question through ASK_HUMAN), reply_to must be set to the exact Checkpoint sequence number carried in that Agent message. If this message is not a targeted reply, such as requesting the Agent to perform further in-depth analysis after the analysis is complete, reply_to can be left empty or set to &quot;0&quot;.  </p>
-     * <p>This field affects how the Agent decides to process the message. Passing an incorrect value may result in analysis results that do not meet expectations.</p>
+     * <p>When this message is a reply to an Agent message (for example, the Agent asks a clarifying question through ASK_HUMAN), set reply_to to the exact Checkpoint sequence number carried in that Agent message. If this message is not a targeted reply, such as requesting the Agent to perform further in-depth analysis after the analysis is complete, leave reply_to empty or set it to &quot;0&quot;.  </p>
+     * <p>This field affects how the Agent decides to process the message. Passing an incorrect value may cause the analysis results to be less effective than expected.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -116,8 +116,8 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     /**
      * <p>The session ID. This is an optional field used for multi-turn conversations.</p>
      * <ul>
-     * <li>You can start a conversation without specifying this field. The response includes the SessionID for the current session.</li>
-     * <li>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating a conversation.</li>
+     * <li>You can start a session without specifying this field. The response includes the SessionID for the current session.</li>
+     * <li>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating a session.</li>
      * <li>If you need multi-turn conversations (such as follow-up questions or confirming execution plans), include the SessionID returned by the previous SendChatMessage call.</li>
      * </ul>
      * 
@@ -134,7 +134,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String taskConfigShrink;
 
     /**
-     * <p>The user\&quot;s OSS bucket. If this field is left empty, the analysis results are securely stored in the built-in storage.</p>
+     * <p>The OSS bucket of the user. If this field is left empty, the analysis data is securely stored in the built-in storage.</p>
      * 
      * <strong>example:</strong>
      * <p>my-bucket</p>

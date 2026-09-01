@@ -944,6 +944,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Data Agent点赞点踩功能</p>
+     * 
+     * @param request CreateDataAgentFeedbackRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataAgentFeedbackResponse
+     */
+    public CreateDataAgentFeedbackResponse createDataAgentFeedbackWithOptions(CreateDataAgentFeedbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.feedbackContent)) {
+            query.put("FeedbackContent", request.feedbackContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.feedbackType)) {
+            query.put("FeedbackType", request.feedbackType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.likeValue)) {
+            query.put("LikeValue", request.likeValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetId)) {
+            query.put("TargetId", request.targetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataAgentFeedback"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataAgentFeedbackResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Data Agent点赞点踩功能</p>
+     * 
+     * @param request CreateDataAgentFeedbackRequest
+     * @return CreateDataAgentFeedbackResponse
+     */
+    public CreateDataAgentFeedbackResponse createDataAgentFeedback(CreateDataAgentFeedbackRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataAgentFeedbackWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a DataAgent knowledge base. The knowledge base creator has read and write permissions. Other workspace members have permission to use it.</p>
      * 
      * @param request CreateDataAgentKnowledgeBaseRequest
@@ -7411,7 +7483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
-     * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
+     * <li>The <code>reply_to</code> field indicates which Agent message this message is a response to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
      * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
      * </ul>
@@ -7526,7 +7598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
-     * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
+     * <li>The <code>reply_to</code> field indicates which Agent message this message is a response to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
      * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
      * </ul>
