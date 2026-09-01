@@ -1,3 +1,9 @@
+2026-09-01 Version: 1.25.1
+- Update API SendChatMessage: add request parameters DataSource.Permission.Tables.$.DisallowedColumns.
+- Update API SendChatMessage: add request parameters DataSources.$.Permission.Tables.$.DisallowedColumns.
+- Update API SendChatMessage: add request parameters SessionConfig.PermissionConfig.
+
+
 2026-08-27 Version: 1.25.0
 - Support API CreateDataAgentSkillMeta.
 - Support API DeleteDataAgentSkillMeta.

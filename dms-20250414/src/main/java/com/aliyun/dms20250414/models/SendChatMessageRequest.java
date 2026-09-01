@@ -283,6 +283,9 @@ public class SendChatMessageRequest extends TeaModel {
         @NameInMap("AllowedColumns")
         public java.util.List<String> allowedColumns;
 
+        @NameInMap("DisallowedColumns")
+        public java.util.List<String> disallowedColumns;
+
         /**
          * <p>The required row filter condition for the current table. If this field is left empty, it is ignored. If specified, all SQL statements involving this table are validated to check whether they include the filter field and whether the WHERE condition meets the constraint. SQL statements that do not meet the constraint are rejected. Ensure the validation condition format is correct.</p>
          * 
@@ -312,6 +315,14 @@ public class SendChatMessageRequest extends TeaModel {
         }
         public java.util.List<String> getAllowedColumns() {
             return this.allowedColumns;
+        }
+
+        public SendChatMessageRequestDataSourcePermissionTables setDisallowedColumns(java.util.List<String> disallowedColumns) {
+            this.disallowedColumns = disallowedColumns;
+            return this;
+        }
+        public java.util.List<String> getDisallowedColumns() {
+            return this.disallowedColumns;
         }
 
         public SendChatMessageRequestDataSourcePermissionTables setRequiredRowFilter(String requiredRowFilter) {
@@ -567,6 +578,9 @@ public class SendChatMessageRequest extends TeaModel {
         @NameInMap("AllowedColumns")
         public java.util.List<String> allowedColumns;
 
+        @NameInMap("DisallowedColumns")
+        public java.util.List<String> disallowedColumns;
+
         /**
          * <p>The required row filter condition for the current table. If this field is left empty, it is ignored. If specified, all SQL statements involving this table are validated to check whether they include the filter field and whether the WHERE condition meets the constraint. SQL statements that do not meet the constraint are rejected. Ensure the validation condition format is correct.</p>
          * 
@@ -596,6 +610,14 @@ public class SendChatMessageRequest extends TeaModel {
         }
         public java.util.List<String> getAllowedColumns() {
             return this.allowedColumns;
+        }
+
+        public SendChatMessageRequestDataSourcesPermissionTables setDisallowedColumns(java.util.List<String> disallowedColumns) {
+            this.disallowedColumns = disallowedColumns;
+            return this;
+        }
+        public java.util.List<String> getDisallowedColumns() {
+            return this.disallowedColumns;
         }
 
         public SendChatMessageRequestDataSourcesPermissionTables setRequiredRowFilter(String requiredRowFilter) {
@@ -844,6 +866,28 @@ public class SendChatMessageRequest extends TeaModel {
 
     }
 
+    public static class SendChatMessageRequestSessionConfigPermissionConfig extends TeaModel {
+        /**
+         * <p>未配置表的默认行为：allow=放行（默认），deny=拒绝</p>
+         */
+        @NameInMap("DefaultAction")
+        public String defaultAction;
+
+        public static SendChatMessageRequestSessionConfigPermissionConfig build(java.util.Map<String, ?> map) throws Exception {
+            SendChatMessageRequestSessionConfigPermissionConfig self = new SendChatMessageRequestSessionConfigPermissionConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatMessageRequestSessionConfigPermissionConfig setDefaultAction(String defaultAction) {
+            this.defaultAction = defaultAction;
+            return this;
+        }
+        public String getDefaultAction() {
+            return this.defaultAction;
+        }
+
+    }
+
     public static class SendChatMessageRequestSessionConfig extends TeaModel {
         /**
          * <p>The custom Agent ID. A custom Agent is an entity used to customize the analysis process. You can create one in the DataAgent console or by calling the CreateCustomAgent operation. The custom Agent ID is a string that starts with <code>ca-</code>.</p>
@@ -912,6 +956,12 @@ public class SendChatMessageRequest extends TeaModel {
          */
         @NameInMap("Mode")
         public String mode;
+
+        /**
+         * <p>session 级权限生效机制配置，仅含未配置表的默认行为</p>
+         */
+        @NameInMap("PermissionConfig")
+        public SendChatMessageRequestSessionConfigPermissionConfig permissionConfig;
 
         /**
          * <p>Specifies whether to enable the plan. Valid values: disable, enable, force. Default value: enable.</p>
@@ -1029,6 +1079,14 @@ public class SendChatMessageRequest extends TeaModel {
         }
         public String getMode() {
             return this.mode;
+        }
+
+        public SendChatMessageRequestSessionConfig setPermissionConfig(SendChatMessageRequestSessionConfigPermissionConfig permissionConfig) {
+            this.permissionConfig = permissionConfig;
+            return this;
+        }
+        public SendChatMessageRequestSessionConfigPermissionConfig getPermissionConfig() {
+            return this.permissionConfig;
         }
 
         public SendChatMessageRequestSessionConfig setPlanMode(String planMode) {
