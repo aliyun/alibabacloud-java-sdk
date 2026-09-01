@@ -9,7 +9,7 @@ public class QueryUserByMobileAccountRequest extends TeaModel {
      * <ul>
      * <li>DingTalk: ding</li>
      * <li>WeCom: corp_weixin</li>
-     * <li>Lark: feishu.</li>
+     * <li>Lark: feishu</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -25,7 +25,7 @@ public class QueryUserByMobileAccountRequest extends TeaModel {
      * <li>DingTalk: The unionId of the DingTalk account.</li>
      * <li>WeCom: The userId of the WeCom account.</li>
      * <li>Lark: The userId of the Lark account.<blockquote>
-     * <p>Notice: The mobileUserId must be obtained by calling the relevant DingTalk, WeCom, or Lark API operations..</p>
+     * <p>Notice: The mobileUserId must be obtained by calling the relevant API operations of DingTalk, WeCom, or Lark.</p>
      * </blockquote>
      * </li>
      * </ul>

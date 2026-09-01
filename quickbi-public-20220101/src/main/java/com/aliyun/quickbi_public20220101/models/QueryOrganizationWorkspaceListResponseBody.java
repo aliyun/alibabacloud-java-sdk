@@ -63,6 +63,149 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AllowExcelImageFile")
+        public Boolean allowExcelImageFile;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("DataExport")
+        public Boolean dataExport;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("DefaultExportType")
+        public Boolean defaultExportType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ExportMainSwitch")
+        public Boolean exportMainSwitch;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ExportToLocal")
+        public Boolean exportToLocal;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ExportToPublicWork")
+        public Boolean exportToPublicWork;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ExportToServer")
+        public Boolean exportToServer;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ImageExport")
+        public Boolean imageExport;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("PdfExport")
+        public Boolean pdfExport;
+
+        public static QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig build(java.util.Map<String, ?> map) throws Exception {
+            QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig self = new QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig setAllowExcelImageFile(Boolean allowExcelImageFile) {
+            this.allowExcelImageFile = allowExcelImageFile;
+            return this;
+        }
+        public Boolean getAllowExcelImageFile() {
+            return this.allowExcelImageFile;
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig setDataExport(Boolean dataExport) {
+            this.dataExport = dataExport;
+            return this;
+        }
+        public Boolean getDataExport() {
+            return this.dataExport;
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig setDefaultExportType(Boolean defaultExportType) {
+            this.defaultExportType = defaultExportType;
+            return this;
+        }
+        public Boolean getDefaultExportType() {
+            return this.defaultExportType;
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig setExportMainSwitch(Boolean exportMainSwitch) {
+            this.exportMainSwitch = exportMainSwitch;
+            return this;
+        }
+        public Boolean getExportMainSwitch() {
+            return this.exportMainSwitch;
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig setExportToLocal(Boolean exportToLocal) {
+            this.exportToLocal = exportToLocal;
+            return this;
+        }
+        public Boolean getExportToLocal() {
+            return this.exportToLocal;
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig setExportToPublicWork(Boolean exportToPublicWork) {
+            this.exportToPublicWork = exportToPublicWork;
+            return this;
+        }
+        public Boolean getExportToPublicWork() {
+            return this.exportToPublicWork;
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig setExportToServer(Boolean exportToServer) {
+            this.exportToServer = exportToServer;
+            return this;
+        }
+        public Boolean getExportToServer() {
+            return this.exportToServer;
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig setImageExport(Boolean imageExport) {
+            this.imageExport = imageExport;
+            return this;
+        }
+        public Boolean getImageExport() {
+            return this.imageExport;
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig setPdfExport(Boolean pdfExport) {
+            this.pdfExport = pdfExport;
+            return this;
+        }
+        public Boolean getPdfExport() {
+            return this.pdfExport;
+        }
+
+    }
+
     public static class QueryOrganizationWorkspaceListResponseBodyResultData extends TeaModel {
         /**
          * <p>Whether works in the workspace can be published. Valid values:</p>
@@ -193,6 +336,9 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         @NameInMap("WorkspaceDescription")
         public String workspaceDescription;
 
+        @NameInMap("WorkspaceExportConfig")
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig workspaceExportConfig;
+
         /**
          * <p>The workspace ID.</p>
          * 
@@ -318,6 +464,14 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         }
         public String getWorkspaceDescription() {
             return this.workspaceDescription;
+        }
+
+        public QueryOrganizationWorkspaceListResponseBodyResultData setWorkspaceExportConfig(QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig workspaceExportConfig) {
+            this.workspaceExportConfig = workspaceExportConfig;
+            return this;
+        }
+        public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig getWorkspaceExportConfig() {
+            return this.workspaceExportConfig;
         }
 
         public QueryOrganizationWorkspaceListResponseBodyResultData setWorkspaceId(String workspaceId) {

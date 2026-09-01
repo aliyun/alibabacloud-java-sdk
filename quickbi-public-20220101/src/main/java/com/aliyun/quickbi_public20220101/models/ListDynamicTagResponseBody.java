@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDynamicTagResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A**********DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The label list.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDynamicTagResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class ListDynamicTagResponseBody extends TeaModel {
 
     public static class ListDynamicTagResponseBodyResult extends TeaModel {
         /**
+         * <p>The column name of the associated data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>site_id</p>
          */
@@ -59,6 +68,8 @@ public class ListDynamicTagResponseBody extends TeaModel {
         public String columnName;
 
         /**
+         * <p>The ID of the individual configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>cfg****14352318681088</p>
          */
@@ -66,6 +77,8 @@ public class ListDynamicTagResponseBody extends TeaModel {
         public String configId;
 
         /**
+         * <p>The name of the label configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>eip</p>
          */
@@ -73,6 +86,8 @@ public class ListDynamicTagResponseBody extends TeaModel {
         public String configName;
 
         /**
+         * <p>The ID of the associated data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>a201c85c-******</p>
          */
@@ -80,6 +95,8 @@ public class ListDynamicTagResponseBody extends TeaModel {
         public String dsId;
 
         /**
+         * <p>The organization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2fe4fbd8-<strong><strong>-</strong></strong>-b3e1-e92c7af083ea</p>
          */
@@ -87,6 +104,13 @@ public class ListDynamicTagResponseBody extends TeaModel {
         public String organizationId;
 
         /**
+         * <p>The associated user attribute. Valid values:</p>
+         * <ul>
+         * <li>0: account ID</li>
+         * <li>1: account name</li>
+         * <li>2: nickname within the organization</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -94,6 +118,8 @@ public class ListDynamicTagResponseBody extends TeaModel {
         public Integer relatedAttribute;
 
         /**
+         * <p>The table name of the associated data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>testTable02\&quot;\&quot;</p>
          */

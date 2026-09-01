@@ -63,7 +63,7 @@ public class QueryUserByMobileAccountResponseBody extends TeaModel {
 
     public static class QueryUserByMobileAccountResponseBodyResult extends TeaModel {
         /**
-         * <p>The QuickBI user ID of the bound account.</p>
+         * <p>The Quick BI user ID of the bound account.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

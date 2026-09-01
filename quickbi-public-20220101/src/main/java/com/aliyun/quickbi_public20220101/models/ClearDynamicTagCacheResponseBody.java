@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ClearDynamicTagCacheResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>78C17888****C462E57A95</p>
      */
@@ -12,6 +14,12 @@ public class ClearDynamicTagCacheResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the cache is purged.</p>
+     * <ul>
+     * <li>true: The cache is purged.</li>
+     * <li>false: No cache exists.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,8 @@ public class ClearDynamicTagCacheResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

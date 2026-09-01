@@ -75,7 +75,7 @@ public class QueryWorksResponseBody extends TeaModel {
          * <p>The name of the directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试目录</p>
+         * <p>Test directory</p>
          */
         @NameInMap("Name")
         public String name;
@@ -93,7 +93,7 @@ public class QueryWorksResponseBody extends TeaModel {
          * <p>The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).</p>
          * 
          * <strong>example:</strong>
-         * <p>测试目录</p>
+         * <p>Test directory</p>
          */
         @NameInMap("PathName")
         public String pathName;
@@ -137,6 +137,74 @@ public class QueryWorksResponseBody extends TeaModel {
 
     }
 
+    public static class QueryWorksResponseBodyResultGlobalParamVoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>string</p>
+         */
+        @NameInMap("DataType")
+        public String dataType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>lastQueryAt</p>
+         */
+        @NameInMap("ParamAlias")
+        public String paramAlias;
+
+        /**
+         * <strong>example:</strong>
+         * <p>lastQueryAt</p>
+         */
+        @NameInMap("ParamName")
+        public String paramName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Required")
+        public Boolean required;
+
+        public static QueryWorksResponseBodyResultGlobalParamVoList build(java.util.Map<String, ?> map) throws Exception {
+            QueryWorksResponseBodyResultGlobalParamVoList self = new QueryWorksResponseBodyResultGlobalParamVoList();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryWorksResponseBodyResultGlobalParamVoList setDataType(String dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        public QueryWorksResponseBodyResultGlobalParamVoList setParamAlias(String paramAlias) {
+            this.paramAlias = paramAlias;
+            return this;
+        }
+        public String getParamAlias() {
+            return this.paramAlias;
+        }
+
+        public QueryWorksResponseBodyResultGlobalParamVoList setParamName(String paramName) {
+            this.paramName = paramName;
+            return this;
+        }
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        public QueryWorksResponseBodyResultGlobalParamVoList setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+    }
+
     public static class QueryWorksResponseBodyResult extends TeaModel {
         /**
          * <p>Third-party embedding status. Valid values:</p>
@@ -155,7 +223,7 @@ public class QueryWorksResponseBody extends TeaModel {
          * <p>Remarks on the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>备注</p>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -165,6 +233,9 @@ public class QueryWorksResponseBody extends TeaModel {
          */
         @NameInMap("Directory")
         public QueryWorksResponseBodyResultDirectory directory;
+
+        @NameInMap("GlobalParamVoList")
+        public java.util.List<QueryWorksResponseBodyResultGlobalParamVoList> globalParamVoList;
 
         /**
          * <p>The timestamp of the creation of the work in milliseconds.</p>
@@ -188,7 +259,7 @@ public class QueryWorksResponseBody extends TeaModel {
          * <p>The Alibaba Cloud account name of the person who modified the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Tom</p>
          */
         @NameInMap("ModifyName")
         public String modifyName;
@@ -206,7 +277,7 @@ public class QueryWorksResponseBody extends TeaModel {
          * <p>The Alibaba Cloud account name of the work owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Tom</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -270,7 +341,7 @@ public class QueryWorksResponseBody extends TeaModel {
          * <p>The name of the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试报表</p>
+         * <p>Test report</p>
          */
         @NameInMap("WorkName")
         public String workName;
@@ -313,7 +384,7 @@ public class QueryWorksResponseBody extends TeaModel {
          * <p>The name of the workspace to which the work belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试空间</p>
+         * <p>Test Space</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;
@@ -345,6 +416,14 @@ public class QueryWorksResponseBody extends TeaModel {
         }
         public QueryWorksResponseBodyResultDirectory getDirectory() {
             return this.directory;
+        }
+
+        public QueryWorksResponseBodyResult setGlobalParamVoList(java.util.List<QueryWorksResponseBodyResultGlobalParamVoList> globalParamVoList) {
+            this.globalParamVoList = globalParamVoList;
+            return this;
+        }
+        public java.util.List<QueryWorksResponseBodyResultGlobalParamVoList> getGlobalParamVoList() {
+            return this.globalParamVoList;
         }
 
         public QueryWorksResponseBodyResult setGmtCreate(String gmtCreate) {

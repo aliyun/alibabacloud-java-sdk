@@ -10,16 +10,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-east-1", "quickbi-public.us-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "quickbi-public.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "quickbi-public.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "quickbi-public.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "quickbi-public.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "quickbi-public.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "quickbi-public.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "quickbi-public.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "quickbi-public.ap-northeast-1.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "quickbi-public.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "quickbi-public.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "quickbi-public.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "quickbi-public.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "quickbi-public.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "quickbi-public.cn-hongkong.aliyuncs.com"),
+            new TeaPair("us-east-1", "quickbi-public.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "quickbi-public.eu-central-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "quickbi-public.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "quickbi-public.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("quickbi-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1170,7 +1170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除单条配置的标签值缓存</p>
+     * <p>Deletes the cached tag value for a single configuration.</p>
      * 
      * @param request ClearDynamicTagCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1202,7 +1202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除单条配置的标签值缓存</p>
+     * <p>Deletes the cached tag value for a single configuration.</p>
      * 
      * @param request ClearDynamicTagCacheRequest
      * @return ClearDynamicTagCacheResponse
@@ -2986,7 +2986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前组织的动态标签列表</p>
+     * <p>Retrieves the list of dynamic labels for the current organization.</p>
      * 
      * @param request ListDynamicTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3011,7 +3011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前组织的动态标签列表</p>
+     * <p>Retrieves the list of dynamic labels for the current organization.</p>
      * 
      * @param request ListDynamicTagRequest
      * @return ListDynamicTagResponse
@@ -5651,7 +5651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists organization members.</p>
+     * <p>Queries the list of organization members.</p>
      * 
      * @param request QueryUserListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5679,7 +5679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists organization members.</p>
+     * <p>Queries the list of organization members.</p>
      * 
      * @param request QueryUserListRequest
      * @return QueryUserListResponse
@@ -6888,7 +6888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the information of a specific member in an organization.</p>
+     * <p>Updates the information of a specified member in an organization.</p>
      * 
      * @param request UpdateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6948,7 +6948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the information of a specific member in an organization.</p>
+     * <p>Updates the information of a specified member in an organization.</p>
      * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse

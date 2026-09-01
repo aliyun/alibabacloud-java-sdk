@@ -14,7 +14,7 @@ public class QueryUserListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The paginated list of users. The <code>Data</code> parameter contains the details of each organization member.</p>
+     * <p>The paginated result of the user list. The detailed information of organization members is stored in the Data response parameter.</p>
      */
     @NameInMap("Result")
     public QueryUserListResponseBodyResult result;
@@ -22,10 +22,8 @@ public class QueryUserListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The request failed.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class QueryUserListResponseBody extends TeaModel {
 
     public static class QueryUserListResponseBodyResultData extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID. For users not added through RAM, this ID is available only after they log in.</p>
+         * <p>The Alibaba Cloud account ID. For users who are not added through RAM self-service, the Alibaba Cloud ID can only be obtained after they log on.</p>
          * 
          * <strong>example:</strong>
          * <p>1355********</p>
@@ -83,17 +81,12 @@ public class QueryUserListResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Indicates whether the user is an organization administrator. Valid values:</p>
+         * <p>Indicates whether the user is bound to the organization administrator role. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Yes</p>
-         * </li>
-         * <li><p><code>false</code>: No</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>This parameter is deprecated. Use the <code>RoleIdList</code> parameter instead.</p>
+         * <p><notice>This parameter is deprecated. Use the RoleIdList parameter instead.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -102,17 +95,12 @@ public class QueryUserListResponseBody extends TeaModel {
         public Boolean adminUser;
 
         /**
-         * <p>Indicates whether the user is a permission administrator. Valid values:</p>
+         * <p>Indicates whether the user is attached to the permission management administrator role. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Yes</p>
-         * </li>
-         * <li><p><code>false</code>: No</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>This parameter is deprecated. Use the <code>RoleIdList</code> parameter instead.</p>
+         * <p><notice>This parameter has expired and is no longer recommended. Use the RoleIdList parameter instead.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -120,16 +108,23 @@ public class QueryUserListResponseBody extends TeaModel {
         @NameInMap("AuthAdminUser")
         public Boolean authAdminUser;
 
+        /**
+         * <p>The intelligent module quota of the user.</p>
+         * <ul>
+         * <li>qreport: Q report</li>
+         * <li>qExploreNum: Q exploration edition</li>
+         * <li>smartQAskNum: Q data inquiry</li>
+         * <li>smartQDevNum: Q builder</li>
+         * </ul>
+         */
         @NameInMap("CopilotModules")
         public java.util.List<String> copilotModules;
 
         /**
-         * <p>Indicates whether the user is inactive.</p>
+         * <p>The user status. Valid values: </p>
          * <ul>
-         * <li><p><code>false</code>: Active</p>
-         * </li>
-         * <li><p><code>true</code>: Inactive</p>
-         * </li>
+         * <li>false: active</li>
+         * <li>true: inactive</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -139,7 +134,7 @@ public class QueryUserListResponseBody extends TeaModel {
         public Boolean isDeleted;
 
         /**
-         * <p>The Unix timestamp (in milliseconds) that indicates when the user joined the organization.</p>
+         * <p>The date when the member joined the organization.</p>
          * 
          * <strong>example:</strong>
          * <p>1718691704000</p>
@@ -148,7 +143,7 @@ public class QueryUserListResponseBody extends TeaModel {
         public Long joinedDate;
 
         /**
-         * <p>The Unix timestamp (in milliseconds) of the user\&quot;s last login.</p>
+         * <p>The last logon time.</p>
          * 
          * <strong>example:</strong>
          * <p>1718761320681</p>
@@ -157,7 +152,7 @@ public class QueryUserListResponseBody extends TeaModel {
         public Long lastLoginTime;
 
         /**
-         * <p>The nickname of the user.</p>
+         * <p>The nickname of the organization member.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -166,7 +161,7 @@ public class QueryUserListResponseBody extends TeaModel {
         public String nickName;
 
         /**
-         * <p>The IDs of the organization roles assigned to the user.</p>
+         * <p>The list of organization role IDs bound to the user.</p>
          */
         @NameInMap("RoleIdList")
         public java.util.List<Long> roleIdList;
@@ -183,12 +178,9 @@ public class QueryUserListResponseBody extends TeaModel {
         /**
          * <p>The user type of the organization member. Valid values:</p>
          * <ul>
-         * <li><p><code>1</code>: developer</p>
-         * </li>
-         * <li><p><code>2</code>: viewer</p>
-         * </li>
-         * <li><p><code>3</code>: analyst</p>
-         * </li>
+         * <li>1: developer</li>
+         * <li>2: visitor</li>
+         * <li>3: analyst</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -302,7 +294,7 @@ public class QueryUserListResponseBody extends TeaModel {
 
     public static class QueryUserListResponseBodyResult extends TeaModel {
         /**
-         * <p>The list of users.</p>
+         * <p>The list of users returned by the request.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryUserListResponseBodyResultData> data;
@@ -317,7 +309,7 @@ public class QueryUserListResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of rows per page specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -326,7 +318,7 @@ public class QueryUserListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of matching users.</p>
+         * <p>The total number of rows.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

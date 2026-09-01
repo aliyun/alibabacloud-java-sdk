@@ -136,6 +136,13 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("IsDeleted")
+        public Boolean isDeleted;
+
+        /**
          * <p>The user\&quot;s nickname.</p>
          * 
          * <strong>example:</strong>
@@ -236,6 +243,14 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public QueryUserInfoByAccountResponseBodyResult setIsDeleted(Boolean isDeleted) {
+            this.isDeleted = isDeleted;
+            return this;
+        }
+        public Boolean getIsDeleted() {
+            return this.isDeleted;
         }
 
         public QueryUserInfoByAccountResponseBodyResult setNickName(String nickName) {

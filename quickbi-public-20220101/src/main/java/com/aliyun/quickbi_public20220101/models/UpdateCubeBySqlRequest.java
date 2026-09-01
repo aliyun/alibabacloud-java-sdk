@@ -50,7 +50,7 @@ public class UpdateCubeBySqlRequest extends TeaModel {
     public String placeholders;
 
     /**
-     * <p>The Quick BI UserId of a user who has permissions to create datasets. This is not your Alibaba Cloud account ID. Call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=api-workbench.api_explorer.0.0.672f50daGq9ooV&params=%7B%7D&tab=DOC&sdkStyle=old&RegionId=cn-hangzhou">QueryUserInfoByAccount</a> operation to obtain the UserId.</p>
+     * <p>The user ID of a Quick BI user who has permissions to create datasets. This is not your Alibaba Cloud account ID. You can call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=api-workbench.api_explorer.0.0.672f50daGq9ooV&params=%7B%7D&tab=DOC&sdkStyle=old&RegionId=cn-hangzhou">QueryUserInfoByAccount</a> operation to obtain the user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
