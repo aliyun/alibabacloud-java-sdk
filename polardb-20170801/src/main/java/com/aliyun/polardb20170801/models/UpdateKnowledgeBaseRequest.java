@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateKnowledgeBaseRequest extends TeaModel {
     /**
+     * <p>The description of the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>test desc</p>
      */
@@ -12,6 +14,7 @@ public class UpdateKnowledgeBaseRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateKnowledgeBaseRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The name of the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>testName</p>
      */
@@ -28,6 +33,7 @@ public class UpdateKnowledgeBaseRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,15 @@ public class UpdateKnowledgeBaseRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The search mode. Valid values:</p>
+     * <ul>
+     * <li>balanced (default): balanced mode.</li>
+     * <li>precise: precise mode.</li>
+     * <li>semantic: semantic mode.</li>
+     * <li>knn: KNN mode.</li>
+     * <li>rrf: reciprocal rank fusion (RRF) mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>balanced</p>
      */

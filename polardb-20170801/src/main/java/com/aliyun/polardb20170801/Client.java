@@ -643,7 +643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>知识库单轮问答</p>
+     * <p>Performs a single-round knowledge base question answering.</p>
      * 
      * @param request AnswerKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -715,7 +715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>知识库单轮问答</p>
+     * <p>Performs a single-round knowledge base question answering.</p>
      * 
      * @param request AnswerKnowledgeBaseRequest
      * @return AnswerKnowledgeBaseResponse
@@ -5740,8 +5740,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LinkName", request.linkName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpEndpoint)) {
+            query.put("McpEndpoint", request.mcpEndpoint);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sheetMcpEndpoint)) {
+            query.put("SheetMcpEndpoint", request.sheetMcpEndpoint);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceDir)) {
@@ -5758,6 +5766,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
             query.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -8399,7 +8411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom cluster endpoint for a PolarDB cluster.</p>
+     * <p>Releases a custom cluster endpoint of a PolarDB cluster.</p>
      * 
      * @param request DeleteDBClusterEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8455,7 +8467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom cluster endpoint for a PolarDB cluster.</p>
+     * <p>Releases a custom cluster endpoint of a PolarDB cluster.</p>
      * 
      * @param request DeleteDBClusterEndpointRequest
      * @return DeleteDBClusterEndpointResponse
@@ -9471,7 +9483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除知识库文件</p>
+     * <p>Deletes a knowledge base file.</p>
      * 
      * @param request DeleteKnowledgeBaseFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9511,7 +9523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除知识库文件</p>
+     * <p>Deletes a knowledge base file.</p>
      * 
      * @param request DeleteKnowledgeBaseFileRequest
      * @return DeleteKnowledgeBaseFileResponse
@@ -15752,11 +15764,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about the kernel versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Kernel version guide</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
+     * <p>For more information about the minor Milvus versions and details of PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/471239.html">Minor Milvus version description</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of the current kernel version for a PolarDB for MySQL cluster.</p>
+     * <p>Queries the details of the current Milvus version of a PolarDB for MySQL cluster.</p>
      * 
      * @param request DescribeDBClusterVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15809,11 +15821,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about the kernel versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Kernel version guide</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
+     * <p>For more information about the minor Milvus versions and details of PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/471239.html">Minor Milvus version description</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of the current kernel version for a PolarDB for MySQL cluster.</p>
+     * <p>Queries the details of the current Milvus version of a PolarDB for MySQL cluster.</p>
      * 
      * @param request DescribeDBClusterVersionRequest
      * @return DescribeDBClusterVersionResponse
@@ -18439,7 +18451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询知识库单轮问答结果</p>
+     * <p>Queries the result of a single-turn Q&amp;A task in a knowledge base.</p>
      * 
      * @param request DescribeKnowledgeBaseAnswerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18479,7 +18491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询知识库单轮问答结果</p>
+     * <p>Queries the result of a single-turn Q&amp;A task in a knowledge base.</p>
      * 
      * @param request DescribeKnowledgeBaseAnswerRequest
      * @return DescribeKnowledgeBaseAnswerResponse
@@ -18539,7 +18551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询知识库文件分片列表</p>
+     * <p>Queries the list of file shards in a knowledge base.</p>
      * 
      * @param request DescribeKnowledgeBaseFileShardsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18587,7 +18599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询知识库文件分片列表</p>
+     * <p>Queries the list of file shards in a knowledge base.</p>
      * 
      * @param request DescribeKnowledgeBaseFileShardsRequest
      * @return DescribeKnowledgeBaseFileShardsResponse
@@ -18599,7 +18611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询知识库文件列表</p>
+     * <p>Queries the list of files in a knowledge base.</p>
      * 
      * @param request DescribeKnowledgeBaseFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18659,7 +18671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询知识库文件列表</p>
+     * <p>Queries the list of files in a knowledge base.</p>
      * 
      * @param request DescribeKnowledgeBaseFilesRequest
      * @return DescribeKnowledgeBaseFilesResponse
@@ -18735,7 +18747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询知识空间详情</p>
+     * <p>Queries the details of a knowledge space.</p>
      * 
      * @param request DescribeKnowledgeSpaceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18771,7 +18783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询知识空间详情</p>
+     * <p>Queries the details of a knowledge space.</p>
      * 
      * @param request DescribeKnowledgeSpaceAttributeRequest
      * @return DescribeKnowledgeSpaceAttributeResponse
@@ -22488,7 +22500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables steady-state serverless.</p>
+     * <p>Disables steady-state Serverless.</p>
      * 
      * @param request DisableDBClusterServerlessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22548,7 +22560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables steady-state serverless.</p>
+     * <p>Disables steady-state Serverless.</p>
      * 
      * @param request DisableDBClusterServerlessRequest
      * @return DisableDBClusterServerlessResponse
@@ -27244,13 +27256,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The parameter template feature in PolarDB lets you centrally manage parameters and apply them to your clusters. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use parameter templates</a>.</p>
+     * <p>PolarDB provides the parameter template feature. You can use parameter templates to centrally manage parameters and quickly apply them to clusters. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use parameter templates</a>.</p>
      * <blockquote>
-     * <p>The parameter template feature is available only for PolarDB for MySQL.</p>
+     * <p>Currently, only PolarDB for MySQL supports the parameter template feature.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the parameters of a PolarDB cluster or applies an existing parameter template to a destination cluster.</p>
+     * <p>Modifies the parameters of a PolarDB cluster or applies an existing parameter template to the specified cluster.</p>
      * 
      * @param request ModifyDBClusterParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27322,13 +27334,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The parameter template feature in PolarDB lets you centrally manage parameters and apply them to your clusters. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use parameter templates</a>.</p>
+     * <p>PolarDB provides the parameter template feature. You can use parameter templates to centrally manage parameters and quickly apply them to clusters. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use parameter templates</a>.</p>
      * <blockquote>
-     * <p>The parameter template feature is available only for PolarDB for MySQL.</p>
+     * <p>Currently, only PolarDB for MySQL supports the parameter template feature.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the parameters of a PolarDB cluster or applies an existing parameter template to a destination cluster.</p>
+     * <p>Modifies the parameters of a PolarDB cluster or applies an existing parameter template to the specified cluster.</p>
      * 
      * @param request ModifyDBClusterParametersRequest
      * @return ModifyDBClusterParametersResponse
@@ -27500,7 +27512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or performs shutdown of the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
+     * <p>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27576,7 +27588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or performs shutdown of the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
+     * <p>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @return ModifyDBClusterSSLResponse
@@ -31580,7 +31592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检索知识库</p>
+     * <p>Retrieves information from a knowledge base.</p>
      * 
      * @param request RetrievalKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31632,7 +31644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检索知识库</p>
+     * <p>Retrieves information from a knowledge base.</p>
      * 
      * @param request RetrievalKnowledgeBaseRequest
      * @return RetrievalKnowledgeBaseResponse
@@ -31644,7 +31656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量重试知识库失败文件</p>
+     * <p>Retries failed files in a knowledge base in batches.</p>
      * 
      * @param request RetryKnowledgeBaseFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31684,7 +31696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量重试知识库失败文件</p>
+     * <p>Retries failed files in a knowledge base in batches.</p>
      * 
      * @param request RetryKnowledgeBaseFilesRequest
      * @return RetryKnowledgeBaseFilesResponse
@@ -32242,7 +32254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Temporarily Modifies the configuration of a node.</p>
+     * <p>Temporarily changes the specifications of a cluster.</p>
      * 
      * @param request TempModifyDBNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32318,7 +32330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Temporarily Modifies the configuration of a node.</p>
+     * <p>Temporarily changes the specifications of a cluster.</p>
      * 
      * @param request TempModifyDBNodeRequest
      * @return TempModifyDBNodeResponse
@@ -32332,12 +32344,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>PolarDB clusters support two billing methods: subscription and pay-as-you-go. You can change the billing method of a cluster from subscription to pay-as-you-go, or from pay-as-you-go to subscription. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change the billing method from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change the billing method from pay-as-you-go to subscription</a>.</p>
-     * </li>
-     * <li><p>You cannot change the billing method from pay-as-you-go to subscription if your Alibaba Cloud account has an insufficient balance.</p>
-     * </li>
-     * <li><p>When you change the billing method from subscription to pay-as-you-go, the system automatically refunds your remaining prepaid fees.</p>
-     * </li>
+     * <li>PolarDB clusters support subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change from pay-as-you-go to subscription</a>.</li>
+     * <li>If your Alibaba Cloud account balance is insufficient, you cannot change the pay-as-you-go billing method to subscription.</li>
+     * <li>When you change the billing method from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</li>
      * </ul>
      * </blockquote>
      * 
@@ -32424,12 +32433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>PolarDB clusters support two billing methods: subscription and pay-as-you-go. You can change the billing method of a cluster from subscription to pay-as-you-go, or from pay-as-you-go to subscription. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change the billing method from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change the billing method from pay-as-you-go to subscription</a>.</p>
-     * </li>
-     * <li><p>You cannot change the billing method from pay-as-you-go to subscription if your Alibaba Cloud account has an insufficient balance.</p>
-     * </li>
-     * <li><p>When you change the billing method from subscription to pay-as-you-go, the system automatically refunds your remaining prepaid fees.</p>
-     * </li>
+     * <li>PolarDB clusters support subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change from pay-as-you-go to subscription</a>.</li>
+     * <li>If your Alibaba Cloud account balance is insufficient, you cannot change the pay-as-you-go billing method to subscription.</li>
+     * <li>When you change the billing method from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</li>
      * </ul>
      * </blockquote>
      * 
@@ -32446,7 +32452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>触发知识库同步</p>
+     * <p>Triggers knowledge base synchronization.</p>
      * 
      * @param request TriggerKnowledgeBaseSyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32486,7 +32492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>触发知识库同步</p>
+     * <p>Triggers knowledge base synchronization.</p>
      * 
      * @param request TriggerKnowledgeBaseSyncRequest
      * @return TriggerKnowledgeBaseSyncResponse
@@ -32919,6 +32925,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateKBSyncLinkResponse updateKBSyncLinkWithOptions(UpdateKBSyncLinkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientSecret)) {
+            query.put("ClientSecret", request.clientSecret);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
             query.put("KnowledgeBaseId", request.knowledgeBaseId);
         }
@@ -32927,12 +32941,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LinkId", request.linkId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpEndpoint)) {
+            query.put("McpEndpoint", request.mcpEndpoint);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sheetMcpEndpoint)) {
+            query.put("SheetMcpEndpoint", request.sheetMcpEndpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncEnabled)) {
+            query.put("SyncEnabled", request.syncEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.syncIntervalMinutes)) {
             query.put("SyncIntervalMinutes", request.syncIntervalMinutes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -32966,7 +32996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新知识库</p>
+     * <p>Updates a knowledge base.</p>
      * 
      * @param request UpdateKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33014,7 +33044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新知识库</p>
+     * <p>Updates a knowledge base.</p>
      * 
      * @param request UpdateKnowledgeBaseRequest
      * @return UpdateKnowledgeBaseResponse
@@ -33026,7 +33056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新知识库文件分块策略</p>
+     * <p>Updates the chunking strategy for a file in a knowledge base.</p>
      * 
      * @param tmpReq UpdateKnowledgeBaseFileShardingStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33080,7 +33110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新知识库文件分块策略</p>
+     * <p>Updates the chunking strategy for a file in a knowledge base.</p>
      * 
      * @param request UpdateKnowledgeBaseFileShardingStrategyRequest
      * @return UpdateKnowledgeBaseFileShardingStrategyResponse
@@ -33092,7 +33122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新知识空间</p>
+     * <p>Updates a knowledge space.</p>
      * 
      * @param tmpReq UpdateKnowledgeSpaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33154,7 +33184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新知识空间</p>
+     * <p>Updates a knowledge space.</p>
      * 
      * @param request UpdateKnowledgeSpaceRequest
      * @return UpdateKnowledgeSpaceResponse

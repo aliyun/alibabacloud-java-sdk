@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AnswerKnowledgeBaseRequest extends TeaModel {
     /**
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The maximum number of context characters. Valid values: 1000 to 32000.</p>
+     * 
      * <strong>example:</strong>
      * <p>16000</p>
      */
@@ -21,15 +24,17 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public Integer maxContextChars;
 
     /**
+     * <p>The user query text.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>总结下今年财报</p>
+     * <p>Summarize this year\&quot;s financial report</p>
      */
     @NameInMap("QueryText")
     public String queryText;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Specifies whether to enable reranking. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -46,6 +53,8 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public Boolean rerankEnabled;
 
     /**
+     * <p>Specifies whether to return citation sources. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -53,6 +62,8 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public Boolean returnSources;
 
     /**
+     * <p>The similarity score threshold.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.7</p>
      */
@@ -60,6 +71,8 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public Double scoreThreshold;
 
     /**
+     * <p>The search mode. Valid values: knn, rrf, precise, semantic, and balanced.</p>
+     * 
      * <strong>example:</strong>
      * <p>semantic</p>
      */
@@ -67,6 +80,8 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public String searchMode;
 
     /**
+     * <p>The system prompt.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a minimal test prompt for security verification.</p>
      */
@@ -74,6 +89,8 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public String systemPrompt;
 
     /**
+     * <p>The number of results to recall during retrieval.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -81,6 +98,8 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public Integer topK;
 
     /**
+     * <p>The supplementary user instructions.</p>
+     * 
      * <strong>example:</strong>
      * <p>Return a short summary and test result.</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TriggerKnowledgeBaseSyncResponseBody extends TeaModel {
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
      */

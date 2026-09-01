@@ -85,7 +85,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
          * </li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is supported only when the database engine is PostgreSQL-compatible or Oracle-syntax-compatible.</p>
+         * <p>This parameter is supported only when the database engine is PostgreSQL-compatible or Oracle syntax-compatible.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     /**
+     * <p>The access control list (ACL) mode of the knowledge space. Valid values:</p>
+     * <ul>
+     * <li>DISABLED</li>
+     * <li>ENFORCED</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ENFORCED</p>
      */
@@ -12,6 +18,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String ACLMode;
 
     /**
+     * <p>The time when the knowledge space was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-06-25T09:53:44Z</p>
      */
@@ -19,6 +27,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
+     * <p>The ID of the PolarDB instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-*************</p>
      */
@@ -26,6 +36,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>polar_rag_meta</p>
      */
@@ -33,6 +45,12 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String DBName;
 
     /**
+     * <p>The type of the database engine. Valid values:</p>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */
@@ -40,6 +58,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String DBType;
 
     /**
+     * <p>The description of the knowledge space.</p>
+     * 
      * <strong>example:</strong>
      * <p>testDesc</p>
      */
@@ -47,6 +67,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The vector dimensions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1536</p>
      */
@@ -54,6 +76,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public Integer embeddingDimension;
 
     /**
+     * <p>The embedding model.</p>
+     * 
      * <strong>example:</strong>
      * <p>text-embedding-v4</p>
      */
@@ -61,6 +85,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String embeddingModel;
 
     /**
+     * <p>The total number of knowledge bases.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,6 +94,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public Integer knowledgeBaseCount;
 
     /**
+     * <p>The unique identifier of the knowledge space.</p>
+     * 
      * <strong>example:</strong>
      * <p>pks-xxxxxx</p>
      */
@@ -75,6 +103,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String knowledgeSpaceId;
 
     /**
+     * <p>The large language model.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3.6-plus</p>
      */
@@ -82,6 +112,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String LLMModel;
 
     /**
+     * <p>The name of the knowledge space.</p>
+     * 
      * <strong>example:</strong>
      * <p>testName</p>
      */
@@ -89,6 +121,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>OSS Bucket</p>
+     * 
      * <strong>example:</strong>
      * <p>test-bucket</p>
      */
@@ -96,6 +130,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String OSSBucket;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>
      */
@@ -103,6 +139,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The reranking model.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3-rerank</p>
      */
@@ -110,16 +148,23 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String rerankModel;
 
     /**
+     * <p>The chunk size in tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>512</p>
      */
     @NameInMap("ShardSize")
     public Integer shardSize;
 
+    /**
+     * <p>The default chunking strategy configuration of the knowledge space. This parameter may be empty if existing instances do not have the complete configuration saved.</p>
+     */
     @NameInMap("ShardingStrategyConfig")
     public DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfig shardingStrategyConfig;
 
     /**
+     * <p>The instance status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Activation</p>
      */
@@ -127,6 +172,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The chunking strategy.</p>
+     * 
      * <strong>example:</strong>
      * <p>hybrid</p>
      */
@@ -134,6 +181,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public String strategy;
 
     /**
+     * <p>The total number of documents.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -141,6 +190,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     public Integer totalDocs;
 
     /**
+     * <p>The total size in bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>318881</p>
      */
@@ -322,6 +373,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigDefaultStrategyParameters extends TeaModel {
         /**
+         * <p>The maximum number of tokens in a single chunk.</p>
+         * 
          * <strong>example:</strong>
          * <p>512</p>
          */
@@ -329,6 +382,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
         public Integer maxTokens;
 
         /**
+         * <p>Specifies whether to merge adjacent small chunks under the same heading.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -359,10 +414,15 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigDefaultStrategy extends TeaModel {
+        /**
+         * <p>The parameter details.</p>
+         */
         @NameInMap("Parameters")
         public DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigDefaultStrategyParameters parameters;
 
         /**
+         * <p>The type of the default chunking strategy. Valid values: hybrid or hierarchical.</p>
+         * 
          * <strong>example:</strong>
          * <p>hybrid</p>
          */
@@ -394,6 +454,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigRulesMatch extends TeaModel {
         /**
+         * <p>The content type. Currently, table is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>table</p>
          */
@@ -417,6 +479,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigRulesStrategyParameters extends TeaModel {
         /**
+         * <p>The Markdown table processing mode. Valid values: auto, on, or off.</p>
+         * 
          * <strong>example:</strong>
          * <p>auto</p>
          */
@@ -424,6 +488,8 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
         public String markdownTables;
 
         /**
+         * <p>The maximum number of tokens in a single chunk for matched content.</p>
+         * 
          * <strong>example:</strong>
          * <p>512</p>
          */
@@ -454,10 +520,15 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigRulesStrategy extends TeaModel {
+        /**
+         * <p>The parameter details.</p>
+         */
         @NameInMap("Parameters")
         public DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigRulesStrategyParameters parameters;
 
         /**
+         * <p>The chunking strategy type used when a rule is matched.</p>
+         * 
          * <strong>example:</strong>
          * <p>hierarchical</p>
          */
@@ -488,9 +559,15 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigRules extends TeaModel {
+        /**
+         * <p>The content type. Currently, table is supported.</p>
+         */
         @NameInMap("Match")
         public DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigRulesMatch match;
 
+        /**
+         * <p>The chunking strategy.</p>
+         */
         @NameInMap("Strategy")
         public DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigRulesStrategy strategy;
 
@@ -518,9 +595,15 @@ public class DescribeKnowledgeSpaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfig extends TeaModel {
+        /**
+         * <p>The default chunking strategy. This strategy is used when no rule is matched.</p>
+         */
         @NameInMap("DefaultStrategy")
         public DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigDefaultStrategy defaultStrategy;
 
+        /**
+         * <p>The list of override rules that are matched in order.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<DescribeKnowledgeSpaceAttributeResponseBodyShardingStrategyConfigRules> rules;
 

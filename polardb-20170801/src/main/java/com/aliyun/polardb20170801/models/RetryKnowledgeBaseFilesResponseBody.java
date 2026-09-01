@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
     /**
+     * <p>The number of failed retries.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("FailedCount")
     public Integer failedCount;
 
+    /**
+     * <p>The list of retry results.</p>
+     */
     @NameInMap("Items")
     public java.util.List<RetryKnowledgeBaseFilesResponseBodyItems> items;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
      */
@@ -22,6 +29,8 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of successful retries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
     public Integer succeededCount;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
 
     public static class RetryKnowledgeBaseFilesResponseBodyItems extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>AclProjectionNotFound</p>
          */
@@ -89,6 +102,8 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The failure reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>No active ACL projection exists for the IM document</p>
          */
@@ -96,6 +111,8 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>91b97b71-xxxx-xxxx-xxxx-33c6a6341cdc</p>
          */
@@ -103,6 +120,12 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The request result. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

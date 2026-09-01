@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateKnowledgeBaseResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the knowledge base.</p>
+     * 
      * <strong>example:</strong>
      * <p>pkb-xxxxx</p>
      */
@@ -12,6 +14,8 @@ public class UpdateKnowledgeBaseResponseBody extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>EB07CFF0-D8A4-5C76-AED7-D00E26FC2***</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TriggerKnowledgeBaseSyncRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class TriggerKnowledgeBaseSyncRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The synchronization link ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pkbl-xxxxx</p>
      */
@@ -21,6 +24,7 @@ public class TriggerKnowledgeBaseSyncRequest extends TeaModel {
     public String linkId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

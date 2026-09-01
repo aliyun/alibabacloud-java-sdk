@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetrievalKnowledgeBaseRequest extends TeaModel {
     /**
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,17 @@ public class RetrievalKnowledgeBaseRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The query text.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>财报</p>
+     * <p>Financial report</p>
      */
     @NameInMap("QueryText")
     public String queryText;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class RetrievalKnowledgeBaseRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Specifies whether to enable reranking. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +44,8 @@ public class RetrievalKnowledgeBaseRequest extends TeaModel {
     public Boolean rerankEnabled;
 
     /**
+     * <p>The similarity score threshold.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.7</p>
      */
@@ -46,6 +53,8 @@ public class RetrievalKnowledgeBaseRequest extends TeaModel {
     public Double scoreThreshold;
 
     /**
+     * <p>The number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

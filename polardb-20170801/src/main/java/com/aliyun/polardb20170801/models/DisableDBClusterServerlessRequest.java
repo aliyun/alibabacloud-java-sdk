@@ -15,6 +15,12 @@ public class DisableDBClusterServerlessRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Specifies whether to immediately run the task or run it during a scheduled time window. Valid values:</p>
+     * <ul>
+     * <li>false (default): The task is run during a scheduled time window.</li>
+     * <li>true: The task is immediately run.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -28,6 +34,8 @@ public class DisableDBClusterServerlessRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The latest time to start running the scheduled task. Specify the time in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-28T14:30:00Z</p>
      */
@@ -35,6 +43,8 @@ public class DisableDBClusterServerlessRequest extends TeaModel {
     public String plannedEndTime;
 
     /**
+     * <p>The earliest time to start running the scheduled task (that is, the task is run within the specified time range). Specify the time in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-28T14:00:00Z</p>
      */

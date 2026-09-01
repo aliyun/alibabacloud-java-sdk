@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBaseFileShardsRequest extends TeaModel {
     /**
+     * <p>The file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeKnowledgeBaseFileShardsRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DescribeKnowledgeBaseFileShardsRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +34,8 @@ public class DescribeKnowledgeBaseFileShardsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -37,6 +43,7 @@ public class DescribeKnowledgeBaseFileShardsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AnswerKnowledgeBaseResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the Q&amp;A task.</p>
+     * 
      * <strong>example:</strong>
      * <p>R3BGbnBqcXN******.2a5a23c9-******-179970533d30</p>
      */
@@ -12,6 +14,8 @@ public class AnswerKnowledgeBaseResponseBody extends TeaModel {
     public String queryId;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
      */
@@ -19,6 +23,8 @@ public class AnswerKnowledgeBaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the Q&amp;A task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */

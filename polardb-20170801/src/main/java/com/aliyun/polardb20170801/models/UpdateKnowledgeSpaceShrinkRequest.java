@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateKnowledgeSpaceShrinkRequest extends TeaModel {
     /**
+     * <p>The description of the knowledge space. The description can be up to 512 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>testDesc</p>
      */
@@ -12,6 +14,7 @@ public class UpdateKnowledgeSpaceShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The unique identifier of the knowledge space.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateKnowledgeSpaceShrinkRequest extends TeaModel {
     public String knowledgeSpaceId;
 
     /**
+     * <p>The name of the large language model.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3.6-plus</p>
      */
@@ -28,6 +33,8 @@ public class UpdateKnowledgeSpaceShrinkRequest extends TeaModel {
     public String LLMModel;
 
     /**
+     * <p>The name of the knowledge space. The name must be 1 to 128 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>testName</p>
      */
@@ -35,6 +42,7 @@ public class UpdateKnowledgeSpaceShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,12 +52,17 @@ public class UpdateKnowledgeSpaceShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the reranking model.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3-rerank</p>
      */
     @NameInMap("RerankModel")
     public String rerankModel;
 
+    /**
+     * <p>The default chunking strategy configuration for the knowledge space. Both simple strategies and composite strategies that match by content type are supported.</p>
+     */
     @NameInMap("ShardingStrategyConfig")
     public String shardingStrategyConfigShrink;
 

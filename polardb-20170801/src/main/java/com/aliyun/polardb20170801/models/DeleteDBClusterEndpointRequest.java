@@ -15,7 +15,7 @@ public class DeleteDBClusterEndpointRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the custom cluster endpoint.</p>
+     * <p>The custom cluster endpoint ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +31,8 @@ public class DeleteDBClusterEndpointRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The PolarFs instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-test*****</p>
      */

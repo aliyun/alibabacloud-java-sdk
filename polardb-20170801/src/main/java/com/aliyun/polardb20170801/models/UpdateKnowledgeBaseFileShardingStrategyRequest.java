@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
     /**
+     * <p>The unique ID of the knowledge base file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>Specifies whether to restore inheritance of the chunking strategy from the knowledge space. When this parameter is set to true, ShardingStrategyConfig cannot be specified at the same time.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -21,6 +24,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
     public Boolean inheritSpaceStrategy;
 
     /**
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The ID of the region where the knowledge base resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +43,9 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The file-level chunking strategy configuration. This parameter is required when InheritSpaceStrategy is not set to true.</p>
+     */
     @NameInMap("ShardingStrategyConfig")
     public UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfig shardingStrategyConfig;
 
@@ -88,6 +96,8 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
 
     public static class UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigDefaultStrategyParameters extends TeaModel {
         /**
+         * <p>The maximum number of tokens per chunk. The value must be a positive integer. This parameter takes effect only when Type is set to hybrid.</p>
+         * 
          * <strong>example:</strong>
          * <p>512</p>
          */
@@ -95,6 +105,8 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
         public Integer maxTokens;
 
         /**
+         * <p>Specifies whether to merge adjacent small chunks under the same heading. This parameter takes effect only when Type is set to hybrid.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -125,10 +137,18 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
     }
 
     public static class UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigDefaultStrategy extends TeaModel {
+        /**
+         * <p>The parameters of the default chunking strategy. MaxTokens and MergePeers are supported only when Type is set to hybrid.</p>
+         */
         @NameInMap("Parameters")
         public UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigDefaultStrategyParameters parameters;
 
         /**
+         * <p>The type of the default chunking strategy. Valid values:</p>
+         * <ul>
+         * <li>hybrid: Splits by document structure and limits the token count.</li>
+         * <li>hierarchical: Splits only by document structure.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +182,8 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
 
     public static class UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigRulesMatch extends TeaModel {
         /**
+         * <p>The content type. Currently, only table is supported, which matches content that is parsed as tables.</p>
+         * 
          * <strong>example:</strong>
          * <p>table</p>
          */
@@ -185,6 +207,13 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
 
     public static class UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigRulesStrategyParameters extends TeaModel {
         /**
+         * <p>The Markdown table processing mode. Valid values:</p>
+         * <ul>
+         * <li>auto: Automatically determines the processing mode.</li>
+         * <li>on: Forcefully enables Markdown table processing.</li>
+         * <li>off: Disables Markdown table processing.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>auto</p>
          */
@@ -192,6 +221,8 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
         public String markdownTables;
 
         /**
+         * <p>The maximum number of tokens per chunk for matched content. The value must be a positive integer. This parameter takes effect only when Type is set to hybrid.</p>
+         * 
          * <strong>example:</strong>
          * <p>512</p>
          */
@@ -222,10 +253,18 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
     }
 
     public static class UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigRulesStrategy extends TeaModel {
+        /**
+         * <p>The chunking strategy parameters of the override rule. MaxTokens takes effect only when Type is set to hybrid. MarkdownTables supports auto, on, or off.</p>
+         */
         @NameInMap("Parameters")
         public UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigRulesStrategyParameters parameters;
 
         /**
+         * <p>The chunking strategy type of the override rule. Valid values:</p>
+         * <ul>
+         * <li>hybrid</li>
+         * <li>hierarchical</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,12 +298,14 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
 
     public static class UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigRules extends TeaModel {
         /**
+         * <p>The rule match condition. Currently, only exact matching by content type for table content is supported.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Match")
         public UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigRulesMatch match;
 
         /**
+         * <p>The chunking strategy to use when the rule is matched.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Strategy")
@@ -295,11 +336,15 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends TeaModel {
 
     public static class UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfig extends TeaModel {
         /**
+         * <p>The default chunking strategy. This strategy is used when no rule is matched.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DefaultStrategy")
         public UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigDefaultStrategy defaultStrategy;
 
+        /**
+         * <p>The list of override rules that are matched in order. Currently, a maximum of one exact-match rule with ContentType set to table is supported.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<UpdateKnowledgeBaseFileShardingStrategyRequestShardingStrategyConfigRules> rules;
 

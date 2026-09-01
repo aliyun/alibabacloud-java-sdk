@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
     /**
+     * <p>The query text.</p>
+     * 
      * <strong>example:</strong>
-     * <p>财报</p>
+     * <p>Financial report</p>
      */
     @NameInMap("QueryText")
     public String queryText;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>
      */
@@ -19,12 +23,17 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("ResultCount")
     public Integer resultCount;
 
+    /**
+     * <p>The search results.</p>
+     */
     @NameInMap("Results")
     public java.util.List<RetrievalKnowledgeBaseResponseBodyResults> results;
 
@@ -67,6 +76,8 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
 
     public static class RetrievalKnowledgeBaseResponseBodyResults extends TeaModel {
         /**
+         * <p>The unique ID of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>91b97b71-xxxx-xxxx-xxxx-33c6a6341cdc</p>
          */
@@ -74,33 +85,47 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>2024财报.pdf</p>
+         * <p>2024FinancialReport.pdf</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The chain of section headings to which the shard belongs.</p>
+         */
         @NameInMap("Headings")
         public java.util.List<String> headings;
 
         /**
+         * <p>The metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("Metadata")
         public String metadata;
 
+        /**
+         * <p>The list of page numbers to which the shard belongs.</p>
+         */
         @NameInMap("PageNumbers")
         public java.util.List<Integer> pageNumbers;
 
         /**
+         * <p>The text content of the shard.</p>
+         * 
          * <strong>example:</strong>
-         * <p>财报</p>
+         * <p>Financial report</p>
          */
         @NameInMap("ShardContent")
         public String shardContent;
 
         /**
+         * <p>The shard index.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -108,6 +133,8 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public Integer shardIndex;
 
         /**
+         * <p>The similarity score.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */

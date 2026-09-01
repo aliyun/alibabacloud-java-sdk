@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
+    /**
+     * <p>The list of files.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeKnowledgeBaseFilesResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -22,6 +29,9 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The number of records per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -29,6 +39,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
      */
@@ -36,6 +48,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -97,6 +111,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
 
     public static class DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigDefaultStrategyParameters extends TeaModel {
         /**
+         * <p>The maximum number of tokens per shard.</p>
+         * 
          * <strong>example:</strong>
          * <p>512</p>
          */
@@ -104,6 +120,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public Integer maxTokens;
 
         /**
+         * <p>Specifies whether to merge adjacent small shards under the same heading.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -134,10 +152,15 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigDefaultStrategy extends TeaModel {
+        /**
+         * <p>The parameter list.</p>
+         */
         @NameInMap("Parameters")
         public DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigDefaultStrategyParameters parameters;
 
         /**
+         * <p>The default chunking strategy type. Valid values: hybrid and hierarchical.</p>
+         * 
          * <strong>example:</strong>
          * <p>hybrid</p>
          */
@@ -169,6 +192,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
 
     public static class DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigRulesMatch extends TeaModel {
         /**
+         * <p>The content type. Currently, table is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>table</p>
          */
@@ -192,6 +217,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
 
     public static class DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigRulesStrategyParameters extends TeaModel {
         /**
+         * <p>The Markdown table processing mode. Valid values: auto, on, and off.</p>
+         * 
          * <strong>example:</strong>
          * <p>auto</p>
          */
@@ -199,6 +226,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public String markdownTables;
 
         /**
+         * <p>The maximum number of tokens per shard for matched content.</p>
+         * 
          * <strong>example:</strong>
          * <p>512</p>
          */
@@ -229,10 +258,15 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigRulesStrategy extends TeaModel {
+        /**
+         * <p>The parameter list.</p>
+         */
         @NameInMap("Parameters")
         public DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigRulesStrategyParameters parameters;
 
         /**
+         * <p>The chunking strategy type applied after a rule is matched.</p>
+         * 
          * <strong>example:</strong>
          * <p>hierarchical</p>
          */
@@ -263,9 +297,15 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigRules extends TeaModel {
+        /**
+         * <p>The content type. Currently, table is supported.</p>
+         */
         @NameInMap("Match")
         public DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigRulesMatch match;
 
+        /**
+         * <p>The chunking strategy.</p>
+         */
         @NameInMap("Strategy")
         public DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigRulesStrategy strategy;
 
@@ -293,9 +333,15 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfig extends TeaModel {
+        /**
+         * <p>The default chunking strategy type. Valid values: hybrid and hierarchical.</p>
+         */
         @NameInMap("DefaultStrategy")
         public DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigDefaultStrategy defaultStrategy;
 
+        /**
+         * <p>The list of override rules matched in order.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigRules> rules;
 
@@ -324,6 +370,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
 
     public static class DescribeKnowledgeBaseFilesResponseBodyItems extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Not Support.</p>
          */
@@ -331,6 +379,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5b2dbb13-xxxx-xxxx-xxxx-a55fe8daec8f</p>
          */
@@ -338,13 +388,17 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>财报.pdf</p>
+         * <p>Financial_report.pdf</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
+         * <p>The file size, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>318881</p>
          */
@@ -352,6 +406,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
+         * <p>The file type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -359,6 +415,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>Indicates whether the chunking strategy is inherited from the knowledge space.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -366,6 +424,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public Boolean inheritSpaceStrategy;
 
         /**
+         * <p>The knowledge base ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pkb-xxxxxx</p>
          */
@@ -373,6 +433,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public String knowledgeBaseId;
 
         /**
+         * <p>The knowledge space ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pks-xxxxxx</p>
          */
@@ -380,6 +442,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public String knowledgeSpaceId;
 
         /**
+         * <p>The document metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -387,23 +451,32 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
+         * <p>The OSS file path.</p>
+         * 
          * <strong>example:</strong>
-         * <p>oss://test-bucket-example/pks-xxxx/pkb-xxxx/财报.pdf</p>
+         * <p>oss://test-bucket-example/pks-xxxx/pkb-xxxx/Financial_report.pdf</p>
          */
         @NameInMap("OSSPath")
         public String OSSPath;
 
         /**
+         * <p>The number of shards.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("ShardCount")
         public Integer shardCount;
 
+        /**
+         * <p>The chunking strategy configuration currently in effect for the document. This value may be empty if the complete configuration was not saved for existing objects.</p>
+         */
         @NameInMap("ShardingStrategyConfig")
         public DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfig shardingStrategyConfig;
 
         /**
+         * <p>The source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -411,6 +484,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
          */
@@ -418,6 +493,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-15T22:28:53Z</p>
          */
@@ -425,6 +502,8 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>The upload time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-15T22:28:53Z</p>
          */

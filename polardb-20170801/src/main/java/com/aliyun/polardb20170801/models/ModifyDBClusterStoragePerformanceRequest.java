@@ -4,19 +4,24 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically use coupons. Valid values:</p>
+     * <ul>
+     * <li>true (default): uses coupons.</li>
+     * <li>false: does not use coupons.</li>
+     * </ul>
+     */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
     /**
-     * <p>Specifies if the I/O performance burst feature is enabled for an ESSD AutoPL disk. Valid values:</p>
+     * <p>Specifies whether to enable I/O performance burst for the ESSD AutoPL cloud disk. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled (Default)</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled (default).</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter applies only when StorageType is set to ESSDAUTOPL.</p>
+     * <p>This parameter is supported only when StorageType is set to ESSDAUTOPL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +31,7 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public String burstingEnabled;
 
     /**
-     * <p>A client-generated token that ensures request idempotence. The token must be unique for each request. It is case-sensitive and can be up to 64 ASCII characters long.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can contain only ASCII characters. The token can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f******************</p>
@@ -45,12 +50,10 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The modification type. Valid values:</p>
+     * <p>The type of the specification change. Valid values: </p>
      * <ul>
-     * <li><p><strong>Upgrade</strong>: Upgrades the storage performance.</p>
-     * </li>
-     * <li><p><strong>Downgrade</strong>: Downgrades the storage performance.</p>
-     * </li>
+     * <li><strong>Upgrade</strong>: upgrades the specifications.</li>
+     * <li><strong>Downgrade</strong>: downgrades the specifications.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,6 +63,8 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public String modifyType;
 
     /**
+     * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
      */
@@ -67,14 +72,9 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>Valid values: 0 to min{50,000, 1000 \* capacity - baseline performance}.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>Baseline performance = min{1,800 + 50 \* capacity, 50,000}.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <blockquote>
-     * <p>This parameter applies only when StorageType is set to ESSDAUTOPL.</p>
-     * </blockquote>
+     * <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</p>
+     * <p id="p_6de_jxy_k2g" props="china" icmsditafragmentmagic=1>Baseline performance = min{1,800 + 50 × Capacity, 50000}.</p>
+     * <note id="note_7kj_j0o_rgs" props="china" icmsditafragmentmagic=1>This parameter is supported only when StorageType is set to ESSDAUTOPL.</note>
      * 
      * <strong>example:</strong>
      * <p>2500</p>
@@ -86,25 +86,18 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The target storage type. Valid values for Enterprise Edition:</p>
+     * <p>The target storage type. Valid values for PolarDB Enterprise Edition:</p>
      * <ul>
-     * <li><p><strong>PSL5</strong></p>
-     * </li>
-     * <li><p><strong>PSL4</strong></p>
-     * </li>
+     * <li><strong>PSL5</strong></li>
+     * <li><strong>PSL4</strong></li>
      * </ul>
-     * <p>Valid values for Standard Edition:</p>
+     * <p>Valid values for PolarDB for MySQL Standard Edition:</p>
      * <ul>
-     * <li><p><strong>ESSDPL0</strong></p>
-     * </li>
-     * <li><p><strong>ESSDPL1</strong></p>
-     * </li>
-     * <li><p><strong>ESSDPL2</strong></p>
-     * </li>
-     * <li><p><strong>ESSDPL3</strong></p>
-     * </li>
-     * <li><p><strong>ESSDAUTOPL</strong></p>
-     * </li>
+     * <li><strong>ESSDPL0</strong></li>
+     * <li><strong>ESSDPL1</strong></li>
+     * <li><strong>ESSDPL2</strong></li>
+     * <li><strong>ESSDPL3</strong></li>
+     * <li><strong>ESSDAUTOPL</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

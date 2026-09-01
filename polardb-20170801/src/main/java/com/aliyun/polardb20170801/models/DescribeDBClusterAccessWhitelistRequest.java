@@ -21,6 +21,8 @@ public class DescribeDBClusterAccessWhitelistRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The PFS instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pfs-xxx</p>
      */

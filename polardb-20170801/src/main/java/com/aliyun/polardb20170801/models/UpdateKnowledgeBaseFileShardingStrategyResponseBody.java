@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateKnowledgeBaseFileShardingStrategyResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>019F7F29-BF69-1734-AE5A-02D391385BAC</p>
      */

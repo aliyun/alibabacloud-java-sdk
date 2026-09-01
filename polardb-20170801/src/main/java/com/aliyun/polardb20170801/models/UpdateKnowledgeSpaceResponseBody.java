@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateKnowledgeSpaceResponseBody extends TeaModel {
     /**
+     * <p>The unique identifier of the knowledge space.</p>
+     * 
      * <strong>example:</strong>
      * <p>pks-xxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class UpdateKnowledgeSpaceResponseBody extends TeaModel {
     public String knowledgeSpaceId;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>
      */
@@ -19,6 +23,8 @@ public class UpdateKnowledgeSpaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the asynchronous workflow task. This value is empty if no actual model change occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>52*****03</p>
      */

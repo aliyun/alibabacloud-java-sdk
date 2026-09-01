@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The number of entries per page in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -26,16 +32,23 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>3E5CD764-xxxx-xxxx-xxxx-20E0DE84B2AF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The shard information.</p>
+     */
     @NameInMap("Shards")
     public java.util.List<DescribeKnowledgeBaseFileShardsResponseBodyShards> shards;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -96,13 +109,21 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeBaseFileShardsResponseBodyShards extends TeaModel {
+        /**
+         * <p>The chain of section headings to which the shard belongs.</p>
+         */
         @NameInMap("Headings")
         public java.util.List<String> headings;
 
+        /**
+         * <p>The list of page numbers to which the shard belongs.</p>
+         */
         @NameInMap("PageNumbers")
         public java.util.List<String> pageNumbers;
 
         /**
+         * <p>The text content of the shard.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -110,6 +131,8 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         public String shardContent;
 
         /**
+         * <p>The shard index.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

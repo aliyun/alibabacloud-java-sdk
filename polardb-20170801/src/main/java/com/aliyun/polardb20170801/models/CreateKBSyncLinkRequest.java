@@ -47,6 +47,9 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     @NameInMap("LinkName")
     public String linkName;
 
+    @NameInMap("McpEndpoint")
+    public String mcpEndpoint;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -55,6 +58,9 @@ public class CreateKBSyncLinkRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("SheetMcpEndpoint")
+    public String sheetMcpEndpoint;
 
     /**
      * <p>This parameter is required.</p>
@@ -87,6 +93,9 @@ public class CreateKBSyncLinkRequest extends TeaModel {
      */
     @NameInMap("TenantId")
     public String tenantId;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static CreateKBSyncLinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKBSyncLinkRequest self = new CreateKBSyncLinkRequest();
@@ -133,12 +142,28 @@ public class CreateKBSyncLinkRequest extends TeaModel {
         return this.linkName;
     }
 
+    public CreateKBSyncLinkRequest setMcpEndpoint(String mcpEndpoint) {
+        this.mcpEndpoint = mcpEndpoint;
+        return this;
+    }
+    public String getMcpEndpoint() {
+        return this.mcpEndpoint;
+    }
+
     public CreateKBSyncLinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateKBSyncLinkRequest setSheetMcpEndpoint(String sheetMcpEndpoint) {
+        this.sheetMcpEndpoint = sheetMcpEndpoint;
+        return this;
+    }
+    public String getSheetMcpEndpoint() {
+        return this.sheetMcpEndpoint;
     }
 
     public CreateKBSyncLinkRequest setSourceDir(String sourceDir) {
@@ -171,6 +196,14 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public CreateKBSyncLinkRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

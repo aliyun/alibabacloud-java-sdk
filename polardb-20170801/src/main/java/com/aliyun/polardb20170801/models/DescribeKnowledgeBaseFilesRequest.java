@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBaseFilesRequest extends TeaModel {
     /**
+     * <p>The list of file IDs, separated by commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>doc_a,doc_b</p>
      */
@@ -12,13 +14,16 @@ public class DescribeKnowledgeBaseFilesRequest extends TeaModel {
     public String fileIds;
 
     /**
+     * <p>The keyword used to filter file names.</p>
+     * 
      * <strong>example:</strong>
-     * <p>财报</p>
+     * <p>Financial report</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DescribeKnowledgeBaseFilesRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The unique ID of the synchronization link.</p>
+     * 
      * <strong>example:</strong>
      * <p>pkbl-2ze123456789abc</p>
      */
@@ -35,6 +42,8 @@ public class DescribeKnowledgeBaseFilesRequest extends TeaModel {
     public String linkId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +51,8 @@ public class DescribeKnowledgeBaseFilesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -49,6 +60,7 @@ public class DescribeKnowledgeBaseFilesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +70,8 @@ public class DescribeKnowledgeBaseFilesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The source type.</p>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */

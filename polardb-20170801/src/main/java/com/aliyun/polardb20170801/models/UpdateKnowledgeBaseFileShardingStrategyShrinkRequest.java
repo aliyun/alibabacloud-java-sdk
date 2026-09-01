@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateKnowledgeBaseFileShardingStrategyShrinkRequest extends TeaModel {
     /**
+     * <p>The unique ID of the knowledge base file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateKnowledgeBaseFileShardingStrategyShrinkRequest extends TeaMod
     public String fileId;
 
     /**
+     * <p>Specifies whether to restore inheritance of the chunking strategy from the knowledge space. When this parameter is set to true, ShardingStrategyConfig cannot be specified at the same time.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -21,6 +24,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyShrinkRequest extends TeaMod
     public Boolean inheritSpaceStrategy;
 
     /**
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyShrinkRequest extends TeaMod
     public String knowledgeBaseId;
 
     /**
+     * <p>The ID of the region where the knowledge base resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +43,9 @@ public class UpdateKnowledgeBaseFileShardingStrategyShrinkRequest extends TeaMod
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The file-level chunking strategy configuration. This parameter is required when InheritSpaceStrategy is not set to true.</p>
+     */
     @NameInMap("ShardingStrategyConfig")
     public String shardingStrategyConfigShrink;
 

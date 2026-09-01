@@ -15,6 +15,12 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Specifies whether to immediately execute or schedule the parameter modification and restart. Valid values:</p>
+     * <ul>
+     * <li>false (default): Schedule the execution.</li>
+     * <li>true: Immediately execute.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -28,6 +34,8 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The latest time to start executing the target scheduled task. Specify the time in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-28T14:30:00Z</p>
      */
@@ -35,6 +43,8 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     public String plannedEndTime;
 
     /**
+     * <p>The earliest time to start executing the scheduled task (that is, the task is executed within the target time period). Specify the time in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-04-28T14:00:00Z</p>
      */

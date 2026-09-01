@@ -20,7 +20,7 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The ID of the PolarDB cluster.</p>
+     * <p>The PolarDB cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp10gr51qasnl****</p>
@@ -31,7 +31,7 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
     /**
      * <p>The expiration time of the instance.</p>
      * <blockquote>
-     * <p>This parameter is returned only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+     * <p>This response parameter is returned only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

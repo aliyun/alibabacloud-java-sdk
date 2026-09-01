@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateKnowledgeSpaceRequest extends TeaModel {
     /**
+     * <p>The description of the knowledge space. The description can be up to 512 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>testDesc</p>
      */
@@ -12,6 +14,7 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The unique identifier of the knowledge space.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
     public String knowledgeSpaceId;
 
     /**
+     * <p>The name of the large language model.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3.6-plus</p>
      */
@@ -28,6 +33,8 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
     public String LLMModel;
 
     /**
+     * <p>The name of the knowledge space. The name must be 1 to 128 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>testName</p>
      */
@@ -35,6 +42,7 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,12 +52,17 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the reranking model.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3-rerank</p>
      */
     @NameInMap("RerankModel")
     public String rerankModel;
 
+    /**
+     * <p>The default chunking strategy configuration for the knowledge space. Both simple strategies and composite strategies that match by content type are supported.</p>
+     */
     @NameInMap("ShardingStrategyConfig")
     public UpdateKnowledgeSpaceRequestShardingStrategyConfig shardingStrategyConfig;
 
@@ -116,6 +129,8 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
 
     public static class UpdateKnowledgeSpaceRequestShardingStrategyConfigDefaultStrategyParameters extends TeaModel {
         /**
+         * <p>The maximum number of tokens per chunk. The value must be a positive integer.</p>
+         * 
          * <strong>example:</strong>
          * <p>512</p>
          */
@@ -123,6 +138,8 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
         public Integer maxTokens;
 
         /**
+         * <p>Specifies whether to merge adjacent small chunks under the same heading.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -153,10 +170,15 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
     }
 
     public static class UpdateKnowledgeSpaceRequestShardingStrategyConfigDefaultStrategy extends TeaModel {
+        /**
+         * <p>The parameters of the default chunking strategy. MaxTokens and MergePeers take effect only when Type is set to hybrid.</p>
+         */
         @NameInMap("Parameters")
         public UpdateKnowledgeSpaceRequestShardingStrategyConfigDefaultStrategyParameters parameters;
 
         /**
+         * <p>The type of the default chunking strategy. Valid values: hybrid or hierarchical.</p>
+         * 
          * <strong>example:</strong>
          * <p>hybrid</p>
          */
@@ -188,6 +210,8 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
 
     public static class UpdateKnowledgeSpaceRequestShardingStrategyConfigRulesMatch extends TeaModel {
         /**
+         * <p>The content type. Currently, only table is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>table</p>
          */
@@ -211,6 +235,8 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
 
     public static class UpdateKnowledgeSpaceRequestShardingStrategyConfigRulesStrategyParameters extends TeaModel {
         /**
+         * <p>The processing mode for Markdown tables. Valid values: auto, on, or off.</p>
+         * 
          * <strong>example:</strong>
          * <p>auto</p>
          */
@@ -218,6 +244,8 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
         public String markdownTables;
 
         /**
+         * <p>The maximum number of tokens per chunk for matched content. The value must be a positive integer.</p>
+         * 
          * <strong>example:</strong>
          * <p>512</p>
          */
@@ -248,10 +276,15 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
     }
 
     public static class UpdateKnowledgeSpaceRequestShardingStrategyConfigRulesStrategy extends TeaModel {
+        /**
+         * <p>The chunking strategy parameters for the override rule. MaxTokens takes effect only when Type is set to hybrid. MarkdownTables supports auto, on, or off.</p>
+         */
         @NameInMap("Parameters")
         public UpdateKnowledgeSpaceRequestShardingStrategyConfigRulesStrategyParameters parameters;
 
         /**
+         * <p>The type of the chunking strategy to use when the rule is matched. Valid values: hybrid or hierarchical.</p>
+         * 
          * <strong>example:</strong>
          * <p>hierarchical</p>
          */
@@ -282,9 +315,15 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
     }
 
     public static class UpdateKnowledgeSpaceRequestShardingStrategyConfigRules extends TeaModel {
+        /**
+         * <p>The match condition of the rule. Currently, only exact matching of table content by content type is supported.</p>
+         */
         @NameInMap("Match")
         public UpdateKnowledgeSpaceRequestShardingStrategyConfigRulesMatch match;
 
+        /**
+         * <p>The chunking strategy to use when the rule is matched.</p>
+         */
         @NameInMap("Strategy")
         public UpdateKnowledgeSpaceRequestShardingStrategyConfigRulesStrategy strategy;
 
@@ -312,9 +351,15 @@ public class UpdateKnowledgeSpaceRequest extends TeaModel {
     }
 
     public static class UpdateKnowledgeSpaceRequestShardingStrategyConfig extends TeaModel {
+        /**
+         * <p>The default chunking strategy. This strategy is used when no rule is matched.</p>
+         */
         @NameInMap("DefaultStrategy")
         public UpdateKnowledgeSpaceRequestShardingStrategyConfigDefaultStrategy defaultStrategy;
 
+        /**
+         * <p>The list of override rules that are matched in order. Currently, a maximum of one exact-match rule with ContentType set to table is supported.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<UpdateKnowledgeSpaceRequestShardingStrategyConfigRules> rules;
 

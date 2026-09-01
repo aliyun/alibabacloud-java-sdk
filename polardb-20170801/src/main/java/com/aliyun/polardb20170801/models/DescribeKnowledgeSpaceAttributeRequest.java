@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKnowledgeSpaceAttributeRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the knowledge space.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeKnowledgeSpaceAttributeRequest extends TeaModel {
     public String knowledgeSpaceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
