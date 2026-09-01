@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSophonCommandsRequest extends TeaModel {
     /**
-     * <p>The name of the command. Fuzzy match is supported.</p>
+     * <p>The name of the command. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>waf_process</p>

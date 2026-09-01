@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePlaybookRequest extends TeaModel {
     /**
-     * <p>Description of the playbook.</p>
+     * <p>The description of the playbook.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a new version</p>
@@ -14,7 +14,7 @@ public class CreatePlaybookRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Name of the playbook.</p>
+     * <p>The name of the playbook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +24,8 @@ public class CreatePlaybookRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The input configuration of the playbook.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;key1\&quot;: \&quot;value1\&quot;, \&quot;key2\&quot;: \&quot;value2\&quot;}</p>
      */
@@ -31,10 +33,12 @@ public class CreatePlaybookRequest extends TeaModel {
     public String inputParams;
 
     /**
-     * <p>Language type for receiving messages. Values:</p>
+     * <p>The language of the messages to receive. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,6 +48,8 @@ public class CreatePlaybookRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The output configuration of the playbook.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;result\&quot;: \&quot;success\&quot;}</p>
      */
@@ -51,10 +57,12 @@ public class CreatePlaybookRequest extends TeaModel {
     public String outputParams;
 
     /**
-     * <p>Playbook TaskFlow type.</p>
+     * <p>The configuration format of the playbook.</p>
      * <ul>
-     * <li><strong>x6</strong> : x6</li>
-     * <li><strong>bpmn</strong>: bpmn</li>
+     * <li><p><strong>xml</strong>: XML format.</p>
+     * </li>
+     * <li><p><strong>x6</strong>: JSON format.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

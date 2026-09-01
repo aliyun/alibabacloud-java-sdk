@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TriggerPlaybookRequest extends TeaModel {
     /**
-     * <p>The input parameters of the playbook.</p>
+     * <p>The input parameters for the playbook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class TriggerPlaybookRequest extends TeaModel {
     public String inputParam;
 
     /**
-     * <p>The playbook UUID.</p>
+     * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

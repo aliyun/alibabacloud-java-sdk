@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
     /**
-     * <p>The output structure information of the playbook.</p>
+     * <p>The output structure of the playbook.</p>
      */
     @NameInMap("PlaybookNodeSchema")
     public DescribeLatestRecordSchemaResponseBodyPlaybookNodeSchema playbookNodeSchema;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>10B92EE1-4597-593B-A131-7A17D25EF5C9</p>

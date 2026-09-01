@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDistinctReleasesResponseBody extends TeaModel {
     /**
-     * <p>The information about versions.</p>
+     * <p>The version records.</p>
      */
     @NameInMap("Records")
     public java.util.List<DescribeDistinctReleasesResponseBodyRecords> records;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. This ID is unique to each request and is used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>145CACF6-D276-5197-8549-CB1AD76E2AC8</p>
@@ -42,7 +42,7 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
 
     public static class DescribeDistinctReleasesResponseBodyRecords extends TeaModel {
         /**
-         * <p>The version description.</p>
+         * <p>The description of the version.</p>
          * 
          * <strong>example:</strong>
          * <p>demo version</p>
@@ -51,7 +51,7 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The MD5 value of the version XML configuration.</p>
+         * <p>The MD5 value of the version\&quot;s XML configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>17cf53049bc8efa941207xxxxx</p>
@@ -60,10 +60,12 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
         public String taskflowMd5;
 
         /**
-         * <p>The format of the playbook. Valid values:</p>
+         * <p>The configuration format of the playbook.</p>
          * <ul>
-         * <li><strong>xml</strong>: XML format.</li>
-         * <li><strong>x6</strong>: JSON format.</li>
+         * <li><p><strong>xml</strong>: XML format.</p>
+         * </li>
+         * <li><p><strong>x6</strong>: JSON format.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

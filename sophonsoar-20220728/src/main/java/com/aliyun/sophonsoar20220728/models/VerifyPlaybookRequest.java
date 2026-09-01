@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class VerifyPlaybookRequest extends TeaModel {
     /**
-     * <p>The playbook UUID.</p>
+     * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePopApiRequest extends TeaModel {
     /**
-     * <p>The operation name of the Alibaba Cloud service.</p>
+     * <p>The name of the Alibaba Cloud product API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +16,6 @@ public class DescribePopApiRequest extends TeaModel {
 
     /**
      * <p>The version number of the API.</p>
-     * <blockquote>
-     * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the version number.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +25,7 @@ public class DescribePopApiRequest extends TeaModel {
     public String apiVersion;
 
     /**
-     * <p>The POP code of the Alibaba Cloud service.</p>
-     * <blockquote>
-     * <p> You can call the <a href="~~DescribeApiList~~">DescribeApiList</a> operation to query the POP code.</p>
-     * </blockquote>
+     * <p>The POP code of the Alibaba Cloud product API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

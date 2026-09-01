@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class TriggerProcessTaskRequest extends TeaModel {
     /**
-     * <p>The type of the action. Valid values:</p>
+     * <p>The type of the handling action. Valid values:</p>
      * <ul>
-     * <li><strong>remove</strong>: cancels blocking or isolation.</li>
-     * <li><strong>retry</strong>: submits the task again.</li>
+     * <li><p><strong>remove</strong>: Removes a block or an asset from isolation.</p>
+     * </li>
+     * <li><p><strong>retry</strong>: Resubmits the task.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,9 +21,9 @@ public class TriggerProcessTaskRequest extends TeaModel {
     public String actionType;
 
     /**
-     * <p>The ID of the handling task.</p>
+     * <p>The unique ID of the handling task.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeProcessTasks~~">DescribeProcessTasks</a> operation to query the IDs of handling tasks.</p>
+     * <p>Call the <a href="~~DescribeProcessTasks~~">DescribeProcessTasks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

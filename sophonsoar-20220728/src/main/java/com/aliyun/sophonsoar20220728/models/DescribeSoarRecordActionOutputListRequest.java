@@ -7,7 +7,7 @@ public class DescribeSoarRecordActionOutputListRequest extends TeaModel {
     /**
      * <p>The UUID of the component action.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeSoarTaskAndActions~~">DescribeSoarTaskAndActions</a> operation to query the UUID.</p>
+     * <p>Call the <a href="~~DescribeSoarTaskAndActions~~">DescribeSoarTaskAndActions</a> operation to get this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,12 @@ public class DescribeSoarRecordActionOutputListRequest extends TeaModel {
     public String actionUuid;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class DescribeSoarRecordActionOutputListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Default value: 1. Pages start from page 1.</p>
+     * <p>The page number of the results to return. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,9 +43,9 @@ public class DescribeSoarRecordActionOutputListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</p>
+     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 10 entries are returned.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>We recommend that you specify a value for this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

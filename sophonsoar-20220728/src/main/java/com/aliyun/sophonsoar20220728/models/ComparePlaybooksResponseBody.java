@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ComparePlaybooksResponseBody extends TeaModel {
     /**
-     * <p>The comparison result.</p>
+     * <p>The result of the comparison.</p>
      */
     @NameInMap("CompareResult")
     public ComparePlaybooksResponseBodyCompareResult compareResult;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
-     * <p>2EC05B06-BF3C-5F3E-8FE8-3B1FAD76087A</p>
+     * <p>2EC05B06-<strong><strong>-5F3E-</strong></strong>-3B1FAD76087A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,10 +51,12 @@ public class ComparePlaybooksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the second version provides more information than the first version. Valid values:</p>
+         * <p>Indicates whether the second version used for comparison is a new version.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The version is new.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The version is not new.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,10 +66,12 @@ public class ComparePlaybooksResponseBody extends TeaModel {
         public Boolean _new;
 
         /**
-         * <p>Indicates whether the configurations of the two versions are the same. Valid values:</p>
+         * <p>Indicates whether the two versions are identical.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Identical.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not identical.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

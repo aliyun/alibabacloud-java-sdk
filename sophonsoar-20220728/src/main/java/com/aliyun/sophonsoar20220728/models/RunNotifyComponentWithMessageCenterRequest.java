@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     /**
-     * <p>The action name of the playbook.</p>
+     * <p>The name of the playbook action.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     public String actionName;
 
     /**
-     * <p>The user ID receiving the message.</p>
+     * <p>The ID of the user who receives the message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     public String aliuid;
 
     /**
-     * <p>Resource instance ID. This parameter is currently deprecated and no longer in use.</p>
+     * <p>The ID of the asset. This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,13 +34,13 @@ public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     public String assetId;
 
     /**
-     * <p>Collection of channel types. If not provided, all channels will be used by default, and it is not required to provide this parameter by default.</p>
+     * <p>A collection of channel types. If you do not specify this parameter, messages are sent through all channels by default.</p>
      */
     @NameInMap("ChannelTypeList")
     public java.util.List<String> channelTypeList;
 
     /**
-     * <p>The component name of the playbook.</p>
+     * <p>The name of the playbook component.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,11 +50,14 @@ public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     public String componentName;
 
     /**
-     * <p>Cloud Pigeon\&quot;s message event ID. Values:</p>
+     * <p>The ID of the message event in Message Center. Valid values:</p>
      * <ul>
-     * <li>yundun_soar_incident_generate: Incident generation.</li>
-     * <li>yundun_soar_alert_generate: Alert generation.</li>
-     * <li>yundun_soar_incident_update: Incident update.</li>
+     * <li><p>yundun_soar_incident_generate: An event is generated.</p>
+     * </li>
+     * <li><p>yundun_soar_alert_generate: An alert is generated.</p>
+     * </li>
+     * <li><p>yundun_soar_incident_update: An event is updated.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -65,10 +68,12 @@ public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The language type for requesting and receiving messages. Values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +83,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The node name of the playbook.</p>
+     * <p>The name of the playbook node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,11 +93,14 @@ public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     public String nodeName;
 
     /**
-     * <p>Template parameters for the message event.</p>
+     * <p>The template parameters for the message event.</p>
      * <ul>
-     * <li>For incident generation: aliyunUID, incidentName, incidentID, startTime</li>
-     * <li>For alert generation: aliyunUID, alertName, alertID, startTime</li>
-     * <li>For incident update: aliyunUID, incidentName, incidentID, startTime, endTime, status, level</li>
+     * <li><p>Event generation: aliyunUID, incidentName, incidentID, startTime</p>
+     * </li>
+     * <li><p>Alert generation: aliyunUID, alertName, alertID, startTime</p>
+     * </li>
+     * <li><p>Event update: aliyunUID, incidentName, incidentID, startTime, endTime, status, level</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +112,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -115,7 +123,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>The user ID when an administrator switches to another member\&quot;s perspective.</p>
+     * <p>The user ID of the member. This parameter is used when an administrator calls the operation on behalf of a member.</p>
      * 
      * <strong>example:</strong>
      * <p>1467894xxx733152</p>
@@ -124,10 +132,12 @@ public class RunNotifyComponentWithMessageCenterRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>View type. Values:</p>
+     * <p>The view type. Valid values:</p>
      * <ul>
-     * <li>0 (default): Current Alibaba Cloud account view.</li>
-     * <li>1: View for all accounts under the enterprise.</li>
+     * <li><p>0 (default): The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts that belong to the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

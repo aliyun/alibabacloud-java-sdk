@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeNodeParamTagsResponseBody extends TeaModel {
     /**
-     * <p>The configuration of the recommended path.</p>
+     * <p>The recommended path configurations.</p>
      */
     @NameInMap("ParamReferredPaths")
     public java.util.List<DescribeNodeParamTagsResponseBodyParamReferredPaths> paramReferredPaths;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6BE94351-712A-505D-A40A-BC77CC8254A9</p>
@@ -42,7 +42,7 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
 
     public static class DescribeNodeParamTagsResponseBodyParamReferredPaths extends TeaModel {
         /**
-         * <p>The name of the upstream node.</p>
+         * <p>The name of the ancestor node.</p>
          * 
          * <strong>example:</strong>
          * <p>DataFormat_1</p>
@@ -51,7 +51,7 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
         public String paramName;
 
         /**
-         * <p>The paths.</p>
+         * <p>An array of paths.</p>
          */
         @NameInMap("ReferredPath")
         public java.util.List<String> referredPath;

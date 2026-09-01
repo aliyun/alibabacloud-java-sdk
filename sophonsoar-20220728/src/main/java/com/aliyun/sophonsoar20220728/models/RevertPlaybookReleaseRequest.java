@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class RevertPlaybookReleaseRequest extends TeaModel {
     /**
-     * <p>Specifies whether to directly publish the new playbook after the rollback.</p>
+     * <p>Specifies whether to publish the playbook after the rollback.</p>
      * <ul>
-     * <li><strong>true</strong> (default)</li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong> (default): Publishes the playbook after the rollback.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Rolls back the playbook without publishing it.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class RevertPlaybookReleaseRequest extends TeaModel {
     public Boolean isPublish;
 
     /**
-     * <p>The version of the playbook that you want to publish.</p>
+     * <p>The ID of the published playbook version.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the playbook version.</p>
+     * <p>Call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +35,7 @@ public class RevertPlaybookReleaseRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

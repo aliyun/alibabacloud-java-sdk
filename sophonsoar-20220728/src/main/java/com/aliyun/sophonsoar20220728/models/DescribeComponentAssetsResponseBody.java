@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeComponentAssetsResponseBody extends TeaModel {
     /**
-     * <p>The information about the assets.</p>
+     * <p>A list of assets.</p>
      */
     @NameInMap("ComponentAssets")
     public java.util.List<DescribeComponentAssetsResponseBodyComponentAssets> componentAssets;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>BFEFB76D-DD0E-5529-BD57-0DAC10B9B30F</p>
@@ -42,7 +42,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
 
     public static class DescribeComponentAssetsResponseBodyComponentAssets extends TeaModel {
         /**
-         * <p>The UUID of the asset.</p>
+         * <p>The asset\&quot;s UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>ff6fe161-93e2-464c-a326-fxxxxxx</p>
@@ -51,7 +51,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         public String assetUuid;
 
         /**
-         * <p>The name of the component to which the asset belongs.</p>
+         * <p>The name of the component that the asset belongs to.</p>
          * 
          * <strong>example:</strong>
          * <p>pyhton3</p>
@@ -60,7 +60,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         public String componentname;
 
         /**
-         * <p>The time when the asset was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+         * <p>The time when the asset was created. The time is in UTC and follows the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-23T14:38Z</p>
@@ -69,7 +69,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the asset was modified. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+         * <p>The time when the asset was last modified. The time is in UTC and follows the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-23T14:38Z</p>
@@ -78,7 +78,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The UUID of the asset.</p>
+         * <p>The unique ID of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>7xx</p>
@@ -87,7 +87,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the asset.</p>
+         * <p>The asset name.</p>
          * 
          * <strong>example:</strong>
          * <p>test asset</p>
@@ -96,9 +96,9 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The configurations of the asset in the JSON string format. DescribeComponentAssetForm</p>
+         * <p>The asset configuration in JSON format.</p>
          * <blockquote>
-         * <p> For more information, see <a href="~~DescribeComponentAssetForm~~">DescribeComponentAssetForm</a>.</p>
+         * <p>For more information about the format, see <a href="~~DescribeComponentAssetForm~~">DescribeComponentAssetForm</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

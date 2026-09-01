@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-southeast-1", "sophonsoar.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("public", "sophonsoar.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("sophonsoar", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Compares configurations between two versions of a published playbook.</p>
+     * <p>Compares the configurations of two published playbook versions.</p>
      * 
      * @param request ComparePlaybooksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,7 +76,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Compares configurations between two versions of a published playbook.</p>
+     * <p>Compares the configurations of two published playbook versions.</p>
      * 
      * @param request ComparePlaybooksRequest
      * @return ComparePlaybooksResponse
@@ -223,11 +227,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Create Playbook.</p>
-     * 
      * <b>summary</b> : 
-     * <p>New Playbook.</p>
+     * <p>Creates a new playbook.</p>
      * 
      * @param request CreatePlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -278,11 +279,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Create Playbook.</p>
-     * 
      * <b>summary</b> : 
-     * <p>New Playbook.</p>
+     * <p>Creates a new playbook.</p>
      * 
      * @param request CreatePlaybookRequest
      * @return CreatePlaybookResponse
@@ -350,7 +348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the assets in a component.</p>
+     * <p>Deletes a component asset.</p>
      * 
      * @param request DeleteComponentAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -386,7 +384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the assets in a component.</p>
+     * <p>Deletes a component asset.</p>
      * 
      * @param request DeleteComponentAssetRequest
      * @return DeleteComponentAssetResponse
@@ -398,7 +396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom playbook.</p>
+     * <p>Deletes a specified custom playbook.</p>
      * 
      * @param request DeletePlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -434,7 +432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom playbook.</p>
+     * <p>Deletes a specified custom playbook.</p>
      * 
      * @param request DeletePlaybookRequest
      * @return DeletePlaybookResponse
@@ -446,7 +444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata of assets in a component. The metadata of an asset refers to the fields that describe the asset.</p>
+     * <p>Obtains the metadata for a component asset, which defines the fields that constitute the asset.</p>
      * 
      * @param request DescribeComponentAssetFormRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -474,7 +472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata of assets in a component. The metadata of an asset refers to the fields that describe the asset.</p>
+     * <p>Obtains the metadata for a component asset, which defines the fields that constitute the asset.</p>
      * 
      * @param request DescribeComponentAssetFormRequest
      * @return DescribeComponentAssetFormResponse
@@ -486,7 +484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of assets in a component.</p>
+     * <p>Retrieves the asset list for a component.</p>
      * 
      * @param request DescribeComponentAssetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -514,7 +512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of assets in a component.</p>
+     * <p>Retrieves the asset list for a component.</p>
      * 
      * @param request DescribeComponentAssetsRequest
      * @return DescribeComponentAssetsResponse
@@ -526,7 +524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of common components that are available.</p>
+     * <p>Retrieves a list of standard components that you can use.</p>
      * 
      * @param request DescribeComponentListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -554,7 +552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of common components that are available.</p>
+     * <p>Retrieves a list of standard components that you can use.</p>
      * 
      * @param request DescribeComponentListRequest
      * @return DescribeComponentListResponse
@@ -566,7 +564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of predefined components that are available.</p>
+     * <p>Retrieves a list of predefined components.</p>
      * 
      * @param request DescribeComponentPlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -594,7 +592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of predefined components that are available.</p>
+     * <p>Retrieves a list of predefined components.</p>
      * 
      * @param request DescribeComponentPlaybookRequest
      * @return DescribeComponentPlaybookResponse
@@ -606,7 +604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the JavaScript file of a component. The component uses the returned JavaScript file for page rendering.</p>
+     * <p>Obtains the JavaScript (JS) file that a component uses to render the page.</p>
      * 
      * @param request DescribeComponentsJsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -634,7 +632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the JavaScript file of a component. The component uses the returned JavaScript file for page rendering.</p>
+     * <p>Obtains the JavaScript (JS) file that a component uses to render the page.</p>
      * 
      * @param request DescribeComponentsJsRequest
      * @return DescribeComponentsJsResponse
@@ -646,7 +644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the published versions of a playbook after deduplication.</p>
+     * <p>Retrieves a list of distinct playbook releases.</p>
      * 
      * @param request DescribeDistinctReleasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -674,7 +672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the published versions of a playbook after deduplication.</p>
+     * <p>Retrieves a list of distinct playbook releases.</p>
      * 
      * @param request DescribeDistinctReleasesRequest
      * @return DescribeDistinctReleasesResponse
@@ -686,7 +684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries enumeration items that are required by a cloud service.</p>
+     * <p>Queries the enumeration information for a product.</p>
      * 
      * @param request DescribeEnumItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -714,7 +712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries enumeration items that are required by a cloud service.</p>
+     * <p>Queries the enumeration information for a product.</p>
      * 
      * @param request DescribeEnumItemsRequest
      * @return DescribeEnumItemsResponse
@@ -726,7 +724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the playbooks that are available for an automatic response plan.</p>
+     * <p>Queries a list of executable playbooks that are used to configure automated response plans.</p>
      * 
      * @param request DescribeExecutePlaybooksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -754,7 +752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the playbooks that are available for an automatic response plan.</p>
+     * <p>Queries a list of executable playbooks that are used to configure automated response plans.</p>
      * 
      * @param request DescribeExecutePlaybooksRequest
      * @return DescribeExecutePlaybooksResponse
@@ -766,7 +764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global configuration information about a cloud service.</p>
+     * <p>Retrieves global configuration information for the product.</p>
      * 
      * @param request DescribeFieldRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -794,7 +792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global configuration information about a cloud service.</p>
+     * <p>Retrieves global configuration information for the product.</p>
      * 
      * @param request DescribeFieldRequest
      * @return DescribeFieldResponse
@@ -852,7 +850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the output structure information of each node in a playbook based on the most recent running record of the playbook.</p>
+     * <p>Describes the output structure of each node in a playbook based on the latest execution record.</p>
      * 
      * @param request DescribeLatestRecordSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -880,7 +878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the output structure information of each node in a playbook based on the most recent running record of the playbook.</p>
+     * <p>Describes the output structure of each node in a playbook based on the latest execution record.</p>
      * 
      * @param request DescribeLatestRecordSchemaRequest
      * @return DescribeLatestRecordSchemaResponse
@@ -892,7 +890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries recommended dynamic input parameters of a component for playbook orchestration.</p>
+     * <p>Returns the reference paths for component inputs in a playbook orchestration.</p>
      * 
      * @param request DescribeNodeParamTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -920,7 +918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries recommended dynamic input parameters of a component for playbook orchestration.</p>
+     * <p>Returns the reference paths for component inputs in a playbook orchestration.</p>
      * 
      * @param request DescribeNodeParamTagsRequest
      * @return DescribeNodeParamTagsResponse
@@ -1024,10 +1022,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or the pricing for log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * <p>Before you use this API, review the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for the orchestration product, which supports threat analysis, response, log access, and traffic monitoring.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the API operations of an Alibaba Cloud service.</p>
+     * <p>Retrieve the API list for a product.</p>
      * 
      * @param request DescribeOpenApiListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1055,10 +1053,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or the pricing for log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * <p>Before you use this API, review the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for the orchestration product, which supports threat analysis, response, log access, and traffic monitoring.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the API operations of an Alibaba Cloud service.</p>
+     * <p>Retrieve the API list for a product.</p>
      * 
      * @param request DescribeOpenApiListRequest
      * @return DescribeOpenApiListResponse
@@ -1070,7 +1068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the XML configuration of a playbook.</p>
+     * <p>Retrieves the XML configuration of a playbook.</p>
      * 
      * @param request DescribePlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1098,7 +1096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the XML configuration of a playbook.</p>
+     * <p>Retrieves the XML configuration of a playbook.</p>
      * 
      * @param request DescribePlaybookRequest
      * @return DescribePlaybookResponse
@@ -1110,7 +1108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the input and output parameter configurations of a playbook.</p>
+     * <p>Retrieves the input and output parameter configurations for a playbook.</p>
      * 
      * @param request DescribePlaybookInputOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1138,7 +1136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the input and output parameter configurations of a playbook.</p>
+     * <p>Retrieves the input and output parameter configurations for a playbook.</p>
      * 
      * @param request DescribePlaybookInputOutputRequest
      * @return DescribePlaybookInputOutputResponse
@@ -1150,7 +1148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metrics of a playbook. The metrics include the playbook name, playbook description, the number of times that the playbook is run, and the failure rate of the playbook.</p>
+     * <p>Queries playbook metadata, including its name, description, number of runs, and failure rate.</p>
      * 
      * @param request DescribePlaybookMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1178,7 +1176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metrics of a playbook. The metrics include the playbook name, playbook description, the number of times that the playbook is run, and the failure rate of the playbook.</p>
+     * <p>Queries playbook metadata, including its name, description, number of runs, and failure rate.</p>
      * 
      * @param request DescribePlaybookMetricsRequest
      * @return DescribePlaybookMetricsResponse
@@ -1190,7 +1188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the historical output data of a component node.</p>
+     * <p>Retrieves the historical output data of a component.</p>
      * 
      * @param request DescribePlaybookNodesOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1218,7 +1216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the historical output data of a component node.</p>
+     * <p>Retrieves the historical output data of a component.</p>
      * 
      * @param request DescribePlaybookNodesOutputRequest
      * @return DescribePlaybookNodesOutputResponse
@@ -1230,7 +1228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics of Security Orchestration Automation Response (SOAR), such as the numbers of created and enabled playbooks.</p>
+     * <p>Retrieves metrics for the response orchestration product, including the total number of playbooks and the number of enabled playbooks.</p>
      * 
      * @param request DescribePlaybookNumberMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1258,7 +1256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics of Security Orchestration Automation Response (SOAR), such as the numbers of created and enabled playbooks.</p>
+     * <p>Retrieves metrics for the response orchestration product, including the total number of playbooks and the number of enabled playbooks.</p>
      * 
      * @param request DescribePlaybookNumberMetricsRequest
      * @return DescribePlaybookNumberMetricsResponse
@@ -1270,7 +1268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the published versions of a playbook.</p>
+     * <p>Queries a list of published versions of a playbook.</p>
      * 
      * @param request DescribePlaybookReleasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1298,7 +1296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the published versions of a playbook.</p>
+     * <p>Queries a list of published versions of a playbook.</p>
      * 
      * @param request DescribePlaybookReleasesRequest
      * @return DescribePlaybookReleasesResponse
@@ -1309,8 +1307,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration, Automation, and Response (SOAR).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieve the list of playbooks.</p>
+     * <p>Queries a list of playbooks.</p>
      * 
      * @param request DescribePlaybooksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1337,8 +1338,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration, Automation, and Response (SOAR).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieve the list of playbooks.</p>
+     * <p>Queries a list of playbooks.</p>
      * 
      * @param request DescribePlaybooksRequest
      * @return DescribePlaybooksResponse
@@ -1350,7 +1354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an API operation.</p>
+     * <p>Retrieves the details of an OpenAPI.</p>
      * 
      * @param request DescribePopApiRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1390,7 +1394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an API operation.</p>
+     * <p>Retrieves the details of an OpenAPI.</p>
      * 
      * @param request DescribePopApiRequest
      * @return DescribePopApiResponse
@@ -1402,10 +1406,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * <p>Make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (Cloud Threat Detection and Response (CTDR) log traffic) before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries statistics.</p>
+     * <p>Retrieves statistics information.</p>
      * 
      * @param request DescribeProcessStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1433,10 +1437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * <p>Make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (Cloud Threat Detection and Response (CTDR) log traffic) before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries statistics.</p>
+     * <p>Retrieves statistics information.</p>
      * 
      * @param request DescribeProcessStatisticsRequest
      * @return DescribeProcessStatisticsResponse
@@ -1448,7 +1452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the number of associated disposal tasks based on the entity UUID.</p>
+     * <p>Queries the count of response tasks associated with an entity UUID.</p>
      * 
      * @param request DescribeProcessTaskCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1476,7 +1480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the number of associated disposal tasks based on the entity UUID.</p>
+     * <p>Queries the count of response tasks associated with an entity UUID.</p>
      * 
      * @param request DescribeProcessTaskCountRequest
      * @return DescribeProcessTaskCountResponse
@@ -1488,10 +1492,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * <p>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration feature (the log traffic of Cloud Threat Detection and Response (CTDR)) before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about handling tasks. When you use Security Orchestration Automation Response (SOAR) to handle events, handling tasks are generated in the handling center.</p>
+     * <p>Retrieves a list of disposal tasks.</p>
      * 
      * @param request DescribeProcessTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1500,6 +1504,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeProcessTasksResponse describeProcessTasksWithOptions(DescribeProcessTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertId)) {
+            query.put("AlertId", request.alertId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
             query.put("Direction", request.direction);
         }
@@ -1518,6 +1526,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventUuid)) {
             query.put("EventUuid", request.eventUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executeUuid)) {
+            query.put("ExecuteUuid", request.executeUuid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderField)) {
@@ -1558,6 +1570,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.reqUuid)) {
             query.put("ReqUuid", request.reqUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleId)) {
+            query.put("ResponseRuleId", request.responseRuleId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
@@ -1607,10 +1623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * <p>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration feature (the log traffic of Cloud Threat Detection and Response (CTDR)) before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about handling tasks. When you use Security Orchestration Automation Response (SOAR) to handle events, handling tasks are generated in the handling center.</p>
+     * <p>Retrieves a list of disposal tasks.</p>
      * 
      * @param request DescribeProcessTasksRequest
      * @return DescribeProcessTasksResponse
@@ -1622,7 +1638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data that is returned when a component initiates an action in a playbook task.</p>
+     * <p>Retrieves the output data generated by a component for an action in a playbook task.</p>
      * 
      * @param request DescribeSoarRecordActionOutputListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1650,7 +1666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data that is returned when a component initiates an action in a playbook task.</p>
+     * <p>Retrieves the output data generated by a component for an action in a playbook task.</p>
      * 
      * @param request DescribeSoarRecordActionOutputListRequest
      * @return DescribeSoarRecordActionOutputListResponse
@@ -1662,7 +1678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the input and output data of a component action. You can call this operation after a playbook is run.</p>
+     * <p>Retrieves the input and output data of a component action after a playbook task is executed.</p>
      * 
      * @param request DescribeSoarRecordInOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1690,7 +1706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the input and output data of a component action. You can call this operation after a playbook is run.</p>
+     * <p>Retrieves the input and output data of a component action after a playbook task is executed.</p>
      * 
      * @param request DescribeSoarRecordInOutputRequest
      * @return DescribeSoarRecordInOutputResponse
@@ -1702,7 +1718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the execution records of a playbook.</p>
+     * <p>Queries the execution records for a playbook.</p>
      * 
      * @param request DescribeSoarRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1730,7 +1746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the execution records of a playbook.</p>
+     * <p>Queries the execution records for a playbook.</p>
      * 
      * @param request DescribeSoarRecordsRequest
      * @return DescribeSoarRecordsResponse
@@ -1742,7 +1758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution records of a component during the running of a playbook.</p>
+     * <p>Retrieves the component execution records for a single playbook run.</p>
      * 
      * @param request DescribeSoarTaskAndActionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1770,7 +1786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution records of a component during the running of a playbook.</p>
+     * <p>Retrieves the component execution records for a single playbook run.</p>
      * 
      * @param request DescribeSoarTaskAndActionsRequest
      * @return DescribeSoarTaskAndActionsResponse
@@ -1782,7 +1798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the commands that can be run to obtain objects.</p>
+     * <p>Queries the commands that are used to manage entities.</p>
      * 
      * @param request DescribeSophonCommandsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1814,7 +1830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the commands that can be run to obtain objects.</p>
+     * <p>Queries the commands that are used to manage entities.</p>
      * 
      * @param request DescribeSophonCommandsRequest
      * @return DescribeSophonCommandsResponse
@@ -1896,7 +1912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operational logs of a Python3 script by using the UUID that is returned when the script is run. The UUID is specified by requestUuid.</p>
+     * <p>After you submit a task for a Python 3 script, use the returned requestUuid to retrieve the operational logs.</p>
      * 
      * @param request DescriberPython3ScriptLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1924,7 +1940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operational logs of a Python3 script by using the UUID that is returned when the script is run. The UUID is specified by requestUuid.</p>
+     * <p>After you submit a task for a Python 3 script, use the returned requestUuid to retrieve the operational logs.</p>
      * 
      * @param request DescriberPython3ScriptLogsRequest
      * @return DescriberPython3ScriptLogsResponse
@@ -1936,7 +1952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about the asset that is configured for a component.</p>
+     * <p>You can call this operation to modify the asset information for a component.</p>
      * 
      * @param request ModifyComponentAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1972,7 +1988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about the asset that is configured for a component.</p>
+     * <p>You can call this operation to modify the asset information for a component.</p>
      * 
      * @param request ModifyComponentAssetRequest
      * @return ModifyComponentAssetResponse
@@ -2108,7 +2124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes the playbook. After the playbook is published, the playbook runs based on the new logic.</p>
+     * <p>Publishes a playbook. Once published, the playbook runs with the new logic.</p>
      * 
      * @param request PublishPlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2144,7 +2160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes the playbook. After the playbook is published, the playbook runs based on the new logic.</p>
+     * <p>Publishes a playbook. Once published, the playbook runs with the new logic.</p>
      * 
      * @param request PublishPlaybookRequest
      * @return PublishPlaybookResponse
@@ -2156,7 +2172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all playbooks at a time.</p>
+     * <p>Retrieves a list of all playbooks.</p>
      * 
      * @param request QueryTreeDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2184,7 +2200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all playbooks at a time.</p>
+     * <p>Retrieves a list of all playbooks.</p>
      * 
      * @param request QueryTreeDataRequest
      * @return QueryTreeDataResponse
@@ -2196,7 +2212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rolls back a playbook to a specific version. You can determine whether to publish the new playbook version during the rollback.</p>
+     * <p>Rolls back a playbook to a specified version. You can also specify whether to publish that version after the rollback.</p>
      * 
      * @param request RevertPlaybookReleaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2236,7 +2252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rolls back a playbook to a specific version. You can determine whether to publish the new playbook version during the rollback.</p>
+     * <p>Rolls back a playbook to a specified version. You can also specify whether to publish that version after the rollback.</p>
      * 
      * @param request RevertPlaybookReleaseRequest
      * @return RevertPlaybookReleaseResponse
@@ -2248,10 +2264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * <p>Before calling this operation, understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration Application Response (SOAR). SOAR is billed based on the log traffic added to the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Runs the email notification component to send messages.</p>
+     * <p>Runs the notification component to send an email message.</p>
      * 
      * @param request RunNotifyComponentWithEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2323,10 +2339,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * <p>Before calling this operation, understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration Application Response (SOAR). SOAR is billed based on the log traffic added to the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Runs the email notification component to send messages.</p>
+     * <p>Runs the notification component to send an email message.</p>
      * 
      * @param request RunNotifyComponentWithEmailRequest
      * @return RunNotifyComponentWithEmailResponse
@@ -2338,10 +2354,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Access Traffic) before using this interface.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR). The service is billed based on the log traffic for threat analysis and response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Execute Notification Component - Send Message via Message Center.</p>
+     * <p>Sends a message using the notification component in Message Center.</p>
      * 
      * @param request RunNotifyComponentWithMessageCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2417,10 +2433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Access Traffic) before using this interface.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR). The service is billed based on the log traffic for threat analysis and response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Execute Notification Component - Send Message via Message Center.</p>
+     * <p>Sends a message using the notification component in Message Center.</p>
      * 
      * @param request RunNotifyComponentWithMessageCenterRequest
      * @return RunNotifyComponentWithMessageCenterResponse
@@ -2432,10 +2448,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of response orchestration. This feature is billed based on the log traffic for threat analysis and response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Runs the webhook notification component to send messages.</p>
+     * <p>Sends a message from a notification component using a webhook.</p>
      * 
      * @param request RunNotifyComponentWithWebhookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2511,10 +2527,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of response orchestration. This feature is billed based on the log traffic for threat analysis and response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Runs the webhook notification component to send messages.</p>
+     * <p>Sends a message from a notification component using a webhook.</p>
      * 
      * @param request RunNotifyComponentWithWebhookRequest
      * @return RunNotifyComponentWithWebhookResponse
@@ -2526,10 +2542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.4c41281fWhbdPa#/commodity/vm_intl">Pricing</a>.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits and runs a Python3 script. You can call this operation only for data processing.</p>
+     * <p>Executes a Python 3 code snippet for data processing.</p>
      * 
      * @param request RunPython3ScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2579,10 +2595,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.4c41281fWhbdPa#/commodity/vm_intl">Pricing</a>.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits and runs a Python3 script. You can call this operation only for data processing.</p>
+     * <p>Executes a Python 3 code snippet for data processing.</p>
      * 
      * @param request RunPython3ScriptRequest
      * @return RunPython3ScriptResponse
@@ -2594,10 +2610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Response Orchestration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Triggers an enabled custom playbook or a predefined playbook.</p>
+     * <p>Triggers an enabled custom or predefined playbook.</p>
      * 
      * @param request TriggerPlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2633,10 +2649,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Response Orchestration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Triggers an enabled custom playbook or a predefined playbook.</p>
+     * <p>Triggers an enabled custom or predefined playbook.</p>
      * 
      * @param request TriggerPlaybookRequest
      * @return TriggerPlaybookResponse
@@ -2648,7 +2664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs an action on a handling task that is generated by the handling center when an event is handled by using Security Orchestration Automation Response (SOAR). For example, you can call this operation to cancel blocking or isolation, or retry blocking.</p>
+     * <p>When an event is handled using response orchestration, the response center creates a task. Perform follow-up actions on the task, such as unblocking, retrying a block, and removing from isolation.</p>
      * 
      * @param request TriggerProcessTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2686,7 +2702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs an action on a handling task that is generated by the handling center when an event is handled by using Security Orchestration Automation Response (SOAR). For example, you can call this operation to cancel blocking or isolation, or retry blocking.</p>
+     * <p>When an event is handled using response orchestration, the response center creates a task. Perform follow-up actions on the task, such as unblocking, retrying a block, and removing from isolation.</p>
      * 
      * @param request TriggerProcessTaskRequest
      * @return TriggerProcessTaskResponse
@@ -2698,10 +2714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</p>
+     * <p>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR) before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Triggers a playbook or a command.</p>
+     * <p>Triggers a playbook or a response command.</p>
      * 
      * @param request TriggerSophonPlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2710,6 +2726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TriggerSophonPlaybookResponse triggerSophonPlaybookWithOptions(TriggerSophonPlaybookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.commandName)) {
             query.put("CommandName", request.commandName);
         }
@@ -2749,10 +2769,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</p>
+     * <p>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR) before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Triggers a playbook or a command.</p>
+     * <p>Triggers a playbook or a response command.</p>
      * 
      * @param request TriggerSophonPlaybookRequest
      * @return TriggerSophonPlaybookResponse
@@ -2764,7 +2784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the configuration of the playbook is correct and whether the logic of the orchestration is reasonable.</p>
+     * <p>Verifies that a playbook configuration is correct and its orchestration logic is valid.</p>
      * 
      * @param request VerifyPlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2800,7 +2820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the configuration of the playbook is correct and whether the logic of the orchestration is reasonable.</p>
+     * <p>Verifies that a playbook configuration is correct and its orchestration logic is valid.</p>
      * 
      * @param request VerifyPlaybookRequest
      * @return VerifyPlaybookResponse
@@ -2812,7 +2832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the syntax of a Python code snippet is correct.</p>
+     * <p>Verifies the syntax of a Python code snippet.</p>
      * 
      * @param request VerifyPythonFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2844,7 +2864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the syntax of a Python code snippet is correct.</p>
+     * <p>Verifies the syntax of a Python code snippet.</p>
      * 
      * @param request VerifyPythonFileRequest
      * @return VerifyPythonFileResponse

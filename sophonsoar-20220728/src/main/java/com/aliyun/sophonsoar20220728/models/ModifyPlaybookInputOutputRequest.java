@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyPlaybookInputOutputRequest extends TeaModel {
     /**
-     * <p>The executed mode of a playbook. The value is a JSON array.</p>
+     * <p>The execution method for the playbook. This parameter is in the JSONObject format.</p>
      */
     @NameInMap("ExeConfig")
     public String exeConfig;
 
     /**
-     * <p>The configuration of the input parameters. The value is a JSON array.</p>
+     * <p>The input parameter configuration for the playbook. This parameter is in the JSONArray format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,12 @@ public class ModifyPlaybookInputOutputRequest extends TeaModel {
     public String inputParams;
 
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language of the request and response messages.</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class ModifyPlaybookInputOutputRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The configuration of the output parameters. This parameter is unavailable. Leave it empty.</p>
+     * <p>Playbooks do not support output parameter configurations. This parameter is fixed to an empty value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,12 +56,16 @@ public class ModifyPlaybookInputOutputRequest extends TeaModel {
     public String outputParams;
 
     /**
-     * <p>The input parameter type.</p>
+     * <p>The type of the input parameter for the playbook.</p>
      * <ul>
-     * <li><strong>template-ip</strong></li>
-     * <li><strong>template-file</strong></li>
-     * <li><strong>template-process</strong></li>
-     * <li><strong>custom</strong></li>
+     * <li><p><strong>template-ip</strong>: IP request template.</p>
+     * </li>
+     * <li><p><strong>template-file</strong>: file request template.</p>
+     * </li>
+     * <li><p><strong>template-process</strong>: process request template.</p>
+     * </li>
+     * <li><p><strong>custom</strong>: custom parameter.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +77,7 @@ public class ModifyPlaybookInputOutputRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

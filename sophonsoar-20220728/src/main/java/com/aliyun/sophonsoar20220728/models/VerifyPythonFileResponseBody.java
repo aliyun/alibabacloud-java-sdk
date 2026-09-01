@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyPythonFileResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>F72685FB-A6E6-5A9A-97F7-6DC1056E63CE</p>
@@ -14,7 +14,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The verification result. If the parameter is left empty, the syntax of the code snippet is correct.</p>
+     * <p>The result set of the Python code verification. If this parameter is empty, the code syntax is correct.</p>
      */
     @NameInMap("Syntax")
     public java.util.List<VerifyPythonFileResponseBodySyntax> syntax;
@@ -42,7 +42,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
 
     public static class VerifyPythonFileResponseBodySyntax extends TeaModel {
         /**
-         * <p>The number that indicates the end column of the error code.</p>
+         * <p>The ending column number of the code that contains an error.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -51,7 +51,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         public Integer endColumn;
 
         /**
-         * <p>The number that indicates the end line of the error code.</p>
+         * <p>The ending line number of the code that contains an error.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -60,7 +60,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         public Integer endLineNumber;
 
         /**
-         * <p>The error message for the error code.</p>
+         * <p>The error message for the code.</p>
          * 
          * <strong>example:</strong>
          * <p>undefined name \&quot;ab\&quot;</p>
@@ -69,10 +69,12 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The severity level of the error code. Valid values:</p>
+         * <p>The error level of the code.</p>
          * <ul>
-         * <li>4: moderate</li>
-         * <li>8: serious</li>
+         * <li><p>4: General error</p>
+         * </li>
+         * <li><p>8: Critical error</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +84,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         public Integer severity;
 
         /**
-         * <p>The number that indicates the start column of the error code.</p>
+         * <p>The starting column number of the code that contains an error.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -91,7 +93,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         public Integer startColumn;
 
         /**
-         * <p>The number that indicates the start line of the error code.</p>
+         * <p>The starting line number of the code that contains an error.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

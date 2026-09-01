@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeComponentPlaybookResponseBody extends TeaModel {
     /**
-     * <p>The information about the predefined components.</p>
+     * <p>The list of component playbooks.</p>
      */
     @NameInMap("Playbooks")
     public java.util.List<DescribeComponentPlaybookResponseBodyPlaybooks> playbooks;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C5F5D6C9-DF1A-5381-92B1-39676F777D20</p>
@@ -42,7 +42,7 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
 
     public static class DescribeComponentPlaybookResponseBodyPlaybooks extends TeaModel {
         /**
-         * <p>The description of the predefined component.</p>
+         * <p>The description of the component playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>aegis_kill_process</p>
@@ -51,7 +51,7 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the predefined component.</p>
+         * <p>The name of the component playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>AegisKillQuara</p>
@@ -60,9 +60,9 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The input parameter configuration of the playbook. The value is a JSON array.</p>
+         * <p>The input parameter configurations of the component playbook. The value is a JSON array.</p>
          * <blockquote>
-         * <p> For more information, see <a href="~~DescribePlaybookInputOutput~~">DescribePlaybookInputOutput</a>.</p>
+         * <p>For more information about the format, see <a href="~~DescribePlaybookInputOutput~~">DescribePlaybookInputOutput</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -82,6 +82,12 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
         public String inputParams;
 
         /**
+         * <p>The input parameter type of the component playbook.</p>
+         * <p>template-ip: IP request template.
+         * template-file: file request template.
+         * template-process: process request template.
+         * custom: custom parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>template-alert</p>
          */

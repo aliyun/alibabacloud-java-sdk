@@ -5,7 +5,15 @@ import com.aliyun.tea.*;
 
 public class QueryTreeDataResponseBody extends TeaModel {
     /**
-     * <p>The returned information about the playbook. The value is a JSON string.</p>
+     * <p>A list of playbooks in JSON string format. The string contains the following fields:</p>
+     * <ul>
+     * <li><p><strong>active</strong>: Indicates whether the playbook is active. A value of <strong>true</strong> means the playbook is active. A value of <strong>false</strong> means the playbook is inactive.</p>
+     * </li>
+     * <li><p><strong>displayName</strong>: The name of the playbook.</p>
+     * </li>
+     * <li><p><strong>playbookUuid</strong>: The UUID of the playbook.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -22,7 +30,7 @@ public class QueryTreeDataResponseBody extends TeaModel {
     public String playbooks;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>EF2ECA2D-D8E6-5021-BF5C-19DD6D52C5B2</p>

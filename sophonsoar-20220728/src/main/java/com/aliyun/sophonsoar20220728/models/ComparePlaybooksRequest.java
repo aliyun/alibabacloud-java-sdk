@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ComparePlaybooksRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response.</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class ComparePlaybooksRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the second version.</p>
+     * <p>The UUID of the second published version for comparison.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the IDs of versions. The system automatically generates IDs for new versions.</p>
+     * <p>To obtain the UUID of a historical version, call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation. The system automatically generates a UUID for a new version.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +33,9 @@ public class ComparePlaybooksRequest extends TeaModel {
     public Integer newPlaybookReleaseId;
 
     /**
-     * <p>The ID of the first version.</p>
+     * <p>The UUID of the first published version for comparison.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the IDs of versions. The system automatically generates IDs for new versions.</p>
+     * <p>To obtain the UUID of a historical version, call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation. The system automatically generates a UUID for a new version.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +48,7 @@ public class ComparePlaybooksRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the UUIDs of playbooks.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

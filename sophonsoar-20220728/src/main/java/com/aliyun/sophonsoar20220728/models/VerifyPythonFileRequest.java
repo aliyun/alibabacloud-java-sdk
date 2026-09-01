@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyPythonFileRequest extends TeaModel {
     /**
-     * <p>The Python code snippet.</p>
+     * <p>The Python code snippet to verify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

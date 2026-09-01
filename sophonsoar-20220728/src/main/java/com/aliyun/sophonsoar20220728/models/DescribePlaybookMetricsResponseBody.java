@@ -11,7 +11,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
     public DescribePlaybookMetricsResponseBodyMetrics metrics;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. This ID is unique to each request and is used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>567D3D0B-2153-5860-BF9A-F9DEED55FB73</p>
@@ -44,8 +44,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
         /**
          * <p>The status of the playbook. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enabled</li>
-         * <li><strong>0</strong>: disabled</li>
+         * <li><p><strong>1</strong>: The playbook is enabled.</p>
+         * </li>
+         * <li><p><strong>0</strong>: The playbook is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,7 +75,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The number of the tasks that are created for the playbook and failed to run.</p>
+         * <p>The number of failed playbook runs.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -111,8 +113,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
         /**
          * <p>The type of the playbook. Valid values:</p>
          * <ul>
-         * <li><strong>preset</strong>: predefined playbook</li>
-         * <li><strong>user</strong>: custom playbook</li>
+         * <li><p><strong>preset</strong>: predefined playbook.</p>
+         * </li>
+         * <li><p><strong>user</strong>: custom playbook.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +135,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
         public String playbookUuid;
 
         /**
-         * <p>The number of the tasks that are created for the playbook and were successfully run.</p>
+         * <p>The number of successful playbook runs.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

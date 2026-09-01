@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeEnumItemsResponseBody extends TeaModel {
     /**
-     * <p>The information about the enumeration item.</p>
+     * <p>The enumeration information.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeEnumItemsResponseBodyData> data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. This ID is unique to each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E7698CFB-4E1C-5840-8EC9-691B86729E94</p>
@@ -42,7 +42,7 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
 
     public static class DescribeEnumItemsResponseBodyData extends TeaModel {
         /**
-         * <p>The key of the enumeration item.</p>
+         * <p>The key of the enumeration.</p>
          * 
          * <strong>example:</strong>
          * <p>system_xxxxx_process_book</p>
@@ -51,7 +51,7 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the enumeration item.</p>
+         * <p>The value of the enumeration.</p>
          * 
          * <strong>example:</strong>
          * <p>system_xxxxx_process_book</p>

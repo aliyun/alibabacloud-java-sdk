@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
     /**
-     * <p>The output data of the component node.</p>
+     * <p>The output data of the node.</p>
      */
     @NameInMap("PlaybookNodesOutput")
     public DescribePlaybookNodesOutputResponseBodyPlaybookNodesOutput playbookNodesOutput;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A491170C-FE1F-520E-83D4-72ED205B72ED</p>
@@ -42,7 +42,7 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
 
     public static class DescribePlaybookNodesOutputResponseBodyPlaybookNodesOutput extends TeaModel {
         /**
-         * <p>The name of the component node.</p>
+         * <p>The name of the playbook node.</p>
          * 
          * <strong>example:</strong>
          * <p>DataFormat_1</p>
@@ -51,7 +51,7 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The historical output data of the component node. The value is in the JSON string format. If no data is found, the parameter is left empty.</p>
+         * <p>The historical output data of the component. The data is in the JSON format. If no data exists, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>{

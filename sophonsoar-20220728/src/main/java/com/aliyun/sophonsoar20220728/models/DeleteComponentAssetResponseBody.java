@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteComponentAssetResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>39C38A34-8532-5D44-B88A-7263B435C316</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyComponentAssetResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. This ID is unique to each request and is used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1C5F11E9-464E-51F0-9296-43BB312A0557</p>

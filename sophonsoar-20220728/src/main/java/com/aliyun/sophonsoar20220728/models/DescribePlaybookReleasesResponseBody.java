@@ -11,13 +11,13 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
     public DescribePlaybookReleasesResponseBodyPage page;
 
     /**
-     * <p>The information about the playbook version.</p>
+     * <p>A list of playbook versions.</p>
      */
     @NameInMap("Records")
     public java.util.List<DescribePlaybookReleasesResponseBodyRecords> records;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3DFBE11C-6EB6-5166-92D6-3397796AFE1E</p>
@@ -56,7 +56,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
 
     public static class DescribePlaybookReleasesResponseBodyPage extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -65,7 +65,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -115,7 +115,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
 
     public static class DescribePlaybookReleasesResponseBodyRecords extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to publish the version.</p>
+         * <p>The ID of the Alibaba Cloud account that published the version.</p>
          * 
          * <strong>example:</strong>
          * <p>145xxxx985</p>
@@ -124,7 +124,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The description of the layer version.</p>
+         * <p>The description of the version.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a new version</p>
@@ -133,7 +133,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the version was created. The value is a 13-digit timestamp.</p>
+         * <p>The time when the version was created. This is a 13-digit UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1655277397000</p>
@@ -142,7 +142,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The time when the version was modified. The value is a 13-digit timestamp.</p>
+         * <p>The time when the version was last modified. This is a 13-digit UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1691460804000</p>
@@ -160,7 +160,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The MD5 value configured for the published version of the playbook.</p>
+         * <p>The MD5 hash of the playbook configuration for the published version.</p>
          * 
          * <strong>example:</strong>
          * <p>be0a4ef084dd174abe47xxxxx</p>

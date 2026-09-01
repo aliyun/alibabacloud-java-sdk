@@ -5,9 +5,18 @@ import com.aliyun.tea.*;
 
 public class TriggerSophonPlaybookRequest extends TeaModel {
     /**
+     * <p>The idempotency token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426614174000</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>The name of the command that you want to trigger.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeSophonCommands~~">DescribeSophonCommands</a> operation to query the command name.</p>
+     * <p>You can call the <a href="~~DescribeSophonCommands~~">DescribeSophonCommands</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +26,7 @@ public class TriggerSophonPlaybookRequest extends TeaModel {
     public String commandName;
 
     /**
-     * <p>The input parameters of the command or playbook that you want to trigger.</p>
+     * <p>The input parameters for triggering the command or playbook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +39,7 @@ public class TriggerSophonPlaybookRequest extends TeaModel {
     public String inputParams;
 
     /**
-     * <p>The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.</p>
+     * <p>The custom ID of the task. If you do not specify this parameter when triggering a playbook, a random ID is generated. This ID is used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>f916b93e-e814-459f-9662-xxxxxxxxxx</p>
@@ -39,10 +48,10 @@ public class TriggerSophonPlaybookRequest extends TeaModel {
     public String sophonTaskId;
 
     /**
-     * <p>The task type. Valid values:</p>
+     * <p>The trigger type. Valid values:</p>
      * <ul>
-     * <li><strong>command</strong></li>
-     * <li><strong>playbook</strong></li>
+     * <li><strong>command</strong>: Triggers a command task.</li>
+     * <li><strong>playbook</strong>: Triggers a playbook task.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +63,7 @@ public class TriggerSophonPlaybookRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+     * <p>You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,6 +75,14 @@ public class TriggerSophonPlaybookRequest extends TeaModel {
     public static TriggerSophonPlaybookRequest build(java.util.Map<String, ?> map) throws Exception {
         TriggerSophonPlaybookRequest self = new TriggerSophonPlaybookRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TriggerSophonPlaybookRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public TriggerSophonPlaybookRequest setCommandName(String commandName) {

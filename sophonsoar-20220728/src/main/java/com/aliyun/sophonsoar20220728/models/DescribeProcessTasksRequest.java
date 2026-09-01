@@ -4,11 +4,14 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessTasksRequest extends TeaModel {
+    @NameInMap("AlertId")
+    public String alertId;
+
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>The sort direction. Valid values:</p>
      * <ul>
-     * <li><strong>desc</strong> (default).</li>
-     * <li><strong>asc</strong>.</li>
+     * <li><strong>desc</strong>: Descending (default).</li>
+     * <li><strong>asc</strong>: Ascending.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +21,7 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The name of the handling entity.</p>
+     * <p>The name of the entity to be disposed.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
@@ -27,11 +30,11 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String entityName;
 
     /**
-     * <p>The type of the handling entity. Valid values:</p>
+     * <p>The type of the entity to be disposed. Valid values:</p>
      * <ul>
-     * <li><strong>ip</strong>.</li>
-     * <li><strong>file</strong>.</li>
-     * <li><strong>process</strong>.</li>
+     * <li><strong>ip</strong>: IP address entity.</li>
+     * <li><strong>file</strong>: File entity.</li>
+     * <li><strong>process</strong>: Process entity.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +44,7 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The UUID of the handling entity.</p>
+     * <p>The UUID of the entity.</p>
      * 
      * <strong>example:</strong>
      * <p>69d189e2-ec17-4676-a2fe-02969234****</p>
@@ -58,10 +61,13 @@ public class DescribeProcessTasksRequest extends TeaModel {
     @NameInMap("EventUuid")
     public String eventUuid;
 
+    @NameInMap("ExecuteUuid")
+    public String executeUuid;
+
     /**
-     * <p>The field that you use to sort the result.</p>
+     * <p>The field used to sort the results.</p>
      * <blockquote>
-     * <p> You can obtain the field from the response result.</p>
+     * <p>You can obtain the sort field from the response of this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,7 +77,7 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String orderField;
 
     /**
-     * <p>The page number. Default value: 1. Pages start from page 1.</p>
+     * <p>The page number of the page to return. Default value: 1, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -80,9 +86,9 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</p>
+     * <p>The maximum number of entries to return on each page for paging queries. Default value: 20. If the PageSize parameter is left empty, 10 entries are returned by default.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,7 +98,7 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The handling entity, handling scenario, or handling parameter that is used for fuzzy match.</p>
+     * <p>The fuzzy match content. This parameter queries the entity, disposal scene, and disposal parameter fields.</p>
      * 
      * <strong>example:</strong>
      * <p>12.x.x.x</p>
@@ -101,7 +107,7 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String paramContent;
 
     /**
-     * <p>The end of the time range for a handling task. The value is a 13-digit timestamp.</p>
+     * <p>The end time of the query range for the disposal time. Format: 13-digit timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1700031183572</p>
@@ -110,7 +116,7 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public Long processActionEnd;
 
     /**
-     * <p>The beginning of the time range for a handling task. The value is a 13-digit timestamp.</p>
+     * <p>The start time of the query range for the disposal time. Format: 13-digit timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1700031183572</p>
@@ -119,7 +125,7 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public Long processActionStart;
 
     /**
-     * <p>The end of the time range for an unblocking task. The value is a 13-digit timestamp.</p>
+     * <p>The end time of the query range for the unblocking time. Format: 13-digit timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1700031183572</p>
@@ -128,7 +134,7 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public Long processRemoveEnd;
 
     /**
-     * <p>The beginning of the time range for an unblocking task. The value is a 13-digit timestamp.</p>
+     * <p>The start time of the query range for the unblocking time. Format: 13-digit timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1700031183572</p>
@@ -137,24 +143,33 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public Long processRemoveStart;
 
     /**
-     * <p>The UUID of the handling policy.</p>
+     * <p>The UUID of the disposal strategy.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2584440.html">ListDisposeStrategy</a> operation to query the UUID of the handling policy.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2584440.html">ListDisposeStrategy</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>92af3c79-1754-4646-9366-9ddbd1e45536_xxxx</p>
+     * <p>92af3c79-1754-4646-9366-9ddbd1e45536_****</p>
      */
     @NameInMap("ProcessStrategyUuid")
     public String processStrategyUuid;
 
+    /**
+     * <p>The trigger ID of the playbook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b73d0b08-f1bd-4e8f-967a-8e2982c9****</p>
+     */
     @NameInMap("ReqUuid")
     public String reqUuid;
 
+    @NameInMap("ResponseRuleId")
+    public String responseRuleId;
+
     /**
-     * <p>The scenario code of the handling task.</p>
+     * <p>The scene code of the disposal task.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeEnumItems~~">DescribeEnumItems</a> operation to query the scenario code of the handling task. This parameter is available when you set <strong>EnumType</strong> to <strong>process</strong>.</p>
+     * <p>You can call the <a href="~~DescribeEnumItems~~">DescribeEnumItems</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -164,7 +179,7 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String sceneCode;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that is specified in the handling task.</p>
+     * <p>The Alibaba Cloud account ID for the disposal.</p>
      * 
      * <strong>example:</strong>
      * <p>125xxxxx9870</p>
@@ -173,13 +188,13 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The triggering source of the handling task. The value is a string array. Valid values:</p>
+     * <p>The trigger source of the disposal task, in array string format. Valid values:</p>
      * <ul>
-     * <li><strong>system</strong>: triggered when you manually handle an event.</li>
-     * <li><strong>custom</strong>: triggered by an event based on an automatic response rule.</li>
-     * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule.</li>
-     * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook.</li>
-     * <li><strong>soar-mdr</strong>: triggered by Managed Security Service.</li>
+     * <li><strong>system</strong>: Triggered by manual event disposal.</li>
+     * <li><strong>custom</strong>: Triggered by an automatic response rule based on an event.</li>
+     * <li><strong>custom_alert</strong>: Triggered by an automatic response rule based on an alert.</li>
+     * <li><strong>soar-manual</strong>: Triggered by manually invoking a SOAR playbook.</li>
+     * <li><strong>soar-mdr</strong>: Triggered by the Managed Security Service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -189,9 +204,9 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The unique identifier of the handling task.</p>
+     * <p>The unique identifier of the disposal task.</p>
      * <blockquote>
-     * <p> This parameter is used to query a specific task. You can obtain the value from the response result.</p>
+     * <p>This parameter is used to query a specific task. You can obtain the value from the response of this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -201,17 +216,17 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The status of the handling task. The value is a string. Valid values:</p>
+     * <p>The status list of the disposal task, in data string format. Valid values:</p>
      * <ul>
-     * <li><strong>11</strong>: being handled.</li>
-     * <li><strong>21</strong>: being blocked.</li>
-     * <li><strong>22</strong>: being quarantined.</li>
-     * <li><strong>23</strong>: completed.</li>
-     * <li><strong>24</strong>: added to the whitelist.</li>
-     * <li><strong>20</strong>: successful.</li>
-     * <li><strong>90</strong>: failed.</li>
-     * <li><strong>91</strong>: unblocking failed.</li>
-     * <li><strong>92</strong>: restoring quarantined files failed</li>
+     * <li><strong>11</strong>: Disposing.</li>
+     * <li><strong>21</strong>: Blocking.</li>
+     * <li><strong>22</strong>: Isolating.</li>
+     * <li><strong>23</strong>: Ended.</li>
+     * <li><strong>24</strong>: Whitelisted.</li>
+     * <li><strong>20</strong>: Succeeded.</li>
+     * <li><strong>90</strong>: Failed.</li>
+     * <li><strong>91</strong>: Unblocking failed.</li>
+     * <li><strong>92</strong>: Unisolation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -221,13 +236,13 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String taskStatus;
 
     /**
-     * <p>The triggering source of the handling task. Valid values:</p>
+     * <p>The trigger source of the disposal task. Valid values:</p>
      * <ul>
-     * <li><strong>system</strong>: triggered when you manually handle an event.</li>
-     * <li><strong>custom</strong>: triggered by an event based on an automatic response rule.</li>
-     * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule.</li>
-     * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook.</li>
-     * <li><strong>soar-mdr</strong>: triggered by Managed Security Service.</li>
+     * <li><strong>system</strong>: Triggered by manual event disposal.</li>
+     * <li><strong>custom</strong>: Triggered by an automatic response rule based on an event.</li>
+     * <li><strong>custom_alert</strong>: Triggered by an automatic response rule based on an alert.</li>
+     * <li><strong>soar-manual</strong>: Triggered by manually invoking a SOAR playbook.</li>
+     * <li><strong>soar-mdr</strong>: Triggered by the Managed Security Service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -237,9 +252,9 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public String triggerSource;
 
     /**
-     * <p>The cloud service that is associated with the handling task. The value is a string. Valid values:</p>
+     * <p>The cloud product associated with the disposal task, in data string format. Valid values:</p>
      * <ul>
-     * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
+     * <li><strong>WAF</strong>: Web Application Firewall.</li>
      * <li><strong>CFW</strong>: Cloud Firewall.</li>
      * <li><strong>Aegis</strong>: Security Center.</li>
      * </ul>
@@ -253,6 +268,14 @@ public class DescribeProcessTasksRequest extends TeaModel {
     public static DescribeProcessTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeProcessTasksRequest self = new DescribeProcessTasksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeProcessTasksRequest setAlertId(String alertId) {
+        this.alertId = alertId;
+        return this;
+    }
+    public String getAlertId() {
+        return this.alertId;
     }
 
     public DescribeProcessTasksRequest setDirection(String direction) {
@@ -293,6 +316,14 @@ public class DescribeProcessTasksRequest extends TeaModel {
     }
     public String getEventUuid() {
         return this.eventUuid;
+    }
+
+    public DescribeProcessTasksRequest setExecuteUuid(String executeUuid) {
+        this.executeUuid = executeUuid;
+        return this;
+    }
+    public String getExecuteUuid() {
+        return this.executeUuid;
     }
 
     public DescribeProcessTasksRequest setOrderField(String orderField) {
@@ -373,6 +404,14 @@ public class DescribeProcessTasksRequest extends TeaModel {
     }
     public String getReqUuid() {
         return this.reqUuid;
+    }
+
+    public DescribeProcessTasksRequest setResponseRuleId(String responseRuleId) {
+        this.responseRuleId = responseRuleId;
+        return this;
+    }
+    public String getResponseRuleId() {
+        return this.responseRuleId;
     }
 
     public DescribeProcessTasksRequest setSceneCode(String sceneCode) {

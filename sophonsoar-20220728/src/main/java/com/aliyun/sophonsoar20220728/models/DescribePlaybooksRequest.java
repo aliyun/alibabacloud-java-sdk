@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribePlaybooksRequest extends TeaModel {
     /**
-     * <p>Activation status of the playbook. Values:</p>
+     * <p>The status of the playbook. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Indicates the playbook is activated.</li>
-     * <li><strong>0</strong>: Indicates the playbook is not activated.</li>
+     * <li><p><strong>1</strong>: The playbook is enabled.</p>
+     * </li>
+     * <li><p><strong>0</strong>: The playbook is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribePlaybooksRequest extends TeaModel {
     public Integer active;
 
     /**
-     * <p>End time for the query, in 13-digit timestamp format.</p>
+     * <p>The end of the time range to query. This value is a 13-digit timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1683858064361</p>
@@ -27,10 +29,12 @@ public class DescribePlaybooksRequest extends TeaModel {
     public Long endMillis;
 
     /**
-     * <p>Specifies the language type for the request and response, default is <strong>zh</strong>. Values:</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,10 +53,12 @@ public class DescribePlaybooksRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sorting logic, with a default value of <strong>desc</strong>. Values:</p>
+     * <p>The sort order. Default value: <strong>desc</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>desc</strong>: Descending order.</li>
-     * <li><strong>asc</strong>: Ascending order.</li>
+     * <li><p><strong>desc</strong>: descending.</p>
+     * </li>
+     * <li><p><strong>asc</strong>: ascending.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,10 +68,12 @@ public class DescribePlaybooksRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>Type of the playbook. Values:</p>
+     * <p>The type of the playbook. Valid values:</p>
      * <ul>
-     * <li><strong>preset</strong>: Predefined playbook.</li>
-     * <li><strong>user</strong>: Custom playbook.</li>
+     * <li><p><strong>preset</strong>: predefined playbook.</p>
+     * </li>
+     * <li><p><strong>user</strong>: custom playbook.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +83,7 @@ public class DescribePlaybooksRequest extends TeaModel {
     public String ownType;
 
     /**
-     * <p>Sets the page number from which to start displaying the query results. The default value is 1, indicating the first page.</p>
+     * <p>The page number of the page to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -84,9 +92,9 @@ public class DescribePlaybooksRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>Specifies the maximum number of items to display per page in a paginated query. The default number of items per page is 20. If the PageSize parameter is empty, it will return 10 items by default.</p>
+     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 10 entries are returned by default.</p>
      * <blockquote>
-     * <p>It is recommended that the PageSize value is not empty.</p>
+     * <p>Specify a value for this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,17 +104,26 @@ public class DescribePlaybooksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The trigger method for the playbook, with a default value of <strong>query all</strong>. Values:</p>
+     * <p>The trigger type of the playbook. If you do not specify this parameter, playbooks of all trigger types are queried. Valid values:</p>
      * <ul>
-     * <li><strong>template-incident</strong>: Security incident.</li>
-     * <li><strong>template-ip</strong>: IP entity.</li>
-     * <li><strong>template-file</strong>: File entity.</li>
-     * <li><strong>template-process</strong>: Process entity.</li>
-     * <li><strong>template-alert</strong>: Security alert.</li>
-     * <li><strong>template-domain</strong>: Domain entity.</li>
-     * <li><strong>template-container</strong>: Container entity.</li>
-     * <li><strong>template-host</strong>: Host entity.</li>
-     * <li><strong>template-custom</strong>: Custom.</li>
+     * <li><p><strong>template-incident</strong>: security event.</p>
+     * </li>
+     * <li><p><strong>template-ip</strong>: IP entity.</p>
+     * </li>
+     * <li><p><strong>template-file</strong>: file entity.</p>
+     * </li>
+     * <li><p><strong>template-process</strong>: process entity.</p>
+     * </li>
+     * <li><p><strong>template-alert</strong>: security alert.</p>
+     * </li>
+     * <li><p><strong>template-domain</strong>: domain name entity.</p>
+     * </li>
+     * <li><p><strong>template-container</strong>: container entity.</p>
+     * </li>
+     * <li><p><strong>template-host</strong>: host entity.</p>
+     * </li>
+     * <li><p><strong>template-custom</strong>: custom.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,10 +135,7 @@ public class DescribePlaybooksRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p>You can use the UUID to query specific playbook information.</p>
-     * <ul>
-     * <li>Call the <a href="~~CreatePlaybook~~">CreatePlaybook</a> API to obtain this parameter.</li>
-     * </ul>
+     * <p>Call the <a href="~~CreatePlaybook~~">CreatePlaybook</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,21 +145,21 @@ public class DescribePlaybooksRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>UUID List of the playbook.</p>
-     * <p>Note You can use the UUID list to query specific playbook information.
-     * Call the DescribePlaybooks API to obtain this parameter.</p>
+     * <p>A comma-separated list of playbook UUIDs. You can specify up to 100 UUIDs.</p>
      * 
      * <strong>example:</strong>
-     * <p>8baa6cff-319e-4ede-97bc-1xxxxxx,7745e6cff-319e-4ede-97bc-1xxxxxx</p>
+     * <p>8baa6cff-319e-4ede-97bc-1xxxxxx,8rrt6cff-319e-4ede-97bc-1xxxxxx</p>
      */
     @NameInMap("PlaybookUuids")
     public String playbookUuids;
 
     /**
-     * <p>The sorting basis, with a default value of <strong>1</strong>. Values:</p>
+     * <p>The field to sort by. Default value: <strong>1</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Last modified time.</li>
-     * <li><strong>2</strong>: Most recent execution time.</li>
+     * <li><p><strong>1</strong>: last modification time.</p>
+     * </li>
+     * <li><p><strong>2</strong>: last running time.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,7 +169,7 @@ public class DescribePlaybooksRequest extends TeaModel {
     public Integer sort;
 
     /**
-     * <p>Start time for the query, in 13-digit timestamp format.</p>
+     * <p>The start of the time range to query. This value is a 13-digit timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1683526277415</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     /**
-     * <p>The name of the action in the playbook.</p>
+     * <p>The name of the playbook action.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String actionName;
 
     /**
-     * <p>The ID of the resource. This parameter is deprecated.</p>
+     * <p>The ID of the resource. This parameter is deprecated and no longer used.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String assetId;
 
     /**
-     * <p>The name of the component in the playbook.</p>
+     * <p>The name of the playbook component.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String componentName;
 
     /**
-     * <p>The message body sent by the DingTalk group chatbot webhook.</p>
+     * <p>The content of the message sent by the webhook of the DingTalk group robot.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,10 +58,12 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,11 +73,14 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of the webhook message. Valid values:</p>
+     * <p>The message type of the webhook. Valid values:</p>
      * <ul>
-     * <li>text.</li>
-     * <li>markdown.</li>
-     * <li>actionCard.</li>
+     * <li><p>text</p>
+     * </li>
+     * <li><p>markdown</p>
+     * </li>
+     * <li><p>actionCard</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -86,7 +91,7 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String msgType;
 
     /**
-     * <p>The name of the node in the playbook.</p>
+     * <p>The name of the playbook node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +103,7 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/3000306.html">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -109,7 +114,7 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+     * <p>The UID of the member that the administrator wants to switch to.</p>
      * 
      * <strong>example:</strong>
      * <p>126339xxxx805497</p>
@@ -118,10 +123,12 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type. Valid values:</p>
      * <ul>
-     * <li>0 (default): the view of the current Alibaba Cloud account.</li>
-     * <li>1: the view of all accounts for the enterprise.</li>
+     * <li><p>0 (default): the view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: the view of all accounts that belong to the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +138,7 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String roleType;
 
     /**
-     * <p>The message key of the DingTalk chatbot webhook. This parameter is deprecated.</p>
+     * <p>The secret key for the webhook of the DingTalk group robot. This parameter is deprecated and no longer used.</p>
      * 
      * <strong>example:</strong>
      * <p>SECc1<em><strong><strong>e157b32b380f</strong></strong></em>***bb8c70e1a67a22072</p>
@@ -140,10 +147,7 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String secret;
 
     /**
-     * <p>The IDs of chatbots that are configured in the message center. Only DingTalk chatbots are supported.</p>
-     * <blockquote>
-     * <p> You can call the <a href="~~ListEncryptWebhooks~~">ListEncryptWebhooks</a> operation to query the chatbot IDs.</p>
-     * </blockquote>
+     * <p>The IDs of the DingTalk robots. Obtain the IDs on the robot management page in Message Center.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

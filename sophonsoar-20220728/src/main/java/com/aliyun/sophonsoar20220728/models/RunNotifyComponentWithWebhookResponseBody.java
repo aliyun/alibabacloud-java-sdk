@@ -20,7 +20,7 @@ public class RunNotifyComponentWithWebhookResponseBody extends TeaModel {
     public RunNotifyComponentWithWebhookResponseBodyPage page;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E7698CFB-****-5840-8EC9-691B86729E94</p>
@@ -59,7 +59,7 @@ public class RunNotifyComponentWithWebhookResponseBody extends TeaModel {
 
     public static class RunNotifyComponentWithWebhookResponseBodyPage extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -77,7 +77,7 @@ public class RunNotifyComponentWithWebhookResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries returned. This parameter is available only for paged queries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

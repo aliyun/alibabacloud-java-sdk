@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribePlaybookRequest extends TeaModel {
     /**
-     * <p>The flag that indicates whether the playbook is of the debugging or published version. Valid values:</p>
+     * <p>A flag that indicates whether the version is a published version or a debug version. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: playbook of the debugging version</li>
-     * <li><strong>0</strong>: playbook of the published version</li>
+     * <li><p><strong>1</strong>: retrieves the debug version.</p>
+     * </li>
+     * <li><p><strong>0</strong>: retrieves the published version.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class DescribePlaybookRequest extends TeaModel {
     public Integer debugFlag;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +37,7 @@ public class DescribePlaybookRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the UUIDs of playbooks.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +48,7 @@ public class DescribePlaybookRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>The MD5 hash value of the playbook.</p>
+     * <p>The MD5 value of the playbook configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>7a8f608dc64c242632aa578xxxxx</p>

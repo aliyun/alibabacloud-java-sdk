@@ -4,14 +4,26 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeSoarRecordsRequest extends TeaModel {
+    /**
+     * <p>The start time when the task was completed. The value is a 13-digit UNIX timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1755676363777</p>
+     */
     @NameInMap("CompletedBeginTime")
     public Long completedBeginTime;
 
+    /**
+     * <p>The end time when the task was completed. The value is a 13-digit UNIX timestamp.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1683526284584</p>
+     */
     @NameInMap("CompletedEndTime")
     public Long completedEndTime;
 
     /**
-     * <p>The end time of the task execution, in 13-digit timestamp format.</p>
+     * <p>The end time of the task run. The value is a 13-digit UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1683772744953</p>
@@ -20,10 +32,12 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     public Long endMillis;
 
     /**
-     * <p>Set the language type for requests and received messages. The default is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +47,7 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Set which page to start displaying the query results from. The default value is 1, indicating the first page.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,9 +56,9 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Specify the maximum number of data entries per page when performing a paginated query. The default number of entries per page is 20. If the PageSize parameter is empty, it will return 10 entries by default.</p>
+     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 10 entries are returned on each page.</p>
      * <blockquote>
-     * <p>It is recommended not to leave the PageSize value empty.</p>
+     * <p>Specify a value for PageSize.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,7 +70,7 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</p>
+     * <p>For more information, see <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,13 +79,19 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
+    /**
+     * <p>The input parameter of the playbook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>input</p>
+     */
     @NameInMap("QueryValue")
     public String queryValue;
 
     /**
-     * <p>UUID of the playbook task execution.</p>
+     * <p>The UUID of the playbook task execution.</p>
      * <blockquote>
-     * <p>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2627455.html">DescribeSoarRecords</a> interface.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2627455.html">DescribeSoarRecords</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,7 +101,7 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     public String requestUuid;
 
     /**
-     * <p>The start time of the task execution, in 13-digit timestamp format.</p>
+     * <p>The start time of the task run. The value is a 13-digit UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1683526284584</p>
@@ -90,11 +110,14 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     public Long startMillis;
 
     /**
-     * <p>The status of the task execution. Values:</p>
+     * <p>The status of the task run. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong>: Successful task.</li>
-     * <li><strong>failed</strong>: Failed task.</li>
-     * <li><strong>inprogress</strong>: Task in progress</li>
+     * <li><p><strong>success</strong>: The task is successful.</p>
+     * </li>
+     * <li><p><strong>failed</strong>: The task failed.</p>
+     * </li>
+     * <li><p><strong>inprogress</strong>: The task is in progress.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,11 +135,31 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     @NameInMap("TaskflowMd5")
     public String taskflowMd5;
 
+    /**
+     * <p>The trigger type of the task. Valid values:</p>
+     * <ul>
+     * <li><p><strong>stream</strong>: stream</p>
+     * </li>
+     * <li><p><strong>debug</strong>: test</p>
+     * </li>
+     * <li><p><strong>manual</strong>: manual</p>
+     * </li>
+     * <li><p><strong>timer</strong>: scheduled</p>
+     * </li>
+     * <li><p><strong>SubInvoke</strong>: child flow</p>
+     * </li>
+     * <li><p><strong>siem</strong>: triggered by a SIEM product</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>debug</p>
+     */
     @NameInMap("TriggerType")
     public String triggerType;
 
     /**
-     * <p>The Alibaba Cloud account ID that executed the playbook task.</p>
+     * <p>The ID of the Alibaba Cloud account that runs the playbook task.</p>
      * 
      * <strong>example:</strong>
      * <p>127xxxx4392</p>

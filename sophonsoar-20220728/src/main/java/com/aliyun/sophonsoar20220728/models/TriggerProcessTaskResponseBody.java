@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TriggerProcessTaskResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>58A518BC-E4A8-5BD7-AFEA-366046ED9073</p>

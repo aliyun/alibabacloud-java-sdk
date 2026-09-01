@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunPython3ScriptRequest extends TeaModel {
     /**
-     * <p>The name of the node in the playbook.</p>
+     * <p>The name of the playbook node.</p>
      * 
      * <strong>example:</strong>
      * <p>python3_3</p>
@@ -14,7 +14,7 @@ public class RunPython3ScriptRequest extends TeaModel {
     public String nodeName;
 
     /**
-     * <p>The input parameters of the Python3 script.</p>
+     * <p>The input parameters for the Python 3 script.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -28,7 +28,7 @@ public class RunPython3ScriptRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class RunPython3ScriptRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>The Python3 script.</p>
+     * <p>The Python 3 script.</p>
      * 
      * <strong>example:</strong>
      * <p>import logging
@@ -54,6 +54,8 @@ public class RunPython3ScriptRequest extends TeaModel {
     public String pythonScript;
 
     /**
+     * <p>The Python version.</p>
+     * 
      * <strong>example:</strong>
      * <p>python2.0</p>
      */

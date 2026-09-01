@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevertPlaybookReleaseResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. This ID is unique to the request and can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>B3FED5B9-190A-5952-93A4-24FBF0F0C573</p>

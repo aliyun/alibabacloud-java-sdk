@@ -21,7 +21,7 @@ public class DescribeGroupProductionsRequest extends TeaModel {
      * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
      * 
      * <strong>example:</strong>
-     * <p>118******150980</p>
+     * <p>11824150xxx50980</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;

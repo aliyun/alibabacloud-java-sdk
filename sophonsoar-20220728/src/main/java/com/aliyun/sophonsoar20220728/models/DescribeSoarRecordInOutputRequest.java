@@ -7,7 +7,7 @@ public class DescribeSoarRecordInOutputRequest extends TeaModel {
     /**
      * <p>The UUID of the component action.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeSoarTaskAndActions~~">DescribeSoarTaskAndActions</a> operation to query the UUIDs of component actions.</p>
+     * <p>Call the <a href="~~DescribeSoarTaskAndActions~~">DescribeSoarTaskAndActions</a> API to get this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,12 @@ public class DescribeSoarRecordInOutputRequest extends TeaModel {
     public String actionUuid;
 
     /**
-     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

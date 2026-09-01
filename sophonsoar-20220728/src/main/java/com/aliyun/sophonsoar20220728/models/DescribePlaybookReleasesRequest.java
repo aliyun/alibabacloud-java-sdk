@@ -7,8 +7,10 @@ public class DescribePlaybookReleasesRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribePlaybookReleasesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Default value: 1. Pages start from page 1.</p>
+     * <p>The page number of the page to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,9 +29,9 @@ public class DescribePlaybookReleasesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</p>
+     * <p>The number of entries per page. Default value: 20. If you do not specify this parameter, 10 entries are returned.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Specify a value for this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,7 +41,7 @@ public class DescribePlaybookReleasesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The playbook UUID.</p>
+     * <p>The UUID of the playbook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

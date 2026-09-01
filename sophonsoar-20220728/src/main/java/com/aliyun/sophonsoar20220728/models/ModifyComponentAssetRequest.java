@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyComponentAssetRequest extends TeaModel {
     /**
-     * <p>The configuration of the asset. The value is a JSON object.</p>
+     * <p>The configuration of the component asset. This parameter is a JSON object.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +32,12 @@ public class ModifyComponentAssetRequest extends TeaModel {
     public String assetConfig;
 
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language of the request and response.</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -45,7 +45,7 @@ public class DescribeSoarRecordInOutputResponseBody extends TeaModel {
     public String inOutputInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>372D8B41-AF8D-573A-9B3F-0924950F241F</p>

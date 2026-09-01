@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     /**
-     * <p>The execution details of each task.</p>
+     * <p>The details of the task execution.</p>
      */
     @NameInMap("Details")
     public DescribeSoarTaskAndActionsResponseBodyDetails details;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("Page")
     public DescribeSoarTaskAndActionsResponseBodyPage page;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>18017A93-3D5D-503A-8308-914543F1CBA3</p>
@@ -53,7 +56,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
 
     public static class DescribeSoarTaskAndActionsResponseBodyDetailsActions extends TeaModel {
         /**
-         * <p>The action name of the component.</p>
+         * <p>The name of the component action.</p>
          * 
          * <strong>example:</strong>
          * <p>formatdata</p>
@@ -62,7 +65,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The UUID of the component execution record.</p>
+         * <p>The UUID of the component action execution record.</p>
          * 
          * <strong>example:</strong>
          * <p>091be399-a937-4276-af78-xxxxxxxx</p>
@@ -71,7 +74,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String actionUuid;
 
         /**
-         * <p>The name of the asset that is used by the component.</p>
+         * <p>The name of the asset used by the component.</p>
          * 
          * <strong>example:</strong>
          * <p>SLS Asset</p>
@@ -80,7 +83,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String assetName;
 
         /**
-         * <p>The component name.</p>
+         * <p>The name of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>DataFormat</p>
@@ -89,7 +92,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String component;
 
         /**
-         * <p>The end of the time range during which the component is run. The value is a 13-digit timestamp.</p>
+         * <p>The end time of the component run. This is a 13-digit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1699868848766</p>
@@ -98,7 +101,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The custom name of the node in the component.</p>
+         * <p>The custom node name of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>DataFormat_1</p>
@@ -107,7 +110,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The beginning of the time range during which the component is run. The value is a 13-digit timestamp.</p>
+         * <p>The start time of the component run. This is a 13-digit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1699868848731</p>
@@ -116,10 +119,12 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The running result of the component. Valid values:</p>
+         * <p>The result of the component run. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><p><strong>success</strong>: The run was successful.</p>
+         * </li>
+         * <li><p><strong>fail</strong>: The run failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,17 +205,23 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSoarTaskAndActionsResponseBodyDetails extends TeaModel {
+        /**
+         * <p>The total number of action logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ActionLogNum")
         public Integer actionLogNum;
 
         /**
-         * <p>The list of component actions during the running of the playbook.</p>
+         * <p>The list of component actions executed in the playbook.</p>
          */
         @NameInMap("Actions")
         public java.util.List<DescribeSoarTaskAndActionsResponseBodyDetailsActions> actions;
 
         /**
-         * <p>The end of the time range during which the playbook is run. The value is a 13-digit timestamp.</p>
+         * <p>The end time of the playbook run. This is a 13-digit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1699868848767</p>
@@ -219,7 +230,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The error message of the task. If the task is successful, this field is empty.</p>
+         * <p>The error message for the playbook task. This field is empty if the task is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>stime not match</p>
@@ -228,7 +239,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The request parameters of the task.</p>
+         * <p>The request parameters of the playbook task.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -240,7 +251,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String rawEventReq;
 
         /**
-         * <p>The request ID of the task. The value is unique.</p>
+         * <p>The request ID of the playbook task. This is the unique ID for each task run.</p>
          * 
          * <strong>example:</strong>
          * <p>17f75844-75cc-4174-86da-cec07a690142</p>
@@ -249,7 +260,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String requestUuid;
 
         /**
-         * <p>The beginning of the time range during which the playbook is run. The value is a 13-digit timestamp.</p>
+         * <p>The start time of the playbook run. This is a 13-digit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1699868848645</p>
@@ -258,11 +269,14 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The status of the playbook task. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
-         * <li><strong>running</strong></li>
+         * <li><p><strong>success</strong>: The task was successful.</p>
+         * </li>
+         * <li><p><strong>fail</strong>: The task failed.</p>
+         * </li>
+         * <li><p><strong>running</strong>: The task is running.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,7 +286,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The MD5 value of the playbook.</p>
+         * <p>The MD5 value of the playbook configuration that was run.</p>
          * 
          * <strong>example:</strong>
          * <p>ed127287-6699-4e4d-b986-9f770879xxx</p>
@@ -281,7 +295,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String taskFlowMd5;
 
         /**
-         * <p>The name of the task. The value is the same as the playbook UUID.</p>
+         * <p>The name of the playbook task. This is the same as the playbook UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>92af3c79-1754-4646-9366-9ddbd1e45536</p>
@@ -290,11 +304,14 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The task type. Valid values:</p>
+         * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li><strong>debug</strong>: a debugging task</li>
-         * <li><strong>manual</strong>: a manual task</li>
-         * <li><strong>siem</strong>: an event-triggered task</li>
+         * <li><p><strong>debug</strong>: A task for debugging a playbook.</p>
+         * </li>
+         * <li><p><strong>manual</strong>: A manually triggered task.</p>
+         * </li>
+         * <li><p><strong>siem</strong>: An event-triggered task.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +321,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String triggerType;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that triggers the task.</p>
+         * <p>The ID of the Alibaba Cloud account that triggered the playbook task.</p>
          * 
          * <strong>example:</strong>
          * <p>127xxxx4392</p>
@@ -416,12 +433,30 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSoarTaskAndActionsResponseBodyPage extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public String pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TotalCount")
         public String totalCount;
 

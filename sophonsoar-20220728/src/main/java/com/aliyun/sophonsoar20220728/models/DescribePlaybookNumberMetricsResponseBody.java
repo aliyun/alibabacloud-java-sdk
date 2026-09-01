@@ -11,7 +11,7 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
     public DescribePlaybookNumberMetricsResponseBodyMetrics metrics;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request. If you have an issue with a request, provide this ID for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>D4CC979E-3D5B-5A6A-BC87-C93C9E861C7B</p>

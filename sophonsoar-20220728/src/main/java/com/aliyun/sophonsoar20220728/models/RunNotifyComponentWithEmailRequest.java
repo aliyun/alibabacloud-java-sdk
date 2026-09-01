@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunNotifyComponentWithEmailRequest extends TeaModel {
     /**
-     * <p>The action name of the component.</p>
+     * <p>The name of the component action.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String actionName;
 
     /**
-     * <p>The resource instance ID of the email sender.</p>
+     * <p>The ID of the asset that is used to send the email.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeComponentAssets~~">DescribeComponentAssets</a> operation to query the ID.</p>
+     * <p>Call the <a href="~~DescribeComponentAssets~~">DescribeComponentAssets</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String assetId;
 
     /**
-     * <p>The name of component in the playbook.</p>
+     * <p>The name of the playbook component.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,10 +47,12 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The language of the content within the request and the response. Valid value:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +62,7 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the node in the playbook.</p>
+     * <p>The name of the playbook node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +74,7 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     /**
      * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -83,14 +85,14 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>The email addresses.</p>
+     * <p>A list of email addresses.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Receivers")
     public java.util.List<String> receivers;
 
     /**
-     * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+     * <p>The UID of the member whose data an administrator wants to access.</p>
      * 
      * <strong>example:</strong>
      * <p>137602xxx718726</p>
@@ -99,10 +101,12 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type. Valid values:</p>
      * <ul>
-     * <li>0: the view of the current Alibaba Cloud account.</li>
-     * <li>1: the view of all accounts for the enterprise.</li>
+     * <li><p>0: The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts that belong to the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +116,7 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String roleType;
 
     /**
-     * <p>The subject of the email.</p>
+     * <p>The title of the email.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -20,7 +20,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>358E012F-****-599D-9ED0-****61CDE615</p>
+     * <p>358E012F-B516-599D-9Exxx-A1A361CDE615</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -72,7 +72,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>All</p>
+         * <p>Read-only permission</p>
          */
         @NameInMap("Type")
         public String type;
@@ -105,7 +105,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
          * <p>The code of the cloud service.</p>
          * 
          * <strong>example:</strong>
-         * <p>DM</p>
+         * <p>Rds</p>
          */
         @NameInMap("Code")
         public String code;
@@ -114,7 +114,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
          * <p>The default requested domain name.</p>
          * 
          * <strong>example:</strong>
-         * <p>dm.aliyuncs.com</p>
+         * <p>rds.aliyuncs.com</p>
          */
         @NameInMap("DefaultDomain")
         public String defaultDomain;
@@ -132,7 +132,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
          * <p>The description of the cloud service.</p>
          * 
          * <strong>example:</strong>
-         * <p>DM</p>
+         * <p>ApsaraDB</p>
          */
         @NameInMap("Description")
         public String description;
@@ -147,7 +147,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
          * <p>The name of the group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Cloud Communication</p>
+         * <p>ApsaraDB</p>
          */
         @NameInMap("Group")
         public String group;
@@ -156,7 +156,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
          * <p>The name of the cloud service.</p>
          * 
          * <strong>example:</strong>
-         * <p>DirectMail</p>
+         * <p>ApsaraDB RDS</p>
          */
         @NameInMap("Name")
         public String name;
@@ -171,7 +171,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
          * <p>The Resource Access Management (RAM) code of the POP to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>dm</p>
+         * <p>rds</p>
          */
         @NameInMap("RamCode")
         public String ramCode;
@@ -180,7 +180,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
          * <p>The short name of the cloud service.</p>
          * 
          * <strong>example:</strong>
-         * <p>DM</p>
+         * <p>RDS</p>
          */
         @NameInMap("ShortName")
         public String shortName;
@@ -308,7 +308,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
          * <p>The name of the cloud service.</p>
          * 
          * <strong>example:</strong>
-         * <p>Cloud Communication</p>
+         * <p>Database</p>
          */
         @NameInMap("GroupName")
         public String groupName;

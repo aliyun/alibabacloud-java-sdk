@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeFieldRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response messages. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class DescribeFieldRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The key of the global configuration. Valid values:</p>
+     * <p>The key of the global configuration. Valid value:</p>
      * <ul>
-     * <li><strong>soar_filed_tags</strong>: queries the input template of the playbook.</li>
+     * <li><strong>soar_filed_tags</strong>: Obtains the input field template for a playbook.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

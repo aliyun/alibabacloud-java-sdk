@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeExecutePlaybooksRequest extends TeaModel {
     /**
-     * <p>The entity type of the script input parameter. When you want to query multiple entity types, separate them with commas.</p>
+     * <p>The entity type of the input parameter for the playbook. To query multiple entity types, separate them with commas.</p>
      * <ul>
-     * <li><strong>ip</strong>: IP entity.</li>
-     * <li><strong>file</strong>: file entity.</li>
-     * <li><strong>process</strong>: process entity.</li>
-     * <li><strong>incident</strong>: incident entity.</li>
+     * <li><p><strong>ip</strong>: IP entity.</p>
+     * </li>
+     * <li><p><strong>file</strong>: file entity.</p>
+     * </li>
+     * <li><p><strong>process</strong>: process entity.</p>
+     * </li>
+     * <li><p><strong>incident</strong>: event entity.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,10 +24,12 @@ public class DescribeExecutePlaybooksRequest extends TeaModel {
     public String inputMode;
 
     /**
-     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,12 +39,16 @@ public class DescribeExecutePlaybooksRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The input parameter type of the playbook.</p>
+     * <p>The type of the input parameter for the playbook.</p>
      * <ul>
-     * <li><strong>template-ip</strong></li>
-     * <li><strong>template-file</strong></li>
-     * <li><strong>template-process</strong></li>
-     * <li><strong>custom</strong></li>
+     * <li><p><strong>template-ip</strong>: IP request template.</p>
+     * </li>
+     * <li><p><strong>template-file</strong>: file request template.</p>
+     * </li>
+     * <li><p><strong>template-process</strong>: process request template.</p>
+     * </li>
+     * <li><p><strong>custom</strong>: custom parameter.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +58,7 @@ public class DescribeExecutePlaybooksRequest extends TeaModel {
     public String paramType;
 
     /**
-     * <p>The playbook name. Fuzzy search is supported.</p>
+     * <p>The name of the playbook. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>demo_test</p>
@@ -57,9 +67,9 @@ public class DescribeExecutePlaybooksRequest extends TeaModel {
     public String playbookName;
 
     /**
-     * <p>The playbook UUID.</p>
+     * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

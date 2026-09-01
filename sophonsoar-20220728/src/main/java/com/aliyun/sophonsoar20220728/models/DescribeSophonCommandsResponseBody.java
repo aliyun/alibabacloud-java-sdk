@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSophonCommandsResponseBody extends TeaModel {
     /**
-     * <p>The commands.</p>
+     * <p>The list of returned commands.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeSophonCommandsResponseBodyData> data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1E1EC464-3BD7-518F-9937-BCC12E6855FE</p>
@@ -42,7 +42,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
 
     public static class DescribeSophonCommandsResponseBodyDataParamConfig extends TeaModel {
         /**
-         * <p>The regular expression that is used to check the format of the parameter value. If the parameter is left empty, the check is not performed.</p>
+         * <p>The regular expression that is used to check the format of the field. If this parameter is empty, no check is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>[0-9]{4}\.[0-9]{4}\.[0-9]{4}\.[0-9]{4}</p>
@@ -51,7 +51,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         public String checkField;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The name of the parameter field.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -62,8 +62,10 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the parameter is required. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default)</li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The parameter is required. This is the default value.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The parameter is optional.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +151,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The parameter configurations.</p>
+         * <p>The parameter settings.</p>
          */
         @NameInMap("ParamConfig")
         public java.util.List<DescribeSophonCommandsResponseBodyDataParamConfig> paramConfig;

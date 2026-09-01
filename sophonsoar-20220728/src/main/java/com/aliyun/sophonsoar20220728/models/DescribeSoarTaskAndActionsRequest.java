@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSoarTaskAndActionsRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,20 +19,59 @@ public class DescribeSoarTaskAndActionsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. The maximum value is 20. If you do not specify this parameter, 10 entries are returned.</p>
+     * <blockquote>
+     * <p>Specify a value for this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The trigger type of the task. Valid values:</p>
+     * <ul>
+     * <li><p><strong>stream</strong>: The task is triggered by a data stream.</p>
+     * </li>
+     * <li><p><strong>debug</strong>: The task is triggered by a debugging process.</p>
+     * </li>
+     * <li><p><strong>manual</strong>: The task is triggered manually.</p>
+     * </li>
+     * <li><p><strong>timer</strong>: The task is triggered by a timer.</p>
+     * </li>
+     * <li><p><strong>SubInvoke</strong>: The task is triggered by a child flow.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>debug</p>
+     */
     @NameInMap("QueryType")
     public String queryType;
 
+    /**
+     * <p>The input parameter of the playbook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>input</p>
+     */
     @NameInMap("QueryValue")
     public String queryValue;
 
     /**
-     * <p>The playbook UUID.</p>
+     * <p>The UUID of the playbook task.</p>
      * 
      * <strong>example:</strong>
      * <p>1077f2f9-25e8-42d9-bfdf-1528e1313f6d</p>

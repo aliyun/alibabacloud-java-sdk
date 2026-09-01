@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOpenApiListRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform.</p>
+     * <p>The API name.</p>
      * 
      * <strong>example:</strong>
      * <p>DescribePopApiItemList</p>
@@ -14,9 +14,9 @@ public class DescribeOpenApiListRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>The version number of the API.</p>
+     * <p>The API version number.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeGroupProductions~~">DescribeGroupProductions</a> operation to query the version number.</p>
+     * <p>Call the <a href="~~DescribeGroupProductions~~">DescribeGroupProductions</a> API to get this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,10 +27,12 @@ public class DescribeOpenApiListRequest extends TeaModel {
     public String apiVersion;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. The default value is <strong>zh</strong>. Values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +42,7 @@ public class DescribeOpenApiListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The POP code of the Alibaba Cloud service.</p>
+     * <p>The POP CODE of the Alibaba Cloud product API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +52,7 @@ public class DescribeOpenApiListRequest extends TeaModel {
     public String popCode;
 
     /**
-     * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+     * <p>The user ID of the member whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>137602xxx8718726</p>
@@ -59,10 +61,12 @@ public class DescribeOpenApiListRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Default value: 0. Valid values:</p>
+     * <p>The view type. The default is 0. Values:</p>
      * <ul>
-     * <li>0: the view of the current Alibaba Cloud account.</li>
-     * <li>1: the view of all accounts for the enterprise.</li>
+     * <li><p>0: Current Alibaba Cloud account view.</p>
+     * </li>
+     * <li><p>1: View of all accounts under the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

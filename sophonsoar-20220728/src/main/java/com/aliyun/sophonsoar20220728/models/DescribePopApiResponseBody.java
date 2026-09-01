@@ -14,13 +14,13 @@ public class DescribePopApiResponseBody extends TeaModel {
     public String apiName;
 
     /**
-     * <p>The information about the API.</p>
+     * <p>List of API information.</p>
      */
     @NameInMap("OpenApiMetaList")
     public java.util.List<DescribePopApiResponseBodyOpenApiMetaList> openApiMetaList;
 
     /**
-     * <p>The POP code of the Alibaba Cloud service.</p>
+     * <p>The POP code of the Alibaba Cloud product API.</p>
      * 
      * <strong>example:</strong>
      * <p>Sas</p>
@@ -29,16 +29,16 @@ public class DescribePopApiResponseBody extends TeaModel {
     public String popCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
-     * <p>1A01B0BA-CFC4-5813-9EB0-A5DA15FA95AE</p>
+     * <p>1A01B0BA-<strong><strong>-5813-</strong></strong>-A5DA15FA95AE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The version of the API.</p>
+     * <p>The version number of the API.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-09-10</p>
@@ -93,7 +93,7 @@ public class DescribePopApiResponseBody extends TeaModel {
 
     public static class DescribePopApiResponseBodyOpenApiMetaList extends TeaModel {
         /**
-         * <p>The parameter description.</p>
+         * <p>The description of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>demo parameter</p>
@@ -122,8 +122,10 @@ public class DescribePopApiResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the parameter is required.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p><strong>true</strong>: required.</p>
+         * </li>
+         * <li><p><strong>false</strong>: not required.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,16 +134,40 @@ public class DescribePopApiResponseBody extends TeaModel {
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <p>The serialization method for an array parameter. Valid values:</p>
+         * <ul>
+         * <li><p><strong>repeatList</strong>: An array is serialized in the XXX.N format. Example: Instance.1=i-instance1&amp;\&amp;Instance.2=i-instance2.</p>
+         * </li>
+         * <li><p><strong>simple</strong>: An array is serialized as a comma-separated string. Example: i-instance1,i-instance2.</p>
+         * </li>
+         * <li><p><strong>spaceDelimited</strong>: An array is serialized as a space-separated string. Example: i-instance1 i-instance2.</p>
+         * </li>
+         * <li><p><strong>pipeDelimited</strong>: An array is serialized as a pipe-separated string. Example: i-instance1|i-instance2.</p>
+         * </li>
+         * <li><p><strong>json</strong>: An array is serialized in JSON format. Example: [&quot;i-instance1&quot;,&quot;i-instance2&quot;].</p>
+         * </li>
+         * <li><p><strong>flat</strong>: An array is serialized in the XXX.N format. Example: Instance.1=i-instance1\&amp;Instance.2=i-instance2.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>json</p>
+         */
         @NameInMap("Style")
         public String style;
 
         /**
-         * <p>The data type of the parameter field. Valid values:</p>
+         * <p>The data type of the parameter. Valid values:</p>
          * <ul>
-         * <li><strong>string</strong></li>
-         * <li><strong>boolean</strong></li>
-         * <li><strong>integer</strong></li>
-         * <li><strong>long</strong></li>
+         * <li><p><strong>string</strong>: a string.</p>
+         * </li>
+         * <li><p><strong>boolean</strong>: a Boolean value.</p>
+         * </li>
+         * <li><p><strong>integer</strong>: an integer.</p>
+         * </li>
+         * <li><p><strong>long</strong>: a long integer.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

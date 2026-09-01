@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDistinctReleasesRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class DescribeDistinctReleasesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The playbook UUID.</p>
+     * <p>The UUID of the playbook.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+     * <p>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +33,7 @@ public class DescribeDistinctReleasesRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>The MD5 value of the playbook XML configuration.</p>
+     * <p>The MD5 value of the playbook\&quot;s XML configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>be0a4ef084dd174abe47xxxxx</p>

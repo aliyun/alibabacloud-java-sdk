@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeEnumItemsRequest extends TeaModel {
     /**
-     * <p>The type of the enumeration item. Valid values:</p>
+     * <p>The type of the enumeration. Valid value:</p>
      * <ul>
-     * <li><strong>process</strong>: scenarios</li>
+     * <li><strong>process</strong>: The enumeration for response scenarios.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,12 @@ public class DescribeEnumItemsRequest extends TeaModel {
     public String enumType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: The default value. Simplified Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: American English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

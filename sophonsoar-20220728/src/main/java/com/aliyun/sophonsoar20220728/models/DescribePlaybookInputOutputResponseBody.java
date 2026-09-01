@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePlaybookInputOutputResponseBody extends TeaModel {
     /**
-     * <p>The configurations.</p>
+     * <p>The configuration information.</p>
      */
     @NameInMap("Config")
     public DescribePlaybookInputOutputResponseBodyConfig config;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>688B4CCD-5272-5DCF-9D76-FE5EFEF545F8</p>
@@ -42,13 +42,13 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
 
     public static class DescribePlaybookInputOutputResponseBodyConfig extends TeaModel {
         /**
-         * <p>The execution method of the playbook is in JSONObject format.</p>
+         * <p>The execution method of the playbook. The value is in the JSONObject format.</p>
          */
         @NameInMap("ExeConfig")
         public String exeConfig;
 
         /**
-         * <p>The input parameter configuration of the playbook. The value is a JSON array.</p>
+         * <p>The input parameter configurations of the playbook. The value is in the JSONArray format.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -67,7 +67,7 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         public String inputParams;
 
         /**
-         * <p>The output parameter configuration. This parameter is unavailable and is always left empty.</p>
+         * <p>Playbooks do not support output parameter configurations. This parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -76,12 +76,16 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         public String outputParams;
 
         /**
-         * <p>The input parameter type of the playbook. Valid values:</p>
+         * <p>The type of the input parameters for the playbook.</p>
          * <ul>
-         * <li><strong>template-ip</strong></li>
-         * <li><strong>template-file</strong></li>
-         * <li><strong>template-process</strong></li>
-         * <li><strong>custom</strong></li>
+         * <li><p><strong>template-ip</strong>: IP request template.</p>
+         * </li>
+         * <li><p><strong>template-file</strong>: file request template.</p>
+         * </li>
+         * <li><p><strong>template-process</strong>: process request template.</p>
+         * </li>
+         * <li><p><strong>custom</strong>: custom parameters.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

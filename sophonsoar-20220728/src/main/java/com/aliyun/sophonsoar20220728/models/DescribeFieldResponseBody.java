@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFieldResponseBody extends TeaModel {
     /**
-     * <p>The configuration content.</p>
+     * <p>The content of the configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;ip&quot;,&quot;name&quot;,&quot;hostinfo&quot;,&quot;md5&quot;]</p>
@@ -23,7 +23,7 @@ public class DescribeFieldResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>BCDE6498-83CC-50A1-8307-3D5A539C42F8</p>

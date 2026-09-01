@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescriberPython3ScriptLogsRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response.</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class DescriberPython3ScriptLogsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UUID that is returned when the Python3 script is run.</p>
+     * <p>The UUID that is returned when you run a Python 3 script.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~RunPython3Script~~">RunPython3Script</a> operation to query the UUID.</p>
+     * <p>Call the <a href="~~RunPython3Script~~">RunPython3Script</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

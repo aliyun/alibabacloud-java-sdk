@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunPython3ScriptResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates this unique ID for the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>F210521C-D9BF-5264-8369-83EDDC617DB0</p>
@@ -14,7 +14,7 @@ public class RunPython3ScriptResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The execution result of the Python3 script.</p>
+     * <p>The data returned after the script is run.</p>
      * 
      * <strong>example:</strong>
      * <p>{

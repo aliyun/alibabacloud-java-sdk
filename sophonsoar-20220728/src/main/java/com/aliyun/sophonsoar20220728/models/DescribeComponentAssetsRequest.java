@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeComponentAssetsRequest extends TeaModel {
     /**
-     * <p>The name of the component.</p>
+     * <p>The component name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class DescribeComponentAssetsRequest extends TeaModel {
     public String componentName;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response.</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
