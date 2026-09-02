@@ -148,6 +148,9 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     }
 
     public static class ListObjectScanEventResponseBodyData extends TeaModel {
+        @NameInMap("AiDetect")
+        public Boolean aiDetect;
+
         /**
          * <p>The bucket name.</p>
          * 
@@ -352,6 +355,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         public static ListObjectScanEventResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListObjectScanEventResponseBodyData self = new ListObjectScanEventResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListObjectScanEventResponseBodyData setAiDetect(Boolean aiDetect) {
+            this.aiDetect = aiDetect;
+            return this;
+        }
+        public Boolean getAiDetect() {
+            return this.aiDetect;
         }
 
         public ListObjectScanEventResponseBodyData setBucketName(String bucketName) {

@@ -13,6 +13,10 @@ public class CreateAgentlessScanTaskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66561899963532d9db8a14124f46f3a0</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

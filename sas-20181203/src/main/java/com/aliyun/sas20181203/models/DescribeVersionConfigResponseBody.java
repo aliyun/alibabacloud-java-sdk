@@ -566,6 +566,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public Integer sasScreen;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SdkAiPostPaidGray")
+    public Integer sdkAiPostPaidGray;
+
+    /**
      * <p>The number of malicious file detection SDK authorizations.</p>
      * 
      * <strong>example:</strong>
@@ -1093,6 +1100,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Integer getSasScreen() {
         return this.sasScreen;
+    }
+
+    public DescribeVersionConfigResponseBody setSdkAiPostPaidGray(Integer sdkAiPostPaidGray) {
+        this.sdkAiPostPaidGray = sdkAiPostPaidGray;
+        return this;
+    }
+    public Integer getSdkAiPostPaidGray() {
+        return this.sdkAiPostPaidGray;
     }
 
     public DescribeVersionConfigResponseBody setSdkCapacity(Long sdkCapacity) {

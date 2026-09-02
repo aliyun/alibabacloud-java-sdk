@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListObjectScanEventRequest extends TeaModel {
+    @NameInMap("AiDetect")
+    public Boolean aiDetect;
+
     /**
      * <p>The batch operation type. Valid values:</p>
      * <ul>
@@ -178,6 +181,14 @@ public class ListObjectScanEventRequest extends TeaModel {
     public static ListObjectScanEventRequest build(java.util.Map<String, ?> map) throws Exception {
         ListObjectScanEventRequest self = new ListObjectScanEventRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListObjectScanEventRequest setAiDetect(Boolean aiDetect) {
+        this.aiDetect = aiDetect;
+        return this;
+    }
+    public Boolean getAiDetect() {
+        return this.aiDetect;
     }
 
     public ListObjectScanEventRequest setBatchType(String batchType) {

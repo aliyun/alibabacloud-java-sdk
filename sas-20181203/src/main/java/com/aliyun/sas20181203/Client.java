@@ -24935,6 +24935,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询 UUID 维度的漏洞数量统计</p>
+     * 
+     * @param request DescribeUuidVulNumClassifyStatisticRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUuidVulNumClassifyStatisticResponse
+     */
+    public DescribeUuidVulNumClassifyStatisticResponse describeUuidVulNumClassifyStatisticWithOptions(DescribeUuidVulNumClassifyStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageVul)) {
+            query.put("ImageVul", request.imageVul);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
+            query.put("Uuids", request.uuids);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUuidVulNumClassifyStatistic"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUuidVulNumClassifyStatisticResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 UUID 维度的漏洞数量统计</p>
+     * 
+     * @param request DescribeUuidVulNumClassifyStatisticRequest
+     * @return DescribeUuidVulNumClassifyStatisticResponse
+     */
+    public DescribeUuidVulNumClassifyStatisticResponse describeUuidVulNumClassifyStatistic(DescribeUuidVulNumClassifyStatisticRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUuidVulNumClassifyStatisticWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the list of servers that support vulnerability fixing based on vulnerability names.</p>
      * 
      * @param request DescribeUuidsByVulNamesRequest
@@ -40282,6 +40330,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListObjectScanEventResponse listObjectScanEventWithOptions(ListObjectScanEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aiDetect)) {
+            query.put("AiDetect", request.aiDetect);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.batchType)) {
             query.put("BatchType", request.batchType);
         }
