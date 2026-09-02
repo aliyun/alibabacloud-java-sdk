@@ -69,6 +69,9 @@ public class ListAgentsResponseBody extends TeaModel {
         @NameInMap("characterAgeStage")
         public String characterAgeStage;
 
+        @NameInMap("characterGender")
+        public String characterGender;
+
         @NameInMap("characterName")
         public String characterName;
 
@@ -142,6 +145,14 @@ public class ListAgentsResponseBody extends TeaModel {
         }
         public String getCharacterAgeStage() {
             return this.characterAgeStage;
+        }
+
+        public ListAgentsResponseBodyList setCharacterGender(String characterGender) {
+            this.characterGender = characterGender;
+            return this;
+        }
+        public String getCharacterGender() {
+            return this.characterGender;
         }
 
         public ListAgentsResponseBodyList setCharacterName(String characterName) {
