@@ -26,7 +26,7 @@ public class AddDocumentsRequest extends TeaModel {
     public String importType;
 
     /**
-     * <p>The ID of the knowledge base.</p>
+     * <p>The knowledge base ID.</p>
      * 
      * <strong>example:</strong>
      * <p>kb-3bd02617e9be335f</p>
@@ -35,7 +35,7 @@ public class AddDocumentsRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
-     * <p>The batch label configuration. The key must be a label field defined in the knowledge base. The value supports string, int64, float32, bool, and list types.</p>
+     * <p>The batch label configuration. The key must be a label field that is already defined in the knowledge base. The value supports string, int64, float32, bool, and list types.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;department&quot;:&quot;legal&quot;,&quot;topics&quot;:[&quot;policy&quot;,&quot;contract&quot;],&quot;reviewed&quot;:true}</p>
@@ -44,7 +44,7 @@ public class AddDocumentsRequest extends TeaModel {
     public Object metaFields;
 
     /**
-     * <p>The ID of the processing strategy.</p>
+     * <p>The processing strategy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>kb-strategy-7043984ca395eabd</p>
@@ -180,7 +180,7 @@ public class AddDocumentsRequest extends TeaModel {
 
     public static class AddDocumentsRequestDocuments extends TeaModel {
         /**
-         * <p>The name of the document.</p>
+         * <p>The document name.</p>
          * 
          * <strong>example:</strong>
          * <p>CHANGELOG.md</p>
@@ -198,7 +198,7 @@ public class AddDocumentsRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The size of the file.</p>
+         * <p>The file size.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>

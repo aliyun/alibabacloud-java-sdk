@@ -145,7 +145,7 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String chunkMethod;
 
         /**
-         * <p>The ID of the knowledge base.</p>
+         * <p>The knowledge base ID.</p>
          * 
          * <strong>example:</strong>
          * <p>kb-123</p>
@@ -172,7 +172,7 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The name of the document.</p>
+         * <p>The document name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.pdf</p>
@@ -199,7 +199,7 @@ public class AddDocumentsResponseBody extends TeaModel {
         public String run;
 
         /**
-         * <p>The size of the file.</p>
+         * <p>The file size.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>

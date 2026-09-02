@@ -325,6 +325,59 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
 
     }
 
+    public static class SearchKnowledgeBaseResponseBodyResultsMediaTimeline extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4200</p>
+         */
+        @NameInMap("endMs")
+        public Long endMs;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1250</p>
+         */
+        @NameInMap("startMs")
+        public Long startMs;
+
+        /**
+         * <strong>example:</strong>
+         * <p>第一句话。</p>
+         */
+        @NameInMap("text")
+        public String text;
+
+        public static SearchKnowledgeBaseResponseBodyResultsMediaTimeline build(java.util.Map<String, ?> map) throws Exception {
+            SearchKnowledgeBaseResponseBodyResultsMediaTimeline self = new SearchKnowledgeBaseResponseBodyResultsMediaTimeline();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchKnowledgeBaseResponseBodyResultsMediaTimeline setEndMs(Long endMs) {
+            this.endMs = endMs;
+            return this;
+        }
+        public Long getEndMs() {
+            return this.endMs;
+        }
+
+        public SearchKnowledgeBaseResponseBodyResultsMediaTimeline setStartMs(Long startMs) {
+            this.startMs = startMs;
+            return this;
+        }
+        public Long getStartMs() {
+            return this.startMs;
+        }
+
+        public SearchKnowledgeBaseResponseBodyResultsMediaTimeline setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
     public static class SearchKnowledgeBaseResponseBodyResultsScoreDetails extends TeaModel {
         /**
          * <p>The keyword relevance score.</p>
@@ -435,6 +488,30 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         public java.util.List<SearchKnowledgeBaseResponseBodyResultsLocations> locations;
 
         /**
+         * <p>音频或视频切片在原始媒体中的结束时间，单位为毫秒；非媒体切片不返回。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8400</p>
+         */
+        @NameInMap("mediaEndMs")
+        public Long mediaEndMs;
+
+        /**
+         * <p>音频或视频切片在原始媒体中的开始时间，单位为毫秒；非媒体切片不返回。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1250</p>
+         */
+        @NameInMap("mediaStartMs")
+        public Long mediaStartMs;
+
+        /**
+         * <p>切片内逐句或逐段内容在原始媒体中的时间范围；非音频切片不返回。</p>
+         */
+        @NameInMap("mediaTimeline")
+        public java.util.List<SearchKnowledgeBaseResponseBodyResultsMediaTimeline> mediaTimeline;
+
+        /**
          * <p>The parent chunk ID.</p>
          * 
          * <strong>example:</strong>
@@ -540,6 +617,30 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         }
         public java.util.List<SearchKnowledgeBaseResponseBodyResultsLocations> getLocations() {
             return this.locations;
+        }
+
+        public SearchKnowledgeBaseResponseBodyResults setMediaEndMs(Long mediaEndMs) {
+            this.mediaEndMs = mediaEndMs;
+            return this;
+        }
+        public Long getMediaEndMs() {
+            return this.mediaEndMs;
+        }
+
+        public SearchKnowledgeBaseResponseBodyResults setMediaStartMs(Long mediaStartMs) {
+            this.mediaStartMs = mediaStartMs;
+            return this;
+        }
+        public Long getMediaStartMs() {
+            return this.mediaStartMs;
+        }
+
+        public SearchKnowledgeBaseResponseBodyResults setMediaTimeline(java.util.List<SearchKnowledgeBaseResponseBodyResultsMediaTimeline> mediaTimeline) {
+            this.mediaTimeline = mediaTimeline;
+            return this;
+        }
+        public java.util.List<SearchKnowledgeBaseResponseBodyResultsMediaTimeline> getMediaTimeline() {
+            return this.mediaTimeline;
         }
 
         public SearchKnowledgeBaseResponseBodyResults setParentChunkId(String parentChunkId) {

@@ -28,11 +28,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <strong>automatically triggers parsing</strong> (chunking and embedding). Two import types are supported:</p>
+     * <p>Registers files that have been uploaded to knowledge base storage as knowledge base documents and <strong>automatically triggers parsing</strong> (chunking and embedding). Two import types are supported:</p>
      * <ul>
-     * <li><code>LOCAL_UPLOAD</code>: Works with the <code>GetKnowledgeBasePreSignedUrl</code> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</li>
+     * <li><code>LOCAL_UPLOAD</code>: Works with the <code>GetKnowledgeBasePreSignedUrl</code> direct upload flow. This operation only registers the file and does not verify whether the file has actually been uploaded. Therefore, you must complete the PUT upload before calling this operation.</li>
      * <li><code>OSS_IMPORT</code>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <code>knowledge_import_task_id</code>. The system downloads and registers the files in the background.
-     * A maximum of 100 files can be registered in a single request.</li>
+     * A maximum of 100 files can be imported in a single request.</li>
      * </ul>
      * 
      * @param request AddDocumentsRequest
@@ -95,11 +95,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <strong>automatically triggers parsing</strong> (chunking and embedding). Two import types are supported:</p>
+     * <p>Registers files that have been uploaded to knowledge base storage as knowledge base documents and <strong>automatically triggers parsing</strong> (chunking and embedding). Two import types are supported:</p>
      * <ul>
-     * <li><code>LOCAL_UPLOAD</code>: Works with the <code>GetKnowledgeBasePreSignedUrl</code> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</li>
+     * <li><code>LOCAL_UPLOAD</code>: Works with the <code>GetKnowledgeBasePreSignedUrl</code> direct upload flow. This operation only registers the file and does not verify whether the file has actually been uploaded. Therefore, you must complete the PUT upload before calling this operation.</li>
      * <li><code>OSS_IMPORT</code>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <code>knowledge_import_task_id</code>. The system downloads and registers the files in the background.
-     * A maximum of 100 files can be registered in a single request.</li>
+     * A maximum of 100 files can be imported in a single request.</li>
      * </ul>
      * 
      * @param request AddDocumentsRequest
