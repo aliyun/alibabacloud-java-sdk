@@ -1,0 +1,29 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks_public20240518.models;
+
+import com.aliyun.tea.*;
+
+public class GetBatchChangeTableOwnerStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>524257_openapi-req-abc123</p>
+     */
+    @NameInMap("BatchId")
+    public String batchId;
+
+    public static GetBatchChangeTableOwnerStatusRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetBatchChangeTableOwnerStatusRequest self = new GetBatchChangeTableOwnerStatusRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public GetBatchChangeTableOwnerStatusRequest setBatchId(String batchId) {
+        this.batchId = batchId;
+        return this;
+    }
+    public String getBatchId() {
+        return this.batchId;
+    }
+
+}

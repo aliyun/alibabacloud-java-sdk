@@ -9282,6 +9282,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询批量转交表Owner状态</p>
+     * 
+     * @param request GetBatchChangeTableOwnerStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBatchChangeTableOwnerStatusResponse
+     */
+    public GetBatchChangeTableOwnerStatusResponse getBatchChangeTableOwnerStatusWithOptions(GetBatchChangeTableOwnerStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchId)) {
+            query.put("BatchId", request.batchId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBatchChangeTableOwnerStatus"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBatchChangeTableOwnerStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询批量转交表Owner状态</p>
+     * 
+     * @param request GetBatchChangeTableOwnerStatusRequest
+     * @return GetBatchChangeTableOwnerStatusResponse
+     */
+    public GetBatchChangeTableOwnerStatusResponse getBatchChangeTableOwnerStatus(GetBatchChangeTableOwnerStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getBatchChangeTableOwnerStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of a business process by calling GetBusiness.</p>
      * 
      * @param request GetBusinessRequest
@@ -21408,6 +21452,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopWorkflowInstancesResponse stopWorkflowInstances(StopWorkflowInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopWorkflowInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交批量转交表Owner</p>
+     * 
+     * @param tmpReq SubmitBatchChangeTableOwnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitBatchChangeTableOwnerResponse
+     */
+    public SubmitBatchChangeTableOwnerResponse submitBatchChangeTableOwnerWithOptions(SubmitBatchChangeTableOwnerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitBatchChangeTableOwnerShrinkRequest request = new SubmitBatchChangeTableOwnerShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tableMetaEntityIds)) {
+            request.tableMetaEntityIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tableMetaEntityIds, "TableMetaEntityIds", "simple");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCrossTenant)) {
+            body.put("EnableCrossTenant", request.enableCrossTenant);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableMetaEntityIdsShrink)) {
+            body.put("TableMetaEntityIds", request.tableMetaEntityIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitBatchChangeTableOwner"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitBatchChangeTableOwnerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交批量转交表Owner</p>
+     * 
+     * @param request SubmitBatchChangeTableOwnerRequest
+     * @return SubmitBatchChangeTableOwnerResponse
+     */
+    public SubmitBatchChangeTableOwnerResponse submitBatchChangeTableOwner(SubmitBatchChangeTableOwnerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitBatchChangeTableOwnerWithOptions(request, runtime);
     }
 
     /**
