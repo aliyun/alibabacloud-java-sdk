@@ -24,8 +24,8 @@ public class AttachToPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The version of the port-specific mitigation policy. Valid values:</p>
      * <ul>
-     * <li><strong>Not specified</strong>: Associates the default surf anti-DDoS engine policy.</li>
-     * <li><strong>2</strong>: Associates the new stream anti-DDoS engine policy.<blockquote>
+     * <li><strong>Not specified</strong>: Associates the default surf mitigation engine policy.</li>
+     * <li><strong>2</strong>: Associates the new stream mitigation engine policy.<blockquote>
      * <p>Only port-specific mitigation policies support this parameter.</p>
      * </blockquote>
      * </li>

@@ -33,7 +33,7 @@ public class DescribeInstanceListRequest extends TeaModel {
     public java.util.List<String> instanceTypeList;
 
     /**
-     * <p>The IP address of the protected object for the Anti-DDoS Origin instance to query.</p>
+     * <p>The protected IP address of the Anti-DDoS Origin instance to query.</p>
      * 
      * <strong>example:</strong>
      * <p>47.89.XX.XX</p>
@@ -55,7 +55,7 @@ public class DescribeInstanceListRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The field used to sort the Anti-DDoS Origin instance list. The value is fixed as <strong>expireTime</strong>, which indicates that instances are sorted by expiration time.</p>
+     * <p>The sort field for the Anti-DDoS Origin instance list. The value is fixed as <strong>expireTime</strong>, which indicates sorting by instance expiration time.</p>
      * <p>You can use the <strong>Orderdire</strong> parameter to specify the sort order.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeInstanceListRequest extends TeaModel {
     public String orderdire;
 
     /**
-     * <p>The number of the page to return when paging is used.</p>
+     * <p>The page number of the current page in a paging query. Settings the current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeInstanceListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of instances on each page when paging is used.</p>
+     * <p>The number of instances on each page in a paging query. Settings the number of instances per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,8 @@ public class DescribeInstanceListRequest extends TeaModel {
     /**
      * <p>The region ID of the Anti-DDoS Origin instance to query.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all region IDs supported by Anti-DDoS Origin.</p>
+     * <h2>You can call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all region IDs supported by Anti-DDoS Origin.</h2>
+     * <p>Notice: This parameter is required. If it is not specified, the API returns DDosBgp.CheckError.InvalidRegion(400).</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -120,7 +121,7 @@ public class DescribeInstanceListRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
-     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+     * <p>If you do not specify this parameter, the default resource group is used.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>
@@ -129,7 +130,7 @@ public class DescribeInstanceListRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags bound to the Anti-DDoS Origin instance to query.</p>
+     * <p>The tags bound to the Anti-DDoS Origin instances to query.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInstanceListRequestTag> tag;

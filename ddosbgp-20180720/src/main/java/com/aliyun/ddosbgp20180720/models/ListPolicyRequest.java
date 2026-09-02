@@ -14,7 +14,7 @@ public class ListPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Settings the page number of the current page in a paged query.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListPolicyRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,6 +33,19 @@ public class ListPolicyRequest extends TeaModel {
 
     /**
      * <p>The applicable product type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ecs</strong>: queries the default policy applicable to ECS.</p>
+     * </li>
+     * <li><p><strong>slb</strong>: queries the default policy applicable to SLB.</p>
+     * </li>
+     * <li><p><strong>eip</strong>: queries the default policy applicable to EIP.</p>
+     * </li>
+     * <li><p><strong>gf-eip</strong>: queries the default policy applicable to elastic IP addresses (EIPs) with Anti-DDoS Proxy Enabled.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter takes effect only when the policy type is <code>default</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -42,6 +55,14 @@ public class ListPolicyRequest extends TeaModel {
 
     /**
      * <p>The policy type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>default</strong>: the default mitigation policy.</p>
+     * </li>
+     * <li><p><strong>l3</strong>: the IP-specific mitigation policy.</p>
+     * </li>
+     * <li><p><strong>l4</strong>: the port-specific mitigation policy.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>l3</p>

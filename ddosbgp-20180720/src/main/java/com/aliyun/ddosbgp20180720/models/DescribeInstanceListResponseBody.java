@@ -11,7 +11,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
     public java.util.List<DescribeInstanceListResponseBodyInstanceList> instanceList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>381D5D33-BB8F-395F-8EE4-AE3BB4B523C4</p>
@@ -100,7 +100,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         public Boolean autoRenewal;
 
         /**
-         * <p>The number of assets that are assigned public IP addresses protected by the instance that are in blackhole filtering status.</p>
+         * <p>The number of IP addresses that are in blackhole filtering status among the assets that are assigned public IP addresses protected by the instance.</p>
          * <blockquote>
          * <p>You can invoke <a href="https://help.aliyun.com/document_detail/118692.html">DeleteBlackhole</a> to deactivate blackhole filtering for a single protected IP address.</p>
          * </blockquote>
@@ -127,10 +127,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>The asset overwrite type of the instance.</p>
          * <ul>
-         * <li><strong>1</strong>: Supports assets that are assigned public IP addresses in multiple regions worldwide.</li>
+         * <li><strong>1</strong>: Supports assets that are assigned public IP addresses in multiple regions globally.</li>
          * <li><strong>2</strong>: Supports assets that are assigned public IP addresses in multiple regions in the Chinese mainland.</li>
          * <li><strong>3</strong>: Supports assets that are assigned public IP addresses in multiple regions outside the Chinese mainland.</li>
-         * <li><strong>4</strong>: Supports assets that are assigned public IP addresses in a single region worldwide.</li>
+         * <li><strong>4</strong>: Supports assets that are assigned public IP addresses in a single region globally.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         public Long debtStatus;
 
         /**
-         * <p>The expiration time of the instance. The value is a timestamp. Unit: milliseconds.</p>
+         * <p>The expiration time of the instance. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640275200000</p>
@@ -162,7 +162,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The purchase time of the instance. The value is a timestamp. Unit: milliseconds.</p>
+         * <p>The purchase time of the instance. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1592886047000</p>
@@ -205,6 +205,12 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         @NameInMap("IpType")
         public String ipType;
 
+        /**
+         * <p>The full logs property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;mitigationAnalysis\&quot;:\&quot;on\&quot;,\&quot;mitigationAnalysisCapacity\&quot;:1,\&quot;ttl\&quot;:180}</p>
+         */
         @NameInMap("LogExt")
         public String logExt;
 

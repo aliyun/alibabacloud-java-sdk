@@ -31,6 +31,13 @@ public class ModifyPolicyContentShrinkRequest extends TeaModel {
 
     /**
      * <p>The version of the port-specific mitigation policy. Valid values:</p>
+     * <ul>
+     * <li><strong>Not specified</strong>: Modifies the default surf mitigation engine policy.</li>
+     * <li><strong>2</strong>: Modifies the new stream mitigation engine policy.<blockquote>
+     * <p>Only port-specific mitigation policies are supported.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2</p>

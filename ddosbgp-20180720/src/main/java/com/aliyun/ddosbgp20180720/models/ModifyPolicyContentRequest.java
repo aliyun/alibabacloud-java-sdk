@@ -31,6 +31,13 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
     /**
      * <p>The version of the port-specific mitigation policy. Valid values:</p>
+     * <ul>
+     * <li><strong>Not specified</strong>: Modifies the default surf mitigation engine policy.</li>
+     * <li><strong>2</strong>: Modifies the new stream mitigation engine policy.<blockquote>
+     * <p>Only port-specific mitigation policies are supported.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -77,8 +84,16 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
     public static class ModifyPolicyContentRequestContentFingerPrintRuleList extends TeaModel {
         /**
+         * <p>The rule comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
+         */
+        @NameInMap("Comment")
+        public String comment;
+
+        /**
          * <p>The end value of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>65535</p>
@@ -88,7 +103,6 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The start value of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -106,7 +120,13 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The action to take when a fingerprint match is found. Valid values:</p>
+         * <p>The action to take after a fingerprint match. Valid values:</p>
+         * <ul>
+         * <li><strong>permit</strong>: Permits traffic that matches the fingerprint.</li>
+         * <li><strong>drop</strong>: Drops traffic that matches the fingerprint.</li>
+         * <li><strong>ip_rate</strong>: Rate-limits the source IP address of traffic that matches the fingerprint. Set the rate limit by using the <strong>RateValue</strong> parameter.</li>
+         * <li><strong>session_rate</strong>: Rate-limits the source session of traffic that matches the fingerprint. Set the rate limit by using the <strong>RateValue</strong> parameter.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +137,6 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The maximum packet length. Valid values: <strong>1</strong> to <strong>1500</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1500</p>
@@ -127,13 +146,21 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The minimum packet length. Valid values: <strong>1</strong> to <strong>1500</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("MinPktLen")
         public Integer minPktLen;
+
+        /**
+         * <p>The rule mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Mode")
+        public Integer mode;
 
         /**
          * <p>The offset. Valid values: <strong>0</strong> to <strong>1500</strong>.</p>
@@ -145,7 +172,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer offset;
 
         /**
-         * <p>The detection payload, expressed in hexadecimal string format.</p>
+         * <p>The detection payload, represented in hexadecimal string format.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -155,7 +182,10 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The protocol type. Valid values:</p>
-         * <p>This parameter is required.</p>
+         * <ul>
+         * <li><strong>tcp</strong>: Transmission Control Protocol.</li>
+         * <li><strong>udp</strong>: User Datagram Protocol.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>tcp</p>
@@ -165,6 +195,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The rate limit value. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is required when the match action is source IP rate limiting or source session rate limiting (<strong>MatchAction</strong> is <strong>ip_rate</strong> or <strong>session_rate</strong>).</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -173,7 +206,19 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer rateValue;
 
         /**
+         * <p>The rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(ip.version == 4)</p>
+         */
+        @NameInMap("Rule")
+        public String rule;
+
+        /**
          * <p>The priority number, expressed as an integer.</p>
+         * <blockquote>
+         * <p>A smaller number indicates a higher priority.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +229,6 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The end value of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>65535</p>
@@ -194,7 +238,6 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The start value of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -202,9 +245,26 @@ public class ModifyPolicyContentRequest extends TeaModel {
         @NameInMap("SrcPortStart")
         public Integer srcPortStart;
 
+        /**
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Type")
+        public Integer type;
+
         public static ModifyPolicyContentRequestContentFingerPrintRuleList build(java.util.Map<String, ?> map) throws Exception {
             ModifyPolicyContentRequestContentFingerPrintRuleList self = new ModifyPolicyContentRequestContentFingerPrintRuleList();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyContentRequestContentFingerPrintRuleList setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
         }
 
         public ModifyPolicyContentRequestContentFingerPrintRuleList setDstPortEnd(Integer dstPortEnd) {
@@ -255,6 +315,14 @@ public class ModifyPolicyContentRequest extends TeaModel {
             return this.minPktLen;
         }
 
+        public ModifyPolicyContentRequestContentFingerPrintRuleList setMode(Integer mode) {
+            this.mode = mode;
+            return this;
+        }
+        public Integer getMode() {
+            return this.mode;
+        }
+
         public ModifyPolicyContentRequestContentFingerPrintRuleList setOffset(Integer offset) {
             this.offset = offset;
             return this;
@@ -287,6 +355,14 @@ public class ModifyPolicyContentRequest extends TeaModel {
             return this.rateValue;
         }
 
+        public ModifyPolicyContentRequestContentFingerPrintRuleList setRule(String rule) {
+            this.rule = rule;
+            return this;
+        }
+        public String getRule() {
+            return this.rule;
+        }
+
         public ModifyPolicyContentRequestContentFingerPrintRuleList setSeqNo(Integer seqNo) {
             this.seqNo = seqNo;
             return this;
@@ -311,11 +387,22 @@ public class ModifyPolicyContentRequest extends TeaModel {
             return this.srcPortStart;
         }
 
+        public ModifyPolicyContentRequestContentFingerPrintRuleList setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
     }
 
     public static class ModifyPolicyContentRequestContentL4RuleListConditionListOffset extends TeaModel {
         /**
          * <p>The end position. Valid values: <strong>0</strong> to <strong>1499</strong>.</p>
+         * <blockquote>
+         * <p>The end position must be greater than or equal to the start position.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1499</p>
@@ -358,6 +445,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
     public static class ModifyPolicyContentRequestContentL4RuleListConditionList extends TeaModel {
         /**
          * <p>The detection content.</p>
+         * <blockquote>
+         * <p>If the rule type is <strong>char</strong>, the value must be an ASCII string. If the rule type is <strong>hex</strong>, the value must be a hexadecimal string. Maximum length: 2048.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -366,7 +456,29 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String arg;
 
         /**
-         * <p>The matching content.</p>
+         * <p>The match content.</p>
+         * <ol>
+         * <li>When <strong>Encode</strong> is set to <strong>str</strong>, the following requirements must be met:</li>
+         * </ol>
+         * <ul>
+         * <li><p>The length of <strong>Content</strong> must not exceed 1500.</p>
+         * </li>
+         * <li><p><strong>End</strong> - <strong>Start</strong> &gt;= the length of <strong>Content</strong>.</p>
+         * </li>
+         * </ul>
+         * <ol start="2">
+         * <li>When <strong>Encode</strong> is set to <strong>hex</strong>, the following requirements must be met:</li>
+         * </ol>
+         * <ul>
+         * <li><p><strong>Content</strong> must be hexadecimal characters.</p>
+         * </li>
+         * <li><p>The length of <strong>Content</strong> must be an even number.</p>
+         * </li>
+         * <li><p>The length of <strong>Content</strong> must not exceed 3000.</p>
+         * </li>
+         * <li><p><strong>End</strong> - <strong>Start</strong> + 1 &gt;= the length of <strong>Content</strong> / 2.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>test**</p>
@@ -385,6 +497,12 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The character type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>str</strong>: string.</p>
+         * </li>
+         * <li><p><strong>hex</strong>: hexadecimal.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>str</p>
@@ -393,13 +511,19 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public String encode;
 
         /**
-         * <p>The matching range.</p>
+         * <p>The match range.</p>
          */
         @NameInMap("Offset")
         public ModifyPolicyContentRequestContentL4RuleListConditionListOffset offset;
 
         /**
-         * <p>The matching pattern. Valid values:</p>
+         * <p>The match mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>contain</strong>: contains.</p>
+         * </li>
+         * <li><p><strong>not_contain</strong>: does not contain.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>contain</p>
@@ -484,7 +608,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
          * <p>The action.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>block</p>
          */
         @NameInMap("Action")
         public String action;
@@ -506,6 +630,12 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The logical operator. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: The action is executed on a match.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The action is executed on a non-match.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -515,6 +645,12 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The rule type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>char</strong>: string match.</p>
+         * </li>
+         * <li><p><strong>hex</strong>: hexadecimal match.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>char</p>
@@ -534,6 +670,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The rule priority. Valid values: 1 to 100.</p>
+         * <blockquote>
+         * <p>A smaller value indicates a higher priority.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -636,6 +775,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The match action. Valid values:</p>
+         * <ul>
+         * <li><strong>drop</strong>: Drop.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -646,6 +788,10 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong>: Transmission Control Protocol.</li>
+         * <li><strong>udp</strong>: User Datagram Protocol.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -656,6 +802,9 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The priority number, expressed as an integer.</p>
+         * <blockquote>
+         * <p>A smaller number indicates a higher priority.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -757,7 +906,11 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
     public static class ModifyPolicyContentRequestContentSipDefense extends TeaModel {
         /**
-         * <p>Specifies whether to enable SIP protection. Valid values:</p>
+         * <p>Specifies whether SIP protection is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -940,6 +1093,12 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
         /**
          * <p>The source rate limiting type. Valid values:</p>
+         * <ul>
+         * <li><strong>3</strong>: source PPS rate limiting.</li>
+         * <li><strong>4</strong>: source bandwidth throttling.</li>
+         * <li><strong>5</strong>: source SYN PPS rate limiting.</li>
+         * <li><strong>6</strong>: source SYN bandwidth throttling.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -989,7 +1148,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
     public static class ModifyPolicyContentRequestContentSourceLimit extends TeaModel {
         /**
-         * <p>The source bandwidth throttling value, in bytes per second.</p>
+         * <p>The source bandwidth throttling value, in bytes per second (Byte/s).</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -998,7 +1157,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer bps;
 
         /**
-         * <p>The source PPS rate limit, in packets per second.</p>
+         * <p>The source PPS rate limit, in packets per second (Packet/s).</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -1007,7 +1166,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer pps;
 
         /**
-         * <p>The source SYN bandwidth throttling value, in bytes per second.</p>
+         * <p>The source SYN bandwidth throttling value, in bytes per second (Byte/s).</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -1016,7 +1175,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Integer synBps;
 
         /**
-         * <p>The source SYN PPS rate limit, in packets per second.</p>
+         * <p>The source SYN PPS rate limit, in packets per second (Packet/s).</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -1065,7 +1224,7 @@ public class ModifyPolicyContentRequest extends TeaModel {
 
     public static class ModifyPolicyContentRequestContent extends TeaModel {
         /**
-         * <p>The expiration time of the IP blacklist (UNIX timestamp).</p>
+         * <p>The expiration time of the IP blacklist, in UNIX timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1716878000</p>
@@ -1101,13 +1260,18 @@ public class ModifyPolicyContentRequest extends TeaModel {
         public Boolean enableL4Defense;
 
         /**
-         * <p>The list of byte-match filter rules.</p>
+         * <p>The list of Byte-Match Filter rules.</p>
          */
         @NameInMap("FingerPrintRuleList")
         public java.util.List<ModifyPolicyContentRequestContentFingerPrintRuleList> fingerPrintRuleList;
 
         /**
          * <p>The protection level of AI-based intelligent protection. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: Normal.</li>
+         * <li><strong>hard</strong>: Strict.</li>
+         * <li><strong>weak</strong>: Loose.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>default</p>
