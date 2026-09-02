@@ -38,7 +38,7 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -146,7 +146,7 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
         public String standardHotelId;
 
         /**
-         * <p>The hotel status (ONLINE/OFFLINE).</p>
+         * <p>The hotel status. Valid values: ONLINE and OFFLINE.</p>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>

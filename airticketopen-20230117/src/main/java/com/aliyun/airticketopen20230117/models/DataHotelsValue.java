@@ -176,7 +176,7 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyType;
 
         /**
-         * <p>The penalty value (percentage/amount/nights).</p>
+         * <p>The penalty value (percentage/amount/number of nights).</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -185,7 +185,7 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyValue;
 
         /**
-         * <p>The currency code (present only when the penalty type is AMOUNT).</p>
+         * <p>The currency code (present only when the type is AMOUNT).</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -711,7 +711,7 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueOffersCancelPolicyPenalties extends TeaModel {
         /**
-         * <p>The effective start time as a UTC millisecond timestamp.</p>
+         * <p>The effective start time, in UTC millisecond timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
@@ -720,7 +720,7 @@ public class DataHotelsValue extends TeaModel {
         public String start;
 
         /**
-         * <p>The effective end time as a UTC millisecond timestamp.</p>
+         * <p>The effective end time, in UTC millisecond timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1672617600000</p>
@@ -738,7 +738,7 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyType;
 
         /**
-         * <p>The penalty value (percentage/amount/nights).</p>
+         * <p>The penalty value (percentage, amount, or number of nights).</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -747,7 +747,7 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyValue;
 
         /**
-         * <p>The currency code. This field is present only when the penalty type is AMOUNT.</p>
+         * <p>The currency code. This field has a value only when the penalty type is AMOUNT.</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -1051,7 +1051,7 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueOffers extends TeaModel {
         /**
-         * <p>The item offer key used for price verification. Pass through this value as-is.</p>
+         * <p>The item offer key, which is a price verification key. Pass this value through as-is.</p>
          * 
          * <strong>example:</strong>
          * <p>itemOffer_123</p>

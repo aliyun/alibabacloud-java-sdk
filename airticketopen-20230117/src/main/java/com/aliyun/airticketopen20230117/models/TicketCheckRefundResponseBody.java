@@ -285,6 +285,10 @@ public class TicketCheckRefundResponseBody extends TeaModel {
     }
 
     public static class TicketCheckRefundResponseBodyDataRefundRuleRefundStageRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("Fee")
         public Double fee;
 

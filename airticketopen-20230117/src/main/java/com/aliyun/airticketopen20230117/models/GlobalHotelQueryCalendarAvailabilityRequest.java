@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     /**
-     * <p>The account ID of the distributor.</p>
+     * <p>The distributor account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public Integer adultCount;
 
     /**
-     * <p>The end date of the check-in period to query, in the format of yyyy-MM-dd. The date cannot be earlier than the start date. The date range includes both the start and end dates, with a maximum span of 30 days.</p>
+     * <p>The end date of the check-in date range to query, in the yyyy-MM-dd format. The date cannot be earlier than the start date. The date range is inclusive and supports a maximum of 30 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public String checkInDateEnd;
 
     /**
-     * <p>The start date of the check-in period to query, in the format of yyyy-MM-dd. The date cannot be earlier than the current day.</p>
+     * <p>The start date of the check-in date range to query, in the yyyy-MM-dd format. The date cannot be earlier than the current day.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public Integer childCount;
 
     /**
-     * <p>The list of children\&quot;s ages.</p>
+     * <p>The list of children ages.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>

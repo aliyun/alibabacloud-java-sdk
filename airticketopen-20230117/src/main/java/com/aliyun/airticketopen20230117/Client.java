@@ -3756,7 +3756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries city administrative divisions (in Chinese and English) by paging.</p>
+     * <p>Queries city administrative divisions by paging (in Chinese and English).</p>
      * 
      * @param request GlobalHotelSearchCityPageRequest
      * @param headers map
@@ -3806,7 +3806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries city administrative divisions (in Chinese and English) by paging.</p>
+     * <p>Queries city administrative divisions by paging (in Chinese and English).</p>
      * 
      * @param request GlobalHotelSearchCityPageRequest
      * @return GlobalHotelSearchCityPageResponse
@@ -3819,7 +3819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query of the hotel list by city with paging support.</p>
+     * <p>Performs a paged query to retrieve the list of hotels by city with paging support.</p>
      * 
      * @param request GlobalHotelSearchHotelListRequest
      * @param headers map
@@ -3869,7 +3869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query of the hotel list by city with paging support.</p>
+     * <p>Performs a paged query to retrieve the list of hotels by city with paging support.</p>
      * 
      * @param request GlobalHotelSearchHotelListRequest
      * @return GlobalHotelSearchHotelListResponse

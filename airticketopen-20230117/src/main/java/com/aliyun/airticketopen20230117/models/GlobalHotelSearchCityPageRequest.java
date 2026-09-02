@@ -25,7 +25,7 @@ public class GlobalHotelSearchCityPageRequest extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The country code (ISO 3166-1 alpha-2).</p>
+     * <p>The country code in ISO 3166-1 alpha-2 format.</p>
      * 
      * <strong>example:</strong>
      * <p>CN</p>
@@ -34,7 +34,7 @@ public class GlobalHotelSearchCityPageRequest extends TeaModel {
     public String countryCode;
 
     /**
-     * <p>The pagination offset (starts from 0).</p>
+     * <p>The pagination offset. Starts from 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
