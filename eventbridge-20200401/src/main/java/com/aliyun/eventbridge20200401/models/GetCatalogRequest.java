@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCatalogRequest extends TeaModel {
     /**
-     * <p>Idempotency token</p>
+     * <p>The idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</p>
@@ -14,7 +14,7 @@ public class GetCatalogRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Data catalog name</p>
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

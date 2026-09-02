@@ -48,29 +48,32 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     @NameInMap("FilterPattern")
     public String filterPattern;
 
+    /**
+     * <p>The generic JSON configurations for the event provider. This parameter is mutually exclusive with Source.</p>
+     */
     @NameInMap("Metadata")
     public String metadata;
 
     /**
-     * <p>The runtime parameters.</p>
+     * <p>The runtime environment parameters.</p>
      */
     @NameInMap("RunOptions")
     public String runOptionsShrink;
 
     /**
-     * <p>The event target. You must select one and only one Sink type.</p>
+     * <p>The event target. You must select exactly one Sink type.</p>
      */
     @NameInMap("Sink")
     public String sinkShrink;
 
     /**
-     * <p>The event provider. You must select one and only one Source type.</p>
+     * <p>The event provider. You must select one and only one type of Source.</p>
      */
     @NameInMap("Source")
     public String sourceShrink;
 
     /**
-     * <p>The Transform-related configurations.</p>
+     * <p>The event transformer configurations.</p>
      */
     @NameInMap("Transforms")
     public String transformsShrink;

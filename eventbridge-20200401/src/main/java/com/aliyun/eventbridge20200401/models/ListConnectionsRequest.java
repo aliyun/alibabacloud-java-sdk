@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConnectionsRequest extends TeaModel {
     /**
-     * <p>The name prefix of the connection configurations to query. Supports prefix matching.</p>
+     * <p>The prefix of the connection configuration name. Supports fuzzy match by prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>connection-name</p>
@@ -14,9 +14,9 @@ public class ListConnectionsRequest extends TeaModel {
     public String connectionNamePrefix;
 
     /**
-     * <p>The maximum number of entries to return on each page. Can be used together with NextToken to implement pagination.</p>
+     * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</p>
      * <ul>
-     * <li>Default value: 10</li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class ListConnectionsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>When MaxResults is specified, NextToken is returned if there are more results to fetch.</p>
+     * <p>The pagination token. If the number of results exceeds the value of MaxResults, a NextToken value is returned.</p>
      * <ul>
-     * <li>NextToken starts from 0 by default. Default value: 0.</li>
+     * <li>The NextToken value starts from 0. Default value: 0.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListConnectionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Filters query results by connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch. If left empty, connections of all types are returned.</p>
+     * <p>Filters query results by connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, and lakehouse. If this parameter is not specified, all types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Http</p>

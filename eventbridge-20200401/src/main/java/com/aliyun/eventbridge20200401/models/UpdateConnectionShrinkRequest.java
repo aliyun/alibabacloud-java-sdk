@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateConnectionShrinkRequest extends TeaModel {
     /**
-     * <p>The data structure of the authentication parameters.</p>
+     * <p>The authentication data structure.</p>
      */
     @NameInMap("AuthParameters")
     public String authParametersShrink;
 
     /**
-     * <p>The name of the connection to be updated. The maximum length is 127 characters. The minimum length is 2 characters.</p>
+     * <p>The name of the connection to update. Maximum length: 127 characters. Minimum length: 2 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UpdateConnectionShrinkRequest extends TeaModel {
     public String connectionName;
 
     /**
-     * <p>The description. The maximum length is 255 characters.</p>
+     * <p>The description. Maximum length: 255 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Description of the connection configuration</p>
@@ -37,7 +37,7 @@ public class UpdateConnectionShrinkRequest extends TeaModel {
     public String networkParametersShrink;
 
     /**
-     * <p>The data source connection parameters (JSON object). For specific field definitions, call the GetConnectionType API and refer to the ParamsSchema in the response.</p>
+     * <p>The data source connection parameters (JSON object). For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
@@ -46,7 +46,7 @@ public class UpdateConnectionShrinkRequest extends TeaModel {
     public String parametersShrink;
 
     /**
-     * <p>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, and Http.</p>
+     * <p>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, lakehouse, Http.</p>
      * 
      * <strong>example:</strong>
      * <p>Http</p>

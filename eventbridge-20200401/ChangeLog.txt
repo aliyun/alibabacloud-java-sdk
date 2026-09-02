@@ -1,3 +1,12 @@
+2026-09-02 Version: 7.4.0
+- Support API GenerateAgentDataSemantics.
+- Support API GetAgentDataSemantics.
+- Support API GetGenerateAgentDataSemanticsProgress.
+- Support API QueryEventHouseWithTimeRange.
+- Support API SaveAgentDataSemantics.
+- Update API DeleteEventStreaming: add request parameters Force.
+
+
 2026-07-23 Version: 7.3.0
 - Support API DeleteEventAnalysisJob.
 - Support API DeleteEventHouseRuntime.

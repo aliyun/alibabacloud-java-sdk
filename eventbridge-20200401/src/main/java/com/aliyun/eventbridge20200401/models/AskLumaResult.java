@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AskLumaResult extends TeaModel {
     /**
-     * <p>Whether clarification is needed</p>
+     * <p>Indicates whether clarification is needed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,28 +14,28 @@ public class AskLumaResult extends TeaModel {
     public Boolean clarificationNeeded;
 
     /**
-     * <p>Clarification question text</p>
+     * <p>The clarification question text.</p>
      * 
      * <strong>example:</strong>
-     * <p>您指的是哪个数据库中的员工表？</p>
+     * <p>Which database does the employee table you are referring to belong to?</p>
      */
     @NameInMap("ClarificationQuestion")
     public String clarificationQuestion;
 
     /**
-     * <p>Query constraints</p>
+     * <p>The query constraints.</p>
      */
     @NameInMap("Constraints")
     public Constraints constraints;
 
     /**
-     * <p>Structured result body</p>
+     * <p>The structured result body.</p>
      */
     @NameInMap("Content")
     public Content content;
 
     /**
-     * <p>Conversation identifier, used for multi-turn follow-up questions</p>
+     * <p>The conversation ID, used for multi-turn follow-up questions.</p>
      * 
      * <strong>example:</strong>
      * <p>conv_xxx</p>
@@ -44,7 +44,7 @@ public class AskLumaResult extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ExecutionFailed, Timeout, RateLimited, InternalError, ConversationExpired</p>
@@ -53,7 +53,7 @@ public class AskLumaResult extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Error details</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
@@ -62,7 +62,7 @@ public class AskLumaResult extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Whether it is an error. false = query succeeded or clarification (including empty result set); true = execution failed / timeout / rate limited / internal error</p>
+     * <p>Indicates whether an error occurred. A value of false indicates that the query succeeded or a clarification is needed (including empty result sets). A value of true indicates that the execution failed due to a timeout, throttling, or internal error.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -71,7 +71,7 @@ public class AskLumaResult extends TeaModel {
     public Boolean isError;
 
     /**
-     * <p>Message identifier, used for PollAskResult polling</p>
+     * <p>The message ID, used for polling with PollAskResult.</p>
      * 
      * <strong>example:</strong>
      * <p>msg_xxx</p>
@@ -80,7 +80,7 @@ public class AskLumaResult extends TeaModel {
     public String messageId;
 
     /**
-     * <p>Execution status</p>
+     * <p>The submit status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING, SUCCEEDED, FAILED, TIMEOUT</p>
@@ -89,13 +89,22 @@ public class AskLumaResult extends TeaModel {
     public String status;
 
     /**
-     * <p>Whether the result was truncated due to exceeding the storage limit. Only appears in large result set scenarios</p>
+     * <p>Indicates whether the result was truncated because it exceeded the storage limit. This field is returned only for large result sets.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("StorageTruncated")
     public Boolean storageTruncated;
+
+    /**
+     * <p>The business Wiki version that was actually used for this response. This field is not returned if the agent does not have a Wiki configured.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eventhouse-multisource-demo-v1</p>
+     */
+    @NameInMap("WikiVersion")
+    public String wikiVersion;
 
     public static AskLumaResult build(java.util.Map<String, ?> map) throws Exception {
         AskLumaResult self = new AskLumaResult();
@@ -188,6 +197,14 @@ public class AskLumaResult extends TeaModel {
     }
     public Boolean getStorageTruncated() {
         return this.storageTruncated;
+    }
+
+    public AskLumaResult setWikiVersion(String wikiVersion) {
+        this.wikiVersion = wikiVersion;
+        return this;
+    }
+    public String getWikiVersion() {
+        return this.wikiVersion;
     }
 
 }

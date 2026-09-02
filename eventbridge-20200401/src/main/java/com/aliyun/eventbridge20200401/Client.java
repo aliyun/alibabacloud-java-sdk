@@ -10,32 +10,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-west-1", "eventbridge-console.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "eventbridge-console.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "eventbridge-console.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "eventbridge-console.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "eventbridge-console.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "eventbridge-console.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "eventbridge-console.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "eventbridge-console.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "eventbridge-console.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "eventbridge-console.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-beijing", "eventbridge-console.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-qingdao", "eventbridge-console.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "eventbridge-console.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "eventbridge-console.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "eventbridge-console.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-heyuan", "eventbridge-console.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "eventbridge-console.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "eventbridge-console.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "eventbridge-console.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "eventbridge-console.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "eventbridge-console.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "eventbridge-console.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "eventbridge-console.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "eventbridge-console.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "eventbridge-console.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "eventbridge-console.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "eventbridge-console.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "eventbridge-console.cn-shenzhen.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "eventbridge-console.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "eventbridge-console.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-northeast-1", "eventbridge-console.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "eventbridge-console.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "eventbridge-console.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "eventbridge-console.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "eventbridge-console.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "eventbridge-console.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "eventbridge-console.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "eventbridge-console.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "eventbridge-console.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "eventbridge-console.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("us-east-1", "eventbridge-console.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "eventbridge-console.eu-west-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "eventbridge-console.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "eventbridge-console.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "eventbridge-console.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "eventbridge-console.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "eventbridge-console.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eventbridge", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -56,7 +56,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries data using natural language.</p>
+     * <p>Queries data by using natural language.</p>
      * 
      * @param request AskLumaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -100,7 +100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries data using natural language.</p>
+     * <p>Queries data by using natural language.</p>
      * 
      * @param request AskLumaRequest
      * @return AskLumaResponse
@@ -1296,6 +1296,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EventStreamingName", request.eventStreamingName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            body.put("Force", request.force);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -1788,6 +1792,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Initiates an agent data semantics generation task.</p>
+     * 
+     * @param request GenerateAgentDataSemanticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateAgentDataSemanticsResponse
+     */
+    public GenerateAgentDataSemanticsResponse generateAgentDataSemanticsWithOptions(GenerateAgentDataSemanticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateAgentDataSemantics"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateAgentDataSemanticsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Initiates an agent data semantics generation task.</p>
+     * 
+     * @param request GenerateAgentDataSemanticsRequest
+     * @return GenerateAgentDataSemanticsResponse
+     */
+    public GenerateAgentDataSemanticsResponse generateAgentDataSemantics(GenerateAgentDataSemanticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateAgentDataSemanticsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves agent metadata.</p>
      * 
      * @param request GetAgentRequest
@@ -1828,6 +1876,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAgentResponse getAgent(GetAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the currently effective data semantics of an agent.</p>
+     * 
+     * @param request GetAgentDataSemanticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentDataSemanticsResponse
+     */
+    public GetAgentDataSemanticsResponse getAgentDataSemanticsWithOptions(GetAgentDataSemanticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentDataSemantics"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentDataSemanticsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the currently effective data semantics of an agent.</p>
+     * 
+     * @param request GetAgentDataSemanticsRequest
+     * @return GetAgentDataSemanticsResponse
+     */
+    public GetAgentDataSemanticsResponse getAgentDataSemantics(GetAgentDataSemanticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgentDataSemanticsWithOptions(request, runtime);
     }
 
     /**
@@ -1882,7 +1974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get data catalog</p>
+     * <p>Retrieves a data catalog.</p>
      * 
      * @param request GetCatalogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1920,7 +2012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get data catalog</p>
+     * <p>Retrieves a data catalog.</p>
      * 
      * @param request GetCatalogRequest
      * @return GetCatalogResponse
@@ -1932,10 +2024,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the configuration information of a single connection.</p>
+     * <p>Queries the configuration of a single connection.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration information of a single connection.</p>
+     * <p>Queries the configuration of a single connection.</p>
      * 
      * @param request GetConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1967,10 +2059,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the configuration information of a single connection.</p>
+     * <p>Queries the configuration of a single connection.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration information of a single connection.</p>
+     * <p>Queries the configuration of a single connection.</p>
      * 
      * @param request GetConnectionRequest
      * @return GetConnectionResponse
@@ -2122,6 +2214,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetEventStreamingResponse getEventStreaming(GetEventStreamingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getEventStreamingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the generation progress of data semantics for an agent.</p>
+     * 
+     * @param request GetGenerateAgentDataSemanticsProgressRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGenerateAgentDataSemanticsProgressResponse
+     */
+    public GetGenerateAgentDataSemanticsProgressResponse getGenerateAgentDataSemanticsProgressWithOptions(GetGenerateAgentDataSemanticsProgressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGenerateAgentDataSemanticsProgress"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGenerateAgentDataSemanticsProgressResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the generation progress of data semantics for an agent.</p>
+     * 
+     * @param request GetGenerateAgentDataSemanticsProgressRequest
+     * @return GetGenerateAgentDataSemanticsProgressResponse
+     */
+    public GetGenerateAgentDataSemanticsProgressResponse getGenerateAgentDataSemanticsProgress(GetGenerateAgentDataSemanticsProgressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getGenerateAgentDataSemanticsProgressWithOptions(request, runtime);
     }
 
     /**
@@ -2445,7 +2581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query data catalog list</p>
+     * <p>Queries the list of data catalogs.</p>
      * 
      * @param request ListCatalogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2481,7 +2617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query data catalog list</p>
+     * <p>Queries the list of data catalogs.</p>
      * 
      * @param request ListCatalogsRequest
      * @return ListCatalogsResponse
@@ -2493,10 +2629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of connection configurations.</p>
+     * <p>Retrieves a list of connection configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of connection configurations.</p>
+     * <p>Retrieves a list of connection configurations.</p>
      * 
      * @param request ListConnectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2540,10 +2676,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of connection configurations.</p>
+     * <p>Retrieves a list of connection configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of connection configurations.</p>
+     * <p>Retrieves a list of connection configurations.</p>
      * 
      * @param request ListConnectionsRequest
      * @return ListConnectionsResponse
@@ -3343,6 +3479,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Executes a single read-only SQL statement and returns a structured result set. BeginTime and EndTime only constrain the internal EventHouse data referenced in the SQL statement and do not affect mounted external data sources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a read-only SQL statement to query internal EventHouse data within a specified time range. The time range only constrains the internal EventHouse data referenced in the SQL statement and does not affect mounted external data sources. Returns a structured result set.</p>
+     * 
+     * @param request QueryEventHouseWithTimeRangeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryEventHouseWithTimeRangeResponse
+     */
+    public QueryEventHouseWithTimeRangeResponse queryEventHouseWithTimeRangeWithOptions(QueryEventHouseWithTimeRangeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            query.put("BeginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryEventHouseWithTimeRange"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryEventHouseWithTimeRangeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Executes a single read-only SQL statement and returns a structured result set. BeginTime and EndTime only constrain the internal EventHouse data referenced in the SQL statement and do not affect mounted external data sources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a read-only SQL statement to query internal EventHouse data within a specified time range. The time range only constrains the internal EventHouse data referenced in the SQL statement and does not affect mounted external data sources. Returns a structured result set.</p>
+     * 
+     * @param request QueryEventHouseWithTimeRangeRequest
+     * @return QueryEventHouseWithTimeRangeResponse
+     */
+    public QueryEventHouseWithTimeRangeResponse queryEventHouseWithTimeRange(QueryEventHouseWithTimeRangeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryEventHouseWithTimeRangeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>You can call this API operation to query event traces.</p>
      * 
      * <b>summary</b> : 
@@ -3533,6 +3731,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryTracedEventsResponse queryTracedEvents(QueryTracedEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryTracedEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Saves data semantics for an agent.</p>
+     * 
+     * @param tmpReq SaveAgentDataSemanticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveAgentDataSemanticsResponse
+     */
+    public SaveAgentDataSemanticsResponse saveAgentDataSemanticsWithOptions(SaveAgentDataSemanticsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SaveAgentDataSemanticsShrinkRequest request = new SaveAgentDataSemanticsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.examples)) {
+            request.examplesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.examples, "Examples", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.joins)) {
+            request.joinsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.joins, "Joins", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.metrics)) {
+            request.metricsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metrics, "Metrics", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.text)) {
+            request.textShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.text, "Text", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.examplesShrink)) {
+            body.put("Examples", request.examplesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.joinsShrink)) {
+            body.put("Joins", request.joinsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricsShrink)) {
+            body.put("Metrics", request.metricsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.textShrink)) {
+            body.put("Text", request.textShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveAgentDataSemantics"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveAgentDataSemanticsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Saves data semantics for an agent.</p>
+     * 
+     * @param request SaveAgentDataSemanticsRequest
+     * @return SaveAgentDataSemanticsResponse
+     */
+    public SaveAgentDataSemanticsResponse saveAgentDataSemantics(SaveAgentDataSemanticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.saveAgentDataSemanticsWithOptions(request, runtime);
     }
 
     /**
@@ -3831,10 +4107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the connection configuration.</p>
+     * <p>Updates connection configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the connection configuration.</p>
+     * <p>Updates connection configuration information.</p>
      * 
      * @param tmpReq UpdateConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3900,10 +4176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the connection configuration.</p>
+     * <p>Updates connection configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the connection configuration.</p>
+     * <p>Updates connection configuration information.</p>
      * 
      * @param request UpdateConnectionRequest
      * @return UpdateConnectionResponse

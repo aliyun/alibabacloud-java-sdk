@@ -14,7 +14,7 @@ public class QueryAskLumaLogRequest extends TeaModel {
     public String after;
 
     /**
-     * <p>The agent name. If this parameter is not specified, logs of all agents are queried.</p>
+     * <p>The agent name. If this parameter is left empty, all agents are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>demo-luma-agent</p>

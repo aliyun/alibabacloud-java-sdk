@@ -14,7 +14,7 @@ public class ListConnectionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of returned connection configurations.</p>
+     * <p>The list of connection configurations.</p>
      */
     @NameInMap("Data")
     public ListConnectionsResponseBodyData data;
@@ -29,7 +29,7 @@ public class ListConnectionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Common parameter. The ID of each request is unique and can be used for troubleshooting and issue locating.</p>
+     * <p>The common parameter. The ID of the request. Each request has a unique ID, which is active for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>E3619976-8714-5D88-BBA2-6983D798A8BB</p>
@@ -76,7 +76,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersApiKeyAuthParameters extends TeaModel {
         /**
-         * <p>The key of the API key.</p>
+         * <p>The key name of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>Token</p>
@@ -118,7 +118,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersBasicAuthParameters extends TeaModel {
         /**
-         * <p>The password used for basic authentication.</p>
+         * <p>The password for basic authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -127,7 +127,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>The username used for basic authentication.</p>
+         * <p>The username for basic authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -202,7 +202,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersBodyParameters extends TeaModel {
         /**
-         * <p>Specifies whether the value is used for authentication.</p>
+         * <p>Indicates whether the value is a secret.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -261,7 +261,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters extends TeaModel {
         /**
-         * <p>Specifies whether the value is used for authentication.</p>
+         * <p>Indicates whether the value is a secret.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -320,7 +320,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters extends TeaModel {
         /**
-         * <p>Specifies whether the value is used for authentication.</p>
+         * <p>Indicates whether the value is a secret.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -329,7 +329,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String isValueSecret;
 
         /**
-         * <p>The key of the query string parameter.</p>
+         * <p>The key of the URI of the request path parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -338,7 +338,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the query string parameter.</p>
+         * <p>The value of the URI of the request path parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -379,19 +379,19 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParameters extends TeaModel {
         /**
-         * <p>The list of request parameter data structures.</p>
+         * <p>The list of body request parameter data structures.</p>
          */
         @NameInMap("BodyParameters")
         public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersBodyParameters> bodyParameters;
 
         /**
-         * <p>The list of header parameters.</p>
+         * <p>The list of header parameter data structures.</p>
          */
         @NameInMap("HeaderParameters")
         public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters> headerParameters;
 
         /**
-         * <p>The data structure of query string parameters.</p>
+         * <p>The data structure of the URI of the request path parameters.</p>
          */
         @NameInMap("QueryStringParameters")
         public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters> queryStringParameters;
@@ -444,7 +444,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersClientParameters clientParameters;
 
         /**
-         * <p>The HTTP method used for the request. Valid values:</p>
+         * <p>The HTTP method for the probe request. Valid values:</p>
          * <ul>
          * <li>GET</li>
          * <li>POST</li>
@@ -458,7 +458,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String httpMethod;
 
         /**
-         * <p>The request parameters used for OAuth authentication.</p>
+         * <p>The HTTP request parameters for OAuth authentication.</p>
          */
         @NameInMap("OAuthHttpParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParameters OAuthHttpParameters;
@@ -504,13 +504,13 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParameters extends TeaModel {
         /**
-         * <p>The data structure of API key authentication parameters.</p>
+         * <p>The data structure of the API key.</p>
          */
         @NameInMap("ApiKeyAuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersApiKeyAuthParameters apiKeyAuthParameters;
 
         /**
-         * <p>The authentication type. Valid values:</p>
+         * <p>The authorization type:</p>
          * <ul>
          * <li><p>BASIC: BASIC_AUTH</p>
          * </li>
@@ -527,7 +527,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String authorizationType;
 
         /**
-         * <p>The data structure of basic authentication parameters.</p>
+         * <p>The data structure of basic authentication.</p>
          */
         @NameInMap("BasicAuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersBasicAuthParameters basicAuthParameters;
@@ -660,7 +660,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnections extends TeaModel {
         /**
-         * <p>The data structure of authentication parameters.</p>
+         * <p>The authentication data structure.</p>
          */
         @NameInMap("AuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParameters authParameters;
@@ -684,7 +684,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The timestamp when the data source was created.</p>
+         * <p>The timestamp when the datasource was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1592838994234</p>
@@ -708,7 +708,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public ListConnectionsResponseBodyDataConnectionsNetworkParameters networkParameters;
 
         /**
-         * <p>The data source connection parameters (JSON object). This field is only returned for data source type connections and is empty for Http type. For field definitions, refer to the ParamsSchema returned by GetConnectionType.</p>
+         * <p>The datasource connection parameters (JSON object). This field is returned only for datasource-type connections and is empty for Http type. For field definitions, refer to the ParamsSchema returned by GetConnectionType.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
@@ -717,7 +717,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public Object parameters;
 
         /**
-         * <p>The connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch.</p>
+         * <p>The connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, and lakehouse.</p>
          * 
          * <strong>example:</strong>
          * <p>Http</p>
@@ -798,7 +798,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of returned connection configurations.</p>
+         * <p>The list of connection configurations.</p>
          */
         @NameInMap("Connections")
         public java.util.List<ListConnectionsResponseBodyDataConnections> connections;
@@ -813,7 +813,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public Float maxResults;
 
         /**
-         * <p>If there are more results to fetch, NextToken is returned.</p>
+         * <p>The pagination token returned when additional results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

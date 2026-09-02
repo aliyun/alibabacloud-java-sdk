@@ -17,7 +17,7 @@ public class Table extends TeaModel {
      * <p>The column definition list of the table. Each column contains Name (column name), Type (data type), and Comment (remarks)</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</p>
+     * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}]</p>
      */
     @NameInMap("Columns")
     public java.util.List<TableColumns> columns;

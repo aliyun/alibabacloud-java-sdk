@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEventStreamingResponseBody extends TeaModel {
     /**
-     * <p>The returned code. Valid values:</p>
-     * <ul>
-     * <li>Success: The request was successful.                                </li>
-     * <li>Other values: An error occurred. For more information, see Error codes.</li>
-     * </ul>
+     * <p>The response code:</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -42,7 +38,7 @@ public class CreateEventStreamingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. The value true is returned if the operation was successful.</p>
+     * <p>Returns true if the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

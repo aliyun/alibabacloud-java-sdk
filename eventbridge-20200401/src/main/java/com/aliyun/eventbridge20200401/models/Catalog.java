@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class Catalog extends TeaModel {
     /**
-     * <p>The comment or description of the data catalog</p>
+     * <p>The comment or description of the data catalog.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试数据目录</p>
+     * <p>Test data catalog</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The connection name associated with a mounted-type Catalog. Only has a value when Provider is MySQL/PostgreSQL/Elasticsearch</p>
+     * <p>The connection name associated with a mounted catalog. This parameter has a value only when Provider is set to MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, or Iceberg.</p>
      * 
      * <strong>example:</strong>
      * <p>my_connection</p>
@@ -23,7 +23,7 @@ public class Catalog extends TeaModel {
     public String connectionName;
 
     /**
-     * <p>The unique identifier name of the data catalog</p>
+     * <p>The unique identifier name of the data catalog.</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -32,7 +32,7 @@ public class Catalog extends TeaModel {
     public String name;
 
     /**
-     * <p>Extended properties (JSON object). The Elasticsearch type contains information such as IndexPattern</p>
+     * <p>The extended properties (JSON object). For the Elasticsearch type, this includes information such as IndexPattern.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;IndexPattern&quot;:&quot;my-index-*&quot;}</p>
@@ -41,7 +41,7 @@ public class Catalog extends TeaModel {
     public java.util.Map<String, ?> properties;
 
     /**
-     * <p>The data source provider. EventHouse is the built-in storage; MySQL/PostgreSQL/Elasticsearch are externally mounted</p>
+     * <p>The data source provider. EventHouse indicates built-in storage. MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, and Iceberg indicate externally mounted sources.</p>
      * 
      * <strong>example:</strong>
      * <p>EventHouse</p>
@@ -50,7 +50,7 @@ public class Catalog extends TeaModel {
     public String provider;
 
     /**
-     * <p>The type of the data catalog, such as RELATIONAL</p>
+     * <p>The type of the data catalog, such as RELATIONAL.</p>
      * 
      * <strong>example:</strong>
      * <p>RELATIONAL</p>

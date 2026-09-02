@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCatalogsRequest extends TeaModel {
     /**
-     * <p>Items per page</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListCatalogsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>Pagination token</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

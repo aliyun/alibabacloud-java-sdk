@@ -4,48 +4,93 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SourceJDBCParameters extends TeaModel {
+    /**
+     * <p>The maximum number of rows returned per query. Default value: 1000. Maximum value: 10000.</p>
+     */
     @NameInMap("BatchSize")
     public Integer batchSize;
 
+    /**
+     * <p>The custom SQL query statement (advanced mode). This parameter is mutually exclusive with TableName.</p>
+     */
     @NameInMap("CustomQuery")
     public String customQuery;
 
+    /**
+     * <p>The incrementing column name. Required when QueryMode is set to <code>incrementing</code> or <code>timestamp_incrementing</code>.</p>
+     */
     @NameInMap("IncrementingColumn")
     public String incrementingColumn;
 
+    /**
+     * <p>The JDBC connection URL. ClickHouse example: <code>jdbc:clickhouse://host:8123/database</code>; MySQL example: <code>jdbc:mysql://host:3306/database</code>. The system automatically identifies the database type.</p>
+     */
     @NameInMap("JdbcUrl")
     public String jdbcUrl;
 
+    /**
+     * <p>The network type. Valid values: <code>PublicNetwork</code> (public network); <code>PrivateNetwork</code> (VPC private network, requires VpcId, VSwitchIds, and SecurityGroupId to be configured).</p>
+     */
     @NameInMap("Network")
     public String network;
 
+    /**
+     * <p>The database password.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The polling interval, in seconds. Minimum value: 10. Default value: 60.</p>
+     */
     @NameInMap("PollingInterval")
     public Integer pollingInterval;
 
+    /**
+     * <p>The query mode. Valid values: <code>bulk</code> (full query); <code>incrementing</code> (incrementing column tracking); <code>timestamp</code> (timestamp tracking); <code>timestamp_incrementing</code> (timestamp and incrementing column dual tracking).</p>
+     */
     @NameInMap("QueryMode")
     public String queryMode;
 
+    /**
+     * <p>The SQL query timeout period, in seconds. Default value: 30. Maximum value: 300.</p>
+     */
     @NameInMap("QueryTimeout")
     public Integer queryTimeout;
 
+    /**
+     * <p>The security group ID. Required when Network is set to PrivateNetwork.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The target table name. This parameter is mutually exclusive with CustomQuery. Required when custom SQL is not used.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <p>The timestamp column name. Required when QueryMode is set to <code>timestamp</code> or <code>timestamp_incrementing</code>.</p>
+     */
     @NameInMap("TimestampColumn")
     public String timestampColumn;
 
+    /**
+     * <p>The database username.</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The vSwitch ID. Required when Network is set to PrivateNetwork.</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
+    /**
+     * <p>The VPC ID. Required when Network is set to PrivateNetwork.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

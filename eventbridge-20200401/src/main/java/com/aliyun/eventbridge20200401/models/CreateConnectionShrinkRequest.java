@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConnectionShrinkRequest extends TeaModel {
     /**
-     * <p>The authentication configuration.</p>
+     * <p>The authentication data structure.</p>
      */
     @NameInMap("AuthParameters")
     public String authParametersShrink;
@@ -30,14 +30,14 @@ public class CreateConnectionShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The network configuration.</p>
+     * <p>The network configuration data structure.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkParameters")
     public String networkParametersShrink;
 
     /**
-     * <p>The data source connection parameters (JSON object). This parameter is required when Type is set to a data source type. This parameter is not required for the Http type. For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</p>
+     * <p>The data source connection parameters (JSON object). This parameter is required when Type is a data source type. It is not required for the Http type. For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
@@ -46,7 +46,7 @@ public class CreateConnectionShrinkRequest extends TeaModel {
     public String parametersShrink;
 
     /**
-     * <p>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, and Http. This parameter is required for data source connections. If this parameter is not specified, the default value Http is used. The Http type is used for HTTP protocol targets such as API Destination. Data source types are used for data connections in the integration marketplace.</p>
+     * <p>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, lakehouse, and Http. This parameter is required for data source type connections. If this parameter is not specified, the default value Http is used. The Http type is used for API Destination and other HTTP protocol targets. Hive and Iceberg are used for the corresponding data lakehouse sources. lakehouse is used only for compatibility with existing connections. Other data source types are used for data connections in the integration marketplace.</p>
      * 
      * <strong>example:</strong>
      * <p>Http</p>

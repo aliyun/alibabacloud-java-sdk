@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAttachment extends TeaModel {
     /**
-     * <p>Query statement</p>
+     * <p>The query statement.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;SELECT city, COUNT(*) AS cnt FROM events GROUP BY city&quot;</p>
@@ -14,7 +14,16 @@ public class QueryAttachment extends TeaModel {
     public String query;
 
     /**
-     * <p>Query execution result</p>
+     * <p>The stable identifier for the actual SQL tool execution, used for result tracking and interpretation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sqlx-0-a1b2c3d4</p>
+     */
+    @NameInMap("QueryId")
+    public String queryId;
+
+    /**
+     * <p>The query execution result.</p>
      */
     @NameInMap("Result")
     public ExecutionResult result;
@@ -30,6 +39,14 @@ public class QueryAttachment extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public QueryAttachment setQueryId(String queryId) {
+        this.queryId = queryId;
+        return this;
+    }
+    public String getQueryId() {
+        return this.queryId;
     }
 
     public QueryAttachment setResult(ExecutionResult result) {

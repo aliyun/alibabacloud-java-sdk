@@ -24,7 +24,7 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public String eventStreamingName;
 
     /**
-     * <p>The event filtering rule. If not specified, all events are matched.</p>
+     * <p>The event filtering rule. If you do not specify this parameter, all events are matched.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -48,6 +48,9 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     @NameInMap("FilterPattern")
     public String filterPattern;
 
+    /**
+     * <p>The generic JSON Configurations for the event source. This parameter is mutually exclusive with Source.</p>
+     */
     @NameInMap("Metadata")
     public String metadata;
 
@@ -58,19 +61,19 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public String runOptionsShrink;
 
     /**
-     * <p>The event target. You must select exactly one Sink type.</p>
+     * <p>The event target. You must select one Sink type, and you can select only one Sink type.</p>
      */
     @NameInMap("Sink")
     public String sinkShrink;
 
     /**
-     * <p>The event provider. You must select exactly one Source type.</p>
+     * <p>The event provider. You must specify one source type, and you can specify only one source type.</p>
      */
     @NameInMap("Source")
     public String sourceShrink;
 
     /**
-     * <p>The tag list. A maximum of 20 items are supported.</p>
+     * <p>The tag list, containing up to 20 items.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateEventStreamingShrinkRequestTags> tags;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConnectionResponseBody extends TeaModel {
     /**
-     * <p>The API status or POP error code. Valid values: Success.</p>
+     * <p>The API status or POP error code. A value of Success indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
