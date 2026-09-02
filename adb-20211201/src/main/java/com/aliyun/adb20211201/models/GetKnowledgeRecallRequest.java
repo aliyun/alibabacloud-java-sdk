@@ -35,6 +35,9 @@ public class GetKnowledgeRecallRequest extends TeaModel {
 
     /**
      * <p>The username. Only files that this user has permission to access are recalled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_name1</p>
      */
     @NameInMap("User")
     public String user;

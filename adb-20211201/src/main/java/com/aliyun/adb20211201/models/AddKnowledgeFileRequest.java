@@ -15,7 +15,7 @@ public class AddKnowledgeFileRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The file address. Currently, only OSS paths are supported.</p>
+     * <p>The file location. Currently, only OSS paths are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,13 +34,19 @@ public class AddKnowledgeFileRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>Specifies whether the file is a folder.</p>
+     * <p>Specifies whether the path is a directory.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("IsDir")
     public Boolean isDir;
+
+    /**
+     * <p>The confidence level or weight of the file.</p>
+     */
+    @NameInMap("Priority")
+    public String priority;
 
     /**
      * <p>The file tags in JSON format.</p>
@@ -95,6 +101,14 @@ public class AddKnowledgeFileRequest extends TeaModel {
     }
     public Boolean getIsDir() {
         return this.isDir;
+    }
+
+    public AddKnowledgeFileRequest setPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+    public String getPriority() {
+        return this.priority;
     }
 
     public AddKnowledgeFileRequest setTags(String tags) {

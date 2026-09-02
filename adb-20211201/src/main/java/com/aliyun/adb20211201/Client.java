@@ -53,22 +53,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhengzhou-nebula-1", "adb.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "adb.ap-northeast-1.aliyuncs.com"),
             new TeaPair("me-east-1", "adb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "adb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "adb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "adb.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "adb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "adb.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "adb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "adb.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "adb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "adb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "adb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "adb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "adb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("eu-west-1", "adb.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "adb.eu-central-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "adb.na-south-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "adb.me-central-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "adb.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("adb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -89,7 +74,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a knowledge base document.</p>
+     * <p>Adds a document to a knowledge base.</p>
      * 
      * @param request AddKnowledgeFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -112,6 +97,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.isDir)) {
             query.put("IsDir", request.isDir);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
@@ -141,7 +130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a knowledge base document.</p>
+     * <p>Adds a document to a knowledge base.</p>
      * 
      * @param request AddKnowledgeFileRequest
      * @return AddKnowledgeFileResponse
@@ -1821,7 +1810,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a> of AnalyticDB for MySQL.</em>* Temporary backups and regular backups have the same pricing and backup set retention period.</p>
+     * <p><em>Before using this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/zh/pricing-calculator?_p_lc=1#/">pricing</a> of AnalyticDB for MySQL.</em>* 
+     * Temporary backups and regular backups have the same pricing and backup set retention period.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a backup set immediately.</p>
@@ -1876,7 +1867,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a> of AnalyticDB for MySQL.</em>* Temporary backups and regular backups have the same pricing and backup set retention period.</p>
+     * <p><em>Before using this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/zh/pricing-calculator?_p_lc=1#/">pricing</a> of AnalyticDB for MySQL.</em>* 
+     * Temporary backups and regular backups have the same pricing and backup set retention period.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a backup set immediately.</p>
