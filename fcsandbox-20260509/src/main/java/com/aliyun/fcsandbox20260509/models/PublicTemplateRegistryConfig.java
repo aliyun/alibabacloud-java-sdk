@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class PublicTemplateRegistryConfig extends TeaModel {
+    /**
+     * <p>The network configuration of the image repository.</p>
+     */
     @NameInMap("networkConfig")
     public PublicTemplateRegistryNetworkConfig networkConfig;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicTemplateRuntimeConfig extends TeaModel {
     /**
+     * <p>The number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,28 +14,44 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
     public Float cpu;
 
     /**
+     * <p>The disk size. Unit: GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    /**
+     * <p>Specifies whether to allow access to the Internet.</p>
+     */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
+    /**
+     * <p>The log configuration.</p>
+     */
     @NameInMap("logConfig")
     public PublicTemplateLogConfig logConfig;
 
     /**
+     * <p>The memory size. Unit: MB.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048</p>
      */
     @NameInMap("memorySize")
     public Integer memorySize;
 
+    /**
+     * <p>The sandbox configuration.</p>
+     */
     @NameInMap("sandboxConfig")
     public PublicTemplateSandboxConfig sandboxConfig;
 
+    /**
+     * <p>The VPC configuration.</p>
+     */
     @NameInMap("vpcConfig")
     public PublicTemplateVPCConfig vpcConfig;
 

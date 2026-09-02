@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class PublicTemplateStatus extends TeaModel {
     /**
+     * <p>The time when the build is completed.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-28T12:00:00.000Z</p>
      */
     @NameInMap("finishedAt")
     public String finishedAt;
 
+    /**
+     * <p>The reason for the build failure.</p>
+     */
     @NameInMap("reason")
     public PublicTemplateStatusReason reason;
 
     /**
+     * <p>The build status.</p>
+     * 
      * <strong>example:</strong>
      * <p>ready</p>
      */

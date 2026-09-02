@@ -65,7 +65,7 @@ public class ListVolumesRequest extends TeaModel {
     public String userID;
 
     /**
-     * <p>The name of the volume. The name must be unique within the team.</p>
+     * <p>The name of the volume. The name must be unique within a team.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace</p>

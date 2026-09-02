@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicTemplate extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-28T12:00:00.000Z</p>
      */
@@ -12,6 +14,8 @@ public class PublicTemplate extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The template name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-template</p>
      */
@@ -19,19 +23,29 @@ public class PublicTemplate extends TeaModel {
     public String name;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmz7h4ocksp5y</p>
      */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The template runtime configuration.</p>
+     */
     @NameInMap("runtimeConfig")
     public PublicTemplateRuntimeConfig runtimeConfig;
 
+    /**
+     * <p>The template build status.</p>
+     */
     @NameInMap("status")
     public PublicTemplateStatus status;
 
     /**
+     * <p>The unique identifier of the team.</p>
+     * 
      * <strong>example:</strong>
      * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
      */
@@ -39,6 +53,8 @@ public class PublicTemplate extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The team name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-team</p>
      */
@@ -46,6 +62,8 @@ public class PublicTemplate extends TeaModel {
     public String teamName;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>w0aipmi0rvn5xqdnsihg</p>
      */

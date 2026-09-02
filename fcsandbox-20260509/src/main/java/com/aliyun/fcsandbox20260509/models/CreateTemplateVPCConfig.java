@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateVPCConfig extends TeaModel {
     /**
+     * <p>The VPC authorization role name.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunFCSandboxDefaultRole</p>
      */
@@ -12,16 +14,23 @@ public class CreateTemplateVPCConfig extends TeaModel {
     public String role;
 
     /**
+     * <p>The security group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-bp1gx7yj8ud5mabcde</p>
      */
     @NameInMap("securityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The list of vSwitch IDs.</p>
+     */
     @NameInMap("vSwitchIds")
     public java.util.List<String> vSwitchIds;
 
     /**
+     * <p>VPC ID</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp1mwrqm3wkq7abcde</p>
      */

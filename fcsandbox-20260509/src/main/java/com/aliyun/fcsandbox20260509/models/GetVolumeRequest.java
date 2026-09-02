@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVolumeRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the Team.</p>
+     * <p>The unique identifier of the team.</p>
      * 
      * <strong>example:</strong>
      * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
