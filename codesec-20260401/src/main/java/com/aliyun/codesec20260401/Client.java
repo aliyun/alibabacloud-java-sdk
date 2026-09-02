@@ -9,10 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-southeast-1", "codesec.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "codesec.cn-hangzhou.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("codesec", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -32,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists projects under the tenant with pagination, supporting fuzzy search by name or prompt.</p>
+     * <p>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</p>
      * 
      * @param request DescribeProjectsRequest
      * @param headers map
@@ -52,6 +48,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("sortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("sortOrder", request.sortOrder);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -74,7 +78,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists projects under the tenant with pagination, supporting fuzzy search by name or prompt.</p>
+     * <p>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</p>
      * 
      * @param request DescribeProjectsRequest
      * @return DescribeProjectsResponse

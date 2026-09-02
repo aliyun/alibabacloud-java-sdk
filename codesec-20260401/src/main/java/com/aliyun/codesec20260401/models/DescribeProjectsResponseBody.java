@@ -13,7 +13,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
     /**
      * <p>The page size.</p>
      * <blockquote>
-     * <p>If not specified, all projects are displayed.</p>
+     * <p>If this parameter is not specified, all projects are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
 
     public static class DescribeProjectsResponseBodyItemsEngines extends TeaModel {
         /**
-         * <p>Indicates whether SAST is supported.</p>
+         * <p>Indicates whether SAST is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -105,7 +105,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
         public Boolean sast;
 
         /**
-         * <p>Indicates whether SCA is supported.</p>
+         * <p>Indicates whether SCA is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -172,7 +172,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
         public Long configRevision;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the project was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-28T03:36:31.573Z</p>
@@ -199,7 +199,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The engine switches for the project or scan snapshot (SAST and SCA only).</p>
+         * <p>The engine switches for the project or scan snapshot. Only SAST and SCA are supported.</p>
          */
         @NameInMap("engines")
         public DescribeProjectsResponseBodyItemsEngines engines;
@@ -223,6 +223,15 @@ public class DescribeProjectsResponseBody extends TeaModel {
         public String instructionPrompt;
 
         /**
+         * <p>The time when a task was last created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-28T03:36:31.573Z</p>
+         */
+        @NameInMap("lastScanTime")
+        public String lastScanTime;
+
+        /**
          * <p>The project name.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +247,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
         public DescribeProjectsResponseBodyItemsSource source;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the project was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-28T03:36:31.573Z</p>
@@ -305,6 +314,14 @@ public class DescribeProjectsResponseBody extends TeaModel {
         }
         public String getInstructionPrompt() {
             return this.instructionPrompt;
+        }
+
+        public DescribeProjectsResponseBodyItems setLastScanTime(String lastScanTime) {
+            this.lastScanTime = lastScanTime;
+            return this;
+        }
+        public String getLastScanTime() {
+            return this.lastScanTime;
         }
 
         public DescribeProjectsResponseBodyItems setName(String name) {

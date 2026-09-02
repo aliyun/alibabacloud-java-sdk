@@ -1,3 +1,9 @@
+2026-09-02 Version: 1.0.2
+- Update API DescribeProjects: add request parameters sortBy.
+- Update API DescribeProjects: add request parameters sortOrder.
+- Update API DescribeProjects: add response parameters Body.items.$.lastScanTime.
+
+
 2026-08-31 Version: 1.0.1
 - Update API DescribeScans: add response parameters Body.items.$.currentPhase.
 

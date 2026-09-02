@@ -14,7 +14,7 @@ public class DescribeProjectsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Do not specify this parameter or set it to an empty string for the first page. For subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken in the response is empty, the last page has been reached.</p>
+     * <p>The pagination token. Do not specify this parameter or set it to an empty string for the first page. For subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
@@ -23,13 +23,42 @@ public class DescribeProjectsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Fuzzy matches projects by project name or prompt.</p>
+     * <p>The keyword for fuzzy match by project name or prompt.</p>
      * 
      * <strong>example:</strong>
      * <p>project</p>
      */
     @NameInMap("query")
     public String query;
+
+    /**
+     * <p>The field by which to sort the results. Default value: last_scan_time.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>last_scan_time: the time when a task was last created.</li>
+     * <li>created_at: the time when the project was created.</li>
+     * <li>updated_at: the time when the project was last modified.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>last_scan_time</p>
+     */
+    @NameInMap("sortBy")
+    public String sortBy;
+
+    /**
+     * <p>The sort order. Default value: desc.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>desc: descending order.</li>
+     * <li>asc: ascending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
+    @NameInMap("sortOrder")
+    public String sortOrder;
 
     public static DescribeProjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeProjectsRequest self = new DescribeProjectsRequest();
@@ -58,6 +87,22 @@ public class DescribeProjectsRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public DescribeProjectsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    public DescribeProjectsRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
     }
 
 }
