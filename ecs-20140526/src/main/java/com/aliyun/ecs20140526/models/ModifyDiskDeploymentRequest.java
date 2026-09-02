@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskDeploymentRequest extends TeaModel {
     /**
-     * <p>The new disk type. This parameter takes effect only when you perform an Upgrade/Downgrade during migration between different dedicated block storage clusters. Currently, only cloud_essd (enterprise SSD) is supported.</p>
-     * <p>Default value: empty, which indicates that the disk type is not changed during the Upgrade/Downgrade.</p>
+     * <p>The new disk type. This parameter takes effect only when you migrate a disk between different dedicated block storage clusters. Currently, only cloud_essd (enterprise SSD) is supported.</p>
+     * <p>Default value: empty, which indicates that the disk type is not changed.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_essd</p>
@@ -27,8 +27,8 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the required parameters, request format, business restrictions, and ECS inventory. If the check fails, the corresponding error is returned. If the check succeeds, the error code DryRunOperation is returned.</li>
-     * <li>false: performs a dry run and sends the request. If the check succeeds, a 2XX HTTP status code is returned and the disk is migrated.</li>
+     * <li>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2XX HTTP status code is returned and the disk is migrated.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -45,12 +45,12 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The performance level of the enterprise SSD. This parameter takes effect only when you migrate a disk between different dedicated block storage clusters. Valid values:</p>
+     * <p>The performance level (PL) of the enterprise SSD. This parameter takes effect only when you migrate a disk between different dedicated block storage clusters. Valid values:</p>
      * <ul>
-     * <li>PL0: a maximum of 10,000 random read/write IOPS per disk.</li>
-     * <li>PL1: a maximum of 50,000 random read/write IOPS per disk.</li>
+     * <li>PL0: A maximum of 10,000 random read/write IOPS per disk.</li>
+     * <li>PL1: A maximum of 50,000 random read/write IOPS per disk.</li>
      * </ul>
-     * <p>Default value: empty, which indicates that the performance level is not changed.</p>
+     * <p>Default value: empty, which indicates that the performance level (PL) is not changed.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -67,8 +67,8 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     /**
      * <p>The dedicated block storage cluster ID.</p>
      * <ul>
-     * <li>To migrate a disk to a dedicated block storage cluster, you must specify <code>StorageClusterId</code>.</li>
-     * <li>To migrate a disk to a public cloud block storage cluster, <code>StorageClusterId</code> must be empty.</li>
+     * <li>To migrate a disk to a dedicated block storage cluster, you must specify StorageClusterId.</li>
+     * <li>To migrate a disk to a public cloud block storage cluster, StorageClusterId must be empty.</li>
      * </ul>
      * <p>Default value: empty, which indicates that the disk is migrated to a public cloud block storage cluster.</p>
      * 

@@ -54,7 +54,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String lockReason;
 
     /**
-     * <p>The maximum number of entries per page for a paging query. If you set this parameter, it indicates that you are using the MaxResults and NextToken paging method.</p>
+     * <p>The maximum number of entries per page for a paged query. If you set this parameter, the MaxResults and NextToken parameters are used together for paging.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -81,7 +81,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to go offline. Use NextToken and MaxResults to perform paging query operations.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults to perform paged query operations for paging.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to go offline. Use NextToken and MaxResults to perform paging query operations.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults to perform paged query operations for paging.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -133,18 +133,18 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to display socket-level capacity information. You can use socket-level capacity information to view remaining resources (vCPU, memory usage, remaining capacity, and total capacity) to determine whether an ECS instance of a specific instance type can be created. Valid values:</p>
+     * <p>Specifies whether to display socket-level capacity information. You can use socket-level capacity information to view remaining resources (vCPUs, memory usage, remaining capacity, and total capacity) to determine whether an ECS instance of a specific instance type can be created. Valid values:</p>
      * <ul>
-     * <li>true: Display socket-level capacity information. Only specific dedicated host types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export DDH information</a>.</li>
-     * <li>false: Do not display socket-level capacity information.</li>
+     * <li>true: Displays socket-level capacity information. Only specific dedicated host types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export DDH information</a>.</li>
+     * <li>false: Does not display socket-level capacity information.</li>
      * </ul>
      * <blockquote>
      * <p>Notice: </p>
      * </blockquote>
      * <p>Each dedicated host typically has two CPUs, numbered Socket 0 and Socket 1. On a dedicated host, ECS instances are not created across sockets to ensure maximum performance. An ECS instance is created based on a single socket only.</p>
      * <ul>
-     * <li>If the remaining computing resources of one socket are greater than or equal to the instance type to be created, the ECS instance is created.</li>
-     * <li>If the remaining computing resources of each socket are less than the instance type to be created, the ECS instance fails to be created, even if the combined remaining resources of both sockets exceed the instance type requirements.</notice></li>
+     * <li>If the remaining computing resources of one socket are greater than or equal to the ECS instance type to be created, the ECS instance is created.</li>
+     * <li>If the remaining computing resources of each socket are less than the ECS instance type to be created, the ECS instance fails to be created, even if the combined remaining resources of both sockets exceed the ECS instance type requirements.</notice></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -156,9 +156,9 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The usage status of the dedicated host. Valid values:</p>
      * <ul>
-     * <li><p>Available: The dedicated host is running normally.</p>
+     * <li><p>Available: The dedicated host is running as expected.</p>
      * </li>
-     * <li><p>UnderAssessment: The physical machine is at risk. The physical machine is available but may cause issues for ECS instances on the dedicated host.</p>
+     * <li><p>UnderAssessment: The physical machine has potential risks. The physical machine is available but may cause issues for ECS instances on the dedicated host.</p>
      * </li>
      * <li><p>PermanentFailure: The dedicated host has a permanent failure and is unavailable.</p>
      * </li>
@@ -176,7 +176,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The list of tags. Valid values of N: 0 to 20.</p>
+     * <p>The tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostsRequestTag> tag;

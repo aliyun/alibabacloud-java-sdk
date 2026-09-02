@@ -65,7 +65,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>Notice: When you use a shared encrypted image to create a disk from an encrypted snapshot, you must set the request parameter Encrypted to true to ensure that the created disk uses the key of the image recipient.</p>
+     * <p>Notice: When you use a shared encrypted image to create a disk from an encrypted snapshot, you must set the request parameter Encrypted to true to ensure that the disk uses the key of the image recipient.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the image to use to reset the system. This parameter is required.</p>
+     * <p>The ID of the image to use when you reset the system. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp67acfmxazb4ph****</p>
@@ -143,7 +143,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
      * <p>Specifies whether to use the preset password of the image.</p>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>When you use this parameter, the Password parameter must be empty. Make sure that the image you use has a preset password.</p>
+     * <p>If you use this parameter, the Password parameter must be empty. Make sure that the image has a preset password.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -172,9 +172,9 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the free Security Center service after the system disk is replaced. Valid values: </p>
      * <ul>
-     * <li><p>Active: Security Center is enabled. This value is valid only for public images.</p>
+     * <li><p>Active: The Security Center service is used. This value is supported only for public images.</p>
      * </li>
-     * <li><p>Deactive: Security Center is not enabled. This value is valid for all images.</p>
+     * <li><p>Deactive: The Security Center service is not used. This value is supported for all images.</p>
      * </li>
      * </ul>
      * <p>Default value: Deactive.</p>
@@ -366,19 +366,18 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         /**
          * <p>The capacity of the new system disk. Unit: GiB. Valid values:</p>
          * <ul>
-         * <li>Basic disk: Max{20, size of the image specified by the parameter ImageId} to 500.</li>
-         * <li>Enterprise SSD:<ul>
-         * <li>PL0: Max{1, size of the image specified by the parameter ImageId} to 2048.</li>
-         * <li>PL1: Max{20, size of the image specified by the parameter ImageId} to 2048.</li>
-         * <li>PL2: Max{461, size of the image specified by the parameter ImageId} to 2048.</li>
-         * <li>PL3: Max{1261, size of the image specified by the parameter ImageId} to 2048.</li>
+         * <li>Basic disk: Max{20, size of the image specified by the ImageId parameter} to 500.</li>
+         * <li>Enterprise SSD (ESSD):<ul>
+         * <li>PL0: Max{1, size of the image specified by the ImageId parameter} to 2048.</li>
+         * <li>PL1: Max{20, size of the image specified by the ImageId parameter} to 2048.</li>
+         * <li>PL2: Max{461, size of the image specified by the ImageId parameter} to 2048.</li>
+         * <li>PL3: Max{1261, size of the image specified by the ImageId parameter} to 2048.</li>
          * </ul>
          * </li>
-         * <li>ESSD AutoPL disk: Max{1, size of the image specified by the parameter ImageId} to 2048.</li>
-         * <li>Standard SSD: Max{20, size of the image specified by the parameter ImageId} to 2048.</li>
-         * <li>Other disk types: Max{20, size of the image specified by the parameter ImageId} to 2048.</li>
+         * <li>ESSD AutoPL disk: Max{1, size of the image specified by the ImageId parameter} to 2048.</li>
+         * <li>Standard SSD and other disk types: Max{20, size of the image specified by the ImageId parameter} to 2048.</li>
          * </ul>
-         * <p>Default value: Max{40, size of the image specified by the parameter ImageId}.</p>
+         * <p>Default value: Max{40, size of the image specified by the ImageId parameter}.</p>
          * <blockquote>
          * <p>You are charged additional fees for the disk capacity that exceeds <code>Max{20, capacity of the original system disk}</code>.</p>
          * </blockquote>

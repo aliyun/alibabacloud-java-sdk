@@ -14,7 +14,7 @@ public class CloneDisksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task group ID of the disk cloning operation. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describetasks">DescribeTasks</a> to query the task execution result.</p>
+     * <p>The task group ID of the disk cloning task. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describetasks">DescribeTasks</a> to query the task execution result.</p>
      * 
      * <strong>example:</strong>
      * <p>g-2ze2op2grqpclwu7****</p>

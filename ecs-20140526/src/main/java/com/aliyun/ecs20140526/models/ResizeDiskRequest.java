@@ -24,7 +24,7 @@ public class ResizeDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The new disk capacity that you want to expand to. Unit: GiB. Valid values:</p>
+     * <p>The new disk capacity that you want after expansion. Unit: GiB. Valid values:</p>
      * <ul>
      * <li><p>System disk:</p>
      * <ul>
@@ -46,7 +46,7 @@ public class ResizeDiskRequest extends TeaModel {
      * </li>
      * <li><p>Standard SSD (cloud_ssd): 20 to 32768.</p>
      * </li>
-     * <li><p>Enterprise SSD (cloud_essd): The valid values depend on the value of <code>PerformanceLevel</code>. You can call <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> to query disk information and then check the valid values based on the <code>PerformanceLevel</code> parameter in the response.</p>
+     * <li><p>Enterprise SSD (cloud_essd): The valid values depend on the value of <code>PerformanceLevel</code>. You can call <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> to query disk information and check the <code>PerformanceLevel</code> parameter in the response.</p>
      * <ul>
      * <li>PL0: 1 to 65536.</li>
      * <li>PL1: 20 to 65536.</li>
@@ -69,7 +69,7 @@ public class ResizeDiskRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The specified new disk capacity must be greater than the original disk capacity. Otherwise, an error is returned.</p>
+     * <p>The new disk capacity must be greater than the original disk capacity. Otherwise, an error is returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -96,7 +96,7 @@ public class ResizeDiskRequest extends TeaModel {
      * <ul>
      * <li><p>offline (default): offline expansion. After the expansion, you must restart the instance in the console by following the instructions in <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a> or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the changes to take effect.</p>
      * </li>
-     * <li><p>online: online expansion. The expansion takes effect without restarting the instance. Supported disk types include ultra disks, standard SSDs, enterprise SSDs, and elastic ephemeral disks.</p>
+     * <li><p>online: online expansion. The expansion takes effect without the need to restart the instance. Supported disk types include ultra disks, standard SSDs, enterprise SSDs, and elastic ephemeral disks.</p>
      * </li>
      * </ul>
      * 

@@ -34,8 +34,8 @@ public class DescribeImagesRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
      * <ul>
-     * <li>true: Only a dry run is performed. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.  </li>
-     * <li>false: A request is sent. If the check succeeds, a 2XX HTTP status code is returned and the resource status is queried directly.</li>
+     * <li>true: Only a dry run is performed. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned. The request does not send the actual query.</li>
+     * <li>false: A normal request is sent. If the check succeeds, a 2XX HTTP status code is returned and the resource status is directly queried.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -46,7 +46,7 @@ public class DescribeImagesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The list of filter conditions for querying resources.</p>
+     * <p>The list of filter conditions used to query resources.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeImagesRequestFilter> filter;
@@ -84,7 +84,7 @@ public class DescribeImagesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The image name. Fuzzy search is supported.</p>
+     * <p>The name of the image. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>testImageName</p>
@@ -95,18 +95,18 @@ public class DescribeImagesRequest extends TeaModel {
     /**
      * <p>The source of the image. Valid values:</p>
      * <ul>
-     * <li>system: Images provided by Alibaba Cloud that are not published through Alibaba Cloud Marketplace. This is different from the &quot;Public Image&quot; concept in the console.</li>
+     * <li>system: Images provided by Alibaba Cloud that are not published through Alibaba Cloud Marketplace. This is different from the concept of &quot;public images&quot; in the console.</li>
      * <li>self: Custom images that you created.</li>
-     * <li>others: Includes shared images (images directly shared by other Alibaba Cloud users) and community images (images that any Alibaba Cloud user has fully shared publicly). Note the following:<ul>
+     * <li>others: Includes shared images (images directly shared with you by other Alibaba Cloud users) and community images (images that any Alibaba Cloud user has fully shared publicly). Note the following:<ul>
      * <li>To find community images, IsPublic must be set to true.</li>
      * <li>To find shared images, IsPublic must be set to false or left empty.</li>
      * </ul>
      * </li>
-     * <li>marketplace: Images published by Alibaba Cloud or third-party independent software vendors (ISVs) in Alibaba Cloud Marketplace. These images must be purchased together with ECS. Check the billing details of Alibaba Cloud Marketplace images.</li>
+     * <li>marketplace: Images published by Alibaba Cloud or third-party independent software vendors (ISVs) in Alibaba Cloud Marketplace. These images must be purchased together with ECS. Check the billing details of Alibaba Cloud Marketplace images on your own.</li>
      * </ul>
      * <p>Default value: empty.</p>
      * <blockquote>
-     * <p>An empty value returns results with values of system, self, and others.</p>
+     * <p>An empty value indicates that images with the system, self, and others values are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class DescribeImagesRequest extends TeaModel {
     public Long imageOwnerId;
 
     /**
-     * <p>The instance type for which available images are queried.</p>
+     * <p>The instance type for which you want to query available images.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5.large</p>
@@ -185,7 +185,7 @@ public class DescribeImagesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the resources list.</p>
+     * <p>The page number of the resources.</p>
      * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
@@ -196,7 +196,7 @@ public class DescribeImagesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging queries. Settings this parameter specifies the number of entries to return on each page.</p>
+     * <p>The number of entries per page for a paging query. Settings this parameter to specify the number of entries to return on each page.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -217,7 +217,7 @@ public class DescribeImagesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the enterprise resource group to which the custom image belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+     * <p>The ID of the resource group to which the custom image belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
@@ -257,15 +257,15 @@ public class DescribeImagesRequest extends TeaModel {
      * <ul>
      * <li>Creating: The image is being created.</li>
      * <li>Waiting: The image is waiting in a multi-task queue.</li>
-     * <li>Available: The image is available for use.</li>
+     * <li>Available: The image is available.</li>
      * <li>UnAvailable: The image is unavailable.</li>
      * <li>CreateFailed: The image failed to be created.</li>
      * <li>Deprecated: The image is deprecated.</li>
      * <li>ALL: All image statuses.</li>
      * </ul>
-     * <p>Default value: Available. Status is required only when Usable is specified, and has no default value in that case.</p>
+     * <p>Default value: Available. When Usable is used, Status is required and has no default value.</p>
      * <blockquote>
-     * <p>This parameter supports multiple values separated by commas (,). When the value is set to ALL, images in all statuses are queried. ALL cannot be used together with other status values.</p>
+     * <p>This parameter supports multiple values at the same time, separated by commas (,). When the value is set to ALL, images in all statuses are queried. ALL cannot be used together with other status values.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class DescribeImagesRequest extends TeaModel {
     /**
      * <p>Specifies whether the image is available.</p>
      * <blockquote>
-     * <p>An available image indicates that the image can be used immediately to create instances. For more scenarios, see <a href="https://help.aliyun.com/document_detail/3044728.html">Instant image availability</a>.</p>
+     * <p>An available image indicates that the image can be immediately used to create instances. For more availability scenarios, see <a href="https://help.aliyun.com/document_detail/3044728.html">Image instant availability</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -295,8 +295,8 @@ public class DescribeImagesRequest extends TeaModel {
     /**
      * <p>Specifies whether the image is running on ECS instances. Valid values:</p>
      * <ul>
-     * <li>instance: The image is in use by ECS instances.</li>
-     * <li>none: The image is idle and not used by any ECS instances.</li>
+     * <li>instance: The image is in use and running on ECS instances.</li>
+     * <li>none: The image is idle and not running on any ECS instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -536,12 +536,12 @@ public class DescribeImagesRequest extends TeaModel {
 
     public static class DescribeImagesRequestFilter extends TeaModel {
         /**
-         * <p>The filter key for querying resources. Valid values:</p>
+         * <p>The filter key used to query resources. Valid values:</p>
          * <ul>
-         * <li>When this parameter is set to <code>CreationStartTime</code>, you can query resources created after the time point specified by <code>Filter.N.Value</code>.</li>
-         * <li>When this parameter is set to <code>CreationEndTime</code>, you can query resources created before the time point specified by <code>Filter.N.Value</code>.</li>
+         * <li>When this parameter is set to <code>CreationStartTime</code>, you can query resources created after the specified time point (<code>Filter.N.Value</code>).</li>
+         * <li>When this parameter is set to <code>CreationEndTime</code>, you can query resources created before the specified time point (<code>Filter.N.Value</code>).</li>
          * <li>When this parameter is set to <code>NetworkType</code>, you can query resources of the specified network type.</li>
-         * <li>When this parameter is set to <code>CpuOnlineUpgrade</code>, <code>CpuOnlineDowngrade</code>, <code>MemoryOnlineUpgrade</code>, or <code>MemoryOnlineDowngrade</code>, you can query the CPU or memory hot-plugging support of the specified image.</li>
+         * <li>When this parameter is set to any of <code>CpuOnlineUpgrade</code>, <code>CpuOnlineDowngrade</code>, <code>MemoryOnlineUpgrade</code>, or <code>MemoryOnlineDowngrade</code>, you can query the CPU or memory hot-plugging support of the specified image.</li>
          * </ul>
          * <p>Default value: null.</p>
          * 
@@ -552,9 +552,9 @@ public class DescribeImagesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter value for querying resources.</p>
+         * <p>The filter value used to query resources.</p>
          * <ul>
-         * <li><p>When <code>Filter.N.Key</code> is set to <code>CreationStartTime</code> or <code>CreationEndTime</code>, the format is <code>yyyy-MM-ddTHH:mmZ</code>, using the UTC+0 time zone.</p>
+         * <li><p>When <code>Filter.N.Key</code> is set to <code>CreationStartTime</code> or <code>CreationEndTime</code>, the format is <code>yyyy-MM-ddTHH:mmZ</code>, in UTC+0 time zone.</p>
          * </li>
          * <li><p>When <code>Filter.N.Key</code> is set to <code>NetworkType</code>, valid network type values include <code>vpc</code> and <code>classic</code>.</p>
          * </li>
@@ -595,7 +595,7 @@ public class DescribeImagesRequest extends TeaModel {
     public static class DescribeImagesRequestTag extends TeaModel {
         /**
          * <p>The tag key of the image. Valid values of N: 1 to 20.</p>
-         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count that has all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count that has all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

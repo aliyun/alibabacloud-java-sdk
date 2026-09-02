@@ -9,7 +9,7 @@ public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
      * <ul>
      * <li><p>If the value of seconds (<code>ss</code>) is not <code>00</code>, the time is automatically set to the start of the current minute (<code>mm</code>).</p>
      * </li>
-     * <li><p>The earliest release time must be at least 30 minutes after the current time.</p>
+     * <li><p>The earliest release time must be at least 30 minutes from the current time.</p>
      * </li>
      * <li><p>The latest release time cannot be more than three years from the current time.</p>
      * </li>
@@ -23,7 +23,7 @@ public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
     public String autoReleaseTime;
 
     /**
-     * <p>The instance ID of the ECS instance for which to configure automatic release.</p>
+     * <p>The ID of the ECS instance for which to configure automatic release.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

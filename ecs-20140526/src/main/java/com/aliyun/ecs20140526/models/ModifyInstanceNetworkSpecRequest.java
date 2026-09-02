@@ -21,15 +21,15 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values: </p>
      * <ul>
-     * <li>true: The payment is automatically completed after the bandwidth configuration is changed. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated. You cannot pay for this order through the ECS console. You can only void the order.</li>
+     * <li>true: The payment is automatically completed after the bandwidth configuration is changed. Make sure that your account balance is sufficient. If the balance is insufficient, an abnormal order is generated. You cannot pay for this order in the ECS console. You can only void the order.</li>
      * </ul>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>false: An order is generated but the payment is not completed after the bandwidth configuration is changed. If your payment method has an insufficient balance, you can set the Autopay parameter to false to cancel automatic payment. In this case, an unpaid order is generated. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to complete the payment.</li>
+     * <li>false: An order is generated but the payment is not completed after the bandwidth configuration is changed. If your payment method has an insufficient balance, set the Autopay parameter to false to cancel automatic payment. In this case, a normal unpaid order is generated. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to complete the payment.</li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <ul>
-     * <li>false: An order is generated but the payment is not completed after the bandwidth configuration is changed. If your payment method has an insufficient balance, you can set the Autopay parameter to false to cancel automatic payment. In this case, an unpaid order is generated. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to complete the payment.</li>
+     * <li>false: An order is generated but the payment is not completed after the bandwidth configuration is changed. If your payment method has an insufficient balance, set the Autopay parameter to false to cancel automatic payment. In this case, a normal unpaid order is generated. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to complete the payment.</li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -97,9 +97,9 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values:</p>
      * <ul>
-     * <li><p>Pay-by-traffic billing: 0 to 100.</p>
+     * <li><p>Pay-by-traffic: 0 to 100.</p>
      * </li>
-     * <li><p>Pay-by-bandwidth billing:</p>
+     * <li><p>Pay-by-bandwidth:</p>
      * <ul>
      * <li>Subscription instances: 0 to 200.</li>
      * <li>Pay-as-you-go instances: 0 to 100.</li>
@@ -107,7 +107,7 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The maximum outbound bandwidth per instance is also limited by the <strong>Network bandwidth baseline/burst (Gbit/s)</strong> metric of the ECS instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * <p>The maximum outbound bandwidth of a single instance is also limited by the <strong>Network bandwidth baseline/burst (Gbit/s)</strong> metric of the ECS instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -117,13 +117,13 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>Transforms the network billing method. Valid values:</p>
+     * <p>Converts the network billing method. Valid values:</p>
      * <ul>
      * <li>PayByBandwidth: pay-by-bandwidth.</li>
      * <li>PayByTraffic: pay-by-traffic.</li>
      * </ul>
      * <blockquote>
-     * <p>In the <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as upper limits of bandwidths instead of guaranteed performance metrics. When resource contention occurs, the peak bandwidths may be limited. If you require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
+     * <p>In the <strong>pay-by-traffic</strong> mode, the inbound and outbound bandwidth peaks are both upper limits and are not guaranteed. When resource contention occurs, the bandwidth peaks may be throttled. If your workloads require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

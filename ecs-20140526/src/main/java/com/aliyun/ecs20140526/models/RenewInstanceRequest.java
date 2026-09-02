@@ -14,8 +14,8 @@ public class RenewInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The day on which to renew the instance to a <a href="https://help.aliyun.com/document_detail/63396.html">unified expiration date</a>. Valid values: 1 to 28.</p>
-     * <p>To use this parameter, you must first <a href="~~63396#694cb636c0rp6~~">set a unified expiration date for ECS instances</a>. The value of this parameter must match the unified expiration date that you have set. Otherwise, the call fails.</p>
+     * <p>Renews the instance to a <a href="https://help.aliyun.com/document_detail/63396.html">unified expiration date</a>. Valid values: 1 to 28.</p>
+     * <p>To use this parameter, you must <a href="~~63396#694cb636c0rp6~~">set a unified expiration date for ECS instances</a>. The value of this parameter must match the unified expiration date that you have set. Otherwise, the call fails.</p>
      * <blockquote>
      * <p>You must specify either the renewal period parameters (Period and PeriodUnit) or the unified expiration date parameter (ExpectedRenewDay), but not both.</p>
      * </blockquote>
@@ -27,7 +27,7 @@ public class RenewInstanceRequest extends TeaModel {
     public Integer expectedRenewDay;
 
     /**
-     * <p>The ID of the instance that you want to renew.</p>
+     * <p>The instance ID of the instance that you want to renewal.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class RenewInstanceRequest extends TeaModel {
      * <p>The renewal period for the subscription instance. If you specify DedicatedHostId, the value of Period cannot exceed the remaining subscription period of the dedicated host. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If you set PeriodUnit to Week, valid values of Period are 1, 2, 3, and 4.</li>
-     * <li>If you set PeriodUnit to Month, valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+     * <li>If PeriodUnit is set to Week, valid values of Period: 1, 2, 3, and 4.</li>
+     * <li>If PeriodUnit is set to Month, valid values of Period: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;If you set PeriodUnit to Month, valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;If PeriodUnit is set to Month, valid values of Period: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
      * <blockquote>
      * <p>You must specify either the renewal period parameters (Period and PeriodUnit) or the unified expiration date parameter (ExpectedRenewDay), but not both.</p>
      * </blockquote>
@@ -61,7 +61,7 @@ public class RenewInstanceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal period. This parameter specifies the unit for the Period parameter. Valid values:</p>
+     * <p>The unit of the renewal period. This parameter specifies the unit of Period. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>Week.</li>

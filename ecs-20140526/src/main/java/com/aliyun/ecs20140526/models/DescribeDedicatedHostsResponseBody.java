@@ -8,7 +8,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
 
     /**
-     * <p>The paging token returned in this call. When you use MaxResults and NextToken for paging query, an empty value indicates that no more data is available.</p>
+     * <p>The query token returned by this call. If this value is empty when you use MaxResults and NextToken for paging, no more data is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9cc11</p>
@@ -388,6 +388,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("SerialNumber")
         public String serialNumber;
 
+        @NameInMap("VgpuVersion")
+        public String vgpuVersion;
+
         public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo();
             return TeaModel.build(map, self);
@@ -399,6 +402,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
         public String getSerialNumber() {
             return this.serialNumber;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo setVgpuVersion(String vgpuVersion) {
+            this.vgpuVersion = vgpuVersion;
+            return this;
+        }
+        public String getVgpuVersion() {
+            return this.vgpuVersion;
         }
 
     }

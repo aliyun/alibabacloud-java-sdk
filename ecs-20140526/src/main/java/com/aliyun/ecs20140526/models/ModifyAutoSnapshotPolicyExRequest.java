@@ -8,7 +8,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
      * <p>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</p>
      * <ul>
      * <li>-1: Snapshot replicas are permanently retained.</li>
-     * <li>1 to 65535: specifies the number of days for which snapshot replicas are retained.</li>
+     * <li>1 to 65535: the number of days for which snapshot replicas are retained.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -92,11 +92,11 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7, where 1 indicates Monday.</p>
+     * <p>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday.</p>
      * <p>To create multiple automatic snapshots within a week, specify multiple days:</p>
      * <ul>
      * <li>You can specify up to 7 days.</li>
-     * <li>Specify multiple days in a JSON array in the format of <code>&quot;1&quot;, &quot;2&quot;, … &quot;7&quot;</code>. Separate the days with commas (,).</li>
+     * <li>Specify multiple days in a JSON array, such as <code>&quot;1&quot;, &quot;2&quot;, … &quot;7&quot;</code>. Separate the days with commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
      * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
      * <ul>
      * <li>-1: Automatic snapshots are permanently retained.</li>
-     * <li>1 to 65536: specifies the number of days for which automatic snapshots are retained.</li>
+     * <li>1 to 65536: the number of days for which automatic snapshots are retained.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -124,7 +124,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
      * <p>To create multiple automatic snapshots within a day, specify multiple points in time:</p>
      * <ul>
      * <li>You can specify up to 24 points in time.</li>
-     * <li>Specify multiple points in time in a JSON array in the format of <code>&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;</code>. Separate the points in time with commas (,).</li>
+     * <li>Specify multiple points in time in a JSON array, such as <code>&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;</code>. Separate the points in time with commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -319,8 +319,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</p>
          * <ul>
-         * <li>true: enables encryption. </li>
-         * <li>false: does not enable encryption.</li>
+         * <li>true: Encryption is enabled. </li>
+         * <li>false: Encryption is not enabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -331,7 +331,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The key ID of the Key Management Service (KMS) key used for encrypted cross-region snapshot replication.</p>
+         * <p>The key ID of the KMS key used for encrypted cross-region snapshot replication.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>

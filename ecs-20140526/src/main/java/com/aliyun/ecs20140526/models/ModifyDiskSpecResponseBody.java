@@ -26,9 +26,9 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID for the disk type change.</p>
+     * <p>The task ID for the disk specification change.</p>
      * <blockquote>
-     * <p>This parameter is not returned if you only modified the performance level (PL) of an ESSD.</p>
+     * <p>This parameter is not returned if you only modify the performance level (PL) of an ESSD.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

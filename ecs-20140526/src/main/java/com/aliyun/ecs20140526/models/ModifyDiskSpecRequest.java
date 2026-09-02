@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyDiskSpecRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not available for general use.</p>
+     * <p>This parameter is in invitational preview and is not available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     /**
      * <p>The new type of the disk. Valid values:</p>
      * <ul>
-     * <li><p>cloud_essd: enterprise SSD.</p>
+     * <li><p>cloud_essd: enterprise SSD (ESSD).</p>
      * </li>
      * <li><p>cloud_auto: ESSD AutoPL disk.</p>
      * </li>
@@ -33,12 +33,12 @@ public class ModifyDiskSpecRequest extends TeaModel {
      * <p>Default value: empty, which indicates that the disk type is not changed.</p>
      * <blockquote>
      * <ul>
-     * <li>The valid values above are listed in descending order of disk performance. If the disk is a subscription disk, downgrading is not allowed.</li>
+     * <li>The valid values above are listed in descending order of disk performance. If the specified disk is a subscription disk, you cannot downgrade the disk type.</li>
      * </ul>
      * </blockquote>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>ESSD Entry disks can be changed only to enterprise SSDs or ESSD AutoPL disks. For more information, see <a href="https://help.aliyun.com/document_detail/161980.html">Change the disk type</a>.</li>
+     * <li>ESSD Entry disks can be changed only to enterprise SSDs (ESSDs) or ESSD AutoPL disks. For more information, see <a href="https://help.aliyun.com/document_detail/161980.html">Change the disk type</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to perform only a dry run without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
      * <li><p>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
      * </li>
@@ -86,7 +86,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public ModifyDiskSpecRequestPerformanceControlOptions performanceControlOptions;
 
     /**
-     * <p>The new performance level (PL) of the ESSD. Valid values:</p>
+     * <p>The new performance level (PL) of an ESSD. Valid values:</p>
      * <ul>
      * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
      * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
@@ -228,8 +228,8 @@ public class ModifyDiskSpecRequest extends TeaModel {
 
         /**
          * <p>Resets the disk performance. Only disks in a dedicated storage cluster are supported.</p>
-         * <p>If this parameter is specified, the PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput parameters do not take effect.</p>
-         * <p>The only valid value is All, which resets the disk IOPS and throughput to their initial values.</p>
+         * <p>If this parameter is set, the PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput parameters do not take effect.</p>
+         * <p>Currently, only the value All is supported, which resets the disk IOPS and throughput to their initial values.</p>
          * 
          * <strong>example:</strong>
          * <p>All</p>
