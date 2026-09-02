@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VideoGenerationResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of success indicates a successful call, and failed indicates a failure.</p>
+     * <p>The response code. A value of success indicates a successful call, and a value of failed indicates a failed call.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class VideoGenerationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The struct of the returned result.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public VideoGenerationResponseBodyData data;
 
     /**
-     * <p>The returned message. Returns the fault message upon failure.</p>
+     * <p>The response message. An error message is returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class VideoGenerationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, used to identify a unique request call.</p>
+     * <p>The request ID, which uniquely identifies a single API call.</p>
      * 
      * <strong>example:</strong>
      * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
@@ -38,7 +38,7 @@ public class VideoGenerationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success, and false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

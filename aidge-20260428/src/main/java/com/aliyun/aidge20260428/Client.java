@@ -9,9 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "aidge.cn-beijing.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("aidge", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1207,6 +1204,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DocumentTranslateResponse documentTranslate(DocumentTranslateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.documentTranslateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><strong>Product Introduction</strong></h2>
+     * <p>E-commerce Video Remix is an AI video service designed for product content production. It covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to rapidly generate multi-version content and reduce shooting, editing, and adaptation costs.</p>
+     * <h2><strong>Scenarios</strong></h2>
+     * <ul>
+     * <li><strong>Video asset remix:</strong> Use an existing e-commerce video as a template and replace only the specified product or person while preserving the original shots, rhythm, and marketing expression. This is suitable for multi-SKU, multi-model, multi-region, and multi-version asset production.</li>
+     * <li><strong>New product launch with rapid asset generation:</strong> For products launched in batches, reduce the need for live shooting, studio time, post-production editing, and repetitive production. Quickly generate video assets for new products and help merchants shorten the cycle from discovering a hit video to scripting and publishing new content.</li>
+     * <li><strong>Product presentation and selling point expression:</strong> Suitable for apparel, beauty and personal care, food and beverages, home and daily essentials, 3C electronics, and small appliances. Based on the selling point structure, display actions, and shot rhythm of the original video, generate presentation videos optimized for new product conversion.</li>
+     * <li><strong>Multi-selling-point and multi-version testing:</strong> Rapidly generate multiple versions based on different product selling points, target audiences, scripts, shots, and visual styles to support content testing and ad creative iteration.</li>
+     * </ul>
+     * <h2><strong>Capabilities</strong></h2>
+     * <h3><strong>Core capabilities</strong></h3>
+     * <p>Two replacement modes are supported:</p>
+     * <ul>
+     * <li><strong>Product replacement (product_replacement):</strong> Preserves the original video host identity, actions, scene, and selling structure while replacing the original product with the target product.</li>
+     * <li><strong>Person replacement (person_replacement):</strong> Preserves the original video product, actions, scene, and selling structure while replacing the on-screen person with the target person from a reference image or description.</li>
+     * <li><strong>Fully automated end-to-end generation with zero prompt requirements:</strong> Simply provide a reference video and a target product image or person image. The system automatically completes the entire pipeline including video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</li>
+     * <li><strong>Product understanding and information structuring:</strong> Identifies product category, appearance, material, color, structure, and key components, and combines merchant-provided titles, attributes, and selling points to generate usable video expression information.</li>
+     * <li><strong>Template video element replacement:</strong> Supports replacing products or persons within the authorized scope, with configurable replacement and protection ranges to minimize changes in non-target areas.</li>
+     * <li><strong>Product subject consistency:</strong> Maintains stable product shape, color, texture, pattern, packaging, and logo across different shots, angles, actions, and scenes.</li>
+     * <li><strong>Product fidelity:</strong> Multi-round VL quality inspection locks product state (color, texture, structure, and print) throughout the process to prevent product feature drift.</li>
+     * <li><strong>Strength category — Apparel:</strong> Faithfully restores apparel details with attention to silhouette, wrinkles, drape, fabric texture, buttons, zippers, prints, and accessories, reducing clipping, deformation, texture loss, and detail artifacts.</li>
+     * <li><strong>Selling point script and storyboard replication:</strong> Replicates the selling point structure, video composition, shot sequence, display actions, voiceover content, and closing style of the original video.</li>
+     * <li><strong>Commercial model matching:</strong> Supports matching model appearance and display style based on product style, silhouette, target audience, and market requirements.</li>
+     * <li><strong>Quality verification and result feedback:</strong> Performs multi-dimensional checks on product subject, person, apparel, text, frame completeness, audio, and overall usability, and outputs result information for manual review.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>E-commerce Video Remix is an AI video service designed for product content production. It covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to rapidly generate multi-version content and reduce shooting, editing, and adaptation costs.</p>
+     * 
+     * @param tmpReq EcomVideoRecreationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EcomVideoRecreationResponse
+     */
+    public EcomVideoRecreationResponse ecomVideoRecreationWithOptions(EcomVideoRecreationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        EcomVideoRecreationShrinkRequest request = new EcomVideoRecreationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.output)) {
+            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.output, "Output", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputShrink)) {
+            query.put("Input", request.inputShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputShrink)) {
+            query.put("Output", request.outputShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EcomVideoRecreation"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EcomVideoRecreationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><strong>Product Introduction</strong></h2>
+     * <p>E-commerce Video Remix is an AI video service designed for product content production. It covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to rapidly generate multi-version content and reduce shooting, editing, and adaptation costs.</p>
+     * <h2><strong>Scenarios</strong></h2>
+     * <ul>
+     * <li><strong>Video asset remix:</strong> Use an existing e-commerce video as a template and replace only the specified product or person while preserving the original shots, rhythm, and marketing expression. This is suitable for multi-SKU, multi-model, multi-region, and multi-version asset production.</li>
+     * <li><strong>New product launch with rapid asset generation:</strong> For products launched in batches, reduce the need for live shooting, studio time, post-production editing, and repetitive production. Quickly generate video assets for new products and help merchants shorten the cycle from discovering a hit video to scripting and publishing new content.</li>
+     * <li><strong>Product presentation and selling point expression:</strong> Suitable for apparel, beauty and personal care, food and beverages, home and daily essentials, 3C electronics, and small appliances. Based on the selling point structure, display actions, and shot rhythm of the original video, generate presentation videos optimized for new product conversion.</li>
+     * <li><strong>Multi-selling-point and multi-version testing:</strong> Rapidly generate multiple versions based on different product selling points, target audiences, scripts, shots, and visual styles to support content testing and ad creative iteration.</li>
+     * </ul>
+     * <h2><strong>Capabilities</strong></h2>
+     * <h3><strong>Core capabilities</strong></h3>
+     * <p>Two replacement modes are supported:</p>
+     * <ul>
+     * <li><strong>Product replacement (product_replacement):</strong> Preserves the original video host identity, actions, scene, and selling structure while replacing the original product with the target product.</li>
+     * <li><strong>Person replacement (person_replacement):</strong> Preserves the original video product, actions, scene, and selling structure while replacing the on-screen person with the target person from a reference image or description.</li>
+     * <li><strong>Fully automated end-to-end generation with zero prompt requirements:</strong> Simply provide a reference video and a target product image or person image. The system automatically completes the entire pipeline including video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</li>
+     * <li><strong>Product understanding and information structuring:</strong> Identifies product category, appearance, material, color, structure, and key components, and combines merchant-provided titles, attributes, and selling points to generate usable video expression information.</li>
+     * <li><strong>Template video element replacement:</strong> Supports replacing products or persons within the authorized scope, with configurable replacement and protection ranges to minimize changes in non-target areas.</li>
+     * <li><strong>Product subject consistency:</strong> Maintains stable product shape, color, texture, pattern, packaging, and logo across different shots, angles, actions, and scenes.</li>
+     * <li><strong>Product fidelity:</strong> Multi-round VL quality inspection locks product state (color, texture, structure, and print) throughout the process to prevent product feature drift.</li>
+     * <li><strong>Strength category — Apparel:</strong> Faithfully restores apparel details with attention to silhouette, wrinkles, drape, fabric texture, buttons, zippers, prints, and accessories, reducing clipping, deformation, texture loss, and detail artifacts.</li>
+     * <li><strong>Selling point script and storyboard replication:</strong> Replicates the selling point structure, video composition, shot sequence, display actions, voiceover content, and closing style of the original video.</li>
+     * <li><strong>Commercial model matching:</strong> Supports matching model appearance and display style based on product style, silhouette, target audience, and market requirements.</li>
+     * <li><strong>Quality verification and result feedback:</strong> Performs multi-dimensional checks on product subject, person, apparel, text, frame completeness, audio, and overall usability, and outputs result information for manual review.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>E-commerce Video Remix is an AI video service designed for product content production. It covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to rapidly generate multi-version content and reduce shooting, editing, and adaptation costs.</p>
+     * 
+     * @param request EcomVideoRecreationRequest
+     * @return EcomVideoRecreationResponse
+     */
+    public EcomVideoRecreationResponse ecomVideoRecreation(EcomVideoRecreationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.ecomVideoRecreationWithOptions(request, runtime);
     }
 
     /**
@@ -2722,10 +2831,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Supports automatic language identification for 24 language directions. Applicable to short text such as search queries, titles, and conversations.</p>
+     * <p>Supports automatic language identification for 31 languages in query phrase scenarios and 35 languages in general scenarios. Applicable to short text language identification such as search terms, titles, and conversations. For supported language directions, refer to the <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language Direction Mapping Table</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Supports automatic language identification for 24 language directions. Applicable to short text such as search queries, titles, and conversations.</p>
+     * <p>Supports automatic language identification for 31 languages in query scenarios and 35 languages in general scenarios. Applicable to short text language identification such as search terms, titles, and conversations.</p>
      * 
      * @param request LanguageDetectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2762,10 +2871,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Supports automatic language identification for 24 language directions. Applicable to short text such as search queries, titles, and conversations.</p>
+     * <p>Supports automatic language identification for 31 languages in query phrase scenarios and 35 languages in general scenarios. Applicable to short text language identification such as search terms, titles, and conversations. For supported language directions, refer to the <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language Direction Mapping Table</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Supports automatic language identification for 24 language directions. Applicable to short text such as search queries, titles, and conversations.</p>
+     * <p>Supports automatic language identification for 31 languages in query scenarios and 35 languages in general scenarios. Applicable to short text language identification such as search terms, titles, and conversations.</p>
      * 
      * @param request LanguageDetectRequest
      * @return LanguageDetectResponse
@@ -4253,29 +4362,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1>Applicable scenarios</h1>
+     * <h1>Scenarios</h1>
      * <ul>
-     * <li>Sellers/platforms batch-generate product short videos: Supports multiple video aspect ratios and sizes (3:4, 9:16), suitable for product detail page video slots, product homepage display, information feed placement, short video content marketing, campaign material, and other scenarios.</li>
-     * <li>New product launches with rapid initial video material generation: When merchants have a large number of new products to list, they only need to upload product images and titles to quickly generate product showcase videos, model try-on videos, voiceover explanation videos, and more, helping merchants rapidly complete material preparation during the launch phase.</li>
-     * <li>High-fidelity apparel display: Generates model showcase videos that closely resemble real commercial photography based on product main images, with optimized capabilities for silhouette accuracy, fabric texture preservation, color fidelity, and consistent detail stability. Supports common e-commerce display methods such as wearing, turning, walking, close-up shots, and multi-angle switching.</li>
-     * <li>High-quality commercial photography models: Includes 20+ built-in target audience model libraries covering plus-size women, plus-size men, swimwear, youthful style, smart casual commute, young casual, business menswear, sports and fitness, and other body types, skin tones, and ethnicities. Supports standing poses, side views, walking displays, partial close-ups, and other commercial photography expressions.</li>
-     * <li>Standard product explanation and other high-frequency e-commerce scenarios: Applicable to standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, household cleaning products, and 3C digital products. Quickly generates product explanation videos based on product main images, titles, selling points, and explanation scripts.</li>
-     * <li>Multi-product, multi-selling-point testing to improve placement efficiency: For information feed advertising, short video placement, and content marketing scenarios, quickly generates multiple versions of video materials, enabling enterprises to validate conversion effects of different selling points and presentation formats at low cost, improving placement ROI.</li>
+     * <li>Sellers/platforms batch-generate product short videos: Supports multiple video aspect ratios and sizes (3:4, 9:16), suitable for product detail page video slots, product homepage displays, information feed placements, short video content marketing, campaign material, and other scenarios.</li>
+     * <li>New product launches with rapid initial video material generation: When merchants have a large number of new products to list, they only need to upload product images, product titles, and other basic information to quickly generate product showcase videos, model try-on videos, voiceover explanation videos, and other content, helping merchants rapidly complete material preparation during the launch phase.</li>
+     * <li>High-fidelity apparel display: Generates model showcase videos based on product main images that closely resemble real commercial photography, with key optimizations for silhouette accuracy, fabric texture preservation, color fidelity, and consistent detail stability. Supports common e-commerce display methods such as garment try-on, turning, walking, close-up shots, and multi-angle switching.</li>
+     * <li>High-quality commercial photography models: Includes 20+ built-in target audience model libraries covering plus-size women, plus-size men, swimwear, youthful style, smart casual commuter, young casual, business menswear, sports and fitness, and other body types, skin tones, and ethnicities. Supports multiple commercial photography presentation methods such as standing poses, side views, walking displays, and detail close-ups.</li>
+     * <li>Standard product explanation and other high-frequency e-commerce scenarios: Suitable for standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, household cleaning products, and 3C digital products. Quickly generates product explanation videos based on product main images, titles, selling point information, and explanation scripts.</li>
+     * <li>Multi-product and multi-selling-point testing to improve placement efficiency: For information feed advertising, short video placement, and content marketing scenarios, quickly generates multiple versions of video materials, enabling businesses to cost-effectively validate the conversion performance of different selling points and presentation formats, improving placement ROI.</li>
      * </ul>
      * <h1>Features</h1>
      * <ul>
-     * <li>Fully automated end-to-end batch generation with zero prompt threshold: Callers only need to provide product image URLs and titles. The system automatically completes the entire process from product understanding, storyboard planning, to video generation without manual prompt writing, template selection, or repeated parameter tuning. Built-in multi-agent capabilities including product understanding, visual quality inspection, script planning, and cinematography direction significantly lower the usage barrier.</li>
-     * <li>Highly stable generation with low discard rate: Uses a deterministic generation pipeline and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, making overall production costs more controllable.</li>
-     * <li>E-commerce-specific product fidelity capability: Built-in multi-round quality inspection agents lock product state throughout video generation (such as zippers not being unzipped, sleeves not being lowered, prints not disappearing), ensuring product consistency through multi-layer defense of &quot;script rewriting + explicit constraint injection + failure-aware retry.&quot;</li>
-     * <li>Reference image priority + 6-axis consistency verification: Adopts a Reference-Image-First generation paradigm, using the original product image as the sole visual truth source, automatically performing 6-dimensional VL diagnostics (color drift, pattern loss, contour deviation, structural addition/removal, model matching, stain detection), fundamentally eliminating the problem of generated images not resembling the product.</li>
-     * <li>Flexible storyboard arrangement and duration control: Supports adjustable video duration of 5–30 seconds. The agent autonomously plans independent storyboards to showcase product effects in different scenarios. Also supports fixed scene mode for in-depth product presentation under a unified visual style.</li>
-     * <li>Cinematic camera movement capabilities: Built-in advanced camera modes including bullet time, Grammy slow motion, 360° orbital rotation, and full-body model rotation display, achieving deterministic output through segmented precise control.</li>
-     * <li>Model library and customization services: Built-in multi-type model resource library, supporting merchants in specifying fixed models, customizing exclusive model personas, and long-term brand visual identity binding to ensure brand visual consistency.</li>
-     * <li>Adapted to high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P, and multiple aspect ratios such as 3:4 and 9:16, suitable for product detail page video slots, product homepage video display, waterfall/information feed placement, campaign materials, and new product and promotional video generation.</li>
+     * <li>Fully automated end-to-end batch generation with zero prompt threshold: Callers only need to provide product image URLs and titles. The system automatically completes the entire process from product understanding, storyboard planning, to video generation, without manual prompt writing, template selection, or repeated parameter tuning. Built-in multi-agent capabilities for product understanding, visual quality inspection, script planning, and directing/camera movement significantly lower the barrier to use.</li>
+     * <li>Highly stable generation with low waste rate: Uses a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, making overall production costs more controllable.</li>
+     * <li>E-commerce-specific product fidelity: Built-in multi-round quality inspection agents lock product state throughout video generation (for example, zippers will not be unzipped, sleeves will not be lowered, prints will not disappear). Multi-layer defense through &quot;script rewriting + explicit constraint injection + failure-aware retry&quot; ensures product consistency.</li>
+     * <li>Reference image priority + 6-axis consistency verification: Uses a Reference-Image-First generation paradigm with the original product image as the sole visual source of truth. Automatically performs 6-dimensional VL diagnostics (color drift, pattern loss, contour deviation, structural addition/removal, model matching, stain detection), fundamentally preventing generated images from deviating from the product.</li>
+     * <li>Flexible storyboard arrangement and duration control: Supports adjustable video duration from 5–30 seconds. The agent autonomously plans independent storyboards to showcase the product in different scenarios. Also supports fixed-scene mode for in-depth product presentation under a unified visual style.</li>
+     * <li>Cinematic camera movement capabilities: Built-in advanced camera movement modes including bullet time, Grammy-style slow motion, 360° orbital rotation, and full-body model rotation display, achieving deterministic output through segment-level precise control.</li>
+     * <li>Model library and customization services: Built-in multi-type model resource library. Supports merchants in specifying fixed models, customizing exclusive model personas, and long-term brand visual identity binding to ensure brand visual consistency.</li>
+     * <li>Adapted for high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P and multiple aspect ratios such as 3:4 and 9:16, suitable for product detail page video slots, product homepage video displays, waterfall/information feed placements, campaign materials, and new product launch and promotional video generation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invokes the e-commerce AI video generation agent for e-commerce merchants and platforms. Based on product main images, titles, selling points, and other information, it automatically generates 5–30 second product showcase short videos, helping customers efficiently produce and distribute e-commerce content. The service supports multiple resolution outputs such as 720P and 1080P, single-product quick invocation and multi-product batch generation, catering to both daily operations and large-scale product content production needs. Currently overwrites all apparel categories (tops, pants, skirts, suits, underwear, swimwear, etc.), and is gradually expanding to skincare, cosmetics, food and beverages, home appliances, and other core e-commerce categories.</p>
+     * <p>The E-commerce AI Video Generation Agent is designed for e-commerce merchants and platforms. Based on product main images, titles, selling points, and other information, it automatically generates 5–30 second product showcase short videos, helping customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P, supports both quick single-product calls and multi-product batch generation, and accommodates both daily operations and large-scale product content production needs. Currently, it covers all apparel categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to skincare, cosmetics, food and beverages, home appliances, and other core e-commerce categories.</p>
      * 
      * @param tmpReq VideoGenerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4329,29 +4438,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1>Applicable scenarios</h1>
+     * <h1>Scenarios</h1>
      * <ul>
-     * <li>Sellers/platforms batch-generate product short videos: Supports multiple video aspect ratios and sizes (3:4, 9:16), suitable for product detail page video slots, product homepage display, information feed placement, short video content marketing, campaign material, and other scenarios.</li>
-     * <li>New product launches with rapid initial video material generation: When merchants have a large number of new products to list, they only need to upload product images and titles to quickly generate product showcase videos, model try-on videos, voiceover explanation videos, and more, helping merchants rapidly complete material preparation during the launch phase.</li>
-     * <li>High-fidelity apparel display: Generates model showcase videos that closely resemble real commercial photography based on product main images, with optimized capabilities for silhouette accuracy, fabric texture preservation, color fidelity, and consistent detail stability. Supports common e-commerce display methods such as wearing, turning, walking, close-up shots, and multi-angle switching.</li>
-     * <li>High-quality commercial photography models: Includes 20+ built-in target audience model libraries covering plus-size women, plus-size men, swimwear, youthful style, smart casual commute, young casual, business menswear, sports and fitness, and other body types, skin tones, and ethnicities. Supports standing poses, side views, walking displays, partial close-ups, and other commercial photography expressions.</li>
-     * <li>Standard product explanation and other high-frequency e-commerce scenarios: Applicable to standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, household cleaning products, and 3C digital products. Quickly generates product explanation videos based on product main images, titles, selling points, and explanation scripts.</li>
-     * <li>Multi-product, multi-selling-point testing to improve placement efficiency: For information feed advertising, short video placement, and content marketing scenarios, quickly generates multiple versions of video materials, enabling enterprises to validate conversion effects of different selling points and presentation formats at low cost, improving placement ROI.</li>
+     * <li>Sellers/platforms batch-generate product short videos: Supports multiple video aspect ratios and sizes (3:4, 9:16), suitable for product detail page video slots, product homepage displays, information feed placements, short video content marketing, campaign material, and other scenarios.</li>
+     * <li>New product launches with rapid initial video material generation: When merchants have a large number of new products to list, they only need to upload product images, product titles, and other basic information to quickly generate product showcase videos, model try-on videos, voiceover explanation videos, and other content, helping merchants rapidly complete material preparation during the launch phase.</li>
+     * <li>High-fidelity apparel display: Generates model showcase videos based on product main images that closely resemble real commercial photography, with key optimizations for silhouette accuracy, fabric texture preservation, color fidelity, and consistent detail stability. Supports common e-commerce display methods such as garment try-on, turning, walking, close-up shots, and multi-angle switching.</li>
+     * <li>High-quality commercial photography models: Includes 20+ built-in target audience model libraries covering plus-size women, plus-size men, swimwear, youthful style, smart casual commuter, young casual, business menswear, sports and fitness, and other body types, skin tones, and ethnicities. Supports multiple commercial photography presentation methods such as standing poses, side views, walking displays, and detail close-ups.</li>
+     * <li>Standard product explanation and other high-frequency e-commerce scenarios: Suitable for standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, household cleaning products, and 3C digital products. Quickly generates product explanation videos based on product main images, titles, selling point information, and explanation scripts.</li>
+     * <li>Multi-product and multi-selling-point testing to improve placement efficiency: For information feed advertising, short video placement, and content marketing scenarios, quickly generates multiple versions of video materials, enabling businesses to cost-effectively validate the conversion performance of different selling points and presentation formats, improving placement ROI.</li>
      * </ul>
      * <h1>Features</h1>
      * <ul>
-     * <li>Fully automated end-to-end batch generation with zero prompt threshold: Callers only need to provide product image URLs and titles. The system automatically completes the entire process from product understanding, storyboard planning, to video generation without manual prompt writing, template selection, or repeated parameter tuning. Built-in multi-agent capabilities including product understanding, visual quality inspection, script planning, and cinematography direction significantly lower the usage barrier.</li>
-     * <li>Highly stable generation with low discard rate: Uses a deterministic generation pipeline and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, making overall production costs more controllable.</li>
-     * <li>E-commerce-specific product fidelity capability: Built-in multi-round quality inspection agents lock product state throughout video generation (such as zippers not being unzipped, sleeves not being lowered, prints not disappearing), ensuring product consistency through multi-layer defense of &quot;script rewriting + explicit constraint injection + failure-aware retry.&quot;</li>
-     * <li>Reference image priority + 6-axis consistency verification: Adopts a Reference-Image-First generation paradigm, using the original product image as the sole visual truth source, automatically performing 6-dimensional VL diagnostics (color drift, pattern loss, contour deviation, structural addition/removal, model matching, stain detection), fundamentally eliminating the problem of generated images not resembling the product.</li>
-     * <li>Flexible storyboard arrangement and duration control: Supports adjustable video duration of 5–30 seconds. The agent autonomously plans independent storyboards to showcase product effects in different scenarios. Also supports fixed scene mode for in-depth product presentation under a unified visual style.</li>
-     * <li>Cinematic camera movement capabilities: Built-in advanced camera modes including bullet time, Grammy slow motion, 360° orbital rotation, and full-body model rotation display, achieving deterministic output through segmented precise control.</li>
-     * <li>Model library and customization services: Built-in multi-type model resource library, supporting merchants in specifying fixed models, customizing exclusive model personas, and long-term brand visual identity binding to ensure brand visual consistency.</li>
-     * <li>Adapted to high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P, and multiple aspect ratios such as 3:4 and 9:16, suitable for product detail page video slots, product homepage video display, waterfall/information feed placement, campaign materials, and new product and promotional video generation.</li>
+     * <li>Fully automated end-to-end batch generation with zero prompt threshold: Callers only need to provide product image URLs and titles. The system automatically completes the entire process from product understanding, storyboard planning, to video generation, without manual prompt writing, template selection, or repeated parameter tuning. Built-in multi-agent capabilities for product understanding, visual quality inspection, script planning, and directing/camera movement significantly lower the barrier to use.</li>
+     * <li>Highly stable generation with low waste rate: Uses a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, making overall production costs more controllable.</li>
+     * <li>E-commerce-specific product fidelity: Built-in multi-round quality inspection agents lock product state throughout video generation (for example, zippers will not be unzipped, sleeves will not be lowered, prints will not disappear). Multi-layer defense through &quot;script rewriting + explicit constraint injection + failure-aware retry&quot; ensures product consistency.</li>
+     * <li>Reference image priority + 6-axis consistency verification: Uses a Reference-Image-First generation paradigm with the original product image as the sole visual source of truth. Automatically performs 6-dimensional VL diagnostics (color drift, pattern loss, contour deviation, structural addition/removal, model matching, stain detection), fundamentally preventing generated images from deviating from the product.</li>
+     * <li>Flexible storyboard arrangement and duration control: Supports adjustable video duration from 5–30 seconds. The agent autonomously plans independent storyboards to showcase the product in different scenarios. Also supports fixed-scene mode for in-depth product presentation under a unified visual style.</li>
+     * <li>Cinematic camera movement capabilities: Built-in advanced camera movement modes including bullet time, Grammy-style slow motion, 360° orbital rotation, and full-body model rotation display, achieving deterministic output through segment-level precise control.</li>
+     * <li>Model library and customization services: Built-in multi-type model resource library. Supports merchants in specifying fixed models, customizing exclusive model personas, and long-term brand visual identity binding to ensure brand visual consistency.</li>
+     * <li>Adapted for high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P and multiple aspect ratios such as 3:4 and 9:16, suitable for product detail page video slots, product homepage video displays, waterfall/information feed placements, campaign materials, and new product launch and promotional video generation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invokes the e-commerce AI video generation agent for e-commerce merchants and platforms. Based on product main images, titles, selling points, and other information, it automatically generates 5–30 second product showcase short videos, helping customers efficiently produce and distribute e-commerce content. The service supports multiple resolution outputs such as 720P and 1080P, single-product quick invocation and multi-product batch generation, catering to both daily operations and large-scale product content production needs. Currently overwrites all apparel categories (tops, pants, skirts, suits, underwear, swimwear, etc.), and is gradually expanding to skincare, cosmetics, food and beverages, home appliances, and other core e-commerce categories.</p>
+     * <p>The E-commerce AI Video Generation Agent is designed for e-commerce merchants and platforms. Based on product main images, titles, selling points, and other information, it automatically generates 5–30 second product showcase short videos, helping customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P, supports both quick single-product calls and multi-product batch generation, and accommodates both daily operations and large-scale product content production needs. Currently, it covers all apparel categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to skincare, cosmetics, food and beverages, home appliances, and other core e-commerce categories.</p>
      * 
      * @param request VideoGenerationRequest
      * @return VideoGenerationResponse

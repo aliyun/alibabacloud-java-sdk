@@ -20,7 +20,7 @@ public class LanguageDetectResponseBody extends TeaModel {
     public LanguageDetectResponseBodyData data;
 
     /**
-     * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+     * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for an exception, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class LanguageDetectResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The request ID, used to uniquely identify a request.</p>
      * 
      * <strong>example:</strong>
      * <p>42542C6C-F2A4-1B2B-8EFF-130C8FD06F54</p>

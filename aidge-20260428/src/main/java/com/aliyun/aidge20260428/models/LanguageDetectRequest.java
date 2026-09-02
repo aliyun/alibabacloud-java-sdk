@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LanguageDetectRequest extends TeaModel {
     /**
-     * <p>Optional. Set this parameter to query (case-insensitive) to use the new model. If this parameter is not specified or an invalid value is passed, the default value common (general language detection) is used.</p>
+     * <p>The detection scenario. Default value: common. If you are using a search phrase scenario, set this parameter to query. If an incorrect value is passed or the parameter is not specified, the common general identification is used. Note: pass query in lowercase.</p>
      * 
      * <strong>example:</strong>
      * <p>query</p>
