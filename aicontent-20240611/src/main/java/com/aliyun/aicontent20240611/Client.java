@@ -10,8 +10,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "aicontent.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "aicontent.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-shanghai", "aicontent.aliyuncs.com"),
             new TeaPair("public", "aicontent.aliyuncs.com")
         );
@@ -7249,6 +7247,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterTransferToMemberWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the status of an API key.</p>
+     * 
+     * @param request ModelRouterUpdateApiKeyStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterUpdateApiKeyStatusResponse
+     */
+    public ModelRouterUpdateApiKeyStatusResponse modelRouterUpdateApiKeyStatusWithOptions(String id, ModelRouterUpdateApiKeyStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterUpdateApiKeyStatus"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/apikeys/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/status"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterUpdateApiKeyStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the status of an API key.</p>
+     * 
+     * @param request ModelRouterUpdateApiKeyStatusRequest
+     * @return ModelRouterUpdateApiKeyStatusResponse
+     */
+    public ModelRouterUpdateApiKeyStatusResponse modelRouterUpdateApiKeyStatus(String id, ModelRouterUpdateApiKeyStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterUpdateApiKeyStatusWithOptions(id, request, headers, runtime);
     }
 
     /**

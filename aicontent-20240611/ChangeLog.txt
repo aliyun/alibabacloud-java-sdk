@@ -1,3 +1,7 @@
+2026-09-03 Version: 7.11.0
+- Support API ModelRouterUpdateApiKeyStatus.
+
+
 2026-08-31 Version: 7.10.0
 - Support API ModelRouterMiguDownloadSource.
 - Support API ModelRouterMiguUploadSource.
