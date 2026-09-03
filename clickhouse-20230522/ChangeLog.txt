@@ -1,3 +1,7 @@
+2026-09-03 Version: 3.1.1
+- Update API DeleteLangfuseInstance: add request parameters ConfirmDeleteAiGateway.
+
+
 2026-08-10 Version: 3.1.0
 - Support API ModifyLangfuseSecurityIPList.
 

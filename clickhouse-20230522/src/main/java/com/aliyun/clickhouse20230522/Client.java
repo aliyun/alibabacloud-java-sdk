@@ -54,22 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("rus-west-1-pop", "clickhouse.aliyuncs.com"),
             new TeaPair("us-east-1", "clickhouse.aliyuncs.com"),
             new TeaPair("us-west-1", "clickhouse.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "clickhouse.us-southeast-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "clickhouse.na-south-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "clickhouse.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu-gic-1", "clickhouse.cn-wulanchabu-gic-1.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "clickhouse.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "clickhouse.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "clickhouse.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "clickhouse.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "clickhouse.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("clickhouse", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1157,6 +1142,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteLangfuseInstanceResponse deleteLangfuseInstanceWithOptions(DeleteLangfuseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.confirmDeleteAiGateway)) {
+            query.put("ConfirmDeleteAiGateway", request.confirmDeleteAiGateway);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
         }
@@ -1876,7 +1865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of clusters.</p>
+     * <p>Queries a list of clusters.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1940,7 +1929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of clusters.</p>
+     * <p>Queries a list of clusters.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse

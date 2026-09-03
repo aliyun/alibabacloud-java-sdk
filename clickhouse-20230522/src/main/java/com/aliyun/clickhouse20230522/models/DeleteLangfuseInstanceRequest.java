@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteLangfuseInstanceRequest extends TeaModel {
     /**
+     * <p>The confirmation flag for deleting the AiGateway instance associated with the Langfuse instance.</p>
+     */
+    @NameInMap("ConfirmDeleteAiGateway")
+    public Boolean confirmDeleteAiGateway;
+
+    /**
      * <p>The Langfuse instance ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -27,6 +33,14 @@ public class DeleteLangfuseInstanceRequest extends TeaModel {
     public static DeleteLangfuseInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLangfuseInstanceRequest self = new DeleteLangfuseInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteLangfuseInstanceRequest setConfirmDeleteAiGateway(Boolean confirmDeleteAiGateway) {
+        this.confirmDeleteAiGateway = confirmDeleteAiGateway;
+        return this;
+    }
+    public Boolean getConfirmDeleteAiGateway() {
+        return this.confirmDeleteAiGateway;
     }
 
     public DeleteLangfuseInstanceRequest setDBInstanceId(String DBInstanceId) {

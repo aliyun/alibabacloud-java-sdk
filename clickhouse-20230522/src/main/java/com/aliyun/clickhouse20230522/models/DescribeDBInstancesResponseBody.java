@@ -253,7 +253,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
-         * <p>active</p>
+         * <p>ACTIVATION
+         * STOPPED
+         * RESOURCE_PREPARING
+         * CREATING
+         * MINOR_VERSION_TRANSING
+         * CLASS_CHANGING</p>
          */
         @NameInMap("Status")
         public String status;

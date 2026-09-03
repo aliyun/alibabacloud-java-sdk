@@ -17,7 +17,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The cluster status.</p>
      * 
      * <strong>example:</strong>
-     * <p>active</p>
+     * <p>ACTIVATION
+     * STOPPED
+     * RESOURCE_PREPARING
+     * CREATING
+     * MINOR_VERSION_TRANSING
+     * CLASS_CHANGING</p>
      */
     @NameInMap("DBInstanceStatus")
     public String DBInstanceStatus;
