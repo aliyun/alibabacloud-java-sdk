@@ -9,14 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "cloudsso.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "cloudsso.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "cloudsso.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cloudsso.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "cloudsso.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "cloudsso.eu-central-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloudsso", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1624,6 +1616,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAccessConfigurationResponse getAccessConfiguration(GetAccessConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAccessConfigurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You must have the cloudsso:GetAttributePassingSetting permission to call this operation. If the directory is not explicitly configured, SourceIdentityPassing returns Disabled by default.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the attribute passing settings of a specified directory to retrieve the current configuration of the SourceIdentity pass-through mode.</p>
+     * 
+     * @param request GetAttributePassingSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAttributePassingSettingResponse
+     */
+    public GetAttributePassingSettingResponse getAttributePassingSettingWithOptions(GetAttributePassingSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAttributePassingSetting"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAttributePassingSettingResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You must have the cloudsso:GetAttributePassingSetting permission to call this operation. If the directory is not explicitly configured, SourceIdentityPassing returns Disabled by default.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the attribute passing settings of a specified directory to retrieve the current configuration of the SourceIdentity pass-through mode.</p>
+     * 
+     * @param request GetAttributePassingSettingRequest
+     * @return GetAttributePassingSettingResponse
+     */
+    public GetAttributePassingSettingResponse getAttributePassingSetting(GetAttributePassingSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAttributePassingSettingWithOptions(request, runtime);
     }
 
     /**
@@ -4448,6 +4490,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAccessConfigurationResponse updateAccessConfiguration(UpdateAccessConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAccessConfigurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You must have the cloudsso:UpdateAttributePassingSetting permission to call this operation. If the SourceIdentityPassing request parameter is not specified, the existing value is retained. If an invalid enum value is specified, the InvalidParameter.SourceIdentityPassing error is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the attribute passing settings for a specified directory, allowing you to set the SourceIdentity pass-through mode to IdP, UserName, or Disabled.</p>
+     * 
+     * @param request UpdateAttributePassingSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAttributePassingSettingResponse
+     */
+    public UpdateAttributePassingSettingResponse updateAttributePassingSettingWithOptions(UpdateAttributePassingSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdentityPassing)) {
+            query.put("SourceIdentityPassing", request.sourceIdentityPassing);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAttributePassingSetting"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAttributePassingSettingResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You must have the cloudsso:UpdateAttributePassingSetting permission to call this operation. If the SourceIdentityPassing request parameter is not specified, the existing value is retained. If an invalid enum value is specified, the InvalidParameter.SourceIdentityPassing error is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the attribute passing settings for a specified directory, allowing you to set the SourceIdentity pass-through mode to IdP, UserName, or Disabled.</p>
+     * 
+     * @param request UpdateAttributePassingSettingRequest
+     * @return UpdateAttributePassingSettingResponse
+     */
+    public UpdateAttributePassingSettingResponse updateAttributePassingSetting(UpdateAttributePassingSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAttributePassingSettingWithOptions(request, runtime);
     }
 
     /**
