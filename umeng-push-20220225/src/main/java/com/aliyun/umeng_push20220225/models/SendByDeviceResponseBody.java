@@ -14,10 +14,6 @@ public class SendByDeviceResponseBody extends TeaModel {
     @NameInMap("Data")
     public SendByDeviceResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -35,10 +31,6 @@ public class SendByDeviceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

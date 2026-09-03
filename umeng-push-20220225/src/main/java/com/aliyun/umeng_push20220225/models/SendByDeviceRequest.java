@@ -18,9 +18,6 @@ public class SendByDeviceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ArdNyIzFCH2K3szXA8arpu0Y7ywOdA67mCSumtpnMnmf</p>
      */
     @NameInMap("DeviceTokens")
     public String deviceTokens;
@@ -34,10 +31,6 @@ public class SendByDeviceRequest extends TeaModel {
     @NameInMap("Policy")
     public Policy policy;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("ProductionMode")
     public Boolean productionMode;
 

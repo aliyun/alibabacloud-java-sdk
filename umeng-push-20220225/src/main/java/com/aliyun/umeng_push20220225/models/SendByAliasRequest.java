@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class SendByAliasRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>test</p>
      */
     @NameInMap("Alias")
     public String alias;
@@ -37,20 +34,12 @@ public class SendByAliasRequest extends TeaModel {
     @NameInMap("Policy")
     public Policy policy;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("ProductionMode")
     public Boolean productionMode;
 
     @NameInMap("ReceiptType")
     public Integer receiptType;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://msg.umeng.com/upush/receipt">https://msg.umeng.com/upush/receipt</a></p>
-     */
     @NameInMap("ReceiptUrl")
     public String receiptUrl;
 
