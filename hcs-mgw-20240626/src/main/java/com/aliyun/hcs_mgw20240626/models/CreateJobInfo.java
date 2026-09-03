@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateJobInfo extends TeaModel {
     /**
+     * <p>Specifies whether to migrate appendable files as normal or multipart files. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -18,7 +20,7 @@ public class CreateJobInfo extends TeaModel {
     public Audit audit;
 
     /**
-     * <p>Indicates whether the Target attribute value of the symbolic links at the source data address is converted. You can convert the Target attribute value of the symbolic links at the source data address in one of the following scenarios: The source data address is an Object Storage Service (OSS) data address and the destination data address is a local data address. The source data address is a local data address and the destination data address is an OSS data address. The source data address is a local data address and the destination data address is another local data address. This ensures that the symbolic links at the destination data address can point to their objects as expected.</p>
+     * <p>Specifies whether to transform the target of a symbolic link. When migrating data from OSS to a local server, from a local server to OSS, or between two local servers, set this parameter to \<code>true\\</code> to ensure that symbolic links can be accessed after migration.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -46,7 +48,7 @@ public class CreateJobInfo extends TeaModel {
     public String destAddress;
 
     /**
-     * <p>Specifies whether to enable multi-version migration. Multi-version migration is not supported.</p>
+     * <p>Specifies whether to migrate multiple object versions. Multi-version migration is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -55,20 +57,20 @@ public class CreateJobInfo extends TeaModel {
     public Boolean enableMultiVersioning;
 
     /**
-     * <p>The filtering rule.</p>
+     * <p>The filter rule.</p>
      */
     @NameInMap("FilterRule")
     public FilterRule filterRule;
 
     /**
-     * <p>The throttling settings of the task.</p>
+     * <p>The task throttling settings.</p>
      */
     @NameInMap("ImportQos")
     public ImportQos importQos;
 
     /**
-     * <p>The task name.\
-     * The name can contain lowercase letters, digits, hyphens (-), and underscores (<em>). The name must be 3 to 63 characters in length. The name is case-sensitive and encoded in UTF-8. The name cannot start with a hyphen (-) or an underscore (</em>). You must specify a name.</p>
+     * <p>The task name.<br>
+     * The name must be 3 to 63 characters in length and can contain lowercase letters, digits, hyphens (-), and underscores (<em>). The name is case-sensitive and must be UTF-8 encoded. It cannot start with a hyphen (-) or an underscore (</em>). This parameter cannot be empty.<br></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,8 +80,8 @@ public class CreateJobInfo extends TeaModel {
     public String name;
 
     /**
-     * <p>The file overwriting mode.\
-     * Valid values: never and always.</p>
+     * <p>The file overwrite mode.<br>
+     * Valid values: \<code>never\\</code> and \<code>always\\</code>. \<code>never\\</code>: Does not overwrite existing files. \<code>always\\</code>: Overwrites existing files.<br></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,7 +91,7 @@ public class CreateJobInfo extends TeaModel {
     public String overwriteMode;
 
     /**
-     * <p>The ID of the parent task. When you create a subtask to migrate a file that failed to be migrated, you can specify the ID of the parent task.</p>
+     * <p>The parent task ID. Specify this ID when you create a subtask to retry failed file transfers.</p>
      * 
      * <strong>example:</strong>
      * <p>6af62558-970d-4f44-8663-4e297170fd6a</p>
@@ -114,8 +116,8 @@ public class CreateJobInfo extends TeaModel {
     public String srcAddress;
 
     /**
-     * <p>The tags in the key:value format.\
-     * The value can contain letters, digits, hyphens (-), underscores (_), and commas (,). The value can be up to 1,024 characters in length.</p>
+     * <p>The tags, in key-value format.<br>
+     * Allowed characters include uppercase and lowercase letters, digits, hyphens (-), and underscores (_). The maximum length is 1024 characters.<br></p>
      * 
      * <strong>example:</strong>
      * <p>K1:V1,K2:V2</p>
@@ -124,6 +126,8 @@ public class CreateJobInfo extends TeaModel {
     public String tags;
 
     /**
+     * <p>Specifies the StorageClass for destination files. The destination address can only be OSS. Valid values: Standard, IA, Archive, ColdArchive, DeepColdArchive.</p>
+     * 
      * <strong>example:</strong>
      * <p>Standard</p>
      */
@@ -131,13 +135,16 @@ public class CreateJobInfo extends TeaModel {
     public String targetStorageClass;
 
     /**
-     * <p>The file transfer mode.\
-     * Valid values: all and lastmodified. all: transfers the full data of files. lastmodified: transfers the incremental data of files.\
-     * Valid values if OverwriteMode and TransferMode are used together:</p>
+     * <p>The file transfer mode.<br>
+     * Valid values: \<code>all\\</code> (full transfer) and \<code>lastmodified\\</code> (incremental transfer).<br>
+     * \<code>OverwriteMode\\</code> and \<code>TransferMode\\</code> are used together:<br><br></p>
      * <ul>
-     * <li>A combination of always and all indicates that all files are forcefully overwritten.</li>
-     * <li>A combination of always and lastmodified indicates that files are overwritten based on the last modification time.</li>
-     * <li>A combination of never and all indicates that the files with the same name are not overwritten.</li>
+     * <li><p>\<code>always\\</code> and \<code>all\\</code>: Forces a full overwrite.</p>
+     * </li>
+     * <li><p>\<code>always\\</code> and \<code>lastmodified\\</code>: Overwrites files based on their last modified time.</p>
+     * </li>
+     * <li><p>\<code>never\\</code> and an empty value for \<code>TransferMode\\</code>: Does not overwrite files with the same name.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -148,6 +155,8 @@ public class CreateJobInfo extends TeaModel {
     public String transferMode;
 
     /**
+     * <p>Specifies whether to preserve the lastModifyTime. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -155,6 +164,8 @@ public class CreateJobInfo extends TeaModel {
     public Boolean withLastModifyTime;
 
     /**
+     * <p>Specifies whether to migrate the StorageClass property. This is allowed only for OSS-to-OSS migration.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

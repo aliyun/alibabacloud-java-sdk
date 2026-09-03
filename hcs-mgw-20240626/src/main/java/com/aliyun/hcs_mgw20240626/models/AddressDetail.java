@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddressDetail extends TeaModel {
     /**
-     * <p>The AccessKey ID that is used to access the bucket.</p>
+     * <p>The AccessKey ID used to access the bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddressDetail extends TeaModel {
     public String accessId;
 
     /**
-     * <p>The AccessKey secret that is used to access the bucket.</p>
+     * <p>The AccessKey Secret used to access the bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,10 @@ public class AddressDetail extends TeaModel {
     public String accessSecret;
 
     /**
-     * <p>The type of the data address.</p>
+     * <p>The address type. Valid values:</p>
+     * <p>Object storage: <code>oss</code>, <code>s3</code>, <code>qiniu</code>, <code>cos</code>, <code>bos</code>, <code>obs</code>, <code>ks3</code>, <code>ucloud</code>, <code>upyun</code>, <code>azure</code>, <code>gcp</code>, and <code>tos</code>.</p>
+     * <p>File storage: <code>local</code>, <code>obsfs</code>, and <code>ftp</code>.</p>
+     * <p>Inventory: <code>inv</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +38,7 @@ public class AddressDetail extends TeaModel {
     public String addressType;
 
     /**
-     * <p>The associated agents. If you want to access data over an Express Connect circuit or a VPN gateway, you must associate agents.</p>
+     * <p>A list of agents required to access data over a leased line or a VPN connection.</p>
      * 
      * <strong>example:</strong>
      * <p>agent1,agent2</p>
@@ -44,7 +47,7 @@ public class AddressDetail extends TeaModel {
     public String agentList;
 
     /**
-     * <p>The bucket name.</p>
+     * <p>The name of the bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +57,8 @@ public class AddressDetail extends TeaModel {
     public String bucket;
 
     /**
+     * <p>Specifies the underlying storage type, such as <code>oss</code>, <code>s3</code>, or <code>obs</code>, when <code>AddressType</code> is <code>inv</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */
@@ -61,7 +66,7 @@ public class AddressDetail extends TeaModel {
     public String dataType;
 
     /**
-     * <p>The domain name of the bucket.</p>
+     * <p>The domain of the bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +79,7 @@ public class AddressDetail extends TeaModel {
     public HdfsAuthConfig hdfsAuthConfig;
 
     /**
-     * <p>The AccessKey ID that is used to access the bucket in which the inventory list resides.</p>
+     * <p>The AccessKey ID used to access the inventory bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>test_inv_access_id</p>
@@ -83,7 +88,7 @@ public class AddressDetail extends TeaModel {
     public String invAccessId;
 
     /**
-     * <p>The AccessKey secret that is used to access the bucket in which the inventory list resides.</p>
+     * <p>The AccessKey Secret used to access the inventory bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>test_inv_secret_key</p>
@@ -92,7 +97,7 @@ public class AddressDetail extends TeaModel {
     public String invAccessSecret;
 
     /**
-     * <p>The name of the bucket in which the inventory list resides.</p>
+     * <p>The name of the inventory bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>test_inv_bucket</p>
@@ -101,7 +106,7 @@ public class AddressDetail extends TeaModel {
     public String invBucket;
 
     /**
-     * <p>The domain name of the bucket in which the inventory list resides.</p>
+     * <p>The domain of the inventory bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>test_inv_domain</p>
@@ -110,8 +115,8 @@ public class AddressDetail extends TeaModel {
     public String invDomain;
 
     /**
-     * <p>The type of the bucket in which the inventory list resides.\
-     * Valid values: oss, s3, and cos.</p>
+     * <p>The type of the inventory bucket.<br>
+     * Valid values: <code>oss</code> and <code>s3</code>.<br></p>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -120,7 +125,7 @@ public class AddressDetail extends TeaModel {
     public String invLocation;
 
     /**
-     * <p>The inventory list. You must specify the file name and file name extension of the inventory list.</p>
+     * <p>The path to the manifest file, which lists the objects and their format.</p>
      * 
      * <strong>example:</strong>
      * <p>manifest.json</p>
@@ -129,7 +134,7 @@ public class AddressDetail extends TeaModel {
     public String invPath;
 
     /**
-     * <p>The region ID of the bucket in which the inventory list resides. If the bucket in which the inventory list resides is an OSS bucket, you must specify the ID of the region in which the inventory list resides. You do not need to specify the domain name of the inventory list.</p>
+     * <p>The region of the inventory bucket. This parameter is required for OSS inventory buckets and eliminates the need to specify a domain. Use the OSS-specific region ID format.</p>
      * 
      * <strong>example:</strong>
      * <p>test_inv_region_id</p>
@@ -138,7 +143,7 @@ public class AddressDetail extends TeaModel {
     public String invRegionId;
 
     /**
-     * <p>The role that is used to migrate data for the bucket in which the inventory list resides. If the bucket in which the inventory list resides is an OSS bucket, you must specify a role. You do not need to specify an AccessKey pair that is used to access the bucket.</p>
+     * <p>The authorization role for the inventory bucket. If the inventory bucket is an OSS bucket, you can use this role to grant access instead of an AccessKey.</p>
      * 
      * <strong>example:</strong>
      * <p>test_inv_role</p>
@@ -147,7 +152,7 @@ public class AddressDetail extends TeaModel {
     public String invRole;
 
     /**
-     * <p>The bucket prefix.</p>
+     * <p>The object prefix in the bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>test_prefix</p>
@@ -156,7 +161,7 @@ public class AddressDetail extends TeaModel {
     public String prefix;
 
     /**
-     * <p>The region ID of the bucket. If the bucket is an OSS bucket, you must specify the ID of the region in which the bucket resides. You do not need to specify the domain name of the bucket.</p>
+     * <p>The region of the bucket. This parameter is required for OSS buckets and eliminates the need to specify a domain. Use the OSS-specific region ID format.</p>
      * 
      * <strong>example:</strong>
      * <p>test_region_id</p>
@@ -165,7 +170,7 @@ public class AddressDetail extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The role that is used to migrate data. If the bucket is an Object Storage Service (OSS) bucket, you must specify a role. You do not need to specify an AccessKey pair that is used to access the bucket.</p>
+     * <p>The authorization role. If the bucket is an OSS bucket, you can use this role to grant access instead of an AccessKey.</p>
      * 
      * <strong>example:</strong>
      * <p>test_role</p>

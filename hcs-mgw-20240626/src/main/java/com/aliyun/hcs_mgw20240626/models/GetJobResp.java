@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobResp extends TeaModel {
     /**
+     * <p>Specifies whether to migrate appendable files as normal or multipart files. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -18,7 +20,7 @@ public class GetJobResp extends TeaModel {
     public Audit audit;
 
     /**
-     * <p>Indicates whether the Target attribute value of the symbolic links at the source data address is converted.</p>
+     * <p>Indicates whether to convert the target of the symbolic link.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,7 +29,7 @@ public class GetJobResp extends TeaModel {
     public Boolean convertSymlinkTarget;
 
     /**
-     * <p>Indicates whether a migration report is created.</p>
+     * <p>Indicates whether to generate a migration report.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -36,7 +38,7 @@ public class GetJobResp extends TeaModel {
     public Boolean createReport;
 
     /**
-     * <p>The time when the task was created.</p>
+     * <p>The time when the job was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-01 12:00:00</p>
@@ -54,7 +56,7 @@ public class GetJobResp extends TeaModel {
     public String destAddress;
 
     /**
-     * <p>Indicates whether multi-version migration is enabled.</p>
+     * <p>Indicates whether multi-versioning is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -63,19 +65,19 @@ public class GetJobResp extends TeaModel {
     public Boolean enableMultiVersioning;
 
     /**
-     * <p>The filtering rule.</p>
+     * <p>The filter rule.</p>
      */
     @NameInMap("FilterRule")
     public FilterRule filterRule;
 
     /**
-     * <p>The throttling settings of the task.</p>
+     * <p>The rate limiting rule for the job.</p>
      */
     @NameInMap("ImportQos")
     public ImportQos importQos;
 
     /**
-     * <p>The time when the task was modified.</p>
+     * <p>The time when the job was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-01 12:00:00</p>
@@ -84,7 +86,7 @@ public class GetJobResp extends TeaModel {
     public String modifyTime;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -93,7 +95,7 @@ public class GetJobResp extends TeaModel {
     public String name;
 
     /**
-     * <p>The file overwriting mode.</p>
+     * <p>The file overwrite mode.</p>
      * 
      * <strong>example:</strong>
      * <p>always</p>
@@ -102,7 +104,7 @@ public class GetJobResp extends TeaModel {
     public String overwriteMode;
 
     /**
-     * <p>The task owner.</p>
+     * <p>The owner.</p>
      * 
      * <strong>example:</strong>
      * <p>test_owner</p>
@@ -111,7 +113,7 @@ public class GetJobResp extends TeaModel {
     public String owner;
 
     /**
-     * <p>The name of the parent task.</p>
+     * <p>The name of the parent job.</p>
      * 
      * <strong>example:</strong>
      * <p>test_parent_name</p>
@@ -120,7 +122,7 @@ public class GetJobResp extends TeaModel {
     public String parentName;
 
     /**
-     * <p>The ID of the parent task.</p>
+     * <p>The ID of the parent job.</p>
      * 
      * <strong>example:</strong>
      * <p>7db93837-a5ee-4e3a-b3c8-800e7947dabc</p>
@@ -144,16 +146,17 @@ public class GetJobResp extends TeaModel {
     public String srcAddress;
 
     /**
-     * <p>The task state. Valid values:</p>
-     * <p>IMPORT_JOB_BEGIN: The task is created.</p>
-     * <p>IMPORT_JOB_LAUNCHING: The task is being started.</p>
-     * <p>IMPORT_JOB_PREPARING: The system is preparing for the task.</p>
-     * <p>IMPORT_JOB_DOING: The task is running.</p>
-     * <p>IMPORT_JOB_SUSPEND: The task is paused.</p>
-     * <p>IMPORT_JOB_CLOSING: The task is being closed.</p>
-     * <p>IMPORT_JOB_FINISHED: The task is complete.</p>
-     * <p>IMPORT_JOB_INTERRUPTED: The task is abnormally interrupted.</p>
-     * <p>IMPORT_JOB_CONFIRMED: The task is complete and the user has confirmed the data integrity and consistency.</p>
+     * <p>The status of the job.</p>
+     * <p>IMPORT_JOB_BEGIN: The job is created.</p>
+     * <p>IMPORT_JOB_LAUNCHING: The job is starting.</p>
+     * <p>IMPORT_JOB_PREPARING: The job is preparing.</p>
+     * <p>IMPORT_JOB_DOING: The job is running.</p>
+     * <p>IMPORT_JOB_SUSPEND: The job is paused.</p>
+     * <p>IMPORT_JOB_CLOSING: The job is shutting down.</p>
+     * <p>IMPORT_JOB_FINISHED: The job is finished.</p>
+     * <p>IMPORT_JOB_INTERRUPTED: The job is abnormally interrupted.</p>
+     * <p>IMPORT_JOB_CONFIRMED: The migration is complete, and the user has confirmed data integrity and consistency.</p>
+     * <p>IMPORT_JOB_DELETING: The job is being deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>IMPORT_JOB_DOING</p>
@@ -171,6 +174,8 @@ public class GetJobResp extends TeaModel {
     public String tags;
 
     /**
+     * <p>Specifies the StorageClass of the destination file. The destination address must be an OSS address. Valid values: Standard, IA, Archive, ColdArchive, and DeepColdArchive.</p>
+     * 
      * <strong>example:</strong>
      * <p>Standard</p>
      */
@@ -187,7 +192,7 @@ public class GetJobResp extends TeaModel {
     public String transferMode;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>test_id</p>
@@ -196,6 +201,8 @@ public class GetJobResp extends TeaModel {
     public String version;
 
     /**
+     * <p>Specifies whether to retain the lastModifyTime property. The default value is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -203,6 +210,8 @@ public class GetJobResp extends TeaModel {
     public Boolean withLastModifyTime;
 
     /**
+     * <p>Specifies whether to migrate the StorageClass property. This is allowed only for migrations from OSS to OSS.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

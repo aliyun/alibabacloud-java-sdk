@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class JobHistory extends TeaModel {
     /**
-     * <p>The ID of the task status change.</p>
+     * <p>The ID of the job status change.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class JobHistory extends TeaModel {
     public String commitId;
 
     /**
-     * <p>The number of files that are migrated. The number includes the number of files that are successfully migrated and the number of files that are skipped.</p>
+     * <p>The number of files whose migration is complete. This includes files that were successfully migrated and files that were skipped.</p>
      * 
      * <strong>example:</strong>
      * <p>900</p>
@@ -23,7 +23,7 @@ public class JobHistory extends TeaModel {
     public Long copiedCount;
 
     /**
-     * <p>The data size of files that are migrated. Unit: bytes.</p>
+     * <p>The size of the migrated files, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -32,7 +32,7 @@ public class JobHistory extends TeaModel {
     public Long copiedSize;
 
     /**
-     * <p>The time when the current state ended.</p>
+     * <p>The end time of the current status.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-01 12:00:00</p>
@@ -50,7 +50,7 @@ public class JobHistory extends TeaModel {
     public Long failedCount;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>test_id</p>
@@ -59,8 +59,8 @@ public class JobHistory extends TeaModel {
     public String jobVersion;
 
     /**
-     * <p>The state of data listing.\
-     * Valid values: Listing and Finished.</p>
+     * <p>The data listing status.<br>
+     * Valid values: \<code>Listing\\</code> (Listing in progress) and \<code>Finished\\</code> (Listing complete).<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>Listing</p>
@@ -69,7 +69,7 @@ public class JobHistory extends TeaModel {
     public String listStatus;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>test error msg.</p>
@@ -78,7 +78,7 @@ public class JobHistory extends TeaModel {
     public String message;
 
     /**
-     * <p>The task name.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -87,8 +87,8 @@ public class JobHistory extends TeaModel {
     public String name;
 
     /**
-     * <p>The operator.\
-     * Valid values: user and system.</p>
+     * <p>The operator.<br>
+     * Valid values: \<code>user\\</code> and \<code>system\\</code>.<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -97,7 +97,7 @@ public class JobHistory extends TeaModel {
     public String operator;
 
     /**
-     * <p>The execution ID of the task.</p>
+     * <p>The task execution ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -106,8 +106,8 @@ public class JobHistory extends TeaModel {
     public String runtimeId;
 
     /**
-     * <p>The runtime state.\
-     * Valid values: Normal and Interrupt.</p>
+     * <p>The running status.<br>
+     * Valid values: \<code>Normal\\</code> (Normal) and \<code>Interrupt\\</code> (Abnormal interruption).<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -116,6 +116,8 @@ public class JobHistory extends TeaModel {
     public String runtimeState;
 
     /**
+     * <p>The number of skipped files.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -123,6 +125,8 @@ public class JobHistory extends TeaModel {
     public Long skippedCount;
 
     /**
+     * <p>The size of skipped files.</p>
+     * 
      * <strong>example:</strong>
      * <p>100000</p>
      */
@@ -130,7 +134,7 @@ public class JobHistory extends TeaModel {
     public Long skippedSize;
 
     /**
-     * <p>The time when the current state started.</p>
+     * <p>The start time of the current status.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-01 12:00:00</p>
@@ -139,7 +143,7 @@ public class JobHistory extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The task state.</p>
+     * <p>The job status.</p>
      * 
      * <strong>example:</strong>
      * <p>IMPORT_JOB_DOING</p>
@@ -157,7 +161,7 @@ public class JobHistory extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The total data size of files. Unit: bytes.</p>
+     * <p>The total size of the files, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

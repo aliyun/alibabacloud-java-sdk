@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobHistoryResponseBody extends TeaModel {
     /**
-     * <p>The running history of the migration task.</p>
+     * <p>The list of task run history entries.</p>
      */
     @NameInMap("JobHistoryList")
     public ListJobHistoryResp jobHistoryList;

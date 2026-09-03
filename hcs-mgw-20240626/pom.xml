@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>hcs_mgw20240626</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <packaging>jar</packaging>
   <name>hcs_mgw20240626</name>
   <description>Alibaba Cloud hcs-mgw (20240626) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>alibabacloud-gateway-oss</artifactId>
-      <version>0.0.24</version>
+      <version>0.0.26</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

@@ -11,7 +11,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._productId = "hcs-mgw";
         com.aliyun.gateway.oss.Client gatewayClient = new com.aliyun.gateway.oss.Client();
         this._spi = gatewayClient;
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-beijing", "cn-beijing.mgw.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "cn-wulanchabu.mgw.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "cn-hangzhou.mgw.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "cn-shanghai.mgw.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "cn-shenzhen.mgw.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "cn-chengdu.mgw.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "cn-hongkong.mgw.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ap-northeast-1.mgw.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ap-southeast-1.mgw.aliyuncs.com"),
+            new TeaPair("eu-central-1", "eu-central-1.mgw.aliyuncs.com"),
+            new TeaPair("us-east-1", "us-east-1.mgw.aliyuncs.com"),
+            new TeaPair("us-west-1", "us-west-1.mgw.aliyuncs.com")
+        );
     }
 
 
@@ -533,7 +547,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query the information about a data address, you must have the permission on mgw:GetImportAddress.</p>
+     * <ul>
+     * <li>To query the information about a data address, you must have the permission on mgw:GetImportAddress.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Obtains the details of a data address.</p>
@@ -565,7 +581,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query the information about a data address, you must have the permission on mgw:GetImportAddress.</p>
+     * <ul>
+     * <li>To query the information about a data address, you must have the permission on mgw:GetImportAddress.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Obtains the details of a data address.</p>
@@ -901,7 +919,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query a list of data addresses, you must have the permission on mgw:ListImportAddress.</p>
+     * <ul>
+     * <li>To query a list of data addresses, you must have the permission on mgw:ListImportAddress.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Lists the data addresses created by a user in the specific region.</p>
@@ -945,7 +965,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query a list of data addresses, you must have the permission on mgw:ListImportAddress.</p>
+     * <ul>
+     * <li>To query a list of data addresses, you must have the permission on mgw:ListImportAddress.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Lists the data addresses created by a user in the specific region.</p>
@@ -1089,14 +1111,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query the execution history of a migration task, you must have the permission on mgw:ListImportJobHistory.</p>
      * <ul>
-     * <li>A migration task can run multiple rounds. A unique execution ID is generated for each round.</li>
-     * <li>The execution history of a migration task records the change history of the task status.</li>
+     * <li>Call this operation to retrieve the run history of a specified migration task. A migration task can have multiple runs, each identified by a unique execution ID. The run history records status changes that occur during each execution.</li>
+     * <li>Required permission: mgw:ListImportJobHistory</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the running history of a migration task.</p>
+     * <p>Lists the run history of a migration task.</p>
      * 
      * @param request ListJobHistoryRequest
      * @param headers map
@@ -1141,14 +1162,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query the execution history of a migration task, you must have the permission on mgw:ListImportJobHistory.</p>
      * <ul>
-     * <li>A migration task can run multiple rounds. A unique execution ID is generated for each round.</li>
-     * <li>The execution history of a migration task records the change history of the task status.</li>
+     * <li>Call this operation to retrieve the run history of a specified migration task. A migration task can have multiple runs, each identified by a unique execution ID. The run history records status changes that occur during each execution.</li>
+     * <li>Required permission: mgw:ListImportJobHistory</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the running history of a migration task.</p>
+     * <p>Lists the run history of a migration task.</p>
      * 
      * @param request ListJobHistoryRequest
      * @return ListJobHistoryResponse

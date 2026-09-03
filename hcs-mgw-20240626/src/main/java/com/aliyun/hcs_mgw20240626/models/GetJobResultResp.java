@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobResultResp extends TeaModel {
     /**
-     * <p>The type of the data address created based on the files that failed to be migrated. This parameter is required if you create a data address.</p>
+     * <p>The data address type for the retry job. This value indicates that the data address is constructed from a failed file inventory. Use this value as the AddressType parameter when you create a data address for a retry job.</p>
      * 
      * <strong>example:</strong>
      * <p>ossinv</p>
@@ -14,7 +14,7 @@ public class GetJobResultResp extends TeaModel {
     public String addressType;
 
     /**
-     * <p>The number of files that are migrated. The number includes the number of files that are successfully migrated and the number of files that are skipped.</p>
+     * <p>The number of objects that were processed successfully. This value includes both migrated objects and skipped objects.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>
@@ -23,7 +23,7 @@ public class GetJobResultResp extends TeaModel {
     public Long copiedObjectCount;
 
     /**
-     * <p>The data size of files that are migrated.</p>
+     * <p>The total size of objects that were processed successfully. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>
@@ -32,7 +32,7 @@ public class GetJobResultResp extends TeaModel {
     public Long copiedObjectSize;
 
     /**
-     * <p>The number of files that failed to be migrated.</p>
+     * <p>The number of objects that failed to migrate.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class GetJobResultResp extends TeaModel {
     public Long failedObjectCount;
 
     /**
-     * <p>The AccessKey ID that is used to access the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * <p>The AccessKey ID that is used to access the bucket where the failed file list is stored. Use this value as the InvAccessId parameter when you create a data address for a retry job.</p>
      * 
      * <strong>example:</strong>
      * <p>test_access_id</p>
@@ -50,7 +50,7 @@ public class GetJobResultResp extends TeaModel {
     public String invAccessId;
 
     /**
-     * <p>The AccessKey secret that is used to access the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * <p>The AccessKey secret that is used to access the bucket where the failed file list is stored. Use this value as the InvAccessSecret parameter when you create a data address for a retry job.</p>
      * 
      * <strong>example:</strong>
      * <p>test_secret_key</p>
@@ -59,7 +59,7 @@ public class GetJobResultResp extends TeaModel {
     public String invAccessSecret;
 
     /**
-     * <p>The name of the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * <p>The name of the bucket that stores the failed file list. Use this value as the InvBucket parameter when you create a data address for a retry job.</p>
      * 
      * <strong>example:</strong>
      * <p>test_sys_bucket</p>
@@ -68,7 +68,7 @@ public class GetJobResultResp extends TeaModel {
     public String invBucket;
 
     /**
-     * <p>The domain name of the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * <p>The endpoint of the bucket that stores the failed file list. Use this value as the InvDomain parameter when you create a data address for a retry job.</p>
      * 
      * <strong>example:</strong>
      * <p>test_domain</p>
@@ -77,7 +77,7 @@ public class GetJobResultResp extends TeaModel {
     public String invDomain;
 
     /**
-     * <p>The type of the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * <p>The storage type of the bucket that stores the failed file list, such as oss. Use this value as the InvLocation parameter when you create a data address for a retry job.</p>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -86,7 +86,7 @@ public class GetJobResultResp extends TeaModel {
     public String invLocation;
 
     /**
-     * <p>The inventory list of files that failed to be migrated. This parameter is required if you create a data address.</p>
+     * <p>The path to the manifest file that lists the failed files. Use this value as the InvPath parameter when you create a data address for a retry job.</p>
      * 
      * <strong>example:</strong>
      * <p>mainfest.json</p>
@@ -95,7 +95,7 @@ public class GetJobResultResp extends TeaModel {
     public String invPath;
 
     /**
-     * <p>The region ID of the bucket in which the inventory list of files that failed to be migrated resides. This parameter is required if you create a data address.</p>
+     * <p>The region ID of the bucket that stores the failed file list. Use this value as the InvRegionId parameter when you create a data address for a retry job.</p>
      * 
      * <strong>example:</strong>
      * <p>test_region_id</p>
@@ -104,8 +104,7 @@ public class GetJobResultResp extends TeaModel {
     public String invRegionId;
 
     /**
-     * <p>Indicates whether the files that failed to be migrated can be migrated again.\
-     * Valid values: NoNeed, Ready, and NotReady.</p>
+     * <p>The retry readiness status for failed files. Valid values: NoNeed indicates that all files were migrated successfully and no retry is required. Ready indicates that the failed file list has been generated and is available for retry. NotReady indicates that the failed file list is being generated.<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -114,6 +113,8 @@ public class GetJobResultResp extends TeaModel {
     public String readyRetry;
 
     /**
+     * <p>The number of objects that were skipped during migration. Objects are skipped when they already exist at the destination and meet the configured skip conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>5000</p>
      */
@@ -121,6 +122,8 @@ public class GetJobResultResp extends TeaModel {
     public Long skippedObjectCount;
 
     /**
+     * <p>The total size of objects that were skipped during migration. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000</p>
      */
@@ -128,7 +131,7 @@ public class GetJobResultResp extends TeaModel {
     public Long skippedObjectSize;
 
     /**
-     * <p>The total number of files.</p>
+     * <p>The total number of objects in the source data address.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -137,7 +140,7 @@ public class GetJobResultResp extends TeaModel {
     public Long totalObjectCount;
 
     /**
-     * <p>The total data size of files.</p>
+     * <p>The total size of all objects in the source data address. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -146,7 +149,7 @@ public class GetJobResultResp extends TeaModel {
     public Long totalObjectSize;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The unique identifier of the migration job.</p>
      * 
      * <strong>example:</strong>
      * <p>test_job_id</p>

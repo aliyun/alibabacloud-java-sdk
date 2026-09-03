@@ -4,9 +4,15 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class HdfsAuthConfig extends TeaModel {
+    /**
+     * <p>The authentication type for HDFS.</p>
+     */
     @NameInMap("AuthType")
     public String authType;
 
+    /**
+     * <p>The username for HDFS authentication.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
