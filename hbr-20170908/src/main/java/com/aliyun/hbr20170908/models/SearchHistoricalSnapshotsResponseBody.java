@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates that the request was successful.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The returned message. If the request is successful, \<code>successful\\</code> is returned. If the request fails, an error message is returned.</p>
+     * <p>The returned message. The value &quot;successful&quot; is returned for successful requests. An error message is returned for failed requests.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token that is required to obtain the next page of snapshots.</p>
+     * <p>The token required to retrieve the next page of snapshots.</p>
      * 
      * <strong>example:</strong>
      * <p>BE</p>
@@ -55,10 +55,8 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +66,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of snapshots that meet the specified criteria.</p>
+     * <p>The total number of snapshots that meet the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

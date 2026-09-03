@@ -40,40 +40,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "hbr.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "hbr.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "hbr.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "hbr.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "hbr.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "hbr.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "hbr.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "hbr.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "hbr.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "hbr.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "hbr.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "hbr.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "hbr.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "hbr.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "hbr.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "hbr.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "hbr.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "hbr.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "hbr.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "hbr.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "hbr.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "hbr.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "hbr.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "hbr.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "hbr.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "hbr.us-southeast-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "hbr.na-south-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "hbr.eu-central-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "hbr.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "hbr.eu-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "hbr.us-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "hbr.me-central-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "hbr.me-east-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "hbr.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "hbr.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "hbr.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "hbr.cn-hangzhou-finance.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "hbr.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("hbr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -3422,6 +3389,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the free trial activation status and expiration time of a specified feature. Currently, only the free trial information of Tablestore backup can be queried.</p>
+     * 
+     * @param request DescribeFeatureTrialInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFeatureTrialInfoResponse
+     */
+    public DescribeFeatureTrialInfoResponse describeFeatureTrialInfoWithOptions(DescribeFeatureTrialInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.featureType)) {
+            query.put("FeatureType", request.featureType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFeatureTrialInfo"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFeatureTrialInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the free trial activation status and expiration time of a specified feature. Currently, only the free trial information of Tablestore backup can be queried.</p>
+     * 
+     * @param request DescribeFeatureTrialInfoRequest
+     * @return DescribeFeatureTrialInfoResponse
+     */
+    public DescribeFeatureTrialInfoResponse describeFeatureTrialInfo(DescribeFeatureTrialInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFeatureTrialInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries for one or more SAP HANA backup plans that match specified criteria.</p>
      * 
      * @param request DescribeHanaBackupPlansRequest
@@ -5147,6 +5158,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the free trial information of a specified OSS bucket or NAS file system.</p>
+     * 
+     * @param request GetTrialInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTrialInfoResponse
+     */
+    public GetTrialInfoResponse getTrialInfoWithOptions(GetTrialInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucket)) {
+            query.put("Bucket", request.bucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTime)) {
+            query.put("CreateTime", request.createTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTrialInfo"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTrialInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the free trial information of a specified OSS bucket or NAS file system.</p>
+     * 
+     * @param request GetTrialInfoRequest
+     * @return GetTrialInfoResponse
+     */
+    public GetTrialInfoResponse getTrialInfo(GetTrialInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTrialInfoWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <ul>
      * <li>This operation creates a background asynchronous task. The task uses Cloud Assistant to install backup clients on ECS instances.</li>
@@ -5292,6 +5359,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries a list of backup points.</p>
+     * 
+     * @param request ListSnapshotsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSnapshotsResponse
+     */
+    public ListSnapshotsResponse listSnapshotsWithOptions(ListSnapshotsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.completeTimeEnd)) {
+            query.put("CompleteTimeEnd", request.completeTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.completeTimeStart)) {
+            query.put("CompleteTimeStart", request.completeTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planId)) {
+            query.put("PlanId", request.planId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protectedResourceId)) {
+            query.put("ProtectedResourceId", request.protectedResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vaultId)) {
+            query.put("VaultId", request.vaultId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSnapshots"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSnapshotsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of backup points.</p>
+     * 
+     * @param request ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    public ListSnapshotsResponse listSnapshots(ListSnapshotsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSnapshotsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Activates Cloud Backup.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
@@ -5381,7 +5524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves one or more historical backup snapshots that meet the specified criteria.</p>
+     * <p>Retrieves one or more historical backup snapshots that meet the specified conditions.</p>
      * 
      * @param tmpReq SearchHistoricalSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5443,7 +5586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves one or more historical backup snapshots that meet the specified criteria.</p>
+     * <p>Retrieves one or more historical backup snapshots that meet the specified conditions.</p>
      * 
      * @param request SearchHistoricalSnapshotsRequest
      * @return SearchHistoricalSnapshotsResponse

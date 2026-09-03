@@ -1,3 +1,9 @@
+2026-09-03 Version: 2.9.0
+- Support API DescribeFeatureTrialInfo.
+- Support API GetTrialInfo.
+- Support API ListSnapshots.
+
+
 2026-08-25 Version: 2.8.3
 - Update API CreatePolicyV2: add request parameters Rules.$.DataSourceFilters.$.AccountScope.
 - Update API CreatePolicyV2: add request parameters Rules.$.DataSourceFilters.$.Accounts.
