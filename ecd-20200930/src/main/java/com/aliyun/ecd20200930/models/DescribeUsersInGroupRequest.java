@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUsersInGroupRequest extends TeaModel {
     /**
-     * <p>The connection status of the user.</p>
+     * <p>The connection state of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     public Integer connectState;
 
     /**
-     * <p>The shared cloud desktop ID.</p>
+     * <p>The ID of the shared cloud computer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,13 +33,13 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>A list of authorized user IDs.</p>
+     * <p>The list of authorized user IDs.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The string for a partial match query. Results that contain this string are returned.</p>
+     * <p>The fuzzy query string. All results that contain this character string are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -48,12 +48,10 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <ul>
-     * <li><p>Maximum value: 100.</p>
-     * </li>
-     * <li><p>Default value: 10.</p>
-     * </li>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +61,7 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to start the next query. An empty value indicates that all results have been returned.</p>
+     * <p>The pagination token for the next query. An empty value indicates that there is no next page.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -90,7 +88,7 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     public Boolean queryUserDetail;
 
     /**
-     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions where WUYING Workspace is available.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

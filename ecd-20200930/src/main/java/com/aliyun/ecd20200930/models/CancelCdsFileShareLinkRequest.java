@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelCdsFileShareLinkRequest extends TeaModel {
     /**
-     * <p>The enterprise drive ID.</p>
+     * <p>The ID of the enterprise network disk.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

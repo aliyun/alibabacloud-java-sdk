@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCloudDriveGroupsResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+     * <p>The operation result. The value <code>success</code> indicates success. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DeleteCloudDriveGroupsResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error message returned. This parameter is not returned if the value of Code is <code>success</code>.</p>
+     * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -41,7 +41,7 @@ public class DeleteCloudDriveGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true: The request is successful. false: The request fails.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

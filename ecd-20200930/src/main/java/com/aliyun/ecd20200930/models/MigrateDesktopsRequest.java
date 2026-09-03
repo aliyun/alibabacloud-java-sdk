@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class MigrateDesktopsRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud computers to migrate. You can specify 1 to 100 IDs.</p>
+     * <p>The IDs of cloud computers. You can specify 1 to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The region ID. To get a list of supported regions, call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,10 @@ public class MigrateDesktopsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <p>The member IP address of the target node for migration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.1.10</p>
      */
     @NameInMap("TargetMemberIp")
     public String targetMemberIp;
@@ -38,7 +41,12 @@ public class MigrateDesktopsRequest extends TeaModel {
     public String targetOfficeSiteId;
 
     /**
+     * <blockquote>
      * <p>This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1m3o4kbjxwe****</p>
      */
     @NameInMap("TargetSubnetId")
     public String targetSubnetId;

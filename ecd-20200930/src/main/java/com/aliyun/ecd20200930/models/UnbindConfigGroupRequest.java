@@ -5,27 +5,23 @@ import com.aliyun.tea.*;
 
 public class UnbindConfigGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+     * <p>The region ID. This operation is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resources from which you want to unbind the configuration group.</p>
+     * <p>The information about the resources to unbind.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceInfos")
     public java.util.List<UnbindConfigGroupRequestResourceInfos> resourceInfos;
 
     /**
-     * <p>The type of the configuration group.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>Timer: the scheduled task type.</li>
-     * </ul>
+     * <p>The type of the configuration group to unbind.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,11 +61,7 @@ public class UnbindConfigGroupRequest extends TeaModel {
 
     public static class UnbindConfigGroupRequestResourceInfos extends TeaModel {
         /**
-         * <p>The service type of the resource.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-         * </ul>
+         * <p>The product type to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>
@@ -78,7 +70,7 @@ public class UnbindConfigGroupRequest extends TeaModel {
         public String productType;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-ctwj0bk3l5nz****</p>
@@ -96,12 +88,7 @@ public class UnbindConfigGroupRequest extends TeaModel {
         public String resourceRegionId;
 
         /**
-         * <p>The type of the resource.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>RESOURCE_GROUP: the resource group.</li>
-         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-         * </ul>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>

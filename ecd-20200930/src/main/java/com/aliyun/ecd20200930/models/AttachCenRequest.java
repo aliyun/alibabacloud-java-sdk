@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachCenRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class AttachCenRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The Alibaba Cloud account to which the CEN instance belongs.</p>
+     * <p>The Alibaba Cloud account ID of the account to which the CEN instance belongs.</p>
      * <ul>
-     * <li>If you own the CEN instance, you can skip this parameter.</li>
-     * <li>If you do not own the CEN instance, you must specify the ID of the account that owns the CEN instance.</li>
+     * <li><p>If the specified CenId belongs to the current Alibaba Cloud account, you do not need to configure this parameter.</p>
+     * </li>
+     * <li><p>If the specified CenId belongs to a different Alibaba Cloud account, specify the Alibaba Cloud account ID of that account.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class AttachCenRequest extends TeaModel {
     public Long cenOwnerId;
 
     /**
-     * <p>The office network ID.</p>
+     * <p>The ID of the office network.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +40,7 @@ public class AttachCenRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +50,7 @@ public class AttachCenRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The verification code. If you do not own the CEN instance, you must call the <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> operation to obtain a verification code.</p>
+     * <p>The verification code. If the specified CenId belongs to a different Alibaba Cloud account, call <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> to obtain the verification code first.</p>
      * 
      * <strong>example:</strong>
      * <p>12****</p>

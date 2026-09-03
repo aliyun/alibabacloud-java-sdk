@@ -14,7 +14,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>The application control policy ID.</p>
+     * <p>The ID of the application control policy.</p>
      * 
      * <strong>example:</strong>
      * <p>bwr-245d4e0e6b7d42f5afa97eb3fbc7e488</p>
@@ -60,7 +60,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This field is not available for use.</p>
+     * <p>This field is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The parameters for creating a cloud desktop without a template. This parameter is invalid when the BundleId parameter is specified.</p>
+     * <p>The parameters for creating a cloud desktop without a template. This parameter is invalid when the BundleID parameter is specified.</p>
      */
     @NameInMap("DesktopAttachment")
     public String desktopAttachmentShrink;
@@ -96,8 +96,8 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     /**
      * <p>The cloud desktop name. The naming rules are as follows:</p>
      * <ul>
-     * <li>The name can be up to 64 characters in length.</li>
-     * <li>The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name cannot exceed 64 characters in length.</li>
+     * <li>The name must start with a letter (uppercase or lowercase) or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</li>
      * </ul>
      * 
@@ -108,7 +108,13 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public String desktopName;
 
     /**
-     * <p>Specifies whether to automatically append a suffix to the cloud desktop name when you create multiple cloud desktops in a batch.</p>
+     * <p>Controls the format of the desktop name.</p>
+     */
+    @NameInMap("DesktopNameModel")
+    public String desktopNameModelShrink;
+
+    /**
+     * <p>Specifies whether to automatically append a suffix to the cloud desktop name when creating multiple cloud desktops in a batch.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -117,7 +123,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public Boolean desktopNameSuffix;
 
     /**
-     * <p>The scheduled task details of the cloud desktop. This parameter is being deprecated. Use the TimerGroupId parameter instead.</p>
+     * <p>The details of the scheduled tasks for the cloud desktop. This parameter is being deprecated. Use the TimerGroupId parameter instead.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -164,13 +170,13 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The custom hostname of the cloud desktop. Settings for this parameter are supported only for cloud desktops that run the Windows operating system in an AD office network.</p>
+     * <p>The custom hostname settings of the cloud desktop. This parameter is supported only for cloud desktops whose operating system type is Windows in an AD office network.</p>
      * <p>The naming rules for the hostname are as follows:</p>
      * <ul>
      * <li>The hostname must be 2 to 15 characters in length.</li>
-     * <li>The hostname can contain uppercase letters, lowercase letters, digits, or hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or consist of only digits.</li>
+     * <li>The hostname can contain uppercase letters, lowercase letters, digits, or hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot consist of only digits.</li>
      * </ul>
-     * <p>When you create multiple cloud desktops, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to uniformly name the cloud desktops. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</p>
+     * <p>When creating multiple cloud desktops, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to name multiple cloud desktops uniformly. For example, if Hostname is set to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</p>
      * <ul>
      * <li><code>name_prefix</code>: the prefix of the hostname.</li>
      * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. <code>begin_number</code> is the starting number. Valid values: 0 to 999999. Default value: 0. <code>bits</code> is the number of digits. Valid values: 1 to 6. Default value: 6.</li>
@@ -184,7 +190,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public String hostname;
 
     /**
-     * <p>The purchase parameters for the monthly hourly package.</p>
+     * <p>The parameters for purchasing a monthly hours package.</p>
      */
     @NameInMap("MonthDesktopSetting")
     public CreateDesktopsShrinkRequestMonthDesktopSetting monthDesktopSetting;
@@ -199,7 +205,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The OU path. If specified, the cloud desktop is added to the corresponding organizational unit (OU) in Active Directory (AD).</p>
+     * <p>The organizational unit (OU) path. After this parameter is specified, the cloud desktop joins the corresponding OU in Active Directory (AD).</p>
      * 
      * <strong>example:</strong>
      * <p>test.com/wuyingtest/computers</p>
@@ -210,7 +216,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     /**
      * <p>The subscription duration of the resource. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
      * <ul>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of this parameter:</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:</p>
      * <ul>
      * <li>1</li>
      * <li>2</li>
@@ -218,7 +224,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
      * <li>6</li>
      * </ul>
      * </li>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values of this parameter:</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values:</p>
      * <ul>
      * <li>1</li>
      * <li>2</li>
@@ -236,7 +242,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration.</p>
+     * <p>The unit of the subscription duration for the billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -269,7 +275,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public String purchaseOptionsShrink;
 
     /**
-     * <p>The public network rate limiting rule ID.</p>
+     * <p>The ID of the public network bandwidth throttling rule.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-52fqmg6kvyro7zu4l</p>
@@ -278,7 +284,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public String qosRuleId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -288,7 +294,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID for resource ownership in reseller pattern. This parameter is not required in non-reseller pattern.</p>
+     * <p>The user ID of the resource ownership in reseller pattern. This parameter is not required in non-reseller pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>1828644634819902</p>
@@ -297,7 +303,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public Long resellerOwnerUid;
 
     /**
-     * <p>The WUYING resource group ID.</p>
+     * <p>The ID of the WUYING resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-3mtuc28rx95lx****</p>
@@ -307,7 +313,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This field is not available for use.</p>
+     * <p>This field is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -317,7 +323,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public String savingPlanId;
 
     /**
-     * <p>The WUYING automatic snapshot policy ID.</p>
+     * <p>The ID of the WUYING automatic snapshot policy.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-28mp6my0l6zow****</p>
@@ -325,6 +331,18 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     @NameInMap("SnapshotPolicyId")
     public String snapshotPolicyId;
 
+    /**
+     * <p>The purchase method of the cloud desktop. Valid values:</p>
+     * <ul>
+     * <li>prePaid: monthly subscription with unlimited duration.</li>
+     * <li>postPaid: pay-as-you-go.</li>
+     * <li>monthPackage: monthly hours package.</li>
+     * <li>jvsAgentPackage: JVS Agent duration package.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>monthPackage</p>
+     */
     @NameInMap("SubPayType")
     public String subPayType;
 
@@ -344,7 +362,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public java.util.List<CreateDesktopsShrinkRequestTag> tag;
 
     /**
-     * <p>The scheduled task group ID.</p>
+     * <p>The ID of the scheduled task group.</p>
      * 
      * <strong>example:</strong>
      * <p>ccg-0caoeogrk9m5****</p>
@@ -382,7 +400,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public String userName;
 
     /**
-     * <p>Specifies whether to enable cloud disk encryption.</p>
+     * <p>Specifies whether to enable disk encryption.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -391,7 +409,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public Boolean volumeEncryptionEnabled;
 
     /**
-     * <p>The ID of the Key Management Service (KMS) key used for cloud disk encryption. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
+     * <p>The ID of the Key Management Service (KMS) key used when disk encryption is enabled. Call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
@@ -501,6 +519,14 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     }
     public String getDesktopName() {
         return this.desktopName;
+    }
+
+    public CreateDesktopsShrinkRequest setDesktopNameModelShrink(String desktopNameModelShrink) {
+        this.desktopNameModelShrink = desktopNameModelShrink;
+        return this;
+    }
+    public String getDesktopNameModelShrink() {
+        return this.desktopNameModelShrink;
     }
 
     public CreateDesktopsShrinkRequest setDesktopNameSuffix(Boolean desktopNameSuffix) {
@@ -773,8 +799,8 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
         /**
          * <p>The cloud desktop name. The naming rules are as follows:</p>
          * <ul>
-         * <li>The name can be up to 64 characters in length.</li>
-         * <li>The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name cannot exceed 64 characters in length.</li>
+         * <li>The name must start with a letter (uppercase or lowercase) or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</li>
          * <li>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</li>
          * </ul>
          * 
@@ -791,13 +817,13 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The custom hostname of the cloud desktop. Settings for this parameter are supported only for cloud desktops that run the Windows operating system in an AD office network.</p>
+         * <p>The custom hostname settings of the cloud desktop. This parameter is supported only for cloud desktops whose operating system type is Windows in an AD office network.</p>
          * <p>The naming rules for the hostname are as follows:</p>
          * <ul>
          * <li>The hostname must be 2 to 15 characters in length.</li>
-         * <li>The hostname can contain uppercase letters, lowercase letters, digits, or hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or consist of only digits.</li>
+         * <li>The hostname can contain uppercase letters, lowercase letters, digits, or hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot consist of only digits.</li>
          * </ul>
-         * <p>When you create multiple cloud desktops, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to uniformly name the cloud desktops. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</p>
+         * <p>When creating multiple cloud desktops, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to name multiple cloud desktops uniformly. For example, if Hostname is set to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</p>
          * <ul>
          * <li><code>name_prefix</code>: the prefix of the hostname.</li>
          * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. <code>begin_number</code> is the starting number. Valid values: 0 to 999999. Default value: 0. <code>bits</code> is the number of digits. Valid values: 1 to 6. Default value: 6.</li>
@@ -811,7 +837,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
         public String hostname;
 
         /**
-         * <p>Specifies whether to enable cloud disk encryption.</p>
+         * <p>Specifies whether to enable disk encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -820,7 +846,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key used for cloud disk encryption. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
+         * <p>The ID of the Key Management Service (KMS) key used when disk encryption is enabled. Call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
@@ -904,7 +930,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
         /**
          * <p>The cron expression of the scheduled task.</p>
          * <blockquote>
-         * <p>Notice: Specify the time in UTC. For example, to schedule a task at 00:00 (UTC+8) every day, set the value to 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
+         * <p>Notice: The time must be specified in UTC. For example, to specify 00:00 (UTC+8) every day, use 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -914,7 +940,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Specifies whether to forcefully execute the task.</p>
+         * <p>Specifies whether to forcefully execute the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -923,7 +949,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>The time interval, in minutes.</p>
+         * <p>The time interval. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1024,7 +1050,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     public static class CreateDesktopsShrinkRequestMonthDesktopSetting extends TeaModel {
         /**
          * <blockquote>
-         * <p>This field is not available for use.</p>
+         * <p>This field is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1035,7 +1061,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This field is not available for use.</p>
+         * <p>This field is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1045,7 +1071,7 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The package option when purchasing a monthly hourly package. Valid values: 120, 250, and 360.</p>
+         * <p>The plan selected when purchasing a monthly hours package. Valid values: 120, 250, and 360.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>

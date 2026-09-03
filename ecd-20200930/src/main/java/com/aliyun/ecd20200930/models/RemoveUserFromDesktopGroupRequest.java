@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the shared cloud desktop from which you revoke the user’s permission.</p>
+     * <p>The ID of the shared cloud computer from which to remove authorized users.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -14,7 +14,7 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>A list of shared desktop group IDs.</p>
+     * <p>The list of shared cloud computer IDs.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
@@ -25,11 +25,17 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    /**
+     * <p>The organization ID of the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org-aliyun-wy-org-id</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
     /**
-     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions where WUYING Workspace is available.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,12 +44,30 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The convenience user group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ug-3f6c8a2b****</p>
+     */
     @NameInMap("SimpleUserGroupId")
     public String simpleUserGroupId;
 
+    /**
+     * <p>The user group name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>R&amp;D Group</p>
+     */
     @NameInMap("UserGroupName")
     public String userGroupName;
 
+    /**
+     * <p>The organizational unit (OU) path of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("UserOuPath")
     public String userOuPath;
 

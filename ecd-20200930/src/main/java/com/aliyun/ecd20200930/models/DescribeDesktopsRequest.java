@@ -4,6 +4,16 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopsRequest extends TeaModel {
+    /**
+     * <p>The business channel. Valid values:</p>
+     * <ul>
+     * <li>Enterprise: Enterprise Edition.</li>
+     * <li>Business: Business Edition.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enterprise</p>
+     */
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
@@ -17,7 +27,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The cloud computer pool ID. If <code>DesktopId</code> is specified, <code>DesktopGroupId</code> is ignored. If <code>DesktopId</code> is empty, the system retrieves the <code>DesktopId</code> of all cloud computers in the cloud computer pool specified by <code>DesktopGroupId</code>.</p>
+     * <p>The cloud computer pool ID. If <code>DesktopId</code> is specified, <code>DesktopGroupId</code> is ignored. If <code>DesktopId</code> is empty, the system retrieves the IDs of all cloud computers in the cloud computer pool specified by <code>DesktopGroupId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -53,7 +63,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String desktopStatus;
 
     /**
-     * <p>The list of cloud computer statuses.</p>
+     * <p>The cloud computer status list.</p>
      */
     @NameInMap("DesktopStatusList")
     public java.util.List<String> desktopStatusList;
@@ -98,7 +108,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public java.util.List<String> excludedEndUserId;
 
     /**
-     * <p>The expiration time of the subscription cloud computer.</p>
+     * <p>The expiration time of the subscription cloud computer. The time follows the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-31T15:59:59Z</p>
@@ -107,7 +117,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>Specifies whether to query enterprise resource group information.</p>
+     * <p>Specifies whether to query resource group information.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -148,6 +158,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
+    /**
+     * <p>Specifies whether to include automatic snapshot policy information in the response.</p>
+     */
     @NameInMap("IncludeAutoSnapshotPolicy")
     public Boolean includeAutoSnapshotPolicy;
 
@@ -174,7 +187,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether there are multiple resources.</p>
+     * <p>Specifies whether multiple resources exist.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -182,8 +195,11 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("MultiResource")
     public Boolean multiResource;
 
+    @NameInMap("NetworkInterfaceIp")
+    public String networkInterfaceIp;
+
     /**
-     * <p>The pagination token for the next query. If this parameter is empty, no more results exist.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -219,13 +235,13 @@ public class DescribeDesktopsRequest extends TeaModel {
     public Boolean onlyDesktopGroup;
 
     /**
-     * <p>The operating system type.</p>
+     * <p>The operating system types.</p>
      */
     @NameInMap("OsTypes")
     public java.util.List<String> osTypes;
 
     /**
-     * <p>The page number of the current page for a paged query.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -234,7 +250,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries per page for a paged query.</p>
+     * <p>The maximum number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -259,6 +275,9 @@ public class DescribeDesktopsRequest extends TeaModel {
      */
     @NameInMap("ProtocolType")
     public String protocolType;
+
+    @NameInMap("PublicIp")
+    public String publicIp;
 
     /**
      * <p>The Internet bandwidth throttling rule ID.</p>
@@ -289,7 +308,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The enterprise resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-4hsvzbbmqdzu3s****</p>
@@ -316,7 +335,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String subPayType;
 
     /**
-     * <p>The tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
+     * <p>The tags. A tag is a key-value pair that is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDesktopsRequestTag> tag;
@@ -503,6 +522,14 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.multiResource;
     }
 
+    public DescribeDesktopsRequest setNetworkInterfaceIp(String networkInterfaceIp) {
+        this.networkInterfaceIp = networkInterfaceIp;
+        return this;
+    }
+    public String getNetworkInterfaceIp() {
+        return this.networkInterfaceIp;
+    }
+
     public DescribeDesktopsRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -575,6 +602,14 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.protocolType;
     }
 
+    public DescribeDesktopsRequest setPublicIp(String publicIp) {
+        this.publicIp = publicIp;
+        return this;
+    }
+    public String getPublicIp() {
+        return this.publicIp;
+    }
+
     public DescribeDesktopsRequest setQosRuleId(String qosRuleId) {
         this.qosRuleId = qosRuleId;
         return this;
@@ -641,7 +676,7 @@ public class DescribeDesktopsRequest extends TeaModel {
 
     public static class DescribeDesktopsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The tag key cannot exceed 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, cannot contain <code>http://</code> or <code>https://</code>, and cannot consist of only spaces.</p>
+         * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, contain <code>http://</code> or <code>https://</code>, or consist of only spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -650,7 +685,7 @@ public class DescribeDesktopsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value cannot exceed 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

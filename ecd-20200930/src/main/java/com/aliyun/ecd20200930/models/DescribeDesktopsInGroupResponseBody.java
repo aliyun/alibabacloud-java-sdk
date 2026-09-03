@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     /**
-     * <p>The token to retrieve the next page of results. If this parameter is not returned, all results have been retrieved.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -23,7 +23,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     public Integer onlinePrePaidDesktopsCount;
 
     /**
-     * <p>A list of subscription cloud desktops.</p>
+     * <p>The list of subscription cloud desktops.</p>
      */
     @NameInMap("PaidDesktops")
     public java.util.List<DescribeDesktopsInGroupResponseBodyPaidDesktops> paidDesktops;
@@ -38,7 +38,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     public Integer paidDesktopsCount;
 
     /**
-     * <p>A list of pay-as-you-go cloud desktops.</p>
+     * <p>The list of pay-as-you-go cloud desktops.</p>
      */
     @NameInMap("PostPaidDesktops")
     public java.util.List<DescribeDesktopsInGroupResponseBodyPostPaidDesktops> postPaidDesktops;
@@ -53,7 +53,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     public Integer postPaidDesktopsCount;
 
     /**
-     * <p>The total billed amount for the pay-as-you-go cloud desktops.</p>
+     * <p>The total billing amount of pay-as-you-go cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -80,7 +80,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     public Integer runningPrePaidDesktopsCount;
 
     /**
-     * <p>Deprecated. This parameter is misspelled. Use <code>StoppedPrePaidDesktopsCount</code> instead.</p>
+     * <p>The number of stopped subscription cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -192,7 +192,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
     public static class DescribeDesktopsInGroupResponseBodyPaidDesktops extends TeaModel {
         /**
-         * <p>The connection status of the cloud desktop.</p>
+         * <p>The connection status.</p>
          * 
          * <strong>example:</strong>
          * <p>Connected</p>
@@ -201,7 +201,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ud-7ftf5b6yu77b0****</p>
@@ -210,7 +210,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The cloud desktop name.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
@@ -219,7 +219,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The status of the cloud desktop.</p>
+         * <p>The cloud desktop status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -237,7 +237,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The ID of the authorized end user.</p>
+         * <p>The authorized user.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -246,13 +246,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The IDs of end users connected to the cloud desktop. If no end user is connected, the array is empty.</p>
+         * <p>The list of currently connected user IDs. This value is empty if the desktop is not connected.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The name of the authorized end user.</p>
+         * <p>The authorized username.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -261,19 +261,22 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserName;
 
         /**
-         * <p>The usernames of end users connected to the cloud desktop. If no end user is connected, the array is empty.</p>
+         * <p>The list of current usernames. This value is empty if the desktop is not connected.</p>
          */
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
 
         /**
-         * <p>The expiration time of the subscription cloud desktop.</p>
+         * <p>The time when the cloud desktop expires. This value is returned only for cloud desktops that use the subscription billable methods. The time is in the ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-31T15:59Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
-         * <p>The image version.</p>
+         * <p>The image version information.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1.0-R-20220914.17****</p>
@@ -318,13 +321,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String managementFlag;
 
         /**
-         * <p>The management flags.</p>
+         * <p>The list of management flags.</p>
          */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
         /**
-         * <p>The IP address of the secondary elastic network interface of the instance.</p>
+         * <p>The IP address of the secondary ENI of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -333,7 +336,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String memberEniIp;
 
         /**
-         * <p>The type of the operating system.</p>
+         * <p>The operating system type.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -342,7 +345,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The IP address of the primary network interface of the instance.</p>
+         * <p>The IP address of the primary ENI of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -351,7 +354,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String primaryEniIp;
 
         /**
-         * <p>The session protocol.</p>
+         * <p>The protocol type.</p>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -360,7 +363,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The time when the cloud desktop was last reset.</p>
+         * <p>The reset time of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-03 08:48:08</p>
@@ -369,7 +372,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String resetTime;
 
         /**
-         * <p>The size of the system disk, in GiB.</p>
+         * <p>The system cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -562,7 +565,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
     public static class DescribeDesktopsInGroupResponseBodyPostPaidDesktops extends TeaModel {
         /**
-         * <p>The connection status of the cloud desktop.</p>
+         * <p>The connection status.</p>
          * 
          * <strong>example:</strong>
          * <p>Connected</p>
@@ -571,7 +574,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The retention period of the cloud desktop, in milliseconds.</p>
+         * <p>The retention duration. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>4153958447</p>
@@ -580,7 +583,8 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String createDuration;
 
         /**
-         * <p>The creation time of the cloud desktop.</p>
+         * <p>The creation time.</p>
+         * <p>The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-21T06:34:57Z</p>
@@ -589,7 +593,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ud-2i8qxpv6t1a07****</p>
@@ -598,7 +602,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The cloud desktop name.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
@@ -607,7 +611,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The status of the cloud desktop.</p>
+         * <p>The cloud desktop status.</p>
          * 
          * <strong>example:</strong>
          * <p>Stopped</p>
@@ -625,7 +629,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The ID of the authorized end user.</p>
+         * <p>The authorized user.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -634,13 +638,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The IDs of end users connected to the cloud desktop. If no end user is connected, the array is empty.</p>
+         * <p>The list of currently connected user IDs. This value is empty if the desktop is not connected.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The name of the authorized end user.</p>
+         * <p>The authorized username.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -649,13 +653,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserName;
 
         /**
-         * <p>The usernames of end users connected to the cloud desktop. If no end user is connected, the array is empty.</p>
+         * <p>The list of current usernames. This value is empty if the desktop is not connected.</p>
          */
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
 
         /**
-         * <p>The image version.</p>
+         * <p>The image version information.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1.0-R-20220914.17****</p>
@@ -700,13 +704,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String managementFlag;
 
         /**
-         * <p>The management flags.</p>
+         * <p>The collection of management flags.</p>
          */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
         /**
-         * <p>The IP address of the secondary elastic network interface of the instance.</p>
+         * <p>The IP address of the secondary ENI of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -715,7 +719,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String memberEniIp;
 
         /**
-         * <p>The type of the operating system.</p>
+         * <p>The operating system type.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -724,7 +728,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The IP address of the primary network interface of the instance.</p>
+         * <p>The IP address of the primary ENI of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -733,7 +737,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String primaryEniIp;
 
         /**
-         * <p>The session protocol.</p>
+         * <p>The protocol type.</p>
          * 
          * <strong>example:</strong>
          * <p>HDX</p>
@@ -742,7 +746,8 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The release time of the cloud desktop.</p>
+         * <p>The release time.
+         * The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-21T16:34:57Z</p>
@@ -751,7 +756,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>The time when the cloud desktop was last reset.</p>
+         * <p>The reset time of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-03 08:48:08</p>
@@ -760,7 +765,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String resetTime;
 
         /**
-         * <p>The size of the system disk, in GiB.</p>
+         * <p>The system cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>

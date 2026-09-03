@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyQosEntriesRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud phones to bind to the QoS rule.</p>
+     * <p>The list of cloud phone IDs to associate.</p>
      */
     @NameInMap("AuthAndroidId")
     public java.util.List<String> authAndroidId;
 
+    /**
+     * <p>The ID of the cloud desktop pool to authorize.</p>
+     */
     @NameInMap("AuthDesktopGroupId")
     public java.util.List<String> authDesktopGroupId;
 
     /**
-     * <p>The IDs of the cloud desktops to bind to the QoS rule.</p>
+     * <p>The list of cloud desktop IDs to associate.</p>
      */
     @NameInMap("AuthDesktopId")
     public java.util.List<String> authDesktopId;
 
     /**
-     * <p>The ID of the QoS rule.</p>
+     * <p>The ID of the public network rate limiting rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,16 +33,19 @@ public class ModifyQosEntriesRequest extends TeaModel {
     public String qosRuleId;
 
     /**
-     * <p>The IDs of the cloud phones to unbind from the QoS rule.</p>
+     * <p>The list of cloud phone IDs to disassociate.</p>
      */
     @NameInMap("RevokeAndroidId")
     public java.util.List<String> revokeAndroidId;
 
+    /**
+     * <p>The ID of the cloud desktop pool to revoke authorization from.</p>
+     */
     @NameInMap("RevokeDesktopGroupId")
     public java.util.List<String> revokeDesktopGroupId;
 
     /**
-     * <p>The IDs of the cloud desktops to unbind from the QoS rule.</p>
+     * <p>The list of cloud desktop IDs to disassociate.</p>
      */
     @NameInMap("RevokeDesktopId")
     public java.util.List<String> revokeDesktopId;

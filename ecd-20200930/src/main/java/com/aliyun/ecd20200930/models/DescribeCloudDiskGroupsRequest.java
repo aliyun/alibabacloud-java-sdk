@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDiskGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the enterprise cloud drive that you created.</p>
+     * <p>The ID of the enterprise cloud disk that is created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeCloudDiskGroupsRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The group ID.</p>
+     * <p>The configuration group ID.</p>
      */
     @NameInMap("GroupId")
     public java.util.List<String> groupId;
@@ -24,7 +24,7 @@ public class DescribeCloudDiskGroupsRequest extends TeaModel {
      * <p>The team space name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test team 1</p>
+     * <p>TestTeam1</p>
      */
     @NameInMap("GroupName")
     public String groupName;

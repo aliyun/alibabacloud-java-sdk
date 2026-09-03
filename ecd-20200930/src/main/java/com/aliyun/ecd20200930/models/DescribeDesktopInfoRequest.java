@@ -4,20 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopInfoRequest extends TeaModel {
+    /**
+     * <p>The business channel. Valid values:</p>
+     * <ul>
+     * <li>Enterprise: Enterprise Edition.</li>
+     * <li>Business: Business Edition.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enterprise</p>
+     */
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
     /**
-     * <p>Desktop ID. Set 1 to 100.</p>
+     * <p>The cloud computer ID. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <p>Specifies whether to return the extended information of the cloud computer.</p>
+     */
     @NameInMap("NeedExtraInfo")
     public Boolean needExtraInfo;
 
     /**
-     * <p>Region ID. Call <a href="t2167755.xdita#"></a>to get a list of regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class ConfigADConnectorUserRequest extends TeaModel {
     public String domainPassword;
 
     /**
-     * <p>The username of the AD user that has the permission to join computers to the domain. After the configuration is complete, cloud computers created in the corresponding AD office network are added to the specified OU.</p>
+     * <p>The username of the AD user that has the permission to join computers to the domain. The AD user specified here must have the permission to join computers to the domain. After the configuration is complete, cloud computers created in the corresponding AD office network are added to the specified OU.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

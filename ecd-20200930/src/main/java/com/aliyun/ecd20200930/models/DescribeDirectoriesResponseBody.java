@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDirectoriesResponseBody extends TeaModel {
     /**
-     * <p>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows. This parameter is returned only when the directory type is AD office network.</p>
+     * <p>The hostname of the domain controller. The hostname must comply with Windows hostname naming conventions. This parameter is returned only when the directory type is AD workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>cnshsv21hmc****</p>
@@ -14,13 +14,13 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     public String adHostname;
 
     /**
-     * <p>The directories.</p>
+     * <p>The list of directory information.</p>
      */
     @NameInMap("Directories")
     public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
 
     /**
-     * <p>The token that is used for the next query. If this parameter is empty, all results are returned.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -29,7 +29,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F369A091-002F-49C8-AD55-02A776297C7B</p>
@@ -76,7 +76,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     public static class DescribeDirectoriesResponseBodyDirectoriesADConnectors extends TeaModel {
         /**
-         * <p>The connection address.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>172.17.XX.XX</p>
@@ -85,14 +85,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String ADConnectorAddress;
 
         /**
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CONNECT_ERROR</li>
-         * <li>RUNNING</li>
-         * <li>CONNECTING: You must configure domain trust for your AD system.</li>
-         * <li>EXPIRED</li>
-         * <li>CREATING</li>
-         * </ul>
+         * <p>The connection status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -101,7 +94,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String connectorStatus;
 
         /**
-         * <p>The ID of the NIC to which the AD connector is mounted.</p>
+         * <p>The ID of the network interface controller (NIC) attached to the AD connector.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp1i4wx78lgosrj6****</p>
@@ -110,23 +103,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The AD connector type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>1: General</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>2: Advanced</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The AD connector specification.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -144,7 +121,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String trustKey;
 
         /**
-         * <p>The ID of the vSwitch with which the AD connector is associated.</p>
+         * <p>The ID of the vSwitch where the AD connector resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp19ocz3erfx15uon****</p>
@@ -209,30 +186,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     public static class DescribeDirectoriesResponseBodyDirectoriesLogs extends TeaModel {
         /**
-         * <p>The level of the log entry.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>ERROR</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>INFO</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>WARN</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The log level.</p>
          * 
          * <strong>example:</strong>
          * <p>INFO</p>
@@ -241,7 +195,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>Details of the log entry.</p>
+         * <p>The detailed log information.</p>
          * 
          * <strong>example:</strong>
          * <p>code:success | message:Create Connector complete.</p>
@@ -259,7 +213,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String step;
 
         /**
-         * <p>The time when the log entry was printed.</p>
+         * <p>The time when the log was printed. The time is in the ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-22T06:45Z</p>
@@ -308,7 +262,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     public static class DescribeDirectoriesResponseBodyDirectories extends TeaModel {
         /**
-         * <p>Details of the AD connector.</p>
+         * <p>The information about AD connectors.</p>
          */
         @NameInMap("ADConnectors")
         public java.util.List<DescribeDirectoriesResponseBodyDirectoriesADConnectors> ADConnectors;
@@ -341,7 +295,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String backupDns;
 
         /**
-         * <p>The time when the directory was created.</p>
+         * <p>The time when the directory was created. The time is in the ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-02T01:44Z</p>
@@ -350,7 +304,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The security group ID. This parameter is returned only when the directory type is AD office network.</p>
+         * <p>The security group ID. This parameter is returned only when the directory type is AD workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1ce64o4g9mdf5u****</p>
@@ -359,29 +313,11 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String customSecurityGroupId;
 
         /**
-         * <p>The method in which the cloud computer is connected.</p>
-         * <p>Valid values:</p>
+         * <p>The method allowed for connecting to cloud computers. Valid values:</p>
          * <ul>
-         * <li><p>VPC</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Internet</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Any</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>VPC: VPC connection.</li>
+         * <li>Internet: Internet connection.</li>
+         * <li>Any: Both Internet and VPC connections.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -391,7 +327,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String desktopAccessType;
 
         /**
-         * <p>The endpoint that is used to connect to cloud computers in the directory over a VPC.</p>
+         * <p>The endpoint used for connecting to cloud computers over a VPC.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com">http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com</a></p>
@@ -410,22 +346,6 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
         /**
          * <p>The directory type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>AD_CONNECTOR: AD directory</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>RAM: RAM directory</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RAM</p>
@@ -434,13 +354,13 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String directoryType;
 
         /**
-         * <p>The DNS address of the directory.</p>
+         * <p>The DNS addresses of the directory.</p>
          */
         @NameInMap("DnsAddress")
         public java.util.List<String> dnsAddress;
 
         /**
-         * <p>The username of a DNS user.</p>
+         * <p>The DNS username.</p>
          * 
          * <strong>example:</strong>
          * <p>testDnsUserName</p>
@@ -458,7 +378,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The password of the domain administrator. This parameter is returned only when the directory type is AD office network.</p>
+         * <p>The password of the domain administrator. This parameter is returned only when the directory type is AD workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>testPassword</p>
@@ -476,7 +396,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String domainUserName;
 
         /**
-         * <p>Indicates whether the local administrator permissions are granted to users that use cloud computers in the office network.</p>
+         * <p>Indicates whether local administrator permissions are granted to cloud computer users.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -485,7 +405,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public Boolean enableAdminAccess;
 
         /**
-         * <p>Indicates whether cloud computers can communicate with each other in the directory.</p>
+         * <p>Indicates whether the cross-cloud-computer access feature is enabled for the directory. After this feature is enabled, cloud computers within the same directory can access each other over the network.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -494,9 +414,9 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public Boolean enableCrossDesktopAccess;
 
         /**
-         * <p>Indicates whether access over the Internet is enabled.</p>
+         * <p>Indicates whether Internet access is enabled.    </p>
          * <blockquote>
-         * <p> This parameter is unavailable.</p>
+         * <p>This parameter is not yet available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -506,19 +426,19 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public Boolean enableInternetAccess;
 
         /**
-         * <p>The IDs of File Storage NAS (NAS) file systems.</p>
+         * <p>The NAS file system IDs.</p>
          */
         @NameInMap("FileSystemIds")
         public java.util.List<String> fileSystemIds;
 
         /**
-         * <p>The registration logs. This parameter is returned only when the directory type is AD office network.</p>
+         * <p>The list of registration log information. This parameter is returned only when the directory type is AD workspace.</p>
          */
         @NameInMap("Logs")
         public java.util.List<DescribeDirectoriesResponseBodyDirectoriesLogs> logs;
 
         /**
-         * <p>Indicates whether MFA is enabled.</p>
+         * <p>Indicates whether multi-factor authentication (MFA) is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -536,8 +456,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether two-step verification for logons is enabled. This parameter is returned only for directories of convenience account type.\
-         * If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.</p>
+         * <p>Indicates whether secondary authentication is required for logon. This parameter applies only to convenience directories. If secondary authentication is enabled, the system checks for security risks when a convenience user logs on to the client. If a risk is detected, the system sends a verification code to the email address associated with the account. The convenience user can log on to the client only after passing the verification.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -546,7 +465,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public Boolean needVerifyLoginRisk;
 
         /**
-         * <p>The organization unit that you selected when you added the cloud computer to the domain.</p>
+         * <p>The organizational unit (OU) selected when cloud computers join the domain.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com/Domain Controllers</p>
@@ -555,7 +474,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String ouName;
 
         /**
-         * <p>Indicates whether single sign-on (SSO) is enabled.</p>
+         * <p>Indicates whether SSO is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -565,22 +484,6 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
         /**
          * <p>The status of the AD directory.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>REGISTERING</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>REGISTERED</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>REGISTERING</p>
@@ -589,13 +492,13 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The DNS address of the enterprise AD subdomain.</p>
+         * <p>The DNS addresses of the AD subdomain.</p>
          */
         @NameInMap("SubDnsAddress")
         public java.util.List<String> subDnsAddress;
 
         /**
-         * <p>The fully qualified domain name (FQDN) of the existing AD subdomain. The value contains both the host name and the domain name.</p>
+         * <p>The fully qualified domain name (FQDN) of the existing AD subdomain, which includes both the hostname and the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>child.example.com</p>
@@ -604,7 +507,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String subDomainName;
 
         /**
-         * <p>The AD trust password. This parameter is returned only when the directory type is AD office network.</p>
+         * <p>The AD trust password. This parameter is returned only when the directory type is AD workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>82Tg****</p>
@@ -613,13 +516,13 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String trustPassword;
 
         /**
-         * <p>The IDs of the vSwitches specified when the directory was created.</p>
+         * <p>The vSwitch IDs specified when the directory was created.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the VPC to which the vSwitch belongs. This parameter is returned only when the directory type is AD office network.</p>
+         * <p>The ID of the VPC to which the vSwitch belongs. This parameter is returned only when the directory type is AD workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6tz5k67puge5jn8****</p>

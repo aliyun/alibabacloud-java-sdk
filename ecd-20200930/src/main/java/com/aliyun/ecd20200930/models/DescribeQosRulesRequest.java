@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQosRulesRequest extends TeaModel {
     /**
-     * <p>The network package ID.</p>
+     * <p>The premium Internet bandwidth ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class DescribeQosRulesRequest extends TeaModel {
     public String networkPackageId;
 
     /**
-     * <p>The QoS rule name.</p>
+     * <p>The name of the QoS rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Office network QoS rule</p>
      */
     @NameInMap("QosRuleName")
     public String qosRuleName;

@@ -4,15 +4,30 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyTemplateRequest extends TeaModel {
+    /**
+     * <p>Specifies whether automatic payment is enabled for the subscription order.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal for the subscription cloud computer.</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The billing method of the cloud computer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The system cloud disk performance level.</p>
+     */
     @NameInMap("DataDiskList")
     public java.util.List<ModifyTemplateRequestDataDiskList> dataDiskList;
 
@@ -28,7 +43,7 @@ public class ModifyTemplateRequest extends TeaModel {
     /**
      * <p>The description of the template. The description must meet the following requirements:</p>
      * <ul>
-     * <li>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</li>
      * </ul>
      * 
@@ -39,7 +54,7 @@ public class ModifyTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the cloud computer image. You can query the ID on the image management page. System images and custom images are supported.</p>
+     * <p>The ID of the cloud computer image. You can query the ID on the Image Management page. System images and custom images are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>m-gx2x1dhsmusr2****</p>
@@ -47,9 +62,38 @@ public class ModifyTemplateRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The subscription duration of the subscription cloud computer. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>. The unit is specified by <code>PeriodUnit</code>.</p>
+     * <ul>
+     * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:<ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>6</li>
+     * </ul>
+     * </li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values:<ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>4</li>
+     * <li>5</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The unit of the subscription duration for the subscription billing method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
@@ -62,13 +106,16 @@ public class ModifyTemplateRequest extends TeaModel {
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    /**
+     * <p>Specifies whether to automatically switch to pay-as-you-go billing after the duration plan is used up.</p>
+     */
     @NameInMap("PostPaidAfterUsedUp")
     public Boolean postPaidAfterUsedUp;
 
     /**
-     * <p>The region-specific template configurations. Multiple configurations are supported. The configuration that matches the specific region is used.</p>
+     * <p>The region-specific template configurations. You can specify multiple configurations. The configuration that matches the specific region is used.</p>
      * <blockquote>
-     * <p>A maximum of 20 region configurations are supported.</p>
+     * <p>You can specify configurations for up to 20 regions.</p>
      * </blockquote>
      */
     @NameInMap("RegionConfigList")
@@ -84,18 +131,21 @@ public class ModifyTemplateRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the cloud computer in key-value format. A maximum of 20 tags can be specified.</p>
+     * <p>The tags of the cloud computer in key-value format. You can specify up to 20 tags.</p>
      */
     @NameInMap("ResourceTagList")
     public java.util.List<ModifyTemplateRequestResourceTagList> resourceTagList;
 
+    /**
+     * <p>The site configuration management.</p>
+     */
     @NameInMap("SiteConfigList")
     public java.util.List<ModifyTemplateRequestSiteConfigList> siteConfigList;
 
     /**
      * <p>The type of the system cloud disk.</p>
      * <blockquote>
-     * <p>Only high-frequency and GPU-accelerated cloud computer specifications support ESSD cloud disks.</p>
+     * <p>Only high frequency and graphics cloud computer specifications support ESSD cloud disks.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,13 +179,13 @@ public class ModifyTemplateRequest extends TeaModel {
     /**
      * <p>The name of the template. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</li>
-     * <li>The name must start with a letter or a Chinese character. The name cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name must be 2 to 126 characters in length.</li>
+     * <li>The name must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>My cloud desktop template 001</p>
+     * <p>MyCloudComputerTemplate001</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -149,6 +199,12 @@ public class ModifyTemplateRequest extends TeaModel {
     @NameInMap("TimerGroupId")
     public String timerGroupId;
 
+    /**
+     * <p>The per-user usage duration plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("UserDuration")
     public Integer userDuration;
 
@@ -328,6 +384,9 @@ public class ModifyTemplateRequest extends TeaModel {
     public static class ModifyTemplateRequestDataDiskList extends TeaModel {
         /**
          * <p>The performance level of the data cloud disk. Default value: <code>AutoPL</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoPL</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -375,7 +434,7 @@ public class ModifyTemplateRequest extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -411,7 +470,7 @@ public class ModifyTemplateRequest extends TeaModel {
         public String subnetId;
 
         /**
-         * <p>Specifies whether to enable cloud disk encryption.</p>
+         * <p>Specifies whether to enable disk encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -420,7 +479,7 @@ public class ModifyTemplateRequest extends TeaModel {
         public Boolean volumeEncryptionEnable;
 
         /**
-         * <p>The ID of the KMS key used when cloud disk encryption is enabled.</p>
+         * <p>The ID of the KMS key used when disk encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>a7b3c0c8-b3a2-4876-b1cc-116dddc9****</p>
@@ -534,9 +593,21 @@ public class ModifyTemplateRequest extends TeaModel {
     }
 
     public static class ModifyTemplateRequestSiteConfigList extends TeaModel {
+        /**
+         * <p>The application control policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bwr-5a5371e0*******</p>
+         */
         @NameInMap("AppRuleId")
         public String appRuleId;
 
+        /**
+         * <p>The site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mainland</p>
+         */
         @NameInMap("SiteId")
         public String siteId;
 

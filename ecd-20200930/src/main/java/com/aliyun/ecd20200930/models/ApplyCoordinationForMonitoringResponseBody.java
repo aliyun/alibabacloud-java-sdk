@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
     /**
-     * <p>The list of coordination flow data.</p>
+     * <p>The list of collaboration flow data.</p>
      */
     @NameInMap("CoordinateFlowModels")
     public java.util.List<ApplyCoordinationForMonitoringResponseBodyCoordinateFlowModels> coordinateFlowModels;
@@ -42,7 +42,7 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
 
     public static class ApplyCoordinationForMonitoringResponseBodyCoordinateFlowModels extends TeaModel {
         /**
-         * <p>The coordination flow ID.</p>
+         * <p>The collaboration flow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>co-0sot77uale3****</p>
@@ -51,11 +51,11 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
         public String coId;
 
         /**
-         * <p>The current coordination status.
-         * [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.COORDINATING  ]coordinating
-         * [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.TERMINATING  ] terminating
-         * [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.TERMINATED ]terminated
-         * [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.PENDING ]pending acceptance</p>
+         * <p>The current collaboration status.
+         * [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.COORDINATING  ]Collaborating.
+         * [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.TERMINATING  ]Terminating.
+         * [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.TERMINATED ]Terminated.
+         * [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.PENDING ]Pending acceptance.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>

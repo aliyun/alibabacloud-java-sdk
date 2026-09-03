@@ -4,19 +4,37 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteAttributeRequest extends TeaModel {
+    /**
+     * <p>The Authority URL of the identity authentication service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a></p>
+     */
     @NameInMap("AuthorityHost")
     public String authorityHost;
 
+    /**
+     * <p>The client ID registered with the identity provider application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a2c8f7e4-1b3d-4c5e-9f0a-6d7b8c9e****</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>The client secret registered with the identity provider application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sct-9f3e2d1c****</p>
+     */
     @NameInMap("ClientSecret")
     public String clientSecret;
 
     /**
-     * <p>The method for connecting to cloud computers.</p>
+     * <p>The access method allowed when connecting to cloud computers.</p>
      * <blockquote>
-     * <p>VPC connections use Alibaba Cloud PrivateLink, a free service. If you set this parameter to VPC or Any, PrivateLink is automatically activated.</p>
+     * <p>The VPC connection method depends on the Alibaba Cloud PrivateLink service, which is free of charge. If this parameter is set to <code>VPC</code> or <code>Any</code>, the system automatically activates the PrivateLink service for you.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,11 +43,17 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
+    /**
+     * <p>The domain name of the enterprise AD.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>domain.local</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>Specifies whether to grant cloud computer users local administrative permissions.</p>
+     * <p>Specifies whether to grant local administrator permissions to cloud computer users.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -38,7 +62,7 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public Boolean enableAdminAccess;
 
     /**
-     * <p>Specifies whether to enable two-factor authentication. This parameter is applicable to only office sites that use convenience accounts. If enabled, the system performs a security check during logon. If the system detects a risk, it sends a verification code to the email address that is associated with the account. The user must enter the correct verification code to log on.</p>
+     * <p>This parameter applies only to convenience account-based office networks. Specifies whether secondary authentication is required during logon. If logon secondary authentication is enabled, the system checks whether the logon account has security risks when a convenience user logs on to the client. If a risk is detected, the system sends a verification code to the email address associated with the account. The convenience user can log on to the client only after passing the verification code check.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -47,7 +71,7 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public Boolean needVerifyLoginRisk;
 
     /**
-     * <p>Specifies whether to enable device verification. This feature is available only for office sites that use convenience accounts.</p>
+     * <p>This parameter applies only to convenience account-based office networks. Specifies whether to enable device verification. For AD-based office networks, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -56,7 +80,7 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public Boolean needVerifyZeroDevice;
 
     /**
-     * <p>The ID of the office site.</p>
+     * <p>The office network ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,17 +90,16 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The name of the office site. The name must be 2 to 255 characters long. The name must start with a letter or a Chinese character, and cannot start with http\:// or https\://. It can contain digits, colons (:), underscores (_), and hyphens (-).<br>
-     * This parameter is optional.<br></p>
+     * <p>The office network name. The name must be 2 to 255 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-).<br>Default value: empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>R&amp;D_Office_Network</p>
      */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions where Elastic Desktop Service is available.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,9 +108,18 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The tenant ID of the identity provider.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72f988bf-86f1-41af-91ab-2d7cd011****</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>The vSwitch ID. Only one vSwitch is supported.</p>
+     */
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;
 

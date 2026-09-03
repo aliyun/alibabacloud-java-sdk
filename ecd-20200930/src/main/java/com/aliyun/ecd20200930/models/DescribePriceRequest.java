@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
     /**
-     * <p>The number of resources. Default value: 1.</p>
+     * <p>The resource count. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,12 +14,10 @@ public class DescribePriceRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>The maximum public bandwidth. Unit: Mbit/s.</p>
+     * <p>The peak Internet bandwidth. Unit: Mbit/s.</p>
      * <ul>
-     * <li><p>Valid values if you set InternetChargeType to PayByBandwidth: 10 to 1000.</p>
-     * </li>
-     * <li><p>Valid values if you set InternetChargeType to InternetChargeType: 10 to 200.</p>
-     * </li>
+     * <li>For pay-by-bandwidth, valid values are 10 to 1000.</li>
+     * <li>For pay-by-traffic, valid values are 10 to 200.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The type of hourly plan if you use the Monthly Subscription billing method. If you set <code>ResourceType</code> to <code>DesktopMonthPackage</code>, you must specify this parameter.</p>
+     * <p>The duration package type for monthly cloud desktop purchases. If ResourceType is set to DesktopMonthPackage, this parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -38,9 +36,9 @@ public class DescribePriceRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The number of cloud computer shares. Default value: 1.</p>
+     * <p>The number of shared cloud desktops. Default value: 1.</p>
      * <blockquote>
-     * <p>This parameter takes effect only if you set <code>ResourceType</code> to <code>DesktopGroup</code>.</p>
+     * <p>This parameter takes effect only when ResourceType is set to DesktopGroup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,13 +48,13 @@ public class DescribePriceRequest extends TeaModel {
     public Integer groupDesktopCount;
 
     /**
-     * <p>The specifications of the resource.</p>
+     * <p>The resource specification.</p>
      * <ul>
-     * <li><p>This parameter is required if you set <code>ResourceType</code> to <code>Desktop</code>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query the available cloud computer types that correspond to the value of <code>DesktopTypeId</code>.</p>
+     * <li><p>If ResourceType is set to Desktop, this parameter is required. You can call <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query available values (corresponding to the DesktopTypeId value).</p>
      * </li>
-     * <li><p>If you set <code>ResourceType</code> to <code>DesktopGroup</code>, set the value of this parameter to <code>large</code>.</p>
+     * <li><p>If ResourceType is set to DesktopGroup, set this parameter to <code>large</code>.</p>
      * </li>
-     * <li><p>If you set <code>ResourceType</code> to <code>Bandwidth</code>, you can leave this parameter empty.</p>
+     * <li><p>If ResourceType is set to Bandwidth, you do not need to specify this parameter.</p>
      * </li>
      * </ul>
      * 
@@ -67,7 +65,7 @@ public class DescribePriceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The metering method for network traffic.</p>
+     * <p>The billing method of the Internet access package.</p>
      * 
      * <strong>example:</strong>
      * <p>PayByTraffic</p>
@@ -76,7 +74,7 @@ public class DescribePriceRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The OS type.</p>
+     * <p>The operating system type.</p>
      * 
      * <strong>example:</strong>
      * <p>Windows</p>
@@ -85,14 +83,11 @@ public class DescribePriceRequest extends TeaModel {
     public String osType;
 
     /**
-     * <p>The subscription duration. The valid values of this parameter vary based on the value of <code>PeriodUnit</code>.</p>
+     * <p>The subscription duration. Valid values are determined by the PeriodUnit parameter.</p>
      * <ul>
-     * <li><p>If you set <code>PeriodUnit</code> to <code>Hour</code>, set the value of this parameter to 1.</p>
-     * </li>
-     * <li><p>If you set <code>PeriodUnit</code> to <code>Month</code>, set the value of this parameter to 1, 2, 3, or 6.</p>
-     * </li>
-     * <li><p>If you set <code>PeriodUnit</code> to <code>Year</code>, set the value of this parameter to 1, 2, or 3.</p>
-     * </li>
+     * <li>If PeriodUnit is set to Hour, the valid value is 1.</li>
+     * <li>If PeriodUnit is set to Month, valid values are 1, 2, 3, and 6.</li>
+     * <li>If PeriodUnit is set to Year, valid values are 1, 2, and 3.</li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -121,7 +116,7 @@ public class DescribePriceRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the regions supported by EDS.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,7 +126,7 @@ public class DescribePriceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>User ID of the resource owner in resale mode. This parameter is not required in non-resale mode.</p>
+     * <p>The user ID for resource ownership in reseller mode. You do not need to specify this parameter in non-reseller mode.</p>
      * 
      * <strong>example:</strong>
      * <p>1422724566551XXX</p>
@@ -140,7 +135,7 @@ public class DescribePriceRequest extends TeaModel {
     public Long resellerOwnerUid;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>Desktop</p>
@@ -149,7 +144,7 @@ public class DescribePriceRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The category of the system disk.</p>
+     * <p>The system cloud disk type.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -158,7 +153,7 @@ public class DescribePriceRequest extends TeaModel {
     public String rootDiskCategory;
 
     /**
-     * <p>Performance level of the system disk. You can configure the disk performance level when the cloud desktop instance type is graphics-optimized or high clock speed. For differences among performance levels of disks, see <a href="t583241.xdita#"></a>.</p>
+     * <p>The performance level (PL) of the system cloud disk. You can set the disk performance level when the cloud desktop specification is set to Graphics or High Frequency. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>PL0</p>
@@ -167,7 +162,7 @@ public class DescribePriceRequest extends TeaModel {
     public String rootDiskPerformanceLevel;
 
     /**
-     * <p>The size of the system disk. Unit: GiB. If you set <code>ResourceType</code> to <code>Desktop</code>, you must specify this parameter.</p>
+     * <p>The system cloud disk size. Unit: GiB. If ResourceType is set to Desktop, this parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -176,7 +171,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer rootDiskSizeGib;
 
     /**
-     * <p>The category of the data disk.</p>
+     * <p>The data cloud disk type.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -185,7 +180,7 @@ public class DescribePriceRequest extends TeaModel {
     public String userDiskCategory;
 
     /**
-     * <p>Performance level of the data disk. You can specify the disk performance level when the WUYING Workspace instance type is set to graphics-optimized or high clock speed. For differences between performance levels of disks, see <a href="t583241.xdita#"></a>.</p>
+     * <p>The performance level (PL) of the data cloud disk. You can set the disk performance level when the cloud desktop specification is set to Graphics or High Frequency. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>PL0</p>
@@ -194,7 +189,7 @@ public class DescribePriceRequest extends TeaModel {
     public String userDiskPerformanceLevel;
 
     /**
-     * <p>The size of the data disk. Unit: GiB.</p>
+     * <p>The data cloud disk size. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

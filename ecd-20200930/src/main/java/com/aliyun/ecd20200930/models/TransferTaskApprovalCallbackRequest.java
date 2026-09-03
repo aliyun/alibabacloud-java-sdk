@@ -32,7 +32,7 @@ public class TransferTaskApprovalCallbackRequest extends TeaModel {
     public String result;
 
     /**
-     * <p>The ID of the transfer task.</p>
+     * <p>The ID of the file transfer task.</p>
      * 
      * <strong>example:</strong>
      * <p>trt-msndfksm18fs****</p>

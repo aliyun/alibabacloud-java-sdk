@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudDriveUsersRequest extends TeaModel {
     /**
-     * <p>Enterprise cloud drive ID.</p>
+     * <p>The enterprise network drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,14 @@ public class CreateCloudDriveUsersRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>List of end user IDs.</p>
+     * <p>The list of end user IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The ID of the region. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain a list of regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class CreateCloudDriveUsersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Maximum storage size for a user\&quot;s personal cloud drive. This value must not exceed the remaining available capacity in the enterprise cloud drive. Unit: byte.</p>
+     * <p>The maximum storage capacity of the user\&quot;s personal drive. This value cannot exceed the remaining allocatable capacity of the enterprise network drive. Unit: bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

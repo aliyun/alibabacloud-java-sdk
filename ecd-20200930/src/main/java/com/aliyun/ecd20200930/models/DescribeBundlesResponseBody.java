@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeBundlesResponseBody extends TeaModel {
     /**
-     * <p>The cloud computer templates.</p>
+     * <p>The list of cloud computer templates.</p>
      */
     @NameInMap("Bundles")
     public java.util.List<DescribeBundlesResponseBodyBundles> bundles;
 
     /**
-     * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
+     * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lu3PTF6h3zE8egwlYuv8M8</p>
@@ -20,7 +20,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BCC854D8-5D1E-46D3-96EF-797A5DD36789</p>
@@ -135,7 +135,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
     public static class DescribeBundlesResponseBodyBundlesDisks extends TeaModel {
         /**
-         * <p>The PL of the disk.</p>
+         * <p>The disk performance level.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -144,7 +144,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String diskPerformanceLevel;
 
         /**
-         * <p>The size of the disk. Unit: GiB.</p>
+         * <p>The disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>150</p>
@@ -153,7 +153,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public Integer diskSize;
 
         /**
-         * <p>The type of the disk.</p>
+         * <p>The disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -194,7 +194,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
     public static class DescribeBundlesResponseBodyBundles extends TeaModel {
         /**
-         * <p>The ID of the cloud computer template.</p>
+         * <p>The cloud computer template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
@@ -212,7 +212,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String bundleName;
 
         /**
-         * <p>The type of the cloud computer template.</p>
+         * <p>The cloud computer templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -221,7 +221,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String bundleType;
 
         /**
-         * <p>The time when the cloud computer template was created.</p>
+         * <p>The time when the cloud computer template was created. The time is in the ISO 8601 standard in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-30T06:09Z</p>
@@ -230,7 +230,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The category of the data disk.</p>
+         * <p>The data cloud disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
@@ -242,13 +242,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
          * <p>The description of the cloud computer template.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Template for daily office use</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The instance type of the cloud computer.</p>
+         * <p>The cloud computer specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd.graphics.2xlarge</p>
@@ -257,13 +257,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String desktopType;
 
         /**
-         * <p>The details of the cloud computer instance type.</p>
+         * <p>The details of the cloud computer specifications.</p>
          */
         @NameInMap("DesktopTypeAttribute")
         public DescribeBundlesResponseBodyBundlesDesktopTypeAttribute desktopTypeAttribute;
 
         /**
-         * <p>The instance family of the cloud computer.</p>
+         * <p>The cloud computer instance family.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.general</p>
@@ -272,7 +272,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String desktopTypeFamily;
 
         /**
-         * <p>Details of the disks.</p>
+         * <p>The disk information.</p>
          */
         @NameInMap("Disks")
         public java.util.List<DescribeBundlesResponseBodyBundlesDisks> disks;
@@ -296,7 +296,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The status of the image.</p>
+         * <p>The image status.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -305,7 +305,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String imageStatus;
 
         /**
-         * <p>The OS language of the image.</p>
+         * <p>The language of the image operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>en-US</p>
@@ -314,7 +314,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The type of the OS.</p>
+         * <p>The operating system type.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -323,7 +323,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The OS.</p>
+         * <p>The operating system platform information.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows Server 2019</p>
@@ -350,7 +350,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String sessionType;
 
         /**
-         * <p>The inventory status of the cloud computer instance type. This parameter is returned only if you set the <code>CheckStock</code> parameter to <code>true</code>.</p>
+         * <p>The stock status. This parameter is returned when <code>CheckStock</code> is set to <code>True</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Sufficient</p>
@@ -359,7 +359,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String stockState;
 
         /**
-         * <p>The category of the system disk.</p>
+         * <p>The system cloud disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
@@ -368,7 +368,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>Indicates whether disk encryption is enabled.</p>
+         * <p>Specifies whether to enable disk encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -377,7 +377,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.</p>
+         * <p>The ID of the KMS key used when disk encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>

@@ -4,6 +4,16 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenterPolicyListRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the academic proxy feature. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("AcademicProxy")
     public String academicProxy;
 
@@ -17,11 +27,21 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     @NameInMap("BusinessType")
     public Integer businessType;
 
+    /**
+     * <p>Specifies whether to enable the model library feature. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("ModelLibrary")
     public String modelLibrary;
 
     /**
-     * <p>The page number of the current page in a paging query.<br>Default value: 1.</p>
+     * <p>The page number of the current page in a paged query. This parameter implements paging.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +50,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries per page in a paging query.</p>
+     * <p>The maximum number of rows per page in a paged query. This parameter implements paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -39,11 +59,21 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of cloud desktop policy IDs.</p>
+     * <p>The list of Cloud Desktop policy IDs.</p>
      */
     @NameInMap("PolicyGroupId")
     public java.util.List<String> policyGroupId;
 
+    /**
+     * <p>Specifies whether to enable the port proxy feature. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("PortProxy")
     public String portProxy;
 
@@ -58,7 +88,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The effective scope of the cloud desktop policy.</p>
+     * <p>The effective scope of the Cloud Desktop policy.</p>
      * 
      * <strong>example:</strong>
      * <p>GLOBAL</p>

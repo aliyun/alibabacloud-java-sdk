@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateADConnectorDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The details of AD connectors.</p>
+     * <p>The information about AD Connectors.</p>
      */
     @NameInMap("AdConnectors")
     public java.util.List<CreateADConnectorDirectoryResponseBodyAdConnectors> adConnectors;
@@ -20,7 +20,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3FE99D5E-93A1-493F-B1CB-0ABD4D05BEFF</p>
@@ -76,7 +76,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
 
     public static class CreateADConnectorDirectoryResponseBodyAdConnectors extends TeaModel {
         /**
-         * <p>The connection address.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.XX.XX</p>

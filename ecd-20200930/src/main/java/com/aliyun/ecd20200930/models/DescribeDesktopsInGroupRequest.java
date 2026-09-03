@@ -4,14 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopsInGroupRequest extends TeaModel {
+    /**
+     * <p>The end time of the custom time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18</p>
+     */
     @NameInMap("CustomEndTimePeriod")
     public Long customEndTimePeriod;
 
+    /**
+     * <p>The start time of the custom time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("CustomStartTimePeriod")
     public Long customStartTimePeriod;
 
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the shared cloud desktop.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +33,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>Specifies whether to return deleted desktops.</p>
+     * <p>Specifies whether to ignore the deletion flag.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -30,13 +42,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public Boolean ignoreDeleted;
 
     /**
-     * <p>The maximum number of entries to return on a single page.</p>
-     * <ul>
-     * <li><p>Maximum value: 100.</p>
-     * </li>
-     * <li><p>Default value: 10.</p>
-     * </li>
-     * </ul>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +51,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query. If this parameter is empty, all results are returned.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -63,7 +69,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

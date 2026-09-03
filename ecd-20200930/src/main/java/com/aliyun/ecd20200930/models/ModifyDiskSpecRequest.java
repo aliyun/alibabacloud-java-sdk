@@ -7,8 +7,8 @@ public class ModifyDiskSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment.</p>
      * <ul>
-     * <li>If you set this parameter to <code>true</code>, ensure that your account balance is sufficient. Otherwise, abnormal orders are generated.</li>
-     * <li>If you set this parameter to <code>false</code>, log on to the console and go to the <strong>Expenses and Costs</strong> page to complete the payment based on the returned order ID.</li>
+     * <li>If you set this parameter to <code>true</code>, make sure that your account balance is sufficient. Otherwise, abnormal orders are generated.</li>
+     * <li>If you set this parameter to <code>false</code>, you can log on to the console and make the payment on the <strong>Expenses and Costs</strong> page based on the returned order ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The promotion ID. You can call the pricing API to obtain the list of matched promotion IDs.</p>
+     * <p>The promotion ID. You can obtain the list of matched promotion IDs by calling the pricing query operation.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -37,7 +37,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,11 +46,17 @@ public class ModifyDiskSpecRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID of the resource ownership in reseller mode. You do not need to specify this parameter if you are not in reseller mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 
     /**
-     * <p>The performance level of the system cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</p>
+     * <p>The performance level (PL) of the system cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -59,7 +65,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String rootDiskPerformanceLevel;
 
     /**
-     * <p>The performance level of the data cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</p>
+     * <p>The performance level (PL) of the data cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>

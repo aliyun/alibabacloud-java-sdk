@@ -11,8 +11,7 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
     public java.util.List<ListVirtualBridgesResponseBodyBridges> bridges;
 
     /**
-     * <p>The maximum number of entries returned. Valid values: 1 to 100. If this parameter is not specified, the default value 100 is used.
-     * The number of returned entries can be less than the specified value but cannot exceed it.</p>
+     * <p>The maximum number of entries returned. Valid values: 1 to 100. If this parameter is not specified, the default value 100 is used. The number of returned entries can be less than but cannot be greater than the specified number.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -122,7 +121,7 @@ public class ListVirtualBridgesResponseBody extends TeaModel {
         public String bridgeType;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-07T02:02:00Z</p>

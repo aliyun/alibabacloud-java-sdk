@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDirectoryUsersResponseBody extends TeaModel {
     /**
-     * <p>The token that is used to start the next query. If this parameter is empty, all results have been returned.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -23,7 +23,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the users in the AD directory. If the AD directory contains only the Administrator and Guest users, an empty \<code>Users\\</code> array is returned.</p>
+     * <p>The array of usernames in the AD directory. If the AD directory contains only the Administrator and Guest users and no other users, an empty Users array is returned.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListDirectoryUsersResponseBodyUsers> users;
@@ -59,7 +59,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
 
     public static class ListDirectoryUsersResponseBodyUsers extends TeaModel {
         /**
-         * <p>The number of assigned cloud desktops.</p>
+         * <p>The number of assigned cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -76,6 +76,12 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The new display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("DisplayNameNew")
         public String displayNameNew;
 
@@ -98,7 +104,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         public String endUser;
 
         /**
-         * <p>The mobile phone number.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>130********</p>
@@ -106,6 +112,12 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The user principal name (UPN).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
+         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 

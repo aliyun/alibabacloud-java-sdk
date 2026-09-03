@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageModifiedRecordsRequest extends TeaModel {
     /**
-     * <p>The cloud desktop ID.</p>
+     * <p>The cloud computer ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,10 @@ public class DescribeImageModifiedRecordsRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>Number of entries per page for paged queries.</p>
+     * <p>The number of entries per page for a paged query.    </p>
      * <ul>
-     * <li><p>Maximum: 100.</p>
-     * </li>
-     * <li><p>Default: 10.</p>
-     * </li>
+     * <li>Maximum value: 100.    </li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +28,7 @@ public class DescribeImageModifiedRecordsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Pagination token. Set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l3d+SWeOobbIlDLjwhjkTk</p>
@@ -39,7 +37,7 @@ public class DescribeImageModifiedRecordsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to list regions that support WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

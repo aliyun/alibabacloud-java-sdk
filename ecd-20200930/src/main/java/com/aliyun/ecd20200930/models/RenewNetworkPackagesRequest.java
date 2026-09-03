@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewNetworkPackagesRequest extends TeaModel {
     /**
-     * <p>Whether to enable automatic payment.</p>
+     * <p>Specifies whether to enable automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -13,25 +13,25 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal for subscription shared cloud desktops.</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
-     * <p>A list of premium public bandwidth IDs. You can specify 1 to 100 IDs.</p>
+     * <p>The IDs of premium Internet bandwidth plans. You can specify 1 to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkPackageId")
     public java.util.List<String> networkPackageId;
 
     /**
-     * <p>The renewal duration. Valid values depend on the value of <code>PeriodUnit</code>.</p>
+     * <p>The renewal duration. Valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
      * <ul>
-     * <li><p>If <code>PeriodUnit</code> is <code>Week</code>, valid values are: 1.</p>
-     * </li>
-     * <li><p>If <code>PeriodUnit</code> is <code>Month</code>, valid values are: 1, 2, 3, or 6.</p>
-     * </li>
-     * <li><p>If <code>PeriodUnit</code> is <code>Year</code>, valid values are: 1, 2, or 3.</p>
-     * </li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Week</code>, the valid value is 1.</li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, and 3.</li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -42,7 +42,7 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit for the renewal duration.</p>
+     * <p>The unit of the renewal duration.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -60,7 +60,7 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to list regions that support WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,6 +69,12 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID for resource ownership in the reseller pattern. You do not need to specify this parameter if you are not using the reseller pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 

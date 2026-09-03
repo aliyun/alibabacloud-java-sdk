@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyCoordinationForMonitoringRequest extends TeaModel {
     /**
-     * <p>The access policy during the remote assistance procedure.</p>
+     * <p>The access policy for the remote assistance procedure.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
     public String coordinatePolicyType;
 
     /**
-     * <p>The ID of the end user who initiates the coordination flow. This parameter is not required if the request is initiated by an administrator.</p>
+     * <p>The ID of the end user who initiates the streaming collaboration. This parameter is not required if the administrator initiates the request.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -126,7 +126,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
         /**
          * <p>The username of the current user of the cloud computer.</p>
          * <blockquote>
-         * <p>This field is required.</p>
+         * <p>This parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The properties of the cloud computer.</p>
+         * <p>The cloud computer properties.</p>
          * 
          * <strong>example:</strong>
          * <p>TestProperty</p>

@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateQosRuleRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud phones to include in this rule.</p>
+     * <p>The list of cloud phones to associate.</p>
      */
     @NameInMap("AuthAndroidId")
     public java.util.List<String> authAndroidId;
 
+    /**
+     * <p>The ID of the cloud computer pool for which the authorization takes effect.</p>
+     */
     @NameInMap("AuthDesktopGroupId")
     public java.util.List<String> authDesktopGroupId;
 
     /**
-     * <p>The IDs of the cloud desktops to include in this rule.</p>
+     * <p>The list of cloud computer IDs to associate.</p>
      */
     @NameInMap("AuthDesktopId")
     public java.util.List<String> authDesktopId;
 
     /**
-     * <p>The maximum downstream bandwidth. Unit: Mbps.</p>
+     * <p>The peak downstream bandwidth. Unit: Mbit/s.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +33,7 @@ public class CreateQosRuleRequest extends TeaModel {
     public Integer download;
 
     /**
-     * <p>The ID of the premium bandwidth plan.</p>
+     * <p>The premium bandwidth ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,17 +43,17 @@ public class CreateQosRuleRequest extends TeaModel {
     public String networkPackageId;
 
     /**
-     * <p>The name of the QoS rule.</p>
+     * <p>The name of the rate limiting rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test</p>
+     * <p>Office network rate limiting rule</p>
      */
     @NameInMap("QosRuleName")
     public String qosRuleName;
 
     /**
-     * <p>The maximum upstream bandwidth. Unit: Mbps.</p>
+     * <p>The peak upstream bandwidth. Unit: Mbit/s.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

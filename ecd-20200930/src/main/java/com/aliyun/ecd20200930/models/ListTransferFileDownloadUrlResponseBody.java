@@ -14,7 +14,7 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of download URL information for the files.</p>
+     * <p>The list of file download URL information.</p>
      */
     @NameInMap("Urls")
     public java.util.List<ListTransferFileDownloadUrlResponseBodyUrls> urls;
@@ -51,7 +51,7 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>document.txt</p>
@@ -60,7 +60,7 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The status of the file.</p>
+         * <p>The file status.</p>
          * 
          * <strong>example:</strong>
          * <p>DELETED</p>
@@ -69,7 +69,7 @@ public class ListTransferFileDownloadUrlResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The download URL of the file.</p>
+         * <p>The file download URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxsy-transfer.oss-cn-beijing.aliyuncs.com/xxxx">http://xxsy-transfer.oss-cn-beijing.aliyuncs.com/xxxx</a></p>

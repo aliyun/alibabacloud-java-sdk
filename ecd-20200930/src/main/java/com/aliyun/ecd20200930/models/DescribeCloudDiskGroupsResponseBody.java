@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
     /**
-     * <p>A list of cloud drive team spaces.</p>
+     * <p>The list of cloud disk team spaces.</p>
      */
     @NameInMap("CloudDriveGroups")
     public java.util.List<DescribeCloudDiskGroupsResponseBodyCloudDriveGroups> cloudDriveGroups;
 
     /**
-     * <p>The total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The token used to start the next query. If NextToken is empty, no more results are available.</p>
+     * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -38,7 +38,7 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. Valid values: true: The operation is successful. false: The operation failed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
 
     public static class DescribeCloudDiskGroupsResponseBodyCloudDriveGroups extends TeaModel {
         /**
-         * <p>The time when the resource was created.</p>
+         * <p>The creation time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-11T07:44:21Z</p>
@@ -132,7 +132,7 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
          * <p>The team space name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test team 1</p>
+         * <p>TestTeam1</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -156,7 +156,7 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The total capacity of the cloud drive team space, in bytes.</p>
+         * <p>The total capacity of the cloud disk team.</p>
          * 
          * <strong>example:</strong>
          * <p>5368709120</p>
@@ -165,7 +165,7 @@ public class DescribeCloudDiskGroupsResponseBody extends TeaModel {
         public Long totalSize;
 
         /**
-         * <p>The amount of space used, in bytes.</p>
+         * <p>The used space size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024000000</p>

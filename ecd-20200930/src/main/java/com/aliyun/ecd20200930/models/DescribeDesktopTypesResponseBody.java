@@ -51,7 +51,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String cpuCount;
 
         /**
-         * <p>The size of the data disk, in GiB.</p>
+         * <p>The data cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>150</p>
@@ -59,6 +59,12 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
+        /**
+         * <p>The description of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newDescription</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -72,7 +78,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String desktopTypeId;
 
         /**
-         * <p>The availability of the specification. A value of <code>SUFFICIENT</code> indicates that the specification is in stock.</p>
+         * <p>The specification status. A value of <code>SUFFICIENT</code> indicates that the specification resources are sufficient.</p>
          * 
          * <strong>example:</strong>
          * <p>SUFFICIENT</p>
@@ -80,9 +86,21 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @NameInMap("DesktopTypeStatus")
         public String desktopTypeStatus;
 
+        /**
+         * <p>The environment ID. This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adifa****</p>
+         */
         @NameInMap("EnvId")
         public String envId;
 
+        /**
+         * <p>The environment type. This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
@@ -96,7 +114,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public Float gpuCount;
 
         /**
-         * <p>The GPU memory size in MiB. This parameter is valid only for GPU-accelerated cloud desktops.</p>
+         * <p>The GPU memory size. This parameter is meaningful only for GPU-accelerated cloud computers. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -105,7 +123,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public Integer gpuMemory;
 
         /**
-         * <p>The GPU memory size.</p>
+         * <p>The GPU memory.</p>
          * 
          * <strong>example:</strong>
          * <p>16 GiB</p>
@@ -114,7 +132,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The instance type family.</p>
+         * <p>The instance family.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd.graphics</p>
@@ -123,7 +141,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String instanceTypeFamily;
 
         /**
-         * <p>The maximum number of concurrent sessions that is supported by the cloud desktop specification.</p>
+         * <p>The number of multi-sessions supported by the current specification.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -132,7 +150,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public Integer maxSessionCount;
 
         /**
-         * <p>The memory size, in MiB.</p>
+         * <p>The memory size. Unit: MiB.</p>
          * 
          * <strong>example:</strong>
          * <p>23552</p>
@@ -141,13 +159,19 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String memorySize;
 
         /**
-         * <p>The purchase options for the specification.</p>
+         * <p>The supported desktop type sale categories.</p>
+         */
+        @NameInMap("SaleTypes")
+        public java.util.List<String> saleTypes;
+
+        /**
+         * <p>The list of billing methods for the specification.</p>
          */
         @NameInMap("Scopes")
         public java.util.List<String> scopes;
 
         /**
-         * <p>The inventory status.</p>
+         * <p>The stock status.</p>
          * 
          * <strong>example:</strong>
          * <p>Sufficient</p>
@@ -156,7 +180,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public String stockState;
 
         /**
-         * <p>The size of the system disk, in GiB.</p>
+         * <p>The system cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>150</p>
@@ -271,6 +295,14 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
         public String getMemorySize() {
             return this.memorySize;
+        }
+
+        public DescribeDesktopTypesResponseBodyDesktopTypes setSaleTypes(java.util.List<String> saleTypes) {
+            this.saleTypes = saleTypes;
+            return this;
+        }
+        public java.util.List<String> getSaleTypes() {
+            return this.saleTypes;
         }
 
         public DescribeDesktopTypesResponseBodyDesktopTypes setScopes(java.util.List<String> scopes) {

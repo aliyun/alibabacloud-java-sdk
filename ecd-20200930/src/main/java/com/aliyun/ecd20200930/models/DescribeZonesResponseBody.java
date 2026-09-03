@@ -14,7 +14,7 @@ public class DescribeZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the zones.</p>
+     * <p>The collection of zone information.</p>
      */
     @NameInMap("Zones")
     public java.util.List<DescribeZonesResponseBodyZones> zones;

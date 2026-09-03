@@ -17,7 +17,7 @@ public class CreateConfigGroupResponseBody extends TeaModel {
      * <p>The creation result.</p>
      * 
      * <strong>example:</strong>
-     * <p>None.</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;

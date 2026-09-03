@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAclEntriesRequest extends TeaModel {
     /**
-     * <p>The Internet access control policy.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>allow: allows access to the Internet.</p>
-     * </li>
-     * <li><p>disable: forbids access to the Internet.</p>
-     * </li>
-     * </ul>
+     * <p>The public network access control policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +15,7 @@ public class ModifyAclEntriesRequest extends TeaModel {
     public String policy;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,21 +25,14 @@ public class ModifyAclEntriesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instance IDs (office network IDs or cloud computer IDs) to which the Internet access control policy is applicable.</p>
+     * <p>The list of instance IDs for public network access control, which are office network IDs or cloud computer IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceId")
     public java.util.List<String> sourceId;
 
     /**
-     * <p>The granularity to which the Internet access control policy is applicable.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>desktop: cloud computer granularity.</p>
-     * </li>
-     * <li><p>vpc: office network granularity.</p>
-     * </li>
-     * </ul>
+     * <p>The granularity of the public network access control policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

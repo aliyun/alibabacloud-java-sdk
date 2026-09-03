@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The cron expression for the recurring schedule.</p>
+     * <p>The Cron expression for the scheduled snapshot creation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +14,17 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("CronExpression")
     public String cronExpression;
 
+    /**
+     * <p>The cloud disk type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
     /**
-     * <p>The name of the automatic snapshot policy. It can contain 2 to 128 English or Chinese characters. It must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-). Default value: empty.</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. Default value: empty.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +34,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The region ID. For more information, see <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +44,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The retention period of the automatic snapshot, in days. Valid values: 1 to 180.</p>
+     * <p>The retention period of automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

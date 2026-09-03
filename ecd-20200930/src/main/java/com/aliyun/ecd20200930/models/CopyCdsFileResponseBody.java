@@ -14,7 +14,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of copying the file.</p>
+     * <p>The result of the file copy operation.</p>
      */
     @NameInMap("CopyCdsFileModel")
     public CopyCdsFileResponseBodyCopyCdsFileModel copyCdsFileModel;

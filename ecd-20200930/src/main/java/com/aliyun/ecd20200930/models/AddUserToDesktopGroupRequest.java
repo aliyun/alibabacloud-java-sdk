@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddUserToDesktopGroupRequest extends TeaModel {
     /**
-     * <p>A client token that ensures the idempotence of a request. Generate a unique value for this parameter from your client. The token can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the shared cloud desktop to which to add an authorized user.</p>
+     * <p>The ID of the shared cloud computer to which you want to add authorized users.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -23,22 +23,28 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>A list of shared cloud desktop group IDs.</p>
+     * <p>The list of shared cloud computer IDs.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
-     * <p>A list of users to authorize.</p>
+     * <p>The list of users to authorize.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    /**
+     * <p>The organization ID of the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org-aliyun-wy-org-id</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
     /**
-     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain a list of regions where WUYING Workspace is available.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,12 +53,30 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The convenience user group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ug-3f6c8a2b****</p>
+     */
     @NameInMap("SimpleUserGroupId")
     public String simpleUserGroupId;
 
+    /**
+     * <p>The user group name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>R&amp;D Group</p>
+     */
     @NameInMap("UserGroupName")
     public String userGroupName;
 
+    /**
+     * <p>The organizational unit (OU) path of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("UserOuPath")
     public String userOuPath;
 

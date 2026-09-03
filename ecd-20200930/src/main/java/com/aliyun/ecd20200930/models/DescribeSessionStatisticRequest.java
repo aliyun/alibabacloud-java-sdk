@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSessionStatisticRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time of the query. UNIX timestamp, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1677808889806</p>
@@ -23,7 +23,7 @@ public class DescribeSessionStatisticRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The query interval. Unit: seconds. Valid values:</p>
+     * <p>The query interval, in seconds. Valid values:</p>
      * <ul>
      * <li>60</li>
      * <li>120</li>
@@ -45,7 +45,7 @@ public class DescribeSessionStatisticRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The region ID used to filter desktop information for a specified region.</p>
+     * <p>The region ID used to filter desktop information in a specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +54,7 @@ public class DescribeSessionStatisticRequest extends TeaModel {
     public String searchRegionId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time of the query. UNIX timestamp, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1679449506572</p>

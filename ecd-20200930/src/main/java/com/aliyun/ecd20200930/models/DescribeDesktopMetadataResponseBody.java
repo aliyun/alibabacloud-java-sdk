@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopMetadataResponseBody extends TeaModel {
     /**
-     * <p>The details of the cloud desktops.</p>
+     * <p>The cloud desktop details.</p>
      */
     @NameInMap("Desktops")
     public java.util.List<DescribeDesktopMetadataResponseBodyDesktops> desktops;
@@ -59,7 +59,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
 
     public static class DescribeDesktopMetadataResponseBodyDesktops extends TeaModel {
         /**
-         * <p>The agents supported by the current cloud desktop.</p>
+         * <p>The agents supported by the current cloud computer.</p>
          */
         @NameInMap("AgentProviderList")
         public java.util.List<String> agentProviderList;
@@ -78,7 +78,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The time when the cloud desktop was created.</p>
+         * <p>The time when the cloud desktop was created. The time is in the ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:28Z</p>
@@ -87,7 +87,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The shared cloud desktop ID.</p>
+         * <p>The shared cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-3uiojcc0j4kh7****</p>
@@ -105,7 +105,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The cloud desktop name.</p>
          * 
          * <strong>example:</strong>
          * <p>testDesktopName</p>
@@ -114,16 +114,16 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The status of the cloud desktop. Valid values:</p>
+         * <p>The cloud desktop status. Valid values:</p>
          * <ul>
-         * <li>Stopped</li>
-         * <li>Starting</li>
-         * <li>Rebuilding</li>
-         * <li>Running</li>
-         * <li>Stopping</li>
-         * <li>Expired</li>
-         * <li>Deleted</li>
-         * <li>Pending</li>
+         * <li>Stopped: stopped.</li>
+         * <li>Starting: starting.</li>
+         * <li>Rebuilding: rebuilding.</li>
+         * <li>Running: running.</li>
+         * <li>Stopping: stopping.</li>
+         * <li>Expired: expired.</li>
+         * <li>Deleted: deleted.</li>
+         * <li>Pending: pending.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String desktopType;
 
         /**
-         * <p>The time when the cloud desktop expires. This value is returned only for cloud desktops that use the subscription billable method.</p>
+         * <p>The time when the cloud desktop expires. This value is returned only for cloud desktops that use the subscription billable method. The time format follows the ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-31T15:59Z</p>
@@ -160,7 +160,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The local name of the region where the cloud desktop resides.</p>
+         * <p>The local name of the region to which the cloud desktop belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>华东2（上海）</p>
@@ -169,7 +169,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>The management status of the cloud desktop.</p>
+         * <p>The management status of the cloud computer.</p>
          */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
@@ -229,7 +229,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
-         * <p>The time when the cloud desktop was started.</p>
+         * <p>The time when the cloud desktop was started. The time is in the ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:31Z</p>

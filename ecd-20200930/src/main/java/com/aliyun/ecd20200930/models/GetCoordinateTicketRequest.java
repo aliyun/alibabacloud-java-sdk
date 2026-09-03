@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCoordinateTicketRequest extends TeaModel {
     /**
-     * <p>The ID of the stream collaboration. You can obtain the value of this parameter based on the value of <code>Coid</code> that is returned by the <code>ApplyCoordinationForMonitoring</code> operation.</p>
+     * <p>The coordination flow ID. This value is the <code>Coid</code> returned by the <a href="~~ApplyCoordinationForMonitoring~~">ApplyCoordinationForMonitoring</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetCoordinateTicketRequest extends TeaModel {
     public String coId;
 
     /**
-     * <p>The name of the convenience user account. If you initiate the request as an administrator, you do not need to specify this parameter.</p>
+     * <p>The username of the end user. This parameter is not required on the administrator side.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -24,7 +24,7 @@ public class GetCoordinateTicketRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class GetCoordinateTicketRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the cloud computer connection task. The first time you initiate the request, you do not need to specify the ID of the cloud computer connection task. If no ticket is returned after you initiate the first request, you must specify the value of taskId that is returned for the first request in the subsequent request.</p>
+     * <p>The cloud computer connection task ID. This parameter is not required for the first request. If the first request does not return a Ticket, specify the <code>TaskId</code> returned by the first request in subsequent requests.</p>
      * 
      * <strong>example:</strong>
      * <p>39cc15e5-6998-4b9f-9b2c-7a4cc3e2****</p>
@@ -43,20 +43,7 @@ public class GetCoordinateTicketRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The type of the user.</p>
-     * <p>Set the value to TENANT_ADMIN.</p>
-     * <ul>
-     * <li><p>The value of</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>TENANT_ADMIN</p>
-     * <!-- -->
-     * 
-     * <p>specifies an administrator.</p>
-     * </li>
-     * </ul>
+     * <p>The user type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

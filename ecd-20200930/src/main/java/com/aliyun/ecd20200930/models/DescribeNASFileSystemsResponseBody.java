@@ -185,9 +185,10 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
     public static class DescribeNASFileSystemsResponseBodyFileSystems extends TeaModel {
         /**
-         * <blockquote>
-         * <p>This field is not publicly available.</p>
-         * </blockquote>
+         * <p>Indicates whether operations on user directories (adding users, deleting data) are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowOperateUserDrive")
         public Boolean allowOperateUserDrive;
@@ -221,7 +222,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The NAS file system description.</p>
+         * <p>The description of the NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -254,7 +255,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The NAS file system name.</p>
+         * <p>The name of the NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>testNAS</p>
@@ -263,7 +264,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String fileSystemName;
 
         /**
-         * <p>The NAS file system status.</p>
+         * <p>The status of the NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -308,7 +309,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String mountTargetStatus;
 
         /**
-         * <p>The office network ID.</p>
+         * <p>The office network ID (deprecated).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -317,7 +318,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The office network name.</p>
+         * <p>The office network name (deprecated).</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -343,6 +344,16 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @NameInMap("ProfileCompatible")
         public Boolean profileCompatible;
 
+        /**
+         * <p>The protocol type of the file system. Valid values:</p>
+         * <ul>
+         * <li>NFS: NFS file protocol.</li>
+         * <li>SMB: SMB file protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SMB</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
@@ -386,7 +397,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public Boolean supportAcl;
 
         /**
-         * <p>The zone.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-f</p>

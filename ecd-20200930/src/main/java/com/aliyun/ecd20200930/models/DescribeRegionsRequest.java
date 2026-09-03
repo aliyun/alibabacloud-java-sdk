@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The display name of the region, which varies based on the current language.</p>
+     * <p>The display language of the business location. Default value: Chinese.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

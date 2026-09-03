@@ -14,7 +14,7 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The pagination token for the next query. An empty value indicates that there are no more results.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -23,7 +23,7 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E54EB497-D7B7-5F04-B744-D8DFA7B******</p>
@@ -85,7 +85,8 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
         public String batchId;
 
         /**
-         * <p>The time when the record was created.</p>
+         * <p>The time when the record was created.
+         * The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-03T08:27:29Z</p>
@@ -94,7 +95,7 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The number of tasks that failed to execute.</p>
+         * <p>The number of tasks that failed to be executed.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -103,7 +104,7 @@ public class DescribeGlobalTimerBatchesResponseBody extends TeaModel {
         public Integer failedCount;
 
         /**
-         * <p>The number of tasks that are currently running.</p>
+         * <p>The number of tasks that are being executed.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

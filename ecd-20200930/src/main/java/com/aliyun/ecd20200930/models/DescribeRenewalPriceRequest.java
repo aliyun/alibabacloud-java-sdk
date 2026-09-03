@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceRequest extends TeaModel {
     /**
-     * <p>The instance ID. The value for this parameter depends on the resource type:</p>
+     * <p>The instance ID. The value depends on the resource type (ResourceType) for which you want to query the renewal price:</p>
      * <ul>
-     * <li><p>If <code>ResourceType</code> is set to <code>Desktop</code>, set <code>InstanceId</code> to the cloud desktop ID.</p>
-     * </li>
-     * <li><p>If <code>ResourceType</code> is set to <code>DesktopGroup</code>, set <code>InstanceId</code> to the desktop pool ID.</p>
-     * </li>
-     * <li><p>If <code>ResourceType</code> is set to <code>Bandwidth</code>, set <code>InstanceId</code> to the premium bandwidth ID.</p>
-     * </li>
+     * <li>If <code>ResourceType</code> is set to <code>Desktop</code> (to query the renewal price of a cloud computer), set <code>InstanceId</code> to the cloud computer ID.</li>
+     * <li>If <code>ResourceType</code> is set to <code>DesktopGroup</code> (to query the renewal price of a cloud computer pool), set <code>InstanceId</code> to the cloud computer pool ID.</li>
+     * <li>If <code>ResourceType</code> is set to <code>Bandwidth</code> (to query the renewal price of premium Internet bandwidth), set <code>InstanceId</code> to the premium Internet bandwidth ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,18 +19,16 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance IDs. The values to provide depend on the resource type (<code>ResourceType</code>).</p>
+     * <p>The instance IDs. The values depend on the resource type (ResourceType) for which you want to query the renewal price.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The renewal duration. The valid values depend on the <code>PeriodUnit</code> parameter.</p>
+     * <p>The renewal duration. Valid values of this parameter are determined by the value of <code>PeriodUnit</code>.</p>
      * <ul>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, the valid values are 1, 2, 3, and 6.</p>
-     * </li>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, the valid values are 1, 2, and 3.</p>
-     * </li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, and 3.</li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -44,7 +39,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The time unit for the <code>Period</code> parameter.</p>
+     * <p>The unit of the renewal duration, which is the unit of the <code>Period</code> parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -52,11 +47,17 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The promotion ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,6 +66,12 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID of the resource ownership user in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1017457975738750</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 

@@ -28,6 +28,12 @@ public class DescribeClientEventsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -69,12 +75,30 @@ public class DescribeClientEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeClientEventsResponseBodyEventsTerminalInfo extends TeaModel {
+        /**
+         * <p>The terminal device model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wuying_mac_x86_64</p>
+         */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>The terminal type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mac</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The terminal serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96c530bc-6095-4014-8bbc-d461b8ac****</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
@@ -168,7 +192,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>User logon event</p>
          */
         @NameInMap("Description")
         public String description;
@@ -213,7 +237,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
          * <p>The name of the cloud computer.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Finance cloud computer</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
@@ -255,7 +279,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String eventId;
 
         /**
-         * <p>The time when the event occurred.</p>
+         * <p>The time when the event occurred. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-30T06:32:31Z</p>
@@ -285,7 +309,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
          * <p>The name of the office network.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>R&amp;D office network</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
@@ -312,7 +336,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
          * <p>The status of the event action. This field typically appears in <code>DESKTOP_DISCONNECT</code> and <code>GET_CONNECTION_TICKET</code> events. Valid values:</p>
          * <ul>
          * <li>200: success.</li>
-         * <li>A failure message is returned, such as FailedToGetConnectionTicket.</li>
+         * <li>A failure message, such as FailedToGetConnectionTicket.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -321,6 +345,9 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The terminal information.</p>
+         */
         @NameInMap("TerminalInfo")
         public DescribeClientEventsResponseBodyEventsTerminalInfo terminalInfo;
 

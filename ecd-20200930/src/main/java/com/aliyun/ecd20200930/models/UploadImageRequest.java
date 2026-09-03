@@ -4,6 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class UploadImageRequest extends TeaModel {
+    /**
+     * <p>The boot mode of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BIOS</p>
+     */
     @NameInMap("BootMode")
     public String bootMode;
 
@@ -35,7 +41,7 @@ public class UploadImageRequest extends TeaModel {
     public Boolean enableSecurityCheck;
 
     /**
-     * <p>Specifies whether the image is a GPU image.</p>
+     * <p>Specifies whether the image is a GPU-type image.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -67,11 +73,11 @@ public class UploadImageRequest extends TeaModel {
      * <ul>
      * <li>Auto: Alibaba Cloud detects the source operating system and assigns a license. In automatic mode, the system first checks whether an Alibaba Cloud official license is available for the <code>Platform</code> you specified and assigns it to the imported image. If no such license is available, the system switches to BYOL (Bring Your Own License) mode.</li>
      * <li>Aliyun: Uses an Alibaba Cloud official license based on the <code>Platform</code> you specified.</li>
-     * <li>BYOL: Uses the license that comes with the source operating system. When you use BYOL, make sure that your license key supports use on Alibaba Cloud.</li>
+     * <li>BYOL: Uses the license that comes with the source operating system. When using BYOL, ensure that your license key supports use on Alibaba Cloud.</li>
      * </ul>
-     * <p>Default value: Auto.</p>
+     * <p>Default value: Auto</p>
      * <blockquote>
-     * <p>Systems such as Windows 10 cannot be activated through Alibaba Cloud. Set <code>LicenseType</code> to BYOL for custom activation.</p>
+     * <p>Systems such as Windows 10 cannot be activated through Alibaba Cloud. Set <code>LicenseType</code> to custom activation (BYOL).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,7 +127,7 @@ public class UploadImageRequest extends TeaModel {
     /**
      * <p>The system cloud disk size. Unit: GiB.</p>
      * <blockquote>
-     * <p>The system cloud disk size cannot be smaller than the image file size.</p>
+     * <p>The system cloud disk size cannot be smaller than the image file.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

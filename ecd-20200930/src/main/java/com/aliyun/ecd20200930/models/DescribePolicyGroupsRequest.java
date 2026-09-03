@@ -4,6 +4,16 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyGroupsRequest extends TeaModel {
+    /**
+     * <p>The business channel. Valid values:</p>
+     * <ul>
+     * <li>Enterprise: Enterprise Edition.</li>
+     * <li>Business: Business Edition.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enterprise</p>
+     */
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
@@ -14,12 +24,10 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public java.util.List<String> externalPolicyGroupIds;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <ul>
-     * <li><p>Maximum value: 100</p>
-     * </li>
-     * <li><p>Default value: 10</p>
-     * </li>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +37,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous response. Do not set this parameter for the first request.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that was returned from the last call to this operation. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -37,9 +45,21 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The page number of the current page for a paged query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The maximum number of entries per page for a paged query.<br>Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -53,7 +73,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public java.util.List<String> policyGroupId;
 
     /**
-     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

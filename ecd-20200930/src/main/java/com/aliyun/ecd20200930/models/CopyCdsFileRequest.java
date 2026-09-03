@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyCdsFileRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically rename the file when a file with the same name exists in the destination folder.</p>
+     * <p>Specifies whether to automatically rename the file when a file with the same name already exists in the destination folder.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -43,9 +43,9 @@ public class CopyCdsFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The ID of the personal drive (which can be obtained from the <code>UserId</code> response parameter of the <a href="https://help.aliyun.com/document_detail/2357237.html">DescribeCloudDriveUsers</a> operation) or the team space ID (which can be obtained from the <code>GroupId</code> response parameter of the <a href="https://help.aliyun.com/document_detail/609896.html">DescribeCloudDriveGroups</a> operation) at the copy destination.</p>
+     * <p>The ID of the personal drive (which can be obtained from the UserId response parameter of the <a href="https://help.aliyun.com/document_detail/2357237.html">DescribeCloudDriveUsers</a> operation) or the team space ID (which can be obtained from the GroupId response parameter of the <a href="https://help.aliyun.com/document_detail/609896.html">DescribeCloudDriveGroups</a> operation) at the destination.</p>
      * <blockquote>
-     * <p>If both <code>FileReceiverId</code> and <code>FileReceiverType</code> are empty, the file is copied to the personal drive where the file currently resides by default.</p>
+     * <p>If both FileReceiverId and FileReceiverType are empty, the file is copied to the personal drive where the file currently resides by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class CopyCdsFileRequest extends TeaModel {
     public String fileReceiverId;
 
     /**
-     * <p>The type of space to which the file belongs.</p>
+     * <p>The type of the space to which the file belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -73,7 +73,7 @@ public class CopyCdsFileRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the parent folder at the copy destination. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the folder. Set this parameter to <code>root</code> if you want to copy the file to the root directory.</p>
+     * <p>The ID of the parent folder at the destination. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the folder. Set this parameter to <code>root</code> if you want to copy the file or folder to the root directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDesktopGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the shared cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -14,7 +14,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The desktop group IDs.</p>
+     * <p>The list of shared cloud computer IDs.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;

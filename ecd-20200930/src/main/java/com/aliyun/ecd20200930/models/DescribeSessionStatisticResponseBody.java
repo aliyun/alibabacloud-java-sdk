@@ -20,7 +20,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
     public java.util.List<DescribeSessionStatisticResponseBodyStatistic> statistic;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +68,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The point in time.</p>
+         * <p>The time point. UNIX timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1690164443508</p>

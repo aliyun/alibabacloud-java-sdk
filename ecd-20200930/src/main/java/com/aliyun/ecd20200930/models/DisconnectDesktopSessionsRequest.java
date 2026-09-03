@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisconnectDesktopSessionsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform precheck. If you perform precheck, the system does not disconnect from desktop sessions. Only the sessions that do not meet specific conditions are returned.</p>
+     * <p>Specifies whether to perform a dry run. If a dry run is performed, the disconnect operation is not actually executed. Only the sessions that do not meet the execution conditions are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class DisconnectDesktopSessionsRequest extends TeaModel {
     public Boolean preCheck;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class DisconnectDesktopSessionsRequest extends TeaModel {
 
     public static class DisconnectDesktopSessionsRequestSessions extends TeaModel {
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The ID of the cloud computer to which the end user is connected.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-90g15fkhsxxxn****</p>
@@ -70,7 +70,7 @@ public class DisconnectDesktopSessionsRequest extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The end user ID.</p>
+         * <p>The ID of the end user who is connected to the session.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>

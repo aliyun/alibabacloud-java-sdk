@@ -4,6 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
+    /**
+     * <p>The business channel. Valid values:
+     * Enterprise: Enterprise Edition.
+     * Business: Business Edition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enterprise</p>
+     */
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
@@ -22,11 +30,14 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     @NameInMap("DesktopName")
     public String desktopName;
 
+    /**
+     * <p>The list of cloud desktop statuses to include.</p>
+     */
     @NameInMap("DesktopStatusList")
     public java.util.List<String> desktopStatusList;
 
     /**
-     * <p>The cloud desktop specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported specification IDs for cloud desktops.</p>
+     * <p>The cloud desktop specifications. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported specification IDs for cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.enterprise_office.2c4g</p>
@@ -55,6 +66,9 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The list of cloud desktop statuses to exclude.</p>
+     */
     @NameInMap("ExcludeDesktopStatusList")
     public java.util.List<String> excludeDesktopStatusList;
 
@@ -68,7 +82,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The sort field. If this parameter is not specified, results are sorted by creation time in descending order. Valid values:</p>
+     * <p>The sort field. If not specified, results are sorted by creation time in descending order. Valid values:</p>
      * <ul>
      * <li>uptime: sorts by cloud desktop uptime.</li>
      * </ul>
@@ -80,7 +94,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number of the current page in a paged query. Paging starts from page 1.<br>Default value: 1.</p>
+     * <p>The page number of the current page when using paging.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,7 +112,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. Valid values:</p>
      * <ul>
      * <li>Shanghai</li>
      * <li>Singapore</li>
@@ -171,6 +185,9 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     @NameInMap("SubPayType")
     public String subPayType;
 
+    /**
+     * <p>The list of usernames.</p>
+     */
     @NameInMap("UserNames")
     public java.util.List<String> userNames;
 

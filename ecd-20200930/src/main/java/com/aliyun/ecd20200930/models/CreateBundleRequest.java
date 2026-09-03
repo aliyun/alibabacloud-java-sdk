@@ -23,9 +23,9 @@ public class CreateBundleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The instance type of the cloud computers. You can call the <a href="https://help.aliyun.com/document_detail/436974.html">DescribeBundles</a> operation to query cloud computer templates and obtain the instance types supported by the cloud computers from the <code>DesktopType</code> response parameter.</p>
+     * <p>The cloud computer specifications. You can call <a href="https://help.aliyun.com/document_detail/436974.html">DescribeBundles</a> to query cloud computer templates and obtain the supported cloud computer specifications from the <code>DesktopType</code> parameter in the response.</p>
      * <blockquote>
-     * <p>If you want the template to use a non-GPU-accelerated image, you can only select a non-GPU-accelerated instance type. If you want the template to use a GPU-accelerated image, you can only select a GPU-accelerated instance type.</p>
+     * <p>Non-GPU images can only use non-GPU specifications, and GPU images can only use GPU specifications.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +36,7 @@ public class CreateBundleRequest extends TeaModel {
     public String desktopType;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The image ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,16 +46,12 @@ public class CreateBundleRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The OS language. This parameter is available only for system images. Valid values:</p>
+     * <p>The operating system language. Currently, only system images are supported. Valid values:</p>
      * <ul>
-     * <li><p>zh-CN: Simplified Chinese</p>
-     * </li>
-     * <li><p>zh-HK: Traditional Chinese (Hong Kong)</p>
-     * </li>
-     * <li><p>en-US: American English</p>
-     * </li>
-     * <li><p>ja-JP: Japanese</p>
-     * </li>
+     * <li>zh-CN: Simplified Chinese.</li>
+     * <li>zh-HK: Traditional Chinese (Hong Kong (China)).</li>
+     * <li>en-US: English.</li>
+     * <li>ja-JP: Japanese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +61,7 @@ public class CreateBundleRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,37 +71,7 @@ public class CreateBundleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The performance level (PL) of the system disk. When the cloud computer instance type that is specified by the DesktopType parameter is set to a graphical instance type or instance type with a high clock speed, you can set the performance level of the disks. For more information about the differences among disks at different PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">Enhanced SSDs</a>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>PL1</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>PL0</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>PL3</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>PL2</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The performance level of the system cloud disk. When the cloud computer specifications are set to graphics or high frequency, you can configure the cloud disk performance level. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>. Settings: standard SSD and ESSD cloud disks are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -114,7 +80,7 @@ public class CreateBundleRequest extends TeaModel {
     public String rootDiskPerformanceLevel;
 
     /**
-     * <p>The size of the system disk. Unit: GiB. The value of this parameter must be consistent with the system disk size supported by the cloud computer instance type. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Overview</a>.</p>
+     * <p>The system disk size. Unit: GiB. The supported system disk sizes correspond to the specifications. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Overview of cloud computer specifications</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,37 +90,7 @@ public class CreateBundleRequest extends TeaModel {
     public Integer rootDiskSizeGib;
 
     /**
-     * <p>The PL of the data disk. When the cloud computer instance type that is specified by the DesktopType parameter is set to a graphical instance type or instance type with a high clock speed, you can set the performance level of the disks. For more information about the differences among disks at different PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">Enhanced SSDs</a>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>PL1</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>PL0</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>PL3</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>PL2</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The performance level of the data cloud disk. When the cloud computer specifications are set to graphics or high frequency, you can configure the cloud disk performance level. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>. Settings: standard SSD and ESSD cloud disks are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -163,7 +99,7 @@ public class CreateBundleRequest extends TeaModel {
     public String userDiskPerformanceLevel;
 
     /**
-     * <p>The data disk sizes. You can configure only one data disk.</p>
+     * <p>The list of data disk sizes. Currently, only one data disk can be configured.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

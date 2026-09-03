@@ -34,7 +34,7 @@ public class ConfigADConnectorTrustRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The trust password. This password is the one that you specified when you configured the trust relationship (that is, established a trust relationship with ecd.acs) in the AD domain.</p>
+     * <p>The trust password. This password is the one that you specified when you configured the trust relationship (that is, established a trust relationship with Elastic Desktop Service ecd.acs) in the AD domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

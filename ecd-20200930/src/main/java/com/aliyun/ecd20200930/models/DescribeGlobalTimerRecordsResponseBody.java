@@ -103,7 +103,8 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String context;
 
         /**
-         * <p>The time when the record was created.</p>
+         * <p>The time when the record was created.
+         * The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-03T08:27:29Z</p>
@@ -121,7 +122,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The cloud computer name.</p>
+         * <p>The name of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>DesktopName</p>
@@ -139,7 +140,8 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String displayResultName;
 
         /**
-         * <p>The time when the task ended.</p>
+         * <p>The time when the task ended.
+         * The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-21T02:00:45Z</p>
@@ -157,6 +159,8 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the resource parent.</p>
+         * 
          * <strong>example:</strong>
          * <p>p-xxx</p>
          */
@@ -182,7 +186,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String timerGroupId;
 
         /**
-         * <p>The timer record ID.</p>
+         * <p>The ID of the scheduled record.</p>
          * 
          * <strong>example:</strong>
          * <p>t-xxx</p>

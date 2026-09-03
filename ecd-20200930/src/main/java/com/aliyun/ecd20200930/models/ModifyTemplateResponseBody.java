@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTemplateResponseBody extends TeaModel {
     /**
-     * <p>The execution result. The value <code>success</code> indicates success. Otherwise, an error message is returned.</p>
+     * <p>The execution result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

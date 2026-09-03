@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopTypesRequest extends TeaModel {
     /**
-     * <p>The scope of the instance types to query. Default value: <code>Public</code>.</p>
+     * <p>The applicable scope of the specification. Default value: <code>Public</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Public</p>
@@ -13,6 +13,14 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("AppliedScope")
     public String appliedScope;
 
+    /**
+     * <p>The business channel. Valid values:
+     * Enterprise: Enterprise Edition.
+     * Business: Business Edition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enterprise</p>
+     */
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
@@ -26,7 +34,7 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     public Integer cpuCount;
 
     /**
-     * <p>The ID of the desktop group to reconfigure. If you specify this parameter, the response returns only the instance types that are compatible with the specified group.</p>
+     * <p>The ID of the shared cloud computer for which you want to change the specification. If this parameter is specified, the response includes compatibility information between the specification and the shared cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-abcdefg****</p>
@@ -35,7 +43,7 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     public String desktopGroupIdForModify;
 
     /**
-     * <p>The ID of the WUYING Workspace to reconfigure. If you specify this parameter, the response returns only the instance types that are compatible with the specified workspace.</p>
+     * <p>The ID of the cloud computer for which you want to change the specification. If this parameter is specified, the response includes compatibility information between the specification and the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
@@ -43,13 +51,19 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("DesktopIdForModify")
     public String desktopIdForModify;
 
+    /**
+     * <p>The scenarios of the cloud computer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>office</p>
+     */
     @NameInMap("DesktopScenario")
     public String desktopScenario;
 
     /**
-     * <p>The ID of the instance type.</p>
+     * <p>The specification ID.</p>
      * <blockquote>
-     * <p>If you omit both the <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> parameters, the operation returns all available WUYING Workspace instance types.</p>
+     * <p>If both <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> are left empty, information about all cloud computer specifications is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,13 +73,13 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     public String desktopTypeId;
 
     /**
-     * <p>An array of instance type IDs.</p>
+     * <p>The list of specification IDs.</p>
      */
     @NameInMap("DesktopTypeIdList")
     public java.util.List<String> desktopTypeIdList;
 
     /**
-     * <p>The number of vGPUs.</p>
+     * <p>The number of GPU cores.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -82,13 +96,19 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("GpuDriverType")
     public String gpuDriverType;
 
+    /**
+     * <p>The GPU memory size. This parameter is meaningful only for GPU-accelerated cloud computers. Unit: MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("GpuMemory")
     public Integer gpuMemory;
 
     /**
-     * <p>The instance type family.</p>
+     * <p>The instance family name.</p>
      * <blockquote>
-     * <p>If you omit both the <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> parameters, the operation returns all available WUYING Workspace instance types.</p>
+     * <p>If both <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> are left empty, information about all cloud computer specifications is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -98,7 +118,7 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     public String instanceTypeFamily;
 
     /**
-     * <p>The memory size, in MiB.</p>
+     * <p>The memory size. Unit: MiB.</p>
      * 
      * <strong>example:</strong>
      * <p>4096</p>
@@ -106,11 +126,17 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("MemorySize")
     public Integer memorySize;
 
+    /**
+     * <p>The ID of the office network to which the shared cloud computer belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+os-c5cy7q578s8jc****</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The property by which to sort the results. If you omit this parameter, the results are sorted by creation time in descending order.</p>
+     * <p>The field by which to sort the results. If this parameter is not specified, results are sorted by creation time in descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>Memory</p>
@@ -128,7 +154,7 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions that Elastic Desktop Service supports.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,7 +164,7 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The billing method of the instance types.</p>
+     * <p>The billing method of the specification.</p>
      * 
      * <strong>example:</strong>
      * <p>FastBuy</p>
@@ -146,6 +172,9 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <p>The list of applicable scopes.</p>
+     */
     @NameInMap("ScopeSet")
     public java.util.List<String> scopeSet;
 
@@ -159,7 +188,7 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     public String sortType;
 
     /**
-     * <p>Filters for instance types that support at least the specified number of concurrent sessions. This parameter applies only to multi-session instance types.</p>
+     * <p>The minimum number of multi-sessions supported by the specification.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -173,7 +202,7 @@ public class DescribeDesktopTypesRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>cn-hangzhou-j</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

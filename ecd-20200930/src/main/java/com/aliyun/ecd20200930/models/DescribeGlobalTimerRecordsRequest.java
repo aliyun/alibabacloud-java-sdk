@@ -15,6 +15,9 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
 
     /**
      * <p>The list of cloud computer IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCEED</p>
      */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
@@ -64,6 +67,12 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of resource types. If empty, all resource types are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ResourceTypes")
     public java.util.List<String> resourceTypes;
 
@@ -105,10 +114,19 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
 
     /**
      * <p>The list of scheduled tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("TimerTypes")
     public java.util.List<String> timerTypes;
 
+    /**
+     * <p>The list of Wuying server IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FAILED</p>
+     */
     @NameInMap("WuyingServerIds")
     public java.util.List<String> wuyingServerIds;
 

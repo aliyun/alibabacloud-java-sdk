@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudDriveServiceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the enterprise network disk.</p>
+     * <p>The ID of the enterprise NAS drive.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+cds-778205****</p>
@@ -14,7 +14,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The name of the cloud storage service.</p>
+     * <p>The service name of the cloud storage.</p>
      * 
      * <strong>example:</strong>
      * <p>CDS_Windows_1126</p>
@@ -23,9 +23,9 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     public String cdsName;
 
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
      * <blockquote>
-     * <p>If you want to connect to a cloud desktop through a VPC, you can add the office network to a CEN instance. This CEN instance connects to your on-premises network through a VPN or a dedicated line.</p>
+     * <p>To connect to cloud desktops over a VPC, you can add the office network to a CEN instance. This CEN instance is the one to which the on-premises network is connected by using a VPN or Express Connect circuit.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,13 +35,13 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The existing enterprise network disks or orders for enterprise network disks that conflict with the enterprise network disk that you want to create.</p>
+     * <p>The existing NAS drive or NAS drive order that conflicts with the NAS drive to be created.</p>
      */
     @NameInMap("ConflictCdsAndOrder")
     public CreateCloudDriveServiceResponseBodyConflictCdsAndOrder conflictCdsAndOrder;
 
     /**
-     * <p>The name of the Active Directory (AD) domain corresponding to the AD office network.</p>
+     * <p>The AD domain name of the AD office network.</p>
      * 
      * <strong>example:</strong>
      * <p>test1.local</p>
@@ -59,7 +59,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The maximum storage usage of the enterprise network disk. Unit: bytes.</p>
+     * <p>The maximum storage capacity of the enterprise NAS drive. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>5368709120</p>
@@ -68,7 +68,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     public String maxSize;
 
     /**
-     * <p>The office network type.</p>
+     * <p>The network type of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>AD_CONNECTOR</p>
@@ -77,7 +77,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     public String officeSiteType;
 
     /**
-     * <p>The order ID. You can obtain the order ID on the Order Management page in the Alibaba Cloud User Center.</p>
+     * <p>The order ID. You can obtain the order ID on the Orders page in the Alibaba Cloud User Center.</p>
      * 
      * <strong>example:</strong>
      * <p>214552063030752</p>
@@ -181,7 +181,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
 
     public static class CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds extends TeaModel {
         /**
-         * <p>The ID of the enterprise network disk.</p>
+         * <p>The ID of the enterprise NAS drive.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+cds-778205****</p>
@@ -190,7 +190,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         public String cdsId;
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions that are supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -223,7 +223,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
 
     public static class CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder extends TeaModel {
         /**
-         * <p>The ID of the enterprise network disk (The order is not paid, and the enterprise network disk cannot be used).</p>
+         * <p>The ID of the enterprise NAS drive. The order is not paid, and the NAS drive is unavailable.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+cds-778205****</p>
@@ -232,7 +232,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         public String cdsId;
 
         /**
-         * <p>The order ID. You can obtain the order ID on the <strong>Order Management</strong> page in the Alibaba Cloud User Center.</p>
+         * <p>The order ID. You can obtain the order ID on the <strong>Orders</strong> page in the Alibaba Cloud User Center.</p>
          * 
          * <strong>example:</strong>
          * <p>22442411898****</p>
@@ -282,13 +282,13 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
 
     public static class CreateCloudDriveServiceResponseBodyConflictCdsAndOrder extends TeaModel {
         /**
-         * <p>The information of conflicting enterprise network disks.</p>
+         * <p>The information about the conflicting NAS drive.</p>
          */
         @NameInMap("ConflictCds")
         public java.util.List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds> conflictCds;
 
         /**
-         * <p>The information of conflicting unpaid orders for enterprise network disks (orders for subscription enterprise network disks).</p>
+         * <p>The information about the conflicting unpaid NAS drive order (subscription NAS drive order).</p>
          */
         @NameInMap("ConflictOrder")
         public java.util.List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder> conflictOrder;

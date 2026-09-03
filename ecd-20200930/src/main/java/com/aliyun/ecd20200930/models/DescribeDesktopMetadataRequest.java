@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopMetadataRequest extends TeaModel {
     /**
-     * <p>The time when the cloud desktop was created. The time is in UTC format:
+     * <p>The time when the cloud computer was created. The time is in UTC and follows the format:
      * <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String creationTimeStart;
 
     /**
-     * <p>The list of cloud desktop IDs.</p>
+     * <p>The list of cloud computer IDs.</p>
      */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
@@ -30,7 +30,7 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The shared cloud desktop ID.</p>
+     * <p>The shared cloud computer ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-i1ruuudp92qpj****</p>
@@ -57,7 +57,7 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>Specifies whether the response includes cloud desktops in shared cloud desktop groups.</p>
+     * <p>Specifies whether the response includes cloud computers in shared cloud computer groups.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -113,7 +113,7 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The start time of the operation performed on the cloud desktop. The time is in UTC format:
+     * <p>The start time of operations performed on the cloud computer. The time is in UTC and follows the format:
      * <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>.</p>
      * 
      * <strong>example:</strong>

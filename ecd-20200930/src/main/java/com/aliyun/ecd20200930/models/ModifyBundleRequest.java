@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBundleRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer template that you want to modify.</p>
+     * <p>The cloud computer template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyBundleRequest extends TeaModel {
     public String bundleId;
 
     /**
-     * <p>The name of the new cloud computer template.</p>
+     * <p>The new cloud computer template name.</p>
      * 
      * <strong>example:</strong>
      * <p>newName</p>
@@ -24,7 +24,7 @@ public class ModifyBundleRequest extends TeaModel {
     public String bundleName;
 
     /**
-     * <p>The description of the new cloud computer template.</p>
+     * <p>The new cloud computer template description.</p>
      * 
      * <strong>example:</strong>
      * <p>newDescription</p>
@@ -35,10 +35,14 @@ public class ModifyBundleRequest extends TeaModel {
     /**
      * <p>The new image ID. The new image must meet the following conditions:</p>
      * <ul>
-     * <li>The new image must be in the Available state.</li>
-     * <li>The operating system of the new image must be the same as that of the original image.</li>
-     * <li>The required disk size for the new image cannot be greater than that for the original image.</li>
-     * <li>The GPU type of the new image must be the same as that of the original image.</li>
+     * <li><p>The new image must be in the Available state.</p>
+     * </li>
+     * <li><p>The new image must have the same operating system as the original image.</p>
+     * </li>
+     * <li><p>The disk size required by the new image cannot be larger than that of the original image.</p>
+     * </li>
+     * <li><p>The GPU type of the new image must be the same as that of the original image.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,18 +52,7 @@ public class ModifyBundleRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The OS language. This parameter is available only for system images.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>en-US: American English</p>
-     * </li>
-     * <li><p>zh-HK: Traditional Chinese (Hong Kong)</p>
-     * </li>
-     * <li><p>zh-CN: Simplified Chinese.</p>
-     * </li>
-     * <li><p>ja-JP: Japanese</p>
-     * </li>
-     * </ul>
+     * <p>The operating system language. Currently, only system images are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -68,7 +61,7 @@ public class ModifyBundleRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

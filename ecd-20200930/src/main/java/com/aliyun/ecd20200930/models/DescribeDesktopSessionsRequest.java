@@ -29,7 +29,8 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String desktopName;
 
     /**
-     * <p>The end time of the query.</p>
+     * <p>The end of the time range to query.
+     * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-02-13T02:51:43Z</p>
@@ -55,6 +56,9 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     @NameInMap("EndUserIdFilter")
     public String endUserIdFilter;
 
+    /**
+     * <p>The list of end user IDs.</p>
+     */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
@@ -110,6 +114,12 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-f3s3dgt8dtb0vlqc8</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -123,7 +133,8 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String sessionStatus;
 
     /**
-     * <p>The start time of the query.</p>
+     * <p>The beginning of the time range to query.
+     * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-01-28T02:31:43Z</p>

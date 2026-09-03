@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDesktopGroupRequest extends TeaModel {
     /**
-     * <p>Shared desktop group ID.</p>
+     * <p>The ID of the shared Cloud Desktop.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteDesktopGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>Region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +24,12 @@ public class DeleteDesktopGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource ownership user in the reseller pattern. This parameter is not required in the non-reseller pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 

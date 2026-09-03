@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCensResponseBody extends TeaModel {
     /**
-     * <p>Details of the CEN instances.</p>
+     * <p>The details of the CEN instances.</p>
      */
     @NameInMap("Cens")
     public java.util.List<DescribeCensResponseBodyCens> cens;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeCensResponseBody extends TeaModel {
 
     public static class DescribeCensResponseBodyCensPackageIds extends TeaModel {
         /**
-         * <p>The ID of the bandwidth plan that is bound to the CEN instance.</p>
+         * <p>The ID of the bandwidth package bound to the CEN instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cenbwp-4c2zaavbvh5f42****</p>
@@ -118,7 +118,7 @@ public class DescribeCensResponseBody extends TeaModel {
 
     public static class DescribeCensResponseBodyCensTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>testKey</p>
@@ -127,7 +127,7 @@ public class DescribeCensResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>testValue</p>
@@ -160,7 +160,7 @@ public class DescribeCensResponseBody extends TeaModel {
 
     public static class DescribeCensResponseBodyCens extends TeaModel {
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-3gwy16dojz1m65****</p>
@@ -169,7 +169,7 @@ public class DescribeCensResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The time when the CEN instance was created.</p>
+         * <p>The time when the CEN instance was created. The time is in the ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-16T08:46Z</p>
@@ -181,7 +181,7 @@ public class DescribeCensResponseBody extends TeaModel {
          * <p>The description of the CEN instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Production environment CEN</p>
          */
         @NameInMap("Description")
         public String description;
@@ -208,17 +208,13 @@ public class DescribeCensResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The bandwidth plans that are bound to the CEN instance.</p>
+         * <p>The list of bandwidth packages bound to the CEN instance.</p>
          */
         @NameInMap("PackageIds")
         public java.util.List<DescribeCensResponseBodyCensPackageIds> packageIds;
 
         /**
-         * <p>The tolerated level of CIDR block conflict.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>REDUCED: CIDR block conflicts are allowed, but the conflicting CIDR blocks cannot be identical.</li>
-         * </ul>
+         * <p>The level of CIDR block overlap conflicts.</p>
          * 
          * <strong>example:</strong>
          * <p>REDUCED</p>
@@ -228,15 +224,6 @@ public class DescribeCensResponseBody extends TeaModel {
 
         /**
          * <p>The status of the CEN instance.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Creating</p>
-         * </li>
-         * <li><p>Active</p>
-         * </li>
-         * <li><p>Deleting</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

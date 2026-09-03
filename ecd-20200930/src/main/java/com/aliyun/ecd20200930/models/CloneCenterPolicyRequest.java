@@ -25,7 +25,7 @@ public class CloneCenterPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the target cloud computer policy to clone.</p>
+     * <p>The ID of the cloud computer policy to clone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

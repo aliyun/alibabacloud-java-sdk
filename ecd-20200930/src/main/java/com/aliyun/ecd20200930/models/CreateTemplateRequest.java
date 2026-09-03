@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
+    /**
+     * <p>Indicates whether automatic payment is enabled for the subscription order.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal for the subscription cloud computer.</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
@@ -21,11 +27,17 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>The billing method of the cloud computer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The data disk size and specification configurations.</p>
+     * <p>The size and specification configurations of data disks.</p>
      */
     @NameInMap("DataDiskList")
     public java.util.List<CreateTemplateRequestDataDiskList> dataDiskList;
@@ -42,18 +54,18 @@ public class CreateTemplateRequest extends TeaModel {
     /**
      * <p>The description of the template. The description must meet the following requirements:</p>
      * <ul>
-     * <li>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Design department template</p>
+     * <p>DesignDepartmentTemplate</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The cloud computer image ID. You can query this value on the image management page. System images and custom images are supported.</p>
+     * <p>The ID of the cloud computer image. You can query the ID on the image management page. System images and custom images are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>desktopimage-windows-server-2022-64-asp</p>
@@ -61,9 +73,38 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The subscription duration of the subscription cloud computer. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>. The unit is specified by <code>PeriodUnit</code>.</p>
+     * <ul>
+     * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:<ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>6</li>
+     * </ul>
+     * </li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values:<ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>4</li>
+     * <li>5</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The unit of the subscription billable methods duration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
@@ -76,6 +117,9 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    /**
+     * <p>Specifies whether to automatically switch to pay-as-you-go billing after the duration plan is used up.</p>
+     */
     @NameInMap("PostPaidAfterUsedUp")
     public Boolean postPaidAfterUsedUp;
 
@@ -89,9 +133,9 @@ public class CreateTemplateRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The region-specific template configurations. Multiple configurations are supported. The configuration that matches the specific region is used.</p>
+     * <p>The region-specific template configurations. You can specify multiple configurations. The configuration that matches the specific region is used.</p>
      * <blockquote>
-     * <p>You can configure up to 20 regions.</p>
+     * <p>You can specify configurations for up to 20 regions.</p>
      * </blockquote>
      */
     @NameInMap("RegionConfigList")
@@ -107,7 +151,7 @@ public class CreateTemplateRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The cloud computer tags in key-value format. You can specify up to 20 tags.</p>
+     * <p>The tags of the cloud computer in key-value format. You can specify up to 20 tags.</p>
      */
     @NameInMap("ResourceTagList")
     public java.util.List<CreateTemplateRequestResourceTagList> resourceTagList;
@@ -119,9 +163,9 @@ public class CreateTemplateRequest extends TeaModel {
     public java.util.List<CreateTemplateRequestSiteConfigList> siteConfigList;
 
     /**
-     * <p>The system disk type.</p>
+     * <p>The type of the system disk.</p>
      * <blockquote>
-     * <p>Only high frequency and graphics cloud computer specifications support ESSD disks.</p>
+     * <p>Only high-frequency and GPU-accelerated cloud computer specifications support ESSD disks.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,7 +175,7 @@ public class CreateTemplateRequest extends TeaModel {
     public String systemDiskPerformanceLevel;
 
     /**
-     * <p>The system disk size. Unit: GiB. Valid values: 40 to 500, in increments of 10 GiB.</p>
+     * <p>The size of the system disk. Unit: GiB. Valid values: 40 to 500. The value must be a multiple of 10.</p>
      * <blockquote>
      * <p>The system disk size cannot be smaller than the image size.</p>
      * </blockquote>
@@ -145,14 +189,14 @@ public class CreateTemplateRequest extends TeaModel {
     /**
      * <p>The name of the template. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</li>
+     * <li>The name must be 2 to 126 characters in length.</li>
      * <li>The name must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>My cloud desktop template 001</p>
+     * <p>MyCloudComputerTemplate001</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -166,6 +210,12 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("TimerGroupId")
     public String timerGroupId;
 
+    /**
+     * <p>The usage duration plan per user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("UserDuration")
     public Integer userDuration;
 
@@ -352,7 +402,7 @@ public class CreateTemplateRequest extends TeaModel {
 
     public static class CreateTemplateRequestDataDiskList extends TeaModel {
         /**
-         * <p>The data disk performance level. Default value: <code>AutoPL</code>.</p>
+         * <p>The performance level of the data disk. Default value: <code>AutoPL</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>AutoPL</p>
@@ -361,9 +411,9 @@ public class CreateTemplateRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The data cloud disk size. Unit: GiB. Valid values: 40 to 2040, in increments of 10 GiB.</p>
+         * <p>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040. The value must be a multiple of 10.</p>
          * <blockquote>
-         * <p>Notice: The larger the standard SSD or ESSD cloud disk capacity, the higher the performance level (PL) available (for example, PL2 is available for capacities above 460 GiB). Higher performance levels incur higher costs. Select the ESSD cloud disk performance level (PL) based on your requirements.</p>
+         * <p>Notice: The larger the ESSD cloud disk capacity, the higher the performance level (PL) available (for example, PL2 is available for capacities of 460 GiB or more). Higher performance levels (PLs) incur higher costs. Select the ESSD cloud disk performance level (PL) based on your requirements. Note: Only standard SSD and ESSD cloud disks are supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -424,7 +474,7 @@ public class CreateTemplateRequest extends TeaModel {
         public String resourceInstanceType;
 
         /**
-         * <p>The automatic snapshot policy ID.</p>
+         * <p>The ID of the automatic snapshot policy.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-35fvn8m21pnx2****</p>
@@ -451,7 +501,7 @@ public class CreateTemplateRequest extends TeaModel {
         public Boolean volumeEncryptionEnable;
 
         /**
-         * <p>The KMS key ID used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
+         * <p>The ID of the KMS key used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a7b3c0c8-b3a2-4876-b1cc-*********</p>

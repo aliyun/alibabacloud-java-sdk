@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClientEventsRequest extends TeaModel {
     /**
-     * <p>The cloud computer ID. If you do not specify this parameter, all cloud computers in the region are queried.</p>
+     * <p>The cloud computer ID. If this parameter is not specified, all cloud computers in the region are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-8fupvkhg0aayu****</p>
@@ -14,7 +14,7 @@ public class DescribeClientEventsRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The IP address of the cloud computer. If you do not specify this parameter, events of all cloud computers in the region are queried.</p>
+     * <p>The IP address of the cloud computer. If this parameter is not specified, events of all cloud computers in the region are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>10.10.<em>.</em></p>
@@ -26,7 +26,7 @@ public class DescribeClientEventsRequest extends TeaModel {
      * <p>The name of the cloud computer.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Finance cloud computer</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
@@ -43,7 +43,7 @@ public class DescribeClientEventsRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The end time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, the current time is used.</p>
+     * <p>The end time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If this parameter is not specified, the current time is used.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-31T06:32:31Z</p>
@@ -52,7 +52,7 @@ public class DescribeClientEventsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The logon user information, which is a Resource Access Management (RAM) user ID or AD username. If you do not specify this parameter, events of all users in the region are queried.</p>
+     * <p>The logon user information, which is a Resource Access Management (RAM) user ID or AD username. If this parameter is not specified, events of all users in the region are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>28961708130834****</p>
@@ -60,6 +60,9 @@ public class DescribeClientEventsRequest extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The list of end user IDs.</p>
+     */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
@@ -73,14 +76,23 @@ public class DescribeClientEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The combination of event types to query. You can specify multiple event types. The query results include events of all specified types.</p>
+     * <p>The combination of event types to query. You can specify multiple event types. The query results include all events of the specified types.</p>
      */
     @NameInMap("EventTypes")
     public java.util.List<String> eventTypes;
 
+    /**
+     * <p>Specifies whether to include terminal information in the response.</p>
+     */
     @NameInMap("FillHardwareInfo")
     public Boolean fillHardwareInfo;
 
+    /**
+     * <p>The language type of the returned information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
@@ -94,7 +106,7 @@ public class DescribeClientEventsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -103,7 +115,7 @@ public class DescribeClientEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the office network to which the cloud computer belongs. If you do not specify this parameter, user events in all office networks in the region are queried.</p>
+     * <p>The ID of the office network to which the cloud computer belongs. If this parameter is not specified, user events in all office networks in the region are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-bh77qa8nmjot4****</p>
@@ -115,7 +127,7 @@ public class DescribeClientEventsRequest extends TeaModel {
      * <p>The name of the office network.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>R&amp;D office network</p>
      */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
@@ -131,7 +143,7 @@ public class DescribeClientEventsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, events are queried backward from the time specified by <code>EndTime</code>.</p>
+     * <p>The start time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If this parameter is not specified, events are queried backward from the time specified by <code>EndTime</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-30T06:32:31Z</p>

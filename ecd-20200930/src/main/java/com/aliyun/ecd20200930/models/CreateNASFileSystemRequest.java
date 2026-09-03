@@ -14,7 +14,7 @@ public class CreateNASFileSystemRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether the file system uses a KMS-managed key to encrypt data stored on the file system. Encrypted data does not need to be decrypted during read and write operations.</p>
+     * <p>Specifies whether to use a Key Management Service (KMS) managed key to encrypt data stored in the file system. Encrypted data does not need to be decrypted during read and write operations.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,7 +23,7 @@ public class CreateNASFileSystemRequest extends TeaModel {
     public String encryptType;
 
     /**
-     * <p>The NAS file system name. The name must meet the following requirements: The name must be 2 to 128 characters in length and can contain letters and Chinese characters. The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, underscores (_), or hyphens (-).</p>
+     * <p>The name of the NAS file system. The name must meet the following requirements: The name must be 2 to 128 characters in length and can contain letters and Chinese characters. The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, underscores (_), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testNAS</p>
@@ -41,11 +41,17 @@ public class CreateNASFileSystemRequest extends TeaModel {
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>The protocol type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASP</p>
+     */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
-     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

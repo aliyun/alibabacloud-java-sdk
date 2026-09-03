@@ -24,7 +24,7 @@ public class AddFilePermissionShrinkRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</p>
+     * <p>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

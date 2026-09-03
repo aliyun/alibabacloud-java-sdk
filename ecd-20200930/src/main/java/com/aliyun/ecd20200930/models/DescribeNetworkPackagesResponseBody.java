@@ -11,7 +11,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
     public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> networkPackages;
 
     /**
-     * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
+     * <p>The pagination token for the next query. If NextToken is empty, no more pages exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -58,9 +58,21 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkPackagesResponseBodyNetworkPackagesTags extends TeaModel {
+        /**
+         * <p>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -107,7 +119,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String businessStatus;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the plan was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-10T02:35:26Z</p>
@@ -127,6 +139,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
          * <li>If the plan uses the subscription billing method, the actual expiration time is returned.</li>
          * <li>If the plan uses the pay-as-you-go billing method, <code>2099-12-31T15:59:59Z</code> is returned.</li>
          * </ul>
+         * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2099-12-31T15:59:59Z</p>
@@ -137,13 +150,13 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         /**
          * <p>The billing method of the premium Internet bandwidth plan.</p>
          * <ul>
-         * <li>If the parameter <code>PayType</code> is set to <code>PrePaid</code>, valid values:<ul>
-         * <li>PayByBandwidth: pay-by-bandwidth.</li>
+         * <li>If the parameter <code>PayType</code> is set to <code>PrePaid</code>, the valid value is:<ul>
+         * <li>PayByBandwidth: billing by fixed bandwidth.</li>
          * </ul>
          * </li>
-         * <li>If the parameter <code>PayType</code> is set to <code>PostPaid</code>, valid values:<ul>
-         * <li>PayByTraffic: pay-by-data-transfer.</li>
-         * <li>PayByBandwidth: pay-by-bandwidth.</li>
+         * <li>If the parameter <code>PayType</code> is set to <code>PostPaid</code>, valid values are:<ul>
+         * <li>PayByTraffic: billing by data transfer.</li>
+         * <li>PayByBandwidth: billing by fixed bandwidth.</li>
          * </ul>
          * </li>
          * </ul>
@@ -209,7 +222,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The effective period of the reserved network bandwidth.</p>
+         * <p>The effective period of the reserved network bandwidth. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-10T00:00:00Z</p>
@@ -235,6 +248,9 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackagesTags> tags;
 

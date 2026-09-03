@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class SendVerifyCodeRequest extends TeaModel {
     /**
-     * <p>The information that is required to send the verification code, in JSON format. When you verify the CEN instance of another Alibaba Cloud account, you must provide the ID of the CEN instance and the ID of the Alibaba Cloud account to which the instance belongs.</p>
+     * <p>The information required to send the verification code, in JSON format. When verifying a CEN instance, provide the CEN instance ID and the Alibaba Cloud account ID to which the CEN instance belongs.</p>
      * <ul>
-     * <li><p>CenId: the ID of the CEN instance.</p>
-     * </li>
-     * <li><p>CenOwnerId: the ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
-     * </li>
+     * <li>CenId: the CEN instance ID. </li>
+     * <li>CenOwnerId: the Alibaba Cloud account ID to which the CEN instance belongs.</li>
      * </ul>
      * <blockquote>
-     * <p>If you own the CEN instance, skip this parameter. If you do not own the CEN instance, specify the ID of the Alibaba Cloud account that owns the CEN instance.</p>
+     * <p>If the specified CenId belongs to the current Alibaba Cloud account, this parameter is not required. If the specified CenId belongs to a different Alibaba Cloud account, specify the Alibaba Cloud account ID of the owner.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +21,7 @@ public class SendVerifyCodeRequest extends TeaModel {
     public String extraInfo;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,11 +31,7 @@ public class SendVerifyCodeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The action that you want to perform by using the verification code.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>eds_cenID_securityverification: Use the verification code to verify the CEN instance.</li>
-     * </ul>
+     * <p>The action associated with the verification code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

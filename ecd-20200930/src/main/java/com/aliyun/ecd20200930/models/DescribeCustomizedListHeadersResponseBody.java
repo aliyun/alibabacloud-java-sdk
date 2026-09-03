@@ -54,7 +54,7 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
          * <p>The key of the table header.</p>
          * 
          * <strong>example:</strong>
-         * <p>system_data_disk</p>
+         * <p>pay_type</p>
          */
         @NameInMap("HeaderKey")
         public String headerKey;

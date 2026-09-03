@@ -14,11 +14,11 @@ public class ExportDesktopGroupInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The download URL of the exported shared cloud desktop list file. The exported file contains the following details of shared cloud desktops:</p>
+     * <p>The download URL of the exported shared cloud computer list file. The exported file contains the following details:</p>
      * <ul>
-     * <li>Shared cloud desktop ID/name</li>
+     * <li>Shared cloud computer ID/name</li>
      * <li>Office network ID/name</li>
-     * <li>Shared cloud desktop template</li>
+     * <li>Shared cloud computer template</li>
      * <li>CPU/memory</li>
      * <li>System cloud disk/data cloud disk</li>
      * <li>Security policy name</li>

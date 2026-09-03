@@ -19,7 +19,7 @@ public class DescribeGuestApplicationsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>alice</p>
+     * <p>demo001</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;

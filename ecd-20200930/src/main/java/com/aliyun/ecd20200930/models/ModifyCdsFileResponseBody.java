@@ -14,7 +14,7 @@ public class ModifyCdsFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether data is returned successfully.
+     * <p>Indicates whether the data is returned successfully.
      * [_single.resp.200.props.Data.enum. false]Failed to return data.</p>
      * 
      * <strong>example:</strong>

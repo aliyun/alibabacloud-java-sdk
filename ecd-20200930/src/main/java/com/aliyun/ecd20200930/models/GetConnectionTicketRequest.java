@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
     /**
-     * <p>Specifies a custom user-mode application that is automatically launched after the credential is obtained.</p>
+     * <p>Specifies a custom user-mode application that is automatically started after the credential is obtained.</p>
      * <ul>
-     * <li>appPath: String. The path of the application startup file. Example: <code>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</code>. Use double backslashes (\\) as path separators.</li>
-     * <li>appParameter: String. The application startup parameters. Example: <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate parameters with spaces.</li>
+     * <li>appPath: a value of the String type that specifies the application startup file path, such as <code>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</code>. Use double backslashes (\\) as path separators.</li>
+     * <li>appParameter: a value of the String type that specifies the application startup parameters, such as <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate parameters with spaces.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String commandContent;
 
     /**
-     * <p>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required to generate the credential.</p>
+     * <p>The ID of the cloud computer for which to generate a connection credential. This parameter is required to generate the credential.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
@@ -87,7 +87,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The unique identifier of the client. If you use the Apsara Uni-manager client, you can view this parameter in the <strong>About</strong> dialog box on the client logon page.</p>
+     * <p>The unique identifier of the client. If you use the Wuying client, you can view this parameter in the <strong>About</strong> dialog box on the client logon page.</p>
      * 
      * <strong>example:</strong>
      * <p>28c80e90-f71e-4c23-93d6-1225329cf949</p>

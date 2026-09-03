@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatesRequest extends TeaModel {
     /**
-     * <p>The region filter condition for the template query. </p>
+     * <p>The region filter condition for template queries.</p>
      * <blockquote>
-     * <p>If this parameter is specified, region-specific configurations that do not match are excluded from the query results.</p>
+     * <p>If this parameter is specified, the query results exclude configurations for regions that do not match.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,13 +22,13 @@ public class DescribeTemplatesRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>default</p>
      */
     @NameInMap("BizType")
     public String bizType;
 
     /**
-     * <p>The cloud computer image ID. You can obtain the ID from the image management page. System images, custom images, and other image types are supported.</p>
+     * <p>The cloud computer image ID. You can obtain the ID from the image management page. System images and custom images are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>m-dnz9xjgbm8*****</p>
@@ -46,7 +46,7 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The page number of the current page in a paged query. This parameter is used for paging.</p>
+     * <p>The page number of the current page in a paged query. Paging starts from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +55,7 @@ public class DescribeTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of rows per page in a paged query. This parameter is used for paging.</p>
+     * <p>The maximum number of rows per page in a paged query. Paging is used to return results in batches.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -74,6 +74,9 @@ public class DescribeTemplatesRequest extends TeaModel {
 
     /**
      * <p>The list of template IDs to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DescribeTemplates</p>
      */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
@@ -82,7 +85,7 @@ public class DescribeTemplatesRequest extends TeaModel {
      * <p>The template name used for the query.</p>
      * 
      * <strong>example:</strong>
-     * <p>My cloud desktop template 001</p>
+     * <p>MyCloudComputerTemplate001</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

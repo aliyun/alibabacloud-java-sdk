@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the automatic payment feature.</p>
+     * <p>Specifies whether to enable automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,14 +14,11 @@ public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The maximum bandwidth of the premium bandwidth plan, in Mbit/s.</p>
+     * <p>The bandwidth of the premium Internet bandwidth plan. Unit: Mbit/s.    </p>
      * <ul>
-     * <li><p>For subscription premium bandwidth, the valid range is 2 to 1000.</p>
-     * </li>
-     * <li><p>For pay-as-you-go premium bandwidth with pay-by-traffic billing, the valid range is 2 to 200.</p>
-     * </li>
-     * <li><p>For pay-as-you-go premium bandwidth with pay-by-bandwidth billing, the valid range is 2 to 1000.</p>
-     * </li>
+     * <li>If the premium bandwidth plan uses the subscription billing method, the valid values are 2 to 1000.</li>
+     * <li>If the premium bandwidth plan uses the pay-as-you-go billing method and the metering method is pay-by-data-transfer (PayByTraffic), the valid values are 2 to 200.</li>
+     * <li>If the premium bandwidth plan uses the pay-as-you-go billing method and the metering method is pay-by-bandwidth (PayByBandwidth), the valid values are 2 to 1000.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +29,7 @@ public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The ID of the premium bandwidth plan.</p>
+     * <p>The ID of the premium Internet bandwidth plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +48,7 @@ public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions supported by Elastic Desktop Service (EDS).</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +57,12 @@ public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID of the resource ownership in the reseller pattern. You do not need to specify this parameter if you are not using the reseller pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQosRulesResponseBody extends TeaModel {
     /**
-     * <p>A list of QoS rules.</p>
+     * <p>The list of QoS rules.</p>
      */
     @NameInMap("QosRules")
     public java.util.List<DescribeQosRulesResponseBodyQosRules> qosRules;
@@ -42,7 +42,7 @@ public class DescribeQosRulesResponseBody extends TeaModel {
 
     public static class DescribeQosRulesResponseBodyQosRules extends TeaModel {
         /**
-         * <p>The number of associated cloud desktops.</p>
+         * <p>The number of cloud computers in the pool.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -50,11 +50,17 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         @NameInMap("DesktopCount")
         public String desktopCount;
 
+        /**
+         * <p>The number of cloud computer pools associated with the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DesktopGroupCount")
         public Integer desktopGroupCount;
 
         /**
-         * <p>The download bandwidth.</p>
+         * <p>The downstream bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -63,7 +69,7 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         public String download;
 
         /**
-         * <p>The network package ID.</p>
+         * <p>The premium Internet bandwidth ID.</p>
          * 
          * <strong>example:</strong>
          * <p>np-5cjh3sqs1ty3s02xq</p>
@@ -81,16 +87,16 @@ public class DescribeQosRulesResponseBody extends TeaModel {
         public String qosRuleId;
 
         /**
-         * <p>The QoS rule name.</p>
+         * <p>The name of the QoS rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Office network QoS rule</p>
          */
         @NameInMap("QosRuleName")
         public String qosRuleName;
 
         /**
-         * <p>The upload bandwidth.</p>
+         * <p>The upstream bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -15,7 +15,7 @@ public class AssociateNetworkPackageRequest extends TeaModel {
     public String networkPackageId;
 
     /**
-     * <p>The ID of the office network. You can call <a href="https://help.aliyun.com/document_detail/216079.html">DescribeNetworkPackages</a> to obtain the ID of the office network associated with the premium Internet bandwidth plan.</p>
+     * <p>The ID of the office network. You can call <a href="https://help.aliyun.com/document_detail/216079.html">DescribeNetworkPackages</a> to query the ID of the office network associated with the premium Internet bandwidth plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

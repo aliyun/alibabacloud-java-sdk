@@ -22,7 +22,7 @@ public class DetachEndUserRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("ClientType")
     public String clientType;
@@ -32,7 +32,7 @@ public class DetachEndUserRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>12OERSLDO7M3****</p>
+     * <p>F9E52EDCCB2B****</p>
      */
     @NameInMap("DeviceId")
     public String deviceId;
@@ -51,7 +51,7 @@ public class DetachEndUserRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>alice</p>
+     * <p>moli</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -60,7 +60,7 @@ public class DetachEndUserRequest extends TeaModel {
      * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("Region")
     public String region;

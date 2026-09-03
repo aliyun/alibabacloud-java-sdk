@@ -38,7 +38,7 @@ public class DescribeFotaTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+     * <p>The pagination token for the next query. An empty value indicates that there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

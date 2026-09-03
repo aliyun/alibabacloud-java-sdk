@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token for the start of the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2</p>
@@ -23,13 +23,13 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The sessions.</p>
+     * <p>The list of session data.</p>
      */
     @NameInMap("Sessions")
     public java.util.List<DescribeDesktopGroupSessionsResponseBodySessions> sessions;
 
     /**
-     * <p>The total number of sessions.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -76,7 +76,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
 
     public static class DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo extends TeaModel {
         /**
-         * <p>The type of the terminal.</p>
+         * <p>The terminal device model.</p>
          * 
          * <strong>example:</strong>
          * <p>wuying_mac_x86_64</p>
@@ -94,7 +94,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>Terminal Serial Number</p>
+         * <p>The terminal serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>96c530bc-6095-4014-8bbc-d461b8ac****</p>
@@ -103,7 +103,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
-         * <p>The terminal UUID.</p>
+         * <p>The UUID of the terminal device.</p>
          * 
          * <strong>example:</strong>
          * <p>EBFDC7773BEBAD418A9F89429652****</p>
@@ -161,7 +161,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The client IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>172.21.XX.XX</p>
@@ -179,7 +179,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String clientOS;
 
         /**
-         * <p>The version of the client.</p>
+         * <p>The client version.</p>
          * 
          * <strong>example:</strong>
          * <p>7.8.0</p>
@@ -197,7 +197,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
-         * <p>The name of the cloud computer share.</p>
+         * <p>The name of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoCCGroup</p>
@@ -206,7 +206,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String desktopGroupName;
 
         /**
-         * <p>If the session status is Connected, it indicates the ID of the cloud computer that is currently connected. If the session status is Disconnected, it indicates the ID of the cloud computer that was last connected.</p>
+         * <p>The cloud computer ID. If the session status is Connected, this value indicates the ID of the currently connected cloud computer. If the session status is Disconnected, this value indicates the ID of the most recently connected cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-g6t1ukbaea****</p>
@@ -224,7 +224,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String directoryType;
 
         /**
-         * <p>The point in time when the end user applies for administrator assistance.</p>
+         * <p>The point in time when the user requested administrator assistance. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1678794261000</p>
@@ -233,7 +233,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public Long endUserApplyCoordinateTime;
 
         /**
-         * <p>The user ID of the terminal that connects to the session.</p>
+         * <p>The ID of the end user connected to the session.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -242,7 +242,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The end time of the most recent connection.</p>
+         * <p>The end time of the most recent connection. Time format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-31 07:56:45</p>
@@ -251,7 +251,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String lastSessionEndTime;
 
         /**
-         * <p>The start time of the most recent connection.</p>
+         * <p>The start time of the most recent connection. Time format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-31 06:56:45</p>
@@ -260,7 +260,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String lastSessionStartTime;
 
         /**
-         * <p>The duration of the most recent session. Unit: seconds.</p>
+         * <p>The duration of the most recent connection. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -269,7 +269,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public Long latestConnectionTime;
 
         /**
-         * <p>The office network ID.</p>
+         * <p>The ID of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-8904****</p>
@@ -278,7 +278,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The office network name.</p>
+         * <p>The name of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoOfficeNetwork</p>
@@ -296,7 +296,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The type of the session.</p>
+         * <p>The session type.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -305,7 +305,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public Integer ownType;
 
         /**
-         * <p>The protocol type supported by the rule.</p>
+         * <p>The protocol type.</p>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -323,7 +323,7 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public Long sessionIdleTime;
 
         /**
-         * <p>The state of the session.</p>
+         * <p>The session connection status.</p>
          * 
          * <strong>example:</strong>
          * <p>Connected</p>
@@ -332,13 +332,13 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         public String sessionStatus;
 
         /**
-         * <p>Terminal Info</p>
+         * <p>The terminal information.</p>
          */
         @NameInMap("TerminalInfo")
         public DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo terminalInfo;
 
         /**
-         * <p>The total duration of the sessions. Unit: seconds.</p>
+         * <p>The total connection duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>

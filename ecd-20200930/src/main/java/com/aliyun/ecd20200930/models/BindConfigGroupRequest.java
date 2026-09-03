@@ -15,7 +15,7 @@ public class BindConfigGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The region ID. This operation is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
+     * <p>The region ID. This feature is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

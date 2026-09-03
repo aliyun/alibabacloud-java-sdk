@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopChargeTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment.</p>
+     * <p>Specifies whether to automatically pay for the order when you convert the billing method to subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The new billing method.</p>
+     * <p>The target billing method to which you want to convert.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -23,7 +23,7 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The IDs of the cloud desktops. You can specify 1 to 20 IDs.</p>
+     * <p>The cloud desktop IDs. You can specify 1 to 20 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,14 +33,11 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The subscription duration. This parameter is required only when you set the <code>ChargeType</code> parameter to <code>PrePaid</code>. The unit of the duration is specified by the <code>PeriodUnit</code> parameter.</p>
+     * <p>The subscription duration of the cloud desktop when you convert the billing method to subscription. The unit is specified by PeriodUnit. This parameter takes effect and is required only when ChargeType is set to PrePaid.</p>
      * <ul>
-     * <li><p>If you set the <code>PeriodUnit</code> parameter to <code>Week</code>, you can set this parameter only to 1.</p>
-     * </li>
-     * <li><p>If you set the <code>PeriodUnit</code> parameter to <code>Month</code>, you can set this parameter to 1, 2, 3, or 6.</p>
-     * </li>
-     * <li><p>If you set the <code>PeriodUnit</code> parameter to <code>Year</code>, you can set this parameter to 1, 2, 3, 4, or 5.</p>
-     * </li>
+     * <li>If PeriodUnit is set to Week, the valid value of this parameter is 1.</li>
+     * <li>If PeriodUnit is set to Month, valid values of this parameter are 1, 2, 3, and 6.</li>
+     * <li>If PeriodUnit is set to Year, valid values of this parameter are 1, 2, 3, 4, and 5.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +47,7 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration.</p>
+     * <p>The unit of the subscription duration when you convert the billing method to subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -68,7 +65,7 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +74,12 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource ownership user in reseller pattern. You do not need to specify this parameter if you are not using reseller pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 
@@ -86,7 +89,7 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>sample</p>
+     * <p>120</p>
      */
     @NameInMap("UseDuration")
     public Integer useDuration;

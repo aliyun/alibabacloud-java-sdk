@@ -1,3 +1,32 @@
+2026-09-03 Version: 5.2.0
+- Support API DescribePrinterEvents.
+- Update API CreateCenterPolicy: add request parameters PrinterAlert.
+- Update API CreateCenterPolicy: add request parameters PrinterAlertContent.
+- Update API CreateCenterPolicy: add request parameters PrinterAlertTitle.
+- Update API CreateCenterPolicy: add request parameters ThreeScreen.
+- Update API CreateDesktops: add request parameters DesktopNameModel.
+- Update API CreateDesktops: add request parameters PurchaseOptions.CreditPackageAmountSpec.
+- Update API CreateDesktops: add request parameters PurchaseOptions.CreditPackagePeriod.
+- Update API CreateDesktops: add request parameters PurchaseOptions.CreditPackagePeriodUnit.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.PrinterAlert.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.PrinterAlertContent.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.PrinterAlertTitle.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.ThreeScreen.
+- Update API DescribeDesktopTypes: add response parameters Body.DesktopTypes.$.SaleTypes.
+- Update API DescribeDesktops: add request parameters NetworkInterfaceIp.
+- Update API DescribeDesktops: add request parameters PublicIp.
+- Update API DescribeOfficeSites: add response parameters Body.OfficeSites.$.BasicInternetType.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.PrinterAlert.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.PrinterAlertContent.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.PrinterAlertTitle.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.ThreeScreen.
+- Update API ModifyCenterPolicy: add request parameters PrinterAlert.
+- Update API ModifyCenterPolicy: add request parameters PrinterAlertContent.
+- Update API ModifyCenterPolicy: add request parameters PrinterAlertTitle.
+- Update API ModifyCenterPolicy: add request parameters ThreeScreen.
+- Update API ModifyTimerGroup: add request parameters ConfigTimers.$.SegmentTimers.$.CreateSnapshot.
+
+
 2026-07-30 Version: 5.1.0
 - Support API CreateVirtualBridge.
 - Support API DeleteVirtualBridge.

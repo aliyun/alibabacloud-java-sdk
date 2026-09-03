@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEcdReportTaskResponseBody extends TeaModel {
     /**
-     * <p>The operation result. The value <code>success</code> indicates success. Otherwise, an error message is returned.</p>
+     * <p>The operation result. The value <code>success</code> indicates that the operation is successful. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

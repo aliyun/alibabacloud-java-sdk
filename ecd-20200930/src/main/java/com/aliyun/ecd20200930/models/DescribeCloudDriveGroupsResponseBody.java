@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     /**
-     * <p>The list of team spaces.</p>
+     * <p>The list of cloud drive team spaces.</p>
      */
     @NameInMap("CloudDriveGroups")
     public java.util.List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroups> cloudDriveGroups;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -20,7 +20,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token for the next query. If <code>NextToken</code> is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -38,7 +38,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
 
     public static class DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos extends TeaModel {
         /**
-         * <p>Mailbox.</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@aliyun.com">123@aliyun.com</a></p>
@@ -102,7 +102,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>Administrator username (may be unreadable when imported from a third party).</p>
+         * <p>The administrator username. This value may not be readable when imported from a third party.</p>
          * 
          * <strong>example:</strong>
          * <p>user01</p>
@@ -111,7 +111,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>Job number (DingTalk)</p>
+         * <p>The employee ID (DingTalk).</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -120,16 +120,16 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String jobNumber;
 
         /**
-         * <p>Administrator nickname.</p>
+         * <p>The administrator nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Doe</p>
+         * <p>John</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
-         * <p>Phone number.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678</p>
@@ -138,19 +138,19 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>Administrator nickname.</p>
+         * <p>The administrator nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Doe</p>
+         * <p>John</p>
          */
         @NameInMap("RealNickName")
         public String realNickName;
 
         /**
-         * <p>Remark.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Doe</p>
+         * <p>John</p>
          */
         @NameInMap("Remark")
         public String remark;
@@ -220,7 +220,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
 
     public static class DescribeCloudDriveGroupsResponseBodyCloudDriveGroups extends TeaModel {
         /**
-         * <p>List of group administrators.</p>
+         * <p>The list of team administrators.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;user01&quot;]</p>
@@ -229,13 +229,13 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String adminUserIds;
 
         /**
-         * <p>Administrator information for the group space.</p>
+         * <p>The team storage management administrator information.</p>
          */
         @NameInMap("AdminUserInfos")
         public java.util.List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos> adminUserInfos;
 
         /**
-         * <p>The time when the team space was created.</p>
+         * <p>The creation time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-11T07:44:21Z</p>
@@ -244,7 +244,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-959593****</p>
@@ -253,7 +253,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String directoryId;
 
         /**
-         * <p>The team space ID.</p>
+         * <p>The space ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sh1234</p>
@@ -262,7 +262,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String driveId;
 
         /**
-         * <p>The team ID.</p>
+         * <p>The team space ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-e70ga4ixp30ur****</p>
@@ -271,16 +271,16 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The name of the team space.</p>
+         * <p>The team space name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test team 1</p>
+         * <p>TestTeam1</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>Organization ID of the team.</p>
+         * <p>The organization ID of the team.</p>
          * 
          * <strong>example:</strong>
          * <p>org-aliyun-wy-org-id</p>
@@ -289,7 +289,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String orgId;
 
         /**
-         * <p>Size of the recycle bin for the team space. Unit: Byte.</p>
+         * <p>The size of the team space recycle bin. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024000</p>
@@ -298,14 +298,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String recycleBinSize;
 
         /**
-         * <p>The team space status. Valid values:</p>
-         * <ul>
-         * <li><p>enabled</p>
-         * </li>
-         * <li><p>disabled</p>
-         * </li>
-         * </ul>
-         * <p>Default value: enabled.</p>
+         * <p>The team space status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -314,7 +307,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The total capacity of the team space.</p>
+         * <p>The total capacity of the cloud drive team space.</p>
          * 
          * <strong>example:</strong>
          * <p>5368709120</p>
@@ -323,7 +316,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public Long totalSize;
 
         /**
-         * <p>The capacity of the used space. Unit: bytes.</p>
+         * <p>The used space size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024000000</p>

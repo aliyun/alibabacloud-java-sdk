@@ -14,7 +14,7 @@ public class CopyImageRequest extends TeaModel {
     public String destinationDescription;
 
     /**
-     * <p>The name of the new image created by the copy operation. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), or hyphens (-). It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the new image created by the copy operation. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

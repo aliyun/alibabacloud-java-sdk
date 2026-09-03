@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     /**
-     * <p>Collection of image modification records.</p>
+     * <p>The image change records.</p>
      */
     @NameInMap("ImageModifiedRecords")
     public java.util.List<DescribeImageModifiedRecordsResponseBodyImageModifiedRecords> imageModifiedRecords;
 
     /**
-     * <p>Token for the next page of results. An empty NextToken means no more results.</p>
+     * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6koN7RqHg3d2z8LKmSoe821</p>
@@ -20,7 +20,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DC40EE61-7E83-59ED-AEA6-7EE9C437F352</p>
@@ -29,7 +29,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of image modification records.</p>
+     * <p>The total number of image change records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -76,7 +76,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
 
     public static class DescribeImageModifiedRecordsResponseBodyImageModifiedRecords extends TeaModel {
         /**
-         * <p>ID of the original image before modification.</p>
+         * <p>The image ID before the change.</p>
          * 
          * <strong>example:</strong>
          * <p>desktopimage-windows-server-2019-64-ch-asp</p>
@@ -85,7 +85,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>Name of the original image before modification.</p>
+         * <p>The image name before the change.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows server 2019 Mainland</p>
@@ -94,7 +94,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>ID of the new image after modification.</p>
+         * <p>The ID of the new image after the change.</p>
          * 
          * <strong>example:</strong>
          * <p>desktopimage-windows-server-2022-64-ch-asp</p>
@@ -103,7 +103,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         public String newImageId;
 
         /**
-         * <p>Name of the new image after modification.</p>
+         * <p>The name of the new image after the change.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows server 2022 Mainland asp</p>
@@ -111,11 +111,17 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         @NameInMap("NewImageName")
         public String newImageName;
 
+        /**
+         * <p>The reason for ignoring the vulnerability. This parameter is required only when you perform the ignore vulnerability operation, that is, when <code>OperateType</code> is set to <code>vul_ignore</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Defer fix</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>Status of the image modification.</p>
+         * <p>The status of the image change.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -124,7 +130,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Time when the image was last modified.</p>
+         * <p>The time when the image was last changed. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ss.SSSZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-03T02:43:44.851Z</p>

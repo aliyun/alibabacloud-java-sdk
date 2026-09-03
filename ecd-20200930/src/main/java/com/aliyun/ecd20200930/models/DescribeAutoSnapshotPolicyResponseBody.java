@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
     /**
-     * <p>The automatic snapshot policies.</p>
+     * <p>The list of automatic snapshot policies.</p>
      */
     @NameInMap("AutoSnapshotPolicies")
     public java.util.List<DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies> autoSnapshotPolicies;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return value is empty, no more results are returned.</p>
+     * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -59,7 +59,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies extends TeaModel {
         /**
-         * <p>The time when the policy was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+         * <p>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-11T09:14:00Z</p>
@@ -68,7 +68,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The cron expression that is used to create snapshots.</p>
+         * <p>The cron expression that specifies the snapshot creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 5,7 ? * 2/2</p>
@@ -77,7 +77,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The number of cloud computers to which the automatic snapshot policy is applied.</p>
+         * <p>The number of cloud computers to which the snapshot policy is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -86,14 +86,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         public Integer desktopNum;
 
         /**
-         * <p>The disk type for which the automatic snapshot policy is created.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>SYSTEM: system disk</p>
-         * </li>
-         * <li><p>DATA: data disk</p>
-         * </li>
-         * </ul>
+         * <p>The cloud disk type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -108,7 +104,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The name of the automatic snapshot policy.</p>
+         * <p>The Policy Name of the automatic snapshot policy.</p>
          * 
          * <strong>example:</strong>
          * <p>snapshot01</p>
@@ -117,7 +113,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The ID of the region where the automatic snapshot policy resides.</p>
+         * <p>The region ID of the automatic snapshot policy.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -126,7 +122,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The retention period of automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
+         * <p>The retention period of automatic snapshots, in days. Valid values: 1 to 180.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -144,8 +140,8 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The points in time when automatic snapshots are created.</p>
-         * <p>The value is a JSON array of integers. Example: <code>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</code>. A maximum of 24 points in time can be specified.</p>
+         * <p>The points in time at which automatic snapshots are created.</p>
+         * <p>The parameter value is a JSON array in the format of <code>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</code>, with a maximum of 24 time points separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;17&quot;,&quot;18&quot;]</p>

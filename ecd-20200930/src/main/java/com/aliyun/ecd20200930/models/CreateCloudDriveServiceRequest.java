@@ -14,7 +14,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. This parameter applies only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect and is optional only when CdsChargeType is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -28,13 +28,13 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>1</p>
      */
     @NameInMap("BizType")
     public Integer bizType;
 
     /**
-     * <p>The billing method of the cloud drive.</p>
+     * <p>The billing method of the NAS drive.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -43,7 +43,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String cdsChargeType;
 
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance. This parameter is required when <code>OfficeSiteType</code> is set to <code>AD_CONNECTOR</code> and you do not specify <code>OfficeSiteId</code>.</p>
+     * <p>The instance ID of the Cloud Enterprise Network (CEN) associated with the AD office network. This parameter takes effect only when <code>OfficeSiteType</code> is set to <code>AD_CONNECTOR</code>. If <code>OfficeSiteId</code> is specified, you do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-g4ba1mkji8nj6****</p>
@@ -52,7 +52,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The name of the domain controller. This parameter is required when <code>OfficeSiteType</code> is set to <code>AD_CONNECTOR</code> and you do not specify <code>OfficeSiteId</code>.</p>
+     * <p>The domain controller name of the AD office network. This parameter takes effect only when <code>OfficeSiteType</code> is set to <code>AD_CONNECTOR</code>. If <code>OfficeSiteId</code> is specified, you do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>test.local</p>
@@ -61,18 +61,16 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>A list of user IDs.</p>
+     * <p>The list of user IDs.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The total capacity of the cloud drive.</p>
+     * <p>The Peak Volume of the NAS drive storage space.</p>
      * <ul>
-     * <li><p>For pay-as-you-go cloud drives, the unit is bytes.</p>
-     * </li>
-     * <li><p>For subscription cloud drives, the unit is GiB. For example, set the value to 500 for 500 GiB, or to 2048 for 2 TiB.</p>
-     * </li>
+     * <li>When you create a pay-as-you-go NAS drive, the unit is bytes.</li>
+     * <li>When you create an upfront NAS drive, the unit is GiB. For example, to create a 500 GiB upfront NAS drive, set this parameter to 500. To create a 2 TiB upfront NAS drive, set this parameter to 2048.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -83,7 +81,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public Long maxSize;
 
     /**
-     * <p>The name of the cloud drive.</p>
+     * <p>The name of the enterprise NAS drive.</p>
      * 
      * <strong>example:</strong>
      * <p>wuying-cds</p>
@@ -92,7 +90,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the office site. This parameter applies only when <code>OfficeSiteType</code> is set to <code>AD_CONNECTOR</code>.</p>
+     * <p>The ID of the office network. This parameter takes effect only when the network type is set to <code>AD_CONNECTOR</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-400695****</p>
@@ -101,7 +99,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The type of the office site.</p>
+     * <p>The network type of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>SIMPLE</p>
@@ -110,7 +108,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String officeSiteType;
 
     /**
-     * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. This parameter is required only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
+     * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect and is required only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -119,7 +117,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>The unit of the subscription duration. This parameter is required only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
+     * <p>The unit of the subscription duration for the subscription NAS drive. This parameter takes effect and is required only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Year</p>
@@ -128,7 +126,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -137,6 +135,12 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID for resource ownership in reseller pattern. You do not need to specify this parameter if you are not in reseller pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 
@@ -146,13 +150,13 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>sol-2i8qxpv6t1a03****</p>
      */
     @NameInMap("SolutionId")
     public String solutionId;
 
     /**
-     * <p>The maximum number of users for a subscription cloud drive. This parameter is required only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
+     * <p>The maximum number of users for the subscription NAS drive. This parameter takes effect and is required only when <code>CdsChargeType</code> is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -161,7 +165,7 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     public Long userCount;
 
     /**
-     * <p>The maximum size of the personal disk for each user, in bytes.</p>
+     * <p>The maximum storage capacity of a personal drive when you assign a personal drive to a user. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>104857600</p>

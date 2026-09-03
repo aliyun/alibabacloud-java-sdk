@@ -47,7 +47,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -65,7 +65,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -203,7 +203,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     public static class DescribeTemplatesResponseBodyDataRegionConfigList extends TeaModel {
         /**
-         * <p>The number of vCPUs included in the cloud computer instance type.</p>
+         * <p>The number of vCPUs included in the cloud computer specification.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -212,7 +212,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Integer cpuCount;
 
         /**
-         * <p>The GPU memory information. This field is displayed only when the instance type is a graphics-accelerated type.</p>
+         * <p>The GPU memory information. This field is displayed only when the specification is a graphics-accelerated type.</p>
          * 
          * <strong>example:</strong>
          * <p>4GiB</p>
@@ -248,7 +248,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The cloud computer instance type ID.</p>
+         * <p>The cloud computer specification ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.4c8g</p>
@@ -393,7 +393,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
          * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>8vCPUs16GiB</p>
          */
         @NameInMap("Value")
         public String value;
@@ -464,12 +464,24 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplatesResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether automatic payment is enabled for subscription orders.</p>
+         */
         @NameInMap("AutoPay")
         public Boolean autoPay;
 
+        /**
+         * <p>Indicates whether auto-renewal is enabled for the subscription shared cloud computer.</p>
+         */
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        /**
+         * <p>The billing type of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
@@ -492,7 +504,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
          * <p>The template description.</p>
          * 
          * <strong>example:</strong>
-         * <p>My template</p>
+         * <p>MyTemplate</p>
          */
         @NameInMap("Description")
         public String description;
@@ -507,7 +519,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The last modification time of the template (UTC).</p>
+         * <p>The update time of the template (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T05:18:46.000+00:00</p>
@@ -533,9 +545,21 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @NameInMap("ImageType")
         public String imageType;
 
+        /**
+         * <p>The subscription duration of the subscription shared cloud computer. This parameter takes effect only when ChargeType is set to PrePaid, and is required in that case. The unit is specified by PeriodUnit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Period")
         public Integer period;
 
+        /**
+         * <p>The unit of the subscription billing duration. Billable methods use this parameter to specify the time unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
@@ -548,6 +572,9 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        /**
+         * <p>Indicates whether the cloud computer automatically switches to pay-as-you-go billing after the duration plan is exhausted.</p>
+         */
         @NameInMap("PostPaidAfterUsedUp")
         public Boolean postPaidAfterUsedUp;
 
@@ -561,7 +588,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The region-specific configuration parameters.</p>
+         * <p>The region-related configuration parameters.</p>
          */
         @NameInMap("RegionConfigList")
         public java.util.List<DescribeTemplatesResponseBodyDataRegionConfigList> regionConfigList;
@@ -627,7 +654,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>My template 001</p>
+         * <p>MyTemplate001</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
@@ -650,6 +677,12 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @NameInMap("TimerGroupId")
         public String timerGroupId;
 
+        /**
+         * <p>The per-user usage duration plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("UserDuration")
         public String userDuration;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     /**
-     * <p>The connection records.</p>
+     * <p>The array of user connection records.</p>
      */
     @NameInMap("ConnectionRecords")
     public java.util.List<DescribeUserConnectionRecordsResponseBodyConnectionRecords> connectionRecords;
 
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -20,7 +20,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2CC66B0A-BA3B-5D87-BFBE-11AAAD7A8E03</p>
@@ -68,7 +68,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         public String connectDuration;
 
         /**
-         * <p>The time when the end user disconnected from the cloud computer.</p>
+         * <p>The connection end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-27T20:03:13Z</p>
@@ -77,7 +77,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         public String connectEndTime;
 
         /**
-         * <p>The time when the end user connected to the cloud computer.</p>
+         * <p>The connection start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-19T10:12:38Z</p>
@@ -86,7 +86,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         public String connectStartTime;
 
         /**
-         * <p>The ID of the connection record.</p>
+         * <p>The connection record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>528</p>
@@ -95,7 +95,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         public String connectionRecordId;
 
         /**
-         * <p>The ID of the cloud computer to which the end user connected.</p>
+         * <p>The ID of the connected cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -104,7 +104,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The name of the cloud computer to which the end user connected.</p>
+         * <p>The name of the connected cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>demoComputer</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopInfoResponseBody extends TeaModel {
     /**
-     * <p>Basic desktop information.</p>
+     * <p>The basic information of cloud computers.</p>
      */
     @NameInMap("Desktops")
     public java.util.List<DescribeDesktopInfoResponseBodyDesktops> desktops;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>062B1439-709A-580E-85DF-CE97A1560565</p>
@@ -42,7 +42,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
 
     public static class DescribeDesktopInfoResponseBodyDesktops extends TeaModel {
         /**
-         * <p>User connection status.</p>
+         * <p>The connection status of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>Disconnected</p>
@@ -51,7 +51,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>Desktop image version number.</p>
+         * <p>The image version number of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>1.4.0-R-***</p>
@@ -60,7 +60,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String currentAppVersion;
 
         /**
-         * <p>Desktop group ID.</p>
+         * <p>The cloud computer pool ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-3uiojcc0j4kh7****</p>
@@ -69,7 +69,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
-         * <p>Desktop ID.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -78,7 +78,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The status of the cloud desktop.</p>
+         * <p>The status of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -87,13 +87,13 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The management flag.</p>
+         * <p>The management flags.</p>
          */
         @NameInMap("ManagementFlag")
         public java.util.List<String> managementFlag;
 
         /**
-         * <p>Upgrade package size, in KB.</p>
+         * <p>The size of the upgrade package, in KB.</p>
          * 
          * <strong>example:</strong>
          * <p>568533470</p>
@@ -102,7 +102,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public Long newAppSize;
 
         /**
-         * <p>Desktop upgradable image version number.</p>
+         * <p>The image version number to which the cloud computer can be upgraded.</p>
          * 
          * <strong>example:</strong>
          * <p>1.6.0-R-***</p>
@@ -111,7 +111,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String newAppVersion;
 
         /**
-         * <p>Description of the upgradable image version.</p>
+         * <p>The description of the image version to which the cloud computer can be upgraded.</p>
          * 
          * <strong>example:</strong>
          * <p>Test upgrade package 03-07</p>
@@ -120,7 +120,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public String releaseNote;
 
         /**
-         * <p>Desktop first startup time.</p>
+         * <p>The time when the cloud computer was first started. The time is in the ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:31Z</p>

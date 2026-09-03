@@ -4,11 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RebuildDesktopsRequest extends TeaModel {
+    /**
+     * <p>The target status of the cloud computer after the rebuild is complete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("AfterStatus")
     public String afterStatus;
 
     /**
-     * <p>The IDs of the cloud computers to rebuild. You can specify 1 to 20 IDs.</p>
+     * <p>The cloud computer ID. You can specify 1 to 20 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +24,7 @@ public class RebuildDesktopsRequest extends TeaModel {
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The ID of the new image.</p>
+     * <p>The ID of the new image to use after the change.</p>
      * 
      * <strong>example:</strong>
      * <p>m-84mztzatmlnys****</p>
@@ -27,7 +33,7 @@ public class RebuildDesktopsRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The operating system language. This parameter applies only to system images. For Linux cloud computers, only English is supported.</p>
+     * <p>The operating system language. Currently, only system images are supported, and Linux computers only support English.</p>
      * 
      * <strong>example:</strong>
      * <p>en-US</p>
@@ -36,29 +42,21 @@ public class RebuildDesktopsRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>Specifies how to handle the data disk.</p>
+     * <p>The operation type for the data cloud disk.</p>
      * <blockquote>
-     * <p>This parameter is optional.</p>
+     * <p>Regardless of whether the cloud computer has a data cloud disk, no field value is passed in by default when you call this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><p>If a cloud computer does not have a data disk, this parameter is ignored.<br></p>
-     * </li>
-     * <li><p>If a cloud computer has a data disk:</p>
-     * <ol>
-     * <li><p>If the new image has the same operating system as the original one:</p>
-     * <ul>
-     * <li><p>If you set this parameter to <code>replace</code>, the data disk is replaced.</p>
-     * </li>
-     * <li><p>If you do not specify this parameter, the data disk is retained.</p>
-     * </li>
+     * <li>If the cloud computer has no data cloud disk:<br>  No data cloud disk operation is performed regardless of the field value passed in.</li>
+     * <li>If the cloud computer has a data cloud disk:<ol>
+     * <li>When the operating system of the cloud computer is the same as that of the target image:<ul>
+     * <li>If the field value is <code>replace</code>, the data cloud disk of the cloud computer is replaced.</li>
+     * <li>If no field value is passed in, the original data cloud disk of the cloud computer is retained.</li>
      * </ul>
      * </li>
-     * <li><p>If the new image has a different operating system:</p>
-     * <ul>
-     * <li><p>If you set this parameter to <code>replace</code>, the data disk is replaced.</p>
-     * </li>
-     * <li><p>If you do not specify this parameter, the data disk is erased.</p>
-     * </li>
+     * <li>When the operating system of the cloud computer is different from that of the target image:<ul>
+     * <li>If the field value is <code>replace</code>, the data cloud disk of the cloud computer is replaced.</li>
+     * <li>If no field value is passed in, the data cloud disk of the cloud computer is cleared.</li>
      * </ul>
      * </li>
      * </ol>
@@ -72,7 +70,7 @@ public class RebuildDesktopsRequest extends TeaModel {
     public String operateType;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to find the regions where Elastic Desktop Service is available.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

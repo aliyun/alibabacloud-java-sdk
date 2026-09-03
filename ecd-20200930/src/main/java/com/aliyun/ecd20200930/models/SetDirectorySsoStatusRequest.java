@@ -15,11 +15,7 @@ public class SetDirectorySsoStatusRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>Specifies whether to enable or disable single sign-on (SSO). Valid values:</p>
-     * <ul>
-     * <li>true: enables SSO</li>
-     * <li>false: disables SSO.</li>
-     * </ul>
+     * <p>Specifies whether to enable or shutdown SSO logon.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

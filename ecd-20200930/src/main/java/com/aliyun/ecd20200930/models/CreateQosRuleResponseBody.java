@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQosRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the created QoS rule.</p>
+     * <p>The rate limiting rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-5605u0gelk200****</p>

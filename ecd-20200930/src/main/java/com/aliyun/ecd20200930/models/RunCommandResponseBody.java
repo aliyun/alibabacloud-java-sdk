@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunCommandResponseBody extends TeaModel {
     /**
-     * <p>The script execution ID. You can use this ID with the <a href="~~DescribeInvocations~~">DescribeInvocations</a> operation to query the script\&quot;s execution status.</p>
+     * <p>The script execution ID. You can call <a href="~~DescribeInvocations~~">DescribeInvocations</a> and pass in this value to query the script execution status.</p>
      * 
      * <strong>example:</strong>
      * <p>t-hz01qgsqj2n****</p>

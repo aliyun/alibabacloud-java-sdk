@@ -5,23 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetOfficeSiteSsoStatusRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable SSO.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>Specifies whether to enable or shutdown single sign-on (SSO) logon.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +15,7 @@ public class SetOfficeSiteSsoStatusRequest extends TeaModel {
     public Boolean enableSso;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The office network ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +25,7 @@ public class SetOfficeSiteSsoStatusRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

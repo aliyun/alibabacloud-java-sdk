@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     /**
-     * <p>The token to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
+     * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL23as</p>
@@ -23,7 +23,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of virtual MFA devices.</p>
+     * <p>The information about virtual MFA devices.</p>
      */
     @NameInMap("VirtualMFADevices")
     public java.util.List<DescribeVirtualMFADevicesResponseBodyVirtualMFADevices> virtualMFADevices;
@@ -58,15 +58,39 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser extends TeaModel {
+        /**
+         * <p>The display name of the AD account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aduser</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The new display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("DisplayNameNew")
         public String displayNameNew;
 
+        /**
+         * <p>The username of the AD account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aduser</p>
+         */
         @NameInMap("EndUser")
         public String endUser;
 
+        /**
+         * <p>The user principal name (UPN).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
+         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 
@@ -110,11 +134,14 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class DescribeVirtualMFADevicesResponseBodyVirtualMFADevices extends TeaModel {
+        /**
+         * <p>The AD domain user information.</p>
+         */
         @NameInMap("AdUser")
         public DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser adUser;
 
         /**
-         * <p>The number of consecutive failed attempts to bind or authenticate the virtual MFA device.</p>
+         * <p>The number of consecutive failures to bind or authenticate the virtual MFA device.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -124,7 +151,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in private preview.</p>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -134,7 +161,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public String directoryId;
 
         /**
-         * <p>The AD username of the bound user.</p>
+         * <p>The username of the AD account that uses the virtual MFA device.</p>
          * 
          * <strong>example:</strong>
          * <p>usertest</p>
@@ -143,7 +170,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The time when the virtual MFA device was enabled. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and in UTC, as specified by the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</p>
+         * <p>The time when the virtual MFA device was enabled. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T14:52:28Z</p>
@@ -152,7 +179,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public String gmtEnabled;
 
         /**
-         * <p>The time when the locked virtual MFA device is automatically unlocked. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and in UTC, as specified by the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</p>
+         * <p>The automatic unlock time after the virtual MFA device is locked. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-21T15:21:28Z</p>
@@ -161,7 +188,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public String gmtUnlock;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-269345****</p>

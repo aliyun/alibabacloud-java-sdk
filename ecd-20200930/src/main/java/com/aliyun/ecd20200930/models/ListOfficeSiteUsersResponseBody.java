@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOfficeSiteUsersResponseBody extends TeaModel {
     /**
-     * <p>The token to start the next query. If this parameter is empty, all results have been returned.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -23,8 +23,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the AD accounts.<br>
-     * If the enterprise AD contains only the Administrator and Guest users, an empty Users array is returned.<br></p>
+     * <p>The array of AD account usernames. If the enterprise AD contains only the Administrator and Guest users and no other users, an empty Users array is returned.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListOfficeSiteUsersResponseBodyUsers> users;
@@ -59,6 +58,12 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     }
 
     public static class ListOfficeSiteUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <p>The number of assigned cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AssignedDesktopNumber")
         public Integer assignedDesktopNumber;
 
@@ -71,9 +76,21 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The new display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("DisplayNameNew")
         public String displayNameNew;
 
+        /**
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:user@example.com">user@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
@@ -86,9 +103,21 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         @NameInMap("EndUser")
         public String endUser;
 
+        /**
+         * <p>The mobile phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130********</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The user principal name (UPN).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
+         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 

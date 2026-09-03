@@ -54,7 +54,7 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
          * <p>The promotion description.</p>
          * 
          * <strong>example:</strong>
-         * <p>New product launch with exclusive discounts.</p>
+         * <p>New product launch with exclusive discounts</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -243,7 +243,7 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
          * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Get 15% off the list price for a one-year purchase.</p>
+         * <p>Get a 15% discount off the list price for a one-year purchase</p>
          */
         @NameInMap("Description")
         public String description;

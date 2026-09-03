@@ -35,7 +35,7 @@ public class CdsFileShareLinkModel extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>文件分享链接。</p>
+     * <p>newDescription</p>
      */
     @NameInMap("Description")
     public String description;

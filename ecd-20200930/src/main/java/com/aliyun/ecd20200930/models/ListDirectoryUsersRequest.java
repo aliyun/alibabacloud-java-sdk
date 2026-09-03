@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListDirectoryUsersRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available. You can only set this parameter to <code>1</code> or leave it empty.</p>
+     * <p>This field is not available for use. You can only pass in <code>1</code> or leave it empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The string for a fuzzy search. The operation returns all results that contain this string.</p>
+     * <p>The fuzzy match query string. All results that contain this character string are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -35,7 +35,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>Specifies whether to return only users who are assigned cloud desktops.</p>
+     * <p>Specifies whether to return only users who have been assigned cloud computers.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,12 +44,10 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public Boolean includeAssignedUser;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page for a paged query.    </p>
      * <ul>
-     * <li><p>Maximum value: 100.</p>
-     * </li>
-     * <li><p>Default value: 10.</p>
-     * </li>
+     * <li>Maximum value: 100.    </li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +57,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query. If this value is empty, no more results are available.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -68,7 +66,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The path of the organizational unit (OU) in the AD domain. You can call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the OU path.</p>
+     * <p>The organizational unit (OU) in the AD domain to which the user belongs. You can call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain this value.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com/Domain Controllers</p>
@@ -77,7 +75,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String OUPath;
 
     /**
-     * <p>The region ID. To get a list of regions that WUYING Workspace supports, call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a>.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

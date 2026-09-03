@@ -4,11 +4,19 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListOfficeSiteUsersRequest extends TeaModel {
+    /**
+     * <blockquote>
+     * <p>This parameter is not publicly available. You can only pass in <code>1</code> or leave it empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AssignedInfo")
     public String assignedInfo;
 
     /**
-     * <p>The query string for fuzzy matching.</p>
+     * <p>The fuzzy query character string.</p>
      * 
      * <strong>example:</strong>
      * <p><em>jin</em></p>
@@ -16,16 +24,17 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>Specifies whether to return only users who are assigned cloud computers.</p>
+     */
     @NameInMap("IncludeAssignedUser")
     public Boolean includeAssignedUser;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page for a paged query.    </p>
      * <ul>
-     * <li><p>Maximum value: 100.</p>
-     * </li>
-     * <li><p>Default value: 10.</p>
-     * </li>
+     * <li>Maximum value: 100.    </li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +44,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results. Leave this empty for the first query. For subsequent queries, use the NextToken value from the previous response.</p>
+     * <p>The pagination token. Leave this parameter empty for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -44,7 +53,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The path of the organizational unit (OU) in the AD domain.</p>
+     * <p>The specified AD domain organizational unit (OU).</p>
      * 
      * <strong>example:</strong>
      * <p>example.com/Domain Controllers</p>
@@ -53,7 +62,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String OUPath;
 
     /**
-     * <p>The office network ID. Only office networks that use enterprise AD accounts are supported.</p>
+     * <p>The office network ID. Only office networks based on enterprise AD accounts are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +72,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions where WUYING Workspace is available.</p>
+     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +81,12 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The sorting method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 

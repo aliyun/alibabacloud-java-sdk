@@ -42,7 +42,7 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
 
     public static class DisconnectDesktopSessionsResponseBodyInvalidSessions extends TeaModel {
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-2jv6wugbkp65p****</p>

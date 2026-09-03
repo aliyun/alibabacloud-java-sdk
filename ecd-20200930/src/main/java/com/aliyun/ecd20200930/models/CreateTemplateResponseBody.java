@@ -14,7 +14,7 @@ public class CreateTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The template ID returned after the template is created.</p>
+     * <p>The template ID returned after successful creation.</p>
      * 
      * <strong>example:</strong>
      * <p>b-0cc7rx533*****</p>

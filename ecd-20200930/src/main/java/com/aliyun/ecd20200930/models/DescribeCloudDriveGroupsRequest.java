@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDriveGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+     * <p>The enterprise cloud drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
@@ -24,7 +24,7 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The office network name.</p>
      * 
      * <strong>example:</strong>
      * <p>testDirectoryName</p>
@@ -33,14 +33,7 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String directoryName;
 
     /**
-     * <p>The team space status. Valid values:</p>
-     * <ul>
-     * <li><p>enabled</p>
-     * </li>
-     * <li><p>disabled</p>
-     * </li>
-     * </ul>
-     * <p>Default value: enabled.</p>
+     * <p>The team space status.</p>
      * 
      * <strong>example:</strong>
      * <p>enabled</p>
@@ -49,14 +42,7 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String driveStatus;
 
     /**
-     * <p>Specifies whether the space is increased.</p>
-     * <ul>
-     * <li><p>binding: increased</p>
-     * </li>
-     * <li><p>unbound: not increased</p>
-     * </li>
-     * </ul>
-     * <p>Default value: null. The default value indicates that all spaces are queried.</p>
+     * <p>Specifies whether a space is added. Default value: empty, which indicates that all types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>binding</p>
@@ -68,29 +54,22 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String driveType;
 
     /**
-     * <p>The team ID.</p>
+     * <p>The list of team space IDs.</p>
      */
     @NameInMap("GroupId")
     public java.util.List<String> groupId;
 
     /**
-     * <p>The team name for fuzzy search.</p>
+     * <p>The team space name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test team 1</p>
+     * <p>TestTeam1</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The team type.</p>
-     * <ul>
-     * <li><p>org: organizational structure</p>
-     * </li>
-     * <li><p>directory: workspace</p>
-     * </li>
-     * </ul>
-     * <p>Default value: null. The default value indicates that all types of teams are queried.</p>
+     * <p>The team type. Default value: empty, which indicates that all types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>org</p>
@@ -99,12 +78,10 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <ul>
-     * <li><p>Valid values: 1 to 100</p>
-     * </li>
-     * <li><p>Default value: 20</p>
-     * </li>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 20.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +91,7 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> that was returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lY3I2VNHLwy+nIoSXh****</p>
@@ -123,8 +100,8 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the parent node. If a parent node ID is specified, the subnodes are queried. If you set the value of this parameter to root, the root node is queried.</p>
-     * <p>Default value: null. The default value indicates that all nodes are queried.</p>
+     * <p>The ID of the parent node of the object to query. To query the root node, set this parameter to <code>root</code>.</p>
+     * <p>Default value: empty, which indicates that all team spaces are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-e70ga4ixp30ur****</p>
@@ -133,7 +110,7 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String parentGroupId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

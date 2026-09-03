@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesRequest extends TeaModel {
     /**
-     * <p>The list of Active Directory (AD) account usernames.</p>
+     * <p>The list of AD account usernames.</p>
      * 
      * <strong>example:</strong>
      * <p>testuser</p>
@@ -13,6 +13,12 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
+    /**
+     * <p>The fuzzy match query string character.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em>jin</em></p>
+     */
     @NameInMap("Filter")
     public String filter;
 
@@ -26,7 +32,7 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. If a response is truncated, use the returned <code>NextToken</code> to retrieve the next page of results.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken that was returned from the last call to this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -44,7 +50,7 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. Call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

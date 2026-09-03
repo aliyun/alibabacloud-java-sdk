@@ -79,7 +79,7 @@ public class DownloadCdsFileResponseBody extends TeaModel {
          * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>None.</p>
+         * <p>None</p>
          */
         @NameInMap("DownloadType")
         public String downloadType;
@@ -97,7 +97,7 @@ public class DownloadCdsFileResponseBody extends TeaModel {
          * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>None.</p>
+         * <p>None</p>
          */
         @NameInMap("ExpirationSecond")
         public String expirationSecond;
@@ -133,7 +133,7 @@ public class DownloadCdsFileResponseBody extends TeaModel {
          * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>None.</p>
+         * <p>None</p>
          */
         @NameInMap("StreamUrl")
         public String streamUrl;

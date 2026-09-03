@@ -4,11 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateCenterPolicyRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the academic proxy feature. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("AcademicProxy")
     public String academicProxy;
 
     /**
-     * <p>Specifies whether users have administrator permissions after logging on to the cloud desktop.</p>
+     * <p>Specifies whether the user has administrator permissions after logging on to the cloud desktop.</p>
      * <blockquote>
      * <p>This feature is in invitational preview and is not publicly available.</p>
      * </blockquote>
@@ -19,14 +29,34 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("AdminAccess")
     public String adminAccess;
 
+    /**
+     * <p>Specifies whether to enable administrator keyboard control in full-screen mode. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("AdminKeyboardOnFullScreen")
     public String adminKeyboardOnFullScreen;
 
+    /**
+     * <p>Specifies whether to enable administrator keyboard control within the Windows system. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("AdminKeyboardOnWindows")
     public String adminKeyboardOnWindows;
 
     /**
-     * <p>Specifies whether to enable the anti-screenshot feature.</p>
+     * <p>Specifies whether to enable the screenshot prevention feature.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -35,7 +65,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String appContentProtection;
 
     /**
-     * <p>The client IP whitelist. After configuration, only IP addresses within the whitelisted CIDR blocks can access the cloud desktop.</p>
+     * <p>The client IP whitelist. After configuration, only IP addresses within the whitelisted CIDR blocks can access cloud computers.</p>
      */
     @NameInMap("AuthorizeAccessPolicyRule")
     public java.util.List<CreateCenterPolicyRequestAuthorizeAccessPolicyRule> authorizeAccessPolicyRule;
@@ -47,7 +77,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public java.util.List<CreateCenterPolicyRequestAuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
 
     /**
-     * <p>The client auto-reconnect switch.</p>
+     * <p>Specifies whether to enable automatic reconnection on the client.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -55,6 +85,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("AutoReconnect")
     public String autoReconnect;
 
+    /**
+     * <p>The business channel. Valid values:
+     * Enterprise: Enterprise Edition.
+     * Business: Business Edition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enterprise</p>
+     */
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
@@ -69,7 +107,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer businessType;
 
     /**
-     * <p>The local camera redirection setting. This parameter takes effect only when no local camera redirection policy is specified in DeviceRedirects.</p>
+     * <p>The local camera redirection policy. This parameter takes effect only when no local camera redirection policy is specified in DeviceRedirects.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -77,14 +115,34 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("CameraRedirect")
     public String cameraRedirect;
 
+    /**
+     * <p>Specifies whether to display the client control menu. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("ClientControlMenu")
     public String clientControlMenu;
 
+    /**
+     * <p>Specifies whether to enable the custom snapshot creation feature on the client. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("ClientCreateSnapshot")
     public String clientCreateSnapshot;
 
     /**
-     * <p>The list of logon method control rules. This parameter controls which clients can access the cloud desktop.</p>
+     * <p>The list of logon method control rules. Specifies which client types can access cloud computers.</p>
      */
     @NameInMap("ClientType")
     public java.util.List<CreateCenterPolicyRequestClientType> clientType;
@@ -105,7 +163,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public java.util.List<CreateCenterPolicyRequestClipboardGraineds> clipboardGraineds;
 
     /**
-     * <p>The scope in which the clipboard policy takes effect.</p>
+     * <p>The clipboard scope.</p>
      * 
      * <strong>example:</strong>
      * <p>GLOBAL</p>
@@ -114,7 +172,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String clipboardScope;
 
     /**
-     * <p>Specifies whether color enhancement is enabled for design and 3D application common scenarios.</p>
+     * <p>Specifies whether color enhancement is enabled for the design and 3D common scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -122,6 +180,16 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("ColorEnhancement")
     public String colorEnhancement;
 
+    /**
+     * <p>Specifies whether to enable the local drive clipboard feature. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("CpdDriveClipboard")
     public String cpdDriveClipboard;
 
@@ -134,6 +202,16 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("CpuDownGradeDuration")
     public Integer cpuDownGradeDuration;
 
+    /**
+     * <p>Specifies whether to enable CPU overload protection. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("CpuOverload")
     public String cpuOverload;
 
@@ -144,7 +222,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public java.util.List<String> cpuProcessors;
 
     /**
-     * <p>The CPU protection mode switch.</p>
+     * <p>Specifies whether to enable CPU spike protection.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -179,11 +257,17 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("CpuSingleRateLimit")
     public Integer cpuSingleRateLimit;
 
+    /**
+     * <p>The description of the NAS file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>newDescription</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The peripheral connection notification control.</p>
+     * <p>The peripheral connection prompt control.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -204,9 +288,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public java.util.List<CreateCenterPolicyRequestDeviceRules> deviceRules;
 
     /**
-     * <p>The session retention after disconnection setting.</p>
+     * <p>Session retention after disconnection.</p>
      * <blockquote>
-     * <p>This parameter applies only to cloud application policies.</p>
+     * <p>Applicable only to cloud application policies.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -216,9 +300,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String disconnectKeepSession;
 
     /**
-     * <p>The session retention duration after disconnection. Valid values: 30 to 7200. Unit: seconds.</p>
+     * <p>The duration of session retention after disconnection. Valid values: 30 to 7200. Unit: seconds.</p>
      * <blockquote>
-     * <p>This parameter applies only to cloud application policies.</p>
+     * <p>Applicable only to cloud application policies.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -227,6 +311,16 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("DisconnectKeepSessionTime")
     public Integer disconnectKeepSessionTime;
 
+    /**
+     * <p>Specifies whether to enable disk overload protection. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("DiskOverload")
     public String diskOverload;
 
@@ -240,7 +334,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String displayMode;
 
     /**
-     * <p>The domain name resolution policy.</p>
+     * <p>The domain name resolution policies.</p>
      */
     @NameInMap("DomainResolveRule")
     public java.util.List<CreateCenterPolicyRequestDomainResolveRule> domainResolveRule;
@@ -255,7 +349,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String domainResolveRuleType;
 
     /**
-     * <p>The session bandwidth throttling setting.</p>
+     * <p>Specifies whether to enable session bandwidth throttling.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -264,7 +358,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String enableSessionRateLimiting;
 
     /**
-     * <p>The setting for users to request administrator assistance.</p>
+     * <p>Specifies whether users can request administrator assistance.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -273,7 +367,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String endUserApplyAdminCoordinate;
 
     /**
-     * <p>The setting for users within the same office network to share cloud desktops.</p>
+     * <p>Specifies whether users in the same office network can share cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -281,6 +375,16 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("EndUserGroupCoordinate")
     public String endUserGroupCoordinate;
 
+    /**
+     * <p>Specifies whether to enable external storage device access. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("ExternalDrive")
     public String externalDrive;
 
@@ -293,32 +397,84 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("FileMigrate")
     public String fileMigrate;
 
+    /**
+     * <p>The service address for the file transfer feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>filetransfer.example.com</p>
+     */
     @NameInMap("FileTransferAddress")
     public String fileTransferAddress;
 
+    /**
+     * <p>The file size limit for a single transfer to the cloud desktop. Use this parameter together with the transfer-in unit parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("FileTransferInSize")
     public Integer fileTransferInSize;
 
+    /**
+     * <p>The unit for the file size limit of a single transfer to the cloud desktop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MB</p>
+     */
     @NameInMap("FileTransferInUnit")
     public String fileTransferInUnit;
 
+    /**
+     * <p>The file size limit for a single transfer from the cloud desktop. Use this parameter together with the transfer-out unit parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("FileTransferOutSize")
     public Integer fileTransferOutSize;
 
+    /**
+     * <p>The unit for the file size limit of a single transfer from the cloud desktop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MB</p>
+     */
     @NameInMap("FileTransferOutUnit")
     public String fileTransferOutUnit;
 
+    /**
+     * <p>Specifies whether to enable the file transfer size limit. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("FileTransferSizeLimit")
     public String fileTransferSizeLimit;
 
+    /**
+     * <p>The file transfer speed level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("FileTransferSpeed")
     public String fileTransferSpeed;
 
+    /**
+     * <p>The location where the file transfer speed configured on the client takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client</p>
+     */
     @NameInMap("FileTransferSpeedLocation")
     public String fileTransferSpeedLocation;
 
     /**
-     * <p>Specifies whether to enable the image quality policy for GPU-accelerated cloud desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
+     * <p>Specifies whether to enable the image quality policy for GPU-accelerated Cloud Desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -326,6 +482,16 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("GpuAcceleration")
     public String gpuAcceleration;
 
+    /**
+     * <p>Specifies whether to enable the floating ball configuration message prompt. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("HoverConfigMsg")
     public String hoverConfigMsg;
 
@@ -347,9 +513,29 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("InternetCommunicationProtocol")
     public String internetCommunicationProtocol;
 
+    /**
+     * <p>Specifies whether to enable the network printer feature. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("InternetPrinter")
     public String internetPrinter;
 
+    /**
+     * <p>Specifies whether to enable the floating ball keyboard control. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("KeyboardControl")
     public String keyboardControl;
 
@@ -363,7 +549,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String localDrive;
 
     /**
-     * <p>The maximum reconnection retry time when the cloud desktop is disconnected due to objective reasons. Valid values: 30 to 7200. Unit: seconds.</p>
+     * <p>The maximum reconnection retry time when a cloud computer is disconnected due to external reasons. Valid values: 30 to 7200. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -372,7 +558,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer maxReconnectTime;
 
     /**
-     * <p>The single-process memory throttling duration. Valid values: 30 to 120. Unit: seconds.</p>
+     * <p>The memory throttling duration of a single process. Valid values: 30 to 120. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -380,6 +566,16 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("MemoryDownGradeDuration")
     public Integer memoryDownGradeDuration;
 
+    /**
+     * <p>Specifies whether to enable memory overload protection. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("MemoryOverload")
     public String memoryOverload;
 
@@ -390,7 +586,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public java.util.List<String> memoryProcessors;
 
     /**
-     * <p>The memory protection mode switch.</p>
+     * <p>Specifies whether to enable memory protection.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -417,7 +613,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer memorySampleDuration;
 
     /**
-     * <p>The single-process memory usage percentage. Valid values: 30 to 60.</p>
+     * <p>The memory usage percentage of a single process. Valid values: 30 to 60.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -426,7 +622,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer memorySingleRateLimit;
 
     /**
-     * <p>Specifies whether to provide the restart button in the cloud desktop floating ball when connecting through mobile clients (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
+     * <p>Specifies whether to provide a restart button in the cloud desktop floating ball when connecting to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
      * <blockquote>
      * <p>This parameter applies only to mobile clients V7.4 or later.</p>
      * </blockquote>
@@ -438,7 +634,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String mobileRestart;
 
     /**
-     * <p>The mobile Windows security control switch.</p>
+     * <p>Specifies whether to enable Windows security control on mobile devices.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -447,7 +643,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String mobileSafeMenu;
 
     /**
-     * <p>Specifies whether to provide the shutdown button in the cloud desktop floating ball when connecting through mobile clients (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
+     * <p>Specifies whether to provide a shutdown button in the cloud desktop floating ball from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
      * <blockquote>
      * <p>This parameter applies only to mobile clients V7.4 or later.</p>
      * </blockquote>
@@ -459,7 +655,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String mobileShutdown;
 
     /**
-     * <p>The mobile WUYING Manager switch.</p>
+     * <p>Specifies whether to enable WUYING Keeper on mobile devices.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -468,7 +664,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String mobileWuyingKeeper;
 
     /**
-     * <p>The mobile AI assistant switch.</p>
+     * <p>Specifies whether to enable WY Assistant on mobile devices.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -476,9 +672,29 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("MobileWyAssistant")
     public String mobileWyAssistant;
 
+    /**
+     * <p>Specifies whether to enable the model library feature. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("ModelLibrary")
     public String modelLibrary;
 
+    /**
+     * <p>Specifies whether to enable the multi-screen display feature. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("MultiScreen")
     public String multiScreen;
 
@@ -505,7 +721,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String netRedirect;
 
     /**
-     * <p>The network redirection policy details.</p>
+     * <p>The details of the network redirect policy.</p>
      * <blockquote>
      * <p>This feature is in invitational preview and is not publicly available.</p>
      * </blockquote>
@@ -514,9 +730,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public java.util.List<CreateCenterPolicyRequestNetRedirectRule> netRedirectRule;
 
     /**
-     * <p>The no-operation disconnect setting.</p>
+     * <p>Disconnect on no operation.</p>
      * <blockquote>
-     * <p>This parameter applies only to cloud application policies.</p>
+     * <p>Applicable only to cloud application policies.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -526,9 +742,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String noOperationDisconnect;
 
     /**
-     * <p>The no-operation disconnect duration. Valid values: 120 to 7200. Unit: seconds.</p>
+     * <p>The duration of inactivity before disconnection. Valid values: 120 to 7200. Unit: seconds.</p>
      * <blockquote>
-     * <p>This parameter applies only to cloud application policies.</p>
+     * <p>Applicable only to cloud application policies.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -537,8 +753,50 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("NoOperationDisconnectTime")
     public Integer noOperationDisconnectTime;
 
+    /**
+     * <p>Specifies whether to enable the port proxy feature. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("PortProxy")
     public String portProxy;
+
+    /**
+     * <p>The printer pop-up prompt setting. Valid values:</p>
+     * <ul>
+     * <li>default: Default value.</li>
+     * <li>off: Disabled.</li>
+     * <li>custom: Custom.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("PrinterAlert")
+    public String printerAlert;
+
+    /**
+     * <p>The content of the printer pop-up prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Print Content</p>
+     */
+    @NameInMap("PrinterAlertContent")
+    public String printerAlertContent;
+
+    /**
+     * <p>The title of the printer pop-up prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Print Title</p>
+     */
+    @NameInMap("PrinterAlertTitle")
+    public String printerAlertTitle;
 
     /**
      * <p>The printer redirection policy. This parameter takes effect only when no printer redirection policy is specified in DeviceRedirects.</p>
@@ -550,7 +808,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String printerRedirect;
 
     /**
-     * <p>Specifies whether image quality enhancement is enabled for design and 3D application common scenarios.</p>
+     * <p>Specifies whether image quality enhancement is enabled for the design and 3D common scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -559,7 +817,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String qualityEnhancement;
 
     /**
-     * <p>The recording duration after an event is detected in screen recording audit. Unit: minutes. Valid values: 10 to 60.</p>
+     * <p>The duration of screen recording after an event is detected in screen recording audits. Unit: minutes. Valid values: 10 to 60.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -568,28 +826,25 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer recordEventDuration;
 
     /**
-     * <p>The screen recording event file name extensions.</p>
+     * <p>The file name extensions for screen recording events.</p>
      */
     @NameInMap("RecordEventFileExts")
     public java.util.List<String> recordEventFileExts;
 
     /**
-     * <p>The absolute paths for file monitoring in screen recording audit.</p>
+     * <p>The absolute paths for file monitoring in screen recording audits.</p>
      */
     @NameInMap("RecordEventFilePaths")
     public java.util.List<String> recordEventFilePaths;
 
     /**
-     * <p>The screen recording event levels.</p>
+     * <p>The levels of screen recording events.</p>
      */
     @NameInMap("RecordEventLevels")
     public java.util.List<CreateCenterPolicyRequestRecordEventLevels> recordEventLevels;
 
     /**
-     * <p>The absolute paths for registry monitoring in screen recording audit.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR</p>
+     * <p>The absolute paths for registry monitoring in screen recording audits.</p>
      */
     @NameInMap("RecordEventRegisters")
     public java.util.List<String> recordEventRegisters;
@@ -619,7 +874,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String recordingAudio;
 
     /**
-     * <p>The duration of each recording file segment, in minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB. Valid values: 10 to 60.</p>
+     * <p>The duration of each screen recording file, in minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB. Valid values: 10 to 60.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -628,7 +883,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer recordingDuration;
 
     /**
-     * <p>The recording end time in the format of HH:MM:SS. This parameter is meaningful only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
+     * <p>The end time of screen recording. Format: HH:MM:SS. This parameter is meaningful only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>08:59:00</p>
@@ -637,7 +892,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String recordingEndTime;
 
     /**
-     * <p>The retention period of recording files. Valid values: 1 to 180. Unit: days.</p>
+     * <p>The retention period of screen recording files. Valid values: 1 to 180. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -646,7 +901,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer recordingExpires;
 
     /**
-     * <p>The recording frame rate. Unit: FPS (frames per second).</p>
+     * <p>The screen recording frame rate. Unit: FPS (frames per second).</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -655,7 +910,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String recordingFps;
 
     /**
-     * <p>The recording start time in the format of HH:MM:SS. This parameter is meaningful only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
+     * <p>The start time of screen recording. Format: HH:MM:SS. This parameter is meaningful only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>08:00:00</p>
@@ -673,10 +928,10 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String recordingUserNotify;
 
     /**
-     * <p>The notification message displayed to end users about screen recording being enabled.</p>
+     * <p>The notification message displayed to end users when screen recording is enabled.</p>
      * 
      * <strong>example:</strong>
-     * <p>Screen recording is enabled.</p>
+     * <p>Screen recording is enabled</p>
      */
     @NameInMap("RecordingUserNotifyMessage")
     public String recordingUserNotifyMessage;
@@ -701,7 +956,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String remoteCoordinate;
 
     /**
-     * <p>The cloud desktop reset setting.</p>
+     * <p>Resets the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -709,11 +964,17 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("ResetDesktop")
     public String resetDesktop;
 
+    /**
+     * <p>The DPI value of the screen resolution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96</p>
+     */
     @NameInMap("ResolutionDpi")
     public Integer resolutionDpi;
 
     /**
-     * <p>The resolution height. Unit: pixels. Valid values for cloud applications: 500 to 50000. Valid values for Cloud Desktop: 480 to 4096.</p>
+     * <p>The height of the resolution. Unit: pixels. Valid values for cloud applications: 500 to 50000. Valid values for cloud desktops: 480 to 4096.</p>
      * 
      * <strong>example:</strong>
      * <p>1280</p>
@@ -731,7 +992,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String resolutionModel;
 
     /**
-     * <p>The resolution width. Unit: pixels. Valid values for cloud applications: 500 to 50000. Valid values for Cloud Desktop: 640 to 4096.</p>
+     * <p>The width of the resolution. Unit: pixels. Valid values for cloud applications: 500 to 50000. Valid values for cloud desktops: 640 to 4096.</p>
      * 
      * <strong>example:</strong>
      * <p>720</p>
@@ -749,11 +1010,21 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>Specifies whether to enable the security center shortcut key. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("SafeMenu")
     public String safeMenu;
 
     /**
-     * <p>The scope in which the policy takes effect.</p>
+     * <p>The scope of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>GLOBAL</p>
@@ -762,16 +1033,22 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>This parameter is required when <code>Scope</code> is set to <code>IP</code>. This parameter takes effect only when <code>Scope</code> is set to <code>IP</code>.</p>
+     * <p>The value to specify when <code>Scope</code> is set to <code>IP</code>. This parameter takes effect only when <code>Scope</code> is set to <code>IP</code>.</p>
      */
     @NameInMap("ScopeValue")
     public java.util.List<String> scopeValue;
 
+    /**
+     * <p>The screen display mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>auto</p>
+     */
     @NameInMap("ScreenDisplayMode")
     public String screenDisplayMode;
 
     /**
-     * <p>The maximum value for session bandwidth throttling. Unit: Kbps. Valid values: 2000 to 100000.</p>
+     * <p>The maximum value of session bandwidth throttling. Unit: Kbps. Valid values: 2000 to 100000.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -780,7 +1057,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer sessionMaxRateKbps;
 
     /**
-     * <p>Specifies whether to enable smoothness enhancement for daily office scenarios.</p>
+     * <p>Specifies whether to enable smoothness enhancement for the daily office scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -789,7 +1066,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String smoothEnhancement;
 
     /**
-     * <p>Specifies whether to provide the status monitoring entry in the cloud desktop floating ball.</p>
+     * <p>Specifies whether to provide a status monitoring entry in the cloud desktop floating ball.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -798,7 +1075,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String statusMonitor;
 
     /**
-     * <p>The streaming mode adaptation scenario.</p>
+     * <p>The streaming mode scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>smooth</p>
@@ -828,7 +1105,20 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String taskbar;
 
     /**
-     * <p>The USB redirection setting.</p>
+     * <p>Specifies whether to enable the three-screen feature. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("ThreeScreen")
+    public String threeScreen;
+
+    /**
+     * <p>The USB redirection policy.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -842,6 +1132,16 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("UsbSupplyRedirectRule")
     public java.util.List<CreateCenterPolicyRequestUsbSupplyRedirectRule> usbSupplyRedirectRule;
 
+    /**
+     * <p>Specifies whether to display the usage duration on the floating ball. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("UseTime")
     public String useTime;
 
@@ -873,7 +1173,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer videoEncMinQP;
 
     /**
-     * <p>The peak bitrate for video encoding. Unit: Kbps. Valid values: 1000 to 50000.</p>
+     * <p>The peak video encoding bitrate. Unit: Kbps. Valid values: 1000 to 50000.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -891,7 +1191,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String videoEncPolicy;
 
     /**
-     * <p>The multimedia redirection setting.</p>
+     * <p>The multimedia redirection policy.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -909,7 +1209,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String visualQuality;
 
     /**
-     * <p>The watermark setting.</p>
+     * <p>The watermark policy.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -918,7 +1218,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String watermark;
 
     /**
-     * <p>The invisible watermark anti-photography feature.</p>
+     * <p>The invisible watermark anti-camera capture feature.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -945,10 +1245,10 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer watermarkColumnAmount;
 
     /**
-     * <p>If you set <code>WatermarkType</code> to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
+     * <p>If the <code>WatermarkType</code> parameter is set to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Internal Document</p>
      */
     @NameInMap("WatermarkCustomText")
     public String watermarkCustomText;
@@ -999,7 +1299,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer watermarkRowAmount;
 
     /**
-     * <p>The security priority rule for invisible watermarks.</p>
+     * <p>The invisible watermark security priority rule.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -1007,6 +1307,16 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("WatermarkSecurity")
     public String watermarkSecurity;
 
+    /**
+     * <p>Specifies whether to enable the watermark shadow effect. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("WatermarkShadow")
     public String watermarkShadow;
 
@@ -1020,7 +1330,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public Integer watermarkTransparencyValue;
 
     /**
-     * <p>The watermark type. You can select up to three types, separated by commas (,).</p>
+     * <p>The watermark type. You can specify up to three types, separated by commas (,).</p>
      * <blockquote>
      * <p>If you set this parameter to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
      * </blockquote>
@@ -1032,7 +1342,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String watermarkType;
 
     /**
-     * <p>The WUYING Manager switch.</p>
+     * <p>The WUYING Keeper switch.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -1041,9 +1351,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String wuyingKeeper;
 
     /**
-     * <p>Specifies whether to provide the WUYING AI Assistant entry in the cloud desktop floating ball when connecting through desktop clients (including Windows and macOS clients).</p>
+     * <p>Specifies whether to provide the WUYING AI Assistant entry in the floating ball when connecting to a cloud computer through a desktop client (including Windows client and macOS client).</p>
      * <blockquote>
-     * <p>This parameter applies only to desktop clients V7.7 or later.</p>
+     * <p>This feature applies only to desktop clients of V7.7 or later.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -1673,6 +1983,30 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.portProxy;
     }
 
+    public CreateCenterPolicyRequest setPrinterAlert(String printerAlert) {
+        this.printerAlert = printerAlert;
+        return this;
+    }
+    public String getPrinterAlert() {
+        return this.printerAlert;
+    }
+
+    public CreateCenterPolicyRequest setPrinterAlertContent(String printerAlertContent) {
+        this.printerAlertContent = printerAlertContent;
+        return this;
+    }
+    public String getPrinterAlertContent() {
+        return this.printerAlertContent;
+    }
+
+    public CreateCenterPolicyRequest setPrinterAlertTitle(String printerAlertTitle) {
+        this.printerAlertTitle = printerAlertTitle;
+        return this;
+    }
+    public String getPrinterAlertTitle() {
+        return this.printerAlertTitle;
+    }
+
     public CreateCenterPolicyRequest setPrinterRedirect(String printerRedirect) {
         this.printerRedirect = printerRedirect;
         return this;
@@ -1953,6 +2287,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.taskbar;
     }
 
+    public CreateCenterPolicyRequest setThreeScreen(String threeScreen) {
+        this.threeScreen = threeScreen;
+        return this;
+    }
+    public String getThreeScreen() {
+        return this.threeScreen;
+    }
+
     public CreateCenterPolicyRequest setUsbRedirect(String usbRedirect) {
         this.usbRedirect = usbRedirect;
         return this;
@@ -2163,7 +2505,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
 
     public static class CreateCenterPolicyRequestAuthorizeAccessPolicyRule extends TeaModel {
         /**
-         * <p>The client access IP CIDR block. An IPv4 CIDR block in CIDR notation.</p>
+         * <p>The client access IP address range. The value is an IPv4 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX/16</p>
@@ -2175,7 +2517,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
          * <p>The description of the client IP whitelist entry.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Company office network segment</p>
          */
         @NameInMap("Description")
         public String description;
@@ -2205,7 +2547,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
 
     public static class CreateCenterPolicyRequestAuthorizeSecurityPolicyRule extends TeaModel {
         /**
-         * <p>The target of the security group control rule. An IPv4 CIDR block in CIDR notation.</p>
+         * <p>The object of the security group control rule. The value is an IPv4 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX/8</p>
@@ -2217,7 +2559,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
          * <p>The description of the security group control rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Allow access to the internal R&amp;D environment</p>
          */
         @NameInMap("Description")
         public String description;
@@ -2241,7 +2583,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The port range of the security group control rule. The port range is determined by the value of IpProtocol:</p>
+         * <p>The port range of the security group control rule. The port range is determined by the value of the protocol (IpProtocol):</p>
          * <ul>
          * <li>TCP or UDP: Valid values: 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
          * <li>ICMP: -1/-1.</li>
@@ -2348,9 +2690,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
         public String clientType;
 
         /**
-         * <p>The logon method control setting that specifies whether a specific type of client is allowed to log on to the cloud desktop.</p>
+         * <p>Specifies whether to allow a specific type of client to log on to cloud computers.</p>
          * <blockquote>
-         * <p>If you do not configure the <code>ClientType</code> parameters, all types of clients are allowed to log on to the cloud desktop by default.</p>
+         * <p>If you do not set the <code>ClientType</code> parameters, all client types are allowed to log on to cloud computers by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2383,27 +2725,87 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
 
     public static class CreateCenterPolicyRequestClipboardGraineds extends TeaModel {
+        /**
+         * <p>The size limit for a single clipboard transfer. Use this parameter together with the size unit parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ClipboardSize")
         public Integer clipboardSize;
 
+        /**
+         * <p>The unit for the single clipboard transfer size limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("ClipboardSizeUnit")
         public String clipboardSizeUnit;
 
+        /**
+         * <p>The fine-grained clipboard control type. Valid values:</p>
+         * <ul>
+         * <li>off: Clipboard usage is disabled.</li>
+         * <li>read: Read-only.</li>
+         * <li>write: Write-only.</li>
+         * <li>readwrite: Read and write.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>readwrite</p>
+         */
         @NameInMap("ClipboardType")
         public String clipboardType;
 
+        /**
+         * <p>The content type for fine-grained clipboard control. Valid values:</p>
+         * <ul>
+         * <li>text: Text.</li>
+         * <li>richtext: Rich text.</li>
+         * <li>file: File.</li>
+         * <li>picture: Image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("GrainedType")
         public String grainedType;
 
+        /**
+         * <p>The size limit for a single clipboard transfer to the cloud desktop. Use this parameter together with the inbound unit parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("InClipboardSize")
         public Integer inClipboardSize;
 
+        /**
+         * <p>The unit for the single clipboard transfer size limit to the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("InClipboardSizeUnit")
         public String inClipboardSizeUnit;
 
+        /**
+         * <p>The size limit for a single clipboard transfer from the cloud desktop. Use this parameter together with the outbound unit parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("OutClipboardSize")
         public Integer outClipboardSize;
 
+        /**
+         * <p>The unit for the single clipboard transfer size limit from the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("OutClipboardSizeUnit")
         public String outClipboardSizeUnit;
 
@@ -2549,7 +2951,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+         * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0x0781</p>
@@ -2558,7 +2960,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
         public String deviceVid;
 
         /**
-         * <p>The link optimization command.</p>
+         * <p>The link optimization instruction.</p>
          * 
          * <strong>example:</strong>
          * <p>2:0</p>
@@ -2566,6 +2968,12 @@ public class CreateCenterPolicyRequest extends TeaModel {
         @NameInMap("OptCommand")
         public String optCommand;
 
+        /**
+         * <p>The platform types to which the device rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
+         */
         @NameInMap("Platforms")
         public String platforms;
 
@@ -2646,7 +3054,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
          * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test rule.</p>
+         * <p>Test rule</p>
          */
         @NameInMap("Description")
         public String description;
@@ -2711,7 +3119,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
         public String domain;
 
         /**
-         * <p>The redirection policy.</p>
+         * <p>The redirect policy.</p>
          * 
          * <strong>example:</strong>
          * <p>allow</p>
@@ -2806,7 +3214,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
          * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test rule.</p>
+         * <p>Test rule</p>
          */
         @NameInMap("Description")
         public String description;
@@ -2839,7 +3247,7 @@ public class CreateCenterPolicyRequest extends TeaModel {
         public String usbRuleType;
 
         /**
-         * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+         * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>04**</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBundleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cloud computer template.</p>
+     * <p>The cloud computer template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b-cezrnfgecbich****</p>
@@ -14,7 +14,7 @@ public class CreateBundleResponseBody extends TeaModel {
     public String bundleId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryHistoryAvgMetricListRequest extends TeaModel {
     /**
-     * <p>The start date of the statistics. The format is <code>YYYY-MM-DD</code>. The default value is T-1.</p>
+     * <p>The start date for statistics. Format: &quot;YYYY-MM-DD&quot;. Default value: T-1.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-04-01</p>
@@ -14,13 +14,13 @@ public class QueryHistoryAvgMetricListRequest extends TeaModel {
     public String dataDate;
 
     /**
-     * <p>The desktop ID list. A maximum of 100 IDs are supported.</p>
+     * <p>The list of desktop IDs. A maximum of 100 IDs are supported.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The metric to query.</p>
+     * <p>The type of monitoring metrics.</p>
      * 
      * <strong>example:</strong>
      * <p>LOAD_SCORE</p>
@@ -29,7 +29,7 @@ public class QueryHistoryAvgMetricListRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The page number, which must be greater than 0. Default value: 1.</p>
+     * <p>The page number. Default value: 1. The value must be greater than 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class QueryHistoryAvgMetricListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The page size. Valid values: 1 to 200. Default value: 20.</p>
+     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -53,7 +53,7 @@ public class QueryHistoryAvgMetricListRequest extends TeaModel {
     public QueryHistoryAvgMetricListRequestRange range;
 
     /**
-     * <p>The desktop region.</p>
+     * <p>The region of the desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -62,7 +62,7 @@ public class QueryHistoryAvgMetricListRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
-     * <p>The sorting method.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>ASC</p>
@@ -159,7 +159,7 @@ public class QueryHistoryAvgMetricListRequest extends TeaModel {
         public Boolean includeMin;
 
         /**
-         * <p>The range label, which is used for the return value.</p>
+         * <p>The range label, which is used in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>label-02\&quot;</p>

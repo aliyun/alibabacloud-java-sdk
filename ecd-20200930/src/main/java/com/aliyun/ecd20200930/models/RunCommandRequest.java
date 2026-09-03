@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
     /**
-     * <p>The script content in plaintext or Base64-encoded format.<br>
-     * The Base64-encoded script content cannot exceed 16 KB.<br></p>
+     * <p>The plaintext or Base64-encoded content of the script. The Base64-encoded script content cannot exceed 16 KB.</p>
      * <blockquote>
-     * <p>If the script content is Base64-encoded, you must set the <code>ContentEncoding</code> parameter to <code>Base64</code>.</p>
+     * <p>If the script content is Base64-encoded, set the ContentEncoding parameter to Base64.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,13 +17,19 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("CommandContent")
     public String commandContent;
 
+    /**
+     * <p>The role used when the command is executed on the cloud computer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
+     */
     @NameInMap("CommandRole")
     public String commandRole;
 
     /**
-     * <p>The encoding mode of the script content.</p>
+     * <p>The encoding method of the script content.</p>
      * <blockquote>
-     * <p>If you specify a value that is not a valid enumeration member, the system defaults to <code>PlainText</code>.</p>
+     * <p>If the specified value is not within the valid values, the value is treated as PlainText.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,17 +39,16 @@ public class RunCommandRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>The IDs of the cloud computers on which to run the script. You can specify up to 50 IDs.<br>
-     * The API call is considered successful if the script runs on at least one of the specified cloud computers. The call fails only if the script fails on all of them.<br></p>
+     * <p>The IDs of cloud computers. Valid values of N: 1 to 50. If you specify multiple cloud computers, the API call succeeds as long as the script is successfully executed on at least one cloud computer. If the script fails to be executed on all specified cloud computers, reset this parameter.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>If you specify this parameter, the command runs with the permissions of the specified end user.</p>
+     * <p>The ID of the end user. If this parameter is specified, the command is executed with the permissions of the end user.</p>
      * <blockquote>
-     * <p>This user must have a session history on the cloud computer. This means the user must have logged in after the cloud computer started and their session was not taken over by another user. This parameter is not supported for Linux cloud computers.</p>
+     * <p>The user must have a session record on the cloud computer (the user has logged on and connected to the cloud computer after it is started, and the connection was not preempted by another user). This parameter is not supported for Linux cloud computers.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,8 +68,7 @@ public class RunCommandRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The script execution timeout, in seconds. Default value: 300.<br>
-     * A command times out if the script cannot be run due to issues such as process conflicts, missing modules, or an unavailable Cloud Assistant client. When a command times out, the system forcibly terminates the script process.<br></p>
+     * <p>The timeout period for executing the script. Unit: seconds. Default value: 300. A timeout may occur when the script cannot run due to process issues, missing modules, or missing Cloud Assistant Agent. After a timeout, the script process is forcefully terminated.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -74,7 +77,7 @@ public class RunCommandRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>The type of the script.</p>
+     * <p>The language type of the O&amp;M script.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

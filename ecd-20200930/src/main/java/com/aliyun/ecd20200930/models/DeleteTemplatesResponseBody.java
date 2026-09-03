@@ -32,7 +32,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
+     * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

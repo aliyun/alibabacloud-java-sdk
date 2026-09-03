@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUsersPasswordResponseBody extends TeaModel {
     /**
-     * <p>The authorized users of the cloud computer.</p>
+     * <p>The list of accounts in the cloud computer image.</p>
      */
     @NameInMap("DesktopUsers")
     public java.util.List<DescribeUsersPasswordResponseBodyDesktopUsers> desktopUsers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F7B4B17B-5C8A-514C-AA4D-F8090E3A63E9</p>
@@ -42,7 +42,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
 
     public static class DescribeUsersPasswordResponseBodyDesktopUsers extends TeaModel {
         /**
-         * <p>The display name of the end user.</p>
+         * <p>The display name of the account in the cloud computer image.</p>
          * 
          * <strong>example:</strong>
          * <p>demo_user01_1488****</p>
@@ -51,7 +51,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The ID of the end user.</p>
+         * <p>The end user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>demo_user01</p>
@@ -60,7 +60,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The password of the end user.</p>
+         * <p>The password of the account in the cloud computer image.</p>
          * 
          * <strong>example:</strong>
          * <p>3q8p-NDey-2Nac-TWcQ-****</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the cloud desktops.</p>
+     * <p>The cloud desktop IDs. If multiple cloud desktops are created in a single call, multiple cloud desktop IDs are returned.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -28,6 +28,12 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The file transfer task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task_abc123</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

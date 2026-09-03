@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBundlesRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud computer templates. You can specify 1 to 100 IDs.</p>
+     * <p>The list of cloud computer template IDs. You can specify 1 to 100 IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
@@ -14,7 +14,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public java.util.List<String> bundleId;
 
     /**
-     * <p>The type of the cloud computer template.</p>
+     * <p>The cloud computer templatetype.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM</p>
@@ -23,7 +23,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public String bundleType;
 
     /**
-     * <p>Specifies whether to query the inventory status of the cloud computer instance type.</p>
+     * <p>Specifies whether to query the stock status of the cloud computer instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public Boolean checkStock;
 
     /**
-     * <p>The number of vCPUs contained in the cloud computer instance type.</p>
+     * <p>The number of vCPUs included in the cloud computer instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public Integer cpuCount;
 
     /**
-     * <p>The instance family of the cloud computers.</p>
+     * <p>The cloud computer instance family.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.general</p>
@@ -51,7 +51,7 @@ public class DescribeBundlesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not available for public use.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public String fotaChannel;
 
     /**
-     * <p>Specifies whether the cloud computers in the template belong to a cloud computer pool.</p>
+     * <p>Specifies whether the template belongs to a cloud computer pool.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -70,7 +70,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public Boolean fromDesktopGroup;
 
     /**
-     * <p>The number of GPUs contained in the cloud computer instance type.</p>
+     * <p>The number of GPUs included in the cloud computer instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -88,15 +88,13 @@ public class DescribeBundlesRequest extends TeaModel {
     public String gpuDriverType;
 
     /**
-     * <p>The image IDs.</p>
+     * <p>The list of image IDs.</p>
      */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Maximum value: 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -105,7 +103,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The memory size of the cloud computer instance type. Unit: GiB.</p>
+     * <p>The memory size included in the cloud computer instance type. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -114,7 +112,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public Integer memorySize;
 
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -123,7 +121,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The type of the OS.</p>
+     * <p>The operating system type.</p>
      * 
      * <strong>example:</strong>
      * <p>Windows</p>
@@ -141,7 +139,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the regions supported by Elastic Desktop Service (EDS).</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -151,7 +149,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The scenario to use the image.</p>
+     * <p>Scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>FastBuy</p>
@@ -160,7 +158,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The desktop template that is selected based on specific criteria.</p>
+     * <p>The selected template.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -169,7 +167,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public Boolean selectedBundle;
 
     /**
-     * <p>The type of the session.</p>
+     * <p>The session type.</p>
      * 
      * <strong>example:</strong>
      * <p>SingleSession</p>
@@ -178,7 +176,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public String sessionType;
 
     /**
-     * <p>Specifies whether to return multi-session cloud computer templates. Default value: false.</p>
+     * <p>Specifies whether to return multi-session cloud computer templates when querying the cloud computer list. Multi-session templates are not returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -26,8 +26,8 @@ public class CreateNetworkPackageRequest extends TeaModel {
      * <p>The bandwidth of the premium bandwidth plan. Unit: Mbit/s.    </p>
      * <ul>
      * <li>If the premium bandwidth plan uses the subscription billing method, the valid values are 2 to 1000.</li>
-     * <li>If the premium bandwidth plan uses the pay-as-you-go billing method and the billing type is pay-by-data-transfer (PayByTraffic), the valid values are 2 to 200.</li>
-     * <li>If the premium bandwidth plan uses the pay-as-you-go billing method and the billing type is pay-by-bandwidth (PayByBandwidth), the valid values are 2 to 1000.</li>
+     * <li>If the premium bandwidth plan uses the pay-as-you-go billing method and the metering method is pay-by-data-transfer (PayByTraffic), the valid values are 2 to 200.</li>
+     * <li>If the premium bandwidth plan uses the pay-as-you-go billing method and the metering method is pay-by-bandwidth (PayByBandwidth), the valid values are 2 to 1000.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,17 +37,25 @@ public class CreateNetworkPackageRequest extends TeaModel {
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <blockquote>
+     * <p>This field is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PBKB1QbqEl2tslEuU6gRrLxvCFBU2M%2FVD0Eru6Oo%2FI9LTU3XQhvq3PGMWarE%2BPJdkNvCqT3blqlRSthNy4A%2BJQ%3D%3D</p>
+     */
     @NameInMap("ChannelCookie")
     public String channelCookie;
 
     /**
      * <p>The billable methods of the premium bandwidth plan.</p>
      * <ul>
-     * <li>If the parameter <code>PayType</code> is set to <code>PrePaid</code>, valid values:<ul>
+     * <li>When the parameter <code>PayType</code> is set to <code>PrePaid</code>, the valid value is:<ul>
      * <li>PayByBandwidth: billing by fixed bandwidth.</li>
      * </ul>
      * </li>
-     * <li>If the parameter <code>PayType</code> is set to <code>PostPaid</code>, valid values:<ul>
+     * <li>When the parameter <code>PayType</code> is set to <code>PostPaid</code>, the valid values are:<ul>
      * <li>PayByTraffic: billing by data transfer.</li>
      * <li>PayByBandwidth: billing by fixed bandwidth.</li>
      * </ul>
@@ -82,8 +90,8 @@ public class CreateNetworkPackageRequest extends TeaModel {
      * <p>The subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when PayType is set to PrePaid. Valid values are determined by the PeriodUnit parameter.</p>
      * <ul>
      * <li>If PeriodUnit is set to Week, the valid value is 1.</li>
-     * <li>If PeriodUnit is set to Month, valid values are 1, 2, 3, and 6.</li>
-     * <li>If PeriodUnit is set to Year, valid values are 1, 2, and 3.</li>
+     * <li>If PeriodUnit is set to Month, the valid values are 1, 2, 3, and 6.</li>
+     * <li>If PeriodUnit is set to Year, the valid values are 1, 2, and 3.</li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -103,7 +111,7 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The promotion ID.</p>
+     * <p>The promotion activity ID.</p>
      * 
      * <strong>example:</strong>
      * <p>23141</p>
@@ -121,9 +129,18 @@ public class CreateNetworkPackageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID of resource ownership in the reseller pattern. You do not need to specify this parameter if you are not using the reseller pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 
+    /**
+     * <p>The tags. A maximum of 20 tags are supported.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateNetworkPackageRequestTag> tag;
 
@@ -237,9 +254,21 @@ public class CreateNetworkPackageRequest extends TeaModel {
     }
 
     public static class CreateNetworkPackageRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

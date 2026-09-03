@@ -6,6 +6,11 @@ import com.aliyun.tea.*;
 public class ModifyDesktopSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment.</p>
+     * <p>Default value: true. Valid values:</p>
+     * <ul>
+     * <li>true: Automatic payment is enabled. Make sure that your Alibaba Cloud account balance is sufficient. Otherwise, abnormal orders may be generated.</li>
+     * <li>false: Only an order is generated. Automatic payment is not enabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +19,7 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The cloud computer ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-4543qyik164a4****</p>
@@ -23,11 +28,11 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The new desktop type. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported desktop types.</p>
+     * <p>The target instance type. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the instance types supported by cloud computers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>eds.general.2c4g</p>
+     * <p>eds.general.2c8g</p>
      */
     @NameInMap("DesktopType")
     public String desktopType;
@@ -36,13 +41,13 @@ public class ModifyDesktopSpecRequest extends TeaModel {
      * <p>The promotion ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>50003308011****</p>
+     * <p>500033080110596</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
-     * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to obtain a list of regions that Elastic Desktop Service supports.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,11 +56,17 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID of the resource ownership in the reseller pattern. This parameter is not required in the non-reseller pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 
     /**
-     * <p>A list of resource specification templates.</p>
+     * <p>The resource specification templates.</p>
      */
     @NameInMap("ResourceSpecs")
     public java.util.List<ModifyDesktopSpecRequestResourceSpecs> resourceSpecs;
@@ -63,7 +74,7 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     /**
      * <p>The resource type.</p>
      * <blockquote>
-     * <p>This parameter is required only for cloud desktops that use the subscription billing method.</p>
+     * <p>This parameter is not required for non-subscription cloud computers.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,7 +84,7 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The new size of the system disk, in GiB. The value must be a multiple of 10 in the range of 80 to 500.</p>
+     * <p>The system cloud disk size after the change. Unit: GiB. Valid values: 80 to 500. The value must be a multiple of 10.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -82,7 +93,14 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     public Integer rootDiskSizeGib;
 
     /**
-     * <p>The performance level of the data disk.</p>
+     * <p>The performance level (PL) of the data cloud disk. Default value: PL0.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PL0</li>
+     * <li>PL1</li>
+     * <li>PL2</li>
+     * <li>PL3</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PL0</p>
@@ -91,16 +109,14 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     public String userDiskPerformanceLevel;
 
     /**
-     * <p>The new size of the data disk, in GiB.</p>
+     * <p>The data cloud disk size after the change. Unit: GiB.</p>
      * <ul>
-     * <li><p>For non-graphics-accelerated desktop types, the value must be a multiple of 10 in the range of 20 to 1,020.</p>
-     * </li>
-     * <li><p>For graphics-accelerated desktop types, the value must be a multiple of 10 in the range of 40 to 1,020.</p>
-     * </li>
+     * <li>For non-graphics cloud computers, valid values: 20 to 1020. The value must be a multiple of 10.</li>
+     * <li>For graphics cloud computers, valid values: 40 to 1020. The value must be a multiple of 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>40</p>
+     * <p>100</p>
      */
     @NameInMap("UserDiskSizeGib")
     public Integer userDiskSizeGib;
@@ -200,7 +216,7 @@ public class ModifyDesktopSpecRequest extends TeaModel {
 
     public static class ModifyDesktopSpecRequestResourceSpecs extends TeaModel {
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-4543qyik164a4****</p>
@@ -209,7 +225,7 @@ public class ModifyDesktopSpecRequest extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The new size of the system disk, in GiB. The value must be a multiple of 10 in the range of 80 to 500.</p>
+         * <p>The target system cloud disk size. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -218,7 +234,7 @@ public class ModifyDesktopSpecRequest extends TeaModel {
         public Integer rootDiskSizeGib;
 
         /**
-         * <p>The new size of the data disk, in GiB. The value must be a multiple of 10 in the range of 20 to 2,040.</p>
+         * <p>The target data cloud disk size. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

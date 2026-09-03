@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUsersPasswordRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer.</p>
+     * <p>The cloud computer ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeUsersPasswordRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

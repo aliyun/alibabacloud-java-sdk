@@ -23,7 +23,7 @@ public class RenewDesktopsRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>A list of WUYING Workspace instance IDs. You can renew only instances purchased on a monthly basis.</p>
+     * <p>The list of cloud computer IDs. Only monthly subscription cloud computers can be renewed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,11 +33,11 @@ public class RenewDesktopsRequest extends TeaModel {
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The renewal duration. Valid values depend on the value of <code>PeriodUnit</code>.</p>
+     * <p>The renewal duration. Valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
      * <ul>
-     * <li><p>If <code>PeriodUnit</code> is <code>Month</code>, valid values are 1, 2, 3, and 6.</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</p>
      * </li>
-     * <li><p>If <code>PeriodUnit</code> is <code>Year</code>, valid values are 1 to 5.</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1 to 5.</p>
      * </li>
      * </ul>
      * <p>Default value: 1.</p>
@@ -49,7 +49,7 @@ public class RenewDesktopsRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit for the renewal duration, which applies to the <code>Period</code> parameter.</p>
+     * <p>The unit of the renewal duration, which is the unit of the <code>Period</code> parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -67,7 +67,7 @@ public class RenewDesktopsRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to list the regions where WUYING Workspace is available.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,16 +76,22 @@ public class RenewDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID for resource ownership in the reselling pattern. You do not need to specify this parameter if you are not using the reselling pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 
     /**
      * <blockquote>
-     * <p>This field is not available for public use.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>Desktop</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

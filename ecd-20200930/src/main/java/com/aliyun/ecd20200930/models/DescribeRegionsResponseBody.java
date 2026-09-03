@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The information about regions.</p>
+     * <p>The region information array.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
@@ -42,10 +42,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>The display name of the region, which varies based on the current language.</p>
+         * <p>The display name of the region, which is converted based on the current language setting.</p>
          * 
          * <strong>example:</strong>
-         * <p>华东1（杭州）</p>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("LocalName")
         public String localName;

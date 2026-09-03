@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopDesktopsRequest extends TeaModel {
     /**
+     * <p>Specifies whether to create a snapshot.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,7 +14,7 @@ public class StopDesktopsRequest extends TeaModel {
     public String createSnapshot;
 
     /**
-     * <p>An array of 1 to 100 cloud desktop IDs.</p>
+     * <p>The cloud computer IDs. You can specify 1 to 100 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +24,7 @@ public class StopDesktopsRequest extends TeaModel {
     public java.util.List<String> desktopId;
 
     /**
-     * <p>Specifies whether to apply pending patch updates.</p>
+     * <p>Specifies whether to perform a patch update when an update is ready. A value of true indicates that the patch update is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -31,6 +33,8 @@ public class StopDesktopsRequest extends TeaModel {
     public Boolean osUpdate;
 
     /**
+     * <p>The patch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>KB5082063</p>
      */
@@ -38,7 +42,7 @@ public class StopDesktopsRequest extends TeaModel {
     public String patchId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to get a list of regions that Elastic Desktop Service supports.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +52,7 @@ public class StopDesktopsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies the billing mode for the cloud desktops after they are stopped.</p>
+     * <p>The billing mode after the cloud computers are stopped.</p>
      * 
      * <strong>example:</strong>
      * <p>StopCharging</p>

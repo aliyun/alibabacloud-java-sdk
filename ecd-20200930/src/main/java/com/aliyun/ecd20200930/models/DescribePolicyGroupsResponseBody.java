@@ -4,17 +4,23 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>The detailed information about the cloud computer policies.</p>
+     * <p>The details of the cloud computer policies.</p>
      */
     @NameInMap("DescribePolicyGroups")
     public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroups> describePolicyGroups;
 
     /**
-     * <p>The pagination token for the next query. If NextToken is empty, no further pages exist.</p>
+     * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -22,9 +28,21 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The page number of the current page for a paged query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The maximum number of entries per page for a paged query.<br>Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -92,7 +110,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules extends TeaModel {
         /**
-         * <p>The client-accessible IP address segment. The value is an IPv4 CIDR block.</p>
+         * <p>The client access IP CIDR block. The value is an IPv4 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX/16</p>
@@ -101,10 +119,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String cidrIp;
 
         /**
-         * <p>The remarks for the client-accessible CIDR block.</p>
+         * <p>The description of the client access IP CIDR block.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Corporate office network</p>
          */
         @NameInMap("Description")
         public String description;
@@ -134,7 +152,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules extends TeaModel {
         /**
-         * <p>The target of the security group control rule. The value is an IPv4 CIDR block.</p>
+         * <p>The target of the security group rule. The value is an IPv4 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX/16</p>
@@ -143,16 +161,16 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String cidrIp;
 
         /**
-         * <p>The description of the security group control rule.</p>
+         * <p>The description of the security group rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Allow access to the internal R&amp;D environment</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The protocol type of the security group control rule.</p>
+         * <p>The protocol type of the security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>tcp</p>
@@ -161,7 +179,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The authorization policy of the security group control rule.</p>
+         * <p>The authorization policy of the security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>accept</p>
@@ -170,7 +188,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String policy;
 
         /**
-         * <p>The port range of the security group control rule.</p>
+         * <p>The port range of the security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>22/22</p>
@@ -179,7 +197,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String portRange;
 
         /**
-         * <p>The priority of the security group control rule. A smaller number indicates a higher priority.</p>
+         * <p>The priority of the security group rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +206,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The rule direction of the security group control rule.</p>
+         * <p>The direction of the security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>inflow</p>
@@ -270,7 +288,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String clientType;
 
         /**
-         * <p>Whether a specific client type is allowed to connect to the cloud computer.</p>
+         * <p>Specifies whether a specific type of client is allowed to connect to cloud desktops.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -312,14 +330,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>The redirection type.</p>
+         * <p>The redirection type. Valid values:</p>
          * <ul>
-         * <li><p>usbRedirect: USB redirection.</p>
-         * </li>
-         * <li><p>deviceRedirect: Device redirection.</p>
-         * </li>
-         * <li><p>off: Disabled.</p>
-         * </li>
+         * <li>usbRedirect: USB redirection.</li>
+         * <li>deviceRedirect: device redirection.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -380,7 +395,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+         * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0x0781</p>
@@ -397,6 +412,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("OptCommand")
         public String optCommand;
 
+        /**
+         * <p>The platform types to which the device rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
+         */
         @NameInMap("Platforms")
         public String platforms;
 
@@ -477,7 +498,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试规则</p>
+         * <p>Test rule</p>
          */
         @NameInMap("Description")
         public String description;
@@ -592,13 +613,19 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels extends TeaModel {
         /**
-         * <p>The event severity.</p>
+         * <p>The event level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HIGH</p>
          */
         @NameInMap("EventLevel")
         public String eventLevel;
 
         /**
          * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StartApplication</p>
          */
         @NameInMap("EventType")
         public String eventType;
@@ -637,7 +664,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The device class. This parameter is required when <code>usbRuleType</code> is set to 1. For more information, see <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
+         * <p>The device class. This parameter is required when <code>usbRuleType</code> is set to 1. See <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0Eh</p>
@@ -646,7 +673,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String deviceClass;
 
         /**
-         * <p>The device subclass. This parameter is required when <code>usbRuleType</code> is set to 1. For more information, see <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
+         * <p>The device subclass. This parameter is required when <code>usbRuleType</code> is set to 1. See <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>xxh</p>
@@ -682,7 +709,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Long usbRuleType;
 
         /**
-         * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+         * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>04**</p>
@@ -754,11 +781,21 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroups extends TeaModel {
+        /**
+         * <p>Specifies whether the academic proxy feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("AcademicProxy")
         public String academicProxy;
 
         /**
-         * <p>Whether end users have administrative permission after connecting to the cloud computer.</p>
+         * <p>Indicates whether the user has administrator permissions after connecting to the cloud computer.</p>
          * <blockquote>
          * <p>This feature is in invitational preview and is not publicly available.</p>
          * </blockquote>
@@ -769,14 +806,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("AdminAccess")
         public String adminAccess;
 
+        /**
+         * <p>Specifies whether the administrator keyboard control in full-screen mode is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("AdminKeyboardOnFullScreen")
         public String adminKeyboardOnFullScreen;
 
+        /**
+         * <p>Specifies whether the administrator keyboard control within the Windows system is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("AdminKeyboardOnWindows")
         public String adminKeyboardOnWindows;
 
         /**
-         * <p>Whether to enable the anti-screenshot feature.</p>
+         * <p>Specifies whether the screenshot prevention feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -785,19 +842,19 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String appContentProtection;
 
         /**
-         * <p>The client IP address whitelist. Only IP addresses within the whitelisted CIDR blocks can access the cloud computer.</p>
+         * <p>The client IP whitelist. Only IP addresses within the whitelisted CIDR blocks can access cloud desktops.</p>
          */
         @NameInMap("AuthorizeAccessPolicyRules")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
 
         /**
-         * <p>The security group control rules.</p>
+         * <p>The list of security group rules.</p>
          */
         @NameInMap("AuthorizeSecurityPolicyRules")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
 
         /**
-         * <p>The automatic client reconnection configuration.</p>
+         * <p>The client auto-reconnect configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -806,7 +863,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String autoReconnect;
 
         /**
-         * <p>Whether to enable local camera redirection.</p>
+         * <p>Specifies whether local camera redirection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -814,29 +871,79 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("CameraRedirect")
         public String cameraRedirect;
 
+        /**
+         * <p>The client control menu display switch. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("ClientControlMenu")
         public String clientControlMenu;
 
+        /**
+         * <p>Specifies whether the client custom snapshot creation feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("ClientCreateSnapshot")
         public String clientCreateSnapshot;
 
+        /**
+         * <p>Specifies whether the hibernate option in the client menu is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("ClientHibernate")
         public String clientHibernate;
 
+        /**
+         * <p>Specifies whether the restart option in the client menu is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("ClientRestart")
         public String clientRestart;
 
+        /**
+         * <p>Specifies whether the shutdown option in the client menu is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("ClientShutdown")
         public String clientShutdown;
 
         /**
-         * <p>The logon method control list. Controls which clients can access the cloud computer.</p>
+         * <p>The logon method control list. Specifies which client types are allowed to access cloud desktops.</p>
          */
         @NameInMap("ClientTypes")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsClientTypes> clientTypes;
 
         /**
-         * <p>The clipboard permissions.</p>
+         * <p>The clipboard permission.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -845,7 +952,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String clipboard;
 
         /**
-         * <p>Whether to enable color enhancement for design and 3D application scenarios.</p>
+         * <p>Indicates whether color enhancement is enabled for common scenarios of design and 3D applications.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -853,11 +960,21 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("ColorEnhancement")
         public String colorEnhancement;
 
+        /**
+         * <p>Specifies whether the local drive clipboard feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("CpdDriveClipboard")
         public String cpdDriveClipboard;
 
         /**
-         * <p>The CPU downclocking duration in seconds. Valid values: 30 to 120.</p>
+         * <p>The CPU throttling duration. Valid values: 30 to 120. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -865,17 +982,27 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("CpuDownGradeDuration")
         public Integer cpuDownGradeDuration;
 
+        /**
+         * <p>Specifies whether CPU overload protection is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("CpuOverload")
         public String cpuOverload;
 
         /**
-         * <p>The process whitelist exempt from CPU usage limits.</p>
+         * <p>The whitelist of processes that are not subject to CPU usage limits.</p>
          */
         @NameInMap("CpuProcessors")
         public java.util.List<String> cpuProcessors;
 
         /**
-         * <p>The CPU protection mode switch.</p>
+         * <p>Specifies whether to enable CPU protection mode.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -893,7 +1020,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer cpuRateLimit;
 
         /**
-         * <p>The overall CPU sampling duration in seconds. Valid values: 10 to 60.</p>
+         * <p>The overall CPU sampling duration. Valid values: 10 to 60. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -910,11 +1037,17 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("CpuSingleRateLimit")
         public Integer cpuSingleRateLimit;
 
+        /**
+         * <p>The description of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newDescription</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The number of cloud computers associated with this policy.</p>
+         * <p>The number of cloud computers associated with the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -923,7 +1056,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer desktopCount;
 
         /**
-         * <p>The number of cloud computer pools associated with this policy.</p>
+         * <p>The number of cloud computer pools associated with the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -931,21 +1064,37 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("DesktopGroupCount")
         public Integer desktopGroupCount;
 
+        /**
+         * <p>The peripheral connection hint control.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("DeviceConnectHint")
         public String deviceConnectHint;
 
         /**
-         * <p>The device redirection rule list.</p>
+         * <p>The list of device redirection rules.</p>
          */
         @NameInMap("DeviceRedirects")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects> deviceRedirects;
 
         /**
-         * <p>The custom peripheral rule list.</p>
+         * <p>The list of custom peripheral rules.</p>
          */
         @NameInMap("DeviceRules")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules> deviceRules;
 
+        /**
+         * <p>Specifies whether disk overload protection is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("DiskOverload")
         public String diskOverload;
 
@@ -959,7 +1108,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String displayMode;
 
         /**
-         * <p>The access control for domain names. Wildcards (\*) are supported. Separate multiple domain names with commas (,).</p>
+         * <p>The access domain name permission control. Domain names support wildcards (\*). Separate multiple domain names with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -974,7 +1123,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDomainResolveRule> domainResolveRule;
 
         /**
-         * <p>The domain name resolution policy switch.</p>
+         * <p>The switch for the domain name resolution policy.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -992,7 +1141,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer edsCount;
 
         /**
-         * <p>The switch for users to request administrator assistance.</p>
+         * <p>Specifies whether to enable the feature that allows users to request administrator assistance.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1000,11 +1149,17 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("EndUserApplyAdminCoordinate")
         public String endUserApplyAdminCoordinate;
 
+        /**
+         * <p>The number of associated end users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("EndUserCount")
         public String endUserCount;
 
         /**
-         * <p>The switch for stream collaboration between users.</p>
+         * <p>Specifies whether to enable stream collaboration between users.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1012,47 +1167,115 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("EndUserGroupCoordinate")
         public String endUserGroupCoordinate;
 
+        /**
+         * <p>Specifies whether the use of external storage devices is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("ExternalDrive")
         public String externalDrive;
 
+        /**
+         * <p>The file migration setting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("FileMigrate")
         public String fileMigrate;
 
         /**
-         * <p>File transfer.</p>
+         * <p>The file transfer setting.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>off</p>
          */
         @NameInMap("FileTransfer")
         public String fileTransfer;
 
+        /**
+         * <p>The service address for the file transfer feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filetransfer.example.com</p>
+         */
         @NameInMap("FileTransferAddress")
         public String fileTransferAddress;
 
+        /**
+         * <p>The file size limit for a single file transfer to the cloud desktop. Use this parameter together with the inbound unit parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("FileTransferInSize")
         public Integer fileTransferInSize;
 
+        /**
+         * <p>The unit for the file size limit of a single file transfer to the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("FileTransferInUnit")
         public String fileTransferInUnit;
 
+        /**
+         * <p>The file size limit for a single file transfer from the cloud desktop. Use this parameter together with the outbound unit parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("FileTransferOutSize")
         public Integer fileTransferOutSize;
 
+        /**
+         * <p>The unit for the file size limit of a single file transfer from the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("FileTransferOutUnit")
         public String fileTransferOutUnit;
 
+        /**
+         * <p>Specifies whether the file transfer size limit is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("FileTransferSizeLimit")
         public String fileTransferSizeLimit;
 
+        /**
+         * <p>The file transfer speed level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("FileTransferSpeed")
         public String fileTransferSpeed;
 
+        /**
+         * <p>The location where the file transfer speed configured on the client takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client</p>
+         */
         @NameInMap("FileTransferSpeedLocation")
         public String fileTransferSpeedLocation;
 
         /**
-         * <p>Whether to enable the image quality policy for graphics-specification cloud computers. Enable this policy if you have high requirements for cloud computer performance and user experience, such as in professional design scenarios.</p>
+         * <p>Specifies whether the image quality policy is enabled for GPU-accelerated cloud desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1060,15 +1283,55 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("GpuAcceleration")
         public String gpuAcceleration;
 
+        /**
+         * <p>Specifies whether the floating ball configuration message prompt is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("HoverConfigMsg")
         public String hoverConfigMsg;
 
+        /**
+         * <p>Specifies whether the hibernate button on the floating ball is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("HoverHibernate")
         public String hoverHibernate;
 
+        /**
+         * <p>Specifies whether the restart button on the floating ball is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("HoverRestart")
         public String hoverRestart;
 
+        /**
+         * <p>Specifies whether the shutdown button on the floating ball is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("HoverShutdown")
         public String hoverShutdown;
 
@@ -1099,14 +1362,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("InternetCommunicationProtocol")
         public String internetCommunicationProtocol;
 
+        /**
+         * <p>The network printer feature switch. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("InternetPrinter")
         public String internetPrinter;
 
+        /**
+         * <p>Specifies whether the keyboard control on the floating ball is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("KeyboardControl")
         public String keyboardControl;
 
         /**
-         * <p>The local disk mapping permissions.</p>
+         * <p>The local drive mapping permission.</p>
          * 
          * <strong>example:</strong>
          * <p>readwrite</p>
@@ -1115,7 +1398,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String localDrive;
 
         /**
-         * <p>The maximum retry time for reconnecting to the cloud computer after a disconnection caused by objective reasons. Valid values: 30 to 7200 seconds.</p>
+         * <p>The maximum reconnection retry time when the cloud computer is disconnected due to external reasons. Valid values: 30 to 7200. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -1124,7 +1407,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer maxReconnectTime;
 
         /**
-         * <p>The memory downclocking duration per process in seconds. Valid values: 30 to 120.</p>
+         * <p>The memory throttling duration of a single process. Valid values: 30 to 120. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1132,17 +1415,27 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("MemoryDownGradeDuration")
         public Integer memoryDownGradeDuration;
 
+        /**
+         * <p>Specifies whether memory overload protection is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("MemoryOverload")
         public String memoryOverload;
 
         /**
-         * <p>The process whitelist exempt from memory usage limits.</p>
+         * <p>The whitelist of processes that are not subject to memory usage limits.</p>
          */
         @NameInMap("MemoryProcessors")
         public java.util.List<String> memoryProcessors;
 
         /**
-         * <p>The memory protection mode switch.</p>
+         * <p>Specifies whether to enable memory protection mode.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1160,7 +1453,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer memoryRateLimit;
 
         /**
-         * <p>The overall memory sampling duration in seconds. Valid values: 30 to 60.</p>
+         * <p>The overall memory sampling duration. Valid values: 30 to 60. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1169,7 +1462,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer memorySampleDuration;
 
         /**
-         * <p>The memory usage percentage per worker. Valid values: 30 to 60.</p>
+         * <p>The memory usage percentage of a single process. Valid values: 30 to 60.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1178,9 +1471,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer memorySingleRateLimit;
 
         /**
-         * <p>Whether to display the restart button in the floating ball when accessing the cloud computer from mobile clients (including Android and iOS clients).</p>
+         * <p>Specifies whether the restart button is provided in the cloud computer floating ball when connecting to a cloud computer from a mobile client (including Android and iOS clients).</p>
          * <blockquote>
-         * <p>Applies only to mobile clients of V7.4 or later.</p>
+         * <p>This applies only to mobile clients of V7.4 or later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1190,7 +1483,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String mobileRestart;
 
         /**
-         * <p>The Windows security control switch for mobile clients.</p>
+         * <p>Specifies whether the Windows security control feature is enabled on mobile clients.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1199,9 +1492,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String mobileSafeMenu;
 
         /**
-         * <p>Whether to display the shutdown button in the floating ball when accessing the cloud computer from mobile clients (including Android and iOS clients).</p>
+         * <p>Specifies whether the shutdown button is provided in the cloud computer floating ball when connecting to a cloud computer from a mobile client (including Android and iOS clients).</p>
          * <blockquote>
-         * <p>Applies only to mobile clients of V7.4 or later.</p>
+         * <p>This applies only to mobile clients of V7.4 or later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1211,7 +1504,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String mobileShutdown;
 
         /**
-         * <p>The WUYING Keeper switch for mobile clients.</p>
+         * <p>Specifies whether the WUYING Keeper feature is enabled on mobile clients.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1220,7 +1513,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String mobileWuyingKeeper;
 
         /**
-         * <p>The Xiaoying AI Assistant switch for mobile clients.</p>
+         * <p>Specifies whether the WUYING Assistant feature is enabled on mobile clients.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1228,14 +1521,34 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("MobileWyAssistant")
         public String mobileWyAssistant;
 
+        /**
+         * <p>Specifies whether the model library feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("ModelLibrary")
         public String modelLibrary;
 
+        /**
+         * <p>Specifies whether the multi-screen display feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("MultiScreen")
         public String multiScreen;
 
         /**
-         * <p>The cloud computer policy name.</p>
+         * <p>The Policy Name of the cloud computer policy.</p>
          * 
          * <strong>example:</strong>
          * <p>testPolicyGroupName</p>
@@ -1244,7 +1557,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Network redirection.</p>
+         * <p>The network redirection setting.</p>
          * <blockquote>
          * <p>This feature is in invitational preview and is not publicly available.</p>
          * </blockquote>
@@ -1264,9 +1577,25 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("NetRedirectRule")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsNetRedirectRule> netRedirectRule;
 
+        /**
+         * <p>The network printer feature switch. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("NetworkPrinter")
         public String networkPrinter;
 
+        /**
+         * <p>The number of associated organizations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("OrganizationCount")
         public String organizationCount;
 
@@ -1280,7 +1609,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String policyGroupId;
 
         /**
-         * <p>The cloud computer policy type.</p>
+         * <p>The type of the cloud computer policy.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -1297,13 +1626,23 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
+        /**
+         * <p>Specifies whether the port proxy feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("PortProxy")
         public String portProxy;
 
         /**
-         * <p>The cloud computer preemption policy.</p>
+         * <p>The preemption policy for the cloud computer.</p>
          * <blockquote>
-         * <p>To ensure user experience and data security for end users currently using a cloud computer, mutual preemption between multiple users is not allowed. This parameter defaults to <code>off</code> and cannot be modified.</p>
+         * <p>To ensure the user experience and data security of end users who are using cloud computers, preemption among multiple users is not allowed. This means the configuration is set to <code>off</code> by default and cannot be modified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1313,10 +1652,42 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String preemptLogin;
 
         /**
-         * <p>The usernames of users who can preempt the cloud computer.</p>
+         * <p>The usernames of users who can preempt cloud desktops.</p>
          */
         @NameInMap("PreemptLoginUsers")
         public java.util.List<String> preemptLoginUsers;
+
+        /**
+         * <p>The printer pop-up alert setting. Valid values:</p>
+         * <ul>
+         * <li>default: Default value.</li>
+         * <li>off: Disabled.</li>
+         * <li>custom: Custom.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("PrinterAlert")
+        public String printerAlert;
+
+        /**
+         * <p>The content of the printer pop-up alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Print Content</p>
+         */
+        @NameInMap("PrinterAlertContent")
+        public String printerAlertContent;
+
+        /**
+         * <p>The title of the printer pop-up alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Print Title</p>
+         */
+        @NameInMap("PrinterAlertTitle")
+        public String printerAlertTitle;
 
         /**
          * <p>The printer redirection policy.</p>
@@ -1328,7 +1699,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String printerRedirection;
 
         /**
-         * <p>Whether to enable image quality enhancement for design and 3D application scenarios.</p>
+         * <p>Specifies whether image quality enhancement is enabled for design and 3D common scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1337,7 +1708,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String qualityEnhancement;
 
         /**
-         * <p>Whether to enable custom screen recording.</p>
+         * <p>Specifies whether custom screen recording is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1346,7 +1717,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String recordContent;
 
         /**
-         * <p>The expiration time for custom screen recording files. Default value: 30 days.</p>
+         * <p>The expiration time of custom screen recording files. Default value: 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1355,7 +1726,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Long recordContentExpires;
 
         /**
-         * <p>The screen recording duration after an event is detected in screen recording audit. Unit: minutes. Valid values: 10 to 60.</p>
+         * <p>The recording duration after an event is detected in screen recording audit. Unit: minutes. Valid values: 10 to 60.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1364,7 +1735,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer recordEventDuration;
 
         /**
-         * <p>The screen recording event suffix.</p>
+         * <p>The file extensions for screen recording events.</p>
          */
         @NameInMap("RecordEventFileExts")
         public java.util.List<String> recordEventFileExts;
@@ -1376,22 +1747,19 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public java.util.List<String> recordEventFilePaths;
 
         /**
-         * <p>The screen recording event severity switch.</p>
+         * <p>The screen recording event level settings.</p>
          */
         @NameInMap("RecordEventLevels")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels> recordEventLevels;
 
         /**
          * <p>The list of absolute paths for registry monitoring in screen recording audit.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR</p>
          */
         @NameInMap("RecordEventRegisters")
         public java.util.List<String> recordEventRegisters;
 
         /**
-         * <p>Whether to enable screen recording.</p>
+         * <p>Specifies whether screen recording is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>OFF</p>
@@ -1400,7 +1768,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String recording;
 
         /**
-         * <p>The option to record audio from the cloud computer.</p>
+         * <p>The option for recording cloud computer audio.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1409,7 +1777,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String recordingAudio;
 
         /**
-         * <p>The screen recording file viewing duration in minutes. Recording files are automatically split based on this duration and uploaded to the bucket. When a file reaches 300 MB, it is preferentially rolled over.</p>
+         * <p>The duration of a screen recording file, in minutes. Recording files are automatically split and uploaded to the storage space based on the duration you specify. When a file reaches 300 MB, it is rolled over first.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1418,7 +1786,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer recordingDuration;
 
         /**
-         * <p>The screen recording end time in HH:MM:SS format. This parameter takes effect only when Recording is set to PERIOD.</p>
+         * <p>The screen recording end time in the format of HH:MM:SS. This parameter is meaningful only when Recording is set to PERIOD.</p>
          * 
          * <strong>example:</strong>
          * <p>08:59:00</p>
@@ -1427,7 +1795,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String recordingEndTime;
 
         /**
-         * <p>The retention period for screen recording files. Valid values: 1 to 180 days.</p>
+         * <p>The retention period of screen recording files. Valid values: 1 to 180. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -1445,7 +1813,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Long recordingFps;
 
         /**
-         * <p>The screen recording start time in HH:MM:SS format. This parameter takes effect only when Recording is set to PERIOD.</p>
+         * <p>The screen recording start time in the format of HH:MM:SS. This parameter is meaningful only when Recording is set to PERIOD.</p>
          * 
          * <strong>example:</strong>
          * <p>08:00:00</p>
@@ -1454,7 +1822,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String recordingStartTime;
 
         /**
-         * <p>The screen recording client notification feature.</p>
+         * <p>The client notification feature for screen recording.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1463,16 +1831,16 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String recordingUserNotify;
 
         /**
-         * <p>The screen recording client notification message. Leave empty by default.</p>
+         * <p>The notification content for the screen recording client. Leave this parameter empty by default.</p>
          * 
          * <strong>example:</strong>
-         * <p>Your cloud desktop is being recorded.</p>
+         * <p>Your cloud computer is being recorded</p>
          */
         @NameInMap("RecordingUserNotifyMessage")
         public String recordingUserNotifyMessage;
 
         /**
-         * <p>The keyboard and mouse control permissions during remote assistance.</p>
+         * <p>The keyboard and mouse control permission for remote assistance.</p>
          * 
          * <strong>example:</strong>
          * <p>fullControl</p>
@@ -1481,28 +1849,52 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String remoteCoordinate;
 
         /**
-         * <p>Resets the cloud computer.</p>
+         * <p>The setting for resetting the cloud computer.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>off</p>
          */
         @NameInMap("ResetDesktop")
         public String resetDesktop;
 
+        /**
+         * <p>The DPI value of the screen resolution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
+         */
         @NameInMap("ResolutionDpi")
         public Integer resolutionDpi;
 
+        /**
+         * <p>The height of the resolution. Unit: pixels. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("ResolutionHeight")
         public Integer resolutionHeight;
 
+        /**
+         * <p>The resolution type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adaptive</p>
+         */
         @NameInMap("ResolutionModel")
         public String resolutionModel;
 
+        /**
+         * <p>The width of the resolution. Unit: pixels. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 640 to 4096.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("ResolutionWidth")
         public Integer resolutionWidth;
 
         /**
-         * <p>The number of resource groups associated with this policy.</p>
+         * <p>The number of resource groups associated with the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1513,7 +1905,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * <p>The region to which the cloud computer policy belongs.</p>
          * <blockquote>
-         * <p>For region-less policies, this value is <code>center</code>.</p>
+         * <p>If the policy is a region-independent policy, this value is <code>center</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1522,6 +1914,16 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("ResourceRegionId")
         public String resourceRegionId;
 
+        /**
+         * <p>The security center shortcut key switch. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("SafeMenu")
         public String safeMenu;
 
@@ -1535,16 +1937,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>Specify this parameter when <code>Scope</code> is set to <code>IP</code>. This parameter takes effect only when <code>Scope</code> is set to <code>IP</code>.</p>
+         * <p>This parameter is required when <code>Scope</code> is set to <code>IP</code>. This parameter takes effect only when <code>Scope</code> is set to <code>IP</code>.</p>
          */
         @NameInMap("ScopeValue")
         public java.util.List<String> scopeValue;
 
+        /**
+         * <p>The screen display mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
         @NameInMap("ScreenDisplayMode")
         public String screenDisplayMode;
 
         /**
-         * <p>Whether to enable smoothness enhancement for daily office scenarios.</p>
+         * <p>Specifies whether smoothness enhancement is enabled for daily office scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1553,7 +1961,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String smoothEnhancement;
 
         /**
-         * <p>Whether to provide the status monitoring feature in the floating ball when accessing the cloud computer.</p>
+         * <p>Specifies whether the status monitoring entry is provided in the cloud computer floating ball.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1562,7 +1970,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String statusMonitor;
 
         /**
-         * <p>The streaming mode adaptation scenario.</p>
+         * <p>The streaming mode for scenario adaptation.</p>
          * 
          * <strong>example:</strong>
          * <p>smooth</p>
@@ -1580,7 +1988,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer targetFps;
 
         /**
-         * <p>USB redirection.</p>
+         * <p>Specifies whether the three-screen feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("ThreeScreen")
+        public String threeScreen;
+
+        /**
+         * <p>The USB redirection policy.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1589,11 +2010,21 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String usbRedirect;
 
         /**
-         * <p>The USB redirection rule.</p>
+         * <p>The USB redirection rules.</p>
          */
         @NameInMap("UsbSupplyRedirectRule")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsUsbSupplyRedirectRule> usbSupplyRedirectRule;
 
+        /**
+         * <p>Specifies whether the usage duration display on the floating ball is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("UseTime")
         public String useTime;
 
@@ -1607,7 +2038,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer videoEncAvgKbps;
 
         /**
-         * <p>The maximum quantization parameter (QP) for video encoding, representing the lowest quality. Valid values: 0 to 51.</p>
+         * <p>The maximum QP for video encoding, which represents the lowest image quality. Valid values: 0 to 51.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1616,7 +2047,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer videoEncMaxQP;
 
         /**
-         * <p>The minimum quantization parameter (QP) for video encoding, representing the highest quality. Valid values: 0 to 51.</p>
+         * <p>The minimum QP for video encoding, which represents the highest quality. Valid values: 0 to 51.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1643,7 +2074,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String videoEncPolicy;
 
         /**
-         * <p>Multimedia redirection.</p>
+         * <p>The multimedia redirection setting.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1661,7 +2092,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String visualQuality;
 
         /**
-         * <p>Watermark.</p>
+         * <p>The watermark policy.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1670,7 +2101,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String watermark;
 
         /**
-         * <p>The blind watermark anti-photo feature.</p>
+         * <p>The anti-camera capture feature for invisible watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1679,7 +2110,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String watermarkAntiCam;
 
         /**
-         * <p>The watermark font color in RGB format. Valid values: 0 to 16777215.</p>
+         * <p>The watermark font color. Valid values: 0 to 16777215.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1688,7 +2119,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer watermarkColor;
 
         /**
-         * <p>If you set <code>WatermarkType</code> to <code>custom</code>, you must also specify <code>WatermarkCustomText</code>.</p>
+         * <p>If the <code>WatermarkType</code> parameter is set to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>custom-watermark</p>
@@ -1724,7 +2155,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String watermarkFontStyle;
 
         /**
-         * <p>The blind watermark enhancement feature.</p>
+         * <p>The enhancement feature for invisible watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>medium</p>
@@ -1735,7 +2166,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * <p>The number of watermark rows.</p>
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not yet available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1745,7 +2176,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Integer watermarkRowAmount;
 
         /**
-         * <p>The blind watermark security priority rule.</p>
+         * <p>The security-first rule for invisible watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1753,11 +2184,21 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("WatermarkSecurity")
         public String watermarkSecurity;
 
+        /**
+         * <p>Specifies whether the watermark shadow effect is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("WatermarkShadow")
         public String watermarkShadow;
 
         /**
-         * <p>The watermark transparency level.</p>
+         * <p>The transparency level of the watermark.</p>
          * 
          * <strong>example:</strong>
          * <p>LIGHT</p>
@@ -1766,7 +2207,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String watermarkTransparency;
 
         /**
-         * <p>The watermark transparency. A higher value means lower transparency. Valid values: 10 to 100.</p>
+         * <p>The watermark transparency. A larger value indicates lower transparency. Valid values: 10 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1783,11 +2224,17 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("WatermarkType")
         public String watermarkType;
 
+        /**
+         * <p>The WUYING Keeper switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("WuyingKeeper")
         public String wuyingKeeper;
 
         /**
-         * <p>Whether to provide the WUYING AI Assistant feature in the floating ball when accessing the cloud computer.</p>
+         * <p>Specifies whether the WUYING AI Assistant entry is provided in the cloud computer floating ball.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -2504,6 +2951,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.preemptLoginUsers;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setPrinterAlert(String printerAlert) {
+            this.printerAlert = printerAlert;
+            return this;
+        }
+        public String getPrinterAlert() {
+            return this.printerAlert;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setPrinterAlertContent(String printerAlertContent) {
+            this.printerAlertContent = printerAlertContent;
+            return this;
+        }
+        public String getPrinterAlertContent() {
+            return this.printerAlertContent;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setPrinterAlertTitle(String printerAlertTitle) {
+            this.printerAlertTitle = printerAlertTitle;
+            return this;
+        }
+        public String getPrinterAlertTitle() {
+            return this.printerAlertTitle;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setPrinterRedirection(String printerRedirection) {
             this.printerRedirection = printerRedirection;
             return this;
@@ -2774,6 +3245,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public Integer getTargetFps() {
             return this.targetFps;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setThreeScreen(String threeScreen) {
+            this.threeScreen = threeScreen;
+            return this;
+        }
+        public String getThreeScreen() {
+            return this.threeScreen;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setUsbRedirect(String usbRedirect) {

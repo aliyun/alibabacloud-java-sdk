@@ -110,7 +110,8 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The time when the session was created.</p>
+         * <p>The session creation time.
+         * The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-31T06:56:45Z</p>
@@ -160,6 +161,12 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The creation time of the cloud desktop. The time is in the ISO 8601 standard (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-06T08:28Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -300,7 +307,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The protocol type.</p>
+         * <p>The protocol type. Valid values:</p>
          * <ul>
          * <li>HDX</li>
          * <li>ASP</li>
@@ -322,7 +329,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The enterprise resource group name.</p>
+         * <p>The enterprise resource group names.</p>
          */
         @NameInMap("ResourceGroups")
         public java.util.List<DescribeGlobalDesktopRecordsResponseBodySessionsResourceGroups> resourceGroups;
@@ -343,7 +350,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public java.util.List<DescribeGlobalDesktopRecordsResponseBodySessionsSessions> sessions;
 
         /**
-         * <p>The time when the cloud desktop status changed.</p>
+         * <p>The UNIX timestamp of the cloud desktop status change. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1760583xxxx</p>

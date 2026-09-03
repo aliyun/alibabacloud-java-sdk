@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDevicesResponseBody extends TeaModel {
     /**
-     * <p>The execution result. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+     * <p>The execution result. The value <code>success</code> indicates success. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class AddDevicesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned error message. This parameter is not returned if the value of Code is <code>success</code>.</p>
+     * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>The parameter is not specified.</p>
@@ -23,7 +23,7 @@ public class AddDevicesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A87DBB05-653A-5E4B-B72B-5F4A1E07****</p>

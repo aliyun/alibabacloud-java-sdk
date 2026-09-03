@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordFileRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The Cloud Desktop ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-7w78ozhjcwa3u****</p>
@@ -14,7 +14,7 @@ public class DescribeRecordFileRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time of the query. Format: yyyyMMddHHmmss.</p>
      * 
      * <strong>example:</strong>
      * <p>20251218205715</p>
@@ -41,9 +41,9 @@ public class DescribeRecordFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The sorting basis. If you do not specify this parameter, the results are sorted by screen recording start time in descending order. Valid value:</p>
+     * <p>The field used for sorting. If this parameter is not specified, the results are sorted by recording start time in descending order. Valid values:</p>
      * <ul>
-     * <li><code>startTime</code>: the start time of a screen recording.</li>
+     * <li>startTime: recording start time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,12 +53,10 @@ public class DescribeRecordFileRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><code>asc</code>: ascending</p>
-     * </li>
-     * <li><p><code>desc</code>: descending</p>
-     * </li>
+     * <li>asc: ascending order.</li>
+     * <li>desc: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +75,7 @@ public class DescribeRecordFileRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of rows per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -86,16 +84,12 @@ public class DescribeRecordFileRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the screen recording. Valid values:</p>
+     * <p>The type of the screen recording file. Valid values:</p>
      * <ul>
-     * <li><p><code>alltime</code>: full-time recording</p>
-     * </li>
-     * <li><p><code>period</code>: recording at intervals</p>
-     * </li>
-     * <li><p><code>event</code>: event-triggered recording</p>
-     * </li>
-     * <li><p><code>session</code>: session-based recording</p>
-     * </li>
+     * <li>alltime: full-time recording.</li>
+     * <li>period: interval recording.</li>
+     * <li>event: event-based recording.</li>
+     * <li>session: session recording.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +99,7 @@ public class DescribeRecordFileRequest extends TeaModel {
     public String recordType;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions that are supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,11 +108,17 @@ public class DescribeRecordFileRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLOUD_DESKTOP</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time of the query. Format: yyyyMMddHHmmss.</p>
      * 
      * <strong>example:</strong>
      * <p>20251218175715</p>
@@ -129,10 +129,8 @@ public class DescribeRecordFileRequest extends TeaModel {
     /**
      * <p>The status of the screen recording file. Valid values:</p>
      * <ul>
-     * <li><p><code>0</code>: The file is uploaded.</p>
-     * </li>
-     * <li><p><code>1</code>: The file is being uploaded.</p>
-     * </li>
+     * <li>0: uploaded.</li>
+     * <li>1: uploading.</li>
      * </ul>
      * 
      * <strong>example:</strong>

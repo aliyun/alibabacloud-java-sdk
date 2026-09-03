@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCensRequest extends TeaModel {
     /**
-     * <p>The page number.<br>Default value: 1.</p>
+     * <p>The page number of the current page in a paged query.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeCensRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.<br>Default value: 50.</p>
+     * <p>The maximum number of entries per page in a paged query.<br>Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -23,7 +23,7 @@ public class DescribeCensRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

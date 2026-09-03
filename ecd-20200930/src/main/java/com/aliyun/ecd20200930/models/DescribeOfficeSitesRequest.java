@@ -4,16 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeOfficeSitesRequest extends TeaModel {
+    /**
+     * <p>The account type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SIMPLE</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page for a paged query.    </p>
      * <ul>
-     * <li><p>Maximum value: 100.</p>
-     * </li>
-     * <li><p>Default value: 10.</p>
-     * </li>
+     * <li>Maximum value: 100.    </li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,7 +27,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -32,7 +36,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The office network IDs. You can specify 1 to 100 office network IDs.</p>
+     * <p>The office network ID. You can specify 1 to 100 IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-363353****</p>
@@ -41,7 +45,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public java.util.List<String> officeSiteId;
 
     /**
-     * <p>The type of account for the office network.</p>
+     * <p>The account system type of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>SIMPLE</p>
@@ -50,7 +54,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String officeSiteType;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +64,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The security protection setting for the office network.</p>
+     * <p>The Network Security Protection Settings of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>SASE</p>
@@ -69,7 +73,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String securityProtection;
 
     /**
-     * <p>The office network status.</p>
+     * <p>The status of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>REGISTERED</p>
@@ -78,7 +82,13 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the VPC in which the office network of the shared cloud computer resides.</p>
+     * <blockquote>
+     * <p>This parameter is not yet available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6w8u60n8xbkg5el****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

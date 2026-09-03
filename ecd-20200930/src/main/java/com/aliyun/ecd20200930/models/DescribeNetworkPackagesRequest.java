@@ -27,7 +27,7 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The IDs of the premium Internet bandwidth plans. You can specify 1 to 100 IDs.</p>
+     * <p>The IDs of premium Internet bandwidth plans. You can specify 1 to 100 IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>np-amtp8e8q1o9e4****</p>
@@ -36,7 +36,7 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     public java.util.List<String> networkPackageId;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -54,6 +54,9 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The tags. A maximum of 20 tags are supported.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeNetworkPackagesRequestTag> tag;
 
@@ -111,9 +114,21 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     }
 
     public static class DescribeNetworkPackagesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -23,7 +23,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>The cloud desktop ID. If you specify a cloud desktop, all script execution records for that cloud desktop are queried.</p>
+     * <p>The cloud desktop ID. If you specify a cloud desktop, all script execution records of the cloud desktop are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-7w78ozhjcwa3u****</p>
@@ -50,13 +50,13 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>Specifies whether to return the execution results of all cloud desktops when a remote command is run on multiple cloud desktops.</p>
+     * <p>Specifies whether to return the execution results of all cloud desktops when the remote command is executed on multiple cloud desktops.</p>
      */
     @NameInMap("IncludeInvokeDesktops")
     public Boolean includeInvokeDesktops;
 
     /**
-     * <p>Specifies whether to return the output of the script execution in the results.</p>
+     * <p>Specifies whether to return the output information of the script execution in the results.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -65,7 +65,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Boolean includeOutput;
 
     /**
-     * <p>The script execution ID. Obtained from the response of <a href="~~RunCommand~~">RunCommand</a>.</p>
+     * <p>The execution ID of the script process. Obtained from the response of <a href="~~RunCommand~~">RunCommand</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>t-hz0jdfwd9f****</p>
@@ -105,7 +105,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

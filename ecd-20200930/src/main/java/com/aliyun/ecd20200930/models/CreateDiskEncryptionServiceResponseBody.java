@@ -23,7 +23,11 @@ public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

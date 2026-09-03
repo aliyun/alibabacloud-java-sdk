@@ -23,7 +23,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ticket used to connect to the user instance. Before using the ticket, decode its content with Base64 and save it as an xxx.ica file, then open the file. Python code example:</p>
+     * <p>The ticket used to connect to the user instance. Before you use the ticket, Base64-decode its content and save it as an xxx.ica file, and then open the file. The following Python code provides an example:</p>
      * <pre><code>import base64
      * response = {
      *     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,

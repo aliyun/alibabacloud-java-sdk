@@ -14,7 +14,7 @@ public class CreateConfigGroupRequest extends TeaModel {
      * <p>The description of the configuration group.</p>
      * 
      * <strong>example:</strong>
-     * <p>Scheduled task description content</p>
+     * <p>Description of the scheduled task</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,7 +24,7 @@ public class CreateConfigGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Scheduled task group</p>
+     * <p>ScheduledTaskGroup</p>
      */
     @NameInMap("Name")
     public String name;
@@ -113,7 +113,7 @@ public class CreateConfigGroupRequest extends TeaModel {
 
     public static class CreateConfigGroupRequestConfigTimersSegmentTimers extends TeaModel {
         /**
-         * <p>The specified time point for executing a scheduled task. After this parameter is specified, the scheduled task is executed at the specified time point.</p>
+         * <p>The appointment timer used for executing scheduled tasks at specified time points.</p>
          * 
          * <strong>example:</strong>
          * <p>1764660600967</p>
@@ -121,73 +121,153 @@ public class CreateConfigGroupRequest extends TeaModel {
         @NameInMap("AppointmentTimer")
         public Long appointmentTimer;
 
+        /**
+         * <p>Specifies whether to create a snapshot.</p>
+         */
         @NameInMap("CreateSnapshot")
         public Boolean createSnapshot;
 
+        /**
+         * <p>The cron expression for the end of the scheduled task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 18 ? * 1-5</p>
+         */
         @NameInMap("EndCronExpression")
         public String endCronExpression;
 
+        /**
+         * <p>Specifies whether to forcefully execute the task. If set to true, the scheduled task is forcefully executed regardless of the desktop and connection status.</p>
+         */
         @NameInMap("Enforce")
         public Boolean enforce;
 
         /**
-         * <p>The image ID to change to. This parameter is used for image change scheduled tasks.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>m-5b0vjqbiqu010XXXXXX</p>
+         * <p>m-4zfb6zj728hhr****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The time interval. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The list of effective IP CIDR blocks.</p>
+         */
         @NameInMap("IpSegments")
         public java.util.List<String> ipSegments;
 
         /**
-         * <p>The lock screen time point for the no-operation lock screen feature. This parameter cannot be used for non-AD desktops.</p>
+         * <p>The duration of inactivity before the screen is locked, used by the no-operation lock screen feature. Unit: minutes. Only AD cloud desktops are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>1800</p>
+         * <p>5</p>
          */
         @NameInMap("LockScreenTime")
         public Integer lockScreenTime;
 
+        /**
+         * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("NotificationTime")
         public Integer notificationTime;
 
+        /**
+         * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Shutdown</p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 
         /**
+         * <p>The patch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>KB5082063</p>
          */
         @NameInMap("PatchId")
         public String patchId;
 
+        /**
+         * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
+         */
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
 
+        /**
+         * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ResetType")
         public String resetType;
 
+        /**
+         * <p>The cron expression for the start of the scheduled task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 8 ? * 1-5</p>
+         */
         @NameInMap("StartCronExpression")
         public String startCronExpression;
 
+        /**
+         * <p>The execution order number of the timer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TimerOrder")
         public Integer timerOrder;
 
+        /**
+         * <p>The time zone used by the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("Timezone")
         public String timezone;
 
+        /**
+         * <p>The trigger configuration type for no-operation scheduled tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("TriggerType")
         public String triggerType;
 
+        /**
+         * <p>The advance notification time before verification is executed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("VerificationNotificationTime")
         public Integer verificationNotificationTime;
 
+        /**
+         * <p>The verification wait duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("VerificationTime")
         public Integer verificationTime;
 
@@ -352,7 +432,7 @@ public class CreateConfigGroupRequest extends TeaModel {
 
     public static class CreateConfigGroupRequestConfigTimers extends TeaModel {
         /**
-         * <p>Specifies whether to allow end users to configure scheduled tasks on their own.</p>
+         * <p>Specifies whether to allow end users to configure scheduled tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -363,7 +443,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         /**
          * <p>The cron expression of the scheduled task.</p>
          * <blockquote>
-         * <p>Notice: Specify the time in UTC. For example, to specify 00:00 (UTC+8) every day, use 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
+         * <p>Notice: Specify the time in UTC. For example, to schedule a task at 00:00 (UTC+8) every day, use 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -373,7 +453,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Specifies whether to forcibly execute the task.</p>
+         * <p>Specifies whether to forcefully execute the task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -382,7 +462,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>The time interval, in minutes.</p>
+         * <p>The time interval. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -390,6 +470,12 @@ public class CreateConfigGroupRequest extends TeaModel {
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("NotificationTime")
         public Integer notificationTime;
 
@@ -409,7 +495,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public java.util.List<String> processWhitelist;
 
         /**
-         * <p>The reset type of the cloud computer.</p>
+         * <p>The reset type of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>RESET_TYPE_SYSTEM</p>
@@ -417,6 +503,9 @@ public class CreateConfigGroupRequest extends TeaModel {
         @NameInMap("ResetType")
         public String resetType;
 
+        /**
+         * <p>The list of segment timer configurations.</p>
+         */
         @NameInMap("SegmentTimers")
         public java.util.List<CreateConfigGroupRequestConfigTimersSegmentTimers> segmentTimers;
 
@@ -431,7 +520,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String timerType;
 
         /**
-         * <p>The trigger configuration type of the no-operation scheduled task.</p>
+         * <p>The trigger configuration type for no-operation scheduled tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>

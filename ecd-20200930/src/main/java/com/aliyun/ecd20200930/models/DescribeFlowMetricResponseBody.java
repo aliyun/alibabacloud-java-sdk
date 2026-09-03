@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowMetricResponseBody extends TeaModel {
     /**
-     * <p>Metric data.</p>
+     * <p>The metric data.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;instanceId\&quot;: \&quot;np-4wrye3ishxi47****\&quot;, \&quot;requestId\&quot;: \&quot;4F0CD5B6-70D6-5115-A2F7-7EAC3981****\&quot;, \&quot;dataPoints\&quot;: [{\&quot;timeStamp\&quot;: 1636510320000, \&quot;Average\&quot;: 293752.0}]}</p>

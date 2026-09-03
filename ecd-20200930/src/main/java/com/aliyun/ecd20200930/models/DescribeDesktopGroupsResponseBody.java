@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupsResponseBody extends TeaModel {
     /**
-     * <p>The details of the shared cloud desktop groups.</p>
+     * <p>The list of shared cloud computers.</p>
      */
     @NameInMap("DesktopGroups")
     public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroups> desktopGroups;
 
     /**
-     * <p>The token used to retrieve the next page of results. If this parameter is not returned, it indicates that all results have been returned.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -59,7 +59,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
     public static class DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus extends TeaModel {
         /**
-         * <p>The number of cloud desktops in the specified status.</p>
+         * <p>The number of cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -68,7 +68,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The status of the cloud desktop.</p>
+         * <p>The cloud computer status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -142,11 +142,17 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopGroupsResponseBodyDesktopGroups extends TeaModel {
+        /**
+         * <p>The account type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
-         * <p>The number of concurrent sessions allowed per cloud desktop in a multi-session shared cloud desktop group.</p>
+         * <p>The number of concurrent sessions allowed per cloud computer in a multi-session shared cloud computer group with multiple instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -155,7 +161,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Long bindAmount;
 
         /**
-         * <p>The number of cloud desktops that you purchase. This parameter applies only to subscription shared cloud desktop groups. Valid values: 0 to 200.</p>
+         * <p>This parameter applies only to subscription shared cloud computers and indicates the initial number of cloud computers purchased. Valid values: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -164,7 +170,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer buyDesktopsCount;
 
         /**
-         * <p>The comments on the shared cloud desktop group.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -173,7 +179,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String comments;
 
         /**
-         * <p>The maximum session duration, in milliseconds. When this duration is reached, the session is automatically disconnected.</p>
+         * <p>The maximum duration that a session can remain in the connected state. The session is automatically disconnected when this duration is reached. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600000</p>
@@ -182,13 +188,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Long connectDuration;
 
         /**
-         * <p>The number of cloud desktops in each status.</p>
+         * <p>The list of cloud computer counts by status.</p>
          */
         @NameInMap("CountPerStatus")
         public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus> countPerStatus;
 
         /**
-         * <p>The number of vCPU cores.</p>
+         * <p>The number of vCPUs.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -197,7 +203,8 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The time when the shared cloud desktop group was created.</p>
+         * <p>The creation time.</p>
+         * <p>The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-17T14:51:07Z</p>
@@ -206,7 +213,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that created the shared cloud desktop group.</p>
+         * <p>The Alibaba Cloud account ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1007214305******</p>
@@ -215,7 +222,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The type of the data disk.</p>
+         * <p>The user disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -224,7 +231,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String dataDiskCategory;
 
         /**
-         * <p>The data disk size in GiB.</p>
+         * <p>The user disk capacity. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -233,7 +240,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String dataDiskSize;
 
         /**
-         * <p>The number of cloud desktops created.</p>
+         * <p>The number of cloud computers that have been created.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -242,7 +249,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer desktopCount;
 
         /**
-         * <p>The ID of the shared cloud desktop group.</p>
+         * <p>The ID of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -251,7 +258,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
-         * <p>The name of the shared cloud desktop group.</p>
+         * <p>The name of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>CloudComputerPool01</p>
@@ -260,7 +267,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String desktopGroupName;
 
         /**
-         * <p>The desktop type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the desktop types supported by WUYING Workspace.</p>
+         * <p>The cloud computer specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by Wuying Cloud Computer.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.4c4g</p>
@@ -269,7 +276,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String desktopType;
 
         /**
-         * <p>The number of authorized users of the shared cloud desktop group.</p>
+         * <p>The number of authorized users for the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -277,17 +284,36 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("EndUserCount")
         public Integer endUserCount;
 
+        /**
+         * <p>The domain name of Microsoft Entra ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contoso.onmicrosoft.com</p>
+         */
         @NameInMap("EntraDomainName")
         public String entraDomainName;
 
+        /**
+         * <p>The environment ID. This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adifa****</p>
+         */
         @NameInMap("EnvId")
         public String envId;
 
+        /**
+         * <p>The environment type. This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
         /**
-         * <p>The time when the subscription shared cloud desktop group expires.</p>
+         * <p>The expiration time of the subscription shared cloud computer.</p>
+         * <p>The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-17T16:00:00Z</p>
@@ -295,11 +321,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The list of expiration times.</p>
+         */
         @NameInMap("ExpiredTimes")
         public java.util.List<String> expiredTimes;
 
         /**
-         * <p>The number of vGPU cores.</p>
+         * <p>The number of GPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -317,7 +346,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String gpuDriverVersion;
 
         /**
-         * <p>The GPU memory size.</p>
+         * <p>The GPU memory.</p>
          * 
          * <strong>example:</strong>
          * <p>16 GiB</p>
@@ -326,7 +355,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The amount of time, in milliseconds, that a session can remain idle. If a session remains idle for longer than this duration, it is automatically disconnected. A session is considered idle if there is no keyboard or mouse activity.</p>
+         * <p>The maximum idle duration after a user session is established. If no keyboard or mouse operations are performed within this duration, the session is disconnected. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>90000</p>
@@ -335,7 +364,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Long idleDisconnectDuration;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-gq15cq5ydlvwn****</p>
@@ -343,12 +372,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>Indicates whether the directory is an LDAP directory.</p>
+         */
         @NameInMap("IsLdap")
         public Boolean isLdap;
 
         /**
-         * <p>The duration, in milliseconds, to retain a disconnected session. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</p>
-         * <p>When a session disconnects, the user can reconnect within this period to resume their work. If the user fails to reconnect in time, the session is terminated and unsaved data is lost.</p>
+         * <p>The retention period after a session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</p>
          * 
          * <strong>example:</strong>
          * <p>180000</p>
@@ -357,7 +388,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Long keepDuration;
 
         /**
-         * <p>The load balancing policy for the multi-session shared cloud desktop group.</p>
+         * <p>The load balancing policy for multi-session shared cloud computers with multiple instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -367,10 +398,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li><p>For a pay-as-you-go shared cloud desktop group, this parameter specifies the maximum number of cloud desktops that the group can contain.</p>
-         * </li>
-         * <li><p>For a subscription shared cloud desktop group, this parameter specifies the total number of cloud desktops, which is the sum of the initially purchased desktops (indicated by the <code>BuyDesktopsCount</code> parameter) and the desktops that can be automatically created.</p>
-         * </li>
+         * <li>For pay-as-you-go shared cloud computers, this parameter indicates the maximum number of cloud computers that can be created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -380,7 +408,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer maxDesktopsCount;
 
         /**
-         * <p>The memory size in MiB.</p>
+         * <p>The memory size. Unit: MiB.</p>
          * 
          * <strong>example:</strong>
          * <p>16384</p>
@@ -390,10 +418,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li><p>For a pay-as-you-go shared cloud desktop group, this specifies the minimum number of cloud desktops to maintain in the group.</p>
-         * </li>
-         * <li><p>For a subscription shared cloud desktop group, this parameter has the same value as <code>BuyDesktopsCount</code> and specifies the number of cloud desktops that you initially purchase.</p>
-         * </li>
+         * <li>For pay-as-you-go shared cloud computers, this parameter indicates the minimum number of cloud computers that can be created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -403,7 +428,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer minDesktopsCount;
 
         /**
-         * <p>The ID of the office network.</p>
+         * <p>The name of the office network to which the shared cloud computer belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-467671****</p>
@@ -412,7 +437,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The name of the office network.</p>
+         * <p>The ID of the office network to which the shared cloud computers belong.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+os-c5cy7q578s8jc****</p>
@@ -421,7 +446,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String officeSiteName;
 
         /**
-         * <p>The account type of the office network.</p>
+         * <p>The account system type of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
@@ -429,11 +454,17 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
+        /**
+         * <p>The organization ID of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-aliyun-wy-org-id</p>
+         */
         @NameInMap("OrgId")
         public String orgId;
 
         /**
-         * <p>The OS.</p>
+         * <p>The operating system type.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -442,7 +473,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The ID of the cloud desktop template.</p>
+         * <p>The cloud computer template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bundle_eds_general_4c8g_s8d5_win2019</p>
@@ -451,16 +482,16 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String ownBundleId;
 
         /**
-         * <p>The name of the cloud desktop template.</p>
+         * <p>The name of the cloud computer template.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Standard Office Template</p>
          */
         @NameInMap("OwnBundleName")
         public String ownBundleName;
 
         /**
-         * <p>The type of the shared cloud desktop group.</p>
+         * <p>The type of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -478,7 +509,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The ID of the policy associated with the shared cloud desktop group.</p>
+         * <p>The ID of the policy associated with the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-53iyi2aar0nd6c8qj</p>
@@ -486,11 +517,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        /**
+         * <p>The list of cloud computer policy IDs.</p>
+         */
         @NameInMap("PolicyGroupIdList")
         public java.util.List<String> policyGroupIdList;
 
         /**
-         * <p>The name of the policy associated with the shared cloud desktop group.</p>
+         * <p>The policy name associated with the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>All enabled policy</p>
@@ -498,6 +532,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
+        /**
+         * <p>The list of cloud computer policy names.</p>
+         */
         @NameInMap("PolicyGroupNameList")
         public java.util.List<String> policyGroupNameList;
 
@@ -510,13 +547,19 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <p>The ID of the QoS rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-5605u0gelk200****</p>
+         */
         @NameInMap("QosRuleId")
         public String qosRuleId;
 
         /**
-         * <p>The session utilization threshold that triggers auto scaling for a multi-session shared cloud desktop group. Session utilization is calculated by using the following formula:</p>
-         * <p><code>Session utilization = Number of active sessions / (Total number of cloud desktops × Maximum number of sessions per cloud desktop) × 100%</code></p>
-         * <p>When the session utilization exceeds this threshold, the system scales out by creating new cloud desktops. When the utilization falls below this threshold, the system scales in by removing idle cloud desktops.</p>
+         * <p>The session occupancy threshold used as the auto scaling trigger condition for multi-session shared cloud computers. The session occupancy is calculated by using the following formula:</p>
+         * <p><code>Session occupancy = Number of bound sessions / (Total number of cloud computers × Maximum number of sessions supported by each cloud computer) × 100%</code></p>
+         * <p>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy is below this threshold, excess cloud computers are deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>0.85</p>
@@ -525,7 +568,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Float ratioThreshold;
 
         /**
-         * <p>The reset type of the shared cloud desktop group.</p>
+         * <p>The reset type of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -533,11 +576,17 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("ResetType")
         public Long resetType;
 
+        /**
+         * <p>The convenience user group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-3f6c8a2b****</p>
+         */
         @NameInMap("SimpleUserGroupId")
         public String simpleUserGroupId;
 
         /**
-         * <p>The status of the shared cloud desktop group.</p>
+         * <p>The status of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -546,7 +595,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The period of inactivity, in milliseconds, after which an idle cloud desktop is automatically stopped. If a user tries to connect to a stopped desktop, the desktop is automatically started.</p>
+         * <p>The idle shutdown duration. When the cloud computer has been idle for this duration, it is automatically shut down. If a user connects after shutdown, the cloud computer automatically starts. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900000</p>
@@ -555,7 +604,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Long stopDuration;
 
         /**
-         * <p>The ID of the subnet.</p>
+         * <p>The subnet ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf63bb6*****8gfytm</p>
@@ -564,7 +613,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String subnetId;
 
         /**
-         * <p>The type of the system disk.</p>
+         * <p>The system cloud disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -573,7 +622,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The system disk size in GiB.</p>
+         * <p>The system cloud disk capacity. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -582,16 +631,22 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer systemDiskSize;
 
         /**
-         * <p>The tags attached to the shared cloud desktop group.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroupsTags> tags;
 
+        /**
+         * <p>The user group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Group</p>
+         */
         @NameInMap("UserGroupName")
         public String userGroupName;
 
         /**
-         * <p>The path of the organizational unit (OU).</p>
+         * <p>The organizational unit (OU) path of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -600,7 +655,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String userOuPath;
 
         /**
-         * <p>The version number of the shared cloud desktop group.</p>
+         * <p>The version number of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -609,7 +664,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer version;
 
         /**
-         * <p>Indicates whether disk encryption is enabled.</p>
+         * <p>Indicates whether encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

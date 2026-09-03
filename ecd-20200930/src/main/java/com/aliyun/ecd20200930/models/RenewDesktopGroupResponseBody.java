@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewDesktopGroupResponseBody extends TeaModel {
     /**
-     * <p>The order IDs.</p>
+     * <p>The list of order IDs.</p>
      */
     @NameInMap("OrderId")
     public java.util.List<String> orderId;

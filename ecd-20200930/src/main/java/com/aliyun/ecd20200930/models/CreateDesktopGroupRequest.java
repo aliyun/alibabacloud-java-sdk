@@ -5,19 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateDesktopGroupRequest extends TeaModel {
     /**
-     * <p>Specifies whether to authorize all users in the desktop group\&quot;s categories.</p>
-     * <blockquote>
-     * <p>This parameter is not yet available.</p>
-     * </blockquote>
+     * <p>The users of all shared cloud computer categories.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alice</p>
+     * <p>true</p>
      */
     @NameInMap("AllClassifyUsers")
     public Boolean allClassifyUsers;
 
     /**
-     * <p>Specifies whether to allow automatic creation of desktops in the subscription desktop group. This parameter is required and applies only when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
+     * <p>Specifies whether to allow automatic creation of cloud computers within subscription shared cloud computers. This parameter takes effect and is required only when ChargeType is set to PrePaid.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,16 +23,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer allowAutoSetup;
 
     /**
-     * <p>The number of desktops to reserve in the pay-as-you-go desktop group. This parameter is required and applies only when <code>ChargeType</code> is set to <code>PostPaid</code>. Valid values:</p>
-     * <ul>
-     * <li><p>0: Does not reserve desktops.</p>
-     * </li>
-     * <li><p>N: Reserves N desktops, where N is an integer from 1 to 100.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>If no desktops are reserved, a user must wait for a new desktop to be created and started, which can cause connection delays. We recommend reserving an appropriate number of desktops to improve connection times.</p>
-     * </blockquote>
+     * <p>The number of reserved cloud computers allowed in pay-as-you-go shared cloud computers. This parameter takes effect and is required only when ChargeType is set to PostPaid. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +32,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer allowBufferCount;
 
     /**
-     * <p>Specifies whether to automatically pay for subscription orders.</p>
+     * <p>Specifies whether automatic payment is enabled for the subscription order.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -53,7 +41,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the subscription desktop group.</p>
+     * <p>Specifies whether to enable auto-renewal for the subscription shared cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -62,10 +50,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The number of concurrent sessions allowed per desktop in a multi-session desktop group.</p>
-     * <blockquote>
-     * <p>This parameter is not yet available.</p>
-     * </blockquote>
+     * <p>The number of concurrent sessions allowed per cloud computer in multi-session shared cloud computers.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -74,7 +59,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Long bindAmount;
 
     /**
-     * <p>The bundle ID.</p>
+     * <p>The cloud computer template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b-je9hani001wfn****</p>
@@ -84,10 +69,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>For <code>subscription</code> desktop groups: The number of desktops to purchase. Valid values: 0 to 200.</p>
-     * </li>
-     * <li><p>For <code>pay-as-you-go</code> desktop groups: The minimum number of desktops in the group. Valid values: 0 to <code>MaxDesktopsCount</code>. The default value is 1.</p>
-     * </li>
+     * <li>For subscription shared cloud computers: the initial number of cloud computers to create. Valid values: 0 to 200.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +79,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer buyDesktopsCount;
 
     /**
-     * <p>The billing method of the desktops.</p>
+     * <p>The billing method of the cloud computer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,10 +89,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The type of the desktop group.</p>
-     * <blockquote>
-     * <p>This parameter is not yet available.</p>
-     * </blockquote>
+     * <p>The type of the shared cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>teacher</p>
@@ -119,7 +98,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String classify;
 
     /**
-     * <p>A client token to ensure the idempotence of the request. You can use your client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -128,7 +107,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>A description or comments for the desktop group.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>comment</p>
@@ -137,7 +116,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String comments;
 
     /**
-     * <p>The maximum duration of a connected session. When the session duration reaches this value, the session is automatically disconnected. Unit: milliseconds. Valid values: 900000 (15 minutes) to 345600000 (4 days).</p>
+     * <p>The maximum duration that a session can remain in the connected state. The session is automatically disconnected when this duration is reached. Unit: milliseconds. Valid values: 900000 (15 minutes) to 345600000 (4 days).</p>
      * 
      * <strong>example:</strong>
      * <p>900000</p>
@@ -146,7 +125,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Long connectDuration;
 
     /**
-     * <p>The type of the data disk.</p>
+     * <p>The data cloud disk type.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_auto</p>
@@ -155,7 +134,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String dataDiskCategory;
 
     /**
-     * <p>The performance level (PL) of the ESSD. Default value: PL0.</p>
+     * <p>The performance level of the ESSD. Default value: PL0.</p>
      * 
      * <strong>example:</strong>
      * <p>PL0</p>
@@ -164,24 +143,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String dataDiskPerLevel;
 
     /**
-     * <p>The size of the data disk. Unit: GiB. The value must be a multiple of 20 and in the range of 0 to 16,380.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <ul>
-     * <li><p>A value of 0 indicates that no data disk is attached.</p>
-     * </li>
-     * <li><p>If the selected bundle uses an Enhanced SSD (ESSD) at PL0, the minimum data disk size is 40 GiB.</p>
-     * </li>
-     * <li><p>If the selected bundle uses an SSD, the minimum data disk size is 20 GiB.</p>
-     * </li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><p>A value of 0 indicates that no data disk is attached.</p>
-     * </li>
-     * <li><p>If the selected bundle uses an SSD, the minimum data disk size is 20 GiB.</p>
-     * </li>
-     * </ul>
-     * <p>Default value: 0</p>
+     * <p>The size of the attached data cloud disk. Unit: GB. Valid values: 0 to 16380. The value must be a multiple of 20.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -190,7 +152,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer dataDiskSize;
 
     /**
-     * <p>The default number of desktops to create in the desktop group. The default value is 1.</p>
+     * <p>The default number of cloud computers to create when you create multiple shared cloud computers. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -207,11 +169,17 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("DefaultLanguage")
     public String defaultLanguage;
 
+    /**
+     * <p>The retention period before cloud computers in the cloud computer pool are automatically deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("DeleteDuration")
     public Long deleteDuration;
 
     /**
-     * <p>The name of the desktop group. The name must be 1 to 30 characters long, start with a letter or a Chinese character, and must not begin with <code>http://</code> or <code>https://</code>. The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>The name of the shared cloud computer. The name can be up to 30 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>SharedComputers01</p>
@@ -220,7 +188,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String desktopGroupName;
 
     /**
-     * <p>The desktop type. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query supported desktop types.</p>
+     * <p>The cloud computer specification. You can call <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query the specification IDs supported by cloud computers.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.enterprise_office.16c64g</p>
@@ -230,9 +198,6 @@ public class CreateDesktopGroupRequest extends TeaModel {
 
     /**
      * <p>The directory ID.</p>
-     * <blockquote>
-     * <p>This parameter is not yet available.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>dri-uf62w3qzt4aigvlcb****</p>
@@ -241,13 +206,13 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>An array of user IDs to authorize for the desktop group.</p>
+     * <p>The list of user IDs for the shared cloud computer.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>Specifies the pool type. To create a static pool, set this parameter to <code>Exclusive</code>. This is required if <code>SessionType</code> is <code>MultipleSession</code>.</p>
+     * <p>Creates a static pool. This parameter is required when the <code>SessionType</code> parameter is set to <code>MultipleSession</code>. Set the value to <code>Exclusive</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Exclusive</p>
@@ -256,10 +221,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String exclusiveType;
 
     /**
-     * <p>The ID of the Apsara File Storage NAS file system used for user data roaming.</p>
-     * <blockquote>
-     * <p>This parameter is not yet available.</p>
-     * </blockquote>
+     * <p>The ID of the NAS file system used for user data roaming.</p>
      * 
      * <strong>example:</strong>
      * <p>kegd-nas-****</p>
@@ -268,7 +230,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The number of individual desktops to create. This parameter is required only if <code>MultiResource</code> is set to <code>false</code>. Valid values: 1 to 5. Default value: 1.</p>
+     * <p>The number of single shared cloud computers to create. This parameter is required only when the <code>MultiResource</code> parameter is set to <code>false</code>. Valid values: 1 to 5. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -277,7 +239,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer groupAmount;
 
     /**
-     * <p>The version of the desktop group.</p>
+     * <p>The version of the shared cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -286,23 +248,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer groupVersion;
 
     /**
-     * <p>The custom hostname for the desktops. This parameter is applicable only to Windows desktops in an AD office network.</p>
-     * <p>The hostname must meet the following naming conventions:</p>
-     * <ul>
-     * <li><p>Must be 2 to 15 characters in length.</p>
-     * </li>
-     * <li><p>Can contain letters, digits, and hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or consist only of digits.</p>
-     * </li>
-     * </ul>
-     * <p>To generate sequential hostnames when creating multiple desktops, use the format <code>name_prefix[begin_number,bits]name_suffix</code>. For example, if you set the Hostname parameter to <code>ecd-[1,4]-test</code>, the first desktop is named ecd-0001-test, the second is named ecd-0002-test, and so on.</p>
-     * <ul>
-     * <li><p><code>name_prefix</code>: The prefix of the hostname.</p>
-     * </li>
-     * <li><p><code>[begin_number,bits]</code>: The sequential number in the hostname. <code>begin_number</code> is the starting number, which can be an integer from 0 to 999999. The default value is 0. <code>bits</code> is the number of digits, which can be an integer from 1 to 6. The default value is 6.</p>
-     * </li>
-     * <li><p><code>name_suffix</code>: The suffix of the hostname.</p>
-     * </li>
-     * </ul>
+     * <p>The custom hostname of the cloud computer. Only Settings for cloud computers that run the Windows operating system in AD office networks are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>testhost</p>
@@ -311,10 +257,10 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String hostname;
 
     /**
-     * <p>The maximum duration that a session can be idle before it is automatically disconnected. A session is considered idle if there is no keyboard or mouse input. Unit: milliseconds. Valid values: 360000 (6 minutes) to 3600000 (60 minutes).</p>
-     * <p>Thirty seconds before disconnection, the user is prompted to save their work to prevent data loss.</p>
+     * <p>The maximum idle duration after a user session is established. If no keyboard or mouse activity occurs within this duration, the session is disconnected. Unit: milliseconds. Valid values: 360000 (6 minutes) to 3600000 (60 minutes).</p>
+     * <p>30 seconds before this duration is reached, the end user in the session receives a prompt to save document data. The end user must save document data promptly to avoid data loss.</p>
      * <blockquote>
-     * <p>This parameter applies only to desktops created from image version 1.0.2 or later.</p>
+     * <p>Applicable only to cloud computers with an image version of 1.0.2 or later.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -333,8 +279,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The duration for which a session is kept active after a user disconnects. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is retained indefinitely.</p>
-     * <p>If a user reconnects within this period, they can resume their session. If they fail to reconnect, the session is terminated, and any unsaved data is lost.</p>
+     * <p>The retention period after a session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</p>
      * 
      * <strong>example:</strong>
      * <p>180000</p>
@@ -343,10 +288,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Long keepDuration;
 
     /**
-     * <p>The load balancing policy for the multi-session desktop group.</p>
-     * <blockquote>
-     * <p>This parameter is not yet available.</p>
-     * </blockquote>
+     * <p>The load balancing policy for multi-session shared cloud computers.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -355,7 +297,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Long loadPolicy;
 
     /**
-     * <p>The maximum number of desktops in the pay-as-you-go desktop group. Valid values: 0 to 500.</p>
+     * <p>The maximum number of pay-as-you-go shared cloud computers. Valid values: 0 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -364,7 +306,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer maxDesktopsCount;
 
     /**
-     * <p>The minimum number of desktops in the subscription desktop group. This parameter is required only if <code>ChargeType</code> is <code>PrePaid</code>. Valid values: 0 to <code>MaxDesktopsCount</code>. Default value: 1.</p>
+     * <p>The maximum number of cloud computers that can be used for automatic creation for subscription shared cloud computers. This parameter takes effect and is required only when ChargeType is set to PrePaid. Default value: 1. Valid values: 0 to the value of MaxDesktopsCount.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -373,7 +315,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer minDesktopsCount;
 
     /**
-     * <p>Specifies whether to create a desktop group.</p>
+     * <p>Specifies whether the cloud computers are multi-resource shared cloud computers.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -382,7 +324,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Boolean multiResource;
 
     /**
-     * <p>The ID of the office network for the desktops.</p>
+     * <p>The ID of the office network to which the shared cloud computer belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -392,10 +334,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The type of the desktop.</p>
-     * <blockquote>
-     * <p>This parameter is not yet available.</p>
-     * </blockquote>
+     * <p>The type of the shared cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -404,35 +343,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer ownType;
 
     /**
-     * <p>The subscription duration for the desktops. This parameter is required only if <code>ChargeType</code> is set to <code>PrePaid</code>. The <code>PeriodUnit</code> parameter specifies the time unit for this duration.</p>
-     * <ul>
-     * <li><p>If <code>PeriodUnit</code> is <code>Month</code>, the valid values are:</p>
-     * <ul>
-     * <li><p>1</p>
-     * </li>
-     * <li><p>2</p>
-     * </li>
-     * <li><p>3</p>
-     * </li>
-     * <li><p>6</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>If <code>PeriodUnit</code> is <code>Year</code>, the valid values are:</p>
-     * <ul>
-     * <li><p>1</p>
-     * </li>
-     * <li><p>2</p>
-     * </li>
-     * <li><p>3</p>
-     * </li>
-     * <li><p>4</p>
-     * </li>
-     * <li><p>5</p>
-     * </li>
-     * </ul>
-     * </li>
-     * </ul>
+     * <p>The subscription duration of the shared cloud computer. This parameter takes effect and is required only when ChargeType is set to PrePaid. The unit is specified by PeriodUnit.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -441,7 +352,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The time unit of the subscription period.</p>
+     * <p>The unit of the subscription billable methods duration.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -450,7 +361,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the policy to apply to the desktops.</p>
+     * <p>The ID of the policy associated with the shared cloud computer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -461,9 +372,6 @@ public class CreateDesktopGroupRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable user data roaming.</p>
-     * <blockquote>
-     * <p>This parameter is not yet available.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -472,7 +380,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Boolean profileFollowSwitch;
 
     /**
-     * <p>The promotion ID.</p>
+     * <p>The coupon ID.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_*****</p>
@@ -481,11 +389,11 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The session usage threshold that triggers auto scaling for multi-session desktop groups. Session usage is calculated by using the following formula:</p>
-     * <p><code>Session usage = (Number of connected sessions / (Total number of desktops × Maximum number of sessions per desktop)) × 100%</code></p>
-     * <p>When session usage reaches this threshold, new desktops are created. When session usage falls below this threshold, the group scales in by deleting surplus desktops.</p>
+     * <p>The session occupancy threshold used as the automatic scaling trigger condition for multi-session shared cloud computers. The session occupancy is calculated by using the following formula:</p>
+     * <p><code>Session occupancy = Number of bound sessions / (Total number of cloud computer resources × Maximum number of sessions supported per cloud computer) × 100%</code></p>
+     * <p>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy is below this threshold, excess cloud computers are deleted.</p>
      * <blockquote>
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not yet available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -495,7 +403,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Float ratioThreshold;
 
     /**
-     * <p>The ID of the region. To find the regions supported by Elastic Desktop Service (EDS), call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -504,11 +412,17 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID of the resource ownership in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1422724566551XXX</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 
     /**
-     * <p>The desktop reset type.</p>
+     * <p>The reset type of the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -517,10 +431,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Long resetType;
 
     /**
-     * <p>The ID of the scaling policy.</p>
-     * <blockquote>
-     * <p>This parameter is not yet available.</p>
-     * </blockquote>
+     * <p>The scaling policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ss-f9dkjz6vw3aaw****</p>
@@ -537,6 +448,12 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("SessionType")
     public String sessionType;
 
+    /**
+     * <p>The ID of the convenience user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ug-3f6c8a2b****</p>
+     */
     @NameInMap("SimpleUserGroupId")
     public String simpleUserGroupId;
 
@@ -550,7 +467,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String snapshotPolicyId;
 
     /**
-     * <p>The amount of time a desktop can be idle before it is automatically stopped. Connecting to a stopped desktop automatically starts it. Unit: milliseconds.</p>
+     * <p>The idle shutdown duration. When the cloud computer has been idle for this duration, it is automatically shut down. If a user connects after shutdown, the cloud computer automatically starts. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300000</p>
@@ -559,7 +476,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Long stopDuration;
 
     /**
-     * <p>The type of the system disk.</p>
+     * <p>The system cloud disk type.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_auto</p>
@@ -568,7 +485,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String systemDiskCategory;
 
     /**
-     * <p>The performance level (PL) of the ESSD. Default value: PL0.</p>
+     * <p>The performance level of the ESSD. Default value: PL0.</p>
      * 
      * <strong>example:</strong>
      * <p>PL0</p>
@@ -577,10 +494,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String systemDiskPerLevel;
 
     /**
-     * <p>The size of the system disk. Unit: GiB.</p>
-     * <blockquote>
-     * <p>The system disk size must be at least the size of the image.</p>
-     * </blockquote>
+     * <p>The system cloud disk size. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -589,7 +503,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Integer systemDiskSize;
 
     /**
-     * <p>The list of tags. You can specify up to 20 tags.</p>
+     * <p>The list of tags. A maximum of 20 tags can be specified.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDesktopGroupRequestTag> tag;
@@ -603,9 +517,21 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("TimerGroupId")
     public String timerGroupId;
 
+    /**
+     * <p>The name of the user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>R&amp;D Group</p>
+     */
     @NameInMap("UserGroupName")
     public String userGroupName;
 
+    /**
+     * <p>The organizational unit (OU) path of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("UserOuPath")
     public String userOuPath;
 
@@ -619,7 +545,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Boolean volumeEncryptionEnabled;
 
     /**
-     * <p>The ID of the key from Key Management Service (KMS) used for disk encryption. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to obtain the key ID.</p>
+     * <p>The ID of the KMS key used for disk encryption. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
@@ -628,10 +554,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String volumeEncryptionKey;
 
     /**
-     * <p>The ID of the Virtual Private Cloud (VPC) that contains the office network for the desktops.</p>
-     * <blockquote>
-     * <p>This parameter is not yet available.</p>
-     * </blockquote>
+     * <p>The VPC ID of the office network to which the shared cloud computer belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-uf6w8u60n8xbkg5el****</p>
@@ -1134,7 +1057,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
 
     public static class CreateDesktopGroupRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The key cannot be an empty string, can be up to 128 characters long, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1144,7 +1067,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. The value can be an empty string. The value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. The value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

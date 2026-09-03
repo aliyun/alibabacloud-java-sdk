@@ -4,12 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateEcdReportTaskRequest extends TeaModel {
+    /**
+     * <p>The business channel. Valid values:
+     * Enterprise: Enterprise Edition.
+     * Business: Business Edition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enterprise</p>
+     */
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
     /**
      * <p>The list of filter conditions for query results. The filter condition objects have a logical AND (&amp;) relationship.
-     * Each filter condition contains FilterKey and FilterValues, which represent the filter condition name and specific values.</p>
+     * Each filter condition contains FilterKey and FilterValues, which specify the filter condition name and its values.</p>
      */
     @NameInMap("FilterList")
     public java.util.List<CreateEcdReportTaskRequestFilterList> filterList;
@@ -27,7 +35,7 @@ public class CreateEcdReportTaskRequest extends TeaModel {
      * <p>The report file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test report name</p>
+     * <p>TestReportName</p>
      */
     @NameInMap("ReportFileName")
     public String reportFileName;
@@ -113,7 +121,7 @@ public class CreateEcdReportTaskRequest extends TeaModel {
          * <li>Cloud computer report</li>
          * </ol>
          * <ul>
-         * <li>KeyWord: automatic keyword recognition for cloud computers.</li>
+         * <li>KeyWord: automatically identifies the cloud computer keyword.</li>
          * <li>RegionId: the region ID.</li>
          * <li>DesktopId: the cloud computer ID.</li>
          * <li>DesktopName: the cloud computer name (fuzzy match).</li>
@@ -124,7 +132,7 @@ public class CreateEcdReportTaskRequest extends TeaModel {
          * <li>DesktopIP: the cloud computer IP address.</li>
          * <li>SubPayType: the billing method.</li>
          * <li>EndUserId: the username (fuzzy match).</li>
-         * <li>ExpireTime: the expiration time in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</li>
+         * <li>ExpireTime: the expiration time, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</li>
          * <li>IncludeAssignedUser: specifies whether users are assigned.</li>
          * <li>ResourceGroupId: the resource group ID.</li>
          * <li>PolicyId: the policy ID.</li>
@@ -149,9 +157,6 @@ public class CreateEcdReportTaskRequest extends TeaModel {
          * <li>ExpireTime</li>
          * <li>IncludeAssignedUser</li>
          * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Test cloud desktop name</p>
          */
         @NameInMap("FilterValues")
         public java.util.List<String> filterValues;

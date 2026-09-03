@@ -42,7 +42,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
 
     public static class DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers extends TeaModel {
         /**
-         * <p>The specified time point for the fixed-time scheduled task. After this parameter is specified, the scheduled task is executed at the specified time point.</p>
+         * <p>The appointment timer used for executing scheduled tasks at specified time points. After this parameter is specified, the scheduled task is executed at the specified time points.</p>
          * 
          * <strong>example:</strong>
          * <p>1764660600967</p>
@@ -50,12 +50,24 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @NameInMap("AppointmentTimer")
         public Long appointmentTimer;
 
+        /**
+         * <p>Specifies whether to create a snapshot.</p>
+         */
         @NameInMap("CreateSnapshot")
         public Boolean createSnapshot;
 
+        /**
+         * <p>The cron expression for the end time of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 18 ? * 1-5</p>
+         */
         @NameInMap("EndCronExpression")
         public String endCronExpression;
 
+        /**
+         * <p>Specifies whether to forcefully execute the task. A value of true indicates that the desktop and connection status checks are ignored and the scheduled task is forcefully executed.</p>
+         */
         @NameInMap("Enforce")
         public Boolean enforce;
 
@@ -68,55 +80,123 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The time interval. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The list of effective IP CIDR blocks.</p>
+         */
         @NameInMap("IpSegments")
         public java.util.List<String> ipSegments;
 
         /**
-         * <p>The lock screen time point for the no-operation lock screen feature. This feature cannot be used for non-AD desktops.</p>
+         * <p>The duration of inactivity before the screen is locked, used by the no-operation lock screen feature. Unit: minutes. Only AD-joined cloud desktops are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>1800</p>
+         * <p>5</p>
          */
         @NameInMap("LockScreenTime")
         public Integer lockScreenTime;
 
+        /**
+         * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("NotificationTime")
         public Integer notificationTime;
 
+        /**
+         * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Shutdown</p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 
         /**
+         * <p>The patch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>KB5082063</p>
          */
         @NameInMap("PatchId")
         public String patchId;
 
+        /**
+         * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
+         */
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
 
+        /**
+         * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ResetType")
         public String resetType;
 
+        /**
+         * <p>The cron expression for the start time of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 8 ? * 1-5</p>
+         */
         @NameInMap("StartCronExpression")
         public String startCronExpression;
 
+        /**
+         * <p>The execution order number of the timer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TimerOrder")
         public Integer timerOrder;
 
+        /**
+         * <p>The time zone used by the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("Timezone")
         public String timezone;
 
+        /**
+         * <p>The trigger configuration type of the no-operation scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("TriggerType")
         public String triggerType;
 
+        /**
+         * <p>The advance notification time before verification is executed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("VerificationNotificationTime")
         public Integer verificationNotificationTime;
 
+        /**
+         * <p>The verification wait duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("VerificationTime")
         public Integer verificationTime;
 
@@ -308,7 +388,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>The time interval, in minutes.</p>
+         * <p>The time interval. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -316,6 +396,12 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("NotificationTime")
         public Integer notificationTime;
 
@@ -343,6 +429,9 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @NameInMap("ResetType")
         public String resetType;
 
+        /**
+         * <p>The list of segment timer configurations.</p>
+         */
         @NameInMap("SegmentTimers")
         public java.util.List<DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers> segmentTimers;
 
@@ -476,7 +565,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public java.util.Map<String, Integer> bindCountMap;
 
         /**
-         * <p>The configuration information of scheduled tasks, in list format.</p>
+         * <p>The configuration information of scheduled tasks. This is a list structure.</p>
          */
         @NameInMap("ConfigTimers")
         public java.util.List<DescribeTimerGroupResponseBodyDataConfigTimers> configTimers;
@@ -485,7 +574,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
          * <p>The description of the configuration group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Scheduled task</p>
+         * <p>ScheduledTask</p>
          */
         @NameInMap("Description")
         public String description;
@@ -500,7 +589,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The mapping code for the system scheduled task description, used for frontend display.</p>
+         * <p>The code of the system scheduled task description, used for frontend display.</p>
          * 
          * <strong>example:</strong>
          * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</p>
@@ -509,7 +598,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String innerTimerDesc;
 
         /**
-         * <p>The mapping code for the system scheduled task name, used for frontend display.</p>
+         * <p>The mapping code of the system scheduled task name, used for frontend display.</p>
          * 
          * <strong>example:</strong>
          * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</p>
@@ -518,13 +607,13 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String innerTimerName;
 
         /**
-         * <p>Used for system scheduled task checks. The current scheduled task does not support unbinding or binding.</p>
+         * <p>Used for system scheduled task check. The current scheduled task does not support unbinding or binding.</p>
          */
         @NameInMap("IsBind")
         public Boolean isBind;
 
         /**
-         * <p>Used for system scheduled task checks. The current scheduled task does not support modification.</p>
+         * <p>Used for system scheduled task check. The current scheduled task does not support modification.</p>
          */
         @NameInMap("IsUpdate")
         public Boolean isUpdate;
@@ -533,7 +622,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
          * <p>The name of the configuration group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Scheduled task</p>
+         * <p>ScheduledTask</p>
          */
         @NameInMap("Name")
         public String name;

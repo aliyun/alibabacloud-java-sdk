@@ -276,7 +276,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The office network name.</p>
+         * <p>The name of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>TestOfficeSite</p>
@@ -318,7 +318,8 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         public java.util.List<DescribeDesktopSessionsResponseBodySessionsResourceGroups> resourceGroups;
 
         /**
-         * <p>The end time of the session.</p>
+         * <p>The end time of the session.
+         * The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-28T02:31:43Z</p>
@@ -336,7 +337,8 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         public Long sessionIdleTime;
 
         /**
-         * <p>The start time of the session.</p>
+         * <p>The start time of the session.
+         * The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-28T02:31:43Z</p>

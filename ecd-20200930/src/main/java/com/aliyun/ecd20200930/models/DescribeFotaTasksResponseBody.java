@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFotaTasksResponseBody extends TeaModel {
     /**
-     * <p>The operation result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
+     * <p>The result of the operation. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     public java.util.List<DescribeFotaTasksResponseBodyFotaTasks> fotaTasks;
 
     /**
-     * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
+     * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>The parameter is not specified.</p>
@@ -29,7 +29,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+     * <p>The pagination token for the next query. An empty value indicates that there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -131,7 +131,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         public Integer pendingDesktopCount;
 
         /**
-         * <p>The publish time of the upgrade version.</p>
+         * <p>The release time of the upgrade version. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-31T04:28:48Z</p>
@@ -143,13 +143,13 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
          * <p>The upgrade version description.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Fixed known issues and improved system stability</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
-         * <p>The size of the upgrade package. Unit: KB.</p>
+         * <p>The size of the upgrade package, in KB.</p>
          * 
          * <strong>example:</strong>
          * <p>568533470</p>

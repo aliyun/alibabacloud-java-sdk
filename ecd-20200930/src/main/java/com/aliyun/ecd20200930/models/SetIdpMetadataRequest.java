@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetIdpMetadataRequest extends TeaModel {
     /**
-     * <p>The workspace ID. This parameter is the same as <code>OfficeSiteId</code>. We recommend that you use <code>OfficeSiteId</code> to replace <code>DirectoryId</code>. You can specify only <code>DirectoryId</code> or <code>OfficeSiteId</code>.</p>
+     * <p>The office network ID, which has the same meaning as <code>OfficeSiteId</code>. We recommend that you stop using <code>DirectoryId</code> and use <code>OfficeSiteId</code> instead. You can specify only one of <code>DirectoryId</code> and <code>OfficeSiteId</code>, not both.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-400695****</p>
@@ -14,7 +14,7 @@ public class SetIdpMetadataRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The metadata of the IdP.</p>
+     * <p>The metadata of the identity provider (IdP).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class SetIdpMetadataRequest extends TeaModel {
     public String idpMetadata;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-400695****</p>
@@ -33,7 +33,7 @@ public class SetIdpMetadataRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

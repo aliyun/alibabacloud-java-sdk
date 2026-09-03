@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebuildDesktopsResponseBody extends TeaModel {
     /**
-     * <p>The rebuild results.</p>
+     * <p>The collection of rebuild results.</p>
      */
     @NameInMap("RebuildResults")
     public java.util.List<RebuildDesktopsResponseBodyRebuildResults> rebuildResults;
@@ -42,7 +42,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
 
     public static class RebuildDesktopsResponseBodyRebuildResults extends TeaModel {
         /**
-         * <p>The operation result. A value of <code>Success</code> indicates the rebuild was initiated. Otherwise, an error code is returned.</p>
+         * <p>The rebuild result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>IncorrectDesktopStatus</p>
@@ -51,7 +51,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The desktop ID.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -60,7 +60,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The error message. This parameter is returned only if the value of <code>Code</code> is not <code>Success</code>.</p>
+         * <p>The error message. This parameter is not returned when <code>Code</code> is <code>success</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>The current status of the desktop does not support this operation.</p>

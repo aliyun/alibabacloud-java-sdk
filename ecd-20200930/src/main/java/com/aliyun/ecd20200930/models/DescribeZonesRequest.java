@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The region ID. Call <a href="t2167755.xdita#"></a>to get the list of regions supported by EDS.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to retrieve the list of regions supported by Alibaba Cloud Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +14,14 @@ public class DescribeZonesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether the zone supports VPC access.</p>
+     */
     @NameInMap("VpcAccessZone")
     public Boolean vpcAccessZone;
 
     /**
-     * <p>The zone type to query. Default value: <code>AvailabilityZone</code>. This queries standard cloud zones.</p>
+     * <p>The type of zone to query. Default value: <code>AvailabilityZone</code>, which indicates a standard cloud zone.</p>
      * 
      * <strong>example:</strong>
      * <p>AvailabilityZone</p>

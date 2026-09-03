@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class VerifyCenResponseBody extends TeaModel {
     /**
-     * <p>The recommended IPv4 CIDR blocks. Three CIDR blocks are randomly recommended. This parameter is returned when the <code>Status</code> value is <code>Conflict</code>.</p>
+     * <p>The recommended IPv4 CIDR blocks. Three CIDR blocks are randomly recommended. This parameter is returned when <code>Status</code> is <code>Conflict</code>.</p>
      */
     @NameInMap("CidrBlocks")
     public java.util.List<String> cidrBlocks;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0AF9D857-AE96-53D6-B317-5DD665EC4EC0</p>
@@ -20,22 +20,13 @@ public class VerifyCenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The routes provided by the CEN instance.</p>
+     * <p>The list of route information contained in the CEN instance.</p>
      */
     @NameInMap("RouteEntries")
     public java.util.List<VerifyCenResponseBodyRouteEntries> routeEntries;
 
     /**
-     * <p>The check result of CIDR block conflict.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>InvalidCen.CenUidInvalid: The Alibaba Cloud account is invalid or the Alibaba Cloud account does not have the permission to access Elastic Desktop Service.</li>
-     * <li>VerifyCode.InvalidTokenCode: The verification code is invalid.</li>
-     * <li>VerifyCode.ReachTokenRetryTime: The maximum number of times for entering a verification code reaches the limit.</li>
-     * <li>Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.</li>
-     * <li>Access: The verification is passed. If the verification result for all routes is Access, Access is returned for this parameter.</li>
-     * <li>InvalidCen.ParameterCenInstanceId: The Alibaba Cloud account does not own the CEN instance.</li>
-     * </ul>
+     * <p>The result of the CIDR block conflict check.</p>
      * 
      * <strong>example:</strong>
      * <p>Access</p>
@@ -82,16 +73,16 @@ public class VerifyCenResponseBody extends TeaModel {
 
     public static class VerifyCenResponseBodyRouteEntries extends TeaModel {
         /**
-         * <p>The CIDR block of the route.</p>
+         * <p>The destination CIDR block of the route.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.111.3****</p>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
-         * <p>The ID of the instance corresponding to the route.</p>
+         * <p>The instance ID of the network instance associated with the routing entry.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf62bu0xs5j8md54p****</p>
@@ -109,12 +100,7 @@ public class VerifyCenResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The verification result of the route.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Conflict: A CIDR block conflict exists.</li>
-         * <li>Access: The verification is passed.</li>
-         * </ul>
+         * <p>The route check result.</p>
          * 
          * <strong>example:</strong>
          * <p>Access</p>

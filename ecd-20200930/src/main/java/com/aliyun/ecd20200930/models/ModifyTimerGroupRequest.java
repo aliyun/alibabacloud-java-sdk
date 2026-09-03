@@ -14,7 +14,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
      * <p>The description of the configuration group.</p>
      * 
      * <strong>example:</strong>
-     * <p>ScheduledTask.</p>
+     * <p>ScheduledTask</p>
      */
     @NameInMap("Description")
     public String description;
@@ -30,10 +30,10 @@ public class ModifyTimerGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The configuration group name.</p>
+     * <p>The name of the configuration group.</p>
      * 
      * <strong>example:</strong>
-     * <p>ScheduledTask.</p>
+     * <p>ScheduledTask</p>
      */
     @NameInMap("Name")
     public String name;
@@ -94,7 +94,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
 
     public static class ModifyTimerGroupRequestConfigTimersSegmentTimers extends TeaModel {
         /**
-         * <p>The specified time point for fixed-time scheduled task execution. After this parameter is specified, the scheduled task is executed at the specified time point.</p>
+         * <p>The appointment timer for executing scheduled tasks at specified time points.</p>
          * 
          * <strong>example:</strong>
          * <p>1764660600967</p>
@@ -102,63 +102,144 @@ public class ModifyTimerGroupRequest extends TeaModel {
         @NameInMap("AppointmentTimer")
         public Long appointmentTimer;
 
+        /**
+         * <p>Specifies whether to create a snapshot.</p>
+         */
+        @NameInMap("CreateSnapshot")
+        public Boolean createSnapshot;
+
+        /**
+         * <p>The cron expression for the end time of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 18 ? * 1-5</p>
+         */
         @NameInMap("EndCronExpression")
         public String endCronExpression;
 
+        /**
+         * <p>Specifies whether to forcefully execute the task. If this parameter is set to true, the scheduled task is forcefully executed regardless of the cloud desktop and connection status.</p>
+         */
         @NameInMap("Enforce")
         public Boolean enforce;
 
         /**
-         * <p>The image ID to change to. This parameter is used for image change scheduled tasks.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>m-5b0vjqbiqu010XXXXXX</p>
+         * <p>m-4zfb6zj728hhr****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The time interval. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The list of IP CIDR blocks that take effect.</p>
+         */
         @NameInMap("IpSegments")
         public java.util.List<String> ipSegments;
 
         /**
-         * <p>The lock screen time point for the no-operation lock screen feature. This parameter is not supported for non-AD desktops.</p>
+         * <p>The duration of inactivity before the screen is locked for the no-operation lock screen feature. Unit: minutes. Only AD-joined cloud desktops are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>1800</p>
+         * <p>5</p>
          */
         @NameInMap("LockScreenTime")
         public Integer lockScreenTime;
 
+        /**
+         * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("NotificationTime")
         public Integer notificationTime;
 
+        /**
+         * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Shutdown</p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
+         */
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
 
+        /**
+         * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ResetType")
         public String resetType;
 
+        /**
+         * <p>The cron expression for the start time of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 8 ? * 1-5</p>
+         */
         @NameInMap("StartCronExpression")
         public String startCronExpression;
 
+        /**
+         * <p>The execution order number of the timer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TimerOrder")
         public Integer timerOrder;
 
+        /**
+         * <p>The time zone used by the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("Timezone")
         public String timezone;
 
+        /**
+         * <p>The trigger configuration type for no-operation scheduled tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("TriggerType")
         public String triggerType;
 
+        /**
+         * <p>The advance notification time before verification is executed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("VerificationNotificationTime")
         public Integer verificationNotificationTime;
 
+        /**
+         * <p>The verification wait duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("VerificationTime")
         public Integer verificationTime;
 
@@ -173,6 +254,14 @@ public class ModifyTimerGroupRequest extends TeaModel {
         }
         public Long getAppointmentTimer() {
             return this.appointmentTimer;
+        }
+
+        public ModifyTimerGroupRequestConfigTimersSegmentTimers setCreateSnapshot(Boolean createSnapshot) {
+            this.createSnapshot = createSnapshot;
+            return this;
+        }
+        public Boolean getCreateSnapshot() {
+            return this.createSnapshot;
         }
 
         public ModifyTimerGroupRequestConfigTimersSegmentTimers setEndCronExpression(String endCronExpression) {
@@ -328,7 +417,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Specifies whether to forcefully execute the task. If set to true, the scheduled task is forcefully executed regardless of the desktop and connection status.</p>
+         * <p>Specifies whether to forcefully execute the task. If this parameter is set to true, the scheduled task is forcefully executed regardless of the cloud desktop and connection status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -337,7 +426,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>The time interval, in minutes.</p>
+         * <p>The time interval. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -345,6 +434,12 @@ public class ModifyTimerGroupRequest extends TeaModel {
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The advance notification time before the scheduled task is executed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("NotificationTime")
         public Integer notificationTime;
 
@@ -372,11 +467,14 @@ public class ModifyTimerGroupRequest extends TeaModel {
         @NameInMap("ResetType")
         public String resetType;
 
+        /**
+         * <p>The list of segment timer configurations.</p>
+         */
         @NameInMap("SegmentTimers")
         public java.util.List<ModifyTimerGroupRequestConfigTimersSegmentTimers> segmentTimers;
 
         /**
-         * <p>The scheduled task type.</p>
+         * <p>The type of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>TimerBoot</p>

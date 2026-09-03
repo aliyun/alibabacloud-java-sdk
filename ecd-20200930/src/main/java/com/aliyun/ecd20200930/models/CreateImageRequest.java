@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
     /**
-     * <p>Specify whether to clear user personal data. If set to <code>true</code>, the image clears all folders under <code>C:\\Users</code>, except <code>Administrator</code> and <code>Public</code>.</p>
+     * <p>Specifies whether to clear personal user data. If this parameter is set to <code>true</code>, the created image clears data in all directories under <code>C:\\Users</code> except the <code>Administrator</code> and <code>Public</code> directories.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -13,11 +13,17 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("AutoCleanUserdata")
     public Boolean autoCleanUserdata;
 
+    /**
+     * <p>The list of data cloud disk snapshot IDs. To include data cloud disks when creating an image, specify the corresponding data cloud disk snapshot IDs. A maximum of 100 IDs are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;s-bp67acfmxazb4ph****&quot;, &quot;s-bp67acfmxazb5qh****&quot;]</p>
+     */
     @NameInMap("DataSnapshotIds")
     public java.util.List<String> dataSnapshotIds;
 
     /**
-     * <p>The description of the image. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the image. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -26,7 +32,7 @@ public class CreateImageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the cloud computer.</p>
+     * <p>The cloud computer ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-7w78ozhjcwa3u****</p>
@@ -44,7 +50,7 @@ public class CreateImageRequest extends TeaModel {
     public String diskType;
 
     /**
-     * <p>The name of the image. The name must be 2 to 128 characters in length. It must start with a letter or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The image name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testImageName</p>
@@ -53,7 +59,7 @@ public class CreateImageRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>This parameter is not available for use.</p>
+     * <p>This parameter is not publicly available.</p>
      * 
      * <strong>example:</strong>
      * <p>deprecated</p>
@@ -62,7 +68,7 @@ public class CreateImageRequest extends TeaModel {
     public String imageResourceType;
 
     /**
-     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to view the list of regions that support WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +78,7 @@ public class CreateImageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the snapshot.</p>
+     * <p>The snapshot ID.</p>
      * 
      * <strong>example:</strong>
      * <p>s-2zefuwk8l6ytcgd3bf4o</p>
@@ -81,7 +87,7 @@ public class CreateImageRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>A list of snapshot IDs.</p>
+     * <p>The list of snapshot IDs.</p>
      */
     @NameInMap("SnapshotIds")
     public java.util.List<String> snapshotIds;

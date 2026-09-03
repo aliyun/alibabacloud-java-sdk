@@ -47,7 +47,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The expiration time of the subscription cloud desktop.</p>
+     * <p>The expiration time of the subscription cloud desktop. The time follows the ISO 8601 standard in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-31T15:59Z</p>
@@ -122,7 +122,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud desktops for easier searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud desktops</a>.</p>
+     * <p>The list of tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud desktops for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud desktops</a>.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ExportDesktopListInfoRequestTag> tag;

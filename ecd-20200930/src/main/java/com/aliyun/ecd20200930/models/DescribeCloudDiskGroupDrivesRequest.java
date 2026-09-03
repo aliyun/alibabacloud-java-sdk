@@ -15,21 +15,19 @@ public class DescribeCloudDiskGroupDrivesRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The team drive name.</p>
+     * <p>The team space name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Team 1</p>
+     * <p>Team1</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The number of entries per page for paged queries.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <ul>
-     * <li><p>Maximum: 100</p>
-     * </li>
-     * <li><p>Default: 20</p>
-     * </li>
+     * <li>Maximum value: 100</li>
+     * <li>Default value: 20</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +37,7 @@ public class DescribeCloudDiskGroupDrivesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the start of the next query. An empty NextToken means no more results.</p>
+     * <p>The token for the next query. If NextToken is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>MTA0MjA=</p>

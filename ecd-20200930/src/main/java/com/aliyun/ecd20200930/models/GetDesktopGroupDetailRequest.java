@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDesktopGroupDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer share.</p>
+     * <p>The ID of the shared cloud computer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetDesktopGroupDetailRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>Region ID. Call <a href="t2167755.xdita#"></a>to list regions that support Elastic Desktop Service (EDS).</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

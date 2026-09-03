@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ResetDesktopsRequest extends TeaModel {
     /**
-     * <p>The ID of the shared cloud desktop.</p>
+     * <p>The shared cloud computer ID.</p>
      * <ul>
-     * <li><p>If you specify <code>DesktopId</code>, the system ignores <code>DesktopGroupId</code>.</p>
-     * </li>
-     * <li><p>If <code>DesktopId</code> is empty, the system uses <code>DesktopGroupId</code> to retrieve the <code>DesktopId</code> of all cloud desktops in the shared cloud desktop group.</p>
-     * </li>
+     * <li>If DesktopId is specified, DesktopGroupId is ignored.</li>
+     * <li>If DesktopId is empty, the system retrieves the DesktopId of all cloud computers within the shared cloud computer based on DesktopGroupId.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,13 +18,13 @@ public class ResetDesktopsRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>A list of shared cloud desktop group IDs.</p>
+     * <p>The shared cloud computer IDs.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
-     * <p>A list of cloud desktop IDs. You can specify 1 to 100 IDs.</p>
+     * <p>The cloud computer IDs. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -40,13 +38,19 @@ public class ResetDesktopsRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The timestamp of the last retry. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1699960800000</p>
+     */
     @NameInMap("LastRetryTime")
     public Long lastRetryTime;
 
     /**
      * <p>The billing method.</p>
      * <blockquote>
-     * <p>This parameter applies only when resetting shared cloud desktops. If you leave it empty, the system resets all cloud desktops in the shared cloud desktop group, regardless of their billing method.</p>
+     * <p>This parameter takes effect only for resetting shared cloud computers. If this parameter is left empty, all cloud computers of all billing methods within the shared cloud computer are reset.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,7 +60,7 @@ public class ResetDesktopsRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to list regions that support WUYING Workspace.</p>
+     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +70,7 @@ public class ResetDesktopsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The scope of the reset operation. Set this parameter to reset either the image or the cloud desktop.</p>
+     * <p>The reset scope. You can configure this parameter to specify whether to reset the image or the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>
@@ -75,7 +79,7 @@ public class ResetDesktopsRequest extends TeaModel {
     public String resetScope;
 
     /**
-     * <p>The reset type. This determines whether to reset and which disks to reset.</p>
+     * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

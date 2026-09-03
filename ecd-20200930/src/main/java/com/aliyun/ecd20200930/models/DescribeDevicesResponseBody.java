@@ -63,7 +63,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
          * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>alice</p>
+         * <p>moli</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;

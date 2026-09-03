@@ -4,6 +4,16 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeEcdReportTasksRequest extends TeaModel {
+    /**
+     * <p>The business channel. Valid values:</p>
+     * <ul>
+     * <li>Enterprise: Enterprise Edition.</li>
+     * <li>Business: Business Edition.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enterprise</p>
+     */
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
@@ -20,7 +30,7 @@ public class DescribeEcdReportTasksRequest extends TeaModel {
      * <p>The number of entries per page. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
-     * <p>20。</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

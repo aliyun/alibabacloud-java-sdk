@@ -105,7 +105,7 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
         public String defaultUser;
 
         /**
-         * <p>The deployment time of the virtual bridge.</p>
+         * <p>The deployment time of the virtual bridge. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-07T02:02:00Z</p>
@@ -114,7 +114,7 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
         public String deployTime;
 
         /**
-         * <p>The expiration time of the virtual bridge.</p>
+         * <p>The expiration time of the virtual bridge. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-18T00:00:00Z</p>
@@ -159,7 +159,7 @@ public class DescribeOfficeSiteBridgeInfoResponseBody extends TeaModel {
         public String officeSiteName;
 
         /**
-         * <p>The start time of the virtual bridge.</p>
+         * <p>The start time of the virtual bridge. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-07T02:02:00Z</p>
