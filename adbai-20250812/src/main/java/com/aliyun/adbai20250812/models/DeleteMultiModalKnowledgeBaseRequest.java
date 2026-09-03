@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class DeleteMultiModalKnowledgeBaseRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-bp11q28kvl688****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    @NameInMap("MmkbName")
+    public String mmkbName;
 
     /**
      * <p>The region ID.</p>
@@ -38,6 +40,14 @@ public class DeleteMultiModalKnowledgeBaseRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DeleteMultiModalKnowledgeBaseRequest setMmkbName(String mmkbName) {
+        this.mmkbName = mmkbName;
+        return this;
+    }
+    public String getMmkbName() {
+        return this.mmkbName;
     }
 
     public DeleteMultiModalKnowledgeBaseRequest setRegionId(String regionId) {

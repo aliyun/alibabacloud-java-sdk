@@ -9,17 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-northeast-1", "adbai.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "adbai.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "adbai.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "adbai.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "adbai.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "adbai.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "adbai.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "adbai.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("us-west-1", "adbai.us-west-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("adbai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -197,12 +186,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateMultiModelKnowledgeBaseResponse createMultiModelKnowledgeBaseWithOptions(CreateMultiModelKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adbInstanceName)) {
+            query.put("AdbInstanceName", request.adbInstanceName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dbClusterAcu)) {
+            query.put("DbClusterAcu", request.dbClusterAcu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lakeStorageBucketName)) {
+            query.put("LakeStorageBucketName", request.lakeStorageBucketName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceAcuMax)) {
+            query.put("ResourceAcuMax", request.resourceAcuMax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceAcuMin)) {
+            query.put("ResourceAcuMin", request.resourceAcuMin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -357,6 +378,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mmkbName)) {
+            query.put("MmkbName", request.mmkbName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

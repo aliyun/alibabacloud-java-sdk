@@ -1,3 +1,17 @@
+2026-09-03 Version: 1.9.2
+- Update API CreateMultiModelKnowledgeBase: add request parameters AdbInstanceName.
+- Update API CreateMultiModelKnowledgeBase: add request parameters DbClusterAcu.
+- Update API CreateMultiModelKnowledgeBase: add request parameters LakeStorageBucketName.
+- Update API CreateMultiModelKnowledgeBase: add request parameters ResourceAcuMax.
+- Update API CreateMultiModelKnowledgeBase: add request parameters ResourceAcuMin.
+- Update API CreateMultiModelKnowledgeBase: add request parameters VSwitchId.
+- Update API CreateMultiModelKnowledgeBase: add request parameters VpcId.
+- Update API CreateMultiModelKnowledgeBase: add request parameters ZoneId.
+- Update API CreateMultiModelKnowledgeBase: add response parameters Body.DbClusterId.
+- Update API CreateMultiModelKnowledgeBase: add response parameters Body.MmkbName.
+- Update API DeleteMultiModalKnowledgeBase: add request parameters MmkbName.
+
+
 2026-08-25 Version: 1.9.1
 - Generated java 2025-08-12 for ADBAI.
 
