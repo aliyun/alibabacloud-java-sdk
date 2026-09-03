@@ -20,7 +20,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
     public ImageTranslationProResponseBodyData data;
 
     /**
-     * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call, such as &quot;The content contains sensitive data. Try other input.&quot;</p>
+     * <p>The error message. Returns &quot;Success&quot; for a successful call. Returns a specific error message for an exception, such as &quot;The content contains sensitive data. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The request ID. Used to uniquely identify a request.</p>
      * 
      * <strong>example:</strong>
      * <p>61785C32-80C2-19A3-9E55-2C3702C84B40</p>
@@ -429,7 +429,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsTextRect textRect;
 
         /**
-         * <p>Indicates whether the TextItem is valid. The item is invalid if this value does not exist or is false.</p>
+         * <p>Indicates whether the TextItem is valid. The item is invalid if this value does not exist or is set to false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -556,7 +556,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
          * <p>The original text before translation.</p>
          * 
          * <strong>example:</strong>
-         * <p>萌趣造型·清脆响铃</p>
+         * <p>Cute Design · Crisp Bell</p>
          */
         @NameInMap("Content")
         public String content;
@@ -858,7 +858,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
 
     public static class ImageTranslationProResponseBodyDataResultList extends TeaModel {
         /**
-         * <p>The URL of the translated result image.</p>
+         * <p>The URL of the image translation result image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></p>

@@ -30,7 +30,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request identity, used for troubleshooting and tracing.</p>
+     * <p>The unique identity of this request, used for troubleshooting and Tracing Analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>39E8A74B-F99E-1195-A5FF-3ECC5F94F304</p>
@@ -39,7 +39,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextTranslateResponseBody extends TeaModel {
     /**
-     * <p>The response code. Returns &quot;success&quot; for successful calls.</p>
+     * <p>The response code. The value &quot;success&quot; is returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class TextTranslateResponseBody extends TeaModel {
     public TextTranslateResponseBodyData data;
 
     /**
-     * <p>The error message. Returns &quot;Success&quot; for successful calls. Returns specific error information for exceptions, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+     * <p>The error message. The value &quot;Success&quot; is returned for successful calls. For exceptions, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class TextTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, used to identify a unique request call.</p>
+     * <p>The request ID, which uniquely identifies a single API call.</p>
      * 
      * <strong>example:</strong>
      * <p>922E43BB-EE0E-1A29-B143-BB91BB3EA6AB</p>
@@ -38,7 +38,7 @@ public class TextTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. true indicates success. false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -158,7 +158,7 @@ public class TextTranslateResponseBody extends TeaModel {
         public java.util.List<TextTranslateResponseBodyDataTranslations> translations;
 
         /**
-         * <p>The usage information, including the input character count.</p>
+         * <p>The usage information, including the number of input characters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;InputCharacterCount&quot;:5}</p>

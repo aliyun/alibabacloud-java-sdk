@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationStandardRequest extends TeaModel {
     /**
-     * <p>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, translation results are not modified.</p>
+     * <p>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -17,7 +17,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
      * <ul>
      * <li>Image URL: Must be publicly accessible.</li>
      * <li>Format: png, jpeg, jpg, bmp, webp</li>
-     * <li>Pixels: Width and height must not exceed 4000</li>
+     * <li>Pixels: Both width and height must not exceed 4000</li>
      * <li>File size: Original file ≤ 10 MB</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -29,7 +29,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the product area. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</p>
+     * <p>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -67,7 +67,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public Boolean translatingBrandInTheProduct;
 
     /**
-     * <p>Specifies whether to return layer information such as text position, font, and color. If set to true, layer information is returned for secondary editing through an image editor. Default value: false.</p>
+     * <p>Specifies whether to return layer information such as text position, font, and color. If you set this parameter to true, layer information is returned, which can be used to integrate with image editors for secondary editing. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

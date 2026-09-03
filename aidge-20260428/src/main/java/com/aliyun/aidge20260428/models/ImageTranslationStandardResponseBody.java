@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationStandardResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
+     * <p>The response code. 200 indicates success. For other response codes, refer to the error code information.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public ImageTranslationStandardResponseBodyData data;
 
     /**
-     * <p>The error message. &quot;Success&quot; is returned for successful calls, and a specific error message is returned for failed calls.</p>
+     * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
+     * <p>Indicates whether the call is successful. true indicates success. false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

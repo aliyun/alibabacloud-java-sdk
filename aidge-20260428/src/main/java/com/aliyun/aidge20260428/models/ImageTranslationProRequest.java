@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationProRequest extends TeaModel {
     /**
-     * <p>Specifies whether to use asynchronous mode. Default value: false (synchronous mode). When set to true, the API immediately returns a TaskId, and you must use the query translation result API to obtain the final result.</p>
+     * <p>Specifies whether to use asynchronous mode. Default value: false (synchronous mode). When set to true, the API immediately returns a TaskId. Use the query translation result API to retrieve the final result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean async;
 
     /**
-     * <p>The intervention glossary ID. Optional. You must create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+     * <p>The ID of the intervention glossary. This parameter is optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -23,13 +23,13 @@ public class ImageTranslationProRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The URL of the original image. Required.</p>
+     * <p>The URL of the original image. This parameter is required.</p>
      * <p>Image requirements:</p>
      * <ul>
      * <li>Image URL: Must be publicly accessible.</li>
      * <li>Format: png, jpeg, jpg, bmp, or webp.</li>
-     * <li>Pixels: Width and height must not exceed 4000 each.</li>
-     * <li>File size: Original file ≤ 10 MB.</li>
+     * <li>Pixels: The width and height must not exceed 4000 pixels each.</li>
+     * <li>File size: The original file must be 10 MB or smaller.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps you protect information and avoid translating embedded information such as product names.</p>
+     * <p>Specifies whether to translate text on the image subject. This parameter is optional. Default value: false. Setting this parameter to false helps protect information such as embedded product names from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -49,7 +49,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>The source language code. Required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language Direction Mapping Table</a>.</p>
+     * <p>The source language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language Direction Mapping Table</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The target language code. Required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language Direction Mapping Table</a>.</p>
+     * <p>The target language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language Direction Mapping Table</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Specifies whether to translate brand names on images. Optional. Default value: false. This helps you protect brand name information from being translated.</p>
+     * <p>Specifies whether to translate brand names on the image. This parameter is optional. Default value: false. Setting this parameter to false helps protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
