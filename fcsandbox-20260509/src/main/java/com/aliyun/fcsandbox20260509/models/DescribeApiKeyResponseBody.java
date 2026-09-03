@@ -22,6 +22,9 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    @NameInMap("effectivePermissions")
+    public EffectivePermissions effectivePermissions;
+
     @NameInMap("ipBlacklist")
     public java.util.List<IPConfig> ipBlacklist;
 
@@ -39,6 +42,9 @@ public class DescribeApiKeyResponseBody extends TeaModel {
      */
     @NameInMap("message")
     public String message;
+
+    @NameInMap("permissionPolicy")
+    public PermissionPolicy permissionPolicy;
 
     /**
      * <p>The request ID.</p>
@@ -70,6 +76,14 @@ public class DescribeApiKeyResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeApiKeyResponseBody setEffectivePermissions(EffectivePermissions effectivePermissions) {
+        this.effectivePermissions = effectivePermissions;
+        return this;
+    }
+    public EffectivePermissions getEffectivePermissions() {
+        return this.effectivePermissions;
+    }
+
     public DescribeApiKeyResponseBody setIpBlacklist(java.util.List<IPConfig> ipBlacklist) {
         this.ipBlacklist = ipBlacklist;
         return this;
@@ -92,6 +106,14 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeApiKeyResponseBody setPermissionPolicy(PermissionPolicy permissionPolicy) {
+        this.permissionPolicy = permissionPolicy;
+        return this;
+    }
+    public PermissionPolicy getPermissionPolicy() {
+        return this.permissionPolicy;
     }
 
     public DescribeApiKeyResponseBody setRequestId(String requestId) {
