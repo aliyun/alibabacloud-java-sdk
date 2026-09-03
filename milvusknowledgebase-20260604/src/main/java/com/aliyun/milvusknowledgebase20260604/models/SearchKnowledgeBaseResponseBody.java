@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchKnowledgeBaseResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the access denial due to a permission verification failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;AuthAction&quot;:&quot;milvusknowledgebase:SearchKnowledgeBase&quot;}</p>
@@ -14,7 +14,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,7 +32,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -327,6 +327,8 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
 
     public static class SearchKnowledgeBaseResponseBodyResultsMediaTimeline extends TeaModel {
         /**
+         * <p>The end time of the segment.</p>
+         * 
          * <strong>example:</strong>
          * <p>4200</p>
          */
@@ -334,6 +336,8 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         public Long endMs;
 
         /**
+         * <p>The start time of the segment.</p>
+         * 
          * <strong>example:</strong>
          * <p>1250</p>
          */
@@ -341,8 +345,10 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         public Long startMs;
 
         /**
+         * <p>The segment text.</p>
+         * 
          * <strong>example:</strong>
-         * <p>第一句话。</p>
+         * <p>The first sentence</p>
          */
         @NameInMap("text")
         public String text;
@@ -488,7 +494,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         public java.util.List<SearchKnowledgeBaseResponseBodyResultsLocations> locations;
 
         /**
-         * <p>音频或视频切片在原始媒体中的结束时间，单位为毫秒；非媒体切片不返回。</p>
+         * <p>The end time of the audio or video chunk in the original media, in milliseconds. This field is not returned for non-media chunks.</p>
          * 
          * <strong>example:</strong>
          * <p>8400</p>
@@ -497,7 +503,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         public Long mediaEndMs;
 
         /**
-         * <p>音频或视频切片在原始媒体中的开始时间，单位为毫秒；非媒体切片不返回。</p>
+         * <p>The start time of the audio or video chunk in the original media, in milliseconds. This field is not returned for non-media chunks.</p>
          * 
          * <strong>example:</strong>
          * <p>1250</p>
@@ -506,7 +512,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         public Long mediaStartMs;
 
         /**
-         * <p>切片内逐句或逐段内容在原始媒体中的时间范围；非音频切片不返回。</p>
+         * <p>The time ranges of sentence-level or paragraph-level content within the chunk in the original media. This field is not returned for non-audio chunks.</p>
          */
         @NameInMap("mediaTimeline")
         public java.util.List<SearchKnowledgeBaseResponseBodyResultsMediaTimeline> mediaTimeline;
@@ -545,7 +551,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         public SearchKnowledgeBaseResponseBodyResultsScoreDetails scoreDetails;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The list of labels.</p>
          */
         @NameInMap("tags")
         public java.util.List<String> tags;

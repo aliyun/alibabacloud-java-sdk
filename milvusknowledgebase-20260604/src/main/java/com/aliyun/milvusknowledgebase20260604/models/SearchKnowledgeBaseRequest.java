@@ -44,7 +44,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query for retrieval.</p>
+     * <p>The retrieval query.</p>
      * 
      * <strong>example:</strong>
      * <p>What is the tax amount on the invoice?</p>
@@ -53,7 +53,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The rerank model ID.</p>
+     * <p>The reranking model ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -62,7 +62,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
     public Long rerankModelId;
 
     /**
-     * <p>The name of the rerank model that the tenant has activated. If both rerankModelName and rerankModelId are specified, this parameter takes precedence.</p>
+     * <p>The name of a reranking model that the tenant has activated. If both rerankModelName and rerankModelId are specified, this parameter takes precedence.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-rerank</p>
@@ -245,7 +245,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
 
     public static class SearchKnowledgeBaseRequestRetrievalConfig extends TeaModel {
         /**
-         * <p>The number of candidate results to recall.</p>
+         * <p>The number of candidate recall results.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

@@ -189,7 +189,7 @@ public class AddDocumentsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The document path. This is the file name or relative path used during upload, which must be consistent with the pre-signed request.</p>
+         * <p>The document path. This is the file name or relative path used during upload, which must be consistent with the pre-signed URL request.</p>
          * 
          * <strong>example:</strong>
          * <p>2026_06_23_17_49_52WwGSUezpG2u2iHWxyYGzkf9KtormhkxN/CHANGELOG.md</p>
@@ -205,6 +205,15 @@ public class AddDocumentsRequest extends TeaModel {
          */
         @NameInMap("Size")
         public Long size;
+
+        /**
+         * <p>The processing strategy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-strategy-7043984ca395eabd</p>
+         */
+        @NameInMap("StrategyId")
+        public String strategyId;
 
         public static AddDocumentsRequestDocuments build(java.util.Map<String, ?> map) throws Exception {
             AddDocumentsRequestDocuments self = new AddDocumentsRequestDocuments();
@@ -233,6 +242,14 @@ public class AddDocumentsRequest extends TeaModel {
         }
         public Long getSize() {
             return this.size;
+        }
+
+        public AddDocumentsRequestDocuments setStrategyId(String strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public String getStrategyId() {
+            return this.strategyId;
         }
 
     }

@@ -1,3 +1,7 @@
+2026-09-03 Version: 1.0.3
+- Update API AddDocuments: add request parameters body.Documents.$.StrategyId.
+
+
 2026-09-02 Version: 1.0.2
 - Update API SearchKnowledgeBase: add response parameters Body.results.$.mediaEndMs.
 - Update API SearchKnowledgeBase: add response parameters Body.results.$.mediaStartMs.
