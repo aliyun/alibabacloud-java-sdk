@@ -4,13 +4,26 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateKBSyncLinkRequest extends TeaModel {
+    /**
+     * <p>The client ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cli_xxxxxxbe8</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>The client secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("ClientSecret")
     public String clientSecret;
 
     /**
+     * <p>The unique identifier of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +33,7 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The synchronization link ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +42,17 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     @NameInMap("LinkId")
     public String linkId;
 
+    /**
+     * <p>The MCP Server address for DingTalk documents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
+     */
     @NameInMap("McpEndpoint")
     public String mcpEndpoint;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,19 +61,39 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The MCP Server address for DingTalk spreadsheets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
+     */
     @NameInMap("SheetMcpEndpoint")
     public String sheetMcpEndpoint;
 
+    /**
+     * <p>Specifies whether to enable automatic synchronization. This parameter can only be modified independently and cannot be changed together with other configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SyncEnabled")
     public Boolean syncEnabled;
 
     /**
+     * <p>20</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("SyncIntervalMinutes")
     public Integer syncIntervalMinutes;
 
+    /**
+     * <p>The DingTalk user ID for the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123***56</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

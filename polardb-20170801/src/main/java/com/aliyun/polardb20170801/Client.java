@@ -48,29 +48,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "polardb.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "polardb.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "polardb.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "polardb.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "polardb.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "polardb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "polardb.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "polardb.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "polardb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "polardb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "polardb.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "polardb.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "polardb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "polardb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "polardb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "polardb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "polardb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "polardb.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("na-south-1", "polardb.na-south-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "polardb.eu-central-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "polardb.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "polardb.eu-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "polardb.us-east-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "polardb.me-east-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "polardb.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "polardb.cn-shenzhen-finance-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "polardb.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("polardb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -3083,7 +3061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application attached to a PolarDB instance.</p>
+     * <p>Creates an application that is attached to a PolarDB instance.</p>
      * 
      * @param tmpReq CreateApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3095,6 +3073,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.components)) {
             request.componentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.components, "Components", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dnatEntries)) {
+            request.dnatEntriesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dnatEntries, "DnatEntries", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.endpoints)) {
@@ -3160,6 +3142,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dnatEntriesShrink)) {
+            query.put("DnatEntries", request.dnatEntriesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dnatIpAddress)) {
+            query.put("DnatIpAddress", request.dnatIpAddress);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
@@ -3266,6 +3256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VpcId", request.vpcId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcNatGatewayId)) {
+            query.put("VpcNatGatewayId", request.vpcNatGatewayId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
             query.put("ZoneId", request.zoneId);
         }
@@ -3289,7 +3283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application attached to a PolarDB instance.</p>
+     * <p>Creates an application that is attached to a PolarDB instance.</p>
      * 
      * @param request CreateApplicationRequest
      * @return CreateApplicationResponse
@@ -5711,7 +5705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建知识库同步链路</p>
+     * <p>Creates a knowledge base synchronization link.</p>
      * 
      * @param request CreateKBSyncLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5791,7 +5785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建知识库同步链路</p>
+     * <p>Creates a knowledge base synchronization link.</p>
      * 
      * @param request CreateKBSyncLinkRequest
      * @return CreateKBSyncLinkResponse
@@ -9383,7 +9377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除知识库同步链路</p>
+     * <p>Deletes a knowledge base synchronization link.</p>
      * 
      * @param request DeleteKBSyncLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9423,7 +9417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除知识库同步链路</p>
+     * <p>Deletes a knowledge base synchronization link.</p>
      * 
      * @param request DeleteKBSyncLinkRequest
      * @return DeleteKBSyncLinkResponse
@@ -18399,7 +18393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询知识库同步列表</p>
+     * <p>Queries the synchronization list of a knowledge base.</p>
      * 
      * @param request DescribeKBSyncLinksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18439,7 +18433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询知识库同步列表</p>
+     * <p>Queries the synchronization list of a knowledge base.</p>
      * 
      * @param request DescribeKBSyncLinksRequest
      * @return DescribeKBSyncLinksResponse
@@ -32916,7 +32910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新知识库同步链路</p>
+     * <p>Updates a knowledge base synchronization link.</p>
      * 
      * @param request UpdateKBSyncLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32984,7 +32978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新知识库同步链路</p>
+     * <p>Updates a knowledge base synchronization link.</p>
      * 
      * @param request UpdateKBSyncLinkRequest
      * @return UpdateKBSyncLinkResponse

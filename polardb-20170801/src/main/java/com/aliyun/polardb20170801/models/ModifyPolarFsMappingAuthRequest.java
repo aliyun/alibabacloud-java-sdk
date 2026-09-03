@@ -15,7 +15,7 @@ public class ModifyPolarFsMappingAuthRequest extends TeaModel {
     public String bucket;
 
     /**
-     * <p>The AccessKey ID for the storage bucket.</p>
+     * <p>The AccessKey ID of the storage bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyPolarFsMappingAuthRequest extends TeaModel {
     public String bucketAccessKeyId;
 
     /**
-     * <p>The AccessKey secret for the storage bucket.</p>
+     * <p>The AccessKey secret of the storage bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

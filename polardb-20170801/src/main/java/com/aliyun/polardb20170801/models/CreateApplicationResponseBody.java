@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-********************</p>
@@ -14,7 +14,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>A list of child components.</p>
+     * <p>The list of child components.</p>
      */
     @NameInMap("Components")
     public java.util.List<CreateApplicationResponseBodyComponents> components;
@@ -29,7 +29,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the generated order.</p>
+     * <p>The generated order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2148126708*****</p>
@@ -38,7 +38,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
@@ -47,7 +47,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the resources are sufficient. This parameter is returned only when <code>DryRun</code> is set to <code>true</code>.</p>
+     * <p>Indicates whether resources are sufficient. This parameter is returned only when DryRun is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,7 +56,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public Boolean resourceAvailable;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-********************</p>
@@ -127,7 +127,7 @@ public class CreateApplicationResponseBody extends TeaModel {
 
     public static class CreateApplicationResponseBodyComponents extends TeaModel {
         /**
-         * <p>The ID of the child component.</p>
+         * <p>The child component ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pac-********************</p>

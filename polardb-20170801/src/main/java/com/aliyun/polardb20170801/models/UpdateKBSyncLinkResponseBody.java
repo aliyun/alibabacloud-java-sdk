@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateKBSyncLinkResponseBody extends TeaModel {
     /**
+     * <p>The synchronization link ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pkbl-xxxxx</p>
      */
@@ -12,12 +14,17 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
     public String linkId;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>EBEAA83D-1734-42E3-85E3-E25F6E******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The scheduling time of the synchronization task.</p>
+     */
     @NameInMap("SyncSchedule")
     public String syncSchedule;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKBSyncLinkRequest extends TeaModel {
     /**
+     * <p>The client ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The client secret.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String clientSecret;
 
     /**
+     * <p>The description of the synchronization link.</p>
+     * 
      * <strong>example:</strong>
      * <p>testDesc</p>
      */
@@ -30,6 +34,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The unique identifier of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The name of the synchronization link.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,10 +53,17 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     @NameInMap("LinkName")
     public String linkName;
 
+    /**
+     * <p>The DingTalk document MCP Server endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
+     */
     @NameInMap("McpEndpoint")
     public String mcpEndpoint;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,10 +72,17 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The DingTalk spreadsheet MCP Server endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
+     */
     @NameInMap("SheetMcpEndpoint")
     public String sheetMcpEndpoint;
 
     /**
+     * <p>The source directory address for synchronization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +92,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String sourceDir;
 
     /**
+     * <p>The data source type. Valid values: FEISHU and SHAREPOINT.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +102,8 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>The synchronization interval. Unit: minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -88,12 +111,20 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public Integer syncIntervalMinutes;
 
     /**
+     * <p>The tenant ID. This parameter is required when SourceType is set to SHAREPOINT.</p>
+     * 
      * <strong>example:</strong>
      * <p>63eexxxx-xxxx-xxxx-xxxx-xxxxxx090f82</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>The DingTalk operator user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123***56</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

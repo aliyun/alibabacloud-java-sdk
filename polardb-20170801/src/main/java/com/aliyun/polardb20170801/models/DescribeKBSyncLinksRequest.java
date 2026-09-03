@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeKBSyncLinksRequest extends TeaModel {
     /**
+     * <p>The source channel of the synchronization link.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEISHU</p>
      */
@@ -12,6 +14,7 @@ public class DescribeKBSyncLinksRequest extends TeaModel {
     public String imPlatform;
 
     /**
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DescribeKBSyncLinksRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

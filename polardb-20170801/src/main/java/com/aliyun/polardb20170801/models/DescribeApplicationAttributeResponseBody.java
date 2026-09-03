@@ -74,14 +74,20 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The list of endpoints for the application.</p>
+     * <p>The list of DNAT mapping entries for NAT mapping.</p>
+     */
+    @NameInMap("DnatMappings")
+    public java.util.List<DescribeApplicationAttributeResponseBodyDnatMappings> dnatMappings;
+
+    /**
+     * <p>The list of endpoints of the application.</p>
      */
     @NameInMap("Endpoints")
     public java.util.List<DescribeApplicationAttributeResponseBodyEndpoints> endpoints;
 
     /**
      * <p>The expiration time.</p>
-     * <p>This value is empty when the billing type is Postpaid.</p>
+     * <p>This value is empty if the billing method is Postpaid.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-06-25T09:37:10Z</p>
@@ -130,7 +136,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String lockMode;
 
     /**
-     * <p>The maintenance end time.</p>
+     * <p>The end time of the maintenance window.</p>
      * 
      * <strong>example:</strong>
      * <p>19:00Z</p>
@@ -139,7 +145,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The maintenance start time.</p>
+     * <p>The start time of the maintenance window.</p>
      * 
      * <strong>example:</strong>
      * <p>18:00Z</p>
@@ -172,7 +178,16 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The billing type.</p>
+     * <p>The SNAT IP address bound to the vSwitch where the application resides for NAT mapping. This is a customer-managed SNAT entry that is discovered and returned by the control plane in real time. It is not related to the Internet NAT gateway SNAT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.64.0.20</p>
+     */
+    @NameInMap("NatMappingSnatIpAddress")
+    public String natMappingSnatIpAddress;
+
+    /**
+     * <p>The billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>Postpaid</p>
@@ -214,13 +229,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of application-level security groups.</p>
+     * <p>The list of security groups at the application level.</p>
      */
     @NameInMap("SecurityGroups")
     public java.util.List<DescribeApplicationAttributeResponseBodySecurityGroups> securityGroups;
 
     /**
-     * <p>The list of application-level whitelists.</p>
+     * <p>The list of whitelists at the application level.</p>
      */
     @NameInMap("SecurityIPArrays")
     public java.util.List<DescribeApplicationAttributeResponseBodySecurityIPArrays> securityIPArrays;
@@ -315,6 +330,15 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String version;
 
     /**
+     * <p>The customer-created VPC NAT gateway ID for NAT mapping.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-xxx</p>
+     */
+    @NameInMap("VpcNatGatewayId")
+    public String vpcNatGatewayId;
+
+    /**
      * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
@@ -390,6 +414,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeApplicationAttributeResponseBody setDnatMappings(java.util.List<DescribeApplicationAttributeResponseBodyDnatMappings> dnatMappings) {
+        this.dnatMappings = dnatMappings;
+        return this;
+    }
+    public java.util.List<DescribeApplicationAttributeResponseBodyDnatMappings> getDnatMappings() {
+        return this.dnatMappings;
     }
 
     public DescribeApplicationAttributeResponseBody setEndpoints(java.util.List<DescribeApplicationAttributeResponseBodyEndpoints> endpoints) {
@@ -478,6 +510,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    public DescribeApplicationAttributeResponseBody setNatMappingSnatIpAddress(String natMappingSnatIpAddress) {
+        this.natMappingSnatIpAddress = natMappingSnatIpAddress;
+        return this;
+    }
+    public String getNatMappingSnatIpAddress() {
+        return this.natMappingSnatIpAddress;
     }
 
     public DescribeApplicationAttributeResponseBody setPayType(String payType) {
@@ -598,6 +638,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
     public String getVersion() {
         return this.version;
+    }
+
+    public DescribeApplicationAttributeResponseBody setVpcNatGatewayId(String vpcNatGatewayId) {
+        this.vpcNatGatewayId = vpcNatGatewayId;
+        return this;
+    }
+    public String getVpcNatGatewayId() {
+        return this.vpcNatGatewayId;
     }
 
     public DescribeApplicationAttributeResponseBody setZoneId(String zoneId) {
@@ -880,7 +928,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public Long componentReplica;
 
         /**
-         * <p>The group name of the application subcomponent replicas.</p>
+         * <p>The group name of the replicas of the application subcomponent.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -898,21 +946,21 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String componentType;
 
         /**
-         * <p>The list of subcomponent-level security groups.</p>
-         * <p>If the subcomponent-level security groups are the same as the application-level security groups, this response element is omitted.</p>
+         * <p>The list of security groups at the subcomponent level.</p>
+         * <p>If the security groups at the subcomponent level are the same as those at the application level, this response element is omitted.</p>
          */
         @NameInMap("SecurityGroups")
         public java.util.List<DescribeApplicationAttributeResponseBodyComponentsSecurityGroups> securityGroups;
 
         /**
-         * <p>The list of subcomponent-level whitelist addresses.</p>
-         * <p>If the subcomponent-level whitelists are the same as the application-level whitelists, this response element is omitted.</p>
+         * <p>The list of whitelist addresses at the subcomponent level.</p>
+         * <p>If the whitelists at the subcomponent level are the same as those at the application level, this response element is omitted.</p>
          */
         @NameInMap("SecurityIPArrays")
         public java.util.List<DescribeApplicationAttributeResponseBodyComponentsSecurityIPArrays> securityIPArrays;
 
         /**
-         * <p>The component status. Valid values are the same as the application status.</p>
+         * <p>The component status. Valid values are the same as those of the application status.</p>
          * 
          * <strong>example:</strong>
          * <p>Activated</p>
@@ -1021,6 +1069,116 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationAttributeResponseBodyDnatMappings extends TeaModel {
+        /**
+         * <p>The access address in the format of NatIp:FrontPort. This address can be used directly from the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.64.0.10:10001</p>
+         */
+        @NameInMap("AccessAddress")
+        public String accessAddress;
+
+        /**
+         * <p>The backend service port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8787</p>
+         */
+        @NameInMap("BackendPort")
+        public Integer backendPort;
+
+        /**
+         * <p>The DNAT entry ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fwd-xxx</p>
+         */
+        @NameInMap("EntryId")
+        public String entryId;
+
+        /**
+         * <p>The frontend port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        @NameInMap("FrontPort")
+        public Integer frontPort;
+
+        /**
+         * <p>The port name. Valid values: webui, hermesagent, dashboard, and ssh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>webui</p>
+         */
+        @NameInMap("PortName")
+        public String portName;
+
+        /**
+         * <p>The entry status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeApplicationAttributeResponseBodyDnatMappings build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationAttributeResponseBodyDnatMappings self = new DescribeApplicationAttributeResponseBodyDnatMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationAttributeResponseBodyDnatMappings setAccessAddress(String accessAddress) {
+            this.accessAddress = accessAddress;
+            return this;
+        }
+        public String getAccessAddress() {
+            return this.accessAddress;
+        }
+
+        public DescribeApplicationAttributeResponseBodyDnatMappings setBackendPort(Integer backendPort) {
+            this.backendPort = backendPort;
+            return this;
+        }
+        public Integer getBackendPort() {
+            return this.backendPort;
+        }
+
+        public DescribeApplicationAttributeResponseBodyDnatMappings setEntryId(String entryId) {
+            this.entryId = entryId;
+            return this;
+        }
+        public String getEntryId() {
+            return this.entryId;
+        }
+
+        public DescribeApplicationAttributeResponseBodyDnatMappings setFrontPort(Integer frontPort) {
+            this.frontPort = frontPort;
+            return this;
+        }
+        public Integer getFrontPort() {
+            return this.frontPort;
+        }
+
+        public DescribeApplicationAttributeResponseBodyDnatMappings setPortName(String portName) {
+            this.portName = portName;
+            return this;
+        }
+        public String getPortName() {
+            return this.portName;
+        }
+
+        public DescribeApplicationAttributeResponseBodyDnatMappings setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class DescribeApplicationAttributeResponseBodyEndpoints extends TeaModel {
         /**
          * <p>The description of the endpoint.</p>
@@ -1056,7 +1214,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          * <p>The endpoint type. Valid values:</p>
          * <ul>
          * <li>Private: VPC endpoint.</li>
-         * <li>Public: public endpoint.</li>
+         * <li>Public: Public endpoint.</li>
          * </ul>
          * 
          * <strong>example:</strong>

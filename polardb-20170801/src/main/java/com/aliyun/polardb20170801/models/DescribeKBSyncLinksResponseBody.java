@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeKBSyncLinksResponseBody extends TeaModel {
+    /**
+     * <p>The list of synchronization links.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeKBSyncLinksResponseBodyItems> items;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>EB07CFF0-D8A4-5C76-AED7-D00E26FC2***</p>
      */
@@ -37,6 +42,8 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
 
     public static class DescribeKBSyncLinksResponseBodyItems extends TeaModel {
         /**
+         * <p>The client identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>cli_xxxxxxbe8</p>
          */
@@ -44,6 +51,8 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         public String clientId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-11T09:55:19Z</p>
          */
@@ -51,6 +60,8 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The description of the synchronization link.</p>
+         * 
          * <strong>example:</strong>
          * <p>testDesc</p>
          */
@@ -58,6 +69,8 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The source channel of the synchronization link.</p>
+         * 
          * <strong>example:</strong>
          * <p>FEISHU</p>
          */
@@ -65,6 +78,8 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         public String imPlatform;
 
         /**
+         * <p>The synchronization link ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pkbl-xxxxx</p>
          */
@@ -72,6 +87,8 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         public String linkId;
 
         /**
+         * <p>The link name.</p>
+         * 
          * <strong>example:</strong>
          * <p>testName</p>
          */
@@ -79,6 +96,8 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         public String linkName;
 
         /**
+         * <p>The source directory address for synchronization.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.feishu.cn/wiki/space/xxxxxx">https://example.feishu.cn/wiki/space/xxxxxx</a></p>
          */
@@ -86,6 +105,8 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         public String sourceDir;
 
         /**
+         * <p>The synchronization interval. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -93,6 +114,14 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         public Integer syncIntervalMinutes;
 
         /**
+         * <p>The synchronization status. Valid values:</p>
+         * <ul>
+         * <li>CREATING</li>
+         * <li>RUNNING</li>
+         * <li>PAUSED</li>
+         * <li>DELETING</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */

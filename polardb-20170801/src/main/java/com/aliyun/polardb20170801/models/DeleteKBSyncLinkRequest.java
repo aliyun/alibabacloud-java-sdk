@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteKBSyncLinkRequest extends TeaModel {
     /**
+     * <p>The unique ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteKBSyncLinkRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The synchronization link ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteKBSyncLinkRequest extends TeaModel {
     public String linkId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
