@@ -149,6 +149,15 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String asrOverrides;
 
         /**
+         * <p>The ASR correction dictionary ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94001ae8-72fd-4f93-84dc-e58e2b20363b</p>
+         */
+        @NameInMap("AsrOverridesUuid")
+        public String asrOverridesUuid;
+
+        /**
          * <p>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</p>
          * 
          * <strong>example:</strong>
@@ -227,6 +236,14 @@ public class GetAsrConfigResponseBody extends TeaModel {
         }
         public String getAsrOverrides() {
             return this.asrOverrides;
+        }
+
+        public GetAsrConfigResponseBodyData setAsrOverridesUuid(String asrOverridesUuid) {
+            this.asrOverridesUuid = asrOverridesUuid;
+            return this;
+        }
+        public String getAsrOverridesUuid() {
+            return this.asrOverridesUuid;
         }
 
         public GetAsrConfigResponseBodyData setAsrVocabularyId(String asrVocabularyId) {

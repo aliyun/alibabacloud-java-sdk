@@ -92,6 +92,15 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     public String ttsOverrides;
 
     /**
+     * <p>The TTS correction dictionary ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94001ae8-72fd-4f93-84dc-e58e2b20363b</p>
+     */
+    @NameInMap("TtsOverridesUuid")
+    public String ttsOverridesUuid;
+
+    /**
      * <p>The voice.</p>
      * 
      * <strong>example:</strong>
@@ -200,6 +209,14 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
     public String getTtsOverrides() {
         return this.ttsOverrides;
+    }
+
+    public DescribeTTSConfigResponseBody setTtsOverridesUuid(String ttsOverridesUuid) {
+        this.ttsOverridesUuid = ttsOverridesUuid;
+        return this;
+    }
+    public String getTtsOverridesUuid() {
+        return this.ttsOverridesUuid;
     }
 
     public DescribeTTSConfigResponseBody setVoice(String voice) {

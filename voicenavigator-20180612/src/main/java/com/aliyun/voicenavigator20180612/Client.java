@@ -9,10 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-hangzhou", "voicenavigator.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "voicenavigator.cn-shanghai.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("voicenavigator", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1637,6 +1633,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AsrOverrides", request.asrOverrides);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.asrOverridesUuid)) {
+            query.put("AsrOverridesUuid", request.asrOverridesUuid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.asrVocabularyId)) {
             query.put("AsrVocabularyId", request.asrVocabularyId);
         }
@@ -1647,6 +1647,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
             query.put("Engine", request.engine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineXunfei)) {
+            query.put("EngineXunfei", request.engineXunfei);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.entryId)) {
@@ -1927,6 +1931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ttsOverrides)) {
             query.put("TtsOverrides", request.ttsOverrides);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsOverridesUuid)) {
+            query.put("TtsOverridesUuid", request.ttsOverridesUuid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.voice)) {

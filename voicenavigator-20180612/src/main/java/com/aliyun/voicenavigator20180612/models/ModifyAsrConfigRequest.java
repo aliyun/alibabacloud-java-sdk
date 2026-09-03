@@ -44,7 +44,16 @@ public class ModifyAsrConfigRequest extends TeaModel {
     public String asrOverrides;
 
     /**
-     * <p>The hotword ID. View the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</p>
+     * <p>The ASR error correction dictionary ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94001ae8-72fd-4f93-84dc-e58e2b20363b</p>
+     */
+    @NameInMap("AsrOverridesUuid")
+    public String asrOverridesUuid;
+
+    /**
+     * <p>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
@@ -76,6 +85,15 @@ public class ModifyAsrConfigRequest extends TeaModel {
     public String engine;
 
     /**
+     * <p>The iFLYTEK ASR configuration parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Uuid&quot;:&quot;b06c4ed3-a5e3-4c55-92b7-c2d2a88ca37f&quot;}</p>
+     */
+    @NameInMap("EngineXunfei")
+    public String engineXunfei;
+
+    /**
      * <p>The entity ID corresponding to config_level.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +106,7 @@ public class ModifyAsrConfigRequest extends TeaModel {
      * <p>NluServiceType</p>
      * 
      * <strong>example:</strong>
-     * <p>Speech recognition.</p>
+     * <p>Speech Recognition</p>
      */
     @NameInMap("NlsServiceType")
     public String nlsServiceType;
@@ -138,6 +156,14 @@ public class ModifyAsrConfigRequest extends TeaModel {
         return this.asrOverrides;
     }
 
+    public ModifyAsrConfigRequest setAsrOverridesUuid(String asrOverridesUuid) {
+        this.asrOverridesUuid = asrOverridesUuid;
+        return this;
+    }
+    public String getAsrOverridesUuid() {
+        return this.asrOverridesUuid;
+    }
+
     public ModifyAsrConfigRequest setAsrVocabularyId(String asrVocabularyId) {
         this.asrVocabularyId = asrVocabularyId;
         return this;
@@ -160,6 +186,14 @@ public class ModifyAsrConfigRequest extends TeaModel {
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public ModifyAsrConfigRequest setEngineXunfei(String engineXunfei) {
+        this.engineXunfei = engineXunfei;
+        return this;
+    }
+    public String getEngineXunfei() {
+        return this.engineXunfei;
     }
 
     public ModifyAsrConfigRequest setEntryId(String entryId) {

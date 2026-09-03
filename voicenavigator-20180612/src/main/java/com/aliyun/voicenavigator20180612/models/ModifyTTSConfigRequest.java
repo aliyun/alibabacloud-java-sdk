@@ -87,10 +87,19 @@ public class ModifyTTSConfigRequest extends TeaModel {
      * <p>The TTS error correction dictionary.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;pronunciation\&quot;:\&quot;huanqian\&quot;,\&quot;word\&quot;:\&quot;huanqian\&quot;}]</p>
+     * <p>[{\&quot;pronunciation\&quot;:\&quot;huanqian\&quot;,\&quot;word\&quot;:\&quot;huaiqian\&quot;}]</p>
      */
     @NameInMap("TtsOverrides")
     public String ttsOverrides;
+
+    /**
+     * <p>The TTS error correction dictionary ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94001ae8-72fd-4f93-84dc-e58e2b20363b</p>
+     */
+    @NameInMap("TtsOverridesUuid")
+    public String ttsOverridesUuid;
 
     /**
      * <p>The voice.</p>
@@ -201,6 +210,14 @@ public class ModifyTTSConfigRequest extends TeaModel {
     }
     public String getTtsOverrides() {
         return this.ttsOverrides;
+    }
+
+    public ModifyTTSConfigRequest setTtsOverridesUuid(String ttsOverridesUuid) {
+        this.ttsOverridesUuid = ttsOverridesUuid;
+        return this;
+    }
+    public String getTtsOverridesUuid() {
+        return this.ttsOverridesUuid;
     }
 
     public ModifyTTSConfigRequest setVoice(String voice) {

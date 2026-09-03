@@ -1,3 +1,11 @@
+2026-09-03 Version: 2.0.6
+- Update API DescribeTTSConfig: add response parameters Body.TtsOverridesUuid.
+- Update API GetAsrConfig: add response parameters Body.Data.AsrOverridesUuid.
+- Update API ModifyAsrConfig: add request parameters AsrOverridesUuid.
+- Update API ModifyAsrConfig: add request parameters EngineXunfei.
+- Update API ModifyTTSConfig: add request parameters TtsOverridesUuid.
+
+
 2026-08-27 Version: 2.0.5
 - Update API AuditTTSVoice: add request parameters NlsServiceType.
 
