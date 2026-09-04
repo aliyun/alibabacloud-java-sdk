@@ -5,23 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>A client token used to ensure the idempotence of the request.</p>
+     * <p>You must generate a unique value on your client for each request. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <code>RequestId</code> of the request as the <code>ClientToken</code>. The <code>RequestId</code> of each request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <strong>2xx</strong> HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: Performs a dry run to check the request. The system checks for required parameters, request syntax, and business constraints without performing the operation. If the request is invalid, an error is returned. If the request is valid, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Sends a normal request. If the request is valid, a <strong>2xx HTTP</strong> status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The HTTP status codes that indicate a healthy backend server.</p>
+     * <p>The list of status codes that indicate a healthy state.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -40,7 +42,8 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public java.util.List<String> healthCheckCodes;
 
     /**
-     * <p>The port that is used for health checks. Valid values: <strong>0 to 65535</strong>. Default value: <strong>0</strong>. This value indicates that the port of a backend server is used for health checks.</p>
+     * <p>The port used for health checks. Valid values: <strong>0</strong> to <strong>65535</strong>.
+     * The default value is <strong>0</strong>, which means the health check uses the backend server\&quot;s port.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -49,27 +52,29 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The domain name that is used for health checks. Valid values:</p>
+     * <p>The domain name used for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>$SERVER_IP</strong> (default): the private IP address of a backend server. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP addresses of backend servers as domain names for health checks.</li>
-     * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</li>
+     * <li><p><strong>$SERVER_IP</strong> (default): The private IP of a backend server. If you specify this value or leave the parameter empty, the load balancing service uses the private IP of the backend server for health checks.</p>
+     * </li>
+     * <li><p><strong>domain</strong>: A domain name that is 1 to 80 characters long and can contain letters, digits, periods (.), and hyphens (-).</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only if <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+     * <p>This parameter takes effect only when the <code>HealthCheckProtocol</code> parameter is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>$_ip</p>
+     * <p>$SERVER_IP</p>
      */
     @NameInMap("HealthCheckHost")
     public String healthCheckHost;
 
     /**
-     * <p>The HTTP version that is used for health checks.</p>
+     * <p>The HTTP version used for health checks.</p>
      * <p>Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
      * <p>Default value: <strong>HTTP1.1</strong>.</p>
      * <blockquote>
-     * <p> This parameter is available only if you set <code>HealthCheckProtocol</code> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+     * <p>This parameter takes effect only when the <code>HealthCheckProtocol</code> parameter is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,7 +84,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public String healthCheckHttpVersion;
 
     /**
-     * <p>The interval at which health checks are performed. Unit: seconds. Valid values: <strong>1 to 50</strong>. Default value: <strong>2</strong>.</p>
+     * <p>The interval between health checks, in seconds. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>2</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -88,14 +93,17 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Integer healthCheckInterval;
 
     /**
-     * <p>The HTTP method that is used for health checks. Valid values:</p>
+     * <p>The method used for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>HEAD</strong> (default): By default, HTTP and HTTPS health checks use the HEAD method.</li>
-     * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
-     * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
+     * <li><p><strong>HEAD</strong> (default): The default method for health checks on HTTP and HTTPS listeners.</p>
+     * </li>
+     * <li><p><strong>GET</strong>: If the response body is larger than 8 KB, it is truncated. This does not affect the health check result.</p>
+     * </li>
+     * <li><p><strong>POST</strong>: The default method for health checks on gRPC listeners.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+     * <p>This parameter takes effect only when the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -105,11 +113,11 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public String healthCheckMethod;
 
     /**
-     * <p>The URL that is used for health checks.</p>
-     * <p>The URL must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&amp;), and the following extended character sets: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>.</p>
+     * <p>The URL used for health checks.</p>
+     * <p>The URL must be 1 to 80 characters long. It can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&amp;), and the following extended characters: <code>_;~!()*[]@$^:\\&quot;,+</code>.</p>
      * <p>The URL must start with a forward slash (/).</p>
      * <blockquote>
-     * <p> This parameter is available only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+     * <p>This parameter takes effect only when the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -119,12 +127,16 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public String healthCheckPath;
 
     /**
-     * <p>The protocol that is used for health checks. Valid values:</p>
+     * <p>The protocol used for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>HTTP</strong> (default): HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
-     * <li><strong>HTTPS</strong>: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS supports encryption and provides higher security than HTTP.</li>
-     * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
-     * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+     * <li><p><strong>HTTP</strong> (default): Checks the health of a backend server by sending an HTTP HEAD or GET request.</p>
+     * </li>
+     * <li><p><strong>HTTPS</strong>: Checks the health of a backend server by sending an HTTPS HEAD or GET request. HTTPS is more secure than HTTP because it encrypts data.</p>
+     * </li>
+     * <li><p><strong>TCP</strong>: Checks if a backend server port is reachable by sending a TCP SYN packet.</p>
+     * </li>
+     * <li><p><strong>gRPC</strong>: Checks the health of a backend server by sending a POST or GET request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,18 +146,18 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public String healthCheckProtocol;
 
     /**
-     * <p>The template ID.</p>
+     * <p>The health check template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>hct-bp1qjwo61pqz3ahltv0mw</p>
+     * <p>hct-bp1qjwo61******</p>
      */
     @NameInMap("HealthCheckTemplateId")
     public String healthCheckTemplateId;
 
     /**
      * <p>The name of the health check template.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters long, start with a letter, a Chinese character, or a digit, and can contain letters, Chinese characters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>HealthCheckTemplate1</p>
@@ -154,8 +166,8 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public String healthCheckTemplateName;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy.</p>
-     * <p>Unit: seconds. Valid values: <strong>1 to 300</strong>. Default value: <strong>5</strong>.</p>
+     * <p>The timeout period, in seconds, for a health check response. A health check fails if a backend server does not respond within this period.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>300</strong>. Default value: <strong>5</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -164,8 +176,8 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Integer healthCheckTimeout;
 
     /**
-     * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <strong>fail</strong> to <strong>success</strong>.</p>
-     * <p>Valid values: <strong>2 to 10</strong>.</p>
+     * <p>The number of consecutive successful health checks required to change a backend server\&quot;s status from <strong>unhealthy</strong> to <strong>healthy</strong>.</p>
+     * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
      * <p>Default value: <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -175,8 +187,8 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Integer healthyThreshold;
 
     /**
-     * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <strong>success</strong> to <strong>fail</strong>.</p>
-     * <p>Valid values: <strong>2 to 10</strong>.</p>
+     * <p>The number of consecutive failed health checks required to change a backend server\&quot;s status from <strong>healthy</strong> to <strong>unhealthy</strong>.</p>
+     * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
      * <p>Default value: <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>

@@ -12,7 +12,7 @@ public class ApplyHealthCheckTemplateToServerGroupRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     * <p>123e4567-e89b-12d3-a456-42665******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

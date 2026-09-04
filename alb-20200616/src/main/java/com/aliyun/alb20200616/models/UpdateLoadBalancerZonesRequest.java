@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerZonesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * <p>Generate a unique token from your client for each request. The <code>ClientToken</code> parameter can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the request\&quot;s <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> differs for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run to check for potential issues, including missing parameters, incorrect formatting, and service limits. If the request fails the dry run, the system returns an error message. If the request passes the dry run, the system returns the <code>DryRunOperation</code> error code.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends the request. If the request passes the check, the system returns an HTTP <code>2xx</code> status code and performs the operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +37,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lb-bp1b6c719dfa08ex****</p>
+     * <p>alb-o9ulmq5hfn68jk****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -44,7 +46,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     public java.util.List<String> retainResourceType;
 
     /**
-     * <p>The zones and the vSwitches in the zones. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service. The specified zones and vSwitches overwrite the existing configurations.</p>
+     * <p>The mappings between availability zones and VSwitches. You can specify up to 10 availability zones. If the current region supports two or more availability zones, you must specify at least two. Specifying this parameter overwrites the existing availability zone configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
@@ -97,13 +99,15 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
 
     public static class UpdateLoadBalancerZonesRequestZoneMappings extends TeaModel {
         /**
-         * <p>The type of EIP. Valid values:</p>
+         * <p>The type of the EIP. Valid values:</p>
          * <ul>
-         * <li><strong>Common</strong>: an EIP.</li>
-         * <li><strong>Anycast</strong>: an Anycast EIP.</li>
+         * <li><p><strong>Common</strong>: an EIP.</p>
+         * </li>
+         * <li><p><strong>Anycast</strong>: an Anycast EIP.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
+         * <p>For a list of regions that support binding an Anycast EIP to an ALB instance, see <a href="https://help.aliyun.com/document_detail/460727.html">Usage limits</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -113,7 +117,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
         public String eipType;
 
         /**
-         * <p>The private IPv4 address. You must specify at least two zones. You can specify a maximum of 10 zones.</p>
+         * <p>The private IPv4 address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.1</p>
@@ -122,17 +126,17 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
         public String intranetAddress;
 
         /**
-         * <p>The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones.</p>
+         * <p>The ID of the VSwitch in the availability zone. Each availability zone uses one VSwitch and one subnet by default.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-bp1rmcrwg3erh1fh8****</p>
+         * <p>vsw-bp1rmcrwg3srh1fh8****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The zone name. You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the most recent zone list. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones.</p>
+         * <p>The ID of the availability zone. You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the IDs of available zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

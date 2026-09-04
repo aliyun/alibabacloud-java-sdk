@@ -19,7 +19,7 @@ public class DissociateAclsFromListenerRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -42,7 +42,7 @@ public class DissociateAclsFromListenerRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsr-bp1bpn0kn908w4nbw****</p>
+     * <p>lsn-bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

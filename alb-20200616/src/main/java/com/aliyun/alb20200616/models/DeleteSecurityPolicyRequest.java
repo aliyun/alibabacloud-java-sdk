@@ -11,7 +11,7 @@ public class DeleteSecurityPolicyRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -34,7 +34,7 @@ public class DeleteSecurityPolicyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>spy-n0kn923****</p>
+     * <p>sp-n0kn923****</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;

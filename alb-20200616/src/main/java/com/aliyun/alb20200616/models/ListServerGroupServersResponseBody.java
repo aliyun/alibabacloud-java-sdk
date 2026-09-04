@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServerGroupServersResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of records returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,10 +14,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If <strong>NextToken</strong> is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,19 +30,19 @@ public class ListServerGroupServersResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>A list of backend servers.</p>
+     * <p>The list of servers.</p>
      */
     @NameInMap("Servers")
     public java.util.List<ListServerGroupServersResponseBodyServers> servers;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records that match the specified filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -115,10 +115,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>Indicates whether the remote IP address feature is enabled. Valid values:</p>
+         * <p>Indicates whether remote IP is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public Boolean remoteIpEnabled;
 
         /**
-         * <p>The ID of the server group.</p>
+         * <p>The server group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sgp-qy042e1jabmprh****</p>
@@ -137,9 +137,9 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String serverGroupId;
 
         /**
-         * <p>The ID of the backend server.</p>
+         * <p>The backend server ID.</p>
          * <blockquote>
-         * <p>If <strong>ServerType</strong> is set to <strong>Fc</strong>, <strong>ServerId</strong> is the ARN of a function.</p>
+         * <p>If <strong>ServerType</strong> is set to <strong>Fc</strong>, <strong>ServerId</strong> specifies the ARN of the Function Compute function.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The IP address in inclusive ENI mode.</p>
+         * <p>The specified IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -158,7 +158,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of the backend server.</p>
+         * <p>The server type of the backend server.</p>
          * 
          * <strong>example:</strong>
          * <p>Ecs</p>
@@ -169,10 +169,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         /**
          * <p>The status of the backend server. Valid values:</p>
          * <ul>
-         * <li><strong>Adding</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Configuring</strong></li>
-         * <li><strong>Removing</strong></li>
+         * <li><strong>Adding</strong>: being added.</li>
+         * <li><strong>Available</strong>: available.</li>
+         * <li><strong>Configuring</strong>: being configured.</li>
+         * <li><strong>Removing</strong>: being removed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The weight of the backend server. An ECS instance with a higher weight receives more requests.</p>
+         * <p>The weight of the backend server. A server with a higher weight receives more requests.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

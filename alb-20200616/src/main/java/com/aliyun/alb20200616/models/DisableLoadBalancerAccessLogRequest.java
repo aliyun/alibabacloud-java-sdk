@@ -11,7 +11,7 @@ public class DisableLoadBalancerAccessLogRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -34,7 +34,7 @@ public class DisableLoadBalancerAccessLogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lb-bp1b6c719dfa08ex*****</p>
+     * <p>alb-bp1b6c719dfa08ex*****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

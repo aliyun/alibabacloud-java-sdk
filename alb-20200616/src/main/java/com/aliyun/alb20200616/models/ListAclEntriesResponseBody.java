@@ -22,8 +22,10 @@ public class ListAclEntriesResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * <li><p>If <strong>NextToken</strong> is empty, no next page exists.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
+     * <p>CEF72CEB-54B6-4AE8-B225-F87******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -117,9 +119,12 @@ public class ListAclEntriesResponseBody extends TeaModel {
         /**
          * <p>The status of the ACL entry. Valid values:</p>
          * <ul>
-         * <li><strong>Adding</strong>: The ACL entry is being added.</li>
-         * <li><strong>Available</strong>: The ACL entry is added and available.</li>
-         * <li><strong>Removing</strong>: The ACL entry is being removed.</li>
+         * <li><p><strong>Adding</strong>: The ACL entry is being added.</p>
+         * </li>
+         * <li><p><strong>Available</strong>: The ACL entry is added and available.</p>
+         * </li>
+         * <li><p><strong>Removing</strong>: The ACL entry is being removed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

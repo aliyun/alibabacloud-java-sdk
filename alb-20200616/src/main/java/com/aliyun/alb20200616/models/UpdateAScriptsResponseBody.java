@@ -17,7 +17,7 @@ public class UpdateAScriptsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>ACA19FE1-C09E-53C7-8FDA-560F49D71891</p>
+     * <p>ACA19FE1-C09E-53C7-8FDA-560******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

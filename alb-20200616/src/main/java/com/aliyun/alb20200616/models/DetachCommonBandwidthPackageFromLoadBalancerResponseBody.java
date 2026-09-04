@@ -17,7 +17,7 @@ public class DetachCommonBandwidthPackageFromLoadBalancerResponseBody extends Te
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>2EF39708-974B-5E74-AFF5-3445263035A8</p>
+     * <p>2EF39708-974B-5E74-AFF5-344******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -9,7 +9,7 @@ public class ListAclEntriesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>nacl-hp34s2h0xx1ht4nwo****</p>
+     * <p>acl-hp34s2h0xx1ht4nwo****</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -26,8 +26,10 @@ public class ListAclEntriesRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * <li><p>You do not need to specify this parameter for the first request.</p>
+     * </li>
+     * <li><p>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

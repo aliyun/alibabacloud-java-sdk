@@ -20,8 +20,10 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +90,7 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         /**
          * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <blockquote>
-         * <p> This parameter is required when you set <strong>ServerType</strong> to <strong>Ecs</strong>, <strong>Eni</strong>, <strong>Eci</strong>, or <strong>Ip</strong>.</p>
+         * <p>This parameter is required when you set <strong>ServerType</strong> to <strong>Ecs</strong>, <strong>Eni</strong>, <strong>Eci</strong>, or <strong>Ip</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -100,12 +102,15 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         /**
          * <p>The backend server ID.</p>
          * <ul>
-         * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
-         * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
-         * <li>If the server group is of the <strong>Fc</strong> type, set ServerId to the Alibaba Cloud Resource Name (ARN) of a function.</li>
+         * <li><p>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</p>
+         * </li>
+         * <li><p>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</p>
+         * </li>
+         * <li><p>If the server group is of the <strong>Fc</strong> type, set ServerId to the Alibaba Cloud Resource Name (ARN) of a function.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2254862.html">ListServerGroups</a> operation to query information about the server group type so that you can set ServerId to a proper value.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2254862.html">ListServerGroups</a> operation to query information about the server group type so that you can set ServerId to a proper value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -127,11 +132,16 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         /**
          * <p>The type of the backend server. Valid values:</p>
          * <ul>
-         * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
-         * <li><strong>Eni</strong>: ENI</li>
-         * <li><strong>Eci</strong>: elastic container instance</li>
-         * <li><strong>Ip</strong>: IP address</li>
-         * <li><strong>Fc</strong>: Function Compute instance</li>
+         * <li><p><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</p>
+         * </li>
+         * <li><p><strong>Eni</strong>: ENI</p>
+         * </li>
+         * <li><p><strong>Eci</strong>: elastic container instance</p>
+         * </li>
+         * <li><p><strong>Ip</strong>: IP address</p>
+         * </li>
+         * <li><p><strong>Fc</strong>: Function Compute instance</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

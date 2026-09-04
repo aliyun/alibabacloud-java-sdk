@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateListenerLogConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to record custom headers in the access log. Valid values:</p>
+     * <p>Specifies whether to include custom header fields in access logs. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: includes custom header fields.</li>
+     * <li><strong>false</strong> (default): does not include custom header fields.</li>
      * </ul>
      * <blockquote>
-     * <p>You can set this parameter to <strong>true</strong> only if the access log feature is enabled by specifying <strong>AccessLogEnabled</strong>.</p>
+     * <p>You can set this parameter to <strong>true</strong> only when the access logging switch <strong>AccessLogEnabled</strong> is turned on for the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
     public Boolean accessLogRecordCustomizedHeadersEnabled;
 
     /**
-     * <p>The configuration information about the Xtrace feature.</p>
+     * <p>The Xtrace configuration information.</p>
      */
     @NameInMap("AccessLogTracingConfig")
     public UpdateListenerLogConfigRequestAccessLogTracingConfig accessLogTracingConfig;
@@ -30,11 +30,11 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -42,8 +42,10 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: (default): performs a dry run and performs the actual request. If the request passes the dry run, a <strong>2xx HTTP</strong> status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs only a dry run. The log configuration of the listener is not updated. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, an <strong>HTTP_2xx</strong> status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,11 +55,11 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the Application Load Balancer (ALB) listener.</p>
+     * <p>The ID of the Application Load Balancer (ALB) instance listener.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsr-bp1bpn0kn908w4nbw****</p>
+     * <p>lsn-o4u54y73wq7b******</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -109,13 +111,13 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
 
     public static class UpdateListenerLogConfigRequestAccessLogTracingConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable the Xtrace feature. Valid values:</p>
+         * <p>The status of the Xtrace feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong> (default): disabled.</li>
          * </ul>
          * <blockquote>
-         * <p>You can set this parameter to <strong>true</strong> only if the access log feature is enabled by specifying <strong>AccessLogEnabled</strong>.</p>
+         * <p>You can set this parameter to <strong>true</strong> only when the access logging switch <strong>AccessLogEnabled</strong> is turned on for the instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -126,10 +128,10 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
         public Boolean tracingEnabled;
 
         /**
-         * <p>The sampling rate of the Xtrace feature.</p>
+         * <p>The Xtrace sampling rate.</p>
          * <p>Valid values: <strong>1 to 10000</strong>.</p>
          * <blockquote>
-         * <p>This parameter takes effect only if you set <strong>TracingEnabled</strong> to <strong>true</strong>.</p>
+         * <p>This parameter takes effect only when <strong>TracingEnabled</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,9 +141,9 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
         public Integer tracingSample;
 
         /**
-         * <p>The type of Xtrace. Set the value to <strong>Zipkin</strong>.</p>
+         * <p>The type of Xtrace. Valid values: <strong>Zipkin</strong> and <strong>OpenTelemetry</strong>.</p>
          * <blockquote>
-         * <p>This parameter takes effect only if you set <strong>TracingEnabled</strong> to <strong>true</strong>.</p>
+         * <p>This parameter takes effect only when <strong>TracingEnabled</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

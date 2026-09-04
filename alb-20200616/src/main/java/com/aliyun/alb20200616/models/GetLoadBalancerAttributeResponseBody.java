@@ -552,7 +552,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
          * <p>The reason why the ALB instance is locked. This parameter is valid only if <strong>LoadBalancerBussinessStatus</strong> is set to <strong>Abnormal</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>nolock</p>
+         * <p>欠费</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -602,7 +602,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
          * <p>This parameter takes effect only if <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Managed instance</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -696,7 +696,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
          * <p>This parameter takes effect when <strong>AddressIPVersion</strong> is set to <strong>IPv4</strong> or <strong>DualStack</strong>. The network type is determined by the value of <strong>AddressType</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.10.1</p>
+         * <p>10.1.0.61</p>
          */
         @NameInMap("Address")
         public String address;
@@ -730,7 +730,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
          * <p>The private IPv4 address.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.0.1.181</p>
+         * <p>10.1.0.61</p>
          */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
@@ -762,7 +762,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
          * <p>This parameter takes effect only when <strong>AddressIPVersion</strong> is set to <strong>DualStack</strong>. The network type is determined by the value of <strong>Ipv6AddressType</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>2408:XXXX:39d:eb00::/56</p>
+         * <p>2408:xxxx:249:dd01:6f4:750f:xxxx:bcd9</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;

@@ -12,7 +12,7 @@ public class StopListenerRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -35,7 +35,7 @@ public class StopListenerRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsr-bp1bpn0kn908w4nbw****</p>
+     * <p>lsn-o4u54y73wq7b******</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

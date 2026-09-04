@@ -146,7 +146,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>DB1AFC33-DAE8-528E-AA4D-4A6AABE71945</p>
+     * <p>DB1AFC33-DAE8-528E-AA4D-4A6A******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

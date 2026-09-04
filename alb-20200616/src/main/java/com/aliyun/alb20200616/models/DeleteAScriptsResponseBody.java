@@ -17,7 +17,7 @@ public class DeleteAScriptsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>1B7B7695-3596-50C8-B739-030C6C685E61</p>
+     * <p>1B7B7695-3596-50C8-B739-030C******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

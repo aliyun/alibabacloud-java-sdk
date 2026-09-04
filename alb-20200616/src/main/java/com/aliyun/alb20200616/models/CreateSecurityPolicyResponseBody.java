@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityPolicyResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The security policy ID.</p>
+     * <p>The ID of the security policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>scp-bp1bpn0kn9****</p>
+     * <p>sp-9cdjz6o8ha70******</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;

@@ -4,10 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationResponseBody extends TeaModel {
+    /**
+     * <p>The LCU reservation state.</p>
+     */
     @NameInMap("CapacityReservationState")
     public java.util.List<DescribeCapacityReservationResponseBodyCapacityReservationState> capacityReservationState;
 
     /**
+     * <p>The number of remaining attempts to decrease or cancel the LCU reservation.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -15,16 +20,23 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
     public Integer decreaseRequestsRemaining;
 
     /**
+     * <p>The time when the LCU reservation was last modified. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-08-22 05:06:58</p>
      */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <p>The minimum LCUs to reserve for an ALB instance.</p>
+     */
     @NameInMap("MinimumLoadBalancerCapacity")
     public DescribeCapacityReservationResponseBodyMinimumLoadBalancerCapacity minimumLoadBalancerCapacity;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>365F4154-92F6-4AE4-92F8-7FF3******</p>
      */
@@ -78,6 +90,8 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
 
     public static class DescribeCapacityReservationResponseBodyCapacityReservationState extends TeaModel {
         /**
+         * <p>The zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>
          */
@@ -85,6 +99,8 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
         public String availabilityZone;
 
         /**
+         * <p>The number of effective reserved LCUs per hour.</p>
+         * 
          * <strong>example:</strong>
          * <p>50.0</p>
          */
@@ -92,6 +108,8 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
         public Double effectiveCapacityUnits;
 
         /**
+         * <p>The cause for the failure. This parameter is returned when the reservation status is Failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>INSUFFICIENT_CAPACITY</p>
          */
@@ -99,6 +117,8 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
         public String reason;
 
         /**
+         * <p>The status of the LCU reservation.</p>
+         * 
          * <strong>example:</strong>
          * <p>Provisioned</p>
          */
@@ -146,6 +166,8 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
 
     public static class DescribeCapacityReservationResponseBodyMinimumLoadBalancerCapacity extends TeaModel {
         /**
+         * <p>The number of LCUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

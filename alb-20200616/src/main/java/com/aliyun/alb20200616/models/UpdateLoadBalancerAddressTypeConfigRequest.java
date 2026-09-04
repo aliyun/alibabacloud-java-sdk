@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     /**
-     * <p>The new network type. Valid values:</p>
+     * <p>The target network type. Valid values:</p>
      * <ul>
-     * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
-     * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the virtual private cloud (VPC) where the ALB instance is deployed.</li>
+     * <li><p><strong>Internet</strong>: The load balancer is assigned a public IP address and can be accessed over the Internet. Its DNS domain name is resolved to the public IP address.</p>
+     * </li>
+     * <li><p><strong>Intranet</strong>: The load balancer is assigned a private IP address and can be accessed only from the VPC where it is deployed. Its DNS domain name is resolved to the private IP address.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,9 +22,9 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate a value from your client to make sure that the value is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,10 +34,12 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends the request. If the request passes the check, the system returns a 2xx HTTP status code and performs the operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,11 +49,11 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     public String dryRun;
 
     /**
-     * <p>The ALB instance ID.</p>
+     * <p>The ID of the Application Load Balancer (ALB) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lb-bp1o94dp5i6ea****</p>
+     * <p>alb-bp1o94dp5i6ea****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -58,7 +62,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     public java.util.List<String> retainResourceType;
 
     /**
-     * <p>The zones and the vSwitches in the zones. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</p>
+     * <p>The mappings between availability zones and vSwitches. You can specify up to 10 mappings. If the region supports two or more availability zones, you must specify mappings for at least two.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<UpdateLoadBalancerAddressTypeConfigRequestZoneMappings> zoneMappings;
@@ -118,9 +122,9 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
 
     public static class UpdateLoadBalancerAddressTypeConfigRequestZoneMappings extends TeaModel {
         /**
-         * <p>The ID of the elastic IP address (EIP). You can specify a maximum of 10 zones.</p>
+         * <p>The ID of the elastic IP address (EIP).</p>
          * <blockquote>
-         * <p> This parameter is required if you want to change the network type from internal-facing to Internet-facing.</p>
+         * <p>This parameter is required when you change the network type from Intranet to Internet.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -132,11 +136,13 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
         /**
          * <p>The type of the EIP. Valid values:</p>
          * <ul>
-         * <li>Common (default): indicates an EIP</li>
-         * <li>Anycast: indicates an Anycast EIP</li>
+         * <li><p><strong>Common</strong> (default): a regular EIP.</p>
+         * </li>
+         * <li><p>Anycast: Anycast EIP.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
+         * <p>For the regions where Application Load Balancer (ALB) supports binding Anycast Elastic IP addresses (EIPs), see <a href="https://help.aliyun.com/document_detail/460727.html">Usage limits</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +152,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
         public String eipType;
 
         /**
-         * <p>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</p>
+         * <p>The ID of the vSwitch in the specified availability zone. You can specify only one vSwitch for each availability zone.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp10ttov87felojcn****</p>
@@ -155,8 +161,8 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The zone ID of the ALB instance. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the information about the zone.</p>
+         * <p>The ID of the availability zone of the ALB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query information about availability zones.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>

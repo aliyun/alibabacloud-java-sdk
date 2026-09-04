@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the asynchronous task.</p>
+     * <p>The asynchronous task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>

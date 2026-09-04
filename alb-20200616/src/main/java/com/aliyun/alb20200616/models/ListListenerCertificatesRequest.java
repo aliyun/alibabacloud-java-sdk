@@ -24,7 +24,7 @@ public class ListListenerCertificatesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsr-bp1bpn0kn908w4nbw****</p>
+     * <p>lsn-5qnirjhpt******</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

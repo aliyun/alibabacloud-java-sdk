@@ -9,6 +9,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-hangzhou-finance", "alb.cn-hangzhou.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("alb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -108,20 +111,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <p><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request ID is returned, the backend server may not be added yet because the system is still processing the task in the background.</p>
      * <ol>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of the server group:</li>
      * </ol>
      * <ul>
-     * <li>If a server group is in the <strong>Configuring</strong> state, it indicates that the server group is being modified.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, it indicates that the server group is running.</li>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
      * </ul>
      * <ol start="2">
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of the backend server:</li>
      * </ol>
      * <ul>
-     * <li>If a backend server is in the <strong>Adding</strong> state, it indicates that the backend server is being added to a server group.</li>
-     * <li>If a backend server is in the <strong>Available</strong> state, it indicates that the server is running.</li>
+     * <li>If the backend server is in the <strong>Adding</strong> state, the backend server is being added to the server group.</li>
+     * <li>If the backend server is in the <strong>Available</strong> state, the backend server is running.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -176,20 +179,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <p><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request ID is returned, the backend server may not be added yet because the system is still processing the task in the background.</p>
      * <ol>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of the server group:</li>
      * </ol>
      * <ul>
-     * <li>If a server group is in the <strong>Configuring</strong> state, it indicates that the server group is being modified.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, it indicates that the server group is running.</li>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
      * </ul>
      * <ol start="2">
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of the backend server:</li>
      * </ol>
      * <ul>
-     * <li>If a backend server is in the <strong>Adding</strong> state, it indicates that the backend server is being added to a server group.</li>
-     * <li>If a backend server is in the <strong>Available</strong> state, it indicates that the server is running.</li>
+     * <li>If the backend server is in the <strong>Adding</strong> state, the backend server is being added to the server group.</li>
+     * <li>If the backend server is in the <strong>Available</strong> state, the backend server is running.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -335,10 +338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task:</p>
+     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="t2324519.xdita#"></a>operation to query the status of the task:</p>
      * <ul>
      * <li>If the HTTPS or QUIC listener is in the <strong>Associating</strong> state, the additional certificates are being associated.</li>
-     * <li>If the HTTPS or QUIC listener is in the <strong>Associated</strong> state, the additional certificates are associated.</li>
+     * <li>If the HTTPS or QUIC listener is in the <strong>Associated</strong> state, the certificates are associated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -386,10 +389,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task:</p>
+     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="t2324519.xdita#"></a>operation to query the status of the task:</p>
      * <ul>
      * <li>If the HTTPS or QUIC listener is in the <strong>Associating</strong> state, the additional certificates are being associated.</li>
-     * <li>If the HTTPS or QUIC listener is in the <strong>Associated</strong> state, the additional certificates are associated.</li>
+     * <li>If the HTTPS or QUIC listener is in the <strong>Associated</strong> state, the certificates are associated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -541,19 +544,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
+     * <h3>Prerequisites</h3>
      * <ul>
-     * <li>A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</li>
+     * <li>You have created a standard edition or WAF-enhanced edition ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</li>
      * </ul>
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p><strong>CreateAScripts</strong> an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of a script.</p>
+     * <h3>Usage</h3>
+     * <p><strong>CreateAScripts</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the programmable script is not created immediately because the creation task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the creation status of the programmable script:</p>
      * <ul>
-     * <li>If the script is in the <strong>Creating</strong> state, the script is being created.</li>
-     * <li>If the script is in the <strong>Available</strong>, the script is created.</li>
+     * <li>If the programmable script is in the <strong>Creating</strong> state, it is being created.</li>
+     * <li>If the programmable script is in the <strong>Available</strong> state, it has been created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates AScript rules.</p>
+     * <p>Create a script.</p>
      * 
      * @param request CreateAScriptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -597,19 +600,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
+     * <h3>Prerequisites</h3>
      * <ul>
-     * <li>A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</li>
+     * <li>You have created a standard edition or WAF-enhanced edition ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</li>
      * </ul>
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p><strong>CreateAScripts</strong> an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of a script.</p>
+     * <h3>Usage</h3>
+     * <p><strong>CreateAScripts</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the programmable script is not created immediately because the creation task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the creation status of the programmable script:</p>
      * <ul>
-     * <li>If the script is in the <strong>Creating</strong> state, the script is being created.</li>
-     * <li>If the script is in the <strong>Available</strong>, the script is created.</li>
+     * <li>If the programmable script is in the <strong>Creating</strong> state, it is being created.</li>
+     * <li>If the programmable script is in the <strong>Available</strong> state, it has been created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates AScript rules.</p>
+     * <p>Create a script.</p>
      * 
      * @param request CreateAScriptsRequest
      * @return CreateAScriptsResponse
@@ -621,15 +624,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>The <strong>CreateAcl</strong> operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of an ACL:</p>
+     * <p><em>CreateAcl</em>* is an asynchronous operation. After you send a request, the system returns an instance ID and starts to create the ACL in the background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of the ACL.</p>
      * <ul>
-     * <li>If an ACL is in the <strong>Creating</strong> state, the ACL is being created.</li>
-     * <li>If an ACL is in the <strong>Available</strong> state, the ACL is created.</li>
+     * <li>If the ACL is in the <strong>Creating</strong> state, the ACL is being created.</li>
+     * <li>If the ACL is in the <strong>Available</strong> state, the ACL is available for use.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an access control list (ACL) in a region.</p>
+     * <p>Creates an access control list (ACL) in a specified region.</p>
      * 
      * @param request CreateAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -677,15 +679,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>The <strong>CreateAcl</strong> operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of an ACL:</p>
+     * <p><em>CreateAcl</em>* is an asynchronous operation. After you send a request, the system returns an instance ID and starts to create the ACL in the background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of the ACL.</p>
      * <ul>
-     * <li>If an ACL is in the <strong>Creating</strong> state, the ACL is being created.</li>
-     * <li>If an ACL is in the <strong>Available</strong> state, the ACL is created.</li>
+     * <li>If the ACL is in the <strong>Creating</strong> state, the ACL is being created.</li>
+     * <li>If the ACL is in the <strong>Available</strong> state, the ACL is available for use.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an access control list (ACL) in a region.</p>
+     * <p>Creates an access control list (ACL) in a specified region.</p>
      * 
      * @param request CreateAclRequest
      * @return CreateAclResponse
@@ -697,7 +698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a health check template in a region.</p>
+     * <p>Create a health check template in a specified region.</p>
      * 
      * @param request CreateHealthCheckTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -789,7 +790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a health check template in a region.</p>
+     * <p>Create a health check template in a specified region.</p>
      * 
      * @param request CreateHealthCheckTemplateRequest
      * @return CreateHealthCheckTemplateResponse
@@ -801,11 +802,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p><strong>CreateListener</strong> is an asynchronous operation. After you call this operation, the system returns a request ID. However, the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/214353.html">GetListenerAttribute</a> operation to query the status of the HTTP, HTTPS, or QUIC listener.</p>
+     * <p><em>CreateListener</em>* is an asynchronous operation. After a request ID is returned, the HTTP, HTTPS, or QUIC listener may not be created yet because the system is still processing the creation task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the creation status of the HTTP, HTTPS, or QUIC listener:</p>
      * <ul>
-     * <li>If the HTTP, HTTPS, or QUIC listener is in the <strong>Provisioning</strong> state, it indicates that the listener is being created.</li>
-     * <li>If the HTTP, HTTPS, or QUIC listener is in the <strong>Running</strong> state, it indicates that the listener has been created successfully.</li>
+     * <li>If the HTTP, HTTPS, or QUIC listener is in the <strong>Provisioning</strong> state, the listener is being created.</li>
+     * <li>If the HTTP, HTTPS, or QUIC listener is in the <strong>Running</strong> state, the listener is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -909,11 +909,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p><strong>CreateListener</strong> is an asynchronous operation. After you call this operation, the system returns a request ID. However, the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/214353.html">GetListenerAttribute</a> operation to query the status of the HTTP, HTTPS, or QUIC listener.</p>
+     * <p><em>CreateListener</em>* is an asynchronous operation. After a request ID is returned, the HTTP, HTTPS, or QUIC listener may not be created yet because the system is still processing the creation task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the creation status of the HTTP, HTTPS, or QUIC listener:</p>
      * <ul>
-     * <li>If the HTTP, HTTPS, or QUIC listener is in the <strong>Provisioning</strong> state, it indicates that the listener is being created.</li>
-     * <li>If the HTTP, HTTPS, or QUIC listener is in the <strong>Running</strong> state, it indicates that the listener has been created successfully.</li>
+     * <li>If the HTTP, HTTPS, or QUIC listener is in the <strong>Provisioning</strong> state, the listener is being created.</li>
+     * <li>If the HTTP, HTTPS, or QUIC listener is in the <strong>Running</strong> state, the listener is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -929,14 +928,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.</p>
+     * <p>The <strong>CreateLoadBalancer</strong> operation is asynchronous. A successful call returns an instance ID, but the application load balancer instance is created in the background. Call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the creation status of the application load balancer instance:</p>
      * <ul>
-     * <li>If an ALB instance is in the <strong>Provisioning</strong> state, it indicates that the ALB instance is being created.</li>
-     * <li>If an ALB instance is in the <strong>Active</strong> state, it indicates that the ALB instance is created.</li>
+     * <li>If the instance is in the <strong>provisioning</strong> state, it is being created.</li>
+     * <li>If the instance is in the <strong>active</strong> state, it has been created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an Application Load Balancer (ALB) instance in a region.</p>
+     * <p>Create an application load balancer in a specified region</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1024,14 +1023,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.</p>
+     * <p>The <strong>CreateLoadBalancer</strong> operation is asynchronous. A successful call returns an instance ID, but the application load balancer instance is created in the background. Call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the creation status of the application load balancer instance:</p>
      * <ul>
-     * <li>If an ALB instance is in the <strong>Provisioning</strong> state, it indicates that the ALB instance is being created.</li>
-     * <li>If an ALB instance is in the <strong>Active</strong> state, it indicates that the ALB instance is created.</li>
+     * <li>If the instance is in the <strong>provisioning</strong> state, it is being created.</li>
+     * <li>If the instance is in the <strong>active</strong> state, it has been created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an Application Load Balancer (ALB) instance in a region.</p>
+     * <p>Create an application load balancer in a specified region</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
@@ -1043,24 +1042,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following limits:</p>
+     * <p>When you call this operation to create a forwarding rule, take note of the following items:</p>
      * <ul>
-     * <li>When you configure the <strong>Redirect</strong> action, you can use the default value only for the <strong>HttpCode</strong> parameter. Do not use the default values for the other parameters.</li>
-     * <li>If you specify the <strong>Rewrite</strong> action together with other actions in a forwarding rule, make sure that the <strong>ForwardGroup</strong> action is specified.</li>
-     * <li><strong>CreateRule</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule.<ul>
-     * <li>If a forwarding rule is in the <strong>Provisioning</strong> state, the forwarding rule is being created.</li>
-     * <li>If a forwarding rule is in the <strong>Available</strong> state, the forwarding rule is created.</li>
+     * <li>When you configure a <strong>Redirect</strong> action, parameters other than <strong>HttpCode</strong> cannot all be set to default values.</li>
+     * <li>When you configure multiple actions for a forwarding rule, the <strong>Rewrite</strong> action must be used together with the <strong>ForwardGroup</strong> action type.</li>
+     * <li>The <strong>CreateRule</strong> operation is asynchronous. After a request is sent, the system returns an instance ID, but the forwarding rule may not be created yet. The system creates the forwarding rule in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rule:<ul>
+     * <li>If the forwarding rule is in the <strong>Provisioning</strong> state, the forwarding rule is being created.</li>
+     * <li>If the forwarding rule is in the <strong>Available</strong> state, the forwarding rule is created.</li>
      * </ul>
      * </li>
-     * <li>You can set <strong>RuleConditions</strong> and <strong>RuleActions</strong> to add conditions and actions to a forwarding rule. The limits on conditions and actions are:<ul>
-     * <li>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</li>
-     * <li>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</li>
+     * <li>The maximum number of conditions (<strong>RuleConditions</strong>) and actions (<strong>RuleActions</strong>) that can be added to a forwarding rule is as follows:<ul>
+     * <li>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</li>
+     * <li>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a forwarding rule for a listener.</p>
+     * <p>Creates a forwarding rule for a specified listener.</p>
      * 
      * @param request CreateRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1124,24 +1123,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following limits:</p>
+     * <p>When you call this operation to create a forwarding rule, take note of the following items:</p>
      * <ul>
-     * <li>When you configure the <strong>Redirect</strong> action, you can use the default value only for the <strong>HttpCode</strong> parameter. Do not use the default values for the other parameters.</li>
-     * <li>If you specify the <strong>Rewrite</strong> action together with other actions in a forwarding rule, make sure that the <strong>ForwardGroup</strong> action is specified.</li>
-     * <li><strong>CreateRule</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule.<ul>
-     * <li>If a forwarding rule is in the <strong>Provisioning</strong> state, the forwarding rule is being created.</li>
-     * <li>If a forwarding rule is in the <strong>Available</strong> state, the forwarding rule is created.</li>
+     * <li>When you configure a <strong>Redirect</strong> action, parameters other than <strong>HttpCode</strong> cannot all be set to default values.</li>
+     * <li>When you configure multiple actions for a forwarding rule, the <strong>Rewrite</strong> action must be used together with the <strong>ForwardGroup</strong> action type.</li>
+     * <li>The <strong>CreateRule</strong> operation is asynchronous. After a request is sent, the system returns an instance ID, but the forwarding rule may not be created yet. The system creates the forwarding rule in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rule:<ul>
+     * <li>If the forwarding rule is in the <strong>Provisioning</strong> state, the forwarding rule is being created.</li>
+     * <li>If the forwarding rule is in the <strong>Available</strong> state, the forwarding rule is created.</li>
      * </ul>
      * </li>
-     * <li>You can set <strong>RuleConditions</strong> and <strong>RuleActions</strong> to add conditions and actions to a forwarding rule. The limits on conditions and actions are:<ul>
-     * <li>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</li>
-     * <li>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</li>
+     * <li>The maximum number of conditions (<strong>RuleConditions</strong>) and actions (<strong>RuleActions</strong>) that can be added to a forwarding rule is as follows:<ul>
+     * <li>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</li>
+     * <li>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a forwarding rule for a listener.</p>
+     * <p>Creates a forwarding rule for a specified listener.</p>
      * 
      * @param request CreateRuleRequest
      * @return CreateRuleResponse
@@ -1153,24 +1152,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following limits:</p>
+     * <p>When you call this operation to create forwarding rules, take note of the following items:</p>
      * <ul>
-     * <li>When you configure the <strong>Redirect</strong> action, do not use the default values for parameters other than <strong>HttpCode</strong>.</li>
-     * <li>If you specify multiple actions in a forward rule, you must specify the <strong>ForwardGroup</strong> parameter along with the <strong>Rewrite</strong> parameter.</li>
-     * <li><strong>CreateRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the forwarding rules.<ul>
+     * <li>When you configure a <strong>Redirect</strong> action, you cannot set all parameters except <strong>HttpCode</strong> to default values.</li>
+     * <li>When you configure multiple actions for the same forwarding rule, the <strong>Rewrite</strong> action must be used together with the <strong>ForwardGroup</strong> action type.</li>
+     * <li>The <strong>CreateRules</strong> operation is asynchronous. After a request is sent, the system returns an instance ID but the forwarding rules are not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rules:<ul>
      * <li>If the forwarding rules are in the <strong>Provisioning</strong> state, the forwarding rules are being created.</li>
      * <li>If the forwarding rules are in the <strong>Available</strong> state, the forwarding rules are created.</li>
      * </ul>
      * </li>
-     * <li>You can set <strong>RuleConditions</strong> and <strong>RuleActions</strong> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<ul>
-     * <li>Conditions: 5 for each basic ALB instance, 10 for each standard ALB instance, and 10 for each WAF-enabled ALB instance.</li>
-     * <li>Actions: 3 for each basic ALB instance, 5 for each standard ALB instance, and 5 for each WAF-enabled ALB instance.</li>
+     * <li>The maximum number of conditions (<strong>RuleConditions</strong>) and actions (<strong>RuleActions</strong>) that can be added to a forwarding rule is as follows:<ul>
+     * <li>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF Enhanced Edition.</li>
+     * <li>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF Enhanced Edition.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates multiple forwarding rules at a time.</p>
+     * <p>Creates multiple forwarding rules in a batch.</p>
      * 
      * @param request CreateRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1221,24 +1220,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following limits:</p>
+     * <p>When you call this operation to create forwarding rules, take note of the following items:</p>
      * <ul>
-     * <li>When you configure the <strong>Redirect</strong> action, do not use the default values for parameters other than <strong>HttpCode</strong>.</li>
-     * <li>If you specify multiple actions in a forward rule, you must specify the <strong>ForwardGroup</strong> parameter along with the <strong>Rewrite</strong> parameter.</li>
-     * <li><strong>CreateRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the forwarding rules.<ul>
+     * <li>When you configure a <strong>Redirect</strong> action, you cannot set all parameters except <strong>HttpCode</strong> to default values.</li>
+     * <li>When you configure multiple actions for the same forwarding rule, the <strong>Rewrite</strong> action must be used together with the <strong>ForwardGroup</strong> action type.</li>
+     * <li>The <strong>CreateRules</strong> operation is asynchronous. After a request is sent, the system returns an instance ID but the forwarding rules are not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rules:<ul>
      * <li>If the forwarding rules are in the <strong>Provisioning</strong> state, the forwarding rules are being created.</li>
      * <li>If the forwarding rules are in the <strong>Available</strong> state, the forwarding rules are created.</li>
      * </ul>
      * </li>
-     * <li>You can set <strong>RuleConditions</strong> and <strong>RuleActions</strong> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<ul>
-     * <li>Conditions: 5 for each basic ALB instance, 10 for each standard ALB instance, and 10 for each WAF-enabled ALB instance.</li>
-     * <li>Actions: 3 for each basic ALB instance, 5 for each standard ALB instance, and 5 for each WAF-enabled ALB instance.</li>
+     * <li>The maximum number of conditions (<strong>RuleConditions</strong>) and actions (<strong>RuleActions</strong>) that can be added to a forwarding rule is as follows:<ul>
+     * <li>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF Enhanced Edition.</li>
+     * <li>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF Enhanced Edition.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates multiple forwarding rules at a time.</p>
+     * <p>Creates multiple forwarding rules in a batch.</p>
      * 
      * @param request CreateRulesRequest
      * @return CreateRulesResponse
@@ -1250,7 +1249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom security policy in a region.</p>
+     * <p>Creates a custom security policy in a specified region.</p>
      * 
      * @param request CreateSecurityPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1306,7 +1305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom security policy in a region.</p>
+     * <p>Creates a custom security policy in a specified region.</p>
      * 
      * @param request CreateSecurityPolicyRequest
      * @return CreateSecurityPolicyResponse
@@ -1318,14 +1317,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group.</p>
+     * <p>The <strong>CreateServerGroup</strong> operation is asynchronous. After a request is sent, the system returns a request ID. However, the server group is not yet created. The creation task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the creation status of the server group:</p>
      * <ul>
-     * <li>If a server group is in the <strong>Creating</strong> state, it indicates that the server group is being created.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, it indicates that the server group is created.</li>
+     * <li>If the server group is in the <strong>Creating</strong> state, the server group is being created.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a server group in a region.</p>
+     * <p>Creates a server group in a specified region.</p>
      * 
      * @param request CreateServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1429,14 +1428,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group.</p>
+     * <p>The <strong>CreateServerGroup</strong> operation is asynchronous. After a request is sent, the system returns a request ID. However, the server group is not yet created. The creation task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the creation status of the server group:</p>
      * <ul>
-     * <li>If a server group is in the <strong>Creating</strong> state, it indicates that the server group is being created.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, it indicates that the server group is created.</li>
+     * <li>If the server group is in the <strong>Creating</strong> state, the server group is being created.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a server group in a region.</p>
+     * <p>Creates a server group in a specified region.</p>
      * 
      * @param request CreateServerGroupRequest
      * @return CreateServerGroupResponse
@@ -1698,14 +1697,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</p>
+     * <p><em>DeleteLoadBalancer</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the instance is not deleted immediately. The system deletes the instance in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the deletion status of the Application Load Balancer instance:</p>
      * <ul>
-     * <li>If an ALB instance is in the <strong>Deleting</strong> state, the ALB instance is being deleted.</li>
-     * <li>If an ALB instance cannot be found, the ALB instance is deleted.</li>
+     * <li>If the Application Load Balancer instance is in the <strong>Deleting</strong> state, the instance is being deleted.</li>
+     * <li>If the Application Load Balancer instance cannot be found, the instance has been deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Application Load Balancer (ALB) instance.</p>
+     * <p>Deletes the specified load balancer instance.</p>
      * 
      * @param request DeleteLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1749,14 +1748,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</p>
+     * <p><em>DeleteLoadBalancer</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the instance is not deleted immediately. The system deletes the instance in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the deletion status of the Application Load Balancer instance:</p>
      * <ul>
-     * <li>If an ALB instance is in the <strong>Deleting</strong> state, the ALB instance is being deleted.</li>
-     * <li>If an ALB instance cannot be found, the ALB instance is deleted.</li>
+     * <li>If the Application Load Balancer instance is in the <strong>Deleting</strong> state, the instance is being deleted.</li>
+     * <li>If the Application Load Balancer instance cannot be found, the instance has been deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Application Load Balancer (ALB) instance.</p>
+     * <p>Deletes the specified load balancer instance.</p>
      * 
      * @param request DeleteLoadBalancerRequest
      * @return DeleteLoadBalancerResponse
@@ -2018,7 +2017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源预留</p>
+     * <p>Queries the details of a Load Balancer Capacity Unit (LCU) reservation.</p>
      * 
      * @param request DescribeCapacityReservationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2050,7 +2049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源预留</p>
+     * <p>Queries the details of a Load Balancer Capacity Unit (LCU) reservation.</p>
      * 
      * @param request DescribeCapacityReservationRequest
      * @return DescribeCapacityReservationResponse
@@ -2490,10 +2489,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214354.html">ListListenerCertificates</a> operation to query the status of the task. - If an additional certificate is in the <strong>Dissociating</strong> state, the additional certificate is being disassociated. - If an additional certificate is in the <strong>Dissociated</strong> state, the additional certificate is disassociated.</p>
+     * <p><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the background. You can call <a href="t2324486.xdita#"></a>to query the status of the dissociation task:</p>
+     * <ul>
+     * <li>If an additional certificate is in the <strong>Dissociating</strong> state, the dissociation is in progress.</li>
+     * <li>If an additional certificate is in the <strong>Dissociated</strong> state, the dissociation is complete.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates additional certificates from a listener.</p>
+     * <p>Dissociates one or more additional certificates from a listener.</p>
      * 
      * @param request DissociateAdditionalCertificatesFromListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2537,10 +2540,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214354.html">ListListenerCertificates</a> operation to query the status of the task. - If an additional certificate is in the <strong>Dissociating</strong> state, the additional certificate is being disassociated. - If an additional certificate is in the <strong>Dissociated</strong> state, the additional certificate is disassociated.</p>
+     * <p><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the background. You can call <a href="t2324486.xdita#"></a>to query the status of the dissociation task:</p>
+     * <ul>
+     * <li>If an additional certificate is in the <strong>Dissociating</strong> state, the dissociation is in progress.</li>
+     * <li>If an additional certificate is in the <strong>Dissociated</strong> state, the dissociation is complete.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates additional certificates from a listener.</p>
+     * <p>Dissociates one or more additional certificates from a listener.</p>
      * 
      * @param request DissociateAdditionalCertificatesFromListenerRequest
      * @return DissociateAdditionalCertificatesFromListenerResponse
@@ -2800,7 +2807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a listener.</p>
+     * <p>Queries the details of a listener.</p>
      * 
      * @param request GetListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2832,7 +2839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a listener.</p>
+     * <p>Queries the details of a listener.</p>
      * 
      * @param request GetListenerAttributeRequest
      * @return GetListenerAttributeResponse
@@ -3360,7 +3367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the listeners in a region.</p>
+     * <p>Queries listeners in a specified region.</p>
      * 
      * @param request ListListenersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3412,7 +3419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the listeners in a region.</p>
+     * <p>Queries listeners in a specified region.</p>
      * 
      * @param request ListListenersRequest
      * @return ListListenersResponse
@@ -3424,7 +3431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of instances.</p>
+     * <p>Queries the configurations of load balancer instances.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3512,7 +3519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of instances.</p>
+     * <p>Queries the configurations of load balancer instances.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @return ListLoadBalancersResponse
@@ -3524,7 +3531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the forwarding rules in a region.</p>
+     * <p>This operation queries the forwarding rules in a specified region.</p>
      * 
      * @param request ListRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3580,7 +3587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the forwarding rules in a region.</p>
+     * <p>This operation queries the forwarding rules in a specified region.</p>
      * 
      * @param request ListRulesRequest
      * @return ListRulesResponse
@@ -3700,7 +3707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries servers in a server group.</p>
+     * <p>Queries the servers in a server group.</p>
      * 
      * @param request ListServerGroupServersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3748,7 +3755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries servers in a server group.</p>
+     * <p>Queries the servers in a server group.</p>
      * 
      * @param request ListServerGroupServersRequest
      * @return ListServerGroupServersResponse
@@ -3760,7 +3767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries server groups.</p>
+     * <p>Queries a list of server groups.</p>
      * 
      * @param request ListServerGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3820,7 +3827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries server groups.</p>
+     * <p>Queries a list of server groups.</p>
      * 
      * @param request ListServerGroupsRequest
      * @return ListServerGroupsResponse
@@ -4127,9 +4134,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.
-     *     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
-     *     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</p>
+     * <ul>
+     * <li>LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.<ul>
+     * <li>If the task is in the Succeeded state, the ALB instance is removed from the security group.</li>
+     * <li>If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Removes an Application Load Balancer (ALB) instance from a security group.</p>
@@ -4176,9 +4187,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.
-     *     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
-     *     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</p>
+     * <ul>
+     * <li>LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.<ul>
+     * <li>If the task is in the Succeeded state, the ALB instance is removed from the security group.</li>
+     * <li>If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Removes an Application Load Balancer (ALB) instance from a security group.</p>
@@ -4192,8 +4207,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>ModifyCapacityReservation</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The LCU reservation is not immediately updated. You can call the DescribeCapacityReservation operation to query the status of an LCU reservation:</p>
+     * <ul>
+     * <li>If an LCU reservation is in the <strong>Pending</strong> state, it is being created.</li>
+     * <li>If an LCU reservation is in the <strong>Provisioned</strong> state, it is created.</li>
+     * <li>If an LCU reservation is in the <strong>Rebalancing</strong> state, it is being rebalanced across zones.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改资源预留</p>
+     * <p>Creates and updates a Load Balancer Capacity Unit (LCU) reservation.</p>
      * 
      * @param request ModifyCapacityReservationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4240,8 +4263,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>ModifyCapacityReservation</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The LCU reservation is not immediately updated. You can call the DescribeCapacityReservation operation to query the status of an LCU reservation:</p>
+     * <ul>
+     * <li>If an LCU reservation is in the <strong>Pending</strong> state, it is being created.</li>
+     * <li>If an LCU reservation is in the <strong>Provisioned</strong> state, it is created.</li>
+     * <li>If an LCU reservation is in the <strong>Rebalancing</strong> state, it is being rebalanced across zones.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改资源预留</p>
+     * <p>Creates and updates a Load Balancer Capacity Unit (LCU) reservation.</p>
      * 
      * @param request ModifyCapacityReservationRequest
      * @return ModifyCapacityReservationResponse
@@ -4461,22 +4492,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>ReplaceServersInServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <p>The <strong>ReplaceServersInServerGroup</strong> operation is asynchronous. After a request ID is returned, the backend server replacement task is still being processed in the background.</p>
      * <ol>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<ul>
-     * <li>If a server group is in the <strong>Configuring</strong> state, it indicates that the server group is being modified.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, it indicates that the server group is running.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
      * </ul>
      * </li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<ul>
-     * <li>If a backend server is in the <strong>Replacing</strong> state, it indicates that the server is being removed from the server group and a new server is added to the server group.</li>
-     * <li>If a backend server is in the \<em>\<em>Available\</em>\</em> state, it indicates that the server is running.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<ul>
+     * <li>If the backend server is in the <strong>Replacing</strong> state, the server group is removing the server and adding a new server.</li>
+     * <li>If the backend server is in the <strong>Available</strong> state, the backend server is running.</li>
      * </ul>
      * </li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Replaces backend servers in a server group.</p>
+     * <p>Replaces backend servers in a backend server group.</p>
      * 
      * @param request ReplaceServersInServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4531,22 +4562,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>ReplaceServersInServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <p>The <strong>ReplaceServersInServerGroup</strong> operation is asynchronous. After a request ID is returned, the backend server replacement task is still being processed in the background.</p>
      * <ol>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<ul>
-     * <li>If a server group is in the <strong>Configuring</strong> state, it indicates that the server group is being modified.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, it indicates that the server group is running.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
      * </ul>
      * </li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<ul>
-     * <li>If a backend server is in the <strong>Replacing</strong> state, it indicates that the server is being removed from the server group and a new server is added to the server group.</li>
-     * <li>If a backend server is in the \<em>\<em>Available\</em>\</em> state, it indicates that the server is running.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<ul>
+     * <li>If the backend server is in the <strong>Replacing</strong> state, the server group is removing the server and adding a new server.</li>
+     * <li>If the backend server is in the <strong>Available</strong> state, the backend server is running.</li>
      * </ul>
      * </li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Replaces backend servers in a server group.</p>
+     * <p>Replaces backend servers in a backend server group.</p>
      * 
      * @param request ReplaceServersInServerGroupRequest
      * @return ReplaceServersInServerGroupResponse
@@ -4864,14 +4895,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateAScripts</em>* is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of an AScript rule.</p>
+     * <p><em>UpdateAScripts</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the programmable script is not yet updated, and the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the update status of the programmable script:</p>
      * <ul>
-     * <li>If the rule is in the <strong>Configuring</strong> state, the rule is being updated.</li>
-     * <li>If the rule is in the <strong>Available</strong> state, the rule is updated.</li>
+     * <li>If the programmable script is in the <strong>Configuring</strong> state, the programmable script is being updated.</li>
+     * <li>If the programmable script is in the <strong>Available</strong> state, the programmable script is updated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates AScript rules.</p>
+     * <p>Updates programmable scripts.</p>
      * 
      * @param request UpdateAScriptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4911,14 +4942,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateAScripts</em>* is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of an AScript rule.</p>
+     * <p><em>UpdateAScripts</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the programmable script is not yet updated, and the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the update status of the programmable script:</p>
      * <ul>
-     * <li>If the rule is in the <strong>Configuring</strong> state, the rule is being updated.</li>
-     * <li>If the rule is in the <strong>Available</strong> state, the rule is updated.</li>
+     * <li>If the programmable script is in the <strong>Configuring</strong> state, the programmable script is being updated.</li>
+     * <li>If the programmable script is in the <strong>Available</strong> state, the programmable script is updated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates AScript rules.</p>
+     * <p>Updates programmable scripts.</p>
      * 
      * @param request UpdateAScriptsRequest
      * @return UpdateAScriptsResponse
@@ -4930,7 +4961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the attributes of an access control list (ACL), such as the name.</p>
+     * <p>Updates the attributes of an ACL, such as its name.</p>
      * 
      * @param request UpdateAclAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4974,7 +5005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the attributes of an access control list (ACL), such as the name.</p>
+     * <p>Updates the attributes of an ACL, such as its name.</p>
      * 
      * @param request UpdateAclAttributeRequest
      * @return UpdateAclAttributeResponse
@@ -4986,7 +5017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes, such as the name and protocol, of a health check template.</p>
+     * <p>This operation updates the attributes of a health check template, such as its name and health check protocol.</p>
      * 
      * @param request UpdateHealthCheckTemplateAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5074,7 +5105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes, such as the name and protocol, of a health check template.</p>
+     * <p>This operation updates the attributes of a health check template, such as its name and health check protocol.</p>
      * 
      * @param request UpdateHealthCheckTemplateAttributeRequest
      * @return UpdateHealthCheckTemplateAttributeResponse
@@ -5086,14 +5117,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task.</p>
+     * <p><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request ID is returned, the listener configuration update is still being processed in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener configuration:</p>
      * <ul>
-     * <li>If a listener is in the <strong>Configuring</strong> state, the configuration of the listener is being modified.</li>
-     * <li>If a listener is in the <strong>Running</strong> state, the configuration of the listener is modified.</li>
+     * <li>If the listener is in the <strong>Configuring</strong> state, the listener configuration is being updated.</li>
+     * <li>If the listener is in the <strong>Running</strong> state, the listener configuration has been updated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the attributes of a listener, such as the name and the default action.</p>
+     * <p>Updates the configuration of a listener, such as the name and default action.</p>
      * 
      * @param request UpdateListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5181,14 +5212,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task.</p>
+     * <p><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request ID is returned, the listener configuration update is still being processed in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener configuration:</p>
      * <ul>
-     * <li>If a listener is in the <strong>Configuring</strong> state, the configuration of the listener is being modified.</li>
-     * <li>If a listener is in the <strong>Running</strong> state, the configuration of the listener is modified.</li>
+     * <li>If the listener is in the <strong>Configuring</strong> state, the listener configuration is being updated.</li>
+     * <li>If the listener is in the <strong>Running</strong> state, the listener configuration has been updated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the attributes of a listener, such as the name and the default action.</p>
+     * <p>Updates the configuration of a listener, such as the name and default action.</p>
      * 
      * @param request UpdateListenerAttributeRequest
      * @return UpdateListenerAttributeResponse
@@ -5200,17 +5231,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the status of the task:</p>
+     * <p><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request ID is returned, the log configuration of the listener is not yet updated, and the system continues to process the update task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener log configuration:</p>
      * <ul>
-     * <li>If a listener is in the <strong>Configuring</strong> state, the log configuration of the listener is being modified.</li>
-     * <li>If a listener is in the <strong>Running</strong> state, the log configuration of the listener is modified.<blockquote>
-     * <p>You can update the log configuration of a listener only after you enable the access log feature.</p>
+     * <li>If the listener is in the <strong>Configuring</strong> state, the log configuration of the listener is being updated.</li>
+     * <li>If the listener is in the <strong>Running</strong> state, the log configuration of the listener is updated.<blockquote>
+     * <p>You can update the log configuration of a listener only after you enable access logging for the instance.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the log configuration of a listener, such as the access log configuration.</p>
+     * <p>Updates the log-related properties of a listener, such as access logs.</p>
      * 
      * @param request UpdateListenerLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5258,17 +5289,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the status of the task:</p>
+     * <p><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request ID is returned, the log configuration of the listener is not yet updated, and the system continues to process the update task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener log configuration:</p>
      * <ul>
-     * <li>If a listener is in the <strong>Configuring</strong> state, the log configuration of the listener is being modified.</li>
-     * <li>If a listener is in the <strong>Running</strong> state, the log configuration of the listener is modified.<blockquote>
-     * <p>You can update the log configuration of a listener only after you enable the access log feature.</p>
+     * <li>If the listener is in the <strong>Configuring</strong> state, the log configuration of the listener is being updated.</li>
+     * <li>If the listener is in the <strong>Running</strong> state, the log configuration of the listener is updated.<blockquote>
+     * <p>You can update the log configuration of a listener only after you enable access logging for the instance.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the log configuration of a listener, such as the access log configuration.</p>
+     * <p>Updates the log-related properties of a listener, such as access logs.</p>
      * 
      * @param request UpdateListenerLogConfigRequest
      * @return UpdateListenerLogConfigResponse
@@ -5280,20 +5311,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Prerequisites</h2>
+     * <p>Prerequisites</p>
      * <ul>
-     * <li>An ALB instance is created. For more information about how to create an ALB instance, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</li>
-     * <li>If you want to change the network type from internal-facing to Internet-facing, you must first create an elastic IP address (EIP). For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.</li>
-     * </ul>
-     * <h2>Usage notes</h2>
-     * <p><strong>UpdateLoadBalancerAddressTypeConfig</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the task.</p>
-     * <ul>
-     * <li>If an ALB instance is in the <strong>Configuring</strong> state, the network type is being changed.</li>
-     * <li>If an ALB instance is in the <strong>Active</strong> state, the network type has been changed.</li>
+     * <li>You have created an Application Load Balancer (ALB) instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</li>
+     * <li>To change the network type of an ALB instance from Intranet to Internet, you must create an elastic IP address. For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.
+     * Usage notes
+     * The <strong>UpdateLoadBalancerAddressTypeConfig</strong> operation is an asynchronous task. After you send a request, the system returns a request ID and runs the task in the background. The network type of the ALB instance is not immediately modified. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the ALB instance:</li>
+     * <li>If the ALB instance is in the <strong>Configuring</strong> state, its network type is being modified.</li>
+     * <li>If the ALB instance is in the <strong>Active</strong> state, its network type has been modified.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the network type of an Application Load Balancer (ALB) instance.</p>
+     * <p>Changing the network type of an application load balancer instance.</p>
      * 
      * @param request UpdateLoadBalancerAddressTypeConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5345,20 +5374,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Prerequisites</h2>
+     * <p>Prerequisites</p>
      * <ul>
-     * <li>An ALB instance is created. For more information about how to create an ALB instance, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</li>
-     * <li>If you want to change the network type from internal-facing to Internet-facing, you must first create an elastic IP address (EIP). For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.</li>
-     * </ul>
-     * <h2>Usage notes</h2>
-     * <p><strong>UpdateLoadBalancerAddressTypeConfig</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the task.</p>
-     * <ul>
-     * <li>If an ALB instance is in the <strong>Configuring</strong> state, the network type is being changed.</li>
-     * <li>If an ALB instance is in the <strong>Active</strong> state, the network type has been changed.</li>
+     * <li>You have created an Application Load Balancer (ALB) instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</li>
+     * <li>To change the network type of an ALB instance from Intranet to Internet, you must create an elastic IP address. For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.
+     * Usage notes
+     * The <strong>UpdateLoadBalancerAddressTypeConfig</strong> operation is an asynchronous task. After you send a request, the system returns a request ID and runs the task in the background. The network type of the ALB instance is not immediately modified. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the ALB instance:</li>
+     * <li>If the ALB instance is in the <strong>Configuring</strong> state, its network type is being modified.</li>
+     * <li>If the ALB instance is in the <strong>Active</strong> state, its network type has been modified.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the network type of an Application Load Balancer (ALB) instance.</p>
+     * <p>Changing the network type of an application load balancer instance.</p>
      * 
      * @param request UpdateLoadBalancerAddressTypeConfigRequest
      * @return UpdateLoadBalancerAddressTypeConfigResponse
@@ -5370,14 +5397,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateLoadBalancerAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</p>
+     * <p>The <strong>UpdateLoadBalancerAttribute</strong> operation is asynchronous. After you send a request, the system returns a request ID and runs the task in the background. The properties of the Application Load Balancer instance are not modified until the task is complete. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the update.</p>
      * <ul>
-     * <li>If the ALB instance is in the <strong>Configuring</strong> state, the ALB instance is being modified.</li>
-     * <li>If the ALB instance is in the <strong>Active</strong> state, the ALB instance is modified.</li>
+     * <li>If the Application Load Balancer instance is in the <strong>Configuring</strong> state, the instance is being updated.</li>
+     * <li>If the Application Load Balancer instance is in the <strong>Active</strong> state, the update is complete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the attributes of an Application Load Balancer (ALB) instance, such as the name and the configuration read-only mode.</p>
+     * <p>Updates the properties of an Application Load Balancer instance, such as its name and modification protection.</p>
      * 
      * @param request UpdateLoadBalancerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5425,14 +5452,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateLoadBalancerAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</p>
+     * <p>The <strong>UpdateLoadBalancerAttribute</strong> operation is asynchronous. After you send a request, the system returns a request ID and runs the task in the background. The properties of the Application Load Balancer instance are not modified until the task is complete. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the update.</p>
      * <ul>
-     * <li>If the ALB instance is in the <strong>Configuring</strong> state, the ALB instance is being modified.</li>
-     * <li>If the ALB instance is in the <strong>Active</strong> state, the ALB instance is modified.</li>
+     * <li>If the Application Load Balancer instance is in the <strong>Configuring</strong> state, the instance is being updated.</li>
+     * <li>If the Application Load Balancer instance is in the <strong>Active</strong> state, the update is complete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the attributes of an Application Load Balancer (ALB) instance, such as the name and the configuration read-only mode.</p>
+     * <p>Updates the properties of an Application Load Balancer instance, such as its name and modification protection.</p>
      * 
      * @param request UpdateLoadBalancerAttributeRequest
      * @return UpdateLoadBalancerAttributeResponse
@@ -5444,8 +5471,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</p>
      * <ul>
+     * <li>You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</li>
      * <li><strong>UpdateLoadBalancerEdition</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.<ul>
      * <li>If the ALB instance is in the <strong>Configuring</strong> state, the edition of the ALB instance is being modified.</li>
      * <li>If the ALB instance is in the <strong>Active</strong> state, the edition of the ALB instance is modified.</li>
@@ -5498,8 +5525,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</p>
      * <ul>
+     * <li>You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</li>
      * <li><strong>UpdateLoadBalancerEdition</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.<ul>
      * <li>If the ALB instance is in the <strong>Configuring</strong> state, the edition of the ALB instance is being modified.</li>
      * <li>If the ALB instance is in the <strong>Active</strong> state, the edition of the ALB instance is modified.</li>
@@ -5520,17 +5547,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateLoadBalancerZones</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</p>
+     * <p><em>UpdateLoadBalancerZones</em>* is an asynchronous API. After you send a request, the system returns a request ID but does not immediately modify the availability zones. The modification runs in the background. Call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the modification status:</p>
      * <ul>
-     * <li>If an ALB instance is in the <strong>Configuring</strong> state, the zones are being modified.</li>
-     * <li>If an ALB instance is in the <strong>Active</strong> state, the zones are modified.<blockquote>
-     * <p>You may be charged after you call UpdateLoadBalancerZones.</p>
+     * <li>If the ALB instance is in the <strong>Configuring</strong> state, the modification is in progress.</li>
+     * <li>If the ALB instance is in the <strong>Active</strong> state, the modification is complete.<blockquote>
+     * <p>Calling this operation may incur fees.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the zones of an Application Load Balancer (ALB) instance.</p>
+     * <p>Modifies the availability zones of an ALB instance.</p>
      * 
      * @param request UpdateLoadBalancerZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5578,17 +5605,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateLoadBalancerZones</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</p>
+     * <p><em>UpdateLoadBalancerZones</em>* is an asynchronous API. After you send a request, the system returns a request ID but does not immediately modify the availability zones. The modification runs in the background. Call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the modification status:</p>
      * <ul>
-     * <li>If an ALB instance is in the <strong>Configuring</strong> state, the zones are being modified.</li>
-     * <li>If an ALB instance is in the <strong>Active</strong> state, the zones are modified.<blockquote>
-     * <p>You may be charged after you call UpdateLoadBalancerZones.</p>
+     * <li>If the ALB instance is in the <strong>Configuring</strong> state, the modification is in progress.</li>
+     * <li>If the ALB instance is in the <strong>Active</strong> state, the modification is complete.<blockquote>
+     * <p>Calling this operation may incur fees.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the zones of an Application Load Balancer (ALB) instance.</p>
+     * <p>Modifies the availability zones of an ALB instance.</p>
      * 
      * @param request UpdateLoadBalancerZonesRequest
      * @return UpdateLoadBalancerZonesResponse
@@ -5600,19 +5627,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateRuleAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule:
-     *     *   If a forwarding rule is in the <strong>Configuring</strong> state, the forwarding rule is being updated.
-     *     *   If a forwarding rule is in the <strong>Available</strong> state, the forwarding rule is updated.</p>
      * <ul>
-     * <li>You can set <strong>RuleConditions</strong> and <strong>RuleActions</strong> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<ul>
-     * <li>Number of conditions: You can specify at most 5 for a basic Application Load Balancer (ALB) instance, at most 10 for a standard ALB instance, and at most 10 for a WAF-enabled ALB instance.</li>
-     * <li>Number of actions: You can specify at most 3 for a basic ALB instance, at most 5 for a standard ALB instance, and at most 5 for a WAF-enabled ALB instance.</li>
+     * <li><strong>UpdateRuleAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the forwarding rule attributes are not yet updated. The update task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the update status of the forwarding rule attributes:<ul>
+     * <li>If the forwarding rule attributes are in the <strong>Configuring</strong> state, the attributes are being updated.</li>
+     * <li>If the forwarding rule attributes are in the <strong>Available</strong> state, the attributes are updated.</li>
+     * </ul>
+     * </li>
+     * <li>The maximum number of conditions (<strong>RuleConditions</strong>) and actions (<strong>RuleActions</strong>) that can be added to a forwarding rule is as follows:<ul>
+     * <li>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</li>
+     * <li>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates a forwarding rule, such as the match condition, action, and name.</p>
+     * <p>Updates the attributes of a forwarding rule, such as conditions, actions, and name.</p>
      * 
      * @param request UpdateRuleAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5668,19 +5697,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateRuleAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule:
-     *     *   If a forwarding rule is in the <strong>Configuring</strong> state, the forwarding rule is being updated.
-     *     *   If a forwarding rule is in the <strong>Available</strong> state, the forwarding rule is updated.</p>
      * <ul>
-     * <li>You can set <strong>RuleConditions</strong> and <strong>RuleActions</strong> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<ul>
-     * <li>Number of conditions: You can specify at most 5 for a basic Application Load Balancer (ALB) instance, at most 10 for a standard ALB instance, and at most 10 for a WAF-enabled ALB instance.</li>
-     * <li>Number of actions: You can specify at most 3 for a basic ALB instance, at most 5 for a standard ALB instance, and at most 5 for a WAF-enabled ALB instance.</li>
+     * <li><strong>UpdateRuleAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the forwarding rule attributes are not yet updated. The update task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the update status of the forwarding rule attributes:<ul>
+     * <li>If the forwarding rule attributes are in the <strong>Configuring</strong> state, the attributes are being updated.</li>
+     * <li>If the forwarding rule attributes are in the <strong>Available</strong> state, the attributes are updated.</li>
+     * </ul>
+     * </li>
+     * <li>The maximum number of conditions (<strong>RuleConditions</strong>) and actions (<strong>RuleActions</strong>) that can be added to a forwarding rule is as follows:<ul>
+     * <li>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</li>
+     * <li>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates a forwarding rule, such as the match condition, action, and name.</p>
+     * <p>Updates the attributes of a forwarding rule, such as conditions, actions, and name.</p>
      * 
      * @param request UpdateRuleAttributeRequest
      * @return UpdateRuleAttributeResponse
@@ -5692,19 +5723,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateRulesAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the task.</p>
+     * <p><em>UpdateRulesAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The properties of the forwarding rules are not updated immediately. You can call the <a href="t2324530.xdita#"></a>operation to query the update status of the forwarding rules:</p>
      * <ul>
-     * <li>If a forwarding rule is in the <strong>Configuring</strong> state, the forwarding rule is being updated.</li>
-     * <li>If a forwarding rule is in the <strong>Available</strong> state, the forwarding rule is updated.</li>
-     * <li>You can set <strong>RuleConditions</strong> and <strong>RuleActions</strong> to add conditions and actions to a forwarding rule. Take note of the following limits on the maximum number of conditions and the maximum number of actions in each forwarding rule:<ul>
-     * <li>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</li>
-     * <li>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</li>
+     * <li>If multiple forwarding rules are in the <strong>Configuring</strong> state, their properties are being updated in a batch.</li>
+     * <li>If multiple forwarding rules are in the <strong>Available</strong> state, their properties are updated.</li>
+     * <li>A forwarding rule supports the following maximum number of conditions (<strong>RuleConditions</strong>) and actions (<strong>RuleActions</strong>):<ul>
+     * <li>Conditions: 5 for a Basic Edition instance, 10 for a Standard Edition instance, and 10 for a WAF-enabled instance.</li>
+     * <li>Actions: 3 for a Basic Edition instance, 5 for a Standard Edition instance, and 5 for a WAF-enabled instance.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the attributes of forwarding rules.</p>
+     * <p>Updates the properties of multiple forwarding rules in a batch.</p>
      * 
      * @param request UpdateRulesAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5751,19 +5782,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateRulesAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the task.</p>
+     * <p><em>UpdateRulesAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The properties of the forwarding rules are not updated immediately. You can call the <a href="t2324530.xdita#"></a>operation to query the update status of the forwarding rules:</p>
      * <ul>
-     * <li>If a forwarding rule is in the <strong>Configuring</strong> state, the forwarding rule is being updated.</li>
-     * <li>If a forwarding rule is in the <strong>Available</strong> state, the forwarding rule is updated.</li>
-     * <li>You can set <strong>RuleConditions</strong> and <strong>RuleActions</strong> to add conditions and actions to a forwarding rule. Take note of the following limits on the maximum number of conditions and the maximum number of actions in each forwarding rule:<ul>
-     * <li>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</li>
-     * <li>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</li>
+     * <li>If multiple forwarding rules are in the <strong>Configuring</strong> state, their properties are being updated in a batch.</li>
+     * <li>If multiple forwarding rules are in the <strong>Available</strong> state, their properties are updated.</li>
+     * <li>A forwarding rule supports the following maximum number of conditions (<strong>RuleConditions</strong>) and actions (<strong>RuleActions</strong>):<ul>
+     * <li>Conditions: 5 for a Basic Edition instance, 10 for a Standard Edition instance, and 10 for a WAF-enabled instance.</li>
+     * <li>Actions: 3 for a Basic Edition instance, 5 for a Standard Edition instance, and 5 for a WAF-enabled instance.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the attributes of forwarding rules.</p>
+     * <p>Updates the properties of multiple forwarding rules in a batch.</p>
      * 
      * @param request UpdateRulesAttributeRequest
      * @return UpdateRulesAttributeResponse
@@ -5775,15 +5806,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
-     * <p><strong>UpdateSecurityPolicyAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> to query the status of the task.</p>
+     * <h2>Usage</h2>
+     * <p><strong>UpdateSecurityPolicyAttribute</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The security policy is not updated immediately. You can call the <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> operation to query its status:</p>
      * <ul>
-     * <li>If a security policy is in the <strong>Configuring</strong> state, the security policy is being updated.</li>
-     * <li>If a security policy is in the <strong>Available</strong> state, the security policy is updated.</li>
+     * <li>If a security policy is in the <strong>Configuring</strong> state, the update is in progress.</li>
+     * <li>If a security policy is in the <strong>Available</strong> state, the update is complete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the attributes of a security policy, such as the TLS protocol version and the supported cipher suites.</p>
+     * <p>Updates the attributes of a security policy, such as the security protocol version and cipher suites.</p>
      * 
      * @param request UpdateSecurityPolicyAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5835,15 +5866,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
-     * <p><strong>UpdateSecurityPolicyAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> to query the status of the task.</p>
+     * <h2>Usage</h2>
+     * <p><strong>UpdateSecurityPolicyAttribute</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The security policy is not updated immediately. You can call the <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> operation to query its status:</p>
      * <ul>
-     * <li>If a security policy is in the <strong>Configuring</strong> state, the security policy is being updated.</li>
-     * <li>If a security policy is in the <strong>Available</strong> state, the security policy is updated.</li>
+     * <li>If a security policy is in the <strong>Configuring</strong> state, the update is in progress.</li>
+     * <li>If a security policy is in the <strong>Available</strong> state, the update is complete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the attributes of a security policy, such as the TLS protocol version and the supported cipher suites.</p>
+     * <p>Updates the attributes of a security policy, such as the security protocol version and cipher suites.</p>
      * 
      * @param request UpdateSecurityPolicyAttributeRequest
      * @return UpdateSecurityPolicyAttributeResponse
@@ -5855,15 +5886,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p><strong>UpdateServerGroupAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group:</p>
+     * <p>The <strong>UpdateServerGroupAttribute</strong> operation is asynchronous. After a request is sent, the system returns a request ID, but the server group configurations have not been updated yet because the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the update status of the server group configurations:</p>
      * <ul>
-     * <li>If a server group is in the <strong>Configuring</strong> state, the configuration of the server group is being modified.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, the configuration of the server group is modified.</li>
+     * <li>If the server group configurations are in the <strong>Configuring</strong> state, the configurations are being updated.</li>
+     * <li>If the server group configurations are in the <strong>Available</strong> state, the configurations have been updated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</p>
+     * <p>Updates the configurations of a server group, such as health check, session persistence, name, scheduling algorithm, and protocol configurations.</p>
      * 
      * @param request UpdateServerGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5947,15 +5977,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p><strong>UpdateServerGroupAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group:</p>
+     * <p>The <strong>UpdateServerGroupAttribute</strong> operation is asynchronous. After a request is sent, the system returns a request ID, but the server group configurations have not been updated yet because the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the update status of the server group configurations:</p>
      * <ul>
-     * <li>If a server group is in the <strong>Configuring</strong> state, the configuration of the server group is being modified.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, the configuration of the server group is modified.</li>
+     * <li>If the server group configurations are in the <strong>Configuring</strong> state, the configurations are being updated.</li>
+     * <li>If the server group configurations are in the <strong>Available</strong> state, the configurations have been updated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</p>
+     * <p>Updates the configurations of a server group, such as health check, session persistence, name, scheduling algorithm, and protocol configurations.</p>
      * 
      * @param request UpdateServerGroupAttributeRequest
      * @return UpdateServerGroupAttributeResponse
@@ -5967,22 +5996,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <p><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the backend server configurations are not yet updated, and the update task is still running in the background.</p>
      * <ol>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<ul>
-     * <li>If a server group is in the <strong>Configuring</strong> state, it indicates that the server group is being modified.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, it indicates that the server group is running.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
      * </ul>
      * </li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<ul>
-     * <li>If a backend server is in the <strong>Configuring</strong> state, it indicates that the backend server is being modified.</li>
-     * <li>If a backend server is in the <strong>Available</strong> state, it indicates that the backend server is running.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<ul>
+     * <li>If the backend server is in the <strong>Configuring</strong> state, the backend server is being modified.</li>
+     * <li>If the backend server is in the <strong>Available</strong> state, the backend server is running.</li>
      * </ul>
      * </li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations, such as the backend server weight and description, of a server group.</p>
+     * <p>Updates the configurations of backend servers in a server group, such as weights and descriptions.</p>
      * 
      * @param request UpdateServerGroupServersAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6033,22 +6062,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <p><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the backend server configurations are not yet updated, and the update task is still running in the background.</p>
      * <ol>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<ul>
-     * <li>If a server group is in the <strong>Configuring</strong> state, it indicates that the server group is being modified.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, it indicates that the server group is running.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
      * </ul>
      * </li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<ul>
-     * <li>If a backend server is in the <strong>Configuring</strong> state, it indicates that the backend server is being modified.</li>
-     * <li>If a backend server is in the <strong>Available</strong> state, it indicates that the backend server is running.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<ul>
+     * <li>If the backend server is in the <strong>Configuring</strong> state, the backend server is being modified.</li>
+     * <li>If the backend server is in the <strong>Available</strong> state, the backend server is running.</li>
      * </ul>
      * </li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations, such as the backend server weight and description, of a server group.</p>
+     * <p>Updates the configurations of backend servers in a server group, such as weights and descriptions.</p>
      * 
      * @param request UpdateServerGroupServersAttributeRequest
      * @return UpdateServerGroupServersAttributeResponse

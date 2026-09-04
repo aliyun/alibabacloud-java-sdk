@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServerGroupsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in a paginated query.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,10 +14,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>Indicates whether a next query exists. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If <strong>NextToken</strong> is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,19 +30,19 @@ public class ListServerGroupsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The server groups.</p>
+     * <p>The list of backend server groups.</p>
      */
     @NameInMap("ServerGroups")
     public java.util.List<ListServerGroupsResponseBodyServerGroups> serverGroups;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -97,10 +97,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroupsConnectionDrainConfig extends TeaModel {
         /**
-         * <p>Indicates whether connection draining is enabled. Valid values:</p>
+         * <p>Indicates whether connection draining is enabled.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean connectionDrainEnabled;
 
         /**
-         * <p>The timeout period of connection draining.</p>
+         * <p>The connection draining timeout period.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -143,14 +143,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroupsHealthCheckConfig extends TeaModel {
         /**
-         * <p>The HTTP status codes that indicate healthy backend servers.</p>
+         * <p>The list of status codes that indicate healthy health checks.</p>
          */
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
 
         /**
-         * <p>The backend port that is used for health checks. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-         * <p>A value of <strong>0</strong> indicates that the port of a backend server is used for health checks.</p>
+         * <p>The port of the backend server used for health checks. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>A value of <strong>0</strong> indicates that the port of the backend server is used for health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -159,10 +159,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer healthCheckConnectPort;
 
         /**
-         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <p>Indicates whether health checks are enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,22 +172,27 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean healthCheckEnabled;
 
         /**
-         * <p>The domain name that is used for health checks.</p>
+         * <p>The domain name used for health checks.</p>
          * <ul>
-         * <li><p><strong>Backend Server Internal IP</strong> (default): Use the internal IP address of backend servers as the health check domain name.</p>
+         * <li><p><strong>Use the internal IP address of the backend server</strong> (default): The internal IP address of the backend server is used as the health check domain name.</p>
          * </li>
-         * <li><p><strong>Custom Domain Name</strong>: Enter a domain name.</p>
+         * <li><p><strong>Specify a domain name</strong>: Enter a domain name.</p>
          * <ul>
-         * <li>The domain name is 1 to 80 characters in length.</li>
-         * <li>The domain name contains lowercase letters, digits, hyphens (-), and periods (.).</li>
-         * <li>The domain name contains at least one period (.) but does not start or end with a period (.).</li>
-         * <li>The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).</li>
-         * <li>The domain name does not start or end with a hyphen (-).</li>
+         * <li><p>The domain name must be 1 to 80 characters in length.</p>
+         * </li>
+         * <li><p>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</p>
+         * </li>
+         * <li><p>The domain name must contain at least one period (.). Periods (.) cannot appear at the beginning or end.</p>
+         * </li>
+         * <li><p>The rightmost domain label can contain only letters, not digits or hyphens (-).</p>
+         * </li>
+         * <li><p>Hyphens (-) cannot appear at the beginning or end.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only if HealthCheckProtocol is set to HTTP, HTTPS, or gRPC.</p>
+         * <p>This parameter takes effect only when HealthCheckProtocol is set to HTTP, HTTPS, or gRPC.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -197,10 +202,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String healthCheckHost;
 
         /**
-         * <p>The HTTP version that is used for health checks.</p>
-         * <p>Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
+         * <p>The HTTP version for health checks.</p>
+         * <p>Valid values: <strong>HTTP1.0</strong> or <strong>HTTP1.1</strong>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+         * <p>This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -210,7 +215,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String healthCheckHttpVersion;
 
         /**
-         * <p>The interval at which health checks are performed. Unit: seconds. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>The interval between two consecutive health checks. Unit: seconds. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -219,14 +224,17 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer healthCheckInterval;
 
         /**
-         * <p>The HTTP method that is used for health checks. Valid values:</p>
+         * <p>The health check method. Valid values:</p>
          * <ul>
-         * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
-         * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
-         * <li><strong>HEAD</strong>: HTTP and HTTPS health checks use the HEAD method by default.</li>
+         * <li><p><strong>GET</strong>: If the response body exceeds 8 KB, it is truncated, but this does not affect the health check result.</p>
+         * </li>
+         * <li><p><strong>POST</strong>: gRPC listener health checks use the POST method by default.</p>
+         * </li>
+         * <li><p><strong>HEAD</strong>: HTTP and HTTPS listener health checks use the HEAD method by default.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+         * <p>This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,9 +244,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String healthCheckMethod;
 
         /**
-         * <p>The URL that is used for health checks.</p>
+         * <p>The path of the forwarding rule for health checks.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+         * <p>This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -248,12 +256,16 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String healthCheckPath;
 
         /**
-         * <p>The protocol that is used for health checks. Valid values:</p>
+         * <p>The health check protocol. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
-         * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.</li>
-         * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
-         * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+         * <li><p><strong>HTTP</strong>: Sends HEAD or GET requests to simulate browser access behavior and check whether the server application is healthy.</p>
+         * </li>
+         * <li><p><strong>HTTPS</strong>: Sends HEAD or GET requests to simulate browser access behavior and check whether the server application is healthy. (Data encryption is used, which is more secure than HTTP.)</p>
+         * </li>
+         * <li><p><strong>TCP</strong>: Sends SYN handshake packets to check whether the server port is alive.</p>
+         * </li>
+         * <li><p><strong>gRPC</strong>: Sends POST or GET requests to check whether the server application is healthy.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,7 +275,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String healthCheckProtocol;
 
         /**
-         * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.</p>
+         * <p>The amount of time to wait for a response from a health check. If the backend server does not respond correctly within the specified time, the health check fails. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -272,7 +284,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer healthCheckTimeout;
 
         /**
-         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <strong>fail</strong> to <strong>success</strong>.</p>
+         * <p>The number of consecutive successful health checks required before the health check status of a backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -281,7 +293,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer healthyThreshold;
 
         /**
-         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <strong>success</strong> to <strong>fail</strong>.</p>
+         * <p>The number of consecutive failed health checks required before the health check status of a backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -394,7 +406,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroupsSlowStartConfig extends TeaModel {
         /**
-         * <p>The duration of a slow start.</p>
+         * <p>The slow start duration.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -403,10 +415,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer slowStartDuration;
 
         /**
-         * <p>Indicates whether slow starts are enabled. Valid values:</p>
+         * <p>Indicates whether slow start is enabled.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -440,7 +452,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroupsStickySessionConfig extends TeaModel {
         /**
-         * <p>The cookie configured for the server.</p>
+         * <p>The cookie configured on the server.</p>
          * 
          * <strong>example:</strong>
          * <p>B490B5EBF6F3CD402E515D22BCDA****</p>
@@ -449,9 +461,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String cookie;
 
         /**
-         * <p>The timeout period of the cookie. Unit: seconds. Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
+         * <p>The cookie timeout period. Unit: seconds. Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> and <strong>StickySessionType</strong> is set to <strong>Insert</strong>.</p>
+         * <p>This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> and <strong>StickySessionType</strong> is set to <strong>Insert</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -463,8 +475,8 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether session persistence is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -474,10 +486,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean stickySessionEnabled;
 
         /**
-         * <p>The method that is used to handle the cookie. Valid values:</p>
+         * <p>The method used to handle cookies. Valid values:</p>
          * <ul>
-         * <li><strong>insert</strong>: inserts the cookie. The first time a client accesses ALB, ALB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.</li>
-         * <li><strong>Server</strong>: rewrites the cookie. ALB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</li>
+         * <li><strong>Insert</strong>: Inserts a cookie. When a client accesses the server for the first time, load balancing inserts a cookie (SERVERID) into the HTTP or HTTPS response. The next time the client accesses the server with this cookie, load balancing forwards the request to the previously recorded backend server.</li>
+         * <li><strong>Server</strong>: Rewrites a cookie. When load balancing detects a user-defined cookie, it rewrites the original cookie. The next time the client accesses the server with the new cookie, load balancing forwards the request to the previously recorded backend server.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -569,7 +581,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroupsUchConfig extends TeaModel {
         /**
-         * <p>The parameter type. Valid value: QueryString.</p>
+         * <p>The parameter type. Only QueryString is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>QueryString</p>
@@ -578,7 +590,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The hash value.</p>
+         * <p>The consistent hashing parameter value.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -613,8 +625,8 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether configuration management is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -624,12 +636,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean configManagedEnabled;
 
         /**
-         * <p>The configurations of connection draining.</p>
-         * <p>After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.</p>
+         * <p>The connection draining configuration.</p>
+         * <p>After connection draining is enabled, when a backend server is removed or a health check has failed, load balancing allows existing connections to continue Normal data transmission for a specified period of time before the connection is subject to break.</p>
          * <blockquote>
          * <ul>
-         * <li>Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining. </li>
-         * <li>Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</li>
+         * <li>Basic Edition instances do not support connection draining. Only Standard Edition and WAF-enabled Edition instances support this feature.</li>
+         * <li>Server type and IP type server groups support connection draining. Function Compute type server groups do not.</li>
          * </ul>
          * </blockquote>
          */
@@ -646,10 +658,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indicates whether cross-zone load balancing is enabled. Valid values:</p>
+         * <p>Indicates whether cross-zone load balancing is enabled for the server group. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default)</li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Enabled (default).</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -659,12 +673,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean crossZoneEnabled;
 
         /**
-         * <p>The health check configurations.</p>
+         * <p>The health check configuration.</p>
          */
         @NameInMap("HealthCheckConfig")
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig healthCheckConfig;
 
         /**
+         * <p>The IP version affinity mode of the server group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Affinity</p>
          */
@@ -674,8 +690,8 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether IPv6 is supported. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -685,11 +701,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean ipv6Enabled;
 
         /**
-         * <p>The backend protocol. Valid values:</p>
+         * <p>The backend protocol type. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong>: allows you to associate HTTPS, HTTP, or QUIC listeners with backend servers.</li>
-         * <li><strong>HTTPS</strong>: allows you to associate HTTPS listeners with backend servers.</li>
-         * <li><strong>GRPC</strong>: allows you to associate HTTPS and QUIC listeners with backend servers.</li>
+         * <li><p><strong>HTTP</strong>: Can be associated with HTTPS, HTTP, and QUIC listeners.</p>
+         * </li>
+         * <li><p><strong>HTTPS</strong>: Can be associated with HTTPS listeners.</p>
+         * </li>
+         * <li><p><strong>GRPC</strong>: Can be associated with HTTPS and QUIC listeners.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -699,13 +718,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The ID of the ALB instance associated with the server group.</p>
+         * <p>The IDs of the associated instances.</p>
          */
         @NameInMap("RelatedLoadBalancerIds")
         public java.util.List<String> relatedLoadBalancerIds;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-atstuj3rtop****</p>
@@ -716,9 +735,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>The scheduling algorithm. Valid values:</p>
          * <ul>
-         * <li><strong>Wrr</strong>: weighted round-robin. Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
-         * <li><strong>Wlc</strong>: weighted least connections. Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least number of connections.</li>
-         * <li><strong>Sch</strong>: consistent hashing. Requests that have the same hash factors are distributed to the same backend server. If you do not specify the UchConfig parameter, the source IP address is used as the hash factor by default. Requests that are from the same IP address are distributed to the same backend server. If you specify the UchConfig parameter, the URL string is used as the hash factor. Requests that have the same URL string are distributed to the same backend server.</li>
+         * <li><strong>Wrr</strong>: Weighted round-robin. Backend servers with higher weights are polled more frequently.</li>
+         * <li><strong>Wlc</strong>: Weighted least connections. In addition to polling based on the weight of each backend server, the actual load (number of connections) of the backend server is also considered. When the weights are the same, backend servers with fewer current connections are polled more frequently.</li>
+         * <li><strong>Sch</strong>: Consistent hashing. Requests with the same hash factor are dispatched to the same backend server. If the UchConfig parameter is not configured, the default hash factor is the source IP address, and requests from the same source IP address are distributed to the same backend server. If the UchConfig parameter is configured, the hash factor is the URL parameter, and requests with the same URL parameter are distributed to the same backend server.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -728,7 +747,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String scheduler;
 
         /**
-         * <p>The number of backend servers in the server group.</p>
+         * <p>The number of servers in the server group.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -755,11 +774,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String serverGroupName;
 
         /**
-         * <p>The status of the server group. Valid values:</p>
+         * <p>The server group status. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>.</li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Configuring</strong></li>
+         * <li><p><strong>Creating</strong>: The server group is being created.</p>
+         * </li>
+         * <li><p><strong>Available</strong>: The server group is available.</p>
+         * </li>
+         * <li><p><strong>Configuring</strong>: The server group is being configured.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -771,9 +793,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>The server group type. Valid values:</p>
          * <ul>
-         * <li><strong>Instance</strong>: instances, including ECS instances, ENIs, and elastic container instances.</li>
-         * <li><strong>Ip</strong>: IP addresses.</li>
-         * <li><strong>Fc</strong>: Function Compute</li>
+         * <li><p><strong>Instance</strong>: Server type, including ECS, ENI, and ECI instances.</p>
+         * </li>
+         * <li><p><strong>Ip</strong>: IP address type.</p>
+         * </li>
+         * <li><p><strong>Fc</strong>: Function Compute type.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -783,7 +808,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String serverGroupType;
 
         /**
-         * <p>The name of the server group.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -792,13 +817,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The configurations of slow starts.</p>
-         * <p>After slow starts are enabled, ALB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.</p>
+         * <p>The slow start configuration.</p>
+         * <p>After slow start is enabled, newly added backend servers in the server group are warmed up within the specified period of time. The number of requests forwarded to the server increases linearly.</p>
          * <blockquote>
          * <ul>
-         * <li>Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.</li>
-         * <li>Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</li>
-         * <li>Slow start is supported only by the weighted round-robin scheduling algorithm.</li>
+         * <li>Basic Edition instances do not support slow start. Only Standard Edition and WAF-enabled Edition instances support this feature.</li>
+         * <li>Server type and IP backend server groups support slow start configuration. Function Compute backend server groups do not.</li>
+         * <li>Slow start can be enabled only when the backend scheduling algorithm is weighted round-robin.</li>
          * </ul>
          * </blockquote>
          */
@@ -806,28 +831,28 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public ListServerGroupsResponseBodyServerGroupsSlowStartConfig slowStartConfig;
 
         /**
-         * <p>The configuration of session persistence.</p>
+         * <p>The session persistence configuration struct.</p>
          */
         @NameInMap("StickySessionConfig")
         public ListServerGroupsResponseBodyServerGroupsStickySessionConfig stickySessionConfig;
 
         /**
-         * <p>The tags that are added to the server group.</p>
+         * <p>The list of tags bound to the server group.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> tags;
 
         /**
-         * <p>The configuration of consistent hashing based on URLs.</p>
+         * <p>The URL consistent hashing parameter settings.</p>
          */
         @NameInMap("UchConfig")
         public ListServerGroupsResponseBodyServerGroupsUchConfig uchConfig;
 
         /**
-         * <p>Indicates whether persistent TCP connections are enabled. Valid values:</p>
+         * <p>Indicates whether backend keepalive is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -837,7 +862,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean upstreamKeepaliveEnabled;
 
         /**
-         * <p>The ID of the VPC to which the ALB instance belongs.</p>
+         * <p>The VPC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp15zckdt37pq72zv****</p>

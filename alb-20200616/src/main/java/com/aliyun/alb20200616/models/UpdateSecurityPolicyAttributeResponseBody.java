@@ -17,7 +17,7 @@ public class UpdateSecurityPolicyAttributeResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

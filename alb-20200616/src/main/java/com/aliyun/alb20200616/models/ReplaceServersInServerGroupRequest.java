@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceServersInServerGroupRequest extends TeaModel {
     /**
-     * <p>The backend servers. You can specify at most 200 servers in each call.</p>
+     * <p>The list of backend servers to add. You can specify up to 200 servers in a single request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddedServers")
@@ -13,9 +13,9 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx</code> HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without replacing backend servers in the server group. The system checks the required parameters, request syntax, and business limitations. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an <code>HTTP 2xx</code> status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,16 +38,16 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The backend servers that you want to remove.</p>
+     * <p>The backend servers to remove.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RemovedServers")
     public java.util.List<ReplaceServersInServerGroupRequestRemovedServers> removedServers;
 
     /**
-     * <p>The ID of the server group.</p>
+     * <p>The server group ID.</p>
      * <blockquote>
-     * <p>You cannot perform this operation on a server group of the Function type.</p>
+     * <p>Server groups of the Function Compute type do not support replacing backend servers.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -104,7 +104,7 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
 
     public static class ReplaceServersInServerGroupRequestAddedServers extends TeaModel {
         /**
-         * <p>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The description of the backend server. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -113,7 +113,7 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The port used by the backend server in the server group. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 200 servers in each call.</p>
+         * <p>The port used by the backend server group. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify up to 200 servers in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -122,13 +122,15 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the backend server. You can specify at most 200 servers in each call.</p>
+         * <p>The backend server ID. You can specify up to 200 servers in a single request.</p>
          * <ul>
-         * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
-         * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
+         * <li><p>If the server group type is <strong>Instance</strong>, set this parameter to the ID of an <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> resource.</p>
+         * </li>
+         * <li><p>If the server group type is <strong>Ip</strong>, set this parameter to an IP address.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</p>
+         * <p>Server groups of the Function Compute type do not support replacing backend servers. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the server group type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -138,7 +140,8 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The IP address of the elastic network interface (ENI) in exclusive mode.</p>
+         * <p>The IP address.</p>
+         * <p>If <strong>ServerType</strong> is set to <strong>Eni</strong>, you can specify the primary private IP address or a secondary private IP address of the ENI.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -147,11 +150,13 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of backend server. You can specify at most 200 servers in each call. Valid values:</p>
+         * <p>The backend server type. You can specify up to 200 servers in a single call. Valid values:</p>
          * <ul>
-         * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
-         * <li><strong>Eni</strong>: ENI</li>
-         * <li><strong>Eci</strong>: elastic container instance</li>
+         * <li><strong>Ecs</strong>: ECS instance.</li>
+         * <li><strong>Eni</strong>: ENI network interface controller (NIC) instance.</li>
+         * <li><strong>Eci</strong>: ECI elastic container.</li>
+         * <li><strong>Ip</strong>: IP address.</li>
+         * <li><strong>Fc</strong>: Function Compute.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,8 +166,8 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String serverType;
 
         /**
-         * <p>The weight of the backend server. You can specify at most 200 servers in each call.</p>
-         * <p>Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the value is set to <strong>0</strong>, no requests are forwarded to the server.</p>
+         * <p>The weight of the backend server. You can specify up to 200 servers in a single request.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the weight is set to <strong>0</strong>, no requests are forwarded to the backend server.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -227,7 +232,7 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
 
     public static class ReplaceServersInServerGroupRequestRemovedServers extends TeaModel {
         /**
-         * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 200 servers in each call.</p>
+         * <p>The port used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify up to 200 servers in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>81</p>
@@ -236,24 +241,27 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the backend server. You can specify at most 200 servers in each call.</p>
+         * <p>The backend server ID. You can specify up to 200 servers in a single request.</p>
          * <ul>
-         * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
-         * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
+         * <li><p>If the server group type is <strong>Instance</strong>, set this parameter to the ID of an <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> resource.</p>
+         * </li>
+         * <li><p>If the server group type is <strong>Ip</strong>, set this parameter to an IP address.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</p>
+         * <p>Server groups of the Function Compute type do not support replacing backend servers. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the server group type.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecs-bp1ac9uozods2uc****</p>
+         * <p>i-bp1f9kdprbgy9uiu****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The IP address of the ENI in exclusive mode.</p>
+         * <p>The IP address.</p>
+         * <p>If <strong>ServerType</strong> is set to <strong>Eni</strong>, you can specify the primary private IP address or a secondary private IP address of the ENI.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.12</p>
@@ -262,11 +270,12 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of backend server. You can specify at most 200 servers in each call. Valid values:</p>
+         * <p>The backend server type. You can specify up to 200 servers in a single call. Valid values:</p>
          * <ul>
-         * <li><strong>Ecs</strong>: ECS instance</li>
-         * <li><strong>Eni</strong>: ENI</li>
-         * <li><strong>Eci</strong>: elastic container instance</li>
+         * <li><strong>Ecs</strong>: ECS instance.</li>
+         * <li><strong>Eni</strong>: ENI network interface controller (NIC) instance.</li>
+         * <li><strong>Eci</strong>: ECI elastic container.</li>
+         * <li><strong>Ip</strong>: IP address.</li>
          * </ul>
          * 
          * <strong>example:</strong>

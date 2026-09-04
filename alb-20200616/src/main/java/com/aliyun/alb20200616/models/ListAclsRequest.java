@@ -28,8 +28,10 @@ public class ListAclsRequest extends TeaModel {
     /**
      * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</li>
+     * <li><p>If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * </li>
+     * <li><p>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListLoadBalancersRequest extends TeaModel {
     /**
-     * <p>The IP version. Valid values:</p>
+     * <p>The protocol version. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong></li>
-     * <li><strong>DualStack</strong></li>
+     * <li><p><strong>IPv4</strong>: IPv4</p>
+     * </li>
+     * <li><p><strong>DualStack</strong>: dual-stack</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>The network type. Valid values:</p>
+     * <p>The type of the IP address that the Application Load Balancer instance uses to provide services. Valid values:</p>
      * <ul>
-     * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
-     * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.</li>
+     * <li><p><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</p>
+     * </li>
+     * <li><p><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed in the VPC where the ALB instance is deployed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,10 +44,12 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String DNSName;
 
     /**
-     * <p>The type of IPv6 address that is used by the ALB instance. Valid values:</p>
+     * <p>The type of the IPv6 address that the Application Load Balancer instance uses to provide services. Valid values:</p>
      * <ul>
-     * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
-     * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</li>
+     * <li><p><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</p>
+     * </li>
+     * <li><p><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed in the VPC where the ALB instance is deployed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,10 +59,12 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String ipv6AddressType;
 
     /**
-     * <p>The service status of the ALB instance. Valid values:</p>
+     * <p>The service status of the Application Load Balancer instance. Valid values:</p>
      * <ul>
-     * <li><strong>Abnormal</strong></li>
-     * <li><strong>Normal</strong></li>
+     * <li><p><strong>Abnormal</strong>: The instance is not working as expected.</p>
+     * </li>
+     * <li><p><strong>Normal</strong>: The instance is working as expected.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,25 +74,30 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String loadBalancerBussinessStatus;
 
     /**
-     * <p>The instance IDs. You can specify at most 20 ALB instance IDs.</p>
+     * <p>The instance IDs. You can specify up to 20 Application Load Balancer instance IDs.</p>
      */
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
     /**
-     * <p>The instance names. You can specify at most 10 instance names.</p>
+     * <p>The instance names. You can specify up to 10 instance names.</p>
      */
     @NameInMap("LoadBalancerNames")
     public java.util.List<String> loadBalancerNames;
 
     /**
-     * <p>The status of the ALB instance. Valid values:</p>
+     * <p>The state of the Application Load Balancer instance. Valid values:</p>
      * <ul>
-     * <li><strong>Inactive</strong>: The ALB instance is disabled. The listeners do not forward traffic.</li>
-     * <li><strong>Active</strong>: The ALB instance is running.</li>
-     * <li><strong>Provisioning</strong>: The ALB instance is being created.</li>
-     * <li><strong>Configuring</strong>: The ALB instance is being modified.</li>
-     * <li><strong>CreateFailed</strong>: The system failed to create the ALB instance. In this case, you are not charged for the ALB instance. You can only delete the ALB instance. By default, the system deletes the ALB instances that are in the CreateFailed state within the last day.</li>
+     * <li><p><strong>Inactive</strong>: The instance is disabled. Listeners of the instance do not forward traffic.</p>
+     * </li>
+     * <li><p><strong>Active</strong>: The instance is running.</p>
+     * </li>
+     * <li><p><strong>Provisioning</strong>: The instance is being created.</p>
+     * </li>
+     * <li><p><strong>Configuring</strong>: The instance is being configured.</p>
+     * </li>
+     * <li><p><strong>CreateFailed</strong>: The instance failed to be created. You are not charged for the instance. You can only delete the instance. The system automatically deletes instances that failed to be created within one day.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,8 +118,10 @@ public class ListLoadBalancersRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * <li><p>You do not need to specify this parameter for the first request.</p>
+     * </li>
+     * <li><p>If a subsequent call is required, set the value to the <strong>NextToken</strong> value returned from the previous call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,8 +131,8 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The billing method of the ALB instance. Set the value to</p>
-     * <p><strong>PostPay</strong>, which specifies the pay-as-you-go billing method. This is the default value.</p>
+     * <p>The billing method of the instance. Valid value:</p>
+     * <p><strong>PostPay</strong> (default): The instance is billed on a pay-as-you-go basis.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPay</p>
@@ -135,20 +150,20 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags added to the ALB instance.</p>
+     * <p>The tags of the instances.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListLoadBalancersRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC to which the ALB instance belongs. You can specify at most 10 VPC IDs.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the Application Load Balancer instance belongs. You can specify up to 10 VPC IDs.</p>
      */
     @NameInMap("VpcIds")
     public java.util.List<String> vpcIds;
 
     /**
-     * <p>The ID of the zone where the ALB instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query zones.</p>
+     * <p>The ID of the zone where the Application Load Balancer instance is deployed.</p>
+     * <p>You can call the <a href="t2324479.xdita#"></a>operation to query information about the zones.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-a</p>
@@ -283,8 +298,8 @@ public class ListLoadBalancersRequest extends TeaModel {
 
     public static class ListLoadBalancersRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key of the instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>KeyTest</p>
@@ -293,8 +308,8 @@ public class ListLoadBalancersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value of the instance. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>alueTest</p>

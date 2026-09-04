@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAclRequest extends TeaModel {
     /**
-     * <p>The name of the ACL. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the ACL. The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), hyphens (-), letters, and Chinese characters. The name must start with a letter, a Chinese character, or a digit.</p>
      * 
      * <strong>example:</strong>
      * <p>test-acl</p>
@@ -15,22 +15,24 @@ public class CreateAclRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate a value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3*****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned. No ACL is created.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +51,10 @@ public class CreateAclRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags to add to the ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-12313</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateAclRequestTag> tag;
@@ -101,7 +106,7 @@ public class CreateAclRequest extends TeaModel {
 
     public static class CreateAclRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -110,7 +115,7 @@ public class CreateAclRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

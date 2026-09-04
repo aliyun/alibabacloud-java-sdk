@@ -5,26 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateAScriptsRequest extends TeaModel {
     /**
-     * <p>The information about the AScript rules.</p>
+     * <p>The AScripts to create.</p>
      */
     @NameInMap("AScripts")
     public java.util.List<CreateAScriptsRequestAScripts> AScripts;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>A client token used to ensure request idempotency.</p>
+     * <p>You can generate this value on your client. The value must be unique across requests and contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run without creating the AScript. The system checks the request for required parameters, format validity, and service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, the system returns an HTTP 2xx status code and performs the operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,8 +84,8 @@ public class CreateAScriptsRequest extends TeaModel {
 
     public static class CreateAScriptsRequestAScriptsExtAttributes extends TeaModel {
         /**
-         * <p>The key of the extended attribute.</p>
-         * <p>You can only set the key to <strong>EsDebug</strong>. This extended attribute adds a debug response header to record the execution of the AScript rule if the client request includes the _es_dbg parameter and its value matches the specified value of the extended attribute.</p>
+         * <p>The attribute key.</p>
+         * <p>The only valid value is <strong>EsDebug</strong>. If a request contains the _es_dbg parameter and its value matches the secret key specified in AttributeValue, the system adds a debug header to the response, which contains rule execution logs.</p>
          * 
          * <strong>example:</strong>
          * <p>EsDebug</p>
@@ -92,7 +94,7 @@ public class CreateAScriptsRequest extends TeaModel {
         public String attributeKey;
 
         /**
-         * <p>The value of the extended attribute, which can contain a maximum of 128 characters, including letters and digits.</p>
+         * <p>The attribute value, which is used as the secret key for the EsDebug attribute. The value must be 1 to 128 characters long and can contain uppercase letters, lowercase letters, and digits.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>
@@ -125,8 +127,8 @@ public class CreateAScriptsRequest extends TeaModel {
 
     public static class CreateAScriptsRequestAScripts extends TeaModel {
         /**
-         * <p>The name of the AScript rule.</p>
-         * <p>The length must be between 2 and 128 characters. This name must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The name of the AScript.</p>
+         * <p>The name must be 2 to 128 characters long, and must start with a letter, a digit, or a Chinese character. It can contain digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,10 +138,12 @@ public class CreateAScriptsRequest extends TeaModel {
         public String AScriptName;
 
         /**
-         * <p>Enables the AScript rule. Valid values:</p>
+         * <p>Specifies whether the AScript is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,10 +153,12 @@ public class CreateAScriptsRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>Enables the extended attribute of the Ascript rule. Valid values:</p>
+         * <p>Specifies whether to enable extended attributes for the AScript. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,17 +168,20 @@ public class CreateAScriptsRequest extends TeaModel {
         public Boolean extAttributeEnabled;
 
         /**
-         * <p>The extended attribute of the AScript rule.</p>
+         * <p>The extended attributes.</p>
          */
         @NameInMap("ExtAttributes")
         public java.util.List<CreateAScriptsRequestAScriptsExtAttributes> extAttributes;
 
         /**
-         * <p>The position where the Ascript rule is evaluated. Valid values are:</p>
+         * <p>Specifies when the AScript is executed. Valid values:</p>
          * <ul>
-         * <li>RequestHead (default): before inbound rules are evaluated</li>
-         * <li>RequestFoot: after inbound rules are evaluated</li>
-         * <li>ResponseHead: before outbound rules are evaluated</li>
+         * <li><p><strong>RequestHead</strong> (default): Executes before request rules.</p>
+         * </li>
+         * <li><p><strong>RequestFoot</strong>: Executes after request rules.</p>
+         * </li>
+         * <li><p><strong>ResponseHead</strong>: Executes before response rules.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +191,7 @@ public class CreateAScriptsRequest extends TeaModel {
         public String position;
 
         /**
-         * <p>The content of the AScript rule.</p>
+         * <p>The content of the AScript.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

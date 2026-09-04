@@ -33,7 +33,7 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -56,7 +56,7 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsr-bp1bpn0kn908w4nbw****</p>
+     * <p>lsn-bp1bpn0kn9*******</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

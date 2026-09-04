@@ -16,7 +16,7 @@ public class AddEntriesToAclRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>nacl-hp34s2h0xx1ht4nwo****</p>
+     * <p>acl-hp34s2h0xx1ht4nwo****</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -29,7 +29,7 @@ public class AddEntriesToAclRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

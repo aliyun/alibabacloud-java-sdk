@@ -7,12 +7,12 @@ public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which you want to transfer the cloud resource.</p>
      * <blockquote>
-     * <p> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></p>
+     * <p>You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-9gLOoK****</p>
+     * <p>rg-aekzbi7******</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -30,15 +30,19 @@ public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><strong>loadbalancer</strong>: Application Load Balancer (ALB) instance</li>
-     * <li><strong>acl</strong>: access control list (ACL)</li>
-     * <li><strong>securitypolicy</strong>: security policy</li>
-     * <li><strong>servergroup</strong>: server group</li>
+     * <li><p><strong>loadbalancer</strong>: Application Load Balancer (ALB) instance</p>
+     * </li>
+     * <li><p><strong>acl</strong>: access control list (ACL)</p>
+     * </li>
+     * <li><p><strong>securitypolicy</strong>: security policy</p>
+     * </li>
+     * <li><p><strong>servergroup</strong>: server group</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ACL</p>
+     * <p>acl</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

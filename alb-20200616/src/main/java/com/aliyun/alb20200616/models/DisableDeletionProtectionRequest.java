@@ -31,7 +31,7 @@ public class DisableDeletionProtectionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>re-atstuj3rtop****</p>
+     * <p>alb-o9ulmq5hgn68jk****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

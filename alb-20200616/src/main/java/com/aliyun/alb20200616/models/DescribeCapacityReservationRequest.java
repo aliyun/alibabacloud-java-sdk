@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationRequest extends TeaModel {
     /**
+     * <p>The ID of the Application Load Balancer (ALB) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

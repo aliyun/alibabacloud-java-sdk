@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DissociateAdditionalCertificatesFromListenerResponseBody extends TeaModel {
     /**
-     * <p>The asynchronous task ID.</p>
+     * <p>The ID of the asynchronous task.</p>
      * 
      * <strong>example:</strong>
      * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
@@ -17,7 +17,7 @@ public class DissociateAdditionalCertificatesFromListenerResponseBody extends Te
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

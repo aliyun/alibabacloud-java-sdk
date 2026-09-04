@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel {
     /**
-     * <p>The extended validation certificates that you want to add to the listener.</p>
+     * <p>The additional certificates.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Certificates")
@@ -15,20 +15,22 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> is different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3F******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run, then performs the operation. If the request passes the check, a <code>2xx</code> HTTP status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,11 +40,11 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     public Boolean dryRun;
 
     /**
-     * <p>The listener ID. This parameter is supported only by HTTPS and QUIC listeners.</p>
+     * <p>The listener ID. This parameter is valid only for HTTPS and QUIC listeners.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsr-bp1bpn0kn908w4nbw****</p>
+     * <p>lsn-5qnirjhpt******</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -87,10 +89,13 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     public static class AssociateAdditionalCertificatesWithListenerRequestCertificates extends TeaModel {
         /**
          * <p>The ID of the certificate. Only server certificates are supported.</p>
+         * <blockquote>
+         * <p>The globally unique certificate ID, which ends with a region ID, for example, 1011\<em>\</em>\<em>\</em>-cn-hangzhou.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cert-123</p>
+         * <p>1011****-cn-hangzhou</p>
          */
         @NameInMap("CertificateId")
         public String certificateId;

@@ -6,22 +6,22 @@ import com.aliyun.tea.*;
 public class AddServersToServerGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request, but does not add a backend server to a server group. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without adding backend servers to the server group. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class AddServersToServerGroupRequest extends TeaModel {
     public String serverGroupId;
 
     /**
-     * <p>The backend servers. You can specify at most 200 servers in each call.</p>
+     * <p>The list of backend servers. You can add up to 200 servers in a single call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Servers")
@@ -95,9 +95,9 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 200 servers in each call.</p>
+         * <p>The port used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can add up to 200 servers in a single call.</p>
          * <blockquote>
-         * <p> This parameter is required if you set <strong>ServerType</strong> to <strong>Ecs</strong>, <strong>Eni</strong>, <strong>Eci</strong>, or <strong>Ip</strong>. You do not need to set this parameter if <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
+         * <p>This parameter is required when <strong>ServerType</strong> is set to <strong>Ecs</strong>, <strong>Eni</strong>, <strong>Eci</strong>, or <strong>Ip</strong>. This parameter is not required when <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -107,13 +107,15 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>Specifies whether to enable the remote IP feature. You can specify at most 200 servers in each call. Default values:</p>
+         * <p>Specifies whether to enable the remote IP feature. You can add up to 200 servers in a single call. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the feature.</li>
-         * <li><strong>false</strong>: disables the feature.</li>
+         * <li><p><strong>true</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>ServerType</strong> is set to <strong>Ip</strong>.</p>
+         * <p>This parameter takes effect only when <strong>ServerType</strong> is set to <strong>Ip</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -123,23 +125,27 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public Boolean remoteIpEnabled;
 
         /**
-         * <p>The ID of the server group. You can specify at most 200 servers in each call.</p>
+         * <p>The backend server ID. You can add up to 200 servers in a single call.</p>
          * <ul>
-         * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
-         * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
-         * <li>If the server group is of the <strong>Fc</strong> type, set ServerId to an Alibaba Cloud Resource Name (ARN).</li>
+         * <li><p>If the server group is of the <strong>Instance</strong> type, this parameter specifies the resource ID of an <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> instance.</p>
+         * </li>
+         * <li><p>If the server group is of the <strong>Ip</strong> type, this parameter specifies an IP address.</p>
+         * </li>
+         * <li><p>If the server group is of the <strong>Fc</strong> type, this parameter specifies the Alibaba Cloud Resource Name (ARN) of a Function Compute function.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ecs-bp67acfmxazb4p****</p>
+         * <p>i-uf616vu8me******</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The IP address of the backend server. You can specify at most 200 servers in each call.</p>
+         * <p>The IP address. You can add up to 200 servers in a single call.</p>
+         * <p>When <strong>ServerType</strong> is set to <strong>Eni</strong>, you can specify the primary private IP address or a secondary private IP address of the ENI.</p>
          * <blockquote>
-         * <p> You do not need to set this parameter if you set <strong>ServerType</strong> to <strong>Fc</strong>.</p>
+         * <p>This parameter is not required when <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -149,13 +155,13 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String serverIp;
 
         /**
-         * <p>The type of the backend server. You can specify at most 200 servers in each call. Default values:</p>
+         * <p>The server type of the backend server. You can add up to 200 servers in a single invoke. Valid values:</p>
          * <ul>
-         * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
-         * <li><strong>Eni</strong>: elastic network interface (ENI)</li>
-         * <li><strong>Eci</strong>: elastic container instance</li>
-         * <li><strong>Ip</strong>: IP address</li>
-         * <li><strong>Fc</strong>: Function Compute</li>
+         * <li><strong>Ecs</strong>: ECS instance.</li>
+         * <li><strong>Eni</strong>: ENI network interface controller (NIC) instance.</li>
+         * <li><strong>Eci</strong>: ECI elastic container instance.</li>
+         * <li><strong>Ip</strong>: IP address.</li>
+         * <li><strong>Fc</strong>: Function Compute.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -166,9 +172,9 @@ public class AddServersToServerGroupRequest extends TeaModel {
         public String serverType;
 
         /**
-         * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the value is set to <strong>0</strong>, no requests are forwarded to the server. You can specify at most 200 servers in each call.</p>
+         * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the weight is set to <strong>0</strong>, no requests are forwarded to the backend server. You can add up to 200 servers in a single call.</p>
          * <blockquote>
-         * <p> You do not need to set this parameter if you set <strong>ServerType</strong> to <strong>Fc</strong>.</p>
+         * <p>This parameter is not required when <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

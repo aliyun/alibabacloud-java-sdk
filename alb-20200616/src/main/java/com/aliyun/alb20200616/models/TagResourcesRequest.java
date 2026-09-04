@@ -17,10 +17,14 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><strong>acl</strong>: an access control list (ACL)</li>
-     * <li><strong>loadbalancer</strong>: an Application Load Balancer (ALB) instance</li>
-     * <li><strong>securitypolicy</strong>: a security policy</li>
-     * <li><strong>servergroup</strong>: a server group</li>
+     * <li><p><strong>acl</strong>: an access control list (ACL)</p>
+     * </li>
+     * <li><p><strong>loadbalancer</strong>: an Application Load Balancer (ALB) instance</p>
+     * </li>
+     * <li><p><strong>securitypolicy</strong>: a security policy</p>
+     * </li>
+     * <li><p><strong>servergroup</strong>: a server group</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

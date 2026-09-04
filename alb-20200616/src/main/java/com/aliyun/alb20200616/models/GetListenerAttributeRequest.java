@@ -9,7 +9,7 @@ public class GetListenerAttributeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lsr-bp1bpn0kn908w4nbw****</p>
+     * <p>lsn-o4u54y73wq7b******</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

@@ -36,7 +36,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
+     * <p>365F4154-92F6-4AE4-92F8-7FF3******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -100,7 +100,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
          * <p>The certificate ID. Only server certificates are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>12315790343_166f8204689_1714763408_70998****</p>
+         * <p>123157******</p>
          */
         @NameInMap("CertificateId")
         public String certificateId;

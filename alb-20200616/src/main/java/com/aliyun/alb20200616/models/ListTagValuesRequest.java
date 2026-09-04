@@ -30,7 +30,7 @@ public class ListTagValuesRequest extends TeaModel {
      * <p>The resource ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>eip-resource-test</p>
+     * <p>alb-gws76zijb0******</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

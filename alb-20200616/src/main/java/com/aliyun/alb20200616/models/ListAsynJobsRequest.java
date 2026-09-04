@@ -18,7 +18,7 @@ public class ListAsynJobsRequest extends TeaModel {
      * <p>Specify the timestamp in the Unix format to indicate the total amount of time that is from 00:00:00 (UTC+0) on January 1, 1970 to when the status of the asynchronous task is queried.</p>
      * 
      * <strong>example:</strong>
-     * <p>2021-06-03T17:22Z</p>
+     * <p>2134663231234</p>
      */
     @NameInMap("BeginTime")
     public Long beginTime;
@@ -28,7 +28,7 @@ public class ListAsynJobsRequest extends TeaModel {
      * <p>Specify the timestamp in the Unix format to indicate the total amount of time that is from 00:00:00 (UTC+0) on January 1, 1970 to when the status of the asynchronous task is returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>2021-06-04T17:22Z</p>
+     * <p>2144663233315</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -79,7 +79,7 @@ public class ListAsynJobsRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>acl</p>
+     * <p>loadbalancer</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

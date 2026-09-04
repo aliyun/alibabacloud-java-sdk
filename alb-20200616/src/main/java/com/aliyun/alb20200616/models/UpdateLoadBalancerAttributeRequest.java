@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>A client-generated token that is used to ensure the idempotence of the request. Make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a value from your client and make sure that the value is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed. This is the default value.</li>
+     * <li><p><strong>true</strong>: Performs a dry run. The system checks for required parameters, the request format, and business limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned. No properties of the Application Load Balancer instance are modified.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Sends a normal request. After the request passes the check, a <code>2xx</code> status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the ALB instance.</p>
+     * <p>The Application Load Balancer instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,16 +43,16 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The name of the ALB instance. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the Application Load Balancer instance must be 2 to 128 characters in length. It must start with a letter, a Chinese character, or a number. The name can contain numbers, periods (.), underscores (_), hyphens (-), and spaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>lb-instance-test</p>
+     * <p>alb-instance-test</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
     /**
-     * <p>The configuration read-only mode settings.</p>
+     * <p>The modification protection settings.</p>
      */
     @NameInMap("ModificationProtectionConfig")
     public UpdateLoadBalancerAttributeRequestModificationProtectionConfig modificationProtectionConfig;
@@ -102,24 +104,26 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
 
     public static class UpdateLoadBalancerAttributeRequestModificationProtectionConfig extends TeaModel {
         /**
-         * <p>The reason for enabling the configuration read-only mode.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
-         * <p>This parameter takes effect only when <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
+         * <p>The reason for enabling modification protection.</p>
+         * <p>The reason must be 2 to 128 characters long. It must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>This parameter is valid only when <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Managed Instance</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
+         * <p>The modification protection status of the Application Load Balancer instance. Valid values:</p>
          * <ul>
-         * <li><strong>NonProtection</strong>: disables the configuration read-only mode. In this case, the value of the <strong>Reason</strong> parameter that you specify does not take effect. If you set the value of <strong>Reason</strong>, the value is cleared.</li>
-         * <li><strong>ConsoleProtection</strong>: enables the configuration read-only mode. In this case, the value of the <strong>Reason</strong> parameter that you specify takes effect.****</li>
+         * <li><p><strong>NonProtection</strong>: Disables modification protection. If you specify a value for <strong>Reason</strong>, the value is cleared.</p>
+         * </li>
+         * <li><p><strong>ConsoleProtection</strong>: Enables modification protection in the console. If you specify a value for <strong>Reason</strong>, the value takes effect.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If the parameter is set to <strong>ConsoleProtection</strong>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</p>
+         * <p>If you set the value to <strong>ConsoleProtection</strong>, you cannot modify the instance configuration in the Application Load Balancer console. However, you can still modify the instance configuration by calling API operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

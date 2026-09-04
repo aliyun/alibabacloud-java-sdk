@@ -14,7 +14,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +45,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
          * <p>The listener ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>lsr-bp1bpn0kn908w4nbw****</p>
+         * <p>lsn-bpn0kn908w4nbw****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
@@ -72,7 +72,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
          * <p>The ID of the SLB instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>lb-bp1b6c719dfa08ex****</p>
+         * <p>alb-bp1b6c719dfa08ex****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
@@ -80,9 +80,12 @@ public class ListAclRelationsResponseBody extends TeaModel {
         /**
          * <p>The association status between the ACL and the listener.</p>
          * <ul>
-         * <li><strong>Associating</strong></li>
-         * <li><strong>Associated</strong></li>
-         * <li><strong>Dissociating</strong></li>
+         * <li><p><strong>Associating</strong></p>
+         * </li>
+         * <li><p><strong>Associated</strong></p>
+         * </li>
+         * <li><p><strong>Dissociating</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +146,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
          * <p>ACL ID</p>
          * 
          * <strong>example:</strong>
-         * <p>nacl-hp34s2h0xx1ht4nwo****</p>
+         * <p>acl-hp34s2h0xx1ht4nwo****</p>
          */
         @NameInMap("AclId")
         public String aclId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCapacityReservationResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>593B0448-D13E-4C56-AC0D-FDF0F******</p>
      */
