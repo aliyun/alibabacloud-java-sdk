@@ -1,3 +1,7 @@
+2026-09-04 Version: 1.11.2
+- Update API UpdateJob: add request parameters body.UserCommand.
+
+
 2026-08-19 Version: 1.11.1
 - Update API GetToken: add request parameters TokenSettings.
 

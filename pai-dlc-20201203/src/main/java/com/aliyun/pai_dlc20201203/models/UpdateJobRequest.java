@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateJobRequest extends TeaModel {
     /**
-     * <p>The job\&quot;s visibility. You can only increase, not decrease, the visibility. Valid value:</p>
+     * <p>The visibility of the job. The visibility can only be expanded, not reduced. Valid values:</p>
      * <ul>
-     * <li><code>PUBLIC</code>: The job is visible to all users in the workspace.</li>
+     * <li>PUBLIC: visible to all users in the workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,18 +20,16 @@ public class UpdateJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The job specifications.</p>
+     * <p>The job specification definition.</p>
      */
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
     /**
-     * <p>The priority of the job. Valid values range from 1 to 9:</p>
+     * <p>The priority of the job. Valid values: 1 to 9.</p>
      * <ul>
-     * <li><p>1 indicates the lowest priority.</p>
-     * </li>
-     * <li><p>9 indicates the highest priority.</p>
-     * </li>
+     * <li>1: the lowest priority.</li>
+     * <li>9: the highest priority.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,6 +37,12 @@ public class UpdateJobRequest extends TeaModel {
      */
     @NameInMap("Priority")
     public Integer priority;
+
+    /**
+     * <p>The user command.</p>
+     */
+    @NameInMap("UserCommand")
+    public String userCommand;
 
     public static UpdateJobRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateJobRequest self = new UpdateJobRequest();
@@ -75,6 +79,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public Integer getPriority() {
         return this.priority;
+    }
+
+    public UpdateJobRequest setUserCommand(String userCommand) {
+        this.userCommand = userCommand;
+        return this;
+    }
+    public String getUserCommand() {
+        return this.userCommand;
     }
 
 }

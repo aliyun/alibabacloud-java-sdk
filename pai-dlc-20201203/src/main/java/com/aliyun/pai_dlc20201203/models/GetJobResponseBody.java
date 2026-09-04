@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetJobResponseBody extends TeaModel {
     /**
      * <p>The visibility of the task. Valid values:</p>
+     * <ul>
+     * <li>PUBLIC: Visible to all users in the workspace.</li>
+     * <li>PRIVATE (default): Visible only to you and administrators in the workspace.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
@@ -71,7 +75,7 @@ public class GetJobResponseBody extends TeaModel {
     public JobElasticSpec elasticSpec;
 
     /**
-     * <p>Specifies whether the debugger job is enabled.</p>
+     * <p>Indicates whether the debugger job is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -164,7 +168,7 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.List<JobReplicaStatus> jobReplicaStatuses;
 
     /**
-     * <p>The node configurations in the job. Refer to <strong>JobSpecs</strong> in the CreateJob API.</p>
+     * <p>The node configurations in the job. For more information, see <strong>JobSpecs</strong> in the CreateJob API.</p>
      */
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
@@ -221,7 +225,7 @@ public class GetJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group in which the job runs.</p>
+     * <p>The ID of the resource group where the job runs.</p>
      * 
      * <strong>example:</strong>
      * <p>r******</p>
@@ -254,7 +258,7 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.List<GetJobResponseBodyRestartRecord> restartRecord;
 
     /**
-     * <p>The number of restarts used and the maximum number of restarts for the job.</p>
+     * <p>The number of restarts used and the maximum number of restarts allowed for the job.</p>
      * 
      * <strong>example:</strong>
      * <p>0/10</p>
@@ -266,6 +270,8 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.Map<String, java.util.Map<String, ?>> roleSystemEnvs;
 
     /**
+     * <p>The scheduling strategy configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>Auto</p>
      */
@@ -279,7 +285,22 @@ public class GetJobResponseBody extends TeaModel {
     public JobSettings settings;
 
     /**
-     * <p>The job running status. Valid values:</p>
+     * <p>The job status. Valid values:</p>
+     * <ul>
+     * <li>Creating</li>
+     * <li>Queuing</li>
+     * <li>Bidding (currently only for Lingjun spot jobs)</li>
+     * <li>EnvPreparing</li>
+     * <li>SanityChecking</li>
+     * <li>Running</li>
+     * <li>Restarting</li>
+     * <li>Stopping</li>
+     * <li>SucceededReserving</li>
+     * <li>FailedReserving</li>
+     * <li>Succeeded</li>
+     * <li>Failed</li>
+     * <li>Stopped</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Stopped</p>
@@ -294,7 +315,7 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.List<StatusTransitionItem> statusHistory;
 
     /**
-     * <p>The job sub-status, such as preemption retry status.</p>
+     * <p>The job substatus, such as preemption retry status.</p>
      * 
      * <strong>example:</strong>
      * <p>Restarting</p>
@@ -369,6 +390,8 @@ public class GetJobResponseBody extends TeaModel {
     public String workspaceName;
 
     /**
+     * <p>The list of supported profiling types, comma-separated, such as sysom. An empty string indicates that profiling is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>sysom</p>
      */
@@ -892,7 +915,7 @@ public class GetJobResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The local mount path. This is an optional parameter. If left empty, the mount path specified in the data source is used.</p>
+         * <p>The local mount path. This is an optional parameter. The default value is empty, which indicates that the mount path specified in the data source is used.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/data/</p>
@@ -999,7 +1022,7 @@ public class GetJobResponseBody extends TeaModel {
         public String podId;
 
         /**
-         * <p>The pod IP addresses.</p>
+         * <p>The IP addresses of the pod.</p>
          */
         @NameInMap("PodIps")
         public java.util.List<PodNetworkInterface> podIps;
@@ -1032,7 +1055,11 @@ public class GetJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The pod sub-status, such as preemption status. Valid values:</p>
+         * <p>The pod substatus, such as preemption status. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Evicted</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1050,6 +1077,8 @@ public class GetJobResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The list of supported profiling types, comma-separated, such as sysom. An empty string indicates that profiling is not supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>sysom</p>
          */
@@ -1240,7 +1269,7 @@ public class GetJobResponseBody extends TeaModel {
         public String podId;
 
         /**
-         * <p>The pod IP addresses.</p>
+         * <p>The IP addresses of the pod.</p>
          */
         @NameInMap("PodIps")
         public java.util.List<PodNetworkInterface> podIps;
@@ -1265,6 +1294,13 @@ public class GetJobResponseBody extends TeaModel {
 
         /**
          * <p>The pod status. Valid values:</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Running</li>
+         * <li>Succeeded</li>
+         * <li>Failed</li>
+         * <li>Unknown</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -1273,7 +1309,11 @@ public class GetJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The pod sub-status, such as preemption status. Valid values:</p>
+         * <p>The pod substatus, such as preemption status. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Evicted</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1282,7 +1322,7 @@ public class GetJobResponseBody extends TeaModel {
         public String subStatus;
 
         /**
-         * <p>The pod type, which corresponds to a JobSpec in the JobSpecs parameter of CreateJob.</p>
+         * <p>The pod type, which corresponds to a specific JobSpec in the JobSpecs parameter of CreateJob.</p>
          * 
          * <strong>example:</strong>
          * <p>Worker</p>
@@ -1291,6 +1331,8 @@ public class GetJobResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The list of supported profiling types, comma-separated, such as sysom. An empty string indicates that profiling is not supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>sysom</p>
          */
@@ -1450,7 +1492,7 @@ public class GetJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The fault error message.</p>
+         * <p>The error information.</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
@@ -1560,7 +1602,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyRestartRecord extends TeaModel {
         /**
-         * <p>The list of fault error messages.</p>
+         * <p>The error information list.</p>
          */
         @NameInMap("DetailErrorInfoList")
         public java.util.List<GetJobResponseBodyRestartRecordDetailErrorInfoList> detailErrorInfoList;
@@ -1578,13 +1620,13 @@ public class GetJobResponseBody extends TeaModel {
         public String occurPhase;
 
         /**
-         * <p>The time when the event occurred.</p>
+         * <p>The time at which the event occurred.</p>
          */
         @NameInMap("OccurTime")
         public String occurTime;
 
         /**
-         * <p>The reason for the restart.</p>
+         * <p>The reason.</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -1601,6 +1643,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("RestartFailReason")
         public String restartFailReason;
 
+        /**
+         * <p>The restart level (pod-level restart or job-level restart).</p>
+         */
         @NameInMap("RestartLevelType")
         public String restartLevelType;
 
@@ -1705,7 +1750,9 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyUserVpc extends TeaModel {
         /**
-         * <p>The default routing. This parameter is valid only for general computing resources. Valid values:</p>
+         * <p>The default route. This parameter is valid only for general-purpose computing resources. Valid values:</p>
+         * <p>eth0: uses the default network interface card (NIC) to access external networks through the public gateway.
+         * eth1: uses the user elastic network interface (ENI) to access external networks through the private gateway.</p>
          */
         @NameInMap("DefaultRoute")
         public String defaultRoute;

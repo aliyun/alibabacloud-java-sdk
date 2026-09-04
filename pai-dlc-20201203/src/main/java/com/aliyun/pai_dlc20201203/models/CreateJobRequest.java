@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class CreateJobRequest extends TeaModel {
     /**
      * <p>The visibility of the job. Valid values:</p>
+     * <ul>
+     * <li>PUBLIC: Visible to all users in this workspace.</li>
+     * <li>PRIVATE: Visible only to you and administrators in this workspace.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
@@ -35,7 +39,7 @@ public class CreateJobRequest extends TeaModel {
     public java.util.List<CreateJobRequestDataSources> dataSources;
 
     /**
-     * <p>This parameter is not currently supported. Ignore this parameter.</p>
+     * <p>This parameter is not currently supported. You can ignore it.</p>
      * 
      * <strong>example:</strong>
      * <p>“”</p>
@@ -47,7 +51,11 @@ public class CreateJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the job. The naming format is as follows:</p>
+     * <p>The name of the job. The naming rules are as follows:</p>
+     * <ul>
+     * <li>The name cannot exceed 256 characters in length.</li>
+     * <li>The name can contain digits, letters, underscores (_), periods (.), and hyphens (-).</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,19 +65,19 @@ public class CreateJobRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>This parameter is not currently supported. Ignore this parameter.</p>
+     * <p>This parameter is not currently supported. You can ignore it.</p>
      */
     @NameInMap("ElasticSpec")
     public JobElasticSpec elasticSpec;
 
     /**
-     * <p>The environment variable configuration.</p>
+     * <p>The environment variable configurations.</p>
      */
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
     /**
-     * <p>The maximum running duration of the job, in minutes.</p>
+     * <p>The maximum running time of the job, in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -78,7 +86,8 @@ public class CreateJobRequest extends TeaModel {
     public Long jobMaxRunningTimeMinutes;
 
     /**
-     * <p><strong>JobSpecs</strong> describes various configurations for job runtime, such as image address, startup command, node resource declarations, and number of replicas.</p>
+     * <p><strong>JobSpecs</strong> describes various configurations for job runtime, such as the image address, startup command, node resource declarations, and number of replicas.</p>
+     * <p>A DLC job consists of different types of nodes. Nodes of the same type share identical configurations, which is called a JobSpec. <strong>JobSpecs</strong> describes the configurations of all node types and is an array of JobSpec objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("JobSpecs")
@@ -86,6 +95,17 @@ public class CreateJobRequest extends TeaModel {
 
     /**
      * <p>The job type. This parameter is case-sensitive. Currently supported job types:</p>
+     * <ul>
+     * <li>TFJob</li>
+     * <li>PyTorchJob</li>
+     * <li>MPIJob</li>
+     * <li>XGBoostJob</li>
+     * <li>OneFlowJob</li>
+     * <li>ElasticBatchJob</li>
+     * <li>SlurmJob</li>
+     * <li>RayJob</li>
+     * <li>DataJuicerJob</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +115,7 @@ public class CreateJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The additional configuration for this node. You can use this parameter to adjust certain behaviors of mounted data sources. For example, if the node has an OSS-type data source mounted, you can set this parameter to <code>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</code> to overwrite the default JindoFS parameter settings.</p>
+     * <p>The additional configurations for this job. You can use this parameter to adjust the behavior of mounted data sources. For example, if the job has an OSS-type data source mounted, you can set this parameter to <code>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</code> to override the default JindoFS parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>key1=value1,key2=value2</p>
@@ -104,7 +124,11 @@ public class CreateJobRequest extends TeaModel {
     public String options;
 
     /**
-     * <p>The priority of the job. This is an optional parameter. The default value is 1. Valid values: 1 to 9. Specifically:</p>
+     * <p>The priority of the job. This is an optional parameter. Default value: 1. Valid values: 1 to 9.</p>
+     * <ul>
+     * <li>1: The lowest priority.</li>
+     * <li>9: The highest priority.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -114,6 +138,10 @@ public class CreateJobRequest extends TeaModel {
 
     /**
      * <p>The resource group ID. This is an optional parameter.</p>
+     * <ul>
+     * <li>If the value is empty, the job is submitted to the public resource group.</li>
+     * <li>If the current workspace is bound to a resource quota, you can specify the corresponding resource quota ID. For information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>rs-xxx</p>
@@ -122,6 +150,8 @@ public class CreateJobRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The scheduling strategy.</p>
+     * 
      * <strong>example:</strong>
      * <p>Auto</p>
      */
@@ -129,13 +159,17 @@ public class CreateJobRequest extends TeaModel {
     public String schedulingStrategy;
 
     /**
-     * <p>The additional parameter settings for the job.</p>
+     * <p>The additional parameter configurations for the job.</p>
      */
     @NameInMap("Settings")
     public JobSettings settings;
 
     /**
-     * <p>The success policy for distributed multi-node jobs. Currently only TensorFlow multi-node jobs support this parameter.</p>
+     * <p>The success policy for distributed multi-node jobs. Currently, only TensorFlow multi-node jobs support this parameter.</p>
+     * <ul>
+     * <li>ChiefWorker: The entire job is considered successful as long as the Chief pod finishes successfully.</li>
+     * <li>AllWorkers (default): The entire job is considered successful only when all Workers finish successfully.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>AllWorkers</p>
@@ -434,7 +468,7 @@ public class CreateJobRequest extends TeaModel {
         public String codeSourceId;
 
         /**
-         * <p>The commit ID of the code to download for this job. This is an optional parameter. By default, the CommitID configured in the code source is used.</p>
+         * <p>The commit ID of the code to download for this job. This is an optional parameter. By default, the commit ID configured in the code source is used.</p>
          * 
          * <strong>example:</strong>
          * <p>44da109b5******</p>
@@ -442,6 +476,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("Commit")
         public String commit;
 
+        /**
+         * <p>Specifies whether the MountPath set for CodeSource is a shared cloud storage path. If set to true, the system enables code clone optimization. In multi-node job scenarios, the clone operation is performed on only one node, and other nodes can directly access the code through the shared cloud storage path.</p>
+         */
         @NameInMap("IsSharedMountPath")
         public Boolean isSharedMountPath;
 
@@ -543,6 +580,9 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestDataSources extends TeaModel {
+        /**
+         * <p>The access point ID. Currently, only CPFS Intelligent Computing access points are supported.</p>
+         */
         @NameInMap("AccessPointId")
         public String accessPointId;
 
@@ -574,7 +614,7 @@ public class CreateJobRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>Custom dataset mount properties. Currently only OSS is supported.</p>
+         * <p>The custom dataset mount properties. Currently, only OSS is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -586,6 +626,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("Options")
         public String options;
 
+        /**
+         * <p>The role chain, a JSON-formatted string. Example: [{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::cloud-product-resource-account-uid:role/xxxtodlcrole&quot;,&quot;assumeRoleFor&quot;:&quot;cloud-product-resource-account-uid&quot;},{&quot;roleType&quot;:&quot;user&quot;,&quot;roleArn&quot;:&quot;acs:ram::cloud-product-service-account-uid:role/roletoassumecustomerrole&quot;},{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::end-user-uid:role/use-bmcpfs-access-ap-role&quot;,&quot;assumeRoleFor&quot;:&quot;end-user-uid&quot;}]</p>
+         */
         @NameInMap("RoleChain")
         public String roleChain;
 
@@ -680,6 +723,10 @@ public class CreateJobRequest extends TeaModel {
     public static class CreateJobRequestUserVpc extends TeaModel {
         /**
          * <p>The default route. Valid values:</p>
+         * <ul>
+         * <li>eth0: Uses the default network interface card (NIC) to access external networks through the public gateway.</li>
+         * <li>eth1: Uses the user elastic network interface (ENI) to access external networks through a private gateway. For the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Configure a DSW instance to access the Internet through a dedicated public network gateway</a>.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>eth0</p>
@@ -689,6 +736,10 @@ public class CreateJobRequest extends TeaModel {
 
         /**
          * <p>The extended CIDR blocks.</p>
+         * <ul>
+         * <li>If the vSwitch ID is empty, this parameter is not required. The system automatically retrieves all CIDR blocks under the VPC.</li>
+         * <li>If the vSwitch ID is specified, this parameter is required. We recommend that you specify all CIDR blocks under the VPC.</li>
+         * </ul>
          */
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
@@ -704,6 +755,10 @@ public class CreateJobRequest extends TeaModel {
 
         /**
          * <p>The ID of the user vSwitch. This is an optional parameter.</p>
+         * <ul>
+         * <li>If the value is empty, the system automatically selects an appropriate vSwitch based on inventory availability.</li>
+         * <li>You can also specify a vSwitch ID.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>vs-abcdef****</p>

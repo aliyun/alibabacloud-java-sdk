@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class JobSpec extends TeaModel {
     /**
-     * <p>The assigned scheduling node configuration.</p>
+     * <p>The node scheduling configuration.</p>
      */
     @NameInMap("AssignNodeSpec")
     public AssignNodeSpec assignNodeSpec;
@@ -17,7 +17,7 @@ public class JobSpec extends TeaModel {
     public AutoScalingSpec autoScalingSpec;
 
     /**
-     * <p>Specifies whether this role is considered when determining job success. This parameter takes effect only when the success policy is set to Partial.</p>
+     * <p>Specifies whether to consider this role when determining job success. This parameter takes effect only when the success policy is set to Partial.</p>
      */
     @NameInMap("ConsiderInSuccessPolicy")
     public Boolean considerInSuccessPolicy;
@@ -26,7 +26,7 @@ public class JobSpec extends TeaModel {
     public String driver;
 
     /**
-     * <p>The hardware specifications of the worker. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for the detailed list of specifications.&gt;Notice: Prices vary depending on the specifications.</p>
+     * <p>The hardware specification of the worker. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for the detailed specification list.&gt;Notice: Prices vary depending on the specification.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
@@ -47,7 +47,7 @@ public class JobSpec extends TeaModel {
     public HyperNodeSchedulingConfig hyperNodeSchedulingConfig;
 
     /**
-     * <p>The runtime image address for this type of worker. Call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain images provided by the PAI platform. You can also specify a third-party public image.</p>
+     * <p>The runtime image address for this type of worker. Call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to retrieve images provided by the PAI platform. You can also specify a third-party public image.</p>
      * 
      * <strong>example:</strong>
      * <p>registry-vpc.cn-hangzhou.aliyuncs.com/cloud-dsw/tensorflow:1.12PAI-gpu-py36-cu101-ubuntu18.04</p>
@@ -62,14 +62,14 @@ public class JobSpec extends TeaModel {
     public ImageConfig imageConfig;
 
     /**
-     * <p>Deprecated due to a spelling error.</p>
+     * <p><strong>[Deprecated]</strong> This field is deprecated due to a spelling error.</p>
      */
     @NameInMap("IsCheif")
     @Deprecated
     public Boolean isCheif;
 
     /**
-     * <p>Indicates whether this role is the Chief role. Only one Chief role is allowed.</p>
+     * <p>Specifies whether the role is the Chief role. Only one Chief role is allowed.</p>
      */
     @NameInMap("IsChief")
     public Boolean isChief;
@@ -132,7 +132,7 @@ public class JobSpec extends TeaModel {
     public SystemDisk systemDisk;
 
     /**
-     * <p>Type is closely related to Job Type. Different job types support different worker types.</p>
+     * <p>The type, which is closely related to the job type. Different job types support different worker types.</p>
      * <ul>
      * <li><p><strong>TFJob</strong>: Supports Chief, PS, Worker, Evaluator, and GraphLearn.</p>
      * </li>
@@ -147,7 +147,7 @@ public class JobSpec extends TeaModel {
      * <li><p><strong>RayJob</strong>: Supports Head, Worker, and Worker[-xxx].</p>
      * </li>
      * </ul>
-     * <p>Master is optional in PyTorchJob, XGBoostJob, OneFlowJob, and ElasticBatch. If Master is not specified, the system automatically designates the first Worker node as Master.</p>
+     * <p>Master is optional in PyTorchJob, XGBoostJob, OneFlowJob, and ElasticBatch. If not specified, the system automatically designates the first Worker node as Master.</p>
      * 
      * <strong>example:</strong>
      * <p>Worker</p>
@@ -164,6 +164,15 @@ public class JobSpec extends TeaModel {
     @NameInMap("UseSpotInstance")
     @Deprecated
     public Boolean useSpotInstance;
+
+    /**
+     * <p>The role-level startup command.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>python train.py</p>
+     */
+    @NameInMap("UserCommand")
+    public String userCommand;
 
     public static JobSpec build(java.util.Map<String, ?> map) throws Exception {
         JobSpec self = new JobSpec();
@@ -362,6 +371,14 @@ public class JobSpec extends TeaModel {
     }
     public Boolean getUseSpotInstance() {
         return this.useSpotInstance;
+    }
+
+    public JobSpec setUserCommand(String userCommand) {
+        this.userCommand = userCommand;
+        return this;
+    }
+    public String getUserCommand() {
+        return this.userCommand;
     }
 
 }

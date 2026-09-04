@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Tensorboard extends TeaModel {
     /**
-     * <p>Visibility.</p>
+     * <p>The visibility.</p>
      * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
@@ -17,7 +17,7 @@ public class Tensorboard extends TeaModel {
     public Long cpu;
 
     /**
-     * <p>Data source ID.</p>
+     * <p>The data source ID.</p>
      * 
      * <strong>example:</strong>
      * <p>datasource-test</p>
@@ -29,7 +29,7 @@ public class Tensorboard extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>Display name.</p>
+     * <p>The display name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -38,16 +38,16 @@ public class Tensorboard extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Runtime duration (seconds).</p>
+     * <p>The duration in seconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234567</p>
+     * <p>60</p>
      */
     @NameInMap("Duration")
     public String duration;
 
     /**
-     * <p>Creation time (UTC).</p>
+     * <p>The creation time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:00Z</p>
@@ -56,7 +56,7 @@ public class Tensorboard extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>End time (UTC).</p>
+     * <p>The end time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -65,7 +65,7 @@ public class Tensorboard extends TeaModel {
     public String gmtFinishTime;
 
     /**
-     * <p>Modification time (UTC).</p>
+     * <p>The modification time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:00Z</p>
@@ -74,7 +74,7 @@ public class Tensorboard extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>Job ID.</p>
+     * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-20210114104214-vf9lowjt3pso</p>
@@ -92,7 +92,7 @@ public class Tensorboard extends TeaModel {
     public String options;
 
     /**
-     * <p>Tensorboard Job priority.</p>
+     * <p>The priority of the TensorBoard job.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -101,7 +101,7 @@ public class Tensorboard extends TeaModel {
     public String priority;
 
     /**
-     * <p>Resource group ID used by Tensorboard.</p>
+     * <p>The ID of the resource group used by TensorBoard.</p>
      * 
      * <strong>example:</strong>
      * <p>quota12***</p>
@@ -110,7 +110,7 @@ public class Tensorboard extends TeaModel {
     public String quotaId;
 
     /**
-     * <p>Name of the resource quota used by Tensorboard.</p>
+     * <p>The name of the resource quota used by TensorBoard.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-quota</p>
@@ -119,25 +119,25 @@ public class Tensorboard extends TeaModel {
     public String quotaName;
 
     /**
-     * <p>Status details code.</p>
+     * <p>The status detail code.</p>
      * 
      * <strong>example:</strong>
-     * <p>Delete by user</p>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("ReasonCode")
     public String reasonCode;
 
     /**
-     * <p>Status details.</p>
+     * <p>The status details.</p>
      * 
      * <strong>example:</strong>
-     * <p>Tensorboard is deleted</p>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -146,7 +146,7 @@ public class Tensorboard extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>running</p>
@@ -155,7 +155,7 @@ public class Tensorboard extends TeaModel {
     public String status;
 
     /**
-     * <p>File path.</p>
+     * <p>The file path.</p>
      * 
      * <strong>example:</strong>
      * <p>/root/data</p>
@@ -167,13 +167,13 @@ public class Tensorboard extends TeaModel {
     public String summaryRelativePath;
 
     /**
-     * <p>Datasets mounted by the Tensorboard Job.</p>
+     * <p>The datasets mounted to the TensorBoard job.</p>
      */
     @NameInMap("TensorboardDataSources")
     public java.util.List<TensorboardDataSourceSpec> tensorboardDataSources;
 
     /**
-     * <p>Tensorboard ID.</p>
+     * <p>Tensorboard ID。</p>
      * 
      * <strong>example:</strong>
      * <p>tensorboard-xxx</p>
@@ -182,13 +182,13 @@ public class Tensorboard extends TeaModel {
     public String tensorboardId;
 
     /**
-     * <p>Pay-as-you-go configuration for the Tensorboard Job.</p>
+     * <p>The pay-as-you-go configuration of the TensorBoard job.</p>
      */
     @NameInMap("TensorboardSpec")
     public TensorboardSpec tensorboardSpec;
 
     /**
-     * <p>Tensorboard URL.</p>
+     * <p>Tensorboard URL。</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://xxxxxx">http://xxxxxx</a></p>
@@ -200,7 +200,7 @@ public class Tensorboard extends TeaModel {
     public String token;
 
     /**
-     * <p>Creator ID.</p>
+     * <p>The ID of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>lycxxxxx</p>
@@ -209,7 +209,7 @@ public class Tensorboard extends TeaModel {
     public String userId;
 
     /**
-     * <p>Creator username.</p>
+     * <p>The username of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>tensorboard.pai</p>

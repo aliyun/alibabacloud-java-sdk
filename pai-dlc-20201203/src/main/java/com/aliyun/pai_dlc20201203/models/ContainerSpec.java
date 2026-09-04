@@ -23,7 +23,7 @@ public class ContainerSpec extends TeaModel {
     public java.util.List<EnvVar> env;
 
     /**
-     * <p>The endpoint of the container image.</p>
+     * <p>The container image address.</p>
      * 
      * <strong>example:</strong>
      * <p>registry.cn-hangzhou.aliyuncs.com/pai-dlc/curl:v1.0.0</p>
@@ -32,7 +32,7 @@ public class ContainerSpec extends TeaModel {
     public String image;
 
     /**
-     * <p>The name of the container.</p>
+     * <p>The container name.</p>
      * 
      * <strong>example:</strong>
      * <p>data-init</p>

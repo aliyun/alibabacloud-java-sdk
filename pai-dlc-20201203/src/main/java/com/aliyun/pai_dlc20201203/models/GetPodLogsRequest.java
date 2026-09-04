@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetPodLogsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to download the log file. Default value: false. Valid values:</p>
+     * <p>Specifies whether to download the log file. Valid values:</p>
      * <ul>
-     * <li>false</li>
-     * <li>true</li>
+     * <li>false (default): Does not download the log file.</li>
+     * <li>true: Downloads the log file.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetPodLogsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The maximum number of log entries. Default value: 2000.</p>
+     * <p>The maximum number of log lines returned. Default value: 2000.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -36,7 +36,7 @@ public class GetPodLogsRequest extends TeaModel {
     public Integer maxLines;
 
     /**
-     * <p>The node UID. For more information about how to obtain a node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
+     * <p>The node UID. To obtain the node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>fe846462-af2c-4521-bd6f-96787a57****</p>

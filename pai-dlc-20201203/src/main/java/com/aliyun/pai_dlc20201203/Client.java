@@ -52,25 +52,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1", "pai-dlc.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "pai-dlc.aliyuncs.com"),
             new TeaPair("me-east-1", "pai-dlc.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "pai-dlc.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "pai-dlc.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "pai-dlc.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "pai-dlc.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "pai-dlc.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "pai-dlc.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "pai-dlc.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "pai-dlc.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "pai-dlc.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "pai-dlc.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "pai-dlc.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "pai-dlc.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "pai-dlc.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "pai-dlc.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("us-east-1", "pai-dlc.us-east-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "pai-dlc.us-southeast-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "pai-dlc.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "pai-dlc.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "pai-dlc.cn-shanghai-finance-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "pai-dlc.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("pai-dlc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -91,10 +73,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Before using this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of CreateJob operation parameters (including system-generated parameters) cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job to run in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
+     * <p>Creates a job and runs it in a cluster. You can specify information such as the data source configuration, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
      * 
      * @param request CreateJobRequest
      * @param headers map
@@ -228,10 +213,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <p>Before using this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of CreateJob operation parameters (including system-generated parameters) cannot exceed 65,536 bytes.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job to run in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
+     * <p>Creates a job and runs it in a cluster. You can specify information such as the data source configuration, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -813,7 +801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the detailed configuration and runtime information of a node.</p>
+     * <p>Retrieves the detailed configuration and runtime information of a task.</p>
      * 
      * @param request GetJobRequest
      * @param headers map
@@ -847,7 +835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the detailed configuration and runtime information of a node.</p>
+     * <p>Retrieves the detailed configuration and runtime information of a task.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
@@ -1244,7 +1232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains or downloads the logs of a node for a task. The logs are from the stdout and stderr of the system and user scripts.</p>
+     * <p>Retrieves or downloads the log of a specific node in a job. The log is collected from stdout and stderr of the system and user scripts.</p>
      * 
      * @param request GetPodLogsRequest
      * @param headers map
@@ -1294,7 +1282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains or downloads the logs of a node for a task. The logs are from the stdout and stderr of the system and user scripts.</p>
+     * <p>Retrieves or downloads the log of a specific node in a job. The log is collected from stdout and stderr of the system and user scripts.</p>
      * 
      * @param request GetPodLogsRequest
      * @return GetPodLogsResponse
@@ -2795,7 +2783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a job\&quot;s configuration, such as its priority.</p>
+     * <p>Updates the configuration of a job, such as modifying the priority of a queued job.</p>
      * 
      * @param request UpdateJobRequest
      * @param headers map
@@ -2821,6 +2809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Priority", request.priority);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userCommand)) {
+            body.put("UserCommand", request.userCommand);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -2841,7 +2833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a job\&quot;s configuration, such as its priority.</p>
+     * <p>Updates the configuration of a job, such as modifying the priority of a queued job.</p>
      * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse
