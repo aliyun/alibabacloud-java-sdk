@@ -9,23 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shenzhen", "ehpcinstant.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "ehpcinstant.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "ehpcinstant.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "ehpcinstant.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ehpcinstant.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "ehpcinstant.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "ehpcinstant.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "ehpcinstant.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "ehpcinstant.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "ehpcinstant.cn-heyuan.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "ehpcinstant.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "ehpcinstant.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "ehpcinstant.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "ehpcinstant.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("eu-central-1", "ehpcinstant.eu-central-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ehpcinstant", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -309,6 +292,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a job template.</p>
+     * 
+     * @param tmpReq CreateJobTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateJobTemplateResponse
+     */
+    public CreateJobTemplateResponse createJobTemplateWithOptions(CreateJobTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateJobTemplateShrinkRequest request = new CreateJobTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.jobTemplateConfig)) {
+            request.jobTemplateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.jobTemplateConfig, "JobTemplateConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobTemplateConfigShrink)) {
+            query.put("JobTemplateConfig", request.jobTemplateConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobTemplateDescription)) {
+            query.put("JobTemplateDescription", request.jobTemplateDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobTemplateName)) {
+            query.put("JobTemplateName", request.jobTemplateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateJobTemplate"),
+            new TeaPair("version", "2023-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateJobTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a job template.</p>
+     * 
+     * @param request CreateJobTemplateRequest
+     * @return CreateJobTemplateResponse
+     */
+    public CreateJobTemplateResponse createJobTemplate(CreateJobTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createJobTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a resource pool.</p>
      * 
      * @param tmpReq CreatePoolRequest
@@ -477,6 +518,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteJobRecordsResponse deleteJobRecords(DeleteJobRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteJobRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a job template.</p>
+     * 
+     * @param request DeleteJobTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteJobTemplateResponse
+     */
+    public DeleteJobTemplateResponse deleteJobTemplateWithOptions(DeleteJobTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobTemplateId)) {
+            query.put("JobTemplateId", request.jobTemplateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteJobTemplate"),
+            new TeaPair("version", "2023-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteJobTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a job template.</p>
+     * 
+     * @param request DeleteJobTemplateRequest
+     * @return DeleteJobTemplateResponse
+     */
+    public DeleteJobTemplateResponse deleteJobTemplate(DeleteJobTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteJobTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -1018,6 +1103,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the details of a job template.</p>
+     * 
+     * @param request GetJobTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobTemplateResponse
+     */
+    public GetJobTemplateResponse getJobTemplateWithOptions(GetJobTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobTemplateId)) {
+            query.put("JobTemplateId", request.jobTemplateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetJobTemplate"),
+            new TeaPair("version", "2023-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a job template.</p>
+     * 
+     * @param request GetJobTemplateRequest
+     * @return GetJobTemplateResponse
+     */
+    public GetJobTemplateResponse getJobTemplate(GetJobTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getJobTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the details of a resource pool.</p>
      * 
      * @param request GetPoolRequest
@@ -1430,6 +1559,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListJobExecutorsResponse listJobExecutors(ListJobExecutorsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listJobExecutorsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of job templates.</p>
+     * 
+     * @param request ListJobTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListJobTemplatesResponse
+     */
+    public ListJobTemplatesResponse listJobTemplatesWithOptions(ListJobTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListJobTemplates"),
+            new TeaPair("version", "2023-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListJobTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of job templates.</p>
+     * 
+     * @param request ListJobTemplatesRequest
+     * @return ListJobTemplatesResponse
+     */
+    public ListJobTemplatesResponse listJobTemplates(ListJobTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listJobTemplatesWithOptions(request, runtime);
     }
 
     /**
@@ -1924,6 +2101,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateJobRecordDurationResponse updateJobRecordDuration(UpdateJobRecordDurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateJobRecordDurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a job template.</p>
+     * 
+     * @param tmpReq UpdateJobTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateJobTemplateResponse
+     */
+    public UpdateJobTemplateResponse updateJobTemplateWithOptions(UpdateJobTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateJobTemplateShrinkRequest request = new UpdateJobTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.jobTemplateConfig)) {
+            request.jobTemplateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.jobTemplateConfig, "JobTemplateConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobTemplateConfigShrink)) {
+            query.put("JobTemplateConfig", request.jobTemplateConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobTemplateDescription)) {
+            query.put("JobTemplateDescription", request.jobTemplateDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobTemplateId)) {
+            query.put("JobTemplateId", request.jobTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobTemplateName)) {
+            query.put("JobTemplateName", request.jobTemplateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateJobTemplate"),
+            new TeaPair("version", "2023-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateJobTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a job template.</p>
+     * 
+     * @param request UpdateJobTemplateRequest
+     * @return UpdateJobTemplateResponse
+     */
+    public UpdateJobTemplateResponse updateJobTemplate(UpdateJobTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateJobTemplateWithOptions(request, runtime);
     }
 
     /**

@@ -1,3 +1,11 @@
+2026-09-04 Version: 4.1.0
+- Support API CreateJobTemplate.
+- Support API DeleteJobTemplate.
+- Support API GetJobTemplate.
+- Support API ListJobTemplates.
+- Support API UpdateJobTemplate.
+
+
 2026-08-20 Version: 4.0.2
 - Update API CreatePool: add request parameters Tags.
 - Update API GetPool: add response parameters Body.PoolInfo.Creator.
