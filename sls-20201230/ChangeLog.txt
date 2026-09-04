@@ -1,3 +1,16 @@
+2026-09-04 Version: 5.18.0
+- Support API CreateApiKey.
+- Support API DeleteApiKey.
+- Support API DisableApiKey.
+- Support API EnableApiKey.
+- Support API GetApiKey.
+- Support API ListApiKeys.
+- Support API ListResourceRecord.
+- Support API UpdateApiKey.
+- Support API UpdateResourceRecord.
+- Support API UpsertResourceRecord.
+
+
 2026-08-31 Version: 5.17.0
 - Support API CreateResourceRecord.
 - Support API DeleteResourceRecord.

@@ -5,12 +5,6 @@ import com.aliyun.tea.*;
 
 public class MaxComputeExportConfigurationSink extends TeaModel {
     /**
-     * <p>Specifies the minimum time granularity between two data shipping jobs. Unit: seconds. Valid values:</p>
-     * <ul>
-     * <li>1800 (default)</li>
-     * <li>3600</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>1800</p>
      */
@@ -25,12 +19,6 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public java.util.List<String> fields;
 
     /**
-     * <p>Specifies whether to filter the invalid content.</p>
-     * <ul>
-     * <li>true (default)</li>
-     * <li>false</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -130,12 +118,6 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String partitionTimeFormat;
 
     /**
-     * <p>The time partition type. Valid values:</p>
-     * <ul>
-     * <li>StrfTimeFormat (default)</li>
-     * <li>JavaSimpleDateFormat</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>StrfTimeFormat</p>
      */

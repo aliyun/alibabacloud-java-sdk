@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class Machine extends TeaModel {
     /**
-     * <p>The host ID of the machine.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

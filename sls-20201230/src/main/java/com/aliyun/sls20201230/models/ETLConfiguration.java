@@ -29,8 +29,6 @@ public class ETLConfiguration extends TeaModel {
     public Long fromTime;
 
     /**
-     * <p>The language of the data transformation script.</p>
-     * 
      * <strong>example:</strong>
      * <p>SPL</p>
      */

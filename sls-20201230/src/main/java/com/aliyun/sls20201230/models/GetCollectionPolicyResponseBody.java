@@ -100,21 +100,9 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
     }
 
     public static class GetCollectionPolicyResponseBodyCollectionPolicyDataConfig extends TeaModel {
-        /**
-         * <p>This parameter is valid only for global log types, such as when \<code>productCode\\</code> is \<code>sls\\</code>. If this parameter is left empty, logs are collected to the default project of the account in the specified \<code>dataRegion\\</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
         @NameInMap("dataProject")
         public String dataProject;
 
-        /**
-         * <p>This parameter is supported only for global log types, such as when \<code>productCode\\</code> is \<code>sls\\</code>. This parameter specifies the region to which global logs are collected during the initial configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("dataRegion")
         public String dataRegion;
 
@@ -212,18 +200,9 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
     }
 
     public static class GetCollectionPolicyResponseBodyCollectionPolicyResourceDirectory extends TeaModel {
-        /**
-         * <p>The mode for selecting accounts in the resource directory. Valid values: \<code>all\\</code> and \<code>custom\\</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>all,custom</p>
-         */
         @NameInMap("accountGroupType")
         public String accountGroupType;
 
-        /**
-         * <p>The member accounts. This parameter is returned only when \<code>accountGroupType\\</code> is set to \<code>custom\\</code>.</p>
-         */
         @NameInMap("members")
         public java.util.List<String> members;
 
@@ -275,9 +254,6 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         @NameInMap("dataCode")
         public String dataCode;
 
-        /**
-         * <p>The configuration that is supported only for global log types, such as when \<code>productCode\\</code> is \<code>sls\\</code>. Otherwise, this parameter is empty.</p>
-         */
         @NameInMap("dataConfig")
         public GetCollectionPolicyResponseBodyCollectionPolicyDataConfig dataConfig;
 
@@ -290,12 +266,6 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         @NameInMap("enabled")
         public Boolean enabled;
 
-        /**
-         * <p>Indicates whether the rule is a built-in rule. Built-in rules cannot be modified or deleted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("internalPolicy")
         public Boolean internalPolicy;
 
@@ -314,12 +284,6 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         @NameInMap("policyName")
         public String policyName;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the rule belongs. If the rule is created by a resource directory administrator or a delegated administrator, this parameter specifies the ID of the administrator\&quot;s Alibaba Cloud account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>148***********50</p>
-         */
         @NameInMap("policyUid")
         public String policyUid;
 
@@ -332,9 +296,6 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         @NameInMap("productCode")
         public String productCode;
 
-        /**
-         * <p>The configuration of the resource directory. This parameter is empty if no configuration is specified.</p>
-         */
         @NameInMap("resourceDirectory")
         public GetCollectionPolicyResponseBodyCollectionPolicyResourceDirectory resourceDirectory;
 

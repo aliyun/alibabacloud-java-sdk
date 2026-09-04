@@ -49,19 +49,6 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("projectName")
     public String projectName;
 
-    /**
-     * <p>Specifies whether to enable the recycle bin feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("recycleBinEnabled")
     public Boolean recycleBinEnabled;
 

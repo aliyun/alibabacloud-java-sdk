@@ -24,12 +24,6 @@ public class GetMLServiceResultsRequest extends TeaModel {
     @NameInMap("body")
     public MLServiceAnalysisParam body;
 
-    /**
-     * <p>The version number of the algorithm. Different versions correspond to different algorithms.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>v1</p>
-     */
     @NameInMap("version")
     public String version;
 

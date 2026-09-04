@@ -19,9 +19,6 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListCollectionPoliciesResponseBodyData> data;
 
-    /**
-     * <p>Statistics returned based on the query conditions.</p>
-     */
     @NameInMap("statistics")
     public java.util.List<ListCollectionPoliciesResponseBodyStatistics> statistics;
 
@@ -148,21 +145,9 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCollectionPoliciesResponseBodyDataDataConfig extends TeaModel {
-        /**
-         * <p>The project for global logs. This parameter is used only for global log types, such as sls. If this parameter is empty, logs are collected to the default project of the account in the region specified by dataRegion.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
         @NameInMap("dataProject")
         public String dataProject;
 
-        /**
-         * <p>The region where global logs are first collected. This parameter is used only for global log types, such as sls.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("dataRegion")
         public String dataRegion;
 
@@ -260,18 +245,9 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCollectionPoliciesResponseBodyDataResourceDirectory extends TeaModel {
-        /**
-         * <p>The mode for selecting accounts in the resource directory. Valid values: all and custom.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>all,custom</p>
-         */
         @NameInMap("accountGroupType")
         public String accountGroupType;
 
-        /**
-         * <p>The list of member accounts. This parameter is returned only if accountGroupType is set to custom.</p>
-         */
         @NameInMap("members")
         public java.util.List<String> members;
 
@@ -323,9 +299,6 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         @NameInMap("dataCode")
         public String dataCode;
 
-        /**
-         * <p>Configurations for global log types, such as sls. This parameter is empty for other log types.</p>
-         */
         @NameInMap("dataConfig")
         public ListCollectionPoliciesResponseBodyDataDataConfig dataConfig;
 
@@ -338,12 +311,6 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         @NameInMap("enabled")
         public Boolean enabled;
 
-        /**
-         * <p>Indicates whether the policy is a built-in policy. Built-in policies cannot be modified or deleted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("internalPolicy")
         public Boolean internalPolicy;
 
@@ -362,12 +329,6 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         @NameInMap("policyName")
         public String policyName;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account that owns the collection rule. If a resource directory administrator or delegated administrator creates the rule, this is the ID of that administrator\&quot;s account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>148***********50</p>
-         */
         @NameInMap("policyUid")
         public String policyUid;
 
@@ -380,9 +341,6 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         @NameInMap("productCode")
         public String productCode;
 
-        /**
-         * <p>The configuration of the resource directory. This parameter is empty if no configuration is available.</p>
-         */
         @NameInMap("resourceDirectory")
         public ListCollectionPoliciesResponseBodyDataResourceDirectory resourceDirectory;
 
@@ -482,21 +440,9 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCollectionPoliciesResponseBodyStatisticsPolicySourceList extends TeaModel {
-        /**
-         * <p>The name of the collection rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>policy_name1_from148</p>
-         */
         @NameInMap("policyName")
         public String policyName;
 
-        /**
-         * <p>The ID of the Alibaba Cloud account that owns the collection rule. If a resource directory administrator or delegated administrator creates the rule, this is the ID of that administrator\&quot;s account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>148***********50</p>
-         */
         @NameInMap("policyUid")
         public String policyUid;
 
@@ -524,18 +470,9 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListCollectionPoliciesResponseBodyStatistics extends TeaModel {
-        /**
-         * <p>The list of collection rule sources.</p>
-         */
         @NameInMap("policySourceList")
         public java.util.List<ListCollectionPoliciesResponseBodyStatisticsPolicySourceList> policySourceList;
 
-        /**
-         * <p>The code of the Alibaba Cloud service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss</p>
-         */
         @NameInMap("productCode")
         public String productCode;
 

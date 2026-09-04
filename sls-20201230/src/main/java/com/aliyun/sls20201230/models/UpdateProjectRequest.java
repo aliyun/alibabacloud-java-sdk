@@ -14,12 +14,6 @@ public class UpdateProjectRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
-    /**
-     * <p>Specifies whether to enable the recycle bin.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("recycleBinEnabled")
     public Boolean recycleBinEnabled;
 

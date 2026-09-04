@@ -18,9 +18,6 @@ public class ETLConfigurationSink extends TeaModel {
     @Deprecated
     public String accessKeySecret;
 
-    /**
-     * <p>The datasets to write to the sink.</p>
-     */
     @NameInMap("datasets")
     public java.util.List<String> datasets;
 

@@ -11,7 +11,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._productId = "Sls";
         com.aliyun.gateway.sls.Client gatewayClient = new com.aliyun.gateway.sls.Client();
         this._spi = gatewayClient;
-        this._endpointRule = "regional";
+        this._endpointRule = "central";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-qingdao", "cn-qingdao.log.aliyuncs.com"),
             new TeaPair("cn-beijing", "cn-beijing.log.aliyuncs.com"),
@@ -637,6 +637,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createAnnotationLabelWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>每个 Project 最多可以创建 10 个 ApiKey。</li>
+     * <li><code>apiKeyName</code> 在 Project 内必须唯一，且创建后不可修改。</li>
+     * <li><code>allowedStores</code> 字段不能为空，并支持通配符匹配。</li>
+     * <li>创建时系统会自动生成 ApiKey 明文，用户不能自定义。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>在指定Project下创建一个新的ApiKey资源。</p>
+     * 
+     * @param request CreateApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateApiKeyResponse
+     */
+    public CreateApiKeyResponse createApiKeyWithOptions(String project, CreateApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedStores)) {
+            body.put("allowedStores", request.allowedStores);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyName)) {
+            body.put("apiKeyName", request.apiKeyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateApiKey"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apikeys"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>每个 Project 最多可以创建 10 个 ApiKey。</li>
+     * <li><code>apiKeyName</code> 在 Project 内必须唯一，且创建后不可修改。</li>
+     * <li><code>allowedStores</code> 字段不能为空，并支持通配符匹配。</li>
+     * <li>创建时系统会自动生成 ApiKey 明文，用户不能自定义。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>在指定Project下创建一个新的ApiKey资源。</p>
+     * 
+     * @param request CreateApiKeyRequest
+     * @return CreateApiKeyResponse
+     */
+    public CreateApiKeyResponse createApiKey(String project, CreateApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createApiKeyWithOptions(project, request, headers, runtime);
     }
 
     /**
@@ -2919,6 +2995,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于从Project中删除指定名称的ApiKey。</li>
+     * <li>删除后，ApiKey立即失效且无法再用于写入数据。</li>
+     * <li>建议接口幂等：即使ApiKey不存在时也返回<code>204 No Content</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于删除指定的ApiKey资源</p>
+     * 
+     * @param request DeleteApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteApiKeyResponse
+     */
+    public DeleteApiKeyResponse deleteApiKeyWithOptions(String project, String apiKeyName, DeleteApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteApiKey"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apikeys/" + apiKeyName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于从Project中删除指定名称的ApiKey。</li>
+     * <li>删除后，ApiKey立即失效且无法再用于写入数据。</li>
+     * <li>建议接口幂等：即使ApiKey不存在时也返回<code>204 No Content</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于删除指定的ApiKey资源</p>
+     * 
+     * @param request DeleteApiKeyRequest
+     * @return DeleteApiKeyResponse
+     */
+    public DeleteApiKeyResponse deleteApiKey(String project, String apiKeyName, DeleteApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteApiKeyWithOptions(project, apiKeyName, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Create a file import task from Azure Blob</p>
      * 
@@ -4551,6 +4687,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>用于禁用指定的ApiKey，使其不能继续用于写入数据。</p>
+     * 
+     * @param request DisableApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableApiKeyResponse
+     */
+    public DisableApiKeyResponse disableApiKeyWithOptions(String project, String apiKeyName, DisableApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableApiKey"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apikeys/" + apiKeyName + "/disable"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DisableApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用于禁用指定的ApiKey，使其不能继续用于写入数据。</p>
+     * 
+     * @param request DisableApiKeyRequest
+     * @return DisableApiKeyResponse
+     */
+    public DisableApiKeyResponse disableApiKey(String project, String apiKeyName, DisableApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.disableApiKeyWithOptions(project, apiKeyName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Disables the Scheduled SQL feature.</p>
      * 
      * @param headers map
@@ -4627,6 +4807,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.enableAlertWithOptions(project, alertName, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于将指定的ApiKey从禁用状态恢复为启用状态。</li>
+     * <li>启用后，ApiKey可以继续用于写入数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于启用指定的ApiKey，使其可以继续用于写入数据。</p>
+     * 
+     * @param request EnableApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableApiKeyResponse
+     */
+    public EnableApiKeyResponse enableApiKeyWithOptions(String project, String apiKeyName, EnableApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableApiKey"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apikeys/" + apiKeyName + "/enable"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new EnableApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于将指定的ApiKey从禁用状态恢复为启用状态。</li>
+     * <li>启用后，ApiKey可以继续用于写入数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于启用指定的ApiKey，使其可以继续用于写入数据。</p>
+     * 
+     * @param request EnableApiKeyRequest
+     * @return EnableApiKeyResponse
+     */
+    public EnableApiKeyResponse enableApiKey(String project, String apiKeyName, EnableApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.enableApiKeyWithOptions(project, apiKeyName, request, headers, runtime);
     }
 
     /**
@@ -4889,6 +5127,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getAnnotationLabelWithOptions(labelId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于通过<code>apiKeyName</code>获取指定ApiKey的详细信息。</li>
+     * <li>返回的信息包括ApiKey的名称、密钥、状态、描述、允许写入的存储列表、创建时间和更新时间。</li>
+     * <li><code>log:GetApiKey</code>被视为敏感权限，调用时需谨慎。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>根据ApiKey名称获取指定ApiKey的详细信息。</p>
+     * 
+     * @param request GetApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetApiKeyResponse
+     */
+    public GetApiKeyResponse getApiKeyWithOptions(String project, String apiKeyName, GetApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetApiKey"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apikeys/" + apiKeyName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于通过<code>apiKeyName</code>获取指定ApiKey的详细信息。</li>
+     * <li>返回的信息包括ApiKey的名称、密钥、状态、描述、允许写入的存储列表、创建时间和更新时间。</li>
+     * <li><code>log:GetApiKey</code>被视为敏感权限，调用时需谨慎。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>根据ApiKey名称获取指定ApiKey的详细信息。</p>
+     * 
+     * @param request GetApiKeyRequest
+     * @return GetApiKeyResponse
+     */
+    public GetApiKeyResponse getApiKey(String project, String apiKeyName, GetApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getApiKeyWithOptions(project, apiKeyName, request, headers, runtime);
     }
 
     /**
@@ -6842,16 +7140,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
-     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
-     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Queries a MaxCompute data shipping job.</p>
+     * <p>获取MC投递任务信息</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6879,16 +7169,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
-     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
-     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Queries a MaxCompute data shipping job.</p>
+     * <p>获取MC投递任务信息</p>
      * @return GetMaxComputeExportResponse
      */
     public GetMaxComputeExportResponse getMaxComputeExport(String project, String mcExportName) throws Exception {
@@ -8078,6 +8360,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listAnnotationLabelsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>通过<code>allowedStore</code>参数可以过滤返回的ApiKey，只返回允许写入指定LogStore或MetricStore的ApiKey。</li>
+     * <li>如果不提供<code>allowedStore</code>参数，则返回项目下的所有ApiKey。</li>
+     * <li><code>log:ListApiKeys</code>权限被视为敏感权限，应谨慎授予。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询指定项目下所有ApiKey及其详细信息。</p>
+     * 
+     * @param request ListApiKeysRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListApiKeysResponse
+     */
+    public ListApiKeysResponse listApiKeysWithOptions(String project, ListApiKeysRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedStore)) {
+            query.put("allowedStore", request.allowedStore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApiKeys"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apikeys"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListApiKeysResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>通过<code>allowedStore</code>参数可以过滤返回的ApiKey，只返回允许写入指定LogStore或MetricStore的ApiKey。</li>
+     * <li>如果不提供<code>allowedStore</code>参数，则返回项目下的所有ApiKey。</li>
+     * <li><code>log:ListApiKeys</code>权限被视为敏感权限，应谨慎授予。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询指定项目下所有ApiKey及其详细信息。</p>
+     * 
+     * @param request ListApiKeysRequest
+     * @return ListApiKeysResponse
+     */
+    public ListApiKeysResponse listApiKeys(String project, ListApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listApiKeysWithOptions(project, request, headers, runtime);
     }
 
     /**
@@ -9833,6 +10189,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listProjectWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists resource records by offset and size.</p>
+     * 
+     * @param request ListResourceRecordRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceRecordResponse
+     */
+    public ListResourceRecordResponse listResourceRecordWithOptions(String resourceName, ListResourceRecordRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ids)) {
+            query.put("ids", request.ids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeSystemRecords)) {
+            query.put("includeSystemRecords", request.includeSystemRecords);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonFilterAcc)) {
+            query.put("jsonFilterAcc", request.jsonFilterAcc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonPath)) {
+            query.put("jsonPath", request.jsonPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonPathValue)) {
+            query.put("jsonPathValue", request.jsonPathValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.search)) {
+            query.put("search", request.search);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sjson)) {
+            query.put("sjson", request.sjson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResourceRecord"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/resources/" + resourceName + "/records"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListResourceRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists resource records by offset and size.</p>
+     * 
+     * @param request ListResourceRecordRequest
+     * @return ListResourceRecordResponse
+     */
+    public ListResourceRecordResponse listResourceRecord(String resourceName, ListResourceRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listResourceRecordWithOptions(resourceName, request, headers, runtime);
     }
 
     /**
@@ -12593,6 +13032,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>apiKeyName</code> 不允许修改。</li>
+     * <li><code>allowedStores</code> 不能为空。</li>
+     * <li>更新后立即生效。</li>
+     * <li>即使ApiKey处于Disabled状态，也可以更新其资源列表。</li>
+     * <li>该API不用于轮换ApiKey明文。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>更新指定ApiKey的资源白名单和描述信息。</p>
+     * 
+     * @param request UpdateApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateApiKeyResponse
+     */
+    public UpdateApiKeyResponse updateApiKeyWithOptions(String project, String apiKeyName, UpdateApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedStores)) {
+            body.put("allowedStores", request.allowedStores);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateApiKey"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apikeys/" + apiKeyName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>apiKeyName</code> 不允许修改。</li>
+     * <li><code>allowedStores</code> 不能为空。</li>
+     * <li>更新后立即生效。</li>
+     * <li>即使ApiKey处于Disabled状态，也可以更新其资源列表。</li>
+     * <li>该API不用于轮换ApiKey明文。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>更新指定ApiKey的资源白名单和描述信息。</p>
+     * 
+     * @param request UpdateApiKeyRequest
+     * @return UpdateApiKeyResponse
+     */
+    public UpdateApiKeyResponse updateApiKey(String project, String apiKeyName, UpdateApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateApiKeyWithOptions(project, apiKeyName, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Updates an Azure Blob ingestion.</p>
      * 
@@ -14432,6 +14945,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates a specified resource record.</p>
+     * 
+     * @param request UpdateResourceRecordRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateResourceRecordResponse
+     */
+    public UpdateResourceRecordResponse updateResourceRecordWithOptions(String resourceName, String recordId, UpdateResourceRecordRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateResourceRecord"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/resources/" + resourceName + "/records/" + recordId + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateResourceRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a specified resource record.</p>
+     * 
+     * @param request UpdateResourceRecordRequest
+     * @return UpdateResourceRecordResponse
+     */
+    public UpdateResourceRecordResponse updateResourceRecord(String resourceName, String recordId, UpdateResourceRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateResourceRecordWithOptions(resourceName, recordId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -14804,5 +15359,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.upsertCollectionPolicyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Writes or updates resource records in batches.</p>
+     * 
+     * @param request UpsertResourceRecordRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpsertResourceRecordResponse
+     */
+    public UpsertResourceRecordResponse upsertResourceRecordWithOptions(String resourceName, UpsertResourceRecordRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.records)) {
+            body.put("records", request.records);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpsertResourceRecord"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/resources/" + resourceName + "/records"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpsertResourceRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Writes or updates resource records in batches.</p>
+     * 
+     * @param request UpsertResourceRecordRequest
+     * @return UpsertResourceRecordResponse
+     */
+    public UpsertResourceRecordResponse upsertResourceRecord(String resourceName, UpsertResourceRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.upsertResourceRecordWithOptions(resourceName, request, headers, runtime);
     }
 }

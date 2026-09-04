@@ -4,21 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListDashboardRequest extends TeaModel {
-    /**
-     * <p>The dashboard name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>dashboard-1609294922657-434834</p>
-     */
     @NameInMap("dashboardName")
     public String dashboardName;
 
-    /**
-     * <p>The display name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>test</p>
-     */
     @NameInMap("displayName")
     public String displayName;
 
@@ -40,9 +28,6 @@ public class ListDashboardRequest extends TeaModel {
     @NameInMap("size")
     public Integer size;
 
-    /**
-     * <p>The tag information.</p>
-     */
     @NameInMap("tags")
     public java.util.List<ListDashboardRequestTags> tags;
 
@@ -92,21 +77,9 @@ public class ListDashboardRequest extends TeaModel {
     }
 
     public static class ListDashboardRequestTags extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>key1</p>
-         */
         @NameInMap("key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value1</p>
-         */
         @NameInMap("value")
         public String value;
 

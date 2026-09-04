@@ -4,12 +4,6 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListETLsRequest extends TeaModel {
-    /**
-     * <p>The Logstore name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ali-test-logstore</p>
-     */
     @NameInMap("logstore")
     public String logstore;
 

@@ -4,12 +4,6 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListCollectionPoliciesRequest extends TeaModel {
-    /**
-     * <p>The destination project for centralized data shipping. Specify this parameter to query the number of rules that are configured to ship data to this project.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>your-central-project1</p>
-     */
     @NameInMap("centralProject")
     public String centralProject;
 
@@ -31,12 +25,6 @@ public class ListCollectionPoliciesRequest extends TeaModel {
     @NameInMap("instanceId")
     public String instanceId;
 
-    /**
-     * <p>The row from which the query starts. Default value: 0.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("offset")
     public Integer offset;
 
@@ -58,12 +46,6 @@ public class ListCollectionPoliciesRequest extends TeaModel {
     @NameInMap("productCode")
     public String productCode;
 
-    /**
-     * <p>The number of collection rules to return on each page. Default value: 50. Maximum value: 100.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>50</p>
-     */
     @NameInMap("size")
     public Integer size;
 

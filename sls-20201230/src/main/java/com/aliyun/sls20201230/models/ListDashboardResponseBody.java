@@ -47,12 +47,6 @@ public class ListDashboardResponseBody extends TeaModel {
         @NameInMap("dashboardName")
         public String dashboardName;
 
-        /**
-         * <p>The description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tablet_ai</p>
-         */
         @NameInMap("description")
         public String description;
 

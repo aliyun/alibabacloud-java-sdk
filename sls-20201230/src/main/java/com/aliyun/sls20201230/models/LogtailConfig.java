@@ -187,8 +187,6 @@ public class LogtailConfig extends TeaModel {
         public String region;
 
         /**
-         * <p>The type of observable data in the Logstore.</p>
-         * 
          * <strong>example:</strong>
          * <p>logs</p>
          */

@@ -88,9 +88,6 @@ public class CreateLogtailPipelineConfigRequest extends TeaModel {
     @NameInMap("processors")
     public java.util.List<java.util.Map<String, ?>> processors;
 
-    /**
-     * <p>The task configuration.</p>
-     */
     @NameInMap("task")
     public java.util.Map<String, ?> task;
 

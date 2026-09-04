@@ -59,8 +59,6 @@ public class MaxComputeExport extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the MaxCompute data shipping job.</p>
-     * 
      * <strong>example:</strong>
      * <p>c7f01719d9feb105fc9d8df92af62010</p>
      */

@@ -29,9 +29,6 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
     @NameInMap("dataCode")
     public String dataCode;
 
-    /**
-     * <p>The data configurations. The configuration is returned only for global logs. For example, if productCode is set to sls, the configuration is returned.</p>
-     */
     @NameInMap("dataConfig")
     public UpsertCollectionPolicyRequestDataConfig dataConfig;
 
@@ -80,9 +77,6 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
     @NameInMap("productCode")
     public String productCode;
 
-    /**
-     * <p>The configurations of the resource directory. The account must have activated the resource directory and be a management account or a delegated administrator of the resource directory.</p>
-     */
     @NameInMap("resourceDirectory")
     public UpsertCollectionPolicyRequestResourceDirectory resourceDirectory;
 
@@ -240,12 +234,6 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
     }
 
     public static class UpsertCollectionPolicyRequestDataConfig extends TeaModel {
-        /**
-         * <p>The region for storing the global logs that are collected for the first time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
-         */
         @NameInMap("dataRegion")
         public String dataRegion;
 
@@ -336,18 +324,9 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
     }
 
     public static class UpsertCollectionPolicyRequestResourceDirectory extends TeaModel {
-        /**
-         * <p>The mode of the resource directory. Valid values: all and custom.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>all,custom</p>
-         */
         @NameInMap("accountGroupType")
         public String accountGroupType;
 
-        /**
-         * <p>The members. If accountGroupType is set to custom, the members are returned.</p>
-         */
         @NameInMap("members")
         public java.util.List<String> members;
 

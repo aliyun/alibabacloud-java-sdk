@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class LogGroup extends TeaModel {
     /**
-     * <p>A list of logs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LogItems")
