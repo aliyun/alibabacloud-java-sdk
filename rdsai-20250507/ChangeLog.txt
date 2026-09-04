@@ -1,3 +1,8 @@
+2026-09-04 Version: 3.9.2
+- Update API DescribeAppInstanceAttribute: add response parameters Body.InstanceLatestVersion.
+- Update API DescribeAppInstanceAttribute: add response parameters Body.MinorVersionDetail.
+
+
 2026-08-27 Version: 3.9.1
 - Update API DescribeModelOperator: add request parameters Region.
 - Update API GetModelOperatorOrder: add request parameters Region.

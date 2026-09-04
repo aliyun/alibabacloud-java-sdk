@@ -22,17 +22,32 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <p>Reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
+    /**
+     * <p>Reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("BranchingEnabled")
     public String branchingEnabled;
 
+    /**
+     * <p>The list of components.</p>
+     */
     @NameInMap("Components")
     public java.util.List<DescribeAppInstanceAttributeResponseBodyComponents> components;
 
     /**
-     * <p>The instance ID of the RDS PostgreSQL database to which the AI application is connected.</p>
+     * <p>The ID of the RDS PostgreSQL database instance that the AI application is connected to.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-2ze49qv594vi****</p>
@@ -40,20 +55,41 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The instance ID of the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-wz9sfo01afag4hxc0utq0</p>
+     */
     @NameInMap("EipId")
     public String eipId;
 
+    /**
+     * <p>The activation status of the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("EipStatus")
     public String eipStatus;
 
     /**
-     * <p>The instance type of the AI application.</p>
+     * <p>The instance class of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>rdsai.supabase.basic</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
+
+    /**
+     * <p>The latest minor version of the RDS AI application instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20260903</p>
+     */
+    @NameInMap("InstanceLatestVersion")
+    public String instanceLatestVersion;
 
     /**
      * <p>The minor version of the RDS AI application instance.</p>
@@ -73,20 +109,53 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>Reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <p>The minor version details of each component of the RDS AI application instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;studio\&quot;:\&quot;20260602r1\&quot;,\&quot;storage\&quot;:\&quot;v1.48.9\&quot;,\&quot;auth\&quot;:\&quot;v2.188.1\&quot;,\&quot;kong\&quot;:\&quot;3.9.0\&quot;,\&quot;rest\&quot;:\&quot;v12.2.12\&quot;,\&quot;meta\&quot;:\&quot;v0.89.3\&quot;,\&quot;realtime-dev\&quot;:\&quot;v2.34.47\&quot;,\&quot;postgres\&quot;:\&quot;rds_postgres_1700_20260830\&quot;}</p>
+     */
+    @NameInMap("MinorVersionDetail")
+    public String minorVersionDetail;
+
+    /**
+     * <p>The creator of the NAT gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("NatCreatedBy")
     public String natCreatedBy;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-bp1l82hw87m2y77ci1hie</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The activation status of the NAT gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("NatStatus")
     public String natStatus;
 
     /**
-     * <p>The public endpoint of the AI application.</p>
+     * <p>The public connection string of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>8.152. XXX.XXX:8000</p>
@@ -112,14 +181,26 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("RetentionHours")
     public String retentionHours;
 
+    /**
+     * <p>Reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("SqlExtendMoInstanceId")
     public String sqlExtendMoInstanceId;
 
     /**
-     * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status</a>.</p>
+     * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status table</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -127,9 +208,18 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("UploadKey")
     public String uploadKey;
 
+    /**
+     * <p>Reserved parameter.</p>
+     */
     @NameInMap("UploadKeyList")
     public java.util.List<DescribeAppInstanceAttributeResponseBodyUploadKeyList> uploadKeyList;
 
@@ -143,7 +233,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The internal endpoint of the AI application.</p>
+     * <p>The internal connection string of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.XXX.XXX:8000</p>
@@ -237,6 +327,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         return this.instanceClass;
     }
 
+    public DescribeAppInstanceAttributeResponseBody setInstanceLatestVersion(String instanceLatestVersion) {
+        this.instanceLatestVersion = instanceLatestVersion;
+        return this;
+    }
+    public String getInstanceLatestVersion() {
+        return this.instanceLatestVersion;
+    }
+
     public DescribeAppInstanceAttributeResponseBody setInstanceMinorVersion(String instanceMinorVersion) {
         this.instanceMinorVersion = instanceMinorVersion;
         return this;
@@ -259,6 +357,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
     public String getLoginToken() {
         return this.loginToken;
+    }
+
+    public DescribeAppInstanceAttributeResponseBody setMinorVersionDetail(String minorVersionDetail) {
+        this.minorVersionDetail = minorVersionDetail;
+        return this;
+    }
+    public String getMinorVersionDetail() {
+        return this.minorVersionDetail;
     }
 
     public DescribeAppInstanceAttributeResponseBody setNatCreatedBy(String natCreatedBy) {
@@ -374,9 +480,21 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAppInstanceAttributeResponseBodyComponents extends TeaModel {
+        /**
+         * <p>The component status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The component type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -404,18 +522,48 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAppInstanceAttributeResponseBodyUploadKeyList extends TeaModel {
+        /**
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
+         */
         @NameInMap("IsSystemKey")
         public Boolean isSystemKey;
 
+        /**
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
+         */
         @NameInMap("SlsStorageBytes")
         public Long slsStorageBytes;
 
+        /**
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
+         */
         @NameInMap("UploadKey")
         public String uploadKey;
 
