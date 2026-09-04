@@ -1,3 +1,7 @@
+2026-09-04 Version: 9.4.3
+- Update API ListTlsInspectCACertificates: add response parameters Body.Certificates.$.CertChainExpirationTime.
+
+
 2026-08-13 Version: 9.4.2
 - Update API AddControlPolicy: add request parameters ClientToken.
 - Update API AddControlPolicy: add request parameters DryRun.

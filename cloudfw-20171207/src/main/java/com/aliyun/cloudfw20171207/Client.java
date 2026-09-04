@@ -12,30 +12,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-southeast-1", "cloudfw.ap-southeast-1.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "cloudfw.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "cloudfw.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "cloudfw.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "cloudfw.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "cloudfw.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-beijing", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "cloudfw.aliyuncs.com"),
-            new TeaPair("us-east-1", "cloudfw.aliyuncs.com"),
-            new TeaPair("us-west-1", "cloudfw.aliyuncs.com"),
-            new TeaPair("eu-west-1", "cloudfw.aliyuncs.com"),
-            new TeaPair("eu-central-1", "cloudfw.aliyuncs.com"),
-            new TeaPair("me-east-1", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "cloudfw.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "cloudfw.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "cloudfw.ap-southeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloudfw", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -15303,7 +15280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation lists the Transport Layer Security (TLS) inspection certificate authority (CA) certificates.</p>
+     * <p>Queries TLS inspection CA certificates.</p>
      * 
      * @param request ListTlsInspectCACertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15343,7 +15320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation lists the Transport Layer Security (TLS) inspection certificate authority (CA) certificates.</p>
+     * <p>Queries TLS inspection CA certificates.</p>
      * 
      * @param request ListTlsInspectCACertificatesRequest
      * @return ListTlsInspectCACertificatesResponse

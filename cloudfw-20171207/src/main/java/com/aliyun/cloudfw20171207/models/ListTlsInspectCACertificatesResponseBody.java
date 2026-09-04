@@ -11,7 +11,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
     public java.util.List<ListTlsInspectCACertificatesResponseBodyCertificates> certificates;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CBF1E9B7-D6A0-4E9E-AD3E-******837D</p>
@@ -59,14 +59,11 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
 
     public static class ListTlsInspectCACertificatesResponseBodyCertificates extends TeaModel {
         /**
-         * <p>The encryption algorithm of the CA certificate. Valid values:</p>
+         * <p>The encryption algorithm type of the CA certificate. Valid values:</p>
          * <ul>
-         * <li><p><strong>RSA</strong>: the RSA algorithm.</p>
-         * </li>
-         * <li><p><strong>ECC</strong>: the ECC algorithm.</p>
-         * </li>
-         * <li><p><strong>SM2</strong>: the SM2 algorithm.</p>
-         * </li>
+         * <li><strong>RSA</strong>: RSA algorithm.</li>
+         * <li><strong>ECC</strong>: ECC algorithm.</li>
+         * <li><strong>SM2</strong>: SM2 (Chinese national cryptographic) algorithm.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -76,7 +73,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>The alias of the certificate.</p>
+         * <p>The certificate alias.</p>
          * 
          * <strong>example:</strong>
          * <p>rsa_ml_***_root</p>
@@ -85,7 +82,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String aliasName;
 
         /**
-         * <p>The ID of the CA certificate.</p>
+         * <p>The CA certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2732BB48-2969-5716-B5D9-******CA85</p>
@@ -96,10 +93,8 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         /**
          * <p>The type of the CA certificate. Valid values:</p>
          * <ul>
-         * <li><p><strong>ROOT</strong>: a root CA certificate.</p>
-         * </li>
-         * <li><p><strong>SUB_ROOT</strong>: a subordinate CA certificate.</p>
-         * </li>
+         * <li><strong>ROOT</strong>: Root CA certificate.</li>
+         * <li><strong>SUB_ROOT</strong>: Subordinate CA certificate.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,6 +102,15 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
          */
         @NameInMap("CaCertType")
         public String caCertType;
+
+        /**
+         * <p>The certificate chain expiration timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1934***149</p>
+         */
+        @NameInMap("CertChainExpirationTime")
+        public Long certChainExpirationTime;
 
         /**
          * <p>The expiration timestamp.</p>
@@ -127,7 +131,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public Integer keySize;
 
         /**
-         * <p>The ID of the parent CA certificate.</p>
+         * <p>The parent CA certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>340BB48-2969-5716-B5D9-****ACA85</p>
@@ -145,12 +149,10 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String signAlgorithm;
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
+         * <p>The certificate status. Valid values:</p>
          * <ul>
-         * <li><p><strong>ISSUE</strong>: enabled.</p>
-         * </li>
-         * <li><p><strong>REVOKE</strong>: revoked.</p>
-         * </li>
+         * <li><strong>ISSUE</strong>: Enabled.</li>
+         * <li><strong>REVOKE</strong>: Revoked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,6 +196,14 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         }
         public String getCaCertType() {
             return this.caCertType;
+        }
+
+        public ListTlsInspectCACertificatesResponseBodyCertificates setCertChainExpirationTime(Long certChainExpirationTime) {
+            this.certChainExpirationTime = certChainExpirationTime;
+            return this;
+        }
+        public Long getCertChainExpirationTime() {
+            return this.certChainExpirationTime;
         }
 
         public ListTlsInspectCACertificatesResponseBodyCertificates setExpirationTime(Long expirationTime) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTlsInspectCACertificatesRequest extends TeaModel {
     /**
-     * <p>The ID of the CA certificate.</p>
+     * <p>The CA certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C3E91391-16CD-1BFC-A133-******D429</p>
@@ -14,7 +14,7 @@ public class ListTlsInspectCACertificatesRequest extends TeaModel {
     public String caCertId;
 
     /**
-     * <p>The page number for a paged query. The default value is 1.</p>
+     * <p>The page number for paging. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListTlsInspectCACertificatesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The maximum number of entries to return on each page for a paged query. The default value is 20.</p>
+     * <p>The maximum number of entries per page for paging. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
