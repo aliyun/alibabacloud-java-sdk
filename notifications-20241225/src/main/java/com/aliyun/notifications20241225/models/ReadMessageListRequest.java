@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReadMessageListRequest extends TeaModel {
     /**
-     * <p>语言，默认为简体中文</p>
+     * <p>The language. Default value: Simplified Chinese.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -14,7 +14,7 @@ public class ReadMessageListRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>系统参数，无需填写</p>
+     * <p>A system parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -23,7 +23,7 @@ public class ReadMessageListRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>系统参数，无需填写</p>
+     * <p>A system parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -32,7 +32,7 @@ public class ReadMessageListRequest extends TeaModel {
     public String bizName;
 
     /**
-     * <p>系统参数，无需填写</p>
+     * <p>A system parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -41,7 +41,7 @@ public class ReadMessageListRequest extends TeaModel {
     public String callerProtocol;
 
     /**
-     * <p>消息类目ID</p>
+     * <p>Deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class ReadMessageListRequest extends TeaModel {
     public Long classId;
 
     /**
-     * <p>系统参数，无需填写</p>
+     * <p>A system parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -59,7 +59,7 @@ public class ReadMessageListRequest extends TeaModel {
     public String clientSource;
 
     /**
-     * <p>消息内容，用于模糊搜索</p>
+     * <p>The message content. This parameter is used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;消息内容示例“</p>
@@ -68,7 +68,7 @@ public class ReadMessageListRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>系统参数，无需填写</p>
+     * <p>A system parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -76,23 +76,35 @@ public class ReadMessageListRequest extends TeaModel {
     @NameInMap("Cookies")
     public String cookies;
 
+    /**
+     * <p>The group code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("GroupCode")
     public String groupCode;
 
+    /**
+     * <p>Specifies whether the messages are historical messages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("History")
     public String history;
 
     /**
-     * <p>栏位 nav代表控制台topbar</p>
+     * <p>The location.</p>
      * 
      * <strong>example:</strong>
-     * <p>/</p>
+     * <p>nav</p>
      */
     @NameInMap("Loc")
     public String loc;
 
     /**
-     * <p>系统参数，无需填写</p>
+     * <p>A system parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -101,7 +113,7 @@ public class ReadMessageListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>系统参数，无需填写</p>
+     * <p>A system parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -110,7 +122,7 @@ public class ReadMessageListRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>分页查询页码</p>
+     * <p>The page number for the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -119,7 +131,7 @@ public class ReadMessageListRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>分页查询大小</p>
+     * <p>The page size for the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -128,7 +140,7 @@ public class ReadMessageListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>系统参数，无需填写</p>
+     * <p>A system parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -137,7 +149,7 @@ public class ReadMessageListRequest extends TeaModel {
     public String srcUrl;
 
     /**
-     * <p>消息状态，已读为1，未读为0</p>
+     * <p>The message status. A value of 1 indicates read. A value of 0 indicates unread. A value of -1 indicates all. Default value: -1.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -146,7 +158,7 @@ public class ReadMessageListRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>系统参数，无需填写</p>
+     * <p>A system parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -155,7 +167,7 @@ public class ReadMessageListRequest extends TeaModel {
     public String tenantCode;
 
     /**
-     * <p>消息标题，用于模糊搜索</p>
+     * <p>The message title. This parameter is used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;标题示例“</p>
@@ -164,7 +176,7 @@ public class ReadMessageListRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>系统参数，无需填写</p>
+     * <p>A system parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>

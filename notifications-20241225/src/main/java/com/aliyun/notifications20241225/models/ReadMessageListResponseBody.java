@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReadMessageListResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+     * <p>The error code returned when the call fails. For more information, see error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,22 +14,22 @@ public class ReadMessageListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data</p>
+     * <p>The execution result.</p>
      */
     @NameInMap("Data")
     public ReadMessageListResponseBodyData data;
 
     /**
-     * <p>message</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
-     * <p>/</p>
+     * <p>成功</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>唯一请求id</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
@@ -38,11 +38,7 @@ public class ReadMessageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
-     * </ul>
+     * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,20 +92,26 @@ public class ReadMessageListResponseBody extends TeaModel {
     }
 
     public static class ReadMessageListResponseBodyDataRows extends TeaModel {
+        /**
+         * <p>The category code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("CategoryCode")
         public String categoryCode;
 
         /**
-         * <p>CategoryName</p>
+         * <p>The message category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p>活动消息</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
-         * <p>Class</p>
+         * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -118,7 +120,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         public String _class;
 
         /**
-         * <p>ClassId</p>
+         * <p>The message class ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,16 +129,16 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Long classId;
 
         /**
-         * <p>内容</p>
+         * <p>The message content.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p>&quot;消息内容示例“</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>删除</p>
+         * <p>The deletion flag.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -145,7 +147,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Integer deleted;
 
         /**
-         * <p>创建时间</p>
+         * <p>The time when the message was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1723772244000</p>
@@ -154,6 +156,8 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Long gmtCreated;
 
         /**
+         * <p>The time when the message was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1723772244000</p>
          */
@@ -161,7 +165,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Long gmtUpdate;
 
         /**
-         * <p>massId</p>
+         * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -170,7 +174,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Long massId;
 
         /**
-         * <p>描述</p>
+         * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -179,7 +183,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         public String memo;
 
         /**
-         * <p>消息id</p>
+         * <p>The message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3727683838</p>
@@ -188,7 +192,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Long msgId;
 
         /**
-         * <p>状态</p>
+         * <p>The read status. A value of 0 indicates unread. A value of 1 indicates read.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -197,14 +201,20 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Long status;
 
         /**
-         * <p>标题</p>
+         * <p>The message title.</p>
          * 
          * <strong>example:</strong>
-         * <p>/</p>
+         * <p>&quot;标题示例“</p>
          */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The highlighted title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
+         */
         @NameInMap("Titleh")
         public String titleh;
 
@@ -329,7 +339,7 @@ public class ReadMessageListResponseBody extends TeaModel {
 
     public static class ReadMessageListResponseBodyData extends TeaModel {
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The number of messages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -338,7 +348,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -347,7 +357,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Long maxResults;
 
         /**
-         * <p>If excess return values exist, this parameter is returned.</p>
+         * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -365,7 +375,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Integer page;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -374,7 +384,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The number of rows updated or returned on PolarDB-X 2.0 compute nodes.</p>
+         * <p>The returned data.</p>
          */
         @NameInMap("Rows")
         public java.util.List<ReadMessageListResponseBodyDataRows> rows;

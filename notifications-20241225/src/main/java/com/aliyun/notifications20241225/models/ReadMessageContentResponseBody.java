@@ -4,18 +4,49 @@ package com.aliyun.notifications20241225.models;
 import com.aliyun.tea.*;
 
 public class ReadMessageContentResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned when the call fails. For more information, refer to error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The execution result.</p>
+     */
     @NameInMap("Data")
     public ReadMessageContentResponseBodyData data;
 
+    /**
+     * <p>The error message returned when the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,36 +96,106 @@ public class ReadMessageContentResponseBody extends TeaModel {
     }
 
     public static class ReadMessageContentResponseBodyDataDatasItem extends TeaModel {
+        /**
+         * <p>The message category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>活动消息</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <p>The message class ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ClassId")
         public Long classId;
 
+        /**
+         * <p>The message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;消息内容示例“</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The deletion flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Deleted")
         public Integer deleted;
 
+        /**
+         * <p>The time when the message was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1729758903000</p>
+         */
         @NameInMap("GmtCreated")
         public Long gmtCreated;
 
+        /**
+         * <p>The time when the message was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1729758903000</p>
+         */
         @NameInMap("GmtUpdate")
         public Long gmtUpdate;
 
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("MassId")
         public Long massId;
 
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>385ad715-4139-41f9-ba59-246a00bb46e0.jpg</p>
+         */
         @NameInMap("Memo")
         public String memo;
 
+        /**
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC14C11F1FF801EE00054518C220EF2C</p>
+         */
         @NameInMap("MsgId")
         public Long msgId;
 
+        /**
+         * <p>The read status. Valid values:</p>
+         * <ul>
+         * <li>0: unread</li>
+         * <li>1: read.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>not_installed</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>The message title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Endless</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -194,36 +295,106 @@ public class ReadMessageContentResponseBody extends TeaModel {
     }
 
     public static class ReadMessageContentResponseBodyDataDatasLastItem extends TeaModel {
+        /**
+         * <p>The message category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>活动消息</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <p>The message class ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ClassId")
         public Long classId;
 
+        /**
+         * <p>The message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;消息内容示例“</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The deletion flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Deleted")
         public Integer deleted;
 
+        /**
+         * <p>The time when the message was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1729758903000</p>
+         */
         @NameInMap("GmtCreated")
         public Long gmtCreated;
 
+        /**
+         * <p>The time when the message was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1729758903000</p>
+         */
         @NameInMap("GmtUpdate")
         public Long gmtUpdate;
 
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("MassId")
         public Long massId;
 
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("Memo")
         public String memo;
 
+        /**
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3727683838</p>
+         */
         @NameInMap("MsgId")
         public Long msgId;
 
+        /**
+         * <p>The read status. Valid values:</p>
+         * <ul>
+         * <li>0: unread</li>
+         * <li>1: read.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>The message title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;标题示例“</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -323,36 +494,106 @@ public class ReadMessageContentResponseBody extends TeaModel {
     }
 
     public static class ReadMessageContentResponseBodyDataDatasNextItem extends TeaModel {
+        /**
+         * <p>The message category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>活动消息</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <p>The message class ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ClassId")
         public Long classId;
 
+        /**
+         * <p>The message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”消息内容示例“</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The deletion flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Deleted")
         public Integer deleted;
 
+        /**
+         * <p>The time when the message was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663809374000</p>
+         */
         @NameInMap("GmtCreated")
         public Long gmtCreated;
 
+        /**
+         * <p>The time when the message was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663809374000</p>
+         */
         @NameInMap("GmtUpdate")
         public Long gmtUpdate;
 
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("MassId")
         public Long massId;
 
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("Memo")
         public String memo;
 
+        /**
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3727683838</p>
+         */
         @NameInMap("MsgId")
         public Long msgId;
 
+        /**
+         * <p>The read status. Valid values:</p>
+         * <ul>
+         * <li>0: unread</li>
+         * <li>1: read.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>The message title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;标题示例“</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -452,12 +693,21 @@ public class ReadMessageContentResponseBody extends TeaModel {
     }
 
     public static class ReadMessageContentResponseBodyDataDatas extends TeaModel {
+        /**
+         * <p>The data item.</p>
+         */
         @NameInMap("Item")
         public java.util.List<ReadMessageContentResponseBodyDataDatasItem> item;
 
+        /**
+         * <p>/</p>
+         */
         @NameInMap("LastItem")
         public java.util.List<ReadMessageContentResponseBodyDataDatasLastItem> lastItem;
 
+        /**
+         * <p>/</p>
+         */
         @NameInMap("NextItem")
         public java.util.List<ReadMessageContentResponseBodyDataDatasNextItem> nextItem;
 
@@ -493,6 +743,9 @@ public class ReadMessageContentResponseBody extends TeaModel {
     }
 
     public static class ReadMessageContentResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of degradation rules.</p>
+         */
         @NameInMap("Datas")
         public ReadMessageContentResponseBodyDataDatas datas;
 

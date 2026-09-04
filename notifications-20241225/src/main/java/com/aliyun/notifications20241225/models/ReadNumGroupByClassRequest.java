@@ -5,33 +5,83 @@ import com.aliyun.tea.*;
 
 public class ReadNumGroupByClassRequest extends TeaModel {
     /**
+     * <p>The language. Default value: Simplified Chinese.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>A system parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>A system parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("BizName")
     public String bizName;
 
+    /**
+     * <p>A system parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("CallerProtocol")
     public String callerProtocol;
 
+    /**
+     * <p>A system parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("ClientSource")
     public String clientSource;
 
+    /**
+     * <p>A system parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("Cookies")
     public String cookies;
 
+    /**
+     * <p>A system parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("SrcUrl")
     public String srcUrl;
 
+    /**
+     * <p>A system parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("TenantCode")
     public String tenantCode;
 
+    /**
+     * <p>A system parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("UidType")
     public String uidType;
 

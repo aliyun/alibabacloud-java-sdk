@@ -5,22 +5,41 @@ import com.aliyun.tea.*;
 
 public class ReadNumGroupTotalResponseBody extends TeaModel {
     /**
+     * <p>The error code returned when the call fails. For more information, see Error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The execution result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ReadNumGroupTotalResponseBodyData> data;
 
+    /**
+     * <p>The error message returned when the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values: true and false. true: The call was successful. false: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -73,18 +92,48 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
     }
 
     public static class ReadNumGroupTotalResponseBodyData extends TeaModel {
+        /**
+         * <p>The group code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("GroupCode")
         public String groupCode;
 
+        /**
+         * <p>The message category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The number of read messages under the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReadCount")
         public Long readCount;
 
+        /**
+         * <p>The total number of messages under the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The number of unread messages under the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UnReadCount")
         public Long unReadCount;
 

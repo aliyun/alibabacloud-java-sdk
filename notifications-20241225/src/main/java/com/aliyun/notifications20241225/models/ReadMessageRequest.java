@@ -4,33 +4,93 @@ package com.aliyun.notifications20241225.models;
 import com.aliyun.tea.*;
 
 public class ReadMessageRequest extends TeaModel {
+    /**
+     * <p>The language. Default value: zh-CN (Simplified Chinese).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>System parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>System parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("BizName")
     public String bizName;
 
+    /**
+     * <p>System parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("CallerProtocol")
     public String callerProtocol;
 
+    /**
+     * <p>System parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("ClientSource")
     public String clientSource;
 
+    /**
+     * <p>System parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("Cookies")
     public String cookies;
 
+    /**
+     * <p>The message ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A9FEF04A004A383534AA6400092A904F</p>
+     */
     @NameInMap("MsgId")
     public String msgId;
 
+    /**
+     * <p>The URL of the source page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("SrcUrl")
     public String srcUrl;
 
+    /**
+     * <p>System parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("TenantCode")
     public String tenantCode;
 
+    /**
+     * <p>System parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("UidType")
     public String uidType;
 

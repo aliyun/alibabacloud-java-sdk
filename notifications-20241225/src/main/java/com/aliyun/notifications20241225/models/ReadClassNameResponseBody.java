@@ -4,18 +4,49 @@ package com.aliyun.notifications20241225.models;
 import com.aliyun.tea.*;
 
 public class ReadClassNameResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned by the system. For more information about error codes, see error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The execution result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ReadClassNameResponseBodyData> data;
 
+    /**
+     * <p>The message returned when the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>73FD6AE8-898F-5D09-9763-69B8A875488A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +96,21 @@ public class ReadClassNameResponseBody extends TeaModel {
     }
 
     public static class ReadClassNameResponseBodyData extends TeaModel {
+        /**
+         * <p>The message category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The message category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>安全消息</p>
+         */
         @NameInMap("Name")
         public String name;
 

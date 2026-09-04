@@ -1,3 +1,24 @@
+2026-09-04 Version: 1.1.0
+- Support API CreateWebhookContact.
+- Support API DeleteWebhookContact.
+- Support API ReadAllCommonContacts.
+- Support API ReadAllMarketingPreferences.
+- Support API ReadAllWebhookContacts.
+- Support API ReadCategoryGroupList.
+- Support API ReadCommonContact.
+- Support API ReadMarketingPreference.
+- Support API ReadMessageLanguage.
+- Support API ReadRevisionHistoryList.
+- Support API ReadUserSubscriptionList.
+- Support API ReadWebhookContact.
+- Support API ReadWebhookContactSendTemplateList.
+- Support API ResetUserSubscription.
+- Support API TestWebhookContact.
+- Support API UpdateMarketingPreference.
+- Support API UpdateMessageLanguage.
+- Support API UpdateWebhookContact.
+
+
 2025-09-18 Version: 1.0.2
 - Update API DeleteAllMessage: add request parameters GroupCode.
 - Update API ReadAllMessage: add request parameters GroupCode.

@@ -4,18 +4,48 @@ package com.aliyun.notifications20241225.models;
 import com.aliyun.tea.*;
 
 public class DeleteAllMessageResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned when the call fails. For more information, see error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the deletion was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The error message returned when the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call was successful. Valid values: true: Successful. false: Failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
