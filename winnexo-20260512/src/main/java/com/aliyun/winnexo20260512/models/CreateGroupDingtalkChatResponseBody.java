@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGroupDingtalkChatResponseBody extends TeaModel {
     /**
-     * <p>The conversation ID, typically used for JSSDK.</p>
+     * <p>The session ID, typically used for JSSDK.</p>
      * 
      * <strong>example:</strong>
      * <p>cidxxxxxxxx</p>
@@ -62,13 +62,13 @@ public class CreateGroupDingtalkChatResponseBody extends TeaModel {
      * <p>The image name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Customer Project Chat</p>
+     * <p>CustomerProjectGroup</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -86,7 +86,7 @@ public class CreateGroupDingtalkChatResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>The data source ID, which is unique within the tenant.</p>
+     * <p>The data source ID (unique within the tenant).</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSourceId</p>

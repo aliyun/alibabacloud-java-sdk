@@ -23,7 +23,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The directory ID.</p>
+     * <p>The folder ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public Long gmtModified;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The tenant folder ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the effective tenant.</p>
+     * <p>The ID of the tenant for which the operation takes effect.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

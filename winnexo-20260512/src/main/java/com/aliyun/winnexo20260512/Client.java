@@ -15,11 +15,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "winnexo.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "winnexo.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "winnexo.cn-hangzhou.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("winnexo", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -218,6 +213,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. The server validates and deduplicates items while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. Deletion, per-item status updates, and remaining valid count are completed within a single transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clean up historical records, MISSING records, or permission-hidden records that are not visible in the list. Then read back the result to confirm that total is 0.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Batch cancels digital employee favorites for specific object types.</p>
+     * 
+     * @param tmpReq BatchRemoveOperatingObjectFavoritesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchRemoveOperatingObjectFavoritesResponse
+     */
+    public BatchRemoveOperatingObjectFavoritesResponse batchRemoveOperatingObjectFavoritesWithOptions(BatchRemoveOperatingObjectFavoritesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchRemoveOperatingObjectFavoritesShrinkRequest request = new BatchRemoveOperatingObjectFavoritesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.objectIds)) {
+            request.objectIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.objectIds, "objectIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.graphName)) {
+            body.put("graphName", request.graphName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectIdsShrink)) {
+            body.put("objectIds", request.objectIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            body.put("objectType", request.objectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatingObjectName)) {
+            body.put("operatingObjectName", request.operatingObjectName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchRemoveOperatingObjectFavorites"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/batchRemoveOperatingObjectFavorites"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchRemoveOperatingObjectFavoritesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. The server validates and deduplicates items while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. Deletion, per-item status updates, and remaining valid count are completed within a single transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clean up historical records, MISSING records, or permission-hidden records that are not visible in the list. Then read back the result to confirm that total is 0.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Batch cancels digital employee favorites for specific object types.</p>
+     * 
+     * @param request BatchRemoveOperatingObjectFavoritesRequest
+     * @return BatchRemoveOperatingObjectFavoritesResponse
+     */
+    public BatchRemoveOperatingObjectFavoritesResponse batchRemoveOperatingObjectFavorites(BatchRemoveOperatingObjectFavoritesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchRemoveOperatingObjectFavoritesWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Performs a service health check.</p>
      * 
@@ -266,12 +338,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</p>
+     * <p>Clears all persisted follows for the current calling user across three independent dimensions: graphName, operatingObjectName, and objectType. This includes historical records, MISSING records, and permission-hidden records that are not visible in the list. The operation does not return invisible object IDs and verifies that the remaining physical record count is zero within the same transaction.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Clears all follows of a specific object type for a digital employee.</p>
+     * 
+     * @param request ClearOperatingObjectFavoritesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClearOperatingObjectFavoritesResponse
+     */
+    public ClearOperatingObjectFavoritesResponse clearOperatingObjectFavoritesWithOptions(ClearOperatingObjectFavoritesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.graphName)) {
+            body.put("graphName", request.graphName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            body.put("objectType", request.objectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatingObjectName)) {
+            body.put("operatingObjectName", request.operatingObjectName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClearOperatingObjectFavorites"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/clearOperatingObjectFavorites"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClearOperatingObjectFavoritesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Clears all persisted follows for the current calling user across three independent dimensions: graphName, operatingObjectName, and objectType. This includes historical records, MISSING records, and permission-hidden records that are not visible in the list. The operation does not return invisible object IDs and verifies that the remaining physical record count is zero within the same transaction.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Clears all follows of a specific object type for a digital employee.</p>
+     * 
+     * @param request ClearOperatingObjectFavoritesRequest
+     * @return ClearOperatingObjectFavoritesResponse
+     */
+    public ClearOperatingObjectFavoritesResponse clearOperatingObjectFavorites(ClearOperatingObjectFavoritesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.clearOperatingObjectFavoritesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Creates a service notice. The caller must be mapped to a real platform user in the system O&amp;M tenant and must have announcement management permissions.</p>
      * <ul>
      * <li><code>priority</code>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</li>
      * <li><code>targetTenantIds</code> / <code>targetRoleCodes</code>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</li>
-     * <li><code>effectiveStart</code> / <code>effectiveEnd</code>: ISO 8601 timestamps with time zone information.</li>
+     * <li><code>effectiveStart</code> / <code>effectiveEnd</code>: ISO 8601 time with time zone.</li>
      * <li><code>publishNow</code>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</li>
      * </ul>
      * 
@@ -370,12 +509,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</p>
+     * <h2>Request description</h2>
+     * <p>Creates a service notice. The caller must be mapped to a real platform user in the system O&amp;M tenant and must have announcement management permissions.</p>
      * <ul>
      * <li><code>priority</code>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</li>
      * <li><code>targetTenantIds</code> / <code>targetRoleCodes</code>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</li>
-     * <li><code>effectiveStart</code> / <code>effectiveEnd</code>: ISO 8601 timestamps with time zone information.</li>
+     * <li><code>effectiveStart</code> / <code>effectiveEnd</code>: ISO 8601 time with time zone.</li>
      * <li><code>publishNow</code>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</li>
      * </ul>
      * 
@@ -648,17 +787,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</li>
+     * <li>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</li>
      * <li>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</li>
      * <li>groupId, chatId, and historyStartTime are required.</li>
-     * <li>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</li>
-     * <li>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</li>
+     * <li>updateFrequency can be configured through preset or a five-segment cron expression for subsequent synchronization frequency.</li>
+     * <li>The server verifies the caller\&quot;s group member identity and target group directory permissions. The same group chat can be created as different Sources.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a group-level DingTalk chat knowledge source.</p>
+     * <p>Creates knowledge from a standard DingTalk group chat for a group.</p>
      * 
      * @param tmpReq CreateGroupDingtalkChatRequest
      * @param headers map
@@ -740,17 +879,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</li>
+     * <li>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</li>
      * <li>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</li>
      * <li>groupId, chatId, and historyStartTime are required.</li>
-     * <li>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</li>
-     * <li>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</li>
+     * <li>updateFrequency can be configured through preset or a five-segment cron expression for subsequent synchronization frequency.</li>
+     * <li>The server verifies the caller\&quot;s group member identity and target group directory permissions. The same group chat can be created as different Sources.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a group-level DingTalk chat knowledge source.</p>
+     * <p>Creates knowledge from a standard DingTalk group chat for a group.</p>
      * 
      * @param request CreateGroupDingtalkChatRequest
      * @return CreateGroupDingtalkChatResponse
@@ -2087,9 +2226,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li>This API is used to create a personal folder (category) under &quot;My Resources&quot;.</li>
-     * <li>If <code>parentDirectoryId</code> is not specified, the system automatically uses or creates the default root folder of the current digital human as the parent folder.</li>
-     * <li>If <code>parentDirectoryId</code> is specified, it must be an existing personal folder of the current user under the current digital human.</li>
-     * <li><code>tenant_id</code> and <code>user_id</code> are derived from the authentication identity only. These fields are ignored if included in the request body.</li>
+     * <li>If <code>parentDirectoryId</code> is not specified, the system automatically uses or creates the default root folder of the current digital employee as the parent folder.</li>
+     * <li>If <code>parentDirectoryId</code> is specified, it must be an existing personal folder of the current user under the current digital employee.</li>
+     * <li><code>tenant_id</code> and <code>user_id</code> are derived from the authenticated identity only. These fields are ignored if passed in the request body.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2148,9 +2287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li>This API is used to create a personal folder (category) under &quot;My Resources&quot;.</li>
-     * <li>If <code>parentDirectoryId</code> is not specified, the system automatically uses or creates the default root folder of the current digital human as the parent folder.</li>
-     * <li>If <code>parentDirectoryId</code> is specified, it must be an existing personal folder of the current user under the current digital human.</li>
-     * <li><code>tenant_id</code> and <code>user_id</code> are derived from the authentication identity only. These fields are ignored if included in the request body.</li>
+     * <li>If <code>parentDirectoryId</code> is not specified, the system automatically uses or creates the default root folder of the current digital employee as the parent folder.</li>
+     * <li>If <code>parentDirectoryId</code> is specified, it must be an existing personal folder of the current user under the current digital employee.</li>
+     * <li><code>tenant_id</code> and <code>user_id</code> are derived from the authenticated identity only. These fields are ignored if passed in the request body.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2929,11 +3068,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to create a new enterprise knowledge base directory under a specified tenant.</li>
-     * <li>You can specify the parent directory of the new directory by setting the <code>parentId</code> parameter. If this parameter is not specified, the directory is created as a root directory by default.</li>
-     * <li>The <code>path</code> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent directory.</li>
+     * <li>This API is used to create a new enterprise knowledge base folder under a specified tenant.</li>
+     * <li>You can set the <code>parentId</code> parameter to specify the parent folder of the new folder. If this parameter is not specified, the folder is created as a root folder by default.</li>
+     * <li>The <code>path</code> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent folder.</li>
      * <li>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</li>
-     * <li>After the directory is created, the related information of the new directory is returned, such as the directory ID and name.</li>
+     * <li>After the folder is created, the related information about the new folder is returned, such as the folder ID and name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2991,11 +3130,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to create a new enterprise knowledge base directory under a specified tenant.</li>
-     * <li>You can specify the parent directory of the new directory by setting the <code>parentId</code> parameter. If this parameter is not specified, the directory is created as a root directory by default.</li>
-     * <li>The <code>path</code> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent directory.</li>
+     * <li>This API is used to create a new enterprise knowledge base folder under a specified tenant.</li>
+     * <li>You can set the <code>parentId</code> parameter to specify the parent folder of the new folder. If this parameter is not specified, the folder is created as a root folder by default.</li>
+     * <li>The <code>path</code> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent folder.</li>
      * <li>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</li>
-     * <li>After the directory is created, the related information of the new directory is returned, such as the directory ID and name.</li>
+     * <li>After the folder is created, the related information about the new folder is returned, such as the folder ID and name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3014,12 +3153,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Creates a user by using OpenAPI.
      *     Business orchestration:
-     *     1. Parses roleCodes → role_ids (validates against system role enumerations).
+     *     1. Parses roleCodes into role_ids (validates against system role enumerations).
      *     2. Checks whether the user already exists (used to return the isNewUser flag).
-     *     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed in as an RSA ciphertext by the caller).
+     *     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed by the caller as an RSA ciphertext).
      *     4. Returns the creation result (including the isNewUser flag).
      *     Error codes:
-     *     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
+     *     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to restore the user.
      *     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
      *     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</p>
      * 
@@ -3057,6 +3196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("roleCodes", request.roleCodesShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ssoProvider)) {
+            body.put("ssoProvider", request.ssoProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.wnAccountId)) {
             body.put("wnAccountId", request.wnAccountId);
         }
@@ -3084,12 +3227,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Creates a user by using OpenAPI.
      *     Business orchestration:
-     *     1. Parses roleCodes → role_ids (validates against system role enumerations).
+     *     1. Parses roleCodes into role_ids (validates against system role enumerations).
      *     2. Checks whether the user already exists (used to return the isNewUser flag).
-     *     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed in as an RSA ciphertext by the caller).
+     *     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed by the caller as an RSA ciphertext).
      *     4. Returns the creation result (including the isNewUser flag).
      *     Error codes:
-     *     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
+     *     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to restore the user.
      *     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
      *     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</p>
      * 
@@ -3174,16 +3317,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a user and sets initial roles and user groups via OpenAPI.
-     *     Business orchestration:
-     *     1. Parses roleCodes → role_ids (system role enumeration validation)
-     *     2. Checks whether the user already exists (used to return the isNewUser flag)
-     *     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
-     *     4. Returns the creation result (including the isNewUser flag)
-     *     Error codes:
-     *     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
-     *     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
-     *     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</p>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation creates a WINNEXO user under a specified tenant and optionally assigns system roles and user groups to the user.</li>
+     * <li>The <code>accountId</code> parameter serves as the logon account for the user and must be unique.</li>
+     * <li>The <code>displayName</code> parameter specifies the display name of the user, which must also be unique within the tenant and cannot exceed 100 characters in length.</li>
+     * <li>The optional <code>roleCodes</code> parameter specifies a list of roles for the user. By default, the <code>APPLICATION_USER</code> role is assigned.</li>
+     * <li>The <code>userGroupIds</code> parameter allows you to add up to 100 user group IDs to the new user. Make sure that all specified user groups belong to the same tenant.</li>
+     * <li>The password must be encrypted by using the RSA-OAEP-SHA256 algorithm and submitted in Base64 format.</li>
+     * <li>This operation supports calls over HTTPS and requires the request body in JSON format.</li>
+     * <li>For security authentication, AK, BearerToken, and APP are supported.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates a WINNEXO user in the current tenant and assigns roles and user groups to the user.</p>
@@ -3252,16 +3396,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a user and sets initial roles and user groups via OpenAPI.
-     *     Business orchestration:
-     *     1. Parses roleCodes → role_ids (system role enumeration validation)
-     *     2. Checks whether the user already exists (used to return the isNewUser flag)
-     *     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
-     *     4. Returns the creation result (including the isNewUser flag)
-     *     Error codes:
-     *     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
-     *     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
-     *     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</p>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation creates a WINNEXO user under a specified tenant and optionally assigns system roles and user groups to the user.</li>
+     * <li>The <code>accountId</code> parameter serves as the logon account for the user and must be unique.</li>
+     * <li>The <code>displayName</code> parameter specifies the display name of the user, which must also be unique within the tenant and cannot exceed 100 characters in length.</li>
+     * <li>The optional <code>roleCodes</code> parameter specifies a list of roles for the user. By default, the <code>APPLICATION_USER</code> role is assigned.</li>
+     * <li>The <code>userGroupIds</code> parameter allows you to add up to 100 user group IDs to the new user. Make sure that all specified user groups belong to the same tenant.</li>
+     * <li>The password must be encrypted by using the RSA-OAEP-SHA256 algorithm and submitted in Base64 format.</li>
+     * <li>This operation supports calls over HTTPS and requires the request body in JSON format.</li>
+     * <li>For security authentication, AK, BearerToken, and APP are supported.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates a WINNEXO user in the current tenant and assigns roles and user groups to the user.</p>
@@ -3282,8 +3427,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
      * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
-     * <li>If the target directory ID (<code>directoryId</code>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the personal directory of the caller.</li>
-     * <li>Security authentication is supported through multiple methods (AK, BearerToken, APP).</li>
+     * <li>If the target directory ID (<code>directoryId</code>) is not specified, the file is automatically bound to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the caller\&quot;s personal directory.</li>
+     * <li>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</li>
      * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
@@ -3331,8 +3476,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
      * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
-     * <li>If the target directory ID (<code>directoryId</code>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the personal directory of the caller.</li>
-     * <li>Security authentication is supported through multiple methods (AK, BearerToken, APP).</li>
+     * <li>If the target directory ID (<code>directoryId</code>) is not specified, the file is automatically bound to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the caller\&quot;s personal directory.</li>
+     * <li>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</li>
      * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
@@ -3646,7 +3791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
      * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
      * <li>If no target folder ID (<code>directoryId</code>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
-     * <li>Security verification is supported through multiple authenticate methods (AK, BearerToken, APP).</li>
+     * <li>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</li>
      * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
@@ -3699,7 +3844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
      * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
      * <li>If no target folder ID (<code>directoryId</code>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
-     * <li>Security verification is supported through multiple authenticate methods (AK, BearerToken, APP).</li>
+     * <li>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</li>
      * <li>The operation type is write (<code>write</code>), and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
@@ -4153,13 +4298,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
      * <li>This operation uploads a file to the enterprise knowledge base.</li>
-     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> permission to call this API operation.</li>
-     * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
-     * <li>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</li>
+     * <li>The <code>DEVELOPMENT_KB_MANAGE</code> feature permission is required to call this API.</li>
+     * <li>The OSS persistent address (<code>filePath</code>) of the file must be provided during upload.</li>
+     * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
+     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
      * <li>You can add tags to the resource by using <code>sourceTags</code> for subsequent management and retrieval.</li>
      * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</li>
      * </ul>
@@ -4229,13 +4374,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
      * <li>This operation uploads a file to the enterprise knowledge base.</li>
-     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> permission to call this API operation.</li>
-     * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
-     * <li>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</li>
+     * <li>The <code>DEVELOPMENT_KB_MANAGE</code> feature permission is required to call this API.</li>
+     * <li>The OSS persistent address (<code>filePath</code>) of the file must be provided during upload.</li>
+     * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
+     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
      * <li>You can add tags to the resource by using <code>sourceTags</code> for subsequent management and retrieval.</li>
      * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</li>
      * </ul>
@@ -5119,8 +5264,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</p>
+     * <h2>Operation description</h2>
+     * <p>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries currently effective service notices.</p>
@@ -5167,8 +5312,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</p>
+     * <h2>Operation description</h2>
+     * <p>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries currently effective service notices.</p>
@@ -5575,13 +5720,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation queries the bill list based on specified conditions.</li>
      * <li>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</li>
      * <li>Returns bill data in pages. The default page size is 20 records.</li>
      * <li>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</li>
-     * <li>Authentication information (such as AK, BearerToken, or APP authentication) is required in the request.</li>
+     * <li>Authentication information (such as AK, BearerToken, or APP authentication) is required for the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5661,13 +5806,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation queries the bill list based on specified conditions.</li>
      * <li>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</li>
      * <li>Returns bill data in pages. The default page size is 20 records.</li>
      * <li>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</li>
-     * <li>Authentication information (such as AK, BearerToken, or APP authentication) is required in the request.</li>
+     * <li>Authentication information (such as AK, BearerToken, or APP authentication) is required for the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5901,19 +6046,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Queries follows by three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1000-item display window of the follow panel.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the precise object type follows of a digital employee by page.</p>
+     * 
+     * @param request ListOperatingObjectFavoritesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOperatingObjectFavoritesResponse
+     */
+    public ListOperatingObjectFavoritesResponse listOperatingObjectFavoritesWithOptions(ListOperatingObjectFavoritesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.graphName)) {
+            body.put("graphName", request.graphName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            body.put("objectType", request.objectType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatingObjectName)) {
+            body.put("operatingObjectName", request.operatingObjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOperatingObjectFavorites"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listOperatingObjectFavorites"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOperatingObjectFavoritesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries follows by three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1000-item display window of the follow panel.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the precise object type follows of a digital employee by page.</p>
+     * 
+     * @param request ListOperatingObjectFavoritesRequest
+     * @return ListOperatingObjectFavoritesResponse
+     */
+    public ListOperatingObjectFavoritesResponse listOperatingObjectFavorites(ListOperatingObjectFavoritesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listOperatingObjectFavoritesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API operation queries the output list of the current logon user.</li>
-     * <li><code>tenantId</code> is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</li>
-     * <li>You can filter results by using parameters such as <code>operatingObjectName</code>, <code>itemType</code>, and <code>keyword</code>.</li>
-     * <li>Set <code>sharedOnly</code> to <code>true</code> to display only shared outputs.</li>
-     * <li>Pagination is controlled by <code>page</code> (page number) and <code>pageSize</code> (number of entries per page). By default, the first page is returned with 20 records per page.</li>
+     * <li>This API operation queries the output list of the current logged-in user.</li>
+     * <li><code>tenantId</code> is a common parameter. If not specified, the default tenant of the caller is used.</li>
+     * <li>Supports filtering by parameters such as <code>operatingObjectName</code>, <code>itemType</code>, and <code>keyword</code>.</li>
+     * <li>Set <code>sharedOnly</code> to <code>true</code> to display only outputs with sharing enabled.</li>
+     * <li>Pagination is controlled by <code>page</code> (page number) and <code>pageSize</code> (number of items per page). By default, results start from page 1 with 20 records per page.</li>
      * <li>Results are sorted by update time in descending order by default.</li>
-     * <li>The <code>tenant_id</code> or <code>user_id</code> values passed in the request body are ignored. This information is obtained only from the authenticated identity.</li>
+     * <li>The <code>tenant_id</code> or <code>user_id</code> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the output list of the current user with support for conditional filtering and pagination.</p>
+     * <p>Queries the output list of the current user, with support for conditional filtering and pagination.</p>
      * 
      * @param request ListOutputFilesRequest
      * @param headers map
@@ -5975,17 +6195,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API operation queries the output list of the current logon user.</li>
-     * <li><code>tenantId</code> is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</li>
-     * <li>You can filter results by using parameters such as <code>operatingObjectName</code>, <code>itemType</code>, and <code>keyword</code>.</li>
-     * <li>Set <code>sharedOnly</code> to <code>true</code> to display only shared outputs.</li>
-     * <li>Pagination is controlled by <code>page</code> (page number) and <code>pageSize</code> (number of entries per page). By default, the first page is returned with 20 records per page.</li>
+     * <li>This API operation queries the output list of the current logged-in user.</li>
+     * <li><code>tenantId</code> is a common parameter. If not specified, the default tenant of the caller is used.</li>
+     * <li>Supports filtering by parameters such as <code>operatingObjectName</code>, <code>itemType</code>, and <code>keyword</code>.</li>
+     * <li>Set <code>sharedOnly</code> to <code>true</code> to display only outputs with sharing enabled.</li>
+     * <li>Pagination is controlled by <code>page</code> (page number) and <code>pageSize</code> (number of items per page). By default, results start from page 1 with 20 records per page.</li>
      * <li>Results are sorted by update time in descending order by default.</li>
-     * <li>The <code>tenant_id</code> or <code>user_id</code> values passed in the request body are ignored. This information is obtained only from the authenticated identity.</li>
+     * <li>The <code>tenant_id</code> or <code>user_id</code> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the output list of the current user with support for conditional filtering and pagination.</p>
+     * <p>Queries the output list of the current user, with support for conditional filtering and pagination.</p>
      * 
      * @param request ListOutputFilesRequest
      * @return ListOutputFilesResponse
@@ -6171,7 +6391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This operation uploads a file to an enterprise knowledge base.</li>
-     * <li>The <code>DEVELOPMENT_KB_MANAGE</code> permission is required to call this API.</li>
+     * <li>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</li>
      * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
      * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
      * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
@@ -6255,7 +6475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This operation uploads a file to an enterprise knowledge base.</li>
-     * <li>The <code>DEVELOPMENT_KB_MANAGE</code> permission is required to call this API.</li>
+     * <li>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</li>
      * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
      * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
      * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
@@ -6278,16 +6498,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</p>
+     * <p>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, and keywords, and supports pagination.</p>
      * <h3>Request parameters</h3>
      * <ul>
      * <li><strong>TenantId</strong>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</li>
      * <li><strong>FilterType</strong>: Optional. The skill filtering dimension. Valid values: <code>ALL</code> (all published), <code>BUILTIN</code> (built-in published), <code>CUSTOM</code> (custom published), <code>DRAFT</code> (drafts, including published skills with unpublished modifications). Default value: <code>ALL</code>.</li>
-     * <li><strong>Tags</strong>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</li>
-     * <li><strong>Keyword</strong>: Optional. Performs fuzzy matching by skill name or description.</li>
+     * <li><strong>Tags</strong>: Optional. Filters by tags. A match is returned if any tag in the array is hit.</li>
+     * <li><strong>Keyword</strong>: Optional. Performs a fuzzy match on the skill name or description.</li>
      * <li><strong>Page</strong>: Optional. The page number. Minimum value: 1. Default value: 1.</li>
-     * <li><strong>PageSize</strong>: Optional. The number of entries per page. Value range: 1 to 100. Default value: 20.</li>
-     * <li><strong>OperatingObjectName</strong>: Optional. The digital employee name. If specified, filters by binding relationship. Must be used together with <code>BindStatus</code>.</li>
+     * <li><strong>PageSize</strong>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</li>
+     * <li><strong>OperatingObjectName</strong>: Optional. The digital employee name. If specified, results are filtered by binding relationship. Must be used together with <code>BindStatus</code>.</li>
      * <li><strong>BindStatus</strong>: Optional. The binding status. Valid values: <code>BOUND</code> (bound), <code>UNBOUND</code> (unbound global skills).</li>
      * </ul>
      * <h3>Response parameters</h3>
@@ -6365,16 +6585,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</p>
+     * <p>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, and keywords, and supports pagination.</p>
      * <h3>Request parameters</h3>
      * <ul>
      * <li><strong>TenantId</strong>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</li>
      * <li><strong>FilterType</strong>: Optional. The skill filtering dimension. Valid values: <code>ALL</code> (all published), <code>BUILTIN</code> (built-in published), <code>CUSTOM</code> (custom published), <code>DRAFT</code> (drafts, including published skills with unpublished modifications). Default value: <code>ALL</code>.</li>
-     * <li><strong>Tags</strong>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</li>
-     * <li><strong>Keyword</strong>: Optional. Performs fuzzy matching by skill name or description.</li>
+     * <li><strong>Tags</strong>: Optional. Filters by tags. A match is returned if any tag in the array is hit.</li>
+     * <li><strong>Keyword</strong>: Optional. Performs a fuzzy match on the skill name or description.</li>
      * <li><strong>Page</strong>: Optional. The page number. Minimum value: 1. Default value: 1.</li>
-     * <li><strong>PageSize</strong>: Optional. The number of entries per page. Value range: 1 to 100. Default value: 20.</li>
-     * <li><strong>OperatingObjectName</strong>: Optional. The digital employee name. If specified, filters by binding relationship. Must be used together with <code>BindStatus</code>.</li>
+     * <li><strong>PageSize</strong>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</li>
+     * <li><strong>OperatingObjectName</strong>: Optional. The digital employee name. If specified, results are filtered by binding relationship. Must be used together with <code>BindStatus</code>.</li>
      * <li><strong>BindStatus</strong>: Optional. The binding status. Valid values: <code>BOUND</code> (bound), <code>UNBOUND</code> (unbound global skills).</li>
      * </ul>
      * <h3>Response parameters</h3>
@@ -7188,12 +7408,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Idempotently offlines a platform announcement by announcement ID. Returns <code>changed=true</code> when a PUBLISHED announcement is offlined for the first time. Returns <code>changed=false</code> when the announcement is already offline or expired.
+     * <h2>Operation description</h2>
+     * <p>Idempotently takes a platform announcement offline by announcement ID. Returns <code>changed=true</code> when a PUBLISHED announcement is taken offline for the first time. Returns <code>changed=false</code> when the announcement is already offline or expired.
      * The caller must belong to the system operations tenant and have announcement management permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Offlines a service notice.</p>
+     * <p>Takes a service notice offline.</p>
      * 
      * @param request OfflineAnnouncementRequest
      * @param headers map
@@ -7233,12 +7453,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Idempotently offlines a platform announcement by announcement ID. Returns <code>changed=true</code> when a PUBLISHED announcement is offlined for the first time. Returns <code>changed=false</code> when the announcement is already offline or expired.
+     * <h2>Operation description</h2>
+     * <p>Idempotently takes a platform announcement offline by announcement ID. Returns <code>changed=true</code> when a PUBLISHED announcement is taken offline for the first time. Returns <code>changed=false</code> when the announcement is already offline or expired.
      * The caller must belong to the system operations tenant and have announcement management permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Offlines a service notice.</p>
+     * <p>Takes a service notice offline.</p>
      * 
      * @param request OfflineAnnouncementRequest
      * @return OfflineAnnouncementResponse
@@ -7404,17 +7624,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API queries primary object data by a specified operating object name (such as <code>customer_1</code>) with paging.</li>
-     * <li>Keyword-based search is supported. You can set whether to return only objects marked as favorites in Settings.</li>
-     * <li>Complex filter conditions can be used to further narrow results, including but not limited to equal to, not equal to, greater than, and less than operators.</li>
+     * <li>This API queries primary object data with pagination based on a specified operating object name (such as <code>customer_1</code>).</li>
+     * <li>Supports keyword-based searching and allows you to specify whether to return only objects marked as favorites.</li>
+     * <li>Complex filter conditions can be used to further refine results, including but not limited to logical operators such as equal to, not equal to, greater than, and less than.</li>
      * <li>If no primary object type is configured, an empty result set is returned.</li>
-     * <li>Data in the request undergoes authentication and filtering to ensure security and accuracy.</li>
+     * <li>Data included in the request undergoes authentication and filtering to ensure security and accuracy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries primary object data by operating object name with paging support, including filtering and search.</p>
+     * <p>Queries primary object data by operating object name with pagination, and supports filtering and searching.</p>
      * 
      * @param request QueryPrimaryObjectDataRequest
      * @param headers map
@@ -7470,17 +7690,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API queries primary object data by a specified operating object name (such as <code>customer_1</code>) with paging.</li>
-     * <li>Keyword-based search is supported. You can set whether to return only objects marked as favorites in Settings.</li>
-     * <li>Complex filter conditions can be used to further narrow results, including but not limited to equal to, not equal to, greater than, and less than operators.</li>
+     * <li>This API queries primary object data with pagination based on a specified operating object name (such as <code>customer_1</code>).</li>
+     * <li>Supports keyword-based searching and allows you to specify whether to return only objects marked as favorites.</li>
+     * <li>Complex filter conditions can be used to further refine results, including but not limited to logical operators such as equal to, not equal to, greater than, and less than.</li>
      * <li>If no primary object type is configured, an empty result set is returned.</li>
-     * <li>Data in the request undergoes authentication and filtering to ensure security and accuracy.</li>
+     * <li>Data included in the request undergoes authentication and filtering to ensure security and accuracy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries primary object data by operating object name with paging support, including filtering and search.</p>
+     * <p>Queries primary object data by operating object name with pagination, and supports filtering and searching.</p>
      * 
      * @param request QueryPrimaryObjectDataRequest
      * @return QueryPrimaryObjectDataResponse
@@ -8537,7 +8757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Precautions</h3>
      * <ul>
      * <li><code>directoryId</code> is a required parameter that specifies the target folder in which to check and retry failed data sources.</li>
-     * <li>If <code>tenantId</code> is not provided, the tenant ID of the caller is used by default.</li>
+     * <li>If <code>tenantId</code> is not provided, the caller\&quot;s tenant ID is used by default.</li>
      * <li>The API supports multiple authentication methods, including AccessKey, BearerToken, and APP authentication.</li>
      * </ul>
      * 
@@ -8593,7 +8813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Precautions</h3>
      * <ul>
      * <li><code>directoryId</code> is a required parameter that specifies the target folder in which to check and retry failed data sources.</li>
-     * <li>If <code>tenantId</code> is not provided, the tenant ID of the caller is used by default.</li>
+     * <li>If <code>tenantId</code> is not provided, the caller\&quot;s tenant ID is used by default.</li>
      * <li>The API supports multiple authentication methods, including AccessKey, BearerToken, and APP authentication.</li>
      * </ul>
      * 
@@ -8611,13 +8831,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</p>
      * <ul>
      * <li><strong>Authentication</strong>: In addition to basic authentication, the <code>DEVELOPMENT_KB_MANAGE</code> permission is required.</li>
      * <li><strong>Security constraints</strong>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</li>
      * <li><strong>Parameters</strong>:<ul>
-     * <li><code>directoryId</code> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</li>
+     * <li><code>directoryId</code> (required): The ID of the enterprise knowledge base directory to check and retry failed data sources.</li>
      * <li><code>tenantId</code> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</li>
      * </ul>
      * </li>
@@ -8625,7 +8845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retries all data sources in failed status under a specified directory in batch.</p>
+     * <p>Retries all data sources in failed status under a specified directory in batches.</p>
      * 
      * @param request RetryKnowledgeBaseFailedSourcesRequest
      * @param headers map
@@ -8665,13 +8885,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</p>
      * <ul>
      * <li><strong>Authentication</strong>: In addition to basic authentication, the <code>DEVELOPMENT_KB_MANAGE</code> permission is required.</li>
      * <li><strong>Security constraints</strong>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</li>
      * <li><strong>Parameters</strong>:<ul>
-     * <li><code>directoryId</code> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</li>
+     * <li><code>directoryId</code> (required): The ID of the enterprise knowledge base directory to check and retry failed data sources.</li>
      * <li><code>tenantId</code> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</li>
      * </ul>
      * </li>
@@ -8679,7 +8899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retries all data sources in failed status under a specified directory in batch.</p>
+     * <p>Retries all data sources in failed status under a specified directory in batches.</p>
      * 
      * @param request RetryKnowledgeBaseFailedSourcesRequest
      * @return RetryKnowledgeBaseFailedSourcesResponse
@@ -9268,12 +9488,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
-     * <li>A persistent OSS address (<code>filePath</code>) must be provided for the file. Other information such as the public access URL and original file name is optional.</li>
-     * <li>If the target folder ID (<code>directoryId</code>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
+     * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
+     * <li>If no target folder ID (<code>directoryId</code>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
      * <li>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</li>
      * <li>The operation type is write, and operation logs are recorded for subsequent auditing.</li>
      * </ul>
@@ -9369,12 +9589,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
      * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
-     * <li>A persistent OSS address (<code>filePath</code>) must be provided for the file. Other information such as the public access URL and original file name is optional.</li>
-     * <li>If the target folder ID (<code>directoryId</code>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
+     * <li>The file must include an OSS persistent address (<code>filePath</code>). Other information such as the public access URL and original file name is optional.</li>
+     * <li>If no target folder ID (<code>directoryId</code>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</li>
      * <li>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</li>
      * <li>The operation type is write, and operation logs are recorded for subsequent auditing.</li>
      * </ul>
@@ -10752,24 +10972,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This API is used to upload a session temporary file by using the <strong>file transfer upload</strong> mode (<code>fileTransfer</code>). The file binary data is not transmitted through the request body of this API. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <code>FileUrl</code> parameter. The backend retrieves the bytes from that address, writes them to its own OSS, and creates a session temporary file record.</p>
-     * <h3>Call methods</h3>
+     * <p>This API operation uploads a temporary temporary file by using the <strong>file transfer upload</strong> mode (<code>fileTransfer</code>). The file binary data is not transmitted in the request body of this API operation. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <code>FileUrl</code> parameter. The backend retrieves the bytes from that address, writes them to its own OSS bucket, and creates a temporary temporary file record.</p>
+     * <h3>How to call</h3>
      * <ul>
-     * <li><strong>Recommended</strong>: Use the <code>UploadChatFileAdvance</code> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates <code>FileUrl</code>.</li>
-     * <li><strong>Direct upload</strong>: Upload the file to an OSS address accessible by the server, and then directly call this API with the <code>FileUrl</code> parameter.</li>
+     * <li><strong>Recommended</strong>: Use the <code>UploadChatFileAdvance</code> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates the <code>FileUrl</code> parameter.</li>
+     * <li><strong>Direct upload</strong>: Upload the file to an OSS address accessible by the server, and then call this API operation directly with the <code>FileUrl</code> parameter.</li>
      * </ul>
      * <h3>Request parameters</h3>
      * <ul>
-     * <li><strong>FileUrl</strong>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</li>
-     * <li><strong>FileName</strong>: Required. The original file name including the extension, such as <code>report.pdf</code>. The OSS address generated during transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</li>
+     * <li><strong>FileUrl</strong>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually set it.</li>
+     * <li><strong>FileName</strong>: Required. The original file name including the extension, such as <code>report.pdf</code>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</li>
      * <li><strong>ContentType</strong>: Optional. The MIME type of the file. If this parameter is not specified, <code>application/octet-stream</code> is used.</li>
-     * <li><strong>OperatingObjectName</strong>: Optional. The Agent namespace identifier that determines the file storage path.</li>
+     * <li><strong>OperatingObjectName</strong>: Optional. The agent namespace identifier that determines the file storage path.</li>
      * </ul>
      * <h3>Response parameters</h3>
-     * <p>The response includes the OSS object path <code>objectName</code>, the storage address <code>fileUrl</code>, the public access address <code>filePublicUrl</code> (valid for 1 hour), and the file record ID <code>fileRecordId</code>. The <code>uploadSignatureUrl</code> parameter is always empty in this mode.</p>
+     * <p>The response includes the OSS object path <code>objectName</code>, the storage address <code>fileUrl</code>, the publicly accessible address <code>filePublicUrl</code> (valid for 1 hour), and the file record ID <code>fileRecordId</code>. The <code>uploadSignatureUrl</code> parameter is always empty in this mode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a local file in a session.</p>
+     * <p>Uploads a local file for a session.</p>
      * 
      * @param request UploadChatFileRequest
      * @param headers map
@@ -10822,24 +11042,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This API is used to upload a session temporary file by using the <strong>file transfer upload</strong> mode (<code>fileTransfer</code>). The file binary data is not transmitted through the request body of this API. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <code>FileUrl</code> parameter. The backend retrieves the bytes from that address, writes them to its own OSS, and creates a session temporary file record.</p>
-     * <h3>Call methods</h3>
+     * <p>This API operation uploads a temporary temporary file by using the <strong>file transfer upload</strong> mode (<code>fileTransfer</code>). The file binary data is not transmitted in the request body of this API operation. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <code>FileUrl</code> parameter. The backend retrieves the bytes from that address, writes them to its own OSS bucket, and creates a temporary temporary file record.</p>
+     * <h3>How to call</h3>
      * <ul>
-     * <li><strong>Recommended</strong>: Use the <code>UploadChatFileAdvance</code> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates <code>FileUrl</code>.</li>
-     * <li><strong>Direct upload</strong>: Upload the file to an OSS address accessible by the server, and then directly call this API with the <code>FileUrl</code> parameter.</li>
+     * <li><strong>Recommended</strong>: Use the <code>UploadChatFileAdvance</code> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates the <code>FileUrl</code> parameter.</li>
+     * <li><strong>Direct upload</strong>: Upload the file to an OSS address accessible by the server, and then call this API operation directly with the <code>FileUrl</code> parameter.</li>
      * </ul>
      * <h3>Request parameters</h3>
      * <ul>
-     * <li><strong>FileUrl</strong>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</li>
-     * <li><strong>FileName</strong>: Required. The original file name including the extension, such as <code>report.pdf</code>. The OSS address generated during transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</li>
+     * <li><strong>FileUrl</strong>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually set it.</li>
+     * <li><strong>FileName</strong>: Required. The original file name including the extension, such as <code>report.pdf</code>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</li>
      * <li><strong>ContentType</strong>: Optional. The MIME type of the file. If this parameter is not specified, <code>application/octet-stream</code> is used.</li>
-     * <li><strong>OperatingObjectName</strong>: Optional. The Agent namespace identifier that determines the file storage path.</li>
+     * <li><strong>OperatingObjectName</strong>: Optional. The agent namespace identifier that determines the file storage path.</li>
      * </ul>
      * <h3>Response parameters</h3>
-     * <p>The response includes the OSS object path <code>objectName</code>, the storage address <code>fileUrl</code>, the public access address <code>filePublicUrl</code> (valid for 1 hour), and the file record ID <code>fileRecordId</code>. The <code>uploadSignatureUrl</code> parameter is always empty in this mode.</p>
+     * <p>The response includes the OSS object path <code>objectName</code>, the storage address <code>fileUrl</code>, the publicly accessible address <code>filePublicUrl</code> (valid for 1 hour), and the file record ID <code>fileRecordId</code>. The <code>uploadSignatureUrl</code> parameter is always empty in this mode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uploads a local file in a session.</p>
+     * <p>Uploads a local file for a session.</p>
      * 
      * @param request UploadChatFileRequest
      * @return UploadChatFileResponse

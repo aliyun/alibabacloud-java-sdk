@@ -33,7 +33,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String digitalEmployeeNameShrink;
 
     /**
-     * <p>Specifies whether to enable direct connection mode. When set to true, the regular scenario routing is skipped and the direct conversation scenario is entered directly.</p>
+     * <p>Specifies whether to enable direct connection mode. If set to true, the regular scenario routing is skipped and the direct conversation scenario is entered.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -42,7 +42,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public Boolean directChat;
 
     /**
-     * <p>The list of file references. Each item is an object, and fileId is required (returned by uploadChatFile).</p>
+     * <p>The list of file references. Each item is an object in which fileId is required and is returned by uploadChatFile.</p>
      */
     @NameInMap("files")
     public String filesShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetryKnowledgeBaseFailedSourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the enterprise knowledge base directory. Failed resources in subdirectories are recursively included.</p>
+     * <p>The enterprise knowledge base directory ID (recursively includes failed resources in subdirectories).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RetryKnowledgeBaseFailedSourcesRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly with --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

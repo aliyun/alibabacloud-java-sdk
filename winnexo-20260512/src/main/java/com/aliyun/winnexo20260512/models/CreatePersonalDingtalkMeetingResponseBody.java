@@ -50,7 +50,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B49109FE-5BB1-593C-915D-F5A99D9F5435</p>

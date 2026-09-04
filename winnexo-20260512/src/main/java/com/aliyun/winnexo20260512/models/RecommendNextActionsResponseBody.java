@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RecommendNextActionsResponseBody extends TeaModel {
     /**
-     * <p>The business status code. 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
+     * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

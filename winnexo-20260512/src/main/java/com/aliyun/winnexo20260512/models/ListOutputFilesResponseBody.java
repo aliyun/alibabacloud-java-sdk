@@ -288,7 +288,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public Long completedSlides;
 
         /**
-         * <p>PPT ID</p>
+         * <p>The PPT file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>examplePptId</p>
@@ -448,7 +448,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public Boolean shareEnabled;
 
         /**
-         * <p>The share token, which is present when sharing is enabled. You can use this token to access the public share preview API.</p>
+         * <p>The share token that is present when sharing is enabled. You can use this token to access the public share preview API.</p>
          * 
          * <strong>example:</strong>
          * <p>example_share_token</p>

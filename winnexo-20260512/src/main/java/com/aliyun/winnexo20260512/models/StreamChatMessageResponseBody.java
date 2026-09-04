@@ -14,7 +14,16 @@ public class StreamChatMessageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The SSE event stream payload. On success, the response is in text/event-stream raw frames and must be consumed frame by frame in a streaming manner.</p>
+     * <p>The incremental content of the current SSE frame.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello</p>
+     */
+    @NameInMap("content")
+    public String content;
+
+    /**
+     * <p>The SSE event stream payload. On success, the response is returned as raw text/event-stream frames that must be consumed frame by frame in streaming mode.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -40,6 +49,15 @@ public class StreamChatMessageResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The SSE event type, such as text, think, heartbeat, done, or error.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
+    @NameInMap("type")
+    public String type;
+
     public static StreamChatMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StreamChatMessageResponseBody self = new StreamChatMessageResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +69,14 @@ public class StreamChatMessageResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public StreamChatMessageResponseBody setContent(String content) {
+        this.content = content;
+        return this;
+    }
+    public String getContent() {
+        return this.content;
     }
 
     public StreamChatMessageResponseBody setData(Object data) {
@@ -75,6 +101,14 @@ public class StreamChatMessageResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public StreamChatMessageResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

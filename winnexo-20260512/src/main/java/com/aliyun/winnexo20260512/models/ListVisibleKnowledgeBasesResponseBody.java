@@ -29,7 +29,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>190F5425-A145-5BBA-980F-082ADB0CA6AF</p>
@@ -120,10 +120,10 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         public String directoryId;
 
         /**
-         * <p>The creation time. This value is a timestamp in milliseconds.</p>
+         * <p>The creation time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-11-14T02:18:27Z</p>
+         * <p>1763086707000</p>
          */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
@@ -132,7 +132,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
          * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-03-26T13:57:42Z</p>
+         * <p>1774533462</p>
          */
         @NameInMap("gmtModified")
         public Long gmtModified;
@@ -156,7 +156,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The number of resources in the FAILED state. This parameter is returned only when listing top-level knowledge base directories.</p>
+         * <p>The number of resources in the FAILED state. This parameter is returned only when the top-level knowledge base directory list is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         public Long sourceFailedCount;
 
         /**
-         * <p>The number of resources in the READY state. This parameter is returned only when listing top-level knowledge base directories.</p>
+         * <p>The number of resources in the READY state. This parameter is returned only when the top-level knowledge base directory list is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -174,7 +174,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         public Long sourceReadyCount;
 
         /**
-         * <p>The total number of resources in the directory and its subdirectories. This parameter is returned only when listing top-level knowledge base directories.</p>
+         * <p>The total number of resources in the directory and its subdirectories. This parameter is returned only when the top-level knowledge base directory list is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

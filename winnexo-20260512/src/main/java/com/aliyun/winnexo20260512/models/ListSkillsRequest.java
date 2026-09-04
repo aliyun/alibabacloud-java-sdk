@@ -48,7 +48,7 @@ public class ListSkillsRequest extends TeaModel {
      * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>1</p>
      */
     @NameInMap("page")
     public Integer page;

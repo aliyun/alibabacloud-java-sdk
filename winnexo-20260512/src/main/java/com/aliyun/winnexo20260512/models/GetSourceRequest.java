@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSourceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return large detail fields (settings / notes / structuredTables / unstructuredDocs). Default value: False, which returns only metadata.</p>
+     * <p>Specifies whether to return large detail fields (settings / notes / structuredTables / unstructuredDocs). Default value: False. When set to False, only metadata is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

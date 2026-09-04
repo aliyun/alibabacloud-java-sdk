@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetryDirectoryFailedSourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the enterprise knowledge base folder. Failed resources in the folder and its subfolders are included recursively.</p>
+     * <p>The ID of the enterprise knowledge base folder. Failed resources in subfolders are recursively included.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

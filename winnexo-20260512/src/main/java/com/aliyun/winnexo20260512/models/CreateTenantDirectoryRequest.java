@@ -42,7 +42,7 @@ public class CreateTenantDirectoryRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The ID of the effective tenant.</p>
+     * <p>The ID of the tenant for which the operation takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

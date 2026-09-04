@@ -15,7 +15,7 @@ public class CreateUserRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The base64-encoded password ciphertext encrypted by RSA-OAEP-SHA256 (required).</p>
+     * <p>The base64-encoded password ciphertext encrypted by using RSA-OAEP-SHA256 (required).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,16 @@ public class CreateUserRequest extends TeaModel {
     public java.util.List<String> roleCodes;
 
     /**
-     * <p>The ID of the tenant in which the operation takes effect.</p>
+     * <p>The SSO provider type. This parameter is optional if the tenant has only one external logon method. This parameter is required if the tenant has multiple external logon methods. Currently, createUser supports BUILD_IN and AGENT_ONE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AGENT_ONE</p>
+     */
+    @NameInMap("ssoProvider")
+    public String ssoProvider;
+
+    /**
+     * <p>The ID of the tenant on which the operation takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -79,6 +88,14 @@ public class CreateUserRequest extends TeaModel {
     }
     public java.util.List<String> getRoleCodes() {
         return this.roleCodes;
+    }
+
+    public CreateUserRequest setSsoProvider(String ssoProvider) {
+        this.ssoProvider = ssoProvider;
+        return this;
+    }
+    public String getSsoProvider() {
+        return this.ssoProvider;
     }
 
     public CreateUserRequest setTenantId(String tenantId) {

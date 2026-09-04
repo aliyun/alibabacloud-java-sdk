@@ -14,7 +14,7 @@ public class ListBillingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the list.</p>
+     * <p>The details of the bill list.</p>
      */
     @NameInMap("list")
     public java.util.List<ListBillingResponseBodyList> list;
@@ -154,7 +154,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String bizType;
 
         /**
-         * <p>costSource</p>
+         * <p>The cost source type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -163,7 +163,7 @@ public class ListBillingResponseBody extends TeaModel {
         public java.util.List<String> costSource;
 
         /**
-         * <p>costSourceDisplayName</p>
+         * <p>The display name of the cost source.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -199,7 +199,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String entryObjectType;
 
         /**
-         * <p>Indicates whether the bill is a shadow bill.</p>
+         * <p>Indicates whether this is a shadow bill.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -235,7 +235,7 @@ public class ListBillingResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The task status. Running is returned upon submission.</p>
+         * <p>The task status. The status is returned as Running upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>

@@ -14,7 +14,7 @@ public class CreateGroupFeishuDocRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dir_group_child</p>
@@ -46,7 +46,7 @@ public class CreateGroupFeishuDocRequest extends TeaModel {
      * <p>The image name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Project Plan</p>
+     * <p>ProjectPlan</p>
      */
     @NameInMap("name")
     public String name;

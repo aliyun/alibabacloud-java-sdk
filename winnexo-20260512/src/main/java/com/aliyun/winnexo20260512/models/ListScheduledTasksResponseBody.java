@@ -33,7 +33,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public java.util.List<ListScheduledTasksResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of entries returned in this request.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -182,7 +182,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
 
     public static class ListScheduledTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The reason for the abnormality. This field has a value only when status is abnormal.</p>
+         * <p>The reason for the exception. This field has a value only when status is abnormal.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -266,7 +266,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
          * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample description</p>
+         * <p>SampleDescription</p>
          */
         @NameInMap("description")
         public String description;
@@ -281,7 +281,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public java.util.List<String> digitalEmployeeName;
 
         /**
-         * <p>The cumulative number of executions.</p>
+         * <p>The total number of executions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -362,13 +362,13 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String triggerType;
 
         /**
-         * <p>The visibility of the group task. Valid values:</p>
+         * <p>The visibility scope of the group task. Valid values:</p>
          * <ul>
          * <li>PRIVATE: visible only to the creator and group owner.</li>
          * <li>COLLABORATIVE: visible to specified collaborators.</li>
          * <li>PUBLIC: visible to all group members.</li>
          * </ul>
-         * <p>If not specified for a group task, the default value is PRIVATE. This field is ignored for personal tasks.</p>
+         * <p>For group tasks, the default value is PRIVATE if not specified. This field is ignored for personal tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -377,7 +377,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String visibility;
 
         /**
-         * <p>The list of collaborator user IDs (excluding the task creator and group creator, who are covered by the authentication layer). This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility.</p>
+         * <p>The list of collaborators (excluding the task creator and group creator, who are covered by the authentication layer). This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

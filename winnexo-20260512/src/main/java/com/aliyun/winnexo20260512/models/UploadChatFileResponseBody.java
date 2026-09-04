@@ -16,16 +16,16 @@ public class UploadChatFileResponseBody extends TeaModel {
     /**
      * <p>The content type of the file. Valid values:</p>
      * <ul>
-     * <li><strong>image</strong>: image</li>
-     * <li><strong>document</strong>: general document</li>
-     * <li><strong>alidoc</strong>: Alibaba document</li>
-     * <li><strong>text</strong>: text</li>
-     * <li><strong>video</strong>: video</li>
-     * <li><strong>audio</strong>: audio</li>
-     * <li><strong>archive</strong>: archive</li>
-     * <li><strong>app</strong>: application</li>
-     * <li><strong>link</strong>: shortcut</li>
-     * <li><strong>other</strong>: other</li>
+     * <li><strong>image</strong>: Image.</li>
+     * <li><strong>document</strong>: General document.</li>
+     * <li><strong>alidoc</strong>: Alibaba document.</li>
+     * <li><strong>text</strong>: Text.</li>
+     * <li><strong>video</strong>: Video.</li>
+     * <li><strong>audio</strong>: Audio.</li>
+     * <li><strong>archive</strong>: Archive.</li>
+     * <li><strong>app</strong>: Application.</li>
+     * <li><strong>link</strong>: Shortcut.</li>
+     * <li><strong>other</strong>: Other.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The publicly accessible URL of the online document.</p>
+     * <p>The publicly accessible URL of the AliDing online document.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -53,7 +53,7 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String filePublicUrl;
 
     /**
-     * <p>The file record ID (optional, corresponding to settings.file_record_id).</p>
+     * <p>The file record ID. This parameter is optional and corresponds to settings.file_record_id.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleFileRecordId</p>
@@ -62,7 +62,7 @@ public class UploadChatFileResponseBody extends TeaModel {
     public String fileRecordId;
 
     /**
-     * <p>The attachment address.</p>
+     * <p>The Yida attachment address.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>

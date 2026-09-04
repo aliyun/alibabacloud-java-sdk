@@ -199,7 +199,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public Long skillHubDefinitionId;
 
         /**
-         * <p>The data source type. Fixed value: FILE.</p>
+         * <p>The skill source type.</p>
          * 
          * <strong>example:</strong>
          * <p>BUILTIN</p>
@@ -208,7 +208,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The task status. Returns Running upon submission.</p>
+         * <p>The task status. Running is returned upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -217,7 +217,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The keys.</p>
+         * <p>The key.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

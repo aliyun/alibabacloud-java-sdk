@@ -14,7 +14,7 @@ public class CreateConversationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3a59769c-e631-4b48-84f3-c9bf3a8ae940</p>
@@ -32,7 +32,7 @@ public class CreateConversationResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>The current zone list is illegal.</p>
@@ -41,7 +41,7 @@ public class CreateConversationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>A reserved field for extension use.</p>
+     * <p>A reserved field for extension purposes.</p>
      */
     @NameInMap("metadata")
     public java.util.Map<String, ?> metadata;

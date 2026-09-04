@@ -8,13 +8,13 @@ public class CreateUserWithGroupsResponseBody extends TeaModel {
      * <p>The WINNEXO logon account.</p>
      * 
      * <strong>example:</strong>
-     * <p>exampleAccountId</p>
+     * <p><a href="mailto:user123@example.com">user123@example.com</a></p>
      */
     @NameInMap("accountId")
     public String accountId;
 
     /**
-     * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* or InvalidParameter.*).</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -26,13 +26,13 @@ public class CreateUserWithGroupsResponseBody extends TeaModel {
      * <p>The display name of the user.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>Indicates whether the user is newly created. A value of false indicates that an existing user joined the tenant.</p>
+     * <p>Indicates whether the user is newly created.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class CreateUserWithGroupsResponseBody extends TeaModel {
     public Boolean isNewUser;
 
     /**
-     * <p>The error description. This parameter is empty when the request succeeds.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -50,7 +50,7 @@ public class CreateUserWithGroupsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request trace ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -59,7 +59,7 @@ public class CreateUserWithGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The WINNEXO platform user ID.</p>
+     * <p>The platform user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

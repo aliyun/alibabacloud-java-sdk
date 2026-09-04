@@ -38,7 +38,7 @@ public class GetChatSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The session ID.</p>
+     * <p>The session information.</p>
      */
     @NameInMap("session")
     public GetChatSessionResponseBodySession session;
@@ -153,7 +153,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The username of the sharing source. This parameter has a value only when from_share=True.</p>
+         * <p>The username of the user who shared the message. This parameter has a value only when from_share is set to True.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -320,7 +320,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the creation time exceeds 30 days.</p>
+         * <p>Indicates whether the creation time is older than 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

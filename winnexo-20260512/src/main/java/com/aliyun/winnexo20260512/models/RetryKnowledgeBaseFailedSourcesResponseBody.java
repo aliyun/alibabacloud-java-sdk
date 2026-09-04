@@ -32,7 +32,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     public Long enqueuedCount;
 
     /**
-     * <p>enqueuedIds。</p>
+     * <p>The list of knowledge base source IDs that have been re-enqueued.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -74,7 +74,7 @@ public class RetryKnowledgeBaseFailedSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of resources skipped because they are not in FAILED status.</p>
+     * <p>The number of resources skipped (not in FAILED status).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

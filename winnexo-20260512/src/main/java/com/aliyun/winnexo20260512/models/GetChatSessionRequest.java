@@ -14,7 +14,7 @@ public class GetChatSessionRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The SessionId value to filter by. If specified, all Active/Expired status information associated with this session is returned.</p>
+     * <p>The session ID to filter by. If specified, all Active/Expired status information associated with this session is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

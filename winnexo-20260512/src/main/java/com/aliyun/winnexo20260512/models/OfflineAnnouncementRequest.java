@@ -15,7 +15,7 @@ public class OfflineAnnouncementRequest extends TeaModel {
     public Long announcementId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this explicitly with --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. Pass it explicitly in winnexo-cli by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

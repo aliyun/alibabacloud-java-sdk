@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserWithGroupsShrinkRequest extends TeaModel {
     /**
-     * <p>The display name of the user (unique within the tenant, required, up to 100 characters).</p>
+     * <p>The display name of the user. The name must be unique within the tenant and cannot exceed 100 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateUserWithGroupsShrinkRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The Base64-encoded password ciphertext encrypted by RSA-OAEP-SHA256 (required).</p>
+     * <p>The Base64-encoded password ciphertext encrypted by using the RSA-OAEP-SHA256 algorithm.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateUserWithGroupsShrinkRequest extends TeaModel {
     public String passwordEncrypted;
 
     /**
-     * <p>The list of system role codes. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER. Default value: APPLICATION_USER.</p>
+     * <p>The list of initial system role codes. If this parameter is not specified, the <code>APPLICATION_USER</code> role is assigned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -34,16 +34,16 @@ public class CreateUserWithGroupsShrinkRequest extends TeaModel {
     public String roleCodesShrink;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using <code>--tenant-id</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>string_value</p>
      */
     @NameInMap("tenantId")
     public String tenantId;
 
     /**
-     * <p>The list of initial user group IDs. This parameter is optional. All user groups must belong to the current tenant.</p>
+     * <p>The list of initial user group IDs. A maximum of 100 user group IDs can be specified. All user groups must belong to the current tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -52,7 +52,7 @@ public class CreateUserWithGroupsShrinkRequest extends TeaModel {
     public String userGroupIdsShrink;
 
     /**
-     * <p>The WINNEXO logon account (unique identifier, required).</p>
+     * <p>The WINNEXO logon account. This parameter is a unique identifier and cannot be empty.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class ListVisibleKnowledgeBasesHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F892C03F-7E12-5F37-A506-1FC3B065EAC6</p>

@@ -32,7 +32,7 @@ public class CreateAnnouncementResponseBody extends TeaModel {
     public Long createdBy;
 
     /**
-     * <p>The response message.</p>
+     * <p>The prompt message.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -68,9 +68,9 @@ public class CreateAnnouncementResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The refund status. You must query this field to confirm the refund status during processing. Valid values:</p>
+     * <p>The refund status. You need to query and confirm the refund status during the refund process. Valid values:</p>
      * <ul>
-     * <li>SUCCESS: All refunds succeeded.</li>
+     * <li>SUCCESS: All succeeded.</li>
      * <li>FAIL: Failed.</li>
      * <li>WAIT_PAY: Waiting for refund.</li>
      * <li>EXPIRE: Expired.</li>

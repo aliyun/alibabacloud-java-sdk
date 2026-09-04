@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckHealthResponseBody extends TeaModel {
     /**
-     * <p>The authentication source: bearer / aliyun_gateway.</p>
+     * <p>The authentication source. Valid values: bearer and aliyun_gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun_gateway</p>
@@ -14,7 +14,7 @@ public class CheckHealthResponseBody extends TeaModel {
     public String authSource;
 
     /**
-     * <p>The caller type: user / aliyun_main / aliyun_ram / service.</p>
+     * <p>The caller type. Valid values: user, aliyun_main, aliyun_ram, and service.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun_main</p>
@@ -41,7 +41,7 @@ public class CheckHealthResponseBody extends TeaModel {
     public String digitalEmployeeName;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>

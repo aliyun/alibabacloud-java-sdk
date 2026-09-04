@@ -272,7 +272,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         public String skillCode;
 
         /**
-         * <p>sourceIds</p>
+         * <p>The list of source IDs for related skills.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

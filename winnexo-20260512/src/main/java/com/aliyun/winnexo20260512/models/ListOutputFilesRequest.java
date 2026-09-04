@@ -14,7 +14,7 @@ public class ListOutputFilesRequest extends TeaModel {
     public String itemType;
 
     /**
-     * <p>The keyword for searching. Matches output titles or item names.</p>
+     * <p>The keyword for searching. Matches the output title or item name.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -41,7 +41,7 @@ public class ListOutputFilesRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of items per page. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class ListOutputFilesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Specifies whether to display only outputs and output items that have sharing enabled.</p>
+     * <p>Specifies whether to display only outputs and output items with sharing enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>

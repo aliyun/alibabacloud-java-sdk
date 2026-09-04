@@ -42,7 +42,7 @@ public class CreateAnnouncementShrinkRequest extends TeaModel {
     public String effectiveEnd;
 
     /**
-     * <p>The effective start time in ISO 8601 format with time zone information. If this parameter is not specified, the notice takes effect immediately.</p>
+     * <p>The effective start time in ISO 8601 format with time zone. If this parameter is not specified, the notice takes effect immediately.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-20T14:00:00+08:00</p>
@@ -51,7 +51,7 @@ public class CreateAnnouncementShrinkRequest extends TeaModel {
     public String effectiveStart;
 
     /**
-     * <p>The priority level. Valid values:</p>
+     * <p>The priority. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

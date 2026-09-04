@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGroupDingtalkChatRequest extends TeaModel {
     /**
-     * <p>The conversation ID, typically used for JSSDK.</p>
+     * <p>The session ID, typically used for JSSDK.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>The chat name.</p>
+     * <p>The group chat name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Customer Project Chat</p>
+     * <p>CustomerProjectGroup</p>
      */
     @NameInMap("chatName")
     public String chatName;
@@ -65,7 +65,7 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
      * <p>The meeting notes content (optional). This participates in auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
-     * <p>Focus on identifying customer requests and to-do items</p>
+     * <p>Focus on identifying customer demands and to-do items</p>
      */
     @NameInMap("notes")
     public String notes;
@@ -83,13 +83,13 @@ public class CreateGroupDingtalkChatRequest extends TeaModel {
      * <p>The source tags.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;Customer&quot;,&quot;Chat&quot;]</p>
+     * <p>[&quot;Customer&quot;,&quot;GroupChat&quot;]</p>
      */
     @NameInMap("sourceTags")
     public String sourceTags;
 
     /**
-     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this explicitly with --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

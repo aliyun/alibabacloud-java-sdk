@@ -14,7 +14,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dir_group_child</p>
@@ -62,13 +62,13 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
      * <p>The image name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Project Plan</p>
+     * <p>ProjectPlan</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>

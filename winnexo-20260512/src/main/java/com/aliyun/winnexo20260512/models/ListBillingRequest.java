@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBillingRequest extends TeaModel {
     /**
-     * <p>The unique business identifier. When bizType is set to LibraryChat, bizId refers to the document library ID.</p>
+     * <p>The unique business identifier. When bizType is LibraryChat, bizId refers to the document library ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleBizId</p>
@@ -32,7 +32,7 @@ public class ListBillingRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to filter out bills with zero credit consumption. Default value: true (filtered).</p>
+     * <p>Specifies whether to filter out bills with zero credit consumption. Default value: true (filter out).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -43,8 +43,8 @@ public class ListBillingRequest extends TeaModel {
     /**
      * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li>start: indicates node creation. This is the default value and does not need to be explicitly set in most cases.</li>
-     * <li>stop: stops a real-time meeting task. This corresponds to the creation of a real-time meeting. Set this to stop after the meeting ends to trigger the call. This is used in real-time meeting scenarios.</li>
+     * <li>start: indicates task creation. This is the default value and does not need to be explicitly set in most cases.</li>
+     * <li>stop: stops a real-time meeting task. This corresponds to the creation of a real-time meeting. After the meeting ends, set this to stop to trigger the call. This is used in real-time meeting scenarios.</li>
      * </ul>
      * <p>Note: When ending a real-time recording, you must set this parameter to stop.</p>
      * 
@@ -73,7 +73,7 @@ public class ListBillingRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The query start time. This is a UNIX timestamp in seconds.</p>
+     * <p>The query start time. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-01T12:00:00Z</p>
@@ -82,7 +82,7 @@ public class ListBillingRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The task status. Running is returned upon submission.</p>
+     * <p>The task status. The status is returned as Running upon submission.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>

@@ -59,7 +59,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The user message ID. Use this ID to establish a pairing relationship with the assistant message in this turn.</p>
+     * <p>The user message ID.</p>
      * 
      * <strong>example:</strong>
      * <p>60756cc6-8c53-4d1f-8db8-b8c09b81a5cb</p>

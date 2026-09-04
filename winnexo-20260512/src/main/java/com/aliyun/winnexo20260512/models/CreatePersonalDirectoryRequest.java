@@ -14,7 +14,7 @@ public class CreatePersonalDirectoryRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the digital human.</p>
+     * <p>The name of the digital employee.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreatePersonalDirectoryRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the digital human (operating object name, optional).</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>

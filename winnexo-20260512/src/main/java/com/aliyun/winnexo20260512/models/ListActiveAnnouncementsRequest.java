@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListActiveAnnouncementsRequest extends TeaModel {
     /**
-     * <p>The page number for pagination.</p>
+     * <p>The page number for paginated queries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListActiveAnnouncementsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page for pagination. Default value: 100. Maximum value: 500.</p>
+     * <p>The number of entries per page. Default value: 100. Maximum value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListActiveAnnouncementsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

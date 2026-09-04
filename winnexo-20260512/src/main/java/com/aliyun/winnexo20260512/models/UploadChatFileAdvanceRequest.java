@@ -7,16 +7,16 @@ public class UploadChatFileAdvanceRequest extends TeaModel {
     /**
      * <p>The content type of the file. Valid values:</p>
      * <ul>
-     * <li><strong>image</strong>: image</li>
-     * <li><strong>document</strong>: general document</li>
-     * <li><strong>alidoc</strong>: Alibaba document</li>
-     * <li><strong>text</strong>: text</li>
-     * <li><strong>video</strong>: video</li>
-     * <li><strong>audio</strong>: audio</li>
-     * <li><strong>archive</strong>: archive</li>
-     * <li><strong>app</strong>: application</li>
-     * <li><strong>link</strong>: shortcut</li>
-     * <li><strong>other</strong>: other</li>
+     * <li><strong>image</strong>: Image.</li>
+     * <li><strong>document</strong>: General document.</li>
+     * <li><strong>alidoc</strong>: Alibaba document.</li>
+     * <li><strong>text</strong>: Text.</li>
+     * <li><strong>video</strong>: Video.</li>
+     * <li><strong>audio</strong>: Audio.</li>
+     * <li><strong>archive</strong>: Archive.</li>
+     * <li><strong>app</strong>: Application.</li>
+     * <li><strong>link</strong>: Shortcut.</li>
+     * <li><strong>other</strong>: Other.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class UploadChatFileAdvanceRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The attachment address.</p>
+     * <p>The Yida attachment address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class UploadChatFileAdvanceRequest extends TeaModel {
     public java.io.InputStream fileUrlObject;
 
     /**
-     * <p>The name of the digital employee (operating object name, optional).</p>
+     * <p>The name of the digital employee (operating object name). This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -55,7 +55,7 @@ public class UploadChatFileAdvanceRequest extends TeaModel {
     public String operatingObjectName;
 
     /**
-     * <p>The tenant ID.</p>
+     * <p>The tenant ID that takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

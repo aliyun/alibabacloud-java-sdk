@@ -14,7 +14,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the enterprise knowledge base folder. Failed resources in the folder and its subfolders are included recursively.</p>
+     * <p>The ID of the enterprise knowledge base folder. Failed resources in subfolders are recursively included.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleDirectoryId</p>
@@ -32,7 +32,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
     public Long enqueuedCount;
 
     /**
-     * <p>enqueuedIds。</p>
+     * <p>The list of source IDs that have been re-enqueued.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>

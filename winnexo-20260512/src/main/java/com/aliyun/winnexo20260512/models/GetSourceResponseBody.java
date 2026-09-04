@@ -104,7 +104,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The meeting notes content (optional), which participates in auxiliary analysis.</p>
+     * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -164,7 +164,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>The user profile card settings.</p>
+     * <p>The user profile settings.</p>
      */
     @NameInMap("settings")
     public java.util.Map<String, ?> settings;
@@ -188,7 +188,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The knowledge base affiliation type. Valid values:</p>
+     * <p>The knowledge base (KB) ownership type. Valid values:</p>
      * <ul>
      * <li>aliding_kb_doc: DingTalk knowledge base document.</li>
      * <li>normal: common knowledge.</li>
@@ -228,7 +228,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>structuredTables</p>
+     * <p>The list of structured tables.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>

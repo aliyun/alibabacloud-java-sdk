@@ -23,7 +23,7 @@ public class ListScheduledTasksShrinkRequest extends TeaModel {
     public Boolean creatorOnly;
 
     /**
-     * <p>The keyword of the rule name, used for fuzzy match.</p>
+     * <p>The keyword of the rule name for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>SampleKeyword</p>
@@ -32,10 +32,10 @@ public class ListScheduledTasksShrinkRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The maximum number of entries returned in this request.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;

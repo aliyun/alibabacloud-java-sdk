@@ -127,7 +127,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
 
     public static class ListActiveAnnouncementsResponseBodyItems extends TeaModel {
         /**
-         * <p>The business ID of the notice.</p>
+         * <p>The business ID of the announcement.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -181,7 +181,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
         public String effectiveEnd;
 
         /**
-         * <p>The effective start time in ISO 8601 format with time zone. If this parameter is not specified, the notice takes effect immediately.</p>
+         * <p>The effective start time in ISO 8601 format with time zone. If not specified, the announcement takes effect immediately.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-20T14:00:00+08:00</p>
@@ -192,7 +192,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
         /**
          * <p>The priority of the free task.</p>
          * <ul>
-         * <li><p>Uses the default priority of the project, as shown in the following figure. The default priority values are as follows:</p>
+         * <li><p>Uses the default priority of the project, as shown in the following figure. The default priorities are as follows:</p>
          * <ul>
          * <li><p><strong>-10</strong>: Low. This is the default value.</p>
          * </li>
@@ -207,9 +207,9 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
          * </ul>
          * <p><img src="https://img.alicdn.com/imgextra/i1/O1CN01hNuSPz25juCzgxhmW_!!6000000007563-2-tps-2682-1304.png" alt=""></p>
          * <ul>
-         * <li>Custom priority defined by the user, as shown in the following figure, with an additional &quot;Generally urgent&quot; level.</li>
+         * <li>Custom priority, as shown in the following figure, with an additional &quot;Moderately urgent&quot; level.</li>
          * </ul>
-         * <p>The value of this parameter is subject to the actual response of the API call. A higher priority corresponds to a larger value.</p>
+         * <p>The value of this parameter is subject to the actual response of the API. A higher priority corresponds to a larger value.</p>
          * <p><img src="https://img.alicdn.com/imgextra/i1/O1CN01V67b3i1mkNvJiW8D1_!!6000000004992-2-tps-2128-1126.png" alt=""></p>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
         public String publishedAt;
 
         /**
-         * <p>The task status. The value Running is returned upon submission.</p>
+         * <p>The task status. Running is returned upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
@@ -240,7 +240,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
          * <p>The title of the scheduled meeting.</p>
          * 
          * <strong>example:</strong>
-         * <p>System Maintenance Notification</p>
+         * <p>System Maintenance Notice</p>
          */
         @NameInMap("title")
         public String title;

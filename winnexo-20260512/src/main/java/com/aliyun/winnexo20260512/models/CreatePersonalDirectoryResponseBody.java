@@ -44,7 +44,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
      * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
-     * <p>2026-03-04 13:54:52</p>
+     * <p>1772603692</p>
      */
     @NameInMap("gmtCreate")
     public Long gmtCreate;
@@ -53,7 +53,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
      * <p>The last modification time.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-11-14T02:18:27Z</p>
+     * <p>1763086707</p>
      */
     @NameInMap("gmtModified")
     public Long gmtModified;
@@ -77,7 +77,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the digital human (operating object name, optional).</p>
+     * <p>The name of the digital employee (operating object name, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -104,7 +104,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
     public String path;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>375701FC-2FB9-5782-BE8F-A3F5E2F2158C</p>

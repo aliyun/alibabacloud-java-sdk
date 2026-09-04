@@ -59,7 +59,7 @@ public class OfflineAnnouncementResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The datasource status after re-parsing.</p>
+     * <p>The data source status after re-parsing.</p>
      * 
      * <strong>example:</strong>
      * <p>OFFLINE</p>

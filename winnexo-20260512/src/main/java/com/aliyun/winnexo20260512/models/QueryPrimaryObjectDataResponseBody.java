@@ -23,7 +23,7 @@ public class QueryPrimaryObjectDataResponseBody extends TeaModel {
     public java.util.List<java.util.Map<String, String>> items;
 
     /**
-     * <p>The error description. This value is empty when the request succeeds.</p>
+     * <p>The error description. This parameter is empty when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>

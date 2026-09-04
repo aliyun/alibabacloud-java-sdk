@@ -59,7 +59,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F42FC60B-C54D-5DFB-A8EC-04625BFFF1F7</p>

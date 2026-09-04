@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledTaskUnderstandDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the collaboration group to which the task belongs (such as cg_101). If this parameter is specified, a group space task is created (the caller must be a valid group member). If this parameter is left empty, a personal task is created.</p>
+     * <p>The ID of the collaboration group (such as cg_101). If this parameter is specified, a group space task is created (the caller must be a valid group member). If this parameter is left empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleCollaborationGroupId</p>
@@ -14,7 +14,7 @@ public class GetScheduledTaskUnderstandDetailRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>The name of the current effective digital employee. This parameter is empty if not configured.</p>
+     * <p>The name of the current effective digital employee. This value is empty if not configured.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class GetScheduledTaskUnderstandDetailRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a mini-app ID.</p>
+         * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a micro-application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
