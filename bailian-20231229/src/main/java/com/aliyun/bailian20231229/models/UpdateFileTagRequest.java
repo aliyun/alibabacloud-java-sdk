@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateFileTagRequest extends TeaModel {
     /**
      * <ul>
-     * <li>The list of tags to associate with the file. You can specify a maximum of 100 tags. The combined length of all tag values cannot exceed 700 characters.</li>
+     * <li>The list of tags associated with the file. You can specify up to 100 tags, and the total character length of all tags cannot exceed 700.</li>
      * </ul>
      * <p>This parameter is required.</p>
      */

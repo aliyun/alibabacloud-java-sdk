@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddFileResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>DataCenter.FileTooLarge</p>
@@ -14,7 +14,7 @@ public class AddFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data field returned by the operation.</p>
+     * <p>The business data field of the operation.</p>
      */
     @NameInMap("Data")
     public AddFileResponseBodyData data;
@@ -47,10 +47,10 @@ public class AddFileResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

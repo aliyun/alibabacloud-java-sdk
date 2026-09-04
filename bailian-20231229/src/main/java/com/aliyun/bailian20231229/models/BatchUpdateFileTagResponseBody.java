@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateFileTagResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Success indicates that the call was successful.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned by the operation.</p>
+     * <p>The business data returned by the operation.</p>
      */
     @NameInMap("Data")
     public BatchUpdateFileTagResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Required parameter(FileId) missing or invalid, please check the request parameters.</p>
@@ -29,7 +29,7 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
@@ -38,7 +38,7 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code returned for the request.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,12 +47,10 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was accepted. Check <code>UpdateFileTagResultList</code> for the status of each file. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was accepted.</p>
-     * </li>
-     * <li><p>false: The request failed, for example, due to an invalid parameter.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +114,7 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
 
     public static class BatchUpdateFileTagResponseBodyDataUpdateFileTagResultList extends TeaModel {
         /**
-         * <p>The error code. This parameter is returned only if Success is false.</p>
+         * <p>The error code. This parameter is returned only when Success is false.</p>
          * 
          * <strong>example:</strong>
          * <p>NoPermission</p>
@@ -125,7 +123,7 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message. This parameter is returned only if Success is false.</p>
+         * <p>The error message. This parameter is returned only when Success is false.</p>
          * 
          * <strong>example:</strong>
          * <p>FileId not exists.</p>
@@ -143,12 +141,10 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>Indicates whether the tags for the specific file were updated. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li><p>true: The tags were updated successfully.</p>
-         * </li>
-         * <li><p>false: The tag update failed.</p>
-         * </li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +194,7 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
 
     public static class BatchUpdateFileTagResponseBodyData extends TeaModel {
         /**
-         * <p>A list of the tag update results.</p>
+         * <p>The list of tag update results.</p>
          */
         @NameInMap("UpdateFileTagResultList")
         public java.util.List<BatchUpdateFileTagResponseBodyDataUpdateFileTagResultList> updateFileTagResultList;

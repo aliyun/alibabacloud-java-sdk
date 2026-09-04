@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFileTagResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <code>Success</code> indicates that the request was successful.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class UpdateFileTagResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public UpdateFileTagResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Requests throttling triggered.</p>
@@ -38,7 +38,7 @@ public class UpdateFileTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,12 +47,10 @@ public class UpdateFileTagResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The request failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +114,7 @@ public class UpdateFileTagResponseBody extends TeaModel {
 
     public static class UpdateFileTagResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the file.</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>

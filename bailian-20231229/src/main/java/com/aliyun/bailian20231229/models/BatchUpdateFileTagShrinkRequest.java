@@ -5,14 +5,18 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateFileTagShrinkRequest extends TeaModel {
     /**
-     * <p>A list of files to update.</p>
+     * <p>The list of documents to update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileInfos")
     public String fileInfosShrink;
 
     /**
-     * <p>The update mode. Valid values are APPEND and OVERWRITE.</p>
+     * <p>The update mode. Valid values:</p>
+     * <ul>
+     * <li>APPEND: appends tags to existing tags.</li>
+     * <li>OVERWRITE: overwrites existing tags.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>OVERWRITE</p>

@@ -1,3 +1,9 @@
+2026-09-04 Version: 2.14.4
+- Update API ListIndices: add response parameters Body.Data.Indices.$.PipelineCommercialCu.
+- Update API ListIndices: add response parameters Body.Data.Indices.$.PipelineCommercialType.
+- Update API ListIndices: add response parameters Body.Data.Indices.$.PipelineStorageUsage.
+
+
 2026-08-04 Version: 2.14.3
 - Update API ListIndices: add response parameters Body.Data.Indices.$.StructuredIndexConfig.
 

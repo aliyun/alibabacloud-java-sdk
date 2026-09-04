@@ -5,14 +5,18 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateFileTagRequest extends TeaModel {
     /**
-     * <p>A list of files to update.</p>
+     * <p>The list of documents to update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileInfos")
     public java.util.List<BatchUpdateFileTagRequestFileInfos> fileInfos;
 
     /**
-     * <p>The update mode. Valid values are APPEND and OVERWRITE.</p>
+     * <p>The update mode. Valid values:</p>
+     * <ul>
+     * <li>APPEND: appends tags to existing tags.</li>
+     * <li>OVERWRITE: overwrites existing tags.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>OVERWRITE</p>
@@ -43,7 +47,7 @@ public class BatchUpdateFileTagRequest extends TeaModel {
 
     public static class BatchUpdateFileTagRequestFileInfos extends TeaModel {
         /**
-         * <p>The file ID. To get this ID, go to the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">application data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">application data</a> page and click the ID icon next to the file name.</p>
+         * <p>The file ID in the data center. On the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page, click the ID icon next to the file name to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,7 +58,7 @@ public class BatchUpdateFileTagRequest extends TeaModel {
 
         /**
          * <ul>
-         * <li>A list of up to 100 tags to associate with the file. The total length of all tags cannot exceed 700 characters.</li>
+         * <li>The list of tags associated with the file. You can specify up to 100 tags, and the total character length of all tags cannot exceed 700.</li>
          * </ul>
          * <p>This parameter is required.</p>
          */

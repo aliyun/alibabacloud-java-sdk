@@ -11,7 +11,7 @@ public class CreateIndexResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The business data returned when the request succeeds.</p>
+     * <p>The business data returned when the request is successful.</p>
      */
     @NameInMap("Data")
     public CreateIndexResponseBodyData data;
@@ -108,9 +108,9 @@ public class CreateIndexResponseBody extends TeaModel {
 
     public static class CreateIndexResponseBodyData extends TeaModel {
         /**
-         * <p>The knowledge base ID, also known as <code>IndexId</code>. This is the unique identifier of the created knowledge base.</p>
+         * <p>The knowledge base ID, also known as <code>IndexId</code>, which is the unique identifier of the created knowledge base.</p>
          * <blockquote>
-         * <p>Store this value properly. It is required for all subsequent API operations related to this knowledge base.</p>
+         * <p>Store this value properly. It is used in all subsequent API operations related to this knowledge base.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

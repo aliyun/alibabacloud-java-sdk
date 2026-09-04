@@ -113,15 +113,39 @@ public class ListIndicesResponseBody extends TeaModel {
     }
 
     public static class ListIndicesResponseBodyDataIndicesStructuredIndexConfig extends TeaModel {
+        /**
+         * <p>Indicates whether this field is used for model responses. A value of <strong>true</strong> indicates that the retrieval results of this column are used as input for the large language model to generate answers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsRecall")
         public Boolean isRecall;
 
+        /**
+         * <p>Indicates whether this field is used for knowledge base retrieval. A value of <strong>true</strong> indicates that the knowledge base can search data in this column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSearch")
         public Boolean isSearch;
 
+        /**
+         * <p>The name of the index field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the index field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -166,7 +190,7 @@ public class ListIndicesResponseBody extends TeaModel {
 
     public static class ListIndicesResponseBodyDataIndices extends TeaModel {
         /**
-         * <p>The estimated chunk size. Valid values: 1 to 2048.</p>
+         * <p>The estimated chunk size. Valid value range: [1-2048].</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -177,8 +201,8 @@ public class ListIndicesResponseBody extends TeaModel {
         /**
          * <p>The configuration mode used by this knowledge base. Valid values:</p>
          * <ul>
-         * <li>recommend: recommended configuration.</li>
-         * <li>user-defined: custom configuration.</li>
+         * <li>recommend: Recommended configuration.</li>
+         * <li>user-defined: Custom configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,31 +212,31 @@ public class ListIndicesResponseBody extends TeaModel {
         public String confgModel;
 
         /**
-         * <p>The knowledge base description.</p>
+         * <p>The description of the knowledge base.</p>
          * 
          * <strong>example:</strong>
-         * <p>Products in this list are mainly for overseas customers</p>
+         * <p>The products in this list are mainly targeted at overseas customers</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The list of file IDs.</p>
+         * <p>The list of document IDs.</p>
          */
         @NameInMap("DocumentIds")
         public java.util.List<String> documentIds;
 
         /**
-         * <p>The embedding model name. Valid values:</p>
+         * <p>The name of the embedding model. Valid values:</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>text-embedding-v4: text-embedding-v4 model.</li>
-         * <li>text-embedding-v3: text-embedding-v3 model.</li>
-         * <li>text-embedding-v2: text-embedding-v2 model.</li>
+         * <li>text-embedding-v4: The text-embedding-v4 model.</li>
+         * <li>text-embedding-v3: The text-embedding-v3 model.</li>
+         * <li>text-embedding-v2: The text-embedding-v2 model.</li>
          * </ul>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <ul>
-         * <li>text-embedding-v2: text-embedding-v2 model.</li>
+         * <li>text-embedding-v2: The text-embedding-v2 model.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +268,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The knowledge base name.</p>
+         * <p>The name of the knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>XXXX Product List</p>
@@ -253,7 +277,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The chunk overlap size. Valid values: 0 to 1024.</p>
+         * <p>The chunk overlap size. Valid value range: [0-1024].</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -262,7 +286,34 @@ public class ListIndicesResponseBody extends TeaModel {
         public Integer overlapSize;
 
         /**
-         * <p>The similarity threshold. Valid values: 0.01 to 1.00.</p>
+         * <p>The commercial knowledge base CU specification. This parameter is valid only for Enterprise Edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("PipelineCommercialCu")
+        public Integer pipelineCommercialCu;
+
+        /**
+         * <p>The commercial knowledge base type specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
+        @NameInMap("PipelineCommercialType")
+        public String pipelineCommercialType;
+
+        /**
+         * <p>The knowledge base storage usage, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.03</p>
+         */
+        @NameInMap("PipelineStorageUsage")
+        public Double pipelineStorageUsage;
+
+        /**
+         * <p>The similarity threshold. Valid value range: [0.01-1.00].</p>
          * 
          * <strong>example:</strong>
          * <p>0.01</p>
@@ -271,7 +322,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public String rerankMinScore;
 
         /**
-         * <p>The rerank model name. Valid values:</p>
+         * <p>The name of the rerank model. Valid values:</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
          * <li>qwen3-rerank-hybrid: qwen3-rerank (hybrid) reranking.</li>
@@ -281,7 +332,7 @@ public class ListIndicesResponseBody extends TeaModel {
          * </ul>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <ul>
-         * <li>gte-rerank-hybrid: official reranking.</li>
+         * <li>gte-rerank-hybrid: Official reranking.</li>
          * <li>gte-rerank: gte-rerank reranking.</li>
          * </ul>
          * 
@@ -292,7 +343,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public String rerankModelName;
 
         /**
-         * <p>The sentence separator. If multiple separators are used, they are separated by |. Valid values:</p>
+         * <p>The sentence separator. If multiple separators are used, they are separated by ｜. Valid values:</p>
          * <ul>
          * <li>\
          * : line break</li>
@@ -335,8 +386,8 @@ public class ListIndicesResponseBody extends TeaModel {
         /**
          * <p>The vector storage type of the knowledge base. Valid values:</p>
          * <ul>
-         * <li>ES: built-in vector database.</li>
-         * <li>BUILT_IN: built-in vector database.</li>
+         * <li>ES: Built-in vector database.</li>
+         * <li>BUILT_IN: Built-in vector database.</li>
          * <li>ADB: AnalyticDB for PostgreSQL database.</li>
          * </ul>
          * 
@@ -350,12 +401,12 @@ public class ListIndicesResponseBody extends TeaModel {
          * <p>The data type in Alibaba Cloud Model Studio &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</p>
          * <p>For document search&lt;props=&quot;china&quot;&gt;/audio and video search knowledge bases, valid values:</p>
          * <ul>
-         * <li>DATA_CENTER_CATEGORY: category type.</li>
-         * <li>DATA_CENTER_FILE: file type.</li>
+         * <li>DATA_CENTER_CATEGORY: Category type.</li>
+         * <li>DATA_CENTER_FILE: File type.</li>
          * </ul>
          * <p>For data query/image Q&amp;A knowledge bases, valid values:</p>
          * <ul>
-         * <li>DATA_CENTER_STRUCTURED_TABLE: data table type.</li>
+         * <li>DATA_CENTER_STRUCTURED_TABLE: Data table type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -365,9 +416,9 @@ public class ListIndicesResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The knowledge base type. Valid values:</p>
+         * <p>The type of the knowledge base. Valid values:</p>
          * <ul>
-         * <li>UNSTRUCTURED: document search.</li>
+         * <li>UNSTRUCTURED: Document search.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,6 +427,9 @@ public class ListIndicesResponseBody extends TeaModel {
         @NameInMap("StructureType")
         public String structureType;
 
+        /**
+         * <p>The index configuration for data query or image Q&amp;A knowledge bases.</p>
+         */
         @NameInMap("StructuredIndexConfig")
         public java.util.List<ListIndicesResponseBodyDataIndicesStructuredIndexConfig> structuredIndexConfig;
 
@@ -454,6 +508,30 @@ public class ListIndicesResponseBody extends TeaModel {
         }
         public Integer getOverlapSize() {
             return this.overlapSize;
+        }
+
+        public ListIndicesResponseBodyDataIndices setPipelineCommercialCu(Integer pipelineCommercialCu) {
+            this.pipelineCommercialCu = pipelineCommercialCu;
+            return this;
+        }
+        public Integer getPipelineCommercialCu() {
+            return this.pipelineCommercialCu;
+        }
+
+        public ListIndicesResponseBodyDataIndices setPipelineCommercialType(String pipelineCommercialType) {
+            this.pipelineCommercialType = pipelineCommercialType;
+            return this;
+        }
+        public String getPipelineCommercialType() {
+            return this.pipelineCommercialType;
+        }
+
+        public ListIndicesResponseBodyDataIndices setPipelineStorageUsage(Double pipelineStorageUsage) {
+            this.pipelineStorageUsage = pipelineStorageUsage;
+            return this;
+        }
+        public Double getPipelineStorageUsage() {
+            return this.pipelineStorageUsage;
         }
 
         public ListIndicesResponseBodyDataIndices setRerankMinScore(String rerankMinScore) {
@@ -538,7 +616,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public java.util.List<ListIndicesResponseBodyDataIndices> indices;
 
         /**
-         * <p>The specified page number.</p>
+         * <p>The returned page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -547,7 +625,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The specified number of entries per page.</p>
+         * <p>The returned number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -7,13 +7,13 @@ public class AddFileShrinkRequest extends TeaModel {
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><p>When CategoryType is set to UNSTRUCTURED, set this parameter to the category ID of the uploaded file, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also go to <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>, click the File tab, and then click the ID icon next to the category name to obtain the category ID. You can set this parameter to default to use the system-created default category.</p>
+     * <li><p>When CategoryType is set to UNSTRUCTURED, specify the category ID to which the uploaded file belongs. This is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also go to <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> &gt; Files tab and click the ID icon next to the category name to obtain the category ID. You can set this parameter to default to use the system-created default category.</p>
      * </li>
      * <li><p>When CategoryType is set to SESSION_FILE, set this parameter to &quot;default&quot;.</p>
      * </li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>Set this parameter to the category ID of the uploaded file, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also go to <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>, click the File tab, and then click the ID icon next to the category name to obtain the category ID. You can set this parameter to default to use the system-created default category.</p>
+     * <p>Specify the category ID to which the uploaded file belongs. This is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also go to <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> &gt; Files tab and click the ID icon next to the category name to obtain the category ID. You can set this parameter to default to use the system-created default category.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +25,13 @@ public class AddFileShrinkRequest extends TeaModel {
     /**
      * <p>The category type. This parameter is optional. Default value: UNSTRUCTURED. Valid values:</p>
      * <ul>
-     * <li>UNSTRUCTURED: category used for building knowledge base scenarios.</li>
+     * <li>UNSTRUCTURED: Category. Used for knowledge base scenarios.</li>
      * </ul>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>SESSION_FILE: file used for <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> in agent applications.
+     * <li>SESSION_FILE: A file used for <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">conversation interaction</a> in agent applications.
      * <note>When using <code>SESSION_FILE</code>, set the CategoryType parameter to <code>SESSION_FILE</code> when calling the ApplyFileUploadLease operation as well.</note>
-     * <note>The file is valid only for the current user session. After the user closes the session, the file expires. The maximum validity period is 7 days. Long-term storage is not supported.</note></li>
+     * <note>The file is valid only for the current user session. After the user closes the session, the file expires (maximum validity period is 7 days) and cannot be retained for long-term storage.</note></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,14 +52,14 @@ public class AddFileShrinkRequest extends TeaModel {
 
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>Specifies a URL for the file. The system records this URL when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document search knowledge base</a>. When you use the Alibaba Cloud Model Studio console to interact with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent application</a>, this URL is returned with the retrieval results of the file through the <code>docUrl</code> field.</p>
+     * <p>Adds a URL to the file. The system records this link when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document search knowledge base</a>. When you use the Alibaba Cloud Model Studio console to chat with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent application</a>, this link is returned with the file retrieval results through the <code>docUrl</code> field.</p>
      * <blockquote>
-     * <p>The agent application must have <strong>Knowledge Base</strong> enabled and the <strong>Show answer sources</strong> feature turned on. Otherwise, this parameter does not take effect.</p>
+     * <p>The agent application must have <strong>Knowledge Base</strong> enabled and the <strong>Display answer sources</strong> feature turned on. Otherwise, this parameter does not take effect.</p>
      * </blockquote>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>Specifies a URL for the file. The system records this URL when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document search knowledge base</a>. When you use the Alibaba Cloud Model Studio console to interact with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent application</a>, this URL is returned with the retrieval results of the file through the <code>docUrl</code> field.</p>
+     * <p>Adds a URL to the file. The system records this link when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document search knowledge base</a>. When you use the Alibaba Cloud Model Studio console to chat with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent application</a>, this link is returned with the file retrieval results through the <code>docUrl</code> field.</p>
      * <blockquote>
-     * <p>The agent application must have <strong>Knowledge Base</strong> enabled and the <strong>Show answer sources</strong> feature turned on. Otherwise, this parameter does not take effect.</p>
+     * <p>The agent application must have <strong>Knowledge Base</strong> enabled and the <strong>Display answer sources</strong> feature turned on. Otherwise, this parameter does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,15 +71,15 @@ public class AddFileShrinkRequest extends TeaModel {
     /**
      * <p>The parser type. Valid values:</p>
      * <ul>
-     * <li>DOCMIND: intelligent document parsing</li>
-     * <li>DOCMIND_DIGITAL: electronic document parsing</li>
-     * <li>DOCMIND_LLM_VERSION: large language model document parsing</li>
-     * <li>DASH_QWEN_VL_PARSER: Qwen VL parsing</li>
-     * <li>DOCMIND_LLM_VERSION_MEDIA: audio and video parsing</li>
-     * <li>AUTO_SELECT: automatic parser selection</li>
+     * <li>DOCMIND: Intelligent document parsing.</li>
+     * <li>DOCMIND_DIGITAL: Electronic document parsing.</li>
+     * <li>DOCMIND_LLM_VERSION: Large language model (LLM) document parsing.</li>
+     * <li>DASH_QWEN_VL_PARSER: Qwen VL parsing.</li>
+     * <li>DOCMIND_LLM_VERSION_MEDIA: Audio and video parsing.</li>
+     * <li>AUTO_SELECT: Automatic parser selection.</li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;
-     * <note>The uploaded file is parsed by using the currently specified parser. If you set this parameter to AUTO_SELECT, the parser configured for the category is used.</note></p>
+     * <note>The file you upload is parsed by using the currently specified parser. If you set this parameter to AUTO_SELECT, the parser configured for the category is used.</note></p>
      * <p>&lt;props=&quot;china&quot;&gt;
      * <note>When CategoryType is set to UNSTRUCTURED, the parser parses the uploaded file based on the data parsing settings of the current category.</note>
      * <note>When CategoryType is set to SESSION_FILE, the system parses the file content by using the default method, which cannot be changed.</note></p>
