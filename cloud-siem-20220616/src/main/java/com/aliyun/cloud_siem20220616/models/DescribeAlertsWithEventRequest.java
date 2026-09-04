@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertsWithEventRequest extends TeaModel {
     /**
-     * <p>The name of the alert.</p>
+     * <p>The alert name.</p>
      * 
      * <strong>example:</strong>
      * <p>Try SNMP weak password</p>
@@ -14,7 +14,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String alertName;
 
     /**
-     * <p>The title of the alert.</p>
+     * <p>The alert title.</p>
      * 
      * <strong>example:</strong>
      * <p>Scan-Try SNMP weak password</p>
@@ -23,7 +23,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String alertTitle;
 
     /**
-     * <p>The type of the alert.</p>
+     * <p>The alert type.</p>
      * 
      * <strong>example:</strong>
      * <p>Scan</p>
@@ -32,7 +32,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String alertType;
 
     /**
-     * <p>The ID of the asset.</p>
+     * <p>The asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>09414e9ebaa9c19b84d851abb91d****</p>
@@ -41,7 +41,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String assetId;
 
     /**
-     * <p>The name of the asset.</p>
+     * <p>The asset name.</p>
      * 
      * <strong>example:</strong>
      * <p>hostname-****</p>
@@ -50,7 +50,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String assetName;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The current page number. The value must be greater than or equal to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end time of the query. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
@@ -69,7 +69,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the entity.</p>
+     * <p>The entity ID.</p>
      * 
      * <strong>example:</strong>
      * <p>21034e803f492b926cea9e5beab4****</p>
@@ -78,7 +78,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String entityId;
 
     /**
-     * <p>The name of the entity.</p>
+     * <p>The entity name.</p>
      * 
      * <strong>example:</strong>
      * <p>launch-advisor-*****</p>
@@ -96,12 +96,10 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String incidentUuid;
 
     /**
-     * <p>Indicates whether the attack is defended. Valid values:</p>
+     * <p>Specifies whether the alert has been defended. Valid values:</p>
      * <ul>
-     * <li><p><code>0</code>: detected</p>
-     * </li>
-     * <li><p><code>1</code>: blocked</p>
-     * </li>
+     * <li>0: detected</li>
+     * <li>1: blocked</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,14 +109,11 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String isDefend;
 
     /**
-     * <p>The threat level. The value is a JSON array. Valid values:</p>
+     * <p>The threat level in JSON array format. Valid values:</p>
      * <ul>
-     * <li><p><code>serious</code>: high</p>
-     * </li>
-     * <li><p><code>suspicious</code>: medium</p>
-     * </li>
-     * <li><p><code>remind</code>: low</p>
-     * </li>
+     * <li>serious: High.</li>
+     * <li>suspicious: Medium.</li>
+     * <li>remind: Low.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -138,12 +133,10 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the data management center of Threat Analysis resides. You can determine the region based on the region in which your assets reside. Valid values:</p>
+     * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p><code>cn-hangzhou</code>: Your assets reside in the Chinese mainland or Hong Kong (China).</p>
-     * </li>
-     * <li><p><code>ap-southeast-1</code>: Your assets reside in regions outside the Chinese mainland.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in Chinese mainland or China (Hong Kong).</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,7 +146,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the member in the resource directory.</p>
+     * <p>The member account ID of the resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -162,12 +155,10 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The entity of the alert. Valid values:</p>
+     * <p>The view type. Valid values:</p>
      * <ul>
-     * <li><p><code>0</code>: the current Alibaba Cloud account.</p>
-     * </li>
-     * <li><p><code>1</code>: all members in the resource directory.</p>
-     * </li>
+     * <li>0: the view of the current Alibaba Cloud account.</li>
+     * <li>1: the view of all accounts in the enterprise.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -177,7 +168,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The data source of the alert.</p>
+     * <p>The alert data source.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -186,7 +177,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The start of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time of the query. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
@@ -195,7 +186,7 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The ID of the account that is associated with the alert.</p>
+     * <p>The ID of the account associated with the alert.</p>
      * 
      * <strong>example:</strong>
      * <p>176555323***</p>

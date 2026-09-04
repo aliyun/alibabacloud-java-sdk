@@ -9,10 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "cloud-siem.cn-shanghai.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cloud-siem.ap-southeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloud-siem", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1320,7 +1316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves alerts associated with a specific event.</p>
+     * <p>Retrieves the list of alerts associated with an incident.</p>
      * 
      * @param request DescribeAlertsWithEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1424,7 +1420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves alerts associated with a specific event.</p>
+     * <p>Retrieves the list of alerts associated with an incident.</p>
      * 
      * @param request DescribeAlertsWithEventRequest
      * @return DescribeAlertsWithEventResponse
@@ -5270,7 +5266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submit incident response information to update the incident status and severity level.</p>
+     * <p>Submits incident handling information, updates the incident status, and updates the incident severity level.</p>
      * 
      * @param request PostEventDisposeAndWhiteruleListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5327,6 +5323,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.syncAlertStatus)) {
+            body.put("SyncAlertStatus", request.syncAlertStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.threatLevel)) {
             body.put("ThreatLevel", request.threatLevel);
         }
@@ -5350,7 +5350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submit incident response information to update the incident status and severity level.</p>
+     * <p>Submits incident handling information, updates the incident status, and updates the incident severity level.</p>
      * 
      * @param request PostEventDisposeAndWhiteruleListRequest
      * @return PostEventDisposeAndWhiteruleListResponse

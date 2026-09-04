@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PostEventDisposeAndWhiteruleListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class PostEventDisposeAndWhiteruleListResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response value.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -32,7 +32,7 @@ public class PostEventDisposeAndWhiteruleListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -41,12 +41,10 @@ public class PostEventDisposeAndWhiteruleListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: succeeded</p>
-     * </li>
-     * <li><p>false: failed</p>
-     * </li>
+     * <li>true: successful</li>
+     * <li>false: failed</li>
      * </ul>
      * 
      * <strong>example:</strong>
