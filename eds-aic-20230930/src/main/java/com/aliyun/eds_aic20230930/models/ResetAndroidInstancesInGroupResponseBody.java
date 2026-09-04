@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
     /**
+     * <p>The order ID for storage reduction. This parameter is returned only when you reduce storage while resetting instances in a cloud phone matrix. It is not returned in other scenarios.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22365781890****</p>
+     */
+    @NameInMap("OrderId")
+    public String orderId;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -13,12 +22,23 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task information.</p>
+     */
     @NameInMap("Tasks")
     public ResetAndroidInstancesInGroupResponseBodyTasks tasks;
 
     public static ResetAndroidInstancesInGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ResetAndroidInstancesInGroupResponseBody self = new ResetAndroidInstancesInGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ResetAndroidInstancesInGroupResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public ResetAndroidInstancesInGroupResponseBody setRequestId(String requestId) {
@@ -39,6 +59,8 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
 
     public static class ResetAndroidInstancesInGroupResponseBodyTasksChildTasks extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-xxxx</p>
          */
@@ -46,6 +68,8 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The child task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-xxxx</p>
          */
@@ -76,10 +100,15 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
     }
 
     public static class ResetAndroidInstancesInGroupResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The child tasks.</p>
+         */
         @NameInMap("ChildTasks")
         public java.util.List<ResetAndroidInstancesInGroupResponseBodyTasksChildTasks> childTasks;
 
         /**
+         * <p>The parent task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-xxxx</p>
          */

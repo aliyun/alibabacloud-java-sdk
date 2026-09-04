@@ -1,3 +1,22 @@
+2026-09-04 Version: 3.30.0
+- Support API CreateAgentSkill.
+- Support API DeleteAgentSkill.
+- Support API DescribeSkills.
+- Support API InstallSkills.
+- Support API UninstallSkills.
+- Update API DescribeAgentTask: add response parameters Body.Tasks.$.ArtifactCount.
+- Update API DescribeAgentTask: add response parameters Body.Tasks.$.Artifacts.
+- Update API DescribeCreditDetail: add request parameters AgentTypes.
+- Update API DescribeCreditDetail: add response parameters Body.Data.Details.$.AgentType.
+- Update API DescribeScheduledTaskExecutions: add response parameters Body.Executions.$.ArtifactCount.
+- Update API DescribeScheduledTaskExecutions: add response parameters Body.Executions.$.Artifacts.
+- Update API ResetAndroidInstancesInGroup: add request parameters AutoPay.
+- Update API ResetAndroidInstancesInGroup: add request parameters PromotionId.
+- Update API ResetAndroidInstancesInGroup: add request parameters TargetDataDiskSize.
+- Update API ResetAndroidInstancesInGroup: add response parameters Body.OrderId.
+- Update API RunAgentTask: add request parameters SaveArtifacts.
+
+
 2026-08-21 Version: 3.29.3
 - Generated java 2023-09-30 for eds-aic.
 

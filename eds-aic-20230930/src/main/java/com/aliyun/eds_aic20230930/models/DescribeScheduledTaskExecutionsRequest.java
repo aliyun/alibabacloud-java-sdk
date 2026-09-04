@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScheduledTaskExecutionsRequest extends TeaModel {
     /**
-     * <p>The end time of the time range in ISO-8601 format.</p>
+     * <p>The end time of the time range in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-06-12T23:59:59</p>
@@ -51,7 +51,7 @@ public class DescribeScheduledTaskExecutionsRequest extends TeaModel {
     public String scheduledId;
 
     /**
-     * <p>The start time of the time range in ISO-8601 format.</p>
+     * <p>The start time of the time range in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-06-01T00:00:00</p>

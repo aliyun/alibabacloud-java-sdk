@@ -20,7 +20,7 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
     public java.util.List<DescribeScheduledTaskExecutionsResponseBodyExecutions> executions;
 
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of results returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,7 +56,7 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The number of results returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -125,7 +125,115 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts extends TeaModel {
+        /**
+         * <p>The MIME type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/png</p>
+         */
+        @NameInMap("ContentType")
+        public String contentType;
+
+        /**
+         * <p>The OSS pre-signed download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/">https://bucket.oss-cn-hangzhou.aliyuncs.com/</a>...</p>
+         */
+        @NameInMap("DownloadUrl")
+        public String downloadUrl;
+
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>screenshot.png</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The file size in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
+        @NameInMap("Size")
+        public Long size;
+
+        /**
+         * <p>The upload time in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-05T10:00:00+08:00</p>
+         */
+        @NameInMap("UpdatedTime")
+        public String updatedTime;
+
+        public static DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts self = new DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
+        }
+
+        public DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
+            return this;
+        }
+        public String getDownloadUrl() {
+            return this.downloadUrl;
+        }
+
+        public DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+        public DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts setUpdatedTime(String updatedTime) {
+            this.updatedTime = updatedTime;
+            return this;
+        }
+        public String getUpdatedTime() {
+            return this.updatedTime;
+        }
+
+    }
+
     public static class DescribeScheduledTaskExecutionsResponseBodyExecutions extends TeaModel {
+        /**
+         * <p>The number of task artifacts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("ArtifactCount")
+        public Integer artifactCount;
+
+        /**
+         * <p>The list of uploaded task artifacts.</p>
+         */
+        @NameInMap("Artifacts")
+        public java.util.List<DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts> artifacts;
+
         /**
          * <p>The end time.</p>
          * 
@@ -228,6 +336,22 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
         public static DescribeScheduledTaskExecutionsResponseBodyExecutions build(java.util.Map<String, ?> map) throws Exception {
             DescribeScheduledTaskExecutionsResponseBodyExecutions self = new DescribeScheduledTaskExecutionsResponseBodyExecutions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeScheduledTaskExecutionsResponseBodyExecutions setArtifactCount(Integer artifactCount) {
+            this.artifactCount = artifactCount;
+            return this;
+        }
+        public Integer getArtifactCount() {
+            return this.artifactCount;
+        }
+
+        public DescribeScheduledTaskExecutionsResponseBodyExecutions setArtifacts(java.util.List<DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts> artifacts) {
+            this.artifacts = artifacts;
+            return this;
+        }
+        public java.util.List<DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts> getArtifacts() {
+            return this.artifacts;
         }
 
         public DescribeScheduledTaskExecutionsResponseBodyExecutions setCompletedAt(String completedAt) {

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCreditDetailRequest extends TeaModel {
     /**
+     * <p>The list of agent types, used to filter credit change details by specified agent types.</p>
+     */
+    @NameInMap("AgentTypes")
+    public java.util.List<String> agentTypes;
+
+    /**
      * <p>The end time.</p>
      * 
      * <strong>example:</strong>
@@ -19,20 +25,32 @@ public class DescribeCreditDetailRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The maximum number of entries to read in this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token for the next query. If a query does not return all results, the returned NextToken is not empty. You can pass the returned NextToken in the next query to continue retrieving results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The list of plan packages or credit booster packages.</p>
+     * <p>The list of package or credit booster pack IDs.</p>
      */
     @NameInMap("PackageIds")
     public java.util.List<String> packageIds;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number for pagination. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,6 +79,14 @@ public class DescribeCreditDetailRequest extends TeaModel {
     public static DescribeCreditDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCreditDetailRequest self = new DescribeCreditDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCreditDetailRequest setAgentTypes(java.util.List<String> agentTypes) {
+        this.agentTypes = agentTypes;
+        return this;
+    }
+    public java.util.List<String> getAgentTypes() {
+        return this.agentTypes;
     }
 
     public DescribeCreditDetailRequest setEndTime(Long endTime) {

@@ -41,9 +41,30 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeCreditDetailResponseBodyDataDetails extends TeaModel {
+        /**
+         * <p>The agent type. This field is populated only when querying by a single agent type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudphone_enterprise</p>
+         */
+        @NameInMap("AgentType")
+        public String agentType;
+
+        /**
+         * <p>The API key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("ApiKeyName")
         public String apiKeyName;
 
+        /**
+         * <p>The number of cached tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("CachedTokens")
         public Long cachedTokens;
 
@@ -74,9 +95,21 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The model inference duration, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("DurationMs")
         public Long durationMs;
 
+        /**
+         * <p>The number of input tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("InputTokens")
         public Long inputTokens;
 
@@ -89,17 +122,35 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-instance</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
+         */
         @NameInMap("ModelId")
         public String modelId;
 
+        /**
+         * <p>The number of output tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("OutputTokens")
         public Long outputTokens;
 
         /**
-         * <p>The ID of the credit or plan package.</p>
+         * <p>The credit or package ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cmag-0c1g77wjljl9h****</p>
@@ -107,11 +158,17 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @NameInMap("PackageId")
         public String packageId;
 
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A923337-44D9-5CAD-B2A5-4B9E6628B1C8</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
         /**
-         * <p>The task ID, which is globally unique.</p>
+         * <p>The globally unique task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-1fr0k51pozyr5****</p>
@@ -119,15 +176,35 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The total number of tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350</p>
+         */
         @NameInMap("TotalTokens")
         public Long totalTokens;
 
+        /**
+         * <p>The response time of the first token, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("TtftMs")
         public Long ttftMs;
 
         public static DescribeCreditDetailResponseBodyDataDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeCreditDetailResponseBodyDataDetails self = new DescribeCreditDetailResponseBodyDataDetails();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCreditDetailResponseBodyDataDetails setAgentType(String agentType) {
+            this.agentType = agentType;
+            return this;
+        }
+        public String getAgentType() {
+            return this.agentType;
         }
 
         public DescribeCreditDetailResponseBodyDataDetails setApiKeyName(String apiKeyName) {
@@ -267,11 +344,17 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @NameInMap("Details")
         public java.util.List<DescribeCreditDetailResponseBodyDataDetails> details;
 
+        /**
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number for pagination. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

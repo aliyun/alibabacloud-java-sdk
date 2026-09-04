@@ -9,10 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-southeast-1", "eds-aic.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "eds-aic.cn-shanghai.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eds-aic", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -800,6 +796,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAICloudPhoneResponse createAICloudPhone(CreateAICloudPhoneRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAICloudPhoneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom skill.</p>
+     * 
+     * @param request CreateAgentSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgentSkillResponse
+     */
+    public CreateAgentSkillResponse createAgentSkillWithOptions(CreateAgentSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileList)) {
+            query.put("FileList", request.fileList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iconKey)) {
+            query.put("IconKey", request.iconKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageOssKey)) {
+            query.put("PackageOssKey", request.packageOssKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillDescription)) {
+            query.put("SkillDescription", request.skillDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
+            query.put("SkillName", request.skillName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillPackageUrl)) {
+            query.put("SkillPackageUrl", request.skillPackageUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgentSkill"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgentSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom skill.</p>
+     * 
+     * @param request CreateAgentSkillRequest
+     * @return CreateAgentSkillResponse
+     */
+    public CreateAgentSkillResponse createAgentSkill(CreateAgentSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAgentSkillWithOptions(request, runtime);
     }
 
     /**
@@ -1961,6 +2021,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes custom skills.</p>
+     * 
+     * @param request DeleteAgentSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentSkillResponse
+     */
+    public DeleteAgentSkillResponse deleteAgentSkillWithOptions(DeleteAgentSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.skillIds)) {
+            query.put("SkillIds", request.skillIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgentSkill"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes custom skills.</p>
+     * 
+     * @param request DeleteAgentSkillRequest
+     * @return DeleteAgentSkillResponse
+     */
+    public DeleteAgentSkillResponse deleteAgentSkill(DeleteAgentSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgentSkillWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Pay-as-you-go instance groups can be deleted at any time.
      * Subscription instance groups can be deleted only after they expire.</p>
@@ -3046,7 +3150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all change records of credits.</p>
+     * <p>Queries all credit change records.</p>
      * 
      * @param request DescribeCreditDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3055,6 +3159,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCreditDetailResponse describeCreditDetailWithOptions(DescribeCreditDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentTypes)) {
+            query.put("AgentTypes", request.agentTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
@@ -3106,7 +3214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all change records of credits.</p>
+     * <p>Queries all credit change records.</p>
      * 
      * @param request DescribeCreditDetailRequest
      * @return DescribeCreditDetailResponse
@@ -3852,7 +3960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution records of agent scheduled tasks.</p>
+     * <p>Queries the execution records of an agent scheduled task.</p>
      * 
      * @param request DescribeScheduledTaskExecutionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3908,7 +4016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution records of agent scheduled tasks.</p>
+     * <p>Queries the execution records of an agent scheduled task.</p>
      * 
      * @param request DescribeScheduledTaskExecutionsRequest
      * @return DescribeScheduledTaskExecutionsResponse
@@ -3988,6 +4096,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeScheduledTasksResponse describeScheduledTasks(DescribeScheduledTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeScheduledTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries skill information.</p>
+     * 
+     * @param request DescribeSkillsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSkillsResponse
+     */
+    public DescribeSkillsResponse describeSkillsWithOptions(DescribeSkillsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            query.put("SkillId", request.skillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusFilter)) {
+            query.put("StatusFilter", request.statusFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSkills"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSkillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries skill information.</p>
+     * 
+     * @param request DescribeSkillsRequest
+     * @return DescribeSkillsResponse
+     */
+    public DescribeSkillsResponse describeSkills(DescribeSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSkillsWithOptions(request, runtime);
     }
 
     /**
@@ -5102,6 +5278,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InstallMonitorAgentResponse installMonitorAgent(InstallMonitorAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.installMonitorAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Installs skills to instances.</p>
+     * 
+     * @param request InstallSkillsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallSkillsResponse
+     */
+    public InstallSkillsResponse installSkillsWithOptions(InstallSkillsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillIds)) {
+            query.put("SkillIds", request.skillIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstallSkills"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallSkillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Installs skills to instances.</p>
+     * 
+     * @param request InstallSkillsRequest
+     * @return InstallSkillsResponse
+     */
+    public InstallSkillsResponse installSkills(InstallSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.installSkillsWithOptions(request, runtime);
     }
 
     /**
@@ -6758,10 +6982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can reset an instance (initialize its system) only when the instance is Active, Stopped, Abnormal, Backup Failed, or <strong>Recover Failed</strong>.</p>
+     * <p>Resetting (initializing the system) is supported only when the instance is in the <strong>Available, Stopped, Abnormal, Backup Failed, or Restore Failed</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets the instance by reinstalling the operating system using its original image. Note: The reset operation will fail if the image that was used to create the Cloud Phone has since been deleted.</p>
+     * <p>Resets cloud phone instances. A reset reinstalls the system using the image of the cloud phone. For example, the reset fails if the image used when the cloud phone was created has been deleted.</p>
      * 
      * @param request ResetAndroidInstancesInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6774,8 +6998,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidInstanceIds", request.androidInstanceIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ignoreParamValidation)) {
             query.put("IgnoreParamValidation", request.ignoreParamValidation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            query.put("PromotionId", request.promotionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
@@ -6784,6 +7016,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.settingResetType)) {
             query.put("SettingResetType", request.settingResetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetDataDiskSize)) {
+            query.put("TargetDataDiskSize", request.targetDataDiskSize);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6805,10 +7041,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can reset an instance (initialize its system) only when the instance is Active, Stopped, Abnormal, Backup Failed, or <strong>Recover Failed</strong>.</p>
+     * <p>Resetting (initializing the system) is supported only when the instance is in the <strong>Available, Stopped, Abnormal, Backup Failed, or Restore Failed</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets the instance by reinstalling the operating system using its original image. Note: The reset operation will fail if the image that was used to create the Cloud Phone has since been deleted.</p>
+     * <p>Resets cloud phone instances. A reset reinstalls the system using the image of the cloud phone. For example, the reset fails if the image used when the cloud phone was created has been deleted.</p>
      * 
      * @param request ResetAndroidInstancesInGroupRequest
      * @return ResetAndroidInstancesInGroupResponse
@@ -6905,6 +7141,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.runConfigShrink)) {
             query.put("RunConfig", request.runConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saveArtifacts)) {
+            query.put("SaveArtifacts", request.saveArtifacts);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduleId)) {
@@ -7696,6 +7936,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UninstallMonitorAgentResponse uninstallMonitorAgent(UninstallMonitorAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uninstallMonitorAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Uninstalls skills from instances.</p>
+     * 
+     * @param request UninstallSkillsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UninstallSkillsResponse
+     */
+    public UninstallSkillsResponse uninstallSkillsWithOptions(UninstallSkillsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillIds)) {
+            query.put("SkillIds", request.skillIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UninstallSkills"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UninstallSkillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Uninstalls skills from instances.</p>
+     * 
+     * @param request UninstallSkillsRequest
+     * @return UninstallSkillsResponse
+     */
+    public UninstallSkillsResponse uninstallSkills(UninstallSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.uninstallSkillsWithOptions(request, runtime);
     }
 
     /**

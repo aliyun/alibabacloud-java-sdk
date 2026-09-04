@@ -38,6 +38,15 @@ public class RunAgentTaskRequest extends TeaModel {
     public RunAgentTaskRequestRunConfig runConfig;
 
     /**
+     * <p>Specifies whether to write the task artifacts to the user\&quot;s OSS bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("SaveArtifacts")
+    public Boolean saveArtifacts;
+
+    /**
      * <p>The scheduling plan ID. When specified, the execution record is associated with the corresponding scheduled node, which facilitates aggregate query by scheduling dimension through aggregation.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +56,7 @@ public class RunAgentTaskRequest extends TeaModel {
     public String scheduleId;
 
     /**
-     * <p>The Targets array. Each element is an object that contains InstanceId and SessionId.</p>
+     * <p>An array of target objects. Each element contains an InstanceId and a SessionId.</p>
      */
     @NameInMap("Targets")
     public java.util.List<RunAgentTaskRequestTargets> targets;
@@ -114,6 +123,14 @@ public class RunAgentTaskRequest extends TeaModel {
     }
     public RunAgentTaskRequestRunConfig getRunConfig() {
         return this.runConfig;
+    }
+
+    public RunAgentTaskRequest setSaveArtifacts(Boolean saveArtifacts) {
+        this.saveArtifacts = saveArtifacts;
+        return this;
+    }
+    public Boolean getSaveArtifacts() {
+        return this.saveArtifacts;
     }
 
     public RunAgentTaskRequest setScheduleId(String scheduleId) {

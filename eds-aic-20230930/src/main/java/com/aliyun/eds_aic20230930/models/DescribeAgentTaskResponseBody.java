@@ -23,7 +23,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The message returned by the API.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success.</p>
@@ -91,14 +91,124 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         return this.tasks;
     }
 
+    public static class DescribeAgentTaskResponseBodyTasksArtifacts extends TeaModel {
+        /**
+         * <p>The MIME type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/png</p>
+         */
+        @NameInMap("ContentType")
+        public String contentType;
+
+        /**
+         * <p>The OSS pre-signed download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/">https://bucket.oss-cn-hangzhou.aliyuncs.com/</a>...</p>
+         */
+        @NameInMap("DownloadUrl")
+        public String downloadUrl;
+
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>screenshot.png</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The file size in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
+        @NameInMap("Size")
+        public Long size;
+
+        /**
+         * <p>The upload time in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-05T10:00:00+08:00</p>
+         */
+        @NameInMap("UpdatedTime")
+        public String updatedTime;
+
+        public static DescribeAgentTaskResponseBodyTasksArtifacts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAgentTaskResponseBodyTasksArtifacts self = new DescribeAgentTaskResponseBodyTasksArtifacts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAgentTaskResponseBodyTasksArtifacts setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
+        }
+
+        public DescribeAgentTaskResponseBodyTasksArtifacts setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
+            return this;
+        }
+        public String getDownloadUrl() {
+            return this.downloadUrl;
+        }
+
+        public DescribeAgentTaskResponseBodyTasksArtifacts setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeAgentTaskResponseBodyTasksArtifacts setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+        public DescribeAgentTaskResponseBodyTasksArtifacts setUpdatedTime(String updatedTime) {
+            this.updatedTime = updatedTime;
+            return this;
+        }
+        public String getUpdatedTime() {
+            return this.updatedTime;
+        }
+
+    }
+
     public static class DescribeAgentTaskResponseBodyTasks extends TeaModel {
         /**
+         * <p>The number of task artifacts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("ArtifactCount")
+        public Integer artifactCount;
+
+        /**
+         * <p>The list of uploaded task artifacts.</p>
+         */
+        @NameInMap("Artifacts")
+        public java.util.List<DescribeAgentTaskResponseBodyTasksArtifacts> artifacts;
+
+        /**
          * <p>The current status of the task. Valid values:</p>
-         * <p>PENDING: The task is being created.</p>
-         * <p>RUNNING: The task is running.</p>
-         * <p>COMPLETED: The task is completed.</p>
-         * <p>FAILED: The task failed.</p>
-         * <p>TIMEOUT: The task execution timed out.</p>
+         * <ul>
+         * <li>PENDING: The task is being created.</li>
+         * <li>RUNNING: The task is running.</li>
+         * <li>COMPLETED: The task is completed.</li>
+         * <li>FAILED: The task failed.</li>
+         * <li>TIMEOUT: The task execution timed out.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -106,6 +216,14 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
+        /**
+         * <p>The source of the digest. Valid values:</p>
+         * <ul>
+         * <li>PROMPT_AUTO: auto-generated.</li>
+         * <li>RESULT_AUTO: result refinement.</li>
+         * <li>USER: user-edited.</li>
+         * </ul>
+         */
         @NameInMap("DigestSource")
         public String digestSource;
 
@@ -139,6 +257,9 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         @NameInMap("Steps")
         public String steps;
 
+        /**
+         * <p>The task digest text, up to 25 characters.</p>
+         */
         @NameInMap("TaskDigest")
         public String taskDigest;
 
@@ -181,6 +302,22 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         public static DescribeAgentTaskResponseBodyTasks build(java.util.Map<String, ?> map) throws Exception {
             DescribeAgentTaskResponseBodyTasks self = new DescribeAgentTaskResponseBodyTasks();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAgentTaskResponseBodyTasks setArtifactCount(Integer artifactCount) {
+            this.artifactCount = artifactCount;
+            return this;
+        }
+        public Integer getArtifactCount() {
+            return this.artifactCount;
+        }
+
+        public DescribeAgentTaskResponseBodyTasks setArtifacts(java.util.List<DescribeAgentTaskResponseBodyTasksArtifacts> artifacts) {
+            this.artifacts = artifacts;
+            return this;
+        }
+        public java.util.List<DescribeAgentTaskResponseBodyTasksArtifacts> getArtifacts() {
+            return this.artifacts;
         }
 
         public DescribeAgentTaskResponseBodyTasks setCurrentStatus(String currentStatus) {
