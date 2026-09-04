@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>codesec20260401</artifactId>
-  <version>1.0.2</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>codesec20260401</name>
   <description>Alibaba Cloud CodeSec (20260401) SDK for Java

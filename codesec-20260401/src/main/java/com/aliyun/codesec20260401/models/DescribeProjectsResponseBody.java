@@ -32,7 +32,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9A1F403F-0A85-5578-8B7C-55E3E9408659</p>

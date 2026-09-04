@@ -1,3 +1,11 @@
+2026-09-04 Version: 1.1.0
+- Support API CompleteCodeBundle.
+- Support API CreateCodeBundle.
+- Support API CreateProject.
+- Support API CreateScan.
+- Support API DescribeScan.
+
+
 2026-09-02 Version: 1.0.2
 - Update API DescribeProjects: add request parameters sortBy.
 - Update API DescribeProjects: add request parameters sortOrder.

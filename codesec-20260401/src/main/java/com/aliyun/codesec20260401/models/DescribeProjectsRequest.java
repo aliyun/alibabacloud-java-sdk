@@ -14,7 +14,7 @@ public class DescribeProjectsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Do not specify this parameter or set it to an empty string for the first page. For subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</p>
+     * <p>The pagination token. Do not specify this parameter or set it to an empty string for the first page. To retrieve subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
@@ -23,7 +23,7 @@ public class DescribeProjectsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The keyword for fuzzy match by project name or prompt.</p>
+     * <p>The keyword used for fuzzy match by project name or prompt.</p>
      * 
      * <strong>example:</strong>
      * <p>project</p>
