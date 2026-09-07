@@ -747,6 +747,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the status, input, parameters, and desired state result of a video text erasure task based on <code>JobId</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status, input parameters, and video result of a video text erasure task.</p>
+     * 
+     * @param request GetVideoDetextJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoDetextJobResponse
+     */
+    public GetVideoDetextJobResponse getVideoDetextJobWithOptions(GetVideoDetextJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            body.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoDetextJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoDetextJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the status, input, parameters, and desired state result of a video text erasure task based on <code>JobId</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status, input parameters, and video result of a video text erasure task.</p>
+     * 
+     * @param request GetVideoDetextJobRequest
+     * @return GetVideoDetextJobResponse
+     */
+    public GetVideoDetextJobResponse getVideoDetextJob(GetVideoDetextJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVideoDetextJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries a video generation task.</p>
      * 
@@ -1469,6 +1519,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitRemakeScriptJobResponse submitRemakeScriptJob(SubmitRemakeScriptJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitRemakeScriptJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a media asset ID. You can configure the erasure time range and text regions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits an asynchronous video text erasure task that supports full-video erasure, time range-based erasure, and region-specific erasure.</p>
+     * 
+     * @param request SubmitVideoDetextJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoDetextJobResponse
+     */
+    public SubmitVideoDetextJobResponse submitVideoDetextJobWithOptions(SubmitVideoDetextJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobParameters)) {
+            body.put("JobParameters", request.jobParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            body.put("Output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            body.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoDetextJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoDetextJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a media asset ID. You can configure the erasure time range and text regions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits an asynchronous video text erasure task that supports full-video erasure, time range-based erasure, and region-specific erasure.</p>
+     * 
+     * @param request SubmitVideoDetextJobRequest
+     * @return SubmitVideoDetextJobResponse
+     */
+    public SubmitVideoDetextJobResponse submitVideoDetextJob(SubmitVideoDetextJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitVideoDetextJobWithOptions(request, runtime);
     }
 
     /**
