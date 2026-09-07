@@ -8,7 +8,7 @@ public class ListEscalationPoliciesRequest extends TeaModel {
      * <p>The name of the escalation policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>prod escalation policy</p>
+     * <p>prod升级策略</p>
      */
     @NameInMap("Name")
     public String name;

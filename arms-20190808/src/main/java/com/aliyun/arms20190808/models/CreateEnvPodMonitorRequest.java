@@ -18,7 +18,7 @@ public class CreateEnvPodMonitorRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Refer to supplementary instructions.</p>
+     * <p>参见补充说明。</p>
      */
     @NameInMap("ConfigYaml")
     public String configYaml;

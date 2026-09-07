@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateGrafanaWorkspaceRequest extends TeaModel {
     /**
+     * <p>Account quantity.  </p>
+     * <p><strong>Value description:</strong>  </p>
+     * <ul>
+     * <li>If GrafanaWorkspaceEdition is <strong>standard</strong>, this parameter is invalid.  </li>
+     * <li>If GrafanaWorkspaceEdition is <strong>personal_edition</strong>, this parameter is invalid. Default Value: 1.  </li>
+     * <li>If GrafanaWorkspaceEdition is <strong>experts_edition</strong>, valid values are 10, 30, or 50. Default Value: 10.  </li>
+     * <li>If GrafanaWorkspaceEdition is <strong>advanced_edition</strong>, this parameter is invalid. Default Value: 100.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -25,6 +34,13 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>Whether auto-renewal is enabled. Valid values:  </p>
+     * <ul>
+     * <li>true: Auto-renewal is enabled.  </li>
+     * <li>false: Auto-renewal is disabled.</li>
+     * </ul>
+     * <p>Default Value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -32,6 +48,15 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     public String autoRenew;
 
     /**
+     * <p>Additional custom account quantity for the User.  </p>
+     * <p><strong>Value description:</strong>  </p>
+     * <ul>
+     * <li>If GrafanaWorkspaceEdition is <strong>standard</strong>, this parameter is invalid.  </li>
+     * <li>If GrafanaWorkspaceEdition is <strong>personal_edition</strong>, this parameter is invalid.  </li>
+     * <li>If GrafanaWorkspaceEdition is <strong>experts_edition</strong>, this parameter is invalid.  </li>
+     * <li>If GrafanaWorkspaceEdition is <strong>advanced_edition</strong>, the value range is 0 to 2000 and must be a multiple of 10. Default Value: 0.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -48,6 +73,13 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Subscription duration of the instance. Valid values:  </p>
+     * <ul>
+     * <li>If PricingCycle is <strong>Month</strong>, indicating monthly billing, the value range is <strong>1</strong> to <strong>9</strong>.  </li>
+     * <li>If PricingCycle is <strong>Year</strong>, indicating yearly billing, the value range is <strong>1</strong> to <strong>3</strong>.</li>
+     * </ul>
+     * <p>Default Value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -55,6 +87,7 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     public String duration;
 
     /**
+     * <p>Grafana version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

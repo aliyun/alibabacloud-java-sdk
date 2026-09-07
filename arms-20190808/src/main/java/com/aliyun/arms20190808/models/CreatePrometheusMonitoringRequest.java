@@ -19,7 +19,7 @@ public class CreatePrometheusMonitoringRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Please refer to the supplementary explanation of the request parameters.</p>
+     * <p>参见请求参数补充说明。</p>
      */
     @NameInMap("ConfigYaml")
     public String configYaml;

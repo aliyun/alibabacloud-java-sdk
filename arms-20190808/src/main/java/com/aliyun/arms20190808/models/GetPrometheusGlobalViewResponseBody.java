@@ -17,7 +17,7 @@ public class GetPrometheusGlobalViewResponseBody extends TeaModel {
      * <p>The struct returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>{ &quot;clusterId&quot;:&quot;The ID of the global aggregation instance.&quot;, &quot;groupName&quot;:&quot;The name of the global aggregation instance.&quot;, &quot;dataSources&quot;:[ { &quot;sourceName&quot;:&quot;The name of the data source.- ArmsPrometheus No.1&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;userId&quot;:&quot;UserID&quot;, &quot;clusterId&quot;:&quot;ClusterId&quot; }, // more datasources ] }</p>
+     * <p>{     &quot;clusterId&quot;:&quot;聚合实例ClusterId&quot;,     &quot;groupName&quot;:&quot;聚合实例名称&quot;,     &quot;dataSources&quot;:[         {             &quot;sourceName&quot;:&quot;数据源名称- ArmsPrometheus No.1&quot;,             &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,             &quot;userId&quot;:&quot;UserID&quot;,             &quot;clusterId&quot;:&quot;ClusterId&quot;         },       // more datasources     ] }</p>
      */
     @NameInMap("Data")
     public String data;

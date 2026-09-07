@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the Prometheus instance.</p>
+     * <p>The Prometheus instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

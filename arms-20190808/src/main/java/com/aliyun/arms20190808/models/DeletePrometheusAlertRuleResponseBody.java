@@ -34,8 +34,10 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the alert rule was deleted. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The alert rule was deleted.</li>
-     * <li><code>false</code>: The alert rule failed to be deleted.</li>
+     * <li><p><code>true</code>: The alert rule was deleted.</p>
+     * </li>
+     * <li><p><code>false</code>: The alert rule failed to be deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -32,7 +32,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
      * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
-     * <p>StartTime is mandatory for this action.</p>
+     * <p>内部错误，请联系管理员。</p>
      */
     @NameInMap("Message")
     public String message;
@@ -117,7 +117,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
          * <p>A reserved parameter. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>保留字段，请忽略。</p>
          */
         @NameInMap("Authentication")
         public String authentication;
@@ -159,7 +159,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
          * <p>A reserved parameter. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>保留字段，请忽略。</p>
          */
         @NameInMap("Preference")
         public String preference;

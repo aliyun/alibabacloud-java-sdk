@@ -35,8 +35,10 @@ public class UpdateEnvironmentRequest extends TeaModel {
     /**
      * <p>The payable resource plan. Valid values:</p>
      * <ul>
-     * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
-     * <li>Otherwise, leave the parameter empty.</li>
+     * <li><p>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</p>
+     * </li>
+     * <li><p>Otherwise, leave the parameter empty.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

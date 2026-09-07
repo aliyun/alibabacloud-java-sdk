@@ -100,7 +100,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
          * <p>The alias of the feature.</p>
          * 
          * <strong>example:</strong>
-         * <p>Prometheus Agent</p>
+         * <p>Prometheus 探针</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -115,7 +115,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
          * <p>The description of the feature.</p>
          * 
          * <strong>example:</strong>
-         * <p>Collect Metric data using the Prometheus collection specification.</p>
+         * <p>以 Prometheus 采集规范采集 Metric 数据。</p>
          */
         @NameInMap("Description")
         public String description;

@@ -19,7 +19,7 @@ public class ListScenarioRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pro-content</p>
+     * <p>测试业务监控</p>
      */
     @NameInMap("Name")
     public String name;

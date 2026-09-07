@@ -109,7 +109,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
          * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-hongkong</p>
          */
         @NameInMap("Region")
         public String region;

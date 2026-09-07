@@ -139,7 +139,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
          * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>2</p>
          */
         @NameInMap("Total")
         public String total;

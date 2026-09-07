@@ -37,7 +37,7 @@ public class DescribeWebhookContactsRequest extends TeaModel {
      * <p>The name of the webhook alert contact.</p>
      * 
      * <strong>example:</strong>
-     * <p>Webhook name</p>
+     * <p>webhook名称</p>
      */
     @NameInMap("WebhookName")
     public String webhookName;

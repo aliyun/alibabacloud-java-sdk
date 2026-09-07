@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGrafanaWorkspaceRequest extends TeaModel {
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The Managed Service for Grafana workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteGrafanaWorkspaceRequest extends TeaModel {
     public String grafanaWorkspaceId;
 
     /**
-     * <p>The region ID. Default value: cn-hangzhou.</p>
+     * <p>The region ID. Default value: ap-southeast-1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

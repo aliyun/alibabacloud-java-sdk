@@ -310,7 +310,7 @@ public class ListSyntheticDetailRequest extends TeaModel {
          * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("Key")
         public String key;
@@ -319,7 +319,7 @@ public class ListSyntheticDetailRequest extends TeaModel {
          * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("OpType")
         public String opType;
@@ -328,7 +328,7 @@ public class ListSyntheticDetailRequest extends TeaModel {
          * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("Value")
         public Object value;

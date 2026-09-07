@@ -10,7 +10,7 @@ public class CloseAlarmRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>163</p>
+     * <p>184723093</p>
      */
     @NameInMap("AlarmId")
     public Long alarmId;
@@ -38,7 +38,7 @@ public class CloseAlarmRequest extends TeaModel {
      * <p>The alert solution.</p>
      * 
      * <strong>example:</strong>
-     * <p>Restart Repair</p>
+     * <p>重启修复</p>
      */
     @NameInMap("Solution")
     public String solution;

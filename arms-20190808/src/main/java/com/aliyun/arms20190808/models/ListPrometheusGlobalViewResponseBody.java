@@ -17,7 +17,7 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
      * <p>The list of global aggregation instances. The value of this parameter is a string in the JSON format.</p>
      * 
      * <strong>example:</strong>
-     * <p>[ {groupName: &quot;the name of the global aggregation instance&quot;, clusterId: &quot;global-v2-clusterid&quot;, endpoint: &quot;cn-hangzhou&quot;}, // ..... more items ]</p>
+     * <p>[   {groupName: &quot;聚合实例名称&quot;, clusterId: &quot;global-v2-clusterid&quot;, endpoint: &quot;cn-hangzhou&quot;}, //   ..... more items ]</p>
      */
     @NameInMap("Data")
     public String data;

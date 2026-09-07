@@ -79,7 +79,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
          * <p>The YAML string of the PodMonitor.</p>
          * 
          * <strong>example:</strong>
-         * <p>Refer to supplementary instructions.</p>
+         * <p>参见补充说明。</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;

@@ -183,7 +183,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
          * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
-         * <p>Reserved field</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("PrometheusClusterId")
         public String prometheusClusterId;
@@ -192,7 +192,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
          * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
-         * <p>Reserved field</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("PrometheusClusterRegion")
         public String prometheusClusterRegion;
@@ -557,7 +557,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
          * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>AlibabaCloud DNS Task</p>
+         * <p>拨测任务</p>
          */
         @NameInMap("Name")
         public String name;

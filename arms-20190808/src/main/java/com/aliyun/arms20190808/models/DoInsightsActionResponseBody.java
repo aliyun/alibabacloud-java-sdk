@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DoInsightsActionResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * <p>Status code. 200 indicates success; other status codes indicate exceptions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,12 +14,12 @@ public class DoInsightsActionResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response parameters vary with the value of module.</p>
+     * <p>The return parameter type is related to the module value passed in.</p>
      * <ul>
      * <li><p>QueryTopo</p>
      * <pre><code>{
-     * &quot;nodes&quot;: [Object] # The nodes. For more information, see node details in the supplementary notes of response parameters.
-     * &quot;edges&quot;: [Object] # The edges. For more information, see edge details in the supplementary notes of response parameters.
+     *  &quot;nodes&quot;: [Object] #Node collection. See the Node definition in the supplementary description of return parameters.
+     *  &quot;edges&quot;: [Object] #Edge collection. See the Edge definition in the supplementary description of return parameters.
      * }
      * </code></pre>
      * </li>
@@ -27,24 +27,23 @@ public class DoInsightsActionResponseBody extends TeaModel {
      * <pre><code>{
      *   &quot;nodeRed&quot;: {
      *       &quot;nodeId&quot;: {
-     *           &quot;count&quot;: double, # The total number of requests in the specified time range.
-     *           &quot;error&quot;: double, # The total number of errors in the specified time range.
-     *           &quot;rt&quot;: double, # The average response time in the specified time range. Unit: milliseconds.
+     *           &quot;count&quot;: double, #Total number of requests during the query period
+     *           &quot;error&quot;: double, #Total number of errors during the query period
+     *           &quot;rt&quot;: double, #Average latency during the query period, in milliseconds
      *       }
      *   },
      *   &quot;edgeRed&quot;: {
      *       &quot;edgeId&quot;: {
-     *           &quot;count&quot;: double, # The total number of requests in the specified time range.
-     *           &quot;error&quot;: double, # The total number of errors in the specified time range.
-     *           &quot;rt&quot;: double, # The average response time in the specified time range. Unit: milliseconds.
+     *           &quot;count&quot;: double, #Total number of requests during the query period
+     *           &quot;error&quot;: double, #Total number of errors during the query period
+     *           &quot;rt&quot;: double, #Average latency during the query period, in milliseconds
      *       }
      *   }
      * </code></pre>
      * </li>
      * </ul>
-     * <p>}</p>
-     * <pre><code>
-     * </code></pre>
+     * <p>}
+     *   ```</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -109,7 +108,7 @@ public class DoInsightsActionResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -127,10 +126,10 @@ public class DoInsightsActionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Whether the query is successful:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><code>true</code>: Successful.</li>
+     * <li><code>false</code>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

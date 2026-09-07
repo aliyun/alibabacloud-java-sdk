@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRumUploadFileUrlResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * <p>The status code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateRumUploadFileUrlResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The file upload URL.</p>
+     * <p>The file upload link.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://arms-rum-v2.oss-cn-hangzhou.aliyuncs.com/113197164xxxxx28/b590lhguqs%40f93xxxxxbf31d3/1.0.0-robots.txt?Expires=1713847079&OSSAccessKeyId=STS.NT6XvoxkyqA&Signature=6ptYX4OTjLMrsleTlA2t97">http://arms-rum-v2.oss-cn-hangzhou.aliyuncs.com/113197164xxxxx28/b590lhguqs%40f93xxxxxbf31d3/1.0.0-robots.txt?Expires=1713847079&amp;OSSAccessKeyId=STS.NT6XvoxkyqA&amp;Signature=6ptYX4OTjLMrsleTlA2t97</a></p>
@@ -32,10 +32,10 @@ public class CreateRumUploadFileUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message that is returned if the request fails.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>内部错误，请联系管理员。</p>
      */
     @NameInMap("Message")
     public String message;
@@ -50,10 +50,12 @@ public class CreateRumUploadFileUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><p><code>true</code>: The operation was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

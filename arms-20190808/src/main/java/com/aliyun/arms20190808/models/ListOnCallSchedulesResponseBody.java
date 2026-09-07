@@ -45,7 +45,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
          * <p>The description of the scheduling policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test scheduling policy</p>
+         * <p>测试排班策略</p>
          */
         @NameInMap("Description")
         public String description;

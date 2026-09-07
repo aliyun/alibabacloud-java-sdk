@@ -15,7 +15,7 @@ public class GetAppJVMConfigRequest extends TeaModel {
 
     /**
      * <p>The IDof the application.</p>
-     * <p>Log on to the <strong>ARMS console</strong>. In the left-side navigation pane, choose <strong>Application Monitoring</strong> &gt; <strong>Applications</strong>. On the <strong>Applications</strong> page, click the name of an application. The URL in the address bar contains the process ID (PID) of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is eb4zdose6v%409781be0f44d\<em>\</em>\<em>\</em>, you must replace %40 with an at sign (@) to obtain eb4zdose6v@9781be0f44d\<em>\</em>\<em>\</em>.</p>
+     * <p>Log on to the <strong>ARMS console</strong>. In the left-side navigation pane, choose <strong>Application Monitoring</strong> &gt; <strong>Applications</strong>. On the <strong>Applications</strong> page, click the name of an application. The URL in the address bar contains the process ID (PID) of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is eb4zdose6v%409781be0f44d\<em>\</em>\<em>\</em>, you must replace %40 with an at sign (@) to obtain eb4zdose6v\@9781be0f44d\<em>\</em>\<em>\</em>.</p>
      * 
      * <strong>example:</strong>
      * <p>atc889zkcf@d8deedfa9bf****</p>

@@ -40,8 +40,10 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><p><code>true</code></p>
+     * </li>
+     * <li><p><code>false</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

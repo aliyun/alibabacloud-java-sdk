@@ -7,8 +7,10 @@ public class UpdatePrometheusGlobalViewRequest extends TeaModel {
     /**
      * <p>To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +71,50 @@ public class UpdatePrometheusGlobalViewRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[ { &quot;headers&quot;:{ }, &quot;regionId&quot;:&quot;cn-hangzhou&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;extras&quot;:{ }, &quot;clusterId&quot;:&quot;c39a1048921e04f***********&quot;, &quot;sourceName&quot;:&quot;arms-luyao-test&quot;, &quot;dataSource&quot;:&quot;&quot;, &quot;userId&quot;:&quot;1672753***********&quot; }, { &quot;headers&quot;:{ }, &quot;regionId&quot;:&quot;cn-beijing&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;extras&quot;:{ }, &quot;clusterId&quot;:&quot;c6b6485496d5b40***********&quot;, &quot;sourceName&quot;:&quot;agent-321-test&quot;, &quot;dataSource&quot;:&quot;&quot;, &quot;userId&quot;:&quot;1672753***********&quot; }, { &quot;headers&quot;:{ }, &quot;regionId&quot;:&quot;cn-zhangjiakou&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;extras&quot;:{ }, &quot;clusterId&quot;:&quot;c261a4f3200c446***********&quot;, &quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;, &quot;dataSource&quot;:&quot;&quot;, &quot;userId&quot;:&quot;1672753***********&quot; } ]</p>
+     * <p>[
+     *     {
+     *         &quot;headers&quot;:{</p>
+     * <pre><code>    },
+     *     &quot;regionId&quot;:&quot;cn-hangzhou&quot;,
+     *     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+     *     &quot;extras&quot;:{
+     * 
+     *     },
+     *     &quot;clusterId&quot;:&quot;c39a1048921e04f***********&quot;,
+     *     &quot;sourceName&quot;:&quot;arms-luyao-test&quot;,
+     *     &quot;dataSource&quot;:&quot;&quot;,
+     *     &quot;userId&quot;:&quot;1672753***********&quot;
+     * },
+     * {
+     *     &quot;headers&quot;:{
+     * 
+     *     },
+     *     &quot;regionId&quot;:&quot;cn-beijing&quot;,
+     *     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+     *     &quot;extras&quot;:{
+     * 
+     *     },
+     *     &quot;clusterId&quot;:&quot;c6b6485496d5b40***********&quot;,
+     *     &quot;sourceName&quot;:&quot;agent-321-测试&quot;,
+     *     &quot;dataSource&quot;:&quot;&quot;,
+     *     &quot;userId&quot;:&quot;1672753***********&quot;
+     * },
+     * {
+     *     &quot;headers&quot;:{
+     * 
+     *     },
+     *     &quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,
+     *     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+     *     &quot;extras&quot;:{
+     * 
+     *     },
+     *     &quot;clusterId&quot;:&quot;c261a4f3200c446***********&quot;,
+     *     &quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,
+     *     &quot;dataSource&quot;:&quot;&quot;,
+     *     &quot;userId&quot;:&quot;1672753***********&quot;
+     * }
+     * </code></pre>
+     * <p>]</p>
      */
     @NameInMap("SubClustersJson")
     public String subClustersJson;

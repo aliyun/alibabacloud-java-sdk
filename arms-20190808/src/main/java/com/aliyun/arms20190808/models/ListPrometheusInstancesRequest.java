@@ -7,16 +7,26 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     /**
      * <p>The cluster type. If you do not specify this parameter, all cluster types are queried. Valid values:</p>
      * <ul>
-     * <li>cloud-product-prometheus: Prometheus instance for cloud services</li>
-     * <li>ManagedKubernetes: ACK managed cluster</li>
-     * <li>satellite: Prometheus instance for ARMS OpenTelemetry</li>
-     * <li>Ask: ACK Serverless cluster</li>
-     * <li>remote-write-prometheus: general-purpose Prometheus instance</li>
-     * <li>cloud-monitor-cmee: Hybrid Cloud Monitoring</li>
-     * <li>ExternalKubernetes: external Kubernetes cluster registered in ACK</li>
-     * <li>vpc-prometheus: Prometheus instance for ECS</li>
-     * <li>cloud-monitor-direct: cloud service self-monitoring</li>
-     * <li>Edge Kubernetes: ACK Edge cluster</li>
+     * <li><p>cloud-product-prometheus: Prometheus instance for cloud services</p>
+     * </li>
+     * <li><p>ManagedKubernetes: ACK managed cluster</p>
+     * </li>
+     * <li><p>satellite: Prometheus instance for ARMS OpenTelemetry</p>
+     * </li>
+     * <li><p>Ask: ACK Serverless cluster</p>
+     * </li>
+     * <li><p>remote-write-prometheus: general-purpose Prometheus instance</p>
+     * </li>
+     * <li><p>cloud-monitor-cmee: Hybrid Cloud Monitoring</p>
+     * </li>
+     * <li><p>ExternalKubernetes: external Kubernetes cluster registered in ACK</p>
+     * </li>
+     * <li><p>vpc-prometheus: Prometheus instance for ECS</p>
+     * </li>
+     * <li><p>cloud-monitor-direct: cloud service self-monitoring</p>
+     * </li>
+     * <li><p>Edge Kubernetes: ACK Edge cluster</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +48,10 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to obtain global aggregation instances. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

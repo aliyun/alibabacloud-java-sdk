@@ -18,7 +18,7 @@ public class ListActivatedAlertsRequest extends TeaModel {
      * <p>The filter condition in the <code>{&quot;key&quot;:&quot;value&quot;}</code>format. You must specify the <code>key</code> and <code>value</code> of the filter condition.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;alertname&quot;:&quot;Container CPU usage is greater than 80%&quot;}</p>
+     * <p>{&quot;alertname&quot;:&quot;容器CPU使用率大于80%&quot;}</p>
      */
     @NameInMap("Filter")
     public String filter;

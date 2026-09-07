@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRumUploadFileRequest extends TeaModel {
     /**
-     * <p>Information of files to be deleted in JSON array format. If a single file needs to be deleted, this field should be left empty. If multiple files need to be deleted, just fill in this field.</p>
+     * <p>The batch deletion parameters in JSON array format. Leave this parameter empty if you want to delete a single file. If you want to delete multiple files in a batch, specify only this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>[{
@@ -22,7 +22,7 @@ public class DeleteRumUploadFileRequest extends TeaModel {
     public String batchItems;
 
     /**
-     * <p>The file name, with the extension.</p>
+     * <p>The file name, including the file name extension.</p>
      * 
      * <strong>example:</strong>
      * <p>test.js.map</p>
@@ -53,7 +53,7 @@ public class DeleteRumUploadFileRequest extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The file ID.</p>
+     * <p>The unique ID of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>MS4wLjAtbWFpbi4wZjM0NzRlOSxxxxxx</p>
@@ -62,7 +62,7 @@ public class DeleteRumUploadFileRequest extends TeaModel {
     public String uuid;
 
     /**
-     * <p>The version number of the file.</p>
+     * <p>The file version number.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.0</p>

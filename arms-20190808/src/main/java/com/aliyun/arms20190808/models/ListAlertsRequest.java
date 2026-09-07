@@ -8,7 +8,7 @@ public class ListAlertsRequest extends TeaModel {
      * <p>The name of the alert rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test alert</p>
+     * <p>告警测试</p>
      */
     @NameInMap("AlertName")
     public String alertName;
@@ -65,7 +65,7 @@ public class ListAlertsRequest extends TeaModel {
      * <p>The notification object configured in the notification policy, responsible for handling alerts.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alice</p>
+     * <p>张三</p>
      */
     @NameInMap("Owner")
     public String owner;

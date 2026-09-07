@@ -80,7 +80,7 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Chatbot name</p>
+     * <p>robot名称</p>
      */
     @NameInMap("RobotName")
     public String robotName;

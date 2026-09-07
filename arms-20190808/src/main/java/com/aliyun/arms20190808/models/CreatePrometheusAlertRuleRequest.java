@@ -76,7 +76,7 @@ public class CreatePrometheusAlertRuleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The CPU utilization of ${{$labels.pod_name}} has exceeded 80%. Current value: {{$value}}%</p>
+     * <p>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</p>
      */
     @NameInMap("Message")
     public String message;

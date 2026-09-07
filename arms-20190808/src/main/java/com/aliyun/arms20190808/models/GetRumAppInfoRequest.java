@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRumAppInfoRequest extends TeaModel {
     /**
-     * <p>The group to which the application belongs.</p>
+     * <p>The application group.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -14,7 +14,7 @@ public class GetRumAppInfoRequest extends TeaModel {
     public String appGroup;
 
     /**
-     * <p>The process ID (PID) of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -54,7 +54,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
          * <p>The name of the alert.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test-triggered alert</p>
+         * <p>测试触发的告警</p>
          */
         @NameInMap("AlarmName")
         public String alarmName;
@@ -135,7 +135,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
          * <p>The name of the notification policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>P1 alert notification policy</p>
+         * <p>P1告警通知策略</p>
          */
         @NameInMap("Name")
         public String name;
@@ -174,7 +174,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
          * <p>The name of the alert.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test-triggered alert</p>
+         * <p>测试触发的告警</p>
          */
         @NameInMap("AlertName")
         public String alertName;
@@ -192,7 +192,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
          * <p>The description of the alert event.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>测试</p>
          */
         @NameInMap("Description")
         public String description;
@@ -219,7 +219,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
          * <p>The user who handled the alert.</p>
          * 
          * <strong>example:</strong>
-         * <p>Tom</p>
+         * <p>张三</p>
          */
         @NameInMap("HandlerName")
         public String handlerName;
@@ -228,7 +228,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
          * <p>The name of the alert integration.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom integration</p>
+         * <p>自定义集成</p>
          */
         @NameInMap("IntegrationName")
         public String integrationName;

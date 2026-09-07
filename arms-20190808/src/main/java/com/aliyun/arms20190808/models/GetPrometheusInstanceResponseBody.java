@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusInstanceResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     * <p>The status code. A value of 200 indicates success. Other values indicate errors.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned information.</p>
      */
     @NameInMap("Data")
     public GetPrometheusInstanceResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message returned for the result.</p>
      * 
      * <strong>example:</strong>
      * <p>message</p>
@@ -118,7 +118,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     public static class GetPrometheusInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The permission type. Valid values: readWrite, readOnly, and httpReadOnly</p>
+         * <p>The permission type. Valid values:</p>
+         * <ul>
+         * <li>readWrite</li>
+         * <li>readOnly</li>
+         * <li>httpReadOnly.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>readWrite</p>
@@ -127,7 +132,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The number of days for which data is automatically archived after the storage duration expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
+         * <p>The number of days that data is automatically archived after the storage period expires. Valid values: 60, 90, 180, and 365. A value of 0 indicates that data is not archived.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -136,25 +141,25 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Integer archiveDuration;
 
         /**
-         * <p>The whitelist of IP addresses for which password-free read is enabled.</p>
+         * <p>The whitelist policy for authentication-free read access.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>0.0.0.0/0</p>
          */
         @NameInMap("AuthFreeReadPolicy")
         public String authFreeReadPolicy;
 
         /**
-         * <p>The whitelist of IP addresses for which password-free write is enabled.</p>
+         * <p>The whitelist policy for authentication-free write access.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>0.0.0.0/0</p>
          */
         @NameInMap("AuthFreeWritePolicy")
         public String authFreeWritePolicy;
 
         /**
-         * <p>The authorization token.</p>
+         * <p>The authorization token string.</p>
          * 
          * <strong>example:</strong>
          * <p>GciOiJIUzI1NiJ9***</p>
@@ -163,7 +168,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String authToken;
 
         /**
-         * <p>The ID of the Prometheus instance.</p>
+         * <p>The Prometheus instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>
@@ -172,7 +177,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the monitoring object.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>prom1</p>
@@ -182,12 +187,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>remote-write: general-purpose Prometheus instance</li>
-         * <li>ecs: Prometheus instances for ECS</li>
-         * <li>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland</li>
-         * <li>cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland</li>
-         * <li>global-view: global aggregation instance</li>
-         * <li>aliyun-cs: Prometheus instance for Container Service</li>
+         * <li>remote-write (Prometheus for Remote Write)</li>
+         * <li>ecs (Prometheus for ECS)</li>
+         * <li>cloud-monitor (Prometheus for Cloud Service in the Chinese mainland)</li>
+         * <li>cloud-product (Prometheus for Cloud Service outside the Chinese mainland)</li>
+         * <li>global-view (Prometheus for GlobalView)</li>
+         * <li>aliyun-cs (Prometheus for Container Service).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +202,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The data storage status at the backend.</p>
+         * <p>The status of the backend data storage.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -206,19 +211,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String dbInstanceStatus;
 
         /**
-         * <p>Indicates whether password-free read is enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * <p>Indicates whether authentication-free read access is enabled.</p>
          */
         @NameInMap("EnableAuthFreeRead")
         public Boolean enableAuthFreeRead;
 
         /**
-         * <p>Indicates whether password-free write is enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * <p>Indicates whether authentication-free write access is enabled.</p>
          */
         @NameInMap("EnableAuthFreeWrite")
         public Boolean enableAuthFreeWrite;
@@ -233,13 +232,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String enableAuthToken;
 
         /**
-         * <p>The extra information. This parameter is returned only for console requests.</p>
+         * <p>The extended information. This parameter is returned only for console requests.</p>
          */
         @NameInMap("ExtraInfo")
         public java.util.Map<String, String> extraInfo;
 
         /**
-         * <p>The ID of the Grafana workspace.</p>
+         * <p>The Grafana workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>grafana-rnggfvhlcdl6m71***</p>
@@ -248,7 +247,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String grafanaInstanceId;
 
         /**
-         * <p>The public URL for the HTTP API.</p>
+         * <p>The public endpoint for HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx">https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx</a></p>
@@ -257,7 +256,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String httpApiInterUrl;
 
         /**
-         * <p>The internal URL for the HTTP API.</p>
+         * <p>The internal endpoint for HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx</a></p>
@@ -274,8 +273,8 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PREPAY: subscription</li>
-         * <li>POSTPAY: pay-as-you-go</li>
+         * <li>PREPAY: subscription.</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +284,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>The time when the billing method was modified.</p>
+         * <p>The time when the billing method of the instance was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-26T06:05:01Z</p>
@@ -294,7 +293,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String paymentTypeUpdateTime;
 
         /**
-         * <p>The product to which the Prometheus instance belongs. Valid values: arms and cms.</p>
+         * <p>The product to which the Prometheus instance belongs (arms or cms).</p>
          * 
          * <strong>example:</strong>
          * <p>arms</p>
@@ -303,7 +302,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>The public URL for Pushgateway.</p>
+         * <p>The public endpoint for push gateway.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
@@ -312,7 +311,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String pushGatewayInterUrl;
 
         /**
-         * <p>The internal URL for Pushgateway.</p>
+         * <p>The internal endpoint for push gateway.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
@@ -330,7 +329,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The public URL for remote read.</p>
+         * <p>The public endpoint for remote read.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
@@ -339,7 +338,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String remoteReadInterUrl;
 
         /**
-         * <p>The internal URL for remote read.</p>
+         * <p>The internal endpoint for remote read.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
@@ -348,7 +347,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String remoteReadIntraUrl;
 
         /**
-         * <p>The public URL for remote write.</p>
+         * <p>The public endpoint for remote write.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
@@ -357,7 +356,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String remoteWriteInterUrl;
 
         /**
-         * <p>The internal URL for remote write.</p>
+         * <p>The internal endpoint for remote write.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
@@ -375,7 +374,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The type of the resource. Set the value to PROMETHEUS.</p>
+         * <p>The fixed value: PROMETHEUS.</p>
          * 
          * <strong>example:</strong>
          * <p>PROMETHEUS</p>
@@ -384,7 +383,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The ID of the security group. This parameter is returned only for Prometheus instances for ECS.</p>
+         * <p>The security group ID. This parameter is returned only for Prometheus for ECS instances.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-8vbdgmf4nraiqa9bx0jo</p>
@@ -393,7 +392,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The data storage duration. Unit: days.</p>
+         * <p>The storage duration, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -402,10 +401,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Integer storageDuration;
 
         /**
-         * <p>The child instances of the global aggregation instance. The value is a JSON string.</p>
+         * <p>The JSON string of sub-instances for the GlobalView instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c39a1048921e04fceb039db2fbb73\<em>\</em>\<em>&quot;,&quot;sourceName&quot;:&quot;arms-luyao-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789\</em>\<em>\</em>&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c6b6485496d5b400abde22cb47b5\<em>\</em>\<em>\</em>&quot;,&quot;sourceName&quot;:&quot;agent-321-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;1672753017899\<em>\</em>\<em>&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c261a4f3200c446659133f1ade789b15e&quot;,&quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789\</em>\<em>\</em>&quot;}]</p>
+         * <p>[{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c39a1048921e04fceb039db2fbb73***&quot;,&quot;sourceName&quot;:&quot;arms-luyao-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789***&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c6b6485496d5b400abde22cb47b5****&quot;,&quot;sourceName&quot;:&quot;agent-321-测试&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;1672753017899***&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c261a4f3200c446659133f1ade789b15e&quot;,&quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789***&quot;}]</p>
          */
         @NameInMap("SubClustersJson")
         public String subClustersJson;
@@ -417,7 +416,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public java.util.List<String> supportAuthTypes;
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The tags bound to the instance.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetPrometheusInstanceResponseBodyDataTags> tags;
@@ -432,7 +431,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The vSwitch ID. This parameter is returned only for Prometheus instances for ECS.</p>
+         * <p>The vSwitch ID. This parameter is returned only for Prometheus for ECS instances.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-f8z73vcja1tqnw90aav5a</p>
@@ -441,7 +440,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>Version</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>V1</p>
@@ -450,7 +449,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The VPC ID. This parameter is returned only for Prometheus instances for ECS.</p>
+         * <p>The VPC associated with the cluster. This parameter is returned only for Prometheus for ECS instances.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-8vb02uk57qbcktqcvqqqj</p>

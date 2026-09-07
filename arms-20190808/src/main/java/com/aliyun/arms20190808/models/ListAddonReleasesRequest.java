@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAddonReleasesRequest extends TeaModel {
     /**
-     * <p>The name of the add-on.</p>
+     * <p>The name of the addon.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql</p>

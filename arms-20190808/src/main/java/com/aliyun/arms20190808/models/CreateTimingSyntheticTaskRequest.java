@@ -400,7 +400,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
          * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("PrometheusClusterId")
         public String prometheusClusterId;
@@ -409,7 +409,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
          * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("PrometheusClusterRegion")
         public String prometheusClusterRegion;

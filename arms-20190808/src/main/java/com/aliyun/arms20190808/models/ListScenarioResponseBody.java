@@ -81,7 +81,7 @@ public class ListScenarioResponseBody extends TeaModel {
          * <p>The name of the business monitoring job.</p>
          * 
          * <strong>example:</strong>
-         * <p>k8s_deployment_css-guns-vip-main-prod_silence</p>
+         * <p>测试业务监控</p>
          */
         @NameInMap("Name")
         public String name;

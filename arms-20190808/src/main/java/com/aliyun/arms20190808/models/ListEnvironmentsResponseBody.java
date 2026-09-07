@@ -96,7 +96,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
          * <p>The alias of the add-on.</p>
          * 
          * <strong>example:</strong>
-         * <p>MySQL Exporter</p>
+         * <p>Prometheus探针</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -105,7 +105,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
          * <p>The description of the add-on.</p>
          * 
          * <strong>example:</strong>
-         * <p>Collect mysql indicator information</p>
+         * <p>以 Prometheus 采集规范采集 Metric 数据</p>
          */
         @NameInMap("Description")
         public String description;
@@ -172,7 +172,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
          * <p>The alias of the feature.</p>
          * 
          * <strong>example:</strong>
-         * <p>Prometheus Agent</p>
+         * <p>Prometheus 探针</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -181,7 +181,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
          * <p>The description of the feature.</p>
          * 
          * <strong>example:</strong>
-         * <p>Collect Metric data using the Prometheus collection specification</p>
+         * <p>以 Prometheus 采集规范采集 Metric 数据</p>
          */
         @NameInMap("Description")
         public String description;
@@ -367,9 +367,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         /**
          * <p>The type of the environment instance. Valid values:</p>
          * <ul>
-         * <li>CS: Container Service</li>
-         * <li>ECS: Elastic Compute Service</li>
-         * <li>Cloud: cloud service</li>
+         * <li><p>CS: Container Service</p>
+         * </li>
+         * <li><p>ECS: Elastic Compute Service</p>
+         * </li>
+         * <li><p>Cloud: cloud service</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,8 +390,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         /**
          * <p>The payable resource plan.</p>
          * <ul>
-         * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.</li>
-         * <li>Otherwise, leave the parameter empty.</li>
+         * <li><p>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.</p>
+         * </li>
+         * <li><p>Otherwise, leave the parameter empty.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -436,9 +441,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether agents or exporters are managed. Valid values:</p>
          * <ul>
-         * <li>none: No. By default, no managed agents or exporters are provided for ACK clusters.</li>
-         * <li>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</li>
-         * <li>agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</li>
+         * <li><p>none: No. By default, no managed agents or exporters are provided for ACK clusters.</p>
+         * </li>
+         * <li><p>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</p>
+         * </li>
+         * <li><p>agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

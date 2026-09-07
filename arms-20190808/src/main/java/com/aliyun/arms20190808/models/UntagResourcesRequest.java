@@ -13,7 +13,7 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
-     * <p>False</p>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -39,7 +39,7 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>PROMETHEUS</p>
+     * <p>APPLICATION</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -106,7 +106,7 @@ public class UntagResourcesRequest extends TeaModel {
          * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestKey</p>
+         * <p>TestTag</p>
          */
         @NameInMap("Key")
         public String key;

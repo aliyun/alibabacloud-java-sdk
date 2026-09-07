@@ -4,10 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListCmsInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListCmsInstancesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7A04B0D-E2CA-59BB-8A9D-D5D349C22BF1</p>
      */
@@ -37,6 +42,8 @@ public class ListCmsInstancesResponseBody extends TeaModel {
 
     public static class ListCmsInstancesResponseBodyDataProducts extends TeaModel {
         /**
+         * <p>The product description.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -46,6 +53,8 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         public String descr;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20210</p>
          */
@@ -53,6 +62,8 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloudserver</p>
          */
@@ -60,6 +71,8 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         public String instance;
 
         /**
+         * <p>The name of the integrated cloud product.</p>
+         * 
          * <strong>example:</strong>
          * <p>hologres</p>
          */
@@ -67,6 +80,8 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>face</p>
          */
@@ -74,6 +89,8 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         public String prod;
 
         /**
+         * <p>The event source.</p>
+         * 
          * <strong>example:</strong>
          * <p>arms</p>
          */
@@ -81,6 +98,14 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The integration status of the product.</p>
+         * <ul>
+         * <li><p><code>true</code>: Integrated.</p>
+         * </li>
+         * <li><p><code>false</code>: Not integrated.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -88,6 +113,8 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The creation timestamp of the Grafana dashboard.</p>
+         * 
          * <strong>example:</strong>
          * <p>1647852021000</p>
          */
@@ -95,6 +122,8 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         public String time;
 
         /**
+         * <p>The product type.</p>
+         * 
          * <strong>example:</strong>
          * <p>HOLOGRES</p>
          */
@@ -102,6 +131,8 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The complete URL of the Grafana dashboard.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://g.console.aliyun.com/d/1098370038733503-35894-565/cms-hologres?orgId%5C%5Cu003d9%5C%5Cu0026refresh%5C%5Cu003d60s">https://g.console.aliyun.com/d/1098370038733503-35894-565/cms-hologres?orgId\\u003d9\\u0026refresh\\u003d60s</a></p>
          */
@@ -197,12 +228,17 @@ public class ListCmsInstancesResponseBody extends TeaModel {
 
     public static class ListCmsInstancesResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether tag collection for the cloud product is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EnableTag")
         public Boolean enableTag;
 
+        /**
+         * <p>The list of cloud products.</p>
+         */
         @NameInMap("Products")
         public java.util.List<ListCmsInstancesResponseBodyDataProducts> products;
 

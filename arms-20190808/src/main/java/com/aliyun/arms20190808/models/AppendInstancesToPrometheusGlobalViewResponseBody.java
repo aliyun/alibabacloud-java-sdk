@@ -79,7 +79,7 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
          * <p>The Info-level information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{regionId: the region where the aggregation instance resides. globalViewClusterId: the ID of the aggregation instance. failedInstances: the ID of the object that failed to be added.}</p>
+         * <p>{regionId: 实例所属region, globalViewClusterId: 实例Id, failedInstances: 数据源JSON list中，添加失败的单个JSON的list}</p>
          */
         @NameInMap("Info")
         public String info;

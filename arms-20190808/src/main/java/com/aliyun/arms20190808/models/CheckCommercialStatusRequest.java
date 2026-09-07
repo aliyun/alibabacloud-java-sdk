@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckCommercialStatusRequest extends TeaModel {
     /**
-     * <p>The region ID. Default value: cn-hangzhou.</p>
+     * <p>The region ID. Default value: ap-southeast-1.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -14,10 +14,10 @@ public class CheckCommercialStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ARMS sub-service. Valid values:</p>
+     * <p>The sub-product type. Valid values:</p>
      * <ul>
      * <li>apm: Application Monitoring</li>
-     * <li>rum: RUM</li>
+     * <li>rum: Real User Monitoring</li>
      * <li>prometheus: Managed Service for Prometheus</li>
      * <li>xtrace: Managed Service for OpenTelemetry</li>
      * </ul>

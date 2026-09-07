@@ -96,7 +96,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
          * <p>The alias of the feature.</p>
          * 
          * <strong>example:</strong>
-         * <p>Prometheus agent.</p>
+         * <p>Prometheus 探针</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -111,7 +111,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
          * <p>The description of the feature.</p>
          * 
          * <strong>example:</strong>
-         * <p>Collect Metric data using the Prometheus collection specification.</p>
+         * <p>以 Prometheus 采集规范采集 Metric 数据。</p>
          */
         @NameInMap("Description")
         public String description;
@@ -388,7 +388,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
          * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
-         * <p>sg-bp1c9fcexoalq9po6cp8</p>
+         * <p>sg-bp1gbhqh8b4dsgvopkry</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -411,7 +411,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
          * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-bp1qt6ict0dbxgv4wer8l</p>
+         * <p>vsw-uf6vc2e4ytv8vv05j3u09</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

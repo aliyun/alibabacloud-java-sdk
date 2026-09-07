@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataBonreeSDKConfigModuleConfigDefaultConfigValue extends TeaModel {
     /**
-     * <p>Indicates whether the configuration is enabled.</p>
+     * <p>The switch.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

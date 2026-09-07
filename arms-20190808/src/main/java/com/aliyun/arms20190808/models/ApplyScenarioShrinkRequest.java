@@ -29,7 +29,7 @@ public class ApplyScenarioShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ScenarioName</p>
+     * <p>测试POP业务监控</p>
      */
     @NameInMap("Name")
     public String name;
@@ -38,7 +38,7 @@ public class ApplyScenarioShrinkRequest extends TeaModel {
      * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-zhangjaikou</p>
+     * <p>cn-zhangjiakou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

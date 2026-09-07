@@ -110,7 +110,30 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{     &quot;notifyStartTime&quot;:&quot;00:00&quot;,     &quot;notifyEndTime&quot;:&quot;23:59&quot;,     &quot;notifyChannels&quot;:[         &quot;dingTalk&quot;,         &quot;email&quot;,         &quot;sms&quot;,         &quot;tts&quot;,         &quot;webhook&quot;     ],     &quot;notifyObjects&quot;:[         {             &quot;notifyObjectType&quot;:&quot;CONTACT&quot;,             &quot;notifyObjectId&quot;:123,             &quot;notifyObjectName&quot;:&quot;test&quot;         }     ] }</p>
+     * <p>{
+     *     &quot;notifyStartTime&quot;: &quot;00:00&quot;,
+     *     &quot;notifyEndTime&quot;: &quot;23:59&quot;,
+     *     &quot;notifyChannels&quot;: [
+     *         &quot;dingTalk&quot;,
+     *         &quot;email&quot;,
+     *         &quot;sms&quot;,
+     *         &quot;tts&quot;,
+     *         &quot;webhook&quot;
+     *     ],
+     *     &quot;notifyObjects&quot;: [
+     *         {
+     *             &quot;notifyObjectType&quot;: &quot;CONTACT&quot;,
+     *             &quot;notifyObjectId&quot;: 123,
+     *             &quot;notifyObjectName&quot;: &quot;test&quot;,
+     *             &quot;notifyChannels&quot;: [
+     *                 &quot;email&quot;,
+     *                 &quot;sms&quot;,
+     *                 &quot;tts&quot;
+     *             ],</p>
+     * <pre><code>    }
+     * ]
+     * </code></pre>
+     * <p>}</p>
      */
     @NameInMap("NotifyRule")
     public String notifyRule;
@@ -119,7 +142,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
      * <p>The notification template. The default notification template is provided below the table.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;robotContent&quot;:&quot;{{if .commonLabels.clustername }} &gt; Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} &gt; Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}{{ for .alerts }} &gt; {{.annotations.message}} {{if .generatorURL }} [Link]\({{.generatorURL}}) {{ end }} {{if eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} (Suspected noise) {{end}} {{end}}&quot;</p>
+     * <p>{ &quot;robotContent&quot;:&quot;{{if .commonLabels.clustername }}   &gt;  集群名称：{{ .commonLabels.clustername }}    {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}   &gt;  应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }}    {{ end }}{{ for .alerts }} &gt;  {{ .annotations.message }} {{if .generatorURL }} <a href="%7B%7B.generatorURL%7D%7D">详情链接</a> {{end}} {{if  eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} （疑似噪音） {{end}}  {{end}}&quot; }</p>
      */
     @NameInMap("NotifyTemplate")
     public String notifyTemplate;

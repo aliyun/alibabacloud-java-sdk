@@ -97,7 +97,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
          * <p>The city.</p>
          * 
          * <strong>example:</strong>
-         * <p>Beijing</p>
+         * <p>北京市</p>
          */
         @NameInMap("City")
         public String city;
@@ -124,7 +124,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
          * <p>The country.</p>
          * 
          * <strong>example:</strong>
-         * <p>China</p>
+         * <p>中国</p>
          */
         @NameInMap("Country")
         public String country;
@@ -142,7 +142,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
          * <p>The carrier.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud</p>
+         * <p>阿里云</p>
          */
         @NameInMap("Operator")
         public String operator;
@@ -160,7 +160,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
          * <p>The region.</p>
          * 
          * <strong>example:</strong>
-         * <p>Beijing</p>
+         * <p>浙江</p>
          */
         @NameInMap("Region")
         public String region;

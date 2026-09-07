@@ -15,6 +15,9 @@ public class UpdateGrafanaWorkspaceRequest extends TeaModel {
 
     /**
      * <p>The description of the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>线上生产环境Grafana</p>
      */
     @NameInMap("Description")
     public String description;

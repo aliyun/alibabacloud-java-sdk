@@ -8,7 +8,7 @@ public class DescribeEnvironmentFeatureRequest extends TeaModel {
      * <p>The language. Valid values: en and zh.</p>
      * 
      * <strong>example:</strong>
-     * <p>en</p>
+     * <p>zh</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;

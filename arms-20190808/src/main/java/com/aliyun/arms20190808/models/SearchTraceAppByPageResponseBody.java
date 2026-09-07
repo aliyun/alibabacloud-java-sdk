@@ -146,8 +146,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: yes</li>
-         * <li><code>false</code>: no</li>
+         * <li><p><code>true</code>: yes</p>
+         * </li>
+         * <li><p><code>false</code>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,8 +167,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         /**
          * <p>The type of the monitoring task. Valid values:</p>
          * <ul>
-         * <li><code>TRACE</code>: Application Monitoring</li>
-         * <li><code>RETCODE</code>: Browser Monitoring</li>
+         * <li><p><code>TRACE</code>: Application Monitoring</p>
+         * </li>
+         * <li><p><code>RETCODE</code>: Browser Monitoring</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

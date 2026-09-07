@@ -72,6 +72,8 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource group ID of the Prometheus instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
      */
@@ -98,6 +100,14 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>Extension information for the Flink VC cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("VcExtraInfo")
     public String vcExtraInfo;
 

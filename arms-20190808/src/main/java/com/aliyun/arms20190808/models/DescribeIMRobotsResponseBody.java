@@ -54,7 +54,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
          * <p>The name of the notification policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>Notification policy test</p>
+         * <p>通知策略测试</p>
          */
         @NameInMap("name")
         public String name;
@@ -151,7 +151,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
          * <p>The name of the IM chatbot.</p>
          * 
          * <strong>example:</strong>
-         * <p>Chatbot name</p>
+         * <p>robot名称</p>
          */
         @NameInMap("RobotName")
         public String robotName;

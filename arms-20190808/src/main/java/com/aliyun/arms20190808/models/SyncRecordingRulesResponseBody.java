@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncRecordingRulesResponseBody extends TeaModel {
     /**
-     * <p>状态码。200表示成功。</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,16 +14,16 @@ public class SyncRecordingRulesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The struct returned.</p>
+     * <p>The response struct.</p>
      * 
      * <strong>example:</strong>
-     * <p>{ &quot;data&quot;:[ &quot;c06ca68cd16f14f52bb07772eda\<em>\</em>\<em>&quot;, &quot;c33dd70a0ac184c1b879d807ab2\</em>\<em>\</em>&quot;, &quot;c384cf7e4dcb543e6ac8c7d4dd3\<em>\</em>\<em>&quot;, &quot;ce30f833bc4a04a56a06b070319\</em>\<em>\</em>&quot; ], &quot;message&quot;:&quot;IDs of Clusters to which the aggregation rule failed to be synchronized&quot;, &quot;success&quot;:true }</p>
+     * <p>{     &quot;data&quot;:[         &quot;c06ca68cd16f14f52bb07772eda***&quot;,         &quot;c33dd70a0ac184c1b879d807ab2***&quot;,         &quot;c384cf7e4dcb543e6ac8c7d4dd3***&quot;,         &quot;ce30f833bc4a04a56a06b070319***&quot;     ],     &quot;message&quot;:&quot;设置RecordingRule失败的clusterIds&quot;,     &quot;success&quot;:true }</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>返回结果的提示信息。</p>
+     * <p>The message returned with the result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class SyncRecordingRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>

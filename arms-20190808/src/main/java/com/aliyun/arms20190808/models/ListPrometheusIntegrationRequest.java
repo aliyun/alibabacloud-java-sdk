@@ -9,7 +9,7 @@ public class ListPrometheusIntegrationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>c77f6f2397ea74672872acf5e31374a27</p>
+     * <p>c77f6f2397ea74672872acf5e31******</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -19,7 +19,7 @@ public class ListPrometheusIntegrationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>kafka, mysql, redis, snmp, emr, nubela, and tidb</p>
+     * <p>kafka</p>
      */
     @NameInMap("IntegrationType")
     public String integrationType;

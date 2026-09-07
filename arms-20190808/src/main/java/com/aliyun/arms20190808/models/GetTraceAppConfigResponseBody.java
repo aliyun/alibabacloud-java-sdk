@@ -31,6 +31,9 @@ public class GetTraceAppConfigResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>查询应用配置成功</p>
      */
     @NameInMap("Message")
     public String message;

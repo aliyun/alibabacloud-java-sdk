@@ -44,10 +44,14 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The aggregation method of the alert condition. Valid values:</p>
          * <ul>
-         * <li>AVG: calculates the average value</li>
-         * <li>SUM: calculates the total value</li>
-         * <li>MAX: selects the maximum value</li>
-         * <li>MIN: selects the minimum value</li>
+         * <li><p>AVG: calculates the average value</p>
+         * </li>
+         * <li><p>SUM: calculates the total value</p>
+         * </li>
+         * <li><p>MAX: selects the maximum value</p>
+         * </li>
+         * <li><p>MIN: selects the minimum value</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -77,14 +81,22 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
          * <ul>
-         * <li>CURRENT_GTE: greater than or equal to</li>
-         * <li>CURRENT_LTE: less than or equal to</li>
-         * <li>PREVIOUS_UP: increase in percentage compared with the previous period</li>
-         * <li>PREVIOUS_DOWN: decrease in percentage compared with the previous period</li>
-         * <li>HOH_UP: increase in percentage compared with the same period in the previous hour</li>
-         * <li>HOH_DOWN: decrease in percentage compared with the same period in the previous hour</li>
-         * <li>DOD_UP: increase in percentage compared with the same period in the previous day</li>
-         * <li>DOD_DOWN: decrease in percentage compared with the same period in the previous day</li>
+         * <li><p>CURRENT_GTE: greater than or equal to</p>
+         * </li>
+         * <li><p>CURRENT_LTE: less than or equal to</p>
+         * </li>
+         * <li><p>PREVIOUS_UP: increase in percentage compared with the previous period</p>
+         * </li>
+         * <li><p>PREVIOUS_DOWN: decrease in percentage compared with the previous period</p>
+         * </li>
+         * <li><p>HOH_UP: increase in percentage compared with the same period in the previous hour</p>
+         * </li>
+         * <li><p>HOH_DOWN: decrease in percentage compared with the same period in the previous hour</p>
+         * </li>
+         * <li><p>DOD_UP: increase in percentage compared with the same period in the previous day</p>
+         * </li>
+         * <li><p>DOD_DOWN: decrease in percentage compared with the same period in the previous day</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,8 +171,10 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The relationship between multiple alert conditions specified for the Application Monitoring or Browser Monitoring alert rule. Valid values:</p>
          * <ul>
-         * <li>OR: The alert rule is triggered if one of the conditions is met.</li>
-         * <li>AND: The alert rule is triggered if all the conditions are met.</li>
+         * <li><p>OR: The alert rule is triggered if one of the conditions is met.</p>
+         * </li>
+         * <li><p>AND: The alert rule is triggered if all the conditions are met.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,8 +261,10 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The logical operator of the filter condition. Valid values:</p>
          * <ul>
-         * <li>\=: equal to</li>
-         * <li>not: not equal to</li>
+         * <li><p>\=: equal to</p>
+         * </li>
+         * <li><p>not: not equal to</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -539,8 +555,10 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The alert check type of the Prometheus alert rule.</p>
          * <ul>
-         * <li>STATIC: static threshold</li>
-         * <li>CUSTOM: custom PromQL</li>
+         * <li><p>STATIC: static threshold</p>
+         * </li>
+         * <li><p>CUSTOM: custom PromQL</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -552,9 +570,12 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The alert contact group ID of the Prometheus alert rule.</p>
          * <ul>
-         * <li>\-1: custom PromQL</li>
-         * <li>1: Kubernetes load</li>
-         * <li>15: Kubernetes node</li>
+         * <li><p>-1: custom PromQL</p>
+         * </li>
+         * <li><p>1: Kubernetes load</p>
+         * </li>
+         * <li><p>15: Kubernetes node</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -590,12 +611,15 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The status of the alert rule. Valid values:</p>
          * <ul>
-         * <li>RUNNING</li>
-         * <li>STOPPED</li>
-         * <li>PAUSED</li>
+         * <li><p>RUNNING</p>
+         * </li>
+         * <li><p>STOPPED</p>
+         * </li>
+         * <li><p>PAUSED</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.</p>
+         * <p>The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -607,9 +631,12 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the alert rule. Valid values:</p>
          * <ul>
-         * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
-         * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
-         * <li>PROMETHEUS_MONITORING_ALERT_RULE: Prometheus alert rule</li>
+         * <li><p>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
+         * </li>
+         * <li><p>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</p>
+         * </li>
+         * <li><p>PROMETHEUS_MONITORING_ALERT_RULE: Prometheus alert rule</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -627,8 +654,10 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the alert rule is applied to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: yes</li>
-         * <li><code>false</code>: no</li>
+         * <li><p><code>true</code>: yes</p>
+         * </li>
+         * <li><p><code>false</code>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -667,11 +696,11 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The extended fields.</p>
          * <blockquote>
-         * <p> For existing Application Monitoring alert rules, the fields contain information such as contacts, alert template, and notification content.</p>
+         * <p>For existing Application Monitoring alert rules, the fields contain information such as contacts, alert template, and notification content.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{\\&quot;alarmContext\\&quot;:\\&quot;{\\\\\&quot;content\\\\\&quot;:\\\\Alert name: $Alert name\\\\\\nFilter condition: $Filter condition\\\\\\nAlert time: $Alert time\\\\\\nAlert content: $Alert content\\\\\\nNote: The alert persists before you receive an email that reminds you to clear the alert. You will be reminded of the alert again 24 hours later. \\\\\&quot;,\\\\\&quot;subTitle\\\\\&quot;:\\\\\&quot;\\\\\&quot;}\\&quot;,\\&quot;alertWays\\&quot;:\\&quot;[0,1]\\&quot;,\\&quot;contactGroupIds\\&quot;:\\&quot;381,5075\\&quot;,\\&quot;notice\\&quot;:\\&quot;{\\\\\&quot;endTime\\\\\&quot;:1480607940000,\\\\\&quot;noticeEndTime\\\\\&quot;:1480607940000,\\\\\&quot;noticeStartTime\\\\\&quot;:1480521600000,\\\\\&quot;startTime\\\\\&quot;:1480521600000}\\&quot;}</p>
+         * <p>{\&quot;alarmContext\&quot;:\&quot;{\\\&quot;content\\\&quot;:\\\&quot;报警名称:$报警名称\\\\n筛选条件: $筛选\\\\n报警时间: $报警时间\\\\n报警内容: $报警内容\\\\n注意！：该报警未收到恢复邮件之前，正在持续报警中，24小时后会再次提醒您！\\\&quot;,\\\&quot;subTitle\\\&quot;:\\\&quot;\\\&quot;}\&quot;,\&quot;alertWays\&quot;:\&quot;[0,1]\&quot;,\&quot;contactGroupIds\&quot;:\&quot;381,5075\&quot;,\&quot;notice\&quot;:\&quot;{\\\&quot;endTime\\\&quot;:1480607940000,\\\&quot;noticeEndTime\\\&quot;:1480607940000,\\\&quot;noticeStartTime\\\&quot;:1480521600000,\\\&quot;startTime\\\&quot;:1480521600000}\&quot;}</p>
          */
         @NameInMap("Extend")
         public String extend;
@@ -691,11 +720,16 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The severity level of the Prometheus alert rule.</p>
          * <ul>
-         * <li>P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</li>
-         * <li>P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</li>
-         * <li>P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</li>
-         * <li>P4: Alert notifications are sent for low-priority issues that do not affect your business.</li>
-         * <li>Default: Alert notifications are sent regardless of alert levels.</li>
+         * <li><p>P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</p>
+         * </li>
+         * <li><p>P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</p>
+         * </li>
+         * <li><p>P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</p>
+         * </li>
+         * <li><p>P4: Alert notifications are sent for low-priority issues that do not affect your business.</p>
+         * </li>
+         * <li><p>Default: Alert notifications are sent regardless of alert levels.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -708,7 +742,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
          * <p>The alert message of the Prometheus alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Namespace: {{$labels.namespace}} / Pod: {{$labels.pod_name}} / Container: {{$labels.container}} CPU usage: {{$labels.metrics_params_opt_label_value}} {{$labels.metrics_params_value}}%. Current value: {{ printf &quot;%.2f&quot; $value }}%</p>
+         * <p>命名空间: {{$labels.namespace}} / Pod: {{$labels.pod_name}} / 容器: {{$labels.container}} CPU使用率{{$labels.metrics_params_opt_label_value}} {{$labels.metrics_params_value}}%, 当前值{{ printf &quot;%.2f&quot; $value }}%</p>
          */
         @NameInMap("Message")
         public String message;

@@ -76,7 +76,7 @@ public class ListTimingSyntheticTasksRequest extends TeaModel {
          * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>AlibabaCloud DNS Task</p>
+         * <p>拨测</p>
          */
         @NameInMap("Name")
         public String name;

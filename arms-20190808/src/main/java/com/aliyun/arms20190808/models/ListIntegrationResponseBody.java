@@ -58,7 +58,7 @@ public class ListIntegrationResponseBody extends TeaModel {
          * <p>The description of the alert integration.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>测试</p>
          */
         @NameInMap("Description")
         public String description;
@@ -240,7 +240,7 @@ public class ListIntegrationResponseBody extends TeaModel {
          * <p>The name of the alert integration.</p>
          * 
          * <strong>example:</strong>
-         * <p>CloudMonitor integration</p>
+         * <p>云监控集成</p>
          */
         @NameInMap("IntegrationName")
         public String integrationName;

@@ -8,8 +8,8 @@ public class QueryAppMetadataRequest extends TeaModel {
     public Long endTimeMs;
 
     /**
-     * <p>The metadata IDs. Separate multiple IDs with commas (,).</p>
-     * <p>You can obtain the exception ID on the <strong>Exception Analysis</strong> page of your application in the ARMS console.</p>
+     * <p>The metadata IDs. Use a comma (,) to separate multiple IDs.</p>
+     * <p>You can obtain the exception ID on the <strong>exception analysis</strong> page of the target application in the ARMS console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,10 +19,12 @@ public class QueryAppMetadataRequest extends TeaModel {
     public String metaIds;
 
     /**
-     * <p>The metadata type. Valid values:</p>
+     * <p>The type of the metadata. Valid values:</p>
      * <ul>
-     * <li>sql: obtains an SQL statement based on sqlId.</li>
-     * <li>exception: obtains the exception stack based on exceptionId.</li>
+     * <li><p>sql: Retrieves the SQL statement by sqlId.</p>
+     * </li>
+     * <li><p>exception: Retrieves the exception stack by exceptionId.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -33,11 +35,11 @@ public class QueryAppMetadataRequest extends TeaModel {
     public String metaType;
 
     /**
-     * <p>The process identifier (PID) of the application. You can obtain the PID of an application by calling the <strong>ListTraceApps</strong> operation.</p>
+     * <p>The application ID. To obtain the ID, call the <strong>ListTraceApps</strong> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ggxw4lnjuz@54364d85b97dc56</p>
+     * <p>ggxw4lnjuz@54364d85b******</p>
      */
     @NameInMap("Pid")
     public String pid;

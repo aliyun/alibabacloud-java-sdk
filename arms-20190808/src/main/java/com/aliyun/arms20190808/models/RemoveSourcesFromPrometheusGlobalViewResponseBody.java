@@ -79,7 +79,7 @@ public class RemoveSourcesFromPrometheusGlobalViewResponseBody extends TeaModel 
          * <p>The Info-level information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{regionId: the region where the aggregation instance resides. globalViewClusterId: the ID of the aggregation instance.</p>
+         * <p>{regionId: 实例所属region, globalViewClusterId: 实例Id}</p>
          */
         @NameInMap("Info")
         public String info;

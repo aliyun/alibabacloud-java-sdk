@@ -8,7 +8,7 @@ public class GetStackRequest extends TeaModel {
      * <p>The exit timestamp of the method call. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>1653641800</p>
+     * <p>1728355143000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -55,7 +55,7 @@ public class GetStackRequest extends TeaModel {
      * <p>The entry timestamp of the method call. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>1653555396</p>
+     * <p>1728351543000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

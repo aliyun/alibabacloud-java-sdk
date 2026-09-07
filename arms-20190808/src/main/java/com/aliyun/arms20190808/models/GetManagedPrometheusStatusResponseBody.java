@@ -32,7 +32,7 @@ public class GetManagedPrometheusStatusResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Successful</p>
+     * <p>查询成功</p>
      */
     @NameInMap("Message")
     public String message;

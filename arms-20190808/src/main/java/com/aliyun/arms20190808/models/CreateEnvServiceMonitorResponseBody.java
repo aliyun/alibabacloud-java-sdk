@@ -79,7 +79,7 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
          * <p>Indicates whether targets are matched.</p>
          * 
          * <strong>example:</strong>
-         * <p>Match successful.</p>
+         * <p>匹配成功。</p>
          */
         @NameInMap("MatchedMsg")
         public String matchedMsg;

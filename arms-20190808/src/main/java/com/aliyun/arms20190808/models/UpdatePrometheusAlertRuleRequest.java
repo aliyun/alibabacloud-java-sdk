@@ -86,7 +86,7 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</p>
+     * <p>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</p>
      */
     @NameInMap("Message")
     public String message;
@@ -94,8 +94,10 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
     /**
      * <p>The method that is used to send alert notifications. Valid values:</p>
      * <ul>
-     * <li><code>ALERT_MANAGER</code>: Alert notifications are sent by Operation Center. This is the default value.</li>
-     * <li><code>DISPATCH_RULE</code>: Alert notifications are sent based on the specified notification policy.</li>
+     * <li><p><code>ALERT_MANAGER</code>: Alert notifications are sent by Operation Center. This is the default value.</p>
+     * </li>
+     * <li><p><code>DISPATCH_RULE</code>: Alert notifications are sent based on the specified notification policy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +126,7 @@ public class UpdatePrometheusAlertRuleRequest extends TeaModel {
      * <p>The type of the alert rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>Kubernetes component alert</p>
+     * <p>Kubernetes组件告警</p>
      */
     @NameInMap("Type")
     public String type;

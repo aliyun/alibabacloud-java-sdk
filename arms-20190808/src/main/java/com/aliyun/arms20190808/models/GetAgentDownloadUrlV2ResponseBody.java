@@ -28,6 +28,9 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>探针类型错误</p>
      */
     @NameInMap("Message")
     public String message;

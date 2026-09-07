@@ -613,7 +613,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
          * <p>The city code.</p>
          * 
          * <strong>example:</strong>
-         * <p>110100</p>
+         * <p>11011XX</p>
          */
         @NameInMap("CityCode")
         public Long cityCode;
@@ -622,7 +622,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
          * <p>The type of the detection point.</p>
          * 
          * <strong>example:</strong>
-         * <p>IDC</p>
+         * <p>1</p>
          */
         @NameInMap("MonitorType")
         public Long monitorType;
@@ -631,7 +631,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
          * <p>The ID of the network service.</p>
          * 
          * <strong>example:</strong>
-         * <p>12001</p>
+         * <p>12</p>
          */
         @NameInMap("NetServiceId")
         public Long netServiceId;
@@ -640,7 +640,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
          * <p>The number of times that the system sends detection requests.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>2</p>
          */
         @NameInMap("SendCount")
         public Long sendCount;

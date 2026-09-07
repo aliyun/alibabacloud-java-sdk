@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRumAppResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the returned results.</p>
+     * <p>The details of the response.</p>
      */
     @NameInMap("Data")
     public UpdateRumAppResponseBodyData data;
@@ -29,7 +29,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>message</p>
@@ -38,7 +38,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</p>
@@ -47,10 +47,10 @@ public class UpdateRumAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the update was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><code>true</code>: Successful.</li>
+     * <li><code>false</code>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,16 +114,16 @@ public class UpdateRumAppResponseBody extends TeaModel {
 
     public static class UpdateRumAppResponseBodyData extends TeaModel {
         /**
-         * <p>The user configurations. This is a reserved parameter.</p>
+         * <p>The user configuration. This is a reserved field.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>用户配置，保留字段。</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
-         * <p>The QPS limit. Unit: bytes.</p>
+         * <p>The quota limit, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -132,7 +132,11 @@ public class UpdateRumAppResponseBody extends TeaModel {
         public Integer limit;
 
         /**
-         * <p>Indicates whether the request is throttled due to the QPS limit. Valid values: true and false.</p>
+         * <p>Indicates whether the quota is exceeded. Valid values:</p>
+         * <ul>
+         * <li>true: Exceeded.</li>
+         * <li>false: Not exceeded.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,7 +145,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
         public Boolean limited;
 
         /**
-         * <p>The usage. Unit: bytes.</p>
+         * <p>The usage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

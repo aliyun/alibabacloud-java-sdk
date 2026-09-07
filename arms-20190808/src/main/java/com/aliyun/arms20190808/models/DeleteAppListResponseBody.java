@@ -17,7 +17,7 @@ public class DeleteAppListResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;{\&quot;code\&quot;:200,\&quot;data\&quot;:\&quot;{\\\&quot;code\\\&quot;:200,\\\&quot;data\\\&quot;:true,\\\&quot;errorCode\\ \&quot;:\\\&quot;Deletion of application successful\\\&quot;,\\\&quot;Message\\\&quot;:\\\&quot;Deletion of application successful\\\&quot;,\\\&quot;Successful\\\&quot;:true,\ \\&quot;traceId\\\&quot;:\\\&quot;0bc1667516940677164677396d0088\\\&quot;}\&quot;,\&quot;errorCode\&quot;:\&quot;Batch deletion of applications successful\&quot;,\&quot;message\&quot;:\&quot;Batch deletion of applications successful\ &quot;,\&quot;Success\&quot;:true,\&quot;traceId\&quot;:\&quot;210f470416940677161213505e0e7a\&quot;}&quot;</p>
+     * <p>&quot;{\&quot;code\&quot;:200,\&quot;data\&quot;:\&quot;{\\\&quot;code\\\&quot;:200,\\\&quot;data\\\&quot;:true,\\\&quot;errorCode\\\&quot;:\\\&quot;删除应用成功\\\&quot;,\\\&quot;message\\\&quot;:\\\&quot;删除应用成功\\\&quot;,\\\&quot;success\\\&quot;:true,\\\&quot;traceId\\\&quot;:\\\&quot;0bc1667516940677164677396d0088\\\&quot;}\&quot;,\&quot;errorCode\&quot;:\&quot;批量删除应用成功\&quot;,\&quot;message\&quot;:\&quot;批量删除应用成功\&quot;,\&quot;success\&quot;:true,\&quot;traceId\&quot;:\&quot;210f470416940677161213505e0e7a\&quot;}&quot;</p>
      */
     @NameInMap("Data")
     public String data;
@@ -26,7 +26,7 @@ public class DeleteAppListResponseBody extends TeaModel {
      * <p>The error message returned for invalid request parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;Deletion of application successful&quot;</p>
+     * <p>“批量删除应用成功”</p>
      */
     @NameInMap("Message")
     public String message;

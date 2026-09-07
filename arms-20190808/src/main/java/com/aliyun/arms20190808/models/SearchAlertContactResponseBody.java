@@ -63,7 +63,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
          * <p>The contact group to which the contact belongs. If your contacts are added to multiple contact groups, the contact groups are separated by vertical bars (|).</p>
          * 
          * <strong>example:</strong>
-         * <p>Default Group | SRE Group</p>
+         * <p>默认分组|SRE分组</p>
          */
         @NameInMap("Content")
         public String content;

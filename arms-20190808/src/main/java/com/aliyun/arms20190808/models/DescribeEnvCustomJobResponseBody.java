@@ -79,7 +79,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
          * <p>If the <strong>encryptYaml</strong> parameter is set to <code>true</code>, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>Refer to supplementary instructions.</p>
+         * <p>参见补充说明。</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;

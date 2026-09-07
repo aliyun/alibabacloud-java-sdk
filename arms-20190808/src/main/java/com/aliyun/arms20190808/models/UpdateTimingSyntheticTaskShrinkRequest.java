@@ -47,7 +47,7 @@ public class UpdateTimingSyntheticTaskShrinkRequest extends TeaModel {
      * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
-     * <p>AlibabaCloud DNS Task</p>
+     * <p>拨测任务</p>
      */
     @NameInMap("Name")
     public String name;

@@ -7,8 +7,10 @@ public class CreateOrUpdateContactGroupRequest extends TeaModel {
     /**
      * <p>The ID of the alert contact group.</p>
      * <ul>
-     * <li>If you do not specify this parameter, an alert contact group is created.</li>
-     * <li>If you specify this parameter, the specified alert contact group is modified.</li>
+     * <li><p>If you do not specify this parameter, an alert contact group is created.</p>
+     * </li>
+     * <li><p>If you specify this parameter, the specified alert contact group is modified.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

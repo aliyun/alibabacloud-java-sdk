@@ -8,7 +8,7 @@ public class ListAlertEventsRequest extends TeaModel {
      * <p>The name of the alert.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test-triggered alert</p>
+     * <p>测试触发的告警</p>
      */
     @NameInMap("AlertName")
     public String alertName;

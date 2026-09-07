@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAddonReleasesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The result returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListAddonReleasesResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</p>
@@ -38,7 +38,11 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the query was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +97,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
     public static class ListAddonReleasesResponseBodyDataReleasesConditions extends TeaModel {
         /**
-         * <p>The first transition time.</p>
+         * <p>The time of the first transition.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-01-31T14:32:19Z</p>
@@ -102,7 +106,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String firstTransitionTime;
 
         /**
-         * <p>The last transition time.</p>
+         * <p>The time of the last transition.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-01-31T14:32:19Z</p>
@@ -120,7 +124,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The reason for the failure.</p>
+         * <p>The failure reason.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -129,7 +133,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The status of the phase.</p>
+         * <p>The phase status.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -138,7 +142,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the phase.</p>
+         * <p>The phase type.</p>
          * 
          * <strong>example:</strong>
          * <p>Loaded</p>
@@ -203,7 +207,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
     public static class ListAddonReleasesResponseBodyDataReleases extends TeaModel {
         /**
-         * <p>The name of the add-on.</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -212,7 +216,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String addonName;
 
         /**
-         * <p>The number of alert rules.</p>
+         * <p>The number of alert groups.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,13 +225,13 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public Long alertRuleCount;
 
         /**
-         * <p>The installation phase.</p>
+         * <p>The installation phases.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<ListAddonReleasesResponseBodyDataReleasesConditions> conditions;
 
         /**
-         * <p>The configuration information of the add-on release.</p>
+         * <p>The configuration of the addon release.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;port&quot;:&quot;9379&quot;}</p>
@@ -236,7 +240,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The time when the add-on was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-22T16:56:29+08:00</p>
@@ -263,7 +267,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The number of exporters.</p>
+         * <p>The number of plug-ins.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -272,7 +276,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public Long exporterCount;
 
         /**
-         * <p>Indicates whether the configuration is available.</p>
+         * <p>Indicates whether the addon has configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -281,7 +285,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public Boolean haveConfig;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The user ID of the installer.</p>
          * 
          * <strong>example:</strong>
          * <p>1268790592387</p>
@@ -299,7 +303,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>Indicates whether the component is fully managed.</p>
+         * <p>Indicates whether the component is managed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -344,7 +348,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String releaseName;
 
         /**
-         * <p>The scenario.</p>
+         * <p>The identified scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>database</p>
@@ -362,7 +366,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the add-on was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-22T16:56:29+08:00</p>
@@ -380,7 +384,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The version of the add-on.</p>
+         * <p>The addon version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.1</p>
@@ -568,7 +572,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public Boolean containsV2Addon;
 
         /**
-         * <p>The queried add-ons.</p>
+         * <p>The collection of addon releases.</p>
          */
         @NameInMap("Releases")
         public java.util.List<ListAddonReleasesResponseBodyDataReleases> releases;

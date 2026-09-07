@@ -255,7 +255,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
          * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>Reserved parameter</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("PrometheusClusterId")
         public String prometheusClusterId;
@@ -264,7 +264,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
          * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>Reserved parameter</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("PrometheusClusterRegion")
         public String prometheusClusterRegion;
@@ -2117,7 +2117,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
          * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>myweb</p>
+         * <p>p_运维</p>
          */
         @NameInMap("Value")
         public String value;
@@ -2198,7 +2198,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
          * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
-         * <p>AlibabaCloud DNS Task</p>
+         * <p>拨测任务</p>
          */
         @NameInMap("Name")
         public String name;

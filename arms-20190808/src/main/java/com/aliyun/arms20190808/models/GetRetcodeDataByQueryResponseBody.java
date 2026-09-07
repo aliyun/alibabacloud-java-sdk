@@ -23,7 +23,22 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
      * <p>The Browser Monitoring data returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;total&quot;:0,&quot;auth&quot;:false,&quot;pageSize&quot;:20,&quot;completed&quot;:true,&quot;page&quot;:1,&quot;items&quot;:[]}</p>
+     * <p>{
+     *     &quot;total&quot;: 1,
+     *     &quot;auth&quot;: false,
+     *     &quot;pageSize&quot;: 20,
+     *     &quot;completed&quot;: true,
+     *     &quot;page&quot;: 1,
+     *     &quot;items&quot;: [
+     *       {
+     *         &quot;date&quot;: &quot;1701820800000&quot;,
+     *         &quot;<strong>time</strong>&quot;: 1701410567,
+     *         &quot;uv&quot;: &quot;64&quot;,
+     *         &quot;<strong>source</strong>&quot;: &quot;&quot;,
+     *         &quot;pv&quot;: &quot;890&quot;
+     *       }
+     *     ]
+     *     }</p>
      */
     @NameInMap("Data")
     public String data;
@@ -32,7 +47,9 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
      * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
-     * <p>Internal error. Please try again. Contact the DingTalk service account if the issue                              persists after multiple retries.</p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("Message")
     public String message;

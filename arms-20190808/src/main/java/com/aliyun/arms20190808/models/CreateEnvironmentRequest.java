@@ -8,8 +8,10 @@ public class CreateEnvironmentRequest extends TeaModel {
      * <p>The language. Default value: zh.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>en: English</li>
-     * <li>zh: Chinese</li>
+     * <li><p>en: English</p>
+     * </li>
+     * <li><p>zh: Chinese</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,14 +43,17 @@ public class CreateEnvironmentRequest extends TeaModel {
     /**
      * <p>The subtype of the environment. Valid values:</p>
      * <ul>
-     * <li>CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)</li>
-     * <li>ECS: ECS</li>
-     * <li>Cloud: cloud service</li>
+     * <li><p>CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)</p>
+     * </li>
+     * <li><p>ECS: ECS</p>
+     * </li>
+     * <li><p>Cloud: cloud service</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ECS, ACK, etc.</p>
+     * <p>ECS、ACK等。</p>
      */
     @NameInMap("EnvironmentSubType")
     public String environmentSubType;
@@ -56,9 +61,12 @@ public class CreateEnvironmentRequest extends TeaModel {
     /**
      * <p>The type of the environment. Valid values:</p>
      * <ul>
-     * <li>CS: Container Service</li>
-     * <li>ECS: Elastic Compute Service</li>
-     * <li>Cloud: cloud service</li>
+     * <li><p>CS: Container Service</p>
+     * </li>
+     * <li><p>ECS: Elastic Compute Service</p>
+     * </li>
+     * <li><p>Cloud: cloud service</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,8 +79,10 @@ public class CreateEnvironmentRequest extends TeaModel {
     /**
      * <p>The payable resource plan.</p>
      * <ul>
-     * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
-     * <li>Otherwise, leave the parameter empty.</li>
+     * <li><p>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</p>
+     * </li>
+     * <li><p>Otherwise, leave the parameter empty.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,9 +115,12 @@ public class CreateEnvironmentRequest extends TeaModel {
     /**
      * <p>Specifies whether agents or exporters are managed. Valid values:</p>
      * <ul>
-     * <li>none: No. By default, no managed agents or exporters are provided for ACK clusters.</li>
-     * <li>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</li>
-     * <li>agent-exporter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</li>
+     * <li><p>none: No. By default, no managed agents or exporters are provided for ACK clusters.</p>
+     * </li>
+     * <li><p>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</p>
+     * </li>
+     * <li><p>agent-exporter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

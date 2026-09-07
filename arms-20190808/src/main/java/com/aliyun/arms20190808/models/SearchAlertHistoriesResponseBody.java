@@ -45,7 +45,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
          * <p>The content of the alert notification.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;Alert name: Alert1\nAlert time: 2020-07-24 12:14:00\nAlert content: A total of four alerts are triggered: \<em>\</em>\<em>\</em>&quot;</p>
+         * <p>&quot;报警名称：Alert1\n报警时间：2020-07-24 12:14:00\n报警内容：共有4条记录触发异常：****&quot;</p>
          */
         @NameInMap("AlarmContent")
         public String alarmContent;

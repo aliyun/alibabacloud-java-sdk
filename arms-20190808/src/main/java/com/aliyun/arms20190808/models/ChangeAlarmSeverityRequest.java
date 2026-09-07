@@ -10,7 +10,7 @@ public class ChangeAlarmSeverityRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>155</p>
+     * <p>184723093</p>
      */
     @NameInMap("AlarmId")
     public Long alarmId;

@@ -21,7 +21,7 @@ public class UpdateIntegrationRequest extends TeaModel {
      * <p>The description of the alert integration.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test</p>
+     * <p>测试</p>
      */
     @NameInMap("Description")
     public String description;
@@ -77,7 +77,109 @@ public class UpdateIntegrationRequest extends TeaModel {
      * <p>The predefined mapped fields are mapped to the fields of ARMS alerts. The predefined mapped fields were generated when the alert integration was created. For more information, see the description of the FieldRedefineRules parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>[ { &quot;redefineType&quot;:&quot;EXTRACT&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;alertname&quot;, &quot;expression&quot;:null, &quot;mappingRuleList&quot;:[ ], &quot;name&quot;:&quot;Alert name&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:&quot;$.alertName&quot;, &quot;id&quot;:10001, &quot;fieldType&quot;:&quot;LABEL&quot; }, { &quot;redefineType&quot;:&quot;MAP&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;severity&quot;, &quot;expression&quot;:null, &quot;mappingRuleList&quot;:[ { &quot;mappingValue&quot;:&quot;critical&quot;, &quot;mappingName&quot;:&quot;P1&quot;, &quot;mappingType&quot;:&quot;MAP&quot;, &quot;originValue&quot;:&quot;CRITICAL&quot; }, { &quot;mappingValue&quot;:&quot;error&quot;, &quot;mappingName&quot;:&quot;P2&quot;, &quot;mappingType&quot;:&quot;MAP&quot;, &quot;originValue&quot;:&quot;WARN&quot; }, { &quot;mappingValue&quot;:&quot;warning&quot;, &quot;mappingName&quot;:&quot;P3&quot;, &quot;mappingType&quot;:&quot;MAP&quot;, &quot;originValue&quot;:&quot;INFO&quot; } ], &quot;name&quot;:&quot;Alert level&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:&quot;$.triggerLevel&quot;, &quot;id&quot;:10002, &quot;fieldType&quot;:&quot;LABEL&quot; }, { &quot;redefineType&quot;:&quot;EXTRACT&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;message&quot;, &quot;expression&quot;:&quot;{{$labels.namespace}} / {{$labels.dimensions}} Alert content {{ $labels.alertname }}, Current value {{$value}}.&quot;, &quot;mappingRuleList&quot;:[ ], &quot;name&quot;:&quot;Alert description&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:null, &quot;id&quot;:10003, &quot;fieldType&quot;:&quot;ANNOTATION&quot; }, { &quot;redefineType&quot;:&quot;EXTRACT&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;value&quot;, &quot;expression&quot;:null, &quot;mappingRuleList&quot;:[ ], &quot;name&quot;:&quot;Alert sample value&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:&quot;$.curValue&quot;, &quot;id&quot;:10004, &quot;fieldType&quot;:&quot;ANNOTATION&quot; }, { &quot;redefineType&quot;:&quot;EXTRACT&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;source&quot;, &quot;expression&quot;:null, &quot;mappingRuleList&quot;:[ ], &quot;name&quot;:&quot;Source&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:null, &quot;id&quot;:10007, &quot;fieldType&quot;:&quot;LABEL&quot; }, { &quot;redefineType&quot;:&quot;ADD&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;generatorUrl&quot;, &quot;expression&quot;:&quot;<a href="https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name=%7B%7B$labels.ruleId%7D%7D%5C%5C&searchValue=%5C%5C&searchType=name%5C%5C&searchProduct=/history/all/searchKey:%7B%7B$labels.ruleId%7D%7D,startTime:%7B%7Bsub">https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name={{$labels.ruleId}}\\&amp;searchValue=\\&amp;searchType=name\\&amp;searchProduct=/history/all/searchKey:{{$labels.ruleId}},startTime:{{sub</a> $startsAt 300000}},endTime:{{$endsAt}}&quot;, &quot;mappingRuleList&quot;:[ ], &quot;name&quot;:&quot;Event URL&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:&quot;<a href="https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name=%7B%7B$labels.ruleId%7D%7D%5C%5C&searchValue=%5C%5C&searchType=name%5C%5C&searchProduct=/history/all/searchKey:%7B%7B$labels.ruleId%7D%7D,startTime:%7B%7Bsub">https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name={{$labels.ruleId}}\\&amp;searchValue=\\&amp;searchType=name\\&amp;searchProduct=/history/all/searchKey:{{$labels.ruleId}},startTime:{{sub</a> $startsAt 300000}},endTime:{{$endsAt}}&quot;, &quot;id&quot;:10012, &quot;fieldType&quot;:&quot;GENERATE_URL&quot; } ]</p>
+     * <p>[
+     *     {
+     *         &quot;redefineType&quot;:&quot;EXTRACT&quot;,
+     *         &quot;matchExpression&quot;:null,
+     *         &quot;fieldName&quot;:&quot;alertname&quot;,
+     *         &quot;expression&quot;:null,
+     *         &quot;mappingRuleList&quot;:[</p>
+     * <pre><code>    ],
+     *     &quot;name&quot;:&quot;告警名称&quot;,
+     *     &quot;integrationId&quot;:1234,
+     *     &quot;jsonPath&quot;:&quot;$.alertName&quot;,
+     *     &quot;id&quot;:10001,
+     *     &quot;fieldType&quot;:&quot;LABEL&quot;
+     * },
+     * {
+     *     &quot;redefineType&quot;:&quot;MAP&quot;,
+     *     &quot;matchExpression&quot;:null,
+     *     &quot;fieldName&quot;:&quot;severity&quot;,
+     *     &quot;expression&quot;:null,
+     *     &quot;mappingRuleList&quot;:[
+     *         {
+     *             &quot;mappingValue&quot;:&quot;critical&quot;,
+     *             &quot;mappingName&quot;:&quot;P1&quot;,
+     *             &quot;mappingType&quot;:&quot;MAP&quot;,
+     *             &quot;originValue&quot;:&quot;CRITICAL&quot;
+     *         },
+     *         {
+     *             &quot;mappingValue&quot;:&quot;error&quot;,
+     *             &quot;mappingName&quot;:&quot;P2&quot;,
+     *             &quot;mappingType&quot;:&quot;MAP&quot;,
+     *             &quot;originValue&quot;:&quot;WARN&quot;
+     *         },
+     *         {
+     *             &quot;mappingValue&quot;:&quot;warning&quot;,
+     *             &quot;mappingName&quot;:&quot;P3&quot;,
+     *             &quot;mappingType&quot;:&quot;MAP&quot;,
+     *             &quot;originValue&quot;:&quot;INFO&quot;
+     *         }
+     *     ],
+     *     &quot;name&quot;:&quot;告警等级&quot;,
+     *     &quot;integrationId&quot;:1234,
+     *     &quot;jsonPath&quot;:&quot;$.triggerLevel&quot;,
+     *     &quot;id&quot;:10002,
+     *     &quot;fieldType&quot;:&quot;LABEL&quot;
+     * },
+     * {
+     *     &quot;redefineType&quot;:&quot;EXTRACT&quot;,
+     *     &quot;matchExpression&quot;:null,
+     *     &quot;fieldName&quot;:&quot;message&quot;,
+     *     &quot;expression&quot;:&quot;{{$labels.namespace}} / {{$labels.dimensions}} 发生 {{ $labels.alertname }}, 当前值 {{$value}}。&quot;,
+     *     &quot;mappingRuleList&quot;:[
+     * 
+     *     ],
+     *     &quot;name&quot;:&quot;告警描述&quot;,
+     *     &quot;integrationId&quot;:1234,
+     *     &quot;jsonPath&quot;:null,
+     *     &quot;id&quot;:10003,
+     *     &quot;fieldType&quot;:&quot;ANNOTATION&quot;
+     * },
+     * {
+     *     &quot;redefineType&quot;:&quot;EXTRACT&quot;,
+     *     &quot;matchExpression&quot;:null,
+     *     &quot;fieldName&quot;:&quot;value&quot;,
+     *     &quot;expression&quot;:null,
+     *     &quot;mappingRuleList&quot;:[
+     * 
+     *     ],
+     *     &quot;name&quot;:&quot;告警样本值&quot;,
+     *     &quot;integrationId&quot;:1234,
+     *     &quot;jsonPath&quot;:&quot;$.curValue&quot;,
+     *     &quot;id&quot;:10004,
+     *     &quot;fieldType&quot;:&quot;ANNOTATION&quot;
+     * },
+     * {
+     *     &quot;redefineType&quot;:&quot;EXTRACT&quot;,
+     *     &quot;matchExpression&quot;:null,
+     *     &quot;fieldName&quot;:&quot;source&quot;,
+     *     &quot;expression&quot;:null,
+     *     &quot;mappingRuleList&quot;:[
+     * 
+     *     ],
+     *     &quot;name&quot;:&quot;来源&quot;,
+     *     &quot;integrationId&quot;:1234,
+     *     &quot;jsonPath&quot;:null,
+     *     &quot;id&quot;:10007,
+     *     &quot;fieldType&quot;:&quot;LABEL&quot;
+     * },
+     * {
+     *     &quot;redefineType&quot;:&quot;ADD&quot;,
+     *     &quot;matchExpression&quot;:null,
+     *     &quot;fieldName&quot;:&quot;generatorUrl&quot;,
+     *     &quot;expression&quot;:&quot;https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name={{$labels.ruleId}}&amp;searchValue=&amp;searchType=name&amp;searchProduct=/history/all/searchKey:{{$labels.ruleId}},startTime:{{sub $startsAt 300000}},endTime:{{$endsAt}}&quot;,
+     *     &quot;mappingRuleList&quot;:[
+     * 
+     *     ],
+     *     &quot;name&quot;:&quot;事件地址&quot;,
+     *     &quot;integrationId&quot;:1234,
+     *     &quot;jsonPath&quot;:&quot;https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name={{$labels.ruleId}}&amp;searchValue=&amp;searchType=name&amp;searchProduct=/history/all/searchKey:{{$labels.ruleId}},startTime:{{sub $startsAt 300000}},endTime:{{$endsAt}}&quot;,
+     *     &quot;id&quot;:10012,
+     *     &quot;fieldType&quot;:&quot;GENERATE_URL&quot;
+     * }
+     * </code></pre>
+     * <p>]</p>
      */
     @NameInMap("FieldRedefineRules")
     public String fieldRedefineRules;
@@ -121,7 +223,7 @@ public class UpdateIntegrationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CloudMonitor integration</p>
+     * <p>云监控集成</p>
      */
     @NameInMap("IntegrationName")
     public String integrationName;

@@ -103,7 +103,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
          * <p>The name of the IM chatbot.</p>
          * 
          * <strong>example:</strong>
-         * <p>Chatbot name</p>
+         * <p>robot名称</p>
          */
         @NameInMap("RobotName")
         public String robotName;

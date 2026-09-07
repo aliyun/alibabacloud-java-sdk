@@ -26,7 +26,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
      * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>删除的应用不存在。</p>
      */
     @NameInMap("Message")
     public String message;
@@ -53,7 +53,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
      * <p>The message that appears when the application is deleted.</p>
      * 
      * <strong>example:</strong>
-     * <p>Success to delete app.</p>
+     * <p>删除应用成功。</p>
      */
     @NameInMap("Result")
     public String result;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentAddonsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,12 +14,14 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The result of the operation.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListEnvironmentAddonsResponseBodyData data;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>message</p>
      */
@@ -25,7 +29,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>32940175-181B-4B93-966E-4BB69176****</p>
@@ -34,6 +38,8 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values are <code>true</code> if the operation succeeded and <code>false</code> if it failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -88,6 +94,9 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
     public static class ListEnvironmentAddonsResponseBodyDataAddonsDashboards extends TeaModel {
         /**
          * <p>The description of the dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL监控大盘信息,监控了连接信息,使用信息等指标</p>
          */
         @NameInMap("Description")
         public String description;
@@ -143,19 +152,19 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
 
     public static class ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsDependencies extends TeaModel {
         /**
-         * <p>The cluster type.</p>
+         * <p>The required cluster types.</p>
          */
         @NameInMap("ClusterTypes")
         public java.util.List<String> clusterTypes;
 
         /**
-         * <p>The feature that can be installed in the environment.</p>
+         * <p>The features available for installation in the environment.</p>
          */
         @NameInMap("Features")
         public java.util.Map<String, Boolean> features;
 
         /**
-         * <p>The services.</p>
+         * <p>The dependent services.</p>
          */
         @NameInMap("Services")
         public java.util.List<String> services;
@@ -193,7 +202,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
 
     public static class ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPoliciesMetricCheckRule extends TeaModel {
         /**
-         * <p>The PromQL statements.</p>
+         * <p>The PromQL query statements.</p>
          */
         @NameInMap("PromQL")
         public java.util.List<String> promQL;
@@ -233,7 +242,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public String icon;
 
         /**
-         * <p>The tag of the protocol.</p>
+         * <p>The label of the protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>ARMS</p>
@@ -291,7 +300,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
 
     public static class ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPolicies extends TeaModel {
         /**
-         * <p>The default alert status.</p>
+         * <p>The default status of the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -300,7 +309,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public String alertDefaultStatus;
 
         /**
-         * <p>The default installation status.</p>
+         * <p>Indicates whether the addon is installed by default in the environment.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -309,7 +318,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public Boolean defaultInstall;
 
         /**
-         * <p>Indicates whether a service account is enabled.</p>
+         * <p>Indicates whether a service account is enabled for the addon.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -318,13 +327,13 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public Boolean enableServiceAccount;
 
         /**
-         * <p>The metric check rule.</p>
+         * <p>The rules for checking metric status.</p>
          */
         @NameInMap("MetricCheckRule")
         public ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPoliciesMetricCheckRule metricCheckRule;
 
         /**
-         * <p>Indicates whether a restart is required after the installation.</p>
+         * <p>Indicates whether a restart is required after the addon is installed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -333,13 +342,13 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public Boolean needRestartAfterIntegration;
 
         /**
-         * <p>The supported protocols.</p>
+         * <p>The list of supported protocols.</p>
          */
         @NameInMap("Protocols")
         public java.util.List<ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPoliciesProtocols> protocols;
 
         /**
-         * <p>The target name of the add-on.</p>
+         * <p>The target name of the addon.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud-rds-mysql</p>
@@ -412,19 +421,22 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
 
     public static class ListEnvironmentAddonsResponseBodyDataAddonsEnvironments extends TeaModel {
         /**
-         * <p>The dependencies of the environment.</p>
+         * <p>The dependencies of the addon within the environment.</p>
          */
         @NameInMap("Dependencies")
         public ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsDependencies dependencies;
 
         /**
          * <p>The description of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL 服务部署在 Kubernetes 集群中。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the feature is enabled.</p>
+         * <p>Indicates whether the addon is supported in this environment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -433,7 +445,10 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The tag of the environment.</p>
+         * <p>The label of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>容器环境</p>
          */
         @NameInMap("Label")
         public String label;
@@ -448,7 +463,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The control policies in the environment.</p>
+         * <p>The policies related to the addon in this environment.</p>
          */
         @NameInMap("Policies")
         public ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPolicies policies;
@@ -510,7 +525,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
 
     public static class ListEnvironmentAddonsResponseBodyDataAddons extends TeaModel {
         /**
-         * <p>The alias of the add-on.</p>
+         * <p>The alias of the addon.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -519,31 +534,34 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The tags of the add-on.</p>
+         * <p>The list of addon tags.</p>
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
         /**
-         * <p>The dashboards.</p>
+         * <p>The list of dashboards.</p>
          */
         @NameInMap("Dashboards")
         public java.util.List<ListEnvironmentAddonsResponseBodyDataAddonsDashboards> dashboards;
 
         /**
-         * <p>The description of the add-on.</p>
+         * <p>The description of the addon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通过 MySQL Exporter 监控数据库指标</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The supported environments.</p>
+         * <p>The list of supported environments.</p>
          */
         @NameInMap("Environments")
         public java.util.List<ListEnvironmentAddonsResponseBodyDataAddonsEnvironments> environments;
 
         /**
-         * <p>The URL of the icon.</p>
+         * <p>The URL of the addon icon.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx">http://xxxx</a></p>
@@ -552,13 +570,13 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public String icon;
 
         /**
-         * <p>The collection of keywords.</p>
+         * <p>The keywords for the addon.</p>
          */
         @NameInMap("Keywords")
         public java.util.List<String> keywords;
 
         /**
-         * <p>The language.</p>
+         * <p>The language of the addon metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -567,7 +585,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The time when the instance was last created.</p>
+         * <p>The creation time of the latest release of the addon.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-22T16:56:29+08:00</p>
@@ -576,7 +594,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public String latestReleaseCreateTime;
 
         /**
-         * <p>The name of the add-on.</p>
+         * <p>The name of the addon.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -585,7 +603,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the add-on can be installed only once.</p>
+         * <p>Indicates whether the addon can be installed only once per environment.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -594,7 +612,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public Boolean once;
 
         /**
-         * <p>The scenario.</p>
+         * <p>The application scenario of the addon.</p>
          * 
          * <strong>example:</strong>
          * <p>database</p>
@@ -603,7 +621,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>The version of the agent.</p>
+         * <p>The addon version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.1</p>
@@ -612,7 +630,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The weight.</p>
+         * <p>The weight of the addon, which is used for sorting in the UI.</p>
          * 
          * <strong>example:</strong>
          * <p>857</p>
@@ -741,15 +759,20 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
 
     public static class ListEnvironmentAddonsResponseBodyData extends TeaModel {
         /**
-         * <p>The queried add-ons.</p>
+         * <p>The list of addons.</p>
          */
         @NameInMap("Addons")
         public java.util.List<ListEnvironmentAddonsResponseBodyDataAddons> addons;
 
+        /**
+         * <p>Indicates whether the list contains V2 addons.</p>
+         */
         @NameInMap("ContainsV2Addon")
         public Boolean containsV2Addon;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

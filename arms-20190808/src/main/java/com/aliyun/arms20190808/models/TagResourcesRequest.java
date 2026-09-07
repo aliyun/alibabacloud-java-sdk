@@ -14,18 +14,25 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the ARMS resources for which you want to modify tags. Valid values:</p>
      * <ul>
-     * <li>WEB: Browser Monitoring</li>
-     * <li>APPLICATION: Application Monitoring</li>
-     * <li>PROMETHEUS: Managed Service for Prometheus</li>
-     * <li>SYNTHETICTASK: Synthetic Monitoring</li>
-     * <li>ALERTRULE: Application Monitoring alert rule</li>
-     * <li>PROMETHEUSALERTRULE: Managed Service for Prometheus alert rule</li>
-     * <li>XTRACEAPP: Managed Service for OpenTelemetry</li>
+     * <li><p>WEB: Browser Monitoring</p>
+     * </li>
+     * <li><p>APPLICATION: Application Monitoring</p>
+     * </li>
+     * <li><p>PROMETHEUS: Managed Service for Prometheus</p>
+     * </li>
+     * <li><p>SYNTHETICTASK: Synthetic Monitoring</p>
+     * </li>
+     * <li><p>ALERTRULE: Application Monitoring alert rule</p>
+     * </li>
+     * <li><p>PROMETHEUSALERTRULE: Managed Service for Prometheus alert rule</p>
+     * </li>
+     * <li><p>XTRACEAPP: Managed Service for OpenTelemetry</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>PROMETHEUS</p>
+     * <p>APPLICATION</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

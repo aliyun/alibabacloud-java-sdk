@@ -109,7 +109,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
          * <p>The value of the annotation.</p>
          * 
          * <strong>example:</strong>
-         * <p>The CPU utilization of ${{$labels.pod_name}} has exceeded 80%. Current value: {{$value}}%</p>
+         * <p>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</p>
          */
         @NameInMap("Value")
         public String value;
@@ -250,7 +250,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
          * <p>The alert message. Tags can be referenced in the {{$labels.xxx}} format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The CPU utilization of ${{$labels.pod_name}} has exceeded 80%. Current value: {{$value}}%</p>
+         * <p>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</p>
          */
         @NameInMap("Message")
         public String message;
@@ -285,7 +285,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
          * <p>The type of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Kubernetes component alert</p>
+         * <p>Kubernetes组件告警</p>
          */
         @NameInMap("Type")
         public String type;

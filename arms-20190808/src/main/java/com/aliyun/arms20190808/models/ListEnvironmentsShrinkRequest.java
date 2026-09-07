@@ -17,7 +17,7 @@ public class ListEnvironmentsShrinkRequest extends TeaModel {
      * <p>The ID of the resource.</p>
      * 
      * <strong>example:</strong>
-     * <p>cff30f0d67d7542dfb05bd114b4b1d7af</p>
+     * <p>cb9229c48e41144dc96af190841808cb0</p>
      */
     @NameInMap("BindResourceId")
     public String bindResourceId;
@@ -63,13 +63,17 @@ public class ListEnvironmentsShrinkRequest extends TeaModel {
     /**
      * <p>The payable resource plan.</p>
      * <ul>
-     * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
-     * <li>Otherwise, leave the parameter empty.</li>
+     * <li><p>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</p>
+     * </li>
+     * <li><p>Otherwise, leave the parameter empty.</p>
+     * </li>
      * </ul>
      * <p>Valid values:</p>
      * <ul>
-     * <li>CS_Pro: Container Monitoring Pro</li>
-     * <li>CS_Basic: Container Monitoring Basic</li>
+     * <li><p>CS_Pro: Container Monitoring Pro</p>
+     * </li>
+     * <li><p>CS_Basic: Container Monitoring Basic</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

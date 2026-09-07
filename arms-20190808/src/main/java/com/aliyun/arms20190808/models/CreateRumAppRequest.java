@@ -27,7 +27,7 @@ public class CreateRumAppRequest extends TeaModel {
      * <p>The description of the application.</p>
      * 
      * <strong>example:</strong>
-     * <p>Monitoring description</p>
+     * <p>用户体验监控前端</p>
      */
     @NameInMap("Description")
     public String description;

@@ -17,7 +17,7 @@ public class GetTimingSyntheticTaskRequest extends TeaModel {
      * <p>The ID of the synthetic monitoring task.</p>
      * 
      * <strong>example:</strong>
-     * <p>856566a9cb2a4cafa05aa95ed0ec8f21</p>
+     * <p>856566a9cb2a4cafa05aa95ed0*******</p>
      */
     @NameInMap("TaskId")
     public String taskId;

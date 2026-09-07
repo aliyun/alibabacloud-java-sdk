@@ -53,12 +53,6 @@ public class UploadRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>We recommend that you do not specify this parameter.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>null</p>
-     */
     @NameInMap("Version")
     public String version;
 

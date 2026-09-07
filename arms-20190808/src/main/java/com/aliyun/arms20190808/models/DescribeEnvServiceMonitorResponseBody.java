@@ -79,7 +79,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
          * <p>The YAML configuration file of the ServiceMonitor.</p>
          * 
          * <strong>example:</strong>
-         * <p>Refer to supplementary instructions.</p>
+         * <p>参见补充说明。</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;

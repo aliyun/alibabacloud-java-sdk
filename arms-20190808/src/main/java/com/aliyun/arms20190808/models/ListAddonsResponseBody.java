@@ -100,7 +100,7 @@ public class ListAddonsResponseBody extends TeaModel {
          * <p>The description of the dashboard.</p>
          * 
          * <strong>example:</strong>
-         * <p>MySQL monitors the market information, monitoring the connection information, usage information and other indicators</p>
+         * <p>MySQL监控大盘信息，监控了连接信息、使用信息等指标</p>
          */
         @NameInMap("Description")
         public String description;
@@ -434,7 +434,7 @@ public class ListAddonsResponseBody extends TeaModel {
          * <p>The description of the environment.</p>
          * 
          * <strong>example:</strong>
-         * <p>The MySQL service is deployed in a Kubernetes cluster.</p>
+         * <p>MySQL 服务部署在 Kubernetes 集群中。</p>
          */
         @NameInMap("Description")
         public String description;
@@ -452,7 +452,7 @@ public class ListAddonsResponseBody extends TeaModel {
          * <p>The tag of the environment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Container</p>
+         * <p>容器环境</p>
          */
         @NameInMap("Label")
         public String label;
@@ -553,7 +553,7 @@ public class ListAddonsResponseBody extends TeaModel {
          * <p>The description of the add-on.</p>
          * 
          * <strong>example:</strong>
-         * <p>Monitor database indicators with MySQL Exporter</p>
+         * <p>通过 MySQL Exporter 监控数据库指标</p>
          */
         @NameInMap("Description")
         public String description;

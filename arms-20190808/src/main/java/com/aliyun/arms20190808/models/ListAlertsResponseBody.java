@@ -62,7 +62,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The content of the alert notification.</p>
          * 
          * <strong>example:</strong>
-         * <p>[Notification policy: Send notifications to DingTalk groups] Host monitoring. Host IP address: 10.76.XX.XX. Average memory usage of the host in the last 1 minute ≥ 1.0%. Current value: 84.7454%.</p>
+         * <p>【通知策略: 钉群通知】 主机监控 节点机IP: 10.76.XX.XX 节点机内存利用率最近1分钟求平均 &gt;= 1.0 %, 当前值84.7454 %</p>
          */
         @NameInMap("Content")
         public String content;
@@ -71,7 +71,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The description of the activity.</p>
          * 
          * <strong>example:</strong>
-         * <p>[Alert Claimed] The alert is claimed</p>
+         * <p>[告警认领]认领了该告警</p>
          */
         @NameInMap("Description")
         public String description;
@@ -80,7 +80,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The name of the handler.</p>
          * 
          * <strong>example:</strong>
-         * <p>O\&amp;M Engineer A</p>
+         * <p>运维A</p>
          */
         @NameInMap("HandlerName")
         public String handlerName;
@@ -162,7 +162,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The name of the event.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test-triggered alert</p>
+         * <p>测试触发的告警</p>
          */
         @NameInMap("AlertName")
         public String alertName;
@@ -180,7 +180,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The description of the event.</p>
          * 
          * <strong>example:</strong>
-         * <p>Host monitoring. Host IP address: 10.76.XX.XX. Average memory usage of the host in the last 1 minute ≥ 1.0%. Current value: 84.7454%.</p>
+         * <p>主机监控 节点机IP: 10.76.XX.XX 节点机内存利用率最近1分钟求平均 &gt;= 1.0 %, 当前值84.7454 %</p>
          */
         @NameInMap("Description")
         public String description;
@@ -406,7 +406,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>Time to claim the alarm.</p>
          * 
          * <strong>example:</strong>
-         * <p>-1</p>
+         * <p>告警从发生到认领之间的时长</p>
          */
         @NameInMap("AcknowledgeTime")
         public Long acknowledgeTime;
@@ -436,7 +436,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The name of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test alert</p>
+         * <p>告警测试</p>
          */
         @NameInMap("AlertName")
         public String alertName;
@@ -454,7 +454,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The description of a event execution status.</p>
          * 
          * <strong>example:</strong>
-         * <p>[Notification Strategy: ARMS Front-end Alarm]\nPage Indicator Page Name: Home JS Error Number Average in the last 5 minutes &gt;= 1.0 times, current value 1.0000 times\n</p>
+         * <p>[告警通知]通过[webhook]通知了xxx(成功）</p>
          */
         @NameInMap("Describe")
         public String describe;
@@ -472,7 +472,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The name of the notification policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>DingTalk Notification</p>
+         * <p>钉群通知</p>
          */
         @NameInMap("DispatchRuleName")
         public String dispatchRuleName;
@@ -481,7 +481,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>Alarm handler.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alice</p>
+         * <p>认领、关闭告警的处理人</p>
          */
         @NameInMap("Handler")
         public String handler;
@@ -490,7 +490,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The contact card of an instant messaging app.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Robot</p>
+         * <p>钉钉的名片。</p>
          */
         @NameInMap("NotifyRobots")
         public String notifyRobots;
@@ -499,7 +499,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The notification object configured in the notification policy, responsible for handling alerts.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alice</p>
+         * <p>通知策略中配置的联系人通知对象</p>
          */
         @NameInMap("Owner")
         public String owner;
@@ -508,7 +508,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>Alarm recovery time.</p>
          * 
          * <strong>example:</strong>
-         * <p>-1</p>
+         * <p>告警从发生到恢复之间的时长</p>
          */
         @NameInMap("RecoverTime")
         public Long recoverTime;
@@ -526,7 +526,7 @@ public class ListAlertsResponseBody extends TeaModel {
          * <p>The Alert solution.</p>
          * 
          * <strong>example:</strong>
-         * <p>--</p>
+         * <p>重启解决</p>
          */
         @NameInMap("Solution")
         public String solution;

@@ -65,7 +65,7 @@ public class ListPrometheusAlertRulesRequest extends TeaModel {
      * <p>The type of the alert rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>Custom</p>
+     * <p>自定义</p>
      */
     @NameInMap("Type")
     public String type;

@@ -7,8 +7,10 @@ public class GetAlertRulesRequest extends TeaModel {
     /**
      * <p>The unique IDs of alert rules.</p>
      * <ul>
-     * <li>If you do not specify this parameter, the API operation does not filter alert rules based on their IDs.</li>
-     * <li>If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</li>
+     * <li><p>If you do not specify this parameter, the API operation does not filter alert rules based on their IDs.</p>
+     * </li>
+     * <li><p>If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>When you call the GetAlertRules operation, you can specify other request parameters to obtain the AlertIds parameter from the response. Then, you can specify the AlertIds parameter to query the specified alert rules.</p>
@@ -23,8 +25,10 @@ public class GetAlertRulesRequest extends TeaModel {
     /**
      * <p>The names of alert rules. When you create alert rules of the new version, you cannot specify duplicate names. However, existing alert rules may have duplicate names. Therefore, the <strong>AlertName</strong> parameter does not uniquely identify an alert rule.</p>
      * <ul>
-     * <li>If you do not specify this parameter, the API operation does not filter alert rules based on their names.</li>
-     * <li>If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</li>
+     * <li><p>If you do not specify this parameter, the API operation does not filter alert rules based on their names.</p>
+     * </li>
+     * <li><p>If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,12 +40,15 @@ public class GetAlertRulesRequest extends TeaModel {
     /**
      * <p>The status of the alert rule. Valid values:</p>
      * <ul>
-     * <li>RUNNING</li>
-     * <li>STOPPED</li>
-     * <li>PAUSED</li>
+     * <li><p>RUNNING</p>
+     * </li>
+     * <li><p>STOPPED</p>
+     * </li>
+     * <li><p>PAUSED</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The PAUSED state indicates an abnormal and paused alert rule. This may result from excessively large threshold values or deleted associated clusters.</p>
+     * <p>The PAUSED state indicates an abnormal and paused alert rule. This may result from excessively large threshold values or deleted associated clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,9 +60,12 @@ public class GetAlertRulesRequest extends TeaModel {
     /**
      * <p>The type of the alert rule. This parameter is required for the new version of Alert Management. Valid values:</p>
      * <ul>
-     * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
-     * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
-     * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</li>
+     * <li><p>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
+     * </li>
+     * <li><p>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</p>
+     * </li>
+     * <li><p>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,6 +74,12 @@ public class GetAlertRulesRequest extends TeaModel {
     @NameInMap("AlertType")
     public String alertType;
 
+    /**
+     * <p>The area ID where the rule resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 

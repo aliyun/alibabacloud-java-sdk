@@ -117,7 +117,7 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Network synthetic monitoring task</p>
+     * <p>网络拨测任务</p>
      */
     @NameInMap("TaskName")
     public String taskName;

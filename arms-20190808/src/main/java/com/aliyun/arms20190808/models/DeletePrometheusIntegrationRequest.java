@@ -28,7 +28,7 @@ public class DeletePrometheusIntegrationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>kafka and mysql.</p>
+     * <p>kafka、mysql等。</p>
      */
     @NameInMap("IntegrationType")
     public String integrationType;

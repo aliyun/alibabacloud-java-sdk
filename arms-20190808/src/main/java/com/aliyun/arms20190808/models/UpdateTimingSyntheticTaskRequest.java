@@ -47,7 +47,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
      * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
-     * <p>AlibabaCloud DNS Task</p>
+     * <p>拨测任务</p>
      */
     @NameInMap("Name")
     public String name;
@@ -363,7 +363,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
          * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>A reserved parameter.</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("PrometheusClusterId")
         public String prometheusClusterId;
@@ -372,7 +372,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
          * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>A reserved parameter.</p>
+         * <p>保留字段。</p>
          */
         @NameInMap("PrometheusClusterRegion")
         public String prometheusClusterRegion;

@@ -54,7 +54,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
          * <p>The template of the alert notification.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert name: $Alert name\nFilter condition: $Filter\nAlert time: $Alert time\nAlert content: $Alert content\nNote: The alert persists until a reply email is received. The system will remind you again in 24 hours.</p>
+         * <p>报警名称：$报警名称\n筛选条件：$筛选\n报警时间：$报警时间\n报警内容：$报警内容\n注意：该报警未收到恢复邮件之前，正在持续报警中，24小时后会再次提醒您！</p>
          */
         @NameInMap("AlarmContentTemplate")
         public String alarmContentTemplate;
@@ -63,7 +63,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
          * <p>The content of the alert notification.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert name: $Alert name\nFilter condition: $Filter\nAlert time: $Alert time\nAlert content: $Alert content\nNote: The alert persists until a reply email is received. The system will remind you again in 24 hours.</p>
+         * <p>报警名称：$报警名称\n筛选条件：$筛选\n报警时间：$报警时间\n报警内容：$报警内容\n注意：该报警未收到恢复邮件之前，正在持续报警中，24小时后会再次提醒您！</p>
          */
         @NameInMap("Content")
         public String content;
@@ -136,7 +136,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
          * <p>The displayed description of the alert metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>response time_ms</p>
+         * <p>调用响应时间_ms</p>
          */
         @NameInMap("Alias")
         public String alias;

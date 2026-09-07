@@ -8,7 +8,7 @@ public class ListIntegrationRequest extends TeaModel {
      * <p>The name of the alert integration.</p>
      * 
      * <strong>example:</strong>
-     * <p>CloudMonitor integration</p>
+     * <p>云监控集成</p>
      */
     @NameInMap("IntegrationName")
     public String integrationName;

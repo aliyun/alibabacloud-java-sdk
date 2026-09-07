@@ -7,8 +7,10 @@ public class DeleteContactResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the alert contact is deleted. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The alert contact is deleted.</li>
-     * <li><code>false</code>: The alert contact is not deleted.</li>
+     * <li><p><code>true</code>: The alert contact is deleted.</p>
+     * </li>
+     * <li><p><code>false</code>: The alert contact is not deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

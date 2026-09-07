@@ -17,7 +17,7 @@ public class UninstallPromClusterResponseBody extends TeaModel {
      * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;

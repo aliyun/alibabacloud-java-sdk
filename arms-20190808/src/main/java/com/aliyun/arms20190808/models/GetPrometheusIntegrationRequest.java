@@ -19,7 +19,7 @@ public class GetPrometheusIntegrationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2893</p>
+     * <p>28**</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
@@ -29,7 +29,7 @@ public class GetPrometheusIntegrationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>kafka, mysql, redis, snmp, emr, nubela, and tidb</p>
+     * <p>tidb</p>
      */
     @NameInMap("IntegrationType")
     public String integrationType;

@@ -13,7 +13,7 @@ public class ListEnvironmentFeaturesRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>en</p>
+     * <p>zh</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;

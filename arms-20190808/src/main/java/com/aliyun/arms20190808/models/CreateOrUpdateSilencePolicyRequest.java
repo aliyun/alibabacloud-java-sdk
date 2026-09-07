@@ -61,7 +61,7 @@ public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
      * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;

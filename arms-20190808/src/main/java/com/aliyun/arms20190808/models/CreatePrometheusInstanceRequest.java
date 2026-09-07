@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusInstanceRequest extends TeaModel {
     /**
-     * <p>Does it require all child instances to be verified successfully before creating a GlobalView instance. The default is false, which means partial success is possible.</p>
+     * <p>Specifies whether all sub-instances must pass validation before the GlobalView instance is created. Default value: false, which indicates that partial success is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Boolean allSubClustersSuccess;
 
     /**
-     * <p>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
+     * <p>The number of days to automatically archive data after the storage period expires. Valid values: 60, 90, 180, and 365. A value of 0 indicates that data is not archived.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>
@@ -23,7 +23,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Integer archiveDuration;
 
     /**
-     * <p>The ID of the ACK cluster. This parameter is required if you set the ClusterType parameter to aliyun-cs.</p>
+     * <p>The Container Service cluster ID. This parameter is required when ClusterType is set to aliyun-cs.</p>
      * 
      * <strong>example:</strong>
      * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
@@ -32,7 +32,8 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The name of the created cluster. This parameter is required if you set the ClusterType parameter to remote-write or ecs.</p>
+     * <p>The name of the cluster to create. This parameter is required when ClusterType is set to remote-write, ecs, or global-view.</p>
+     * <p>For ecs instances, the ClusterName must follow the format &quot;name-vpc-id&quot;, and the name part cannot exceed 24 characters. Example: &quot;mytest1-vpc-xxxxxxxxxxx&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>clusterNameOfTest</p>
@@ -41,15 +42,15 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The type of the Prometheus instance. Valid values:</p>
+     * <p>The instance type. Valid values: </p>
      * <ul>
-     * <li>remote-write: Prometheus instance for Remote Write</li>
-     * <li>ecs (unavailable): Prometheus instance for ECS</li>
-     * <li>global-view: Prometheus instance for GlobalView</li>
-     * <li>aliyun-cs: Prometheus instance for Container Service</li>
-     * <li>cloud-product (unavailable): Prometheus instance for Alibaba Cloud services</li>
-     * <li>cloud-monitor (unavailable): Prometheus instance for Hybrid Cloud Monitoring</li>
-     * <li>flink (unavailable): Prometheus instance for Flink</li>
+     * <li>remote-write: Prometheus for Remote Write.</li>
+     * <li>ecs (no longer supported): Prometheus for ECS.</li>
+     * <li>global-view: Prometheus for GlobalView.</li>
+     * <li>aliyun-cs (no longer supported): Prometheus for Container Service.</li>
+     * <li>cloud-product (no longer supported): Prometheus for Cloud Service.</li>
+     * <li>cloud-monitor (no longer supported): Prometheus for Hybrid Cloud Monitoring.</li>
+     * <li>flink (no longer supported): Prometheus for Flink.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -60,7 +61,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The data storage duration. Unit: days.</p>
+     * <p>The data storage duration, in days.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>
@@ -69,7 +70,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The ID of the Grafana dedicated instance. This parameter is available if you set the ClusterType parameter to ecs.</p>
+     * <p>The ID of the bound Grafana workspace. Set this parameter to &quot;free&quot; when you use the shared Grafana edition.</p>
      * 
      * <strong>example:</strong>
      * <p>grafana-bp1*****</p>
@@ -78,7 +79,10 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String grafanaInstanceId;
 
     /**
-     * <p>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data. Empty: The user-defined default billing mode is used. If you do not specify a default value, you are charged based on the amount of reported metric data.</p>
+     * <p>The Billable methods. Valid values:
+     * POSTPAY: pay-as-you-go based on the number of reported metrics.
+     * POSTPAY_GB: pay-as-you-go based on the volume of written metrics.
+     * Empty: uses the default billing method configured by the user. If no default is configured, the system defaults to billing based on the number of reported metrics.</p>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
@@ -87,7 +91,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The ID of the region. If you use a Prometheus instance to monitor an Alibaba Cloud service in China, this parameter must be set to cn-shanghai.</p>
+     * <p>The actual region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,7 +101,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the custom resource group. You can configure this parameter to bind the instance to the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
@@ -106,7 +110,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the security group. This parameter is required if you set the ClusterType parameter to ecs.</p>
+     * <p>The Network Security group ID. This parameter is required when ClusterType is set to ecs or aliyun-cs for a managed ASK cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp1********</p>
@@ -115,61 +119,60 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>JSON string for child instances of the globalView instance.</p>
+     * <p>The JSON string of sub-instances for the GlobalView instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>When the clusterType is global view, this parameter needs to be passed: a list of information about the clusters that need to be aggregated.
-     * Example:
+     * <p>当clusterType为global-view时，需要传此参数：需要聚合的集群的信息列表；示例：
      * [
-     *   {
-     *     &quot;Headers&quot;:{</p>
-     * <pre><code>},
-     * &quot;RegionId&quot;: &quot;cn hangzhou&quot;,
-     * &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
-     * &quot;Extras&quot;:{
+     *     {
+     *         &quot;headers&quot;:{</p>
+     * <pre><code>    },
+     *     &quot;regionId&quot;:&quot;cn-hangzhou&quot;,
+     *     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+     *     &quot;extras&quot;:{
      * 
+     *     },
+     *     &quot;clusterId&quot;:&quot;c39a1048921e04f***********&quot;,
+     *     &quot;sourceName&quot;:&quot;arms-luyao-test&quot;,
+     *     &quot;dataSource&quot;:&quot;&quot;,
+     *     &quot;userId&quot;:&quot;1672753***********&quot;
      * },
-     * &quot;ClusterId&quot;: &quot;c39a1048921e04f ****************&quot;,
-     * &quot;SourceName&quot;: &quot;test1&quot;,
-     * &quot;DataSource&quot;: &quot;&quot;,
-     * &quot;UserId&quot;: &quot;1672753 ******************&quot;
-     * </code></pre>
-     * <p>  },
-     *   {
-     *     &quot;Headers&quot;:{</p>
-     * <pre><code>},
-     * &quot;RegionId&quot;: &quot;cn beijing&quot;,
-     * &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
-     * &quot;Extras&quot;:{
+     * {
+     *     &quot;headers&quot;:{
      * 
-     * },
-     * &quot;ClusterId&quot;: &quot;c6b6485496d5b40 ****************&quot;,
-     * &quot;SourceName&quot;: &quot;test2&quot;,
-     * &quot;DataSource&quot;: &quot;&quot;,
-     * &quot;UserId&quot;: &quot;1672753 ******************&quot;
-     * </code></pre>
-     * <p>  },
-     *   {
-     *     &quot;Headers&quot;:{</p>
-     * <pre><code>},
-     * &quot;RegionId&quot;: &quot;cn zhangjiakou&quot;,
-     * &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
-     * &quot;Extras&quot;:{
+     *     },
+     *     &quot;regionId&quot;:&quot;cn-beijing&quot;,
+     *     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+     *     &quot;extras&quot;:{
      * 
+     *     },
+     *     &quot;clusterId&quot;:&quot;c6b6485496d5b40***********&quot;,
+     *     &quot;sourceName&quot;:&quot;agent-321-测试&quot;,
+     *     &quot;dataSource&quot;:&quot;&quot;,
+     *     &quot;userId&quot;:&quot;1672753***********&quot;
      * },
-     * &quot;ClusterId&quot;: &quot;c261a4f3200c446 ****************&quot;,
-     * &quot;SourceName&quot;: &quot;test3&quot;,
-     * &quot;DataSource&quot;: &quot;&quot;,
-     * &quot;UserId&quot;: &quot;1672753 ******************&quot;
+     * {
+     *     &quot;headers&quot;:{
+     * 
+     *     },
+     *     &quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,
+     *     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+     *     &quot;extras&quot;:{
+     * 
+     *     },
+     *     &quot;clusterId&quot;:&quot;c261a4f3200c446***********&quot;,
+     *     &quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,
+     *     &quot;dataSource&quot;:&quot;&quot;,
+     *     &quot;userId&quot;:&quot;1672753***********&quot;
+     * }
      * </code></pre>
-     * <p>  }
-     * ]</p>
+     * <p>]</p>
      */
     @NameInMap("SubClustersJson")
     public String subClustersJson;
 
     /**
-     * <p>The tags of the instance. You can configure this parameter to manage tags for the instance.</p>
+     * <p>The custom tags.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -185,7 +188,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public java.util.List<CreatePrometheusInstanceRequestTags> tags;
 
     /**
-     * <p>The ID of the vSwitch. This parameter is required if you set the ClusterType parameter to ecs.</p>
+     * <p>The vSwitch ID. This parameter is required when ClusterType is set to ecs or aliyun-cs for a managed ASK cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1*********</p>
@@ -194,7 +197,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of virtual private cloud (VPC). This parameter is required if you set the ClusterType parameter to ecs.</p>
+     * <p>The VPC ID. This parameter is required when ClusterType is set to ecs or aliyun-cs for a managed ASK cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-rpn**********</p>
@@ -329,6 +332,8 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
 
     public static class CreatePrometheusInstanceRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -336,6 +341,8 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

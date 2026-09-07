@@ -40,8 +40,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><p><code>true</code></p>
+     * </li>
+     * <li><p><code>false</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +111,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
          * <p>The value of the annotation.</p>
          * 
          * <strong>example:</strong>
-         * <p>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</p>
+         * <p>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</p>
          */
         @NameInMap("Value")
         public String value;
@@ -250,7 +252,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</p>
+         * <p>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</p>
          */
         @NameInMap("Message")
         public String message;
@@ -258,8 +260,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         /**
          * <p>The method of that is used to send alert notifications. Valid values:</p>
          * <ul>
-         * <li><code>ALERT_MANAGER</code>: Alert notifications are sent by Operation Center.</li>
-         * <li><code>DISPATCH_RULE</code>: Alert notifications are sent based on the specified notification policy.</li>
+         * <li><p><code>ALERT_MANAGER</code>: Alert notifications are sent by Operation Center.</p>
+         * </li>
+         * <li><p><code>DISPATCH_RULE</code>: Alert notifications are sent based on the specified notification policy.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,8 +275,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the alert rule is enabled. Valid values:</p>
          * <ul>
-         * <li><code>1</code>: The alert rule is enabled.</li>
-         * <li><code>0</code>: The alert rule is disabled.</li>
+         * <li><p><code>1</code>: The alert rule is enabled.</p>
+         * </li>
+         * <li><p><code>0</code>: The alert rule is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +291,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
          * <p>The type of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Kubernetes component alert</p>
+         * <p>Kubernetes组件告警</p>
          */
         @NameInMap("Type")
         public String type;

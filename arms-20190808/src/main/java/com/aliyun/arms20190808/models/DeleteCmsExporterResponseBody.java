@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCmsExporterResponseBody extends TeaModel {
     /**
+     * <p>Return Result information.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCmsExporterResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The unique ID of this request. If a fault occurs, you can use this ID to troubleshoot the issue.</p>
+     * 
      * <strong>example:</strong>
      * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
      */

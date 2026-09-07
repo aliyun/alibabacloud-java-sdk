@@ -54,7 +54,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
          * <p>The value of the annotation.</p>
          * 
          * <strong>example:</strong>
-         * <p>The available memory on node {{ $labels.instance }} is less than 10%. Available memory: {{ $value }}%</p>
+         * <p>节点 {{ $labels.instance }} 可用内存不足10%，当前可用内存 {{ $value }}%</p>
          */
         @NameInMap("Value")
         public String value;
@@ -129,7 +129,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
          * <p>The name of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>The available memory on the node is less than 10%</p>
+         * <p>节点内存可用率不足10%</p>
          */
         @NameInMap("AlertName")
         public String alertName;
@@ -144,7 +144,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
          * <p>The content of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The available memory on node {{ $labels.instance }} is less than 10%. Available memory: {{ $value }}%</p>
+         * <p>节点 {{ $labels.instance }} 可用内存不足10%，当前可用内存 {{ $value }}%</p>
          */
         @NameInMap("Description")
         public String description;
@@ -177,7 +177,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
          * <p>The type of the alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Node</p>
+         * <p>节点</p>
          */
         @NameInMap("Type")
         public String type;
