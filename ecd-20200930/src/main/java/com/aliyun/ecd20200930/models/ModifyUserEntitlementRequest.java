@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyUserEntitlementRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud computers to which you want to add end users.</p>
+     * <p>The list of cloud computer IDs for which to add authorized users.</p>
      */
     @NameInMap("AuthorizeDesktopId")
     public java.util.List<String> authorizeDesktopId;
 
     /**
-     * <p>The ID of the users.</p>
+     * <p>The list of user IDs (usernames).</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ModifyUserEntitlementRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the cloud computers whose end users you want to remove.</p>
+     * <p>The list of cloud computer IDs for which to remove authorized users.</p>
      */
     @NameInMap("RevokeDesktopId")
     public java.util.List<String> revokeDesktopId;

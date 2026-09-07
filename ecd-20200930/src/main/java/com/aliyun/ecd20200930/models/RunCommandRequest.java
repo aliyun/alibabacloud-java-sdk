@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
     /**
-     * <p>The plaintext or Base64-encoded content of the script. The Base64-encoded script content cannot exceed 16 KB.</p>
+     * <p>The plaintext or Base64-encoded content of the script.<br>The Base64-encoded script content cannot exceed 16 KB.</p>
      * <blockquote>
      * <p>If the script content is Base64-encoded, set the ContentEncoding parameter to Base64.</p>
      * </blockquote>
@@ -29,7 +29,7 @@ public class RunCommandRequest extends TeaModel {
     /**
      * <p>The encoding method of the script content.</p>
      * <blockquote>
-     * <p>If the specified value is not within the valid values, the value is treated as PlainText.</p>
+     * <p>If the specified value is not within the valid values, the value is treated as <code>PlainText</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class RunCommandRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>The IDs of cloud computers. Valid values of N: 1 to 50. If you specify multiple cloud computers, the API call succeeds as long as the script is successfully executed on at least one cloud computer. If the script fails to be executed on all specified cloud computers, reset this parameter.</p>
+     * <p>The list of cloud computer IDs. Valid values of N: 1 to 50.<br>If multiple cloud computers are specified, the API call succeeds as long as the script is successfully executed on at least one cloud computer. If the script fails to execute on all specified cloud computers, reset this parameter.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
@@ -48,7 +48,7 @@ public class RunCommandRequest extends TeaModel {
     /**
      * <p>The ID of the end user. If this parameter is specified, the command is executed with the permissions of the end user.</p>
      * <blockquote>
-     * <p>The user must have a session record on the cloud computer (the user has logged on and connected to the cloud computer after it is started, and the connection was not preempted by another user). This parameter is not supported for Linux cloud computers.</p>
+     * <p>The user must have a session record on the cloud computer (the user has logged on and connected to the cloud computer after it was started, and the session was not preempted by another user). This parameter is not supported for Linux cloud computers.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class RunCommandRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The timeout period for executing the script. Unit: seconds. Default value: 300. A timeout may occur when the script cannot run due to process issues, missing modules, or missing Cloud Assistant Agent. After a timeout, the script process is forcefully terminated.</p>
+     * <p>The timeout period for executing the script. Unit: seconds. Default value: 300.<br>A timeout may occur when the script cannot run because of process issues, missing modules, or a missing Cloud Assistant client. After a timeout, the script process is forcefully terminated.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>

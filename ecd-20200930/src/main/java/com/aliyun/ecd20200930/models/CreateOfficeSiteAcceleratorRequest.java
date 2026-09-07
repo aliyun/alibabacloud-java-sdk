@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOfficeSiteAcceleratorRequest extends TeaModel {
     /**
-     * <p>A list of regions where access points provide acceleration.</p>
+     * <p>The list of acceleration region information for the access points.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AccelerateRegion")
@@ -106,7 +106,7 @@ public class CreateOfficeSiteAcceleratorRequest extends TeaModel {
         public String accelerateRegionId;
 
         /**
-         * <p>The bandwidth allocated to the acceleration region. Unit: Mbps.</p>
+         * <p>The bandwidth allocated to the acceleration region. Unit: Mbit/s.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,9 +116,9 @@ public class CreateOfficeSiteAcceleratorRequest extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The IP protocol version used to access the GA instance.</p>
+         * <p>The IP address protocol used to connect to the GA service.</p>
          * <blockquote>
-         * <p>Only standard pay-as-you-go GA instances support <code>DUAL_STACK</code>.</p>
+         * <p>The <code>DUAL_STACK</code> type is supported only by standard pay-as-you-go GA instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -128,13 +128,11 @@ public class CreateOfficeSiteAcceleratorRequest extends TeaModel {
         public String ipVersion;
 
         /**
-         * <p>The line type.</p>
+         * <p>The public network line type of the acceleration region.</p>
          * <blockquote>
          * <ul>
-         * <li><p>This parameter is required for pay-by-data-transfer GA instances.</p>
-         * </li>
-         * <li><p>The supported line types vary by acceleration region.</p>
-         * </li>
+         * <li>Configure this parameter for GA instances that use the <strong>pay-by-data-transfer</strong> billing method.</li>
+         * <li>The supported public network line types vary by acceleration region.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>

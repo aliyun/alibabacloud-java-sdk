@@ -22,7 +22,7 @@ public class MigrateDesktopsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The member IP address of the target node for migration.</p>
+     * <p>The member IP address of the destination node for migration.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.1.10</p>
@@ -31,7 +31,7 @@ public class MigrateDesktopsRequest extends TeaModel {
     public String targetMemberIp;
 
     /**
-     * <p>The ID of the target office network.</p>
+     * <p>The ID of the destination office network.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class MigrateDesktopsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not yet available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

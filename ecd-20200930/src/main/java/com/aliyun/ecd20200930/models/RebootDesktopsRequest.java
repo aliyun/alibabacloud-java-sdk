@@ -4,11 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RebootDesktopsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to create a snapshot.</p>
+     */
     @NameInMap("CreateSnapshot")
     public Boolean createSnapshot;
 
     /**
-     * <p>An array of 1 to 100 desktop IDs.</p>
+     * <p>The cloud computer ID. You can specify 1 to 100 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +27,8 @@ public class RebootDesktopsRequest extends TeaModel {
     public Boolean osUpdate;
 
     /**
+     * <p>The patch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>KB5082063</p>
      */
@@ -31,7 +36,7 @@ public class RebootDesktopsRequest extends TeaModel {
     public String patchId;
 
     /**
-     * <p>The ID of the region. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions where Elastic Desktop Service is available.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

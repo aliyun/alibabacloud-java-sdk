@@ -35,7 +35,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String desktopScenario;
 
     /**
-     * <p>The end of the time range during which the snapshot was created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time must be in UTC.</p>
+     * <p>The end of the time range during which the snapshots were created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-31T06:32:31Z</p>
@@ -94,7 +94,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The display name of the snapshot. The name must be 2 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter or Chinese character. The name cannot start with <code>auto</code> to avoid conflicts with automatic snapshot names.</p>
+     * <p>The display name of the snapshot. The name must be 2 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter. The name cannot start with <code>auto</code> to avoid conflicts with automatic snapshot names.</p>
      * 
      * <strong>example:</strong>
      * <p>Test data disk</p>
@@ -112,7 +112,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotType;
 
     /**
-     * <p>The type of the cloud disk for which to create the snapshot.</p>
+     * <p>The type of the cloud disk from which the snapshot is created.</p>
      * <blockquote>
      * <p>The value is case-insensitive.</p>
      * </blockquote>
@@ -124,7 +124,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String sourceDiskType;
 
     /**
-     * <p>The beginning of the time range during which the snapshot was created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time must be in UTC.</p>
+     * <p>The beginning of the time range during which the snapshots were created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-30T06:32:31Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartDesktopsRequest extends TeaModel {
     /**
-     * <p>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</p>
+     * <p>The cloud computer IDs. You can specify 1 to 100 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class StartDesktopsRequest extends TeaModel {
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -149,7 +149,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The snapshot creation progress. Unit: percent.</p>
+         * <p>The snapshot creation progress, in percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100%</p>
@@ -191,7 +191,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          * <p>The restore point name.</p>
          * 
          * <strong>example:</strong>
-         * <p>数据盘备份</p>
+         * <p>DataDiskBackup</p>
          */
         @NameInMap("RestorePointName")
         public String restorePointName;

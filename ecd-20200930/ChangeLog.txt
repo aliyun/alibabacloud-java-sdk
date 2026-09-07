@@ -1,3 +1,12 @@
+2026-09-07 Version: 5.3.0
+- Support API DescribePeripheralDrivers.
+- Support API DescribeVulDesktops.
+- Support API DescribeVulnerability.
+- Support API QueryActiveUserStatistic.
+- Support API QueryEndUserHistoryUsage.
+- Support API QueryHistoryActiveUserStatistic.
+
+
 2026-09-03 Version: 5.2.0
 - Support API DescribePrinterEvents.
 - Update API CreateCenterPolicy: add request parameters PrinterAlert.

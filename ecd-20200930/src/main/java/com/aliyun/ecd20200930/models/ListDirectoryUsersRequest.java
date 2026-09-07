@@ -26,7 +26,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The fuzzy match query string. All results that contain this character string are returned.</p>
+     * <p>The fuzzy search string. All results that contain this string are matched.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -44,7 +44,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public Boolean includeAssignedUser;
 
     /**
-     * <p>The number of entries per page for a paged query.    </p>
+     * <p>The number of entries per page for a paginated query.    </p>
      * <ul>
      * <li>Maximum value: 100.    </li>
      * <li>Default value: 10.</li>
@@ -57,7 +57,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+     * <p>The token for the next query. If this parameter is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

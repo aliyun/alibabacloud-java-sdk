@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOfficeSiteAcceleratorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The GA instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp1qxuk10jceqw3zb***p</p>

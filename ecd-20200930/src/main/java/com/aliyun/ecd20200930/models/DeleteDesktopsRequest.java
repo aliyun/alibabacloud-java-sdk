@@ -22,7 +22,7 @@ public class DeleteDesktopsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the resource ownership in the reseller pattern. You do not need to specify this parameter if you are not in the reseller pattern.</p>
+     * <p>The ID of the resource owner in reseller mode. You do not need to specify this parameter if you are not using reseller mode.</p>
      * 
      * <strong>example:</strong>
      * <p>1422724566551XXX</p>

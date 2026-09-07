@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDirectoryUsersResponseBody extends TeaModel {
     /**
-     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+     * <p>The token for the next query. If this parameter is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -80,7 +80,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
          * <p>The new display name of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("DisplayNameNew")
         public String displayNameNew;
@@ -104,7 +104,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         public String endUser;
 
         /**
-         * <p>The phone number.</p>
+         * <p>The mobile phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>130********</p>

@@ -3828,11 +3828,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating cloud desktops, complete the following preparations:</p>
+     * <p>Before creating cloud computers, complete the following preparations:</p>
      * <ul>
-     * <li>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<ul>
-     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
+     * <li>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<ul>
+     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
      * </ul>
      * </li>
      * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
@@ -3916,10 +3916,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * ```
      * </details>
-     * To have cloud desktops automatically execute custom command scripts, use the `UserCommands` field to configure custom commands.
+     * To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
      * 
      * <b>summary</b> : 
-     * <p>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</p>
+     * <p>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</p>
      * 
      * @param tmpReq CreateDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4133,11 +4133,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating cloud desktops, complete the following preparations:</p>
+     * <p>Before creating cloud computers, complete the following preparations:</p>
      * <ul>
-     * <li>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<ul>
-     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
+     * <li>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<ul>
+     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
      * </ul>
      * </li>
      * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
@@ -4221,10 +4221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * ```
      * </details>
-     * To have cloud desktops automatically execute custom command scripts, use the `UserCommands` field to configure custom commands.
+     * To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
      * 
      * <b>summary</b> : 
-     * <p>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</p>
+     * <p>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</p>
      * 
      * @param request CreateDesktopsRequest
      * @return CreateDesktopsResponse
@@ -4804,10 +4804,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure you fully understand the billing methods and <a href="t2208086.xdita#">pricing</a> of the GA service.</p>
+     * <p>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables the Global Accelerator (GA) service for an office network.</p>
+     * <p>Enables Global Accelerator (GA) for an office network.</p>
      * 
      * @param request CreateOfficeSiteAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4855,10 +4855,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure you fully understand the billing methods and <a href="t2208086.xdita#">pricing</a> of the GA service.</p>
+     * <p>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables the Global Accelerator (GA) service for an office network.</p>
+     * <p>Enables Global Accelerator (GA) for an office network.</p>
      * 
      * @param request CreateOfficeSiteAcceleratorRequest
      * @return CreateOfficeSiteAcceleratorResponse
@@ -9929,7 +9929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the inbound bandwidth and outbound bandwidth monitoring data of a cloud computer, or the public network access inbound bandwidth and outbound bandwidth monitoring data of a premium public bandwidth plan.</p>
+     * <p>Queries the inbound and outbound bandwidth monitoring data of a cloud computer, or the public inbound and outbound bandwidth monitoring data of a premium public bandwidth instance.</p>
      * 
      * @param request DescribeFlowMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9985,7 +9985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the inbound bandwidth and outbound bandwidth monitoring data of a cloud computer, or the public network access inbound bandwidth and outbound bandwidth monitoring data of a premium public bandwidth plan.</p>
+     * <p>Queries the inbound and outbound bandwidth monitoring data of a cloud computer, or the public inbound and outbound bandwidth monitoring data of a premium public bandwidth instance.</p>
      * 
      * @param request DescribeFlowMetricRequest
      * @return DescribeFlowMetricResponse
@@ -11321,7 +11321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all properties of an office network, including the ID, name, status, and creation time.</p>
+     * <p>Queries all attributes of an office network, including the ID, name, status, and creation time.</p>
      * 
      * @param request DescribeOfficeSitesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11385,7 +11385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all properties of an office network, including the ID, name, status, and creation time.</p>
+     * <p>Queries all attributes of an office network, including the ID, name, status, and creation time.</p>
      * 
      * @param request DescribeOfficeSitesRequest
      * @return DescribeOfficeSitesResponse
@@ -11455,6 +11455,208 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeOnlineUserCountResponse describeOnlineUserCount(DescribeOnlineUserCountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeOnlineUserCountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When multiple filter conditions are specified, only drivers that meet all conditions are returned. If no filter conditions are specified, both Wuying official drivers and drivers of the current account are returned. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, increment PageNumber page by page, and stop when an empty list is returned. The example values are provided to illustrate the format. Replace them with actual values.</p>
+     * <h2>Request examples</h2>
+     * <p>The following JSON examples show the logical request parameters. Common signature parameters are generated by the SDK or signing component.</p>
+     * <h3>Query official printer drivers</h3>
+     * <p>Query official printer drivers of a specified brand that contain a keyword. The first page is returned with a maximum of 20 entries per page.</p>
+     * <pre><code class="language-json">{
+     *   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+     *   &quot;Version&quot;: &quot;2020-09-30&quot;,
+     *   &quot;OwnerType&quot;: &quot;WUYING&quot;,
+     *   &quot;Brand&quot;: &quot;hp&quot;,
+     *   &quot;DeviceType&quot;: &quot;printer&quot;,
+     *   &quot;Filter&quot;: &quot;LaserJet&quot;,
+     *   &quot;PageSize&quot;: 20,
+     *   &quot;PageNumber&quot;: 1
+     * }
+     * </code></pre>
+     * <h3>Query drivers by driver ID in batches</h3>
+     * <pre><code class="language-json">{
+     *   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+     *   &quot;Version&quot;: &quot;2020-09-30&quot;,
+     *   &quot;DriverIds&quot;: [
+     *     &quot;11111111-2222-4333-8444-555555555555&quot;,
+     *     &quot;66666666-7777-4888-8999-000000000000&quot;
+     *   ],
+     *   &quot;PageSize&quot;: 20,
+     *   &quot;PageNumber&quot;: 1
+     * }
+     * </code></pre>
+     * <p>When you construct request parameters directly, expand DriverIds by sequence number:</p>
+     * <pre><code class="language-text">DriverIds.1=11111111-2222-4333-8444-555555555555
+     * DriverIds.2=66666666-7777-4888-8999-000000000000
+     * </code></pre>
+     * <p>When you use an SDK, pass in a string array and the SDK handles the encoding.</p>
+     * <h2>Response examples</h2>
+     * <p>The following responses are format examples. The icon URLs are for illustration purposes only. The reserved fields MaxResults and NextToken do not provide valid values and are omitted from the examples.</p>
+     * <h3>Successful query</h3>
+     * <pre><code class="language-json">{
+     *   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+     *   &quot;Count&quot;: 1,
+     *   &quot;DriverInfos&quot;: [
+     *     {
+     *       &quot;Id&quot;: &quot;11111111-2222-4333-8444-555555555555&quot;,
+     *       &quot;Icon&quot;: &quot;https://example.com/icons/printer.png&quot;,
+     *       &quot;Name&quot;: &quot;HP Universal Printing PCL 6&quot;,
+     *       &quot;Brand&quot;: &quot;hp&quot;,
+     *       &quot;DeviceType&quot;: &quot;printer&quot;,
+     *       &quot;OsType&quot;: &quot;Windows&quot;,
+     *       &quot;CreateTime&quot;: &quot;2026-09-01T10:30:00+08:00&quot;,
+     *       &quot;Source&quot;: &quot;Wuying&quot;,
+     *       &quot;OwnerType&quot;: &quot;WUYING&quot;
+     *     }
+     *   ]
+     * }
+     * </code></pre>
+     * <h3>No matching results</h3>
+     * <pre><code class="language-json">{
+     *   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+     *   &quot;Count&quot;: 0,
+     *   &quot;DriverInfos&quot;: []
+     * }
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries peripheral drivers visible to the current account, with support for filtering by ownership, brand, device type, driver ID, and keyword, and returns paginated results.</p>
+     * 
+     * @param request DescribePeripheralDriversRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePeripheralDriversResponse
+     */
+    public DescribePeripheralDriversResponse describePeripheralDriversWithOptions(DescribePeripheralDriversRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brand)) {
+            query.put("Brand", request.brand);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
+            query.put("DeviceType", request.deviceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.driverIds)) {
+            query.put("DriverIds", request.driverIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerType)) {
+            query.put("OwnerType", request.ownerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePeripheralDrivers"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePeripheralDriversResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When multiple filter conditions are specified, only drivers that meet all conditions are returned. If no filter conditions are specified, both Wuying official drivers and drivers of the current account are returned. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, increment PageNumber page by page, and stop when an empty list is returned. The example values are provided to illustrate the format. Replace them with actual values.</p>
+     * <h2>Request examples</h2>
+     * <p>The following JSON examples show the logical request parameters. Common signature parameters are generated by the SDK or signing component.</p>
+     * <h3>Query official printer drivers</h3>
+     * <p>Query official printer drivers of a specified brand that contain a keyword. The first page is returned with a maximum of 20 entries per page.</p>
+     * <pre><code class="language-json">{
+     *   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+     *   &quot;Version&quot;: &quot;2020-09-30&quot;,
+     *   &quot;OwnerType&quot;: &quot;WUYING&quot;,
+     *   &quot;Brand&quot;: &quot;hp&quot;,
+     *   &quot;DeviceType&quot;: &quot;printer&quot;,
+     *   &quot;Filter&quot;: &quot;LaserJet&quot;,
+     *   &quot;PageSize&quot;: 20,
+     *   &quot;PageNumber&quot;: 1
+     * }
+     * </code></pre>
+     * <h3>Query drivers by driver ID in batches</h3>
+     * <pre><code class="language-json">{
+     *   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+     *   &quot;Version&quot;: &quot;2020-09-30&quot;,
+     *   &quot;DriverIds&quot;: [
+     *     &quot;11111111-2222-4333-8444-555555555555&quot;,
+     *     &quot;66666666-7777-4888-8999-000000000000&quot;
+     *   ],
+     *   &quot;PageSize&quot;: 20,
+     *   &quot;PageNumber&quot;: 1
+     * }
+     * </code></pre>
+     * <p>When you construct request parameters directly, expand DriverIds by sequence number:</p>
+     * <pre><code class="language-text">DriverIds.1=11111111-2222-4333-8444-555555555555
+     * DriverIds.2=66666666-7777-4888-8999-000000000000
+     * </code></pre>
+     * <p>When you use an SDK, pass in a string array and the SDK handles the encoding.</p>
+     * <h2>Response examples</h2>
+     * <p>The following responses are format examples. The icon URLs are for illustration purposes only. The reserved fields MaxResults and NextToken do not provide valid values and are omitted from the examples.</p>
+     * <h3>Successful query</h3>
+     * <pre><code class="language-json">{
+     *   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+     *   &quot;Count&quot;: 1,
+     *   &quot;DriverInfos&quot;: [
+     *     {
+     *       &quot;Id&quot;: &quot;11111111-2222-4333-8444-555555555555&quot;,
+     *       &quot;Icon&quot;: &quot;https://example.com/icons/printer.png&quot;,
+     *       &quot;Name&quot;: &quot;HP Universal Printing PCL 6&quot;,
+     *       &quot;Brand&quot;: &quot;hp&quot;,
+     *       &quot;DeviceType&quot;: &quot;printer&quot;,
+     *       &quot;OsType&quot;: &quot;Windows&quot;,
+     *       &quot;CreateTime&quot;: &quot;2026-09-01T10:30:00+08:00&quot;,
+     *       &quot;Source&quot;: &quot;Wuying&quot;,
+     *       &quot;OwnerType&quot;: &quot;WUYING&quot;
+     *     }
+     *   ]
+     * }
+     * </code></pre>
+     * <h3>No matching results</h3>
+     * <pre><code class="language-json">{
+     *   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+     *   &quot;Count&quot;: 0,
+     *   &quot;DriverInfos&quot;: []
+     * }
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries peripheral drivers visible to the current account, with support for filtering by ownership, brand, device type, driver ID, and keyword, and returns paginated results.</p>
+     * 
+     * @param request DescribePeripheralDriversRequest
+     * @return DescribePeripheralDriversResponse
+     */
+    public DescribePeripheralDriversResponse describePeripheralDrivers(DescribePeripheralDriversRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePeripheralDriversWithOptions(request, runtime);
     }
 
     /**
@@ -12621,7 +12823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the snapshot list and snapshot details of a cloud computer.</p>
+     * <p>Queries the snapshot list and detailed snapshot information of a cloud computer.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12705,7 +12907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the snapshot list and snapshot details of a cloud computer.</p>
+     * <p>Queries the snapshot list and detailed snapshot information of a cloud computer.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @return DescribeSnapshotsResponse
@@ -13375,6 +13577,196 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVirtualMFADevicesResponse describeVirtualMFADevices(DescribeVirtualMFADevicesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVirtualMFADevicesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</li>
+     * <li>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves cloud computer information for a vulnerability.</p>
+     * 
+     * @param request DescribeVulDesktopsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVulDesktopsResponse
+     */
+    public DescribeVulDesktopsResponse describeVulDesktopsWithOptions(DescribeVulDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cveId)) {
+            query.put("CveId", request.cveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopIdList)) {
+            query.put("DesktopIdList", request.desktopIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeFixResult)) {
+            query.put("IncludeFixResult", request.includeFixResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyCurrentMonthFixAttempted)) {
+            query.put("OnlyCurrentMonthFixAttempted", request.onlyCurrentMonthFixAttempted);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.patchId)) {
+            query.put("PatchId", request.patchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchRegionId)) {
+            query.put("SearchRegionId", request.searchRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusList)) {
+            query.put("StatusList", request.statusList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vulLevel)) {
+            query.put("VulLevel", request.vulLevel);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVulDesktops"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVulDesktopsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</li>
+     * <li>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves cloud computer information for a vulnerability.</p>
+     * 
+     * @param request DescribeVulDesktopsRequest
+     * @return DescribeVulDesktopsResponse
+     */
+    public DescribeVulDesktopsResponse describeVulDesktops(DescribeVulDesktopsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVulDesktopsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves vulnerability information.</p>
+     * 
+     * @param request DescribeVulnerabilityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVulnerabilityResponse
+     */
+    public DescribeVulnerabilityResponse describeVulnerabilityWithOptions(DescribeVulnerabilityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cveId)) {
+            query.put("CveId", request.cveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeDesktop)) {
+            query.put("IncludeDesktop", request.includeDesktop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.patchId)) {
+            query.put("PatchId", request.patchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchRegionId)) {
+            query.put("SearchRegionId", request.searchRegionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVulnerability"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVulnerabilityResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves vulnerability information.</p>
+     * 
+     * @param request DescribeVulnerabilityRequest
+     * @return DescribeVulnerabilityResponse
+     */
+    public DescribeVulnerabilityResponse describeVulnerability(DescribeVulnerabilityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVulnerabilityWithOptions(request, runtime);
     }
 
     /**
@@ -14595,7 +14987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves user information from an enterprise Active Directory (AD) when you use an AD directory to connect to your enterprise AD.</p>
+     * <p>Retrieves user information from an enterprise Active Directory (AD) if you use an AD directory to connect to your enterprise AD.</p>
      * 
      * @param request ListDirectoryUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14659,7 +15051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves user information from an enterprise Active Directory (AD) when you use an AD directory to connect to your enterprise AD.</p>
+     * <p>Retrieves user information from an enterprise Active Directory (AD) if you use an AD directory to connect to your enterprise AD.</p>
      * 
      * @param request ListDirectoryUsersRequest
      * @return ListDirectoryUsersResponse
@@ -15273,7 +15665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrates cloud computers from the current office network (formerly known as workspace) to a new office network.</p>
+     * <p>Migrates cloud computers from the current office network to a new office network.</p>
      * 
      * @param request MigrateDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15321,7 +15713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrates cloud computers from the current office network (formerly known as workspace) to a new office network.</p>
+     * <p>Migrates cloud computers from the current office network to a new office network.</p>
      * 
      * @param request MigrateDesktopsRequest
      * @return MigrateDesktopsResponse
@@ -19312,10 +19704,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify end users only for cloud computers that are in the Running state.</p>
+     * <p>Only cloud computers in the Running state support modifying authorized users.</p>
      * 
      * <b>summary</b> : 
-     * <p>Grants permissions on cloud desktops to end users, or revokes the permissions from the end users.</p>
+     * <p>Adds or removes the authorization of one or more cloud computers for one or more users.</p>
      * 
      * @param request ModifyUserEntitlementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19359,10 +19751,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify end users only for cloud computers that are in the Running state.</p>
+     * <p>Only cloud computers in the Running state support modifying authorized users.</p>
      * 
      * <b>summary</b> : 
-     * <p>Grants permissions on cloud desktops to end users, or revokes the permissions from the end users.</p>
+     * <p>Adds or removes the authorization of one or more cloud computers for one or more users.</p>
      * 
      * @param request ModifyUserEntitlementRequest
      * @return ModifyUserEntitlementResponse
@@ -19637,6 +20029,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the trend of active user count statistics within a specified time range. Returns the deduplicated active user count at each time slice based on the specified aggregation interval (Period), which can be used to plot online user trend charts.</p>
+     * 
+     * @param request QueryActiveUserStatisticRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryActiveUserStatisticResponse
+     */
+    public QueryActiveUserStatisticResponse queryActiveUserStatisticWithOptions(QueryActiveUserStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryActiveUserStatistic"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryActiveUserStatisticResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the trend of active user count statistics within a specified time range. Returns the deduplicated active user count at each time slice based on the specified aggregation interval (Period), which can be used to plot online user trend charts.</p>
+     * 
+     * @param request QueryActiveUserStatisticRequest
+     * @return QueryActiveUserStatisticResponse
+     */
+    public QueryActiveUserStatisticResponse queryActiveUserStatistic(QueryActiveUserStatisticRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryActiveUserStatisticWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the usage duration ranking and details of each end user under a tenant within a specified date range. Aggregates offline statistical data, summarizes connection duration by user dimension, and populates basic information and per-desktop usage duration details for users on the current page.</p>
+     * 
+     * @param request QueryEndUserHistoryUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryEndUserHistoryUsageResponse
+     */
+    public QueryEndUserHistoryUsageResponse queryEndUserHistoryUsageWithOptions(QueryEndUserHistoryUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAdUser)) {
+            query.put("IsAdUser", request.isAdUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryEndUserHistoryUsage"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryEndUserHistoryUsageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the usage duration ranking and details of each end user under a tenant within a specified date range. Aggregates offline statistical data, summarizes connection duration by user dimension, and populates basic information and per-desktop usage duration details for users on the current page.</p>
+     * 
+     * @param request QueryEndUserHistoryUsageRequest
+     * @return QueryEndUserHistoryUsageResponse
+     */
+    public QueryEndUserHistoryUsageResponse queryEndUserHistoryUsage(QueryEndUserHistoryUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryEndUserHistoryUsageWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
@@ -19694,6 +20206,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryHistoryActiveUserCountResponse queryHistoryActiveUserCount(QueryHistoryActiveUserCountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryHistoryActiveUserCountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the daily historical active user count for a tenant within a specified time range. Based on offline statistical data, this operation aggregates and deduplicates active users by date to calculate daily active users (DAU). Filtering by user group and workspace is supported.</p>
+     * 
+     * @param request QueryHistoryActiveUserStatisticRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryHistoryActiveUserStatisticResponse
+     */
+    public QueryHistoryActiveUserStatisticResponse queryHistoryActiveUserStatisticWithOptions(QueryHistoryActiveUserStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            query.put("UserGroupId", request.userGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryHistoryActiveUserStatistic"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHistoryActiveUserStatisticResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the daily historical active user count for a tenant within a specified time range. Based on offline statistical data, this operation aggregates and deduplicates active users by date to calculate daily active users (DAU). Filtering by user group and workspace is supported.</p>
+     * 
+     * @param request QueryHistoryActiveUserStatisticRequest
+     * @return QueryHistoryActiveUserStatisticResponse
+     */
+    public QueryHistoryActiveUserStatisticResponse queryHistoryActiveUserStatistic(QueryHistoryActiveUserStatisticRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryHistoryActiveUserStatisticWithOptions(request, runtime);
     }
 
     /**
@@ -19958,10 +20534,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The desktops must be in the Running state.</p>
+     * <p>The cloud computers must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reboots one or more desktops.</p>
+     * <p>Restarts one or more cloud computers.</p>
      * 
      * @param request RebootDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20009,10 +20585,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The desktops must be in the Running state.</p>
+     * <p>The cloud computers must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reboots one or more desktops.</p>
+     * <p>Restarts one or more cloud computers.</p>
      * 
      * @param request RebootDesktopsRequest
      * @return RebootDesktopsResponse
@@ -20972,7 +21548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a PowerShell or Bat script on one or more cloud computers that run the Windows operating system.</p>
+     * <p>Executes a PowerShell or Bat script on one or more cloud computers that run Windows.</p>
      * 
      * @param request RunCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21032,7 +21608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a PowerShell or Bat script on one or more cloud computers that run the Windows operating system.</p>
+     * <p>Executes a PowerShell or Bat script on one or more cloud computers that run Windows.</p>
      * 
      * @param request RunCommandRequest
      * @return RunCommandResponse
@@ -21562,10 +22138,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers that you want to start must be in the Stopped state.</p>
+     * <p>The cloud computers must be in the Stopped state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Starts stopped cloud computers. After the API operation is successfully called, the cloud computers enter the Running state.</p>
+     * <p>Starts one or more stopped cloud computers. After the operation is called successfully, the cloud computers enter the Running state.</p>
      * 
      * @param request StartDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21601,10 +22177,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers that you want to start must be in the Stopped state.</p>
+     * <p>The cloud computers must be in the Stopped state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Starts stopped cloud computers. After the API operation is successfully called, the cloud computers enter the Running state.</p>
+     * <p>Starts one or more stopped cloud computers. After the operation is called successfully, the cloud computers enter the Running state.</p>
      * 
      * @param request StartDesktopsRequest
      * @return StartDesktopsResponse
