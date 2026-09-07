@@ -9,9 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-hangzhou", "qualitycheck.cn-hangzhou.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("qualitycheck", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -493,7 +490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an Agent batch task for conversation analysis. The application call supports HTTP calls to complete the customer response.</p>
+     * <p>Creates an Agent batch task for conversation analysis. Application calls support HTTP invocations to complete customer responses.</p>
      * 
      * @param request CreateAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -529,7 +526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an Agent batch task for conversation analysis. The application call supports HTTP calls to complete the customer response.</p>
+     * <p>Creates an Agent batch task for conversation analysis. Application calls support HTTP invocations to complete customer responses.</p>
      * 
      * @param request CreateAgentTaskRequest
      * @return CreateAgentTaskResponse
@@ -2062,9 +2059,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a single AgentM task.</p>
+     * 
+     * @param request GetAgentMJobInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentMJobInfoResponse
+     */
+    public GetAgentMJobInfoResponse getAgentMJobInfoWithOptions(GetAgentMJobInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            body.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            body.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentMJobInfo"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentMJobInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a single AgentM task.</p>
+     * 
+     * @param request GetAgentMJobInfoRequest
+     * @return GetAgentMJobInfoResponse
+     */
+    public GetAgentMJobInfoResponse getAgentMJobInfo(GetAgentMJobInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgentMJobInfoWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
-     * 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</p>
+     * <p>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
+     * By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the task result of an agent node.</p>
@@ -2103,8 +2148,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
-     * 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</p>
+     * <p>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
+     * By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the task result of an agent node.</p>
@@ -3395,6 +3440,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InvalidRuleResponse invalidRule(InvalidRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.invalidRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists AI analysis assistant tasks.</p>
+     * 
+     * @param request ListAgentMJobInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgentMJobInfoResponse
+     */
+    public ListAgentMJobInfoResponse listAgentMJobInfoWithOptions(ListAgentMJobInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            body.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            body.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgentMJobInfo"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentMJobInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists AI analysis assistant tasks.</p>
+     * 
+     * @param request ListAgentMJobInfoRequest
+     * @return ListAgentMJobInfoResponse
+     */
+    public ListAgentMJobInfoResponse listAgentMJobInfo(ListAgentMJobInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAgentMJobInfoWithOptions(request, runtime);
     }
 
     /**

@@ -3,9 +3,9 @@ package com.aliyun.qualitycheck20190115.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAgentTaskRequest extends TeaModel {
+public class ListAgentMJobInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the business workspace.</p>
+     * <p>The business space ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -14,20 +14,20 @@ public class CreateAgentTaskRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
-     * <p>The complete <strong>JSON string</strong> information. For details, see the following sections.</p>
+     * <p>The complete JSON string. For more information, see the following detailed information.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;\&quot;:\&quot;\&quot;}</p>
+     * <p>{}</p>
      */
     @NameInMap("JsonStr")
     public String jsonStr;
 
-    public static CreateAgentTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateAgentTaskRequest self = new CreateAgentTaskRequest();
+    public static ListAgentMJobInfoRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListAgentMJobInfoRequest self = new ListAgentMJobInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAgentTaskRequest setBaseMeAgentId(Long baseMeAgentId) {
+    public ListAgentMJobInfoRequest setBaseMeAgentId(Long baseMeAgentId) {
         this.baseMeAgentId = baseMeAgentId;
         return this;
     }
@@ -35,7 +35,7 @@ public class CreateAgentTaskRequest extends TeaModel {
         return this.baseMeAgentId;
     }
 
-    public CreateAgentTaskRequest setJsonStr(String jsonStr) {
+    public ListAgentMJobInfoRequest setJsonStr(String jsonStr) {
         this.jsonStr = jsonStr;
         return this;
     }

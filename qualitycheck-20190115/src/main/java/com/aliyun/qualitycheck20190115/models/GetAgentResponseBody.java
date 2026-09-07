@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
