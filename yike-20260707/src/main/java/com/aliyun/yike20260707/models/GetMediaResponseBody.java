@@ -60,7 +60,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String channelLayout;
 
         /**
-         * <p>The number of audio channels.</p>
+         * <p>The number of channels.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -159,7 +159,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String numFrames;
 
         /**
-         * <p>The encoding profile.</p>
+         * <p>The codec profile.</p>
          * 
          * <strong>example:</strong>
          * <p>High</p>
@@ -392,7 +392,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file size in bytes.</p>
+         * <p>The file size, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>27007</p>
@@ -455,7 +455,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The storage region of the file.</p>
+         * <p>The region where the file is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -853,7 +853,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String fps;
 
         /**
-         * <p>Indicates whether the video stream contains B-frames.</p>
+         * <p>Indicates whether B-frames exist.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -925,7 +925,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String pixFmt;
 
         /**
-         * <p>The encoding profile.</p>
+         * <p>The codec profile.</p>
          * 
          * <strong>example:</strong>
          * <p>High</p>
@@ -1197,7 +1197,7 @@ public class GetMediaResponseBody extends TeaModel {
         public java.util.List<GetMediaResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> subtitleStreamInfoList;
 
         /**
-         * <p>The video stream information. A media asset may contain multiple video streams.</p>
+         * <p>The video stream information. A media asset may have multiple video streams.</p>
          */
         @NameInMap("VideoStreamInfoList")
         public java.util.List<GetMediaResponseBodyMediaInfoFileInfoListVideoStreamInfoList> videoStreamInfoList;
@@ -1243,7 +1243,7 @@ public class GetMediaResponseBody extends TeaModel {
 
     public static class GetMediaResponseBodyMediaInfoMediaBasicInfo extends TeaModel {
         /**
-         * <p>The business type of the media asset (currently unavailable).</p>
+         * <p>The business type of the media asset. This parameter is currently unavailable.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>
@@ -1267,7 +1267,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the media asset was created.</p>
+         * <p>The creation time of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:08Z</p>
@@ -1276,7 +1276,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The content description (the request parameter value of the register media asset API).</p>
+         * <p>The content description. This is the request parameter value of the RegisterMediaInfo API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -1294,7 +1294,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>The publicly accessible HTTP URL (the request parameter value of the register media asset API).</p>
+         * <p>The publicly accessible HTTP URL. This is the request parameter value of the RegisterMediaInfo API operation.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
@@ -1312,7 +1312,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The tags, separated by commas (the request parameter value of the register media asset API).</p>
+         * <p>The tags, separated by commas. This is the request parameter value of the RegisterMediaInfo API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>pitaya,prd-wuxi,248</p>
@@ -1321,7 +1321,7 @@ public class GetMediaResponseBody extends TeaModel {
         public String mediaTags;
 
         /**
-         * <p>The media type of the media asset: image/audio/video.</p>
+         * <p>The media type of the media asset. Valid values: image, audio, and video.</p>
          * 
          * <strong>example:</strong>
          * <p>image</p>
@@ -1562,7 +1562,7 @@ public class GetMediaResponseBody extends TeaModel {
 
     public static class GetMediaResponseBodyMediaInfoMediaDynamicInfoDynamicMetaData extends TeaModel {
         /**
-         * <p>The dynamic metadata content.</p>
+         * <p>The content of the dynamic metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

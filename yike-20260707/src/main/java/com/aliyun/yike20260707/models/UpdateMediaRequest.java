@@ -10,6 +10,9 @@ public class UpdateMediaRequest extends TeaModel {
     @NameInMap("AppendTags")
     public Boolean appendTags;
 
+    @NameInMap("BizConfig")
+    public String bizConfig;
+
     @NameInMap("CategoryId")
     public Long categoryId;
 
@@ -59,10 +62,10 @@ public class UpdateMediaRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The tags. Separate multiple tags with commas.</p>
+     * <p>The tags. Separate multiple tags with commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>CapCut animation.</p>
+     * <p>剪映动画</p>
      */
     @NameInMap("MediaTags")
     public String mediaTags;
@@ -77,7 +80,7 @@ public class UpdateMediaRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>The user data. The maximum length is 1024 bytes.</p>
+     * <p>The user data. Maximum length: 1024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -96,6 +99,14 @@ public class UpdateMediaRequest extends TeaModel {
     }
     public Boolean getAppendTags() {
         return this.appendTags;
+    }
+
+    public UpdateMediaRequest setBizConfig(String bizConfig) {
+        this.bizConfig = bizConfig;
+        return this;
+    }
+    public String getBizConfig() {
+        return this.bizConfig;
     }
 
     public UpdateMediaRequest setCategoryId(Long categoryId) {

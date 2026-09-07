@@ -9,10 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "yike.cn-shanghai.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "yike.ap-southeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("yike", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -48,8 +44,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AuthTimeout", request.authTimeout);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bizConfig)) {
+            query.put("BizConfig", request.bizConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mediaIds)) {
             query.put("MediaIds", request.mediaIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnDynamicMeta)) {
+            query.put("ReturnDynamicMeta", request.returnDynamicMeta);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -315,6 +319,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMediasResponse deleteMediasWithOptions(DeleteMediasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizConfig)) {
+            query.put("BizConfig", request.bizConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deletePhysicalFiles)) {
             query.put("DeletePhysicalFiles", request.deletePhysicalFiles);
         }
@@ -580,7 +588,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description.</h2>
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query a media content analysis job.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a media asset.</p>
@@ -594,6 +603,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.authTimeout)) {
             query.put("AuthTimeout", request.authTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizConfig)) {
+            query.put("BizConfig", request.bizConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputURL)) {
@@ -623,7 +636,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description.</h2>
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query a media content analysis job.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a media asset.</p>
@@ -826,18 +840,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <ul>
-     * <li>This API retrieves the status and details of a video translation task based on the <code>JobId</code>.</li>
-     * <li><code>JobId</code> is a required parameter, passed through query or form.</li>
-     * <li>If the task does not exist or does not belong to the current caller, the <code>InvalidParameter</code> error code with HTTP status code 400 is returned.</li>
-     * <li>On a successful response, the HTTP status code is 200, and the task object is located in <code>data.Job</code>.</li>
-     * <li>When the task is completed (<code>Status=Finished</code>), the output artifacts can be found in the <code>data.Job.Output</code> field. The client needs to perform a JSON parse to obtain the specific results.</li>
-     * <li>For tasks with multiple target languages, use <code>Output.AiResult.ResultMap</code> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <code>data.Job.EditingProjectId</code>.</li>
-     * </ul>
+     * <p>Queries the status, input, parameters, and desired state results of a video translation job based on the <code>JobId</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status and result of a video translation task by the specified ID.</p>
+     * <p>Queries the status, input parameters, and multilingual outputs of a video translation job.</p>
      * 
      * @param request GetVideoTranslationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -869,18 +875,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <ul>
-     * <li>This API retrieves the status and details of a video translation task based on the <code>JobId</code>.</li>
-     * <li><code>JobId</code> is a required parameter, passed through query or form.</li>
-     * <li>If the task does not exist or does not belong to the current caller, the <code>InvalidParameter</code> error code with HTTP status code 400 is returned.</li>
-     * <li>On a successful response, the HTTP status code is 200, and the task object is located in <code>data.Job</code>.</li>
-     * <li>When the task is completed (<code>Status=Finished</code>), the output artifacts can be found in the <code>data.Job.Output</code> field. The client needs to perform a JSON parse to obtain the specific results.</li>
-     * <li>For tasks with multiple target languages, use <code>Output.AiResult.ResultMap</code> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <code>data.Job.EditingProjectId</code>.</li>
-     * </ul>
+     * <p>Queries the status, input, parameters, and desired state results of a video translation job based on the <code>JobId</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status and result of a video translation task by the specified ID.</p>
+     * <p>Queries the status, input parameters, and multilingual outputs of a video translation job.</p>
      * 
      * @param request GetVideoTranslationJobRequest
      * @return GetVideoTranslationJobResponse
@@ -973,8 +971,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API is used to query media content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API is used to query media content analysis jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Imports a media asset.</p>
@@ -986,6 +984,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImportMediaResponse importMediaWithOptions(ImportMediaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizConfig)) {
+            query.put("BizConfig", request.bizConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
             query.put("CategoryId", request.categoryId);
         }
@@ -1038,6 +1040,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UserData", request.userData);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.yikeAssetConfig)) {
+            query.put("YikeAssetConfig", request.yikeAssetConfig);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1057,8 +1063,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API is used to query media content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API is used to query media content analysis jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Imports a media asset.</p>
@@ -1073,7 +1079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of categories.</p>
+     * <p>Retrieves a paged list of categories.</p>
      * 
      * @param request ListAssetCategoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1109,7 +1115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of categories.</p>
+     * <p>Retrieves a paged list of categories.</p>
      * 
      * @param request ListAssetCategoriesRequest
      * @return ListAssetCategoriesResponse
@@ -1206,6 +1212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchMediaResponse searchMediaWithOptions(SearchMediaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizConfig)) {
+            query.put("BizConfig", request.bizConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
             query.put("CategoryId", request.categoryId);
         }
@@ -1603,19 +1613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <ul>
-     * <li>This API supports multiple video translation features, including subtitle translation and voice translation.</li>
-     * <li>The <code>JobType</code> parameter defines the task type, such as <code>SubtitleTranslate</code> and <code>VoiceTranslate</code>.</li>
-     * <li>The <code>Input</code> and <code>Output</code> parameters specify the input resource and output path, respectively.</li>
-     * <li><code>JobParameters</code> contains language configuration and other feature switches, such as <code>SourceLanguage</code>, <code>TargetLanguage</code>, <code>NeedDetext</code>, and <code>NeedVisualTranslate</code>.</li>
-     * <li><code>EditingConfig</code> can be used to specify the style configuration for the final editing and compositing.</li>
-     * <li><code>ClientToken</code> is an optional parameter used to ensure the idempotence of the request.</li>
-     * <li>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</li>
-     * </ul>
+     * <p>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</p>
+     * <p>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1675,19 +1676,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <ul>
-     * <li>This API supports multiple video translation features, including subtitle translation and voice translation.</li>
-     * <li>The <code>JobType</code> parameter defines the task type, such as <code>SubtitleTranslate</code> and <code>VoiceTranslate</code>.</li>
-     * <li>The <code>Input</code> and <code>Output</code> parameters specify the input resource and output path, respectively.</li>
-     * <li><code>JobParameters</code> contains language configuration and other feature switches, such as <code>SourceLanguage</code>, <code>TargetLanguage</code>, <code>NeedDetext</code>, and <code>NeedVisualTranslate</code>.</li>
-     * <li><code>EditingConfig</code> can be used to specify the style configuration for the final editing and compositing.</li>
-     * <li><code>ClientToken</code> is an optional parameter used to ensure the idempotence of the request.</li>
-     * <li>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</li>
-     * </ul>
+     * <p>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</p>
+     * <p>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @return SubmitVideoTranslationJobResponse
@@ -1699,7 +1691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</p>
+     * <p>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a media asset category.</p>
@@ -1738,7 +1730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</p>
+     * <p>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a media asset category.</p>
@@ -1813,8 +1805,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>This API is used to query media content understanding jobs.</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates media asset information.</p>
@@ -1828,6 +1820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appendTags)) {
             query.put("AppendTags", request.appendTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizConfig)) {
+            query.put("BizConfig", request.bizConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
@@ -1885,8 +1881,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>This API is used to query media content understanding jobs.</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates media asset information.</p>

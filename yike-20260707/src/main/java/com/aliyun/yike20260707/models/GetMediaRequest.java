@@ -13,6 +13,9 @@ public class GetMediaRequest extends TeaModel {
     @NameInMap("AuthTimeout")
     public Long authTimeout;
 
+    @NameInMap("BizConfig")
+    public String bizConfig;
+
     /**
      * <p>Currently unavailable.</p>
      * 
@@ -23,7 +26,7 @@ public class GetMediaRequest extends TeaModel {
     public String inputURL;
 
     /**
-     * <p>The media asset ID. If this parameter is not empty, the system queries the media asset by this ID and validates whether the value is a valid MediaId.</p>
+     * <p>The media asset ID. If this parameter is not empty, the query is performed based on this parameter, and the system verifies whether the value is a valid MediaId.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -42,6 +45,14 @@ public class GetMediaRequest extends TeaModel {
     }
     public Long getAuthTimeout() {
         return this.authTimeout;
+    }
+
+    public GetMediaRequest setBizConfig(String bizConfig) {
+        this.bizConfig = bizConfig;
+        return this;
+    }
+    public String getBizConfig() {
+        return this.bizConfig;
     }
 
     public GetMediaRequest setInputURL(String inputURL) {

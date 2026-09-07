@@ -85,7 +85,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
         public String channels;
 
         /**
-         * <p>The long name of the codec.</p>
+         * <p>The long name of the codec format.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -94,7 +94,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
         public String codecLongName;
 
         /**
-         * <p>The short name of the codec.</p>
+         * <p>The short name of the codec format.</p>
          * 
          * <strong>example:</strong>
          * <p>H264</p>
@@ -569,7 +569,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
 
     public static class BatchGetMediasResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList extends TeaModel {
         /**
-         * <p>The long name of the codec.</p>
+         * <p>The long name of the codec format.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -578,7 +578,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
         public String codecLongName;
 
         /**
-         * <p>The short name of the codec.</p>
+         * <p>The short name of the codec format.</p>
          * 
          * <strong>example:</strong>
          * <p>H264</p>
@@ -765,7 +765,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The long name of the codec.</p>
+         * <p>The long name of the codec format.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -774,7 +774,7 @@ public class BatchGetMediasResponseBody extends TeaModel {
         public String codecLongName;
 
         /**
-         * <p>The short name of the codec.</p>
+         * <p>The short name of the codec format.</p>
          * 
          * <strong>example:</strong>
          * <p>H264</p>

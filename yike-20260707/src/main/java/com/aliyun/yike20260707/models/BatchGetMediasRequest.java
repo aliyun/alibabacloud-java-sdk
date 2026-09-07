@@ -13,6 +13,9 @@ public class BatchGetMediasRequest extends TeaModel {
     @NameInMap("AuthTimeout")
     public Long authTimeout;
 
+    @NameInMap("BizConfig")
+    public String bizConfig;
+
     /**
      * <p>The IDs of the media assets to query, separated by commas.</p>
      * 
@@ -21,6 +24,9 @@ public class BatchGetMediasRequest extends TeaModel {
      */
     @NameInMap("MediaIds")
     public String mediaIds;
+
+    @NameInMap("ReturnDynamicMeta")
+    public Boolean returnDynamicMeta;
 
     public static BatchGetMediasRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetMediasRequest self = new BatchGetMediasRequest();
@@ -35,12 +41,28 @@ public class BatchGetMediasRequest extends TeaModel {
         return this.authTimeout;
     }
 
+    public BatchGetMediasRequest setBizConfig(String bizConfig) {
+        this.bizConfig = bizConfig;
+        return this;
+    }
+    public String getBizConfig() {
+        return this.bizConfig;
+    }
+
     public BatchGetMediasRequest setMediaIds(String mediaIds) {
         this.mediaIds = mediaIds;
         return this;
     }
     public String getMediaIds() {
         return this.mediaIds;
+    }
+
+    public BatchGetMediasRequest setReturnDynamicMeta(Boolean returnDynamicMeta) {
+        this.returnDynamicMeta = returnDynamicMeta;
+        return this;
+    }
+    public Boolean getReturnDynamicMeta() {
+        return this.returnDynamicMeta;
     }
 
 }

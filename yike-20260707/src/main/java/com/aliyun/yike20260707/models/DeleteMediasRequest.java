@@ -4,6 +4,9 @@ package com.aliyun.yike20260707.models;
 import com.aliyun.tea.*;
 
 public class DeleteMediasRequest extends TeaModel {
+    @NameInMap("BizConfig")
+    public String bizConfig;
+
     /**
      * <p>Specifies whether to delete the physical files at the same time.</p>
      * 
@@ -20,7 +23,7 @@ public class DeleteMediasRequest extends TeaModel {
     public String inputURLs;
 
     /**
-     * <p>The media asset IDs, separated by commas. Invalid IDs are added to the IgnoredList.</p>
+     * <p>The media asset IDs, separated by commas. Invalid IDs are added to IgnoredList.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
@@ -31,6 +34,14 @@ public class DeleteMediasRequest extends TeaModel {
     public static DeleteMediasRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMediasRequest self = new DeleteMediasRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMediasRequest setBizConfig(String bizConfig) {
+        this.bizConfig = bizConfig;
+        return this;
+    }
+    public String getBizConfig() {
+        return this.bizConfig;
     }
 
     public DeleteMediasRequest setDeletePhysicalFiles(Boolean deletePhysicalFiles) {

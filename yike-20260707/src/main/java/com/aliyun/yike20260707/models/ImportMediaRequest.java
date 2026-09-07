@@ -4,6 +4,9 @@ package com.aliyun.yike20260707.models;
 import com.aliyun.tea.*;
 
 public class ImportMediaRequest extends TeaModel {
+    @NameInMap("BizConfig")
+    public String bizConfig;
+
     @NameInMap("CategoryId")
     public Long categoryId;
 
@@ -62,10 +65,10 @@ public class ImportMediaRequest extends TeaModel {
     public String inputURL;
 
     /**
-     * <p>The tags of the media asset. Separate multiple tags with commas.</p>
+     * <p>The tags of the media asset. Separate multiple tags with commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>AdvancedImageToVideo,AIGenerated.</p>
+     * <p>AdvancedImageToVideo,AIGenerated</p>
      */
     @NameInMap("MediaTags")
     public String mediaTags;
@@ -107,7 +110,7 @@ public class ImportMediaRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>The user data. The maximum size is 1024 bytes.</p>
+     * <p>The user data. Maximum length: 1024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -115,9 +118,20 @@ public class ImportMediaRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
+    @NameInMap("YikeAssetConfig")
+    public String yikeAssetConfig;
+
     public static ImportMediaRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportMediaRequest self = new ImportMediaRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImportMediaRequest setBizConfig(String bizConfig) {
+        this.bizConfig = bizConfig;
+        return this;
+    }
+    public String getBizConfig() {
+        return this.bizConfig;
     }
 
     public ImportMediaRequest setCategoryId(Long categoryId) {
@@ -222,6 +236,14 @@ public class ImportMediaRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
+    }
+
+    public ImportMediaRequest setYikeAssetConfig(String yikeAssetConfig) {
+        this.yikeAssetConfig = yikeAssetConfig;
+        return this;
+    }
+    public String getYikeAssetConfig() {
+        return this.yikeAssetConfig;
     }
 
 }

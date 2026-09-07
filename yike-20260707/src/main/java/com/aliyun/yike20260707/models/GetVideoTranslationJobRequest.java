@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetVideoTranslationJobRequest extends TeaModel {
     /**
-     * <p>The task ID returned by <code>SubmitVideoTranslationJob</code>.</p>
+     * <p>The video translation job ID returned by SubmitVideoTranslationJob.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     * <p>vtj_0123456789abcdef0123456789abcdef</p>
      */
     @NameInMap("JobId")
     public String jobId;

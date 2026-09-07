@@ -72,7 +72,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
          * <p>The task input.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Prompt&quot;:&quot;Person in image 1 is on a basketball court, dunking with the appearance from image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
+         * <p>{&quot;Prompt&quot;:&quot;Person in image 1 is on a basketball court, dunking with image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
          */
         @NameInMap("Input")
         public String input;
@@ -123,8 +123,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public Integer n;
 
         /**
-         * <p>The generation result. The value is a JSON string that contains the following fields:</p>
-         * <p>Medias: a list of media information (Media objects). The Media object contains the following fields:
+         * <p>The generation result in JsonString format, which contains:</p>
+         * <p>Medias: a list of media information (Media objects). Fields of a Media object:
          * MediaId: String. The media asset ID.
          * OutputUrl: String. The media URL (with authentication string).</p>
          * 
@@ -144,7 +144,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String resolution;
 
         /**
-         * <p>The scene type. Currently, only general is supported.</p>
+         * <p>The scene type. Currently only general is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>

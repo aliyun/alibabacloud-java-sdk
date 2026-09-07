@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetVideoTranslationJobResponseBody extends TeaModel {
     /**
-     * <p>The video translation task.</p>
+     * <p>The video translation job.</p>
      */
     @NameInMap("Job")
     public GetVideoTranslationJobResponseBodyJob job;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
      * 
      * <strong>example:</strong>
-     * <p>request-id</p>
+     * <p>req-vt-get-20260820-001</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,25 +42,25 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
 
     public static class GetVideoTranslationJobResponseBodyJob extends TeaModel {
         /**
-         * <p>The duration of the input video, in seconds.</p>
+         * <p>The input video duration, in seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.0</p>
+         * <p>60.5</p>
          */
         @NameInMap("Duration")
         public Double duration;
 
         /**
-         * <p>The editing project ID.</p>
+         * <p>The editing project ID for a single-target-language job. For multi-target-language results, retrieve the ID from Output.AiResult.ResultMap.</p>
          * 
          * <strong>example:</strong>
-         * <p>ba50304145fd411c827239c398820267</p>
+         * <p>editing-project-001</p>
          */
         @NameInMap("EditingProjectId")
         public String editingProjectId;
 
         /**
-         * <p>Optional. The error code returned when the task ultimately fails.</p>
+         * <p>The business error code returned when the job fails. This field is typically not returned for non-failed states.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidInput</p>
@@ -69,43 +69,43 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>Optional. The error message returned when the task ultimately fails.</p>
+         * <p>The business error message returned when the job fails. This field is typically not returned for non-failed states.</p>
          * 
          * <strong>example:</strong>
-         * <p>Input is invalid.</p>
+         * <p>Input video is invalid.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>The normalized Input JSON.</p>
+         * <p>The normalized input configuration JSON string saved at submission time.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Video&quot;:&quot;<a href="https://example.com/input.mp4%22%7D">https://example.com/input.mp4&quot;}</a></p>
+         * <p>{&quot;VideoMediaId&quot;:&quot;media-video-001&quot;}</p>
          */
         @NameInMap("Input")
         public String input;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The video translation job ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         * <p>vtj_0123456789abcdef0123456789abcdef</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
-         * <p>The normalized JobParameters JSON, including default values.</p>
+         * <p>The normalized job parameters JSON string, including default values supplemented by the service.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;NeedDetext&quot;:true,&quot;SubtitleFrom&quot;:&quot;default&quot;,&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;NeedVisualTranslate&quot;:true}</p>
+         * <p>{&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;SubtitleFrom&quot;:&quot;default&quot;,&quot;NeedDetext&quot;:false,&quot;NeedVisualTranslate&quot;:false}</p>
          */
         @NameInMap("JobParameters")
         public String jobParameters;
 
         /**
-         * <p>The normalized task type.</p>
+         * <p>The normalized job type.</p>
          * 
          * <strong>example:</strong>
          * <p>VoiceTranslate</p>
@@ -114,19 +114,19 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The JSON string of the final task result.</p>
+         * <p>The job output JSON string. When the job succeeds, AiResult.ResultMap organizes the final video, subtitle, and audio outputs by target language.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;AiResult&quot;:{&quot;ResultMap&quot;:{&quot;ja&quot;:{&quot;EditingProjectId&quot;:&quot;editing-project-xxx&quot;,&quot;MediaURL&quot;:&quot;<a href="https://example.com/bucket/prefix/ja/result.mp4%22%7D%7D%7D%7D">https://example.com/bucket/prefix/ja/result.mp4&quot;}}}}</a></p>
+         * <p>{&quot;AiResult&quot;:{&quot;ResultMap&quot;:{&quot;en&quot;:{&quot;EditingProjectId&quot;:&quot;editing-project-001&quot;,&quot;MediaURL&quot;:&quot;<a href="https://example.com/video-translation/en/result.mp4%22,%22MediaId%22:%22media-output-001%22%7D%7D%7D%7D">https://example.com/video-translation/en/result.mp4&quot;,&quot;MediaId&quot;:&quot;media-output-001&quot;}}}}</a></p>
          */
         @NameInMap("Output")
         public String output;
 
         /**
-         * <p>The task status. Valid values: Created, Queuing, Executing, Finished, and Failed.</p>
+         * <p>The job status. Valid values: Created, Queuing, Executing, Finished, or Failed.</p>
          * 
          * <strong>example:</strong>
-         * <p>Executing</p>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;

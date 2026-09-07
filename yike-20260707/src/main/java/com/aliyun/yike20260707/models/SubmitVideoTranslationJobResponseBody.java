@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoTranslationJobResponseBody extends TeaModel {
     /**
-     * <p><code>data.JobId</code></p>
+     * <p>The video translation job ID, used to call GetVideoTranslationJob to query the job.</p>
      * 
      * <strong>example:</strong>
-     * <p>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+     * <p>vtj_0123456789abcdef0123456789abcdef</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
-     * <p><code>requestId</code></p>
+     * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
      * 
      * <strong>example:</strong>
-     * <p>request-id</p>
+     * <p>req-vt-20260820-001</p>
      */
     @NameInMap("RequestId")
     public String requestId;

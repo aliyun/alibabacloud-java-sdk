@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMediaResponseBody extends TeaModel {
     /**
-     * <p>The ICE media asset ID.</p>
+     * <p>The Intelligent Cloud Editing (ICE) media asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>

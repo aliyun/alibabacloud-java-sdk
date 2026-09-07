@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitImageGenerationJobRequest extends TeaModel {
     /**
-     * <p>The aspect ratio. Valid values: 16:9 (default), 9:16, 4:3, 3:4, and 1:1.</p>
+     * <p>The aspect ratio. Valid values: 16:9 (default), 9:16, 4:3, 3:4, 1:1, and 21:9.</p>
      * 
      * <strong>example:</strong>
      * <p>4:3</p>
@@ -14,7 +14,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String aspectRatio;
 
     /**
-     * <p>The idempotency token.</p>
+     * <p>The idempotency token. A unique, case-sensitive string of up to 32 characters. This token ensures that the request is completed no more than once, preventing duplicate operations caused by multiple retries.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>3e761e9d11edba640c42a1b7</strong></strong></p>
@@ -23,11 +23,11 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The task input. A JSON string that contains the following fields:</p>
+     * <p>The task input. This parameter is required. The value is a JSON string that contains the following fields:</p>
      * <ul>
-     * <li>Prompt: String. Required. The prompt.</li>
+     * <li>Prompt: String. Required. The prompt for image generation.</li>
      * <li>Medias: A list of media items. Required when the task type is <code>image_to_image</code>. A maximum of 9 items are supported.<blockquote>
-     * <p>The Media structure contains: Type, the media type, String, valid value: image; URL, the media download URL, String; MediaId, the media asset ID, String.</p>
+     * <p>The Media struct contains the following fields: Type, the media type, String, valid value: image. URL, the download URL of the media, String. MediaId, the media asset ID, String.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -39,7 +39,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String input;
 
     /**
-     * <p>The task function parameters. A JSON string. No configuration is required at this time.</p>
+     * <p>The task feature parameters. The value is a JSON string. You do not need to set this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -48,10 +48,10 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String jobParameters;
 
     /**
-     * <p>The type of the generation task. Valid values:</p>
+     * <p>The type of the generation task. This parameter is required. Valid values:</p>
      * <ul>
-     * <li>text_to_image: text-to-image.</li>
-     * <li>image_to_image: image-to-image.</li>
+     * <li>text_to_image: text-to-image generation.</li>
+     * <li>image_to_image: image-to-image generation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,11 +61,12 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The model name. Currently supported models:</p>
+     * <p>The model name. This parameter is required. Valid values:</p>
      * <ul>
-     * <li>wan2.7-image</li>
-     * <li>qwen-image-2.0</li>
+     * <li>qwen-image-3.0</li>
      * <li>qwen-image-2.0-pro</li>
+     * <li>qwen-image-2.0</li>
+     * <li>wan2.7-image</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +94,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String resolution;
 
     /**
-     * <p>The scene. This is an enumeration type. Currently only <code>general</code> is supported.</p>
+     * <p>The scenario. This is an enumeration type. Currently, only <code>general</code> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>general</p>

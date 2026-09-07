@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMediaResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -218,7 +218,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The storage region of the file.</p>
+         * <p>The file storage region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -414,7 +414,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the media asset was created.</p>
+         * <p>The creation time of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-01T19:48Z</p>
@@ -477,7 +477,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String mediaType;
 
         /**
-         * <p>The time when the media asset was last modified.</p>
+         * <p>The modification time of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-01T20:48Z</p>

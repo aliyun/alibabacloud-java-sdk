@@ -5,41 +5,35 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoTranslationJobRequest extends TeaModel {
     /**
-     * <p>The user-level idempotency key.</p>
+     * <p>The user-level idempotency token, up to 40 characters. If the same user submits a request with the same token, the original job is returned.</p>
      * 
      * <strong>example:</strong>
-     * <p><strong><strong>3e761e9d11edba640c42a1b7</strong></strong></p>
+     * <p>vt-client-20260820-001</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The job description.</p>
+     * <p>The job description, used to record business purposes or processing requirements.</p>
      * 
      * <strong>example:</strong>
-     * <p>description</p>
+     * <p>Translate a Chinese product introduction video into English</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The input configuration JSON string:</p>
-     * <ul>
-     * <li>Video</li>
-     * <li>Audio</li>
-     * <li>Subtitle</li>
-     * </ul>
-     * <p><notice>Currently, only OSS addresses under the calling account are supported as input.</notice></p>
+     * <p>The input configuration JSON string. You must specify either Video or VideoMediaId, but not both. You can specify at most one of Audio or AudioMediaId. Subtitle is optional.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Video&quot;:&quot;oss://bucket/path/input.mp4&quot;}</p>
+     * <p>{&quot;VideoMediaId&quot;:&quot;media-video-001&quot;}</p>
      */
     @NameInMap("Input")
     public String input;
 
     /**
-     * <p>The job parameters JSON string.</p>
+     * <p>The job parameters JSON string. It must contain at least SourceLanguage and TargetLanguage. You can also configure main subtitle erasure, voice translation, on-screen text translation, and final editing.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,11 +43,7 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String jobParameters;
 
     /**
-     * <p>The job type. Valid values:</p>
-     * <ul>
-     * <li>SubtitleTranslate</li>
-     * <li>VoiceTranslate</li>
-     * </ul>
+     * <p>The job type. SubtitleTranslate indicates subtitle translation. VoiceTranslate indicates voice translation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,28 +53,28 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The output configuration JSON string. The OssUri value must be a folder.</p>
+     * <p>The output configuration JSON string. OssUri is an optional customer OSS output directory. If not specified, a signed URL of the service-owned artifact is returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;OssUri&quot;:&quot;oss://bucket/output/&quot;}</p>
+     * <p>{&quot;OssUri&quot;:&quot;oss://example-bucket/video-translation/output/&quot;}</p>
      */
     @NameInMap("Output")
     public String output;
 
     /**
-     * <p>If not specified, the service generates a default title.</p>
+     * <p>The job title. If not specified, the service generates a default title.</p>
      * 
      * <strong>example:</strong>
-     * <p>title</p>
+     * <p>Product introduction video English translation</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
-     * <p>The custom user data JSON string.</p>
+     * <p>The custom user data JSON string. It can contain the asynchronous notification address NotifyAddress.</p>
      * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;NotifyAddress&quot;:&quot;mns://account.mns.cn-shanghai.aliyuncs.com/queues/video-translation-result&quot;}</p>
      */
     @NameInMap("UserData")
     public String userData;
