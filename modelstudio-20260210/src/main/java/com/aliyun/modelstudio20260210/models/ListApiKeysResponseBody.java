@@ -172,6 +172,9 @@ public class ListApiKeysResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether access to all models with inference permissions in the workspace is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("allowAllModels")
         public Boolean allowAllModels;
@@ -326,6 +329,13 @@ public class ListApiKeysResponseBody extends TeaModel {
         @NameInMap("workspaceId")
         public String workspaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workspace_test</p>
+         */
+        @NameInMap("workspaceName")
+        public String workspaceName;
+
         public static ListApiKeysResponseBodyApiKeys build(java.util.Map<String, ?> map) throws Exception {
             ListApiKeysResponseBodyApiKeys self = new ListApiKeysResponseBodyApiKeys();
             return TeaModel.build(map, self);
@@ -393,6 +403,14 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
         public String getWorkspaceId() {
             return this.workspaceId;
+        }
+
+        public ListApiKeysResponseBodyApiKeys setWorkspaceName(String workspaceName) {
+            this.workspaceName = workspaceName;
+            return this;
+        }
+        public String getWorkspaceName() {
+            return this.workspaceName;
         }
 
     }

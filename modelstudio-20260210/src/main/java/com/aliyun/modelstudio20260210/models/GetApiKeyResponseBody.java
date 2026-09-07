@@ -282,6 +282,13 @@ public class GetApiKeyResponseBody extends TeaModel {
         @NameInMap("workspaceId")
         public String workspaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workspace_test</p>
+         */
+        @NameInMap("workspaceName")
+        public String workspaceName;
+
         public static GetApiKeyResponseBodyApiKey build(java.util.Map<String, ?> map) throws Exception {
             GetApiKeyResponseBodyApiKey self = new GetApiKeyResponseBodyApiKey();
             return TeaModel.build(map, self);
@@ -349,6 +356,14 @@ public class GetApiKeyResponseBody extends TeaModel {
         }
         public String getWorkspaceId() {
             return this.workspaceId;
+        }
+
+        public GetApiKeyResponseBodyApiKey setWorkspaceName(String workspaceName) {
+            this.workspaceName = workspaceName;
+            return this;
+        }
+        public String getWorkspaceName() {
+            return this.workspaceName;
         }
 
     }

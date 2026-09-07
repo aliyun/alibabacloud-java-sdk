@@ -8,14 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "modelstudio.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "modelstudio.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "modelstudio.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "modelstudio.eu-central-1.aliyuncs.com")
-        );
+        this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("modelstudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
