@@ -1,3 +1,10 @@
+2026-09-07 Version: 2.3.0
+- Support API GetAdUsersCount.
+- Support API GetUsersCount.
+- Update API DescribeGroups: add response parameters Body.Groups.$.DownloadNeedApproval.
+- Update API DescribeGroups: add response parameters Body.Groups.$.UploadNeedApproval.
+
+
 2026-08-19 Version: 2.2.3
 - Update API DescribeOrgs: add request parameters IsQueryAllSubOrgs.
 - Update API DescribeOrgs: add response parameters Body.Orgs.$.AccessType.

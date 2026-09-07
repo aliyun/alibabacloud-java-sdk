@@ -9,10 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "eds-user.cn-shanghai.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "eds-user.ap-southeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eds-user", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -744,7 +740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query user groups.</p>
+     * <p>Queries user groups.</p>
      * 
      * @param request DescribeGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -816,7 +812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query user groups.</p>
+     * <p>Queries user groups.</p>
      * 
      * @param request DescribeGroupsRequest
      * @return DescribeGroupsResponse
@@ -1417,6 +1413,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <blockquote>
+     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>获取用户数量</p>
+     * 
+     * @param request GetAdUsersCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAdUsersCountResponse
+     */
+    public GetAdUsersCountResponse getAdUsersCountWithOptions(GetAdUsersCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.solutionId)) {
+            body.put("SolutionId", request.solutionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAdUsersCount"),
+            new TeaPair("version", "2021-03-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAdUsersCountResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <blockquote>
+     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>获取用户数量</p>
+     * 
+     * @param request GetAdUsersCountRequest
+     * @return GetAdUsersCountResponse
+     */
+    public GetAdUsersCountResponse getAdUsersCount(GetAdUsersCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAdUsersCountWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Obtains the information about the current logon administrator based on the authorization code.</p>
      * 
@@ -1458,6 +1520,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetManagerInfoByAuthCodeResponse getManagerInfoByAuthCode(GetManagerInfoByAuthCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getManagerInfoByAuthCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <blockquote>
+     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>获取用户数量</p>
+     * 
+     * @param request GetUsersCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUsersCountResponse
+     */
+    public GetUsersCountResponse getUsersCountWithOptions(GetUsersCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.solutionId)) {
+            body.put("SolutionId", request.solutionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUsersCount"),
+            new TeaPair("version", "2021-03-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUsersCountResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <blockquote>
+     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>获取用户数量</p>
+     * 
+     * @param request GetUsersCountRequest
+     * @return GetUsersCountResponse
+     */
+    public GetUsersCountResponse getUsersCount(GetUsersCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUsersCountWithOptions(request, runtime);
     }
 
     /**
