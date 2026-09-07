@@ -11,7 +11,7 @@ public class ListApprovalsRequest extends TeaModel {
     public java.util.List<String> approvalIds;
 
     /**
-     * <p>The end time for approval instance creation, in seconds-level timestamp.</p>
+     * <p>The end time for querying approval instance creation, in seconds-level timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1736750500</p>
@@ -20,7 +20,7 @@ public class ListApprovalsRequest extends TeaModel {
     public Long createEndTime;
 
     /**
-     * <p>The start time for approval instance creation, in seconds-level timestamp.</p>
+     * <p>The start time for querying approval instance creation, in seconds-level timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1730000000</p>
@@ -75,7 +75,11 @@ public class ListApprovalsRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The list of report effective statuses. Valid values: Enabled, Expired.</p>
+     * <p>The list of report effective statuses, serialized in Flat format. Duplicate values are not allowed. Only records with an approval status of Approved are matched. Valid values:</p>
+     * <ul>
+     * <li>Enabled: effective.</li>
+     * <li>Expired: expired or invalidated.</li>
+     * </ul>
      */
     @NameInMap("EffectStatuses")
     public java.util.List<String> effectStatuses;
@@ -110,6 +114,14 @@ public class ListApprovalsRequest extends TeaModel {
 
     /**
      * <p>The adaptation policy type. Valid values:</p>
+     * <ul>
+     * <li><strong>DomainBlacklist</strong>: Domain name blacklist.</li>
+     * <li><strong>DomainWhitelist</strong>: Domain name whitelist.</li>
+     * <li><strong>SoftwareBlock</strong>: Software blocking.</li>
+     * <li><strong>AppUninstall</strong>: Agent uninstallation.</li>
+     * <li><strong>DlpSend</strong>: File outbound transfer.</li>
+     * <li><strong>PeripheralBlock</strong>: Peripheral control.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DlpSend</p>
@@ -136,7 +148,12 @@ public class ListApprovalsRequest extends TeaModel {
     public String processName;
 
     /**
-     * <p>The list of report types. If not specified, only ApprovalReport is queried.</p>
+     * <p>The list of report types, serialized in Flat format. Duplicate values are not allowed. Valid values:</p>
+     * <ul>
+     * <li>ApprovalReport: approval report.</li>
+     * <li>BackendReport: backend report.
+     * If not specified, only ApprovalReport is queried by default.</li>
+     * </ul>
      */
     @NameInMap("ReportTypes")
     public java.util.List<String> reportTypes;

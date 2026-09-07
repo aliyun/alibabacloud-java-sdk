@@ -700,6 +700,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a backend filing.</p>
+     * 
+     * @param request CreateBackendReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBackendReportResponse
+     */
+    public CreateBackendReportResponse createBackendReportWithOptions(CreateBackendReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimestamp)) {
+            body.put("EndTimestamp", request.endTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
+            body.put("PolicyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            body.put("Reason", request.reason);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reportObjects)) {
+            bodyFlat.put("ReportObjects", request.reportObjects);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targets)) {
+            bodyFlat.put("Targets", request.targets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityType)) {
+            body.put("ValidityType", request.validityType);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBackendReport"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBackendReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a backend filing.</p>
+     * 
+     * @param request CreateBackendReportRequest
+     * @return CreateBackendReportResponse
+     */
+    public CreateBackendReportResponse createBackendReport(CreateBackendReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBackendReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Create a custom identity source user for your Alibaba Cloud account.</p>
      * 
      * @param request CreateClientUserRequest
@@ -6096,6 +6165,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Immediately invalidates an approval.</p>
+     * 
+     * @param request InvalidateApprovalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InvalidateApprovalResponse
+     */
+    public InvalidateApprovalResponse invalidateApprovalWithOptions(InvalidateApprovalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.approvalId)) {
+            body.put("ApprovalId", request.approvalId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InvalidateApproval"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InvalidateApprovalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Immediately invalidates an approval.</p>
+     * 
+     * @param request InvalidateApprovalRequest
+     * @return InvalidateApprovalResponse
+     */
+    public InvalidateApprovalResponse invalidateApproval(InvalidateApprovalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.invalidateApprovalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the applications associated with one or more private access policies.</p>
      * 
      * @param request ListApplicationsForPrivateAccessPolicyRequest
@@ -7307,6 +7420,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListNacUserCertResponse listNacUserCert(ListNacUserCertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNacUserCertWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<code>NetType</code>) and instance ID list (<code>InstanceIds</code>), and use <code>CurrentPage</code> and <code>PageSize</code> for pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</p>
+     * 
+     * @param request ListNetBandwidthRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNetBandwidthResponse
+     */
+    public ListNetBandwidthResponse listNetBandwidthWithOptions(ListNetBandwidthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.netType)) {
+            query.put("NetType", request.netType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNetBandwidth"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNetBandwidthResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<code>NetType</code>) and instance ID list (<code>InstanceIds</code>), and use <code>CurrentPage</code> and <code>PageSize</code> for pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</p>
+     * 
+     * @param request ListNetBandwidthRequest
+     * @return ListNetBandwidthResponse
+     */
+    public ListNetBandwidthResponse listNetBandwidth(ListNetBandwidthRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNetBandwidthWithOptions(request, runtime);
     }
 
     /**

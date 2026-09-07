@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApprovalRequest extends TeaModel {
     /**
-     * <p>The approval instance ID. You can obtain the value from:</p>
+     * <p>The approval instance ID. You can obtain the value from the following operations:</p>
      * <ul>
      * <li><a href="~~ListApprovals~~">ListApprovals</a>: Lists approval instances.</li>
      * <li><a href="~~GetApproval~~">GetApproval</a>: Queries the details of an approval instance.</li>

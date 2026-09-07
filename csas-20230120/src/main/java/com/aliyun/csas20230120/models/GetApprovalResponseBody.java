@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApprovalResponseBody extends TeaModel {
     /**
-     * <p>The approval instance.</p>
+     * <p>The approval details list, which typically contains one record.</p>
      */
     @NameInMap("Approval")
     public java.util.List<GetApprovalResponseBodyApproval> approval;
@@ -14,7 +14,7 @@ public class GetApprovalResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>7E9D7ACD-53D5-56EF-A913-79D148D06299</p>
+     * <p>D6707286-A50E-57B1-B2CF-EFAC59E8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,7 +54,7 @@ public class GetApprovalResponseBody extends TeaModel {
          * <p>The username of the operator for the approval progress node.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Smith</p>
+         * <p>user***</p>
          */
         @NameInMap("Username")
         public String username;
@@ -138,7 +138,7 @@ public class GetApprovalResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the action was performed on the approval progress node. The value is a UNIX timestamp in seconds.</p>
+         * <p>The execution time of the approval progress node. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736752000</p>
@@ -202,9 +202,21 @@ public class GetApprovalResponseBody extends TeaModel {
     }
 
     public static class GetApprovalResponseBodyApprovalBackendReportDetailTargetUser extends TeaModel {
+        /**
+         * <p>The SASE user ID of the actual effective user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>su_70a1ed06a900d337527984de27568352fdfed1b19442a886d2a697c0327f****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The username of the actual effective user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user***</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -232,18 +244,45 @@ public class GetApprovalResponseBody extends TeaModel {
     }
 
     public static class GetApprovalResponseBodyApprovalBackendReportDetail extends TeaModel {
+        /**
+         * <p>The associated policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private access***</p>
+         */
         @NameInMap("AssociatedPolicyName")
         public String associatedPolicyName;
 
+        /**
+         * <p>The associated policy type, which is the same as PolicyType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateAccessBlock</p>
+         */
         @NameInMap("AssociatedPolicyType")
         public String associatedPolicyType;
 
+        /**
+         * <p>The remark for the backend report, which is the same as the report reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Temporary access for a project</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The report object. The fields vary based on PolicyType. Fields within the object use camelCase naming.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;applicationId&quot;:&quot;pa-application-eb75f0c80c28****&quot;,&quot;applicationName&quot;:&quot;App***&quot;}</p>
+         */
         @NameInMap("ReportObject")
         public Object reportObject;
 
+        /**
+         * <p>The actual effective user of the backend report.</p>
+         */
         @NameInMap("TargetUser")
         public GetApprovalResponseBodyApprovalBackendReportDetailTargetUser targetUser;
 
@@ -299,7 +338,7 @@ public class GetApprovalResponseBody extends TeaModel {
          * <p>The details of the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;initiatorName&quot;:&quot;John Smith&quot;,&quot;initiatorDept&quot;:&quot;QA Department&quot;,&quot;devType&quot;:&quot;windows&quot;,&quot;deviceType&quot;:&quot;usbStorage&quot;,&quot;deviceId&quot;:&quot;FC216E9E3****&quot;,&quot;approvalEndTimestamp&quot;:1736524799,&quot;approvalReason&quot;:&quot;This is a test&quot;}</p>
+         * <p>{&quot;applicationId&quot;:&quot;pa-application-eb75f0c80c28****&quot;,&quot;applicationName&quot;:&quot;App***&quot;,&quot;associatedPolicyName&quot;:&quot;Private access***&quot;}</p>
          */
         @NameInMap("ApprovalDetail")
         public String approvalDetail;
@@ -314,37 +353,55 @@ public class GetApprovalResponseBody extends TeaModel {
         public String approvalId;
 
         /**
-         * <p>The list of approval progress nodes.</p>
+         * <p>The approval progress list. For backend reports without approval nodes, an empty array is returned.</p>
          */
         @NameInMap("ApprovalProgresses")
         public java.util.List<GetApprovalResponseBodyApprovalApprovalProgresses> approvalProgresses;
 
+        /**
+         * <p>The approval type. Valid values:</p>
+         * <ul>
+         * <li>0: built-in approval.</li>
+         * <li>1: DingTalk approval.</li>
+         * <li>2: WeCom approval.</li>
+         * <li>3: Lark approval.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ApprovalType")
         public Integer approvalType;
 
         /**
-         * <p>The backend report details. This parameter is returned only when ReportType is set to BackendReport.</p>
+         * <p>The backend report details. This value is returned only when ReportType is set to BackendReport.</p>
          */
         @NameInMap("BackendReportDetail")
         public GetApprovalResponseBodyApprovalBackendReportDetail backendReportDetail;
 
         /**
-         * <p>The time when the approval instance was created.</p>
+         * <p>The creation time in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-11-15 22:11:55</p>
+         * <p>2026-08-18 17:48:44</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The creation time as a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1787046524</p>
+         */
         @NameInMap("CreateTimeUnix")
         public Long createTimeUnix;
 
         /**
-         * <p>The department of the user who created the approval instance.</p>
+         * <p>The department path of the report initiator.</p>
          * 
          * <strong>example:</strong>
-         * <p>QA Department</p>
+         * <p>CN=cn***,OU=ou***</p>
          */
         @NameInMap("CreatorDepartment")
         public String creatorDepartment;
@@ -359,7 +416,7 @@ public class GetApprovalResponseBody extends TeaModel {
         public String creatorDevTag;
 
         /**
-         * <p>The ID of the user who created the approval instance.</p>
+         * <p>The ID of the user who created the approval instance. For backend reports, this is the actual effective user, not the administrator.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -371,13 +428,20 @@ public class GetApprovalResponseBody extends TeaModel {
          * <p>The username of the user who created the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Smith</p>
+         * <p>user***</p>
          */
         @NameInMap("CreatorUsername")
         public String creatorUsername;
 
         /**
-         * <p>The effective status of the report. Enabled indicates that the report is active, and Expired indicates that the report has expired.</p>
+         * <p>The effective status of the report. This value is an empty string when the approval status is not Approved. Valid values:</p>
+         * <ul>
+         * <li>Enabled: valid.</li>
+         * <li>Expired: expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("EffectStatus")
         public String effectStatus;
@@ -397,9 +461,14 @@ public class GetApprovalResponseBody extends TeaModel {
          * <li><strong>DomainBlacklist</strong>: Domain name blacklist.</li>
          * <li><strong>DomainWhitelist</strong>: Domain name whitelist.</li>
          * <li><strong>SoftwareBlock</strong>: Software blocking.</li>
-         * <li><strong>AppUninstall</strong>: Agent uninstallation.</li>
+         * <li><strong>DeviceRegistration</strong>: Excess registration.</li>
+         * <li><strong>AppUninstall</strong>: Client uninstallation.</li>
          * <li><strong>DlpSend</strong>: File outbound transfer.</li>
-         * <li><strong>PeripheralBlock</strong>: Peripheral device control.</li>
+         * <li><strong>PeripheralBlock</strong>: Peripheral control.</li>
+         * <li><strong>EndpointHardening</strong>: Endpoint hardening.</li>
+         * <li><strong>oftwareHardening</strong>: Software hardening.</li>
+         * <li><strong>AiAgentBlock</strong>: AI Agent control.</li>
+         * <li><strong>PrivateAccessBlock</strong>: Private access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -421,7 +490,7 @@ public class GetApprovalResponseBody extends TeaModel {
          * <p>The name of the process associated with the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>Approval***</p>
          */
         @NameInMap("ProcessName")
         public String processName;
@@ -430,13 +499,20 @@ public class GetApprovalResponseBody extends TeaModel {
          * <p>The reason for creating the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a test</p>
+         * <p>Temporary access for a project</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>The report type. ApprovalReport indicates an approval report, and BackendReport indicates a backend report.</p>
+         * <p>The report type. Valid values:</p>
+         * <ul>
+         * <li>ApprovalReport: approval report.</li>
+         * <li>BackendReport: backend report.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BackendReport</p>
          */
         @NameInMap("ReportType")
         public String reportType;
@@ -463,7 +539,7 @@ public class GetApprovalResponseBody extends TeaModel {
          * <p>The name of the template associated with the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>Template***</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
@@ -476,6 +552,7 @@ public class GetApprovalResponseBody extends TeaModel {
          * <li><strong>Rejected</strong>: Denied.</li>
          * <li><strong>Revoked</strong>: Revoked.</li>
          * <li><strong>Expired</strong>: Expired.</li>
+         * <li><strong>Deleted</strong>: Deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -485,7 +562,14 @@ public class GetApprovalResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The validity duration type. When the value is Permanent, EndTimestamp returns 0.</p>
+         * <p>The validity duration type. Valid values:</p>
+         * <ul>
+         * <li><strong>FixedTime</strong>: Expires at a specified time.</li>
+         * <li><strong>Permanent</strong>: Permanently valid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Permanent</p>
          */
         @NameInMap("ValidityType")
         public String validityType;

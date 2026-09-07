@@ -1,3 +1,9 @@
+2026-09-07 Version: 1.29.0
+- Support API CreateBackendReport.
+- Support API InvalidateApproval.
+- Support API ListNetBandwidth.
+
+
 2026-08-30 Version: 1.28.0
 - Support API BindSaseUserTag.
 - Support API CreateSaseUserTag.
