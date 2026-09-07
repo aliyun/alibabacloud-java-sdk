@@ -60,14 +60,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1-oxs", "cas.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "cas.aliyuncs.com"),
             new TeaPair("us-east-1", "cas.aliyuncs.com"),
-            new TeaPair("us-west-1", "cas.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "cas.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "cas.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "cas.eu-central-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "cas.me-central-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "cas.ap-south-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "cas.me-east-1.aliyuncs.com")
+            new TeaPair("us-west-1", "cas.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2460,6 +2453,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the status information of a Private Certificate Authority (PCA) instance that you purchased in the Certificate Management Service console by using the instance ID. The status information includes the CA instance status, the number of digital certificates included, and the number of digital certificates issued.
+     * Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Invoke this operation as appropriate.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the details of an instance.</p>
      * 
@@ -2492,6 +2491,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the status information of a Private Certificate Authority (PCA) instance that you purchased in the Certificate Management Service console by using the instance ID. The status information includes the CA instance status, the number of digital certificates included, and the number of digital certificates issued.
+     * Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Invoke this operation as appropriate.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the details of an instance.</p>
      * 
@@ -3481,6 +3486,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by using the IDs of the PCA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
+     * Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves a list of instances.</p>
      * 
@@ -3491,6 +3502,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoReissueFlag)) {
+            query.put("AutoReissueFlag", request.autoReissueFlag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.brand)) {
             query.put("Brand", request.brand);
         }
@@ -3519,6 +3534,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serverDeployFlag)) {
+            query.put("ServerDeployFlag", request.serverDeployFlag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.showSize)) {
             query.put("ShowSize", request.showSize);
         }
@@ -3545,6 +3564,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by using the IDs of the PCA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
+     * Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves a list of instances.</p>
      * 
@@ -4262,7 +4287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>共享证书</p>
+     * <p>Shares a certificate.</p>
      * 
      * @param request ShareCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4298,7 +4323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>共享证书</p>
+     * <p>Shares a certificate.</p>
      * 
      * @param request ShareCertificateRequest
      * @return ShareCertificateResponse
@@ -4840,7 +4865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a Certificate Management Service instance.</p>
+     * <p>Updates an instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4928,7 +4953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a Certificate Management Service instance.</p>
+     * <p>Updates an instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse

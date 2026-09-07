@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
-     * <p>Whether to enable automatic management.</p>
+     * <p>Specifies whether to enable automatic hosting. Valid values:</p>
      * <ul>
-     * <li><p>enable: enabled</p>
-     * </li>
-     * <li><p>disable: disabled</p>
-     * </li>
+     * <li>enable: Enabled.</li>
+     * <li>disable: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String autoReissue;
 
     /**
-     * <p>The name of the instance. When issuing a certificate, this value serves as the default certificate name.</p>
+     * <p>The name of the instance. When a certificate is issued, this name is used as the default name of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -29,7 +27,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String certificateName;
 
     /**
-     * <p>The city where the company or organization of the certificate requester is located. Required when generating a CSR for a DV certificate. Default value: Beijing.</p>
+     * <p>The city where the company or organization of the certificate purchaser is located. This field is required when generating a CSR for a DV certificate. Default value: Beijing.</p>
      * 
      * <strong>example:</strong>
      * <p>Beijing</p>
@@ -38,7 +36,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String city;
 
     /**
-     * <p>The company information ID. Required for OV and EV certificates. Otherwise, you cannot call ApplyCertificate to request a certificate.</p>
+     * <p>The company information ID. This parameter is required for OV and EV certificates. Otherwise, you cannot call the ApplyCertificate operation to apply for a certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>44211</p>
@@ -47,13 +45,13 @@ public class UpdateInstanceRequest extends TeaModel {
     public Long companyId;
 
     /**
-     * <p>The list of contact IDs. You must specify at least one contact. Otherwise, you cannot call ApplyCertificate to request a certificate.</p>
+     * <p>The list of contact IDs. If a contact already exists, you do not need to specify this parameter. If no contact has been configured, specify at least one contact ID. Otherwise, you cannot call the ApplyCertificate operation to apply for a certificate.</p>
      */
     @NameInMap("ContactIdList")
     public java.util.List<Long> contactIdList;
 
     /**
-     * <p>The country or region code of the certificate organization. For example, CN represents China, and US represents the United States. Required when generating a CSR for a DV certificate. Default value: CN.</p>
+     * <p>The country or region code of the certificate organization. For example, CN indicates China and US indicates the United States. This field is required when generating a CSR for a DV certificate. Default value: CN.</p>
      * 
      * <strong>example:</strong>
      * <p>CN</p>
@@ -62,7 +60,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String countryCode;
 
     /**
-     * <p>The CSR content. You can generate a CSR using OpenSSL or Keytool. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How to create a CSR file</a>.</p>
+     * <p>The CSR content. You can use OpenSSL or Keytool to generate a CSR. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file?</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</p>
@@ -71,17 +69,15 @@ public class UpdateInstanceRequest extends TeaModel {
     public String csr;
 
     /**
-     * <p>The domain name to bind to the certificate. Requirements are as follows:</p>
+     * <p>The domain name to which the certificate is bound. Requirements:</p>
      * <ul>
-     * <li><p>Supports single domain names or wildcard domain names (for example, <code>*.aliyundoc.com</code>).</p>
-     * </li>
-     * <li><p>Supports multiple domain names. Separate multiple domain names with commas (,). The first domain determines whether a free domain is included.</p>
-     * </li>
+     * <li>You can specify a single domain name or a wildcard domain name (for example, <code>*.aliyundoc.com</code>).</li>
+     * <li>You can specify multiple domain names. Separate multiple domain names with commas (,). Whether a free domain name is included is determined based on the first domain name.</li>
      * </ul>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice:  </p>
      * </blockquote>
-     * <p>If you bind multiple domain names to the certificate, this parameter is required. This parameter and the <strong>Csr</strong> parameter cannot both be empty. If you set both parameters, the system uses the <strong>CN</strong> field value from the <strong>Csr</strong> as the domain name for the certificate.</p>
+     * <p>When the certificate is bound to multiple domain names, this parameter is required. This parameter and the <strong>Csr</strong> parameter cannot both be empty. If you specify both this parameter and the <strong>Csr</strong> parameter, the <strong>CN</strong> field value in the <strong>Csr</strong> parameter is used as the domain name to which the certificate is bound.</p>
      * 
      * <strong>example:</strong>
      * <p>test.com</p>
@@ -90,12 +86,10 @@ public class UpdateInstanceRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The CSR generation method. Default value: online.</p>
+     * <p>The method used to generate the certificate signing request (CSR). Default value: online. Valid values:</p>
      * <ul>
-     * <li><p>online: The system generates the CSR. The Csr field is ignored.</p>
-     * </li>
-     * <li><p>upload: You upload the CSR. The Csr field is required.</p>
-     * </li>
+     * <li>online: The system generates the CSR. The Csr parameter is ignored.</li>
+     * <li>upload: You upload the CSR. The Csr parameter is required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,18 +109,13 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The certificate algorithm. Default value: RSA_2048.</p>
+     * <p>The certificate algorithm. Default value: RSA_2048. Valid values:</p>
      * <ul>
-     * <li><p><strong>RSA_2048</strong></p>
-     * </li>
-     * <li><p><strong>RSA_3072</strong></p>
-     * </li>
-     * <li><p><strong>RSA_4096</strong></p>
-     * </li>
-     * <li><p><strong>ECC_256</strong></p>
-     * </li>
-     * <li><p><strong>SM2</strong></p>
-     * </li>
+     * <li><strong>RSA_2048</strong></li>
+     * <li><strong>RSA_3072</strong></li>
+     * <li><strong>RSA_4096</strong></li>
+     * <li><strong>ECC_256</strong></li>
+     * <li><strong>SM2</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,7 +125,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String keyAlgorithm;
 
     /**
-     * <p>The province or region where the company is located. Required when generating a CSR for a DV certificate. Default value: Beijing.</p>
+     * <p>The province or region where the company is located. This field is required when generating a CSR for a DV certificate. Default value: Beijing.</p>
      * 
      * <strong>example:</strong>
      * <p>Beijing</p>
@@ -145,7 +134,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String province;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ae******4wia</p>
@@ -154,18 +143,16 @@ public class UpdateInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<UpdateInstanceRequestTags> tags;
 
     /**
-     * <p>The certificate validation method.</p>
+     * <p>The validation method for the certificate application. Valid values:</p>
      * <ul>
-     * <li><p>DNS: DNS validation using TXT or CNAME records.</p>
-     * </li>
-     * <li><p>HTTP: File-based validation.</p>
-     * </li>
+     * <li>DNS: DNS validation, which uses TXT or CNAME records.</li>
+     * <li>HTTP: File validation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -301,8 +288,8 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the instance. Valid values for N: <strong>1</strong> to <strong>20</strong>. If you specify this value, it cannot be an empty string.</p>
-         * <p>It can contain up to 64 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>, and it cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, the value cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -311,8 +298,8 @@ public class UpdateInstanceRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the instance. Valid values for N: <strong>1</strong> to <strong>20</strong>. If you specify this value, it can be an empty string.</p>
-         * <p>It can contain up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>, and it cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, the value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

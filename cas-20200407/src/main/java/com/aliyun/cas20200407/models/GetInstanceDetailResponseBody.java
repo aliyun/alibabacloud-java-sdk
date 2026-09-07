@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetInstanceDetailResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether automatic managed renewal is enabled. Valid values:</p>
+     * <p>Indicates whether automatic hosting is enabled. Valid values:</p>
      * <ul>
      * <li>enable: Enabled.</li>
-     * <li>disable: Disabled.</li>
+     * <li>disable: Not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -16,6 +16,19 @@ public class GetInstanceDetailResponseBody extends TeaModel {
      */
     @NameInMap("AutoReissue")
     public String autoReissue;
+
+    /**
+     * <p>Indicates whether the current version includes automatic hosting. Valid values:</p>
+     * <ul>
+     * <li>1: Included.</li>
+     * <li>0: Not included.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("AutoReissueFlag")
+    public Integer autoReissueFlag;
 
     /**
      * <p>The average waiting time for issuing a certificate of this specification. Unit: seconds.</p>
@@ -36,10 +49,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String brand;
 
     /**
-     * <p>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.
-     *   --For the China site, the format is certificate ID + &quot;-cn-hangzhou&quot;.
-     * For the China site, the format is certificate ID + &quot;-ap-southeast-1&quot;.
-     * For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the China site is &quot;123-ap-southeast-1&quot;.</p>
+     * <p>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
+     * <ul>
+     * <li>China site: certificate ID + &quot;-cn-hangzhou&quot;</li>
+     * <li>International site: certificate ID + &quot;-ap-southeast-1&quot;</li>
+     * </ul>
+     * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>22783111-cn-hangzhou</p>
@@ -57,7 +72,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public Integer certificateId;
 
     /**
-     * <p>The name of the instance. When a certificate is issued, this name is used as the default certificate name.</p>
+     * <p>The name of the instance. When a certificate is issued, this name is used as the default name of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -95,10 +110,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     /**
      * <p>The status of the certificate. Valid values:</p>
      * <ul>
-     * <li><strong>issued</strong>: issued.</li>
-     * <li><strong>revoked</strong>: revoked.</li>
-     * <li><strong>willExpire</strong>: about to expire.</li>
-     * <li><strong>expired</strong>: expired.</li>
+     * <li><strong>issued</strong>: Issued.</li>
+     * <li><strong>revoked</strong>: Revoked.</li>
+     * <li><strong>willExpire</strong>: About to expire.</li>
+     * <li><strong>expired</strong>: Expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -159,6 +174,24 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String csr;
 
     /**
+     * <p>The number of cloud resources to which the certificate has been deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
+    @NameInMap("DeploymentResourceCount")
+    public Integer deploymentResourceCount;
+
+    /**
+     * <p>The used quota for cloud server deployment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
+    @NameInMap("DeploymentUseCount")
+    public Integer deploymentUseCount;
+
+    /**
      * <p>The list of associated expert service DingTalk groups.</p>
      */
     @NameInMap("DingGroupList")
@@ -174,7 +207,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String domain;
 
     /**
-     * <p>The list of domain validations.</p>
+     * <p>The list of domain names to be validated.</p>
      */
     @NameInMap("DomainValidationList")
     public java.util.List<GetInstanceDetailResponseBodyDomainValidationList> domainValidationList;
@@ -189,10 +222,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public Integer fullDomainCount;
 
     /**
-     * <p>The CSR generation method. Valid values:</p>
+     * <p>The method used to generate the certificate signing request. Valid values:</p>
      * <ul>
-     * <li>online: system-generated. The Csr field is ignored.</li>
-     * <li>upload: user-uploaded. The Csr field is required.</li>
+     * <li>online: System-generated. The Csr field is ignored.</li>
+     * <li>upload: User-uploaded. The Csr field is required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -231,8 +264,8 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     /**
      * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><strong>BUY</strong>: formal certificate.</li>
-     * <li><strong>TEST</strong>: test certificate.</li>
+     * <li>BUY: official certificate</li>
+     * <li>TEST: test certificate</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -258,7 +291,29 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String keyAlgorithm;
 
     /**
-     * <p>The end time of the instance purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</p>
+     * <p>Indicates whether the domain name monitoring quota can be expanded. Valid values:</p>
+     * <ul>
+     * <li>1: Yes.</li>
+     * <li>0: No.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("MonitorExpandFlag")
+    public Integer monitorExpandFlag;
+
+    /**
+     * <p>The used quota for domain name monitoring.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("MonitorUseCount")
+    public Integer monitorUseCount;
+
+    /**
+     * <p>The end time of the instance at the time of purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -267,7 +322,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public Long orderEndTime;
 
     /**
-     * <p>The start time of the instance purchase, in UNIX timestamp format. This value is used to determine the refund time limit. The value is accurate to the second.</p>
+     * <p>The start time of the instance at the time of purchase, in UNIX timestamp format. This value is used to determine the refund time limit. The value is accurate to the second.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -276,7 +331,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public Long orderStartTime;
 
     /**
-     * <p>The result returned by the certification authority (CA) during the last certificate operation.</p>
+     * <p>The result returned by the CA during the last certificate operation.</p>
      * 
      * <strong>example:</strong>
      * <p>pending</p>
@@ -294,7 +349,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String province;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>B2CE1D02-6D5E-56E5-A9BD-EE288255C7F9</p>
@@ -323,13 +378,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><strong>inactive</strong>: pending use.</li>
-     * <li><strong>pending</strong>: under review. The latest certificate is being reviewed.</li>
-     * <li><strong>willExpire</strong>: the instance is about to expire.</li>
-     * <li><strong>expired</strong>: the instance has expired.</li>
-     * <li><strong>refund</strong>: refunded.</li>
-     * <li><strong>normal</strong>: normal.</li>
-     * <li><strong>closed</strong>: closed and unavailable.</li>
+     * <li><strong>inactive</strong>: Pending use.</li>
+     * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
+     * <li><strong>willExpire</strong>: The instance is about to expire.</li>
+     * <li><strong>expired</strong>: The instance has expired.</li>
+     * <li><strong>refund</strong>: Refunded.</li>
+     * <li><strong>normal</strong>: Normal.</li>
+     * <li><strong>closed</strong>: Closed. The instance cannot be used.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -345,13 +400,31 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public java.util.List<GetInstanceDetailResponseBodyTags> tags;
 
     /**
+     * <p>The total quota for cloud server deployment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
+    @NameInMap("TotalDeploymentCount")
+    public Integer totalDeploymentCount;
+
+    /**
+     * <p>The total quota for domain name monitoring.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
+    @NameInMap("TotalMonitorCount")
+    public Integer totalMonitorCount;
+
+    /**
      * <p>The upgrade status of the instance. Valid values:</p>
      * <ul>
-     * <li><p>none: the instance has not been upgraded.</p>
+     * <li><p>none: The instance has not been upgraded.</p>
      * </li>
-     * <li><p>payed: the instance upgrade has been paid.</p>
+     * <li><p>payed: The instance upgrade has been paid.</p>
      * </li>
-     * <li><p>issued: the latest certificate has been issued after the instance upgrade.</p>
+     * <li><p>issued: The latest certificate has been issued for the instance upgrade.</p>
      * </li>
      * </ul>
      * 
@@ -362,10 +435,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String upgradeStatus;
 
     /**
-     * <p>The certificate validation method. Valid values:</p>
+     * <p>The validation method for the certificate application. Valid values:</p>
      * <ul>
-     * <li>DNS: DNS validation, using TXT or CNAME.</li>
-     * <li>HTTP: file-based validation.</li>
+     * <li>DNS: DNS validation, using TXT or CNAME records.</li>
+     * <li>HTTP: File-based validation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -373,6 +446,15 @@ public class GetInstanceDetailResponseBody extends TeaModel {
      */
     @NameInMap("ValidationMethod")
     public String validationMethod;
+
+    /**
+     * <p>The version type. Valid values: FOTA: system upgrade. APP: application upgrade.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("VersionType")
+    public String versionType;
 
     /**
      * <p>The number of wildcard domain names.</p>
@@ -394,6 +476,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     }
     public String getAutoReissue() {
         return this.autoReissue;
+    }
+
+    public GetInstanceDetailResponseBody setAutoReissueFlag(Integer autoReissueFlag) {
+        this.autoReissueFlag = autoReissueFlag;
+        return this;
+    }
+    public Integer getAutoReissueFlag() {
+        return this.autoReissueFlag;
     }
 
     public GetInstanceDetailResponseBody setAverageWaitingTime(String averageWaitingTime) {
@@ -516,6 +606,22 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         return this.csr;
     }
 
+    public GetInstanceDetailResponseBody setDeploymentResourceCount(Integer deploymentResourceCount) {
+        this.deploymentResourceCount = deploymentResourceCount;
+        return this;
+    }
+    public Integer getDeploymentResourceCount() {
+        return this.deploymentResourceCount;
+    }
+
+    public GetInstanceDetailResponseBody setDeploymentUseCount(Integer deploymentUseCount) {
+        this.deploymentUseCount = deploymentUseCount;
+        return this;
+    }
+    public Integer getDeploymentUseCount() {
+        return this.deploymentUseCount;
+    }
+
     public GetInstanceDetailResponseBody setDingGroupList(java.util.List<GetInstanceDetailResponseBodyDingGroupList> dingGroupList) {
         this.dingGroupList = dingGroupList;
         return this;
@@ -596,6 +702,22 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         return this.keyAlgorithm;
     }
 
+    public GetInstanceDetailResponseBody setMonitorExpandFlag(Integer monitorExpandFlag) {
+        this.monitorExpandFlag = monitorExpandFlag;
+        return this;
+    }
+    public Integer getMonitorExpandFlag() {
+        return this.monitorExpandFlag;
+    }
+
+    public GetInstanceDetailResponseBody setMonitorUseCount(Integer monitorUseCount) {
+        this.monitorUseCount = monitorUseCount;
+        return this;
+    }
+    public Integer getMonitorUseCount() {
+        return this.monitorUseCount;
+    }
+
     public GetInstanceDetailResponseBody setOrderEndTime(Long orderEndTime) {
         this.orderEndTime = orderEndTime;
         return this;
@@ -668,6 +790,22 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         return this.tags;
     }
 
+    public GetInstanceDetailResponseBody setTotalDeploymentCount(Integer totalDeploymentCount) {
+        this.totalDeploymentCount = totalDeploymentCount;
+        return this;
+    }
+    public Integer getTotalDeploymentCount() {
+        return this.totalDeploymentCount;
+    }
+
+    public GetInstanceDetailResponseBody setTotalMonitorCount(Integer totalMonitorCount) {
+        this.totalMonitorCount = totalMonitorCount;
+        return this;
+    }
+    public Integer getTotalMonitorCount() {
+        return this.totalMonitorCount;
+    }
+
     public GetInstanceDetailResponseBody setUpgradeStatus(String upgradeStatus) {
         this.upgradeStatus = upgradeStatus;
         return this;
@@ -682,6 +820,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     }
     public String getValidationMethod() {
         return this.validationMethod;
+    }
+
+    public GetInstanceDetailResponseBody setVersionType(String versionType) {
+        this.versionType = versionType;
+        return this;
+    }
+    public String getVersionType() {
+        return this.versionType;
     }
 
     public GetInstanceDetailResponseBody setWildcardDomainCount(Integer wildcardDomainCount) {
@@ -714,8 +860,8 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the expert service DingTalk group. Valid values:</p>
          * <ul>
-         * <li>expedite: application assistance.</li>
-         * <li>remote: offline deployment.</li>
+         * <li>expedite: application assistance</li>
+         * <li>remote: offline deployment</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -828,7 +974,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         public String validationType;
 
         /**
-         * <p>The validation host record value.</p>
+         * <p>The host record value for validation.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

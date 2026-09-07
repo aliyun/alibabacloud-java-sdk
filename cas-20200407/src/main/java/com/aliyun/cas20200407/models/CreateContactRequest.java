@@ -46,7 +46,7 @@ public class CreateContactRequest extends TeaModel {
      * <p>The webhook URLs of DingTalk, WeCom, or Lark chatbots. The value is a string in list format.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5\\&quot;]</a></p>
+     * <p>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/XXX%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/XXX\\&quot;]</a></p>
      */
     @NameInMap("Webhooks")
     public String webhooks;

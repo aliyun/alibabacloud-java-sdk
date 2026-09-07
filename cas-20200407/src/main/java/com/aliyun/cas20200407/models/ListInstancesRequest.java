@@ -5,6 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
+     * <p>Specifies whether the instance is managed. Valid values:</p>
+     * <ul>
+     * <li>1: Managed.</li>
+     * <li>0: Not managed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("AutoReissueFlag")
+    public Integer autoReissueFlag;
+
+    /**
      * <p>The CA brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +62,7 @@ public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li>BUY: official certificate.</li>
+     * <li>BUY: formal certificate.</li>
      * <li>TEST: test certificate.</li>
      * </ul>
      * 
@@ -78,6 +91,19 @@ public class ListInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Specifies whether to return only instances that meet server deployment conditions. Valid values:</p>
+     * <ul>
+     * <li>1: Yes.</li>
+     * <li>0: No.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ServerDeployFlag")
+    public Integer serverDeployFlag;
+
+    /**
      * <p>The number of instances to display per page in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -91,11 +117,11 @@ public class ListInstancesRequest extends TeaModel {
      * <ul>
      * <li><strong>inactive</strong>: Pending use.</li>
      * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
-     * <li><strong>willExpire</strong>: About to expire.</li>
-     * <li><strong>expired</strong>: Expired.</li>
+     * <li><strong>willExpire</strong>: The instance is about to expire.</li>
+     * <li><strong>expired</strong>: The instance has expired.</li>
      * <li><strong>refund</strong>: Refunded.</li>
      * <li><strong>normal</strong>: Normal.</li>
-     * <li><strong>closed</strong>: Closed and unavailable.</li>
+     * <li><strong>closed</strong>: Closed. The instance is unavailable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,6 +133,14 @@ public class ListInstancesRequest extends TeaModel {
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesRequest setAutoReissueFlag(Integer autoReissueFlag) {
+        this.autoReissueFlag = autoReissueFlag;
+        return this;
+    }
+    public Integer getAutoReissueFlag() {
+        return this.autoReissueFlag;
     }
 
     public ListInstancesRequest setBrand(String brand) {
@@ -163,6 +197,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListInstancesRequest setServerDeployFlag(Integer serverDeployFlag) {
+        this.serverDeployFlag = serverDeployFlag;
+        return this;
+    }
+    public Integer getServerDeployFlag() {
+        return this.serverDeployFlag;
     }
 
     public ListInstancesRequest setShowSize(Integer showSize) {
