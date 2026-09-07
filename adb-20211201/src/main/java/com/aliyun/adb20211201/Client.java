@@ -141,6 +141,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds tags to a knowledge base document.</p>
+     * 
+     * @param request AddKnowledgeTagsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddKnowledgeTagsResponse
+     */
+    public AddKnowledgeTagsResponse addKnowledgeTagsWithOptions(AddKnowledgeTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileLocation)) {
+            query.put("FileLocation", request.fileLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddKnowledgeTags"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddKnowledgeTagsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds tags to a knowledge base document.</p>
+     * 
+     * @param request AddKnowledgeTagsRequest
+     * @return AddKnowledgeTagsResponse
+     */
+    public AddKnowledgeTagsResponse addKnowledgeTags(AddKnowledgeTagsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addKnowledgeTagsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds authorized users to a knowledge base document.</p>
+     * 
+     * @param request AddKnowledgeUploadUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddKnowledgeUploadUserResponse
+     */
+    public AddKnowledgeUploadUserResponse addKnowledgeUploadUserWithOptions(AddKnowledgeUploadUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileLocation)) {
+            query.put("FileLocation", request.fileLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.users)) {
+            query.put("Users", request.users);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddKnowledgeUploadUser"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddKnowledgeUploadUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds authorized users to a knowledge base document.</p>
+     * 
+     * @param request AddKnowledgeUploadUserRequest
+     * @return AddKnowledgeUploadUserResponse
+     */
+    public AddKnowledgeUploadUserResponse addKnowledgeUploadUser(AddKnowledgeUploadUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addKnowledgeUploadUserWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>For a list of service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -1026,7 +1130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
+     * <p>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a database account for a cluster.</p>
@@ -1039,6 +1143,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateAccountShrinkRequest request = new CreateAccountShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.promqlInsertPrivileges)) {
+            request.promqlInsertPrivilegesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.promqlInsertPrivileges, "PromqlInsertPrivileges", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.promqlSelectPrivileges)) {
+            request.promqlSelectPrivilegesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.promqlSelectPrivileges, "PromqlSelectPrivileges", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.ramUserList)) {
             request.ramUserListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ramUserList, "RamUserList", "json");
         }
@@ -1068,8 +1180,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Engine", request.engine);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.promqlInsertPrivilegesShrink)) {
+            query.put("PromqlInsertPrivileges", request.promqlInsertPrivilegesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promqlSelectNodePercentage)) {
+            query.put("PromqlSelectNodePercentage", request.promqlSelectNodePercentage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promqlSelectPrivilegesShrink)) {
+            query.put("PromqlSelectPrivileges", request.promqlSelectPrivilegesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ramUserListShrink)) {
             query.put("RamUserList", request.ramUserListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            query.put("ResourceGroupName", request.resourceGroupName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1091,7 +1219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
+     * <p>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a database account for a cluster.</p>
@@ -2054,7 +2182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
@@ -2203,7 +2331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
@@ -2834,10 +2962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a database account from an AnalyticDB for MySQL cluster.</p>
+     * <p>Deletes a database account from a cluster.</p>
      * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2856,6 +2984,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
             query.put("Engine", request.engine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            query.put("ResourceGroupName", request.resourceGroupName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2877,10 +3009,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a database account from an AnalyticDB for MySQL cluster.</p>
+     * <p>Deletes a database account from a cluster.</p>
      * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -3370,6 +3502,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteFormationCrawlerResponse deleteFormationCrawler(DeleteFormationCrawlerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteFormationCrawlerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a knowledge base document.</p>
+     * 
+     * @param request DeleteKnowledgeFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKnowledgeFileResponse
+     */
+    public DeleteKnowledgeFileResponse deleteKnowledgeFileWithOptions(DeleteKnowledgeFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileLocation)) {
+            query.put("FileLocation", request.fileLocation);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKnowledgeFile"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKnowledgeFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a knowledge base document.</p>
+     * 
+     * @param request DeleteKnowledgeFileRequest
+     * @return DeleteKnowledgeFileResponse
+     */
+    public DeleteKnowledgeFileResponse deleteKnowledgeFile(DeleteKnowledgeFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKnowledgeFileWithOptions(request, runtime);
     }
 
     /**
@@ -4102,7 +4282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration information of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the database accounts of a cluster.</p>
@@ -4130,6 +4310,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            query.put("ResourceGroupName", request.resourceGroupName);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4149,7 +4333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration information of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the database accounts of a cluster.</p>
@@ -6364,10 +6548,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service endpoint address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</p>
+     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>View target cluster performance data.</p>
+     * <p>Queries the performance data of a specified cluster.</p>
      * 
      * @param request DescribeDBClusterPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6419,10 +6603,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service endpoint address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</p>
+     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>View target cluster performance data.</p>
+     * <p>Queries the performance data of a specified cluster.</p>
      * 
      * @param request DescribeDBClusterPerformanceRequest
      * @return DescribeDBClusterPerformanceResponse
@@ -12555,8 +12739,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12605,8 +12789,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -13394,6 +13578,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the tags of a knowledge base document.</p>
+     * 
+     * @param request ListKnowledgeTagsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeTagsResponse
+     */
+    public ListKnowledgeTagsResponse listKnowledgeTagsWithOptions(ListKnowledgeTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileLocation)) {
+            query.put("FileLocation", request.fileLocation);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeTags"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeTagsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tags of a knowledge base document.</p>
+     * 
+     * @param request ListKnowledgeTagsRequest
+     * @return ListKnowledgeTagsResponse
+     */
+    public ListKnowledgeTagsResponse listKnowledgeTags(ListKnowledgeTagsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeTagsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the authorized users of a knowledge base document.</p>
+     * 
+     * @param request ListKnowledgeUploadUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeUploadUserResponse
+     */
+    public ListKnowledgeUploadUserResponse listKnowledgeUploadUserWithOptions(ListKnowledgeUploadUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileLocation)) {
+            query.put("FileLocation", request.fileLocation);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeUploadUser"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeUploadUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the authorized users of a knowledge base document.</p>
+     * 
+     * @param request ListKnowledgeUploadUserRequest
+     * @return ListKnowledgeUploadUserResponse
+     */
+    public ListKnowledgeUploadUserResponse listKnowledgeUploadUser(ListKnowledgeUploadUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeUploadUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a list of lake storages.</p>
      * 
      * @param request ListLakeStoragesRequest
@@ -14062,10 +14342,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the description of a database account for an AnalyticDB for MySQL cluster.</p>
+     * <p>Modifies the description of a database account for a specified cluster.</p>
      * 
      * @param request ModifyAccountDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14090,6 +14370,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Engine", request.engine);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            query.put("ResourceGroupName", request.resourceGroupName);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -14109,10 +14393,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the description of a database account for an AnalyticDB for MySQL cluster.</p>
+     * <p>Modifies the description of a database account for a specified cluster.</p>
      * 
      * @param request ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
@@ -14124,7 +14408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the permissions of a database account.</p>
@@ -14141,6 +14425,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.accountPrivilegesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accountPrivileges, "AccountPrivileges", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.promqlInsertPrivileges)) {
+            request.promqlInsertPrivilegesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.promqlInsertPrivileges, "PromqlInsertPrivileges", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.promqlSelectPrivileges)) {
+            request.promqlSelectPrivilegesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.promqlSelectPrivileges, "PromqlSelectPrivileges", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
             query.put("AccountName", request.accountName);
@@ -14154,8 +14446,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.promqlInsertPrivilegesShrink)) {
+            query.put("PromqlInsertPrivileges", request.promqlInsertPrivilegesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promqlSelectNodePercentage)) {
+            query.put("PromqlSelectNodePercentage", request.promqlSelectNodePercentage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promqlSelectPrivilegesShrink)) {
+            query.put("PromqlSelectPrivileges", request.promqlSelectPrivilegesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            query.put("ResourceGroupName", request.resourceGroupName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -14177,7 +14485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the permissions of a database account.</p>
@@ -14530,10 +14838,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the SQL audit settings of an AnalyticDB for MySQL cluster.</p>
+     * <p>Modifies the SQL audit log settings of a cluster.</p>
      * 
      * @param request ModifyAuditLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14593,10 +14901,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the SQL audit settings of an AnalyticDB for MySQL cluster.</p>
+     * <p>Modifies the SQL audit log settings of a cluster.</p>
      * 
      * @param request ModifyAuditLogConfigRequest
      * @return ModifyAuditLogConfigResponse
@@ -14684,10 +14992,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the backup policy of an AnalyticDB for MySQL cluster.</p>
+     * <p>Modifies the backup policy of a cluster.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14755,10 +15063,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the backup policy of an AnalyticDB for MySQL cluster.</p>
+     * <p>Modifies the backup policy of a cluster.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
@@ -15326,7 +15634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
+     * <p>For the endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Changes the resource group of a cluster.</p>
@@ -15467,7 +15775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
+     * <p>For the endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Changes the resource group of a cluster.</p>
@@ -16418,6 +16726,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes tags from a knowledge base document.</p>
+     * 
+     * @param request RemoveKnowledgeTagsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveKnowledgeTagsResponse
+     */
+    public RemoveKnowledgeTagsResponse removeKnowledgeTagsWithOptions(RemoveKnowledgeTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileLocation)) {
+            query.put("FileLocation", request.fileLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveKnowledgeTags"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveKnowledgeTagsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes tags from a knowledge base document.</p>
+     * 
+     * @param request RemoveKnowledgeTagsRequest
+     * @return RemoveKnowledgeTagsResponse
+     */
+    public RemoveKnowledgeTagsResponse removeKnowledgeTags(RemoveKnowledgeTagsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeKnowledgeTagsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the name of a semantic view.</p>
      * 
      * @param request RenameSemanticViewRequest
@@ -16534,10 +16894,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets the password of a database account for an AnalyticDB for MySQL cluster.</p>
+     * <p>Resets the password of a database account for a specified cluster.</p>
      * 
      * @param request ResetAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16566,6 +16926,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Engine", request.engine);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            query.put("ResourceGroupName", request.resourceGroupName);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -16585,10 +16949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets the password of a database account for an AnalyticDB for MySQL cluster.</p>
+     * <p>Resets the password of a database account for a specified cluster.</p>
      * 
      * @param request ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse

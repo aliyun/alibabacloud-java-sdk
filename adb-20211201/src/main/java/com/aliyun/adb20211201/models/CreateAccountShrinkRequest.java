@@ -12,7 +12,7 @@ public class CreateAccountShrinkRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>数据库连接测试账号</p>
+     * <p>Database connection test account</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
@@ -74,8 +74,8 @@ public class CreateAccountShrinkRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>AnalyticDB</strong> (default): AnalyticDB for MySQL engine.</li>
-     * <li><strong>Clickhouse</strong>: wide table engine.</li>
+     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,11 +84,23 @@ public class CreateAccountShrinkRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    @NameInMap("PromqlInsertPrivileges")
+    public String promqlInsertPrivilegesShrink;
+
+    @NameInMap("PromqlSelectNodePercentage")
+    public Double promqlSelectNodePercentage;
+
+    @NameInMap("PromqlSelectPrivileges")
+    public String promqlSelectPrivilegesShrink;
+
     /**
-     * <p>The list of Alibaba Cloud Resource Access Management (RAM) user IDs to attach. Currently, only one RAM user can be attached.</p>
+     * <p>The list of Alibaba Cloud RAM user IDs to bind. Currently, only one RAM user can be bound.</p>
      */
     @NameInMap("RamUserList")
     public String ramUserListShrink;
+
+    @NameInMap("ResourceGroupName")
+    public String resourceGroupName;
 
     public static CreateAccountShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAccountShrinkRequest self = new CreateAccountShrinkRequest();
@@ -143,12 +155,44 @@ public class CreateAccountShrinkRequest extends TeaModel {
         return this.engine;
     }
 
+    public CreateAccountShrinkRequest setPromqlInsertPrivilegesShrink(String promqlInsertPrivilegesShrink) {
+        this.promqlInsertPrivilegesShrink = promqlInsertPrivilegesShrink;
+        return this;
+    }
+    public String getPromqlInsertPrivilegesShrink() {
+        return this.promqlInsertPrivilegesShrink;
+    }
+
+    public CreateAccountShrinkRequest setPromqlSelectNodePercentage(Double promqlSelectNodePercentage) {
+        this.promqlSelectNodePercentage = promqlSelectNodePercentage;
+        return this;
+    }
+    public Double getPromqlSelectNodePercentage() {
+        return this.promqlSelectNodePercentage;
+    }
+
+    public CreateAccountShrinkRequest setPromqlSelectPrivilegesShrink(String promqlSelectPrivilegesShrink) {
+        this.promqlSelectPrivilegesShrink = promqlSelectPrivilegesShrink;
+        return this;
+    }
+    public String getPromqlSelectPrivilegesShrink() {
+        return this.promqlSelectPrivilegesShrink;
+    }
+
     public CreateAccountShrinkRequest setRamUserListShrink(String ramUserListShrink) {
         this.ramUserListShrink = ramUserListShrink;
         return this;
     }
     public String getRamUserListShrink() {
         return this.ramUserListShrink;
+    }
+
+    public CreateAccountShrinkRequest setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
     }
 
 }

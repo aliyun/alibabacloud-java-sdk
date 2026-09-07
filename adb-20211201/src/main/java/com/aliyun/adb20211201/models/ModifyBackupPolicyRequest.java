@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The number of days for which to retain full backup files. Valid values: 7 to 730.</p>
+     * <p>The number of days for which full backups are retained. Valid values: 7 to 730.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the default value 7 is used.</p>
+     * <p>If you do not specify this parameter, the default value is 7.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupRetentionPeriod;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,14 +28,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable log backup. Valid values:</p>
+     * <p>Specifies whether to enable log (real-time) backup. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disable</strong></li>
-     * </ul>
-     * <blockquote>
-     * <p> If you do not specify this parameter, the default value Enable is used.</p>
+     * <li><strong>Enable</strong>: Enabled.</li>
+     * <li><strong>Disable</strong>: Disabled.<blockquote>
+     * <p>If you do not specify this parameter, log backup is enabled by default.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Enable</p>
@@ -43,9 +44,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String enableBackupLog;
 
     /**
-     * <p>The number of days for which to retain log backup files. Valid values: 7 to 730.</p>
+     * <p>The number of days for which log (real-time) backups are retained. Valid values: 7 to 730.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the default value 7 is used.</p>
+     * <p>If you do not specify this parameter, the default value is 7.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,18 +62,18 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The days of the week on which to perform a full backup. Separate multiple values with commas (,). Valid values:</p>
+     * <p>The full backup cycle. Separate multiple values with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>Monday</strong></li>
-     * <li><strong>Tuesday</strong></li>
-     * <li><strong>Wednesday</strong></li>
-     * <li><strong>Thursday</strong></li>
-     * <li><strong>Friday</strong></li>
-     * <li><strong>Saturday</strong></li>
-     * <li><strong>Sunday</strong></li>
+     * <li><strong>Monday</strong>: Monday.</li>
+     * <li><strong>Tuesday</strong>: Tuesday.</li>
+     * <li><strong>Wednesday</strong>: Wednesday.</li>
+     * <li><strong>Thursday</strong>: Thursday.</li>
+     * <li><strong>Friday</strong>: Friday.</li>
+     * <li><strong>Saturday</strong>: Saturday.</li>
+     * <li><strong>Sunday</strong>: Sunday.</li>
      * </ul>
      * <blockquote>
-     * <p> To ensure data security, we recommend that you specify at least two values.</p>
+     * <p>To ensure data security, select at least two days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,9 +83,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The start time to perform a full backup. Specify the time in the HH:mmZ-HH:mmZ format. The time must be in UTC.</p>
+     * <p>The start time of the full backup. Specify the time in the HH:mmZ-HH:mmZ format (UTC).</p>
      * <blockquote>
-     * <p> The time range must be 1 hour.</p>
+     * <p>The time range is limited to 1 hour.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

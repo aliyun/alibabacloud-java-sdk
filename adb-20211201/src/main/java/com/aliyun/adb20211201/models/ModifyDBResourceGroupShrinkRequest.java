@@ -11,7 +11,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String atmConfigShrink;
 
     /**
-     * <p>The automatic stop interval.</p>
+     * <p>The auto-stop interval.</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -20,19 +20,19 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String autoStopInterval;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>Reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("ClusterMode")
     public String clusterMode;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>Reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("ClusterSizeResource")
     public String clusterSizeResource;
@@ -49,7 +49,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable the spot instance feature for the resource group. After the spot instance feature is enabled, the unit price of resources is reduced, but the resources may be released. Only Job resource groups support this feature. Valid values:</p>
+     * <p>Specifies whether to enable the spot instance feature for the resource group. After spot instances are enabled, the unit price of resources is reduced, but the resources may be released. Only Job resource groups support this feature. Valid values:</p>
      * <ul>
      * <li><strong>True</strong>: Enables the spot instance feature.</li>
      * <li><strong>False</strong>: Disables the spot instance feature.</li>
@@ -94,7 +94,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
      * <ul>
      * <li><strong>Interactive</strong></li>
      * <li><strong>Job</strong><blockquote>
-     * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
+     * <p>For more information about Data Lakehouse Edition resource groups, refer to <a href="https://help.aliyun.com/document_detail/428610.html">Resource group introduction</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -107,10 +107,10 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>Reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("MaxClusterCount")
     public Integer maxClusterCount;
@@ -118,8 +118,8 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The maximum reserved computing resources.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the unallocated resources of the cluster, in increments of 16 ACUs.</li>
-     * <li>If the resource group type is Job, the maximum reserved computing resources is the unallocated resources of the cluster, in increments of 8 ACUs.</li>
+     * <li>If the resource group type is Interactive, the maximum reserved computing resources are the current unallocated resources of the cluster, in increments of 16 ACUs.</li>
+     * <li>If the resource group type is Job, the maximum reserved computing resources are the current unallocated resources of the cluster, in increments of 8 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String maxComputeResource;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>Reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter. Not applicable.</p>
@@ -138,10 +138,10 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public Integer maxGpuQuantity;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>Reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("MinClusterCount")
     public Integer minClusterCount;
@@ -149,8 +149,8 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The minimum reserved computing resources.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACUs.</li>
-     * <li>If the resource group type is Job, the minimum reserved computing resources is 0 ACUs.</li>
+     * <li>If the resource group type is Interactive, the minimum reserved computing resources are 16 ACUs.</li>
+     * <li>If the resource group type is Job, the minimum reserved computing resources are 0 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String minComputeResource;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>Reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter. Not applicable.</p>
@@ -193,7 +193,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String rulesShrink;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>Reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter. Not applicable.</p>
@@ -211,7 +211,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>Reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter. Not applicable.</p>

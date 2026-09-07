@@ -11,7 +11,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     public CreateDBResourceGroupRequestAtmConfig atmConfig;
 
     /**
-     * <p>The automatic stop interval, in minutes (m).</p>
+     * <p>The auto-stop interval, in minutes (m).</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -69,8 +69,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the spot instance feature for the resource group. After the spot instance feature is enabled, the unit price of resources is reduced, but the resources may be released. Only Job resource groups support this feature. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong>: enables the spot instance feature.</li>
-     * <li><strong>False</strong>: disables the spot instance feature.</li>
+     * <li><strong>True</strong>: Enables the spot instance feature.</li>
+     * <li><strong>False</strong>: Disables the spot instance feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     public java.util.Map<String, ?> engineParams;
 
     /**
-     * <p>The GPU time-sharing elastic plan.</p>
+     * <p>The GPU time-based elastic plan.</p>
      */
     @NameInMap("GpuElasticPlan")
     public CreateDBResourceGroupRequestGpuElasticPlan gpuElasticPlan;
@@ -127,7 +127,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
      * <ul>
      * <li><strong>Interactive</strong></li>
      * <li><strong>Job</strong><blockquote>
-     * <p>For more information about resource groups of the Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
+     * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Introduction to resource groups (Data Lakehouse Edition)</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -153,8 +153,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The maximum reserved computing resources, in ACUs.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 16 ACUs.</li>
-     * <li>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 8 ACUs.</li>
+     * <li>If the resource group type is Interactive, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 16 ACUs.</li>
+     * <li>If the resource group type is Job, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 8 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -186,8 +186,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The minimum reserved computing resources, in ACUs.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACUs.</li>
-     * <li>If the resource group type is Job, the minimum reserved computing resources is 0 ACUs.</li>
+     * <li>If the resource group type is Interactive, the minimum reserved computing resources are 16 ACUs.</li>
+     * <li>If the resource group type is Job, the minimum reserved computing resources are 0 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -235,9 +235,9 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The scaling policy of the resource group. Valid values:</p>
      * <ul>
-     * <li>AutoScaling: enables the AutoScaling automatic scaling policy.</li>
-     * <li>Disable: disables automatic scaling.</li>
-     * <li>MultiCluster: enables the MultiCluster automatic scaling policy.</li>
+     * <li>AutoScaling: enables the AutoScaling auto-scaling policy.</li>
+     * <li>Disable: disables auto-scaling.</li>
+     * <li>MultiCluster: enables the MultiCluster auto-scaling policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     public String specName;
 
     /**
-     * <p>The name of the target resource group.</p>
+     * <p>The name of the destination resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -472,7 +472,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer authNodeNum;
 
         /**
-         * <p>The authentication node specifications ([0-9+]ACU).</p>
+         * <p>The authentication node specification ([0-9+]ACU).</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -490,7 +490,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer insertNodeNum;
 
         /**
-         * <p>The insert node specifications ([0-9+]ACU).</p>
+         * <p>The insert node specification ([0-9+]ACU).</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -517,7 +517,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer selectNodeNum;
 
         /**
-         * <p>The query node specifications ([0-9+]ACU).</p>
+         * <p>The query node specification ([0-9+]ACU).</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -553,7 +553,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer storageNodeNum;
 
         /**
-         * <p>The storage node specifications ([0-9+]ACU).</p>
+         * <p>The storage node specification ([0-9+]ACU).</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -658,7 +658,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
 
     public static class CreateDBResourceGroupRequestGpuElasticPlanRules extends TeaModel {
         /**
-         * <p>The end time, specified as a cron expression. The interval must be at least 1 hour.</p>
+         * <p>The end time as a cron expression. The interval must be at least 1 hour.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 3 * * ?</p>
@@ -667,7 +667,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String endCronExpression;
 
         /**
-         * <p>The start time, specified as a cron expression. The interval must be at least 1 hour.</p>
+         * <p>The start time as a cron expression. The interval must be at least 1 hour.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 2 * * ?</p>
@@ -702,8 +702,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the elastic plan immediately after creation. Valid values:</p>
          * <ul>
-         * <li>true: enables the elastic plan immediately.</li>
-         * <li>false: does not enable the elastic plan.</li>
+         * <li>true: Enables the elastic plan immediately.</li>
+         * <li>false: Does not enable the elastic plan.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -829,7 +829,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String workerDiskCapacity;
 
         /**
-         * <p>The node specifications of the worker node.</p>
+         * <p>The specification of the worker node.</p>
          * 
          * <strong>example:</strong>
          * <p>xlarge</p>
@@ -913,9 +913,9 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         /**
          * <p>The Ray cluster type. Valid values:</p>
          * <ul>
-         * <li><p>BASIC: basic type, non-high-availability.</p>
+         * <li><p>BASIC: the basic type, which is non-highly available.</p>
          * </li>
-         * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
+         * <li><p>HIGH_AVAILABILITY: the highly available type.</p>
          * </li>
          * </ul>
          * 
@@ -926,7 +926,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>Specifies whether to enable user ENI connectivity.</p>
+         * <p>Specifies whether to enable user Elastic Network Interface (ENI) connectivity.</p>
          */
         @NameInMap("EnableUserEni")
         public Boolean enableUserEni;
@@ -950,7 +950,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String headDiskCapacity;
 
         /**
-         * <p>The node specifications of the head node.</p>
+         * <p>The specification of the head node.</p>
          * 
          * <strong>example:</strong>
          * <p>xlarge</p>
@@ -1083,7 +1083,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String queryTime;
 
         /**
-         * <p>The name of the target resource group.</p>
+         * <p>The name of the destination resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>job</p>

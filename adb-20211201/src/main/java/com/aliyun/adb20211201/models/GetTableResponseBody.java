@@ -41,7 +41,7 @@ public class GetTableResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The table details.</p>
+     * <p>The detailed table information.</p>
      */
     @NameInMap("Table")
     public TableModel table;

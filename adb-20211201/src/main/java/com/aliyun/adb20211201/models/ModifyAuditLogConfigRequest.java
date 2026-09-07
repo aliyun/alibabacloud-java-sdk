@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyAuditLogConfigRequest extends TeaModel {
     /**
-     * <p>The status to which you want to change the SQL audit feature. Valid values:</p>
+     * <p>The status of SQL audit logging. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><strong>on</strong>: Enables SQL audit logging.</li>
+     * <li><strong>off</strong>: Disables SQL audit logging.</li>
      * </ul>
      * <blockquote>
-     * <p> After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see <a href="https://help.aliyun.com/document_detail/612426.html">DescribeAuditLogRecords</a>. When you re-enable SQL audit, audit logs that are generated from the time when SQL audit was last enabled are available for queries.</p>
+     * <p>After SQL audit logging is disabled, all SQL audit logs are deleted. Query and export the SQL audit logs before disabling SQL audit logging. For more information, see <a href="https://help.aliyun.com/document_detail/612426.html">DescribeAuditLogRecords</a>. When SQL audit logging is enabled again, audit logs are displayed starting from the most recent time that audit logging was enabled.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,9 +22,10 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     public String auditLogStatus;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> to query the IDs of all clusters in a specified region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,8 +38,8 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     /**
      * <p>The type of the compute engine. Valid values:</p>
      * <ul>
-     * <li>XIHE (<strong>default</strong>)</li>
-     * <li>SPARK</li>
+     * <li>XIHE (<strong>default</strong>): Xihe compute engine.</li>
+     * <li>SPARK: Spark compute engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,9 +55,9 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> to query the region ID of a specified cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

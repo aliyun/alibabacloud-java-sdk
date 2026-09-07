@@ -15,14 +15,14 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The permissions that you want to grant to the database account.</p>
-     * <p>This parameter is required.</p>
+     * <p>The list of granted permissions.</p>
      */
     @NameInMap("AccountPrivileges")
     public java.util.List<ModifyAccountPrivilegesRequestAccountPrivileges> accountPrivileges;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +30,15 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    @NameInMap("PromqlInsertPrivileges")
+    public java.util.List<String> promqlInsertPrivileges;
+
+    @NameInMap("PromqlSelectNodePercentage")
+    public Double promqlSelectNodePercentage;
+
+    @NameInMap("PromqlSelectPrivileges")
+    public java.util.List<String> promqlSelectPrivileges;
 
     /**
      * <p>The region ID.</p>
@@ -40,6 +49,9 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupName")
+    public String resourceGroupName;
 
     public static ModifyAccountPrivilegesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAccountPrivilegesRequest self = new ModifyAccountPrivilegesRequest();
@@ -70,6 +82,30 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
         return this.DBClusterId;
     }
 
+    public ModifyAccountPrivilegesRequest setPromqlInsertPrivileges(java.util.List<String> promqlInsertPrivileges) {
+        this.promqlInsertPrivileges = promqlInsertPrivileges;
+        return this;
+    }
+    public java.util.List<String> getPromqlInsertPrivileges() {
+        return this.promqlInsertPrivileges;
+    }
+
+    public ModifyAccountPrivilegesRequest setPromqlSelectNodePercentage(Double promqlSelectNodePercentage) {
+        this.promqlSelectNodePercentage = promqlSelectNodePercentage;
+        return this;
+    }
+    public Double getPromqlSelectNodePercentage() {
+        return this.promqlSelectNodePercentage;
+    }
+
+    public ModifyAccountPrivilegesRequest setPromqlSelectPrivileges(java.util.List<String> promqlSelectPrivileges) {
+        this.promqlSelectPrivileges = promqlSelectPrivileges;
+        return this;
+    }
+    public java.util.List<String> getPromqlSelectPrivileges() {
+        return this.promqlSelectPrivileges;
+    }
+
     public ModifyAccountPrivilegesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -78,9 +114,17 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ModifyAccountPrivilegesRequest setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
+    }
+
     public static class ModifyAccountPrivilegesRequestAccountPrivilegesPrivilegeObject extends TeaModel {
         /**
-         * <p>The columns on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Column.</p>
+         * <p>The column to which permissions are granted. This parameter is required when the privilege level is column.</p>
          * 
          * <strong>example:</strong>
          * <p>column1</p>
@@ -89,7 +133,7 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
         public String column;
 
         /**
-         * <p>The databases on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Database, Table, or Column.</p>
+         * <p>The database to which permissions are granted. This parameter is required when the privilege level is database, table, or column.</p>
          * 
          * <strong>example:</strong>
          * <p>tsdb1</p>
@@ -98,7 +142,7 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
         public String database;
 
         /**
-         * <p>The tables on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Table or Column.</p>
+         * <p>The table to which permissions are granted. This parameter is required when the privilege level is table or column.</p>
          * 
          * <strong>example:</strong>
          * <p>table1</p>
@@ -139,13 +183,13 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
 
     public static class ModifyAccountPrivilegesRequestAccountPrivileges extends TeaModel {
         /**
-         * <p>The objects on which you want to grant permissions, including databases, tables, and columns.</p>
+         * <p>The privilege object, which is a tuple of database, table, and column.</p>
          */
         @NameInMap("PrivilegeObject")
         public ModifyAccountPrivilegesRequestAccountPrivilegesPrivilegeObject privilegeObject;
 
         /**
-         * <p>The permission level that you want to assign to the database account. You can call the <code>DescribeEnabledPrivileges</code> operation to query the permission level that can be assigned to the database account.</p>
+         * <p>The privilege level, obtained from the <code>DescribeEnabledPrivileges</code> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Global</p>
@@ -154,7 +198,7 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
         public String privilegeType;
 
         /**
-         * <p>The permissions that you want to grant to the database account.</p>
+         * <p>The list of granted permissions.</p>
          */
         @NameInMap("Privileges")
         public java.util.List<String> privileges;

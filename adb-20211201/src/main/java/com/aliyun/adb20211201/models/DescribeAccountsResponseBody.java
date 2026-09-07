@@ -37,6 +37,63 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeAccountsResponseBodyAccountListDBAccountPromqlInsertPrivileges extends TeaModel {
+        @NameInMap("PromqlInsertPrivileges")
+        public java.util.List<String> promqlInsertPrivileges;
+
+        public static DescribeAccountsResponseBodyAccountListDBAccountPromqlInsertPrivileges build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountsResponseBodyAccountListDBAccountPromqlInsertPrivileges self = new DescribeAccountsResponseBodyAccountListDBAccountPromqlInsertPrivileges();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccountPromqlInsertPrivileges setPromqlInsertPrivileges(java.util.List<String> promqlInsertPrivileges) {
+            this.promqlInsertPrivileges = promqlInsertPrivileges;
+            return this;
+        }
+        public java.util.List<String> getPromqlInsertPrivileges() {
+            return this.promqlInsertPrivileges;
+        }
+
+    }
+
+    public static class DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectNodes extends TeaModel {
+        @NameInMap("PromqlSelectNodes")
+        public java.util.List<String> promqlSelectNodes;
+
+        public static DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectNodes self = new DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectNodes setPromqlSelectNodes(java.util.List<String> promqlSelectNodes) {
+            this.promqlSelectNodes = promqlSelectNodes;
+            return this;
+        }
+        public java.util.List<String> getPromqlSelectNodes() {
+            return this.promqlSelectNodes;
+        }
+
+    }
+
+    public static class DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectPrivileges extends TeaModel {
+        @NameInMap("PromqlSelectPrivileges")
+        public java.util.List<String> promqlSelectPrivileges;
+
+        public static DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectPrivileges build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectPrivileges self = new DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectPrivileges();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectPrivileges setPromqlSelectPrivileges(java.util.List<String> promqlSelectPrivileges) {
+            this.promqlSelectPrivileges = promqlSelectPrivileges;
+            return this;
+        }
+        public java.util.List<String> getPromqlSelectPrivileges() {
+            return this.promqlSelectPrivileges;
+        }
+
+    }
+
     public static class DescribeAccountsResponseBodyAccountListDBAccountRamUserList extends TeaModel {
         @NameInMap("RamUserList")
         public java.util.List<String> ramUserList;
@@ -72,11 +129,23 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("Engine")
         public String engine;
 
+        @NameInMap("PromqlInsertPrivileges")
+        public DescribeAccountsResponseBodyAccountListDBAccountPromqlInsertPrivileges promqlInsertPrivileges;
+
+        @NameInMap("PromqlSelectNodes")
+        public DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectNodes promqlSelectNodes;
+
+        @NameInMap("PromqlSelectPrivileges")
+        public DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectPrivileges promqlSelectPrivileges;
+
         @NameInMap("RamUserList")
         public DescribeAccountsResponseBodyAccountListDBAccountRamUserList ramUserList;
 
         @NameInMap("RamUsers")
         public String ramUsers;
+
+        @NameInMap("promqlSelectNodePercentage")
+        public Double promqlSelectNodePercentage;
 
         public static DescribeAccountsResponseBodyAccountListDBAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccountListDBAccount self = new DescribeAccountsResponseBodyAccountListDBAccount();
@@ -123,6 +192,30 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.engine;
         }
 
+        public DescribeAccountsResponseBodyAccountListDBAccount setPromqlInsertPrivileges(DescribeAccountsResponseBodyAccountListDBAccountPromqlInsertPrivileges promqlInsertPrivileges) {
+            this.promqlInsertPrivileges = promqlInsertPrivileges;
+            return this;
+        }
+        public DescribeAccountsResponseBodyAccountListDBAccountPromqlInsertPrivileges getPromqlInsertPrivileges() {
+            return this.promqlInsertPrivileges;
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccount setPromqlSelectNodes(DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectNodes promqlSelectNodes) {
+            this.promqlSelectNodes = promqlSelectNodes;
+            return this;
+        }
+        public DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectNodes getPromqlSelectNodes() {
+            return this.promqlSelectNodes;
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccount setPromqlSelectPrivileges(DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectPrivileges promqlSelectPrivileges) {
+            this.promqlSelectPrivileges = promqlSelectPrivileges;
+            return this;
+        }
+        public DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectPrivileges getPromqlSelectPrivileges() {
+            return this.promqlSelectPrivileges;
+        }
+
         public DescribeAccountsResponseBodyAccountListDBAccount setRamUserList(DescribeAccountsResponseBodyAccountListDBAccountRamUserList ramUserList) {
             this.ramUserList = ramUserList;
             return this;
@@ -137,6 +230,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getRamUsers() {
             return this.ramUsers;
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccount setPromqlSelectNodePercentage(Double promqlSelectNodePercentage) {
+            this.promqlSelectNodePercentage = promqlSelectNodePercentage;
+            return this;
+        }
+        public Double getPromqlSelectNodePercentage() {
+            return this.promqlSelectNodePercentage;
         }
 
     }

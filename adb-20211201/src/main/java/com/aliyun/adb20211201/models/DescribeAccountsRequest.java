@@ -30,10 +30,8 @@ public class DescribeAccountsRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><p><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine</p>
-     * </li>
-     * <li><p><strong>Clickhouse</strong>: the LindormTable engine</p>
-     * </li>
+     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,6 +42,12 @@ public class DescribeAccountsRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public String ownerId;
+
+    /**
+     * <p>The name of the resource group.</p>
+     */
+    @NameInMap("ResourceGroupName")
+    public String resourceGroupName;
 
     public static DescribeAccountsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountsRequest self = new DescribeAccountsRequest();
@@ -80,6 +84,14 @@ public class DescribeAccountsRequest extends TeaModel {
     }
     public String getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeAccountsRequest setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
     }
 
 }

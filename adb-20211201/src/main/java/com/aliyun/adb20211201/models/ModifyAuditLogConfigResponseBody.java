@@ -14,10 +14,10 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the status of SQL audit is updated. Valid values:</p>
+     * <p>Indicates whether the SQL audit logging status is updated. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The status is updated.</li>
+     * <li><strong>false</strong>: The status failed to be updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -12,7 +12,7 @@ public class CreateAccountRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>数据库连接测试账号</p>
+     * <p>Database connection test account</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
@@ -74,8 +74,8 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>AnalyticDB</strong> (default): AnalyticDB for MySQL engine.</li>
-     * <li><strong>Clickhouse</strong>: wide table engine.</li>
+     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,11 +84,23 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    @NameInMap("PromqlInsertPrivileges")
+    public java.util.List<String> promqlInsertPrivileges;
+
+    @NameInMap("PromqlSelectNodePercentage")
+    public Double promqlSelectNodePercentage;
+
+    @NameInMap("PromqlSelectPrivileges")
+    public java.util.List<String> promqlSelectPrivileges;
+
     /**
-     * <p>The list of Alibaba Cloud Resource Access Management (RAM) user IDs to attach. Currently, only one RAM user can be attached.</p>
+     * <p>The list of Alibaba Cloud RAM user IDs to bind. Currently, only one RAM user can be bound.</p>
      */
     @NameInMap("RamUserList")
     public java.util.List<String> ramUserList;
+
+    @NameInMap("ResourceGroupName")
+    public String resourceGroupName;
 
     public static CreateAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAccountRequest self = new CreateAccountRequest();
@@ -143,12 +155,44 @@ public class CreateAccountRequest extends TeaModel {
         return this.engine;
     }
 
+    public CreateAccountRequest setPromqlInsertPrivileges(java.util.List<String> promqlInsertPrivileges) {
+        this.promqlInsertPrivileges = promqlInsertPrivileges;
+        return this;
+    }
+    public java.util.List<String> getPromqlInsertPrivileges() {
+        return this.promqlInsertPrivileges;
+    }
+
+    public CreateAccountRequest setPromqlSelectNodePercentage(Double promqlSelectNodePercentage) {
+        this.promqlSelectNodePercentage = promqlSelectNodePercentage;
+        return this;
+    }
+    public Double getPromqlSelectNodePercentage() {
+        return this.promqlSelectNodePercentage;
+    }
+
+    public CreateAccountRequest setPromqlSelectPrivileges(java.util.List<String> promqlSelectPrivileges) {
+        this.promqlSelectPrivileges = promqlSelectPrivileges;
+        return this;
+    }
+    public java.util.List<String> getPromqlSelectPrivileges() {
+        return this.promqlSelectPrivileges;
+    }
+
     public CreateAccountRequest setRamUserList(java.util.List<String> ramUserList) {
         this.ramUserList = ramUserList;
         return this;
     }
     public java.util.List<String> getRamUserList() {
         return this.ramUserList;
+    }
+
+    public CreateAccountRequest setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
     }
 
 }
