@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoDetextJobResponseBody extends TeaModel {
     /**
-     * <p>The video text erasure job ID. You can use this ID to call GetVideoDetextJob to query the job status.</p>
+     * <p>The video text erasure job ID. Use this ID to call GetVideoDetextJob to query the job.</p>
      * 
      * <strong>example:</strong>
      * <p>vdt_0123456789abcdef0123456789abcdef</p>
