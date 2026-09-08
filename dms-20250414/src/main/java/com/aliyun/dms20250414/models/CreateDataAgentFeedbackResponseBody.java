@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentFeedbackResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response struct.</p>
+     */
     @NameInMap("Data")
     public CreateDataAgentFeedbackResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
      */
@@ -36,6 +47,8 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>89a07eac-96ff-48be-983b-f22c55*****</p>
      */
@@ -43,6 +56,12 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +131,8 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
 
     public static class CreateDataAgentFeedbackResponseBodyData extends TeaModel {
         /**
+         * <p>The feedback content.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;feedback_type&quot;:&quot;PRODUCT_SUGGESTION&quot;,&quot;user_feedback&quot;: &quot;test&quot;,&quot;email&quot;:&quot;<a href="mailto:yourname@example.com">yourname@example.com</a>&quot;,&quot;is_authorized&quot;:&quot;Y&quot;}</p>
          */
@@ -119,6 +140,8 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         public String feedbackContent;
 
         /**
+         * <p>The feedback type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ISSUE_REPORT</p>
          */
@@ -126,6 +149,8 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         public String feedbackType;
 
         /**
+         * <p>The like value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -133,6 +158,8 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         public Integer likeValue;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -140,6 +167,8 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The agent session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>h8r********4fch</p>
          */
@@ -147,6 +176,8 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The feedback target ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>h8r********4fch_sdesfews</p>
          */
@@ -154,6 +185,8 @@ public class CreateDataAgentFeedbackResponseBody extends TeaModel {
         public String targetId;
 
         /**
+         * <p>The feedback target.</p>
+         * 
          * <strong>example:</strong>
          * <p>SESSION</p>
          */

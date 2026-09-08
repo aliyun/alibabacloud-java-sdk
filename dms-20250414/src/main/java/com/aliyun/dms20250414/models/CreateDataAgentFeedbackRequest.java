@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentFeedbackRequest extends TeaModel {
     /**
+     * <p>The current DMS unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,17 @@ public class CreateDataAgentFeedbackRequest extends TeaModel {
     public String DMSUnit;
 
     /**
+     * <p>The feedback content. You can directly enter the feedback content, or pass a JSON string for the issue report scenario as shown in the example. The feedback_type field corresponds to the issue type, user_feedback corresponds to the issue description, email corresponds to the contact email address, and is_authorized indicates whether to authorize log access for troubleshooting.</p>
+     * <p>feedback_type issue types. Valid values:</p>
+     * <ul>
+     * <li><strong>ANALYSIS_RESULT_INACCURATE</strong>: Inaccurate analysis result.</li>
+     * <li><strong>RUNTIME_ERROR</strong>: Runtime error.</li>
+     * <li><strong>REPORT_EXCEPTION</strong>: Report exception.</li>
+     * <li><strong>SLOW_RESPONSE</strong>: Slow response.</li>
+     * <li><strong>PRODUCT_SUGGESTION</strong>: Product suggestion.</li>
+     * <li><strong>OTHER</strong>: Other.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;feedback_type&quot;:&quot;PRODUCT_SUGGESTION&quot;,&quot;user_feedback&quot;: &quot;test&quot;,&quot;email&quot;:&quot;<a href="mailto:yourname@example.com">yourname@example.com</a>&quot;,&quot;is_authorized&quot;:&quot;Y&quot;}</p>
      */
@@ -19,6 +32,14 @@ public class CreateDataAgentFeedbackRequest extends TeaModel {
     public String feedbackContent;
 
     /**
+     * <p>The feedback type. Valid values:</p>
+     * <ul>
+     * <li><strong>ISSUE_REPORT</strong>: issue report.</li>
+     * <li><strong>CANCEL_CHAT</strong>: task cancellation.</li>
+     * <li><strong>LIKE</strong>: like.</li>
+     * <li><strong>DISLIKE</strong>: dislike.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ISSUE_REPORT</p>
      */
@@ -26,6 +47,12 @@ public class CreateDataAgentFeedbackRequest extends TeaModel {
     public String feedbackType;
 
     /**
+     * <p>The like value. This parameter is used only for like and dislike scenarios. Do not pass this parameter for other scenarios. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: like.</li>
+     * <li><strong>-1</strong>: dislike.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +60,8 @@ public class CreateDataAgentFeedbackRequest extends TeaModel {
     public Integer likeValue;
 
     /**
+     * <p>The agent session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>h8r********4fch</p>
      */
@@ -40,6 +69,12 @@ public class CreateDataAgentFeedbackRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The feedback target ID.</p>
+     * <ul>
+     * <li>For issue reports, use SessionId + underscore + random UUID.</li>
+     * <li>For other feedback types, pass the checkpoint of the current SSE message stream.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>h8r********4fch_sdesfews</p>
      */
@@ -47,6 +82,14 @@ public class CreateDataAgentFeedbackRequest extends TeaModel {
     public String targetId;
 
     /**
+     * <p>The feedback target. Valid values:</p>
+     * <ul>
+     * <li><strong>SESSION</strong>: session (used for issue reports).</li>
+     * <li><strong>CHAT</strong>: chat (used for task cancellation).</li>
+     * <li><strong>REPORT</strong>: report.</li>
+     * <li><strong>PLAN</strong>: execution plan.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SESSION</p>
      */
@@ -54,6 +97,8 @@ public class CreateDataAgentFeedbackRequest extends TeaModel {
     public String targetType;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>56kv1pvl9uvt9**********bb</p>
      */

@@ -9,16 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shenzhen", "dms.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-beijing", "dms.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "dms.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "dms.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "dms.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "dms.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("us-west-1", "dms.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "dms.us-east-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -944,7 +934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Data Agent点赞点踩功能</p>
+     * <p>Creates feedback for a DataAgent.</p>
      * 
      * @param request CreateDataAgentFeedbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1004,7 +994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Data Agent点赞点踩功能</p>
+     * <p>Creates feedback for a DataAgent.</p>
      * 
      * @param request CreateDataAgentFeedbackRequest
      * @return CreateDataAgentFeedbackResponse
@@ -4209,6 +4199,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, the service endpoint must match the region where the instance resides. Otherwise, the complete SQL window operation logs cannot be retrieved.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the operation logs of the SQL window.</p>
      * 
@@ -4269,6 +4262,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, the service endpoint must match the region where the instance resides. Otherwise, the complete SQL window operation logs cannot be retrieved.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the operation logs of the SQL window.</p>
      * 
@@ -4756,7 +4752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListCustomAgent returns a list of all custom agents from the personal space and workspaces.</p>
+     * <p>Lists all custom agents in a personal space or workspace.</p>
      * 
      * @param request ListCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4808,7 +4804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListCustomAgent returns a list of all custom agents from the personal space and workspaces.</p>
+     * <p>Lists all custom agents in a personal space or workspace.</p>
      * 
      * @param request ListCustomAgentRequest
      * @return ListCustomAgentResponse
@@ -7482,7 +7478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. To append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
      * <li>The <code>reply_to</code> field indicates which Agent message this message is a response to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
      * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
@@ -7597,7 +7593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. To append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
      * <li>The <code>reply_to</code> field indicates which Agent message this message is a response to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
      * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>

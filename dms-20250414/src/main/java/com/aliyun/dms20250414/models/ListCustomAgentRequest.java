@@ -14,7 +14,7 @@ public class ListCustomAgentRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. The default value is 20.</p>
+     * <p>The number of records per page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListCustomAgentRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether to query all published custom agents. The default value is false.</p>
+     * <p>Specifies whether to query all custom agents in the published state. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,10 +32,10 @@ public class ListCustomAgentRequest extends TeaModel {
     public Boolean queryAllReleased;
 
     /**
-     * <p>A keyword for a fuzzy search on the names and descriptions of custom agents.</p>
+     * <p>The search keyword. Supports fuzzy search by custom agent name and description.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试Agent</p>
+     * <p>TestAgent</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
@@ -50,7 +50,7 @@ public class ListCustomAgentRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>56kv1pvl9uvt9**********bb</p>
