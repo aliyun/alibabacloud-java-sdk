@@ -77,6 +77,9 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("SourcePlatform")
+        public String sourcePlatform;
+
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 
@@ -118,6 +121,14 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListAPIKeyCredentialProvidersResponseBodyAPIKeyCredentialProviders setSourcePlatform(String sourcePlatform) {
+            this.sourcePlatform = sourcePlatform;
+            return this;
+        }
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
         }
 
         public ListAPIKeyCredentialProvidersResponseBodyAPIKeyCredentialProviders setTokenVaultName(String tokenVaultName) {

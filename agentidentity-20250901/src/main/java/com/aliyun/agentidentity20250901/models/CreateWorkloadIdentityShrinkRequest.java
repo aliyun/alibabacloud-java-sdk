@@ -4,6 +4,9 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkloadIdentityShrinkRequest extends TeaModel {
+    @NameInMap("AllowedConsentCallbackURLs")
+    public String allowedConsentCallbackURLsShrink;
+
     @NameInMap("AllowedResourceOAuth2ReturnURLs")
     public String allowedResourceOAuth2ReturnURLsShrink;
 
@@ -34,6 +37,14 @@ public class CreateWorkloadIdentityShrinkRequest extends TeaModel {
     public static CreateWorkloadIdentityShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWorkloadIdentityShrinkRequest self = new CreateWorkloadIdentityShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateWorkloadIdentityShrinkRequest setAllowedConsentCallbackURLsShrink(String allowedConsentCallbackURLsShrink) {
+        this.allowedConsentCallbackURLsShrink = allowedConsentCallbackURLsShrink;
+        return this;
+    }
+    public String getAllowedConsentCallbackURLsShrink() {
+        return this.allowedConsentCallbackURLsShrink;
     }
 
     public CreateWorkloadIdentityShrinkRequest setAllowedResourceOAuth2ReturnURLsShrink(String allowedResourceOAuth2ReturnURLsShrink) {

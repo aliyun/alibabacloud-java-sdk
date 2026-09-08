@@ -852,11 +852,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateWorkloadIdentityShrinkRequest request = new CreateWorkloadIdentityShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.allowedConsentCallbackURLs)) {
+            request.allowedConsentCallbackURLsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.allowedConsentCallbackURLs, "AllowedConsentCallbackURLs", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.allowedResourceOAuth2ReturnURLs)) {
             request.allowedResourceOAuth2ReturnURLsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.allowedResourceOAuth2ReturnURLs, "AllowedResourceOAuth2ReturnURLs", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedConsentCallbackURLsShrink)) {
+            body.put("AllowedConsentCallbackURLs", request.allowedConsentCallbackURLsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.allowedResourceOAuth2ReturnURLsShrink)) {
             body.put("AllowedResourceOAuth2ReturnURLs", request.allowedResourceOAuth2ReturnURLsShrink);
         }
@@ -3674,11 +3682,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateLoginPreferenceShrinkRequest request = new UpdateLoginPreferenceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.allowedPostLogoutRedirectUris)) {
+            request.allowedPostLogoutRedirectUrisShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.allowedPostLogoutRedirectUris, "AllowedPostLogoutRedirectUris", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.loginPreference)) {
             request.loginPreferenceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.loginPreference, "LoginPreference", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedPostLogoutRedirectUrisShrink)) {
+            query.put("AllowedPostLogoutRedirectUris", request.allowedPostLogoutRedirectUrisShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.loginPreferenceShrink)) {
             query.put("LoginPreference", request.loginPreferenceShrink);
         }
@@ -4200,11 +4216,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateWorkloadIdentityShrinkRequest request = new UpdateWorkloadIdentityShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.allowedConsentCallbackURLs)) {
+            request.allowedConsentCallbackURLsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.allowedConsentCallbackURLs, "AllowedConsentCallbackURLs", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.allowedResourceOAuth2ReturnURLs)) {
             request.allowedResourceOAuth2ReturnURLsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.allowedResourceOAuth2ReturnURLs, "AllowedResourceOAuth2ReturnURLs", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedConsentCallbackURLsShrink)) {
+            body.put("AllowedConsentCallbackURLs", request.allowedConsentCallbackURLsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.allowedResourceOAuth2ReturnURLsShrink)) {
             body.put("AllowedResourceOAuth2ReturnURLs", request.allowedResourceOAuth2ReturnURLsShrink);
         }

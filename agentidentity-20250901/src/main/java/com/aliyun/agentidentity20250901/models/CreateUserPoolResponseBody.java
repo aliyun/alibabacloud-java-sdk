@@ -38,6 +38,12 @@ public class CreateUserPoolResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("OIDCDiscoveryURL")
+        public String OIDCDiscoveryURL;
+
+        @NameInMap("SigninBaseURL")
+        public String signinBaseURL;
+
         @NameInMap("SourcePlatform")
         public String sourcePlatform;
 
@@ -69,6 +75,22 @@ public class CreateUserPoolResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public CreateUserPoolResponseBodyUserPool setOIDCDiscoveryURL(String OIDCDiscoveryURL) {
+            this.OIDCDiscoveryURL = OIDCDiscoveryURL;
+            return this;
+        }
+        public String getOIDCDiscoveryURL() {
+            return this.OIDCDiscoveryURL;
+        }
+
+        public CreateUserPoolResponseBodyUserPool setSigninBaseURL(String signinBaseURL) {
+            this.signinBaseURL = signinBaseURL;
+            return this;
+        }
+        public String getSigninBaseURL() {
+            return this.signinBaseURL;
         }
 
         public CreateUserPoolResponseBodyUserPool setSourcePlatform(String sourcePlatform) {

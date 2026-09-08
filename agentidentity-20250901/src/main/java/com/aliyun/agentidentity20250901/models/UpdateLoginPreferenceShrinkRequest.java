@@ -4,6 +4,9 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateLoginPreferenceShrinkRequest extends TeaModel {
+    @NameInMap("AllowedPostLogoutRedirectUris")
+    public String allowedPostLogoutRedirectUrisShrink;
+
     @NameInMap("LoginPreference")
     public String loginPreferenceShrink;
 
@@ -13,6 +16,14 @@ public class UpdateLoginPreferenceShrinkRequest extends TeaModel {
     public static UpdateLoginPreferenceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLoginPreferenceShrinkRequest self = new UpdateLoginPreferenceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateLoginPreferenceShrinkRequest setAllowedPostLogoutRedirectUrisShrink(String allowedPostLogoutRedirectUrisShrink) {
+        this.allowedPostLogoutRedirectUrisShrink = allowedPostLogoutRedirectUrisShrink;
+        return this;
+    }
+    public String getAllowedPostLogoutRedirectUrisShrink() {
+        return this.allowedPostLogoutRedirectUrisShrink;
     }
 
     public UpdateLoginPreferenceShrinkRequest setLoginPreferenceShrink(String loginPreferenceShrink) {

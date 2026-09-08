@@ -32,6 +32,9 @@ public class GetWorkloadIdentityResponseBody extends TeaModel {
     }
 
     public static class GetWorkloadIdentityResponseBodyWorkloadIdentity extends TeaModel {
+        @NameInMap("AllowedConsentCallbackURLs")
+        public java.util.List<String> allowedConsentCallbackURLs;
+
         @NameInMap("AllowedResourceOAuth2ReturnURLs")
         public java.util.List<String> allowedResourceOAuth2ReturnURLs;
 
@@ -68,6 +71,14 @@ public class GetWorkloadIdentityResponseBody extends TeaModel {
         public static GetWorkloadIdentityResponseBodyWorkloadIdentity build(java.util.Map<String, ?> map) throws Exception {
             GetWorkloadIdentityResponseBodyWorkloadIdentity self = new GetWorkloadIdentityResponseBodyWorkloadIdentity();
             return TeaModel.build(map, self);
+        }
+
+        public GetWorkloadIdentityResponseBodyWorkloadIdentity setAllowedConsentCallbackURLs(java.util.List<String> allowedConsentCallbackURLs) {
+            this.allowedConsentCallbackURLs = allowedConsentCallbackURLs;
+            return this;
+        }
+        public java.util.List<String> getAllowedConsentCallbackURLs() {
+            return this.allowedConsentCallbackURLs;
         }
 
         public GetWorkloadIdentityResponseBodyWorkloadIdentity setAllowedResourceOAuth2ReturnURLs(java.util.List<String> allowedResourceOAuth2ReturnURLs) {

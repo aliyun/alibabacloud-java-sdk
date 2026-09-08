@@ -47,6 +47,13 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>idaas_xxxx</p>
+         */
+        @NameInMap("IDaaSInstanceId")
+        public String IDaaSInstanceId;
+
         @NameInMap("OAuth2CredentialProviderName")
         public String OAuth2CredentialProviderName;
 
@@ -55,6 +62,30 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
 
         @NameInMap("OAuthType")
         public String OAuthType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>app_xxxxx</p>
+         */
+        @NameInMap("OutboundApplicationId")
+        public String outboundApplicationId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>agent-xxxx</p>
+         */
+        @NameInMap("OutboundAudience")
+        public String outboundAudience;
+
+        /**
+         * <strong>example:</strong>
+         * <p>client_xxxx</p>
+         */
+        @NameInMap("OutboundClientId")
+        public String outboundClientId;
+
+        @NameInMap("SourcePlatform")
+        public String sourcePlatform;
 
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
@@ -107,6 +138,14 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setIDaaSInstanceId(String IDaaSInstanceId) {
+            this.IDaaSInstanceId = IDaaSInstanceId;
+            return this;
+        }
+        public String getIDaaSInstanceId() {
+            return this.IDaaSInstanceId;
+        }
+
         public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setOAuth2CredentialProviderName(String OAuth2CredentialProviderName) {
             this.OAuth2CredentialProviderName = OAuth2CredentialProviderName;
             return this;
@@ -129,6 +168,38 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
         }
         public String getOAuthType() {
             return this.OAuthType;
+        }
+
+        public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setOutboundApplicationId(String outboundApplicationId) {
+            this.outboundApplicationId = outboundApplicationId;
+            return this;
+        }
+        public String getOutboundApplicationId() {
+            return this.outboundApplicationId;
+        }
+
+        public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setOutboundAudience(String outboundAudience) {
+            this.outboundAudience = outboundAudience;
+            return this;
+        }
+        public String getOutboundAudience() {
+            return this.outboundAudience;
+        }
+
+        public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setOutboundClientId(String outboundClientId) {
+            this.outboundClientId = outboundClientId;
+            return this;
+        }
+        public String getOutboundClientId() {
+            return this.outboundClientId;
+        }
+
+        public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setSourcePlatform(String sourcePlatform) {
+            this.sourcePlatform = sourcePlatform;
+            return this;
+        }
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
         }
 
         public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setTokenVaultName(String tokenVaultName) {

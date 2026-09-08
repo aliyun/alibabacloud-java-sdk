@@ -56,6 +56,9 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
         @NameInMap("OAuthType")
         public String OAuthType;
 
+        @NameInMap("SourcePlatform")
+        public String sourcePlatform;
+
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 
@@ -129,6 +132,14 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
         }
         public String getOAuthType() {
             return this.OAuthType;
+        }
+
+        public CreateOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setSourcePlatform(String sourcePlatform) {
+            this.sourcePlatform = sourcePlatform;
+            return this;
+        }
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
         }
 
         public CreateOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setTokenVaultName(String tokenVaultName) {
