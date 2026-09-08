@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReadMarketingPreferenceRequest extends TeaModel {
     /**
+     * <p>The language.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -12,6 +14,8 @@ public class ReadMarketingPreferenceRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The application name of the requester.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -19,6 +23,8 @@ public class ReadMarketingPreferenceRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The business line of the requester.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -26,6 +32,8 @@ public class ReadMarketingPreferenceRequest extends TeaModel {
     public String bizName;
 
     /**
+     * <p>The request protocol type.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -33,6 +41,8 @@ public class ReadMarketingPreferenceRequest extends TeaModel {
     public String callerProtocol;
 
     /**
+     * <p>The source of the operation terminal.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -40,6 +50,8 @@ public class ReadMarketingPreferenceRequest extends TeaModel {
     public String clientSource;
 
     /**
+     * <p>The contact ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -47,6 +59,8 @@ public class ReadMarketingPreferenceRequest extends TeaModel {
     public Long contactId;
 
     /**
+     * <p>The cookies of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -54,6 +68,8 @@ public class ReadMarketingPreferenceRequest extends TeaModel {
     public String cookies;
 
     /**
+     * <p>The URL of the source page.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -61,6 +77,8 @@ public class ReadMarketingPreferenceRequest extends TeaModel {
     public String srcUrl;
 
     /**
+     * <p>The tenant information.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -68,6 +86,8 @@ public class ReadMarketingPreferenceRequest extends TeaModel {
     public String tenantCode;
 
     /**
+     * <p>The user type.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */

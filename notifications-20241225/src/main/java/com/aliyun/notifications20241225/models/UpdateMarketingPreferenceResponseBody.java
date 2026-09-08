@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMarketingPreferenceResponseBody extends TeaModel {
     /**
+     * <p>The business status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMarketingPreferenceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The message returned when the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -19,6 +23,8 @@ public class UpdateMarketingPreferenceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -26,6 +32,12 @@ public class UpdateMarketingPreferenceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

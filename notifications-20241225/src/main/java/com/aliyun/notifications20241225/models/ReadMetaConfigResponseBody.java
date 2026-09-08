@@ -1,0 +1,107 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.notifications20241225.models;
+
+import com.aliyun.tea.*;
+
+public class ReadMetaConfigResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
+    @NameInMap("Code")
+    public String code;
+
+    /**
+     * <p>The execution result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;isSubNextUser&quot;: &quot;YES&quot;,
+     *     &quot;IS_INNER_USER&quot;: &quot;NO&quot;,
+     *     &quot;isXsWhite&quot;: &quot;NO&quot;,
+     *     &quot;isXs&quot;: &quot;NO&quot;,
+     *     &quot;SITEID&quot;: &quot;cn&quot;,
+     *     &quot;webhookSignatures&quot;: [
+     *         &quot;Alibaba&quot;,
+     *         &quot;阿里云&quot;
+     *     ]
+     * }</p>
+     */
+    @NameInMap("Data")
+    public Object data;
+
+    /**
+     * <p>The message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static ReadMetaConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ReadMetaConfigResponseBody self = new ReadMetaConfigResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ReadMetaConfigResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ReadMetaConfigResponseBody setData(Object data) {
+        this.data = data;
+        return this;
+    }
+    public Object getData() {
+        return this.data;
+    }
+
+    public ReadMetaConfigResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ReadMetaConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ReadMetaConfigResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+}

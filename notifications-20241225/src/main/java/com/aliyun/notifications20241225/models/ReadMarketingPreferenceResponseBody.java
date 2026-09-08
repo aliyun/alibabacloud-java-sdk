@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class ReadMarketingPreferenceResponseBody extends TeaModel {
     /**
+     * <p>The error code returned by the system. For more information about error codes, see error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The execution result.</p>
+     */
     @NameInMap("Data")
     public ReadMarketingPreferenceResponseBodyData data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Succeeded</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
      */
@@ -29,6 +38,8 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
 
     public static class ReadMarketingPreferenceResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether notifications are allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,6 +102,8 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
         public Boolean allowMarketing;
 
         /**
+         * <p>The email address of the contact in Account Center.</p>
+         * 
          * <strong>example:</strong>
          * <p>t*@qq.*</p>
          */
@@ -96,6 +111,8 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
         public String contactEmail;
 
         /**
+         * <p>The contact ID in Account Center. A value of 0 indicates the account contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -103,6 +120,8 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
         public Long contactId;
 
         /**
+         * <p>The mobile phone number of the contact in Account Center (masked).</p>
+         * 
          * <strong>example:</strong>
          * <p>130*123</p>
          */
@@ -110,6 +129,8 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
         public String contactMobile;
 
         /**
+         * <p>The name of the contact in Account Center.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -117,6 +138,8 @@ public class ReadMarketingPreferenceResponseBody extends TeaModel {
         public String contactName;
 
         /**
+         * <p>The position of the contact in Account Center.</p>
+         * 
          * <strong>example:</strong>
          * <p>CEO</p>
          */

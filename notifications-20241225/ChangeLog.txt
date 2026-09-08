@@ -1,3 +1,7 @@
+2026-09-08 Version: 1.2.0
+- Support API ReadMetaConfig.
+
+
 2026-09-04 Version: 1.1.0
 - Support API CreateWebhookContact.
 - Support API DeleteWebhookContact.

@@ -3,9 +3,13 @@ package com.aliyun.notifications20241225.models;
 
 import com.aliyun.tea.*;
 
-public class ReadUserSubscriptionListRequest extends TeaModel {
+public class ReadMetaConfigRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language type of the returned information. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -14,19 +18,19 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The application project name of the caller.</p>
+     * <p>The application project name of the requester.</p>
      * 
      * <strong>example:</strong>
-     * <p>/</p>
+     * <p>xxxApp</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>The business line of the caller.</p>
+     * <p>The business line of the requester.</p>
      * 
      * <strong>example:</strong>
-     * <p>/</p>
+     * <p>SystemAlerts</p>
      */
     @NameInMap("BizName")
     public String bizName;
@@ -35,40 +39,22 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
      * <p>The request protocol type.</p>
      * 
      * <strong>example:</strong>
-     * <p>/</p>
+     * <p>https</p>
      */
     @NameInMap("CallerProtocol")
     public String callerProtocol;
 
     /**
-     * <p>The category group code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>prod_msg</p>
-     */
-    @NameInMap("CategoryGroupCode")
-    public String categoryGroupCode;
-
-    /**
-     * <p>The channel group.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>base</p>
-     */
-    @NameInMap("ChannelGroupCode")
-    public String channelGroupCode;
-
-    /**
      * <p>The source of the operation terminal.</p>
      * 
      * <strong>example:</strong>
-     * <p>/</p>
+     * <p>h5</p>
      */
     @NameInMap("ClientSource")
     public String clientSource;
 
     /**
-     * <p>The cookies of the user.</p>
+     * <p>The user cookies.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -80,7 +66,7 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
      * <p>The URL of the source page.</p>
      * 
      * <strong>example:</strong>
-     * <p>/</p>
+     * <p><a href="https://example.com/notify,0">https://example.com/notify,0</a></p>
      */
     @NameInMap("SrcUrl")
     public String srcUrl;
@@ -89,7 +75,7 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
      * <p>The tenant information.</p>
      * 
      * <strong>example:</strong>
-     * <p>/</p>
+     * <p>T002</p>
      */
     @NameInMap("TenantCode")
     public String tenantCode;
@@ -98,17 +84,17 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
      * <p>The user type.</p>
      * 
      * <strong>example:</strong>
-     * <p>/</p>
+     * <p>aliyunPk</p>
      */
     @NameInMap("UidType")
     public String uidType;
 
-    public static ReadUserSubscriptionListRequest build(java.util.Map<String, ?> map) throws Exception {
-        ReadUserSubscriptionListRequest self = new ReadUserSubscriptionListRequest();
+    public static ReadMetaConfigRequest build(java.util.Map<String, ?> map) throws Exception {
+        ReadMetaConfigRequest self = new ReadMetaConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public ReadUserSubscriptionListRequest setAcceptLanguage(String acceptLanguage) {
+    public ReadMetaConfigRequest setAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
@@ -116,7 +102,7 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public ReadUserSubscriptionListRequest setAppName(String appName) {
+    public ReadMetaConfigRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -124,7 +110,7 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
         return this.appName;
     }
 
-    public ReadUserSubscriptionListRequest setBizName(String bizName) {
+    public ReadMetaConfigRequest setBizName(String bizName) {
         this.bizName = bizName;
         return this;
     }
@@ -132,7 +118,7 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
         return this.bizName;
     }
 
-    public ReadUserSubscriptionListRequest setCallerProtocol(String callerProtocol) {
+    public ReadMetaConfigRequest setCallerProtocol(String callerProtocol) {
         this.callerProtocol = callerProtocol;
         return this;
     }
@@ -140,23 +126,7 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
         return this.callerProtocol;
     }
 
-    public ReadUserSubscriptionListRequest setCategoryGroupCode(String categoryGroupCode) {
-        this.categoryGroupCode = categoryGroupCode;
-        return this;
-    }
-    public String getCategoryGroupCode() {
-        return this.categoryGroupCode;
-    }
-
-    public ReadUserSubscriptionListRequest setChannelGroupCode(String channelGroupCode) {
-        this.channelGroupCode = channelGroupCode;
-        return this;
-    }
-    public String getChannelGroupCode() {
-        return this.channelGroupCode;
-    }
-
-    public ReadUserSubscriptionListRequest setClientSource(String clientSource) {
+    public ReadMetaConfigRequest setClientSource(String clientSource) {
         this.clientSource = clientSource;
         return this;
     }
@@ -164,7 +134,7 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
         return this.clientSource;
     }
 
-    public ReadUserSubscriptionListRequest setCookies(String cookies) {
+    public ReadMetaConfigRequest setCookies(String cookies) {
         this.cookies = cookies;
         return this;
     }
@@ -172,7 +142,7 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
         return this.cookies;
     }
 
-    public ReadUserSubscriptionListRequest setSrcUrl(String srcUrl) {
+    public ReadMetaConfigRequest setSrcUrl(String srcUrl) {
         this.srcUrl = srcUrl;
         return this;
     }
@@ -180,7 +150,7 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
         return this.srcUrl;
     }
 
-    public ReadUserSubscriptionListRequest setTenantCode(String tenantCode) {
+    public ReadMetaConfigRequest setTenantCode(String tenantCode) {
         this.tenantCode = tenantCode;
         return this;
     }
@@ -188,7 +158,7 @@ public class ReadUserSubscriptionListRequest extends TeaModel {
         return this.tenantCode;
     }
 
-    public ReadUserSubscriptionListRequest setUidType(String uidType) {
+    public ReadMetaConfigRequest setUidType(String uidType) {
         this.uidType = uidType;
         return this;
     }

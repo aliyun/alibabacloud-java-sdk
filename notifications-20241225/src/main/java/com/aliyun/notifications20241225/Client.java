@@ -928,7 +928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户营销偏好</p>
+     * <p>Retrieves the marketing preferences of a user.</p>
      * 
      * @param request ReadMarketingPreferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -996,7 +996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户营销偏好</p>
+     * <p>Retrieves the marketing preferences of a user.</p>
      * 
      * @param request ReadMarketingPreferenceRequest
      * @return ReadMarketingPreferenceResponse
@@ -1460,6 +1460,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves the metadata service.</p>
+     * 
+     * @param request ReadMetaConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReadMetaConfigResponse
+     */
+    public ReadMetaConfigResponse readMetaConfigWithOptions(ReadMetaConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            body.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizName)) {
+            body.put("BizName", request.bizName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callerProtocol)) {
+            body.put("CallerProtocol", request.callerProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientSource)) {
+            body.put("ClientSource", request.clientSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cookies)) {
+            body.put("Cookies", request.cookies);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcUrl)) {
+            body.put("SrcUrl", request.srcUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantCode)) {
+            body.put("TenantCode", request.tenantCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uidType)) {
+            body.put("UidType", request.uidType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReadMetaConfig"),
+            new TeaPair("version", "2024-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReadMetaConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the metadata service.</p>
+     * 
+     * @param request ReadMetaConfigRequest
+     * @return ReadMetaConfigResponse
+     */
+    public ReadMetaConfigResponse readMetaConfig(ReadMetaConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.readMetaConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the count of read messages for each category.</p>
      * 
      * @param request ReadNumGroupByClassRequest
@@ -1710,7 +1786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户订阅列表</p>
+     * <p>Retrieves the subscription list of a user.</p>
      * 
      * @param request ReadUserSubscriptionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1782,7 +1858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户订阅列表</p>
+     * <p>Retrieves the subscription list of a user.</p>
      * 
      * @param request ReadUserSubscriptionListRequest
      * @return ReadUserSubscriptionListResponse
@@ -2148,7 +2224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新营销偏好</p>
+     * <p>Updates marketing preferences.</p>
      * 
      * @param request UpdateMarketingPreferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2220,7 +2296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新营销偏好</p>
+     * <p>Updates marketing preferences.</p>
      * 
      * @param request UpdateMarketingPreferenceRequest
      * @return UpdateMarketingPreferenceResponse

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReadUserSubscriptionListResponseBody extends TeaModel {
     /**
+     * <p>The response code of the operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,17 +14,24 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ReadUserSubscriptionListResponseBodyData> data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Succeeded</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -31,6 +39,12 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +98,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
 
     public static class ReadUserSubscriptionListResponseBodyDataChannelConfigs extends TeaModel {
         /**
+         * <p>The channel type.</p>
+         * 
          * <strong>example:</strong>
          * <p>email</p>
          */
@@ -91,6 +107,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public String channelType;
 
         /**
+         * <p>Indicates whether the subscription is configured.</p>
+         * 
          * <strong>example:</strong>
          * <p>YES</p>
          */
@@ -98,6 +116,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public String checkedState;
 
         /**
+         * <p>Indicates whether the option is selected by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>YES</p>
          */
@@ -105,6 +125,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public String defaultChecked;
 
         /**
+         * <p>The fatigue limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -112,6 +134,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public Integer fatigueDayLimit;
 
         /**
+         * <p>Indicates whether the option can be modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>YES</p>
          */
@@ -166,9 +190,15 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
     }
 
     public static class ReadUserSubscriptionListResponseBodyDataContactCommonContactsMessageSource extends TeaModel {
+        /**
+         * <p>The blacklist.</p>
+         */
         @NameInMap("KeywordBlacklist")
         public java.util.List<String> keywordBlacklist;
 
+        /**
+         * <p>The whitelist.</p>
+         */
         @NameInMap("KeywordWhitelist")
         public java.util.List<String> keywordWhitelist;
 
@@ -197,6 +227,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
 
     public static class ReadUserSubscriptionListResponseBodyDataContactCommonContacts extends TeaModel {
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -204,6 +236,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The email address of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>t*@qq.*</p>
          */
@@ -211,6 +245,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public String contactEmail;
 
         /**
+         * <p>The contact ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -218,6 +254,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public Long contactId;
 
         /**
+         * <p>The masked mobile phone number of the Account Center contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>130*90</p>
          */
@@ -225,6 +263,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public String contactMobile;
 
         /**
+         * <p>The name of the Account Center contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -232,16 +272,23 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public String contactName;
 
         /**
+         * <p>Indicates whether the email address is verified.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EmailConfirmed")
         public Boolean emailConfirmed;
 
+        /**
+         * <p>The message source.</p>
+         */
         @NameInMap("MessageSource")
         public ReadUserSubscriptionListResponseBodyDataContactCommonContactsMessageSource messageSource;
 
         /**
+         * <p>Indicates whether the mobile phone number of the Account Center contact is verified.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -249,6 +296,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public Boolean mobileConfirmed;
 
         /**
+         * <p>The position of the Account Center contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>CEO</p>
          */
@@ -335,9 +384,15 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
     }
 
     public static class ReadUserSubscriptionListResponseBodyDataContactWebhookContactsMessageSource extends TeaModel {
+        /**
+         * <p>The blacklist.</p>
+         */
         @NameInMap("KeywordBlacklist")
         public java.util.List<String> keywordBlacklist;
 
+        /**
+         * <p>The whitelist.</p>
+         */
         @NameInMap("KeywordWhitelist")
         public java.util.List<String> keywordWhitelist;
 
@@ -366,6 +421,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
 
     public static class ReadUserSubscriptionListResponseBodyDataContactWebhookContacts extends TeaModel {
         /**
+         * <p>The contact ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -373,16 +430,23 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public Long contactId;
 
         /**
+         * <p>The name of the Account Center contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("ContactName")
         public String contactName;
 
+        /**
+         * <p>The message source.</p>
+         */
         @NameInMap("MessageSource")
         public ReadUserSubscriptionListResponseBodyDataContactWebhookContactsMessageSource messageSource;
 
         /**
+         * <p>The security token.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -390,6 +454,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public String securityToken;
 
         /**
+         * <p>The webhook URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx">https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx</a></p>
          */
@@ -397,6 +463,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public String serverUrl;
 
         /**
+         * <p>The webhook type.</p>
+         * 
          * <strong>example:</strong>
          * <p>dingtalk</p>
          */
@@ -459,9 +527,15 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
     }
 
     public static class ReadUserSubscriptionListResponseBodyDataContact extends TeaModel {
+        /**
+         * <p>The Account Center contact list.</p>
+         */
         @NameInMap("CommonContacts")
         public java.util.List<ReadUserSubscriptionListResponseBodyDataContactCommonContacts> commonContacts;
 
+        /**
+         * <p>The webhook contact list.</p>
+         */
         @NameInMap("WebhookContacts")
         public java.util.List<ReadUserSubscriptionListResponseBodyDataContactWebhookContacts> webhookContacts;
 
@@ -490,6 +564,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
 
     public static class ReadUserSubscriptionListResponseBodyData extends TeaModel {
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -497,6 +573,8 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The message category code.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod_edu_content</p>
          */
@@ -504,13 +582,17 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public String categoryCode;
 
         /**
+         * <p>The description of the message category.</p>
+         * 
          * <strong>example:</strong>
-         * <p>产品的使用场景、技术分享的相关内容</p>
+         * <p>Content related to product usage scenarios and technical sharing</p>
          */
         @NameInMap("CategoryDesc")
         public String categoryDesc;
 
         /**
+         * <p>The category group code.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod_msg</p>
          */
@@ -518,25 +600,38 @@ public class ReadUserSubscriptionListResponseBody extends TeaModel {
         public String categoryGroupCode;
 
         /**
+         * <p>The category group name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>产品消息</p>
+         * <p>Product Messages</p>
          */
         @NameInMap("CategoryGroupName")
         public String categoryGroupName;
 
         /**
+         * <p>The message category name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>产品教育内容</p>
+         * <p>Product Educational Content</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <p>The channel list.</p>
+         */
         @NameInMap("ChannelConfigs")
         public java.util.List<ReadUserSubscriptionListResponseBodyDataChannelConfigs> channelConfigs;
 
+        /**
+         * <p>The contact.</p>
+         */
         @NameInMap("Contact")
         public ReadUserSubscriptionListResponseBodyDataContact contact;
 
+        /**
+         * <p>The receiving time list.</p>
+         */
         @NameInMap("ReceiveTimeList")
         public java.util.List<Integer> receiveTimeList;
 
