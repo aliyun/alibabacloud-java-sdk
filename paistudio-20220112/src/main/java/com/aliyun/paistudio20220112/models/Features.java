@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Features extends TeaModel {
+    /**
+     * <p>The Quota feature.</p>
+     */
     @NameInMap("Quota")
     public FeaturesQuota quota;
 
@@ -22,6 +25,8 @@ public class Features extends TeaModel {
 
     public static class FeaturesQuota extends TeaModel {
         /**
+         * <p>Indicates whether the feature is started.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
     /**
-     * <p>A list of user resource usage details.</p>
+     * <p>The list of user resource usage details.</p>
      */
     @NameInMap("QuotaUserUsage")
     public java.util.List<QuotaUser> quotaUserUsage;
 
+    /**
+     * <p>The user usage information.</p>
+     */
     @NameInMap("QuotaUserUsages")
     public java.util.List<QuotaUser> quotaUserUsages;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>E7C42CC7-2E85-508A-84F4-923B605FD10F</p>
@@ -23,7 +26,7 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that meet the filter criteria.</p>
+     * <p>The number of instances that match the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserViewMetricsResponseBody extends TeaModel {
     /**
-     * <p>资源组ID</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rgf0zhfqn1d4ity2</p>
@@ -14,13 +14,13 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>用户监控数据。</p>
+     * <p>The user monitoring data.</p>
      */
     @NameInMap("Summary")
     public UserViewMetric summary;
 
     /**
-     * <p>总条数</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -29,7 +29,7 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
     public Integer total;
 
     /**
-     * <p>按照用户维度统计的指标</p>
+     * <p>The metrics aggregated at the user dimension.</p>
      */
     @NameInMap("UserMetrics")
     public java.util.List<UserViewMetric> userMetrics;

@@ -7,10 +7,8 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><code>desc</code>: descending order.</p>
-     * </li>
-     * <li><p><code>asc</code>: ascending order.</p>
-     * </li>
+     * <li>desc: descending order.</li>
+     * <li>asc: ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>If true, retrieves resource usage from the current quota only.</p>
+     * <p>Specifies whether to view only the resource usage in the current quota.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -47,24 +45,16 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public Boolean selfOnly;
 
     /**
-     * <p>The field to sort the results by. Valid values:</p>
+     * <p>The field by which to sort the returned results. Valid values:</p>
      * <ul>
-     * <li><p>QuotaId</p>
-     * </li>
-     * <li><p>SubmittedCPU</p>
-     * </li>
-     * <li><p>SubmittedMemory</p>
-     * </li>
-     * <li><p>SubmittedGPU</p>
-     * </li>
-     * <li><p>UsedCPU</p>
-     * </li>
-     * <li><p>UsedMemory</p>
-     * </li>
-     * <li><p>UsedGPU</p>
-     * </li>
-     * <li><p>WorkloadCount</p>
-     * </li>
+     * <li>QuotaId</li>
+     * <li>SubmittedCPU</li>
+     * <li>SubmittedMemory</li>
+     * <li>SubmittedGPU</li>
+     * <li>UsedCPU</li>
+     * <li>UsedMemory</li>
+     * <li>UsedGPU</li>
+     * <li>WorkloadCount</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +64,7 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>Filters the results by user ID.</p>
+     * <p>The user ID for which to query resource usage.</p>
      * 
      * <strong>example:</strong>
      * <p>200xxxxxx</p>
@@ -83,7 +73,7 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>Filters the results by username.</p>
+     * <p>The username for which to query resource usage.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

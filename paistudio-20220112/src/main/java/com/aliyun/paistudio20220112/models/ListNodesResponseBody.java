@@ -20,7 +20,7 @@ public class ListNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of nodes that meet the filter conditions.</p>
+     * <p>The number of nodes that match the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>23</p>

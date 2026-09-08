@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteQuotaResponseBody extends TeaModel {
     /**
-     * <p>Quota ID.</p>
+     * <p>Quota ID。</p>
      * 
      * <strong>example:</strong>
      * <p>quotamtl37ge7gkvdz</p>
@@ -14,7 +14,7 @@ public class DeleteQuotaResponseBody extends TeaModel {
     public String quotaId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>

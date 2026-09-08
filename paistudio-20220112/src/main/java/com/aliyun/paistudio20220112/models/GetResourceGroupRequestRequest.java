@@ -22,7 +22,7 @@ public class GetResourceGroupRequestRequest extends TeaModel {
     public String podStatus;
 
     /**
-     * <p>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to obtain information about the resource group.</p>
+     * <p>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to retrieve information about the resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

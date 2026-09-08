@@ -29,11 +29,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shanghai-finance-1", "pai.cn-shanghai-finance-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "pai.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "pai.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "pai.us-southeast-1.aliyuncs.com"),
             new TeaPair("cn-zhongwei", "pai.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "pai.ap-northeast-2.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "pai.cn-guangzhou.aliyuncs.com"),
             new TeaPair("ap-southeast-8", "pai.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "pai.ap-northeast-2.aliyuncs.com")
+            new TeaPair("us-southeast-1", "pai.us-southeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("paistudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -250,7 +250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the <code>CreateQuota</code> operation to create a quota.</p>
+     * <p>Creates a resource quota by calling the CreateQuota operation.</p>
      * 
      * @param request CreateQuotaRequest
      * @param headers map
@@ -324,7 +324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the <code>CreateQuota</code> operation to create a quota.</p>
+     * <p>Creates a resource quota by calling the CreateQuota operation.</p>
      * 
      * @param request CreateQuotaRequest
      * @return CreateQuotaResponse
@@ -662,7 +662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can delete a resource quota by using DeleteQuota.</p>
+     * <p>Deletes a resource quota.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -688,7 +688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can delete a resource quota by using DeleteQuota.</p>
+     * <p>Deletes a resource quota.</p>
      * @return DeleteQuotaResponse
      */
     public DeleteQuotaResponse deleteQuota(String QuotaId) throws Exception {
@@ -736,7 +736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified machine group from a resource group.</p>
+     * <p>Deletes a machine group.</p>
      * 
      * @deprecated OpenAPI DeleteResourceGroupMachineGroup is deprecated
      * 
@@ -766,7 +766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified machine group from a resource group.</p>
+     * <p>Deletes a machine group.</p>
      * 
      * @deprecated OpenAPI DeleteResourceGroupMachineGroup is deprecated
      * @return DeleteResourceGroupMachineGroupResponse
@@ -984,7 +984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the GetNodeMetrics operation to obtain the metric information of resource group nodes.</p>
+     * <p>Retrieves metric information for resource group nodes.</p>
      * 
      * @deprecated OpenAPI GetNodeMetrics is deprecated
      * 
@@ -1038,7 +1038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the GetNodeMetrics operation to obtain the metric information of resource group nodes.</p>
+     * <p>Retrieves metric information for resource group nodes.</p>
      * 
      * @deprecated OpenAPI GetNodeMetrics is deprecated
      * 
@@ -1055,7 +1055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call GetQuota to retrieve the details of a resource quota. This helps you monitor current resource usage for effective resource management and planning.</p>
+     * <p>Retrieves the details of a resource quota to help you understand the current resource usage and facilitate resource management and planning.</p>
      * 
      * @param request GetQuotaRequest
      * @param headers map
@@ -1093,7 +1093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call GetQuota to retrieve the details of a resource quota. This helps you monitor current resource usage for effective resource management and planning.</p>
+     * <p>Retrieves the details of a resource quota to help you understand the current resource usage and facilitate resource management and planning.</p>
      * 
      * @param request GetQuotaRequest
      * @return GetQuotaResponse
@@ -1216,7 +1216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the GetResourceGroupRequest operation to obtain the number of resources that have been allocated to a resource group.</p>
+     * <p>Retrieves the number of resources that have been assigned to a resource group.</p>
      * 
      * @deprecated OpenAPI GetResourceGroupRequest is deprecated
      * 
@@ -1258,7 +1258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the GetResourceGroupRequest operation to obtain the number of resources that have been allocated to a resource group.</p>
+     * <p>Retrieves the number of resources that have been assigned to a resource group.</p>
      * 
      * @deprecated OpenAPI GetResourceGroupRequest is deprecated
      * 
@@ -1765,8 +1765,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</li>
-     * <li><code>NodeName</code> and <code>ResourceGroupId</code> are required parameters that represent the node name and the resource group ID to which the node belongs.</li>
-     * <li>Optional parameters include <code>OversoldTypes</code> and <code>GPUIndexes</code>, which are used to further filter or specify conditions.</li>
+     * <li>NodeName and ResourceGroupId are required parameters that represent the node name and the ID of the resource group to which the node belongs.</li>
+     * <li>Optional parameters include OversoldTypes and GPUIndexes, which are used to further filter or specify conditions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1815,8 +1815,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</li>
-     * <li><code>NodeName</code> and <code>ResourceGroupId</code> are required parameters that represent the node name and the resource group ID to which the node belongs.</li>
-     * <li>Optional parameters include <code>OversoldTypes</code> and <code>GPUIndexes</code>, which are used to further filter or specify conditions.</li>
+     * <li>NodeName and ResourceGroupId are required parameters that represent the node name and the ID of the resource group to which the node belongs.</li>
+     * <li>Optional parameters include OversoldTypes and GPUIndexes, which are used to further filter or specify conditions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1914,10 +1914,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ListNodes retrieves resource nodes that match specified filter conditions.</p>
+     * <p>You can call ListNodes to retrieve resource nodes that match specified filter conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns a list of resource nodes.</p>
+     * <p>Retrieves a list of resource nodes.</p>
      * 
      * @param tmpReq ListNodesRequest
      * @param headers map
@@ -2081,10 +2081,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ListNodes retrieves resource nodes that match specified filter conditions.</p>
+     * <p>You can call ListNodes to retrieve resource nodes that match specified filter conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns a list of resource nodes.</p>
+     * <p>Retrieves a list of resource nodes.</p>
      * 
      * @param request ListNodesRequest
      * @return ListNodesResponse
@@ -2097,10 +2097,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the resource usage of users in a specified quota.</p>
+     * <p>Retrieves the resource usage of users for a specified QuotaId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists users within a quota and their resource usage.</p>
+     * <p>Retrieves the list of users under the current resource quota and their resource usage.</p>
      * 
      * @param request ListQuotaActiveUserUsagesRequest
      * @param headers map
@@ -2166,10 +2166,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the resource usage of users in a specified quota.</p>
+     * <p>Retrieves the resource usage of users for a specified QuotaId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists users within a quota and their resource usage.</p>
+     * <p>Retrieves the list of users under the current resource quota and their resource usage.</p>
      * 
      * @param request ListQuotaActiveUserUsagesRequest
      * @return ListQuotaActiveUserUsagesResponse
@@ -2182,7 +2182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of workloads associated with a specific quota.</p>
+     * <p>Retrieves the list of node information on a resource quota.</p>
      * 
      * @param request ListQuotaWorkloadsRequest
      * @param headers map
@@ -2308,7 +2308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of workloads associated with a specific quota.</p>
+     * <p>Retrieves the list of node information on a resource quota.</p>
      * 
      * @param request ListQuotaWorkloadsRequest
      * @return ListQuotaWorkloadsResponse
@@ -2321,7 +2321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists quotas.</p>
+     * <p>Retrieves a list of resource quotas.</p>
      * 
      * @param request ListQuotasRequest
      * @param headers map
@@ -2423,7 +2423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists quotas.</p>
+     * <p>Retrieves a list of resource quotas.</p>
      * 
      * @param request ListQuotasRequest
      * @return ListQuotasResponse
@@ -3180,10 +3180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use OperateNode to manage a specified resource node. Supported operations include disabling or enabling scheduling.</p>
+     * <p>You can call OperateNode to operate on a specified resource node, including operations such as disabling scheduling and enabling scheduling.</p>
      * 
      * <b>summary</b> : 
-     * <p>Use OperateNode to manage nodes.</p>
+     * <p>Operates on a specified node.</p>
      * 
      * @param request OperateNodeRequest
      * @param headers map
@@ -3225,10 +3225,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use OperateNode to manage a specified resource node. Supported operations include disabling or enabling scheduling.</p>
+     * <p>You can call OperateNode to operate on a specified resource node, including operations such as disabling scheduling and enabling scheduling.</p>
      * 
      * <b>summary</b> : 
-     * <p>Use OperateNode to manage nodes.</p>
+     * <p>Operates on a specified node.</p>
      * 
      * @param request OperateNodeRequest
      * @return OperateNodeResponse

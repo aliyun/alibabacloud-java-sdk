@@ -5,67 +5,74 @@ import com.aliyun.tea.*;
 
 public class QuotaDetails extends TeaModel {
     /**
-     * <p>Total MinQuota amount actually assigned</p>
+     * <p>The total MinQuota actually allocated. For example, if the user configured 10 nodes but only 8 nodes are actually bound, this value returns the total resources of the 8 nodes.</p>
      */
     @NameInMap("ActualMinQuota")
     public ResourceAmount actualMinQuota;
 
     /**
-     * <p>Quota amount assignable by the User</p>
+     * <p>The user-allocatable quota amount. For general computing resources, each node has system-reserved resources. This value represents the quota resources that user workloads can occupy.
+     * ActualMin = AllocatableQuota + SystemReservedQuota.</p>
      */
     @NameInMap("AllocatableQuota")
     public ResourceAmount allocatableQuota;
 
     /**
-     * <p>Total Quota usage information</p>
+     * <p>The total quota usage information, which is the total resources occupied by workloads after scheduling to nodes.</p>
      */
     @NameInMap("AllocatedQuota")
     public ResourceAmount allocatedQuota;
 
     /**
-     * <p>Quota usage information of ancestors</p>
+     * <p>The ancestor quota usage information, which is the total resources of workloads submitted using ancestor quotas after they are scheduled to nodes.</p>
      */
     @NameInMap("AncestorsAllocatedQuota")
     public ResourceAmount ancestorsAllocatedQuota;
 
     /**
-     * <p>Quota usage information of descendants</p>
+     * <p>The descendant quota usage information, which is the total resources of workloads submitted using descendant quotas after they are scheduled to nodes.</p>
      */
     @NameInMap("DescendantsAllocatedQuota")
     public ResourceAmount descendantsAllocatedQuota;
 
     /**
-     * <p>Total MinQuota amount requested by the User</p>
+     * <p>The total MinQuota desired by the user.</p>
      */
     @NameInMap("DesiredMinQuota")
     public ResourceAmount desiredMinQuota;
 
+    /**
+     * <p>The statistics information of nodes within the quota.</p>
+     */
     @NameInMap("NodeStatistics")
     public QuotaNodeStatistics nodeStatistics;
 
     /**
-     * <p>Quota request amount</p>
+     * <p>The quota requested amount, which is the total resources occupied by workloads after they are dequeued.</p>
      */
     @NameInMap("RequestedQuota")
     public ResourceAmount requestedQuota;
 
     /**
-     * <p>Quota usage information at the current level</p>
+     * <p>The current-level quota usage information, which is the total resources of workloads submitted using this quota after they are scheduled to nodes.</p>
      */
     @NameInMap("SelfAllocatedQuota")
     public ResourceAmount selfAllocatedQuota;
 
+    /**
+     * <p>The amount submitted to this quota, which is the total resources of workloads submitted to this quota, including workloads that are queued.</p>
+     */
     @NameInMap("SelfSubmittedQuota")
     public ResourceAmount selfSubmittedQuota;
 
     /**
-     * <p>System-reserved Quota amount</p>
+     * <p>The system-reserved quota amount.</p>
      */
     @NameInMap("SystemReservedQuota")
     public ResourceAmount systemReservedQuota;
 
     /**
-     * <p>Quota usage amount</p>
+     * <p>The quota used amount. This field is deprecating. Use AllocatedQuota instead.</p>
      */
     @NameInMap("UsedQuota")
     public ResourceAmount usedQuota;

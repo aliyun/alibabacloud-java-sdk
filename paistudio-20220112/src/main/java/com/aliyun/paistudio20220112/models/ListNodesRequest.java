@@ -7,12 +7,10 @@ public class ListNodesRequest extends TeaModel {
     /**
      * <p>The accelerator type. Valid values:</p>
      * <ul>
-     * <li><p>CPU</p>
-     * </li>
-     * <li><p>GPU</p>
-     * </li>
+     * <li>CPU</li>
+     * <li>GPU</li>
      * </ul>
-     * <p>If omitted, this operation returns nodes of all accelerator types.</p>
+     * <p>Default value: empty, which indicates all types.</p>
      * 
      * <strong>example:</strong>
      * <p>CPU</p>
@@ -30,7 +28,7 @@ public class ListNodesRequest extends TeaModel {
     public String diskPL;
 
     /**
-     * <p>When used with <code>ResourceGroupIds</code>, this parameter further filters the results to include only nodes from the specified resource quota.</p>
+     * <p>Used together with ResourceGroupIds to display nodes in the resource groups that are bound to the specified quotas.</p>
      * 
      * <strong>example:</strong>
      * <p>quotamtl37ge7gkvdz</p>
@@ -39,7 +37,7 @@ public class ListNodesRequest extends TeaModel {
     public String filterByQuotaId;
 
     /**
-     * <p>When used with <code>QuotaId</code>, this parameter further filters the results to include only nodes from the specified resource groups.</p>
+     * <p>Used together with QuotaId to display nodes in the quota that belong to the specified resource groups.</p>
      * 
      * <strong>example:</strong>
      * <p>rg69rj0leslwdnbe</p>
@@ -48,7 +46,7 @@ public class ListNodesRequest extends TeaModel {
     public String filterByResourceGroupIds;
 
     /**
-     * <p>The GPU type. Fuzzy matching is supported.</p>
+     * <p>The GPU type. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>T4</p>
@@ -56,9 +54,15 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <p>The number of healthy nodes.</p>
+     */
     @NameInMap("HealthCount")
     public ListNodesRequestHealthCount healthCount;
 
+    /**
+     * <p>The health rate of nodes (the proportion of healthy nodes).</p>
+     */
     @NameInMap("HealthRate")
     public ListNodesRequestHealthRate healthRate;
 
@@ -68,6 +72,9 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("HyperZone")
     public String hyperZone;
 
+    /**
+     * <p>The layout mode.</p>
+     */
     @NameInMap("LayoutMode")
     public String layoutMode;
 
@@ -75,7 +82,7 @@ public class ListNodesRequest extends TeaModel {
     public String machineGroupIds;
 
     /**
-     * <p>A comma-separated list of node names. Only nodes with names that match this list are returned.</p>
+     * <p>The node names to display, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>lingjxxxx</p>
@@ -84,7 +91,7 @@ public class ListNodesRequest extends TeaModel {
     public String nodeNames;
 
     /**
-     * <p>A comma-separated list of node statuses. If this parameter is omitted, this operation returns nodes of all statuses.</p>
+     * <p>The node statuses, separated by commas. If this parameter is not specified, nodes in all statuses are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -93,7 +100,7 @@ public class ListNodesRequest extends TeaModel {
     public String nodeStatuses;
 
     /**
-     * <p>A comma-separated list of node specifications. If this parameter is omitted, this operation returns nodes of all specifications.</p>
+     * <p>The resource node specifications, separated by commas. If this parameter is not configured, nodes of all node specifications are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.xlarge</p>
@@ -104,10 +111,8 @@ public class ListNodesRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><code>desc</code>: Descending</p>
-     * </li>
-     * <li><p><code>asc</code>: Ascending</p>
-     * </li>
+     * <li>desc: Descending order.</li>
+     * <li>asc: Ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,7 +122,7 @@ public class ListNodesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>A comma-separated list of order IDs.</p>
+     * <p>The order ID information.</p>
      * 
      * <strong>example:</strong>
      * <p>260590501560397</p>
@@ -126,7 +131,7 @@ public class ListNodesRequest extends TeaModel {
     public String orderInstanceIds;
 
     /**
-     * <p>A comma-separated list of order statuses.</p>
+     * <p>The order statuses of the nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -135,7 +140,7 @@ public class ListNodesRequest extends TeaModel {
     public String orderStatuses;
 
     /**
-     * <p>The page number. The first page is 1.</p>
+     * <p>The page number, starting from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -144,7 +149,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page for paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -159,7 +164,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer podNum;
 
     /**
-     * <p>The ID of the resource quota that contains the nodes.</p>
+     * <p>The resource quota ID to which the node belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>quotamtl37ge7gkvdz</p>
@@ -171,15 +176,12 @@ public class ListNodesRequest extends TeaModel {
     public String reasonCodes;
 
     /**
-     * <p>A comma-separated list of resource group IDs. You must specify either this parameter or <code>QuotaId</code>.
-     * Constraints:</p>
+     * <p>The IDs of resource groups, separated by commas. Either this parameter or QuotaId is required.</p>
+     * <p>Constraints:</p>
      * <ol>
-     * <li><p>The user ID of the request must match the user ID associated with the specified resource groups.</p>
-     * </li>
-     * <li><p>All specified resource groups must be of the same type.</p>
-     * </li>
-     * <li><p>All specified resource groups must be in the same VPC.</p>
-     * </li>
+     * <li>The UserId of the specified ResourceGroupId must match the UserId of the request.</li>
+     * <li>The specified resource groups must be of the same type.</li>
+     * <li>The specified resource groups must be associated with the same VPC at this stage.</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -188,11 +190,14 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("ResourceGroupIds")
     public String resourceGroupIds;
 
+    /**
+     * <p>The name of the resource group.</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -201,7 +206,7 @@ public class ListNodesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>Specifies whether to return resource usage information. This parameter applies only when <code>QuotaId</code> is specified.</p>
+     * <p>Specifies whether to return resource usage information. This parameter takes effect only when QuotaId is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -469,6 +474,9 @@ public class ListNodesRequest extends TeaModel {
     }
 
     public static class ListNodesRequestHealthCount extends TeaModel {
+        /**
+         * <p>The comparison operator. Valid values: ge, gte, eq, lte, lt.</p>
+         */
         @NameInMap("operation")
         public String operation;
 
@@ -499,6 +507,9 @@ public class ListNodesRequest extends TeaModel {
     }
 
     public static class ListNodesRequestHealthRate extends TeaModel {
+        /**
+         * <p>The comparison operator. Valid values: ge, gte, eq, lte, lt.</p>
+         */
         @NameInMap("operation")
         public String operation;
 

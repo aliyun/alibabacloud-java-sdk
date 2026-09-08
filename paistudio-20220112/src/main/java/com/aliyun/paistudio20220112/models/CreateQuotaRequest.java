@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQuotaRequest extends TeaModel {
     /**
-     * <p>The allocation strategy for the quota. Only <code>ByNodeSpecs</code> is supported.</p>
+     * <p>The quota allocation strategy. Currently, only ByNodeSpecs is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>ByNodeSpecs</p>
@@ -14,13 +14,13 @@ public class CreateQuotaRequest extends TeaModel {
     public String allocateStrategy;
 
     /**
-     * <p>The native cluster specification for the quota.</p>
+     * <p>The specifications of the native cluster for the resource quota.</p>
      */
     @NameInMap("ClusterSpec")
     public ClusterSpec clusterSpec;
 
     /**
-     * <p>The description of the quota.</p>
+     * <p>The quota description.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test quota</p>
@@ -29,41 +29,33 @@ public class CreateQuotaRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The tags for the quota.</p>
+     * <p>The quota labels.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The minimum resources for the quota. You can define this in one of the following ways:</p>
+     * <p>The minimum quota configuration. Valid options:</p>
      * <ul>
-     * <li><p><code>ResourceAmount</code>: Specifies the CPU, memory, and GPU details.</p>
-     * </li>
-     * <li><p><code>NodeSpecs</code>: Specifies the node specification and the number of nodes.</p>
-     * </li>
+     * <li>ResourceAmount: specifies CPU, memory, or GPU details.</li>
+     * <li>NodeSpecs: specifies the instance type and quantity.</li>
      * </ul>
      * <p>Constraints:</p>
      * <ul>
-     * <li><p>If this quota allocates resources from a dedicated resource group, you must use the <code>NodeSpecs</code> method.</p>
-     * </li>
-     * <li><p>If this quota allocates resources from a parent quota, both methods are allowed. However, all its child quotas must use the same method.</p>
-     * </li>
-     * <li><p>All GPU specifications within the quota must have the same GPU type.</p>
-     * </li>
-     * <li><p>For quotas with the resource type set to ECS or Lingjun, only the <code>NodeSpecs</code> method can be used.</p>
-     * </li>
+     * <li>If the quota allocates resources from a dedicated resource group, only the NodeSpecs strategy is allowed.</li>
+     * <li>If the quota allocates resources from a parent quota, both strategies are allowed, but all child quotas must use the same strategy.</li>
+     * <li>All GPU specifications within a quota must use the same GPU type.</li>
+     * <li>Resource quotas with the ECS or Lingjun resource type can only use the NodeSpecs strategy.</li>
      * </ul>
      */
     @NameInMap("Min")
     public ResourceSpec min;
 
     /**
-     * <p>The ID of the parent quota.</p>
+     * <p>The parent QuotaId:</p>
      * <ul>
-     * <li><p>If you do not specify this parameter, a root quota is created. Resources are allocated from a dedicated resource group.</p>
-     * </li>
-     * <li><p>If you specify this parameter, a child quota is created. Resources are allocated from the nodes that are bound to the root quota.</p>
-     * </li>
+     * <li>If ParentQuotaId is empty, a root quota is created and machines are allocated from the dedicated resource group.</li>
+     * <li>If ParentQuotaId is not empty, a child quota is created and resources are allocated from the nodes bound to the root quota.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,16 +65,12 @@ public class CreateQuotaRequest extends TeaModel {
     public String parentQuotaId;
 
     /**
-     * <p>The queuing strategy for the quota. Four strategies are supported:</p>
+     * <p>Four queuing policies are supported for quotas.</p>
      * <ul>
-     * <li><p><code>PaiStrategyIntelligent</code>: The intelligent strategy.</p>
-     * </li>
-     * <li><p><code>PaiStrategyBalance</code>: The balance strategy.</p>
-     * </li>
-     * <li><p><code>PaiStrategyRoundRobin</code>: The round-robin strategy.</p>
-     * </li>
-     * <li><p><code>PaiStrategyStrictFIFO</code>: The FIFO strategy.</p>
-     * </li>
+     * <li>PaiStrategyIntelligent: intelligent policies.</li>
+     * <li>PaiStrategyBalance: balanced policy.</li>
+     * <li>PaiStrategyRoundRobin: resource-priority policy.</li>
+     * <li>PaiStrategyStrictFIFO: FIFO policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,19 +83,17 @@ public class CreateQuotaRequest extends TeaModel {
     public String queueStrategy;
 
     /**
-     * <p>Constraints for the <code>QuotaConfig</code> parameter:</p>
+     * <p>QuotaConfig configuration constraints:</p>
      * <ul>
-     * <li><p>This parameter is ignored if the resource type is ECS or Lingjun.</p>
-     * </li>
-     * <li><p>If the resource type is ACS, the specified VPC and ACS configurations are applied.</p>
-     * </li>
+     * <li>This configuration does not take effect when the ECS or Lingjun resource type is used.</li>
+     * <li>When the ACS resource type is used, the user VPC information and ACS configuration take effect.</li>
      * </ul>
      */
     @NameInMap("QuotaConfig")
     public QuotaConfig quotaConfig;
 
     /**
-     * <p>The name of the quota.</p>
+     * <p>The quota name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-quota</p>
@@ -116,19 +102,17 @@ public class CreateQuotaRequest extends TeaModel {
     public String quotaName;
 
     /**
-     * <p>The IDs of the dedicated resource groups. The following constraints apply:</p>
+     * <p>The list of dedicated resource groups. Constraints:</p>
      * <ul>
-     * <li><p>Only a root quota, for which <code>ParentQuotaId</code> is empty, can allocate nodes from a resource group.</p>
-     * </li>
-     * <li><p>The VPC configurations of the specified resource groups must be the same.</p>
-     * </li>
+     * <li>Only root quotas (where ParentQuotaId is empty) can allocate machines from resource groups.</li>
+     * <li>The VPC configurations in the specified resource groups must be consistent.</li>
      * </ul>
      */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
 
     /**
-     * <p>The resource type of the quota. Valid values: Lingjun, ECS, and ACS. Default value: ECS.</p>
+     * <p>The quota resource type (Lingjun/ECS/ACS). Default value: ECS.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>

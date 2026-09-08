@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Rules extends TeaModel {
+    /**
+     * <p>The node scheduling rule configuration.</p>
+     */
     @NameInMap("Scheduling")
     public SchedulingRule scheduling;
 

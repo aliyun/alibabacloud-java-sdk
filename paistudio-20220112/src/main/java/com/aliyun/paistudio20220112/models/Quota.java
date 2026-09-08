@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Quota extends TeaModel {
     /**
-     * <p>The resource allocation strategy. Currently, only <code>ByNodeSpec</code> is supported.</p>
+     * <p>The resource allocation strategy. Currently, only ByNodeSpecs is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>ByNodeSpec</p>
@@ -14,7 +14,7 @@ public class Quota extends TeaModel {
     public String allocateStrategy;
 
     /**
-     * <p>The ID of the user who created the quota.</p>
+     * <p>The ID of the resource quota creator.</p>
      * 
      * <strong>example:</strong>
      * <p>1884692****</p>
@@ -23,7 +23,7 @@ public class Quota extends TeaModel {
     public String creatorId;
 
     /**
-     * <p>The quota description.</p>
+     * <p>The resource quota description.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test quota</p>
@@ -31,11 +31,14 @@ public class Quota extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The GPU type.</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
     /**
-     * <p>The time when the quota was created.</p>
+     * <p>The time when the resource quota was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -44,7 +47,7 @@ public class Quota extends TeaModel {
     public String gmtCreatedTime;
 
     /**
-     * <p>The time when the quota was last modified.</p>
+     * <p>The time when the resource quota was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -56,13 +59,13 @@ public class Quota extends TeaModel {
     public java.util.List<String> hyperZones;
 
     /**
-     * <p>The quota labels.</p>
+     * <p>The resource quota labels.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The ID of the most recent operation on the quota.</p>
+     * <p>The ID of the latest operation on the resource quota.</p>
      * 
      * <strong>example:</strong>
      * <p>operation****</p>
@@ -77,7 +80,7 @@ public class Quota extends TeaModel {
     public ResourceSpec min;
 
     /**
-     * <p>The parent quota ID.</p>
+     * <p>The parent resource quota ID.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -86,16 +89,12 @@ public class Quota extends TeaModel {
     public String parentQuotaId;
 
     /**
-     * <p>The queuing strategy. Valid values:</p>
+     * <p>The queue policy for the quota. Valid values:</p>
      * <ul>
-     * <li><p><code>PaiStrategyIntelligent</code>: intelligent strategy.</p>
-     * </li>
-     * <li><p><code>PaiStrategyBalance</code>: balanced strategy.</p>
-     * </li>
-     * <li><p><code>PaiStrategyRoundRobin</code>: round-robin strategy.</p>
-     * </li>
-     * <li><p><code>PaiStrategyStrictFIFO</code>: FIFO strategy.</p>
-     * </li>
+     * <li>PaiStrategyIntelligent: intelligent policies.</li>
+     * <li>PaiStrategyBalance: balanced policy.</li>
+     * <li>PaiStrategyRoundRobin: resource-priority policy.</li>
+     * <li>PaiStrategyStrictFIFO: FIFO policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,19 +107,19 @@ public class Quota extends TeaModel {
     public QuotaCluster quotaCluster;
 
     /**
-     * <p>The quota configuration.</p>
+     * <p>The resource quota configuration.</p>
      */
     @NameInMap("QuotaConfig")
     public QuotaConfig quotaConfig;
 
     /**
-     * <p>The quota details.</p>
+     * <p>The resource quota details.</p>
      */
     @NameInMap("QuotaDetails")
     public QuotaDetails quotaDetails;
 
     /**
-     * <p>The quota ID.</p>
+     * <p>The resource quota ID.</p>
      * 
      * <strong>example:</strong>
      * <p>quota12345</p>
@@ -129,7 +128,7 @@ public class Quota extends TeaModel {
     public String quotaId;
 
     /**
-     * <p>The quota name.</p>
+     * <p>The resource quota name.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-quota</p>
@@ -147,7 +146,7 @@ public class Quota extends TeaModel {
     public String reasonCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error reason.</p>
      * 
      * <strong>example:</strong>
      * <p>“”</p>
@@ -156,7 +155,7 @@ public class Quota extends TeaModel {
     public String reasonMessage;
 
     /**
-     * <p>A list of resource group IDs.</p>
+     * <p>The list of resource groups.</p>
      */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
@@ -164,12 +163,9 @@ public class Quota extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p><code>Lingjun</code></p>
-     * </li>
-     * <li><p><code>ECS</code> (default)</p>
-     * </li>
-     * <li><p><code>ACS</code></p>
-     * </li>
+     * <li>Lingjun</li>
+     * <li>ECS (default)</li>
+     * <li>ACS</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -179,7 +175,7 @@ public class Quota extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The quota status.</p>
+     * <p>The resource quota status.</p>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -188,7 +184,7 @@ public class Quota extends TeaModel {
     public String status;
 
     /**
-     * <p>A list of sub-quotas.</p>
+     * <p>The list of sub-quotas under the resource quota.</p>
      */
     @NameInMap("SubQuotas")
     public java.util.List<QuotaIdName> subQuotas;
@@ -200,7 +196,7 @@ public class Quota extends TeaModel {
     public String version;
 
     /**
-     * <p>The workspaces that are associated with the quota.</p>
+     * <p>The workspaces associated with the resource quota.</p>
      */
     @NameInMap("Workspaces")
     public java.util.List<WorkspaceIdName> workspaces;

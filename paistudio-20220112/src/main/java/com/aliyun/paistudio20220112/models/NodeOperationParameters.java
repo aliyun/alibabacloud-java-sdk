@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class NodeOperationParameters extends TeaModel {
     /**
-     * <p>Node cordon parameter settings</p>
+     * <p>The parameter settings for disabling node scheduling.</p>
      */
     @NameInMap("CordonParameters")
     public NodeCordonParameters cordonParameters;
 
     /**
-     * <p>Node drain task instance parameter settings</p>
+     * <p>The parameter settings for draining task instances from a node.</p>
      */
     @NameInMap("DrainParameters")
     public NodeDrainParameters drainParameters;
 
     /**
-     * <p>Node uncordon parameter settings</p>
+     * <p>The parameters for changing disk capacity.</p>
+     */
+    @NameInMap("ResizeDiskParameters")
+    public ResizeDiskParameters resizeDiskParameters;
+
+    /**
+     * <p>The parameter settings for enabling node scheduling.</p>
      */
     @NameInMap("UncordonParameters")
     public NodeUncordonParameters uncordonParameters;
@@ -41,6 +47,14 @@ public class NodeOperationParameters extends TeaModel {
     }
     public NodeDrainParameters getDrainParameters() {
         return this.drainParameters;
+    }
+
+    public NodeOperationParameters setResizeDiskParameters(ResizeDiskParameters resizeDiskParameters) {
+        this.resizeDiskParameters = resizeDiskParameters;
+        return this;
+    }
+    public ResizeDiskParameters getResizeDiskParameters() {
+        return this.resizeDiskParameters;
     }
 
     public NodeOperationParameters setUncordonParameters(NodeUncordonParameters uncordonParameters) {

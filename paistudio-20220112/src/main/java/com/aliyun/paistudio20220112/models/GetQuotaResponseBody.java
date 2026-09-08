@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQuotaResponseBody extends TeaModel {
     /**
-     * <p>The resource allocation policy.</p>
+     * <p>The resource allocation strategy.</p>
      * 
      * <strong>example:</strong>
      * <p>ByNodeSpec</p>
@@ -14,7 +14,7 @@ public class GetQuotaResponseBody extends TeaModel {
     public String allocateStrategy;
 
     /**
-     * <p>The ID of the user who created the resource quota.</p>
+     * <p>The ID of the quota creator.</p>
      * 
      * <strong>example:</strong>
      * <p>1884692****</p>
@@ -23,7 +23,7 @@ public class GetQuotaResponseBody extends TeaModel {
     public String creatorId;
 
     /**
-     * <p>The description of the resource quota.</p>
+     * <p>The description of the quota.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test quota</p>
@@ -32,7 +32,16 @@ public class GetQuotaResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The time when the resource quota was created.</p>
+     * <p>The GPU type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>L20</p>
+     */
+    @NameInMap("GPUType")
+    public String GPUType;
+
+    /**
+     * <p>The time when the quota was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -41,7 +50,7 @@ public class GetQuotaResponseBody extends TeaModel {
     public String gmtCreatedTime;
 
     /**
-     * <p>The time when the resource quota was last modified.</p>
+     * <p>The time when the quota was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -50,19 +59,19 @@ public class GetQuotaResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>A list of high-performance network zones.</p>
+     * <p>The list of high-performance network zones.</p>
      */
     @NameInMap("HyperZones")
     public java.util.List<String> hyperZones;
 
     /**
-     * <p>The labels of the resource quota.</p>
+     * <p>The labels of the quota.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The ID of the most recent change to the resource quota.</p>
+     * <p>The ID of the latest quota operation.</p>
      * 
      * <strong>example:</strong>
      * <p>operation****</p>
@@ -71,13 +80,13 @@ public class GetQuotaResponseBody extends TeaModel {
     public String latestOperationId;
 
     /**
-     * <p>The configuration of the minimum quota.</p>
+     * <p>The minimum quota configuration.</p>
      */
     @NameInMap("Min")
     public ResourceSpec min;
 
     /**
-     * <p>The ID of the parent resource quota.</p>
+     * <p>The ID of the parent quota.</p>
      * 
      * <strong>example:</strong>
      * <p>quota1ci8g79****</p>
@@ -86,7 +95,7 @@ public class GetQuotaResponseBody extends TeaModel {
     public String parentQuotaId;
 
     /**
-     * <p>The queuing policy for tasks in the resource quota.</p>
+     * <p>The queuing strategy for tasks in the quota.</p>
      * 
      * <strong>example:</strong>
      * <p>PaiStrategyIntelligent</p>
@@ -95,19 +104,19 @@ public class GetQuotaResponseBody extends TeaModel {
     public String queueStrategy;
 
     /**
-     * <p>The specifications and status of the cluster that is composed of resources within the quota.</p>
+     * <p>The cluster specifications and status composed of resources in the quota.</p>
      */
     @NameInMap("QuotaCluster")
     public QuotaCluster quotaCluster;
 
     /**
-     * <p>The configurations of the resource quota:</p>
+     * <p>The quota configuration:</p>
      * <ul>
      * <li><p>VPC information</p>
      * </li>
-     * <li><p>Whether Remote Direct Memory Access (RDMA) is supported</p>
+     * <li><p>Whether RDMA is supported</p>
      * </li>
-     * <li><p>ACS configurations, which take effect if the resource type is ACS</p>
+     * <li><p>ACS configuration (takes effect when the resource type is ACS)</p>
      * </li>
      * </ul>
      */
@@ -115,13 +124,13 @@ public class GetQuotaResponseBody extends TeaModel {
     public QuotaConfig quotaConfig;
 
     /**
-     * <p>The details of the resource quota.</p>
+     * <p>The details of the quota.</p>
      */
     @NameInMap("QuotaDetails")
     public QuotaDetails quotaDetails;
 
     /**
-     * <p>The ID of the resource quota.</p>
+     * <p>The resource quota ID.</p>
      * 
      * <strong>example:</strong>
      * <p>quotajradxh4****</p>
@@ -148,7 +157,7 @@ public class GetQuotaResponseBody extends TeaModel {
     public String reasonCode;
 
     /**
-     * <p>The cause of the error.</p>
+     * <p>The error reason.</p>
      * 
      * <strong>example:</strong>
      * <p>“”</p>
@@ -166,7 +175,7 @@ public class GetQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource groups that are associated with the resource quota.</p>
+     * <p>The resource group information associated with the resource quota.</p>
      */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
@@ -181,7 +190,7 @@ public class GetQuotaResponseBody extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The status of the resource quota.</p>
+     * <p>The status of the quota.</p>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -190,13 +199,13 @@ public class GetQuotaResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>A list of sub-quotas of the resource quota.</p>
+     * <p>The list of sub-quotas under the quota.</p>
      */
     @NameInMap("SubQuotas")
     public java.util.List<QuotaIdName> subQuotas;
 
     /**
-     * <p>The version information. This parameter takes effect when ResourceType is set to ECS.</p>
+     * <p>The version information. Takes effect when the resource type is ECS.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0</p>
@@ -205,7 +214,7 @@ public class GetQuotaResponseBody extends TeaModel {
     public String version;
 
     /**
-     * <p>The workspaces that are associated with the resource quota.</p>
+     * <p>The workspaces associated with the quota.</p>
      */
     @NameInMap("Workspaces")
     public java.util.List<WorkspaceIdName> workspaces;
@@ -237,6 +246,14 @@ public class GetQuotaResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public GetQuotaResponseBody setGPUType(String GPUType) {
+        this.GPUType = GPUType;
+        return this;
+    }
+    public String getGPUType() {
+        return this.GPUType;
     }
 
     public GetQuotaResponseBody setGmtCreatedTime(String gmtCreatedTime) {

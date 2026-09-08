@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class NodeTypeStatistic extends TeaModel {
     /**
+     * <p>The number of resource nodes of the specification that can be bound.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -12,6 +14,8 @@ public class NodeTypeStatistic extends TeaModel {
     public Integer canBeBoundCount;
 
     /**
+     * <p>The resource node specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.g6.4xlarge</p>
      */
@@ -19,6 +23,8 @@ public class NodeTypeStatistic extends TeaModel {
     public String nodeType;
 
     /**
+     * <p>The total number of resource nodes of the specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

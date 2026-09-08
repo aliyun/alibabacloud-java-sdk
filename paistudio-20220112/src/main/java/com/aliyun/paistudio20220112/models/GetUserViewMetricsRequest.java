@@ -38,7 +38,7 @@ public class GetUserViewMetricsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The sorting criterion.</p>
+     * <p>The sorting field.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtModified</p>
@@ -56,7 +56,7 @@ public class GetUserViewMetricsRequest extends TeaModel {
      * <li><p>s: seconds.</p>
      * </li>
      * </ul>
-     * <p>If no unit is specified, the default unit s (seconds) is used.</p>
+     * <p>If no unit is specified, the default unit is s (seconds).</p>
      * 
      * <strong>example:</strong>
      * <p>1h</p>

@@ -14,7 +14,7 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of workloads that match the filter criteria.</p>
+     * <p>The number of instances that match the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>23</p>
@@ -23,7 +23,7 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>A list of workloads.</p>
+     * <p>The list of workload information.</p>
      */
     @NameInMap("Workloads")
     public java.util.List<QueueInfo> workloads;

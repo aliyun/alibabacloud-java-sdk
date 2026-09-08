@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotasResponseBody extends TeaModel {
     /**
-     * <p>The list of quotas.</p>
+     * <p>The list of resource quotas.</p>
      */
     @NameInMap("Quotas")
     public java.util.List<Quota> quotas;
@@ -20,7 +20,7 @@ public class ListQuotasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that match the request.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>23</p>

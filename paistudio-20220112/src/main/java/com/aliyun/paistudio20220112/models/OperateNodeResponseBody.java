@@ -14,7 +14,7 @@ public class OperateNodeResponseBody extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>96496E6E-00B4-5F55-80F6-1844FA9E92DC</p>

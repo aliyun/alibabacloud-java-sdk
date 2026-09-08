@@ -39,7 +39,7 @@ public class GetNodeMetricsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The time step. Default value: 5m. The supported time units are:</p>
+     * <p>The time step. Default value: 5m. Valid values for the time unit:</p>
      * <ul>
      * <li><p>h: hours.</p>
      * </li>
@@ -48,7 +48,7 @@ public class GetNodeMetricsRequest extends TeaModel {
      * <li><p>s: seconds.</p>
      * </li>
      * </ul>
-     * <p>If the value does not contain a unit, the default unit is s (seconds).</p>
+     * <p>If no unit is specified, the default unit is s (seconds).</p>
      * 
      * <strong>example:</strong>
      * <p>1h</p>
@@ -57,10 +57,9 @@ public class GetNodeMetricsRequest extends TeaModel {
     public String timeStep;
 
     /**
-     * <p>Specifies whether to display non-essential information. Non-essential information currently includes Labels.
-     * Valid values:</p>
-     * <p>false: does not display non-essential information (default value)
-     * true: displays non-essential information</p>
+     * <p>Specifies whether to display non-essential information. Non-essential information currently includes Labels. Valid values:</p>
+     * <p>false: does not display non-essential information (default).
+     * true: displays non-essential information.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

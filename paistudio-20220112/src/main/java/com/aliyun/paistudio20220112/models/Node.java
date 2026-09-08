@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Node extends TeaModel {
     /**
-     * <p>The accelerator type of the resource node instance, such as CPU or GPU.</p>
+     * <p>The accelerator type of the resource node specifications (CPU/GPU).</p>
      * 
      * <strong>example:</strong>
      * <p>CPU</p>
@@ -14,13 +14,19 @@ public class Node extends TeaModel {
     public String acceleratorType;
 
     /**
-     * <p>The number of allocatable CPU cores.</p>
+     * <p>The number of CPU cores that can be allocated to users.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("AllocatableCPU")
     public String allocatableCPU;
 
     /**
-     * <p>The amount of allocatable memory in GiB.</p>
+     * <p>The memory size that can be allocated to users.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("AllocatableMemory")
     public String allocatableMemory;
@@ -28,11 +34,17 @@ public class Node extends TeaModel {
     @NameInMap("AncestorQuotaWorkloadNum")
     public Long ancestorQuotaWorkloadNum;
 
+    /**
+     * <p>The zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C</p>
+     */
     @NameInMap("AvailabilityZone")
     public String availabilityZone;
 
     /**
-     * <p>The list of quotas that are bound to the node.</p>
+     * <p>The list of bound quotas.</p>
      */
     @NameInMap("BoundQuotas")
     public java.util.List<QuotaIdName> boundQuotas;
@@ -47,7 +59,7 @@ public class Node extends TeaModel {
     public String CPU;
 
     /**
-     * <p>The ID of the user who created the resource node.</p>
+     * <p>The creator of the resource node.</p>
      * 
      * <strong>example:</strong>
      * <p>281044699048527748</p>
@@ -74,7 +86,10 @@ public class Node extends TeaModel {
     public String GPU;
 
     /**
-     * <p>The GPU memory size in GiB.</p>
+     * <p>The GPU memory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
      */
     @NameInMap("GPUMemory")
     public String GPUMemory;
@@ -89,7 +104,7 @@ public class Node extends TeaModel {
     public String GPUType;
 
     /**
-     * <p>The time when the resource node was created.</p>
+     * <p>The creation time of the resource node.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-07-10T11:49:47Z</p>
@@ -98,11 +113,14 @@ public class Node extends TeaModel {
     @Deprecated
     public String gmtCreateTime;
 
+    /**
+     * <p>The creation time of the resource node.</p>
+     */
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
     /**
-     * <p>The time when the resource node expires.</p>
+     * <p>The expiration time of the resource node.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-06-22T00:00:00Z</p>
@@ -111,7 +129,7 @@ public class Node extends TeaModel {
     public String gmtExpiredTime;
 
     /**
-     * <p>The time when the resource node was last modified.</p>
+     * <p>The update time of the resource node.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-07-10T11:49:47Z</p>
@@ -119,11 +137,17 @@ public class Node extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>The high-speed interconnect zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C3</p>
+     */
     @NameInMap("HyperZone")
     public String hyperZone;
 
     /**
-     * <p>Indicates whether the node is bound to a quota.</p>
+     * <p>Indicates whether the resource node is bound to a quota.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -150,7 +174,7 @@ public class Node extends TeaModel {
     public String limitGPU;
 
     /**
-     * <p>The maximum memory size in GiB.</p>
+     * <p>The maximum memory size.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -168,13 +192,31 @@ public class Node extends TeaModel {
     public String machineGroupId;
 
     /**
-     * <p>The memory size in GiB.</p>
+     * <p>The memory size.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
      */
     @NameInMap("Memory")
     public String memory;
+
+    /**
+     * <p>The GPU memory of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>640G</p>
+     */
+    @NameInMap("NodeGPUMemory")
+    public String nodeGPUMemory;
+
+    /**
+     * <p>The GPU memory of the node in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>687194767360</p>
+     */
+    @NameInMap("NodeGPUMemoryBytes")
+    public Long nodeGPUMemoryBytes;
 
     /**
      * <p>The name of the resource node.</p>
@@ -195,7 +237,7 @@ public class Node extends TeaModel {
     public String nodeStatus;
 
     /**
-     * <p>The instance type of the resource node.</p>
+     * <p>The node specifications type of the resource node.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c8i.xlarge</p>
@@ -258,7 +300,7 @@ public class Node extends TeaModel {
     public String requestGPU;
 
     /**
-     * <p>The requested memory size in GiB.</p>
+     * <p>The requested memory size.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -287,17 +329,26 @@ public class Node extends TeaModel {
     @NameInMap("SelfQuotaWorkloadNum")
     public Long selfQuotaWorkloadNum;
 
+    /**
+     * <p>The names of the child nodes.</p>
+     */
     @NameInMap("SubNodes")
     public java.util.List<String> subNodes;
 
     /**
-     * <p>The number of CPU cores that are reserved for the system.</p>
+     * <p>The number of system-reserved CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SystemReservedCPU")
     public String systemReservedCPU;
 
     /**
-     * <p>The amount of memory that is reserved for the system in GiB.</p>
+     * <p>The system-reserved memory size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("SystemReservedMemory")
     public String systemReservedMemory;
@@ -521,6 +572,22 @@ public class Node extends TeaModel {
     }
     public String getMemory() {
         return this.memory;
+    }
+
+    public Node setNodeGPUMemory(String nodeGPUMemory) {
+        this.nodeGPUMemory = nodeGPUMemory;
+        return this;
+    }
+    public String getNodeGPUMemory() {
+        return this.nodeGPUMemory;
+    }
+
+    public Node setNodeGPUMemoryBytes(Long nodeGPUMemoryBytes) {
+        this.nodeGPUMemoryBytes = nodeGPUMemoryBytes;
+        return this;
+    }
+    public Long getNodeGPUMemoryBytes() {
+        return this.nodeGPUMemoryBytes;
     }
 
     public Node setNodeName(String nodeName) {

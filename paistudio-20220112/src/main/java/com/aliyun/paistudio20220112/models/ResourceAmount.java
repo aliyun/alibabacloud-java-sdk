@@ -23,6 +23,20 @@ public class ResourceAmount extends TeaModel {
     public String GPU;
 
     /**
+     * <strong>example:</strong>
+     * <p>80G</p>
+     */
+    @NameInMap("GPUMemory")
+    public String GPUMemory;
+
+    /**
+     * <strong>example:</strong>
+     * <p>85899345920</p>
+     */
+    @NameInMap("GPUMemoryBytes")
+    public Long GPUMemoryBytes;
+
+    /**
      * <p>GPU card type</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +73,22 @@ public class ResourceAmount extends TeaModel {
     }
     public String getGPU() {
         return this.GPU;
+    }
+
+    public ResourceAmount setGPUMemory(String GPUMemory) {
+        this.GPUMemory = GPUMemory;
+        return this;
+    }
+    public String getGPUMemory() {
+        return this.GPUMemory;
+    }
+
+    public ResourceAmount setGPUMemoryBytes(Long GPUMemoryBytes) {
+        this.GPUMemoryBytes = GPUMemoryBytes;
+        return this;
+    }
+    public Long getGPUMemoryBytes() {
+        return this.GPUMemoryBytes;
     }
 
     public ResourceAmount setGPUType(String GPUType) {

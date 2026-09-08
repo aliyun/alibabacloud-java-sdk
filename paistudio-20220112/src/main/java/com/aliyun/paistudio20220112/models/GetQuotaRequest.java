@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQuotaRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return detailed information.</p>
+     * <p>Specifies whether to display detailed information.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class GetQuotaRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>Specifies whether to return the metadata of nodes that are attached to the resource quota.</p>
+     * <p>Specifies whether to return the node metadata bound to the quota.</p>
      */
     @NameInMap("WithNodeMeta")
     public Boolean withNodeMeta;

@@ -8,7 +8,7 @@ public class ResourceGroup extends TeaModel {
      * <p>The user ID of the creator.</p>
      * 
      * <strong>example:</strong>
-     * <p>161228528250****</p>
+     * <p>1612285282502324</p>
      */
     @NameInMap("CreatorID")
     public String creatorID;
@@ -53,7 +53,7 @@ public class ResourceGroup extends TeaModel {
      * <p>The ID of the PAI resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg17tmvwiokh****</p>
+     * <p>rg17tmvwiokhzaxg</p>
      */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;

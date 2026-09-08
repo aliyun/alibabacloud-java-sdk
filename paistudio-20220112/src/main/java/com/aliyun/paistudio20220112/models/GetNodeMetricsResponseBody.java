@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNodeMetricsResponseBody extends TeaModel {
     /**
-     * <p>The name of the metric to query.</p>
+     * <p>The name of the queried metric.</p>
      * 
      * <strong>example:</strong>
      * <p>DiskWriteRate</p>
@@ -14,13 +14,13 @@ public class GetNodeMetricsResponseBody extends TeaModel {
     public String metricType;
 
     /**
-     * <p>The metric information of the nodes.</p>
+     * <p>The node metric information.</p>
      */
     @NameInMap("NodesMetrics")
     public java.util.List<NodeMetric> nodesMetrics;
 
     /**
-     * <p>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to obtain information about the resource group.</p>
+     * <p>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to retrieve information about the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rgf0zhfqn1d4ity2</p>

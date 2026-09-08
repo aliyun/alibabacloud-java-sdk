@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQuotaResponseBody extends TeaModel {
     /**
-     * <p>The quota ID.</p>
+     * <p>The resource quota ID.</p>
      * 
      * <strong>example:</strong>
      * <p>quotad2kd8ljpsno</p>

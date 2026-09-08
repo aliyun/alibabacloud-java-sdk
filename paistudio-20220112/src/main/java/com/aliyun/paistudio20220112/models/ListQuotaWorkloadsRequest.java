@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotaWorkloadsRequest extends TeaModel {
     /**
-     * <p>Retrieves workloads that precede the specified workload ID in the queue.</p>
+     * <p>Queries the queuing information for instances before a specified workload ID in the queue.</p>
      * 
      * <strong>example:</strong>
      * <p>dsw654433**</p>
@@ -14,19 +14,19 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public String beforeWorkloadId;
 
     /**
-     * <p>Filters workloads by their dequeue time range.</p>
+     * <p>The range search for workload dequeue time.</p>
      */
     @NameInMap("GmtDequeuedTimeRange")
     public TimeRangeFilter gmtDequeuedTimeRange;
 
     /**
-     * <p>Filters workloads by their enqueue time range.</p>
+     * <p>The range search for workload enqueue time.</p>
      */
     @NameInMap("GmtEnqueuedTimeRange")
     public TimeRangeFilter gmtEnqueuedTimeRange;
 
     /**
-     * <p>Filters workloads by the time range of their last queue position change.</p>
+     * <p>The range search for workload queue position change time.</p>
      */
     @NameInMap("GmtPositionModifiedTimeRange")
     public TimeRangeFilter gmtPositionModifiedTimeRange;
@@ -35,7 +35,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Filters workloads by node name.</p>
+     * <p>Searches only for nodes on the specified node.</p>
      * 
      * <strong>example:</strong>
      * <p>lrn482781276**</p>
@@ -44,7 +44,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public String nodeName;
 
     /**
-     * <p>The sort order for the results. Valid values are <code>asc</code> for ascending and <code>desc</code> for descending.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -53,7 +53,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +62,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries to return on a single page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -77,7 +77,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>Specifies whether to return only workloads that belong to the specified quota.</p>
+     * <p>Specifies whether to display only the workloads associated with the current resource quota.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -86,7 +86,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public Boolean showOwn;
 
     /**
-     * <p>The field to use for sorting the results.</p>
+     * <p>The field by which to sort the returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreatedTime</p>
@@ -95,7 +95,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>Filters workloads by their status in the queue.</p>
+     * <p>The status in the queue.</p>
      * 
      * <strong>example:</strong>
      * <p>Enqueued</p>
@@ -104,7 +104,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Filters workloads by sub-quota ID. You can specify multiple IDs, separated by commas.</p>
+     * <p>The list of sub-resource quota IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>quota123446**,quota644322**</p>
@@ -116,7 +116,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public Boolean useOversoldResource;
 
     /**
-     * <p>Filters workloads by user ID. You can specify multiple IDs, separated by commas.</p>
+     * <p>The list of user IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>290438938**,238290930**</p>
@@ -124,20 +124,17 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     @NameInMap("UserIds")
     public String userIds;
 
-    /**
-     * <p>Specifies whether to include historical data in the query results.</p>
-     */
     @NameInMap("WithHistoricalData")
     public Boolean withHistoricalData;
 
     /**
-     * <p>Filters workloads based on their creation time range.</p>
+     * <p>The range search for workload creation time.</p>
      */
     @NameInMap("WorkloadCreatedTimeRange")
     public TimeRangeFilter workloadCreatedTimeRange;
 
     /**
-     * <p>Filters workloads by workload ID. You can specify multiple IDs, separated by commas.</p>
+     * <p>Queries the queuing information for specified workload IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc123445**</p>
@@ -149,7 +146,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public String workloadNames;
 
     /**
-     * <p>Filters workloads by status. You can specify multiple statuses, separated by commas.</p>
+     * <p>Filters by workload status.</p>
      * 
      * <strong>example:</strong>
      * <p>Pending</p>
@@ -158,7 +155,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public String workloadStatuses;
 
     /**
-     * <p>Filters workloads by the sub-product type of the instance.</p>
+     * <p>Queries the queuing information for instances of a specified sub-product.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc</p>
@@ -167,7 +164,7 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     public String workloadType;
 
     /**
-     * <p>Filters workloads by workspace ID. You can specify multiple IDs, separated by commas.</p>
+     * <p>Queries the queuing information for workloads in a specified workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>1866**</p>
