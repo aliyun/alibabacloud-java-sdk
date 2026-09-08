@@ -3,7 +3,7 @@ package com.aliyun.ecd20210602.models;
 
 import com.aliyun.tea.*;
 
-public class ListTenantAppResponse extends TeaModel {
+public class CreateTenantSkillResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListTenantAppResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListTenantAppResponseBody body;
+    public CreateTenantSkillResponseBody body;
 
-    public static ListTenantAppResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListTenantAppResponse self = new ListTenantAppResponse();
+    public static CreateTenantSkillResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateTenantSkillResponse self = new CreateTenantSkillResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListTenantAppResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateTenantSkillResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListTenantAppResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListTenantAppResponse setStatusCode(Integer statusCode) {
+    public CreateTenantSkillResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListTenantAppResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListTenantAppResponse setBody(ListTenantAppResponseBody body) {
+    public CreateTenantSkillResponse setBody(CreateTenantSkillResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListTenantAppResponseBody getBody() {
+    public CreateTenantSkillResponseBody getBody() {
         return this.body;
     }
 
