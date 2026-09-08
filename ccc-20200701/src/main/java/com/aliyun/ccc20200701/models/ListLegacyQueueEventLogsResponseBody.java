@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListLegacyQueueEventLogsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A5A8998-41F9-5F85-BFCF-EB2B6E376812</p>
      */
@@ -32,6 +47,8 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the invocation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +110,8 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
 
     public static class ListLegacyQueueEventLogsResponseBodyDataList extends TeaModel {
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>456328****</p>
          */
@@ -100,6 +119,8 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         public String acid;
 
         /**
+         * <p>Calling party</p>
+         * 
          * <strong>example:</strong>
          * <p>8012****</p>
          */
@@ -107,6 +128,8 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         public String ani;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -114,26 +137,44 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         public String answerPhone;
 
         /**
+         * <p>Acknowledgement duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
         @NameInMap("AnswerTime")
         public Long answerTime;
 
+        /**
+         * <p>Hang-up reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>正常</p>
+         */
         @NameInMap("Cause")
         public String cause;
 
         /**
+         * <p>Dialed number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1312211****</p>
          */
         @NameInMap("Dnis")
         public String dnis;
 
+        /**
+         * <p>Primary key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109160</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         /**
+         * <p>Queue duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -141,6 +182,8 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         public Long queueTime;
 
         /**
+         * <p>Statistics date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-03T10:15:30</p>
          */
@@ -148,6 +191,8 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         public String statisticDate;
 
         /**
+         * <p>Tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acc3733</p>
          */
@@ -155,6 +200,8 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>Queue name.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -257,10 +304,15 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
     }
 
     public static class ListLegacyQueueEventLogsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of queue event logs.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListLegacyQueueEventLogsResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 1000.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -268,6 +320,8 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 1000.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -275,6 +329,8 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

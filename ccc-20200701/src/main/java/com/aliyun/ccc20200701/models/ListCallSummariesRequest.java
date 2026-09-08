@@ -4,10 +4,14 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListCallSummariesRequest extends TeaModel {
+    /**
+     * <p>List of call IDs.</p>
+     */
     @NameInMap("ContactIdList")
     public java.util.List<String> contactIdList;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

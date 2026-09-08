@@ -4,13 +4,26 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class RemoveUsersRequest extends TeaModel {
+    /**
+     * <p>The ObjectKey of the OSS object containing the file with the list of users to delete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>temp/removeUsers.xlsx</p>
+     */
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <p>Specifies whether to force delete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,10 +32,18 @@ public class RemoveUsersRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Notification email address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:123@abc.com">123@abc.com</a></p>
+     */
     @NameInMap("NotificationEmail")
     public String notificationEmail;
 
     /**
+     * <p>A JSON-formatted string representing an array of agent IDs. Each array element is an agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;agent1@ccc-test&quot;,&quot;agent2@ccc-test&quot;]</p>
      */

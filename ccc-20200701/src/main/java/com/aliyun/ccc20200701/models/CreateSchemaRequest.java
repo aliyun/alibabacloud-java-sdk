@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSchemaRequest extends TeaModel {
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,7 +16,7 @@ public class CreateSchemaRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>schema id</p>
+     * <p>The schema ID.</p>
      * 
      * <strong>example:</strong>
      * <p>profile</p>
@@ -23,6 +25,7 @@ public class CreateSchemaRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +34,15 @@ public class CreateSchemaRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The list of fields.</p>
+     */
     @NameInMap("Properties")
     public java.util.List<CreateSchemaRequestProperties> properties;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
      */
@@ -88,6 +96,8 @@ public class CreateSchemaRequest extends TeaModel {
 
     public static class CreateSchemaRequestProperties extends TeaModel {
         /**
+         * <p>Indicates whether the field is an array.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -95,6 +105,8 @@ public class CreateSchemaRequest extends TeaModel {
         public Boolean array;
 
         /**
+         * <p>The extended properties.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Clusters\&quot;: {\&quot;Description\&quot;: \&quot;The list of clusters.\&quot;}, \&quot;ClusterIds\&quot;: {\&quot;Description\&quot;: \&quot;The list of cluster IDs.\&quot;}}</p>
          */
@@ -102,6 +114,7 @@ public class CreateSchemaRequest extends TeaModel {
         public String attributes;
 
         /**
+         * <p>The data type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +124,8 @@ public class CreateSchemaRequest extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The description of the version.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -120,16 +135,26 @@ public class CreateSchemaRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the field is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        /**
+         * <p>The display name for agents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>显示名称</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The display order in the list.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -137,6 +162,8 @@ public class CreateSchemaRequest extends TeaModel {
         public Integer displayOrder;
 
         /**
+         * <p>The editor type.</p>
+         * 
          * <strong>example:</strong>
          * <p>textbox</p>
          */
@@ -144,6 +171,8 @@ public class CreateSchemaRequest extends TeaModel {
         public String editorType;
 
         /**
+         * <p>The maximum length.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -151,6 +180,8 @@ public class CreateSchemaRequest extends TeaModel {
         public Integer maxLength;
 
         /**
+         * <p>The maximum value of the number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -158,6 +189,8 @@ public class CreateSchemaRequest extends TeaModel {
         public Double maximum;
 
         /**
+         * <p>The minimum length.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -165,6 +198,8 @@ public class CreateSchemaRequest extends TeaModel {
         public Integer minLength;
 
         /**
+         * <p>The minimum value of the number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -172,6 +207,7 @@ public class CreateSchemaRequest extends TeaModel {
         public Double minimum;
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,6 +217,8 @@ public class CreateSchemaRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The regular expression that is used for validation.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -189,10 +227,18 @@ public class CreateSchemaRequest extends TeaModel {
         @NameInMap("Pattern")
         public String pattern;
 
+        /**
+         * <p>The error message that is returned when the regular expression fails to match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>错误的格式</p>
+         */
         @NameInMap("PatternErrorMessage")
         public String patternErrorMessage;
 
         /**
+         * <p>Indicates whether the field is read-only.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -200,6 +246,8 @@ public class CreateSchemaRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
+         * <p>Indicates whether the field is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

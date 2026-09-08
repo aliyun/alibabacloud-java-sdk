@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSkillGroupRequest extends TeaModel {
     /**
+     * <p>Whether to force delete. If the skill group is associated with a number or agent, you must enable the force delete flag to successfully delete it.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class DeleteSkillGroupRequest extends TeaModel {
     public Boolean force;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteSkillGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

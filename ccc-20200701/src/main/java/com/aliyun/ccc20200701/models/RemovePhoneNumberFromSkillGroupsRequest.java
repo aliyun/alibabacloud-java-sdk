@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemovePhoneNumberFromSkillGroupsRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemovePhoneNumberFromSkillGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The phone number to detach.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RemovePhoneNumberFromSkillGroupsRequest extends TeaModel {
     public String number;
 
     /**
+     * <p>List of skill group IDs to detach. Ensure that each skill group is already associated with the phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

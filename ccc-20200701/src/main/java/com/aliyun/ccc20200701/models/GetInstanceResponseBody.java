@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public GetInstanceResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
      */
@@ -77,10 +92,18 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataAdminList extends TeaModel {
+        /**
+         * <p>The name of the administrator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>管理员</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The mailbox.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -88,6 +111,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The agent\&quot;s extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -95,6 +120,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -102,6 +129,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The agent\&quot;s logon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
@@ -109,6 +138,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String loginName;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1382114****</p>
          */
@@ -116,6 +147,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>The role ID. The format is: Role\@Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin@ccc-test</p>
          */
@@ -123,6 +156,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String roleId;
 
         /**
+         * <p>The role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin</p>
          */
@@ -130,6 +165,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -137,6 +174,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -261,13 +300,27 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataNumberListSkillGroups extends TeaModel {
+        /**
+         * <p>The description of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心的测试技能组。</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -275,6 +328,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
          */
@@ -282,6 +337,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The number of phone numbers associated with the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -289,6 +346,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer phoneNumberCount;
 
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -296,6 +355,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>The number of agents associated with the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -367,16 +428,26 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyDataNumberList extends TeaModel {
         /**
+         * <p>Indicates whether the number is active.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The city where the number is registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>乐山</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>The ID of the contact flow (IVR) associated with the phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>2ec7a58f-3243-4815-bb21-97b480b95f5e</p>
          */
@@ -384,6 +455,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String contactFlowId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -391,19 +464,32 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0830011****</p>
          */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <p>The province where the number is registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>四川</p>
+         */
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <p>The list of skill groups associated with the number.</p>
+         */
         @NameInMap("SkillGroups")
         public java.util.List<GetInstanceResponseBodyDataNumberListSkillGroups> skillGroups;
 
         /**
+         * <p>The purpose of the number.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bidirection</p>
          */
@@ -411,6 +497,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String usage;
 
         /**
+         * <p>The agent ID. If this parameter is not empty, the number is a personal outbound number for the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -497,6 +585,9 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of administrators.</p>
+         */
         @NameInMap("AdminList")
         public java.util.List<GetInstanceResponseBodyDataAdminList> adminList;
 
@@ -504,6 +595,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String agentType;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>157123456789****</p>
          */
@@ -514,16 +607,26 @@ public class GetInstanceResponseBody extends TeaModel {
         public GetInstanceResponseBodyDataChatbotBusinessUnit chatbotBusinessUnit;
 
         /**
+         * <p>The URL of the Cloud Contact Center instance homepage. This URL is formed by combining the base URL of Cloud Contact Center and the instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2.aliyun.com/#/workbench/ccc-test">https://ccc-v2.aliyun.com/#/workbench/ccc-test</a></p>
          */
         @NameInMap("ConsoleUrl")
         public String consoleUrl;
 
+        /**
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心的测试实例。</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The domain name of the instance. It is globally unique.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -531,19 +634,32 @@ public class GetInstanceResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试实例</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of numbers.</p>
+         */
         @NameInMap("NumberList")
         public java.util.List<GetInstanceResponseBodyDataNumberList> numberList;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */

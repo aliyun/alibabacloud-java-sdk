@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetNumberLocationResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetNumberLocationResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>584AA2E3-9AC4-561B-BC8D-C74BA11B1387</p>
      */
@@ -77,16 +92,30 @@ public class GetNumberLocationResponseBody extends TeaModel {
     }
 
     public static class GetNumberLocationResponseBodyData extends TeaModel {
+        /**
+         * <p>City of the number\&quot;s registration location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>Number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1312121****</p>
          */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <p>Province of the number\&quot;s registration location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("Province")
         public String province;
 

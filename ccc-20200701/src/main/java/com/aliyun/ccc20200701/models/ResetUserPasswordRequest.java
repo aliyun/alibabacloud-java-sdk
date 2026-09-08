@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetUserPasswordRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResetUserPasswordRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>New password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ResetUserPasswordRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>Agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

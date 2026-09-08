@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConfigItemsRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListConfigItemsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the object to which the config item applies. This can be the ID of an Alibaba Cloud account, an instance, a skill group, or an agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListConfigItemsRequest extends TeaModel {
     public String objectId;
 
     /**
+     * <p>The type of the object.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

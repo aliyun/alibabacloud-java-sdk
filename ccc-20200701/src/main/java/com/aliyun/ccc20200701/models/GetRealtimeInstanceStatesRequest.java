@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRealtimeInstanceStatesRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,12 @@ public class GetRealtimeInstanceStatesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Media type. The default is audio (AUDIO).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUDIO</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 

@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetInstanceTrendingReportResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetInstanceTrendingReportResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
      */
@@ -78,6 +93,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
 
     public static class GetInstanceTrendingReportResponseBodyDataInbound extends TeaModel {
         /**
+         * <p>Number of calls abandoned in the IVR, meaning calls that were abandoned during the IVR flow after entering it.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -85,6 +102,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long callsAbandonedInIVR;
 
         /**
+         * <p>Number of calls abandoned in the queue, meaning calls that were abandoned while waiting in the skill group queue after entering it.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -92,6 +111,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long callsAbandonedInQueue;
 
         /**
+         * <p>Number of calls abandoned during ringing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -99,6 +120,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long callsAbandonedInRing;
 
         /**
+         * <p>Number of calls answered by agents. If a single call is distributed to multiple agents, it is counted as one call.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -106,6 +129,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long callsHandled;
 
         /**
+         * <p>Number of calls that entered the queue. If a single call enters the queue multiple times, it is counted as one call.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -113,6 +138,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long callsQueued;
 
         /**
+         * <p>The start time of the segment statistics, in UNIX timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1604639129000</p>
          */
@@ -120,6 +147,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long statsTime;
 
         /**
+         * <p>Total number of incoming calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -191,6 +220,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
 
     public static class GetInstanceTrendingReportResponseBodyDataOutbound extends TeaModel {
         /**
+         * <p>Number of answered outbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -198,6 +229,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long callsAnswered;
 
         /**
+         * <p>Start time of the segment, in UNIX timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1604639129000</p>
          */
@@ -205,6 +238,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long statsTime;
 
         /**
+         * <p>Total number of outbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -243,9 +278,21 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
     }
 
     public static class GetInstanceTrendingReportResponseBodyDataOverall extends TeaModel {
+        /**
+         * <p>Maximum number of agents logged on simultaneously during this time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102</p>
+         */
         @NameInMap("MaxLoggedInAgents")
         public Long maxLoggedInAgents;
 
+        /**
+         * <p>The start time of the segment statistics, in UNIX timestamp format, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1604639129000</p>
+         */
         @NameInMap("StatsTime")
         public Long statsTime;
 
@@ -273,12 +320,21 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
     }
 
     public static class GetInstanceTrendingReportResponseBodyData extends TeaModel {
+        /**
+         * <p>Inbound metrics.</p>
+         */
         @NameInMap("Inbound")
         public java.util.List<GetInstanceTrendingReportResponseBodyDataInbound> inbound;
 
+        /**
+         * <p>Outbound metrics.</p>
+         */
         @NameInMap("Outbound")
         public java.util.List<GetInstanceTrendingReportResponseBodyDataOutbound> outbound;
 
+        /**
+         * <p>Overall metrics.</p>
+         */
         @NameInMap("Overall")
         public java.util.List<GetInstanceTrendingReportResponseBodyDataOverall> overall;
 

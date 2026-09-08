@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListBriefSkillGroupsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListBriefSkillGroupsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3969FC68-CEC2-4398-B76A-60D2F7EDEBAF</p>
      */
@@ -77,23 +92,45 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
     }
 
     public static class ListBriefSkillGroupsResponseBodyDataList extends TeaModel {
+        /**
+         * <p>Description of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心的测试技能组。</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The media type. The default value is AUDIO. Other valid values include CHAT and VIDEO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIDEO</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
+         * <p>Quantity of phone numbers associated with the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -101,6 +138,8 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         public Integer phoneNumberCount;
 
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -108,6 +147,8 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>Name of the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
          */
@@ -115,6 +156,8 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         public String skillGroupName;
 
         /**
+         * <p>The number of agents associated with the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -193,10 +236,15 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
     }
 
     public static class ListBriefSkillGroupsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of skill group summary information.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListBriefSkillGroupsResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -204,6 +252,8 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -211,6 +261,8 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

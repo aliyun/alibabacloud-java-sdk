@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListFlashSmsSettingsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListFlashSmsSettingsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of incorrect parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -89,6 +107,14 @@ public class ListFlashSmsSettingsResponseBody extends TeaModel {
 
     public static class ListFlashSmsSettingsResponseBodyDataList extends TeaModel {
         /**
+         * <p>Indicates whether flash SMS is enabled for the skill group.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -96,6 +122,8 @@ public class ListFlashSmsSettingsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -103,12 +131,20 @@ public class ListFlashSmsSettingsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup1@ccc-test</p>
          */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <p>The name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>闪信测试技能组</p>
+         */
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
@@ -152,10 +188,15 @@ public class ListFlashSmsSettingsResponseBody extends TeaModel {
     }
 
     public static class ListFlashSmsSettingsResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of configurations.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListFlashSmsSettingsResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -163,6 +204,8 @@ public class ListFlashSmsSettingsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -170,6 +213,8 @@ public class ListFlashSmsSettingsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

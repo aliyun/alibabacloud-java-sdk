@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetHistoricalInstanceReportResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetHistoricalInstanceReportResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
      */
@@ -77,9 +92,21 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
     }
 
     public static class GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList extends TeaModel {
+        /**
+         * <p>Channel Type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Web</p>
+         */
         @NameInMap("AccessChannelType")
         public String accessChannelType;
 
+        /**
+         * <p>Number of assigned sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("CallsOffered")
         public Long callsOffered;
 
@@ -108,16 +135,23 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
     public static class GetHistoricalInstanceReportResponseBodyDataInbound extends TeaModel {
         /**
+         * <p>Abandon rate. Calculation Formula: CallsAbandoned / CallsOffered (because abandonment events and assignment events may fall into different time ranges, the result may exceed 100% in certain cases).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AbandonRate")
         public Float abandonRate;
 
+        /**
+         * <p>Statistics for each channel.</p>
+         */
         @NameInMap("AccessChannelTypeDetailList")
         public java.util.List<GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList> accessChannelTypeDetailList;
 
         /**
+         * <p>Average abandon time, in seconds. Calculation formula: TotalAbandonTime / CallsAbandoned.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -125,6 +159,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageAbandonTime;
 
         /**
+         * <p>Average IVR abandonment duration, in seconds. Calculation Formula: TotalAbandonedInIVRTime / CallsAbandonedInIVR.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -132,6 +168,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageAbandonedInIVRTime;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_Inbound_properties_MaxAbandonedInQueueTime_type]integer</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -139,26 +177,44 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageAbandonedInQueueTime;
 
         /**
+         * <p>Average ring-time abandon duration, in seconds. Calculation formula: TotalAbandonedInRingTime / CallsAbandonedInRing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AverageAbandonedInRingTime")
         public Float averageAbandonedInRingTime;
 
+        /**
+         * <p>Average first response time for chat sessions, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("AverageFirstResponseTime")
         public Float averageFirstResponseTime;
 
         /**
+         * <p>Average call hold duration, in seconds. Calculation Formula: TotalHoldTime / CallsHold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AverageHoldTime")
         public Float averageHoldTime;
 
+        /**
+         * <p>Average response time (RT) for chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("AverageResponseTime")
         public Float averageResponseTime;
 
         /**
+         * <p>Average ring time in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -166,6 +222,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageRingTime;
 
         /**
+         * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsHandled.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -173,6 +231,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_Inbound_properties_AverageFirstResponseTime_type]number</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -180,6 +240,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageWaitTime;
 
         /**
+         * <p>Average post-processing time, in seconds. Calculation formula: TotalWorkTime / CallsHandled.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -187,6 +249,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
+         * <p>Total number of abandoned calls. Calculation Formula: CallsAbandonedInIVR + CallsAbandonedInQueue + CallsAbandonedInRing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -194,6 +258,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsAbandoned;
 
         /**
+         * <p>Number of calls abandoned in IVR, which refers to the count of calls where the customer hung up during the IVR flow after entering it. This is determined by the hang-up reason in call details being marked as &quot;IVR abandoned.&quot;</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -201,6 +267,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsAbandonedInIVR;
 
         /**
+         * <p>Number of calls abandoned in queue, which refers to the number of calls where the customer hung up while waiting in the queue after the call entered the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -208,6 +276,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsAbandonedInQueue;
 
         /**
+         * <p>Number of calls abandoned during ringing, which refers to the quantity of calls where the customer hung up while the agent\&quot;s phone was ringing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -215,6 +285,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsAbandonedInRing;
 
         /**
+         * <p>Number of calls abandoned in the Intelligent Voice Navigator module.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -222,6 +294,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsAbandonedInVoiceNavigator;
 
         /**
+         * <p>Number of consultative transfers, which refers to the number of calls that were transferred via consultative transfer. If a single call is transferred multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -229,16 +303,26 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsAttendedTransferred;
 
         /**
+         * <p>The number of blind transfers, which refers to the count of calls directly transferred without consultation. If a single call is transferred multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("CallsBlindTransferred")
         public Long callsBlindTransferred;
 
+        /**
+         * <p>Number of calls that caused IVR exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsCausedIVRException")
         public Long callsCausedIVRException;
 
         /**
+         * <p>Number of calls forwarded to an external number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -246,6 +330,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsForwardToOutsideNumber;
 
         /**
+         * <p>Acknowledgement count, which refers to the number of calls answered by agents. If a single call is answered by multiple agents, it is counted only once.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -253,6 +339,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsHandled;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_Inbound_properties_TotalAbandonTime_type]integer</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -260,6 +348,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsHold;
 
         /**
+         * <p>Number of calls with IVR exceptions. A call is counted when the IVR enters a hang-up reason node and the hang-up reason configured in that node is &quot;transfer to agent failed.&quot;</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -267,6 +357,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsIVRException;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_Inbound_properties_TotalAbandonedInRingTime_type]integer</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -274,6 +366,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsOffered;
 
         /**
+         * <p>Number of calls entering the queue. If a single call enters the queue multiple times, it is counted once.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -281,6 +375,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsQueued;
 
         /**
+         * <p>The number of queue failures, which refers to the count of calls where the customer hung up while waiting in the queue after entering it.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -288,6 +384,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsQueuingFailed;
 
         /**
+         * <p>The number of calls that overflowed from the queue, where queue overflow refers to calls exceeding the queue capacity while waiting in the IVR queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -295,6 +393,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsQueuingOverflow;
 
         /**
+         * <p>Number of calls that timed out during the queuing phase.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -302,16 +402,26 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsQueuingTimeout;
 
         /**
+         * <p>Number of calls that rang agents. If a single call is assigned to multiple agents and rings, it is counted once.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("CallsRinged")
         public Long callsRinged;
 
+        /**
+         * <p>The number of calls routed to voicemail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("CallsToVoicemail")
         public Long callsToVoicemail;
 
         /**
+         * <p>Number of calls transferred to voicemail. The count increases by 1 when a call enters the voicemail module configured in IVR.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -319,6 +429,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsVoicemail;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_Inbound_properties_CallsBlindTransferred_type]integer</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -326,6 +438,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float handleRate;
 
         /**
+         * <p>Maximum abandon time, in seconds. A call is considered abandoned if the customer hangs up after entering the IVR but before an agent answers.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -333,6 +447,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxAbandonTime;
 
         /**
+         * <p>Maximum IVR abandonment duration, in seconds. IVR abandonment is defined as a customer hanging up during IVR interaction. This does not include hang-ups while waiting in queue or during agent ringing after call assignment.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -340,6 +456,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxAbandonedInIVRTime;
 
         /**
+         * <p>Maximum queue abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -347,6 +465,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxAbandonedInQueueTime;
 
         /**
+         * <p>Maximum ringing abandonment duration, in seconds. Ringing abandonment is defined as the customer hanging up while the call is ringing on the agent\&quot;s side after being assigned to the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -354,6 +474,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxAbandonedInRingTime;
 
         /**
+         * <p>Maximum hold time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -361,6 +483,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
+         * <p>Maximum ring duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -368,6 +492,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxRingTime;
 
         /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -375,6 +501,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum wait time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -382,6 +510,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxWaitTime;
 
         /**
+         * <p>Maximum post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -389,6 +519,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_Inbound_properties_CallsQueuingOverflow_type]integer</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -396,6 +528,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Satisfaction rate. Calculation Formula: Number of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -403,6 +537,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -410,26 +546,44 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("SatisfactionSurveysResponded")
         public Long satisfactionSurveysResponded;
 
+        /**
+         * <p>Service level within 15 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.78</p>
+         */
         @NameInMap("ServiceLevel15")
         public Float serviceLevel15;
 
         /**
+         * <p>Service level within 20 seconds: number of calls with wait time less than or equal to 20 seconds divided by CallsQueued.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("ServiceLevel20")
         public Float serviceLevel20;
 
+        /**
+         * <p>Service level within 30 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
         @NameInMap("ServiceLevel30")
         public Float serviceLevel30;
 
         /**
+         * <p>Total abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -437,6 +591,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalAbandonTime;
 
         /**
+         * <p>Total IVR abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -444,6 +600,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalAbandonedInIVRTime;
 
         /**
+         * <p>Total queue abandon time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -451,6 +609,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalAbandonedInQueueTime;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_Inbound_properties_SatisfactionSurveysOffered_type]integer</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -458,22 +618,44 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalAbandonedInRingTime;
 
         /**
+         * <p>Total call hold duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("TotalHoldTime")
         public Long totalHoldTime;
 
+        /**
+         * <p>Total number of messages sent in chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("TotalMessagesSent")
         public Long totalMessagesSent;
 
+        /**
+         * <p>Total number of messages sent by agents in chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("TotalMessagesSentByAgent")
         public Long totalMessagesSentByAgent;
 
+        /**
+         * <p>Total number of messages sent by the customer in chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TotalMessagesSentByCustomer")
         public Long totalMessagesSentByCustomer;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_Inbound_properties_CallsQueuingFailed_type]integer</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -481,6 +663,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalRingTime;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_Inbound_properties_CallsToVoicemail_type]integer</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -488,6 +672,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total wait time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -495,6 +681,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalWaitTime;
 
         /**
+         * <p>Total post-processing duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1005,9 +1193,21 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
     }
 
     public static class GetHistoricalInstanceReportResponseBodyDataInternal extends TeaModel {
+        /**
+         * <p>Number of answered calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CallsAnswered")
         public Long callsAnswered;
 
+        /**
+         * <p>Dial-up volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CallsDialed")
         public Long callsDialed;
 
@@ -1036,6 +1236,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
     public static class GetHistoricalInstanceReportResponseBodyDataOutbound extends TeaModel {
         /**
+         * <p>Answer rate. Calculation Formula: CallsAnswered / CallsDialed. (Because the answering event and the acknowledgement event may fall into different time ranges, the result may exceed 100% in certain cases.)</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1043,6 +1245,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float answerRate;
 
         /**
+         * <p>Average Dial-up Time, in seconds. Calculation Formula: TotalDialingTime / CallsDialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1050,6 +1254,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageDialingTime;
 
         /**
+         * <p>Average hold duration, in seconds. Calculation formula: TotalHoldTime / CallsHold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1057,6 +1263,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageHoldTime;
 
         /**
+         * <p>Average ring time, in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1064,6 +1272,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageRingTime;
 
         /**
+         * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsAnswered.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1071,6 +1281,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
+         * <p>Average post-processing time per call, in seconds. Calculation Formula: TotalWorkTime / CallsDialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1078,6 +1290,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
+         * <p>Answered Call Count.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1085,6 +1299,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsAnswered;
 
         /**
+         * <p>Number of attended transfers, which refers to the quantity of calls that underwent attended transfer. If a single call is transferred multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1092,6 +1308,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsAttendedTransferred;
 
         /**
+         * <p>Number of blind transfers, which refers to the quantity of calls that underwent blind transfer. If a single call is transferred multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1099,6 +1317,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsBlindTransferred;
 
         /**
+         * <p>Dial-up Call Count.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1106,6 +1326,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsDialed;
 
         /**
+         * <p>Hold Count, which is the number of calls that were placed on hold. If a single call was put on hold multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1113,6 +1335,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Integer callsHold;
 
         /**
+         * <p>Number of calls that rang for agents. If a single call is assigned to multiple agents and rings for each, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1120,6 +1344,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsRinged;
 
         /**
+         * <p>Maximum Dial-up Time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1127,6 +1353,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxDialingTime;
 
         /**
+         * <p>Maximum call hold duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1134,6 +1362,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
+         * <p>Maximum ring duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1141,6 +1371,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxRingTime;
 
         /**
+         * <p>Maximum Talk Time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1148,6 +1380,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum post-processing time per call, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1155,6 +1389,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>Satisfaction Index, which is the average of the satisfaction keypress digits (single-digit numbers).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1162,6 +1398,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Satisfaction Rate. Calculation Formula: Number of responses marked as satisfied / Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1169,6 +1407,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1176,6 +1416,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Response Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1183,6 +1425,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Total dial-up duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1190,6 +1434,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalDialingTime;
 
         /**
+         * <p>Total hold duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1197,6 +1443,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalHoldTime;
 
         /**
+         * <p>Total Ring Time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1204,6 +1452,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalRingTime;
 
         /**
+         * <p>Total Talk Time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1211,6 +1461,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total post-processing duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1434,6 +1686,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
     public static class GetHistoricalInstanceReportResponseBodyDataOverall extends TeaModel {
         /**
+         * <p>Average break duration, in seconds. Calculation Formula: TotalBreakTime / Count of breaks. The count of breaks is not an exposed API field.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1441,6 +1695,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageBreakTime;
 
         /**
+         * <p>Average call hold duration, in seconds. Calculation Formula: TotalHoldTime / (InboundCallsHold + OutboundCallsHold).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1448,6 +1704,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageHoldTime;
 
         /**
+         * <p>Average ready duration, in seconds. Calculation Formula: TotalReadyTime / Count of ready events. The count of ready events is not currently exposed externally.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1455,6 +1713,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageReadyTime;
 
         /**
+         * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / (CallsAnswered + CallsHandled).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1462,6 +1722,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
+         * <p>Average post-processing time per call, in seconds. Calculation Formula: TotalWorkTime / TotalCalls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1469,6 +1731,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
+         * <p>Maximum short break duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1476,16 +1740,26 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxBreakTime;
 
         /**
+         * <p>Maximum call hold duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("MaxHoldTime")
         public Long maxHoldTime;
 
+        /**
+         * <p>Maximum number of agents simultaneously logged on during the Time Range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102</p>
+         */
         @NameInMap("MaxLoggedInAgents")
         public Long maxLoggedInAgents;
 
         /**
+         * <p>Maximum ready time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1493,6 +1767,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxReadyTime;
 
         /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1500,6 +1776,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum post-processing time per call, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1507,6 +1785,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>Agent occupancy rate. Calculation Formula: (TotalWorkTime + TotalTalkTime) / TotalLoggedInTime.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1514,6 +1794,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float occupancyRate;
 
         /**
+         * <p>Satisfaction index, which is the average value of the satisfaction keypress digits (single-digit numbers).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1521,6 +1803,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Satisfaction rate. Calculation Formula: Count of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1528,6 +1812,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1535,6 +1821,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1542,6 +1830,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Total break time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1549,6 +1839,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalBreakTime;
 
         /**
+         * <p>Total call volume. Calculation Formula: CallsOffered + CallsDialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1556,6 +1848,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalCalls;
 
         /**
+         * <p>Total hold time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1563,6 +1857,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalHoldTime;
 
         /**
+         * <p>Total logon duration, in seconds. Exclude break time.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1570,6 +1866,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalLoggedInTime;
 
         /**
+         * <p>Total ready time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1577,6 +1875,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalReadyTime;
 
         /**
+         * <p>Total talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1584,6 +1884,8 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1782,15 +2084,27 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
     }
 
     public static class GetHistoricalInstanceReportResponseBodyData extends TeaModel {
+        /**
+         * <p>Inbound data.</p>
+         */
         @NameInMap("Inbound")
         public GetHistoricalInstanceReportResponseBodyDataInbound inbound;
 
+        /**
+         * <p>Internal call metrics.</p>
+         */
         @NameInMap("Internal")
         public GetHistoricalInstanceReportResponseBodyDataInternal internal;
 
+        /**
+         * <p>Outbound metrics.</p>
+         */
         @NameInMap("Outbound")
         public GetHistoricalInstanceReportResponseBodyDataOutbound outbound;
 
+        /**
+         * <p>Overall metrics.</p>
+         */
         @NameInMap("Overall")
         public GetHistoricalInstanceReportResponseBodyDataOverall overall;
 

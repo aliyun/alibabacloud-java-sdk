@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
     /**
+     * <p>Indicates whether the phone number is active. This parameter is optional. The default value is empty, which means no filtering is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
     public Boolean active;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Indicates whether the phone numbers are associated with the skill group. If true, the API queries the list of phone numbers already associated with the specified SkillGroupId. If false, the API queries the list of phone numbers that can be associated with the specified SkillGroupId but are not currently associated. This parameter is typically used together with the AddNumbersToSkillGroup API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
     public Boolean isMember;
 
     /**
+     * <p>Page number for paging. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size for paging. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,8 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Performs Fuzzy Matching on phone numbers. This parameter is optional. The default value is empty, which means no filtering is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>0833</p>
      */
@@ -55,6 +63,7 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
     public String searchPattern;
 
     /**
+     * <p>Skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

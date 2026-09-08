@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListAudioFilesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListAudioFilesResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>53223330-EBF1-586B-A2CB-93C3B711FDA0</p>
      */
@@ -78,6 +93,8 @@ public class ListAudioFilesResponseBody extends TeaModel {
 
     public static class ListAudioFilesResponseBodyDataList extends TeaModel {
         /**
+         * <p>Audio file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-file.wav</p>
          */
@@ -85,16 +102,26 @@ public class ListAudioFilesResponseBody extends TeaModel {
         public String audioFileName;
 
         /**
+         * <p>Audio resource ID, which is the UUID of the audio file.</p>
+         * 
          * <strong>example:</strong>
          * <p>d5cd7a94-3b6a-47d2-b7fd-0b1cd839bf77</p>
          */
         @NameInMap("AudioResourceId")
         public String audioResourceId;
 
+        /**
+         * <p>Audio content threat review result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("AuditResult")
         public String auditResult;
 
         /**
+         * <p>The creation time of the audio resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-03-05 17:35:45.0</p>
          */
@@ -102,32 +129,56 @@ public class ListAudioFilesResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Display name of the audio resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>欢迎语</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The key of the audio resource file in OSS.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test/test-file.wav</p>
          */
         @NameInMap("OssFileKey")
         public String ossFileKey;
 
+        /**
+         * <p>The status of the audio file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
+         */
         @NameInMap("Status")
         public String status;
 
         /**
+         * <p>Last modified time of the audio resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-03-08 15:34:49.0</p>
          */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
+        /**
+         * <p>The usage of the audio file. The default value is General (used in scenarios such as IVR). Other optional values include HoldMusic (hold music during call waiting).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
+         */
         @NameInMap("Usage")
         public String usage;
 
@@ -219,10 +270,15 @@ public class ListAudioFilesResponseBody extends TeaModel {
     }
 
     public static class ListAudioFilesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of audio files.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListAudioFilesResponseBodyDataList> list;
 
         /**
+         * <p>The page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -230,6 +286,8 @@ public class ListAudioFilesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The paging size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -237,6 +295,8 @@ public class ListAudioFilesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

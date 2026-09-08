@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AppendCasesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,16 +17,26 @@ public class AppendCasesResponseBody extends TeaModel {
     public java.util.List<AppendCasesResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BC976D32-AC4C-4E0F-8AA9-F4BC6C4E2B3E</p>
      */

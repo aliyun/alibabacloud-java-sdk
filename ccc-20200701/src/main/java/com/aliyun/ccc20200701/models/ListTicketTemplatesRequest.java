@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTicketTemplatesRequest extends TeaModel {
     /**
+     * <p>The ID of the ticket category.</p>
+     * 
      * <strong>example:</strong>
      * <p>43c2671b-********86d0-6bd187905cc8</p>
      */
@@ -12,6 +14,7 @@ public class ListTicketTemplatesRequest extends TeaModel {
     public String categoryId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListTicketTemplatesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number. The value must be between 1 and 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,16 +33,32 @@ public class ListTicketTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. The value must be between 1 and 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the template. Fuzzy search is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>模板1</p>
+     */
     @NameInMap("SearchPattern")
     public String searchPattern;
 
     /**
+     * <p>The status of the template.</p>
+     * <ul>
+     * <li><p>Enabled: The template is published.</p>
+     * </li>
+     * <li><p>Disabled: The template is unpublished.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportAdminsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ImportAdminsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>A list of UIDs for Alibaba Cloud RAM accounts. The value must be a string-encoded JSON array. The array supports up to 20 UIDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

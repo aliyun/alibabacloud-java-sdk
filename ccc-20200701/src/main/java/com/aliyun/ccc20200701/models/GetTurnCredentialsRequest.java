@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTurnCredentialsRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetTurnCredentialsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the agent. This parameter is optional. If you do not specify this parameter, the agent mapped to the current RAM user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

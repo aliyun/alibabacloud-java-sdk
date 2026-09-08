@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetRealtimeInstanceStatesResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
      */
@@ -77,9 +92,21 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
     }
 
     public static class GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList extends TeaModel {
+        /**
+         * <p>Break code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
+        /**
+         * <p>Break count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Long count;
 
@@ -107,10 +134,15 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
     }
 
     public static class GetRealtimeInstanceStatesResponseBodyData extends TeaModel {
+        /**
+         * <p>List of distributions of break code counts.</p>
+         */
         @NameInMap("BreakCodeDetailList")
         public java.util.List<GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList> breakCodeDetailList;
 
         /**
+         * <p>Number of agents on break.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -118,6 +150,8 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public Long breakingAgents;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -125,6 +159,8 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Number of calls interacting within IVR.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -132,6 +168,8 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public Long interactiveCalls;
 
         /**
+         * <p>Number of logged-in agents (including agents in ready, on break, on call, or other non-unpublished statuses).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -139,6 +177,8 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public Long loggedInAgents;
 
         /**
+         * <p>Maximum queue waiting time among currently queued incoming calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -146,6 +186,8 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public Long longestWaitingTime;
 
         /**
+         * <p>Number of agents in ready status.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -153,6 +195,8 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public Long readyAgents;
 
         /**
+         * <p>Number of agents on calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -160,6 +204,8 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public Long talkingAgents;
 
         /**
+         * <p>Total number of agents.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -167,6 +213,8 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public Long totalAgents;
 
         /**
+         * <p>Number of incoming calls currently queued.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -174,6 +222,8 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public Long waitingCalls;
 
         /**
+         * <p>Number of agents in post-processing status.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

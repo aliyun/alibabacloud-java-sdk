@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class CreateSkillGroupResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public CreateSkillGroupResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -77,20 +92,36 @@ public class CreateSkillGroupResponseBody extends TeaModel {
     }
 
     public static class CreateSkillGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>Description of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心的测试技能组。</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Media type. The default value is AUDIO. Other valid values include CHAT and VIDEO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIDEO</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
+         * <p>Skill group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
          */
@@ -98,6 +129,8 @@ public class CreateSkillGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Skill group ID, in the format: skill group name\@instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */

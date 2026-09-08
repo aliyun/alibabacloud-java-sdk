@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ReadyForServiceResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ReadyForServiceResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CC49060B-87ED-489A-AD3D-00E57775DBFF</p>
      */
@@ -89,6 +107,8 @@ public class ReadyForServiceResponseBody extends TeaModel {
 
     public static class ReadyForServiceResponseBodyData extends TeaModel {
         /**
+         * <p>Break status code, which can be either System-defined or Custom-defined. System-defined break codes include: Warm-up (temporary break state after the agent is published and before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent rejecting a call). There are no restrictions on Custom-defined status codes; customers can define them according to their business needs.</p>
+         * 
          * <strong>example:</strong>
          * <p>Warm-up</p>
          */
@@ -96,6 +116,8 @@ public class ReadyForServiceResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>Device ID, which is the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
@@ -103,6 +125,8 @@ public class ReadyForServiceResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -110,6 +134,8 @@ public class ReadyForServiceResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -117,6 +143,8 @@ public class ReadyForServiceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -124,16 +152,23 @@ public class ReadyForServiceResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <p>List of skill group IDs that the agent has signed into.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -141,6 +176,8 @@ public class ReadyForServiceResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Agent status.</p>
+         * 
          * <strong>example:</strong>
          * <p>READY</p>
          */
@@ -148,6 +185,8 @@ public class ReadyForServiceResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */

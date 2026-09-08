@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportCustomCallTaggingResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Data. The download link to the OSS object containing the export result. The link has a validity period of 24 hours.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/tagging.xlsx">http://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/tagging.xlsx</a> ?Expires=1610910578&amp;OSSAccessKeyId=<strong><strong>&amp;Signature=</strong></strong></p>
      */
@@ -19,16 +23,26 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */

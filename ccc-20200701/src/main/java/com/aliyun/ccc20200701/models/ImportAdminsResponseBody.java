@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ImportAdminsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>A list of imported admins.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ImportAdminsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CDB5C94-ACFB-59B5-85FE-C1DAF8049C63</p>
      */
@@ -78,6 +93,8 @@ public class ImportAdminsResponseBody extends TeaModel {
 
     public static class ImportAdminsResponseBodyData extends TeaModel {
         /**
+         * <p>The agent extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>8021****</p>
          */
@@ -85,6 +102,8 @@ public class ImportAdminsResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -92,6 +111,8 @@ public class ImportAdminsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The UID of the Alibaba Cloud RAM account.</p>
+         * 
          * <strong>example:</strong>
          * <p>26972543893791****</p>
          */
@@ -99,6 +120,8 @@ public class ImportAdminsResponseBody extends TeaModel {
         public String ramId;
 
         /**
+         * <p>The role ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin@ccc-test</p>
          */
@@ -106,6 +129,8 @@ public class ImportAdminsResponseBody extends TeaModel {
         public String roleId;
 
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */

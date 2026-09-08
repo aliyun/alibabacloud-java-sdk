@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVisitorLoginDetailsRequest extends TeaModel {
     /**
+     * <p>Chat device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetVisitorLoginDetailsRequest extends TeaModel {
     public String chatDeviceId;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ccc-test</p>
      */
@@ -21,6 +24,8 @@ public class GetVisitorLoginDetailsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Channel token for network services.</p>
+     * 
      * <strong>example:</strong>
      * <p>9XYGTGWtq2wFi_Bpg7aUnIoYi_vG_rO3b<em><strong>YtsxbHRHrYHlz1LDBLJAyZcLxieRQR4h_6AnWvTjJeNU5jgxzO</strong></em>**bHwej7WgWrmA</p>
      */
@@ -28,6 +33,7 @@ public class GetVisitorLoginDetailsRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>Visitor ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

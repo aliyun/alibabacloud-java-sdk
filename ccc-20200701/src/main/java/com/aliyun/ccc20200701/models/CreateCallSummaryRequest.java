@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateCallSummaryRequest extends TeaModel {
     /**
+     * <p>The ID of the session.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-522327189435260928</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <p>Summary information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;summaryTitle&quot;:&quot;标题&quot;,&quot;summaryContent&quot;:&quot;内容&quot;,&quot;keywords&quot;:&quot;关键信息&quot;}</p>
+     */
     @NameInMap("Context")
     public String context;
 
     /**
+     * <p>Customer ID</p>
+     * 
      * <strong>example:</strong>
      * <p>51e155ce-3747-*****-b402-13c69597b920</p>
      */
@@ -22,6 +32,7 @@ public class CreateCallSummaryRequest extends TeaModel {
     public String customerId;
 
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

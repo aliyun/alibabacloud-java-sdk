@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListInstancesResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>26A34338-5CD9-4C95-A7A6-5BDCE76C6B94</p>
      */
@@ -77,10 +92,18 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyDataListAdminList extends TeaModel {
+        /**
+         * <p>The administrator\&quot;s name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试坐席</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Mailbox.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -88,6 +111,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -95,6 +120,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -102,6 +129,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Agent logon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
@@ -109,6 +138,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String loginName;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1382114****</p>
          */
@@ -116,6 +147,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>The role ID, in the format: role\@instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin@ccc-test</p>
          */
@@ -123,6 +156,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String roleId;
 
         /**
+         * <p>Role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin</p>
          */
@@ -130,6 +165,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -137,6 +174,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -232,6 +271,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataListNumberList extends TeaModel {
         /**
+         * <p>The number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0830011****</p>
          */
@@ -254,10 +295,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyDataList extends TeaModel {
+        /**
+         * <p>Administrator list.</p>
+         */
         @NameInMap("AdminList")
         public java.util.List<ListInstancesResponseBodyDataListAdminList> adminList;
 
         /**
+         * <p>The Alibaba Cloud account ID to which the instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>157123456789****</p>
          */
@@ -265,6 +311,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String aliyunUid;
 
         /**
+         * <p>The URL of the Cloud Contact Center instance, used to access the homepage of the Cloud Call Center instance. It is composed of the specific Cloud Call Center URL followed by the instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2.aliyun.com/#/workbench/ccc-test">https://ccc-v2.aliyun.com/#/workbench/ccc-test</a></p>
          */
@@ -272,16 +320,26 @@ public class ListInstancesResponseBody extends TeaModel {
         public String consoleUrl;
 
         /**
+         * <p>The creation time of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1624679747000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心的测试实例。</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The domain name of the instance, which is globally unique.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -289,19 +347,32 @@ public class ListInstancesResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试实例</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of numbers.</p>
+         */
         @NameInMap("NumberList")
         public java.util.List<ListInstancesResponseBodyDataListNumberList> numberList;
 
         /**
+         * <p>Instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -396,10 +467,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>List.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListInstancesResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -407,6 +483,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -414,6 +492,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

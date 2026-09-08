@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListAgentStatesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListAgentStatesResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
      */
@@ -32,6 +47,8 @@ public class ListAgentStatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,16 +110,26 @@ public class ListAgentStatesResponseBody extends TeaModel {
 
     public static class ListAgentStatesResponseBodyDataList extends TeaModel {
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>Agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
+         * <p>Break code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Warm-up</p>
          */
@@ -110,6 +137,8 @@ public class ListAgentStatesResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8030****</p>
          */
@@ -117,6 +146,8 @@ public class ListAgentStatesResponseBody extends TeaModel {
         public String dn;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -124,6 +155,8 @@ public class ListAgentStatesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Agent logon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
@@ -131,6 +164,8 @@ public class ListAgentStatesResponseBody extends TeaModel {
         public String loginName;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -138,6 +173,8 @@ public class ListAgentStatesResponseBody extends TeaModel {
         public Boolean outboundScenario;
 
         /**
+         * <p>Agent status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Ready</p>
          */
@@ -145,6 +182,8 @@ public class ListAgentStatesResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>Duration of the agent status.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -231,10 +270,15 @@ public class ListAgentStatesResponseBody extends TeaModel {
     }
 
     public static class ListAgentStatesResponseBodyData extends TeaModel {
+        /**
+         * <p>List.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListAgentStatesResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -242,6 +286,8 @@ public class ListAgentStatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 300.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -249,6 +295,8 @@ public class ListAgentStatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */

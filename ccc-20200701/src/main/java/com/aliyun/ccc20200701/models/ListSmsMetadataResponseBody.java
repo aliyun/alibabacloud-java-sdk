@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListSmsMetadataResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListSmsMetadataResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of incorrect parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8707EB29-BAED-4302-B999-40BA61877437</p>
      */
@@ -89,36 +107,62 @@ public class ListSmsMetadataResponseBody extends TeaModel {
 
     public static class ListSmsMetadataResponseBodyDataList extends TeaModel {
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>15772400000****</p>
          */
         @NameInMap("AliyunUid")
         public Long aliyunUid;
 
+        /**
+         * <p>The description of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>漏话短信配置</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>漏话短信提醒</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The scenario type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MISSED_CALL_NOTIFICATION</p>
          */
         @NameInMap("Scenario")
         public String scenario;
 
+        /**
+         * <p>The name of the SMS signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云呼叫中心</p>
+         */
         @NameInMap("SignName")
         public String signName;
 
         /**
+         * <p>The ID of the SMS configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>5ffc1c9a-4d3d-4019-*****-73255fb01d1c</p>
          */
@@ -126,6 +170,8 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         public String smsMetadataId;
 
         /**
+         * <p>The template code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SMS_468xxxx298</p>
          */
@@ -204,10 +250,15 @@ public class ListSmsMetadataResponseBody extends TeaModel {
     }
 
     public static class ListSmsMetadataResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of SMS configurations.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListSmsMetadataResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -215,6 +266,8 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -222,6 +275,8 @@ public class ListSmsMetadataResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */

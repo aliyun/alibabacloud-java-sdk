@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class CreateCustomCallTaggingResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of inbound number tags that failed to be created.</p>
+     */
     @NameInMap("Data")
     public java.util.List<CreateCustomCallTaggingResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -78,6 +93,8 @@ public class CreateCustomCallTaggingResponseBody extends TeaModel {
 
     public static class CreateCustomCallTaggingResponseBodyData extends TeaModel {
         /**
+         * <p>The number of the inbound number tag that failed to be created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1312121****</p>
          */
@@ -85,6 +102,8 @@ public class CreateCustomCallTaggingResponseBody extends TeaModel {
         public String item;
 
         /**
+         * <p>The reason why the creation of the inbound number tag failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM_NUMBER_DUPLICATED</p>
          */

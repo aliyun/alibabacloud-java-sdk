@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InterceptCallRequest extends TeaModel {
     /**
+     * <p>Device ID. This parameter is meaningless and can be filled in with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -12,6 +14,7 @@ public class InterceptCallRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>实例 ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class InterceptCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The agent ID that is forcibly disconnected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class InterceptCallRequest extends TeaModel {
     public String interceptedUserId;
 
     /**
+     * <p>The call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class InterceptCallRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>强拆超时时间，经过指定的时间强拆仍未成功，则取消强拆，正常情况下，强拆操作会马上成功，设置超时时间是为了防止异常发生，此字段选填，默认 30，单位秒。</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -46,6 +53,8 @@ public class InterceptCallRequest extends TeaModel {
     public Integer timeoutSeconds;
 
     /**
+     * <p>发起强拆的坐席。</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

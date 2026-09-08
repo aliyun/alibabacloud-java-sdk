@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListInstancesOfUserResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListInstancesOfUserResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3969FC68-CEC2-4398-B76A-60D2F7EDEBAF</p>
      */
@@ -77,10 +92,18 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
     }
 
     public static class ListInstancesOfUserResponseBodyDataListAdminList extends TeaModel {
+        /**
+         * <p>The administrator\&quot;s name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试坐席</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Mailbox.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -88,6 +111,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -95,6 +120,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -102,6 +129,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Agent logon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
@@ -109,6 +138,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String loginName;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1382114****</p>
          */
@@ -116,6 +147,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>The role ID, in the format: role\@instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin@ccc-test</p>
          */
@@ -123,6 +156,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String roleId;
 
         /**
+         * <p>Role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin</p>
          */
@@ -130,6 +165,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -137,6 +174,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -231,13 +270,27 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
     }
 
     public static class ListInstancesOfUserResponseBodyDataListNumberListSkillGroups extends TeaModel {
+        /**
+         * <p>Skill group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心的测试技能组。</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -245,6 +298,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
          */
@@ -252,6 +307,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Number of phone numbers associated with the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -259,6 +316,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public Integer phoneNumberCount;
 
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -266,6 +325,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>The number of agents associated with the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -337,16 +398,26 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
 
     public static class ListInstancesOfUserResponseBodyDataListNumberList extends TeaModel {
         /**
+         * <p>Indicates whether the number is active.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The city of the phone number\&quot;s registration location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>乐山</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>The contact flow ID (IVR) associated with this phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>a3fb6c62-9b49-4942-ae5b-cf2abd4123ek</p>
          */
@@ -354,6 +425,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String contactFlowId;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -361,19 +434,32 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0830011****</p>
          */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <p>The province of the phone number\&quot;s registration location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>四川</p>
+         */
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <p>List of skill groups associated with the phone number.</p>
+         */
         @NameInMap("SkillGroups")
         public java.util.List<ListInstancesOfUserResponseBodyDataListNumberListSkillGroups> skillGroups;
 
         /**
+         * <p>The usage of the number.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bidirection</p>
          */
@@ -381,6 +467,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String usage;
 
         /**
+         * <p>Agent ID. If this parameter is not empty, the number is a personal outbound number assigned to the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -467,10 +555,15 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
     }
 
     public static class ListInstancesOfUserResponseBodyDataList extends TeaModel {
+        /**
+         * <p>Administrator list.</p>
+         */
         @NameInMap("AdminList")
         public java.util.List<ListInstancesOfUserResponseBodyDataListAdminList> adminList;
 
         /**
+         * <p>The Alibaba Cloud Account ID to which the instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>157123456789****</p>
          */
@@ -478,16 +571,26 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String aliyunUid;
 
         /**
+         * <p>The URL of the Cloud Contact Center instance, used to access the homepage of the Cloud Contact Center instance. It consists of the specific Cloud Contact Center URL followed by the instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2.aliyun.com/#/workbench/ccc-test">https://ccc-v2.aliyun.com/#/workbench/ccc-test</a></p>
          */
         @NameInMap("ConsoleUrl")
         public String consoleUrl;
 
+        /**
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心的测试实例。</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The domain name of the instance, which is globally unique.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -495,19 +598,32 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试实例</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>List of numbers.</p>
+         */
         @NameInMap("NumberList")
         public java.util.List<ListInstancesOfUserResponseBodyDataListNumberList> numberList;
 
         /**
+         * <p>Instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -594,10 +710,15 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
     }
 
     public static class ListInstancesOfUserResponseBodyData extends TeaModel {
+        /**
+         * <p>List.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListInstancesOfUserResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -605,6 +726,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -612,6 +735,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

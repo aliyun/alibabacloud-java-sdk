@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveWebRtcInfoResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,26 @@ public class SaveWebRtcInfoResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF1C21B9-2D49-4B54-880F-FBE248C16903</p>
      */
@@ -29,6 +41,8 @@ public class SaveWebRtcInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of rows returned upon data storage, indicating how many records were successfully written. If this value is not 1, an abnormal condition may have occurred and requires attention.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +50,8 @@ public class SaveWebRtcInfoResponseBody extends TeaModel {
     public Long rowCount;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +59,8 @@ public class SaveWebRtcInfoResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The time when the information was stored, formatted as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1647262108395</p>
      */

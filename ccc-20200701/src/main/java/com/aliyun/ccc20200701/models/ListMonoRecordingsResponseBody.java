@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListMonoRecordingsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of recording information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListMonoRecordingsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E836EF2A-EDAE-5310-8921-F983C967D42D</p>
      */
@@ -78,16 +93,26 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
 
     public static class ListMonoRecordingsResponseBodyData extends TeaModel {
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>The agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-25920271311543****</p>
          */
@@ -95,6 +120,8 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>The duration of the recording in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5903871</p>
          */
@@ -102,6 +129,8 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The name of the recording file.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.wav</p>
          */
@@ -109,6 +138,8 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The Object Storage Service (OSS) download URL for the recording file. Note that the download URL is valid for one day.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-shanghai.oss-cn-shanghai.aliyuncs.com/ccc-test/job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.wav?Expires=1657014031&OSSAccessKeyId=****&Signature=">https://ccc-v2-shanghai.oss-cn-shanghai.aliyuncs.com/ccc-test/job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.wav?Expires=1657014031&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */
@@ -116,6 +147,8 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The ID of the Resource Access Management (RAM) account that corresponds to the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>26972543893791****</p>
          */
@@ -123,6 +156,8 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         public String ramId;
 
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -130,6 +165,8 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>The start time of the recording. This is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620259200000</p>
          */

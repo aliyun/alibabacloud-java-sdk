@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRealtimeAgentStatesRequest extends TeaModel {
     /**
+     * <p>List of agent IDs, formatted as a JSON array string. The array can contain up to 20 elements. This parameter is optional and defaults to empty, which matches all agents under the current instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;agent1@ccc-test&quot;, &quot;agent2@ccc-test&quot;]</p>
      */
@@ -12,6 +14,8 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     public String agentIdList;
 
     /**
+     * <p>Perform fuzzy matching by agent name.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent</p>
      */
@@ -19,13 +23,16 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     public String agentName;
 
     /**
+     * <p>Filters by a list of call types. The value is a string in JSON array format, where each array element is a call type. This parameter is optional and defaults to empty, which matches all call types.</p>
+     * 
      * <strong>example:</strong>
-     * <p>[&quot;INBOUND&quot;, &quot;OUTBOUND&quot;]</p>
+     * <p>[&quot;Inbound&quot;, &quot;Outbound&quot;]</p>
      */
     @NameInMap("CallTypeList")
     public String callTypeList;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +41,18 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Media type. The default is Audio. Other options include Chat (text), Video, and ALL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUDIO</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
     /**
+     * <p>Filters agents who are in outbound-only mode. This parameter is optional and defaults to empty, which means no filtering by outbound-only mode is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -45,6 +60,7 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     public Boolean outboundScenario;
 
     /**
+     * <p>Page number, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +70,7 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +80,8 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Performs fuzzy filtering based on the full or partial agent display name, agent ID, or agent extension number. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent</p>
      */
@@ -70,6 +89,8 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Filter by skill group ID. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>skillgroup@ccc-test</p>
      */
@@ -77,6 +98,8 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     public String skillGroupId;
 
     /**
+     * <p>Filters by a list of statuses. This parameter is optional and defaults to empty, which matches all statuses.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;ACW&quot;, &quot;Dialing&quot;]</p>
      */
@@ -84,6 +107,8 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     public String stateList;
 
     /**
+     * <p>Filter by work mode list. This parameter is optional and defaults to empty, which means all work modes are matched.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;OFFICE_PHONE&quot;,&quot;ON_SITE&quot;]</p>
      */

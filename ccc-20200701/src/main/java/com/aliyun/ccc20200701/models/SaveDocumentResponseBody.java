@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveDocumentResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class SaveDocumentResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Data.</p>
+     * 
      * <strong>example:</strong>
      * <p>0101234****</p>
      */
@@ -19,19 +23,32 @@ public class SaveDocumentResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>01B12EE4-6AF2-4730-8B78-EC15F4E5C025</p>
      */

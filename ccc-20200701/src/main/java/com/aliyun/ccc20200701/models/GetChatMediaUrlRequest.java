@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatMediaUrlRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class GetChatMediaUrlRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>media id</p>
+     * <p>Media ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,8 @@ public class GetChatMediaUrlRequest extends TeaModel {
     public String mediaId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8707EB29-BAED-4302-B999-40BA61877437</p>
      */

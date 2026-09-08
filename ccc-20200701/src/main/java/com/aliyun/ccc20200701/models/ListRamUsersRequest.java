@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRamUsersRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListRamUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number of the results to return. Valid values: 1 to 1,000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListRamUsersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class ListRamUsersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The keyword to use for a fuzzy search based on the RAM user\&quot;s logon name or display name. This parameter is optional. If you leave this parameter empty, no filtering is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent</p>
      */

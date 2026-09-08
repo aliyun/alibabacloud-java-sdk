@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListRecentCallDetailRecordsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,6 +93,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
 
     public static class ListRecentCallDetailRecordsResponseBodyDataList extends TeaModel {
         /**
+         * <p>List of agent IDs. Multiple values are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -85,6 +102,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public String agentIds;
 
         /**
+         * <p>Call duration in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -92,6 +111,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public String callDuration;
 
         /**
+         * <p>Called number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1332315****</p>
          */
@@ -99,6 +120,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public String calledNumber;
 
         /**
+         * <p>Calling number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0533128****</p>
          */
@@ -106,6 +129,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public String callingNumber;
 
         /**
+         * <p>The reason the call ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -113,6 +138,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public String contactDisposition;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-7660472242845****</p>
          */
@@ -120,6 +147,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>Call type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Outbound</p>
          */
@@ -127,6 +156,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public String contactType;
 
         /**
+         * <p>Call duration in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -134,6 +165,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -141,6 +174,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Skill groups to which the agent participating in the call belongs. Multiple skill groups are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -148,6 +183,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public String skillGroupIds;
 
         /**
+         * <p>Call start time. For inbound calls, it starts when the call enters IVR. For outbound calls, it starts when the call is answered. The format is a Unix timestamp string in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1532448000000</p>
          */
@@ -250,10 +287,15 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
     }
 
     public static class ListRecentCallDetailRecordsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of call records.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListRecentCallDetailRecordsResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -261,6 +303,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -268,6 +312,8 @@ public class ListRecentCallDetailRecordsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count. The actual total is returned only when PageNumber is 1; otherwise, it is 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */

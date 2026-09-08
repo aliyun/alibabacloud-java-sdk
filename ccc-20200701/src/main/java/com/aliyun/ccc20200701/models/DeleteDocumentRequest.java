@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDocumentRequest extends TeaModel {
     /**
+     * <p>The document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteDocumentRequest extends TeaModel {
     public String documentId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DeleteDocumentRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DE803553-8AA9-4B9D-9E4E-A82BC69EDCEE</p>
      */
@@ -30,7 +34,7 @@ public class DeleteDocumentRequest extends TeaModel {
     public String requestId;
 
     /**
-     * <p>schema id</p>
+     * <p>The schema ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

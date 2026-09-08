@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListContactFlowsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListContactFlowsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,6 +93,8 @@ public class ListContactFlowsResponseBody extends TeaModel {
 
     public static class ListContactFlowsResponseBodyDataList extends TeaModel {
         /**
+         * <p>The ID of the IVR contact flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>78128960-bb00-4ddc-8e82-923a8c5bd22d</p>
          */
@@ -85,16 +102,26 @@ public class ListContactFlowsResponseBody extends TeaModel {
         public String contactFlowId;
 
         /**
+         * <p>When the contact flow was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-03-05 17:35:45.0</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The JSON-formatted definition of the IVR contact flow. This parameter is for internal use and is parsed by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;activities&quot;:[{&quot;type&quot;:&quot;INCOMING_CALL&quot;,&quot;id&quot;:&quot;e98f0d47&quot;,&quot;name&quot;:&quot;开始&quot;,&quot;properties&quot;:{&quot;position&quot;:{&quot;x&quot;:263,&quot;y&quot;:164}},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:&quot;2d3ad2c2&quot;,&quot;edgeId&quot;:&quot;41f7dbd0&quot;}],&quot;nodeIndex&quot;:0},{&quot;type&quot;:&quot;HANGUP&quot;,&quot;id&quot;:&quot;bd4f37e2&quot;,&quot;name&quot;:&quot;挂机&quot;,&quot;properties&quot;:{&quot;position&quot;:{&quot;x&quot;:765,&quot;y&quot;:185}},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:null}],&quot;nodeIndex&quot;:999},{&quot;type&quot;:&quot;PLAY_SAY&quot;,&quot;id&quot;:&quot;2d3ad2c2&quot;,&quot;name&quot;:&quot;放音&quot;,&quot;properties&quot;:{&quot;say&quot;:&quot;您好，欢迎来到云联络中心。&quot;,&quot;audioResourceId&quot;:&quot;&quot;,&quot;position&quot;:{&quot;x&quot;:485.5,&quot;y&quot;:153.5},&quot;audioType&quot;:&quot;tts&quot;,&quot;audioInterrupt&quot;:false},&quot;events&quot;:[{&quot;event&quot;:&quot;complete&quot;,&quot;next&quot;:&quot;bd4f37e2&quot;,&quot;edgeId&quot;:&quot;e1af4f1f&quot;}],&quot;nodeIndex&quot;:1}],&quot;description&quot;:&quot;&quot;}</p>
+         */
         @NameInMap("Definition")
         public String definition;
 
         /**
+         * <p>The description of the contact flow version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -102,6 +129,8 @@ public class ListContactFlowsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The draft ID. This parameter is returned only when the contact flow is unpublished.</p>
+         * 
          * <strong>example:</strong>
          * <p>db07c0bb-6b1f-47d2-b37e-2451c617562d</p>
          */
@@ -109,6 +138,8 @@ public class ListContactFlowsResponseBody extends TeaModel {
         public String draftId;
 
         /**
+         * <p>The login name of the agent currently editing this draft.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -116,19 +147,32 @@ public class ListContactFlowsResponseBody extends TeaModel {
         public String editor;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the IVR contact flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认流程</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>A list of phone numbers that are bound to the IVR contact flow.</p>
+         */
         @NameInMap("NumberList")
         public java.util.List<String> numberList;
 
         /**
+         * <p>Indicates whether the contact flow has been published.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -136,6 +180,8 @@ public class ListContactFlowsResponseBody extends TeaModel {
         public Boolean published;
 
         /**
+         * <p>The type of the IVR contact flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAIN_FLOW</p>
          */
@@ -143,6 +189,8 @@ public class ListContactFlowsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The last time the contact flow was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-03-08 15:34:49.0</p>
          */
@@ -253,10 +301,15 @@ public class ListContactFlowsResponseBody extends TeaModel {
     }
 
     public static class ListContactFlowsResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of contact flows.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListContactFlowsResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -264,6 +317,8 @@ public class ListContactFlowsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -271,6 +326,8 @@ public class ListContactFlowsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDoNotCallFileUploadParametersRequest extends TeaModel {
     /**
+     * <p>Name of the file containing prohibited outbound call numbers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDoNotCallFileUploadParametersRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAudioFileRequest extends TeaModel {
     /**
+     * <p>Audio file name, containing 1 to 32 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateAudioFileRequest extends TeaModel {
     public String audioFileName;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,17 @@ public class CreateAudioFileRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Display name of the audio, containing 1 to 32 characters.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>欢迎语</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Key of the OSS file, returned by the GetAudioFileUploadParameters API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +44,12 @@ public class CreateAudioFileRequest extends TeaModel {
     @NameInMap("OssFileKey")
     public String ossFileKey;
 
+    /**
+     * <p>Usage of the audio file. The default value is General (used in scenarios such as IVR). Other optional values include HoldMusic (hold music during a call).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>General</p>
+     */
     @NameInMap("Usage")
     public String usage;
 

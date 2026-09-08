@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListPhoneNumbersOfSkillGroupResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListPhoneNumbersOfSkillGroupResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,16 +93,26 @@ public class ListPhoneNumbersOfSkillGroupResponseBody extends TeaModel {
 
     public static class ListPhoneNumbersOfSkillGroupResponseBodyDataList extends TeaModel {
         /**
+         * <p>Whether the phone number is active.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>City where the phone number is registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>乐山</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>IVR contact flow ID associated with the phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>a3fb6c62-9b49-4942-ae5b-cf2abd4123ek</p>
          */
@@ -95,6 +120,8 @@ public class ListPhoneNumbersOfSkillGroupResponseBody extends TeaModel {
         public String contactFlowId;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -102,16 +129,26 @@ public class ListPhoneNumbersOfSkillGroupResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>08330011****</p>
          */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <p>Province where the phone number is registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>四川</p>
+         */
         @NameInMap("Province")
         public String province;
 
         /**
+         * <p>Usage of the phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bidirection</p>
          */
@@ -182,10 +219,15 @@ public class ListPhoneNumbersOfSkillGroupResponseBody extends TeaModel {
     }
 
     public static class ListPhoneNumbersOfSkillGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>List of phone numbers.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListPhoneNumbersOfSkillGroupResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -193,6 +235,8 @@ public class ListPhoneNumbersOfSkillGroupResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -200,6 +244,8 @@ public class ListPhoneNumbersOfSkillGroupResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

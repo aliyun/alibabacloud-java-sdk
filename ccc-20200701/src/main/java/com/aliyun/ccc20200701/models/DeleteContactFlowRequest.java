@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContactFlowRequest extends TeaModel {
     /**
+     * <p>The ID of the contact flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class DeleteContactFlowRequest extends TeaModel {
     public Boolean force;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

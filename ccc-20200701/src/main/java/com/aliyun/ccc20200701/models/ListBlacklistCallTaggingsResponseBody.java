@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class ListBlacklistCallTaggingsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListBlacklistCallTaggingsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -80,6 +93,8 @@ public class ListBlacklistCallTaggingsResponseBody extends TeaModel {
 
     public static class ListBlacklistCallTaggingsResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the number has a blacklist tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -87,6 +102,8 @@ public class ListBlacklistCallTaggingsResponseBody extends TeaModel {
         public Boolean blacklisted;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-481841171213393920</p>
          */
@@ -94,6 +111,8 @@ public class ListBlacklistCallTaggingsResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1521083xxxx</p>
          */

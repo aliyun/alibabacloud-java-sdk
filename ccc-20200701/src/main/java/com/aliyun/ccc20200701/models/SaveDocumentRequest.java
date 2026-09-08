@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveDocumentRequest extends TeaModel {
     /**
+     * <p>Document ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,7 @@ public class SaveDocumentRequest extends TeaModel {
     public String documentId;
 
     /**
+     * <p>The document content to save. It must conform to the rules defined in the schema.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class SaveDocumentRequest extends TeaModel {
     public String documentJson;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class SaveDocumentRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>EAF3C248-E123-441B-A545-B6CD02E98EED</p>
      */

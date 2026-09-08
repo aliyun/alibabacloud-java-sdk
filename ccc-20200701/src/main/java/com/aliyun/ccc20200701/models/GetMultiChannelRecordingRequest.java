@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMultiChannelRecordingRequest extends TeaModel {
     /**
+     * <p>Call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetMultiChannelRecordingRequest extends TeaModel {
     public String contactId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

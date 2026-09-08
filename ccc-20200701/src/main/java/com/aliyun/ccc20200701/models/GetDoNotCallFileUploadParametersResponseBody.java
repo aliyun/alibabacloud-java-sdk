@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetDoNotCallFileUploadParametersResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -32,6 +47,8 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +110,8 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
 
     public static class GetDoNotCallFileUploadParametersResponseBodyData extends TeaModel {
         /**
+         * <p>AccessKeyId used for signing.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -100,6 +119,8 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
+         * <p>Expiration time, formatted as a Unix timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1647313420</p>
          */
@@ -107,6 +128,8 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         public Integer expireTime;
 
         /**
+         * <p>Key of the OSS file.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test/blacklist.xlsx</p>
          */
@@ -114,6 +137,8 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         public String filePath;
 
         /**
+         * <p>Endpoint domain name of OSS.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></p>
          */
@@ -121,6 +146,8 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>Signature policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJleHBpcmF0aW9uIjoiMjAyMi0wMy0xNVQwMzowMzo0MC4zMTJaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjBdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwidGVtcC9ibGFja2xpc3QvaW1wb3J0LzE1NzcyNDcxMTU0OTA0MDEvY2NjVjIta216LzIwMjIE1MTAwMzQwLyJd****</p>
          */
@@ -128,6 +155,8 @@ public class GetDoNotCallFileUploadParametersResponseBody extends TeaModel {
         public String policy;
 
         /**
+         * <p>Signature information of the temporary credential for file upload, used to authenticate validity during upload.</p>
+         * 
          * <strong>example:</strong>
          * <p>zi31STIMtIfa/UN2l+6lww****</p>
          */

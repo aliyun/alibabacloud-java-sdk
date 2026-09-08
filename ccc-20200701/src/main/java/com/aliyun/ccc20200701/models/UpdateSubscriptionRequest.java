@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSubscriptionRequest extends TeaModel {
     /**
+     * <p>The endpoint for MQ. The service endpoint for webhook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,18 @@ public class UpdateSubscriptionRequest extends TeaModel {
     @NameInMap("AccessPoint")
     public String accessPoint;
 
+    /**
+     * <p>Leave blank.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AliyunUid")
     public Long aliyunUid;
 
     /**
+     * <p>For MQ, enter the topic name. For webhook, enter Topic_Webhook.</p>
+     * 
      * <strong>example:</strong>
      * <p>ccc-event</p>
      */
@@ -24,6 +33,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String defaultTopic;
 
     /**
+     * <p>The message subscription checklist.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +43,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String eventSubscriptionsJson;
 
     /**
+     * <p>The ID of the Cloud Contact Center instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +53,8 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The MQ instance ID. Specify this only when MqType is rocketmq4 or rocketmq5.</p>
+     * 
      * <strong>example:</strong>
      * <p>rmq-cn-****</p>
      */
@@ -49,6 +62,16 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String mqInstanceId;
 
     /**
+     * <p>The message push type.</p>
+     * <ul>
+     * <li><p>rocketmq4</p>
+     * </li>
+     * <li><p>rocketmq5</p>
+     * </li>
+     * <li><p>webhook</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>rocketmq5</p>
      */
@@ -56,6 +79,8 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String mqType;
 
     /**
+     * <p>The MQ password. Specify this only when MqType is rocketmq5.</p>
+     * 
      * <strong>example:</strong>
      * <p>password</p>
      */
@@ -63,6 +88,8 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>For Message Queue (MQ), enter the Group ID. For webhook, enter PID_Webhook.</p>
+     * 
      * <strong>example:</strong>
      * <p>GID_xxx</p>
      */
@@ -70,6 +97,8 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String producerId;
 
     /**
+     * <p>The MQ username. Specify this only when MqType is rocketmq5.</p>
+     * 
      * <strong>example:</strong>
      * <p>username</p>
      */

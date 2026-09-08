@@ -4,10 +4,18 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class UpdateTicketRequest extends TeaModel {
+    /**
+     * <p>The ticket form information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;productName&quot;:&quot;玩具1&quot;}</p>
+     */
     @NameInMap("Context")
     public String context;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>51e155ce-<em><strong>-</strong></em>*-b402-13c69597b920</p>
      */
@@ -15,6 +23,7 @@ public class UpdateTicketRequest extends TeaModel {
     public String customerId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +33,7 @@ public class UpdateTicketRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ticket ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +42,12 @@ public class UpdateTicketRequest extends TeaModel {
     @NameInMap("TicketId")
     public String ticketId;
 
+    /**
+     * <p>The ticket title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>标题</p>
+     */
     @NameInMap("Title")
     public String title;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMonoRecordingsRequest extends TeaModel {
     /**
+     * <p>The channel ID of the agent conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>ch-user-<strong><strong>-</strong></strong>-1772180844645-job-*****</p>
      */
@@ -12,6 +14,8 @@ public class ListMonoRecordingsRequest extends TeaModel {
     public String agentChannelId;
 
     /**
+     * <p>The agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */
@@ -19,6 +23,7 @@ public class ListMonoRecordingsRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ListMonoRecordingsRequest extends TeaModel {
     public String contactId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

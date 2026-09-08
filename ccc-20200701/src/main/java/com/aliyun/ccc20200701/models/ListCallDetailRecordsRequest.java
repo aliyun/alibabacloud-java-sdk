@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCallDetailRecordsRequest extends TeaModel {
     /**
+     * <p>Filter by agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */
@@ -12,6 +14,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>Filter by called number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1320523****</p>
      */
@@ -19,6 +23,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String calledNumber;
 
     /**
+     * <p>Filter by calling number.</p>
+     * 
      * <strong>example:</strong>
      * <p>07353988****</p>
      */
@@ -26,6 +32,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String callingNumber;
 
     /**
+     * <p>Filter by disposition type. Note: Disposition reasons such as voicemail, transfer to agent failed, queuing timeout, queuing overflow, and IVR abnormal are only displayed if the customer has configured a disposition reason node. If no such node is configured and there is no transfer-to-agent module in the IVR, the disposition reason defaults to &quot;Abandoned in IVR&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String contactDisposition;
 
     /**
+     * <p>Filter by hang-up reason list.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;Success&quot;,&quot;NoAnswer&quot;]</p>
      */
@@ -40,6 +50,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String contactDispositionList;
 
     /**
+     * <p>Query the record of a specific call by specifying a contactId. The contactId can be obtained from the softphone software development kit (SDK) during a call. If this parameter is provided, all other query parameters are automatically ignored.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-12515239414412****</p>
      */
@@ -47,6 +59,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String contactId;
 
     /**
+     * <p>Filter by call type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Outbound</p>
      */
@@ -54,6 +68,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String contactType;
 
     /**
+     * <p>Filter by contact type list.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;Internal&quot;,&quot;Inbound&quot;]</p>
      */
@@ -61,6 +77,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String contactTypeList;
 
     /**
+     * <p>Perform a fuzzy query based on the calling or called number. The value must be a JSON string containing only one field, phoneNumber, which can be the full number or a partial segment of either the calling or called number.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;phoneNumber&quot;:&quot;0735&quot;}</p>
      */
@@ -68,6 +86,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String criteria;
 
     /**
+     * <p>Filter by a list of reasons for failed connection.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;NotConnected&quot;,&quot;NoAnswer&quot;]</p>
      */
@@ -75,6 +95,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String earlyMediaStateList;
 
     /**
+     * <p>End time of the historical data to retrieve. The default value is the current time, in UNIX timestamp format with millisecond precision.</p>
+     * 
      * <strong>example:</strong>
      * <p>1532707199000</p>
      */
@@ -82,6 +104,7 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,6 +114,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Sorting field. Optional. Default value is startTime (call start time).</p>
+     * 
      * <strong>example:</strong>
      * <p>startTime</p>
      */
@@ -98,6 +123,7 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String orderByField;
 
     /**
+     * <p>Page number for paging, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,6 +133,7 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,10 +142,18 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Filter by satisfaction description list. The description content is Custom by the Customer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;满意&quot;,&quot;一般&quot;]</p>
+     */
     @NameInMap("SatisfactionDescriptionList")
     public String satisfactionDescriptionList;
 
     /**
+     * <p>Filter by satisfaction List. Separate multiple satisfaction Results with commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;1&quot;,&quot;3&quot;]</p>
      */
@@ -126,6 +161,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String satisfactionList;
 
     /**
+     * <p>Filter by satisfaction survey channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>IVR</p>
      */
@@ -133,6 +170,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String satisfactionSurveyChannel;
 
     /**
+     * <p>Filter by skill group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>skillgroup@ccc-test</p>
      */
@@ -140,6 +179,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String skillGroupId;
 
     /**
+     * <p>Sorting order. This parameter is optional and defaults to descending.</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -147,6 +188,8 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     public String sortOrder;
 
     /**
+     * <p>Start time of the historical data to retrieve. The default value is 00:00:00 of the current day, in UNIX timestamp format with millisecond precision.</p>
+     * 
      * <strong>example:</strong>
      * <p>1532448000000</p>
      */

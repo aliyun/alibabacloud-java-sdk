@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWaitingChatsRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListWaitingChatsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Skill group ID list.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;skillgroup1@ccc-test&quot;, &quot;skillgroup2@ccc-test&quot;]</p>
      */

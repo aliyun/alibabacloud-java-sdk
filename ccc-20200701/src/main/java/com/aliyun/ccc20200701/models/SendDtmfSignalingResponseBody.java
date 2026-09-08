@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class SendDtmfSignalingResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public SendDtmfSignalingResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>842399EC-7D32-4472-AD08-9504C3F141FF</p>
      */
@@ -89,6 +107,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
 
     public static class SendDtmfSignalingResponseBodyDataCallContextChannelContexts extends TeaModel {
         /**
+         * <p>The call type of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
@@ -96,6 +116,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String callType;
 
         /**
+         * <p>Channel flags.</p>
+         * 
          * <strong>example:</strong>
          * <p>MONITORING</p>
          */
@@ -103,6 +125,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String channelFlags;
 
         /**
+         * <p>The voice channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ch:user:131888****-&gt;8001****:1609234221870:job-6573574060089****</p>
          */
@@ -110,6 +134,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The status of the call channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>ANSWERED</p>
          */
@@ -117,6 +143,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String channelState;
 
         /**
+         * <p>Callee of the call channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -124,6 +152,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String destination;
 
         /**
+         * <p>An auto-increment ID assigned by the system. Customers do not need to concern themselves with this value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -131,6 +161,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public Integer index;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6573574060089****</p>
          */
@@ -138,19 +170,35 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The originator of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>0101234****</p>
          */
         @NameInMap("Originator")
         public String originator;
 
+        /**
+         * <p>The party that initiated the release of the call channel, indicating who first hung up the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("ReleaseInitiator")
         public String releaseInitiator;
 
+        /**
+         * <p>The release reason for the voice channel, indicating why the current voice channel was disconnected. The value corresponds to response codes defined in the SIP protocol. Customers should refer to the SIP protocol to analyze the disconnection reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
         /**
+         * <p>The skill group ID associated with the voice channel. In inbound scenarios, the associated skill group ID is determined by the skill group configured in the IVR transfer-to-agent module. In outbound scenarios, the associated skill group ID is the first skill group that the agent signed into.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -158,6 +206,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>The UNIX timestamp of the most recent status change of the voice channel, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609234222367</p>
          */
@@ -165,6 +215,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>The extension number of the agent associated with the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -172,6 +224,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String userExtension;
 
         /**
+         * <p>The agent ID associated with the channel. This field is empty if the channel belongs to a Customer.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -299,16 +353,23 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
 
     public static class SendDtmfSignalingResponseBodyDataCallContext extends TeaModel {
         /**
+         * <p>Call type.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <p>List of call channels.</p>
+         */
         @NameInMap("ChannelContexts")
         public java.util.List<SendDtmfSignalingResponseBodyDataCallContextChannelContexts> channelContexts;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -316,6 +377,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6573574060089****</p>
          */
@@ -363,6 +426,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
 
     public static class SendDtmfSignalingResponseBodyDataUserContext extends TeaModel {
         /**
+         * <p>Break status code, which can be either System-defined or Custom-defined. System-defined break codes include: Warm-up (temporary break state after an agent is published and before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent rejecting a call). There are no restrictions on Custom-defined status codes; customers can define them according to their business needs.</p>
+         * 
          * <strong>example:</strong>
          * <p>Warm-up</p>
          */
@@ -370,6 +435,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>Device ID, the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
@@ -377,6 +444,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The agent\&quot;s extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -384,6 +453,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The time when the last heartbeat was received from the agent, in UNIX timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609234222375</p>
          */
@@ -391,6 +462,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public Long heartbeat;
 
         /**
+         * <p>instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -398,6 +471,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6573574060089****</p>
          */
@@ -405,6 +480,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1390000****</p>
          */
@@ -412,6 +489,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -419,16 +498,23 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public Boolean outboundScenario;
 
         /**
+         * <p>The most recent time when the agent was reserved. Being reserved means an incoming call will be assigned to the agent shortly. The value is in UNIX timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609234221864</p>
          */
         @NameInMap("Reserved")
         public Long reserved;
 
+        /**
+         * <p>List of skill group IDs that the agent has signed into.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -436,6 +522,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Agent status.</p>
+         * 
          * <strong>example:</strong>
          * <p>TALKING</p>
          */
@@ -443,6 +531,8 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -561,9 +651,15 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
     }
 
     public static class SendDtmfSignalingResponseBodyData extends TeaModel {
+        /**
+         * <p>Call context environment.</p>
+         */
         @NameInMap("CallContext")
         public SendDtmfSignalingResponseBodyDataCallContext callContext;
 
+        /**
+         * <p>Agent context environment.</p>
+         */
         @NameInMap("UserContext")
         public SendDtmfSignalingResponseBodyDataUserContext userContext;
 

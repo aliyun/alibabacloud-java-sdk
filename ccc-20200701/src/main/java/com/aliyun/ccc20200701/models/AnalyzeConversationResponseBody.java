@@ -5,26 +5,47 @@ import com.aliyun.tea.*;
 
 public class AnalyzeConversationResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Return Result. The content varies depending on the analysis job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;订单号&quot;: &quot;1234&quot;,
+     *   &quot;商品名称&quot;: &quot;笔记本&quot;
+     * }</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID, which can be used for LogSearch of this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>9F766284-F103-4298-8EC5-19F9F9BE5522</p>
      */

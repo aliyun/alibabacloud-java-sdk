@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTicketsRequest extends TeaModel {
     /**
+     * <p>Assignee ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>assignee@cccV2-kmz</p>
      */
@@ -12,6 +14,8 @@ public class ListTicketsRequest extends TeaModel {
     public String assignee;
 
     /**
+     * <p>Assignee type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Agent</p>
      */
@@ -19,6 +23,8 @@ public class ListTicketsRequest extends TeaModel {
     public String assigneeType;
 
     /**
+     * <p>Ticket category ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>43c2671b-****-4223-86d0-6bd187905cc8</p>
      */
@@ -26,6 +32,8 @@ public class ListTicketsRequest extends TeaModel {
     public String categoryId;
 
     /**
+     * <p>Creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>creator@cccV2-kmz</p>
      */
@@ -33,6 +41,8 @@ public class ListTicketsRequest extends TeaModel {
     public String creator;
 
     /**
+     * <p>Customer ID. The Cloud Contact Center customer profile ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>51e155ce-3747-*****-b402-13c69597b920</p>
      */
@@ -40,6 +50,8 @@ public class ListTicketsRequest extends TeaModel {
     public String customerId;
 
     /**
+     * <p>End time. Filter by ticket creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1646928000000</p>
      */
@@ -47,6 +59,7 @@ public class ListTicketsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +69,8 @@ public class ListTicketsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>A list of contact IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;job-12******&quot;,&quot;job-23****&quot;]</p>
      */
@@ -63,6 +78,7 @@ public class ListTicketsRequest extends TeaModel {
     public String jobIdList;
 
     /**
+     * <p>Paging ordinal number. Range: 1-100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +88,7 @@ public class ListTicketsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Paging size. Range: 1-100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +98,8 @@ public class ListTicketsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Participant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>participant@cccV2-kmz</p>
      */
@@ -88,6 +107,8 @@ public class ListTicketsRequest extends TeaModel {
     public String participant;
 
     /**
+     * <p>Start time. Filter by ticket creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1646841600000</p>
      */
@@ -95,6 +116,8 @@ public class ListTicketsRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Ticket state.</p>
+     * 
      * <strong>example:</strong>
      * <p>Processing</p>
      */
@@ -102,12 +125,20 @@ public class ListTicketsRequest extends TeaModel {
     public String state;
 
     /**
+     * <p>Ticket ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5491d3b4-14ee-4341-b5f1-db2c78beddeb</p>
      */
     @NameInMap("TicketId")
     public String ticketId;
 
+    /**
+     * <p>Ticket title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>标题</p>
+     */
     @NameInMap("Title")
     public String title;
 

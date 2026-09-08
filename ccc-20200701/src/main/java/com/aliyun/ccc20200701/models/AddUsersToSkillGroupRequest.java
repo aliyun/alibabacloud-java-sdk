@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddUsersToSkillGroupRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AddUsersToSkillGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class AddUsersToSkillGroupRequest extends TeaModel {
     public String skillGroupId;
 
     /**
+     * <p>A list of agent skill levels in the skill group, formatted as a JSON array string. Each array element is an object containing two fields: userId and skillLevel. The userId field specifies the ID of the agent to be added, and the skillLevel field specifies the agent\&quot;s skill level after joining the skill group. Skill levels range from 1 to 10; a lower value indicates stronger service capability and the ability to handle more calls per unit time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

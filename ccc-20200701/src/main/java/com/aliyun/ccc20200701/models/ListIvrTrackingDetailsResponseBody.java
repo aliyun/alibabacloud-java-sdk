@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListIvrTrackingDetailsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListIvrTrackingDetailsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D2RB671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,6 +93,8 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
 
     public static class ListIvrTrackingDetailsResponseBodyDataList extends TeaModel {
         /**
+         * <p>Callee number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0533128****</p>
          */
@@ -85,6 +102,8 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public String callee;
 
         /**
+         * <p>The calling number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1332315****</p>
          */
@@ -92,6 +111,8 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public String caller;
 
         /**
+         * <p>Voice channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>65cp2c15-92ac-4e67-98b2-073a3c541c5d</p>
          */
@@ -99,6 +120,8 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>Channel-associated data.</p>
+         * 
          * <strong>example:</strong>
          * <p>A=B;C=D</p>
          */
@@ -106,6 +129,8 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public String channelVariables;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-10963442671187****</p>
          */
@@ -113,6 +138,8 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>The time when the call entered this IVR edge zone, in Unix timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1621910542876</p>
          */
@@ -120,16 +147,26 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public Long enterTime;
 
         /**
+         * <p>Contact flow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc99462-1058-47d0-a114-f145ea7444ff</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <p>The name of the contact flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试IVR</p>
+         */
         @NameInMap("FlowName")
         public String flowName;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -137,6 +174,8 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public String instance;
 
         /**
+         * <p>Time when leaving this IVR node.</p>
+         * 
          * <strong>example:</strong>
          * <p>1621910545105</p>
          */
@@ -144,6 +183,8 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public Long leaveTime;
 
         /**
+         * <p>Status code of the edge zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -151,26 +192,44 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public String nodeExitCode;
 
         /**
+         * <p>Node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e0bc19a3</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>Edge zone name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>放音</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>A collection of properties of the edge zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;say&quot;:&quot;您好。&quot;}</p>
+         */
         @NameInMap("NodeProperties")
         public java.util.Map<String, ?> nodeProperties;
 
         /**
+         * <p>File Type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>PLAY_OR_SAY</p>
+         * <p>PLAY_SAY</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
+         * <p>Node variables.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;digits&quot;:&quot;2&quot;}</p>
          */
@@ -313,10 +372,15 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
     }
 
     public static class ListIvrTrackingDetailsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of IVR tracking details.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListIvrTrackingDetailsResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -324,6 +388,8 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -331,6 +397,8 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

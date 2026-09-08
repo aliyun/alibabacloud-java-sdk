@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListCampaignsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListCampaignsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CCEF32F-8614-535F-A1D9-D85B8C0DC4F0</p>
      */
@@ -32,6 +47,8 @@ public class ListCampaignsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +110,8 @@ public class ListCampaignsResponseBody extends TeaModel {
 
     public static class ListCampaignsResponseBodyDataList extends TeaModel {
         /**
+         * <p>The actual end time of the predictive dialing campaign. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1634008800000</p>
          */
@@ -100,6 +119,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Long actualEndTime;
 
         /**
+         * <p>The actual start time of the predictive dialing campaign. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1634000460000</p>
          */
@@ -107,6 +128,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Long actualStartTime;
 
         /**
+         * <p>The ID of the predictive dialing campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>6badb397-a8b5-40b6-21019d382a09</p>
          */
@@ -114,6 +137,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public String campaignId;
 
         /**
+         * <p>The number of aborted cases in the predictive dialing campaign. An aborted case indicates that the call to the contact was canceled.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -121,6 +146,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Long casesAborted;
 
         /**
+         * <p>The number of connected cases in the predictive dialing campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -128,19 +155,35 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Long casesConnected;
 
         /**
+         * <p>The number of uncompleted cases in the predictive dialing campaign. An uncompleted case indicates that the call was not connected and the maximum number of retry attempts was not reached.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("CasesUncompleted")
         public Long casesUncompleted;
 
+        /**
+         * <p>The completion rate. This parameter is deprecated. You can calculate the completion rate by using the formula (TotalCases - CasesUnCompleted) / TotalCases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("CompletionRate")
         public Float completionRate;
 
+        /**
+         * <p>The ID of the IVR contact flow associated with the phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3fb6c62-9b49-4942-ae5b-cf2abd4123ek</p>
+         */
         @NameInMap("ContactFlowId")
         public String contactFlowId;
 
         /**
+         * <p>The maximum number of attempts for the predictive dialing campaign. This value specifies the maximum number of redial attempts when a call to a number fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -148,6 +191,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Long maxAttemptCount;
 
         /**
+         * <p>The minimum redial interval for the predictive dialing campaign. This value specifies the minimum interval between redial attempts after a failure. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -155,6 +200,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Long minAttemptInterval;
 
         /**
+         * <p>The name of the predictive dialing campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-campaign</p>
          */
@@ -162,6 +209,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The planned end time of the predictive dialing campaign. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1634054400000</p>
          */
@@ -169,6 +218,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Long planedEndTime;
 
         /**
+         * <p>The planned start time of the predictive dialing campaign. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1633968000000</p>
          */
@@ -176,16 +227,26 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Long planedStartTime;
 
         /**
+         * <p>The ID of the associated skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
         @NameInMap("QueueId")
         public String queueId;
 
+        /**
+         * <p>The name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
         /**
+         * <p>Indicates whether the campaign is a simulated campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -193,6 +254,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Boolean simulation;
 
         /**
+         * <p>The state of the predictive dialing campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>Completed</p>
          */
@@ -200,6 +263,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The strategy parameters of the predictive dialing campaign. Example for the PID strategy: {&quot;abandonRate&quot;:&quot;5&quot;,&quot;historicalConnectedRate&quot;:&quot;35&quot;}. Example for the PACING strategy: {&quot;ratio&quot;:1}. abandonRate specifies the expected call abandon rate. historicalConnectedRate specifies the historical reference connection rate. ratio specifies the fixed dialing ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;ratio&quot;:1}</p>
          */
@@ -207,6 +272,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public String strategyParameters;
 
         /**
+         * <p>The strategy mode of the predictive dialing campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>PACING</p>
          */
@@ -214,6 +281,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public String strategyType;
 
         /**
+         * <p>The total number of phone numbers.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -388,10 +457,15 @@ public class ListCampaignsResponseBody extends TeaModel {
     }
 
     public static class ListCampaignsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of predictive dialing campaigns.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListCampaignsResponseBodyDataList> list;
 
         /**
+         * <p>The page number. Valid values: 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -399,6 +473,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The page size. Valid values: 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -406,6 +482,8 @@ public class ListCampaignsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

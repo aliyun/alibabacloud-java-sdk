@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ResetAgentStateResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public ResetAgentStateResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Reserved for future use.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -89,6 +107,8 @@ public class ResetAgentStateResponseBody extends TeaModel {
 
     public static class ResetAgentStateResponseBodyData extends TeaModel {
         /**
+         * <p>The reason code for the agent\&quot;s break. This can be a system-defined or a custom code. System-defined codes include:</p>
+         * 
          * <strong>example:</strong>
          * <p>Warm-up</p>
          */
@@ -96,6 +116,8 @@ public class ResetAgentStateResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>The ID of the registered device, such as a browser-based WebRTC softphone or a physical phone. An agent can register only one device at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
@@ -103,6 +125,8 @@ public class ResetAgentStateResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The agent\&quot;s extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -110,26 +134,41 @@ public class ResetAgentStateResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the call. This parameter is returned only if the agent is on a call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
         /**
+         * <p>Indicates whether the outbound-only mode is enabled for the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <p>The IDs of the skill groups that the agent is signed in to.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>The ID of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -137,6 +176,8 @@ public class ResetAgentStateResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The current state of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>OFFLINE</p>
          */
@@ -144,6 +185,8 @@ public class ResetAgentStateResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>The agent\&quot;s work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */

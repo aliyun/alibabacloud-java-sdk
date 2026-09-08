@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListUsersResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -89,26 +107,44 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static class ListUsersResponseBodyDataListPersonalOutboundNumberList extends TeaModel {
         /**
+         * <p>Whether the number is active.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>City where the number is registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>乐山</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>Number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0830011****</p>
          */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <p>The province of the phone number\&quot;s registration location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>四川</p>
+         */
         @NameInMap("Province")
         public String province;
 
         /**
+         * <p>Usage of the number.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bidirection</p>
          */
@@ -164,6 +200,8 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static class ListUsersResponseBodyDataListSkillLevelList extends TeaModel {
         /**
+         * <p>The ID of the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -171,6 +209,8 @@ public class ListUsersResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>The name of the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
          */
@@ -178,6 +218,8 @@ public class ListUsersResponseBody extends TeaModel {
         public String skillGroupName;
 
         /**
+         * <p>The skill level.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -217,6 +259,8 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static class ListUsersResponseBodyDataList extends TeaModel {
         /**
+         * <p>SIP phone extension number. If the agent has registered a SIP phone, this parameter is the extension number of the SIP phone device.</p>
+         * 
          * <strong>example:</strong>
          * <p>8033****</p>
          */
@@ -224,6 +268,8 @@ public class ListUsersResponseBody extends TeaModel {
         public String deviceExt;
 
         /**
+         * <p>Device ID, which is the identity of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
@@ -231,6 +277,8 @@ public class ListUsersResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The status of the SIP phone device. If no SIP phone is registered, the status is UNREGISTERED (Unregistered). If a SIP phone is registered but offline, the status is OFFLINE (Offline). If a SIP phone is registered and online, the status is ONLINE (Online).</p>
+         * 
          * <strong>example:</strong>
          * <p>OFFLINE</p>
          */
@@ -238,16 +286,26 @@ public class ListUsersResponseBody extends TeaModel {
         public String deviceState;
 
         /**
+         * <p>The agent\&quot;s employee ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
         @NameInMap("DisplayId")
         public String displayId;
 
+        /**
+         * <p>Agent display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Mailbox.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -255,6 +313,8 @@ public class ListUsersResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The landline extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8031****</p>
          */
@@ -262,6 +322,8 @@ public class ListUsersResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>Agent logon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
@@ -269,26 +331,38 @@ public class ListUsersResponseBody extends TeaModel {
         public String loginName;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1382114****</p>
          */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <p>List of personal outbound numbers for the agent.</p>
+         */
         @NameInMap("PersonalOutboundNumberList")
         public java.util.List<ListUsersResponseBodyDataListPersonalOutboundNumberList> personalOutboundNumberList;
 
+        /**
+         * <p>Indicates whether the RAM account mapped to the agent is a RAM root account.</p>
+         */
         @NameInMap("Primary")
         public Boolean primary;
 
         /**
+         * <p>Indicates whether the RAM account mapped to the agent is a RAM primary account.</p>
+         * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>已弃用，请使用Primary代替此参数。</p>
          */
         @NameInMap("PrimaryAccount")
         public Boolean primaryAccount;
 
         /**
+         * <p>The UID of the Resource Access Management (RAM) user associated with the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>21234502254620****</p>
          */
@@ -296,6 +370,8 @@ public class ListUsersResponseBody extends TeaModel {
         public Long ramId;
 
         /**
+         * <p>The role ID, in the format: role\@instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin@ccc-test</p>
          */
@@ -303,16 +379,23 @@ public class ListUsersResponseBody extends TeaModel {
         public String roleId;
 
         /**
+         * <p>The role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin</p>
          */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The list of skill group levels associated with the agent.</p>
+         */
         @NameInMap("SkillLevelList")
         public java.util.List<ListUsersResponseBodyDataListSkillLevelList> skillLevelList;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -320,6 +403,8 @@ public class ListUsersResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -478,10 +563,15 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyData extends TeaModel {
+        /**
+         * <p>Agent list.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListUsersResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -489,6 +579,8 @@ public class ListUsersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -496,6 +588,8 @@ public class ListUsersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

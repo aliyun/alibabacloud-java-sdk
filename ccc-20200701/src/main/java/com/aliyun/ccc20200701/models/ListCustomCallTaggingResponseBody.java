@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListCustomCallTaggingResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListCustomCallTaggingResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -78,6 +93,8 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
 
     public static class ListCustomCallTaggingResponseBodyDataListCallTagList extends TeaModel {
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -85,6 +102,8 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Number tag name.</p>
+         * 
          * <strong>example:</strong>
          * <p>TagA</p>
          */
@@ -115,20 +134,33 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
     }
 
     public static class ListCustomCallTaggingResponseBodyDataList extends TeaModel {
+        /**
+         * <p>List of number tags.</p>
+         */
         @NameInMap("CallTagList")
         public java.util.List<ListCustomCallTaggingResponseBodyDataListCallTagList> callTagList;
 
         /**
+         * <p>Creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The description of the inbound number mark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -136,6 +168,8 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The number of the inbound number mark.</p>
+         * 
          * <strong>example:</strong>
          * <p>1312121****</p>
          */
@@ -143,6 +177,8 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         public String number;
 
         /**
+         * <p>Last update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-07-05 00:00:00.0</p>
          */
@@ -205,10 +241,15 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
     }
 
     public static class ListCustomCallTaggingResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of inbound number marks.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListCustomCallTaggingResponseBodyDataList> list;
 
         /**
+         * <p>The page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -216,6 +257,8 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -223,6 +266,8 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

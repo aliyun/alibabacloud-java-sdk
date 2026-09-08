@@ -52,7 +52,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>废弃预测式外呼活动</p>
+     * <p>Invoke AbortCampaign to stop the predictive outbound calling Activity corresponding to the specified Activity ID under the specified instance.</p>
      * 
      * @param request AbortCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -88,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>废弃预测式外呼活动</p>
+     * <p>Invoke AbortCampaign to stop the predictive outbound calling Activity corresponding to the specified Activity ID under the specified instance.</p>
      * 
      * @param request AbortCampaignRequest
      * @return AbortCampaignResponse
@@ -99,6 +99,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Call this operation to accept a chat.</p>
+     * 
      * @param request AcceptChatRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AcceptChatResponse
@@ -132,6 +135,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Call this operation to accept a chat.</p>
+     * 
      * @param request AcceptChatRequest
      * @return AcceptChatResponse
      */
@@ -142,7 +148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑呼入控制号码</p>
+     * <p>Adds a blacklist tag to a specified phone number. You can use this feature with your Interactive Voice Response (IVR) settings to block frequent harassing calls.</p>
      * 
      * @param request AddBlacklistCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -182,7 +188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑呼入控制号码</p>
+     * <p>Adds a blacklist tag to a specified phone number. You can use this feature with your Interactive Voice Response (IVR) settings to block frequent harassing calls.</p>
      * 
      * @param request AddBlacklistCallTaggingRequest
      * @return AddBlacklistCallTaggingResponse
@@ -194,7 +200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>追加联系人</p>
+     * <p>Invoke AddCases to add an outbound call list to a predictive dialing activity identified by a specified ID under a specified instance.</p>
      * 
      * @param tmpReq AddCasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -240,7 +246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>追加联系人</p>
+     * <p>Invoke AddCases to add an outbound call list to a predictive dialing activity identified by a specified ID under a specified instance.</p>
      * 
      * @param request AddCasesRequest
      * @return AddCasesResponse
@@ -251,6 +257,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use the AddFeedback API to evaluate and rate AI features.</p>
+     * 
      * @param request AddFeedbackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddFeedbackResponse
@@ -296,6 +305,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use the AddFeedback API to evaluate and rate AI features.</p>
+     * 
      * @param request AddFeedbackRequest
      * @return AddFeedbackResponse
      */
@@ -306,7 +318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>技能组添加号码</p>
+     * <p>Adds one or more phone numbers to a skill group by calling AddNumbersToSkillGroup.</p>
      * 
      * @param request AddNumbersToSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -350,7 +362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>技能组添加号码</p>
+     * <p>Adds one or more phone numbers to a skill group by calling AddNumbersToSkillGroup.</p>
      * 
      * @param request AddNumbersToSkillGroupRequest
      * @return AddNumbersToSkillGroupResponse
@@ -362,7 +374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加个人号码</p>
+     * <p>You can invoke AddPersonalNumbersToUser to add one or more personal outbound numbers to a specified agent under a specified instance.</p>
      * 
      * @param request AddPersonalNumbersToUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -402,7 +414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加个人号码</p>
+     * <p>You can invoke AddPersonalNumbersToUser to add one or more personal outbound numbers to a specified agent under a specified instance.</p>
      * 
      * @param request AddPersonalNumbersToUserRequest
      * @return AddPersonalNumbersToUserResponse
@@ -414,7 +426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>技能组添加号码</p>
+     * <p>You can invoke AddPhoneNumberToSkillGroups to associate a phone number with one or more skill groups under a specified instance.</p>
      * 
      * @param request AddPhoneNumberToSkillGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -454,7 +466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>技能组添加号码</p>
+     * <p>You can invoke AddPhoneNumberToSkillGroups to associate a phone number with one or more skill groups under a specified instance.</p>
      * 
      * @param request AddPhoneNumberToSkillGroupsRequest
      * @return AddPhoneNumberToSkillGroupsResponse
@@ -466,7 +478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加号码</p>
+     * <p>You can invoke AddPhoneNumbers to add one or more phone numbers to a specified instance.</p>
      * 
      * @param request AddPhoneNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -514,7 +526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加号码</p>
+     * <p>You can invoke AddPhoneNumbers to add one or more phone numbers to a specified instance.</p>
      * 
      * @param request AddPhoneNumbersRequest
      * @return AddPhoneNumbersResponse
@@ -582,7 +594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>技能组添加用户</p>
+     * <p>You can invoke AddSkillGroupsToUser to add one or more skill groups to a specified agent under a specified instance.</p>
      * 
      * @param request AddSkillGroupsToUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -622,7 +634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>技能组添加用户</p>
+     * <p>You can invoke AddSkillGroupsToUser to add one or more skill groups to a specified agent under a specified instance.</p>
      * 
      * @param request AddSkillGroupsToUserRequest
      * @return AddSkillGroupsToUserResponse
@@ -633,6 +645,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use AddTicketTask to add a signature and assign an assignee.</p>
+     * 
      * @param request AddTicketTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddTicketTaskResponse
@@ -682,6 +697,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use AddTicketTask to add a signature and assign an assignee.</p>
+     * 
      * @param request AddTicketTaskRequest
      * @return AddTicketTaskResponse
      */
@@ -692,7 +710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>技能组添加用户</p>
+     * <p>You can invoke AddUsersToSkillGroup to add one or more agents to the same skill group.</p>
      * 
      * @param request AddUsersToSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -732,7 +750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>技能组添加用户</p>
+     * <p>You can invoke AddUsersToSkillGroup to add one or more agents to the same skill group.</p>
      * 
      * @param request AddUsersToSkillGroupRequest
      * @return AddUsersToSkillGroupResponse
@@ -743,8 +761,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API can be used for both online chat sessions and voice sessions. When used for voice sessions, the real-time speech-to-text transcription feature must be enabled.</p>
+     * 
      * <b>summary</b> : 
-     * <p>分析对话</p>
+     * <p>Analyze the specified text-based conversation content and extract summary-related information, such as the title, keywords, summary, and other specified details.</p>
      * 
      * @param request AnalyzeConversationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -787,8 +808,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API can be used for both online chat sessions and voice sessions. When used for voice sessions, the real-time speech-to-text transcription feature must be enabled.</p>
+     * 
      * <b>summary</b> : 
-     * <p>分析对话</p>
+     * <p>Analyze the specified text-based conversation content and extract summary-related information, such as the title, keywords, summary, and other specified details.</p>
      * 
      * @param request AnalyzeConversationRequest
      * @return AnalyzeConversationResponse
@@ -800,7 +824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>接电话</p>
+     * <p>You can invoke AnswerCall to answer the call associated with a specified call ID under a specified instance.</p>
      * 
      * @param request AnswerCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -844,7 +868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>接电话</p>
+     * <p>You can invoke AnswerCall to answer the call associated with a specified call ID under a specified instance.</p>
      * 
      * @param request AnswerCallRequest
      * @return AnswerCallResponse
@@ -856,7 +880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>追加联系人</p>
+     * <p>Adds cases to a predictive campaign in a specified instance.</p>
      * 
      * @param tmpReq AppendCasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -904,7 +928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>追加联系人</p>
+     * <p>Adds cases to a predictive campaign in a specified instance.</p>
      * 
      * @param request AppendCasesRequest
      * @return AppendCasesResponse
@@ -915,8 +939,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</p>
+     * 
      * <b>summary</b> : 
-     * <p>导入坐席</p>
+     * <p>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</p>
      * 
      * @deprecated OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
      * 
@@ -971,8 +998,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</p>
+     * 
      * <b>summary</b> : 
-     * <p>导入坐席</p>
+     * <p>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</p>
      * 
      * @deprecated OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
      * 
@@ -988,7 +1018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>BargeInCall</p>
+     * <p>You can invoke BargeInCall to forcibly insert into an ongoing call associated with a specified call ID under a specified instance. After the forced insertion succeeds, the original two-party call becomes a three-party conference call.</p>
      * 
      * @param request BargeInCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1040,7 +1070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>BargeInCall</p>
+     * <p>You can invoke BargeInCall to forcibly insert into an ongoing call associated with a specified call ID under a specified instance. After the forced insertion succeeds, the original two-party call becomes a three-party conference call.</p>
      * 
      * @param request BargeInCallRequest
      * @return BargeInCallResponse
@@ -1052,7 +1082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>盲转</p>
+     * <p>Directly transfer a call to another agent, a skill group queue, or an external number. Direct transfer is also known as blind transfer or single-step transfer.</p>
      * 
      * @param request BlindTransferRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1148,7 +1178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>盲转</p>
+     * <p>Directly transfer a call to another agent, a skill group queue, or an external number. Direct transfer is also known as blind transfer or single-step transfer.</p>
      * 
      * @param request BlindTransferRequest
      * @return BlindTransferResponse
@@ -1236,7 +1266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关注转-取消</p>
+     * <p>You can invoke the CancelAttendedTransfer API to cancel an attended transfer. You can call this API at any time after initiating the attended transfer and before completing it, even if the transferee has already answered the call.</p>
      * 
      * @param request CancelAttendedTransferRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1280,7 +1310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关注转-取消</p>
+     * <p>You can invoke the CancelAttendedTransfer API to cancel an attended transfer. You can call this API at any time after initiating the attended transfer and before completing it, even if the transferee has already answered the call.</p>
      * 
      * @param request CancelAttendedTransferRequest
      * @return CancelAttendedTransferResponse
@@ -1292,7 +1322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改隐身状态(等同于仅外呼场景)</p>
+     * <p>Changes an agent\&quot;s status to invisible. This is equivalent to the outbound-only mode.</p>
      * 
      * @param request ChangeVisibilityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1332,7 +1362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改隐身状态(等同于仅外呼场景)</p>
+     * <p>Changes an agent\&quot;s status to invisible. This is equivalent to the outbound-only mode.</p>
      * 
      * @param request ChangeVisibilityRequest
      * @return ChangeVisibilityResponse
@@ -1344,7 +1374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改坐席工作模式</p>
+     * <p>You can invoke ChangeWorkMode to change the agent\&quot;s work mode.</p>
      * 
      * @param request ChangeWorkModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1396,7 +1426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改坐席工作模式</p>
+     * <p>You can invoke ChangeWorkMode to change the agent\&quot;s work mode.</p>
      * 
      * @param request ChangeWorkModeRequest
      * @return ChangeWorkModeResponse
@@ -1408,7 +1438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>认领电话</p>
+     * <p>Call the <code>ClaimCall</code> API to assign a call to an agent.</p>
      * 
      * @param request ClaimCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1460,7 +1490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>认领电话</p>
+     * <p>Call the <code>ClaimCall</code> API to assign a call to an agent.</p>
      * 
      * @param request ClaimCallRequest
      * @return ClaimCallResponse
@@ -1471,6 +1501,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can call ClaimChat to claim the chat for a specified Job ID in a specified instance.</p>
+     * 
      * @param request ClaimChatRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ClaimChatResponse
@@ -1508,6 +1541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can call ClaimChat to claim the chat for a specified Job ID in a specified instance.</p>
+     * 
      * @param request ClaimChatRequest
      * @return ClaimChatResponse
      */
@@ -1518,7 +1554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>辅导</p>
+     * <p>You can invoke CoachCall to coach a specified agent in a specified call (identified by a call ID) under a specified instance. During the coaching session, the coached agent can hear the coach\&quot;s voice, but the customer cannot hear the coach\&quot;s voice.</p>
      * 
      * @param request CoachCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1570,7 +1606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>辅导</p>
+     * <p>You can invoke CoachCall to coach a specified agent in a specified call (identified by a call ID) under a specified instance. During the coaching session, the coached agent can hear the coach\&quot;s voice, but the customer cannot hear the coach\&quot;s voice.</p>
      * 
      * @param request CoachCallRequest
      * @return CoachCallResponse
@@ -1582,7 +1618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交ivr流程</p>
+     * <p>Commits a contact flow.</p>
      * 
      * @param request CommitContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1630,7 +1666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交ivr流程</p>
+     * <p>Commits a contact flow.</p>
      * 
      * @param request CommitContactFlowRequest
      * @return CommitContactFlowResponse
@@ -1642,7 +1678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关注转-完成</p>
+     * <p>You can invoke CompleteAttendedTransfer to complete a consultative transfer.</p>
      * 
      * @param request CompleteAttendedTransferRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1686,7 +1722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关注转-完成</p>
+     * <p>You can invoke CompleteAttendedTransfer to complete a consultative transfer.</p>
      * 
      * @param request CompleteAttendedTransferRequest
      * @return CompleteAttendedTransferResponse
@@ -1698,7 +1734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建媒体文件</p>
+     * <p>You can invoke CreateAudioFile to create an audio resource under a specified instance. The created audio resource can be used in the instance, such as selecting the audio file for playback during IVR.</p>
      * 
      * @param request CreateAudioFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1746,7 +1782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建媒体文件</p>
+     * <p>You can invoke CreateAudioFile to create an audio resource under a specified instance. The created audio resource can be used in the instance, such as selecting the audio file for playback during IVR.</p>
      * 
      * @param request CreateAudioFileRequest
      * @return CreateAudioFileResponse
@@ -1758,7 +1794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建会话小结</p>
+     * <p>Use the CreateCallSummary operation to create a call summary.</p>
      * 
      * @param request CreateCallSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1802,7 +1838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建会话小结</p>
+     * <p>Use the CreateCallSummary operation to create a call summary.</p>
      * 
      * @param request CreateCallSummaryRequest
      * @return CreateCallSummaryResponse
@@ -1814,7 +1850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量创建号码标签</p>
+     * <p>You can invoke CreateCallTags to create multiple call tags under a specified instance.</p>
      * 
      * @param request CreateCallTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1850,7 +1886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量创建号码标签</p>
+     * <p>You can invoke CreateCallTags to create multiple call tags under a specified instance.</p>
      * 
      * @param request CreateCallTagsRequest
      * @return CreateCallTagsResponse
@@ -1862,7 +1898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建预测式外呼活动</p>
+     * <p>You can invoke CreateCampaign to create a predictive outbound calling activity under a specified instance.</p>
      * 
      * @param tmpReq CreateCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1976,7 +2012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建预测式外呼活动</p>
+     * <p>You can invoke CreateCampaign to create a predictive outbound calling activity under a specified instance.</p>
      * 
      * @param request CreateCampaignRequest
      * @return CreateCampaignResponse
@@ -2034,7 +2070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建ivr流程</p>
+     * <p>Creates an IVR flow.</p>
      * 
      * @param request CreateContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2082,7 +2118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建ivr流程</p>
+     * <p>Creates an IVR flow.</p>
      * 
      * @param request CreateContactFlowRequest
      * @return CreateContactFlowResponse
@@ -2094,7 +2130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建呼入控制号码</p>
+     * <p>You can invoke CreateCustomCallTagging to create one or more inbound number tags under a specified instance.</p>
      * 
      * @deprecated OpenAPI CreateCustomCallTagging is deprecated, please use CCC::2020-07-01::CreateCustomCallTaggings instead.
      * 
@@ -2134,7 +2170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建呼入控制号码</p>
+     * <p>You can invoke CreateCustomCallTagging to create one or more inbound number tags under a specified instance.</p>
      * 
      * @deprecated OpenAPI CreateCustomCallTagging is deprecated, please use CCC::2020-07-01::CreateCustomCallTaggings instead.
      * 
@@ -2150,7 +2186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Invoke CreateInstance to create a Cloud Contact Center instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2198,7 +2234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Invoke CreateInstance to create a Cloud Contact Center instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -2270,7 +2306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建技能组</p>
+     * <p>You can call CreateSkillGroup to create a skill group under a specified instance.</p>
      * 
      * @param request CreateSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2318,7 +2354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建技能组</p>
+     * <p>You can call CreateSkillGroup to create a skill group under a specified instance.</p>
      * 
      * @param request CreateSkillGroupRequest
      * @return CreateSkillGroupResponse
@@ -2329,6 +2365,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use CreateTicket to create a ticket.</p>
+     * 
      * @param request CreateTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTicketResponse
@@ -2382,6 +2421,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use CreateTicket to create a ticket.</p>
+     * 
      * @param request CreateTicketRequest
      * @return CreateTicketResponse
      */
@@ -2391,8 +2433,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creating an agent is equivalent to creating a Resource Access Management (RAM) sub-account. Agents in Cloud Contact Center are mapped to RAM sub-accounts. Therefore, the parameters for creating an agent are similar to those for creating a RAM account. For example, LoginName is the logon name for the RAM account. Email is the email address associated with the RAM account. This email address receives an email containing the initial logon password for the RAM account.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建坐席</p>
+     * <p>Call the CreateUser operation to create a new agent in a specified instance.</p>
      * 
      * @param request CreateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2471,8 +2516,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creating an agent is equivalent to creating a Resource Access Management (RAM) sub-account. Agents in Cloud Contact Center are mapped to RAM sub-accounts. Therefore, the parameters for creating an agent are similar to those for creating a RAM account. For example, LoginName is the logon name for the RAM account. Email is the email address associated with the RAM account. This email address receives an email containing the initial logon password for the RAM account.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建坐席</p>
+     * <p>Call the CreateUser operation to create a new agent in a specified instance.</p>
      * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
@@ -2484,7 +2532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除语音文件</p>
+     * <p>You can invoke DeleteAudioFile to delete the audio file associated with a specified audio resource ID under a specified instance.</p>
      * 
      * @param request DeleteAudioFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2520,7 +2568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除语音文件</p>
+     * <p>You can invoke DeleteAudioFile to delete the audio file associated with a specified audio resource ID under a specified instance.</p>
      * 
      * @param request DeleteAudioFileRequest
      * @return DeleteAudioFileResponse
@@ -2532,7 +2580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除号码标签</p>
+     * <p>You can invoke DeleteCallTag to delete a phone number tag under a specified instance.</p>
      * 
      * @param request DeleteCallTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2568,7 +2616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除号码标签</p>
+     * <p>You can invoke DeleteCallTag to delete a phone number tag under a specified instance.</p>
      * 
      * @param request DeleteCallTagRequest
      * @return DeleteCallTagResponse
@@ -2580,7 +2628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除ivr流程</p>
+     * <p>Deletes the specified contact flow.</p>
      * 
      * @param request DeleteContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2620,7 +2668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除ivr流程</p>
+     * <p>Deletes the specified contact flow.</p>
      * 
      * @param request DeleteContactFlowRequest
      * @return DeleteContactFlowResponse
@@ -2632,7 +2680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除呼入控制号码</p>
+     * <p>You can invoke DeleteCustomCallTagging to delete the inbound number tag associated with a specified number under a specified instance.</p>
      * 
      * @param request DeleteCustomCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2668,7 +2716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除呼入控制号码</p>
+     * <p>You can invoke DeleteCustomCallTagging to delete the inbound number tag associated with a specified number under a specified instance.</p>
      * 
      * @param request DeleteCustomCallTaggingRequest
      * @return DeleteCustomCallTaggingResponse
@@ -2920,7 +2968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除技能组</p>
+     * <p>Invoke DeleteSkillGroup to delete the skill group associated with the specified skill group ID under the specified instance.</p>
      * 
      * @param request DeleteSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2960,7 +3008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除技能组</p>
+     * <p>Invoke DeleteSkillGroup to delete the skill group associated with the specified skill group ID under the specified instance.</p>
      * 
      * @param request DeleteSkillGroupRequest
      * @return DeleteSkillGroupResponse
@@ -2971,6 +3019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified ticket.</p>
+     * 
      * @param request DeleteTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTicketResponse
@@ -3004,6 +3055,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified ticket.</p>
+     * 
      * @param request DeleteTicketRequest
      * @return DeleteTicketResponse
      */
@@ -3013,6 +3067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified ticket template.</p>
+     * 
      * @param request DeleteTicketTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTicketTemplateResponse
@@ -3046,6 +3103,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified ticket template.</p>
+     * 
      * @param request DeleteTicketTemplateRequest
      * @return DeleteTicketTemplateResponse
      */
@@ -3105,6 +3165,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use the DisableTicketTemplate operation to disable a ticket template. A disabled template cannot be selected when you create a new ticket.</p>
+     * 
      * @param request DisableTicketTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableTicketTemplateResponse
@@ -3138,6 +3201,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use the DisableTicketTemplate operation to disable a ticket template. A disabled template cannot be selected when you create a new ticket.</p>
+     * 
      * @param request DisableTicketTemplateRequest
      * @return DisableTicketTemplateResponse
      */
@@ -3148,7 +3214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>废弃当前IVR流程</p>
+     * <p>Revoke contact flow editing and discard the associated draft.</p>
      * 
      * @param request DiscardEditingContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3188,7 +3254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>废弃当前IVR流程</p>
+     * <p>Revoke contact flow editing and discard the associated draft.</p>
      * 
      * @param request DiscardEditingContactFlowRequest
      * @return DiscardEditingContactFlowResponse
@@ -3249,6 +3315,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>The EnableTicketTemplate operation publishes a ticket template. Published ticket templates can be used to create tickets.</p>
+     * 
      * @param request EnableTicketTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableTicketTemplateResponse
@@ -3282,6 +3351,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>The EnableTicketTemplate operation publishes a ticket template. Published ticket templates can be used to create tickets.</p>
+     * 
      * @param request EnableTicketTemplateRequest
      * @return EnableTicketTemplateResponse
      */
@@ -3292,7 +3364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>结束会议</p>
+     * <p>You can invoke EndConference to make the specified agent exit the call associated with the specified call ID under the specified instance. The call must be in a conference state.</p>
      * 
      * @param request EndConferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3332,7 +3404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>结束会议</p>
+     * <p>You can invoke EndConference to make the specified agent exit the call associated with the specified call ID under the specified instance. The call must be in a conference state.</p>
      * 
      * @param request EndConferenceRequest
      * @return EndConferenceResponse
@@ -3390,7 +3462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出全部呼入号码标签</p>
+     * <p>You can invoke ExportCustomCallTagging to export all inbound number tags under a specified instance.</p>
      * 
      * @deprecated OpenAPI ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.
      * 
@@ -3426,7 +3498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出全部呼入号码标签</p>
+     * <p>You can invoke ExportCustomCallTagging to export all inbound number tags under a specified instance.</p>
      * 
      * @deprecated OpenAPI ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.
      * 
@@ -3442,7 +3514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出黑名单号码</p>
+     * <p>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</p>
      * 
      * @param request ExportDoNotCallNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3482,7 +3554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出黑名单号码</p>
+     * <p>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</p>
      * 
      * @param request ExportDoNotCallNumbersRequest
      * @return ExportDoNotCallNumbersResponse
@@ -3493,6 +3565,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use the FinishTicketTask operation to process tickets.</p>
+     * 
      * @param request FinishTicketTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return FinishTicketTaskResponse
@@ -3534,6 +3609,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use the FinishTicketTask operation to process tickets.</p>
+     * 
      * @param request FinishTicketTaskRequest
      * @return FinishTicketTaskResponse
      */
@@ -3584,7 +3662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音频文件</p>
+     * <p>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</p>
      * 
      * @param request GetAudioFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3620,7 +3698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音频文件</p>
+     * <p>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</p>
      * 
      * @param request GetAudioFileRequest
      * @return GetAudioFileResponse
@@ -3632,7 +3710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取录音文件下载链接</p>
+     * <p>Invoke GetAudioFileDownloadUrl to obtain the OSS download link for a specified audio resource under a specified instance.</p>
      * 
      * @param request GetAudioFileDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3668,7 +3746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取录音文件下载链接</p>
+     * <p>Invoke GetAudioFileDownloadUrl to obtain the OSS download link for a specified audio resource under a specified instance.</p>
      * 
      * @param request GetAudioFileDownloadUrlRequest
      * @return GetAudioFileDownloadUrlResponse
@@ -3680,7 +3758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取录音文件上传参数</p>
+     * <p>Invoke the GetAudioFileUploadParameters API to obtain audio file upload parameters. Before creating an audio file, you must first call this API to retrieve the upload parameters and then call CreateAudioFile to create the audio file. This API is typically invoked by the default public cloud CRM system provided by Cloud Contact Center. It is not recommended for integration customers to call this API directly, because file upload must be performed through a Page operation first; only after the upload is complete can the GetAudioFileUploadParameters API be called.</p>
      * 
      * @param request GetAudioFileUploadParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3716,7 +3794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取录音文件上传参数</p>
+     * <p>Invoke the GetAudioFileUploadParameters API to obtain audio file upload parameters. Before creating an audio file, you must first call this API to retrieve the upload parameters and then call CreateAudioFile to create the audio file. This API is typically invoked by the default public cloud CRM system provided by Cloud Contact Center. It is not recommended for integration customers to call this API directly, because file upload must be performed through a Page operation first; only after the upload is complete can the GetAudioFileUploadParameters API be called.</p>
      * 
      * @param request GetAudioFileUploadParametersRequest
      * @return GetAudioFileUploadParametersResponse
@@ -3728,7 +3806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通话记录详情</p>
+     * <p>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</p>
      * 
      * @param request GetCallDetailRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3764,7 +3842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通话记录详情</p>
+     * <p>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</p>
      * 
      * @param request GetCallDetailRecordRequest
      * @return GetCallDetailRecordResponse
@@ -3776,7 +3854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼活动信息</p>
+     * <p>Gets a predictive outbound campaign by its ID from a specified instance.</p>
      * 
      * @param request GetCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3812,7 +3890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼活动信息</p>
+     * <p>Gets a predictive outbound campaign by its ID from a specified instance.</p>
      * 
      * @param request GetCampaignRequest
      * @return GetCampaignResponse
@@ -3824,7 +3902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测试外呼号码配置文件上传链接</p>
+     * <p>Invoke GetCaseFileUploadUrl to obtain the OSS upload parameters for a predictive outbound calling list file under a specified instance. When creating a predictive outbound calling Activity by importing a file, you must first invoke this API to retrieve the file upload parameters and then invoke the CreateCampaign API.</p>
      * 
      * @param request GetCaseFileUploadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3860,7 +3938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测试外呼号码配置文件上传链接</p>
+     * <p>Invoke GetCaseFileUploadUrl to obtain the OSS upload parameters for a predictive outbound calling list file under a specified instance. When creating a predictive outbound calling Activity by importing a file, you must first invoke this API to retrieve the file upload parameters and then invoke the CreateCampaign API.</p>
      * 
      * @param request GetCaseFileUploadUrlRequest
      * @return GetCaseFileUploadUrlResponse
@@ -3917,6 +3995,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use GetChatRoutingProfile to retrieve the chat routing configuration.</p>
+     * 
      * @param request GetChatRoutingProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetChatRoutingProfileResponse
@@ -3946,6 +4027,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use GetChatRoutingProfile to retrieve the chat routing configuration.</p>
+     * 
      * @param request GetChatRoutingProfileRequest
      * @return GetChatRoutingProfileResponse
      */
@@ -3956,7 +4040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取ivr流程信息</p>
+     * <p>Retrieve a specified contact flow.</p>
      * 
      * @param request GetContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3996,7 +4080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取ivr流程信息</p>
+     * <p>Retrieve a specified contact flow.</p>
      * 
      * @param request GetContactFlowRequest
      * @return GetContactFlowResponse
@@ -4008,7 +4092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取通话文本信息</p>
+     * <p>Call GetConversationDetail to obtain the conversation details for the call corresponding to the specified contact ID within the specified instance. The instance and skill group must have quality inspection push enabled to obtain these details.</p>
      * 
      * @param request GetConversationDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4048,7 +4132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取通话文本信息</p>
+     * <p>Call GetConversationDetail to obtain the conversation details for the call corresponding to the specified contact ID within the specified instance. The instance and skill group must have quality inspection push enabled to obtain these details.</p>
      * 
      * @param request GetConversationDetailRequest
      * @return GetConversationDetailResponse
@@ -4108,7 +4192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取黑名单文件上传地址</p>
+     * <p>Invoke GetDoNotCallFileUploadParameters to obtain the upload parameters for a do-not-call file. When importing prohibited outbound call numbers through a file, you must first invoke this API to upload the do-not-call number file to the public OSS space of Cloud Contact Center, and then invoke ImportDoNotCallNumbers to execute the import.</p>
      * 
      * @param request GetDoNotCallFileUploadParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4144,7 +4228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取黑名单文件上传地址</p>
+     * <p>Invoke GetDoNotCallFileUploadParameters to obtain the upload parameters for a do-not-call file. When importing prohibited outbound call numbers through a file, you must first invoke this API to upload the do-not-call number file to the public OSS space of Cloud Contact Center, and then invoke ImportDoNotCallNumbers to execute the import.</p>
      * 
      * @param request GetDoNotCallFileUploadParametersRequest
      * @return GetDoNotCallFileUploadParametersResponse
@@ -4202,7 +4286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取早媒体音频</p>
+     * <p>Retrieve early-media audio recordings for a call in a specified Cloud Contact Center instance.</p>
      * 
      * @param request GetEarlyMediaRecordingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4238,7 +4322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取早媒体音频</p>
+     * <p>Retrieve early-media audio recordings for a call in a specified Cloud Contact Center instance.</p>
      * 
      * @param request GetEarlyMediaRecordingRequest
      * @return GetEarlyMediaRecordingResponse
@@ -4250,7 +4334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>统计呼入号码信息</p>
+     * <p>Invoke GetHistoricalCallerReport to retrieve the historical inbound call report for a specified calling number under a specified instance.</p>
      * 
      * @param request GetHistoricalCallerReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4294,7 +4378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>统计呼入号码信息</p>
+     * <p>Invoke GetHistoricalCallerReport to retrieve the historical inbound call report for a specified calling number under a specified instance.</p>
      * 
      * @param request GetHistoricalCallerReportRequest
      * @return GetHistoricalCallerReportResponse
@@ -4306,7 +4390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼活动历史报表</p>
+     * <p>You can invoke the GetHistoricalCampaignReport API to retrieve the historical data report of a predictive outbound calling activity corresponding to a specified ID under a specified instance.</p>
      * 
      * @param request GetHistoricalCampaignReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4334,7 +4418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼活动历史报表</p>
+     * <p>You can invoke the GetHistoricalCampaignReport API to retrieve the historical data report of a predictive outbound calling activity corresponding to a specified ID under a specified instance.</p>
      * 
      * @param request GetHistoricalCampaignReportRequest
      * @return GetHistoricalCampaignReportResponse
@@ -4346,7 +4430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>统计实例呼叫数据</p>
+     * <p>You can invoke GetHistoricalInstanceReport to obtain the historical data report for a specified instance.</p>
      * 
      * @param request GetHistoricalInstanceReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4390,7 +4474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>统计实例呼叫数据</p>
+     * <p>You can invoke GetHistoricalInstanceReport to obtain the historical data report for a specified instance.</p>
      * 
      * @param request GetHistoricalInstanceReportRequest
      * @return GetHistoricalInstanceReportResponse
@@ -4402,7 +4486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例信息</p>
+     * <p>Retrieves the details of a Cloud Contact Center instance.</p>
      * 
      * @param request GetInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4434,7 +4518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例信息</p>
+     * <p>Retrieves the details of a Cloud Contact Center instance.</p>
      * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
@@ -4446,7 +4530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>统计实例呼叫信息</p>
+     * <p>You can call GetInstanceTrendingReport to retrieve the trend report for a specified instance.</p>
      * 
      * @param request GetInstanceTrendingReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4490,7 +4574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>统计实例呼叫信息</p>
+     * <p>You can call GetInstanceTrendingReport to retrieve the trend report for a specified instance.</p>
      * 
      * @param request GetInstanceTrendingReportRequest
      * @return GetInstanceTrendingReportResponse
@@ -4502,7 +4586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取IVR轨迹小结</p>
+     * <p>Retrieve the IVR tracking summary.</p>
      * 
      * @param request GetIvrTrackingSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4538,7 +4622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取IVR轨迹小结</p>
+     * <p>Retrieve the IVR tracking summary.</p>
      * 
      * @param request GetIvrTrackingSummaryRequest
      * @return GetIvrTrackingSummaryResponse
@@ -4550,7 +4634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取登录信息</p>
+     * <p>Invoke GetLoginDetails to obtain the agent\&quot;s logon information, including basic agent information, server address information, authentication information, and more. This API can only be invoked by the agent themselves; administrators are not permitted to invoke it on behalf of others.</p>
      * 
      * @param request GetLoginDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4590,7 +4674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取登录信息</p>
+     * <p>Invoke GetLoginDetails to obtain the agent\&quot;s logon information, including basic agent information, server address information, authentication information, and more. This API can only be invoked by the agent themselves; administrators are not permitted to invoke it on behalf of others.</p>
      * 
      * @param request GetLoginDetailsRequest
      * @return GetLoginDetailsResponse
@@ -4602,7 +4686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取通话对应的录音, 用于播放和下载</p>
+     * <p>You can invoke GetMonoRecording to obtain the single-track recording of a specified call under a specified instance. A single-track recording contains only one audio track, with both the agent-side and customer-side recordings merged into the same track in WAV format.</p>
      * 
      * @param request GetMonoRecordingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4642,7 +4726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取通话对应的录音, 用于播放和下载</p>
+     * <p>You can invoke GetMonoRecording to obtain the single-track recording of a specified call under a specified instance. A single-track recording contains only one audio track, with both the agent-side and customer-side recordings merged into the same track in WAV format.</p>
      * 
      * @param request GetMonoRecordingRequest
      * @return GetMonoRecordingResponse
@@ -4654,7 +4738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取通话对应的录音, 用于分轨或者质检</p>
+     * <p>You can invoke GetMultiChannelRecording to obtain the multi-track recording of a specified call under a specified instance. In the multi-track recording, the agent\&quot;s and customer\&quot;s audio are distributed across different sound channels. During each playback, only one sound channel can be played, meaning you can hear only one party\&quot;s voice. The format is MKV.</p>
      * 
      * @param request GetMultiChannelRecordingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4690,7 +4774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取通话对应的录音, 用于分轨或者质检</p>
+     * <p>You can invoke GetMultiChannelRecording to obtain the multi-track recording of a specified call under a specified instance. In the multi-track recording, the agent\&quot;s and customer\&quot;s audio are distributed across different sound channels. During each playback, only one sound channel can be played, meaning you can hear only one party\&quot;s voice. The format is MKV.</p>
      * 
      * @param request GetMultiChannelRecordingRequest
      * @return GetMultiChannelRecordingResponse
@@ -4702,7 +4786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询号码归属地</p>
+     * <p>Invoke the GetNumberLocation API to obtain number location information.</p>
      * 
      * @param request GetNumberLocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4738,7 +4822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询号码归属地</p>
+     * <p>Invoke the GetNumberLocation API to obtain number location information.</p>
      * 
      * @param request GetNumberLocationRequest
      * @return GetNumberLocationResponse
@@ -4750,7 +4834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼实时状态</p>
+     * <p>You can invoke GetRealtimeCampaignStats to retrieve real-time agent status data for a predictive outbound calling Activity with a specified ID under a specified instance.</p>
      * 
      * @param request GetRealtimeCampaignStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4778,7 +4862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼实时状态</p>
+     * <p>You can invoke GetRealtimeCampaignStats to retrieve real-time agent status data for a predictive outbound calling Activity with a specified ID under a specified instance.</p>
      * 
      * @param request GetRealtimeCampaignStatsRequest
      * @return GetRealtimeCampaignStatsResponse
@@ -4790,7 +4874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实时查询实例状态信息</p>
+     * <p>You can invoke GetRealtimeInstanceStates to obtain the real-time status of a specified instance.</p>
      * 
      * @param request GetRealtimeInstanceStatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4826,7 +4910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实时查询实例状态信息</p>
+     * <p>You can invoke GetRealtimeInstanceStates to obtain the real-time status of a specified instance.</p>
      * 
      * @param request GetRealtimeInstanceStatesRequest
      * @return GetRealtimeInstanceStatesResponse
@@ -4884,7 +4968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询技能组</p>
+     * <p>You can invoke GetSkillGroup to obtain information about the skill group corresponding to a specified skill group ID under a specified instance.</p>
      * 
      * @param request GetSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4920,7 +5004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询技能组</p>
+     * <p>You can invoke GetSkillGroup to obtain information about the skill group corresponding to a specified skill group ID under a specified instance.</p>
      * 
      * @param request GetSkillGroupRequest
      * @return GetSkillGroupResponse
@@ -4931,6 +5015,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the content of a session summary template.</p>
+     * 
      * @param request GetSummaryTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSummaryTemplateResponse
@@ -4964,6 +5051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the content of a session summary template.</p>
+     * 
      * @param request GetSummaryTemplateRequest
      * @return GetSummaryTemplateResponse
      */
@@ -4973,6 +5063,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves information about a specific ticket.</p>
+     * 
      * @param request GetTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTicketResponse
@@ -5006,6 +5099,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves information about a specific ticket.</p>
+     * 
      * @param request GetTicketRequest
      * @return GetTicketResponse
      */
@@ -5015,6 +5111,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can call GetTicketSummaryReport to retrieve a summary of ticket statuses.</p>
+     * 
      * @param request GetTicketSummaryReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTicketSummaryReportResponse
@@ -5084,6 +5183,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can call GetTicketSummaryReport to retrieve a summary of ticket statuses.</p>
+     * 
      * @param request GetTicketSummaryReportRequest
      * @return GetTicketSummaryReportResponse
      */
@@ -5094,7 +5196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工单模版</p>
+     * <p>Call GetTicketTemplate to retrieve ticket template definitions.</p>
      * 
      * @param request GetTicketTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5134,7 +5236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工单模版</p>
+     * <p>Call GetTicketTemplate to retrieve ticket template definitions.</p>
      * 
      * @param request GetTicketTemplateRequest
      * @return GetTicketTemplateResponse
@@ -5146,7 +5248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取TURN服务的临时用户名和密码</p>
+     * <p>Call GetTurnCredentials to get the connection credentials for a Cloud Contact Center Point of Presence (PoP). These credentials include a username and password for authentication. Connecting to Cloud Contact Center through a PoP improves network quality and stability.</p>
      * 
      * @param request GetTurnCredentialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5182,7 +5284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取TURN服务的临时用户名和密码</p>
+     * <p>Call GetTurnCredentials to get the connection credentials for a Cloud Contact Center Point of Presence (PoP). These credentials include a username and password for authentication. Connecting to Cloud Contact Center through a PoP improves network quality and stability.</p>
      * 
      * @param request GetTurnCredentialsRequest
      * @return GetTurnCredentialsResponse
@@ -5194,7 +5296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取可用的TURN服务器列表</p>
+     * <p>Call GetTurnServerList to get a list of front-end access points for Alibaba Cloud Contact Center. Connecting through these access points improves network quality and stability.</p>
      * 
      * @param request GetTurnServerListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5226,7 +5328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取可用的TURN服务器列表</p>
+     * <p>Call GetTurnServerList to get a list of front-end access points for Alibaba Cloud Contact Center. Connecting through these access points improves network quality and stability.</p>
      * 
      * @param request GetTurnServerListRequest
      * @return GetTurnServerListResponse
@@ -5238,7 +5340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取质检参数</p>
+     * <p>Obtain the parameters related to offline quality inspection audio files. Normally, if the Customer has configured the quality inspection feature in Cloud Contact Center, the audio files requiring offline quality inspection and their corresponding parameters are automatically passed to Intelligent Quality Inspection. You only need to invoke this API to obtain the parameters for pushing quality inspection recordings when the Customer has not configured the quality inspection feature in Cloud Contact Center and wishes to manually push Cloud Contact Center call recordings to the quality inspection system.</p>
      * 
      * @param request GetUploadAudioDataParamsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5266,7 +5368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取质检参数</p>
+     * <p>Obtain the parameters related to offline quality inspection audio files. Normally, if the Customer has configured the quality inspection feature in Cloud Contact Center, the audio files requiring offline quality inspection and their corresponding parameters are automatically passed to Intelligent Quality Inspection. You only need to invoke this API to obtain the parameters for pushing quality inspection recordings when the Customer has not configured the quality inspection feature in Cloud Contact Center and wishes to manually push Cloud Contact Center call recordings to the quality inspection system.</p>
      * 
      * @param request GetUploadAudioDataParamsRequest
      * @return GetUploadAudioDataParamsResponse
@@ -5278,7 +5380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询坐席</p>
+     * <p>You can invoke GetUser to obtain the agent information corresponding to a specified agent ID under a specified instance.</p>
      * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5318,7 +5420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询坐席</p>
+     * <p>You can invoke GetUser to obtain the agent information corresponding to a specified agent ID under a specified instance.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -5369,6 +5471,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Call GetVisitorLoginDetails to retrieve login, server address, and authentication information for network service visitors.</p>
+     * 
      * @param request GetVisitorLoginDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetVisitorLoginDetailsResponse
@@ -5410,6 +5515,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Call GetVisitorLoginDetails to retrieve login, server address, and authentication information for network service visitors.</p>
+     * 
      * @param request GetVisitorLoginDetailsRequest
      * @return GetVisitorLoginDetailsResponse
      */
@@ -5420,7 +5528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取语音邮箱录音, 用于播放和下载</p>
+     * <p>You can invoke GetVoicemailRecording to obtain the voicemail recording of a specified call under a specified instance. The recording is single-track and in WAV format.</p>
      * 
      * @param request GetVoicemailRecordingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5456,7 +5564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取语音邮箱录音, 用于播放和下载</p>
+     * <p>You can invoke GetVoicemailRecording to obtain the voicemail recording of a specified call under a specified instance. The recording is single-track and in WAV format.</p>
      * 
      * @param request GetVoicemailRecordingRequest
      * @return GetVoicemailRecordingResponse
@@ -5468,7 +5576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保持通话</p>
+     * <p>You can invoke HoldCall to hold the call associated with a specified call ID under a specified instance. After the call is held, it will be temporarily suspended, and the held party will hear hold music.</p>
      * 
      * @param request HoldCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5520,7 +5628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保持通话</p>
+     * <p>You can invoke HoldCall to hold the call associated with a specified call ID under a specified instance. After the call is held, it will be temporarily suspended, and the held party will hear hold music.</p>
      * 
      * @param request HoldCallRequest
      * @return HoldCallResponse
@@ -5532,7 +5640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入管理员</p>
+     * <p>Imports one or more admins to a specified instance. The caller must have the <code>AliyunCCCFullAccess</code> permission, which you can grant in the RAM console.</p>
      * 
      * @param request ImportAdminsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5568,7 +5676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入管理员</p>
+     * <p>Imports one or more admins to a specified instance. The caller must have the <code>AliyunCCCFullAccess</code> permission, which you can grant in the RAM console.</p>
      * 
      * @param request ImportAdminsRequest
      * @return ImportAdminsResponse
@@ -5626,7 +5734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入自有线路号码</p>
+     * <p>Imports your organization’s telephone line numbers. Before performing the first import, contact Cloud Contact Center technical support to add the numbers to the allowlist.</p>
      * 
      * @param request ImportCorpNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5678,7 +5786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入自有线路号码</p>
+     * <p>Imports your organization’s telephone line numbers. Before performing the first import, contact Cloud Contact Center technical support to add the numbers to the allowlist.</p>
      * 
      * @param request ImportCorpNumbersRequest
      * @return ImportCorpNumbersResponse
@@ -5690,7 +5798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文件导入呼入控制号码</p>
+     * <p>You can invoke ImportCustomCallTagging to import multiple inbound number tags into a specified instance.</p>
      * 
      * @deprecated OpenAPI ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
      * 
@@ -5730,7 +5838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文件导入呼入控制号码</p>
+     * <p>You can invoke ImportCustomCallTagging to import multiple inbound number tags into a specified instance.</p>
      * 
      * @deprecated OpenAPI ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
      * 
@@ -5746,7 +5854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加黑名单号码</p>
+     * <p>Imports one or more do-not-call numbers to a specified instance. You can import numbers by manual entry or file upload.</p>
      * 
      * @param request ImportDoNotCallNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5790,7 +5898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加黑名单号码</p>
+     * <p>Imports one or more do-not-call numbers to a specified instance. You can import numbers by manual entry or file upload.</p>
      * 
      * @param request ImportDoNotCallNumbersRequest
      * @return ImportDoNotCallNumbersResponse
@@ -5852,7 +5960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入ram用户</p>
+     * <p>Import existing RAM users as contact center agents.</p>
      * 
      * @param request ImportRamUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5900,7 +6008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入ram用户</p>
+     * <p>Import existing RAM users as contact center agents.</p>
      * 
      * @param request ImportRamUsersRequest
      * @return ImportRamUsersResponse
@@ -5912,7 +6020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关注转-发起</p>
+     * <p>Consultation transfer refers to transferring a call to another agent, a skill group queue, or an external number. It is also known as follow transfer or two-step transfer.</p>
      * 
      * @param request InitiateAttendedTransferRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6000,7 +6108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关注转-发起</p>
+     * <p>Consultation transfer refers to transferring a call to another agent, a skill group queue, or an external number. It is also known as follow transfer or two-step transfer.</p>
      * 
      * @param request InitiateAttendedTransferRequest
      * @return InitiateAttendedTransferResponse
@@ -6012,7 +6120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打断通话</p>
+     * <p>You can invoke InterceptCall to forcibly disconnect the call associated with a specified call ID under a given instance. The call must be in the listener state, and the forced disconnection must be initiated by the listener. After the forced disconnection succeeds, the agent who was originally talking with the customer will be disconnected, and the agent who initiated the forced disconnection will replace the original agent and continue the conversation with the customer.</p>
      * 
      * @param request InterceptCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6064,7 +6172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打断通话</p>
+     * <p>You can invoke InterceptCall to forcibly disconnect the call associated with a specified call ID under a given instance. The call must be in the listener state, and the forced disconnection must be initiated by the listener. After the forced disconnection succeeds, the agent who was originally talking with the customer will be disconnected, and the agent who initiated the forced disconnection will replace the original agent and continue the conversation with the customer.</p>
      * 
      * @param request InterceptCallRequest
      * @return InterceptCallResponse
@@ -6076,7 +6184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起IVR认证流程</p>
+     * <p>You can invoke LaunchAuthentication to temporarily transfer a call into a specified IVR flow. After invoking this API, the call enters an IVR interaction phase, which is commonly used for identity verification operations.</p>
      * 
      * @param request LaunchAuthenticationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6128,7 +6236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起IVR认证流程</p>
+     * <p>You can invoke LaunchAuthentication to temporarily transfer a call into a specified IVR flow. After invoking this API, the call enters an IVR interaction phase, which is commonly used for identity verification operations.</p>
      * 
      * @param request LaunchAuthenticationRequest
      * @return LaunchAuthenticationResponse
@@ -6140,7 +6248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起话后满意度调查IVR流程</p>
+     * <p>Invoke LaunchSurvey to send a satisfaction survey. This operation causes the agent to hang up. If it is a voice-based satisfaction survey, the customer enters the IVR satisfaction survey flow after the agent hangs up and completes the satisfaction collection within the IVR flow. If it is an SMS-based satisfaction survey, the call ends and the customer receives a satisfaction survey text message.</p>
      * 
      * @param request LaunchSurveyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6208,7 +6316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起话后满意度调查IVR流程</p>
+     * <p>Invoke LaunchSurvey to send a satisfaction survey. This operation causes the agent to hang up. If it is a voice-based satisfaction survey, the customer enters the IVR satisfaction survey flow after the agent hangs up and completes the satisfaction collection within the IVR flow. If it is an SMS-based satisfaction survey, the call ends and the customer receives a satisfaction survey text message.</p>
      * 
      * @param request LaunchSurveyRequest
      * @return LaunchSurveyResponse
@@ -6220,7 +6328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取坐席状态记录列表</p>
+     * <p>Invoke ListAgentStateLogs to obtain the status log list of a specified agent under a specified instance. Note that this API will soon expire. Use the override API ListRealtimeAgentStates instead.</p>
      * 
      * @param request ListAgentStateLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6264,7 +6372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取坐席状态记录列表</p>
+     * <p>Invoke ListAgentStateLogs to obtain the status log list of a specified agent under a specified instance. Note that this API will soon expire. Use the override API ListRealtimeAgentStates instead.</p>
      * 
      * @param request ListAgentStateLogsRequest
      * @return ListAgentStateLogsResponse
@@ -6276,7 +6384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListAgentStates for ACC</p>
+     * <p>You can invoke the ListAgentStates API to retrieve a list of agent statuses under a specified instance, filtered by specified conditions. This API is available only to specific Users. Other Customers are not recommended to invoke it.</p>
      * 
      * @deprecated OpenAPI ListAgentStates is deprecated, please use CCC::2020-07-01::ListRealtimeAgentStates instead.
      * 
@@ -6336,7 +6444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListAgentStates for ACC</p>
+     * <p>You can invoke the ListAgentStates API to retrieve a list of agent statuses under a specified instance, filtered by specified conditions. This API is available only to specific Users. Other Customers are not recommended to invoke it.</p>
      * 
      * @deprecated OpenAPI ListAgentStates is deprecated, please use CCC::2020-07-01::ListRealtimeAgentStates instead.
      * 
@@ -6352,7 +6460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListAgentSummaryReportsSinceMidnight for acc</p>
+     * <p>You can invoke the ListAgentSummaryReportsSinceMidnight API to retrieve agent historical data reports under a specified instance, filtered by given conditions. The statistics cover data from 00:00 of the current day up to the current time. This API is available only to specific users; other customers are not recommended to invoke it.</p>
      * 
      * @deprecated OpenAPI ListAgentSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalAgentReport instead.
      * 
@@ -6384,7 +6492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListAgentSummaryReportsSinceMidnight for acc</p>
+     * <p>You can invoke the ListAgentSummaryReportsSinceMidnight API to retrieve agent historical data reports under a specified instance, filtered by given conditions. The statistics cover data from 00:00 of the current day up to the current time. This API is available only to specific users; other customers are not recommended to invoke it.</p>
      * 
      * @deprecated OpenAPI ListAgentSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalAgentReport instead.
      * 
@@ -6400,7 +6508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼呼叫记录</p>
+     * <p>You can invoke ListAttempts to obtain the list of contact dialing records for a specified predictive outbound calling Activity under a specified instance.</p>
      * 
      * @param request ListAttemptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6428,7 +6536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼呼叫记录</p>
+     * <p>You can invoke ListAttempts to obtain the list of contact dialing records for a specified predictive outbound calling Activity under a specified instance.</p>
      * 
      * @param request ListAttemptsRequest
      * @return ListAttemptsResponse
@@ -6440,7 +6548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音频文件列表</p>
+     * <p>Invoke ListAudioFiles to obtain the list of audio files under a specified instance.</p>
      * 
      * @param request ListAudioFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6488,7 +6596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音频文件列表</p>
+     * <p>Invoke ListAudioFiles to obtain the list of audio files under a specified instance.</p>
      * 
      * @param request ListAudioFilesRequest
      * @return ListAudioFilesResponse
@@ -6500,7 +6608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑呼入控制号码</p>
+     * <p>Queries the blacklist tag status of specified numbers in a batch.</p>
      * 
      * @param request ListBlacklistCallTaggingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6536,7 +6644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑呼入控制号码</p>
+     * <p>Queries the blacklist tag status of specified numbers in a batch.</p>
      * 
      * @param request ListBlacklistCallTaggingsRequest
      * @return ListBlacklistCallTaggingsResponse
@@ -6548,7 +6656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>坐席工作台坐席调用转接使用</p>
+     * <p>You can invoke ListBriefSkillGroups to obtain the list of skill group summary information under a specified instance.</p>
      * 
      * @param request ListBriefSkillGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6596,7 +6704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>坐席工作台坐席调用转接使用</p>
+     * <p>You can invoke ListBriefSkillGroups to obtain the list of skill group summary information under a specified instance.</p>
      * 
      * @param request ListBriefSkillGroupsRequest
      * @return ListBriefSkillGroupsResponse
@@ -6607,8 +6715,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To ensure query efficiency, the TotalCount field in the response data is populated only when the first page is queried. For other pages, this field returns 0.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取通话详情</p>
+     * <p>You can invoke ListCallDetailRecords to obtain a list of call details filtered by specified search conditions under a specified instance. This API is no longer iteratively updated. We recommend that you use the ListCallDetailRecordsV2 API instead.</p>
      * 
      * @param request ListCallDetailRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6719,8 +6830,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To ensure query efficiency, the TotalCount field in the response data is populated only when the first page is queried. For other pages, this field returns 0.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取通话详情</p>
+     * <p>You can invoke ListCallDetailRecords to obtain a list of call details filtered by specified search conditions under a specified instance. This API is no longer iteratively updated. We recommend that you use the ListCallDetailRecordsV2 API instead.</p>
      * 
      * @param request ListCallDetailRecordsRequest
      * @return ListCallDetailRecordsResponse
@@ -6731,8 +6845,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>ListCallDetailRecordsV2 is used to override the ListCallDetailRecords operation. New fields and query conditions will undergo continuous optimization in ListCallDetailRecordsV2. To ensure query efficiency, the TotalCount field in the response is populated only when you query the first page. For other pages, the value 0 is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通话记录列表</p>
+     * <p>Retrieves a list of call detail records that match the specified filter criteria for a specified instance.</p>
      * 
      * @param request ListCallDetailRecordsV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -6867,8 +6984,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>ListCallDetailRecordsV2 is used to override the ListCallDetailRecords operation. New fields and query conditions will undergo continuous optimization in ListCallDetailRecordsV2. To ensure query efficiency, the TotalCount field in the response is populated only when you query the first page. For other pages, the value 0 is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通话记录列表</p>
+     * <p>Retrieves a list of call detail records that match the specified filter criteria for a specified instance.</p>
      * 
      * @param request ListCallDetailRecordsV2Request
      * @return ListCallDetailRecordsV2Response
@@ -6879,6 +6999,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use the ListCallSummaries operation to retrieve call summaries.</p>
+     * 
      * @param tmpReq ListCallSummariesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCallSummariesResponse
@@ -6918,6 +7041,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use the ListCallSummaries operation to retrieve call summaries.</p>
+     * 
      * @param request ListCallSummariesRequest
      * @return ListCallSummariesResponse
      */
@@ -6928,7 +7054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出号码标签</p>
+     * <p>You can invoke ListCallTags to obtain all number tags under a specified instance.</p>
      * 
      * @param request ListCallTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6968,7 +7094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出号码标签</p>
+     * <p>You can invoke ListCallTags to obtain all number tags under a specified instance.</p>
      * 
      * @param request ListCallTagsRequest
      * @return ListCallTagsResponse
@@ -6980,7 +7106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼活动趋势报表</p>
+     * <p>Obtain the trend report of the predictive outbound calling activity with the specified ID under the specified instance.</p>
      * 
      * @param request ListCampaignTrendingReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7008,7 +7134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼活动趋势报表</p>
+     * <p>Obtain the trend report of the predictive outbound calling activity with the specified ID under the specified instance.</p>
      * 
      * @param request ListCampaignTrendingReportRequest
      * @return ListCampaignTrendingReportResponse
@@ -7020,7 +7146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼活动列表</p>
+     * <p>Calls ListCampaigns to obtain the list of predictive dialing campaigns under a specified instance.</p>
      * 
      * @param request ListCampaignsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7088,7 +7214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼活动列表</p>
+     * <p>Calls ListCampaigns to obtain the list of predictive dialing campaigns under a specified instance.</p>
      * 
      * @param request ListCampaignsRequest
      * @return ListCampaignsResponse
@@ -7100,7 +7226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼活动的联系人呼叫详情</p>
+     * <p>Invoke ListCases to obtain the execution details list of the outbound contact list for the predictive dialing Activity corresponding to the specified ID under the specified instance.</p>
      * 
      * @param request ListCasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7152,7 +7278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取预测式外呼活动的联系人呼叫详情</p>
+     * <p>Invoke ListCases to obtain the execution details list of the outbound contact list for the predictive dialing Activity corresponding to the specified ID under the specified instance.</p>
      * 
      * @param request ListCasesRequest
      * @return ListCasesResponse
@@ -7163,6 +7289,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use ListCategories to retrieve category information.</p>
+     * 
      * @param request ListCategoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCategoriesResponse
@@ -7200,6 +7329,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use ListCategories to retrieve category information.</p>
+     * 
      * @param request ListCategoriesRequest
      * @return ListCategoriesResponse
      */
@@ -7209,6 +7341,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the ticket field types that are defined for an instance.</p>
+     * 
      * @param request ListCommonTicketFieldsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCommonTicketFieldsResponse
@@ -7238,6 +7373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the ticket field types that are defined for an instance.</p>
+     * 
      * @param request ListCommonTicketFieldsRequest
      * @return ListCommonTicketFieldsResponse
      */
@@ -7248,7 +7386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询系统配置</p>
+     * <p>Retrieves the config items for a specified instance.</p>
      * 
      * @param request ListConfigItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7288,7 +7426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询系统配置</p>
+     * <p>Retrieves the config items for a specified instance.</p>
      * 
      * @param request ListConfigItemsRequest
      * @return ListConfigItemsResponse
@@ -7300,7 +7438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询ivr流程</p>
+     * <p>Call ListContactFlows to retrieve the IVR contact flows for a specified instance.</p>
      * 
      * @param request ListContactFlowsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7356,7 +7494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询ivr流程</p>
+     * <p>Call ListContactFlows to retrieve the IVR contact flows for a specified instance.</p>
      * 
      * @param request ListContactFlowsRequest
      * @return ListContactFlowsResponse
@@ -7368,7 +7506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出呼入控制号码</p>
+     * <p>You can invoke ListCustomCallTagging to obtain the list of inbound number marks under a specified instance.</p>
      * 
      * @deprecated OpenAPI ListCustomCallTagging is deprecated, please use CCC::2020-07-01::ListCustomCallTaggings instead.
      * 
@@ -7420,7 +7558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出呼入控制号码</p>
+     * <p>You can invoke ListCustomCallTagging to obtain the list of inbound number marks under a specified instance.</p>
      * 
      * @deprecated OpenAPI ListCustomCallTagging is deprecated, please use CCC::2020-07-01::ListCustomCallTaggings instead.
      * 
@@ -7436,7 +7574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询可用设备</p>
+     * <p>Obtain the device list of a specified agent under a specified instance.</p>
      * 
      * @param request ListDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7472,7 +7610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询可用设备</p>
+     * <p>Obtain the device list of a specified agent under a specified instance.</p>
      * 
      * @param request ListDevicesRequest
      * @return ListDevicesResponse
@@ -7484,7 +7622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询黑名单号码</p>
+     * <p>Retrieves the list of prohibited outbound call numbers under a specified instance, filtered by specified search conditions.</p>
      * 
      * @param request ListDoNotCallNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7532,7 +7670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询黑名单号码</p>
+     * <p>Retrieves the list of prohibited outbound call numbers under a specified instance, filtered by specified search conditions.</p>
      * 
      * @param request ListDoNotCallNumbersRequest
      * @return ListDoNotCallNumbersResponse
@@ -7612,7 +7750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询反馈记录</p>
+     * <p>Queries feedback records.</p>
      * 
      * @param request ListFeedbacksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7648,7 +7786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询反馈记录</p>
+     * <p>Queries feedback records.</p>
      * 
      * @param request ListFeedbacksRequest
      * @return ListFeedbacksResponse
@@ -7659,6 +7797,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use ListFlashSmsApplication to obtain third-party flash SMS configuration information.</p>
+     * 
      * @param request ListFlashSmsApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFlashSmsApplicationsResponse
@@ -7704,6 +7845,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use ListFlashSmsApplication to obtain third-party flash SMS configuration information.</p>
+     * 
      * @param request ListFlashSmsApplicationsRequest
      * @return ListFlashSmsApplicationsResponse
      */
@@ -7713,6 +7857,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Call the ListFlashSmsSettings operation to retrieve the flash SMS configurations for a specified skill group.</p>
+     * 
      * @param tmpReq ListFlashSmsSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFlashSmsSettingsResponse
@@ -7764,6 +7911,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Call the ListFlashSmsSettings operation to retrieve the flash SMS configurations for a specified skill group.</p>
+     * 
      * @param request ListFlashSmsSettingsRequest
      * @return ListFlashSmsSettingsResponse
      */
@@ -7774,7 +7924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取闪信模板列表</p>
+     * <p>Use ListFlashSmsTemplates to retrieve flash SMS template information.</p>
      * 
      * @param request ListFlashSmsTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7814,7 +7964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取闪信模板列表</p>
+     * <p>Use ListFlashSmsTemplates to retrieve flash SMS template information.</p>
      * 
      * @param request ListFlashSmsTemplatesRequest
      * @return ListFlashSmsTemplatesResponse
@@ -7826,7 +7976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListGroupChatMessages</p>
+     * <p>Retrieves the records of group chat messages.</p>
      * 
      * @param request ListGroupChatMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7874,7 +8024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListGroupChatMessages</p>
+     * <p>Retrieves the records of group chat messages.</p>
      * 
      * @param request ListGroupChatMessagesRequest
      * @return ListGroupChatMessagesResponse
@@ -7886,7 +8036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询历史作息报告</p>
+     * <p>Retrieves historical data reports for one or more agents in a specified instance.</p>
      * 
      * @param request ListHistoricalAgentReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7948,7 +8098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询历史作息报告</p>
+     * <p>Retrieves historical data reports for one or more agents in a specified instance.</p>
      * 
      * @param request ListHistoricalAgentReportRequest
      * @return ListHistoricalAgentReportResponse
@@ -7960,7 +8110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListHistoricalAgentSkillGroupReport</p>
+     * <p>You can call ListHistoricalAgentSkillGroupReport to retrieve historical skill group reports for one or more agents in a specified instance.</p>
      * 
      * @param request ListHistoricalAgentSkillGroupReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8022,7 +8172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListHistoricalAgentSkillGroupReport</p>
+     * <p>You can call ListHistoricalAgentSkillGroupReport to retrieve historical skill group reports for one or more agents in a specified instance.</p>
      * 
      * @param request ListHistoricalAgentSkillGroupReportRequest
      * @return ListHistoricalAgentSkillGroupReportResponse
@@ -8034,7 +8184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>技能组汇总报表</p>
+     * <p>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</p>
      * 
      * @param request ListHistoricalSkillGroupReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8092,7 +8242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>技能组汇总报表</p>
+     * <p>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</p>
      * 
      * @param request ListHistoricalSkillGroupReportRequest
      * @return ListHistoricalSkillGroupReportResponse
@@ -8103,8 +8253,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If a RAM user needs to invoke this API, the RAM user must have the &quot;Manage Cloud Call Center (CCC)&quot; permission (AliyunCCCFullAccess).</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询实例列表</p>
+     * <p>Invoke the ListInstances API to obtain the list of Cloud Contact Center instances under the current Alibaba Cloud account.</p>
      * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8139,8 +8292,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If a RAM user needs to invoke this API, the RAM user must have the &quot;Manage Cloud Call Center (CCC)&quot; permission (AliyunCCCFullAccess).</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询实例列表</p>
+     * <p>Invoke the ListInstances API to obtain the list of Cloud Contact Center instances under the current Alibaba Cloud account.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -8152,7 +8308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例列表</p>
+     * <p>You can invoke ListInstancesOfUser to obtain the list of Cloud Contact Center instances to which the User belongs.</p>
      * 
      * @param request ListInstancesOfUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8188,7 +8344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例列表</p>
+     * <p>You can invoke ListInstancesOfUser to obtain the list of Cloud Contact Center instances to which the User belongs.</p>
      * 
      * @param request ListInstancesOfUserRequest
      * @return ListInstancesOfUserResponse
@@ -8200,7 +8356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询坐席报表</p>
+     * <p>You can invoke ListIntervalAgentReport to obtain the segment statistical report of a specified agent under a specified instance.</p>
      * 
      * @param request ListIntervalAgentReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8252,7 +8408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询坐席报表</p>
+     * <p>You can invoke ListIntervalAgentReport to obtain the segment statistical report of a specified agent under a specified instance.</p>
      * 
      * @param request ListIntervalAgentReportRequest
      * @return ListIntervalAgentReportResponse
@@ -8264,7 +8420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListIntervalAgentSkillGroupReport</p>
+     * <p>Retrieves the interval-based statistical report for a specified agent in a specified instance.</p>
      * 
      * @param request ListIntervalAgentSkillGroupReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8292,7 +8448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListIntervalAgentSkillGroupReport</p>
+     * <p>Retrieves the interval-based statistical report for a specified agent in a specified instance.</p>
      * 
      * @param request ListIntervalAgentSkillGroupReportRequest
      * @return ListIntervalAgentSkillGroupReportResponse
@@ -8304,7 +8460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例报表</p>
+     * <p>You can invoke ListIntervalInstanceReport to obtain the segment statistical report for a specified instance.</p>
      * 
      * @param request ListIntervalInstanceReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8348,7 +8504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例报表</p>
+     * <p>You can invoke ListIntervalInstanceReport to obtain the segment statistical report for a specified instance.</p>
      * 
      * @param request ListIntervalInstanceReportRequest
      * @return ListIntervalInstanceReportResponse
@@ -8360,7 +8516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询技能组报表</p>
+     * <p>You can invoke ListIntervalSkillGroupReport to obtain the segment-based statistical report of a specified skill group under a specified instance.</p>
      * 
      * @param request ListIntervalSkillGroupReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8412,7 +8568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询技能组报表</p>
+     * <p>You can invoke ListIntervalSkillGroupReport to obtain the segment-based statistical report of a specified skill group under a specified instance.</p>
      * 
      * @param request ListIntervalSkillGroupReportRequest
      * @return ListIntervalSkillGroupReportResponse
@@ -8424,7 +8580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询ivr轨迹</p>
+     * <p>Invoke ListIvrTrackingDetails to obtain the IVR tracking details of a specified call under a specified instance.</p>
      * 
      * @param request ListIvrTrackingDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8468,7 +8624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询ivr轨迹</p>
+     * <p>Invoke ListIvrTrackingDetails to obtain the IVR tracking details of a specified call under a specified instance.</p>
      * 
      * @param request ListIvrTrackingDetailsRequest
      * @return ListIvrTrackingDetailsResponse
@@ -8480,7 +8636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListLegacyAgentEventLogs</p>
+     * <p>You can invoke ListLegacyAgentEventLogs to obtain the list of 1.0 legacy agent event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</p>
      * 
      * @deprecated OpenAPI ListLegacyAgentEventLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
      * 
@@ -8536,7 +8692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListLegacyAgentEventLogs</p>
+     * <p>You can invoke ListLegacyAgentEventLogs to obtain the list of 1.0 legacy agent event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</p>
      * 
      * @deprecated OpenAPI ListLegacyAgentEventLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
      * 
@@ -8552,7 +8708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListLegacyAgentStatusLogs</p>
+     * <p>You can invoke ListLegacyAgentStatusLogs to obtain the list of legacy agent status logs for version 1.0. This API is available only to specific Users, and other Customers are not recommended to invoke it.</p>
      * 
      * @deprecated OpenAPI ListLegacyAgentStatusLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
      * 
@@ -8608,7 +8764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListLegacyAgentStatusLogs</p>
+     * <p>You can invoke ListLegacyAgentStatusLogs to obtain the list of legacy agent status logs for version 1.0. This API is available only to specific Users, and other Customers are not recommended to invoke it.</p>
      * 
      * @deprecated OpenAPI ListLegacyAgentStatusLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
      * 
@@ -8684,7 +8840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListLegacyQueueEventLogs</p>
+     * <p>You can invoke ListLegacyQueueEventLogs to obtain the list of 1.0 legacy queue event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</p>
      * 
      * @param request ListLegacyQueueEventLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8736,7 +8892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListLegacyQueueEventLogs</p>
+     * <p>You can invoke ListLegacyQueueEventLogs to obtain the list of 1.0 legacy queue event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</p>
      * 
      * @param request ListLegacyQueueEventLogsRequest
      * @return ListLegacyQueueEventLogsResponse
@@ -8748,7 +8904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单轨录音</p>
+     * <p>Call ListMonoRecordings to retrieve single-track recordings for each party in a specified call under a specified instance. During a call, each party has a channel, and each channel generates a combined track recording in WAV format.</p>
      * 
      * @param request ListMonoRecordingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8792,7 +8948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单轨录音</p>
+     * <p>Call ListMonoRecordings to retrieve single-track recordings for each party in a specified call under a specified instance. During a call, each party has a channel, and each channel generates a combined track recording in WAV format.</p>
      * 
      * @param request ListMonoRecordingsRequest
      * @return ListMonoRecordingsResponse
@@ -8804,7 +8960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取分轨录音</p>
+     * <p>Call ListMultiChannelRecordings to retrieve the multi-channel recordings for each party in a specified call and instance. Each party has a call channel that corresponds to a multi-channel recording in MKV format.</p>
      * 
      * @param request ListMultiChannelRecordingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8848,7 +9004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取分轨录音</p>
+     * <p>Call ListMultiChannelRecordings to retrieve the multi-channel recordings for each party in a specified call and instance. Each party has a call channel that corresponds to a multi-channel recording in MKV format.</p>
      * 
      * @param request ListMultiChannelRecordingsRequest
      * @return ListMultiChannelRecordingsResponse
@@ -8860,7 +9016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消息推送记录</p>
+     * <p>Query notification records that were not sent using Message Queue (MQ).</p>
      * 
      * @param request ListNotificationRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8896,7 +9052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消息推送记录</p>
+     * <p>Query notification records that were not sent using Message Queue (MQ).</p>
      * 
      * @param request ListNotificationRecordsRequest
      * @return ListNotificationRecordsResponse
@@ -8908,7 +9064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>该坐席可用的外呼号码列表</p>
+     * <p><code>ListOutboundNumbersOfUser</code> retrieves the outbound numbers for a specified agent in a specified instance.</p>
      * 
      * @param request ListOutboundNumbersOfUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8956,7 +9112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>该坐席可用的外呼号码列表</p>
+     * <p><code>ListOutboundNumbersOfUser</code> retrieves the outbound numbers for a specified agent in a specified instance.</p>
      * 
      * @param request ListOutboundNumbersOfUserRequest
      * @return ListOutboundNumbersOfUserResponse
@@ -8967,8 +9123,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: If a number is already attached to a skill group, it will not appear in the list of numbers available as personal outbound numbers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取个人外呼号码列表</p>
+     * <p>You can invoke ListPersonalNumbersOfUser to obtain the list of personal outbound numbers for a specified agent under a specified instance. You can also use this API to retrieve the list of numbers that can be added as personal outbound numbers for an agent.</p>
      * 
      * @param request ListPersonalNumbersOfUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9019,8 +9178,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: If a number is already attached to a skill group, it will not appear in the list of numbers available as personal outbound numbers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取个人外呼号码列表</p>
+     * <p>You can invoke ListPersonalNumbersOfUser to obtain the list of personal outbound numbers for a specified agent under a specified instance. You can also use this API to retrieve the list of numbers that can be added as personal outbound numbers for an agent.</p>
      * 
      * @param request ListPersonalNumbersOfUserRequest
      * @return ListPersonalNumbersOfUserResponse
@@ -9032,7 +9194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取号码列表</p>
+     * <p>You can invoke ListPhoneNumbers to obtain the phone number list under a specified instance.</p>
      * 
      * @param request ListPhoneNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9084,7 +9246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取号码列表</p>
+     * <p>You can invoke ListPhoneNumbers to obtain the phone number list under a specified instance.</p>
      * 
      * @param request ListPhoneNumbersRequest
      * @return ListPhoneNumbersResponse
@@ -9095,8 +9257,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: If a phone number is already used as a personal outbound number, it will not appear in the list of numbers available for association with a skill group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询技能组绑定的号码</p>
+     * <p>You can invoke the ListPhoneNumbersOfSkillGroup API to obtain the list of phone numbers associated with a specified skill group under a specified instance. You can also use this API to query phone numbers that are not currently associated with the skill group but can be associated with it.</p>
      * 
      * @param request ListPhoneNumbersOfSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9151,8 +9316,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: If a phone number is already used as a personal outbound number, it will not appear in the list of numbers available for association with a skill group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询技能组绑定的号码</p>
+     * <p>You can invoke the ListPhoneNumbersOfSkillGroup API to obtain the list of phone numbers associated with a specified skill group under a specified instance. You can also use this API to query phone numbers that are not currently associated with the skill group but can be associated with it.</p>
      * 
      * @param request ListPhoneNumbersOfSkillGroupRequest
      * @return ListPhoneNumbersOfSkillGroupResponse
@@ -9164,7 +9332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户权限</p>
+     * <p>Invoke ListPrivilegesOfUser to obtain the permissions owned by the current User.</p>
      * 
      * @param request ListPrivilegesOfUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9196,7 +9364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户权限</p>
+     * <p>Invoke ListPrivilegesOfUser to obtain the permissions owned by the current User.</p>
      * 
      * @param request ListPrivilegesOfUserRequest
      * @return ListPrivilegesOfUserResponse
@@ -9207,8 +9375,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>A Resource Access Management (RAM) user can be imported as an agent into multiple Cloud Contact Center (CCC) instances. However, an agent can be associated with only one RAM account. When you create an agent in a CCC instance, a corresponding RAM account is also created. To avoid creating redundant RAM accounts when you set up a new instance, you can call the ListRamUsers operation to list RAM users that have not been imported into the instance. You can then call the operation that imports RAM users to add them to the new instance. This prevents creating unnecessary RAM accounts and conserves resources.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列表查询ram用户</p>
+     * <p>Lists RAM users that have not been imported into a specified instance.</p>
      * 
      * @param request ListRamUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9251,8 +9422,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>A Resource Access Management (RAM) user can be imported as an agent into multiple Cloud Contact Center (CCC) instances. However, an agent can be associated with only one RAM account. When you create an agent in a CCC instance, a corresponding RAM account is also created. To avoid creating redundant RAM accounts when you set up a new instance, you can call the ListRamUsers operation to list RAM users that have not been imported into the instance. You can then call the operation that imports RAM users to add them to the new instance. This prevents creating unnecessary RAM accounts and conserves resources.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列表查询ram用户</p>
+     * <p>Lists RAM users that have not been imported into a specified instance.</p>
      * 
      * @param request ListRamUsersRequest
      * @return ListRamUsersResponse
@@ -9264,7 +9438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询坐席状态</p>
+     * <p>You can invoke ListRealtimeAgentStates to obtain a real-time status data report for one or more specified agents in a specified instance.</p>
      * 
      * @param request ListRealtimeAgentStatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9342,7 +9516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询坐席状态</p>
+     * <p>You can invoke ListRealtimeAgentStates to obtain a real-time status data report for one or more specified agents in a specified instance.</p>
      * 
      * @param request ListRealtimeAgentStatesRequest
      * @return ListRealtimeAgentStatesResponse
@@ -9354,7 +9528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询技能组状态报表</p>
+     * <p>You can invoke ListRealtimeSkillGroupStates to obtain the real-time skill group status report for a specified instance.</p>
      * 
      * @param request ListRealtimeSkillGroupStatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9404,7 +9578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询技能组状态报表</p>
+     * <p>You can invoke ListRealtimeSkillGroupStates to obtain the real-time skill group status report for a specified instance.</p>
      * 
      * @param request ListRealtimeSkillGroupStatesRequest
      * @return ListRealtimeSkillGroupStatesResponse
@@ -9416,7 +9590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询历史通话记录</p>
+     * <p>You can invoke ListRecentCallDetailRecords to obtain the list of recent call detail records for agents mapped to the current Resource Access Management (RAM) user under the specified instance.</p>
      * 
      * @param request ListRecentCallDetailRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9470,7 +9644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询历史通话记录</p>
+     * <p>You can invoke ListRecentCallDetailRecords to obtain the list of recent call detail records for agents mapped to the current Resource Access Management (RAM) user under the specified instance.</p>
      * 
      * @param request ListRecentCallDetailRecordsRequest
      * @return ListRecentCallDetailRecordsResponse
@@ -9482,7 +9656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询角色</p>
+     * <p>You can invoke ListRoles to obtain all roles under a specified instance.</p>
      * 
      * @param request ListRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9514,7 +9688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询角色</p>
+     * <p>You can invoke ListRoles to obtain all roles under a specified instance.</p>
      * 
      * @param request ListRolesRequest
      * @return ListRolesResponse
@@ -9526,7 +9700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListSkillGroupStates for acc</p>
+     * <p>You can invoke the ListSkillgroupStates API to obtain the status list of specified skill groups under a specified instance. This API is only available to specific Users, and other Customers are not recommended to invoke it.</p>
      * 
      * @deprecated OpenAPI ListSkillGroupStates is deprecated, please use CCC::2020-07-01::ListRealtimeSkillGroupStates instead.
      * 
@@ -9558,7 +9732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListSkillGroupStates for acc</p>
+     * <p>You can invoke the ListSkillgroupStates API to obtain the status list of specified skill groups under a specified instance. This API is only available to specific Users, and other Customers are not recommended to invoke it.</p>
      * 
      * @deprecated OpenAPI ListSkillGroupStates is deprecated, please use CCC::2020-07-01::ListRealtimeSkillGroupStates instead.
      * 
@@ -9574,7 +9748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListSkillGroupSummaryReportsSinceMidnight for acc</p>
+     * <p>The <code>ListSkillgroupSummaryReportsSinceMidnight</code> operation retrieves historical summary reports, filtered by specified conditions, for skill groups in a specified instance. The report contains data from 00:00 (midnight) today to the time of the request. This operation is available to specific users only.</p>
      * 
      * @deprecated OpenAPI ListSkillGroupSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalSkillGroupReport instead.
      * 
@@ -9606,7 +9780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListSkillGroupSummaryReportsSinceMidnight for acc</p>
+     * <p>The <code>ListSkillgroupSummaryReportsSinceMidnight</code> operation retrieves historical summary reports, filtered by specified conditions, for skill groups in a specified instance. The report contains data from 00:00 (midnight) today to the time of the request. This operation is available to specific users only.</p>
      * 
      * @deprecated OpenAPI ListSkillGroupSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalSkillGroupReport instead.
      * 
@@ -9622,7 +9796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询技能组列表</p>
+     * <p>You can invoke ListSkillGroups to obtain the list of skill groups under a specified instance.</p>
      * 
      * @param request ListSkillGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9670,7 +9844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询技能组列表</p>
+     * <p>You can invoke ListSkillGroups to obtain the list of skill groups under a specified instance.</p>
      * 
      * @param request ListSkillGroupsRequest
      * @return ListSkillGroupsResponse
@@ -9682,7 +9856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户技能组级别</p>
+     * <p>You can use this API to retrieve the list of skill levels for skill groups associated with a specified agent under a specified instance. You can also use this API to query the list of skill groups that the agent can be associated with but is not currently associated with.</p>
      * 
      * @param request ListSkillLevelsOfUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9734,7 +9908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户技能组级别</p>
+     * <p>You can use this API to retrieve the list of skill levels for skill groups associated with a specified agent under a specified instance. You can also use this API to query the list of skill groups that the agent can be associated with but is not currently associated with.</p>
      * 
      * @param request ListSkillLevelsOfUserRequest
      * @return ListSkillLevelsOfUserResponse
@@ -9746,7 +9920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>使用ListSmsMetadata获取短信配置信息。</p>
+     * <p>Queries the details of SMS configurations.</p>
      * 
      * @param request ListSmsMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9790,7 +9964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>使用ListSmsMetadata获取短信配置信息。</p>
+     * <p>Queries the details of SMS configurations.</p>
      * 
      * @param request ListSmsMetadataRequest
      * @return ListSmsMetadataResponse
@@ -9843,6 +10017,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of ticket templates.</p>
+     * 
      * @param request ListTicketTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTicketTemplatesResponse
@@ -9892,6 +10069,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of ticket templates.</p>
+     * 
      * @param request ListTicketTemplatesRequest
      * @return ListTicketTemplatesResponse
      */
@@ -9901,6 +10081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of tickets for an instance.</p>
+     * 
      * @param request ListTicketsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTicketsResponse
@@ -9986,6 +10169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of tickets for an instance.</p>
+     * 
      * @param request ListTicketsRequest
      * @return ListTicketsResponse
      */
@@ -9996,7 +10182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取未分配号码列表</p>
+     * <p>You can invoke ListUnassignedNumbers to obtain the list of numbers under your Alibaba Cloud account that have not been assigned to an instance.</p>
      * 
      * @param request ListUnassignedNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10036,7 +10222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取未分配号码列表</p>
+     * <p>You can invoke ListUnassignedNumbers to obtain the list of numbers under your Alibaba Cloud account that have not been assigned to an instance.</p>
      * 
      * @param request ListUnassignedNumbersRequest
      * @return ListUnassignedNumbersResponse
@@ -10048,7 +10234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询技能组级别列表</p>
+     * <p>You can invoke the ListUserLevelsOfSkillGroup API to retrieve the list of agent skill levels under a specified skill group in a given instance. You can also use this API to retrieve the list of agents who can be associated with but are not currently associated with the specified skill group.</p>
      * 
      * @param request ListUserLevelsOfSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10100,7 +10286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询技能组级别列表</p>
+     * <p>You can invoke the ListUserLevelsOfSkillGroup API to retrieve the list of agent skill levels under a specified skill group in a given instance. You can also use this API to retrieve the list of agents who can be associated with but are not currently associated with the specified skill group.</p>
      * 
      * @param request ListUserLevelsOfSkillGroupRequest
      * @return ListUserLevelsOfSkillGroupResponse
@@ -10112,7 +10298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户列表</p>
+     * <p>Invoke ListUsers to obtain the agent list under a specified instance.</p>
      * 
      * @param request ListUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10160,7 +10346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户列表</p>
+     * <p>Invoke ListUsers to obtain the agent list under a specified instance.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -10172,7 +10358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListVisitorChatMessages</p>
+     * <p>You can use ListVisitorChatMessages to retrieve visitor chat records.</p>
      * 
      * @param request ListVisitorChatMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10236,7 +10422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListVisitorChatMessages</p>
+     * <p>You can use ListVisitorChatMessages to retrieve visitor chat records.</p>
      * 
      * @param request ListVisitorChatMessagesRequest
      * @return ListVisitorChatMessagesResponse
@@ -10248,7 +10434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询语音信箱列表</p>
+     * <p>You can call the ListVoicemails operation to retrieve a list of voicemails for a specified instance.</p>
      * 
      * @param request ListVoicemailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10308,7 +10494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询语音信箱列表</p>
+     * <p>You can call the ListVoicemails operation to retrieve a list of voicemails for a specified instance.</p>
      * 
      * @param request ListVoicemailsRequest
      * @return ListVoicemailsResponse
@@ -10319,6 +10505,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>The ListWaitingChats operation allows agents to retrieve chats that are waiting in a queue to be assigned or claimed.</p>
+     * 
      * @param request ListWaitingChatsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListWaitingChatsResponse
@@ -10352,6 +10541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>The ListWaitingChats operation allows agents to retrieve chats that are waiting in a queue to be assigned or claimed.</p>
+     * 
      * @param request ListWaitingChatsRequest
      * @return ListWaitingChatsResponse
      */
@@ -10361,6 +10553,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can invoke MakeCall to initiate a call. The callee can be an internal agent or an external customer.</p>
+     * 
      * @param request MakeCallRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MakeCallResponse
@@ -10426,6 +10621,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can invoke MakeCall to initiate a call. The callee can be an internal agent or an external customer.</p>
+     * 
      * @param request MakeCallRequest
      * @return MakeCallResponse
      */
@@ -10436,7 +10634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改媒体文件</p>
+     * <p>You can invoke ModifyAudioFile to modify the audio file associated with a specified audio resource ID under a given instance. You can update the audio file name, display name, and the OSS key of the audio file.</p>
      * 
      * @param request ModifyAudioFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10488,7 +10686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改媒体文件</p>
+     * <p>You can invoke ModifyAudioFile to modify the audio file associated with a specified audio resource ID under a given instance. You can update the audio file name, display name, and the OSS key of the audio file.</p>
      * 
      * @param request ModifyAudioFileRequest
      * @return ModifyAudioFileResponse
@@ -10500,7 +10698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改活动外呼号码</p>
+     * <p>Modifies the calling numbers for a batch prediction outbound campaign.</p>
      * 
      * @param tmpReq ModifyCampaignNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10550,7 +10748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改活动外呼号码</p>
+     * <p>Modifies the calling numbers for a batch prediction outbound campaign.</p>
      * 
      * @param request ModifyCampaignNumbersRequest
      * @return ModifyCampaignNumbersResponse
@@ -10562,7 +10760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑呼入控制号码</p>
+     * <p>You can invoke ModifyCustomCallTagging to modify the description and attached number tags of an inbound number mark for a specified number under a specified instance.</p>
      * 
      * @param request ModifyCustomCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10606,7 +10804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑呼入控制号码</p>
+     * <p>You can invoke ModifyCustomCallTagging to modify the description and attached number tags of an inbound number mark for a specified number under a specified instance.</p>
      * 
      * @param request ModifyCustomCallTaggingRequest
      * @return ModifyCustomCallTaggingResponse
@@ -10618,7 +10816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例</p>
+     * <p>You can invoke ModifyInstance to modify a Cloud Contact Center instance.</p>
      * 
      * @param request ModifyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10654,7 +10852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例</p>
+     * <p>You can invoke ModifyInstance to modify a Cloud Contact Center instance.</p>
      * 
      * @param request ModifyInstanceRequest
      * @return ModifyInstanceResponse
@@ -10666,7 +10864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改电话号码</p>
+     * <p>You can invoke ModifyPhoneNumber to modify the information of a specified phone number under a specified instance, primarily to update the number\&quot;s usage and the attached contact flow ID.</p>
      * 
      * @param request ModifyPhoneNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10710,7 +10908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改电话号码</p>
+     * <p>You can invoke ModifyPhoneNumber to modify the information of a specified phone number under a specified instance, primarily to update the number\&quot;s usage and the attached contact flow ID.</p>
      * 
      * @param request ModifyPhoneNumberRequest
      * @return ModifyPhoneNumberResponse
@@ -10722,7 +10920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改技能组</p>
+     * <p>You can invoke ModifySkillGroup to modify the information of a skill group associated with a specified skill group ID under a specified instance, primarily updating the skill group\&quot;s display name and description.</p>
      * 
      * @param request ModifySkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10766,7 +10964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改技能组</p>
+     * <p>You can invoke ModifySkillGroup to modify the information of a skill group associated with a specified skill group ID under a specified instance, primarily updating the skill group\&quot;s display name and description.</p>
      * 
      * @param request ModifySkillGroupRequest
      * @return ModifySkillGroupResponse
@@ -10778,7 +10976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改坐席技能组</p>
+     * <p>Modify the skill level of a specified agent in one or more skill groups under a specified instance.</p>
      * 
      * @param request ModifySkillLevelsOfUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10818,7 +11016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改坐席技能组</p>
+     * <p>Modify the skill level of a specified agent in one or more skill groups under a specified instance.</p>
      * 
      * @param request ModifySkillLevelsOfUserRequest
      * @return ModifySkillLevelsOfUserResponse
@@ -10830,7 +11028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改坐席</p>
+     * <p>You can invoke ModifyUser to modify the information of a specified agent under a specified instance. You can modify the phone number, work mode, role, and agent ID.</p>
      * 
      * @param request ModifyUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10898,7 +11096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改坐席</p>
+     * <p>You can invoke ModifyUser to modify the information of a specified agent under a specified instance. You can modify the phone number, work mode, role, and agent ID.</p>
      * 
      * @param request ModifyUserRequest
      * @return ModifyUserResponse
@@ -10910,7 +11108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改坐席技能组级别</p>
+     * <p>You can invoke ModifyUserLevelsOfSkillGroup to modify the skill levels of one or more agents under a specified skill group in a specified instance.</p>
      * 
      * @param request ModifyUserLevelsOfSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10950,7 +11148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改坐席技能组级别</p>
+     * <p>You can invoke ModifyUserLevelsOfSkillGroup to modify the skill levels of one or more agents under a specified skill group in a specified instance.</p>
      * 
      * @param request ModifyUserLevelsOfSkillGroupRequest
      * @return ModifyUserLevelsOfSkillGroupResponse
@@ -10962,7 +11160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通话监听</p>
+     * <p>You can invoke MonitorCall to listen to a call associated with a specified call ID under a specified instance. The call must be in a state where both the agent and the customer are normally connected, and the agent initiating the listening must have permission to monitor the target agent.</p>
      * 
      * @param request MonitorCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11010,7 +11208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通话监听</p>
+     * <p>You can invoke MonitorCall to listen to a call associated with a specified call ID under a specified instance. The call must be in a state where both the agent and the customer are normally connected, and the agent initiating the listening must have permission to monitor the target agent.</p>
      * 
      * @param request MonitorCallRequest
      * @return MonitorCallResponse
@@ -11022,7 +11220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>静音</p>
+     * <p>You can invoke MuteCall to mute the call associated with a specified call ID under a specified instance. This operation can only be invoked by an agent who is in a talking state, and the agent can only mute themselves. After the agent mutes themselves, the customer will no longer hear the agent\&quot;s voice.</p>
      * 
      * @param request MuteCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11070,7 +11268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>静音</p>
+     * <p>You can invoke MuteCall to mute the call associated with a specified call ID under a specified instance. This operation can only be invoked by an agent who is in a talking state, and the agent can only mute themselves. After the agent mutes themselves, the customer will no longer hear the agent\&quot;s voice.</p>
      * 
      * @param request MuteCallRequest
      * @return MuteCallResponse
@@ -11082,7 +11280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停预测式外呼活动</p>
+     * <p>Invoke PauseCampaign to pause the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</p>
      * 
      * @param request PauseCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11118,7 +11316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停预测式外呼活动</p>
+     * <p>Invoke PauseCampaign to pause the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</p>
      * 
      * @param request PauseCampaignRequest
      * @return PauseCampaignResponse
@@ -11130,7 +11328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>选择外呼号码</p>
+     * <p>You can invoke PickOutboundNumbers to select an appropriate caller number based on the provided callee number. The number selection logic is controlled by an Intelligent algorithm.</p>
      * 
      * @param request PickOutboundNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11174,7 +11372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>选择外呼号码</p>
+     * <p>You can invoke PickOutboundNumbers to select an appropriate caller number based on the provided callee number. The number selection logic is controlled by an Intelligent algorithm.</p>
      * 
      * @param request PickOutboundNumbersRequest
      * @return PickOutboundNumbersResponse
@@ -11186,7 +11384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>轮询座席状态</p>
+     * <p>Polls the agent status of a specified agent under a specified instance. This operation is typically invoked by the frontend agent Workbench to synchronize agent status.</p>
      * 
      * @param request PollUserStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11226,7 +11424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>轮询座席状态</p>
+     * <p>Polls the agent status of a specified agent under a specified instance. This operation is typically invoked by the frontend agent Workbench to synchronize agent status.</p>
      * 
      * @param request PollUserStatusRequest
      * @return PollUserStatusResponse
@@ -11352,7 +11550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布ivr流程</p>
+     * <p>Publishes a contact flow.</p>
      * 
      * @param request PublishContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11392,7 +11590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布ivr流程</p>
+     * <p>Publishes a contact flow.</p>
      * 
      * @param request PublishContactFlowRequest
      * @return PublishContactFlowResponse
@@ -11404,7 +11602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>就绪/示闲</p>
+     * <p>You can invoke ReadyForService to make a specified agent under a specified instance ready. After becoming ready, the agent enters the idle status.</p>
      * 
      * @param request ReadyForServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11448,7 +11646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>就绪/示闲</p>
+     * <p>You can invoke ReadyForService to make a specified agent under a specified instance ready. After becoming ready, the agent enters the idle status.</p>
      * 
      * @param request ReadyForServiceRequest
      * @return ReadyForServiceResponse
@@ -11460,7 +11658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重拨</p>
+     * <p>Redial the number in the desensitized call record</p>
      * 
      * @param request RedialCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11520,7 +11718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重拨</p>
+     * <p>Redial the number in the desensitized call record</p>
      * 
      * @param request RedialCallRequest
      * @return RedialCallResponse
@@ -11532,7 +11730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册设备</p>
+     * <p>Registers a Session Initiation Protocol (SIP) device with a specified agent in an instance. A SIP device can be a physical SIP phone or a softphone.</p>
      * 
      * @param request RegisterDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11576,7 +11774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册设备</p>
+     * <p>Registers a Session Initiation Protocol (SIP) device with a specified agent in an instance. A SIP device can be a physical SIP phone or a softphone.</p>
      * 
      * @param request RegisterDeviceRequest
      * @return RegisterDeviceResponse
@@ -11588,7 +11786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册设备</p>
+     * <p>Registers one or more SIP devices to specified agents in an instance. A SIP device can be a SIP phone or a SIP softphone.</p>
      * 
      * @param request RegisterDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11632,7 +11830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册设备</p>
+     * <p>Registers one or more SIP devices to specified agents in an instance. A SIP device can be a SIP phone or a SIP softphone.</p>
      * 
      * @param request RegisterDevicesRequest
      * @return RegisterDevicesResponse
@@ -11643,6 +11841,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Rejects a chat assigned to an agent.</p>
+     * 
      * @param request RejectChatRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RejectChatResponse
@@ -11676,6 +11877,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Rejects a chat assigned to an agent.</p>
+     * 
      * @param request RejectChatRequest
      * @return RejectChatResponse
      */
@@ -11685,6 +11889,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use the RejectTicket operation to reject a ticket. The ticket creator can add information to a rejected ticket and then resubmit it.</p>
+     * 
      * @param request RejectTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RejectTicketResponse
@@ -11722,6 +11929,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Use the RejectTicket operation to reject a ticket. The ticket creator can add information to a rejected ticket and then resubmit it.</p>
+     * 
      * @param request RejectTicketRequest
      * @return RejectTicketResponse
      */
@@ -11732,7 +11942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放对话</p>
+     * <p>You can invoke ReleaseCall to hang up the call associated with a specified call ID under a specified instance. The invoker must be an agent and currently in a call.</p>
      * 
      * @param request ReleaseCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11780,7 +11990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放对话</p>
+     * <p>You can invoke ReleaseCall to hang up the call associated with a specified call ID under a specified instance. The invoker must be an agent and currently in a call.</p>
      * 
      * @param request ReleaseCallRequest
      * @return ReleaseCallResponse
@@ -11791,6 +12001,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>The ReleaseChat operation ends the current chat.</p>
+     * 
      * @param request ReleaseChatRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseChatResponse
@@ -11836,6 +12049,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>The ReleaseChat operation ends the current chat.</p>
+     * 
      * @param request ReleaseChatRequest
      * @return ReleaseChatResponse
      */
@@ -11846,7 +12062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑呼入控制号码</p>
+     * <p>Removes the blacklist tag from a specified phone number.</p>
      * 
      * @param request RemoveBlacklistCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11886,7 +12102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑呼入控制号码</p>
+     * <p>Removes the blacklist tag from a specified phone number.</p>
      * 
      * @param request RemoveBlacklistCallTaggingRequest
      * @return RemoveBlacklistCallTaggingResponse
@@ -11898,7 +12114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除黑名单号码</p>
+     * <p>You can invoke RemoveDoNotCallNumbers to delete one or more Do Not Call number configuration items under a specified instance.</p>
      * 
      * @param request RemoveDoNotCallNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11934,7 +12150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除黑名单号码</p>
+     * <p>You can invoke RemoveDoNotCallNumbers to delete one or more Do Not Call number configuration items under a specified instance.</p>
      * 
      * @param request RemoveDoNotCallNumbersRequest
      * @return RemoveDoNotCallNumbersResponse
@@ -11946,7 +12162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除个人号码</p>
+     * <p>You can invoke RemovePersonalNumbersFromUser to delete one or more personal outbound numbers associated with a specified agent under a specified instance.</p>
      * 
      * @param request RemovePersonalNumbersFromUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11986,7 +12202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除个人号码</p>
+     * <p>You can invoke RemovePersonalNumbersFromUser to delete one or more personal outbound numbers associated with a specified agent under a specified instance.</p>
      * 
      * @param request RemovePersonalNumbersFromUserRequest
      * @return RemovePersonalNumbersFromUserResponse
@@ -11998,7 +12214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除技能组下的电话号码</p>
+     * <p>You can invoke RemovePhoneNumberFromSkillGroups to delete the binding relationship between a specified phone number and one or more skill groups under a given instance. This operation removes only the association between the phone number and the skill groups, not the actual phone number itself.</p>
      * 
      * @param request RemovePhoneNumberFromSkillGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12038,7 +12254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除技能组下的电话号码</p>
+     * <p>You can invoke RemovePhoneNumberFromSkillGroups to delete the binding relationship between a specified phone number and one or more skill groups under a given instance. This operation removes only the association between the phone number and the skill groups, not the actual phone number itself.</p>
      * 
      * @param request RemovePhoneNumberFromSkillGroupsRequest
      * @return RemovePhoneNumberFromSkillGroupsResponse
@@ -12050,7 +12266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除电话号码</p>
+     * <p>Removes one or more numbers from an instance. This action disassociates the numbers from the instance but does not permanently delete them. It also disassociates all associated resources, such as skill groups, contact flows, and agents.</p>
      * 
      * @param request RemovePhoneNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12090,7 +12306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除电话号码</p>
+     * <p>Removes one or more numbers from an instance. This action disassociates the numbers from the instance but does not permanently delete them. It also disassociates all associated resources, such as skill groups, contact flows, and agents.</p>
      * 
      * @param request RemovePhoneNumbersRequest
      * @return RemovePhoneNumbersResponse
@@ -12102,7 +12318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除技能组下的电话号码</p>
+     * <p>You can invoke RemovePhoneNumbersFromSkillGroup to delete the association between one or more phone numbers and a specified skill group under a given instance.</p>
      * 
      * @param request RemovePhoneNumbersFromSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12142,7 +12358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除技能组下的电话号码</p>
+     * <p>You can invoke RemovePhoneNumbersFromSkillGroup to delete the association between one or more phone numbers and a specified skill group under a given instance.</p>
      * 
      * @param request RemovePhoneNumbersFromSkillGroupRequest
      * @return RemovePhoneNumbersFromSkillGroupResponse
@@ -12154,7 +12370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除多个技能组下的坐席</p>
+     * <p>You can invoke RemoveSkillGroupsFromUser to delete the association between one or more skill groups and a specified agent under a specified instance.</p>
      * 
      * @param request RemoveSkillGroupsFromUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12194,7 +12410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除多个技能组下的坐席</p>
+     * <p>You can invoke RemoveSkillGroupsFromUser to delete the association between one or more skill groups and a specified agent under a specified instance.</p>
      * 
      * @param request RemoveSkillGroupsFromUserRequest
      * @return RemoveSkillGroupsFromUserResponse
@@ -12206,7 +12422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除坐席</p>
+     * <p>You can invoke RemoveUsers to delete one or more agents from a specified instance. This operation only detaches the RAM accounts from the instance and removes the agents mapped to those RAM accounts from the instance. It does not delete the RAM accounts themselves.</p>
      * 
      * @param request RemoveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12254,7 +12470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除坐席</p>
+     * <p>You can invoke RemoveUsers to delete one or more agents from a specified instance. This operation only detaches the RAM accounts from the instance and removes the agents mapped to those RAM accounts from the instance. It does not delete the RAM accounts themselves.</p>
      * 
      * @param request RemoveUsersRequest
      * @return RemoveUsersResponse
@@ -12266,7 +12482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除坐席下的技能组</p>
+     * <p>You can invoke RemoveUsersFromSkillGroup to delete the association between one or more agents and a specified skill group under a specified instance. This operation only removes the association between the skill group and the agents and does not delete the agents themselves.</p>
      * 
      * @param request RemoveUsersFromSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12306,7 +12522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除坐席下的技能组</p>
+     * <p>You can invoke RemoveUsersFromSkillGroup to delete the association between one or more agents and a specified skill group under a specified instance. This operation only removes the association between the skill group and the agents and does not delete the agents themselves.</p>
      * 
      * @param request RemoveUsersFromSkillGroupRequest
      * @return RemoveUsersFromSkillGroupResponse
@@ -12318,7 +12534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置坐席状态</p>
+     * <p>Resets the state of a specific agent in a specific instance.</p>
      * 
      * @param request ResetAgentStateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12358,7 +12574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置坐席状态</p>
+     * <p>Resets the state of a specific agent in a specific instance.</p>
      * 
      * @param request ResetAgentStateRequest
      * @return ResetAgentStateResponse
@@ -12370,7 +12586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置坐席密码</p>
+     * <p>Invoke ResetUserPassword to reset the logon password of a specified agent under a specified instance. In practice, agents do not have logon passwords; this operation actually modifies the logon password of the RAM account associated with the agent. This is typically used in scenarios where a customer service representative forgets the logon password of their RAM account.</p>
      * 
      * @param request ResetUserPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12410,7 +12626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置坐席密码</p>
+     * <p>Invoke ResetUserPassword to reset the logon password of a specified agent under a specified instance. In practice, agents do not have logon passwords; this operation actually modifies the logon password of the RAM account associated with the agent. This is typically used in scenarios where a customer service representative forgets the logon password of their RAM account.</p>
      * 
      * @param request ResetUserPasswordRequest
      * @return ResetUserPasswordResponse
@@ -12422,7 +12638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>录音解冻</p>
+     * <p>Restores call recordings for the specified instance.</p>
      * 
      * @param request RestoreArchivedRecordingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12458,7 +12674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>录音解冻</p>
+     * <p>Restores call recordings for the specified instance.</p>
      * 
      * @param request RestoreArchivedRecordingsRequest
      * @return RestoreArchivedRecordingsResponse
@@ -12469,6 +12685,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use the ResubmitTicket API to resubmit a rejected or returned ticket.</p>
+     * 
      * @param request ResubmitTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResubmitTicketResponse
@@ -12506,6 +12725,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use the ResubmitTicket API to resubmit a rejected or returned ticket.</p>
+     * 
      * @param request ResubmitTicketRequest
      * @return ResubmitTicketResponse
      */
@@ -12516,7 +12738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>恢复预测式外呼活动</p>
+     * <p>Invoke ResumeCampaign to recover the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</p>
      * 
      * @param request ResumeCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12552,7 +12774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>恢复预测式外呼活动</p>
+     * <p>Invoke ResumeCampaign to recover the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</p>
      * 
      * @param request ResumeCampaignRequest
      * @return ResumeCampaignResponse
@@ -12564,7 +12786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取回</p>
+     * <p>You can invoke RetrieveCall to retrieve a call associated with a specified call ID under a specified instance. The call must be on hold for the retrieve operation to be performed.</p>
      * 
      * @param request RetrieveCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12612,7 +12834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取回</p>
+     * <p>You can invoke RetrieveCall to retrieve a call associated with a specified call ID under a specified instance. The call must be on hold for the retrieve operation to be performed.</p>
      * 
      * @param request RetrieveCallRequest
      * @return RetrieveCallResponse
@@ -12678,7 +12900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客服侧数据收集</p>
+     * <p>Invoke SaveRTCStatsV2 to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. This API is not relevant for regular customers.</p>
      * 
      * @param request SaveRTCStatsV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -12730,7 +12952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客服侧数据收集</p>
+     * <p>Invoke SaveRTCStatsV2 to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. This API is not relevant for regular customers.</p>
      * 
      * @param request SaveRTCStatsV2Request
      * @return SaveRTCStatsV2Response
@@ -12742,7 +12964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存终端埋点日志</p>
+     * <p>Invoke the SaveTerminalLog API to report agent-side log information. Regular customers do not need to be concerned with this API.</p>
      * 
      * @param request SaveTerminalLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12806,7 +13028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存终端埋点日志</p>
+     * <p>Invoke the SaveTerminalLog API to report agent-side log information. Regular customers do not need to be concerned with this API.</p>
      * 
      * @param request SaveTerminalLogRequest
      * @return SaveTerminalLogResponse
@@ -12818,7 +13040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客服侧数据收集</p>
+     * <p>Invoke the SaveWebRTCStats API to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. Regular customers do not need to concern themselves with this API.</p>
      * 
      * @param request SaveWebRTCStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12870,7 +13092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客服侧数据收集</p>
+     * <p>Invoke the SaveWebRTCStats API to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. Regular customers do not need to concern themselves with this API.</p>
      * 
      * @param request SaveWebRTCStatsRequest
      * @return SaveWebRTCStatsResponse
@@ -12882,7 +13104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客服侧数据收集</p>
+     * <p>Invoke the SaveWebRtcInfo API to report WebRTC call status information from the agent side, including call quality monitoring data, for backend statistics and monitoring. Customers do not need to concern themselves with this API.</p>
      * 
      * @param request SaveWebRtcInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12930,7 +13152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客服侧数据收集</p>
+     * <p>Invoke the SaveWebRtcInfo API to report WebRTC call status information from the agent side, including call quality monitoring data, for backend statistics and monitoring. Customers do not need to concern themselves with this API.</p>
      * 
      * @param request SaveWebRtcInfoRequest
      * @return SaveWebRtcInfoResponse
@@ -12942,7 +13164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在接通的电话上发送DTMF信号</p>
+     * <p>You can invoke SendDtmfSignaling to send DTMF keypress information during a call.</p>
      * 
      * @param request SendDtmfSignalingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12994,7 +13216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在接通的电话上发送DTMF信号</p>
+     * <p>You can invoke SendDtmfSignaling to send DTMF keypress information during a call.</p>
      * 
      * @param request SendDtmfSignalingRequest
      * @return SendDtmfSignalingResponse
@@ -13066,7 +13288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线</p>
+     * <p>You can invoke SignInGroup to sign an agent into a specified skill group under a specified instance, which is the operation for publishing the agent online.</p>
      * 
      * @param request SignInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13118,7 +13340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线</p>
+     * <p>You can invoke SignInGroup to sign an agent into a specified skill group under a specified instance, which is the operation for publishing the agent online.</p>
      * 
      * @param request SignInGroupRequest
      * @return SignInGroupResponse
@@ -13130,7 +13352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线</p>
+     * <p>You can call SignOutGroup to check out an agent from the skill group they are currently signed into, which is equivalent to performing an unpublish operation for the agent.</p>
      * 
      * @param request SignOutGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13170,7 +13392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线</p>
+     * <p>You can call SignOutGroup to check out an agent from the skill group they are currently signed into, which is equivalent to performing an unpublish operation for the agent.</p>
      * 
      * @param request SignOutGroupRequest
      * @return SignOutGroupResponse
@@ -13181,8 +13403,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>A back-to-back call differs from a traditional two-party call in that the caller does not directly call the callee. Instead, a Back-to-Back Agent is used. The Back-to-Back Agent first calls the caller, and after the connection is established, it calls the callee and then joins both parties into a single conference. In this mode, because all message streams of each call pass through the Back-to-Back Agent, the service provider (SP) can offer value-added services such as call timing, call recording, and number masking.</p>
+     * 
      * <b>summary</b> : 
-     * <p>双呼</p>
+     * <p>You can invoke StartBack2BackCall to initiate a back-to-back call.</p>
      * 
      * @param request StartBack2BackCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13237,8 +13462,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>A back-to-back call differs from a traditional two-party call in that the caller does not directly call the callee. Instead, a Back-to-Back Agent is used. The Back-to-Back Agent first calls the caller, and after the connection is established, it calls the callee and then joins both parties into a single conference. In this mode, because all message streams of each call pass through the Back-to-Back Agent, the service provider (SP) can offer value-added services such as call timing, call recording, and number masking.</p>
+     * 
      * <b>summary</b> : 
-     * <p>双呼</p>
+     * <p>You can invoke StartBack2BackCall to initiate a back-to-back call.</p>
      * 
      * @param request StartBack2BackCallRequest
      * @return StartBack2BackCallResponse
@@ -13249,6 +13477,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Starts a chat session.</p>
+     * 
      * @param tmpReq StartChatRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartChatResponse
@@ -13296,6 +13527,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Starts a chat session.</p>
+     * 
      * @param request StartChatRequest
      * @return StartChatResponse
      */
@@ -13306,7 +13540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开始会议</p>
+     * <p>You can invoke StartConference to initiate a conference.</p>
      * 
      * @param request StartConferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13354,7 +13588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开始会议</p>
+     * <p>You can invoke StartConference to initiate a conference.</p>
      * 
      * @param request StartConferenceRequest
      * @return StartConferenceResponse
@@ -13366,7 +13600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑ivr流程</p>
+     * <p>Start editing a contact flow and generate a draft version.</p>
      * 
      * @param request StartEditContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13402,7 +13636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑ivr流程</p>
+     * <p>Start editing a contact flow and generate a draft version.</p>
      * 
      * @param request StartEditContactFlowRequest
      * @return StartEditContactFlowResponse
@@ -13413,8 +13647,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In addition to supporting agents initiating outbound calls from the agent Workbench, Cloud Call Center also enables your Operational System backend to initiate outbound calls and transfer the call to an agent after it is answered. This allows you to seamlessly embed Cloud Call Center features into your Business Process.
+     * For example, your Customer can enter their phone number on your WeChat Official Account and click a button to inquire about a product. Your backend system then invokes this API to call the Customer’s Phone. After the call is connected, the system plays back the message: “We have received your inquiry about our product via the Official Account. We are now connecting you to an advisor. Please wait.” The call is then transferred to an appropriate agent.
+     * Compared with the DialEX API in version 1.0, this API offers greater flexibility in configuration. In addition to customizing the IVR for transfer-in, you can also pass custom parameters, which can be played back by voice within the IVR to support notification scenarios.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开始预测试外呼</p>
+     * <p>Invoke StartPredictiveCall to initiate predictive outbound calling.</p>
      * 
      * @param request StartPredictiveCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13477,8 +13716,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In addition to supporting agents initiating outbound calls from the agent Workbench, Cloud Call Center also enables your Operational System backend to initiate outbound calls and transfer the call to an agent after it is answered. This allows you to seamlessly embed Cloud Call Center features into your Business Process.
+     * For example, your Customer can enter their phone number on your WeChat Official Account and click a button to inquire about a product. Your backend system then invokes this API to call the Customer’s Phone. After the call is connected, the system plays back the message: “We have received your inquiry about our product via the Official Account. We are now connecting you to an advisor. Please wait.” The call is then transferred to an appropriate agent.
+     * Compared with the DialEX API in version 1.0, this API offers greater flexibility in configuration. In addition to customizing the IVR for transfer-in, you can also pass custom parameters, which can be played back by voice within the IVR to support notification scenarios.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开始预测试外呼</p>
+     * <p>Invoke StartPredictiveCall to initiate predictive outbound calling.</p>
      * 
      * @param request StartPredictiveCallRequest
      * @return StartPredictiveCallResponse
@@ -13490,7 +13734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起隐私呼叫</p>
+     * <p>Starts a privacy call.</p>
      * 
      * @param request StartPrivacyCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13534,7 +13778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起隐私呼叫</p>
+     * <p>Starts a privacy call.</p>
      * 
      * @param request StartPrivacyCallRequest
      * @return StartPrivacyCallResponse
@@ -13546,7 +13790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交预测式外呼活动</p>
+     * <p>Invoke SubmitCampaign to start the predictive outbound calling activity corresponding to the specified ID under the specified instance.</p>
      * 
      * @param request SubmitCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13582,7 +13826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交预测式外呼活动</p>
+     * <p>Invoke SubmitCampaign to start the predictive outbound calling activity corresponding to the specified ID under the specified instance.</p>
      * 
      * @param request SubmitCampaignRequest
      * @return SubmitCampaignResponse
@@ -13594,7 +13838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>切换关注/咨询转到会议</p>
+     * <p>You can invoke SwitchToConference to switch the status of a specified call under a specified instance to a three-party conference. This is typically used in scenarios where a consultation is converted into a conference.</p>
      * 
      * @param request SwitchToConferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13638,7 +13882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>切换关注/咨询转到会议</p>
+     * <p>You can invoke SwitchToConference to switch the status of a specified call under a specified instance to a three-party conference. This is typically used in scenarios where a consultation is converted into a conference.</p>
      * 
      * @param request SwitchToConferenceRequest
      * @return SwitchToConferenceResponse
@@ -13650,7 +13894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>小休</p>
+     * <p>You can invoke TakeBreak to set a specified agent in a specified instance to the break state.</p>
      * 
      * @param request TakeBreakRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13694,7 +13938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>小休</p>
+     * <p>You can invoke TakeBreak to set a specified agent in a specified instance to the break state.</p>
      * 
      * @param request TakeBreakRequest
      * @return TakeBreakResponse
@@ -13705,6 +13949,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Closes a ticket.</p>
+     * 
      * @param request TerminateTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TerminateTicketResponse
@@ -13742,6 +13989,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Closes a ticket.</p>
+     * 
      * @param request TerminateTicketRequest
      * @return TerminateTicketResponse
      */
@@ -13751,6 +14001,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can call TransferTicketTask to transfer a ticket to another user.</p>
+     * 
      * @param request TransferTicketTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TransferTicketTaskResponse
@@ -13796,6 +14049,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can call TransferTicketTask to transfer a ticket to another user.</p>
+     * 
      * @param request TransferTicketTaskRequest
      * @return TransferTicketTaskResponse
      */
@@ -13806,7 +14062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消静音</p>
+     * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_UserState_type]string</p>
      * 
      * @param request UnmuteCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13854,7 +14110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消静音</p>
+     * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_UserState_type]string</p>
      * 
      * @param request UnmuteCallRequest
      * @return UnmuteCallResponse
@@ -13866,7 +14122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除注册设备</p>
+     * <p>You can invoke UnregisterDevice to delete the device registration record of a specified agent under a specified instance. After deletion, the SIP phone or SIP softphone associated with the agent becomes inactive.</p>
      * 
      * @param request UnregisterDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13902,7 +14158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除注册设备</p>
+     * <p>You can invoke UnregisterDevice to delete the device registration record of a specified agent under a specified instance. After deletion, the SIP phone or SIP softphone associated with the agent becomes inactive.</p>
      * 
      * @param request UnregisterDeviceRequest
      * @return UnregisterDeviceResponse
@@ -13914,7 +14170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新会话小结</p>
+     * <p>Updates a call summary.</p>
      * 
      * @param request UpdateCallSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13954,7 +14210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新会话小结</p>
+     * <p>Updates a call summary.</p>
      * 
      * @param request UpdateCallSummaryRequest
      * @return UpdateCallSummaryResponse
@@ -13966,7 +14222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新预测试外呼活动</p>
+     * <p>Updates outbound campaign parameters.</p>
      * 
      * @param request UpdateCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14026,7 +14282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新预测试外呼活动</p>
+     * <p>Updates outbound campaign parameters.</p>
      * 
      * @param request UpdateCampaignRequest
      * @return UpdateCampaignResponse
@@ -14037,6 +14293,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use UpdateChatRoutingProfile to configure session transfers.</p>
+     * 
      * @param request UpdateChatRoutingProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateChatRoutingProfileResponse
@@ -14070,6 +14329,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use UpdateChatRoutingProfile to configure session transfers.</p>
+     * 
      * @param request UpdateChatRoutingProfileRequest
      * @return UpdateChatRoutingProfileResponse
      */
@@ -14080,7 +14342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新系统配置</p>
+     * <p>Use the UpdateConfigItems operation to add or modify configuration items for an instance, such as hiding the caller ID for inbound calls or allowing agents to hang up.</p>
      * 
      * @param request UpdateConfigItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14124,7 +14386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新系统配置</p>
+     * <p>Use the UpdateConfigItems operation to add or modify configuration items for an instance, such as hiding the caller ID for inbound calls or allowing agents to hang up.</p>
      * 
      * @param request UpdateConfigItemsRequest
      * @return UpdateConfigItemsResponse
@@ -14192,7 +14454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpdateSubscription</p>
+     * <p>Use the UpdateSubscription operation to configure message subscriptions.</p>
      * 
      * @param request UpdateSubscriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14260,7 +14522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpdateSubscription</p>
+     * <p>Use the UpdateSubscription operation to configure message subscriptions.</p>
      * 
      * @param request UpdateSubscriptionRequest
      * @return UpdateSubscriptionResponse
@@ -14271,6 +14533,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>UpdateTicket updates the content of a ticket.</p>
+     * 
      * @param request UpdateTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTicketResponse
@@ -14316,6 +14581,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>UpdateTicket updates the content of a ticket.</p>
+     * 
      * @param request UpdateTicketRequest
      * @return UpdateTicketResponse
      */
@@ -14325,6 +14593,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use WithdrawTicket to withdraw a ticket.</p>
+     * 
      * @param request WithdrawTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return WithdrawTicketResponse
@@ -14362,6 +14633,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>You can use WithdrawTicket to withdraw a ticket.</p>
+     * 
      * @param request WithdrawTicketRequest
      * @return WithdrawTicketResponse
      */

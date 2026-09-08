@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReleaseChatRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ccc-test</p>
      */
@@ -12,6 +14,7 @@ public class ReleaseChatRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ReleaseChatRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Channel token for network services.</p>
+     * 
      * <strong>example:</strong>
      * <p>9XYGTGWtq2wFi_Bpg7aUnIoYi_vG_rO3bjEn0YtsxbHRHrYHlz1LDBLJAyZcLxieRQR4h_6AnWvTjJeNU5jg************Hwej7WgWrmA=</p>
      */
@@ -28,6 +33,8 @@ public class ReleaseChatRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>User ID. Visitor ID or agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>edbcf95a-ef9f-4296-a0a6-985ac9e36db3</p>
      */
@@ -35,6 +42,13 @@ public class ReleaseChatRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>User type.</p>
+     * <ul>
+     * <li><p>CUSTOMER: visitor</p>
+     * </li>
+     * <li><p>AGENT: agent</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

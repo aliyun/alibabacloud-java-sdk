@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetConversationDetailRequest extends TeaModel {
     /**
+     * <p>Agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */
@@ -12,6 +14,7 @@ public class GetConversationDetailRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The ID of the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class GetConversationDetailRequest extends TeaModel {
     public String contactId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

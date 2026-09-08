@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendDtmfSignalingRequest extends TeaModel {
     /**
+     * <p>The channel ID of the call to which DTMF tones are to be sent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SendDtmfSignalingRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -21,6 +24,7 @@ public class SendDtmfSignalingRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>DTMF key information, which refers to the keys on a dial pad, including 0–9, \*, and #.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class SendDtmfSignalingRequest extends TeaModel {
     public String dtmf;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class SendDtmfSignalingRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,8 @@ public class SendDtmfSignalingRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The agent ID that sends DTMF.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

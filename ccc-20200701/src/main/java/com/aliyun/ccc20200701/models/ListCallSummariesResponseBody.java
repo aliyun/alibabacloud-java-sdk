@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListCallSummariesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCallSummariesResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>932579BC-811A-503D-B322-4C2E57087CAA</p>
      */
@@ -89,16 +107,74 @@ public class ListCallSummariesResponseBody extends TeaModel {
 
     public static class ListCallSummariesResponseBodyData extends TeaModel {
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-544789******759424</p>
          */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <p>Summary information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;_sys_field_config&quot;: [
+         *         {
+         *             &quot;Array&quot;: false,
+         *             &quot;Required&quot;: true,
+         *             &quot;DisplayName&quot;: &quot;主题&quot;,
+         *             &quot;Attributes&quot;: &quot;{}&quot;,
+         *             &quot;DataType&quot;: &quot;TEXT&quot;,
+         *             &quot;EditorType&quot;: &quot;TEXT&quot;,
+         *             &quot;MaxLength&quot;: 30,
+         *             &quot;System&quot;: true,
+         *             &quot;Name&quot;: &quot;summaryTitle&quot;
+         *         },
+         *         {
+         *             &quot;Array&quot;: false,
+         *             &quot;DisplayName&quot;: &quot;小结&quot;,
+         *             &quot;Attributes&quot;: &quot;{}&quot;,
+         *             &quot;DataType&quot;: &quot;TEXT&quot;,
+         *             &quot;EditorType&quot;: &quot;TEXTAREA&quot;,
+         *             &quot;MaxLength&quot;: 1000,
+         *             &quot;System&quot;: true,
+         *             &quot;Name&quot;: &quot;summaryContent&quot;
+         *         },
+         *         {
+         *             &quot;Array&quot;: true,
+         *             &quot;DisplayName&quot;: &quot;标签&quot;,
+         *             &quot;Attributes&quot;: &quot;{}&quot;,
+         *             &quot;DataType&quot;: &quot;TEXT&quot;,
+         *             &quot;EditorType&quot;: &quot;SELECT&quot;,
+         *             &quot;System&quot;: true,
+         *             &quot;Name&quot;: &quot;keywords&quot;
+         *         }
+         *     ],
+         *     &quot;summaryContent&quot;: &quot;小结内容&quot;,
+         *     &quot;creator&quot;: &quot;creator@ccc-test&quot;,
+         *     &quot;bizType&quot;: &quot;Summary&quot;,
+         *     &quot;keywords&quot;: [
+         *         &quot;标签1&quot;
+         *     ],
+         *     &quot;source&quot;: &quot;Console&quot;,
+         *     &quot;summaryTitle&quot;: &quot;测试会话小结&quot;,
+         *     &quot;instanceId&quot;: &quot;ccc-test&quot;,
+         *     &quot;externalInput&quot;: &quot;{\&quot;summaryTitle\&quot;:\&quot;测试会话小结\&quot;,\&quot;summaryContent\&quot;:\&quot;小结内容\&quot;,\&quot;keywords\&quot;:[\&quot;标签1\&quot;],\&quot;_sys_field_config\&quot;:[{\&quot;DisplayName\&quot;:\&quot;主题\&quot;,\&quot;Name\&quot;:\&quot;summaryTitle\&quot;,\&quot;Required\&quot;:true,\&quot;EditorType\&quot;:\&quot;TEXT\&quot;,\&quot;Array\&quot;:false,\&quot;DataType\&quot;:\&quot;TEXT\&quot;,\&quot;System\&quot;:true,\&quot;MaxLength\&quot;:30,\&quot;Attributes\&quot;:\&quot;{}\&quot;},{\&quot;DisplayName\&quot;:\&quot;小结\&quot;,\&quot;Name\&quot;:\&quot;summaryContent\&quot;,\&quot;EditorType\&quot;:\&quot;TEXTAREA\&quot;,\&quot;Array\&quot;:false,\&quot;DataType\&quot;:\&quot;TEXT\&quot;,\&quot;System\&quot;:true,\&quot;MaxLength\&quot;:1000,\&quot;Attributes\&quot;:\&quot;{}\&quot;},{\&quot;DisplayName\&quot;:\&quot;标签\&quot;,\&quot;Name\&quot;:\&quot;keywords\&quot;,\&quot;EditorType\&quot;:\&quot;SELECT\&quot;,\&quot;Array\&quot;:true,\&quot;DataType\&quot;:\&quot;TEXT\&quot;,\&quot;System\&quot;:true,\&quot;Attributes\&quot;:\&quot;{}\&quot;}]}&quot;,
+         *     &quot;templateName&quot;: &quot;Summary-Ticket&quot;,
+         *     &quot;bizId&quot;: &quot;job-544789<strong><strong><strong>759424&quot;,
+         *     &quot;ticketStartTime&quot;: 1723449513735,
+         *     &quot;ticketId&quot;: &quot;ac0dd304-</strong></strong>-</strong><strong>-<strong><strong>-4a90010f0d38&quot;,
+         *     &quot;definitionId&quot;: &quot;Summary-Ticket:2:6881f43a-</strong></strong>-11ee-***</strong>-6eb35a90a7a6&quot;
+         * }</p>
+         */
         @NameInMap("Context")
         public String context;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1723449513735</p>
          */
@@ -106,6 +182,8 @@ public class ListCallSummariesResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>Creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>creator@ccc-test</p>
          */
@@ -113,6 +191,8 @@ public class ListCallSummariesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>Editor.</p>
+         * 
          * <strong>example:</strong>
          * <p>editor@ccc-test</p>
          */
@@ -120,6 +200,8 @@ public class ListCallSummariesResponseBody extends TeaModel {
         public String editor;
 
         /**
+         * <p>Summary ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ac0dd304-<strong><strong>-</strong></strong>-****-4a90010f0d38</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SwitchToConferenceRequest extends TeaModel {
     /**
+     * <p>Invalid field. You can enter any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -12,6 +14,7 @@ public class SwitchToConferenceRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class SwitchToConferenceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class SwitchToConferenceRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Agent ID. If not specified, the agent mapped to the current Resource Access Management (RAM) user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

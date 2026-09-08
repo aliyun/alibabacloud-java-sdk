@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListUserLevelsOfSkillGroupResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -77,20 +92,36 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
     }
 
     public static class ListUserLevelsOfSkillGroupResponseBodyDataList extends TeaModel {
+        /**
+         * <p>Agent display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Agent logon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
         @NameInMap("LoginName")
         public String loginName;
 
+        /**
+         * <p>The user\&quot;s Resource Access Management (RAM) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28036411123456****</p>
+         */
         @NameInMap("RamId")
         public String ramId;
 
         /**
+         * <p>Role ID, in the format: role\@instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin@ccc-test</p>
          */
@@ -98,6 +129,8 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         public String roleId;
 
         /**
+         * <p>Role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin</p>
          */
@@ -105,6 +138,8 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>Skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -112,6 +147,8 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>Skill group Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
          */
@@ -119,6 +156,8 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         public String skillGroupName;
 
         /**
+         * <p>Agent skill Level.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -126,6 +165,8 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         public Integer skillLevel;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -212,10 +253,15 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
     }
 
     public static class ListUserLevelsOfSkillGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>List of skill levels.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListUserLevelsOfSkillGroupResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -223,6 +269,8 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -230,6 +278,8 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

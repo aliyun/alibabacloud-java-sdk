@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTicketTasksRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListTicketTasksRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the ticket.</p>
+     * 
      * <strong>example:</strong>
      * <p>5491d3b4-14ee-4341-b5f1-db2c78beddeb</p>
      */

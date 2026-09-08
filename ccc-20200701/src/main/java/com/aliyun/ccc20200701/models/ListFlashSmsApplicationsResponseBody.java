@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListFlashSmsApplicationsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListFlashSmsApplicationsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
      */
@@ -89,6 +107,8 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
 
     public static class ListFlashSmsApplicationsResponseBodyDataList extends TeaModel {
         /**
+         * <p>Registration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>71b396fa-***********-bd80e070b7c0</p>
          */
@@ -96,16 +116,26 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Configuration name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>闪信配置</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Flash SMS provider ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Uincall</p>
          */
@@ -113,6 +143,8 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
         public String providerId;
 
         /**
+         * <p>Configuration content.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;user&quot;:&quot;600******_dev&quot;,&quot;pwd&quot;:&quot;85abf3****<strong><strong><strong>f494e&quot;,&quot;account&quot;:&quot;6004</strong></strong></strong>&quot;}</p>
          */
@@ -167,10 +199,15 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListFlashSmsApplicationsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of flash SMS configurations.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListFlashSmsApplicationsResponseBodyDataList> list;
 
         /**
+         * <p>Page number. Valid values: 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -178,6 +215,8 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size. Valid values: 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -185,6 +224,8 @@ public class ListFlashSmsApplicationsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

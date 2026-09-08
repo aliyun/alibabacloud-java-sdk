@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCallSummaryResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateCallSummaryResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Data. The summary ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c58b9719-3bc3-441d-a4d3-fc0309ef7066</p>
      */
@@ -19,19 +23,32 @@ public class CreateCallSummaryResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of invalid parameters</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>8707EB29-BAED-4302-B999-40BA61877437</p>
      */

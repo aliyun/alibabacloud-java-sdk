@@ -4,13 +4,26 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ModifySkillGroupRequest extends TeaModel {
+    /**
+     * <p>Description of the skill group. This parameter is optional and defaults to empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>云联络中心的新测试技能组。</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Display name of the skill group, which must be 1 to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新测试技能组</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +33,7 @@ public class ModifySkillGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

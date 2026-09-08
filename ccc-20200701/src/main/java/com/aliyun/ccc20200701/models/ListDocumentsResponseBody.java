@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListDocumentsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListDocumentsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
      */
@@ -89,6 +107,8 @@ public class ListDocumentsResponseBody extends TeaModel {
 
     public static class ListDocumentsResponseBodyDataSchema extends TeaModel {
         /**
+         * <p>The time when the schema was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-14T09:53:53Z</p>
          */
@@ -96,6 +116,8 @@ public class ListDocumentsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>Indicates whether the schema is deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -103,6 +125,8 @@ public class ListDocumentsResponseBody extends TeaModel {
         public Boolean deleted;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -112,7 +136,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>schame id</p>
+         * <p>The schema ID.</p>
          * 
          * <strong>example:</strong>
          * <p>profile</p>
@@ -121,16 +145,23 @@ public class ListDocumentsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>87b12784-8ce2-40b6-b21f-c49cb3b5501e</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The list of fields.</p>
+         */
         @NameInMap("Properties")
         public java.util.Map<String, DataSchemaPropertiesValue> properties;
 
         /**
+         * <p>The time when the schema was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-14T09:53:53Z</p>
          */
@@ -201,10 +232,15 @@ public class ListDocumentsResponseBody extends TeaModel {
     }
 
     public static class ListDocumentsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of documents.</p>
+         */
         @NameInMap("Documents")
         public java.util.List<java.util.Map<String, ?>> documents;
 
         /**
+         * <p>The token for the next page of results.</p>
+         * 
          * <strong>example:</strong>
          * <p>54d1a616d95a4a01ba58967a9115b649</p>
          */
@@ -212,12 +248,14 @@ public class ListDocumentsResponseBody extends TeaModel {
         public String nextPageToken;
 
         /**
-         * <p>scheme</p>
+         * <p>The schema.</p>
          */
         @NameInMap("Schema")
         public ListDocumentsResponseBodyDataSchema schema;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

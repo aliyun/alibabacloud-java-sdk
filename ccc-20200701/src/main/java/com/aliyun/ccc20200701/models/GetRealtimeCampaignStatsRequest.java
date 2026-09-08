@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRealtimeCampaignStatsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetRealtimeCampaignStatsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The predictive outbound dialing activity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

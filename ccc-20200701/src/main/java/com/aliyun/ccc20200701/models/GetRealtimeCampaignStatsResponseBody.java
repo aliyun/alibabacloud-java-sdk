@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetRealtimeCampaignStatsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>42970829-E2C8-515A-8F42-5A6B59F852A7</p>
      */
@@ -78,6 +93,8 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
 
     public static class GetRealtimeCampaignStatsResponseBodyData extends TeaModel {
         /**
+         * <p>Number of agents on break.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -85,6 +102,8 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         public Long breakingAgents;
 
         /**
+         * <p>The number of concurrent calls per second. &quot;Concurrent&quot; means calls happening simultaneously.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -92,25 +111,53 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         public Long caps;
 
         /**
+         * <p>Number of logged-in agents.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("LoggedInAgents")
         public Long loggedInAgents;
 
+        /**
+         * <p>The number of agents in outbound-only mode who are on a break.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OutboundScenarioBreakingAgents")
         public Long outboundScenarioBreakingAgents;
 
+        /**
+         * <p>The number of agents in outbound-only mode who are idle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OutboundScenarioReadyAgents")
         public Long outboundScenarioReadyAgents;
 
+        /**
+         * <p>Number of agents in a call under outbound-only mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OutboundScenarioTalkingAgents")
         public Long outboundScenarioTalkingAgents;
 
+        /**
+         * <p>Number of agents in post-processing status under outbound-only mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OutboundScenarioWorkingAgents")
         public Long outboundScenarioWorkingAgents;
 
         /**
+         * <p>Number of idle agents.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -118,6 +165,8 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         public Long readyAgents;
 
         /**
+         * <p>Number of agents in a call.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -125,6 +174,8 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         public Long talkingAgents;
 
         /**
+         * <p>Total number of agents.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -132,6 +183,8 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         public Long totalAgents;
 
         /**
+         * <p>Number of agents in post-processing.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

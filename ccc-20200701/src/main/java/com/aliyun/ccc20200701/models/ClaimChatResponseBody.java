@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ClaimChatResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ClaimChatResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BC976D32-AC4C-4E0F-8AA9-F4BC6C4E2B3E</p>
      */
@@ -89,16 +107,26 @@ public class ClaimChatResponseBody extends TeaModel {
 
     public static class ClaimChatResponseBodyDataChatContexts extends TeaModel {
         /**
+         * <p>Network service channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>226****-cbb6-****-8fea-1e71baf7bfa7</p>
          */
         @NameInMap("AccessChannelId")
         public String accessChannelId;
 
+        /**
+         * <p>Network service channel name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试渠道</p>
+         */
         @NameInMap("AccessChannelName")
         public String accessChannelName;
 
         /**
+         * <p>Network service channel type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Web</p>
          */
@@ -106,16 +134,26 @@ public class ClaimChatResponseBody extends TeaModel {
         public String accessChannelType;
 
         /**
+         * <p>Whether the session has been assigned to an agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("BeingAssigned")
         public Boolean beingAssigned;
 
+        /**
+         * <p>Call variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("CallVariables")
         public String callVariables;
 
         /**
+         * <p>Session type.</p>
+         * 
          * <strong>example:</strong>
          * <p>INBOUND</p>
          */
@@ -123,6 +161,8 @@ public class ClaimChatResponseBody extends TeaModel {
         public String chatType;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -130,6 +170,8 @@ public class ClaimChatResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat-65382141036853491</p>
          */
@@ -209,6 +251,8 @@ public class ClaimChatResponseBody extends TeaModel {
 
     public static class ClaimChatResponseBodyDataUserContext extends TeaModel {
         /**
+         * <p>Break status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Warm-up</p>
          */
@@ -216,6 +260,8 @@ public class ClaimChatResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>Device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>CCC-169.254.165.2-browser125.0.0-bs48b41903450e6c8</p>
          */
@@ -223,6 +269,8 @@ public class ClaimChatResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Device state.</p>
+         * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
          */
@@ -230,6 +278,8 @@ public class ClaimChatResponseBody extends TeaModel {
         public String deviceState;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -237,6 +287,8 @@ public class ClaimChatResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>Time of the agent\&quot;s last heartbeat, in Unix timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609136956378</p>
          */
@@ -244,6 +296,8 @@ public class ClaimChatResponseBody extends TeaModel {
         public Long heartbeat;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -251,6 +305,8 @@ public class ClaimChatResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat-65382141036853491</p>
          */
@@ -258,6 +314,8 @@ public class ClaimChatResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Agent\&quot;s personal phone number. Not applicable for chat scenarios.</p>
+         * 
          * <strong>example:</strong>
          * <p>18******102</p>
          */
@@ -265,6 +323,8 @@ public class ClaimChatResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>Outbound call scenario only. Not applicable for chat services.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -272,16 +332,23 @@ public class ClaimChatResponseBody extends TeaModel {
         public Boolean outboundScenario;
 
         /**
+         * <p>Time when the agent was last reserved, in Unix timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Reserved")
         public Long reserved;
 
+        /**
+         * <p>List of skill group IDs the agent is signed into.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>userId@ccc-test</p>
          */
@@ -289,6 +356,23 @@ public class ClaimChatResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Agent state.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li><p>READY: Idle.</p>
+         * </li>
+         * <li><p>WORKING: Post-call processing.</p>
+         * </li>
+         * <li><p>BREAK: Break.</p>
+         * </li>
+         * <li><p>OFFLINE: Offline.</p>
+         * </li>
+         * <li><p>TALKING: Chatting.</p>
+         * </li>
+         * <li><p>RINGING: Incoming chat.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TALKING</p>
          */
@@ -296,6 +380,17 @@ public class ClaimChatResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>Work mode. Not applicable for chat scenarios.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li><p>ON_SITE: On-site mode.</p>
+         * </li>
+         * <li><p>OFF_SITE: Off-site mode.</p>
+         * </li>
+         * <li><p>OFFICE_PHONE: Office phone mode.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -422,16 +517,24 @@ public class ClaimChatResponseBody extends TeaModel {
     }
 
     public static class ClaimChatResponseBodyData extends TeaModel {
+        /**
+         * <p>Session context.</p>
+         */
         @NameInMap("ChatContexts")
         public java.util.List<ClaimChatResponseBodyDataChatContexts> chatContexts;
 
         /**
+         * <p>System auto-increment ID. Customers do not need to be concerned.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789</p>
          */
         @NameInMap("ContextId")
         public Long contextId;
 
+        /**
+         * <p>Agent context.</p>
+         */
         @NameInMap("UserContext")
         public ClaimChatResponseBodyDataUserContext userContext;
 

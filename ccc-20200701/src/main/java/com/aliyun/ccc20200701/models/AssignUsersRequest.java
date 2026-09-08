@@ -8,6 +8,7 @@ public class AssignUsersRequest extends TeaModel {
     public Boolean async;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class AssignUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>A JSON array of RAM user IDs to import, formatted as a string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,7 @@ public class AssignUsersRequest extends TeaModel {
     public String ramIdList;
 
     /**
+     * <p>The ID of the role to assign to the users in the instance. After the RAM users are imported, they are assigned this role. Valid roles are Administrator, Teamleader, and Agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +38,8 @@ public class AssignUsersRequest extends TeaModel {
     public String roleId;
 
     /**
+     * <p>A JSON array of skill objects, provided as a string. Each object specifies a skillGroupId and a skillLevel from 1 to 10. A lower skillLevel value indicates higher proficiency and greater call-handling capacity.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;skillGroupId&quot;:&quot;skillgroup@ccc-test&quot;,&quot;skillLevel&quot;:5}]</p>
      */
@@ -42,6 +47,7 @@ public class AssignUsersRequest extends TeaModel {
     public String skillLevelList;
 
     /**
+     * <p>The work mode for the agents.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

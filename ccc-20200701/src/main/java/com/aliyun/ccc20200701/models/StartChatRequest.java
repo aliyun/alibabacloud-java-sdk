@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartChatRequest extends TeaModel {
     /**
+     * <p>The ID of the web service channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>cf584733-<em><strong>-</strong></em>-9699-cb77aa3b7aa6</p>
      */
@@ -12,6 +14,8 @@ public class StartChatRequest extends TeaModel {
     public String accessChannelId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ccc-test</p>
      */
@@ -19,6 +23,8 @@ public class StartChatRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The channel token for the web service.</p>
+     * 
      * <strong>example:</strong>
      * <p>9XYGTGWtq2wFi_Bpg7aUnIoYi_vG_rO3bjEn0YtsxbHRHrYHlz1LDBLJAyZcLxieRQR4h_6AnWvTjJeNU5jg************Hwej7WgWrmA=</p>
      */
@@ -26,6 +32,7 @@ public class StartChatRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>The information about chat members.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserList")
@@ -70,16 +77,26 @@ public class StartChatRequest extends TeaModel {
 
     public static class StartChatRequestUserList extends TeaModel {
         /**
+         * <p>The URL of the member\&quot;s profile picture.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.com/image">http://xxx.com/image</a></p>
          */
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
+        /**
+         * <p>The nickname of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>访客-1a272a174a7d</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
         /**
+         * <p>The member ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>fcd020fe-d8e4-40e5-8c77-1a272a174a7d</p>
          */
@@ -87,6 +104,14 @@ public class StartChatRequest extends TeaModel {
         public String userId;
 
         /**
+         * <p>The type of the member.</p>
+         * <ul>
+         * <li><p>AGENT: An agent.</p>
+         * </li>
+         * <li><p>CUSTOMER: A visitor.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMER</p>
          */

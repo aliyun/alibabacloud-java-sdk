@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProcessCustomIMCallbackRequest extends TeaModel {
     /**
+     * <p>The channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ProcessCustomIMCallbackRequest extends TeaModel {
     public String accessChannelId;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ProcessCustomIMCallbackRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,12 +35,28 @@ public class ProcessCustomIMCallbackRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The message content.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>消息内容，格式如下：</p>
+     * <p>文本消息：
+     * { &quot;contentType&quot;:&quot;Text&quot;, &quot;text&quot;:&quot;你好  &quot; }</p>
+     * <p>图片消息：
+     * { &quot;contentType&quot;:&quot;Image&quot;, &quot;mediaId&quot;: &quot;xxx-xxx-xxx&quot;, &quot;fileType&quot;: &quot;png&quot;, &quot;fileSize&quot;: 1233 }</p>
+     * <p>视频消息：
+     * { &quot;contentType&quot;:&quot;Video&quot;, &quot;mediaId&quot;: &quot;xxx-xxx-xxx&quot; &quot;duration&quot;: 12, &quot;fileSize&quot;: 1233, }</p>
+     * <p>音频消息：
+     * { &quot;contentType&quot;:&quot;Audio&quot;, &quot;mediaId&quot;: &quot;xxx-xxx-xxx&quot; &quot;duration&quot;: 12, &quot;fileSize&quot;: 1233 }</p>
+     * <p>文件消息：
+     * { &quot;contentType&quot;:&quot;File&quot;, &quot;mediaId&quot;: &quot;xxx-xxx-xxx&quot;, &quot;fileSize&quot;: 223232, &quot;filename&quot;: &quot;xyz. zip&quot; }</p>
      */
     @NameInMap("MessageContent")
     public String messageContent;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
      */
@@ -45,6 +64,8 @@ public class ProcessCustomIMCallbackRequest extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The profile picture ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -52,6 +73,7 @@ public class ProcessCustomIMCallbackRequest extends TeaModel {
     public String senderAvatarMediaId;
 
     /**
+     * <p>The user ID of the message sender.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,6 +83,8 @@ public class ProcessCustomIMCallbackRequest extends TeaModel {
     public String senderId;
 
     /**
+     * <p>The name of the sender.</p>
+     * 
      * <strong>example:</strong>
      * <p>tom</p>
      */

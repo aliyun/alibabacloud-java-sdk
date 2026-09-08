@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListGroupChatMessagesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListGroupChatMessagesResponseBodyData data;
 
     /**
+     * <p>HTTP status code returned in the response. A value of 200 indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2263B273-AC1B-44EB-BA98-87F2322C6780</p>
      */
@@ -77,10 +92,18 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
     }
 
     public static class ListGroupChatMessagesResponseBodyDataMessages extends TeaModel {
+        /**
+         * <p>Message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;variables&quot;:{},&quot;text&quot;:&quot;<p>好的，不客气</p>&quot;,&quot;contentType&quot;:&quot;Text&quot;,&quot;subContentType&quot;:&quot;richtext&quot;}</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat-65382141036853491</p>
          */
@@ -88,6 +111,8 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Indicates whether the message was revoked.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -95,6 +120,8 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         public Boolean recalled;
 
         /**
+         * <p>Sender profile picture URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxxxx.com">http://xxxxx.com</a></p>
          */
@@ -102,6 +129,8 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         public String senderAvatarUrl;
 
         /**
+         * <p>User ID of the message sender.</p>
+         * 
          * <strong>example:</strong>
          * <p>64bb4ececc34fc5ec1ca1153</p>
          */
@@ -109,6 +138,8 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         public String senderId;
 
         /**
+         * <p>Sender name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-agent@test-instanceId</p>
          */
@@ -116,6 +147,17 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         public String senderName;
 
         /**
+         * <p>Sender type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p><strong>ADMIN</strong>: system</p>
+         * </li>
+         * <li><p><strong>CUSTOMER</strong>: visitor</p>
+         * </li>
+         * <li><p><strong>AGENT</strong>: agent</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMER</p>
          */
@@ -123,6 +165,8 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         public String senderType;
 
         /**
+         * <p>Message timestamp, in Unix timestamp format, measured in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1696126980371</p>
          */
@@ -201,10 +245,15 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
     }
 
     public static class ListGroupChatMessagesResponseBodyData extends TeaModel {
+        /**
+         * <p>Message list.</p>
+         */
         @NameInMap("Messages")
         public java.util.List<ListGroupChatMessagesResponseBodyDataMessages> messages;
 
         /**
+         * <p>Token for the next page.</p>
+         * 
          * <strong>example:</strong>
          * <p>54d1a616d95a4a01ba58967a9115b649</p>
          */

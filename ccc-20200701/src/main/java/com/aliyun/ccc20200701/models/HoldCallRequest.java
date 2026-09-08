@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class HoldCallRequest extends TeaModel {
     /**
+     * <p>Channel ID to be held.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class HoldCallRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>A unique ID provided by the agent endpoint to represent an agent workbench. An agent can have multiple workbenches of different types, such as browser, iOS, or Android, but only one can be active at a time.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACC-YUNBS-1.0.10-****</p>
      */
@@ -21,6 +24,7 @@ public class HoldCallRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class HoldCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Call job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,10 +43,18 @@ public class HoldCallRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>Name of the hold music. This parameter is optional and defaults to empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Music")
     public String music;
 
     /**
+     * <p>Agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

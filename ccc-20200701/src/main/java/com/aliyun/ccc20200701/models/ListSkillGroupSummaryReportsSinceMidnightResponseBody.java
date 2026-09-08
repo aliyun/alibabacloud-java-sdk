@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,19 +14,32 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("PagedSkillGroupSummaryReport")
     public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReport pagedSkillGroupSummaryReport;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2B36CEBC-6D11-5451-9E6B-C6D1927841C5</p>
      */
@@ -32,6 +47,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +110,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
 
     public static class ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound extends TeaModel {
         /**
+         * <p>The number of calls abandoned while waiting in the skill group queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -100,6 +119,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long abandonedInQueueOfQueueCount;
 
         /**
+         * <p>The number of calls routed to the skill group and answered by an agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -107,6 +128,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long answeredByAgentOfQueueCount;
 
         /**
+         * <p>The maximum queue wait time for a call answered by an agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -114,6 +137,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long answeredByAgentOfQueueMaxWaitTimeDuration;
 
         /**
+         * <p>The total queue wait time for calls answered by an agent, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -121,6 +146,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long answeredByAgentOfQueueWaitTimeDuration;
 
         /**
+         * <p>The average ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -128,6 +155,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long averageRingTime;
 
         /**
+         * <p>The average talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -135,6 +164,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long averageTalkTime;
 
         /**
+         * <p>The average after-call work time, in seconds (<code>TotalWorkTime</code> / <code>CallsHandled</code>).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -145,6 +176,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsAbandoned;
 
         /**
+         * <p>The number of attended transfers initiated. If a call is transferred multiple times, each transfer is counted separately.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -152,6 +185,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsAttendedTransferOut;
 
         /**
+         * <p>The number of blind transfers initiated. If a call is transferred multiple times, each transfer is counted separately.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -159,6 +194,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsBlindTransferOut;
 
         /**
+         * <p>The number of handled inbound calls. Each call is counted once per queue entry, regardless of how many agents answer it.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -166,6 +203,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsHandled;
 
         /**
+         * <p>The number of calls offered to the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -188,6 +227,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsQueuingTimeout;
 
         /**
+         * <p>The number of calls answered by an agent within 10 seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -195,6 +236,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsServiceLevel10;
 
         /**
+         * <p>The number of calls answered by an agent within 20 seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -202,6 +245,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsServiceLevel20;
 
         /**
+         * <p>The number of calls answered by an agent within 30 seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -212,6 +257,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsTimeout;
 
         /**
+         * <p>The number of calls that were abandoned while an agent in the skill group was being alerted.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -219,6 +266,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long giveUpByAgentOfQueueCount;
 
         /**
+         * <p>The handle rate (<code>CallsHandled</code> / <code>CallsOffered</code>). The value can exceed 100% because the handle and offer events might occur in different time windows.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -226,6 +275,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Float handleRate;
 
         /**
+         * <p>The number of calls that entered the skill group queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -233,6 +284,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long inComingQueueOfQueueCount;
 
         /**
+         * <p>The maximum ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -240,6 +293,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long maxRingTime;
 
         /**
+         * <p>The maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -247,6 +302,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public String maxTalkTime;
 
         /**
+         * <p>The maximum after-call work time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -254,6 +311,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long maxWorkTime;
 
         /**
+         * <p>The number of calls that overflowed from the skill group queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -261,6 +320,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long overFlowInQueueOfQueueCount;
 
         /**
+         * <p>The maximum queue wait time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -268,6 +329,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long queueMaxWaitTimeDuration;
 
         /**
+         * <p>The queue wait time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -275,6 +338,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long queueWaitTimeDuration;
 
         /**
+         * <p>The satisfaction index, calculated as the average of single-digit keypad inputs from satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -282,6 +347,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Float satisfactionIndex;
 
         /**
+         * <p>The number of satisfaction surveys offered.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -289,6 +356,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>The number of satisfaction surveys responded to.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -296,6 +365,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>The percentage of calls answered within 20 seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -303,6 +374,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Float serviceLevel20;
 
         /**
+         * <p>The total ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -310,6 +383,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long totalRingTime;
 
         /**
+         * <p>The total talk time for inbound calls, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -317,6 +392,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long totalTalkTime;
 
         /**
+         * <p>The total after-call work time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -628,6 +705,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
 
     public static class ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound extends TeaModel {
         /**
+         * <p>The answer rate, expressed as a percentage (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -635,6 +714,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Float answerRate;
 
         /**
+         * <p>The average dialing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -642,6 +723,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long averageDialingTime;
 
         /**
+         * <p>The average talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -649,6 +732,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long averageTalkTime;
 
         /**
+         * <p>The average after-call work time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -662,6 +747,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsAgentHandled;
 
         /**
+         * <p>The number of answered outbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -669,6 +756,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsAnswered;
 
         /**
+         * <p>The number of outbound calls dialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -697,6 +786,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsQueuingTimeout;
 
         /**
+         * <p>The number of calls answered by an agent within 30 seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -707,6 +798,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long callsServiceLevel30V2;
 
         /**
+         * <p>The maximum dialing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -714,6 +807,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long maxDialingTime;
 
         /**
+         * <p>The maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -721,6 +816,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long maxTalkTime;
 
         /**
+         * <p>The maximum after-call work time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -728,6 +825,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long maxWorkTime;
 
         /**
+         * <p>The satisfaction index, calculated as the average of single-digit keypad inputs from satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -735,6 +834,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Float satisfactionIndex;
 
         /**
+         * <p>The number of satisfaction surveys offered.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -742,6 +843,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>The number of satisfaction surveys responded to.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -749,6 +852,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>The total dialing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -756,6 +861,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long totalDialingTime;
 
         /**
+         * <p>The total talk time for outbound calls, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -766,6 +873,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long totalWaitTime;
 
         /**
+         * <p>The total after-call work time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -997,6 +1106,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
 
     public static class ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOverall extends TeaModel {
         /**
+         * <p>The average ready time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1004,6 +1115,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long averageReadyTime;
 
         /**
+         * <p>The average talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1011,6 +1124,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long averageTalkTime;
 
         /**
+         * <p>The average after-call work time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1018,6 +1133,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long averageWorkTime;
 
         /**
+         * <p>The maximum ready time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1025,6 +1142,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long maxReadyTime;
 
         /**
+         * <p>The maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1032,6 +1151,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long maxTalkTime;
 
         /**
+         * <p>The maximum after-call work time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1039,6 +1160,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long maxWorkTime;
 
         /**
+         * <p>The agent occupancy rate, expressed as a percentage (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1046,6 +1169,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Float occupancyRate;
 
         /**
+         * <p>The satisfaction index, calculated as the average of single-digit keypad inputs from satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1053,6 +1178,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Float satisfactionIndex;
 
         /**
+         * <p>The number of satisfaction surveys offered.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1060,6 +1187,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>The number of satisfaction surveys responded to.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1067,6 +1196,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>The total break time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1074,6 +1205,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long totalBreakTime;
 
         /**
+         * <p>The total number of calls (<code>CallsOffered</code> + <code>CallsDialed</code>).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1081,6 +1214,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long totalCalls;
 
         /**
+         * <p>The total logged-in time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1088,6 +1223,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long totalLoggedInTime;
 
         /**
+         * <p>The total ready time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1095,6 +1232,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long totalReadyTime;
 
         /**
+         * <p>The total talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1102,6 +1241,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Long totalTalkTime;
 
         /**
+         * <p>The total after-call work time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1244,33 +1385,54 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
     }
 
     public static class ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportList extends TeaModel {
+        /**
+         * <p>Inbound call metrics.</p>
+         */
         @NameInMap("Inbound")
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound inbound;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Outbound call metrics.</p>
+         */
         @NameInMap("Outbound")
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound outbound;
 
+        /**
+         * <p>Overall metrics.</p>
+         */
         @NameInMap("Overall")
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOverall overall;
 
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <p>The name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
         /**
+         * <p>The timestamp when the metrics were collected.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-09-13 00:00:00</p>
          */
@@ -1341,10 +1503,15 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
     }
 
     public static class ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReport extends TeaModel {
+        /**
+         * <p>A list of skill group summary reports.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportList> list;
 
         /**
+         * <p>The page number. The valid range is 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1352,6 +1519,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page. The valid range is 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -1359,6 +1528,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

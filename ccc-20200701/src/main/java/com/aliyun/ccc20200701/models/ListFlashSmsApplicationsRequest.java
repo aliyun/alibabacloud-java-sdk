@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFlashSmsApplicationsRequest extends TeaModel {
     /**
+     * <p>Cloud Contact Center instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,18 @@ public class ListFlashSmsApplicationsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Flash SMS configuration name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>闪信</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Page number. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,6 +33,8 @@ public class ListFlashSmsApplicationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -31,6 +42,8 @@ public class ListFlashSmsApplicationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Flash SMS provider ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>Uincall</p>
      */

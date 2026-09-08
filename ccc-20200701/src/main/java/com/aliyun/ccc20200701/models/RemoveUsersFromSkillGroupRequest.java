@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUsersFromSkillGroupRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveUsersFromSkillGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RemoveUsersFromSkillGroupRequest extends TeaModel {
     public String skillGroupId;
 
     /**
+     * <p>List of agent IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

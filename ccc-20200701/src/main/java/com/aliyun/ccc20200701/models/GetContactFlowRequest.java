@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetContactFlowRequest extends TeaModel {
     /**
+     * <p>The contact flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetContactFlowRequest extends TeaModel {
     public String contactFlowId;
 
     /**
+     * <p>The draft ID. This is the ID of the editable draft version for the current contact flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetContactFlowRequest extends TeaModel {
     public String draftId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

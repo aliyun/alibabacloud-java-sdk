@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHistoricalCallerReportRequest extends TeaModel {
     /**
+     * <p>Calling number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetHistoricalCallerReportRequest extends TeaModel {
     public String callingNumber;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetHistoricalCallerReportRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Start time of the query, formatted as a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetHistoricalCallerReportRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>End time of the query, formatted as a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

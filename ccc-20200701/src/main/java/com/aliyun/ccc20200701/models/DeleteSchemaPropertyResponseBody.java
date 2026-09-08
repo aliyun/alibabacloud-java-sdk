@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSchemaPropertyResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DeleteSchemaPropertyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class DeleteSchemaPropertyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>User 244715989906081477 does not exist in instance worldfirst01.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The information about error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
      */

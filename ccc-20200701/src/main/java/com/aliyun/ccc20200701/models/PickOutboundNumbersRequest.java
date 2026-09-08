@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PickOutboundNumbersRequest extends TeaModel {
     /**
+     * <p>Called number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class PickOutboundNumbersRequest extends TeaModel {
     public String calledNumber;
 
     /**
+     * <p>The desired quantity of selectable numbers to return. Default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,7 @@ public class PickOutboundNumbersRequest extends TeaModel {
     public Integer count;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class PickOutboundNumbersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>A collection of skill group IDs, formatted as a JSON array string. Each array element is a skill group ID. Numbers are associated with skill groups, and this parameter specifies from which skill groups to select numbers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

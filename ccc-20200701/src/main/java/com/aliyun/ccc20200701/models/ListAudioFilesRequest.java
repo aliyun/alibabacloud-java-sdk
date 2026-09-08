@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAudioFilesRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListAudioFilesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The paging ordinal number, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListAudioFilesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,9 +34,24 @@ public class ListAudioFilesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Converting (transforming)<br>
+     * Completed (transformation completed)<br>
+     * Failed (transformation failed)<br>
+     * If this parameter is not specified, resources in all statuses are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Completed</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Purpose of the audio file. The default value is General (used in scenarios such as IVR). Other optional values include HoldMusic (hold music during calls).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>General</p>
+     */
     @NameInMap("Usage")
     public String usage;
 

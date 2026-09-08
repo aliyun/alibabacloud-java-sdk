@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class CreateCallTagsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of call tags that failed to be created.</p>
+     */
     @NameInMap("Data")
     public java.util.List<CreateCallTagsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,6 +93,8 @@ public class CreateCallTagsResponseBody extends TeaModel {
 
     public static class CreateCallTagsResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the call tag that failed to be created.</p>
+         * 
          * <strong>example:</strong>
          * <p>TagC</p>
          */
@@ -85,6 +102,8 @@ public class CreateCallTagsResponseBody extends TeaModel {
         public String item;
 
         /**
+         * <p>The reason why the call tag creation failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>CALL_TAG_NAME_DUPLICATED</p>
          */

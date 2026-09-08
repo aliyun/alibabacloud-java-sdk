@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddPhoneNumbersRequest extends TeaModel {
     /**
+     * <p>ID of the IVR contact flow to attach. This parameter is valid only when the number usage includes inbound calls. It is optional and defaults to empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>dDMD_0mif4hv</p>
      */
@@ -12,6 +14,7 @@ public class AddPhoneNumbersRequest extends TeaModel {
     public String contactFlowId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class AddPhoneNumbersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Number group ID. You can view number grouping information in the Cloud Contact Center console. This parameter is optional and defaults to empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>2cb77c29-5f60-4b90-b21e-9d2ba9833f14</p>
      */
@@ -28,6 +33,8 @@ public class AddPhoneNumbersRequest extends TeaModel {
     public String numberGroupId;
 
     /**
+     * <p>List of phone numbers to add.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;0101234****&quot;, &quot;0105678****&quot;]</p>
      */
@@ -35,6 +42,7 @@ public class AddPhoneNumbersRequest extends TeaModel {
     public String numberList;
 
     /**
+     * <p>Usage of the phone number. Note: If the provided number is a 400 number, the usage must be set to Inbound.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

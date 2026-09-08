@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNotificationRecordsRequest extends TeaModel {
     /**
+     * <p>The ID of the Cloud Contact Center instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListNotificationRecordsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>A list of notification keys to query. For example, if you specify a call ID, the API returns all notifications for that call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

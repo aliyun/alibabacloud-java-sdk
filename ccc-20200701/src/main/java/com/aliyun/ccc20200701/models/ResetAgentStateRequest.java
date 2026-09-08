@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResetAgentStateRequest extends TeaModel {
     /**
+     * <p>A string that identifies the device. The value is not processed by the system and can be any string.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -12,6 +14,7 @@ public class ResetAgentStateRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The ID of the Cloud Call Center (CCC) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ResetAgentStateRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the agent. This parameter is optional. If omitted, the agent mapped to the current RAM account is reset.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

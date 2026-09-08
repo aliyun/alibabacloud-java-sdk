@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetMonoRecordingResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetMonoRecordingResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -77,10 +92,18 @@ public class GetMonoRecordingResponseBody extends TeaModel {
     }
 
     public static class GetMonoRecordingResponseBodyData extends TeaModel {
+        /**
+         * <p>Recording duration, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
         /**
+         * <p>Recording file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103689****.wav</p>
          */
@@ -88,6 +111,8 @@ public class GetMonoRecordingResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The OSS download URL of the recording file. Note that the download URL expires after a validity period of 1 Day.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record/job-6538214103689****.wav?Expires=1610910578&OSSAccessKeyId=****&Signature=">http://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record/job-6538214103689****.wav?Expires=1610910578&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */

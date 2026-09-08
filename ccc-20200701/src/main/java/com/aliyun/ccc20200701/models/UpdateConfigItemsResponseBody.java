@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateConfigItemsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,12 +14,20 @@ public class UpdateConfigItemsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -25,6 +35,8 @@ public class UpdateConfigItemsResponseBody extends TeaModel {
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8E7Y5B39-3E24-4A04-81E6-6C4F5B39DF75</p>
      */

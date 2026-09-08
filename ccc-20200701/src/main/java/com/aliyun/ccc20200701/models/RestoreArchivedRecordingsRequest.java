@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RestoreArchivedRecordingsRequest extends TeaModel {
     /**
+     * <p>List of contact IDs, in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;job-216750038017142784\&quot;]</p>
      */
@@ -12,6 +14,7 @@ public class RestoreArchivedRecordingsRequest extends TeaModel {
     public String contactIds;
 
     /**
+     * <p>Cloud Contact Center instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class AnswerCallResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public AnswerCallResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -89,6 +107,8 @@ public class AnswerCallResponseBody extends TeaModel {
 
     public static class AnswerCallResponseBodyDataCallContextChannelContexts extends TeaModel {
         /**
+         * <p>The call type of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>INBOUND</p>
          */
@@ -96,6 +116,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String callType;
 
         /**
+         * <p>The ingest endpoint ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
          */
@@ -103,26 +125,44 @@ public class AnswerCallResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The status of the voice channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>ANSWERED</p>
          */
         @NameInMap("ChannelState")
         public String channelState;
 
+        /**
+         * <p>Channel-associated data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a=b;c=d;</p>
+         */
         @NameInMap("ChannelVariables")
         public String channelVariables;
 
         /**
+         * <p>The callee of the voice channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>1390501****</p>
          */
         @NameInMap("Destination")
         public String destination;
 
+        /**
+         * <p>The order in which the channel was created during the call procedure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Long index;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -130,6 +170,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The calling party of the ingest endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>0830019****</p>
          */
@@ -137,6 +179,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String originator;
 
         /**
+         * <p>The party that initiated the release of the voice channel, indicating who hung up first.</p>
+         * 
          * <strong>example:</strong>
          * <p>1390501****</p>
          */
@@ -144,6 +188,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String releaseInitiator;
 
         /**
+         * <p>The hang-up reason for the ingest endpoint, indicating why the current ingest endpoint was disconnected. The value corresponds to the response codes defined in the SIP protocol. Customers should refer to the SIP protocol to analyze the hang-up reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>404 - No destination</p>
          */
@@ -151,6 +197,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String releaseReason;
 
         /**
+         * <p>The skill group ID associated with the ingest endpoint. In inbound scenarios, the associated skill group ID is determined by the skill group configured in the IVR transfer-to-agent module. In outbound scenarios, the associated skill group ID is the first skill group that the agent signed into.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -158,6 +206,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>The UNIX timestamp of the most recent status change of the ingest endpoint, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609138903315</p>
          */
@@ -165,6 +215,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>The extension number of the agent associated with the voice channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -172,6 +224,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String userExtension;
 
         /**
+         * <p>The agent ID associated with the ingest endpoint. This field is empty if the ingest endpoint belongs to a customer.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -299,16 +353,23 @@ public class AnswerCallResponseBody extends TeaModel {
 
     public static class AnswerCallResponseBodyDataCallContext extends TeaModel {
         /**
+         * <p>Call type.</p>
+         * 
          * <strong>example:</strong>
          * <p>INBOUND</p>
          */
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <p>List of channels.</p>
+         */
         @NameInMap("ChannelContexts")
         public java.util.List<AnswerCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -316,6 +377,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -363,6 +426,8 @@ public class AnswerCallResponseBody extends TeaModel {
 
     public static class AnswerCallResponseBodyDataUserContext extends TeaModel {
         /**
+         * <p>Break status code, which can be either System-defined or Custom-defined. System-defined break codes include: Warm-up (temporary break state after an agent is published and before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent call rejection). There are no restrictions on Custom-defined status codes; customers can define them as needed for their business.</p>
+         * 
          * <strong>example:</strong>
          * <p>Warm-up</p>
          */
@@ -370,6 +435,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>Device ID, the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
@@ -377,6 +444,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The agent\&quot;s extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -384,6 +453,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The time when the last heartbeat was received from the agent, formatted as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609136956378</p>
          */
@@ -391,6 +462,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public Long heartbeat;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -398,6 +471,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -405,6 +480,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1324730****</p>
          */
@@ -412,6 +489,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -419,16 +498,23 @@ public class AnswerCallResponseBody extends TeaModel {
         public Boolean outboundScenario;
 
         /**
+         * <p>The most recent time the agent was reserved. Being reserved means an incoming call will soon be assigned to the agent. The value is formatted as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609136956378</p>
          */
         @NameInMap("Reserved")
         public Long reserved;
 
+        /**
+         * <p>List of skill group IDs that the agent has signed into.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -436,6 +522,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Agent status.</p>
+         * 
          * <strong>example:</strong>
          * <p>TALKING</p>
          */
@@ -443,6 +531,8 @@ public class AnswerCallResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -561,16 +651,24 @@ public class AnswerCallResponseBody extends TeaModel {
     }
 
     public static class AnswerCallResponseBodyData extends TeaModel {
+        /**
+         * <p>Call context environment.</p>
+         */
         @NameInMap("CallContext")
         public AnswerCallResponseBodyDataCallContext callContext;
 
         /**
+         * <p>System auto increment ID. Customers do not need to concern themselves with this.</p>
+         * 
          * <strong>example:</strong>
          * <p>103655</p>
          */
         @NameInMap("ContextId")
         public Long contextId;
 
+        /**
+         * <p>Agent context environment.</p>
+         */
         @NameInMap("UserContext")
         public AnswerCallResponseBodyDataUserContext userContext;
 

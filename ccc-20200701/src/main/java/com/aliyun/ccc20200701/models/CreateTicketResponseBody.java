@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTicketResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateTicketResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Returned data, ticket ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3d26b90a-c5d2-4b09-8219-60cda1******</p>
      */
@@ -19,16 +23,26 @@ public class CreateTicketResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A450574A-337F-43E2-BC59-9C6594C994C6</p>
      */

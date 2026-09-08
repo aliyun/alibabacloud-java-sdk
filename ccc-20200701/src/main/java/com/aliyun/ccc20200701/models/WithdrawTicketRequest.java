@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class WithdrawTicketRequest extends TeaModel {
     /**
+     * <p>The comments.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>撤回，补充信息</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +25,7 @@ public class WithdrawTicketRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ticket ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

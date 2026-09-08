@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListRolesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of roles.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListRolesResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>711D948F-C616-4E23-8573-0F260513CE09</p>
      */
@@ -78,6 +93,8 @@ public class ListRolesResponseBody extends TeaModel {
 
     public static class ListRolesResponseBodyData extends TeaModel {
         /**
+         * <p>Role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin</p>
          */
@@ -85,6 +102,8 @@ public class ListRolesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Role ID, in the format: role\@instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin@ccc-test</p>
          */

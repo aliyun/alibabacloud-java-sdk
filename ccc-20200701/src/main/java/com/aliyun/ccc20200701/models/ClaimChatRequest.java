@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ClaimChatRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ClaimChatRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ClaimChatRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Filter by skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

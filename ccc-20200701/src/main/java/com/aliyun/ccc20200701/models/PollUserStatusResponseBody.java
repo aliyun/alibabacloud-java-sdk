@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class PollUserStatusResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public PollUserStatusResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -89,6 +107,8 @@ public class PollUserStatusResponseBody extends TeaModel {
 
     public static class PollUserStatusResponseBodyDataCallContextChannelContexts extends TeaModel {
         /**
+         * <p>The call type of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
@@ -96,6 +116,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String callType;
 
         /**
+         * <p>Call channel flags.</p>
+         * 
          * <strong>example:</strong>
          * <p>MONITORING</p>
          */
@@ -103,6 +125,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String channelFlags;
 
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
          */
@@ -110,6 +134,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The status of the call channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>CREATED</p>
          */
@@ -117,6 +143,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String channelState;
 
         /**
+         * <p>Channel-associated data.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -124,6 +152,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String channelVariables;
 
         /**
+         * <p>Callee of the call channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>1390501****</p>
          */
@@ -131,6 +161,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String destination;
 
         /**
+         * <p>Auto-incremented system ID. Customers do not need to concern themselves with this value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -138,6 +170,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public Integer index;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -145,6 +179,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The calling party of the call channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>0830019****</p>
          */
@@ -152,6 +188,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String originator;
 
         /**
+         * <p>The party that initiated the hang-up of the call channel, indicating who first terminated the call.</p>
+         * 
          * <strong>example:</strong>
          * <p>1390501****</p>
          */
@@ -159,6 +197,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String releaseInitiator;
 
         /**
+         * <p>The hang-up reason for the call channel, indicating why the current call channel was disconnected. The value comes from the response codes defined in the SIP protocol. Customers should refer to the SIP protocol to analyze the hang-up reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>404 - No destination</p>
          */
@@ -166,6 +206,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String releaseReason;
 
         /**
+         * <p>The skill group ID associated with the channel. In inbound scenarios, the associated skill group ID is determined by the skill group configured in the IVR transfer-to-agent module. In outbound scenarios, the associated skill group ID is the first skill group the agent signed into.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -173,6 +215,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>The UNIX timestamp indicating the most recent status change of the channel, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609138903315</p>
          */
@@ -180,6 +224,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>The extension number of the agent associated with the voice channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -187,6 +233,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String userExtension;
 
         /**
+         * <p>The agent ID associated with the voice channel. This field is empty if the channel belongs to a customer.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -322,6 +370,8 @@ public class PollUserStatusResponseBody extends TeaModel {
 
     public static class PollUserStatusResponseBodyDataCallContext extends TeaModel {
         /**
+         * <p>Call type.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
@@ -329,16 +379,23 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String callType;
 
         /**
+         * <p>Ingest endpoint data. Custom data passed through SIP signaling.</p>
+         * 
          * <strong>example:</strong>
          * <p>a=b;c=d</p>
          */
         @NameInMap("CallVariables")
         public String callVariables;
 
+        /**
+         * <p>List of call channels.</p>
+         */
         @NameInMap("ChannelContexts")
         public java.util.List<PollUserStatusResponseBodyDataCallContextChannelContexts> channelContexts;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -346,6 +403,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -400,24 +459,84 @@ public class PollUserStatusResponseBody extends TeaModel {
     }
 
     public static class PollUserStatusResponseBodyDataChatContextsMembers extends TeaModel {
+        /**
+         * <p>System auto increment ID. Customers do not need to concern themselves with this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>The party that initiated the hang-up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("ReleaseInitiator")
         public String releaseInitiator;
 
+        /**
+         * <p>The hang-up reason for the call channel, indicating why the current call channel was terminated. The value is derived from the response codes defined in the SIP protocol. Customers should refer to the SIP protocol for analysis of the hang-up reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
+        /**
+         * <p>Skill group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a527a80a-75cf-448f-aba0-fca37c61946d</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <p>The status of the agent in this session.</p>
+         * <p>Enumeration values:</p>
+         * <ul>
+         * <li><p>RINGING</p>
+         * </li>
+         * <li><p>TALKING</p>
+         * </li>
+         * <li><p>RELEASED (End)</p>
+         * </li>
+         * <li><p>MISSED (Missed)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RINGING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>User type.</p>
+         * <p>Enumeration values:</p>
+         * <ul>
+         * <li><p>CUSTOMER: Customer</p>
+         * </li>
+         * <li><p>AGENT: Agent</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manager</p>
+         */
         @NameInMap("UserType")
         public String userType;
 
@@ -485,18 +604,45 @@ public class PollUserStatusResponseBody extends TeaModel {
     }
 
     public static class PollUserStatusResponseBodyDataChatContexts extends TeaModel {
+        /**
+         * <p>Ingest endpoint data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("CallVariables")
         public String callVariables;
 
+        /**
+         * <p>Session type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INBOUND</p>
+         */
         @NameInMap("ChatType")
         public String chatType;
 
+        /**
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Call job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat-65382141036853491</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>Information about the agents and customers participating in this chat session.</p>
+         */
         @NameInMap("Members")
         public java.util.List<PollUserStatusResponseBodyDataChatContextsMembers> members;
 
@@ -548,12 +694,41 @@ public class PollUserStatusResponseBody extends TeaModel {
     }
 
     public static class PollUserStatusResponseBodyDataUserContextParallelJobList extends TeaModel {
+        /**
+         * <p>Session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6538214103685****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The agent\&quot;s status in this session.</p>
+         * <h3>Enumeration values:</h3>
+         * <ul>
+         * <li><p>RINGING</p>
+         * </li>
+         * <li><p>TALKING</p>
+         * </li>
+         * <li><p>RELEASED (End)</p>
+         * </li>
+         * <li><p>MISSED (Missed)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RINGING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the status changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1609136956378</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -590,6 +765,8 @@ public class PollUserStatusResponseBody extends TeaModel {
 
     public static class PollUserStatusResponseBodyDataUserContext extends TeaModel {
         /**
+         * <p>Break status code, which can be either System-defined or Customer-defined. System-defined break codes include: Warm-up (temporary break state after an agent is published and before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent call rejection). There are no restrictions on Customer-defined status codes, and customers can define them according to their business needs.</p>
+         * 
          * <strong>example:</strong>
          * <p>Warm-up</p>
          */
@@ -597,6 +774,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>Device ID, the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
@@ -604,6 +783,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -611,6 +792,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The time when the last heartbeat was received from the agent, in Unix timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609136956378</p>
          */
@@ -618,6 +801,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public Long heartbeat;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -625,6 +810,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -632,6 +819,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1324730****</p>
          */
@@ -639,26 +828,38 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <p>Chat sessions currently being handled or already handled by the agent</p>
+         */
         @NameInMap("ParallelJobList")
         public java.util.List<PollUserStatusResponseBodyDataUserContextParallelJobList> parallelJobList;
 
         /**
+         * <p>The UNIX timestamp (in milliseconds) indicating when the agent was most recently reserved. Being reserved means an incoming call will soon be assigned to the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609136956378</p>
          */
         @NameInMap("Reserved")
         public Long reserved;
 
+        /**
+         * <p>List of skill group IDs that the agent has signed into.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -666,6 +867,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Agent status.</p>
+         * 
          * <strong>example:</strong>
          * <p>BREAK</p>
          */
@@ -673,6 +876,8 @@ public class PollUserStatusResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -799,19 +1004,30 @@ public class PollUserStatusResponseBody extends TeaModel {
     }
 
     public static class PollUserStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>Call context environment.</p>
+         */
         @NameInMap("CallContext")
         public PollUserStatusResponseBodyDataCallContext callContext;
 
+        /**
+         * <p>Session context environment.</p>
+         */
         @NameInMap("ChatContexts")
         public java.util.List<PollUserStatusResponseBodyDataChatContexts> chatContexts;
 
         /**
+         * <p>System auto increment ID. Customers do not need to concern themselves with this.</p>
+         * 
          * <strong>example:</strong>
          * <p>103655</p>
          */
         @NameInMap("ContextId")
         public Long contextId;
 
+        /**
+         * <p>Agent context environment.</p>
+         */
         @NameInMap("UserContext")
         public PollUserStatusResponseBodyDataUserContext userContext;
 

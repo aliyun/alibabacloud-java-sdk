@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
     /**
+     * <p>Agent extension number. This parameter is optional. You must specify either UserId or Extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>8003****</p>
      */
@@ -12,6 +14,7 @@ public class GetUserRequest extends TeaModel {
     public String extension;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class GetUserRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Agent ID. This parameter is optional. You must specify either UserId or Extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

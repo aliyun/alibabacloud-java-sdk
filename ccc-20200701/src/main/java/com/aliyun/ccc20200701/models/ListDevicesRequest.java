@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDevicesRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDevicesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

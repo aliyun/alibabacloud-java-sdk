@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateContactFlowResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateContactFlowResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>IVR contact flow ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>78128960-bb00-4ddc-8e82-923a8c5bd22d</p>
      */
@@ -19,16 +23,26 @@ public class CreateContactFlowResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
      */

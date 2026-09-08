@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSchemaShrinkRequest extends TeaModel {
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,7 +16,7 @@ public class CreateSchemaShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>schema id</p>
+     * <p>The schema ID.</p>
      * 
      * <strong>example:</strong>
      * <p>profile</p>
@@ -23,6 +25,7 @@ public class CreateSchemaShrinkRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +34,15 @@ public class CreateSchemaShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The list of fields.</p>
+     */
     @NameInMap("Properties")
     public String propertiesShrink;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
      */

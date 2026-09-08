@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CoachCallRequest extends TeaModel {
     /**
+     * <p>Agent ID being coached.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CoachCallRequest extends TeaModel {
     public String coachedUserId;
 
     /**
+     * <p>Device ID. This field is meaningless and can be filled with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -21,6 +24,7 @@ public class CoachCallRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class CoachCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class CoachCallRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Coaching timeout. If the coaching session is not established within the specified time, the coaching operation is canceled. This field is optional and defaults to 30 seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -46,6 +53,8 @@ public class CoachCallRequest extends TeaModel {
     public Integer timeoutSeconds;
 
     /**
+     * <p>Agent ID initiating the coaching.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

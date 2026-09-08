@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillGroupRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetSkillGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Skill group ID, in the format: skill group name\@instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

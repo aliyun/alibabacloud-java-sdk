@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLegacyAgentEventLogsRequest extends TeaModel {
     /**
+     * <p>Filter by agent ID. This parameter is optional and defaults to empty. An empty value indicates no filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */
@@ -12,6 +14,7 @@ public class ListLegacyAgentEventLogsRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>End time, in Unix timestamp format, in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListLegacyAgentEventLogsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ListLegacyAgentEventLogsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number, ranging from 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class ListLegacyAgentEventLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,7 @@ public class ListLegacyAgentEventLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Start Time, in Unix timestamp format, in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVoicemailRecordingRequest extends TeaModel {
     /**
+     * <p>Call ID. Ensure that this call ID has a voicemail message; otherwise, the return result will contain no data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetVoicemailRecordingRequest extends TeaModel {
     public String contactId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

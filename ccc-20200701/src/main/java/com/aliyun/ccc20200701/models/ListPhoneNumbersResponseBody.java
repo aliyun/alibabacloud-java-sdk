@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListPhoneNumbersResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListPhoneNumbersResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -77,10 +92,18 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
     }
 
     public static class ListPhoneNumbersResponseBodyDataListSkillGroups extends TeaModel {
+        /**
+         * <p>The display name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -88,6 +111,8 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
          */
@@ -95,6 +120,8 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -142,26 +169,44 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
 
     public static class ListPhoneNumbersResponseBodyDataList extends TeaModel {
         /**
+         * <p>Indicates whether the number is active.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The city where the number is registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>乐山</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>The IVR contact flow ID associated with the phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>a3fb6c62-9b49-4942-ae5b-cf2abd4123ek</p>
          */
         @NameInMap("ContactFlowId")
         public String contactFlowId;
 
+        /**
+         * <p>Name of the IVR contact flow associated with the number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认联系流</p>
+         */
         @NameInMap("ContactFlowName")
         public String contactFlowName;
 
         /**
+         * <p>The number creation time, which is the time when the number was associated with the instance, in Unix timestamp format with millisecond precision.</p>
+         * 
          * <strong>example:</strong>
          * <p>1617958538000</p>
          */
@@ -169,6 +214,8 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -176,6 +223,8 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Number.</p>
+         * 
          * <strong>example:</strong>
          * <p>08330011****</p>
          */
@@ -183,19 +232,32 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         public String number;
 
         /**
+         * <p>Number provider name.</p>
+         * 
          * <strong>example:</strong>
          * <p>alicom</p>
          */
         @NameInMap("Provider")
         public String provider;
 
+        /**
+         * <p>The province where the number is registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>四川</p>
+         */
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <p>The list of skill groups associated with the number.</p>
+         */
         @NameInMap("SkillGroups")
         public java.util.List<ListPhoneNumbersResponseBodyDataListSkillGroups> skillGroups;
 
         /**
+         * <p>Business tags for the number, primarily used for labeling and extended business purposes. Ordinary customers do not need to concern themselves with this.</p>
+         * 
          * <strong>example:</strong>
          * <p>M1</p>
          */
@@ -203,6 +265,8 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         public String tags;
 
         /**
+         * <p>The usage of the phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bidirection</p>
          */
@@ -210,6 +274,8 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         public String usage;
 
         /**
+         * <p>Agent ID. If this parameter is not empty, the number is dedicated to the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -328,10 +394,15 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
     }
 
     public static class ListPhoneNumbersResponseBodyData extends TeaModel {
+        /**
+         * <p>The phone number list.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListPhoneNumbersResponseBodyDataList> list;
 
         /**
+         * <p>The page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -339,6 +410,8 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -346,6 +419,8 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

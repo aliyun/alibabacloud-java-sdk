@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetChatMediaUrlResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +32,23 @@ public class GetChatMediaUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal service issue. Detail:.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9FBA26B0-462B-4D77-B78F-AF35560DBC71</p>
      */

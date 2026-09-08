@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetVoicemailRecordingResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetVoicemailRecordingResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,6 +93,8 @@ public class GetVoicemailRecordingResponseBody extends TeaModel {
 
     public static class GetVoicemailRecordingResponseBodyData extends TeaModel {
         /**
+         * <p>Recording file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>voicemail.job-054ded02****.wav</p>
          */
@@ -85,6 +102,8 @@ public class GetVoicemailRecordingResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The OSS download URL of the recording file. Note that the download URL expires after 1 day.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record-mixed/ccc-test/2022/06/voicemail.job-054ded02****.wav?Expires=1656074923&OSSAccessKeyId=****&Signature=">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record-mixed/ccc-test/2022/06/voicemail.job-054ded02****.wav?Expires=1656074923&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */

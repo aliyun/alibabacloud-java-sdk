@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSchemaResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetSchemaResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class GetSchemaResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Service abnormal, the instance 0418 is ceased.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>19D09CCC-F298-4124-849A-AFA217819011</p>
      */
@@ -93,6 +107,8 @@ public class GetSchemaResponseBody extends TeaModel {
 
     public static class GetSchemaResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the schema was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-07-14 10:48:43.0</p>
          */
@@ -100,17 +116,25 @@ public class GetSchemaResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>Indicates whether the schema is deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Deleted")
         public Boolean deleted;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户profile</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>schema id</p>
+         * <p>The ID of the schema.</p>
          * 
          * <strong>example:</strong>
          * <p>profile</p>
@@ -119,16 +143,23 @@ public class GetSchemaResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>5e0964fd-951c-4e45-b518-d09d4d2db8ca</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The list of fields.</p>
+         */
         @NameInMap("Properties")
         public java.util.Map<String, DataPropertiesValue> properties;
 
         /**
+         * <p>The time when the schema was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-07-14 10:48:43.0</p>
          */

@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListPrivilegesOfUserResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListPrivilegesOfUserResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,6 +93,8 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
 
     public static class ListPrivilegesOfUserResponseBodyData extends TeaModel {
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -85,6 +102,8 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Permission Name. Regular Customers do not need to understand specific permission names; this API is primarily invoked by the Workbench.</p>
+         * 
          * <strong>example:</strong>
          * <p>Workbench:Call</p>
          */
@@ -92,6 +111,8 @@ public class ListPrivilegesOfUserResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Permission Scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>SELF_ONLY</p>
          */

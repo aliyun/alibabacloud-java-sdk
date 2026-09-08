@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferTicketTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the assignee.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class TransferTicketTaskRequest extends TeaModel {
     @NameInMap("Assignee")
     public String assignee;
 
+    /**
+     * <p>Comments.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请assignee处理</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,8 @@ public class TransferTicketTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>f780ade8-3ca9-458b-b067-63077946a570</p>
      */
@@ -33,6 +43,8 @@ public class TransferTicketTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The ticket ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5491d3b4-14ee-4341-b5f1-db2c78beddeb</p>
      */

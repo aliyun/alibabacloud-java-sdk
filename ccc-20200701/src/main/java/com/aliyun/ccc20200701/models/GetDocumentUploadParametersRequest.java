@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDocumentUploadParametersRequest extends TeaModel {
     /**
+     * <p>File name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDocumentUploadParametersRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class GetDocumentUploadParametersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>24BE19E8-BF7D-4992-A35E-15EBA874F2E5</p>
      */

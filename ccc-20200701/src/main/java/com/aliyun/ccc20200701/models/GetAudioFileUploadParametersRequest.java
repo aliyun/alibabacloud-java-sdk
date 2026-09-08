@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAudioFileUploadParametersRequest extends TeaModel {
     /**
+     * <p>Audio file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetAudioFileUploadParametersRequest extends TeaModel {
     public String audioFileName;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableTicketTemplateRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DisableTicketTemplateRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ticket template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>43c2671b-8939-4223-86d0-6bd187905cc8_1717664210492</p>
      */

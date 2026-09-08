@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartEditContactFlowRequest extends TeaModel {
     /**
+     * <p>The contact flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartEditContactFlowRequest extends TeaModel {
     public String contactFlowId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

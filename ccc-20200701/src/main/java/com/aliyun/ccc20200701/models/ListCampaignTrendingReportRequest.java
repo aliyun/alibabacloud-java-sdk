@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCampaignTrendingReportRequest extends TeaModel {
     /**
+     * <p>The ID of the predictive outbound calling Activity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListCampaignTrendingReportRequest extends TeaModel {
     public String campaignId;
 
     /**
+     * <p>The end time. This parameter is optional. The default value is the end time of the predictive outbound dialing activity.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-10-14 20:59:59</p>
      */
@@ -21,6 +24,7 @@ public class ListCampaignTrendingReportRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ListCampaignTrendingReportRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Start Time. This parameter is optional. The default value is the Start Time of the predictive outbound calling Activity.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-10-14 00:00:00</p>
      */

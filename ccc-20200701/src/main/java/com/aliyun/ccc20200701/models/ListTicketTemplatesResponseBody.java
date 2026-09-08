@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListTicketTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListTicketTemplatesResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of invalid parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8707EB29-BAED-4302-B999-40BA61877437</p>
      */
@@ -89,6 +107,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
 
     public static class ListTicketTemplatesResponseBodyDataListTicketFields extends TeaModel {
         /**
+         * <p>Indicates whether the field is an array.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -96,6 +116,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Boolean array;
 
         /**
+         * <p>The extended properties.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -103,6 +125,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public String attribute;
 
         /**
+         * <p>The time when the field was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715780670000</p>
          */
@@ -110,6 +134,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>creator</p>
          */
@@ -117,26 +143,44 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The data type.</p>
+         * 
          * <strong>example:</strong>
          * <p>String</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>姓名字段</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether the field is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        /**
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>姓名</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The display order in the list.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -144,6 +188,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Integer displayOrder;
 
         /**
+         * <p>The type of the editor.</p>
+         * 
          * <strong>example:</strong>
          * <p>textbox</p>
          */
@@ -151,6 +197,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public String editorType;
 
         /**
+         * <p>The maximum length.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -158,6 +206,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Integer maxLength;
 
         /**
+         * <p>The maximum value for a number.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -165,6 +215,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Double maximum;
 
         /**
+         * <p>The minimum length.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -172,6 +224,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Integer minLength;
 
         /**
+         * <p>The minimum value for a number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -179,6 +233,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Double minimum;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -186,16 +242,26 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The regular expression that is used for validation.</p>
+         * 
          * <strong>example:</strong>
          * <p>^</p>
          */
         @NameInMap("Pattern")
         public String pattern;
 
+        /**
+         * <p>The error message that is returned when the regular expression validation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>不是有效的email地址</p>
+         */
         @NameInMap("PatternErrorMessage")
         public String patternErrorMessage;
 
         /**
+         * <p>Indicates whether the field is read-only.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -203,6 +269,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Boolean readOnly;
 
         /**
+         * <p>Indicates whether the field is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -210,6 +278,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Boolean required;
 
         /**
+         * <p>Indicates whether the field is a system field.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -217,6 +287,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Boolean system;
 
         /**
+         * <p>The time when the field was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715780670000</p>
          */
@@ -400,6 +472,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
 
     public static class ListTicketTemplatesResponseBodyDataList extends TeaModel {
         /**
+         * <p>The current working version.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -407,6 +481,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public String appliedVersion;
 
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>43c2671b-*****-4223-86d0-6bd187905cc8</p>
          */
@@ -414,6 +490,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public String categoryId;
 
         /**
+         * <p>The user who last edited the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>creator@ccc-test</p>
          */
@@ -421,6 +499,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public String editor;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -428,19 +508,35 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The draft version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715780670000</p>
          */
         @NameInMap("LatestVersion")
         public String latestVersion;
 
+        /**
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试模板</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The process information. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("ProcessDefinition")
         public String processDefinition;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -448,16 +544,23 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b5c21219-3a1e-4bc0-92e7-da66e057d2f6</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The list of fields in the template.</p>
+         */
         @NameInMap("TicketFields")
         public java.util.List<ListTicketTemplatesResponseBodyDataListTicketFields> ticketFields;
 
         /**
+         * <p>The time when the template was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715780670000</p>
          */
@@ -560,10 +663,15 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTicketTemplatesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of templates.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListTicketTemplatesResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -571,6 +679,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -578,6 +688,8 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */

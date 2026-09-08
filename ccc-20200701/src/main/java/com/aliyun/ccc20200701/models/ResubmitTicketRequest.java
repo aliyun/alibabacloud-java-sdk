@@ -4,10 +4,17 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ResubmitTicketRequest extends TeaModel {
+    /**
+     * <p>The handling comment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>信息已补充</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class ResubmitTicketRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ticket ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

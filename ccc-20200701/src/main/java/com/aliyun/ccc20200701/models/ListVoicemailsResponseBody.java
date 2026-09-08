@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListVoicemailsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListVoicemailsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,6 +93,8 @@ public class ListVoicemailsResponseBody extends TeaModel {
 
     public static class ListVoicemailsResponseBodyDataList extends TeaModel {
         /**
+         * <p>The called number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0533128****</p>
          */
@@ -85,16 +102,26 @@ public class ListVoicemailsResponseBody extends TeaModel {
         public String callee;
 
         /**
+         * <p>The calling number.</p>
+         * 
          * <strong>example:</strong>
          * <p>073xxxx7539</p>
          */
         @NameInMap("Caller")
         public String caller;
 
+        /**
+         * <p>The start time of the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1532448000000，已废弃，请使用StartTime。</p>
+         */
         @NameInMap("CdrStartTime")
         public Long cdrStartTime;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-125152394144124921</p>
          */
@@ -102,6 +129,8 @@ public class ListVoicemailsResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>The duration of the voicemail message in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -109,6 +138,8 @@ public class ListVoicemailsResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The ID of the CC instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -116,16 +147,26 @@ public class ListVoicemailsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the voicemail.</p>
+         * 
          * <strong>example:</strong>
          * <p>voicemail-test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The duration of the voicemail message in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10，已废弃，请使用Duration</p>
+         */
         @NameInMap("RecordingDuration")
         public Long recordingDuration;
 
         /**
+         * <p>The start time of the voicemail.</p>
+         * 
          * <strong>example:</strong>
          * <p>1631440860000</p>
          */
@@ -212,10 +253,15 @@ public class ListVoicemailsResponseBody extends TeaModel {
     }
 
     public static class ListVoicemailsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of voicemail records.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListVoicemailsResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -223,6 +269,8 @@ public class ListVoicemailsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -230,6 +278,8 @@ public class ListVoicemailsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries. This parameter is returned only when \<code>PageNumber\\</code> is set to 1. For other values of \<code>PageNumber\\</code>, this parameter returns 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */

@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListDevicesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Device list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDevicesResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -89,6 +107,8 @@ public class ListDevicesResponseBody extends TeaModel {
 
     public static class ListDevicesResponseBodyData extends TeaModel {
         /**
+         * <p>Call ID from the registration signaling initiated by the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>d7b818c3-8d3a-732f-bc9e-1782wa16****</p>
          */
@@ -96,6 +116,8 @@ public class ListDevicesResponseBody extends TeaModel {
         public String callId;
 
         /**
+         * <p>Device address information.</p>
+         * 
          * <strong>example:</strong>
          * <p>sip:8032****@33.89.XX.XX:64189;transport=tcp;registering_acc=18_134_23_4</p>
          */
@@ -103,16 +125,26 @@ public class ListDevicesResponseBody extends TeaModel {
         public String contact;
 
         /**
+         * <p>Device ID, which is the identity ID of a browser Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <p>Device type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHAT</p>
+         */
         @NameInMap("DeviceType")
         public String deviceType;
 
         /**
+         * <p>Device registration expiration time, in UNIX timestamp format with millisecond precision. If the device does not re-register after expiration, it will go offline.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609118499750</p>
          */
@@ -120,6 +152,8 @@ public class ListDevicesResponseBody extends TeaModel {
         public Long expires;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -127,6 +161,8 @@ public class ListDevicesResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -134,6 +170,8 @@ public class ListDevicesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLegacyQueueEventLogsRequest extends TeaModel {
     /**
+     * <p>End time, in UNIX timestamp format, in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListLegacyQueueEventLogsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListLegacyQueueEventLogsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number for paging, ranging from 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ListLegacyQueueEventLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,8 @@ public class ListLegacyQueueEventLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filter by skill group ID. This parameter is optional and defaults to empty. An empty value means no filtering is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>skillgroup@ccc-test</p>
      */
@@ -48,6 +54,7 @@ public class ListLegacyQueueEventLogsRequest extends TeaModel {
     public String skillGroupId;
 
     /**
+     * <p>Start Time, in UNIX timestamp format, in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class TakeBreakResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public TakeBreakResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B59382D2-5755-4C6D-861F-FA2AAD8F89F7</p>
      */
@@ -89,6 +107,8 @@ public class TakeBreakResponseBody extends TeaModel {
 
     public static class TakeBreakResponseBodyData extends TeaModel {
         /**
+         * <p>Break status code, which can be either System-defined or Custom-defined. System-defined break codes include: Warm-up (temporary break state after the agent is published but before becoming idle), RingingTimeout (break caused by ringing timeout), and RejectCall (break caused by the agent rejecting a call). There are no restrictions on Custom-defined status codes; customers can define them according to their business needs.</p>
+         * 
          * <strong>example:</strong>
          * <p>lunchtime</p>
          */
@@ -96,6 +116,8 @@ public class TakeBreakResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>Device ID, which is the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
@@ -103,6 +125,8 @@ public class TakeBreakResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The agent\&quot;s extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -110,6 +134,8 @@ public class TakeBreakResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The time when the last heartbeat from the agent was received, formatted as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609249563836</p>
          */
@@ -117,16 +143,26 @@ public class TakeBreakResponseBody extends TeaModel {
         public Long heartbeat;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Call ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1390000****</p>
          */
@@ -134,6 +170,8 @@ public class TakeBreakResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -141,16 +179,23 @@ public class TakeBreakResponseBody extends TeaModel {
         public Boolean outboundScenario;
 
         /**
+         * <p>The UNIX timestamp (in milliseconds) indicating when the agent was most recently reserved. Being reserved means an incoming call will be assigned to the agent shortly.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609234221864</p>
          */
         @NameInMap("Reserved")
         public Long reserved;
 
+        /**
+         * <p>List of skill group IDs that the agent has signed into.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -158,6 +203,8 @@ public class TakeBreakResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Agent status.</p>
+         * 
          * <strong>example:</strong>
          * <p>BREAK</p>
          */
@@ -165,6 +212,8 @@ public class TakeBreakResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */

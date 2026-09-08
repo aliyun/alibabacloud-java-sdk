@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddPhoneNumberToSkillGroupsRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AddPhoneNumberToSkillGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class AddPhoneNumberToSkillGroupsRequest extends TeaModel {
     public String number;
 
     /**
+     * <p>List of skill group IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

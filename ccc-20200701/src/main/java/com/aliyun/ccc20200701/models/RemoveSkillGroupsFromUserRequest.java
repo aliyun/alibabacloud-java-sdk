@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveSkillGroupsFromUserRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveSkillGroupsFromUserRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>A list of skill group IDs to disassociate, formatted as a JSON array string, where each array element is a skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RemoveSkillGroupsFromUserRequest extends TeaModel {
     public String skillGroupIdList;
 
     /**
+     * <p>Agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillGroupsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class ListSkillGroupsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The media type. The default is AUDIO. Other options include CHAT and VIDEO.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Audio</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
     /**
+     * <p>The page number, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,7 @@ public class ListSkillGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The paging size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +43,12 @@ public class ListSkillGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Performs fuzzy matching based on the skill group name or display name. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试技能组</p>
+     */
     @NameInMap("SearchPattern")
     public String searchPattern;
 

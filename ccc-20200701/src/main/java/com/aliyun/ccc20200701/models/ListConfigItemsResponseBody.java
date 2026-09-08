@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListConfigItemsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of config items.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListConfigItemsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -89,6 +107,8 @@ public class ListConfigItemsResponseBody extends TeaModel {
 
     public static class ListConfigItemsResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -96,6 +116,8 @@ public class ListConfigItemsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the config item. A name can be system-defined or custom. You can customize the value of a system-defined item. You can also create custom items with custom names and values.</p>
+         * 
          * <strong>example:</strong>
          * <p>config-item</p>
          */
@@ -103,6 +125,8 @@ public class ListConfigItemsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the object to which the config item applies.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -110,6 +134,8 @@ public class ListConfigItemsResponseBody extends TeaModel {
         public String objectId;
 
         /**
+         * <p>The type of the object to which the config item applies.</p>
+         * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
          */
@@ -117,6 +143,8 @@ public class ListConfigItemsResponseBody extends TeaModel {
         public String objectType;
 
         /**
+         * <p>The value of the config item.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

@@ -5,27 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListVisitorChatMessagesResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data</p>
+     */
     @NameInMap("Data")
     public ListVisitorChatMessagesResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>8707EB29-BAED-4302-B999-40BA61877437</p>
@@ -79,10 +92,18 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
     }
 
     public static class ListVisitorChatMessagesResponseBodyDataMessages extends TeaModel {
+        /**
+         * <p>Message content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;variables&quot;:{},&quot;text&quot;:&quot;Hi，我是小云~ 很高兴遇见你！&quot;,&quot;contentType&quot;:&quot;Text&quot;}</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Call ID</p>
+         * 
          * <strong>example:</strong>
          * <p>chat-65382141036853491</p>
          */
@@ -90,6 +111,8 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Sender profile picture URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxxxx.com/avatar.png">http://xxxxx.com/avatar.png</a></p>
          */
@@ -97,16 +120,35 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
         public String senderAvatarUrl;
 
         /**
+         * <p>Sender user ID</p>
+         * 
          * <strong>example:</strong>
          * <p>fcd020fe-****-1a272a174a7d</p>
          */
         @NameInMap("SenderId")
         public String senderId;
 
+        /**
+         * <p>Sender name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>访客1</p>
+         */
         @NameInMap("SenderName")
         public String senderName;
 
         /**
+         * <p>Sender type</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p><strong>ADMIN</strong>: system</p>
+         * </li>
+         * <li><p><strong>CUSTOMER</strong>: visitor</p>
+         * </li>
+         * <li><p><strong>AGENT</strong>: agent</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMER</p>
          */
@@ -114,6 +156,8 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
         public String senderType;
 
         /**
+         * <p>UNIX timestamp</p>
+         * 
          * <strong>example:</strong>
          * <p>1696126980371</p>
          */
@@ -184,10 +228,15 @@ public class ListVisitorChatMessagesResponseBody extends TeaModel {
     }
 
     public static class ListVisitorChatMessagesResponseBodyData extends TeaModel {
+        /**
+         * <p>Message list</p>
+         */
         @NameInMap("Messages")
         public java.util.List<ListVisitorChatMessagesResponseBodyDataMessages> messages;
 
         /**
+         * <p>Token for the next page</p>
+         * 
          * <strong>example:</strong>
          * <p>1737193352340::7463707254.EAUNIT</p>
          */

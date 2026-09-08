@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Data, which is the ID of the pipeline used to create the instance in the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>75c1346c-1dc2-4ed8-973f-edf8b1e5fe77</p>
      */
@@ -19,16 +23,26 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
      */

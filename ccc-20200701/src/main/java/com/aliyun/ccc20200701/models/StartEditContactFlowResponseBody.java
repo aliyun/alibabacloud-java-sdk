@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartEditContactFlowResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class StartEditContactFlowResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The data, which is the contact flow draft ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>b3114362-9062-46c7-82dc-ae55ac168b2e</p>
      */
@@ -19,16 +23,26 @@ public class StartEditContactFlowResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BC2733CE-C470-564A-8C11-9DC02468823A</p>
      */

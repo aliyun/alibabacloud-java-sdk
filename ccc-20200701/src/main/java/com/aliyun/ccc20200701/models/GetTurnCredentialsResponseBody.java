@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class GetTurnCredentialsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetTurnCredentialsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -28,6 +41,8 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -89,6 +104,8 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
 
     public static class GetTurnCredentialsResponseBodyData extends TeaModel {
         /**
+         * <p>The password.</p>
+         * 
          * <strong>example:</strong>
          * <p>M0NQNG/uRUrfIxW7er/S9gKX****</p>
          */
@@ -96,6 +113,8 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>1602585817:****</p>
          */

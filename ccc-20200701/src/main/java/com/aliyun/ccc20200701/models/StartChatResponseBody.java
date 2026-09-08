@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class StartChatResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public StartChatResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,6 +93,8 @@ public class StartChatResponseBody extends TeaModel {
 
     public static class StartChatResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the chat session.</p>
+         * 
          * <strong>example:</strong>
          * <p>$23086709$EAUNIT</p>
          */
@@ -85,6 +102,8 @@ public class StartChatResponseBody extends TeaModel {
         public String chatConversationId;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat-525523618219921408</p>
          */

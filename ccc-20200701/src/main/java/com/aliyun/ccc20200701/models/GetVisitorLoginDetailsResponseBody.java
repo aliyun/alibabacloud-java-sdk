@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class GetVisitorLoginDetailsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public GetVisitorLoginDetailsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Parameter information.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>19D09CCC-F298-4124-849A-AFA217819011</p>
      */
@@ -89,6 +107,8 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
 
     public static class GetVisitorLoginDetailsResponseBodyData extends TeaModel {
         /**
+         * <p>Chat session application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7pjxxx</p>
          */
@@ -96,6 +116,8 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         public String chatAppId;
 
         /**
+         * <p>Chat session application key.</p>
+         * 
          * <strong>example:</strong>
          * <p>955e4bd7xxxxxxxxxxxxxd7898ba9fa0d0</p>
          */
@@ -103,6 +125,8 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         public String chatAppKey;
 
         /**
+         * <p>Chat device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4c51c9116c36537cb850dc1081d745df</p>
          */
@@ -110,6 +134,8 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         public String chatDeviceId;
 
         /**
+         * <p>Chat session login token.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;accessToken&quot;:&quot;oauth_cloud_key:+4oJXUAFSWxGD2YuRW4V/oUN0/8qJGNc0I<em><strong><strong><strong><strong>n1E3DOr3Q3lX00ZnTpyqRi8Y6hYoLYA7n2ZkWuv485hVtXeSgnIQkKxXPbMgwoLxWaK//lI5Dn/mb4YuDifigv+ZyFzc+07vxm9ZFu/NjA==&quot;,&quot;accessTokenExpiredTime&quot;:86400000,&quot;refreshToken&quot;:&quot;oauth_cloud_key:/U+8UueDmpeUszhXC+SWow4pNLZp2C</strong></strong></strong></strong></em>**U/377BNXF+Mjo1lFgDk6GtEjNNoJpapX2mHH8GcRke2+yKQs/w4gAN9xSMn543Ciung+93pXV6IpQGbEVlu&quot;}</p>
          */
@@ -117,6 +143,8 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         public String chatLoginToken;
 
         /**
+         * <p>Chat session server address.</p>
+         * 
          * <strong>example:</strong>
          * <p>wss://wss.im.dingtalk.cn</p>
          */
@@ -124,6 +152,8 @@ public class GetVisitorLoginDetailsResponseBody extends TeaModel {
         public String chatServerUrl;
 
         /**
+         * <p>Visitor\&quot;s identity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dac9c001****a15684ea91a81317</p>
          */

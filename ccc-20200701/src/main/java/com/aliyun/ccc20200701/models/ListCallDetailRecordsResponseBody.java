@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListCallDetailRecordsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListCallDetailRecordsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,6 +93,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
 
     public static class ListCallDetailRecordsResponseBodyDataList extends TeaModel {
         /**
+         * <p>An additional broker number, which may be used in double-call scenarios.</p>
+         * 
          * <strong>example:</strong>
          * <p>0533128****</p>
          */
@@ -85,16 +102,26 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String additionalBroker;
 
         /**
+         * <p>A list of agent IDs, with multiple values separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
         @NameInMap("AgentIds")
         public String agentIds;
 
+        /**
+         * <p>List of agent names involved in the call, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("AgentNames")
         public String agentNames;
 
         /**
+         * <p>The intermediary number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0533127****</p>
          */
@@ -102,29 +129,53 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String broker;
 
         /**
+         * <p>Call duration. For inbound calls, timing starts when the call enters IVR. For outbound calls, timing starts when the call is connected. The unit is seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("CallDuration")
         public String callDuration;
 
+        /**
+         * <p>The Call-Id field in the underlying SIP protocol. If you need to obtain the call ID from the number provider side, you can retrieve it from this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
+         */
         @NameInMap("CallIds")
         public String callIds;
 
         /**
+         * <p>Called number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1332315****</p>
          */
         @NameInMap("CalledNumber")
         public String calledNumber;
 
+        /**
+         * <p>The callee\&quot;s location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>山东省-济南</p>
+         */
         @NameInMap("CalleeLocation")
         public String calleeLocation;
 
+        /**
+         * <p>Caller location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京市-北京</p>
+         */
         @NameInMap("CallerLocation")
         public String callerLocation;
 
         /**
+         * <p>Calling number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0533128****</p>
          */
@@ -132,6 +183,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String callingNumber;
 
         /**
+         * <p>Reason for call termination.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -139,6 +192,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String contactDisposition;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-12515239414412****</p>
          */
@@ -146,16 +201,26 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>Call type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Outbound</p>
          */
         @NameInMap("ContactType")
         public String contactType;
 
+        /**
+         * <p>Dial-up duration, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DialingTime")
         public Long dialingTime;
 
         /**
+         * <p>Reason for failure to connect.</p>
+         * 
          * <strong>example:</strong>
          * <p>NotConnected</p>
          */
@@ -163,16 +228,26 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String earlyMediaState;
 
         /**
+         * <p>The time when the call was established. If the call was not established, this value is empty. The format is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1532448000000</p>
          */
         @NameInMap("EstablishedTime")
         public Long establishedTime;
 
+        /**
+         * <p>The hold duration, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("HeldTime")
         public Long heldTime;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -180,6 +255,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>IVR duration, in seconds. This is the time interval from when the IVR starts until the call enters the agent queue (or the customer hangs up).</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -187,6 +264,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Long ivrTime;
 
         /**
+         * <p>The queue duration, in seconds, measured from when the customer entered the agent queue until the agent started ringing (or the customer abandoned the call, the queue timed out, or the queue overflowed).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -194,6 +273,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Long queueTime;
 
         /**
+         * <p>Recording duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -201,6 +282,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Long recordingDuration;
 
         /**
+         * <p>Indicates whether the recording has been generated. Returns false if the call was not established.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -208,16 +291,26 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Boolean recordingReady;
 
         /**
+         * <p>The party that ended the call.</p>
+         * 
          * <strong>example:</strong>
          * <p>customer</p>
          */
         @NameInMap("ReleaseInitiator")
         public String releaseInitiator;
 
+        /**
+         * <p>Hang-up reason for the channel, indicating why the current channel was disconnected. The value is derived from response codes defined in the SIP protocol. Customers should refer to the SIP protocol to analyze the hang-up reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>486:USER_BUSY</p>
+         */
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
         /**
+         * <p>The call end time, formatted as a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1532707199000</p>
          */
@@ -225,16 +318,26 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Long releaseTime;
 
         /**
+         * <p>Ring duration, which is the time from when the agent\&quot;s phone starts ringing until the agent answers (or the customer hangs up), in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("RingTime")
         public Long ringTime;
 
+        /**
+         * <p>The satisfaction description, corresponding to the configuration of the satisfaction module in the satisfaction IVR. This is defined by the customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>满意</p>
+         */
         @NameInMap("SatisfactionDescription")
         public String satisfactionDescription;
 
         /**
+         * <p>Satisfaction rating, represented as a single-digit numeric value entered by the customer.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -242,6 +345,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Integer satisfactionIndex;
 
         /**
+         * <p>The channel used for the satisfaction survey.</p>
+         * 
          * <strong>example:</strong>
          * <p>IVR</p>
          */
@@ -249,6 +354,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String satisfactionSurveyChannel;
 
         /**
+         * <p>Indicates whether a satisfaction survey was initiated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -256,26 +363,44 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Boolean satisfactionSurveyOffered;
 
         /**
+         * <p>The IDs of the skill groups to which the agents participating in the call belong. Multiple skill group IDs are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
         @NameInMap("SkillGroupIds")
         public String skillGroupIds;
 
+        /**
+         * <p>The names of the skill groups to which the agents participating in the call belong. Multiple skill group names are separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("SkillGroupNames")
         public String skillGroupNames;
 
         /**
+         * <p>Call start time. For inbound calls, timing starts when the call enters IVR. For outbound calls, timing starts from dial-up. The format is a Unix string in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1532448000000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>Talk time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TalkTime")
         public Long talkTime;
 
         /**
+         * <p>The customer\&quot;s waiting duration, which equals QueueTime plus RingTime. If the customer abandons the call during waiting, the value is 0. The unit is seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -570,10 +695,15 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
     }
 
     public static class ListCallDetailRecordsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of call records.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListCallDetailRecordsResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -581,6 +711,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -588,6 +720,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count. A real numeric value is returned only when PageNumber is 1; otherwise, 0 is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */

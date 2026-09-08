@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRecentCallDetailRecordsRequest extends TeaModel {
     /**
+     * <p>Fuzzy search criteria in JSON object format. The object contains three properties that can be combined arbitrarily: phoneNumber (fuzzy search by calling or called number), callingNumber (fuzzy search by calling number), and calledNumber (fuzzy search by called number).</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;phoneNumber&quot;:&quot;1312121****&quot;,&quot;callingNumber&quot;:&quot;1312121****&quot;,&quot;calledNumber&quot;:&quot;1312121****&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class ListRecentCallDetailRecordsRequest extends TeaModel {
     public String criteria;
 
     /**
+     * <p>End UNIX timestamp. The default value is the current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1604639129000</p>
      */
@@ -19,6 +23,7 @@ public class ListRecentCallDetailRecordsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ListRecentCallDetailRecordsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page ordinal number, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class ListRecentCallDetailRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,8 @@ public class ListRecentCallDetailRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Start UNIX timestamp. The default value is the start time of the current day. The earliest allowed time is 180 days before the current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1604638129000</p>
      */

@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class GetDocumentUploadParametersResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetDocumentUploadParametersResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>9FBA26B0-462B-4D77-B78F-AF35560DBC71</p>
      */
@@ -89,6 +107,8 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
 
     public static class GetDocumentUploadParametersResponseBodyData extends TeaModel {
         /**
+         * <p>AccessKeyId used for signing</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -96,6 +116,8 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
+         * <p>Expired At</p>
+         * 
          * <strong>example:</strong>
          * <p>1647313420</p>
          */
@@ -103,6 +125,8 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         public Integer expireTime;
 
         /**
+         * <p>OSS file path</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test/blacklist.xlsx</p>
          */
@@ -110,7 +134,7 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         public String filePath;
 
         /**
-         * <p>oss host</p>
+         * <p>OSS host</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></p>
@@ -119,6 +143,8 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>Signature policy</p>
+         * 
          * <strong>example:</strong>
          * <p>Permit</p>
          */
@@ -126,6 +152,8 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
         public String policy;
 
         /**
+         * <p>Signature</p>
+         * 
          * <strong>example:</strong>
          * <p>zi31STIMtIfa/UN2l+6lww****</p>
          */

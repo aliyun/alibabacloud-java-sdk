@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListCampaignTrendingReportResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of statistical data points.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCampaignTrendingReportResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CCEF32F-8614-535F-A1D9-D85B8C0DC4F0</p>
      */
@@ -78,16 +93,26 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
 
     public static class ListCampaignTrendingReportResponseBodyData extends TeaModel {
         /**
+         * <p>Number of agents on break.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("BreakAgents")
         public Long breakAgents;
 
+        /**
+         * <p>Number of agents in break status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
         /**
+         * <p>The concurrent call volume, which refers to the number of simultaneous outbound calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -95,6 +120,8 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         public Long concurrency;
 
         /**
+         * <p>The timestamp for segmented statistics, formatted as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1634037840000</p>
          */
@@ -102,51 +129,101 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         public Long datetime;
 
         /**
+         * <p>The number of published agents.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("LoggedInAgents")
         public Long loggedInAgents;
 
+        /**
+         * <p>The number of agents in outbound-only mode who are on a break.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("OutboundScenarioBreakingAgents")
         public Long outboundScenarioBreakingAgents;
 
+        /**
+         * <p>Number of agents in idle status under outbound-only mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OutboundScenarioReadyAgents")
         public Long outboundScenarioReadyAgents;
 
+        /**
+         * <p>The number of agents in outbound-only mode who are currently on a call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OutboundScenarioTalkingAgents")
         public Long outboundScenarioTalkingAgents;
 
+        /**
+         * <p>Number of agents in post-processing status under outbound-only mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("OutboundScenarioWorkingAgents")
         public Long outboundScenarioWorkingAgents;
 
         /**
+         * <p>Number of idle agents.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("ReadyAgents")
         public Long readyAgents;
 
+        /**
+         * <p>Time of the statistical data point, formatted as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1604639129000</p>
+         */
         @NameInMap("StatsTime")
         public Long statsTime;
 
         /**
+         * <p>Deprecated. Refer to TalkAgents.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("TalkAgents")
         public Long talkAgents;
 
+        /**
+         * <p>The number of agents in a call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TalkingAgents")
         public Long talkingAgents;
 
         /**
+         * <p>Deprecated. Refer to WorkingAgents.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("WorkAgents")
         public Long workAgents;
 
+        /**
+         * <p>Number of agents in post-processing status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WorkingAgents")
         public Long workingAgents;
 

@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetHistoricalCampaignReportResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetHistoricalCampaignReportResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E3A847C1-9800-57DF-9172-2CDDC026388D</p>
      */
@@ -77,20 +92,36 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
     }
 
     public static class GetHistoricalCampaignReportResponseBodyData extends TeaModel {
+        /**
+         * <p>Abandon rate, calculated as: number of abandoned calls divided by total calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.10</p>
+         */
         @NameInMap("AbandonRate")
         public Float abandonRate;
 
         /**
+         * <p>Deprecated. Refer to AbandonRate instead.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.10</p>
          */
         @NameInMap("AbandonedRate")
         public Float abandonedRate;
 
+        /**
+         * <p>Answer rate, in %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.50</p>
+         */
         @NameInMap("AnswerRate")
         public Float answerRate;
 
         /**
+         * <p>Number of abandoned calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -98,6 +129,8 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         public Long callsAbandoned;
 
         /**
+         * <p>Number of connected calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -105,6 +138,8 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         public Long callsConnected;
 
         /**
+         * <p>Number of calls dialed, including retries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -112,6 +147,8 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         public Long callsDialed;
 
         /**
+         * <p>Deprecated. Refer to AnswerRate instead.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.50</p>
          */
@@ -119,6 +156,8 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         public Float connectedRate;
 
         /**
+         * <p>Agent occupancy rate, calculated as: (total talk duration + total post-processing duration) divided by total agent online duration. Total agent online duration refers to the sum of online durations of all agents in the skill group associated with this activity.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.50</p>
          */

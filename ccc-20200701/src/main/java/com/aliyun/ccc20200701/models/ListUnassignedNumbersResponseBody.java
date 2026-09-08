@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListUnassignedNumbersResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListUnassignedNumbersResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -77,16 +92,30 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
     }
 
     public static class ListUnassignedNumbersResponseBodyDataList extends TeaModel {
+        /**
+         * <p>City where the number is registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>乐山</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>Number.</p>
+         * 
          * <strong>example:</strong>
          * <p>08330011****</p>
          */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <p>Province where the number is registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>四川</p>
+         */
         @NameInMap("Province")
         public String province;
 
@@ -122,10 +151,15 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
     }
 
     public static class ListUnassignedNumbersResponseBodyData extends TeaModel {
+        /**
+         * <p>List of numbers.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListUnassignedNumbersResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -133,6 +167,8 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -140,6 +176,8 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

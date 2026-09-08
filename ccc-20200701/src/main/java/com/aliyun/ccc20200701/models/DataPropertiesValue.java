@@ -4,10 +4,18 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class DataPropertiesValue extends TeaModel {
+    /**
+     * <p>The display name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>姓名</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -15,6 +23,8 @@ public class DataPropertiesValue extends TeaModel {
     public String description;
 
     /**
+     * <p>The name.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -22,6 +32,8 @@ public class DataPropertiesValue extends TeaModel {
     public String name;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>string</p>
      */
@@ -29,16 +41,26 @@ public class DataPropertiesValue extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The regular expression that is used for validation.</p>
+     * 
      * <strong>example:</strong>
      * <p>^</p>
      */
     @NameInMap("Pattern")
     public String pattern;
 
+    /**
+     * <p>The error message that is returned if the value does not match the regular expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>不是有效的email地址</p>
+     */
     @NameInMap("PatternErrorMessage")
     public String patternErrorMessage;
 
     /**
+     * <p>The minimum length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -46,6 +68,8 @@ public class DataPropertiesValue extends TeaModel {
     public Integer minLength;
 
     /**
+     * <p>The maximum length.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -53,6 +77,8 @@ public class DataPropertiesValue extends TeaModel {
     public Integer maxLength;
 
     /**
+     * <p>The minimum value.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -60,6 +86,8 @@ public class DataPropertiesValue extends TeaModel {
     public Double minimum;
 
     /**
+     * <p>The maximum value.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -67,6 +95,8 @@ public class DataPropertiesValue extends TeaModel {
     public Double maximum;
 
     /**
+     * <p>Indicates whether the field is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -74,6 +104,8 @@ public class DataPropertiesValue extends TeaModel {
     public Boolean required;
 
     /**
+     * <p>Indicates whether the field is a system field.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -81,6 +113,8 @@ public class DataPropertiesValue extends TeaModel {
     public Boolean system;
 
     /**
+     * <p>Indicates whether the field is disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -88,6 +122,8 @@ public class DataPropertiesValue extends TeaModel {
     public Boolean disabled;
 
     /**
+     * <p>Indicates whether the field is an array.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -95,6 +131,8 @@ public class DataPropertiesValue extends TeaModel {
     public Boolean array;
 
     /**
+     * <p>Indicates whether the field is read-only.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -102,6 +140,8 @@ public class DataPropertiesValue extends TeaModel {
     public Boolean readOnly;
 
     /**
+     * <p>The type of the editor.</p>
+     * 
      * <strong>example:</strong>
      * <p>textbox</p>
      */
@@ -109,6 +149,8 @@ public class DataPropertiesValue extends TeaModel {
     public String editorType;
 
     /**
+     * <p>The extended properties.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -116,6 +158,8 @@ public class DataPropertiesValue extends TeaModel {
     public String attributes;
 
     /**
+     * <p>The display order.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -123,6 +167,8 @@ public class DataPropertiesValue extends TeaModel {
     public Integer displayOrder;
 
     /**
+     * <p>The time when the field was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-07-14 10:48:43.0</p>
      */
@@ -130,6 +176,8 @@ public class DataPropertiesValue extends TeaModel {
     public Long createdTime;
 
     /**
+     * <p>The time when the field was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-07-14 10:48:43.0</p>
      */
@@ -137,6 +185,8 @@ public class DataPropertiesValue extends TeaModel {
     public Long updatedTime;
 
     /**
+     * <p>Creator</p>
+     * 
      * <strong>example:</strong>
      * <p>tom</p>
      */

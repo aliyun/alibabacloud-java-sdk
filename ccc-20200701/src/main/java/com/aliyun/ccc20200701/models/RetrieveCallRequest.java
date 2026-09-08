@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetrieveCallRequest extends TeaModel {
     /**
+     * <p>Channel ID of the call to retrieve.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class RetrieveCallRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -21,6 +24,7 @@ public class RetrieveCallRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class RetrieveCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class RetrieveCallRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

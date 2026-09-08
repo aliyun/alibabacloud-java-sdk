@@ -4,23 +4,44 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ModifyUserRequest extends TeaModel {
+    /**
+     * <p>Agent profile picture URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://abc.com/sam.jpb">http://abc.com/sam.jpb</a></p>
+     */
     @NameInMap("AvatarUrl")
     public String avatarUrl;
 
     /**
+     * <p>Agent ID (employee ID).</p>
+     * 
      * <strong>example:</strong>
      * <p>1001</p>
      */
     @NameInMap("DisplayId")
     public String displayId;
 
+    /**
+     * <p>User\&quot;s full name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三疯</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>Whether to force the modification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,16 +51,26 @@ public class ModifyUserRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Agent\&quot;s personal phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1382114****</p>
      */
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <p>Agent nickname</p>
+     * 
+     * <strong>example:</strong>
+     * <p>老王</p>
+     */
     @NameInMap("Nickname")
     public String nickname;
 
     /**
+     * <p>Role ID, in the format: role\@instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>Admin@ccc-test</p>
      */
@@ -47,6 +78,7 @@ public class ModifyUserRequest extends TeaModel {
     public String roleId;
 
     /**
+     * <p>Agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +88,7 @@ public class ModifyUserRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>Work mode.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

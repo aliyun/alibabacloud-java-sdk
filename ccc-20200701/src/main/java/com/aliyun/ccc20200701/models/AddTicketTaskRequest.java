@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddTicketTaskRequest extends TeaModel {
     /**
+     * <p>The assignee for the signature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,17 @@ public class AddTicketTaskRequest extends TeaModel {
     public String assignee;
 
     /**
+     * <p>Comments.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请assignee处理。</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +35,14 @@ public class AddTicketTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The position to add the signature.</p>
+     * <ul>
+     * <li><p>Before: Before the current handler.</p>
+     * </li>
+     * <li><p>After: After the current handler.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>After</p>
      */
@@ -36,6 +50,7 @@ public class AddTicketTaskRequest extends TeaModel {
     public String position;
 
     /**
+     * <p>The ticket flow node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +60,7 @@ public class AddTicketTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The ticket ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

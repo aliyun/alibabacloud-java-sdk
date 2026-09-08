@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListMultiChannelRecordingsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Recording list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListMultiChannelRecordingsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B19CD719-9F65-56A6-8B79-DA4282EA4797</p>
      */
@@ -77,9 +92,21 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
     }
 
     public static class ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments extends TeaModel {
+        /**
+         * <p>The end time of the call hold, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687860143925</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Call hold start time, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1673255098049</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -108,6 +135,8 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
 
     public static class ListMultiChannelRecordingsResponseBodyData extends TeaModel {
         /**
+         * <p>Agent call channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ch-user-8526899****-8602****-1656926504363-job-25920271311543****</p>
          */
@@ -115,16 +144,26 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         public String agentChannelId;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>Agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-25920271311543****</p>
          */
@@ -132,6 +171,8 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>Recording duration, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>56321</p>
          */
@@ -139,6 +180,8 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>Recording file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.mkv</p>
          */
@@ -146,16 +189,23 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>OSS download URL for the recording file. Note the time-to-live (TTL) of the download URL. The download URL is valid for 1 day.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-shanghai.oss-cn-shanghai.aliyuncs.com/ccc-test/job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.mkv?Expires=1657014031&OSSAccessKeyId=****&Signature=">https://ccc-v2-shanghai.oss-cn-shanghai.aliyuncs.com/ccc-test/job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.mkv?Expires=1657014031&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <p>List of call hold time segments.</p>
+         */
         @NameInMap("HoldTimeSegments")
         public java.util.List<ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments> holdTimeSegments;
 
         /**
+         * <p>RAM account ID for the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>22807673106369****</p>
          */
@@ -163,6 +213,8 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         public String ramId;
 
         /**
+         * <p>Skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -170,6 +222,8 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>Recording start time, in UNIX timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1656926518491</p>
          */

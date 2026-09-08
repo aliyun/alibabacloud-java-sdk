@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,19 +14,32 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("PagedAgentSummaryReport")
     public ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReport pagedAgentSummaryReport;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>27DD30C4-CAE2-481A-97CC-D3C54625341D</p>
      */
@@ -32,6 +47,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +110,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
 
     public static class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListInbound extends TeaModel {
         /**
+         * <p>Average ring time, in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -100,6 +119,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long averageRingTime;
 
         /**
+         * <p>Average talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -107,6 +128,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long averageTalkTime;
 
         /**
+         * <p>Average post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -114,6 +137,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long averageWorkTime;
 
         /**
+         * <p>Acknowledgement Count, which is the number of times the agent answered calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -121,6 +146,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long callsHandled;
 
         /**
+         * <p>Assign Count, which is the number of calls assigned to this agent, including calls blindly transferred or consultation-transferred from other agents.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -128,6 +155,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long callsOffered;
 
         /**
+         * <p>Acknowledgement rate. Calculation Formula: CallsHandled / CallsOffered (because acknowledgement events and assign events may fall into different Time Ranges, the Result may exceed 100% in certain cases).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -135,6 +164,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Float handleRate;
 
         /**
+         * <p>Maximum ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -142,6 +173,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long maxRingTime;
 
         /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -149,6 +182,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -156,6 +191,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>Satisfaction Index, which is the average value of the single-digit satisfaction rating entered by customers.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -163,6 +200,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -170,6 +209,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Response Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -177,6 +218,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Answer rate within 20 seconds, in percent (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -184,6 +227,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Float serviceLevel20;
 
         /**
+         * <p>Total ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -191,6 +236,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long totalRingTime;
 
         /**
+         * <p>Total talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -198,6 +245,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -341,6 +390,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
 
     public static class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOutbound extends TeaModel {
         /**
+         * <p>Answer rate. Calculation Formula: CallsAnswered / CallsDialed. (Because management events for answering and acknowledgement may fall into different Time Ranges, the Result may exceed 100% in some cases.)</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -348,6 +399,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Float answerRate;
 
         /**
+         * <p>Average dial-up time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -355,6 +408,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long averageDialingTime;
 
         /**
+         * <p>Average talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -362,6 +417,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long averageTalkTime;
 
         /**
+         * <p>Average post-processing duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -369,6 +426,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long averageWorkTime;
 
         /**
+         * <p>Number of answered calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -376,6 +435,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long callsAnswered;
 
         /**
+         * <p>Number of dial-up calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -383,6 +444,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long callsDialed;
 
         /**
+         * <p>Maximum dial-up duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -390,6 +453,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long maxDialingTime;
 
         /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -397,6 +462,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum post-processing duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -404,6 +471,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public String maxWorkTime;
 
         /**
+         * <p>Satisfaction index, which is the average value of the satisfaction rating digits (single-digit numbers).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -411,6 +480,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -418,6 +489,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Response Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -425,6 +498,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Total dial-up time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -432,6 +507,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long totalDialingTime;
 
         /**
+         * <p>Total talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -439,6 +516,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -574,6 +653,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
 
     public static class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOverall extends TeaModel {
         /**
+         * <p>Average ready time. Calculation Formula: TotalReadyTime divided by the Count of ready events. The Count of ready events is a non-API statistical field, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -581,6 +662,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long averageReadyTime;
 
         /**
+         * <p>Average talk time. Calculation Formula: TotalTalkTime / (CallsAnswered + CallsHandled), in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -588,6 +671,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long averageTalkTime;
 
         /**
+         * <p>Average post-processing time. Calculation Formula: TotalWorkTime divided by TotalCalls, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -595,6 +680,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long averageWorkTime;
 
         /**
+         * <p>Maximum ready time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>37</p>
          */
@@ -602,6 +689,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long maxReadyTime;
 
         /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -609,6 +698,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum post-processing time after a call, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -616,6 +707,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>Agent occupancy rate. Calculation Formula: (TotalWorkTime + TotalTalkTime) / TotalLoggedInTime.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -623,6 +716,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Float occupancyRate;
 
         /**
+         * <p>Quantity of directly transferred calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -630,6 +725,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long oneTransferCalls;
 
         /**
+         * <p>Satisfaction index, which is the average of the satisfaction rating digits (single-digit numbers).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -637,6 +734,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -644,6 +743,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -651,6 +752,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Total break time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -658,6 +761,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long totalBreakTime;
 
         /**
+         * <p>Total call volume. Calculation Formula: CallsOffered + CallsDialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -665,6 +770,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long totalCalls;
 
         /**
+         * <p>Total logon time, excluding break time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -672,6 +779,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long totalLoggedInTime;
 
         /**
+         * <p>Total ready time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -679,6 +788,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long totalReadyTime;
 
         /**
+         * <p>Total talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -686,6 +797,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -837,19 +950,32 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
 
     public static class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportList extends TeaModel {
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>Agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王。</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
+        /**
+         * <p>Inbound metrics.</p>
+         */
         @NameInMap("Inbound")
         public ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListInbound inbound;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -857,29 +983,47 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Agent logon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
         @NameInMap("LoginName")
         public String loginName;
 
+        /**
+         * <p>Outbound metrics.</p>
+         */
         @NameInMap("Outbound")
         public ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOutbound outbound;
 
+        /**
+         * <p>Overall metric.</p>
+         */
         @NameInMap("Overall")
         public ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOverall overall;
 
         /**
+         * <p>List of skill group IDs to which the agent belongs, formatted as a JSON array string, where each array element is a skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;skillgroup1@ccc-test&quot;,&quot;skillgroup2@ccc-test&quot;]</p>
          */
         @NameInMap("SkillGroupIds")
         public String skillGroupIds;
 
+        /**
+         * <p>List of skill group names to which the agent belongs, formatted as a JSON array string, where each array element is a skill group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;测试技能组1&quot;,&quot;测试技能组2&quot;]</p>
+         */
         @NameInMap("SkillGroupNames")
         public String skillGroupNames;
 
         /**
+         * <p>The timestamp of the statistics data point.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-09-13 00:00:00</p>
          */
@@ -974,10 +1118,15 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
     }
 
     public static class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReport extends TeaModel {
+        /**
+         * <p>List of agent summary data.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -985,6 +1134,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -992,6 +1143,8 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListRealtimeSkillGroupStatesResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>26A34338-5CD9-4C95-A7A6-5BDCE76C6B94</p>
      */
@@ -77,9 +92,21 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
     }
 
     public static class ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList extends TeaModel {
+        /**
+         * <p>Break status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户自定义参数，比如午餐、会议等</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
+        /**
+         * <p>The number of times the break status occurred</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Long count;
 
@@ -107,10 +134,15 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
     }
 
     public static class ListRealtimeSkillGroupStatesResponseBodyDataList extends TeaModel {
+        /**
+         * <p>Break statistics.</p>
+         */
         @NameInMap("BreakCodeDetailList")
         public java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList> breakCodeDetailList;
 
         /**
+         * <p>Number of agents currently on break.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -118,6 +150,8 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public Long breakingAgents;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -125,6 +159,8 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Number of agents currently logged in.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -132,6 +168,8 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public Long loggedInAgents;
 
         /**
+         * <p>Current maximum queue waiting time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -139,6 +177,8 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public Long longestWaitingTime;
 
         /**
+         * <p>Number of agents in outbound-only mode and in an idle status.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -146,6 +186,8 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public Long outboundScenarioReadyAgents;
 
         /**
+         * <p>Number of agents currently idle.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -153,6 +195,8 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public Long readyAgents;
 
         /**
+         * <p>Skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -160,6 +204,8 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>Skill group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
          */
@@ -167,16 +213,26 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public String skillGroupName;
 
         /**
+         * <p>Number of agents currently on a call.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("TalkingAgents")
         public Long talkingAgents;
 
+        /**
+         * <p>Total number of agents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("TotalAgents")
         public Long totalAgents;
 
         /**
+         * <p>Number of calls currently in the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -184,6 +240,8 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public Long waitingCalls;
 
         /**
+         * <p>Number of agents currently in post-processing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -302,10 +360,15 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
     }
 
     public static class ListRealtimeSkillGroupStatesResponseBodyData extends TeaModel {
+        /**
+         * <p>List of real-time skill group status data.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -313,6 +376,8 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -320,6 +385,8 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

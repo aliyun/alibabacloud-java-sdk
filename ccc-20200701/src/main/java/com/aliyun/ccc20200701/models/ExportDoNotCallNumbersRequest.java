@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportDoNotCallNumbersRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ExportDoNotCallNumbersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies the scope of the do-not-call numbers. A value of SYSTEM applies to your entire Alibaba Cloud account, while INSTANCE applies only to the current instance. The default value is INSTANCE.</p>
+     * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>
      */
@@ -21,6 +24,8 @@ public class ExportDoNotCallNumbersRequest extends TeaModel {
     public String scope;
 
     /**
+     * <p>The keyword for a fuzzy search of phone numbers or remarks. If this parameter is left empty, no keyword-based filtering is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>RemarkA</p>
      */

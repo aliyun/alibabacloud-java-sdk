@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportContactFlowRequest extends TeaModel {
     /**
+     * <p>Data</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ImportContactFlowRequest extends TeaModel {
     public String flowPackageData;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ImportContactFlowRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DE803553-8AA9-4B9D-9E4E-A82BC69EDCEE</p>
      */

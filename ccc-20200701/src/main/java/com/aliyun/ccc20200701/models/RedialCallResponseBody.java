@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class RedialCallResponseBody extends TeaModel {
     /**
+     * <p>Status code. A return value of &quot;OK&quot; indicates that the request succeeded. For other error codes, see the error code list.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public RedialCallResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BF268B34-09C2-43FD-BAC4-5D31EA63****</p>
      */
@@ -89,6 +107,8 @@ public class RedialCallResponseBody extends TeaModel {
 
     public static class RedialCallResponseBodyDataCallContextChannelContexts extends TeaModel {
         /**
+         * <p>The call type of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
@@ -96,6 +116,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String callType;
 
         /**
+         * <p>Call channel flags.</p>
+         * 
          * <strong>example:</strong>
          * <p>COACHING</p>
          */
@@ -103,6 +125,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String channelFlags;
 
         /**
+         * <p>Channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
          */
@@ -110,6 +134,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The status of the voice channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>CREATED</p>
          */
@@ -117,6 +143,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String channelState;
 
         /**
+         * <p>The callee of the voice channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -124,6 +152,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String destination;
 
         /**
+         * <p>Call job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6573574060089****</p>
          */
@@ -131,6 +161,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The calling party of the call channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>1318888****</p>
          */
@@ -138,6 +170,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String originator;
 
         /**
+         * <p>The party that initiated the hang-up of the call channel, indicating who first terminated the call.</p>
+         * 
          * <strong>example:</strong>
          * <p>139xxxx0501</p>
          */
@@ -145,6 +179,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String releaseInitiator;
 
         /**
+         * <p>The release reason of the voice channel, indicating why the current voice channel was released. The value is derived from the response codes defined in the SIP protocol. Customers can refer to the SIP protocol to analyze the release reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>486:USER_BUSY</p>
          */
@@ -152,6 +188,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String releaseReason;
 
         /**
+         * <p>UNIX timestamp of the last status change.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609138903315</p>
          */
@@ -159,6 +197,8 @@ public class RedialCallResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>User extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8000****</p>
          */
@@ -166,6 +206,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String userExtension;
 
         /**
+         * <p>Agent User ID information.</p>
+         * 
          * <strong>example:</strong>
          * <p>samzhang@abc</p>
          */
@@ -277,16 +319,23 @@ public class RedialCallResponseBody extends TeaModel {
 
     public static class RedialCallResponseBodyDataCallContext extends TeaModel {
         /**
+         * <p>The call type, indicating the type of the call when it was initially initiated.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <p>The list of call channels.</p>
+         */
         @NameInMap("ChannelContexts")
         public java.util.List<RedialCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
         /**
+         * <p>Cloud Contact Center instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -294,6 +343,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The call job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -340,13 +391,37 @@ public class RedialCallResponseBody extends TeaModel {
     }
 
     public static class RedialCallResponseBodyDataUserContext extends TeaModel {
+        /**
+         * <p>Break status code, which is divided into system-defined and customer-defined types.</p>
+         * <p>System-defined break codes:</p>
+         * <ul>
+         * <li><p>Warm-up: A temporary break state after an agent is published but before becoming idle.</p>
+         * </li>
+         * <li><p>RingingTimeout: A break caused by ringing timeout for the agent.</p>
+         * </li>
+         * <li><p>RejectCall: A break caused by the agent rejecting a call.</p>
+         * </li>
+         * </ul>
+         * <p>There are no restrictions on customer-defined status codes. Customers can define them according to their business needs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Warm-up</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
+        /**
+         * <p>Device ID, which is the identity of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CCC-x.x.x.x-chrome102-bsdf911812c60f61e</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
         /**
+         * <p>User extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8000****</p>
          */
@@ -354,6 +429,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -361,6 +438,8 @@ public class RedialCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6573574060089****</p>
          */
@@ -368,25 +447,68 @@ public class RedialCallResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <p>List of skill group IDs that the agent has signed into.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>Agent User ID information.</p>
+         * 
          * <strong>example:</strong>
          * <p>samzhang@abc</p>
          */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>Agent status. Enumeration values:</p>
+         * <ul>
+         * <li><p>READY: idle</p>
+         * </li>
+         * <li><p>WORKING: post-processing</p>
+         * </li>
+         * <li><p>DIALING: dial-up</p>
+         * </li>
+         * <li><p>BREAK: break</p>
+         * </li>
+         * <li><p>OFFLINE: offline</p>
+         * </li>
+         * <li><p>TALKING: talking</p>
+         * </li>
+         * <li><p>RINGING: ringing</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>READY</p>
+         */
         @NameInMap("UserState")
         public String userState;
 
+        /**
+         * <p>Work mode. Enumeration values:</p>
+         * <ul>
+         * <li><p>ON_SITE: On-site mode</p>
+         * </li>
+         * <li><p>OFF_SITE: Off-site mode</p>
+         * </li>
+         * <li><p>OFFICE_PHONE: Office phone mode</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
+         */
         @NameInMap("WorkMode")
         public String workMode;
 
@@ -478,16 +600,24 @@ public class RedialCallResponseBody extends TeaModel {
     }
 
     public static class RedialCallResponseBodyData extends TeaModel {
+        /**
+         * <p>Call context environment.</p>
+         */
         @NameInMap("CallContext")
         public RedialCallResponseBodyDataCallContext callContext;
 
         /**
+         * <p>Context ID, strictly ordered and incrementing.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789</p>
          */
         @NameInMap("ContextId")
         public Long contextId;
 
+        /**
+         * <p>Agent context environment.</p>
+         */
         @NameInMap("UserContext")
         public RedialCallResponseBodyDataUserContext userContext;
 

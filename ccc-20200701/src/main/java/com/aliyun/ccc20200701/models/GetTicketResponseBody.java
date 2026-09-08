@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class GetTicketResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public GetTicketResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of incorrect parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BF268B34-09C2-43FD-BAC4-5D31EA633111</p>
      */
@@ -89,39 +107,77 @@ public class GetTicketResponseBody extends TeaModel {
 
     public static class GetTicketResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the assignee.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent1@ccc-test</p>
          */
         @NameInMap("Assignee")
         public String assignee;
 
+        /**
+         * <p>The name of the assignee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席A</p>
+         */
         @NameInMap("AssigneeName")
         public String assigneeName;
 
         /**
+         * <p>The ticket category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8939-4223-86d0-6bd187905cc8</p>
          */
         @NameInMap("CategoryId")
         public String categoryId;
 
+        /**
+         * <p>The name of the ticket category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>售后类目</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
+         * <p>The reason for closing the ticket.</p>
+         * <ul>
+         * <li><p>Completed</p>
+         * </li>
+         * <li><p>Terminated</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Completed</p>
          */
         @NameInMap("CloseCode")
         public String closeCode;
 
+        /**
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The fields of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;productName&quot;:&quot;商品A&quot;}</p>
+         */
         @NameInMap("Context")
         public String context;
 
         /**
+         * <p>The time when the ticket was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620259200000</p>
          */
@@ -129,26 +185,44 @@ public class GetTicketResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>creator@ccc-test</p>
          */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The name of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席B</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
         /**
+         * <p>The ID of the current node.</p>
+         * 
          * <strong>example:</strong>
          * <p>912f0b78-6639-4a93-ae18-0d832885c27e</p>
          */
         @NameInMap("CurrentTaskId")
         public String currentTaskId;
 
+        /**
+         * <p>The name of the current node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>节点1</p>
+         */
         @NameInMap("CurrentTaskName")
         public String currentTaskName;
 
         /**
+         * <p>The time when the current node started.</p>
+         * 
          * <strong>example:</strong>
          * <p>1693793208075</p>
          */
@@ -156,6 +230,8 @@ public class GetTicketResponseBody extends TeaModel {
         public Long currentTaskStartTime;
 
         /**
+         * <p>The customer ID. This is the customer ID in the customer profile of Cloud Contact Center.</p>
+         * 
          * <strong>example:</strong>
          * <p>4223-86d0-6bd187905-891798749</p>
          */
@@ -163,6 +239,8 @@ public class GetTicketResponseBody extends TeaModel {
         public String customerId;
 
         /**
+         * <p>The time when the ticket processing was completed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1687846259999</p>
          */
@@ -170,6 +248,8 @@ public class GetTicketResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -177,6 +257,8 @@ public class GetTicketResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-399383842187575296</p>
          */
@@ -184,6 +266,16 @@ public class GetTicketResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The source of the ticket.</p>
+         * <ul>
+         * <li><p>AUDIO: Voice service.</p>
+         * </li>
+         * <li><p>CHAT: Web service.</p>
+         * </li>
+         * <li><p>Console: Created in the ticket console.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Audio</p>
          */
@@ -191,6 +283,8 @@ public class GetTicketResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The time when the ticket processing started.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620259200000</p>
          */
@@ -198,6 +292,18 @@ public class GetTicketResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The ticket status.</p>
+         * <ul>
+         * <li><p>Processing</p>
+         * </li>
+         * <li><p>Withdrawal</p>
+         * </li>
+         * <li><p>Rejected</p>
+         * </li>
+         * <li><p>Closed</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Processing</p>
          */
@@ -205,6 +311,8 @@ public class GetTicketResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The ticket template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test_43c2671b-8939-4223-86d0-6bd187905cc8_*****0666238</p>
          */
@@ -212,6 +320,8 @@ public class GetTicketResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The version of the ticket template.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -219,16 +329,26 @@ public class GetTicketResponseBody extends TeaModel {
         public String templateVersion;
 
         /**
+         * <p>The ticket ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b3a6a131-359e-46bd-9bc5-1f5cb0ea093f</p>
          */
         @NameInMap("TicketId")
         public String ticketId;
 
+        /**
+         * <p>The ticket title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>售后工单</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The time of the last update.</p>
+         * 
          * <strong>example:</strong>
          * <p>1693793208075</p>
          */

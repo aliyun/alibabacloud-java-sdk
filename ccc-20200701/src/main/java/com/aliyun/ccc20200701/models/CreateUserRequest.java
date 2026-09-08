@@ -4,10 +4,18 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
+    /**
+     * <p>The URL of the agent\&quot;s profile picture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://abc.com/sam.jpg">http://abc.com/sam.jpg</a></p>
+     */
     @NameInMap("AvatarUrl")
     public String avatarUrl;
 
     /**
+     * <p>The agent\&quot;s ID number. Set this as needed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1001</p>
      */
@@ -15,12 +23,17 @@ public class CreateUserRequest extends TeaModel {
     public String displayId;
 
     /**
+     * <p>The display name of the agent. It must be 1 to 128 characters in length.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>坐席小王</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>The email address of the agent. After the agent is created, an email is sent to this address. The email contains the logon URL for Cloud Contact Center, and the username and password for the RAM account. Keep this information secure.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +43,7 @@ public class CreateUserRequest extends TeaModel {
     public String email;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +53,7 @@ public class CreateUserRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The logon name of the agent. It must be 4 to 64 characters in length and can contain uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +63,8 @@ public class CreateUserRequest extends TeaModel {
     public String loginName;
 
     /**
+     * <p>The personal phone number of the agent. This number is used in OFF_SITE mode. The agent can use this number to answer calls in OFF_SITE mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>1382114****</p>
      */
@@ -55,16 +72,32 @@ public class CreateUserRequest extends TeaModel {
     public String mobile;
 
     /**
+     * <p>Specifies whether to send an email notification.</p>
+     * <ul>
+     * <li><p>true: Send</p>
+     * </li>
+     * <li><p>false: Do not send</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("NeedEmailNotification")
     public String needEmailNotification;
 
+    /**
+     * <p>The agent\&quot;s nickname.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>老王</p>
+     */
     @NameInMap("Nickname")
     public String nickname;
 
     /**
+     * <p>Specifies whether the agent must reset the password upon the first logon. If set to true, the agent is prompted to reset the password when they first log on to the RAM account. Otherwise, they are not prompted. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -72,6 +105,7 @@ public class CreateUserRequest extends TeaModel {
     public Boolean resetPassword;
 
     /**
+     * <p>The role ID. The format is Role\@InstanceID. The following roles are supported: Admin (administrator), Manager (skill group leader), and Agent (agent).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +115,8 @@ public class CreateUserRequest extends TeaModel {
     public String roleId;
 
     /**
+     * <p>A list of skill levels for skill groups. This is a string in the format of a JSON array. The array can contain up to 100 elements. Each element is an object that contains two fields: skillGroupId and skillLevel. For skillGroupId, enter the ID of the skill group to add. For skillLevel, enter the skill level to add. The value can range from 1 to 10. A smaller value indicates a higher skill level, meaning the agent can handle more calls per unit of time.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;skillGroupId&quot;:&quot;skillgroup1@ccc-test&quot;,&quot;skillLevel&quot;:1},{&quot;skillGroupId&quot;:&quot;skillgroup2@ccc-test&quot;,&quot;skillLevel&quot;:10}]</p>
      */
@@ -88,6 +124,8 @@ public class CreateUserRequest extends TeaModel {
     public String skillLevelList;
 
     /**
+     * <p>The work mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>ON_SITE</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableSchemaPropertyRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DisableSchemaPropertyRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Field name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DisableSchemaPropertyRequest extends TeaModel {
     public String propertyName;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>2263B273-AC1B-44EB-BA98-87F2322C6780</p>
      */
@@ -30,7 +34,7 @@ public class DisableSchemaPropertyRequest extends TeaModel {
     public String requestId;
 
     /**
-     * <p>schema id</p>
+     * <p>Schema ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

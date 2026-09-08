@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ProcessCustomIMCallbackResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,19 +32,32 @@ public class ProcessCustomIMCallbackResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>chat-65382141036853491</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
      */

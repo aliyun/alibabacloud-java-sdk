@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddBlacklistCallTaggingRequest extends TeaModel {
     /**
+     * <p>The ID of the Cloud Contact Center instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class AddBlacklistCallTaggingRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The call ID. If the phone number is encrypted and contains asterisks (\*), specify the JobId. This parameter is not required for unencrypted numbers.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-6582589278232****</p>
      */
@@ -21,6 +24,7 @@ public class AddBlacklistCallTaggingRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

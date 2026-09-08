@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RegisterDeviceRequest extends TeaModel {
     /**
+     * <p>The custom device ID. No specific format is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RegisterDeviceRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RegisterDeviceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The password used to authenticate the SIP device during registration. Keep this password secure.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class RegisterDeviceRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

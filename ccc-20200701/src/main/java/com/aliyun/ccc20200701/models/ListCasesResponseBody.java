@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListCasesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListCasesResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7CC6523B-0E51-1B62-8DA5-6A9831CAE316</p>
      */
@@ -77,10 +92,26 @@ public class ListCasesResponseBody extends TeaModel {
     }
 
     public static class ListCasesResponseBodyDataList extends TeaModel {
+        /**
+         * <p>Phase at which the call was abandoned.</p>
+         * <ul>
+         * <li><p>IVR (IVR interaction phase)</p>
+         * </li>
+         * <li><p>Queuing (queuing phase)</p>
+         * </li>
+         * <li><p>Ringing (agent ringing phase)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ringing</p>
+         */
         @NameInMap("AbandonPhase")
         public String abandonPhase;
 
         /**
+         * <p>The type of call abandonment, that is, the reason why the call was not successfully connected.</p>
+         * 
          * <strong>example:</strong>
          * <p>NA</p>
          */
@@ -88,6 +119,8 @@ public class ListCasesResponseBody extends TeaModel {
         public String abandonType;
 
         /**
+         * <p>Number of attempts, which is the total number of calls made to this contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -95,19 +128,35 @@ public class ListCasesResponseBody extends TeaModel {
         public Long attemptCount;
 
         /**
+         * <p>System-generated contact ID. Customers do not need to concern themselves with this.</p>
+         * 
          * <strong>example:</strong>
          * <p>60ecb1a2-4480-4d01-bede-c5b7655bfadf</p>
          */
         @NameInMap("CaseId")
         public String caseId;
 
+        /**
+         * <p>Custom variables defined by the customer, formatted as a JSON object. The object can contain up to 10 properties, each with a name and value defined by the customer. These can be configured when creating a predictive outbound dialing activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;yy&quot;,&quot;客戶标签&quot;:&quot;tag-yy&quot;}</p>
+         */
         @NameInMap("CustomVariables")
         public String customVariables;
 
+        /**
+         * <p>Reason for outbound call failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("FailureReason")
         public String failureReason;
 
         /**
+         * <p>Phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1888888****</p>
          */
@@ -115,6 +164,8 @@ public class ListCasesResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
+         * <p>Status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Connected</p>
          */
@@ -193,10 +244,15 @@ public class ListCasesResponseBody extends TeaModel {
     }
 
     public static class ListCasesResponseBodyData extends TeaModel {
+        /**
+         * <p>List of contact list execution details.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListCasesResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -204,6 +260,8 @@ public class ListCasesResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -211,6 +269,8 @@ public class ListCasesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

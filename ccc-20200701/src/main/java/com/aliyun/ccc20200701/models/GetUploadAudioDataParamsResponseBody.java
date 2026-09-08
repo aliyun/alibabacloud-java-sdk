@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetUploadAudioDataParamsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetUploadAudioDataParamsResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID, which can be used for LogSearch of the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
      */
@@ -77,6 +92,9 @@ public class GetUploadAudioDataParamsResponseBody extends TeaModel {
     }
 
     public static class GetUploadAudioDataParamsResponseBodyData extends TeaModel {
+        /**
+         * <p>Parameters related to offline quality inspection audio files.</p>
+         */
         @NameInMap("ParamsStr")
         public String paramsStr;
 

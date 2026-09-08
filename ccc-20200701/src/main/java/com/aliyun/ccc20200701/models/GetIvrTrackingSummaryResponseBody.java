@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetIvrTrackingSummaryResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +32,8 @@ public class GetIvrTrackingSummaryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Unknown error code \&quot;NoPermission.Recording\&quot;. Reason: null</p>
      */
@@ -29,6 +41,8 @@ public class GetIvrTrackingSummaryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DE803553-8AA9-4B9D-9E4E-A82BC69EDCEE</p>
      */

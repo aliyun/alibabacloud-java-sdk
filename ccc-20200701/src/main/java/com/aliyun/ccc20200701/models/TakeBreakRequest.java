@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TakeBreakRequest extends TeaModel {
     /**
+     * <p>Break status code. Customers can define any custom break status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class TakeBreakRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -21,6 +24,7 @@ public class TakeBreakRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class TakeBreakRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Agent ID. If not specified, the agent mapped to the current RAM account is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

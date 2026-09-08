@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetUserResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Extension parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -88,10 +106,18 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyData extends TeaModel {
+        /**
+         * <p>Agent profile picture URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.com/xxx.jpg">http://xxx.com/xxx.jpg</a></p>
+         */
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
         /**
+         * <p>SIP phone extension number. If the agent has registered a SIP phone, this parameter is the extension number of the SIP phone device.</p>
+         * 
          * <strong>example:</strong>
          * <p>8033****</p>
          */
@@ -99,6 +125,8 @@ public class GetUserResponseBody extends TeaModel {
         public String deviceExt;
 
         /**
+         * <p>Device ID, which is the identity of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
@@ -106,6 +134,8 @@ public class GetUserResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The status of the SIP phone device. If no SIP phone is registered, the status is UNREGISTERED (Unregistered). If a SIP phone was previously registered but is currently offline, the status is OFFLINE (Offline). If a SIP phone is registered and currently online, the status is ONLINE (Online).</p>
+         * 
          * <strong>example:</strong>
          * <p>OFFLINE</p>
          */
@@ -113,16 +143,26 @@ public class GetUserResponseBody extends TeaModel {
         public String deviceState;
 
         /**
+         * <p>Agent\&quot;s employee ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
         @NameInMap("DisplayId")
         public String displayId;
 
+        /**
+         * <p>Agent display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Mailbox.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -130,6 +170,8 @@ public class GetUserResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8003****</p>
          */
@@ -137,6 +179,8 @@ public class GetUserResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -144,6 +188,8 @@ public class GetUserResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Agent logon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
@@ -151,16 +197,26 @@ public class GetUserResponseBody extends TeaModel {
         public String loginName;
 
         /**
+         * <p>Agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1391234****</p>
          */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <p>Agent nickname</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿云</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
         /**
+         * <p>Role ID, in the format: role\@instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin@ccc-test</p>
          */
@@ -168,6 +224,8 @@ public class GetUserResponseBody extends TeaModel {
         public String roleId;
 
         /**
+         * <p>Role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Admin</p>
          */
@@ -175,6 +233,8 @@ public class GetUserResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -182,6 +242,8 @@ public class GetUserResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */

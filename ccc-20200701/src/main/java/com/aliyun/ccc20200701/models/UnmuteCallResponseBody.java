@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class UnmuteCallResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_Heartbeat_description]The UNIX timestamp in milliseconds indicating when the last heartbeat was received from the agent.</p>
+     */
     @NameInMap("Data")
     public UnmuteCallResponseBodyData data;
 
     /**
+     * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_UserId_type]string</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_InstanceId_type]string</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_BreakCode_enumValueTitles_RejectCall]Break caused by agent rejecting a call</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_DeviceId_type]string</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -89,6 +107,8 @@ public class UnmuteCallResponseBody extends TeaModel {
 
     public static class UnmuteCallResponseBodyDataCallContextChannelContexts extends TeaModel {
         /**
+         * <p>The call type of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
@@ -96,6 +116,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String callType;
 
         /**
+         * <p>Channel flags.</p>
+         * 
          * <strong>example:</strong>
          * <p>MONITORING</p>
          */
@@ -103,6 +125,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String channelFlags;
 
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-6538214103685****</p>
          */
@@ -110,6 +134,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>[parameters_JobId_schema_description]The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>CREATED</p>
          */
@@ -117,6 +143,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String channelState;
 
         /**
+         * <p>Called party of the call channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>1390501****</p>
          */
@@ -124,6 +152,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String destination;
 
         /**
+         * <p>An auto-incremented ID assigned by the system. Customers do not need to concern themselves with this value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -131,6 +161,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public Integer index;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -138,6 +170,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The originator of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>0830019****</p>
          */
@@ -145,6 +179,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String originator;
 
         /**
+         * <p>[parameters_JobId_in]query</p>
+         * 
          * <strong>example:</strong>
          * <p>1390501****</p>
          */
@@ -152,6 +188,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String releaseInitiator;
 
         /**
+         * <p>The reason for releasing the channel. This indicates why the current channel was disconnected. The value corresponds to a response code defined in the SIP protocol. Customers should refer to the SIP protocol to analyze the disconnection reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>404 - No destination</p>
          */
@@ -159,6 +197,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String releaseReason;
 
         /**
+         * <p>The skill group associated with this call. In inbound scenarios, the skill group is specified by the queue routed through IVR. In outbound scenarios, the skill group is the first one the agent signs into.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -166,6 +206,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>The UNIX timestamp of the most recent status change of the channel, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609138903315</p>
          */
@@ -173,6 +215,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>The extension number of the agent associated with the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -180,6 +224,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String userExtension;
 
         /**
+         * <p>The agent ID associated with the channel. This field is empty if the channel belongs to a customer.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -307,16 +353,23 @@ public class UnmuteCallResponseBody extends TeaModel {
 
     public static class UnmuteCallResponseBodyDataCallContext extends TeaModel {
         /**
+         * <p>Call type.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <p>List of call channels.</p>
+         */
         @NameInMap("ChannelContexts")
         public java.util.List<UnmuteCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_ChannelFlags_enumValueTitles_MONITORING]Monitoring</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -324,6 +377,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -371,6 +426,8 @@ public class UnmuteCallResponseBody extends TeaModel {
 
     public static class UnmuteCallResponseBodyDataUserContext extends TeaModel {
         /**
+         * <p>Break status code, which can be either system-defined or customer-defined. System-defined break codes include: Warm-up (temporary break state after an agent goes online but before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent rejecting a call). Customer-defined status codes have no restrictions, and customers can define them according to their business needs.</p>
+         * 
          * <strong>example:</strong>
          * <p>Warm-up</p>
          */
@@ -378,6 +435,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>Device ID, which is the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
@@ -385,6 +444,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_Mobile_description]The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -392,6 +453,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The UNIX timestamp in milliseconds indicating when the last heartbeat was received from the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609136956378</p>
          */
@@ -399,6 +462,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public Long heartbeat;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -406,6 +471,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_SkillGroupId_type]string</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -413,6 +480,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1324730****</p>
          */
@@ -420,16 +489,23 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_ChannelId_type]string</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -437,6 +513,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_CallType_description]Call type.</p>
+         * 
          * <strong>example:</strong>
          * <p>TALKING</p>
          */
@@ -444,6 +522,8 @@ public class UnmuteCallResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_Index_type]integer</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -554,9 +634,15 @@ public class UnmuteCallResponseBody extends TeaModel {
     }
 
     public static class UnmuteCallResponseBodyData extends TeaModel {
+        /**
+         * <p>[responses_200_schema_properties_Data_properties_CallContext_properties_ChannelContexts_items_properties_ReleaseReason_type]string</p>
+         */
         @NameInMap("CallContext")
         public UnmuteCallResponseBodyDataCallContext callContext;
 
+        /**
+         * <p>[responses_200_schema_properties_Data_properties_UserContext_properties_OutboundScenario_description]Indicates whether the agent is in outbound-only mode.</p>
+         */
         @NameInMap("UserContext")
         public UnmuteCallResponseBodyDataUserContext userContext;
 

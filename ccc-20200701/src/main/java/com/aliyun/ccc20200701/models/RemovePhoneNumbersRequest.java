@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemovePhoneNumbersRequest extends TeaModel {
     /**
+     * <p>Specifies whether to force the removal. If a number is associated with a skill group, contact flow, or agent, you must set this parameter to <code>true</code> to remove it. The default value is <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class RemovePhoneNumbersRequest extends TeaModel {
     public Boolean force;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class RemovePhoneNumbersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The list of numbers to remove.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportDoNotCallNumbersResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ExportDoNotCallNumbersResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The OSS download link for the exported file. The link is valid for 24 hours.</p>
+     * 
      * <strong>example:</strong>
      * <p>https://<strong><strong>.oss-cn-shanghai.aliyuncs.com/ccc-test/blacklist.xlsx?Expires=3294624578&amp;OSSAccessKeyId=</strong></strong>&amp;Signature=****</p>
      */
@@ -19,19 +23,32 @@ public class ExportDoNotCallNumbersResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */

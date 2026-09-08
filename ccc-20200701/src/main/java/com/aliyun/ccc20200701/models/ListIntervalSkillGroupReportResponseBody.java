@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of segment-based statistics for the skill group.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListIntervalSkillGroupReportResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
      */
@@ -77,51 +92,147 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
     }
 
     public static class ListIntervalSkillGroupReportResponseBodyDataBack2Back extends TeaModel {
+        /**
+         * <p>Agent acknowledgement rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AgentHandleRate")
         public Float agentHandleRate;
 
+        /**
+         * <p>Answer rate. Calculation Formula: CallsAnswered / CallsDialed. (Because management events for answering and acknowledgement may fall into different Time Ranges, the Result may exceed 100% in certain cases.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("AnswerRate")
         public String answerRate;
 
+        /**
+         * <p>Average ring time on the Customer side, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AverageCustomerRingTime")
         public Float averageCustomerRingTime;
 
+        /**
+         * <p>Average ring time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AverageRingTime")
         public Float averageRingTime;
 
+        /**
+         * <p>Average talk time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AverageTalkTime")
         public String averageTalkTime;
 
+        /**
+         * <p>Quantity of calls handled by agents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("CallsAgentHandled")
         public Long callsAgentHandled;
 
+        /**
+         * <p>Call connection volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CallsAnswered")
         public Long callsAnswered;
 
+        /**
+         * <p>Quantity of calls answered by the Customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("CallsCustomerAnswered")
         public Long callsCustomerAnswered;
 
+        /**
+         * <p>Dial-up volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CallsDialed")
         public Long callsDialed;
 
+        /**
+         * <p>Customer answer rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
         @NameInMap("CustomerAnswerRate")
         public Float customerAnswerRate;
 
+        /**
+         * <p>Maximum customer-side ring time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxCustomerRingTime")
         public Long maxCustomerRingTime;
 
+        /**
+         * <p>Maximum ring time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxRingTime")
         public Long maxRingTime;
 
+        /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxTalkTime")
         public String maxTalkTime;
 
+        /**
+         * <p>Total customer-side ring time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCustomerRingTime")
         public Long totalCustomerRingTime;
 
+        /**
+         * <p>Total ring time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalRingTime")
         public Long totalRingTime;
 
+        /**
+         * <p>Total talk time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalTalkTime")
         public Long totalTalkTime;
 
@@ -262,6 +373,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListIntervalSkillGroupReportResponseBodyDataInbound extends TeaModel {
         /**
+         * <p>Abandon rate. Calculation Formula: CallsAbandoned / CallsOffered (because management events related to abandonment and assignment may fall into different time ranges, the result may exceed 100% in certain cases).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -269,6 +382,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float abandonRate;
 
         /**
+         * <p>Average abandonment duration, in seconds. Calculation Formula: TotalAbandonTime / CallsAbandoned.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -276,6 +391,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageAbandonTime;
 
         /**
+         * <p>Average abandoned-in-queue duration, in seconds. Calculation Formula: TotalAbandonedInQueueTime / CallsAbandonedInQueue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -283,26 +400,44 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageAbandonedInQueueTime;
 
         /**
+         * <p>Average ringing abandonment duration, in seconds. Calculation Formula: TotalAbandonedInRingTime / CallsAbandonedInRing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AverageAbandonedInRingTime")
         public Float averageAbandonedInRingTime;
 
+        /**
+         * <p>Average first response time for chat sessions, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("AverageFirstResponseTime")
         public Float averageFirstResponseTime;
 
         /**
+         * <p>Average hold time during calls, in seconds. Calculation Formula: TotalHoldTime / CallsHold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AverageHoldTime")
         public Float averageHoldTime;
 
+        /**
+         * <p>Average response time for chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("AverageResponseTime")
         public Float averageResponseTime;
 
         /**
+         * <p>Average ring time, in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -310,6 +445,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageRingTime;
 
         /**
+         * <p>Average talk duration, in seconds. Calculation Formula: TotalTalkTime / CallsHandled.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -317,6 +454,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
+         * <p>Average wait time, which is the average duration a caller waits before an agent answers the call. Calculation Formula: TotalWaitTime / CallsHandled.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -324,6 +463,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageWaitTime;
 
         /**
+         * <p>Average post-processing duration, in seconds. Calculation Formula: TotalWorkTime / CallsHandled.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -331,6 +472,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
+         * <p>Abandoned call quantity. Calculation Formula: CallsAbandonedInQueue + CallsAbandonedInRing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -338,6 +481,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAbandoned;
 
         /**
+         * <p>Quantity of abandoned calls in queue, which refers to the number of calls where the customer hung up after entering the queue but before being answered.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -345,6 +490,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAbandonedInQueue;
 
         /**
+         * <p>Ring abandonment count, which refers to the number of calls abandoned by customers while ringing to an agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -352,6 +499,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAbandonedInRing;
 
         /**
+         * <p>Attended transfer-in count, which is the number of calls transferred to this skill group via attended transfers initiated from other skill groups. Transfers between agents within the same skill group are not counted. If an agent signs in to multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed in to. If a single call is transferred from another skill group to this skill group multiple times, each transfer is counted separately. The same rule applies below.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -359,6 +508,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAttendedTransferIn;
 
         /**
+         * <p>Attended transfer-out count, which refers to the number of calls transferred from this skill group to another skill group for consultation. Transfers between agents within the same skill group are not counted.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -366,6 +517,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAttendedTransferOut;
 
         /**
+         * <p>Quantity of blind transfer-in calls, which refers to the number of calls directly transferred into this skill group from other skill groups. Transfers between agents within the same skill group are not counted. If an agent is signed into multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups into this skill group, each transfer is counted separately. The same rule applies below.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -373,6 +526,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsBlindTransferIn;
 
         /**
+         * <p>Quantity of blind transfer-out calls, which refers to the number of calls directly transferred out from this skill group to other skill groups. Transfers between agents within the same skill group are not counted.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -380,6 +535,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsBlindTransferOut;
 
         /**
+         * <p>Acknowledgement count, which is the number of times agents answered calls. For a single call that enters a queue multiple times, if it is answered by multiple agents after one queue entry, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -387,6 +544,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsHandled;
 
         /**
+         * <p>Hold count, which is the number of times calls were placed on hold. If a single call enters the queue and is placed on hold multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -394,6 +553,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsHold;
 
         /**
+         * <p>Assigned call volume, which is the number of calls assigned to this skill group, including calls assigned through queues and calls assigned via transfers (consultation transfers and direct transfers). Calculation formula: CallsQueued + CallsBlindTransferIn + CallsAttendedTransferIn.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -401,6 +562,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsOffered;
 
         /**
+         * <p>Overflow count, which is the number of calls that overflowed from a queue (skill group). If a single call enters the same queue multiple times, each overflow is counted separately.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -408,19 +571,35 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsOverflow;
 
         /**
+         * <p>Number of inbound calls entering a queue (skill group). If a single call enters the same queue multiple times, each entry is counted separately.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("CallsQueued")
         public Long callsQueued;
 
+        /**
+         * <p>Number of calls that overflowed from the queue, meaning calls that experienced queue overflow while waiting in the IVR queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsQueuingOverflow")
         public Long callsQueuingOverflow;
 
+        /**
+         * <p>Number of calls that timed out during the queuing phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsQueuingTimeout")
         public Long callsQueuingTimeout;
 
         /**
+         * <p>Number of calls that rang to agents. Each time a call enters the queue and is assigned to multiple agents, resulting in ringing, it is counted as one occurrence.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -428,6 +607,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsRinged;
 
         /**
+         * <p>Timeout count, which is the number of calls that timed out in a queue (skill group). If a single call enters the same queue multiple times, each timeout is counted separately.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -435,6 +616,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsTimeout;
 
         /**
+         * <p>Acknowledgement rate. Calculation Formula: CallsHandled / CallsOffered (because acknowledgement events and assignment events may fall into different time ranges, the result may exceed 100% in certain cases).</p>
+         * 
          * <strong>example:</strong>
          * <p>0.6666666666666666</p>
          */
@@ -442,6 +625,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float handleRate;
 
         /**
+         * <p>Maximum abandonment time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -449,6 +634,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxAbandonTime;
 
         /**
+         * <p>Maximum queue abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -456,6 +643,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxAbandonedInQueueTime;
 
         /**
+         * <p>Maximum ring abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -463,6 +652,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxAbandonedInRingTime;
 
         /**
+         * <p>Maximum hold duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -470,6 +661,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
+         * <p>Maximum ring duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -477,6 +670,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxRingTime;
 
         /**
+         * <p>Maximum talk duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -484,6 +679,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum wait time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -491,6 +688,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxWaitTime;
 
         /**
+         * <p>Maximum post-processing duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>19</p>
          */
@@ -498,6 +697,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>Satisfaction index, which is the average value of the satisfaction rating digits (single-digit numbers) entered by callers.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -505,6 +706,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Satisfaction rate. Calculation Formula: Number of evaluations marked as satisfied divided by the count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -512,6 +715,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -519,6 +724,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -526,6 +733,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Service level within 20 seconds: the number of calls with waiting time less than or equal to 20 seconds divided by CallsQueued.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -533,6 +742,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float serviceLevel20;
 
         /**
+         * <p>Total abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -540,6 +751,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalAbandonTime;
 
         /**
+         * <p>Total queue abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -547,6 +760,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalAbandonedInQueueTime;
 
         /**
+         * <p>Total ringing abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -554,22 +769,44 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalAbandonedInRingTime;
 
         /**
+         * <p>Total call hold time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("TotalHoldTime")
         public Long totalHoldTime;
 
+        /**
+         * <p>Total number of messages sent in chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("TotalMessagesSent")
         public Long totalMessagesSent;
 
+        /**
+         * <p>Total number of messages sent by agents in chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("TotalMessagesSentByAgent")
         public Long totalMessagesSentByAgent;
 
+        /**
+         * <p>Total number of messages sent by the Customer in chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TotalMessagesSentByCustomer")
         public Long totalMessagesSentByCustomer;
 
         /**
+         * <p>Total ringing duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>33</p>
          */
@@ -577,6 +814,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalRingTime;
 
         /**
+         * <p>Total talk duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -584,6 +823,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total wait time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>33</p>
          */
@@ -591,6 +832,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalWaitTime;
 
         /**
+         * <p>Total post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -1022,6 +1265,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListIntervalSkillGroupReportResponseBodyDataOutbound extends TeaModel {
         /**
+         * <p>Answer rate. Calculation Formula: CallsAnswered / CallsDialed (because management events for answering and acknowledgement may fall into different Time Ranges, the Result may exceed 100% in certain cases).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1029,6 +1274,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float answerRate;
 
         /**
+         * <p>Average dial-up duration, in seconds. Calculation Formula: TotalDialingTime / CallsDialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -1036,6 +1283,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageDialingTime;
 
         /**
+         * <p>Average hold time during calls, in seconds. Calculation formula: TotalHoldTime / CallsHold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1043,6 +1292,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageHoldTime;
 
         /**
+         * <p>Average ring time in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1050,6 +1301,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageRingTime;
 
         /**
+         * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsAnswered.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -1057,6 +1310,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
+         * <p>Average post-processing time in seconds. Calculation Formula: TotalWorkTime / CallsDialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -1064,6 +1319,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
+         * <p>Answered call count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1071,6 +1328,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAnswered;
 
         /**
+         * <p>Transfer-in calls, which refer to the number of calls transferred to this skill group from other skill groups. Transfers between agents within the same skill group are not counted. If an agent is signed into multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups to this skill group, each transfer is counted separately. The same rule applies below.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1078,6 +1337,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAttendedTransferIn;
 
         /**
+         * <p>Transfer-out call volume, which refers to the number of calls initiated by this skill group and transferred to other skill groups. Transfers between agents within the same skill group are not counted.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1085,6 +1346,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsAttendedTransferOut;
 
         /**
+         * <p>Direct transfer-in calls, which refer to the number of calls directly transferred to this skill group from other skill groups. Transfers between agents within the same skill group are not counted. If an agent is signed into multiple skill groups simultaneously, the call is attributed to the first skill group the agent signed into. If a single call is transferred multiple times from other skill groups to this skill group, each transfer is counted separately. The same rule applies below.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1092,6 +1355,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsBlindTransferIn;
 
         /**
+         * <p>Direct transfer-out calls, which refer to the number of calls directly transferred from this skill group to other skill groups. Transfers between agents within the same skill group are not counted.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1099,6 +1364,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsBlindTransferOut;
 
         /**
+         * <p>Dialed call count.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1106,6 +1373,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsDialed;
 
         /**
+         * <p>Hold count, which is the number of calls that were placed on hold. If a single call was placed on hold multiple times before being transferred out of the current skill group, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1113,6 +1382,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsHold;
 
         /**
+         * <p>Number of calls that rang to agents. Each call is counted once per queue entry, even if it was assigned to multiple agents and rang multiple times.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1120,6 +1391,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long callsRinged;
 
         /**
+         * <p>Maximum dial-up duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>49</p>
          */
@@ -1127,6 +1400,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxDialingTime;
 
         /**
+         * <p>Maximum hold time during a call, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1134,6 +1409,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
+         * <p>Maximum ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1141,6 +1418,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxRingTime;
 
         /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -1148,6 +1427,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum post-processing time in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -1155,6 +1436,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>Satisfaction index, which is the average value of the satisfaction key digits (single-digit numbers).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1162,6 +1445,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Satisfaction rate. Calculation Formula: number of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1169,6 +1454,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1176,6 +1463,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1183,6 +1472,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Total dial-up duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -1190,6 +1481,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalDialingTime;
 
         /**
+         * <p>Total hold time during calls, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1197,6 +1490,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalHoldTime;
 
         /**
+         * <p>Total ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1204,6 +1499,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalRingTime;
 
         /**
+         * <p>Total talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -1211,6 +1508,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total post-processing duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -1449,12 +1748,30 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
     }
 
     public static class ListIntervalSkillGroupReportResponseBodyDataOverallBreakCodeDetailList extends TeaModel {
+        /**
+         * <p>Break type code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>会议</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
+        /**
+         * <p>Number of occurrences of this break type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>Total duration of this break type, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
@@ -1491,6 +1808,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
 
     public static class ListIntervalSkillGroupReportResponseBodyDataOverall extends TeaModel {
         /**
+         * <p>Average break time, in seconds. Calculation Formula: TotalBreakTime / Count of breaks. The Count of breaks is not a field provided by the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1498,6 +1817,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageBreakTime;
 
         /**
+         * <p>Average call hold time, in seconds. Calculation Formula: TotalHoldTime / (Inbound CallsHold + Outbound CallsHold).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1505,6 +1826,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageHoldTime;
 
         /**
+         * <p>Average ready time, in seconds. Calculation Formula: TotalReadyTime / Count of ready events. The count of ready events is not an API statistical field.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1512,6 +1835,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageReadyTime;
 
         /**
+         * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / (CallsAnswered + CallsHandled).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1519,16 +1844,23 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
+         * <p>Average post-processing time, in seconds. Calculation Formula: TotalWorkTime / TotalCalls.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
         @NameInMap("AverageWorkTime")
         public Float averageWorkTime;
 
+        /**
+         * <p>Statistics for each break type.</p>
+         */
         @NameInMap("BreakCodeDetailList")
         public java.util.List<ListIntervalSkillGroupReportResponseBodyDataOverallBreakCodeDetailList> breakCodeDetailList;
 
         /**
+         * <p>Maximum break duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1536,6 +1868,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxBreakTime;
 
         /**
+         * <p>Maximum call hold duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1543,6 +1877,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
+         * <p>Maximum ready time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>4927</p>
          */
@@ -1550,6 +1886,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxReadyTime;
 
         /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -1557,6 +1895,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum post-processing duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>19</p>
          */
@@ -1564,6 +1904,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>Agent occupancy rate, calculated using the formula: (TotalWorkTime + TotalTalkTime) / TotalLoggedInTime.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.00422315148470254</p>
          */
@@ -1571,6 +1913,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float occupancyRate;
 
         /**
+         * <p>Satisfaction index, which is the average value of the single-digit satisfaction rating entered by users.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1578,6 +1922,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Satisfaction rate. Calculation Formula: Number of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1585,6 +1931,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1592,6 +1940,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1599,6 +1949,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Total break time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -1606,6 +1958,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalBreakTime;
 
         /**
+         * <p>Total call volume. Calculation Formula: CallsOffered + CallsDialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -1613,6 +1967,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalCalls;
 
         /**
+         * <p>Total hold time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1620,6 +1976,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalHoldTime;
 
         /**
+         * <p>Total logon duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>9236</p>
          */
@@ -1627,6 +1985,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalLoggedInTime;
 
         /**
+         * <p>Total ready time in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>9106</p>
          */
@@ -1634,6 +1994,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalReadyTime;
 
         /**
+         * <p>Total talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -1641,6 +2003,8 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -1839,19 +2203,33 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
     }
 
     public static class ListIntervalSkillGroupReportResponseBodyData extends TeaModel {
+        /**
+         * <p>Back-to-back call metric.</p>
+         */
         @NameInMap("Back2Back")
         public ListIntervalSkillGroupReportResponseBodyDataBack2Back back2Back;
 
+        /**
+         * <p>Inbound metrics.</p>
+         */
         @NameInMap("Inbound")
         public ListIntervalSkillGroupReportResponseBodyDataInbound inbound;
 
+        /**
+         * <p>Outbound metrics.</p>
+         */
         @NameInMap("Outbound")
         public ListIntervalSkillGroupReportResponseBodyDataOutbound outbound;
 
+        /**
+         * <p>Overall metrics.</p>
+         */
         @NameInMap("Overall")
         public ListIntervalSkillGroupReportResponseBodyDataOverall overall;
 
         /**
+         * <p>Start Time of the time segment, formatted as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1604639129000</p>
          */

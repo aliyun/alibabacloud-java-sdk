@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MonitorCallRequest extends TeaModel {
     /**
+     * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -12,6 +14,7 @@ public class MonitorCallRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class MonitorCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the agent being monitored.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class MonitorCallRequest extends TeaModel {
     public String monitoredUserId;
 
     /**
+     * <p>The timeout period for the listening operation, in seconds. If the listening operation does not succeed within the specified time, it is canceled. Normally, the listening operation succeeds immediately. The timeout setting is provided to handle abnormal scenarios. This field is optional and defaults to 30 seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -37,6 +43,8 @@ public class MonitorCallRequest extends TeaModel {
     public Integer timeoutSeconds;
 
     /**
+     * <p>Agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class CreateChatMediaUrlResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public CreateChatMediaUrlResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
      */
@@ -89,6 +107,8 @@ public class CreateChatMediaUrlResponseBody extends TeaModel {
 
     public static class CreateChatMediaUrlResponseBodyData extends TeaModel {
         /**
+         * <p>Media ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>$iAHNCNQCo21wMwMGBAAFAAbaACOEAaQhIH6TAqogDGyb-qD2Hbj0A88AAAGRLKYVnwTOACwwYwcACM8AAAGRLRPynQ</p>
          */
@@ -96,6 +116,8 @@ public class CreateChatMediaUrlResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/namelist.csv?Expires=1642067227&OSSAccessKeyId=****&Signature=">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/namelist.csv?Expires=1642067227&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */

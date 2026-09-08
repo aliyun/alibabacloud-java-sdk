@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListNotificationRecordsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListNotificationRecordsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of invalid parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0630E5DF-CEB0-445B-8626-D5C7481181C3</p>
      */
@@ -89,6 +107,8 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
 
     public static class ListNotificationRecordsResponseBodyData extends TeaModel {
         /**
+         * <p>The notification content.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;agentId&quot;: &quot;agent@ccc-test&quot;,
@@ -108,6 +128,8 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -115,6 +137,8 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The notification key.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-468a63a2-<strong><strong>-</strong></strong>-****-b1ecf726d4be</p>
          */
@@ -122,6 +146,8 @@ public class ListNotificationRecordsResponseBody extends TeaModel {
         public String notificationKey;
 
         /**
+         * <p>The message type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Dialing</p>
          */

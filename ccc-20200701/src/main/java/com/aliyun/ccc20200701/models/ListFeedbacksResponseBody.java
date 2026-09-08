@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListFeedbacksResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned dataset.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListFeedbacksResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>26E54929-CA86-1035-9B42-0C8F291BB027</p>
      */
@@ -78,6 +93,8 @@ public class ListFeedbacksResponseBody extends TeaModel {
 
     public static class ListFeedbacksResponseBodyData extends TeaModel {
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-25920271311543****</p>
          */
@@ -85,6 +102,8 @@ public class ListFeedbacksResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -92,6 +111,8 @@ public class ListFeedbacksResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20251216-8B9B7B02-16FE-54BE-942A-F59DE0656032</p>
          */
@@ -99,6 +120,8 @@ public class ListFeedbacksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The task name.</p>
+         * 
          * <strong>example:</strong>
          * <p>PostCallAnalyzer:solution</p>
          */
@@ -106,6 +129,8 @@ public class ListFeedbacksResponseBody extends TeaModel {
         public String taskName;
 
         /**
+         * <p>The user\&quot;s rating for the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -113,6 +138,8 @@ public class ListFeedbacksResponseBody extends TeaModel {
         public Integer userRating;
 
         /**
+         * <p>The data from user feedback.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxxx</p>
          */

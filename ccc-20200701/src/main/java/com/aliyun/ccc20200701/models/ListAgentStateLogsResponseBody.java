@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListAgentStateLogsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAgentStateLogsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
      */
@@ -77,13 +92,27 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
     }
 
     public static class ListAgentStateLogsResponseBodyData extends TeaModel {
+        /**
+         * <p>Break code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>会议</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
+        /**
+         * <p>Duration of the status, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -91,6 +120,8 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         public Boolean outboundScenario;
 
         /**
+         * <p>Start Time of the status, in UNIX timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620259200000</p>
          */
@@ -98,6 +129,8 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>Status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Break</p>
          */
@@ -105,12 +138,20 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>Sub-status, which provides additional details for the status code. In certain scenarios, an agent\&quot;s status is jointly identified by State and StateCode. For example, in a monitoring scenario, the State is Talking and the StateCode is Monitoring.</p>
+         * 
          * <strong>example:</strong>
          * <p>CHECK_IN_BREAK</p>
          */
         @NameInMap("StateCode")
         public String stateCode;
 
+        /**
+         * <p>Work mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
+         */
         @NameInMap("WorkMode")
         public String workMode;
 

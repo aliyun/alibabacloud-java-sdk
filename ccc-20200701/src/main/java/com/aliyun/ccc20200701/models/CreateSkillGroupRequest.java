@@ -4,16 +4,27 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class CreateSkillGroupRequest extends TeaModel {
+    /**
+     * <p>Description of the skill group. This parameter is optional. If not specified, it defaults to empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>云联络中心的测试技能组。</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Display name of the skill group. It must be 1 to 64 characters in length.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试技能组</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +33,17 @@ public class CreateSkillGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Media type. The default value is AUDIO. Other valid values include CHAT and VIDEO.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CHAT</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
     /**
+     * <p>The skill group name. It must be 1 to 64 characters in length, can contain digits, letters, underscores (_), and hyphens (-), and must start with a letter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

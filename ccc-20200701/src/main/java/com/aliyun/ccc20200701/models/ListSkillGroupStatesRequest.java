@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillGroupStatesRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListSkillGroupStatesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number, ranging from 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListSkillGroupStatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -28,6 +33,8 @@ public class ListSkillGroupStatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>List of skill group IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;skillgroup1@ccc-test&quot;,&quot;skillgroup2@ccc-test&quot;]</p>
      */

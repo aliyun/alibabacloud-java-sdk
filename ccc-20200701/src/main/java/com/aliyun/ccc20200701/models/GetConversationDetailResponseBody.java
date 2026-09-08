@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetConversationDetailResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,19 +14,32 @@ public class GetConversationDetailResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of conversations.</p>
+     */
     @NameInMap("Phrases")
     public java.util.List<GetConversationDetailResponseBodyPhrases> phrases;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7E407F9B-A278-52A0-B193-3EE5471D7A87</p>
      */
@@ -78,6 +93,8 @@ public class GetConversationDetailResponseBody extends TeaModel {
 
     public static class GetConversationDetailResponseBodyPhrases extends TeaModel {
         /**
+         * <p>The offset of the sentence start time relative to the session start time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>240</p>
          */
@@ -85,25 +102,47 @@ public class GetConversationDetailResponseBody extends TeaModel {
         public Integer begin;
 
         /**
+         * <p>The offset of the sentence end time relative to the session start time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1280</p>
          */
         @NameInMap("End")
         public Integer end;
 
+        /**
+         * <p>Is finished.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Finished")
         public Boolean finished;
 
         /**
+         * <p>The ARN of the role. The system uses this identifier internally to identify the role. This parameter does not require management.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
         @NameInMap("Identity")
         public String identity;
 
+        /**
+         * <p>Role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客服</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>Conversation text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>欢迎致电云联络中心</p>
+         */
         @NameInMap("Words")
         public String words;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillGroupSummaryReportsSinceMidnightRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number to return. The value must be in the range of 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. The value must be in the range of 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +33,8 @@ public class ListSkillGroupSummaryReportsSinceMidnightRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>A JSON-formatted string that contains the IDs of the skill groups to query. If this parameter is omitted, the query includes all skill groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;skillgroup1@ccc-test&quot;, &quot;skillgroup2@ccc-test2&quot;]</p>
      */

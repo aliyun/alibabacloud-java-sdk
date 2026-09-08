@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCasesShrinkRequest extends TeaModel {
     /**
+     * <p>The predictive outbound call activity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class AddCasesShrinkRequest extends TeaModel {
     @NameInMap("CampaignId")
     public String campaignId;
 
+    /**
+     * <p>The list of outbound call cases.</p>
+     */
     @NameInMap("CaseList")
     public String caseListShrink;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

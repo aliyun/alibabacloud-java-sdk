@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetCampaignResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetCampaignResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetCampaignResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CCEF32F-8614-535F-A1D9-D85B8C0DC4F0</p>
      */
@@ -67,6 +76,8 @@ public class GetCampaignResponseBody extends TeaModel {
 
     public static class GetCampaignResponseBodyData extends TeaModel {
         /**
+         * <p>The actual end time of the predictive outbound campaign. This is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1634008800000</p>
          */
@@ -74,6 +85,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public Long actualEndTime;
 
         /**
+         * <p>The actual start time of the predictive outbound campaign. This is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1634000460000</p>
          */
@@ -81,6 +94,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public Long actualStartTime;
 
         /**
+         * <p>The ID of the predictive outbound campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>6badb397-a8b5-40b6-21019d382a09</p>
          */
@@ -88,6 +103,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public String campaignId;
 
         /**
+         * <p>The number of aborted contacts.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -95,6 +112,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public Long casesAborted;
 
         /**
+         * <p>The number of connected contacts.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -102,6 +121,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public Long casesConnected;
 
         /**
+         * <p>The number of uncompleted contacts.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -112,19 +133,29 @@ public class GetCampaignResponseBody extends TeaModel {
         public String casesUncompletedAfterAttempt;
 
         /**
+         * <p>The number of attempted but unconnected contacts that are still eligible for redial.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CasesUncompletedAfterAttempted")
         public Long casesUncompletedAfterAttempted;
 
+        /**
+         * <p>The ratio of connected contacts to the total number of contacts.</p>
+         */
         @NameInMap("CompletionRate")
         public Float completionRate;
 
+        /**
+         * <p>The ID of the associated Contact Flow.</p>
+         */
         @NameInMap("ContactFlowId")
         public String contactFlowId;
 
         /**
+         * <p>The maximum number of call attempts for each contact. If an attempt fails, the contact is redialed until this limit is reached.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -132,6 +163,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public Long maxAttemptCount;
 
         /**
+         * <p>The minimum interval, in seconds, to wait before redialing a failed call.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -139,6 +172,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public Long minAttemptInterval;
 
         /**
+         * <p>The name of the predictive outbound campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-campaign</p>
          */
@@ -146,6 +181,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The planned end time of the predictive outbound campaign. This is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1634054400000</p>
          */
@@ -153,6 +190,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public Long planedEndTime;
 
         /**
+         * <p>The planned start time of the predictive outbound campaign. This is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1633968000000</p>
          */
@@ -160,26 +199,44 @@ public class GetCampaignResponseBody extends TeaModel {
         public Long planedStartTime;
 
         /**
+         * <p>The ID of the associated skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
         @NameInMap("QueueId")
         public String queueId;
 
+        /**
+         * <p>The name of the associated skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
         /**
+         * <p>Indicates whether the campaign is a test simulation. This parameter is not intended for production use.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Simulation")
         public Boolean simulation;
 
+        /**
+         * <p>The parameters for a test simulation. This parameter is not intended for production use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("SimulationParameters")
         public String simulationParameters;
 
         /**
+         * <p>The state of the predictive outbound campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>Completed</p>
          */
@@ -187,6 +244,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The strategy parameters for the predictive outbound campaign, in JSON format. For a <code>PID</code> strategy, the format is <code>{&quot;abandonRate&quot;:&quot;5&quot;,&quot;historicalConnectedRate&quot;:&quot;35&quot;}</code>. For a <code>PACING</code> strategy, the format is <code>{&quot;ratio&quot;:1}</code>. <code>abandonRate</code> specifies the target abandon rate, <code>historicalConnectedRate</code> specifies the historical connection rate for reference, and <code>ratio</code> specifies the fixed dialing ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;ratio&quot;:1}</p>
          */
@@ -194,6 +253,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public String strategyParameters;
 
         /**
+         * <p>The dialing strategy for the predictive outbound campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>PACING</p>
          */
@@ -201,6 +262,8 @@ public class GetCampaignResponseBody extends TeaModel {
         public String strategyType;
 
         /**
+         * <p>The total number of contacts.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

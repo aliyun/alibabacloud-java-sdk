@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVisitorChatMessagesRequest extends TeaModel {
     /**
+     * <p>Web business channel ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cf584733-<em><strong>-</strong></em>-9699-cb77aa3b7aa6</p>
      */
@@ -12,6 +14,8 @@ public class ListVisitorChatMessagesRequest extends TeaModel {
     public String accessChannelId;
 
     /**
+     * <p>Web business channel token.</p>
+     * 
      * <strong>example:</strong>
      * <p>9XYGTGWtq2wXzVikKuip_zeVGl6O4VJ-l-<em>-</em>-JPofhap4P7fAevuE=</p>
      */
@@ -19,6 +23,8 @@ public class ListVisitorChatMessagesRequest extends TeaModel {
     public String accessToken;
 
     /**
+     * <p>End time, in UNIX timestamp format. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1650316799000</p>
      */
@@ -26,6 +32,8 @@ public class ListVisitorChatMessagesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Cloud Contact Center instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ccc-test</p>
      */
@@ -33,6 +41,8 @@ public class ListVisitorChatMessagesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Token for the next page. Do not include this parameter in your first request. The service returns it in the response. Include it in subsequent requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>1737193352340::7463707254.EAUNIT</p>
      */
@@ -40,6 +50,8 @@ public class ListVisitorChatMessagesRequest extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>Number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -47,6 +59,11 @@ public class ListVisitorChatMessagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Sorting order. Default is descending.</p>
+     * <p>Valid values:</p>
+     * <p>ASC: ascending.</p>
+     * <p>DESC: descending.</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -54,6 +71,8 @@ public class ListVisitorChatMessagesRequest extends TeaModel {
     public String sortOrder;
 
     /**
+     * <p>Start time, in UNIX timestamp format. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1647325450000</p>
      */
@@ -61,6 +80,8 @@ public class ListVisitorChatMessagesRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Visitor ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>fcd020fe-****-1a272a174a7d</p>
      */

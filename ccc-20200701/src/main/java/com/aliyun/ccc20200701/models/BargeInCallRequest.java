@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BargeInCallRequest extends TeaModel {
     /**
+     * <p>Agent ID whose call was barged in on.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class BargeInCallRequest extends TeaModel {
     public String bargedUserId;
 
     /**
+     * <p>Device ID. This parameter is meaningless and can be filled in with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -21,6 +24,7 @@ public class BargeInCallRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class BargeInCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class BargeInCallRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Timeout for force insert, in seconds. If the force insert operation does not succeed within the specified time, it is canceled. Normally, the force insert operation succeeds immediately. The timeout setting is provided to handle abnormal scenarios. This field is optional and defaults to 30 seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -46,6 +53,8 @@ public class BargeInCallRequest extends TeaModel {
     public Integer timeoutSeconds;
 
     /**
+     * <p>Agent ID initiating the force insert.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListSkillGroupStatesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListSkillGroupStatesResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1F69EBB0-63E9-5DDE-887F-9FC040ADF309</p>
      */
@@ -32,6 +47,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +110,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
 
     public static class ListSkillGroupStatesResponseBodyDataList extends TeaModel {
         /**
+         * <p>The average waiting time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -100,16 +119,26 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Long averageWaitingTime;
 
         /**
+         * <p>Number of agents in break status.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
+        /**
+         * <p>The number of agents on calls in the inbound scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("InboundTalkingAgents")
         public Long inboundTalkingAgents;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -117,6 +146,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Number of logged-in agents.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -124,6 +155,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Long loggedInAgents;
 
         /**
+         * <p>Maximum waiting duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -131,16 +164,26 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Long longestCall;
 
         /**
+         * <p>The number of agents who are idle and in outbound-only status.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("OutboundScenarioReadyAgents")
         public Long outboundScenarioReadyAgents;
 
+        /**
+         * <p>Number of agents on outbound calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OutboundTalkingAgents")
         public Long outboundTalkingAgents;
 
         /**
+         * <p>The number of idle agents.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -148,16 +191,26 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Long readyAgents;
 
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup1@ccc-test</p>
          */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <p>Skill group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
         /**
+         * <p>The number of agents on calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -165,6 +218,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Long talkingAgents;
 
         /**
+         * <p>Number of calls currently in the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -172,6 +227,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Long waitingCalls;
 
         /**
+         * <p>The number of calls with a waiting duration of less than 10 seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -179,6 +236,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Long waitingCallsLevel10;
 
         /**
+         * <p>Number of calls with waiting duration less than 20 seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -186,6 +245,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Long waitingCallsLevel20;
 
         /**
+         * <p>The number of calls with a waiting duration of less than 30 seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -193,6 +254,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Long waitingCallsLevel30;
 
         /**
+         * <p>The number of agents in post-processing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -343,10 +406,15 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
     }
 
     public static class ListSkillGroupStatesResponseBodyData extends TeaModel {
+        /**
+         * <p>List of skill group status data.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListSkillGroupStatesResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -354,6 +422,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -361,6 +431,8 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

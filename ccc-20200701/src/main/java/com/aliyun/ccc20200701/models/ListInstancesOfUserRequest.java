@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesOfUserRequest extends TeaModel {
     /**
+     * <p>Paging ordinal number, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListInstancesOfUserRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Paging size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

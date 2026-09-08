@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListWaitingChatsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListWaitingChatsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
      */
@@ -77,16 +92,36 @@ public class ListWaitingChatsResponseBody extends TeaModel {
     }
 
     public static class ListWaitingChatsResponseBodyDataMessages extends TeaModel {
+        /**
+         * <p>Message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试消息</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Message sender ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c361765f-******-4e07-b81c-4b5d9183fac6</p>
          */
         @NameInMap("SenderId")
         public String senderId;
 
+        /**
+         * <p>Sender type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>CUSTOMER</strong>: visitor</p>
+         * </li>
+         * <li><p><strong>AGENT</strong>: agent</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;variables&quot;:{},&quot;text&quot;:&quot;<p>这种的名片选单面还是双面</p>&quot;}</p>
+         */
         @NameInMap("SenderType")
         public String senderType;
 
@@ -122,20 +157,36 @@ public class ListWaitingChatsResponseBody extends TeaModel {
     }
 
     public static class ListWaitingChatsResponseBodyDataUserList extends TeaModel {
+        /**
+         * <p>Profile picture URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c361765f-******-4e07-b81c-4b5d9183fac6</p>
          */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>User name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>访客-1c***</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
         /**
+         * <p>User type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMER</p>
          */
@@ -183,6 +234,8 @@ public class ListWaitingChatsResponseBody extends TeaModel {
 
     public static class ListWaitingChatsResponseBodyData extends TeaModel {
         /**
+         * <p>Access channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>843073c2-*****-49fb-a616-738ddddfebdc</p>
          */
@@ -190,6 +243,8 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         public String accessChannelId;
 
         /**
+         * <p>Access channel type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Web</p>
          */
@@ -197,6 +252,8 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         public String accessChannelType;
 
         /**
+         * <p>Indicates whether the session has been assigned to an agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -204,6 +261,8 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         public Boolean beingAssigned;
 
         /**
+         * <p>Chat session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>$23086709$EAUNIT</p>
          */
@@ -211,6 +270,8 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         public String chatConversationId;
 
         /**
+         * <p>Enqueue time, in Unix timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1718868572094</p>
          */
@@ -218,18 +279,32 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         public Long enqueueTime;
 
         /**
+         * <p>Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat-434537064047960064</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>Message list.</p>
+         */
         @NameInMap("Messages")
         public java.util.List<ListWaitingChatsResponseBodyDataMessages> messages;
 
+        /**
+         * <p>The skill group information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skill@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <p>User list.</p>
+         */
         @NameInMap("UserList")
         public java.util.List<ListWaitingChatsResponseBodyDataUserList> userList;
 

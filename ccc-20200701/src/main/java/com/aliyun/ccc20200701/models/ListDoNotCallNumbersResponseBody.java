@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListDoNotCallNumbersResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListDoNotCallNumbersResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -89,16 +107,26 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
 
     public static class ListDoNotCallNumbersResponseBodyDataList extends TeaModel {
         /**
+         * <p>Creation time of the Do Not Call number configuration, in Unix timestamp format with millisecond precision. (Deprecated)</p>
+         * 
          * <strong>example:</strong>
          * <p>1626962425000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Creation time of the prohibited outbound call number configuration, in Unix timestamp format, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631440860000</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         /**
+         * <p>Creator, which is the agent logon name of the agent who created this record.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
@@ -106,16 +134,26 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>Phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1900000****</p>
          */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <p>Remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
         /**
+         * <p>Scope of application.</p>
+         * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
          */
@@ -178,10 +216,15 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
     }
 
     public static class ListDoNotCallNumbersResponseBodyData extends TeaModel {
+        /**
+         * <p>List of prohibited outbound call numbers.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListDoNotCallNumbersResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -189,6 +232,8 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -196,6 +241,8 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

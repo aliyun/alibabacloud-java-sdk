@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartPredictiveCallRequest extends TeaModel {
     /**
+     * <p>The callee number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartPredictiveCallRequest extends TeaModel {
     public String callee;
 
     /**
+     * <p>The caller number, which must be an active outbound number under the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class StartPredictiveCallRequest extends TeaModel {
     public String caller;
 
     /**
+     * <p>The IVR contact flow ID. After the callee answers, the call is automatically transferred into this IVR flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +34,17 @@ public class StartPredictiveCallRequest extends TeaModel {
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
+    /**
+     * <p>The contact flow variables passed in as a JSON-formatted string of an array. Each array element is a key-value pair, where the key is the variable name and the value is the variable value. To use these variables in the IVR flow, create a Custom Parameter with the same name in the start node of the IVR associated with the specified contact flow ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;:&quot;王先生&quot;,&quot;time&quot;:&quot;19点20分&quot;,&quot;address&quot;:&quot;某某中心&quot;}</p>
+     */
     @NameInMap("ContactFlowVariables")
     public String contactFlowVariables;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +54,8 @@ public class StartPredictiveCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The desensitized callee number. If this field is not empty, it indicates that the callee number must be desensitized. The Desensitization Rule is defined by the Customer. Simply enter the desensitized callee number here. Using a desensitized callee number means that in certain scenarios, only the desensitized number is visible, and the real callee number cannot be viewed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1312353****</p>
      */
@@ -51,16 +63,26 @@ public class StartPredictiveCallRequest extends TeaModel {
     public String maskedCallee;
 
     /**
+     * <p>The skill group ID. This parameter is optional. If specified, the outbound number is selected only from the numbers associated with the specified skill group.</p>
+     * 
      * <strong>example:</strong>
      * <p>skillgroup@ccc-test</p>
      */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
+    /**
+     * <p>The ingest endpoint data, primarily used for extension purposes. Regular users do not need to concern themselves with this.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
     /**
+     * <p>The timeout period, in seconds. If the call is not answered within the specified time, it is automatically disconnected.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

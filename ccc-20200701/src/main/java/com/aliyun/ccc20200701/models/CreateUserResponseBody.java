@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class CreateUserResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public CreateUserResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -88,13 +106,27 @@ public class CreateUserResponseBody extends TeaModel {
     }
 
     public static class CreateUserResponseBodyData extends TeaModel {
+        /**
+         * <p>The URL of the agent\&quot;s profile picture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://abc.com/sam.jpg">http://abc.com/sam.jpg</a></p>
+         */
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
+        /**
+         * <p>The display name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -102,6 +134,8 @@ public class CreateUserResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The agent\&quot;s extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -109,6 +143,8 @@ public class CreateUserResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The logon name of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
@@ -116,16 +152,26 @@ public class CreateUserResponseBody extends TeaModel {
         public String loginName;
 
         /**
+         * <p>The personal phone number of the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>1382114****</p>
          */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <p>The agent\&quot;s nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>老王。</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -133,6 +179,8 @@ public class CreateUserResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */

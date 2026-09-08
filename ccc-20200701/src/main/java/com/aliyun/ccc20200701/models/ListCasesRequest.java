@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCasesRequest extends TeaModel {
     /**
+     * <p>Predictive outbound dialing activity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListCasesRequest extends TeaModel {
     public String campaignId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListCasesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The paging ordinal number, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ListCasesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,9 +44,26 @@ public class ListCasesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>Filters by phone number. Fuzzy Matching is not supported. This parameter is not Required and defaults to empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>Pending (to be dialed)<br>
+     * Executing (dialing in progress)<br>
+     * Connected (contact succeeded)<br>
+     * Failed (contact failed)<br>
+     * Aborted (call stopped or canceled)<br>
+     * Forbidden (call prohibited by rule, such as blacklist)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Pending</p>
+     */
     @NameInMap("State")
     public String state;
 

@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetSkillGroupResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetSkillGroupResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF1C21B9-2D49-4B54-880F-FBE248C16903</p>
      */
@@ -77,23 +92,45 @@ public class GetSkillGroupResponseBody extends TeaModel {
     }
 
     public static class GetSkillGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>Description of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心的测试技能组。</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Display name of the skill group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Media type. The default value is AUDIO. Other valid values include CHAT and VIDEO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIDEO</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
+         * <p>Name of the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
          */
@@ -101,6 +138,8 @@ public class GetSkillGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Skill group ID, in the format: skill group name\@instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */

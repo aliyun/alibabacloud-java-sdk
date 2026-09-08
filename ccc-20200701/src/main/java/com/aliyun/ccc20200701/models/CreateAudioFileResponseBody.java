@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAudioFileResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateAudioFileResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Data, which is the ID of the audio resource and uniquely identifies an audio resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>2301b83f-1f9f-491e-9f97-2f832ed92f0b</p>
      */
@@ -19,16 +23,26 @@ public class CreateAudioFileResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>94E29B9B-DBC6-5951-B3DD-C85C1BDF20ED</p>
      */

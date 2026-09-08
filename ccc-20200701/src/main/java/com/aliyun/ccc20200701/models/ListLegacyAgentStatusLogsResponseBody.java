@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListLegacyAgentStatusLogsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4C9A5D93-33A6-57F3-A423-4C83BD0A8455</p>
      */
@@ -32,6 +47,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +110,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
 
     public static class ListLegacyAgentStatusLogsResponseBodyDataList extends TeaModel {
         /**
+         * <p>Indicates whether the agent hung up the call.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -100,29 +119,53 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String agentDropCall;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
         @NameInMap("AgentNo")
         public String agentNo;
 
+        /**
+         * <p>Hang-up reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("AliHangupCause")
         public String aliHangupCause;
 
+        /**
+         * <p>Call direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内部</p>
+         */
         @NameInMap("CallDir")
         public String callDir;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>454326****</p>
          */
         @NameInMap("CallId")
         public String callId;
 
+        /**
+         * <p>Call type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>呼入</p>
+         */
         @NameInMap("CallType")
         public String callType;
 
         /**
+         * <p>The callee number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1312121****</p>
          */
@@ -130,6 +173,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String calleeId;
 
         /**
+         * <p>Calling number.</p>
+         * 
          * <strong>example:</strong>
          * <p>08337676****</p>
          */
@@ -137,25 +182,53 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String callerId;
 
         /**
+         * <p>Call channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>487326****</p>
          */
         @NameInMap("ConnId")
         public String connId;
 
+        /**
+         * <p>Custom extension field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Custom extension field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Custom extension field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>Custom extension field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Extend4")
         public String extend4;
 
         /**
+         * <p>Skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -163,6 +236,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String groupNo;
 
         /**
+         * <p>The listener phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8032****</p>
          */
@@ -170,6 +245,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String monitedAgentNo;
 
         /**
+         * <p>The monitored agent phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8012****</p>
          */
@@ -177,6 +254,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String monitedAgentPhoneNo;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -184,6 +263,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public Boolean outboundScenario;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8012****</p>
          */
@@ -191,6 +272,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String phoneNo;
 
         /**
+         * <p>The time when the statistics were collected.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-03T10:15:30</p>
          */
@@ -198,16 +281,26 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String statisticDate;
 
         /**
+         * <p>Duration of the status, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("StatisticTime")
         public Integer statisticTime;
 
+        /**
+         * <p>Agent status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>振铃</p>
+         */
         @NameInMap("Status")
         public String status;
 
         /**
+         * <p>Skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -215,6 +308,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String targetRequest;
 
         /**
+         * <p>Skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -222,6 +317,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String targetSelect;
 
         /**
+         * <p>Tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acc6736</p>
          */
@@ -229,6 +326,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>Transfer number.</p>
+         * 
          * <strong>example:</strong>
          * <p>07551231****</p>
          */
@@ -236,6 +335,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public String transferNo;
 
         /**
+         * <p>Transfer number.</p>
+         * 
          * <strong>example:</strong>
          * <p>05711231****</p>
          */
@@ -458,10 +559,15 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
     }
 
     public static class ListLegacyAgentStatusLogsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of agent status data.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListLegacyAgentStatusLogsResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 1000.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -469,6 +575,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 1000.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -476,6 +584,8 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

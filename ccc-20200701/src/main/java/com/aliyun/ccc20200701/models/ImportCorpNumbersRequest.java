@@ -4,30 +4,59 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ImportCorpNumbersRequest extends TeaModel {
+    /**
+     * <p>The city.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>西安</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <p>The enterprise name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx公司</p>
+     */
     @NameInMap("CorpName")
     public String corpName;
 
     /**
+     * <p>The list of numbers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\&quot;02912345678\&quot;]</p>
+     * <p>[\&quot;029xxxxxx\&quot;]</p>
      */
     @NameInMap("NumberList")
     public String numberList;
 
     /**
+     * <p>The line information.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx通信-陕西线路</p>
      */
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <p>The province.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>陕西</p>
+     */
     @NameInMap("Province")
     public String province;
 
+    /**
+     * <p>The business tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("TagList")
     public String tagList;
 

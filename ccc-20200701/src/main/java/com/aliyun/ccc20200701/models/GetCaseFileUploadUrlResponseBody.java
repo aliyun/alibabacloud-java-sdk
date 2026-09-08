@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetCaseFileUploadUrlResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetCaseFileUploadUrlResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -78,6 +93,8 @@ public class GetCaseFileUploadUrlResponseBody extends TeaModel {
 
     public static class GetCaseFileUploadUrlResponseBodyData extends TeaModel {
         /**
+         * <p>The key of the OSS file.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test/namelist.csv</p>
          */
@@ -85,6 +102,8 @@ public class GetCaseFileUploadUrlResponseBody extends TeaModel {
         public String caseFileKey;
 
         /**
+         * <p>A pre-signed OSS file upload URL for uploading the file. The validity period is one hour.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/namelist.csv?Expires=1642067227&OSSAccessKeyId=****&Signature=">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-test/namelist.csv?Expires=1642067227&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */

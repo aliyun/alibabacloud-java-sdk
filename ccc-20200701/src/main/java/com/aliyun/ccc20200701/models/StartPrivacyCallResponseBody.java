@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartPrivacyCallResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class StartPrivacyCallResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned result, which is the call ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-xxx</p>
      */
@@ -19,19 +23,32 @@ public class StartPrivacyCallResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The parameter information.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0630E5DF-CEB0-445B-8626-D5C7481181C3</p>
      */

@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetEarlyMediaRecordingResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetEarlyMediaRecordingResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
      */
@@ -78,13 +93,17 @@ public class GetEarlyMediaRecordingResponseBody extends TeaModel {
 
     public static class GetEarlyMediaRecordingResponseBodyData extends TeaModel {
         /**
+         * <p>Recording file name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>job-6538214103689****-earlyMedia..wav</p>
+         * <p>job-6538214103689****-earlyMedia.wav</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
+         * <p>OSS download URL for the recording file. Note the expiration time. The URL is valid for one day.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record-mixed/ccc-test/2022/06/voicemail.job-054ded02****.wav?Expires=1656074923&OSSAccessKeyId=****&Signature=">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record-mixed/ccc-test/2022/06/voicemail.job-054ded02****.wav?Expires=1656074923&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class FinishTicketTaskRequest extends TeaModel {
     /**
+     * <p>Processing comments.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>同意</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +25,8 @@ public class FinishTicketTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>b52a34dc-f514-4600-9c39-3cf657167c97</p>
      */
@@ -27,6 +34,8 @@ public class FinishTicketTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Ticket ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>f2c6722b-cd13-442d-bf10-22a07c70d6d5</p>
      */

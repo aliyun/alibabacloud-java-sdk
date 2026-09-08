@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveBlacklistCallTaggingRequest extends TeaModel {
     /**
+     * <p>ID of the Cloud Contact Center instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class RemoveBlacklistCallTaggingRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Call ID. Provide this field only for masked numbers (containing \*). Do not provide it for unmasked numbers.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-6538214103685****</p>
      */
@@ -21,6 +24,7 @@ public class RemoveBlacklistCallTaggingRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

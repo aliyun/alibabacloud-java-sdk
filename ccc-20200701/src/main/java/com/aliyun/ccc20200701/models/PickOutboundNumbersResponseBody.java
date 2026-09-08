@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class PickOutboundNumbersResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<PickOutboundNumbersResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -77,16 +92,30 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
     }
 
     public static class PickOutboundNumbersResponseBodyDataCallee extends TeaModel {
+        /**
+         * <p>City of number registration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>Number</p>
+         * 
          * <strong>example:</strong>
          * <p>1388888****</p>
          */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <p>Province of number registration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("Province")
         public String province;
 
@@ -122,16 +151,30 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
     }
 
     public static class PickOutboundNumbersResponseBodyDataCaller extends TeaModel {
+        /**
+         * <p>City of number registration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>Number</p>
+         * 
          * <strong>example:</strong>
          * <p>0108989****</p>
          */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <p>Province of number registration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("Province")
         public String province;
 
@@ -167,9 +210,15 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
     }
 
     public static class PickOutboundNumbersResponseBodyData extends TeaModel {
+        /**
+         * <p>Callee number.</p>
+         */
         @NameInMap("Callee")
         public PickOutboundNumbersResponseBodyDataCallee callee;
 
+        /**
+         * <p>Caller number.</p>
+         */
         @NameInMap("Caller")
         public PickOutboundNumbersResponseBodyDataCaller caller;
 

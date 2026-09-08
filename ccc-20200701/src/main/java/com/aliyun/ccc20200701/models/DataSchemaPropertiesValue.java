@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DataSchemaPropertiesValue extends TeaModel {
     /**
+     * <p>The display name of the field.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -12,6 +14,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -21,6 +25,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public String description;
 
     /**
+     * <p>The name.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -28,6 +34,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public String name;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>string</p>
      */
@@ -35,6 +43,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The regular expression.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -43,10 +53,18 @@ public class DataSchemaPropertiesValue extends TeaModel {
     @NameInMap("Pattern")
     public String pattern;
 
+    /**
+     * <p>The error message for the regular expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>格式错误</p>
+     */
     @NameInMap("PatternErrorMessage")
     public String patternErrorMessage;
 
     /**
+     * <p>The minimum length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +72,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Integer minLength;
 
     /**
+     * <p>The maximum length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +81,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Integer maxLength;
 
     /**
+     * <p>The minimum value.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,6 +90,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Double minimum;
 
     /**
+     * <p>The maximum value.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -75,6 +99,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Double maximum;
 
     /**
+     * <p>Indicates whether the field is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -82,6 +108,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Boolean required;
 
     /**
+     * <p>Indicates whether the field is a system field.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -89,6 +117,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Boolean system;
 
     /**
+     * <p>Indicates whether the field is disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -96,6 +126,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Boolean disabled;
 
     /**
+     * <p>Indicates whether the field is an array.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -103,6 +135,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Boolean array;
 
     /**
+     * <p>Indicates whether the field is read-only.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -110,6 +144,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Boolean readOnly;
 
     /**
+     * <p>The editor type.</p>
+     * 
      * <strong>example:</strong>
      * <p>textbox</p>
      */
@@ -117,6 +153,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public String editorType;
 
     /**
+     * <p>The extended properties.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -124,6 +162,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public String attributes;
 
     /**
+     * <p>The display order.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -131,6 +171,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Integer displayOrder;
 
     /**
+     * <p>The time when the field was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-10-14T09:53:53Z</p>
      */
@@ -138,6 +180,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Long createdTime;
 
     /**
+     * <p>The time when the field was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-10-14T09:53:53Z</p>
      */
@@ -145,6 +189,8 @@ public class DataSchemaPropertiesValue extends TeaModel {
     public Long updatedTime;
 
     /**
+     * <p>The creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>tom</p>
      */

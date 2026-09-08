@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListCallTagsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListCallTagsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -78,6 +93,8 @@ public class ListCallTagsResponseBody extends TeaModel {
 
     public static class ListCallTagsResponseBodyDataList extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -85,6 +102,8 @@ public class ListCallTagsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the number tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>TagA</p>
          */
@@ -115,10 +134,15 @@ public class ListCallTagsResponseBody extends TeaModel {
     }
 
     public static class ListCallTagsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of number tags.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListCallTagsResponseBodyDataList> list;
 
         /**
+         * <p>The page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -126,6 +150,8 @@ public class ListCallTagsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -133,6 +159,8 @@ public class ListCallTagsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

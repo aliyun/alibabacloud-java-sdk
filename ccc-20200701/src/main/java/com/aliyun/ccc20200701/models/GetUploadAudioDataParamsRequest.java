@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUploadAudioDataParamsRequest extends TeaModel {
     /**
+     * <p>Call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetUploadAudioDataParamsRequest extends TeaModel {
     public String contactId;
 
     /**
+     * <p>Cloud Contact Center instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportRamUsersResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ImportRamUsersResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Data, import execution ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ca2b084-6f0a-454b-9851-29768a9a5832</p>
      */
@@ -19,16 +23,26 @@ public class ImportRamUsersResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
      */

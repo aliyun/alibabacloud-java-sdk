@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableSchemaPropertyResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DisableSchemaPropertyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class DisableSchemaPropertyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Additional information</p>
+     * 
      * <strong>example:</strong>
      * <p>User 244715989906081477 does not exist in instance worldfirst01.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Parameter information</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>9FBA26B0-462B-4D77-B78F-AF35560DBC71</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDocumentsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDocumentsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJ0YWJsZUlkIjoiY2Y2MTQxYjA5NDY0NDUxMzk5YjFjMTA5YTMxZWNkMzEiLCJ0b2tlbiI6IjAwMDAwMDAwMDAwNzAzNzcifQ==</p>
      */
@@ -21,6 +24,8 @@ public class ListDocumentsRequest extends TeaModel {
     public String nextPageToken;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -28,6 +33,8 @@ public class ListDocumentsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EAF3C248-E123-441B-A545-B6CD02E98EED</p>
      */
@@ -35,7 +42,7 @@ public class ListDocumentsRequest extends TeaModel {
     public String requestId;
 
     /**
-     * <p>schema id</p>
+     * <p>The schema ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,9 +51,18 @@ public class ListDocumentsRequest extends TeaModel {
     @NameInMap("SchemaId")
     public String schemaId;
 
+    /**
+     * <p>The search conditional expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>支持Lucene搜索语法</p>
+     */
     @NameInMap("SearchPattern")
     public String searchPattern;
 
+    /**
+     * <p>The custom sorting value.</p>
+     */
     @NameInMap("Sorts")
     public java.util.List<ListDocumentsRequestSorts> sorts;
 
@@ -113,6 +129,14 @@ public class ListDocumentsRequest extends TeaModel {
 
     public static class ListDocumentsRequestSorts extends TeaModel {
         /**
+         * <p>The sorting order. Valid values:</p>
+         * <ul>
+         * <li><p>ASC (default): ascending order.</p>
+         * </li>
+         * <li><p>DESC: descending order.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -120,6 +144,8 @@ public class ListDocumentsRequest extends TeaModel {
         public String order;
 
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */

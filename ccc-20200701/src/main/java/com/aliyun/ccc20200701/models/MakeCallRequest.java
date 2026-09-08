@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class MakeCallRequest extends TeaModel {
     /**
+     * <p>Callee number. For internal calls, specify the target agent\&quot;s extension number in this field. For outbound calls, specify the customer\&quot;s phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class MakeCallRequest extends TeaModel {
     public String callee;
 
     /**
+     * <p>Caller number. This parameter is invalid for internal calls. For outbound calls, specify an outbound number available to the current agent. Ensure that the number supports outbound calling and that the agent has permission to use it. Permission can be granted in two ways: either by attaching the number to the skill group the agent signed into, or by setting the number as the agent\&quot;s personal outbound number.</p>
+     * 
      * <strong>example:</strong>
      * <p>010989****</p>
      */
@@ -21,16 +24,25 @@ public class MakeCallRequest extends TeaModel {
     public String caller;
 
     /**
+     * <p>Device ID. This field is meaningless and can be filled with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>Flash SMS configuration</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;applicationId\&quot;:\&quot;6bd18325-ea7f-4881-8902-4d06283d3b3b\&quot;,\&quot;templateId\&quot;:\&quot;1722217249064\&quot;}</p>
+     */
     @NameInMap("FlashSmsVariables")
     public String flashSmsVariables;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,16 +52,26 @@ public class MakeCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The desensitized callee number. If this field is not empty, it indicates that the callee number must be desensitized. The desensitization rule is defined by the customer. You only need to enter the desensitized callee number here. Using a desensitized callee number means that in certain scenarios, you will see the desensitized callee number and cannot view the real callee number.</p>
+     * 
      * <strong>example:</strong>
      * <p>131****8888</p>
      */
     @NameInMap("MaskedCallee")
     public String maskedCallee;
 
+    /**
+     * <p>Media type. The default value is AUDIO. Other valid values include VIDEO.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUDIO</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
     /**
+     * <p>Ingest endpoint data. The customer does not need to concern themselves with this.</p>
+     * 
      * <strong>example:</strong>
      * <p>tags</p>
      */
@@ -57,6 +79,8 @@ public class MakeCallRequest extends TeaModel {
     public String tags;
 
     /**
+     * <p>Timeout. If the call is not answered within the time specified by this parameter, the system automatically hangs up. Valid values range from 30 to 300 seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -64,6 +88,8 @@ public class MakeCallRequest extends TeaModel {
     public Integer timeoutSeconds;
 
     /**
+     * <p>Agent ID initiating the outbound call. This field is optional. If not specified, the system uses the agent mapped to the current RAM user by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

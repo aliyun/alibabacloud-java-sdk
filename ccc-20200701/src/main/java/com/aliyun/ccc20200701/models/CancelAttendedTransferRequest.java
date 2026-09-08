@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelAttendedTransferRequest extends TeaModel {
     /**
+     * <p>The Device ID. This parameter is meaningless and can be filled with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -12,6 +14,7 @@ public class CancelAttendedTransferRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CancelAttendedTransferRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class CancelAttendedTransferRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The agent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

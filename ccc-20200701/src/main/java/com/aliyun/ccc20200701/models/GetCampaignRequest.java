@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCampaignRequest extends TeaModel {
     /**
+     * <p>The ID of the campaign.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetCampaignRequest extends TeaModel {
     public String campaignId;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMonoRecordingRequest extends TeaModel {
     /**
+     * <p>Call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class GetMonoRecordingRequest extends TeaModel {
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <p>Expiration time, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("ExpireSeconds")
     public Long expireSeconds;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

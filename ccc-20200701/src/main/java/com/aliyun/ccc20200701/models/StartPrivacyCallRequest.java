@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartPrivacyCallRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartPrivacyCallRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The callee\&quot;s number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class StartPrivacyCallRequest extends TeaModel {
     public String callee;
 
     /**
+     * <p>The caller\&quot;s number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class StartPrivacyCallRequest extends TeaModel {
     public String caller;
 
     /**
+     * <p>The ID of the Cloud Contact Center (CCC) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

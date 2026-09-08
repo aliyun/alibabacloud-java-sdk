@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSchemaPropertyRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Field</p>
+     */
     @NameInMap("Property")
     public UpdateSchemaPropertyRequestProperty property;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>BC976D32-AC4C-4E0F-8AA9-F4BC6C4E2B3E</p>
      */
@@ -72,6 +78,8 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
 
     public static class UpdateSchemaPropertyRequestProperty extends TeaModel {
         /**
+         * <p>Specifies whether the property is an array.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -79,6 +87,8 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public Boolean array;
 
         /**
+         * <p>Extension attributes</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;instanceId\&quot;:\&quot;4cc3f160-ca64-49ff-bc70-390a044a4e83\&quot;,\&quot;appId\&quot;:\&quot;1684145288664\&quot;,\&quot;commodityCode\&quot;:\&quot;dide_pre\&quot;,\&quot;dide_pre_set\&quot;:\&quot;version_ent\&quot;}</p>
          */
@@ -86,6 +96,7 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public String attributes;
 
         /**
+         * <p>Data type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -95,6 +106,8 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public String dataType;
 
         /**
+         * <p>Description.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -104,16 +117,26 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the property is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        /**
+         * <p>Display name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>姓名</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Display order</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -121,6 +144,8 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public Integer displayOrder;
 
         /**
+         * <p>Editor type</p>
+         * 
          * <strong>example:</strong>
          * <p>textbox</p>
          */
@@ -128,6 +153,8 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public String editorType;
 
         /**
+         * <p>Maximum length</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -135,6 +162,8 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public Integer maxLength;
 
         /**
+         * <p>Maximum value</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -142,6 +171,8 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public Double maximum;
 
         /**
+         * <p>Minimum length</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -149,6 +180,8 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public Integer minLength;
 
         /**
+         * <p>Minimum value</p>
+         * 
          * <strong>example:</strong>
          * <p>10800</p>
          */
@@ -156,6 +189,7 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public Double minimum;
 
         /**
+         * <p>Name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,16 +199,26 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Regular expression validation rule</p>
+         * 
          * <strong>example:</strong>
          * <p>(.*)</p>
          */
         @NameInMap("Pattern")
         public String pattern;
 
+        /**
+         * <p>Regular expression validation error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>不是有效的email地址</p>
+         */
         @NameInMap("PatternErrorMessage")
         public String patternErrorMessage;
 
         /**
+         * <p>Read-only</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -182,6 +226,8 @@ public class UpdateSchemaPropertyRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
+         * <p>Required</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

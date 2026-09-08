@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSchemaRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetSchemaRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
      */
@@ -21,7 +24,7 @@ public class GetSchemaRequest extends TeaModel {
     public String requestId;
 
     /**
-     * <p>schema id</p>
+     * <p>The ID of the schema.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

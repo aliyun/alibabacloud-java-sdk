@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportContactFlowRequest extends TeaModel {
     /**
+     * <p>The ID of the IVR contact flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExportContactFlowRequest extends TeaModel {
     public String flowId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ExportContactFlowRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AF9834D8-6D09-4A1B-BADB-B019D9D444C8</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListUsersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,12 +35,20 @@ public class ListUsersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Fuzzy matching based on the agent logon name or agent display name. This parameter is optional and defaults to empty, which means no filtering is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent</p>
      */
     @NameInMap("SearchPattern")
     public String searchPattern;
 
+    /**
+     * <p>The skill group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ankedayaopin@zcwlwhkf</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 

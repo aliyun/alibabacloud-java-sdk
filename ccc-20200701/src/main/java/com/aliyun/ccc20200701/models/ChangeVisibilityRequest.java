@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeVisibilityRequest extends TeaModel {
     /**
+     * <p>The ID of the Cloud Connect Center instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ChangeVisibilityRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether to set the agent\&quot;s status to invisible.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +24,8 @@ public class ChangeVisibilityRequest extends TeaModel {
     public Boolean invisible;
 
     /**
+     * <p>The ID of the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>sam@szpczf</p>
      */

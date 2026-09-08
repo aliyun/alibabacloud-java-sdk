@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCustomCallTaggingRequest extends TeaModel {
     /**
+     * <p>Filter by a list of number tag names. This parameter is optional and defaults to empty, which means no filtering is applied. The format is a JSON array string, where each array element is a number tag name.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;TagA&quot;]</p>
      */
@@ -12,6 +14,7 @@ public class ListCustomCallTaggingRequest extends TeaModel {
     public String callTagNameList;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListCustomCallTaggingRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ListCustomCallTaggingRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class ListCustomCallTaggingRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Perform fuzzy matching based on number or description. This parameter is optional and defaults to empty. An empty value indicates no filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>1312121****</p>
      */

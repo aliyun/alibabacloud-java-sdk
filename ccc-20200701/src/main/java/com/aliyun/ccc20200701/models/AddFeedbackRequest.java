@@ -4,10 +4,17 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class AddFeedbackRequest extends TeaModel {
+    /**
+     * <p>The feedback provided by returning users.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;问题描述&quot;:&quot;客户询问沙发生产周期并尝试加快&quot;, &quot;客服方案&quot;:&quot;订单确认，建议联系在线客服&quot;, &quot;完成度判断&quot;:&quot;否&quot;}</p>
+     */
     @NameInMap("Feedback")
     public String feedback;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,14 @@ public class AddFeedbackRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Rating:</p>
+     * <ul>
+     * <li><p>thumbsDown: Thumbs down.</p>
+     * </li>
+     * <li><p>thumbsUp: Thumbs up.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>thumbsUp</p>
      */
@@ -24,6 +39,8 @@ public class AddFeedbackRequest extends TeaModel {
     public Integer rating;
 
     /**
+     * <p>AI task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>f780ade8-****-458b-b067-63077946a570</p>
      */
@@ -31,6 +48,16 @@ public class AddFeedbackRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Task type.</p>
+     * <ul>
+     * <li><p>Abstract:fields (Field extraction)</p>
+     * </li>
+     * <li><p>Abstract:keywords (Hot keywords)</p>
+     * </li>
+     * <li><p>Abstract:title_summary (Summary)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Abstract:fields</p>
      */

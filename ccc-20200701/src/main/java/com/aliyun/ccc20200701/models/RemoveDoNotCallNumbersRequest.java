@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveDoNotCallNumbersRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class RemoveDoNotCallNumbersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>List of Do Not Call numbers to be deleted, formatted as a JSON array string. The array length must be between 1 and 300.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;1900000****&quot;,&quot;1312211****&quot;]</p>
      */

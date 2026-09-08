@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class LaunchAuthenticationRequest extends TeaModel {
     /**
+     * <p>The contact flow ID for the IVR identity verification flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,23 @@ public class LaunchAuthenticationRequest extends TeaModel {
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
+    /**
+     * <p>Variables passed to the contact flow. This parameter is optional. The configured variables can be retrieved and used within the IVR flow. The format is a JSON string representing a collection of key-value pairs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;customerID&quot;: &quot;208880281831****&quot;,
+     *       &quot;operateType&quot;: &quot;cipherCode&quot;,
+     *       &quot;taskId&quot;: &quot;1234567890&quot;,
+     *       &quot;crmOther&quot;: &quot;123&quot;
+     * }</p>
+     */
     @NameInMap("ContactFlowVariables")
     public String contactFlowVariables;
 
     /**
+     * <p>Device ID. This parameter is meaningless and can be filled in with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACC-YUNBS-1.0.10-****</p>
      */
@@ -24,6 +38,7 @@ public class LaunchAuthenticationRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +48,7 @@ public class LaunchAuthenticationRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +58,8 @@ public class LaunchAuthenticationRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The agent ID that initiates identity verification.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyPhoneNumberRequest extends TeaModel {
     /**
+     * <p>The IVR contact flow ID attached to the number. This field is valid only when the number usage is Inbound or Bidirection.</p>
+     * 
      * <strong>example:</strong>
      * <p>78128960-bb00-4ddc-8a82-923a8c5bd22d</p>
      */
@@ -12,6 +14,7 @@ public class ModifyPhoneNumberRequest extends TeaModel {
     public String contactFlowId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ModifyPhoneNumberRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ModifyPhoneNumberRequest extends TeaModel {
     public String number;
 
     /**
+     * <p>Number usage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

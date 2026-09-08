@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetHistoricalCallerReportResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetHistoricalCallerReportResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -78,6 +93,8 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
 
     public static class GetHistoricalCallerReportResponseBodyData extends TeaModel {
         /**
+         * <p>The UNIX timestamp (in milliseconds) of the most recent incoming call.</p>
+         * 
          * <strong>example:</strong>
          * <p>1646917200000</p>
          */
@@ -85,6 +102,8 @@ public class GetHistoricalCallerReportResponseBody extends TeaModel {
         public Long lastCallingTime;
 
         /**
+         * <p>Total number of incoming calls from this number during the query time period.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

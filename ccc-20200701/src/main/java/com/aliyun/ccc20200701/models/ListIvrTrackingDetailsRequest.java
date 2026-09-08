@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIvrTrackingDetailsRequest extends TeaModel {
     /**
+     * <p>The call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListIvrTrackingDetailsRequest extends TeaModel {
     public String contactId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListIvrTrackingDetailsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Page number, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ListIvrTrackingDetailsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

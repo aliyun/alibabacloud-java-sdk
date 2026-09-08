@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCaseFileUploadUrlRequest extends TeaModel {
     /**
+     * <p>The file name of the predictive outbound calling Activity list. The name must consist of uppercase and lowercase English letters, and the file format must be CSV.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetCaseFileUploadUrlRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

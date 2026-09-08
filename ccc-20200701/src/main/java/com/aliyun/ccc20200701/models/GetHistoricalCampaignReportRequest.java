@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHistoricalCampaignReportRequest extends TeaModel {
     /**
+     * <p>Predictive outbound call activity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetHistoricalCampaignReportRequest extends TeaModel {
     public String campaignId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

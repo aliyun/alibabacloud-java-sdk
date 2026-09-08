@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListRamUsersResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListRamUsersResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>24753D71-C91D-1A38-A8AD-372BF12453F6</p>
      */
@@ -89,16 +107,26 @@ public class ListRamUsersResponseBody extends TeaModel {
 
     public static class ListRamUsersResponseBodyDataList extends TeaModel {
         /**
+         * <p>The UID of the Alibaba Cloud account to which the RAM user belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>15772400000****</p>
          */
         @NameInMap("AliyunUid")
         public Long aliyunUid;
 
+        /**
+         * <p>The display name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试账号</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The email address of the RAM user.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
@@ -106,6 +134,8 @@ public class ListRamUsersResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The logon name of the RAM user.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent</p>
          */
@@ -113,6 +143,8 @@ public class ListRamUsersResponseBody extends TeaModel {
         public String loginName;
 
         /**
+         * <p>The mobile number of the RAM user.</p>
+         * 
          * <strong>example:</strong>
          * <p>1382114****</p>
          */
@@ -120,6 +152,8 @@ public class ListRamUsersResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>Indicates whether the user is a primary account. A value of <code>false</code> indicates that the user is a RAM user.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -127,6 +161,8 @@ public class ListRamUsersResponseBody extends TeaModel {
         public Boolean primary;
 
         /**
+         * <p>The ID of the RAM user.</p>
+         * 
          * <strong>example:</strong>
          * <p>28036411123456****</p>
          */
@@ -197,10 +233,15 @@ public class ListRamUsersResponseBody extends TeaModel {
     }
 
     public static class ListRamUsersResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of RAM users.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListRamUsersResponseBodyDataList> list;
 
         /**
+         * <p>The returned page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -208,6 +249,8 @@ public class ListRamUsersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -215,6 +258,8 @@ public class ListRamUsersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

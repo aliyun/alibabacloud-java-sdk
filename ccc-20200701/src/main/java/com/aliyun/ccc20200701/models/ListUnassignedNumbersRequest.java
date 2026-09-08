@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUnassignedNumbersRequest extends TeaModel {
     /**
+     * <p>Page number for paging, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListUnassignedNumbersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ListUnassignedNumbersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Performs Fuzzy Matching based on the number. This parameter is optional and defaults to empty. An empty value indicates no filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>0833</p>
      */

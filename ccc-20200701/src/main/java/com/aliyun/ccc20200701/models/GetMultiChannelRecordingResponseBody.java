@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetMultiChannelRecordingResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetMultiChannelRecordingResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,6 +93,8 @@ public class GetMultiChannelRecordingResponseBody extends TeaModel {
 
     public static class GetMultiChannelRecordingResponseBodyData extends TeaModel {
         /**
+         * <p>Recording file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103689****.mkv</p>
          */
@@ -85,6 +102,8 @@ public class GetMultiChannelRecordingResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The OSS download URL of the recording file. Note that the download URL expires after a validity period of 1 day.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record-mixed/ccc-test/2021/04/job-6538214103689****.mkv?Expires=1617435462&OSSAccessKeyId=****&Signature=">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record-mixed/ccc-test/2021/04/job-6538214103689****.mkv?Expires=1617435462&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */

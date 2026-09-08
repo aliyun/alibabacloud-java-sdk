@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ClaimCallResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ClaimCallResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>93CDC17E-3E8A-48F2-99E5-FA2E238DE8B4</p>
      */
@@ -89,6 +107,8 @@ public class ClaimCallResponseBody extends TeaModel {
 
     public static class ClaimCallResponseBodyDataCallContextChannelContexts extends TeaModel {
         /**
+         * <p>The call type of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
@@ -96,6 +116,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String callType;
 
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
          */
@@ -103,6 +125,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The state of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>ANSWERED</p>
          */
@@ -110,6 +134,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String channelState;
 
         /**
+         * <p>The channel variables.</p>
+         * 
          * <strong>example:</strong>
          * <p>a=b;c=d;</p>
          */
@@ -117,6 +143,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String channelVariables;
 
         /**
+         * <p>The destination of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>1390501****</p>
          */
@@ -124,6 +152,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String destination;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6573574060089****</p>
          */
@@ -131,6 +161,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The originator of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>0830019****</p>
          */
@@ -138,16 +170,26 @@ public class ClaimCallResponseBody extends TeaModel {
         public String originator;
 
         /**
+         * <p>The party who initiated the channel release.</p>
+         * 
          * <strong>example:</strong>
          * <p>1390501****</p>
          */
         @NameInMap("ReleaseInitiator")
         public String releaseInitiator;
 
+        /**
+         * <p>The reason why the channel was released. This is a SIP response code. For more information, see the SIP protocol specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
         /**
+         * <p>The Unix timestamp that indicates the last time the channel state changed. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609225718295</p>
          */
@@ -155,6 +197,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>The agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8059****</p>
          */
@@ -162,6 +206,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String userExtension;
 
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>invoker@ccc-test</p>
          */
@@ -272,10 +318,15 @@ public class ClaimCallResponseBody extends TeaModel {
     }
 
     public static class ClaimCallResponseBodyDataCallContext extends TeaModel {
+        /**
+         * <p>The channel contexts.</p>
+         */
         @NameInMap("ChannelContexts")
         public java.util.List<ClaimCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -283,6 +334,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6538214103685****</p>
          */
@@ -322,6 +375,8 @@ public class ClaimCallResponseBody extends TeaModel {
 
     public static class ClaimCallResponseBodyDataUserContext extends TeaModel {
         /**
+         * <p>The break code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Customized</p>
          */
@@ -329,6 +384,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>The device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>device-xxxx</p>
          */
@@ -336,6 +393,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0830019****</p>
          */
@@ -343,6 +402,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -350,6 +411,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6573574060089****</p>
          */
@@ -357,16 +420,23 @@ public class ClaimCallResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Indicates whether this is an outbound scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <p>The list of signed-in skill group IDs.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>user@ccc-test</p>
          */
@@ -374,6 +444,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The agent state.</p>
+         * 
          * <strong>example:</strong>
          * <p>Dialing</p>
          */
@@ -381,6 +453,8 @@ public class ClaimCallResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>The work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -475,16 +549,24 @@ public class ClaimCallResponseBody extends TeaModel {
     }
 
     public static class ClaimCallResponseBodyData extends TeaModel {
+        /**
+         * <p>The call context.</p>
+         */
         @NameInMap("CallContext")
         public ClaimCallResponseBodyDataCallContext callContext;
 
         /**
+         * <p>The context ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
         @NameInMap("ContextId")
         public Long contextId;
 
+        /**
+         * <p>The agent context.</p>
+         */
         @NameInMap("UserContext")
         public ClaimCallResponseBodyDataUserContext userContext;
 

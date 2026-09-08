@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetAudioFileUploadParametersResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetAudioFileUploadParametersResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C81FD1A5-4B99-470A-A527-D80150228784</p>
      */
@@ -78,6 +93,8 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
 
     public static class GetAudioFileUploadParametersResponseBodyData extends TeaModel {
         /**
+         * <p>AccessKey ID used for signing.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -85,6 +102,8 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
+         * <p>Expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1647313420</p>
          */
@@ -92,6 +111,8 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         public Integer expireTime;
 
         /**
+         * <p>Key of the OSS file.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test/test-file.wav</p>
          */
@@ -99,6 +120,8 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         public String filePath;
 
         /**
+         * <p>Endpoint domain name of OSS.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></p>
          */
@@ -106,6 +129,8 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>Signature policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJleHBpcmF0aW9uIjoiMjAyMi0wNi0yOVQwMDoyOTowMC42NTRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjBdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiYXVkaW8vMTU3NzI0NzExNTQ5MDQwMS9seS1vbmxpbmUvMjAyMjA2MjkwNzI5MDAvIl1d****</p>
          */
@@ -113,6 +138,8 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
         public String policy;
 
         /**
+         * <p>Signature information of the temporary credential for file upload, used to authenticate the upload request.</p>
+         * 
          * <strong>example:</strong>
          * <p>HIyClras8IcVlbTV7RIJWJbU****</p>
          */

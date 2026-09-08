@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListCallDetailRecordsV2ResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>01B12EE4-6AF2-4730-8B78-EC15F4E5C025</p>
      */
@@ -77,18 +92,52 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
     }
 
     public static class ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion extends TeaModel {
+        /**
+         * <p>The confidence level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Confidence")
         public Integer confidence;
 
+        /**
+         * <p>The detailed remark of the emotion analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No emotional change from the customer</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ff07fe35670423089dbdf12766d962f</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The emotion type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Neutral</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -140,18 +189,52 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
     }
 
     public static class ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving extends TeaModel {
+        /**
+         * <p>The problem description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert issue</p>
+         */
         @NameInMap("Problem")
         public String problem;
 
+        /**
+         * <p>The Solutions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The enrichment service automatically closes the original alert</p>
+         */
         @NameInMap("Solution")
         public String solution;
 
+        /**
+         * <p>Indicates whether the problem is resolved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Solved")
         public Boolean solved;
 
+        /**
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8bf18b7a10064b29a75946a8d5b8469a</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
@@ -203,15 +286,43 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
     }
 
     public static class ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction extends TeaModel {
+        /**
+         * <p>The detailed remark of the satisfaction analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The customer expressed satisfaction</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The satisfaction description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Satisfied</p>
+         */
         @NameInMap("SatisfactionDescription")
         public String satisfactionDescription;
 
+        /**
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb67479ce28243b28ff39948feaa0806</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
@@ -255,12 +366,31 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
     }
 
     public static class ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList extends TeaModel {
+        /**
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb67479ce28243b28ff39948feaa0806</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The to-do items.</p>
+         */
         @NameInMap("Tasks")
         public java.util.List<String> tasks;
 
@@ -296,15 +426,27 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
     }
 
     public static class ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport extends TeaModel {
+        /**
+         * <p>The emotion analysis.</p>
+         */
         @NameInMap("Emotion")
         public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportEmotion emotion;
 
+        /**
+         * <p>The problem resolution status.</p>
+         */
         @NameInMap("ProblemSolving")
         public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportProblemSolving problemSolving;
 
+        /**
+         * <p>The satisfaction analysis.</p>
+         */
         @NameInMap("Satisfaction")
         public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportSatisfaction satisfaction;
 
+        /**
+         * <p>The to-do list.</p>
+         */
         @NameInMap("TodoList")
         public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReportTodoList todoList;
 
@@ -348,6 +490,12 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
     }
 
     public static class ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex extends TeaModel {
+        /**
+         * <p>The keywords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CustomerService</p>
+         */
         @NameInMap("Keywords")
         public String keywords;
 
@@ -367,10 +515,27 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
     }
 
     public static class ListCallDetailRecordsV2ResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8f6bcbad-6e2d-4ca3-9b65-91cf0aafdf00</p>
+         */
+        @NameInMap("AccessChannelId")
+        public String accessChannelId;
+
+        /**
+         * <p>The channel name. This parameter has a value only when MediaType is CHAT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestChannel</p>
+         */
         @NameInMap("AccessChannelName")
         public String accessChannelName;
 
         /**
+         * <p>The channel type. This parameter has a value only when MediaType is CHAT.</p>
+         * 
          * <strong>example:</strong>
          * <p>Web</p>
          */
@@ -378,16 +543,26 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String accessChannelType;
 
         /**
+         * <p>The visitor ID. This parameter has a value only when MediaType is CHAT.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-user-id</p>
          */
         @NameInMap("AccessChannelUserId")
         public String accessChannelUserId;
 
+        /**
+         * <p>The visitor name. This parameter has a value only when MediaType is CHAT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestVisitor</p>
+         */
         @NameInMap("AccessChannelUserName")
         public String accessChannelUserName;
 
         /**
+         * <p>The additional intermediate number, which may be used in dual-call scenarios.</p>
+         * 
          * <strong>example:</strong>
          * <p>0533128****</p>
          */
@@ -395,22 +570,41 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String additionalBroker;
 
         /**
+         * <p>The list of agent IDs. Multiple values are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
         @NameInMap("AgentIds")
         public String agentIds;
 
+        /**
+         * <p>The list of agent names involved in the call. Multiple agents are separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudCallCenterTestAgent</p>
+         */
         @NameInMap("AgentNames")
         public String agentNames;
 
+        /**
+         * <p>The post-call analytics report.</p>
+         */
         @NameInMap("AnalyticsReport")
         public ListCallDetailRecordsV2ResponseBodyDataListAnalyticsReport analyticsReport;
 
+        /**
+         * <p>Indicates whether the AI post-call analytics report is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AnalyticsReportReady")
         public Boolean analyticsReportReady;
 
         /**
+         * <p>The intermediate number.</p>
+         * 
          * <strong>example:</strong>
          * <p>053xxxx3127</p>
          */
@@ -418,39 +612,71 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String broker;
 
         /**
+         * <p>The call duration. For inbound calls, timing starts when the call enters the IVR. For outbound calls, timing starts when the call is connected. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
         @NameInMap("CallDuration")
         public String callDuration;
 
+        /**
+         * <p>The list of SIP CallIds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dxxx1sdf,xkkwwwa</p>
+         */
         @NameInMap("CallIds")
         public String callIds;
 
         /**
+         * <p>The called number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1332315****</p>
          */
         @NameInMap("CalledNumber")
         public String calledNumber;
 
+        /**
+         * <p>The location of the callee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Shandong-Jinan</p>
+         */
         @NameInMap("CalleeLocation")
         public String calleeLocation;
 
+        /**
+         * <p>The location of the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing-Beijing</p>
+         */
         @NameInMap("CallerLocation")
         public String callerLocation;
 
         /**
+         * <p>The calling number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0533128****</p>
          */
         @NameInMap("CallingNumber")
         public String callingNumber;
 
+        /**
+         * <p>The visitor client application name. This parameter has a value only when MediaType is CHAT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unknown</p>
+         */
         @NameInMap("ClientAppName")
         public String clientAppName;
 
         /**
+         * <p>The visitor client IP address. This parameter has a value only when MediaType is CHAT.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.100.2.1</p>
          */
@@ -458,6 +684,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String clientIpAddress;
 
         /**
+         * <p>The visitor client location. This parameter has a value only when MediaType is CHAT.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -465,6 +693,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String clientLocation;
 
         /**
+         * <p>The visitor client user agent information. This parameter has a value only when MediaType is CHAT.</p>
+         * 
          * <strong>example:</strong>
          * <p>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36</p>
          */
@@ -472,6 +702,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String clientUserAgent;
 
         /**
+         * <p>The call end reason. For the enumeration list, refer to the ContactDispositionList query parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -479,6 +711,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String contactDisposition;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-2255019651513856</p>
          */
@@ -486,6 +720,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>The call type. For the enumeration list, refer to the ContactTypeList query parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
@@ -493,6 +729,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String contactType;
 
         /**
+         * <p>The dialing duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -500,16 +738,26 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long dialingTime;
 
         /**
+         * <p>The early media state.</p>
+         * 
          * <strong>example:</strong>
          * <p>NotConnected</p>
          */
         @NameInMap("EarlyMediaState")
         public String earlyMediaState;
 
+        /**
+         * <p>The early media text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Currently on a call</p>
+         */
         @NameInMap("EarlyMediaText")
         public String earlyMediaText;
 
         /**
+         * <p>The time when the call was established. If the call was not established, this value is empty. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1532448000000</p>
          */
@@ -517,6 +765,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long establishedTime;
 
         /**
+         * <p>The time taken for the agent to first respond to the customer message. This parameter has a value only when MediaType is CHAT.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -524,6 +774,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long firstResponseTime;
 
         /**
+         * <p>The hold time. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -531,6 +783,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long heldTime;
 
         /**
+         * <p>The call center instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -538,6 +792,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The IVR duration, which is the time from when the call enters the IVR to when it starts entering the manual service queue (or the customer abandons the call). Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -545,6 +801,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long ivrTime;
 
         /**
+         * <p>The media type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AUDIO: Voice.</li>
+         * <li>CHAT: Message.</li>
+         * <li>VIDEO: Video.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CHAT</p>
          */
@@ -552,6 +816,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String mediaType;
 
         /**
+         * <p>The total number of messages. This parameter has a value only when MediaType is CHAT.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -559,6 +825,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long messagesSent;
 
         /**
+         * <p>The total number of messages sent by the agent. This parameter has a value only when MediaType is CHAT.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -566,6 +834,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long messagesSentByAgent;
 
         /**
+         * <p>The total number of messages sent by the customer. This parameter has a value only when MediaType is CHAT.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -573,6 +843,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long messagesSentByCustomer;
 
         /**
+         * <p>The list of off-site agent IDs involved in the call. Multiple agents are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>skg-default@ccc-test</p>
          */
@@ -580,6 +852,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String offSiteAgentIds;
 
         /**
+         * <p>The off-site agent number that is called when the assigned agent is an off-site agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>80312348</p>
          */
@@ -587,22 +861,44 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String offsiteAgentDestinationNumbers;
 
         /**
+         * <p>The number that initiates the call to the off-site agent when the assigned agent is an off-site agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>0101257****</p>
          */
         @NameInMap("OffsiteAgentOriginatorNumbers")
         public String offsiteAgentOriginatorNumbers;
 
+        /**
+         * <p>The hangup reason of the last assigned offsite agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IVRException</p>
+         */
         @NameInMap("OffsiteAgentReleaseReason")
         public String offsiteAgentReleaseReason;
 
+        /**
+         * <p>The called number when the call is transferred to an outside line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>134xxxxxx</p>
+         */
         @NameInMap("OutsideNumberDestinationNumber")
         public String outsideNumberDestinationNumber;
 
+        /**
+         * <p>The hangup reason when the call is transferred to an outside line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoAnswer</p>
+         */
         @NameInMap("OutsideNumberReleaseReason")
         public String outsideNumberReleaseReason;
 
         /**
+         * <p>The queue duration, which is the time from when the call enters the manual service queue to when the agent starts ringing (or the customer abandons the call, the queue times out, or the queue overflows). Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -610,6 +906,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long queueTime;
 
         /**
+         * <p>The recording duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -617,6 +915,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long recordingDuration;
 
         /**
+         * <p>Indicates whether the recording has been generated. If the call was not established, false is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -624,6 +924,13 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Boolean recordingReady;
 
         /**
+         * <p>The party that hung up.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>agent: The agent.</li>
+         * <li>customer: The customer.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>customer</p>
          */
@@ -631,6 +938,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String releaseInitiator;
 
         /**
+         * <p>The hangup reason of the call channel, indicating why the current call channel was hung up. The value is a response code defined in the SIP protocol. Refer to the SIP protocol to analyze the hangup reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>486:USER_BUSY</p>
          */
@@ -638,6 +947,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String releaseReason;
 
         /**
+         * <p>The time when the call ended, in Unix timestamp format. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1532707199000</p>
          */
@@ -645,16 +956,26 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long releaseTime;
 
         /**
+         * <p>The ringing duration, which is the time from when the agent starts ringing to when the agent answers (or the customer abandons the call). Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("RingTime")
         public Long ringTime;
 
+        /**
+         * <p>The satisfaction description, which corresponds to the configuration of the satisfaction module in the satisfaction IVR and is defined by the customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Satisfied</p>
+         */
         @NameInMap("SatisfactionDescription")
         public String satisfactionDescription;
 
         /**
+         * <p>The satisfaction rating, which is the value of the satisfaction key digit (a single digit).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -662,6 +983,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Integer satisfactionIndex;
 
         /**
+         * <p>The satisfaction survey channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>IVR</p>
          */
@@ -669,6 +992,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public String satisfactionSurveyChannel;
 
         /**
+         * <p>Indicates whether a satisfaction survey was sent.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -676,26 +1001,41 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Boolean satisfactionSurveyOffered;
 
         /**
+         * <p>The skill group IDs of the agents who participated in the call. Multiple skill groups are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>skg-default@ccc-test</p>
          */
         @NameInMap("SkillGroupIds")
         public String skillGroupIds;
 
+        /**
+         * <p>The skill group names of the agents who participated in the call. Multiple skill groups are separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestSkillGroup1,TestSkillGroup2</p>
+         */
         @NameInMap("SkillGroupNames")
         public String skillGroupNames;
 
         /**
+         * <p>The time when the call started. For inbound calls, this is counted from when the call enters the IVR. For outbound calls, this is counted from when dialing begins. The value is in Unix timestamp format. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1631440860000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The summary index.</p>
+         */
         @NameInMap("SummaryIndex")
         public ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex summaryIndex;
 
         /**
+         * <p>The talk time. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -703,19 +1043,35 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Long talkTime;
 
         /**
+         * <p>The number of transfers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("TransferCount")
         public Long transferCount;
 
+        /**
+         * <p>The outbound called number carried when the call is transferred from an intelligent outbound call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>134xxxxxx</p>
+         */
         @NameInMap("VoicebotDestinationNumber")
         public String voicebotDestinationNumber;
 
+        /**
+         * <p>The outbound caller number carried when the call is transferred from an intelligent outbound call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>021xxxxxxx</p>
+         */
         @NameInMap("VoicebotOriginatorNumber")
         public String voicebotOriginatorNumber;
 
         /**
+         * <p>The customer wait time, which equals QueueTime + RingTime. If the customer abandons the call during the waiting period, the value is 0. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -725,6 +1081,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public static ListCallDetailRecordsV2ResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListCallDetailRecordsV2ResponseBodyDataList self = new ListCallDetailRecordsV2ResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataList setAccessChannelId(String accessChannelId) {
+            this.accessChannelId = accessChannelId;
+            return this;
+        }
+        public String getAccessChannelId() {
+            return this.accessChannelId;
         }
 
         public ListCallDetailRecordsV2ResponseBodyDataList setAccessChannelName(String accessChannelName) {
@@ -1218,10 +1582,15 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
     }
 
     public static class ListCallDetailRecordsV2ResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of call records.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListCallDetailRecordsV2ResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1229,6 +1598,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -1236,6 +1607,8 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

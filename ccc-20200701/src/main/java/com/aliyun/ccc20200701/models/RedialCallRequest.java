@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RedialCallRequest extends TeaModel {
     /**
+     * <p>Callee number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1318888****</p>
      */
@@ -12,16 +14,25 @@ public class RedialCallRequest extends TeaModel {
     public String callee;
 
     /**
+     * <p>Caller number.</p>
+     * 
      * <strong>example:</strong>
      * <p>0109810****</p>
      */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <p>Unique ID provided by the agent endpoint to identify an agent Workbench.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CCC-x.x.x.x-chrome102-bsdf911812c60f61e</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
+     * <p>Instance ID of the call center.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +42,8 @@ public class RedialCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Call job ID. The job ID of the previous call used for redialing.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-6581536084722****</p>
      */
@@ -38,6 +51,8 @@ public class RedialCallRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Per-call data. It must not exceed 128 bytes and is primarily used for extension purposes. Ordinary customers do not need to pay attention to it.</p>
+     * 
      * <strong>example:</strong>
      * <p>a=b</p>
      */
@@ -45,6 +60,8 @@ public class RedialCallRequest extends TeaModel {
     public String tags;
 
     /**
+     * <p>Timeout. If the call is not answered within the time specified by this parameter, it is automatically disconnected.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -52,6 +69,8 @@ public class RedialCallRequest extends TeaModel {
     public Integer timeoutSeconds;
 
     /**
+     * <p>User ID of the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>samzhang@abc</p>
      */

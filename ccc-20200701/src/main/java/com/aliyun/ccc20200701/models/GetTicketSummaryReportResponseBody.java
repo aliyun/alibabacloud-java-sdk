@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetTicketSummaryReportResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public GetTicketSummaryReportResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EAF3C248-E123-441B-A545-B6CD02E98EED</p>
      */
@@ -78,6 +93,8 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
 
     public static class GetTicketSummaryReportResponseBodyData extends TeaModel {
         /**
+         * <p>Number of tickets pending processing.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -85,6 +102,8 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
         public String ticketsAssigned;
 
         /**
+         * <p>Number of tickets created.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -92,6 +111,8 @@ public class GetTicketSummaryReportResponseBody extends TeaModel {
         public String ticketsCreated;
 
         /**
+         * <p>Number of tickets processed.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

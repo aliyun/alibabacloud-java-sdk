@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTicketTemplateRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetTicketTemplateRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4ca2e2-c8d19b82c-d7ce393ac8197d3ab</p>
      */
@@ -21,6 +24,8 @@ public class GetTicketTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
+     * <p>Template version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1703517780627</p>
      */

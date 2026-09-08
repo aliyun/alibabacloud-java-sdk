@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemovePersonalNumbersFromUserRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemovePersonalNumbersFromUserRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>List of personal outbound numbers to delete. You can obtain the current list of personal outbound numbers associated with the agent by invoking ListPersonalNumbersOfUser.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RemovePersonalNumbersFromUserRequest extends TeaModel {
     public String numberList;
 
     /**
+     * <p>Agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

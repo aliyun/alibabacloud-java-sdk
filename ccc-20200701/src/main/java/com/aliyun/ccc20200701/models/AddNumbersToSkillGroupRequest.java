@@ -4,10 +4,17 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class AddNumbersToSkillGroupRequest extends TeaModel {
+    /**
+     * <p>The list of phone number group IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;38f5b191-b764-45b8-bd93-4b65f839e13a&quot;]</p>
+     */
     @NameInMap("InstNumberGroupIdList")
     public String instNumberGroupIdList;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,8 @@ public class AddNumbersToSkillGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The list of phone numbers. Ensure that the phone numbers already exist in the current instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;0103182****&quot;,&quot;0102387****&quot;]</p>
      */
@@ -24,6 +33,7 @@ public class AddNumbersToSkillGroupRequest extends TeaModel {
     public String numberList;
 
     /**
+     * <p>The skill group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

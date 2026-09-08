@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBlacklistCallTaggingsRequest extends TeaModel {
     /**
+     * <p>The ID of the Cloud Contact Center instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListBlacklistCallTaggingsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>A list of numbers to query for their blacklist tag status. The jobId field is required if a number is encrypted (contains \<em>\</em>\*).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

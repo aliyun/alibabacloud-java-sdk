@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListRealtimeAgentStatesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListRealtimeAgentStatesResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -78,19 +93,44 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
 
     public static class ListRealtimeAgentStatesResponseBodyDataList extends TeaModel {
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent1@ccc-test</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>Agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
+        /**
+         * <p>Break code.</p>
+         * <p><strong>Enumeration values:</strong></p>
+         * <ul>
+         * <li><p>RingingTimeout: Break caused by agent ringing timeout.</p>
+         * </li>
+         * <li><p>RejectCall: Break caused by agent call rejection.</p>
+         * </li>
+         * <li><p>Warm-up: Temporary break state after the agent is published and before becoming idle.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Warm-up</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
         /**
+         * <p>Call type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Outbound</p>
          */
@@ -98,6 +138,8 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public String callType;
 
         /**
+         * <p>Used in specific three-party scenarios, primarily for listener, coaching, and consultation. In three-party scenarios, it represents the third party—for example, the agent being monitored or coached in a listener or coaching scenario, or the agent or external number to which a call is transferred in a consultation scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -105,6 +147,8 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public String counterParty;
 
         /**
+         * <p>Duration of the current status, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -112,6 +156,8 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The agent\&quot;s extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>80317391</p>
          */
@@ -119,6 +165,8 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -126,6 +174,8 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1382114****</p>
          */
@@ -133,19 +183,29 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>Whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <p>List of skill group IDs that the agent has signed into.</p>
+         */
         @NameInMap("SkillGroupIdList")
         public java.util.List<String> skillGroupIdList;
 
+        /**
+         * <p>List of skill group names that the agent has signed into.</p>
+         */
         @NameInMap("SkillGroupNameList")
         public java.util.List<String> skillGroupNameList;
 
         /**
+         * <p>Agent status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACW</p>
          */
@@ -153,6 +213,8 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>Sub-status. In some scenarios, the agent\&quot;s status cannot be fully represented by the State field alone, so a sub-status is required for clarification. For example, when an agent is being monitored, State=Talking and StateCode=Monitoring.</p>
+         * 
          * <strong>example:</strong>
          * <p>Monitored</p>
          */
@@ -160,13 +222,17 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public String stateCode;
 
         /**
+         * <p>Time when the status started.</p>
+         * 
          * <strong>example:</strong>
-         * <p>8</p>
+         * <p>1696670640774</p>
          */
         @NameInMap("StateTime")
         public Long stateTime;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -309,10 +375,15 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
     }
 
     public static class ListRealtimeAgentStatesResponseBodyData extends TeaModel {
+        /**
+         * <p>List of real-time agent status data.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListRealtimeAgentStatesResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -320,6 +391,8 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -327,6 +400,8 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

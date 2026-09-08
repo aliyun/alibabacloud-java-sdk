@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ChangeVisibilityResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ChangeVisibilityResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class ChangeVisibilityResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal service issue. Detail:.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>24BE19E8-BF7D-4992-A35E-15EBA874F2E5</p>
      */
@@ -92,10 +106,18 @@ public class ChangeVisibilityResponseBody extends TeaModel {
     }
 
     public static class ChangeVisibilityResponseBodyData extends TeaModel {
+        /**
+         * <p>The break code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>会议</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
         /**
+         * <p>The device ID. This can be the ID of a browser-based WebRTC softphone or a physical phone. Only one device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>Yealink SIP-T23G 44.84.203.6</p>
          */
@@ -103,6 +125,8 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The agent\&quot;s extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -110,6 +134,8 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>szpczf</p>
          */
@@ -117,6 +143,8 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The call ID. If populated, this field indicates that the agent is in a call.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-330557290544431104</p>
          */
@@ -124,16 +152,23 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <p>The IDs of the skill groups to which the agent is signed in.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sam@szpczf</p>
          */
@@ -141,6 +176,8 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The agent state.</p>
+         * 
          * <strong>example:</strong>
          * <p>Ready</p>
          */
@@ -148,6 +185,8 @@ public class ChangeVisibilityResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>The work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */

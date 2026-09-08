@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFlashSmsSettingsRequest extends TeaModel {
     /**
+     * <p>The ID of the CC instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListFlashSmsSettingsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number. The value ranges from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListFlashSmsSettingsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. The value ranges from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,9 +34,18 @@ public class ListFlashSmsSettingsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>A list of skill group IDs.</p>
+     */
     @NameInMap("SkillGroupIdList")
     public java.util.List<String> skillGroupIdList;
 
+    /**
+     * <p>The name of the skill group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>闪信测试技能组</p>
+     */
     @NameInMap("SkillGroupName")
     public String skillGroupName;
 

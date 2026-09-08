@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListCommonTicketFieldsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListCommonTicketFieldsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30C7D235-DDCF-4C7F-A462-5E2598252C2B</p>
      */
@@ -89,6 +107,8 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
 
     public static class ListCommonTicketFieldsResponseBodyData extends TeaModel {
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1703517780627</p>
          */
@@ -96,7 +116,7 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>Schema ID。</p>
+         * <p>Schema ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ticketing</p>
@@ -105,16 +125,23 @@ public class ListCommonTicketFieldsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>List of fields.</p>
+         */
         @NameInMap("Properties")
         public java.util.Map<String, DataPropertiesValue> properties;
 
         /**
+         * <p>Last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1716211430928</p>
          */

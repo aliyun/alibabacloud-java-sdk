@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetCallDetailRecordResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public GetCallDetailRecordResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
      */
@@ -78,6 +93,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     public static class GetCallDetailRecordResponseBodyDataAgentEventsEventSequence extends TeaModel {
         /**
+         * <p>The event duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -85,6 +102,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Dialing</p>
          */
@@ -92,6 +111,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1604639129000</p>
          */
@@ -131,19 +152,32 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     public static class GetCallDetailRecordResponseBodyDataAgentEvents extends TeaModel {
         /**
+         * <p>The agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>The agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
+        /**
+         * <p>The sequence of events.</p>
+         */
         @NameInMap("EventSequence")
         public java.util.List<GetCallDetailRecordResponseBodyDataAgentEventsEventSequence> eventSequence;
 
         /**
+         * <p>The skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -462,6 +496,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     public static class GetCallDetailRecordResponseBodyDataCustomerEventsEventSequence extends TeaModel {
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Released</p>
          */
@@ -469,6 +505,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1532458000000</p>
          */
@@ -500,12 +538,17 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     public static class GetCallDetailRecordResponseBodyDataCustomerEvents extends TeaModel {
         /**
+         * <p>The customer ID. This is usually the customer\&quot;s phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1332315****</p>
          */
         @NameInMap("CustomerId")
         public String customerId;
 
+        /**
+         * <p>The sequence of events.</p>
+         */
         @NameInMap("EventSequence")
         public java.util.List<GetCallDetailRecordResponseBodyDataCustomerEventsEventSequence> eventSequence;
 
@@ -534,6 +577,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     public static class GetCallDetailRecordResponseBodyDataIvrEventsEventSequence extends TeaModel {
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Route2IVR</p>
          */
@@ -541,6 +586,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1604639129000</p>
          */
@@ -571,10 +618,15 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     }
 
     public static class GetCallDetailRecordResponseBodyDataIvrEvents extends TeaModel {
+        /**
+         * <p>The sequence of events.</p>
+         */
         @NameInMap("EventSequence")
         public java.util.List<GetCallDetailRecordResponseBodyDataIvrEventsEventSequence> eventSequence;
 
         /**
+         * <p>The ID of the IVR contact flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>edaf2eaa-8f88-44ca-812e-41b3cd2b7a90</p>
          */
@@ -582,6 +634,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String flowId;
 
         /**
+         * <p>The type of the contact flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAIN_FLOW</p>
          */
@@ -621,6 +675,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     public static class GetCallDetailRecordResponseBodyDataQueueEventsEventSequence extends TeaModel {
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Enqueue</p>
          */
@@ -628,6 +684,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The time when the event occurred. The value is a UNIX timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1604639129000</p>
          */
@@ -658,10 +716,15 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     }
 
     public static class GetCallDetailRecordResponseBodyDataQueueEvents extends TeaModel {
+        /**
+         * <p>The sequence of events.</p>
+         */
         @NameInMap("EventSequence")
         public java.util.List<GetCallDetailRecordResponseBodyDataQueueEventsEventSequence> eventSequence;
 
         /**
+         * <p>The contact flow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>edaf2eaa-8f88-44ca-812e-41b3cd2b7a90</p>
          */
@@ -669,16 +732,26 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String flowId;
 
         /**
+         * <p>The queue ID. If the call is routed to a skill group, this is the skill group ID. If the call is routed to an agent, this is the agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
         @NameInMap("QueueId")
         public String queueId;
 
+        /**
+         * <p>The queue name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
         /**
+         * <p>The queue type.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -733,10 +806,15 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     }
 
     public static class GetCallDetailRecordResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of agent events.</p>
+         */
         @NameInMap("AgentEvents")
         public java.util.List<GetCallDetailRecordResponseBodyDataAgentEvents> agentEvents;
 
         /**
+         * <p>The IDs of the agents who are involved in the call. Multiple IDs are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent1@ccc-test,agent2@ccc-test</p>
          */
@@ -744,6 +822,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String agentIds;
 
         /**
+         * <p>The names of the agents who are involved in the call. Multiple names are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent1,agent2</p>
          */
@@ -757,6 +837,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public Boolean analyticsReportReady;
 
         /**
+         * <p>The call duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -764,19 +846,35 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public Long callDuration;
 
         /**
+         * <p>The called number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1332315****</p>
          */
         @NameInMap("CalledNumber")
         public String calledNumber;
 
+        /**
+         * <p>The location of the called number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>河北省-唐山</p>
+         */
         @NameInMap("CalleeLocation")
         public String calleeLocation;
 
+        /**
+         * <p>The location of the calling number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>山东省-淄博</p>
+         */
         @NameInMap("CallerLocation")
         public String callerLocation;
 
         /**
+         * <p>The calling number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0533128****</p>
          */
@@ -784,6 +882,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String callingNumber;
 
         /**
+         * <p>The reason why the call ended. Note: The \<code>Voicemail\\</code>, \<code>QueuingFailed\\</code>, \<code>QueuingTimeout\\</code>, \<code>QueuingOverflow\\</code>, and \<code>IVRException\\</code> reasons are returned only if you configure the hang-up reason node. If you do not configure this node and the IVR flow does not include a module to transfer the call to an agent, the default reason is \<code>AbandonedInIVR\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -791,19 +891,32 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String contactDisposition;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-10963442671187****</p>
          */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <p>The call type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OUTBOUND</p>
+         */
         @NameInMap("ContactType")
         public String contactType;
 
+        /**
+         * <p>The list of customer events.</p>
+         */
         @NameInMap("CustomerEvents")
         public java.util.List<GetCallDetailRecordResponseBodyDataCustomerEvents> customerEvents;
 
         /**
+         * <p>The state of the early media. An exception occurred during the early media phase, which is when the customer is being called. An exception at this stage can cause the call to fail. This parameter provides possible reasons for the connection failure based on an analysis of the early media state.</p>
+         * 
          * <strong>example:</strong>
          * <p>NotConnected</p>
          */
@@ -811,6 +924,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String earlyMediaState;
 
         /**
+         * <p>The time when the call was connected. This parameter is empty if the call was not connected. The value is a UNIX timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1532458000000</p>
          */
@@ -818,22 +933,32 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public Long establishedTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The list of IVR events.</p>
+         */
         @NameInMap("IvrEvents")
         public java.util.List<GetCallDetailRecordResponseBodyDataIvrEvents> ivrEvents;
 
         @NameInMap("OutsideNumberReleaseReason")
         public String outsideNumberReleaseReason;
 
+        /**
+         * <p>The list of queue events.</p>
+         */
         @NameInMap("QueueEvents")
         public java.util.List<GetCallDetailRecordResponseBodyDataQueueEvents> queueEvents;
 
         /**
+         * <p>Indicates whether the recording was generated. A value of \<code>false\\</code> is returned if the call was not connected.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -841,6 +966,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public Boolean recordingReady;
 
         /**
+         * <p>The release initiator.</p>
+         * 
          * <strong>example:</strong>
          * <p>customer</p>
          */
@@ -848,6 +975,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String releaseInitiator;
 
         /**
+         * <p>The reason why the call ended. The value is usually the SIP code followed by a text description.</p>
+         * 
          * <strong>example:</strong>
          * <p>200 - OK</p>
          */
@@ -855,6 +984,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String releaseReason;
 
         /**
+         * <p>The time when the call ended. This is the time when the last party of the call hangs up. The value is a UNIX timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1532458000000</p>
          */
@@ -862,6 +993,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public Long releaseTime;
 
         /**
+         * <p>The satisfaction score. The value and its meaning are defined by you.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -869,6 +1002,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public Integer satisfaction;
 
         /**
+         * <p>The channel through which the satisfaction survey was initiated.</p>
+         * 
          * <strong>example:</strong>
          * <p>IVR</p>
          */
@@ -876,6 +1011,8 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public String satisfactionSurveyChannel;
 
         /**
+         * <p>Indicates whether a satisfaction survey was initiated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -883,16 +1020,26 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public Boolean satisfactionSurveyOffered;
 
         /**
+         * <p>The IDs of the skill groups to which the agents involved in the call belong. Multiple IDs are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
         @NameInMap("SkillGroupIds")
         public String skillGroupIds;
 
+        /**
+         * <p>The names of the skill groups to which the agents involved in the call belong. Multiple names are separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试技能组</p>
+         */
         @NameInMap("SkillGroupNames")
         public String skillGroupNames;
 
         /**
+         * <p>The time when the call started. For an inbound call, this is the time when the call enters the IVR. For an outbound call, this is the time when the call is initiated. The value is a UNIX timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1532458000000</p>
          */

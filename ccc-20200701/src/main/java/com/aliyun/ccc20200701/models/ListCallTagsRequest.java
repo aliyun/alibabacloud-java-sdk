@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCallTagsRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListCallTagsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Paging ordinal number, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListCallTagsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size, ranging from 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

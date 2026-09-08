@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MuteCallRequest extends TeaModel {
     /**
+     * <p>The ID of the voice channel to be muted. This parameter is optional and defaults to empty. If it is empty, the voice channel of the agent corresponding to UserId will be muted.</p>
+     * 
      * <strong>example:</strong>
      * <p>ch:user:1318888****-&gt;8001****:1609253204816:job-6581536084722****</p>
      */
@@ -12,6 +14,8 @@ public class MuteCallRequest extends TeaModel {
     public String channelId;
 
     /**
+     * <p>Device ID. This parameter is meaningless and can be filled with any value.</p>
+     * 
      * <strong>example:</strong>
      * <p>device</p>
      */
@@ -19,6 +23,7 @@ public class MuteCallRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class MuteCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class MuteCallRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The agent ID to be muted.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
      */

@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListTicketTasksResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListTicketTasksResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>DE803553-8AA9-4B9D-9E4E-A82BC69EDCEE</p>
      */
@@ -89,6 +107,8 @@ public class ListTicketTasksResponseBody extends TeaModel {
 
     public static class ListTicketTasksResponseBodyData extends TeaModel {
         /**
+         * <p>The action performed on the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>CounterSignTask</p>
          */
@@ -96,6 +116,8 @@ public class ListTicketTasksResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The ID of the assignee.</p>
+         * 
          * <strong>example:</strong>
          * <p>assignee@ccc-test</p>
          */
@@ -103,29 +125,47 @@ public class ListTicketTasksResponseBody extends TeaModel {
         public String assignee;
 
         /**
+         * <p>The name of the assignee.</p>
+         * 
          * <strong>example:</strong>
          * <p>assignee</p>
          */
         @NameInMap("AssigneeName")
         public String assigneeName;
 
+        /**
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>同意</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620269200000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>A list of files.</p>
+         */
         @NameInMap("FileKeys")
         public java.util.List<String> fileKeys;
 
+        /**
+         * <p>A list of file access URLs.</p>
+         */
         @NameInMap("FileUrls")
         public java.util.List<String> fileUrls;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -133,6 +173,8 @@ public class ListTicketTasksResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620259200000</p>
          */
@@ -140,6 +182,8 @@ public class ListTicketTasksResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The ID of the ticket node in the process definition.</p>
+         * 
          * <strong>example:</strong>
          * <p>APPROVAL__6zu2QjAz</p>
          */
@@ -147,6 +191,8 @@ public class ListTicketTasksResponseBody extends TeaModel {
         public String taskDefinitionNodeId;
 
         /**
+         * <p>The type of the ticket node in the process definition.</p>
+         * 
          * <strong>example:</strong>
          * <p>APPROVAL</p>
          */
@@ -154,16 +200,26 @@ public class ListTicketTasksResponseBody extends TeaModel {
         public String taskDefinitionNodeType;
 
         /**
+         * <p>The ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>eb039a4a6a5742c6b44ccff0c1fca745</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>节点1</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
+         * <p>The ID of the ticket.</p>
+         * 
          * <strong>example:</strong>
          * <p>5491d3b4-14ee-4341-b5f1-db2c78beddeb</p>
          */

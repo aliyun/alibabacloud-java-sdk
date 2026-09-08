@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class GetSummaryTemplateResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public GetSummaryTemplateResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30C7D235-DDCF-4C7F-A462-5E2598252C2B</p>
      */
@@ -89,6 +107,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
 
     public static class GetSummaryTemplateResponseBodyDataPropertyList extends TeaModel {
         /**
+         * <p>Indicates whether the field is an array.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -96,6 +116,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Boolean array;
 
         /**
+         * <p>The extended properties.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -103,6 +125,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public String attributes;
 
         /**
+         * <p>The time when the field was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1717664210000</p>
          */
@@ -110,6 +134,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>The user who created the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>cretor-xxx@ccc-test</p>
          */
@@ -117,6 +143,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The data type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -124,6 +152,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The description of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>Description-xxxx</p>
          */
@@ -131,6 +161,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the field is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -138,6 +170,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>DisplayName-A</p>
          */
@@ -145,6 +179,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The display order in the list.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -152,6 +188,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Integer displayOrder;
 
         /**
+         * <p>The type of the editor.</p>
+         * 
          * <strong>example:</strong>
          * <p>textbox</p>
          */
@@ -159,6 +197,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public String editorType;
 
         /**
+         * <p>The maximum length.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -166,6 +206,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Integer maxLength;
 
         /**
+         * <p>The maximum value of the number.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -173,6 +215,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Double maximum;
 
         /**
+         * <p>The minimum length.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -180,6 +224,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Integer minLength;
 
         /**
+         * <p>The minimum value of the number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -187,6 +233,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Double minimum;
 
         /**
+         * <p>The name of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>Name-A</p>
          */
@@ -194,16 +242,26 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The validation rule that is specified by a regular expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>^</p>
          */
         @NameInMap("Pattern")
         public String pattern;
 
+        /**
+         * <p>The error message that is returned when the regular expression fails to pass the validation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>不是有效的email地址</p>
+         */
         @NameInMap("PatternErrorMessage")
         public String patternErrorMessage;
 
         /**
+         * <p>Indicates whether the field is read-only.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -211,6 +269,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Boolean readOnly;
 
         /**
+         * <p>Indicates whether the field is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -218,6 +278,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Boolean required;
 
         /**
+         * <p>Indicates whether the field is a system field.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -225,6 +287,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public Boolean system;
 
         /**
+         * <p>The time when the field was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1717664210000</p>
          */
@@ -408,6 +472,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
 
     public static class GetSummaryTemplateResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the summary category.</p>
+         * 
          * <strong>example:</strong>
          * <p>8939-4223-86d0-6bd187905cc8</p>
          */
@@ -415,6 +481,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public String categoryId;
 
         /**
+         * <p>The user who edited the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>editor-xxx@ccc-test</p>
          */
@@ -422,19 +490,38 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public String editor;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试模板</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of template fields.</p>
+         */
         @NameInMap("PropertyList")
         public java.util.List<GetSummaryTemplateResponseBodyDataPropertyList> propertyList;
 
         /**
+         * <p>The status code.</p>
+         * <ul>
+         * <li><p>Enabled: The template is enabled.</p>
+         * </li>
+         * <li><p>Disabled: The template is disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -442,6 +529,8 @@ public class GetSummaryTemplateResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>43c2671b-8939-4223-86d0-6bd187905cc8_1717664210492</p>
          */

@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class GetLoginDetailsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Logon information data.</p>
+     */
     @NameInMap("Data")
     public GetLoginDetailsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F1A4774A-F28B-5C40-AEF6-D88D2DD6C7E4</p>
      */
@@ -89,34 +107,80 @@ public class GetLoginDetailsResponseBody extends TeaModel {
 
     public static class GetLoginDetailsResponseBodyData extends TeaModel {
         /**
+         * <p>Agent data push server URL. After a successful connection, the server pushes agent status data to the agent Workbench.</p>
+         * 
          * <strong>example:</strong>
          * <p>sh-wss-ccc.aliyuncs.com</p>
          */
         @NameInMap("AgentServerUrl")
         public String agentServerUrl;
 
+        /**
+         * <p>Agent profile picture URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://abc.com/sam.jpb">http://abc.com/sam.jpb</a></p>
+         */
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
+        /**
+         * <p>Chat session application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7pjxxx</p>
+         */
         @NameInMap("ChatAppId")
         public String chatAppId;
 
+        /**
+         * <p>Chat session application key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>955e4bd7xxxxxxxxxxxxxd7898ba9fa0d0</p>
+         */
         @NameInMap("ChatAppKey")
         public String chatAppKey;
 
+        /**
+         * <p>Chat Device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4c51c9116c36537cb850dc1081d745df</p>
+         */
         @NameInMap("ChatDeviceId")
         public String chatDeviceId;
 
+        /**
+         * <p>Chat session logon token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;accessToken&quot;:&quot;oauth_cloud_key:4xxx0=&quot;,&quot;accessTokenExpiredTime&quot;:864xxxx,&quot;refreshToken&quot;:&quot;oauth_cloud_key:Paxxxx==&quot;}</p>
+         */
         @NameInMap("ChatLoginToken")
         public String chatLoginToken;
 
+        /**
+         * <p>Chat session server URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wss://wss.im.dingtalk.cn</p>
+         */
         @NameInMap("ChatServerUrl")
         public String chatServerUrl;
 
+        /**
+         * <p>Chat session Device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A-8000100x</p>
+         */
         @NameInMap("ChatUserId")
         public String chatUserId;
 
         /**
+         * <p>SIP device extension number. This field is required when using a SIP phone.</p>
+         * 
          * <strong>example:</strong>
          * <p>8033****</p>
          */
@@ -124,6 +188,8 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         public String deviceExt;
 
         /**
+         * <p>If the agent has registered an SIP phone, this parameter is the Device ID of the SIP phone device; otherwise, it is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>Yealink SIP-T23G 44.84.XX.XX</p>
          */
@@ -131,26 +197,44 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>SIP device status.</p>
+         * 
          * <strong>example:</strong>
          * <p>OFFLINE</p>
          */
         @NameInMap("DeviceState")
         public String deviceState;
 
+        /**
+         * <p>Agent display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席小王</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <p>Agent nickname</p>
+         * 
+         * <strong>example:</strong>
+         * <p>老王</p>
+         */
         @NameInMap("Nickname")
         public String nickname;
 
         /**
+         * <p>Signature information generated using an asymmetric key encryption algorithm. This information is required for authentication when registering with the SIP server.</p>
+         * 
          * <strong>example:</strong>
          * <p>zi31STIMtIfa/UN2l+6lww****</p>
          */
@@ -158,6 +242,8 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         public String signature;
 
         /**
+         * <p>Signature information generated using an asymmetric key encryption algorithm. This information is required for authentication when registering with the SIP server.</p>
+         * 
          * <strong>example:</strong>
          * <p>zi31STIMtIfa/UN2l+6lww****</p>
          */
@@ -165,6 +251,8 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         public String signature2;
 
         /**
+         * <p>SIP registration server URL. The agent must register with the server as an SIP user to perform transactional processing (TP) operations.</p>
+         * 
          * <strong>example:</strong>
          * <p>sh-sip-ccc.aliyuncs.com:443</p>
          */
@@ -172,16 +260,26 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         public String sipServerUrl;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>Signature data used to generate signature information. Because this signature mechanism does not support Chinese characters, UserKey2 is currently used for signing instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>坐席@aliyun:802001:1656406628862</p>
+         */
         @NameInMap("UserKey")
         public String userKey;
 
         /**
+         * <p>Signature data used to generate signature information. UserKey2 was added because UserKey does not support Chinese characters in signatures.</p>
+         * 
          * <strong>example:</strong>
          * <p>802001:1656406628862&quot;</p>
          */
@@ -189,6 +287,8 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         public String userKey2;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */

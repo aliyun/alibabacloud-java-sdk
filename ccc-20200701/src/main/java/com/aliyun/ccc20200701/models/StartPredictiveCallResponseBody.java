@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class StartPredictiveCallResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public StartPredictiveCallResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of response parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>26A34338-5CD9-4C95-A7A6-5BDCE76C6B94</p>
      */
@@ -89,6 +107,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
 
     public static class StartPredictiveCallResponseBodyDataCallContextChannelContexts extends TeaModel {
         /**
+         * <p>The call type of the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
@@ -96,6 +116,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String callType;
 
         /**
+         * <p>Flags of the voice channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -103,6 +125,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String channelFlags;
 
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ch:user:131888****-&gt;8001****:1609225718294:job-6570007401392****</p>
          */
@@ -110,6 +134,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The status of the voice channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>NONE</p>
          */
@@ -117,6 +143,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String channelState;
 
         /**
+         * <p>Callee of the call channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -124,6 +152,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String destination;
 
         /**
+         * <p>The call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6570007401392****</p>
          */
@@ -131,19 +161,35 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The originator of the call channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>1318888****</p>
          */
         @NameInMap("Originator")
         public String originator;
 
+        /**
+         * <p>The party that initiated the disconnection of the voice channel, indicating who first hung up the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("ReleaseInitiator")
         public String releaseInitiator;
 
+        /**
+         * <p>The release reason for the voice channel, indicating why the current voice channel was disconnected. The value comes from the response codes defined in the SIP protocol. Customers should refer to the SIP protocol to analyze the disconnection reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
         /**
+         * <p>The UNIX timestamp indicating the most recent status change of the channel, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609225718295</p>
          */
@@ -151,6 +197,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>The extension number of the agent associated with the channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -158,6 +206,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String userExtension;
 
         /**
+         * <p>The agent ID associated with the call channel. This field is empty if the channel belongs to a Customer.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -269,16 +319,23 @@ public class StartPredictiveCallResponseBody extends TeaModel {
 
     public static class StartPredictiveCallResponseBodyDataCallContext extends TeaModel {
         /**
+         * <p>Call type.</p>
+         * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
          */
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <p>List of call channels.</p>
+         */
         @NameInMap("ChannelContexts")
         public java.util.List<StartPredictiveCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -286,6 +343,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6570007401392****</p>
          */
@@ -333,6 +392,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
 
     public static class StartPredictiveCallResponseBodyDataUserContext extends TeaModel {
         /**
+         * <p>Break code, which can be either system-defined or customer-defined. System-defined break codes include: Warm-up (temporary break state after an agent is published and before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent call rejection). There are no restrictions on customer-defined break codes; customers can define them as needed for their business.</p>
+         * 
          * <strong>example:</strong>
          * <p>Warm-up</p>
          */
@@ -340,6 +401,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String breakCode;
 
         /**
+         * <p>Device ID, which is the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACC-YUNBS-1.0.10-****</p>
          */
@@ -347,6 +410,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Device status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
          */
@@ -354,6 +419,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String deviceState;
 
         /**
+         * <p>Agent extension number.</p>
+         * 
          * <strong>example:</strong>
          * <p>8001****</p>
          */
@@ -361,6 +428,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The time when the last heartbeat from the agent was received, in UNIX timestamp format, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609136956378</p>
          */
@@ -368,6 +437,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public Long heartbeat;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -375,6 +446,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-6570007401392****</p>
          */
@@ -382,6 +455,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The agent\&quot;s personal phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1324730****</p>
          */
@@ -389,6 +464,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>Indicates whether the agent is in outbound-only mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -396,16 +473,23 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public Boolean outboundScenario;
 
         /**
+         * <p>The timestamp in milliseconds of the most recent time the agent was reserved. Being reserved means an incoming call will soon be assigned to this agent. The format is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1609136956378</p>
          */
         @NameInMap("Reserved")
         public Long reserved;
 
+        /**
+         * <p>List of skill group IDs that the agent has signed into.</p>
+         */
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
         /**
+         * <p>Agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agent@ccc-test</p>
          */
@@ -413,6 +497,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Agent status.</p>
+         * 
          * <strong>example:</strong>
          * <p>READY</p>
          */
@@ -420,6 +506,8 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public String userState;
 
         /**
+         * <p>Work mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>ON_SITE</p>
          */
@@ -546,9 +634,15 @@ public class StartPredictiveCallResponseBody extends TeaModel {
     }
 
     public static class StartPredictiveCallResponseBodyData extends TeaModel {
+        /**
+         * <p>Call context environment.</p>
+         */
         @NameInMap("CallContext")
         public StartPredictiveCallResponseBodyDataCallContext callContext;
 
+        /**
+         * <p>Agent context environment.</p>
+         */
         @NameInMap("UserContext")
         public StartPredictiveCallResponseBodyDataUserContext userContext;
 

@@ -5,20 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListCampaignsRequest extends TeaModel {
     /**
+     * <p>The actual start time of the campaign. This parameter is optional. By default, all time ranges are queried.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2021-10-14 20:59:59</p>
+     * <p>1780329600000</p>
      */
     @NameInMap("ActualStartTimeFrom")
     public String actualStartTimeFrom;
 
     /**
+     * <p>The actual end time of the campaign. This parameter is optional. By default, all time ranges are queried.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2021-10-14 20:59:59</p>
+     * <p>1781625600000</p>
      */
     @NameInMap("ActualStartTimeTo")
     public String actualStartTimeTo;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class ListCampaignsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Filters campaigns by predictive dialing campaign name. Fuzzy match is not supported. This parameter is optional and defaults to empty, which indicates no filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-campaign</p>
      */
@@ -35,6 +42,7 @@ public class ListCampaignsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,7 @@ public class ListCampaignsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,20 +62,26 @@ public class ListCampaignsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The planned start time of the campaign. This parameter is optional. By default, all time ranges are queried.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2021-10-14 00:00:00</p>
+     * <p>1780243200000</p>
      */
     @NameInMap("PlanedStartTimeFrom")
     public String planedStartTimeFrom;
 
     /**
+     * <p>The planned end time of the campaign. This parameter is optional. By default, all time ranges are queried.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2021-10-14 20:59:59</p>
+     * <p>1781798399000</p>
      */
     @NameInMap("PlanedStartTimeTo")
     public String planedStartTimeTo;
 
     /**
+     * <p>Filters campaigns by skill group ID. This parameter is optional and defaults to empty, which indicates no filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>skillgroup@ccc-test</p>
      */
@@ -74,6 +89,8 @@ public class ListCampaignsRequest extends TeaModel {
     public String queueId;
 
     /**
+     * <p>Filters campaigns by predictive dialing campaign state. This parameter is optional and defaults to empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>Draft</p>
      */

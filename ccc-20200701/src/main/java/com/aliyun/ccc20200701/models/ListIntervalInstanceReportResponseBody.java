@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListIntervalInstanceReportResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of instance segment statistics data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListIntervalInstanceReportResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
      */
@@ -77,10 +92,18 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
     }
 
     public static class ListIntervalInstanceReportResponseBodyDataInbound extends TeaModel {
+        /**
+         * <p>Abandon rate. Calculation Formula: CallsAbandoned / CallsOffered (because management events related to abandonment and assignment may fall into different Time Ranges, the Result may exceed 100% in certain cases).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AbandonRate")
         public Float abandonRate;
 
         /**
+         * <p>Deprecated. Refer to the AbandonRate field instead.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -88,6 +111,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float abandonedRate;
 
         /**
+         * <p>The average abandon time, in seconds. Calculation Formula: TotalAbandonTime / CallsAbandoned.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -95,6 +120,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageAbandonTime;
 
         /**
+         * <p>Average IVR abandonment time, in seconds. Calculation Formula: TotalAbandonedInIVRTime / CallsAbandonedInIVR.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -102,6 +129,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageAbandonedInIVRTime;
 
         /**
+         * <p>Average queue abandonment duration, in seconds. Calculation Formula: TotalAbandonedInQueueTime / CallsAbandonedInQueue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -109,26 +138,44 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageAbandonedInQueueTime;
 
         /**
+         * <p>Average abandoned-in-ring time, in seconds. Calculation Formula: TotalAbandonedInRingTime / CallsAbandonedInRing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AverageAbandonedInRingTime")
         public Float averageAbandonedInRingTime;
 
+        /**
+         * <p>Average first response time for chat sessions, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("AverageFirstResponseTime")
         public Float averageFirstResponseTime;
 
         /**
+         * <p>Average call hold duration, in seconds. Calculation Formula: TotalHoldTime / CallsHold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AverageHoldTime")
         public Float averageHoldTime;
 
+        /**
+         * <p>Average response time (RT) of chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("AverageResponseTime")
         public Float averageResponseTime;
 
         /**
+         * <p>Average ring time, in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -136,6 +183,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageRingTime;
 
         /**
+         * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsHandled.</p>
+         * 
          * <strong>example:</strong>
          * <p>64</p>
          */
@@ -143,6 +192,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
+         * <p>Average wait time, which is the average duration callers wait before an agent answers a call. Calculation Formula: TotalWaitTime / CallsHandled.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -150,6 +201,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageWaitTime;
 
         /**
+         * <p>Average post-processing time, in seconds. Calculation Formula: TotalWorkTime / CallsHandled.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -157,6 +210,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
+         * <p>Total abandoned calls. Calculation Formula: CallsAbandonedInIVR + CallsAbandonedInQueue + CallsAbandonedInRing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -164,6 +219,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsAbandoned;
 
         /**
+         * <p>Number of calls abandoned in IVR, which refers to the count of calls where the Customer hung up during the IVR flow after entering the IVR process.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -171,6 +228,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsAbandonedInIVR;
 
         /**
+         * <p>The number of calls abandoned in the queue, which refers to calls where the customer hung up while waiting in the queue after entering it.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -178,6 +237,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsAbandonedInQueue;
 
         /**
+         * <p>Number of calls abandoned during ringing, which refers to the Quantity of calls where the Customer hung up while the agent\&quot;s phone was ringing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -185,6 +246,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsAbandonedInRing;
 
         /**
+         * <p>The number of calls abandoned in the Intelligent Navigation module.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -192,6 +255,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsAbandonedInVoiceNavigator;
 
         /**
+         * <p>Number of consult transfers, which refers to the Count of calls that involved a consult transfer. If a single call initiated multiple transfers, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -199,16 +264,26 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsAttendedTransferred;
 
         /**
+         * <p>Quantity of blind transfers, which is the number of calls that were directly transferred. If a single call was transferred multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("CallsBlindTransferred")
         public Long callsBlindTransferred;
 
+        /**
+         * <p>Number of calls that caused IVR exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsCausedIVRException")
         public Long callsCausedIVRException;
 
         /**
+         * <p>The number of calls forwarded to an external number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -216,6 +291,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsForwardToOutsideNumber;
 
         /**
+         * <p>The acknowledgement count, which refers to the number of calls answered by agents. If a single call is answered by multiple agents, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -223,6 +300,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsHandled;
 
         /**
+         * <p>Number of calls placed on hold. If a single call is placed on hold multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -230,6 +309,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsHold;
 
         /**
+         * <p>The number of calls with IVR exceptions. A call is counted when the IVR enters a hang-up reason node and the hang-up reason configured for that node is &quot;failed transfer to agent.&quot; In this case, the count increases by 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -237,6 +318,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsIVRException;
 
         /**
+         * <p>Number of calls offered to Cloud Contact Center.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -244,6 +327,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsOffered;
 
         /**
+         * <p>Number of calls that entered the queue. If a single call entered the queue multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -251,6 +336,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsQueued;
 
         /**
+         * <p>Queue Failure quantity, which refers to the number of calls where the customer hung up during queuing after the call entered the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -258,6 +345,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsQueuingFailed;
 
         /**
+         * <p>Quantity of calls that overflowed from the queue, meaning calls that encountered queue overflow while waiting in the IVR queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -265,6 +354,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsQueuingOverflow;
 
         /**
+         * <p>Number of calls that timed out during the queuing phase.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -272,16 +363,26 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsQueuingTimeout;
 
         /**
+         * <p>Number of calls that rang to agents. If a single call was assigned to multiple agents and rang for each, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
         @NameInMap("CallsRinged")
         public Long callsRinged;
 
+        /**
+         * <p>Quantity of calls transferred to voicemail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CallsToVoicemail")
         public Long callsToVoicemail;
 
         /**
+         * <p>The number of calls directed to voicemail.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -289,6 +390,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsVoicemail;
 
         /**
+         * <p>Acknowledgement rate. Calculation Formula: CallsHandled / CallsOffered (because acknowledgement events and assign events may fall into different time ranges, the result may exceed 100% in certain cases).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -296,6 +399,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float handleRate;
 
         /**
+         * <p>The maximum abandon time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -303,6 +408,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxAbandonTime;
 
         /**
+         * <p>Maximum IVR abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -310,6 +417,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxAbandonedInIVRTime;
 
         /**
+         * <p>Maximum abandoned-in-queue time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -317,6 +426,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxAbandonedInQueueTime;
 
         /**
+         * <p>Maximum ring abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -324,6 +435,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxAbandonedInRingTime;
 
         /**
+         * <p>Maximum hold time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -331,6 +444,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
+         * <p>Maximum ring duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -338,6 +453,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxRingTime;
 
         /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>219</p>
          */
@@ -345,6 +462,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>The maximum wait time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -352,6 +471,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxWaitTime;
 
         /**
+         * <p>Maximum post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>17</p>
          */
@@ -359,6 +480,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>Satisfaction index, which is the average value of the satisfaction keypress digits (single-digit numbers).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -366,6 +489,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Satisfaction rate. Calculation Formula: Number of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -373,6 +498,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -380,6 +507,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>The count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -387,6 +516,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Service level within 20 seconds, calculated as the number of calls with wait time less than or equal to 20 seconds divided by CallsQueued.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -394,6 +525,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float serviceLevel20;
 
         /**
+         * <p>Total abandon time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -401,6 +534,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalAbandonTime;
 
         /**
+         * <p>Total IVR abandonment duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -408,6 +543,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalAbandonedInIVRTime;
 
         /**
+         * <p>Total abandoned-in-queue time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -415,6 +552,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalAbandonedInQueueTime;
 
         /**
+         * <p>Total abandoned-in-ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -422,22 +561,44 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalAbandonedInRingTime;
 
         /**
+         * <p>Total hold time during calls, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("TotalHoldTime")
         public Long totalHoldTime;
 
+        /**
+         * <p>Total number of messages sent in chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("TotalMessagesSent")
         public Long totalMessagesSent;
 
+        /**
+         * <p>Total number of messages sent by agents in chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("TotalMessagesSentByAgent")
         public Long totalMessagesSentByAgent;
 
+        /**
+         * <p>Total number of messages sent by the Customer in chat sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TotalMessagesSentByCustomer")
         public Long totalMessagesSentByCustomer;
 
         /**
+         * <p>Total ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -445,6 +606,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalRingTime;
 
         /**
+         * <p>Total talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>447</p>
          */
@@ -452,6 +615,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>The total wait time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>34</p>
          */
@@ -459,6 +624,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalWaitTime;
 
         /**
+         * <p>Total post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>85</p>
          */
@@ -954,6 +1121,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
 
     public static class ListIntervalInstanceReportResponseBodyDataOutbound extends TeaModel {
         /**
+         * <p>Answer rate. Calculation Formula: CallsAnswered / CallsDialed (because management events for answering and acknowledgement may fall into different Time Ranges, the Result may exceed 100% in certain cases).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -961,6 +1130,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float answerRate;
 
         /**
+         * <p>Average dial-up duration, in seconds. Calculation Formula: TotalDialingTime / CallsDialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -968,6 +1139,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageDialingTime;
 
         /**
+         * <p>Average hold duration, in seconds. Calculation formula: TotalHoldTime / CallsHold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -975,6 +1148,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageHoldTime;
 
         /**
+         * <p>Average ring time in seconds. Calculation Formula: TotalRingTime / CallsRinged.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -982,6 +1157,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageRingTime;
 
         /**
+         * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / CallsAnswered.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -989,6 +1166,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
+         * <p>Average post-processing time in seconds. Calculation Formula: TotalWorkTime / CallsDialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -996,6 +1175,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
+         * <p>Number of answered calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1003,6 +1184,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsAnswered;
 
         /**
+         * <p>The number of calls transferred via consultation, which refers to the quantity of calls that underwent consultation-based transfer. If a single call was transferred multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1010,6 +1193,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsAttendedTransferred;
 
         /**
+         * <p>Quantity of blind transfers, which refers to the number of calls that were directly transferred. If a single call is transferred multiple times, it counts as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1017,6 +1202,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsBlindTransferred;
 
         /**
+         * <p>Number of dialed calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1024,6 +1211,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsDialed;
 
         /**
+         * <p>Number of calls placed on hold. If a single call is placed on hold multiple times, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1031,6 +1220,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsHold;
 
         /**
+         * <p>Number of calls that rang for agents. If a single call is assigned to multiple agents and rings for each, it is counted as one.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1038,6 +1229,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long callsRinged;
 
         /**
+         * <p>Maximum dial-up duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1045,6 +1238,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxDialingTime;
 
         /**
+         * <p>Maximum hold time during calls, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1052,6 +1247,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
+         * <p>Maximum ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1059,6 +1256,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxRingTime;
 
         /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1066,6 +1265,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum post-processing time in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1073,6 +1274,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>Satisfaction index, which is the average value of the single-digit satisfaction key presses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1080,6 +1283,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Satisfaction rate. Calculation Formula: Quantity of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1087,6 +1292,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1094,6 +1301,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1101,6 +1310,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Total dial-up duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1108,6 +1319,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalDialingTime;
 
         /**
+         * <p>Total hold duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1115,6 +1328,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalHoldTime;
 
         /**
+         * <p>Total ring time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1122,6 +1337,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalRingTime;
 
         /**
+         * <p>Total talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1129,6 +1346,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total post-processing duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1352,6 +1571,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
 
     public static class ListIntervalInstanceReportResponseBodyDataOverall extends TeaModel {
         /**
+         * <p>Average break time, in seconds. Calculation Formula: TotalBreakTime / Break Count. Break Count is not an API statistics field.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1359,6 +1580,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageBreakTime;
 
         /**
+         * <p>Average call hold time, in seconds. Calculation Formula: TotalHoldTime / (Inbound Calls on Hold + Outbound Calls on Hold).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1366,6 +1589,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageHoldTime;
 
         /**
+         * <p>Average ready time, in seconds. Calculation Formula: TotalReadyTime / Ready Count. Ready Count is not an API statistics field.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1373,6 +1598,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageReadyTime;
 
         /**
+         * <p>Average talk time, in seconds. Calculation Formula: TotalTalkTime / (CallsAnswered + CallsHandled).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1380,6 +1607,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageTalkTime;
 
         /**
+         * <p>Average post-processing time per call, in seconds. Calculation Formula: TotalWorkTime / TotalCalls.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1387,6 +1616,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float averageWorkTime;
 
         /**
+         * <p>Maximum break time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1394,6 +1625,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxBreakTime;
 
         /**
+         * <p>Maximum call hold time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1401,6 +1634,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxHoldTime;
 
         /**
+         * <p>Maximum ready time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1408,6 +1643,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxReadyTime;
 
         /**
+         * <p>Maximum talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1415,6 +1652,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>Maximum post-processing time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1422,6 +1661,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long maxWorkTime;
 
         /**
+         * <p>Agent occupancy rate. Calculation Formula: (TotalWorkTime + TotalTalkTime) / TotalLoggedInTime.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1429,6 +1670,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float occupancyRate;
 
         /**
+         * <p>Satisfaction index, which is the average value of the satisfaction keypress digits (single-digit numbers).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1436,6 +1679,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionIndex;
 
         /**
+         * <p>Satisfaction rate. Calculation Formula: Count of evaluations marked as satisfied / Count of satisfaction survey responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1443,6 +1688,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Float satisfactionRate;
 
         /**
+         * <p>Sending Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1450,6 +1697,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysOffered;
 
         /**
+         * <p>Response Count of satisfaction surveys.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1457,6 +1706,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long satisfactionSurveysResponded;
 
         /**
+         * <p>Total break time in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1464,6 +1715,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalBreakTime;
 
         /**
+         * <p>Total call volume. Calculation Formula: CallsOffered + CallsDialed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1471,6 +1724,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalCalls;
 
         /**
+         * <p>Total hold time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1478,6 +1733,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalHoldTime;
 
         /**
+         * <p>Total logon duration, in seconds. Exclude break time.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1485,6 +1742,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalLoggedInTime;
 
         /**
+         * <p>Total ready time in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1492,6 +1751,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalReadyTime;
 
         /**
+         * <p>Total talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1499,6 +1760,8 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Total post-processing time in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1689,16 +1952,27 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
     }
 
     public static class ListIntervalInstanceReportResponseBodyData extends TeaModel {
+        /**
+         * <p>Inbound metrics.</p>
+         */
         @NameInMap("Inbound")
         public ListIntervalInstanceReportResponseBodyDataInbound inbound;
 
+        /**
+         * <p>Outbound metrics.</p>
+         */
         @NameInMap("Outbound")
         public ListIntervalInstanceReportResponseBodyDataOutbound outbound;
 
+        /**
+         * <p>Overall metrics.</p>
+         */
         @NameInMap("Overall")
         public ListIntervalInstanceReportResponseBodyDataOverall overall;
 
         /**
+         * <p>Start Time, formatted as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1620230400000</p>
          */

@@ -5,29 +5,47 @@ import com.aliyun.tea.*;
 
 public class UpdateSubscriptionResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public UpdateSubscriptionResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of invalid parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
      */
@@ -89,6 +107,8 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
 
     public static class UpdateSubscriptionResponseBodyDataEventList extends TeaModel {
         /**
+         * <p>Indicates whether the push is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -96,12 +116,20 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
+         * <p>The event name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Dialing</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The event topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
@@ -138,16 +166,23 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
 
     public static class UpdateSubscriptionResponseBodyData extends TeaModel {
         /**
+         * <p>The endpoint for MQ. The service endpoint for webhook.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-****.cn-shanghai.rmq.aliyuncs.com:8080</p>
          */
         @NameInMap("AccessPoint")
         public String accessPoint;
 
+        /**
+         * <p>The event checklist.</p>
+         */
         @NameInMap("EventList")
         public java.util.List<UpdateSubscriptionResponseBodyDataEventList> eventList;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-test</p>
          */
@@ -155,6 +190,8 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The MQ instance ID. Specify this only when MqType is rocketmq4 or rocketmq5.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-****</p>
          */
@@ -162,6 +199,16 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         public String mqInstanceId;
 
         /**
+         * <p>The message push type.</p>
+         * <ul>
+         * <li><p>rocketmq4</p>
+         * </li>
+         * <li><p>rocketmq5</p>
+         * </li>
+         * <li><p>webhook</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>rocketmq5</p>
          */
@@ -169,6 +216,8 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         public String mqType;
 
         /**
+         * <p>For MQ, enter the Group ID. For webhook, enter PID_Webhook.</p>
+         * 
          * <strong>example:</strong>
          * <p>GID_xxx</p>
          */
@@ -176,6 +225,8 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         public String producerId;
 
         /**
+         * <p>For MQ, enter the topic name. For webhook, enter Topic_Webhook.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccc-event</p>
          */
@@ -183,6 +234,8 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         public String topic;
 
         /**
+         * <p>The MQ username. Specify this only when MqType is rocketmq5.</p>
+         * 
          * <strong>example:</strong>
          * <p>username</p>
          */

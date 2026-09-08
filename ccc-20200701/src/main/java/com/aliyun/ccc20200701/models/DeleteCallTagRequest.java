@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCallTagRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteCallTagRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The phone number tag name. Ensure that the tag you specify has already been created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

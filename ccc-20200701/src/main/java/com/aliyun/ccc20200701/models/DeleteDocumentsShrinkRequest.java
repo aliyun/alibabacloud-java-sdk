@@ -4,10 +4,14 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class DeleteDocumentsShrinkRequest extends TeaModel {
+    /**
+     * <p>A list of document IDs.</p>
+     */
     @NameInMap("DocumentIds")
     public String documentIdsShrink;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,8 @@ public class DeleteDocumentsShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0630E5DF-CEB0-445B-8626-D5C7481181C3</p>
      */
@@ -24,7 +30,7 @@ public class DeleteDocumentsShrinkRequest extends TeaModel {
     public String requestId;
 
     /**
-     * <p>schema id</p>
+     * <p>The schema ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

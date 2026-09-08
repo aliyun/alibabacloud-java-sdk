@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveRTCStatsV2ResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,26 @@ public class SaveRTCStatsV2ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
      */
@@ -29,6 +41,8 @@ public class SaveRTCStatsV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Number of rows.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +50,8 @@ public class SaveRTCStatsV2ResponseBody extends TeaModel {
     public Long rowCount;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +59,8 @@ public class SaveRTCStatsV2ResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Time when the record was generated, in Unix timestamp format, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1647309061000</p>
      */

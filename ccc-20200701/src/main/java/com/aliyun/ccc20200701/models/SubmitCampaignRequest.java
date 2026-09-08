@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitCampaignRequest extends TeaModel {
     /**
+     * <p>The predictive outbound calling activity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SubmitCampaignRequest extends TeaModel {
     public String campaignId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

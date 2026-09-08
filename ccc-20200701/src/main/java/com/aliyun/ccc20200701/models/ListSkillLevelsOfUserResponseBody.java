@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListSkillLevelsOfUserResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public ListSkillLevelsOfUserResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -77,10 +92,18 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
     }
 
     public static class ListSkillLevelsOfUserResponseBodyDataList extends TeaModel {
+        /**
+         * <p>Media type. The default value is AUDIO. Other optional values include CHAT and VIDEO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIDEO</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
+         * <p>Skill group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup@ccc-test</p>
          */
@@ -88,6 +111,8 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>Skill group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>skillgroup</p>
          */
@@ -95,6 +120,8 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         public String skillGroupName;
 
         /**
+         * <p>Skill level, with values ranging from 1 to 10. A smaller numeric value indicates stronger business capability and the ability to handle more calls per unit time.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -141,10 +168,15 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
     }
 
     public static class ListSkillLevelsOfUserResponseBodyData extends TeaModel {
+        /**
+         * <p>List of skill group levels.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListSkillLevelsOfUserResponseBodyDataList> list;
 
         /**
+         * <p>Page number, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -152,6 +184,8 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size, ranging from 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -159,6 +193,8 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

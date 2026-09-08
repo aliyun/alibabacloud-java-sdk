@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListOutboundNumbersOfUserResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
      */
@@ -77,10 +92,18 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
     }
 
     public static class ListOutboundNumbersOfUserResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The city where the phone number is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>乐山</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0830019****</p>
          */
@@ -104,6 +127,12 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         @NameInMap("ProviderType")
         public String providerType;
 
+        /**
+         * <p>The province where the phone number is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>四川</p>
+         */
         @NameInMap("Province")
         public String province;
 
@@ -181,10 +210,15 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
     }
 
     public static class ListOutboundNumbersOfUserResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of phone numbers.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListOutboundNumbersOfUserResponseBodyDataList> list;
 
         /**
+         * <p>The page number. Valid values: 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -192,6 +226,8 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -199,6 +235,8 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

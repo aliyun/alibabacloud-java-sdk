@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RestoreArchivedRecordingsResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<RestoreArchivedRecordingsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance 0 does not exist.</p>
      */
@@ -29,6 +38,8 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F8066648-5D95-55AB-ACD3-2F4AD3BEA715</p>
      */
@@ -82,6 +93,8 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
 
     public static class RestoreArchivedRecordingsResponseBodyData extends TeaModel {
         /**
+         * <p>Contact ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-25920271311543****</p>
          */
@@ -89,6 +102,8 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>Is the recording file existing?</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -96,6 +111,8 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
         public String exists;
 
         /**
+         * <p>The recording\&quot;s restored state. Values are Completed or Progressing.</p>
+         * 
          * <strong>example:</strong>
          * <p>Progressing</p>
          */
@@ -103,6 +120,8 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Storage class of the recording file.</p>
+         * 
          * <strong>example:</strong>
          * <p>Standard</p>
          */
