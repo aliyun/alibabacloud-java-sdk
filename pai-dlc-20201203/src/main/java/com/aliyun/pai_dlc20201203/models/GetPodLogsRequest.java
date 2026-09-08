@@ -5,10 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetPodLogsRequest extends TeaModel {
     /**
+     * <p>Filters logs by specified containers. Separate multiple container names with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pytorch,aimaster-worker</p>
+     */
+    @NameInMap("Containers")
+    public String containers;
+
+    /**
      * <p>Specifies whether to download the log file. Valid values:</p>
      * <ul>
-     * <li>false (default): Does not download the log file.</li>
-     * <li>true: Downloads the log file.</li>
+     * <li>false (default): The log file is not downloaded.</li>
+     * <li>true: The log file is downloaded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +36,7 @@ public class GetPodLogsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The maximum number of log lines returned. Default value: 2000.</p>
+     * <p>The maximum number of log lines to return. Default value: 2000.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -36,7 +45,7 @@ public class GetPodLogsRequest extends TeaModel {
     public Integer maxLines;
 
     /**
-     * <p>The node UID. To obtain the node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
+     * <p>The node UID. For information about how to obtain the node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>fe846462-af2c-4521-bd6f-96787a57****</p>
@@ -56,6 +65,14 @@ public class GetPodLogsRequest extends TeaModel {
     public static GetPodLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPodLogsRequest self = new GetPodLogsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetPodLogsRequest setContainers(String containers) {
+        this.containers = containers;
+        return this;
+    }
+    public String getContainers() {
+        return this.containers;
     }
 
     public GetPodLogsRequest setDownloadToFile(Boolean downloadToFile) {

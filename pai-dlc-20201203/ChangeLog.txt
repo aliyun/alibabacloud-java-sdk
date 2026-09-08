@@ -1,3 +1,9 @@
+2026-09-08 Version: 1.11.3
+- Update API GetPodLogs: add request parameters Containers.
+- Update API GetPodLogs: add response parameters Body.ContainerInfo.
+- Update API GetPodLogs: add response parameters Body.Containers.
+
+
 2026-09-04 Version: 1.11.2
 - Update API UpdateJob: add request parameters body.UserCommand.
 

@@ -5,6 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetPodLogsResponseBody extends TeaModel {
     /**
+     * <p>The container information that may be associated with the node.</p>
+     */
+    @NameInMap("ContainerInfo")
+    public ContainerInfo containerInfo;
+
+    /**
+     * <p>The containers used to filter logs. Separate multiple container names with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pytorch,aimaster-worker</p>
+     */
+    @NameInMap("Containers")
+    public String containers;
+
+    /**
      * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +64,22 @@ public class GetPodLogsResponseBody extends TeaModel {
     public static GetPodLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPodLogsResponseBody self = new GetPodLogsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetPodLogsResponseBody setContainerInfo(ContainerInfo containerInfo) {
+        this.containerInfo = containerInfo;
+        return this;
+    }
+    public ContainerInfo getContainerInfo() {
+        return this.containerInfo;
+    }
+
+    public GetPodLogsResponseBody setContainers(String containers) {
+        this.containers = containers;
+        return this;
+    }
+    public String getContainers() {
+        return this.containers;
     }
 
     public GetPodLogsResponseBody setJobId(String jobId) {
