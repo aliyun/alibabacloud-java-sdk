@@ -9,33 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-southeast-2", "apig.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "apig.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "apig.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "apig.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "apig.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "apig.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "apig.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "apig.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "apig.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("us-west-1", "apig.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "apig.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "apig.eu-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "apig.eu-west-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "apig.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "apig.me-central-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("apig", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -4279,7 +4252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</p>
+     * <p>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
@@ -4292,6 +4265,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGatewayQuotaRuleSubjectUsageResponse getGatewayQuotaRuleSubjectUsageWithOptions(String gatewayId, String ruleId, String subjectId, GetGatewayQuotaRuleSubjectUsageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filterFailedRequests)) {
             query.put("filterFailedRequests", request.filterFailedRequests);
         }
@@ -4302,6 +4279,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4324,7 +4305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</p>
+     * <p>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>

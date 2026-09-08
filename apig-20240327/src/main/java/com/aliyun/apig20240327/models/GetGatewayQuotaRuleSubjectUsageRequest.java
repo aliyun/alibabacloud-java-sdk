@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     /**
+     * <p>The end time for querying consumption record details, in UNIX timestamp format (seconds). If only this parameter is specified, the system automatically calculates startTime based on the rule cycle.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1788425220</p>
+     */
+    @NameInMap("endTime")
+    public Long endTime;
+
+    /**
      * <p>Specifies whether to filter out zero values.</p>
      * 
      * <strong>example:</strong>
@@ -31,9 +40,26 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The start time for querying consumption record details, in UNIX timestamp format (seconds). If only this parameter is specified, the system automatically calculates endTime based on the rule cycle.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1788338820</p>
+     */
+    @NameInMap("startTime")
+    public Long startTime;
+
     public static GetGatewayQuotaRuleSubjectUsageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetGatewayQuotaRuleSubjectUsageRequest self = new GetGatewayQuotaRuleSubjectUsageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetGatewayQuotaRuleSubjectUsageRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public GetGatewayQuotaRuleSubjectUsageRequest setFilterFailedRequests(Boolean filterFailedRequests) {
@@ -58,6 +84,14 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public GetGatewayQuotaRuleSubjectUsageRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

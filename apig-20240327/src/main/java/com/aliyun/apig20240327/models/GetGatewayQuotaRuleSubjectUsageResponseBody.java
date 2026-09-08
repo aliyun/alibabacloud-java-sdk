@@ -88,6 +88,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long cachedAmount;
 
         /**
+         * <p>The exact value of cached consumption. Supports decimals in credit scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.5</p>
+         */
+        @NameInMap("cachedAmountDecimal")
+        public Double cachedAmountDecimal;
+
+        /**
          * <p>The consumer name.</p>
          * 
          * <strong>example:</strong>
@@ -106,6 +115,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long inputAmount;
 
         /**
+         * <p>The exact value of input consumption. Supports decimals in credit scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.5</p>
+         */
+        @NameInMap("inputAmountDecimal")
+        public Double inputAmountDecimal;
+
+        /**
          * <p>The model name.</p>
          * 
          * <strong>example:</strong>
@@ -122,6 +140,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
          */
         @NameInMap("outputAmount")
         public Long outputAmount;
+
+        /**
+         * <p>The exact value of output consumption. Supports decimals in credit scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80.5</p>
+         */
+        @NameInMap("outputAmountDecimal")
+        public Double outputAmountDecimal;
 
         /**
          * <p>The request ID.</p>
@@ -150,6 +177,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         @NameInMap("usedAmount")
         public Long usedAmount;
 
+        /**
+         * <p>The exact value of total consumption. Supports decimals in credit scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210.5</p>
+         */
+        @NameInMap("usedAmountDecimal")
+        public Double usedAmountDecimal;
+
         public static GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems build(java.util.Map<String, ?> map) throws Exception {
             GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems self = new GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems();
             return TeaModel.build(map, self);
@@ -161,6 +197,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
         public Long getCachedAmount() {
             return this.cachedAmount;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setCachedAmountDecimal(Double cachedAmountDecimal) {
+            this.cachedAmountDecimal = cachedAmountDecimal;
+            return this;
+        }
+        public Double getCachedAmountDecimal() {
+            return this.cachedAmountDecimal;
         }
 
         public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setConsumer(String consumer) {
@@ -179,6 +223,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             return this.inputAmount;
         }
 
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setInputAmountDecimal(Double inputAmountDecimal) {
+            this.inputAmountDecimal = inputAmountDecimal;
+            return this;
+        }
+        public Double getInputAmountDecimal() {
+            return this.inputAmountDecimal;
+        }
+
         public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setModel(String model) {
             this.model = model;
             return this;
@@ -193,6 +245,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
         public Long getOutputAmount() {
             return this.outputAmount;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setOutputAmountDecimal(Double outputAmountDecimal) {
+            this.outputAmountDecimal = outputAmountDecimal;
+            return this;
+        }
+        public Double getOutputAmountDecimal() {
+            return this.outputAmountDecimal;
         }
 
         public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setRequestId(String requestId) {
@@ -217,6 +277,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
         public Long getUsedAmount() {
             return this.usedAmount;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setUsedAmountDecimal(Double usedAmountDecimal) {
+            this.usedAmountDecimal = usedAmountDecimal;
+            return this;
+        }
+        public Double getUsedAmountDecimal() {
+            return this.usedAmountDecimal;
         }
 
     }
@@ -250,7 +318,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -308,6 +376,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long cachedAmount;
 
         /**
+         * <p>The exact value of total cached consumption. Supports decimals in credit scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20.5</p>
+         */
+        @NameInMap("cachedAmountDecimal")
+        public Double cachedAmountDecimal;
+
+        /**
          * <p>The paginated consumption details.</p>
          * 
          * <strong>example:</strong>
@@ -326,6 +403,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long inputAmount;
 
         /**
+         * <p>The exact value of total input consumption. Supports decimals in credit scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300.5</p>
+         */
+        @NameInMap("inputAmountDecimal")
+        public Double inputAmountDecimal;
+
+        /**
          * <p>The total output token consumption.</p>
          * 
          * <strong>example:</strong>
@@ -333,6 +419,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
          */
         @NameInMap("outputAmount")
         public Long outputAmount;
+
+        /**
+         * <p>The exact value of total output consumption. Supports decimals in credit scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180.5</p>
+         */
+        @NameInMap("outputAmountDecimal")
+        public Double outputAmountDecimal;
 
         /**
          * <p>Indicates whether the quota limit is exceeded.</p>
@@ -344,11 +439,16 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Boolean overLimit;
 
         /**
-         * <p>The subject type. Valid values:</p>
-         * <ul>
-         * <li>consumer</li>
-         * <li>consumer_group</li>
-         * </ul>
+         * <p>The quota dimension. Valid values: token and credit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token</p>
+         */
+        @NameInMap("quotaDimension")
+        public String quotaDimension;
+
+        /**
+         * <p>The subject type. Valid values: consumer and consumer_group.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer_group</p>
@@ -374,6 +474,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         @NameInMap("usedAmount")
         public Long usedAmount;
 
+        /**
+         * <p>The exact value of the total used amount of the subject. Supports decimals in credit scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500.5</p>
+         */
+        @NameInMap("usedAmountDecimal")
+        public Double usedAmountDecimal;
+
         public static GetGatewayQuotaRuleSubjectUsageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetGatewayQuotaRuleSubjectUsageResponseBodyData self = new GetGatewayQuotaRuleSubjectUsageResponseBodyData();
             return TeaModel.build(map, self);
@@ -385,6 +494,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
         public Long getCachedAmount() {
             return this.cachedAmount;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyData setCachedAmountDecimal(Double cachedAmountDecimal) {
+            this.cachedAmountDecimal = cachedAmountDecimal;
+            return this;
+        }
+        public Double getCachedAmountDecimal() {
+            return this.cachedAmountDecimal;
         }
 
         public GetGatewayQuotaRuleSubjectUsageResponseBodyData setDetails(GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetails details) {
@@ -403,6 +520,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             return this.inputAmount;
         }
 
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyData setInputAmountDecimal(Double inputAmountDecimal) {
+            this.inputAmountDecimal = inputAmountDecimal;
+            return this;
+        }
+        public Double getInputAmountDecimal() {
+            return this.inputAmountDecimal;
+        }
+
         public GetGatewayQuotaRuleSubjectUsageResponseBodyData setOutputAmount(Long outputAmount) {
             this.outputAmount = outputAmount;
             return this;
@@ -411,12 +536,28 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             return this.outputAmount;
         }
 
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyData setOutputAmountDecimal(Double outputAmountDecimal) {
+            this.outputAmountDecimal = outputAmountDecimal;
+            return this;
+        }
+        public Double getOutputAmountDecimal() {
+            return this.outputAmountDecimal;
+        }
+
         public GetGatewayQuotaRuleSubjectUsageResponseBodyData setOverLimit(Boolean overLimit) {
             this.overLimit = overLimit;
             return this;
         }
         public Boolean getOverLimit() {
             return this.overLimit;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyData setQuotaDimension(String quotaDimension) {
+            this.quotaDimension = quotaDimension;
+            return this;
+        }
+        public String getQuotaDimension() {
+            return this.quotaDimension;
         }
 
         public GetGatewayQuotaRuleSubjectUsageResponseBodyData setSubjectType(String subjectType) {
@@ -441,6 +582,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
         public Long getUsedAmount() {
             return this.usedAmount;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyData setUsedAmountDecimal(Double usedAmountDecimal) {
+            this.usedAmountDecimal = usedAmountDecimal;
+            return this;
+        }
+        public Double getUsedAmountDecimal() {
+            return this.usedAmountDecimal;
         }
 
     }
