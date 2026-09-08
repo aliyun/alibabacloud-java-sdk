@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRoutersRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-j3jzhw1zpau2km****</p>
@@ -14,7 +14,7 @@ public class ListTransitRoutersRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The feature to be filtered.</p>
+     * <p>The feature filter for transit routers.</p>
      */
     @NameInMap("FeatureFilter")
     public java.util.List<ListTransitRoutersRequestFeatureFilter> featureFilter;
@@ -35,7 +35,7 @@ public class ListTransitRoutersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>. For more information about paging, see the related parameter descriptions.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,8 +44,8 @@ public class ListTransitRoutersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the transit router is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the transit router instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -60,18 +60,13 @@ public class ListTransitRoutersRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the transit router.</p>
+     * <p>The status of the transit router instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>Creating</strong>: The transit router is being created.</p>
-     * </li>
-     * <li><p><strong>Active</strong>: The transit router is available.</p>
-     * </li>
-     * <li><p><strong>Modifying</strong>: The transit router is being modified.</p>
-     * </li>
-     * <li><p><strong>Deleting</strong>: The transit router is being deleted.</p>
-     * </li>
-     * <li><p><strong>Upgrading</strong>: The transit router is being upgraded.</p>
-     * </li>
+     * <li><strong>Creating</strong>: being created.</li>
+     * <li><strong>Active</strong>: active.</li>
+     * <li><strong>Modifying</strong>: being modified.</li>
+     * <li><strong>Deleting</strong>: being deleted.</li>
+     * <li><strong>Upgrading</strong>: being upgraded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,14 +76,14 @@ public class ListTransitRoutersRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
-     * <p>You can specify up to 20 tags.</p>
+     * <p>The tag information.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRoutersRequestTag> tag;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The transit router instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-uf654ttymmljlvh2x****</p>
@@ -97,7 +92,7 @@ public class ListTransitRoutersRequest extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>The name of the transit router.</p>
+     * <p>The name of the transit router instance.</p>
      * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -107,12 +102,10 @@ public class ListTransitRoutersRequest extends TeaModel {
     public String transitRouterName;
 
     /**
-     * <p>The type of the transit router.</p>
+     * <p>The type of the transit router instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enterprise</strong>: Enterprise Edition.</p>
-     * </li>
-     * <li><p><strong>Basic</strong>: Basic Edition.</p>
-     * </li>
+     * <li><strong>Enterprise</strong>: Enterprise Edition transit router.</li>
+     * <li><strong>Basic</strong>: Basic Edition transit router.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -240,8 +233,7 @@ public class ListTransitRoutersRequest extends TeaModel {
 
     public static class ListTransitRoutersRequestFeatureFilter extends TeaModel {
         /**
-         * <p>The key of the feature to be filtered.
-         * The following key is supported:</p>
+         * <p>The key of the feature filter for transit routers. Currently supported fields:</p>
          * <ul>
          * <li><strong>Multicast</strong>: the multicast feature.</li>
          * </ul>
@@ -253,13 +245,10 @@ public class ListTransitRoutersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>A list of values for the feature.
-         * If you set the key to <strong>Multicast</strong>, you can specify only one value. Valid values:</p>
+         * <p>The list of values for the feature filter of transit routers. When the key is <strong>Multicast</strong>, only one value is supported. Valid values:</p>
          * <ul>
-         * <li><p><strong>Enabled</strong>: Multicast is supported.</p>
-         * </li>
-         * <li><p><strong>Disabled</strong>: Multicast is not supported.</p>
-         * </li>
+         * <li><strong>Enabled</strong>: multicast is supported.</li>
+         * <li><strong>Disabled</strong>: multicast is not supported.</li>
          * </ul>
          */
         @NameInMap("Value")
@@ -290,9 +279,9 @@ public class ListTransitRoutersRequest extends TeaModel {
 
     public static class ListTransitRoutersRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the resource.</p>
          * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey</p>
@@ -301,9 +290,9 @@ public class ListTransitRoutersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify up to 20 tag values.</p>
+         * <p>The tag value of the resource.</p>
+         * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

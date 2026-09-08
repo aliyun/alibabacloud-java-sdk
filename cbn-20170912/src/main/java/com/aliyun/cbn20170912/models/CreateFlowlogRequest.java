@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFlowlogRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +16,9 @@ public class CreateFlowlogRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a value for this parameter from your client. Make sure that the value is unique for each request. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class CreateFlowlogRequest extends TeaModel {
 
     /**
      * <p>The description of the flow log.</p>
-     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -39,7 +39,7 @@ public class CreateFlowlogRequest extends TeaModel {
 
     /**
      * <p>The name of the flow log.</p>
-     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -48,7 +48,7 @@ public class CreateFlowlogRequest extends TeaModel {
     public String flowLogName;
 
     /**
-     * <p>The aggregation interval for the flow log. Unit: seconds. Valid values: <strong>60</strong> and <strong>600</strong>. Default value: <strong>600</strong>.</p>
+     * <p>The capture window duration of the flow log. Unit: seconds. Valid values: <strong>60</strong> and <strong>600</strong>. Default value: <strong>600</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>
@@ -57,14 +57,12 @@ public class CreateFlowlogRequest extends TeaModel {
     public Long interval;
 
     /**
-     * <p>A custom string of log fields for the flow log.</p>
+     * <p>The string that defines custom flow log record fields. </p>
      * <p>The format is defined as:
      * <code>${field 1}${field 2}${field 3}...${field n}</code></p>
      * <ul>
-     * <li><p>If you do not specify this parameter, all default fields are logged.</p>
-     * </li>
-     * <li><p>If you specify this parameter, you must start the string with <code>${srcaddr}${dstaddr}${bytes}</code> because these are required parameters. For more information about all supported log fields, see <a href="https://help.aliyun.com/document_detail/339822.html">Configure a flow log</a>.</p>
-     * </li>
+     * <li>If you leave this parameter empty, all default fields are recorded.</li>
+     * <li>If you specify this parameter, because <code>${srcaddr}${dstaddr}${bytes}</code> are required fields, the string must start with <code>${srcaddr}${dstaddr}${bytes}</code>. For all supported flow log fields, see <a href="https://help.aliyun.com/document_detail/339822.html">Configure a flow log</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,21 +72,17 @@ public class CreateFlowlogRequest extends TeaModel {
     public String logFormatString;
 
     /**
-     * <p>The Logstore that is used to store the captured traffic.</p>
+     * <p>The Logstore that stores the caught traffic.</p>
      * <ul>
-     * <li><p>If you have already created a Logstore in the current region, enter the name of the Logstore.</p>
+     * <li><p>If you have already created a Logstore in the current region, enter the name of the existing Logstore.</p>
      * </li>
-     * <li><p>If you have not created a Logstore in the current region, you can specify a custom name for the Logstore. The system automatically creates the Logstore.
-     * The name of the Logstore must meet the following requirements:</p>
+     * <li><p>If you have not created a Logstore in the current region, specify a custom name for the Logstore. The system automatically creates the Logstore.
+     *   The naming rules for the Logstore are as follows:</p>
      * <ul>
-     * <li><p>The name must be unique within the same project.</p>
-     * </li>
-     * <li><p>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
-     * </li>
-     * <li><p>It must start and end with a lowercase letter or a digit.</p>
-     * </li>
-     * <li><p>It must be 3 to 63 characters in length.</p>
-     * </li>
+     * <li>The Logstore name must be unique within the same project.</li>
+     * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name must start and end with a lowercase letter or digit.</li>
+     * <li>The name must be 3 to 63 characters in length.</li>
      * </ul>
      * </li>
      * </ul>
@@ -106,21 +100,17 @@ public class CreateFlowlogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The project that is used to store the captured traffic.</p>
+     * <p>The project that stores the caught traffic.</p>
      * <ul>
-     * <li><p>If you have already created a project in the current region, enter the name of the project.</p>
+     * <li><p>If you have already created a project in the current region, enter the name of the existing project.</p>
      * </li>
-     * <li><p>If you have not created a project in the current region, you can specify a custom name for the project. The system automatically creates the project.</p>
-     * <p>A project name must be globally unique within an Alibaba Cloud region and cannot be modified after the project is created. The name must meet the following requirements:</p>
+     * <li><p>If you have not created a project in the current region, specify a custom name for the project. The system automatically creates the project.</p>
+     * <p>  The project name must be globally unique within the Alibaba Cloud region and cannot be modified after creation. The naming rules are as follows:</p>
      * <ul>
-     * <li><p>The name must be globally unique.</p>
-     * </li>
-     * <li><p>It can contain only lowercase letters, digits, and hyphens (-).</p>
-     * </li>
-     * <li><p>It must start and end with a lowercase letter or a digit.</p>
-     * </li>
-     * <li><p>It must be 3 to 63 characters in length.</p>
-     * </li>
+     * <li>The project name must be globally unique.</li>
+     * <li>The name can contain only lowercase letters, digits, and hyphens (-).</li>
+     * <li>The name must start and end with a lowercase letter or digit.</li>
+     * <li>The name must be 3 to 63 characters in length.</li>
      * </ul>
      * </li>
      * </ul>
@@ -133,7 +123,7 @@ public class CreateFlowlogRequest extends TeaModel {
 
     /**
      * <p>The region ID of the flow log.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -149,15 +139,15 @@ public class CreateFlowlogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tag.</p>
-     * <p>You can add up to 20 tags in each call.</p>
+     * <p>The tag information.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateFlowlogRequestTag> tag;
 
     /**
      * <p>The ID of the VPC connection, VPN connection, VBR connection, ECR connection, or inter-region connection.</p>
-     * <p>If you want to configure a flow log for a transit router instance, do not specify this parameter.</p>
+     * <p>Leave this parameter empty if you want to configure a flow log for a transit router instance.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-attach-r6g0m3epjehw57****</p>
@@ -166,7 +156,7 @@ public class CreateFlowlogRequest extends TeaModel {
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The ID of the transit router instance.</p>
+     * <p>The transit routing instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-bp1rmwxnk221e3fas****</p>
@@ -309,9 +299,9 @@ public class CreateFlowlogRequest extends TeaModel {
 
     public static class CreateFlowlogRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https:// </code>.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey</p>
@@ -320,9 +310,9 @@ public class CreateFlowlogRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https:// </code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify up to 20 tag values.</p>
+         * <p>The tag value of the resource.</p>
+         * <p>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

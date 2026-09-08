@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
      * <blockquote>
-     * <p>This parameter is required if the network instance belongs to another Alibaba Cloud account.</p>
+     * <p>This parameter is required if the network instance belongs to a different Alibaba Cloud account.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public Long childInstanceAliUid;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The network instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,8 +37,8 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The ID of the region where the network instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region ID of the network instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,10 +50,8 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>VPC</strong>: a virtual private cloud (VPC).</p>
-     * </li>
-     * <li><p><strong>VBR</strong>: a virtual border router (VBR).</p>
-     * </li>
+     * <li><strong>VPC</strong>: a virtual private cloud (VPC).</li>
+     * <li><strong>VBR</strong>: a virtual border router (VBR).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -64,8 +62,8 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public String childInstanceType;
 
     /**
-     * <p>The destination CIDR block of the route.</p>
-     * <p>The destination CIDR block must be in CIDR format. Example: 192.168.10.0/24.</p>
+     * <p>The destination CIDR block of the route entry.</p>
+     * <p>The destination CIDR block must be in CIDR notation. Example: 192.168.10.0/24.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

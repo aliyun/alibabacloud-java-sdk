@@ -14,7 +14,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     public DescribeRouteServicesInCenResponseBodyRouteServiceEntries routeServiceEntries;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

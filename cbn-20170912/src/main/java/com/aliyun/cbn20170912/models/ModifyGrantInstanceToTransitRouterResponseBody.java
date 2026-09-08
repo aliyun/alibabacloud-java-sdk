@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyGrantInstanceToTransitRouterResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</p>

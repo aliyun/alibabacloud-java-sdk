@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. The default value is <strong>50</strong>.</p>
+     * <p>The number of entries per page for a paged query. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The token for the next query in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>dd20****</p>
@@ -35,14 +35,11 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the route propagation.</p>
+     * <p>The status of the route learning relationship. Valid values:</p>
      * <ul>
-     * <li><p><strong>Active</strong>: The propagation is active.</p>
-     * </li>
-     * <li><p><strong>Enabling</strong>: The propagation is being enabled.</p>
-     * </li>
-     * <li><p><strong>Disabling</strong>: The propagation is being disabled.</p>
-     * </li>
+     * <li><strong>Active</strong>: active.</li>
+     * <li><strong>Enabling</strong>: being enabled.</li>
+     * <li><strong>Disabling</strong>: being disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +49,7 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the network instance connection.</p>
+     * <p>The network instance connection ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-attach-vx6iwhjr1x1j78****</p>
@@ -61,7 +58,7 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The network instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1h8vbrbcgohcju5****</p>
@@ -70,16 +67,12 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public String transitRouterAttachmentResourceId;
 
     /**
-     * <p>The type of the network instance.</p>
+     * <p>The network instance type. Valid values:</p>
      * <ul>
-     * <li><p><strong>VPC</strong>: a virtual private cloud (VPC).</p>
-     * </li>
-     * <li><p><strong>VBR</strong>: a virtual border router (VBR).</p>
-     * </li>
-     * <li><p><strong>TR</strong>: a transit router.</p>
-     * </li>
-     * <li><p><strong>VPN</strong>: a VPN connection.</p>
-     * </li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
+     * <li><strong>VBR</strong>: virtual border router (VBR) instance.</li>
+     * <li><strong>TR</strong>: transit router instance.</li>
+     * <li><strong>VPN</strong>: VPN connection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,7 +82,7 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public String transitRouterAttachmentResourceType;
 
     /**
-     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * <p>The ID of the Enterprise Edition transit router route table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

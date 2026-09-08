@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The network instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the network instance.</p>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
-     * <p>The route table ID of the network instance.</p>
+     * <p>The ID of the route table of the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,10 +48,7 @@ public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>VPC</strong>: virtual private cloud.</p>
-     * </li>
-     * <li><p><strong>VBR</strong>: virtual border router.</p>
-     * </li>
+     * <li><strong>VPC</strong>: virtual private cloud.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -62,7 +59,7 @@ public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceType;
 
     /**
-     * <p>The destination CIDR block of the route entry that you want to withdraw.</p>
+     * <p>The destination CIDR block of the route entry to withdraw.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-5mv960yjhja0dh****</p>
@@ -14,8 +14,8 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public String cenId;
 
     /**
-     * <p>The time when the network instance was attached to the CEN instance.</p>
-     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+     * <p>The time when the network instance was attached.</p>
+     * <p>The time is displayed in UTC in the YYYY-MM-DDThh:mmZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-07-30T07:53Z</p>
@@ -24,13 +24,13 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public String childInstanceAttachTime;
 
     /**
-     * <p>The details about the network instance.</p>
+     * <p>The details of the network instance.</p>
      */
     @NameInMap("ChildInstanceAttributes")
     public DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributes childInstanceAttributes;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The network instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zebdboka7d7t37vo****</p>
@@ -66,11 +66,14 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public String childInstanceRegionId;
 
     /**
-     * <p>The type of the network instance. Valid values:</p>
+     * <p>The type of the network instance.</p>
      * <ul>
-     * <li><strong>VPC</strong>: VPC</li>
-     * <li><strong>VBR</strong>: VBR</li>
-     * <li><strong>CCN</strong>: CCN instance</li>
+     * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: virtual border router.</p>
+     * </li>
+     * <li><p><strong>CCN</strong>: Cloud Connect Network.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +83,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public String childInstanceType;
 
     /**
-     * <p>The cloud service that the network instance belongs to. Its standard code is only returned when the VPC is connected to the transit router. For self-managed VPCs, no code is returned.</p>
+     * <p>The cloud service to which the network instance belongs. This parameter is returned only when a VPC occupied by a cloud service is connected to a transit router. If the VPC is managed by you, this parameter is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>swas</p>
@@ -89,7 +92,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public String managedService;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ADD98358-D265-4060-87CB-A2427F5A8944</p>
@@ -98,11 +101,11 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public String requestId;
 
     /**
-     * <p>Indicates whether the network instance is attached to the CEN instance.</p>
+     * <p>The attachment status of the network instance.</p>
      * <ul>
-     * <li><strong>Attaching</strong>: The network instance is being attached to the CEN instance.</li>
-     * <li><strong>Attached</strong>: The network instance is attached to the CEN instance.</li>
-     * <li><strong>Detaching</strong>: The network instance is being detached from the CEN instance.</li>
+     * <li><strong>Attaching</strong>: being attached.</li>
+     * <li><strong>Attached</strong>: attached.</li>
+     * <li><strong>Detaching</strong>: being detached.</li>
      * </ul>
      * 
      * <strong>example:</strong>

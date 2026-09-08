@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-dc4vwznpwbobrl****</p>
@@ -14,7 +14,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     public String cenId;
 
     /**
-     * <p>The ID of the route table of the network instance.</p>
+     * <p>The route table ID of the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     public String childInstanceRouteTableId;
 
     /**
-     * <p>The number of entries to return on each page. The default value is <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,12 +33,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>Specifies whether a next query token (Token) exists. Valid values:</p>
      * <ul>
-     * <li><p>If this is your first query, leave this parameter empty.</p>
-     * </li>
-     * <li><p>If a next query is required, set the value to the NextToken value returned from the last call.</p>
-     * </li>
+     * <li>You do not need to specify this parameter for the first query or if no next query exists.</li>
+     * <li>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,13 +58,13 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     public Long resourceOwnerId;
 
     /**
-     * <p>The filter for the destination CIDR block.</p>
+     * <p>The destination CIDR block filter.</p>
      */
     @NameInMap("RouteFilter")
     public java.util.List<ListCenChildInstanceRouteEntriesToAttachmentRequestRouteFilter> routeFilter;
 
     /**
-     * <p>The type of the managed routing service. If this parameter is empty, the route is not managed. Set the value to TR. This value indicates that the route is managed by a transit router.</p>
+     * <p>The type of route hosting. If this field is empty, the route is not hosted. Valid values: TR, which indicates that the hosting type is transit router.</p>
      * 
      * <strong>example:</strong>
      * <p>TR</p>
@@ -179,9 +177,9 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
 
     public static class ListCenChildInstanceRouteEntriesToAttachmentRequestRouteFilter extends TeaModel {
         /**
-         * <p>The route matching mode.</p>
+         * <p>The route match mode.</p>
          * <ul>
-         * <li><strong>prefix-exact-match</strong>: exact match</li>
+         * <li><strong>prefix-exact-match</strong>: exact match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +189,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
         public String key;
 
         /**
-         * <p>A list of destination CIDR blocks.</p>
+         * <p>The list of destination CIDR blocks.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterRouteTableRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a token from your client to ensure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,10 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a custom route table is created.</p>
-     * </li>
+     * <li><strong>false</strong> (default): sends a normal request and creates the custom route table after the request passes the verification.</li>
+     * <li><strong>true</strong>: sends a check request without creating the custom route table. The system checks the required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,14 +43,14 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The features of the route table.</p>
+     * <p>The route table options.</p>
      */
     @NameInMap("RouteTableOptions")
     public CreateTransitRouterRouteTableRequestRouteTableOptions routeTableOptions;
 
     /**
-     * <p>The tag.</p>
-     * <p>You can specify up to 20 tags in each call.</p>
+     * <p>The tag information.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterRouteTableRequestTag> tag;
@@ -69,7 +67,7 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
 
     /**
      * <p>The description of the custom route table.</p>
-     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -79,7 +77,7 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
 
     /**
      * <p>The name of the custom route table.</p>
-     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -182,12 +180,10 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
 
     public static class CreateTransitRouterRouteTableRequestRouteTableOptions extends TeaModel {
         /**
-         * <p>The multi-region equal-cost multi-path (ECMP) routing feature. Valid values:</p>
+         * <p>The multi-region equal-cost multi-path (ECMP) routing setting. Valid values:</p>
          * <ul>
-         * <li><p><strong>disable</strong> (default): disables the multi-region ECMP routing feature. If you disable the multi-region ECMP routing feature, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. The region ID is sorted in alphabetical order. In this case, the latency and bandwidth consumption of the traffic may change. Make sure that you are aware of the impact before you disable the feature.</p>
-         * </li>
-         * <li><p><strong>enable</strong>: enables the multi-region ECMP routing feature. If you enable the multi-region ECMP routing feature, routes that are learned from different regions but have the same prefix and attributes are considered ECMP routes. In this case, the latency and bandwidth consumption of the traffic may change. Make sure that you are aware of the impact before you enable the feature.</p>
-         * </li>
+         * <li><strong>disable</strong> (default): disables multi-region ECMP routing. After multi-region ECMP routing is disabled, routes with the same prefix learned from different regions prefer the transit router whose Region ID is the smallest (sorted alphabetically) as the next hop when other route attributes are the same. This may change traffic latency and bandwidth consumption between regions. Make sure that you fully evaluate the impact before disabling this feature.</li>
+         * <li><strong>enable</strong>: enables multi-region ECMP routing. After multi-region ECMP routing is enabled, routes with the same prefix learned from different regions form ECMP routes when other route attributes are the same. This may change traffic latency and bandwidth consumption between regions. Make sure that you fully evaluate the impact before enabling this feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,8 +210,8 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
     public static class CreateTransitRouterRouteTableRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with \<code>aliyun\\</code> or \<code>acs:\\</code>. It cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -225,8 +221,8 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with \<code>aliyun\\</code> or \<code>acs:\\</code> and cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify up to 20 tag values.</p>
+         * <p>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>

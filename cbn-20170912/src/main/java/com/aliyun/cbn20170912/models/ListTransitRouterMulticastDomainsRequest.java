@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-a7syd349kne38g****</p>
@@ -15,7 +15,7 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a token that is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -24,7 +24,7 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,12 +33,10 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
      * <ul>
-     * <li><p>If this is your first query or no next query is to be sent, leave this parameter empty.</p>
-     * </li>
-     * <li><p>If a next query is to be sent, set the value to the NextToken value returned from the last call.</p>
-     * </li>
+     * <li>If this is your first query or no subsequent queries are to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,8 +52,8 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the transit router is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
+     * <p>The region ID of the transit router.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -70,14 +68,14 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
-     * <p>You can specify up to 20 tags.</p>
+     * <p>The tag information.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterMulticastDomainsRequestTag> tag;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The transit router instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-p0wr9p28r92d598y6****</p>
@@ -199,7 +197,7 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey</p>
@@ -209,8 +207,8 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a corresponding tag value. You can specify up to 20 tag values.</p>
+         * <p>The tag value can be an empty string and can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest extends TeaMo
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions without deleting the traffic classification rule from the traffic marking policy. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs the actual request. After the check passes, the traffic classification rule is directly deleted from the traffic marking policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest extends TeaMo
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the traffic classification rule.</p>
+     * <p>The IDs of the traffic classification rules.</p>
      */
     @NameInMap("TrafficMarkRuleIds")
     public java.util.List<String> trafficMarkRuleIds;

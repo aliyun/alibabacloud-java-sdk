@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * <ul>
-     * <li><p>If you did not set the <strong>MaxResults</strong> parameter in the request, this parameter indicates the total number of entries.</p>
-     * </li>
-     * <li><p>If you set the <strong>MaxResults</strong> parameter in the request, this parameter indicates the number of entries on the current page.</p>
-     * </li>
+     * <li>If you did not specify the <strong>MaxResults</strong> request parameter, it indicates that you did not need to query results by page. The value of <strong>MaxResults</strong> in the response indicates the total number of entries.</li>
+     * <li>If you specified the <strong>MaxResults</strong> request parameter, it indicates that you needed to query results by page. The value of <strong>MaxResults</strong> in the response indicates the number of entries on the current page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,12 +18,10 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li><p>If <strong>NextToken</strong> is empty, no next page exists.</p>
-     * </li>
-     * <li><p>If <strong>NextToken</strong> is not empty, the value of this parameter indicates the token that is used for the next query.</p>
-     * </li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent request exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +49,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>A list of CIDR block allocations.</p>
+     * <p>The allocation details of the transit router CIDR block.</p>
      */
     @NameInMap("TransitRouterCidrAllocations")
     public java.util.List<ListTransitRouterCidrAllocationResponseBodyTransitRouterCidrAllocations> transitRouterCidrAllocations;
@@ -105,7 +101,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
 
     public static class ListTransitRouterCidrAllocationResponseBodyTransitRouterCidrAllocations extends TeaModel {
         /**
-         * <p>The allocated CIDR block.</p>
+         * <p>The allocated CIDR block under the transit router CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.0/28</p>
@@ -132,7 +128,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         public String attachmentName;
 
         /**
-         * <p>The CIDR block of the transit router.</p>
+         * <p>The transit router CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.0/24</p>
@@ -141,7 +137,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         public String cidr;
 
         /**
-         * <p>The ID of the CIDR block of the transit router.</p>
+         * <p>The ID of the transit router CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>cidr-0zv0q9crqpntzz****</p>

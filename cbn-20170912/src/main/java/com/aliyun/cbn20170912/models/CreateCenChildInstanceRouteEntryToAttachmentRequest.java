@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +16,9 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>The destination CIDR block of the route.</p>
+     * <p>The destination CIDR block of the route entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,15 +38,13 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
     public String destinationCidrBlock;
 
     /**
-     * <p>Specifies whether to perform a dry run, without performing the actual request. The dry run checks permissions and the status of the instance. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. The dry run checks parameter validity, user permissions, and instance status. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): sends a normal request and creates a route for the network instance after the request passes the check.</p>
-     * </li>
-     * <li><p><strong>true</strong>: sends a dry run request to check the request parameters. If the request passes the check, the system does not create a route for the network instance. The system checks the required parameters and the request format. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, a route entry is added to the network instance.</li>
+     * <li><strong>true</strong>: Sends a check request. No route entry is added to the network instance. The system checks the required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is not in use.</p>
+     * <p>This parameter is not currently in effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

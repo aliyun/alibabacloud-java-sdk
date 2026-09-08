@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouterRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class DeleteTransitRouterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the request. Check items include permissions and the status of the transit router. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, the transit router is deleted.</li>
-     * <li><strong>true</strong>: prechecks the request but does not delete the transit router. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the transit router instance is deleted.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the check is performed. The transit router instance is not deleted. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DeleteTransitRouterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The transit router instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -17,7 +17,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page when using paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

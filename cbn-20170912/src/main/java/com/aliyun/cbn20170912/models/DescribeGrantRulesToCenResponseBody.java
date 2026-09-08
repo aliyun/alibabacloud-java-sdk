@@ -9,10 +9,8 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>The maximum number of entries to return per page.</p>
-     * </li>
-     * <li><p>This value is the same as the <strong>MaxResults</strong> value that you specified in the request.</p>
-     * </li>
+     * <li>If you did not specify the <strong>MaxResults</strong> request parameter, pagination is not required. The <strong>MaxResults</strong> value in the response indicates the total number of entries.</li>
+     * <li>If you specified the <strong>MaxResults</strong> request parameter, pagination is required. The <strong>MaxResults</strong> value in the response indicates the number of entries in the current page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,12 +20,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li><p>If the <strong>NextToken</strong> parameter is empty, no more results are available.</p>
-     * </li>
-     * <li><p>To retrieve the next page, set the NextToken request parameter to this value.</p>
-     * </li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +42,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

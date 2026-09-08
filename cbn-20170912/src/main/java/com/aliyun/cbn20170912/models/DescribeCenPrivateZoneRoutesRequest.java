@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCenPrivateZoneRoutesRequest extends TeaModel {
     /**
-     * <p>The ID of the region where you access the PrivateZone service.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
+     * <p>The ID of the region from which the PrivateZone service is accessed.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -15,7 +15,7 @@ public class DescribeCenPrivateZoneRoutesRequest extends TeaModel {
     public String accessRegionId;
 
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeCenPrivateZoneRoutesRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the region where the PrivateZone service is deployed.</p>
+     * <p>The ID of the region where the PrivateZone service resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -34,7 +34,7 @@ public class DescribeCenPrivateZoneRoutesRequest extends TeaModel {
     public String hostRegionId;
 
     /**
-     * <p>The page number. The default value is <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class DescribeCenPrivateZoneRoutesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The default value is <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The number of entries per page for paging. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, there is no next query.</li>
-     * <li>If <strong>NextToken</strong> has a return value, the value is the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
     public String requestId;
 
     /**
-     * <p>The number of entries in the list.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

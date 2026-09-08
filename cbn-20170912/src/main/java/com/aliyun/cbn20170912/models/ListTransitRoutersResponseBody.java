@@ -14,7 +14,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query. For more information about paging, see the related parameter descriptions.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>A list of transit routers.</p>
+     * <p>The list of transit router instances.</p>
      */
     @NameInMap("TransitRouters")
     public java.util.List<ListTransitRoutersResponseBodyTransitRouters> transitRouters;
@@ -135,7 +135,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
 
     public static class ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList extends TeaModel {
         /**
-         * <p>The CIDR block of the transit router.</p>
+         * <p>The transit router CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>
@@ -144,7 +144,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String cidr;
 
         /**
-         * <p>The description of the CIDR block.</p>
+         * <p>The description of the transit router CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>CIDRdesc</p>
@@ -153,7 +153,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the CIDR block.</p>
+         * <p>The name of the transit router CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>CIDRname</p>
@@ -162,14 +162,14 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the system automatically adds a route for the transit router CIDR block to the route table of the transit router.</p>
+         * <p>Indicates whether the system is allowed to automatically add a route for the transit router CIDR block to the transit router route table. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Yes.</p>
-         * <p>If this parameter is set to <strong>true</strong>, after you create a VPN connection of the private gateway type and enable route learning for the VPN connection, the system automatically adds a blackhole route to the route table of the transit router that is in a route learning correlation with the VPN connection.</p>
-         * <p>The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router is the CIDR block from which an IP address is allocated to the IPsec-VPN connection.</p>
-         * <p>This blackhole route is advertised only to the route tables of the virtual border routers (VBRs) that are connected to the transit router.</p>
+         * <li><p><strong>true</strong>: allowed.</p>
+         * <p>   If the value is <strong>true</strong>, after you create a VPN connection of the private gateway type and create a route learning relationship for the VPN connection, the system automatically adds the following route entry to the transit router route table that has a route learning relationship with the VPN connection:</p>
+         * <p>A blackhole route whose destination CIDR block is the transit router CIDR block from which a gateway IP address is allocated to the IPsec connection.</p>
+         * <p>The blackhole route is propagated only to the route tables of VBR instances under the transit router.</p>
          * </li>
-         * <li><p><strong>false</strong>: No.</p>
+         * <li><p><strong>false</strong>: not allowed.</p>
          * </li>
          * </ul>
          * 
@@ -180,7 +180,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public Boolean publishCidrRoute;
 
         /**
-         * <p>The ID of the CIDR block.</p>
+         * <p>The ID of the transit router CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>cidr-46p5ceg21e8152****</p>
@@ -246,7 +246,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-j3jzhw1zpau2km****</p>
@@ -255,8 +255,8 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The time when the transit router was created.</p>
-         * <p>The time is displayed in the <code>YYYY-MM-DDThh:mmZ</code> format in UTC.</p>
+         * <p>The time when the transit router instance was created.</p>
+         * <p>The time is displayed in UTC in the <code>YYYY-MM-DDThh:mmZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-15T09:39Z</p>
@@ -265,7 +265,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The ID of the region where the transit router is deployed.</p>
+         * <p>The region ID of the transit router instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -274,18 +274,13 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the transit router.</p>
+         * <p>The status of the transit router instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>Creating</strong>: The transit router is being created.</p>
-         * </li>
-         * <li><p><strong>Active</strong>: The transit router is available.</p>
-         * </li>
-         * <li><p><strong>Modifying</strong>: The transit router is being modified.</p>
-         * </li>
-         * <li><p><strong>Deleting</strong>: The transit router is being deleted.</p>
-         * </li>
-         * <li><p><strong>Upgrading</strong>: The transit router is being upgraded.</p>
-         * </li>
+         * <li><strong>Creating</strong>: being created.</li>
+         * <li><strong>Active</strong>: active.</li>
+         * <li><strong>Modifying</strong>: being modified.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
+         * <li><strong>Upgrading</strong>: being upgraded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,12 +290,10 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether the multicast feature is enabled for the transit router.</p>
+         * <p>Indicates whether the multicast feature is enabled for the transit router instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: enabled.</p>
-         * </li>
-         * <li><p><strong>false</strong>: disabled.</p>
-         * </li>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -310,19 +303,19 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public Boolean supportMulticast;
 
         /**
-         * <p>A list of tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTags> tags;
 
         /**
-         * <p>A list of CIDR blocks of the transit router.</p>
+         * <p>The list of transit router CIDR blocks.</p>
          */
         @NameInMap("TransitRouterCidrList")
         public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList> transitRouterCidrList;
 
         /**
-         * <p>The description of the transit router.</p>
+         * <p>The description of the transit router instance.</p>
          * 
          * <strong>example:</strong>
          * <p>testdesc</p>
@@ -331,7 +324,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String transitRouterDescription;
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit router instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-bp1su1ytdxtataupl****</p>
@@ -340,7 +333,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String transitRouterId;
 
         /**
-         * <p>The name of the transit router.</p>
+         * <p>The name of the transit router instance.</p>
          * 
          * <strong>example:</strong>
          * <p>testname</p>
@@ -349,12 +342,10 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String transitRouterName;
 
         /**
-         * <p>The type of the transit router.</p>
+         * <p>The type of the transit router instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>Enterprise</strong>: Enterprise Edition.</p>
-         * </li>
-         * <li><p><strong>Basic</strong>: Basic Edition.</p>
-         * </li>
+         * <li><strong>Enterprise</strong>: Enterprise Edition transit router.</li>
+         * <li><strong>Basic</strong>: Basic Edition transit router.</li>
          * </ul>
          * 
          * <strong>example:</strong>

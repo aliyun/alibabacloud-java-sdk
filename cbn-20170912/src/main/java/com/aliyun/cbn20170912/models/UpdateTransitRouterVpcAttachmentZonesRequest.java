@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
     /**
-     * <p>The zones and vSwitches that you want to add to the VPC connection.</p>
+     * <p>The list of zones and vSwitches to add to the VPC connection.</p>
      */
     @NameInMap("AddZoneMappings")
     public java.util.List<UpdateTransitRouterVpcAttachmentZonesRequestAddZoneMappings> addZoneMappings;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned. The zones and vSwitches of the VPC connection are not modified.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the zones and vSwitches of the VPC connection are modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The zones and vSwitches that you want to remove from the VPC connection.</p>
+     * <p>The list of zones and vSwitches to remove from the VPC connection.</p>
      */
     @NameInMap("RemoveZoneMappings")
     public java.util.List<UpdateTransitRouterVpcAttachmentZonesRequestRemoveZoneMappings> removeZoneMappings;
@@ -143,12 +143,13 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
 
     public static class UpdateTransitRouterVpcAttachmentZonesRequestAddZoneMappings extends TeaModel {
         /**
-         * <p>The ID of the vSwitch that you want to add to the VPC connection.</p>
-         * <p>You can specify at most 10 vSwitches in each call.</p>
+         * <p>The ID of the vSwitch to add to the VPC connection.</p>
+         * <p>You can add up to 10 vSwitches at a time.</p>
          * <ul>
-         * <li>If the VPC connection belongs to the current Alibaba Cloud account, you can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the IDs of the vSwitches and zones of the VPC.</li>
-         * <li>If the VPC connection belongs to another Alibaba Cloud account, you can call the <a href="https://help.aliyun.com/document_detail/427599.html">ListGrantVSwitchesToCen</a> operation to query the IDs of the vSwitches and zones of the VPC.</li>
+         * <li>If the Alibaba Cloud account that you use to log on and the VPC-connected instance belong to the same account, you can invoke the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the vSwitch IDs and the IDs of the zones to which the vSwitches belong in the VPC-connected instance.</li>
+         * <li>If the Alibaba Cloud account that you use to log on and the VPC-connected instance belong to different accounts, you can invoke the <a href="https://help.aliyun.com/document_detail/427599.html">ListGrantVSwitchesToCen</a> operation to query the vSwitch IDs and the IDs of the zones to which the vSwitches belong in the VPC-connected instance.</li>
          * </ul>
+         * <p>If you set <strong>VSwitchId</strong>, you must also set <strong>ZoneId</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-wz988dda8ldm4uvmx****</p>
@@ -157,8 +158,9 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone where the vSwitch that you want to add to the VPC connection is deployed.</p>
-         * <p>You can specify at most 10 vSwitches in each call.</p>
+         * <p>The ID of the zone to which the vSwitch to add to the VPC connection belongs.</p>
+         * <p>You can add up to 10 vSwitches at a time.</p>
+         * <p>If you set <strong>ZoneId</strong>, you must also set <strong>VSwitchId</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -191,8 +193,9 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
 
     public static class UpdateTransitRouterVpcAttachmentZonesRequestRemoveZoneMappings extends TeaModel {
         /**
-         * <p>The ID of the vSwitch that you want to remove from the VPC connection.</p>
-         * <p>You can remove at most 10 vSwitches from a VPC in each call.</p>
+         * <p>The ID of the vSwitch to remove from the VPC connection.</p>
+         * <p>You can remove up to 10 vSwitches at a time.</p>
+         * <p>If you set <strong>VSwitchId</strong>, you must also set <strong>ZoneId</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-wz9f5izl6wshndmta****</p>
@@ -201,7 +204,9 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone where the vSwitch that you want to remove from the VPC connection is deployed.</p>
+         * <p>The ID of the zone to which the vSwitch to remove from the VPC connection belongs.</p>
+         * <p>You can remove up to 10 vSwitches at a time.</p>
+         * <p>If you set <strong>ZoneId</strong>, you must also set <strong>VSwitchId</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>

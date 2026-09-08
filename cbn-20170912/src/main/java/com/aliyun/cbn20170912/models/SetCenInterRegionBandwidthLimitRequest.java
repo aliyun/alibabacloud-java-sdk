@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
     /**
-     * <p>The inter-region bandwidth between the two regions. Unit: Mbps.</p>
+     * <p>The inter-region bandwidth between the two regions. Unit: Mbit/s.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
     public Long bandwidthLimit;
 
     /**
-     * <p>The method used to allocate bandwidth. Valid value:</p>
+     * <p>The bandwidth allocation method. Valid values:</p>
      * <ul>
-     * <li><strong>BandwidthPackage</strong> (default): allocates bandwidth from a bandwidth plan.</li>
+     * <li><strong>BandwidthPackage</strong> (default): Bandwidth is allocated from the bandwidth package.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
     public String bandwidthType;
 
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
 
     /**
      * <p>The ID of the local region.</p>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the regions where network instances can be attached to a CEN instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query the regions of the network instances that can be attached to a CEN instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

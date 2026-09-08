@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCenBandwidthPackageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the bandwidth plan.</p>
+     * <p>The instance ID of the new bandwidth plan.</p>
      * 
      * <strong>example:</strong>
      * <p>cenbwp-4c2zaavbvh5fx****</p>
@@ -14,7 +14,7 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
     public String cenBandwidthPackageId;
 
     /**
-     * <p>The ID of the order for the bandwidth plan.</p>
+     * <p>The order ID of the bandwidth plan.</p>
      * 
      * <strong>example:</strong>
      * <p>20156420004****</p>

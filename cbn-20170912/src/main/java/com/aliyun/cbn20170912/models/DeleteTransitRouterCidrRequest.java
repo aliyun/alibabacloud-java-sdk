@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouterCidrRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a client-side token that is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,10 +20,8 @@ public class DeleteTransitRouterCidrRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: sends a check request without deleting the CIDR block. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, the CIDR block is deleted.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run without deleting the transit router CIDR block. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and then deletes the transit router CIDR block after the request passes the check.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,8 +37,8 @@ public class DeleteTransitRouterCidrRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the transit router is deployed.</p>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to obtain the region ID.</p>
+     * <p>The region ID of the transit router instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,8 +54,8 @@ public class DeleteTransitRouterCidrRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the CIDR block of the transit router.</p>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> to query the ID of the CIDR block.</p>
+     * <p>The ID of the transit router CIDR block.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the ID of a transit router CIDR block.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +65,7 @@ public class DeleteTransitRouterCidrRequest extends TeaModel {
     public String transitRouterCidrId;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The transit router instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

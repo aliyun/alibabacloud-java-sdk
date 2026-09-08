@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowlogsRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-7qthudw0ll6jmc****</p>
@@ -15,9 +15,9 @@ public class DescribeFlowlogsRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId value as the ClientToken value. The RequestId value may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeFlowlogsRequest extends TeaModel {
 
     /**
      * <p>The description of the flow log.</p>
-     * <p>The description is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -37,7 +37,7 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the flow log.</p>
+     * <p>The flow log ID.</p>
      * 
      * <strong>example:</strong>
      * <p>flowlog-m5evbtbpt****</p>
@@ -47,7 +47,7 @@ public class DescribeFlowlogsRequest extends TeaModel {
 
     /**
      * <p>The name of the flow log.</p>
-     * <p>The name is optional. If you enter a name, it must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -56,8 +56,8 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public String flowLogName;
 
     /**
-     * <p>The flow log version.</p>
-     * <p>Flow logs are automatically created in the latest version, which is <strong>3</strong>.</p>
+     * <p>The version of the flow log.</p>
+     * <p>When a flow log is created, the latest version supported by the system is automatically used. The current version is <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -66,7 +66,7 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public String flowLogVersion;
 
     /**
-     * <p>The time window for collecting log data. Unit: seconds Valid values: <strong>60</strong> or <strong>600</strong> Default value: <strong>600</strong>.</p>
+     * <p>The capture window duration of the flow log. Unit: seconds. Valid values: <strong>60</strong> or <strong>600</strong>. Default value: <strong>600</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>
@@ -75,8 +75,8 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The name of the Logstore where the flow log is stored.</p>
-     * <p>The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-). It must start or end with a lowercase letter or a digit.</p>
+     * <p>The name of the Logstore that stores the captured traffic.</p>
+     * <p>The Logstore name must be 3 to 63 characters in length, and must start and end with a lowercase letter or digit. It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>FlowLogStore</p>
@@ -91,7 +91,7 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -100,7 +100,7 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Minimum value: <strong>1</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for paging queries. Minimum value: <strong>1</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -109,8 +109,8 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the project where the flow log is stored.</p>
-     * <p>The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). It must start or end with a lowercase letter or a digit.</p>
+     * <p>The name of the project that stores the captured traffic.</p>
+     * <p>The project name must be 3 to 63 characters in length, and must start and end with a lowercase letter or digit. It can contain only lowercase letters, digits, and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>FlowLogProject</p>
@@ -119,8 +119,8 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The ID of the region where the flow log is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the flow log.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -137,8 +137,10 @@ public class DescribeFlowlogsRequest extends TeaModel {
     /**
      * <p>The status of the flow log. Valid values:</p>
      * <ul>
-     * <li><strong>Active</strong>: The flow log is enabled.</li>
-     * <li><strong>Inactive</strong>: The flow log is disabled.</li>
+     * <li><p><strong>Active</strong>: activated.</p>
+     * </li>
+     * <li><p><strong>Inactive</strong>: not activated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -148,23 +150,23 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The information about the tags.</p>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>The tag information.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeFlowlogsRequestTag> tag;
 
     /**
-     * <p>The ID of the network instance connection.</p>
+     * <p>The network instance connection ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>tr-attach-qieks13jnt1cchy****</p>
+     * <p>tr-attach-qieks13jnt1cchy***</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The transit router instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-uf654ttymmljlvh2x****</p>
@@ -339,9 +341,9 @@ public class DescribeFlowlogsRequest extends TeaModel {
 
     public static class DescribeFlowlogsRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey</p>
@@ -350,9 +352,9 @@ public class DescribeFlowlogsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value of the resource.</p>
+         * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

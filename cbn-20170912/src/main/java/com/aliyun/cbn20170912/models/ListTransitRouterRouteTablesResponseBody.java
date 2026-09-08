@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page when entries are returned by page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,12 +14,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li><p>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</p>
-     * </li>
-     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that is used for the next query.</p>
-     * </li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,12 +97,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
 
     public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions extends TeaModel {
         /**
-         * <p>The multi-region ECMP routing feature. Valid values:</p>
+         * <p>Multi-region equal-cost multi-path (ECMP) routing. Valid values:</p>
          * <ul>
-         * <li><p><strong>disable</strong>: Disables multi-region ECMP routing. After this feature is disabled, for routes that are learned from different regions and have the same prefix and other attributes, the system selects the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetical order. This changes the latency and bandwidth consumption between different regions. Make sure that you fully evaluate the impact before you disable the feature.</p>
-         * </li>
-         * <li><p><strong>enable</strong>: Enables multi-region ECMP routing. After this feature is enabled, for routes that are learned from different regions and have the same prefix and other attributes, ECMP routing is formed. This changes the latency and bandwidth consumption between different regions. Make sure that you fully evaluate the impact before you enable the feature.</p>
-         * </li>
+         * <li><strong>disable</strong>: Disables multi-region ECMP routing. After multi-region ECMP routing is disabled, routes with the same prefix learned from different regions select the transit router (TR) with the smallest Region ID (sorted alphabetically) as the next hop when other route attributes are the same. This changes the traffic latency and bandwidth consumed between different regions. Make sure that you fully evaluate the impact before disabling this feature.</li>
+         * <li><strong>enable</strong>: Enables multi-region ECMP routing. After multi-region ECMP routing is enabled, routes with the same prefix learned from different regions form ECMP routes when other route attributes are the same. This changes the traffic latency and bandwidth consumed between different regions. Make sure that you fully evaluate the impact before enabling this feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +169,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables extends TeaModel {
         /**
          * <p>The time when the route table was created.</p>
-         * <p>The time is displayed in the YYYY-MM-DDThh:mmZ format in UTC.</p>
+         * <p>The time is displayed in UTC in the YYYY-MM-DDThh:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-15T09:39Z</p>
@@ -182,7 +178,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the region where the Enterprise Edition transit router is deployed.</p>
+         * <p>The region ID of the Enterprise Edition transit router instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -191,7 +187,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The features of the route table.</p>
+         * <p>The route table feature options.</p>
          */
         @NameInMap("RouteTableOptions")
         public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions routeTableOptions;
@@ -203,7 +199,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> tags;
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit router instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-8vb8bie2koduo5awz****</p>
@@ -241,12 +237,9 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         /**
          * <p>The status of the route table.</p>
          * <ul>
-         * <li><p><strong>Creating</strong>: The route table is being created.</p>
-         * </li>
-         * <li><p><strong>Deleting</strong>: The route table is being deleted.</p>
-         * </li>
-         * <li><p><strong>Active</strong>: The route table is available.</p>
-         * </li>
+         * <li><strong>Creating</strong>: being created.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
+         * <li><strong>Active</strong>: active.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,10 +251,8 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         /**
          * <p>The type of the route table.</p>
          * <ul>
-         * <li><p><strong>Custom</strong>: a custom route table.</p>
-         * </li>
-         * <li><p><strong>System</strong>: the default route table.</p>
-         * </li>
+         * <li><strong>Custom</strong>: custom route table.</li>
+         * <li><strong>System</strong>: system default route table.</li>
          * </ul>
          * 
          * <strong>example:</strong>

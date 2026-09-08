@@ -8,7 +8,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
     public DescribeCenGeographicSpansResponseBodyGeographicSpanModels geographicSpanModels;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

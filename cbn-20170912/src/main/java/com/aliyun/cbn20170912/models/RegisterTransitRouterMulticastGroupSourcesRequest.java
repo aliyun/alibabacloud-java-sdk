@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel {
     /**
-     * <p>A client token to ensure the idempotence of the request.</p>
-     * <p>Generate a unique value from your client. The client token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the request ID as the client token. The request ID is different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,10 +20,8 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): sends the request. If the request passes the check, a multicast source is created.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the multicast source is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,12 +31,11 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel 
     public Boolean dryRun;
 
     /**
-     * <p>The IP address of the multicast group to which the multicast source belongs. Valid values range from <strong>224.0.1.0</strong> to <strong>239.255.255.254</strong>.</p>
+     * <p>The IP address of the multicast group to which the multicast source belongs. Valid values: <strong>224.0.1.0</strong> to <strong>239.255.255.254</strong>.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: 224.0.0.0 to 224.0.0.127 are system reserved IP addresses and cannot be used as multicast group IP addresses.
+     * If the multicast group that you specify does not exist in the current multicast domain, the system automatically creates a multicast group.</p>
      * </blockquote>
-     * <p>The IP addresses from 224.0.0.0 to 224.0.0.127 are system reserved IP addresses. They cannot be used as multicast group IP addresses.</p>
-     * <p>If the specified multicast group does not exist in the multicast domain, the system automatically creates the multicast group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +45,7 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel 
     public String groupIpAddress;
 
     /**
-     * <p>A list of ENI IDs.</p>
+     * <p>The list of network interface controller (NIC) IDs of the elastic network interfaces (ENIs).</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
@@ -76,12 +73,10 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel 
     public String transitRouterMulticastDomainId;
 
     /**
-     * <p>The ID of the VPC to which the ENI belongs.</p>
+     * <p>The ID of the VPC-connected instance to which the network interface controller (NIC) of the elastic network interfaces (ENIs) belongs.</p>
      * <ul>
-     * <li><p>If the ENI belongs to your Alibaba Cloud account, this parameter is optional.</p>
-     * </li>
-     * <li><p>If the ENI belongs to a different Alibaba Cloud account, this parameter is required.</p>
-     * </li>
+     * <li>If the ENI belongs to the same Alibaba Cloud account as the account that you use to logon, you do not need to set this parameter.</li>
+     * <li>If the ENI belongs to a different Alibaba Cloud account from the account that you use to logon, this parameter is required.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFlowLogAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-7qthudw0ll6jmc****</p>
@@ -14,9 +14,10 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The unique, one-use client token that is used to ensure the idempotence of the request. It can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you leave this parameter empty, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +28,7 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
 
     /**
      * <p>The new description of the flow log.</p>
-     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -36,7 +37,7 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the flow log.</p>
+     * <p>The flow log ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +48,7 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
 
     /**
      * <p>The new name of the flow log.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -56,7 +57,7 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public String flowLogName;
 
     /**
-     * <p>The duraton of the capture window. Unit: seconds. Valid values: <strong>60</strong> and <strong>600</strong>. Default value: <strong>600</strong>.</p>
+     * <p>The capture window duration for the flow log. Unit: seconds. Valid values: <strong>60</strong> or <strong>600</strong>. Default value: <strong>600</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>
@@ -71,8 +72,8 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the flow log is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the flow log.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteTransitRouterRouteEntryRequest extends TeaModel {
     /**
-     * <p>A client token that is used to ensure the idempotence of the request.</p>
-     * <p>The token must be unique for each request and can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,10 @@ public class DeleteTransitRouterRouteEntryRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. A dry run checks for potential issues, such as missing parameter values, incorrect request syntax, and service limits. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, including permission and instance status validation. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): Sends the request. If the request passes the check, the route entry is deleted.</p>
-     * </li>
-     * <li><p><strong>true</strong>: Performs only a dry run. The system checks the request for potential issues. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Sends a normal request and directly deletes the route entry after the request passes the validation.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the validation is performed. The route entry is not deleted. The system checks required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +43,7 @@ public class DeleteTransitRouterRouteEntryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The destination CIDR block of the route.</p>
+     * <p>The destination CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/24</p>
@@ -63,7 +61,7 @@ public class DeleteTransitRouterRouteEntryRequest extends TeaModel {
     public String transitRouterRouteEntryId;
 
     /**
-     * <p>The ID of the network instance connection that serves as the next hop.</p>
+     * <p>The ID of the network instance connection associated with the next hop of the route entry.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-attach-nls9fzkfat8934****</p>
@@ -72,12 +70,10 @@ public class DeleteTransitRouterRouteEntryRequest extends TeaModel {
     public String transitRouterRouteEntryNextHopId;
 
     /**
-     * <p>The type of the next hop. Valid values:</p>
+     * <p>The next hop type of the route entry. Valid values:</p>
      * <ul>
-     * <li><p><strong>BlackHole</strong>: The route is a blackhole route. You do not need to specify a next hop.</p>
-     * </li>
-     * <li><p><strong>Attachment</strong>: The next hop is a network instance connection. You must specify the ID of the network instance connection.</p>
-     * </li>
+     * <li><strong>BlackHole</strong>: The route entry is a blackhole route. You do not need to specify the next-hop information.</li>
+     * <li><strong>Attachment</strong>: The next hop of the route entry is a network instance connection. You must also specify the ID of the network instance connection as the next hop.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +83,7 @@ public class DeleteTransitRouterRouteEntryRequest extends TeaModel {
     public String transitRouterRouteEntryNextHopType;
 
     /**
-     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * <p>The ID of the Enterprise Edition transit router route table.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-bp1dudbh2d5na6b50****</p>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>Indicates whether a next query token exists. Valid values:</p>
      * <ul>
-     * <li><p>If <strong>NextToken</strong> is empty, no next query is to be sent.</p>
+     * <li><p>If <strong>NextToken</strong> is empty, no next query exists.</p>
      * </li>
-     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that is used for the next query.</p>
+     * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</p>
      * </li>
      * </ul>
      * 

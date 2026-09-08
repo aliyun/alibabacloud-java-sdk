@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,12 +14,10 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li><p>If this is your first query or no next page exists, do not specify this parameter.</p>
-     * </li>
-     * <li><p>If a next page exists, set the value to the <strong>NextToken</strong> value returned from the previous call.</p>
-     * </li>
+     * <li>You do not need to specify this parameter for the first request or if no next query exists.</li>
+     * <li>If a next query exists, set the value to the <strong>NextToken</strong> value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,8 +39,8 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The description of the QoS policy.</p>
-     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with http\:// or https\://.</p>
+     * <p>The description of the traffic scheduling policy.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -51,7 +49,7 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
     public String trafficQosPolicyDescription;
 
     /**
-     * <p>The ID of the QoS policy.</p>
+     * <p>The ID of the traffic scheduling policy.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-rnghap5gc8155x****</p>
@@ -60,8 +58,8 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
     public String trafficQosPolicyId;
 
     /**
-     * <p>The name of the QoS policy.</p>
-     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</p>
+     * <p>The name of the traffic scheduling policy.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -79,7 +77,7 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The ID of the TransitRouter instance.</p>
+     * <p>The transit router instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-bp1rmwxnk221e3fas****</p>

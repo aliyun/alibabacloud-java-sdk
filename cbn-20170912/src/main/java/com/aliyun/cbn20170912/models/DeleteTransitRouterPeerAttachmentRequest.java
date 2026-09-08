@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteTransitRouterPeerAttachmentRequest extends TeaModel {
     /**
-     * <p>A client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a token from your client to ensure that the token is unique among different requests. The ClientToken parameter can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,10 @@ public class DeleteTransitRouterPeerAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. A dry run checks permissions and the status of the instance. Valid values:</p>
+     * <p>Specifies whether to perform a dry run for this deletion request, including permission and instance status checks. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): sends the request. If the request passes the check, the inter-region connection is deleted.</p>
-     * </li>
-     * <li><p><strong>true</strong>: sends a check request. The system checks the required parameters and the request format. If the request fails the check, an error is returned. If the request passes the check, the corresponding request ID is returned. The inter-region connection is not deleted.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the inter-region connection is deleted.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the check is performed without actually deleting the inter-region connection. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,12 +31,10 @@ public class DeleteTransitRouterPeerAttachmentRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully delete the inter-region connection. Valid values:</p>
+     * <p>Specifies whether to force delete the inter-region connection. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): checks for resource dependencies, such as associated forwarding and route learning, before deleting the inter-region connection. If dependencies exist, the deletion is not allowed and an error is returned.</p>
-     * </li>
-     * <li><p><strong>true</strong>: deletes all related dependencies when deleting the inter-region connection.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Before deleting the inter-region connection, the system checks whether related resource dependencies exist, such as associated forwarding and route learning. If related dependencies exist, the deletion is not allowed and the corresponding error is returned.</li>
+     * <li><strong>true</strong>: When deleting the inter-region connection, all related dependencies are deleted by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>

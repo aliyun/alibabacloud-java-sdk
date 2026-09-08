@@ -7,7 +7,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     /**
      * <p>The ID of the next hop connection.</p>
      * <blockquote>
-     * <p>If you want to query information about the prefix list that is used to generate blackhole routes, set this parameter to <strong>BlackHole</strong>.</p>
+     * <p>To query information about a prefix list that generates blackhole routes, set this parameter to <strong>BlackHole</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The ID of the network instance that is associated with the next hop connection.</p>
+     * <p>The network instance ID associated with the next hop connection.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-6eh7fp9hdqa2wv85t****</p>
@@ -28,14 +28,10 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     /**
      * <p>The next hop type. Valid values:</p>
      * <ul>
-     * <li><p><strong>BlackHole</strong>: queries the prefix lists that generate blackhole routes.</p>
-     * </li>
-     * <li><p><strong>VPC</strong>: queries the prefix lists whose next hop is a Virtual Private Cloud (VPC) connection.</p>
-     * </li>
-     * <li><p><strong>VBR</strong>: queries the prefix lists whose next hop is a virtual border router (VBR) connection.</p>
-     * </li>
-     * <li><p><strong>TR</strong>: queries the prefix lists whose next hop is an inter-region connection.</p>
-     * </li>
+     * <li><strong>BlackHole</strong>: queries information about prefix lists that generate blackhole routes.</li>
+     * <li><strong>VPC</strong>: queries information about prefix lists whose next hop is a Virtual Private Cloud (VPC) connection.</li>
+     * <li><strong>VBR</strong>: queries information about prefix lists whose next hop is a Virtual Border Router (VBR) connection.</li>
+     * <li><strong>TR</strong>: queries information about prefix lists whose next hop is an inter-region connection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +56,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     public Long ownerUid;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list to query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +65,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -87,7 +83,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     public String prefixListId;
 
     /**
-     * <p>The region ID of the transit router.</p>
+     * <p>The region ID of the transit router instance.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -106,10 +102,8 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     /**
      * <p>The status of the prefix list.</p>
      * <ul>
-     * <li><p><strong>Active</strong>: The prefix list is active.</p>
-     * </li>
-     * <li><p><strong>Updating</strong>: The prefix list is being updated.</p>
-     * </li>
+     * <li><strong>Active</strong>: active.</li>
+     * <li><strong>Updating</strong>: being updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,7 +113,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The transit router instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,7 +123,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>The ID of the route table of the transit router.</p>
+     * <p>The ID of the transit router route table.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-6ehgc262hr170qgyc****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainAssociationsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,12 +14,10 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
      * <ul>
-     * <li><p>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</p>
-     * </li>
-     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that is used for the next query.</p>
-     * </li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query is to be sent.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +116,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
 
         /**
          * <p>The type of resource associated with the multicast domain.</p>
-         * <p>The value is <strong>VPC</strong>.</p>
+         * <p>Set the value to <strong>VPC</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -129,12 +127,9 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         /**
          * <p>The association status.</p>
          * <ul>
-         * <li><p><strong>Associated</strong>: The resource is associated with the multicast domain.</p>
-         * </li>
-         * <li><p><strong>Associating</strong>: The resource is being associated with the multicast domain.</p>
-         * </li>
-         * <li><p><strong>Dissociating</strong>: The resource is being dissociated from the multicast domain.</p>
-         * </li>
+         * <li><strong>Associated</strong>: associated.</li>
+         * <li><strong>Associating</strong>: being associated.</li>
+         * <li><strong>Dissociating</strong>: being dissociated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,7 +139,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         public String status;
 
         /**
-         * <p>The ID of the network instance connection.</p>
+         * <p>The network instance connection ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-p90y3ymbbwuvy5****</p>
@@ -153,7 +148,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         public String transitRouterAttachmentId;
 
         /**
-         * <p>The ID of the multicast domain.</p>
+         * <p>The multicast domain ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
@@ -162,7 +157,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         public String transitRouterMulticastDomainId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-p0wxk12u6okfkr8xy****</p>

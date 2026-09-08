@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     /**
-     * <p>A list of available zone IDs.</p>
+     * <p>The list of zone IDs.</p>
      */
     @NameInMap("AvailableZones")
     public java.util.List<String> availableZones;
 
     /**
-     * <p>A list of primary zone IDs.</p>
+     * <p>The list of primary zone IDs.</p>
      */
     @NameInMap("MasterZones")
     public java.util.List<String> masterZones;
@@ -26,13 +26,13 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of secondary zone IDs.</p>
+     * <p>The list of secondary zone IDs.</p>
      */
     @NameInMap("SlaveZones")
     public java.util.List<String> slaveZones;
 
     /**
-     * <p>Indicates whether the returned zones support the multicast feature.</p>
+     * <p>Indicates whether the zone information is for multicast-enabled zones.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

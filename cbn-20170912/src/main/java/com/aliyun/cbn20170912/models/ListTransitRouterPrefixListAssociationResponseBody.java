@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -95,7 +95,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         /**
          * <p>The ID of the next hop connection.</p>
          * <blockquote>
-         * <p>If <strong>BlackHole</strong> is returned, it indicates that all CIDR blocks in the prefix list are blackhole routes. All traffic destined for the CIDR blocks in the prefix list is dropped.</p>
+         * <p>If the value is <strong>BlackHole</strong>, all CIDR blocks in the prefix list are blackhole routes, and all traffic destined for the CIDR blocks in the prefix list is dropped.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         public String nextHop;
 
         /**
-         * <p>The ID of the network instance that is associated with the next hop connection.</p>
+         * <p>The network instance ID associated with the next hop connection.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-6eh7fp9hdqa2wv85t****</p>
@@ -116,14 +116,10 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         /**
          * <p>The next hop type.</p>
          * <ul>
-         * <li><p><strong>BlackHole</strong>: The routes are blackhole routes. All traffic destined for the CIDR blocks in the prefix list is dropped.</p>
-         * </li>
-         * <li><p><strong>VPC</strong>: The next hop is a Virtual Private Cloud (VPC) connection.</p>
-         * </li>
-         * <li><p><strong>VBR</strong>: The next hop is a virtual border router (VBR) connection.</p>
-         * </li>
-         * <li><p><strong>TR</strong>: The next hop is an inter-region connection.</p>
-         * </li>
+         * <li><strong>BlackHole</strong>: the CIDR blocks in the prefix list are blackhole routes, and all traffic destined for the CIDR blocks in the prefix list is dropped.</li>
+         * <li><strong>VPC</strong>: the next hop of the CIDR blocks in the prefix list is a Virtual Private Cloud (VPC) connection.</li>
+         * <li><strong>VBR</strong>: the next hop of the CIDR blocks in the prefix list is a Virtual Border Router (VBR) connection.</li>
+         * <li><strong>TR</strong>: the next hop of the CIDR blocks in the prefix list is an inter-region connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,10 +149,8 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         /**
          * <p>The status of the prefix list.</p>
          * <ul>
-         * <li><p><strong>Active</strong>: The prefix list is active.</p>
-         * </li>
-         * <li><p><strong>Updating</strong>: The prefix list is being updated.</p>
-         * </li>
+         * <li><strong>Active</strong>: active.</li>
+         * <li><strong>Updating</strong>: being updated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +160,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         public String status;
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit router instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-6ehx7q2jze8ch5ji0****</p>
@@ -175,7 +169,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         public String transitRouterId;
 
         /**
-         * <p>The ID of the route table of the transit router.</p>
+         * <p>The ID of the transit router route table.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-6ehgc262hr170qgyc****</p>

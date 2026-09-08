@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateCenBandwidthPackageRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment for the bill of the bandwidth plan instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: yes.</p>
+     * <li><p><strong>true</strong>: enables automatic payment.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): no.</p>
+     * <li><p><strong>false</strong> (default): disables automatic payment.</p>
      * </li>
      * </ul>
-     * <p>If you disable automatic payment, you must go to the Order Hub in the console to complete the payment after you call this operation. Otherwise, the instance cannot be created.</p>
+     * <p>If you set this parameter to false, go to the Order Center in the console to complete the payment after you invoke this operation. Otherwise, the instance cannot be created.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,7 +27,7 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     public Integer autoRenewDuration;
 
     /**
-     * <p>The maximum bandwidth of the bandwidth plan. Unit: Mbps. Valid values: <strong>2</strong> to <strong>10000</strong>.</p>
+     * <p>The maximum bandwidth value of the bandwidth plan. Unit: Mbit/s. Valid values: <strong>2</strong> to <strong>10000</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The billing method of the bandwidth plan. Set the value to <strong>PREPAY</strong>. This value specifies the subscription billing method.</p>
+     * <p>The billing method of the bandwidth plan. Valid values: <strong>PREPAY</strong>, which indicates the subscription billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
@@ -47,7 +47,7 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Make sure that the client token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-001****</p>
@@ -57,7 +57,7 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The description of the bandwidth plan.</p>
-     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with http\:// or https\://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>namedesc</p>
@@ -66,16 +66,12 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The area where the network instance is deployed. Valid values:</p>
+     * <p>The area to which the network instance belongs. Valid values:</p>
      * <ul>
-     * <li><p><strong>China</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>North-America</strong>: North America.</p>
-     * </li>
-     * <li><p><strong>Asia-Pacific</strong>: Asia-Pacific.</p>
-     * </li>
-     * <li><p><strong>Europe</strong>: Europe.</p>
-     * </li>
+     * <li><strong>China</strong>: the Chinese mainland.</li>
+     * <li><strong>North-America</strong>: North America.</li>
+     * <li><strong>Asia-Pacific</strong>: Asia Pacific.</li>
+     * <li><strong>Europe</strong>: Europe.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -86,16 +82,12 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     public String geographicRegionAId;
 
     /**
-     * <p>The other area where the network instance is deployed. Valid values:</p>
+     * <p>The area to which the other network instance belongs. Valid values:</p>
      * <ul>
-     * <li><p><strong>China</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>North-America</strong>: North America.</p>
-     * </li>
-     * <li><p><strong>Asia-Pacific</strong>: Asia-Pacific.</p>
-     * </li>
-     * <li><p><strong>Europe</strong>: Europe.</p>
-     * </li>
+     * <li><strong>China</strong>: the Chinese mainland.</li>
+     * <li><strong>North-America</strong>: North America.</li>
+     * <li><strong>Asia-Pacific</strong>: Asia Pacific.</li>
+     * <li><strong>Europe</strong>: Europe.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -107,7 +99,7 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The name of the bandwidth plan.</p>
-     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -124,13 +116,11 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The subscription duration of the bandwidth plan. Default value: 1.</p>
      * <ul>
-     * <li><p>If you set <strong>PricingCycle</strong> to <strong>Month</strong>, valid values for <strong>Period</strong> are <strong>1</strong> to <strong>3</strong> and <strong>6</strong>.</p>
-     * </li>
-     * <li><p>If you set <strong>PricingCycle</strong> to <strong>Year</strong>, valid values for <strong>Period</strong> are <strong>1</strong> to <strong>3</strong>.</p>
-     * </li>
+     * <li>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, valid values for <strong>Period</strong> are <strong>1</strong> to <strong>3</strong> and <strong>6</strong>.</li>
+     * <li>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, valid values for <strong>Period</strong> are <strong>1</strong> to <strong>3</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if you set <strong>BandwidthPackageChargeType</strong> to <strong>PREPAY</strong>.</p>
+     * <p>This parameter is required when <strong>BandwidthPackageChargeType</strong> is set to <strong>PREPAY</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -142,9 +132,9 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The billing cycle of the bandwidth plan. Valid values:</p>
      * <ul>
-     * <li><p><strong>Month</strong> (default): The bandwidth plan is billed by month.</p>
+     * <li><p><strong>Month</strong> (default): billed on a monthly basis.</p>
      * </li>
-     * <li><p><strong>Year</strong>: The bandwidth plan is billed by year.</p>
+     * <li><p><strong>Year</strong>: billed on a yearly basis.</p>
      * </li>
      * </ul>
      * 
@@ -161,8 +151,8 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
-     * <p>You can specify up to 20 tags.</p>
+     * <p>The tag information.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCenBandwidthPackageRequestTag> tag;
@@ -310,9 +300,9 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
 
     public static class CreateCenBandwidthPackageRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>
@@ -321,9 +311,9 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values.</p>
+         * <p>The tag value of the resource.</p>
+         * <p>The tag value cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. The tag value cannot contain http:// or https://.</p>
+         * <p>Each tag key has a unique tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>

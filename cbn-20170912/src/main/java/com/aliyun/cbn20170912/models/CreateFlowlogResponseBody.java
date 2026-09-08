@@ -23,11 +23,11 @@ public class CreateFlowlogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the API call is successful.</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call is successful.</p>
+     * <li><p><strong>true</strong>: successful.</p>
      * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
+     * <li><p><strong>false</strong>: failed.</p>
      * </li>
      * </ul>
      * 

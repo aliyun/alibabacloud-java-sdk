@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VPC.</p>
+     * <p>Specifies whether to allow the Enterprise Edition forward router to automatically publish route entry to the VPC-connected instance.</p>
      * <ul>
-     * <li><p><strong>false</strong>: The transit router does not automatically advertise routes.</p>
-     * </li>
-     * <li><p><strong>true</strong>: The transit router automatically advertises routes.</p>
-     * </li>
+     * <li><strong>false</strong>: no.</li>
+     * <li><strong>true</strong>: yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,9 +19,9 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can generate the token from your client, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,12 +31,10 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run, which checks for issues such as permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, the system modifies the name and description of the VPC connection.</p>
-     * </li>
-     * <li><p><strong>true</strong>: sends a check request. The system validates the request without modifying the VPC connection. If the check passes, the system returns the ID of the request. Otherwise, the system returns an error.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the name and description of the VPC connection are modified.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the verification is performed, and the name and description of the VPC connection are not modified. The system checks whether the required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,13 +44,13 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
     public Boolean dryRun;
 
     /**
-     * <p>The billing method.</p>
+     * <p>The collection of feature attributes.</p>
      */
     @NameInMap("Options")
     public String optionsShrink;
 
     /**
-     * <p>The billing method.</p>
+     * <p>The payer of the network instance.</p>
      * 
      * <strong>example:</strong>
      * <p>PayByCenOwner</p>
@@ -75,8 +71,8 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
     public Long resourceOwnerId;
 
     /**
-     * <p>The new description of the VPC connection.</p>
-     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
+     * <p>The description of the VPC connection.</p>
+     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -95,8 +91,8 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The new name of the VPC connection.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
+     * <p>The name of the VPC connection.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -105,7 +101,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest extends TeaM
     public String transitRouterAttachmentName;
 
     /**
-     * <p>The feature properties of the VPC connection. This parameter is deprecated. We recommend that you use the <code>Options</code> parameter.</p>
+     * <p>The list of feature attributes of the VPC connection (to be deprecated. Use the new parameter Options instead).</p>
      */
     @NameInMap("TransitRouterVPCAttachmentOptions")
     public String transitRouterVPCAttachmentOptionsShrink;

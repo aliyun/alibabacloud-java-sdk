@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     /**
-     * <p>Filters the results by the actual bandwidth. Only positive integers are supported. Unit: Mbit/s.</p>
+     * <p>Filters results by the actual effective bandwidth value. Only positive integers are allowed. Unit: Mbit/s.</p>
      */
     @NameInMap("EffectiveBandwidthFilter")
     public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter effectiveBandwidthFilter;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,12 +20,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that determines the start point of the next query. Valid values:</p>
      * <ul>
-     * <li><p>If <strong>NextToken</strong> is empty, no more results are returned.</p>
-     * </li>
-     * <li><p>If NextToken is not empty, the value of <strong>NextToken</strong> is used for the next query.</p>
-     * </li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value indicates the token that is used for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +45,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the QoS policy.</p>
+     * <p>The ID of the traffic scheduling policy.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-rnghap5gc8155x****</p>
@@ -56,8 +54,8 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public String trafficQosPolicyId;
 
     /**
-     * <p>The description of the queue in the QoS policy.</p>
-     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+     * <p>The description of the traffic scheduling policy queue.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>qosQueueDescription</p>
@@ -66,7 +64,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public String trafficQosQueueDescription;
 
     /**
-     * <p>The ID of the queue in the QoS policy.</p>
+     * <p>The ID of the traffic scheduling policy queue.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-queue-siakjb2nn9gz5z****</p>
@@ -75,8 +73,8 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public String trafficQosQueueId;
 
     /**
-     * <p>The name of the queue in the QoS policy.</p>
-     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+     * <p>The name of the traffic scheduling policy queue.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>qosQueueName</p>
@@ -94,7 +92,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The ID of the transit router instance.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-bp1rmwxnk221e3fas****</p>
@@ -213,7 +211,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
 
     public static class ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter extends TeaModel {
         /**
-         * <p>The actual bandwidth is greater than or equal to the specified value.</p>
+         * <p>The actual effective bandwidth is greater than or equal to the specified bandwidth value.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -222,7 +220,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
         public Long gte;
 
         /**
-         * <p>The actual bandwidth is less than or equal to the specified value.</p>
+         * <p>The actual effective bandwidth is less than or equal to the specified bandwidth value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

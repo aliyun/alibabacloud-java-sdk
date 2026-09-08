@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,10 @@ public class DeleteTransitRouteTableAggregationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Default values:</p>
+     * <p>Specifies whether to perform a dry run for this deletion request, including permission and instance status verification. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): performs only a dry run.</p>
-     * </li>
-     * <li><p><strong>true</strong>: performs a dry run and performs the actual request. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the aggregate route is deleted.</li>
+     * <li><strong>true</strong>: Sends a check request. Only verification is performed without actually deleting the aggregate route. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,15 +44,6 @@ public class DeleteTransitRouteTableAggregationRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the aggregate route.</p>
-     * <blockquote>
-     * <p>The following CIDR blocks are not supported:</p>
-     * <ul>
-     * <li><p>CIDR blocks that start with 0 or 100.64.</p>
-     * </li>
-     * <li><p>Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.</p>
-     * </li>
-     * </ul>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +53,7 @@ public class DeleteTransitRouteTableAggregationRequest extends TeaModel {
     public String transitRouteTableAggregationCidr;
 
     /**
-     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * <p>The ID of the Enterprise Edition transit router route table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

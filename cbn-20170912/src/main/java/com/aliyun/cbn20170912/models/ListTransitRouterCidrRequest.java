@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ListTransitRouterCidrRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ListTransitRouterCidrRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the API request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request but does not query the CIDR block. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. After the request passes the check, the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without querying the CIDR blocks added to the transit router. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. After the request passes the dry run, the CIDR blocks added to the transit router are queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,8 +37,8 @@ public class ListTransitRouterCidrRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the transit router.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the transit router instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ListTransitRouterCidrRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the CIDR block.</p>
+     * <p>The ID of the transit router CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>cidr-0zv0q9crqpntzz****</p>
@@ -63,7 +63,7 @@ public class ListTransitRouterCidrRequest extends TeaModel {
     public String transitRouterCidrId;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The ID of the transit router instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

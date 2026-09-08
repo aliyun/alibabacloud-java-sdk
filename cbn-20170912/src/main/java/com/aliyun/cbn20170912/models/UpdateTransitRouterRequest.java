@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateTransitRouterRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a client token to make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each request is unique.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,10 @@ public class UpdateTransitRouterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. A dry run checks permissions and the status of the instance. Valid values:</p>
+     * <p>Specifies whether to perform a dry run for this modification request, including permission and instance status checks. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): Sends a normal request. After the request passes the check, the information about the TransitRouter instance is modified.</p>
-     * </li>
-     * <li><p><strong>true</strong>: Sends a check request. The system checks the request for required parameters and format correctness, but does not modify the TransitRouter instance. If the check fails, an error is returned. If the check passes, the request ID is returned.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Sends a normal request. After the request passes the check, the transit router instance information is directly modified.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the check is performed, and the transit router instance information is not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,8 +37,8 @@ public class UpdateTransitRouterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the TransitRouter instance is deployed.</p>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the transit router instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,8 +54,8 @@ public class UpdateTransitRouterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new description of the TransitRouter instance.</p>
-     * <p>The description can be empty or 1 to 256 characters in length. The description cannot start with http\:// or https\://.</p>
+     * <p>The new description of the transit router instance.</p>
+     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -66,7 +64,7 @@ public class UpdateTransitRouterRequest extends TeaModel {
     public String transitRouterDescription;
 
     /**
-     * <p>The ID of the TransitRouter instance.</p>
+     * <p>The ID of the transit router instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,8 +74,8 @@ public class UpdateTransitRouterRequest extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>The new name for the TransitRouter instance.</p>
-     * <p>The name can be empty or 1 to 128 characters in length. The name cannot start with http\:// or https\://.</p>
+     * <p>The new name of the transit router instance.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>

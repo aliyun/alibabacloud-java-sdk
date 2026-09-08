@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the bandwidth plan.</p>
+     * <p>The instance ID of the bandwidth plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     public String cenBandwidthPackageId;
 
     /**
-     * <p>The new description for the bandwidth plan.</p>
-     * <p>The description can be empty or 1 to 256 characters long. It cannot start with http\:// or https\://.</p>
+     * <p>The new description of the bandwidth plan instance.  </p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>Bandwidth package</p>
@@ -25,8 +25,8 @@ public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The new name for the bandwidth plan.</p>
-     * <p>The name can be empty or 1 to 128 characters long. It cannot start with http\:// or https\://.</p>
+     * <p>The new name of the bandwidth plan instance.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

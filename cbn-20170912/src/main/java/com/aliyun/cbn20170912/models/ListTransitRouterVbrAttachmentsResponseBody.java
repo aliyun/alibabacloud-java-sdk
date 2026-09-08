@@ -14,12 +14,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query.</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
      * <ul>
-     * <li><p>If this parameter is empty, no more data is returned.</p>
-     * </li>
-     * <li><p>If a value is returned for this parameter, it is the token that you can use to retrieve the next page of results.</p>
-     * </li>
+     * <li>If this is the first query or no subsequent query is to be sent, you do not need to specify this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the value to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +45,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>A list of VBR connections.</p>
+     * <p>The list of VBR connections.</p>
      */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
@@ -141,12 +139,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         /**
-         * <p>Indicates whether the Enterprise Edition transit router automatically advertises routes to the VBR.</p>
+         * <p>Indicates whether the Enterprise Edition forward routing automatically publishes route entries to the VBR instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>false</strong>: no.</p>
-         * </li>
-         * <li><p><strong>true</strong>: yes.</p>
-         * </li>
+         * <li><strong>false</strong>: The Enterprise Edition forward routing does not automatically publish route entries to the VBR instance.</li>
+         * <li><strong>true</strong>: The Enterprise Edition forward routing automatically publishes route entries to the VBR instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +152,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public Boolean autoPublishRouteEnabled;
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-j3jzhw1zpau2km****</p>
@@ -166,7 +162,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the VBR connection was created.</p>
-         * <p>The time is displayed in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+         * <p>The time is displayed in the ISO 8601 standard in UTC. Format: YYYY-MM-DDThh:mmZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-15T15:20Z</p>
@@ -174,16 +170,17 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The cloud service that manages the VBR connection. This parameter is returned only when the VBR connection is managed by a cloud service. The standard code of the cloud service is returned. If the VBR connection is managed by you, this parameter is not returned.</p>
+         */
         @NameInMap("ManagedService")
         public String managedService;
 
         /**
-         * <p>The payer for the network instance. Valid values:</p>
+         * <p>The payer of the network instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>PayByCenOwner</strong>: The connection fee and data transfer fee for the VBR are paid by the account that owns the transit router.</p>
-         * </li>
-         * <li><p><strong>PayByResourceOwner</strong>: The connection fee and data transfer fee for the VBR are paid by the account that owns the VBR.</p>
-         * </li>
+         * <li><strong>PayByCenOwner</strong>: The connection fee and data processing fee of the VBR instance are paid by the account to which the transit router instance belongs.</li>
+         * <li><strong>PayByResourceOwner</strong>: The connection fee and data processing fee of the VBR instance are paid by the account to which the VBR instance belongs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,8 +190,8 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public String orderType;
 
         /**
-         * <p>The resource type of the connection.</p>
-         * <p>The value is set to <strong>VBR</strong>, which indicates a VBR instance.</p>
+         * <p>The type of resource to which the connection belongs.</p>
+         * <p>The value is <strong>VBR</strong>, which indicates a virtual border router instance.</p>
          * 
          * <strong>example:</strong>
          * <p>VBR</p>
@@ -203,14 +200,11 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The status of the VBR connection.</p>
+         * <p>The status of the VBR connection. Valid values:</p>
          * <ul>
-         * <li><p><strong>Attached</strong>: The connection is established.</p>
-         * </li>
-         * <li><p><strong>Attaching</strong>: The connection is being established.</p>
-         * </li>
-         * <li><p><strong>Detaching</strong>: The connection is being removed.</p>
-         * </li>
+         * <li><strong>Attached</strong>: The VBR connection is attached.</li>
+         * <li><strong>Attaching</strong>: The VBR connection is being attached.</li>
+         * <li><strong>Detaching</strong>: The VBR connection is being detached.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +247,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public String transitRouterAttachmentName;
 
         /**
-         * <p>The ID of the Enterprise Edition transit router.</p>
+         * <p>The Enterprise Edition forward routing instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-bp1su1ytdxtataupl****</p>
@@ -262,7 +256,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public String transitRouterId;
 
         /**
-         * <p>The VBR ID.</p>
+         * <p>The VBR instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-bp1svadp4lq38janc****</p>
@@ -271,7 +265,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public String vbrId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * <p>The ID of the account to which the VBR instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1688111111111111</p>
@@ -280,7 +274,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public Long vbrOwnerId;
 
         /**
-         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>The region ID of the VBR instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

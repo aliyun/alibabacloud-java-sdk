@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class PublishRouteEntriesRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The network instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class PublishRouteEntriesRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The ID of the region where the network instance is deployed.</p>
+     * <p>The region ID of the network instance.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +36,7 @@ public class PublishRouteEntriesRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
-     * <p>The ID of the route table of the network instance.</p>
+     * <p>The route table ID of the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,10 +48,7 @@ public class PublishRouteEntriesRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>VPC</strong>: virtual private cloud.</p>
-     * </li>
-     * <li><p><strong>VBR</strong>: virtual border router.</p>
-     * </li>
+     * <li><strong>VPC</strong>: virtual private cloud.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -62,7 +59,7 @@ public class PublishRouteEntriesRequest extends TeaModel {
     public String childInstanceType;
 
     /**
-     * <p>The destination CIDR block of the route that you want to advertise.</p>
+     * <p>The destination CIDR block of the route entry to be published.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

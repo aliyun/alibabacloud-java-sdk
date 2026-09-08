@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
     /**
-     * <p>A client token that ensures the idempotence of the request.</p>
-     * <p>Generate a unique token on your client for each request. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-4266****</p>
@@ -17,10 +17,8 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Performs a dry run. The system checks the required parameters, request format, and service limits. If the check fails, an error message is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Sends the request. If the request passes the check, the name and description of the multicast domain are modified.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. After the request passes the dry run, the name and description of the multicast domain are modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +47,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The new description of the multicast domain.</p>
-     * <p>The description can be empty or 1 to 256 characters long. It cannot start with http\:// or https\://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -69,7 +67,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The new name of the multicast domain.</p>
-     * <p>The name can be empty or 1 to 128 characters long. It cannot start with http\:// or https\://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -164,13 +162,11 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
 
     public static class ModifyTransitRouterMulticastDomainRequestOptions extends TeaModel {
         /**
-         * <p>Specifies whether to enable the Internet Group Management Protocol (IGMP) feature for the multicast domain. When this feature is enabled, hosts can use IGMP to dynamically join or leave multicast groups. Set the value to <strong>enable</strong>.</p>
+         * <p>Specifies whether to enable the IGMP feature for the multicast domain. After this feature is enabled, hosts can dynamically join or leave multicast groups by using Internet Group Management Protocol (IGMP). Valid values: <strong>enable</strong>.</p>
          * <blockquote>
          * <ul>
-         * <li><p>The IGMP feature is in public preview. To use this feature, contact your account manager.</p>
-         * </li>
-         * <li><p>You cannot disable the IGMP feature after it is enabled.</p>
-         * </li>
+         * <li>The IGMP feature is in public preview. To use this feature, contact your account manager to request access.</li>
+         * <li>The IGMP feature cannot be disabled after it is enabled.</li>
          * </ul>
          * </blockquote>
          * 
@@ -181,6 +177,18 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
         public String igmpv2Support;
 
         /**
+         * <p>Specifies whether to enable the strict multicast source control feature. If this feature is disabled, all ECS instances in the associated vSwitch can serve as multicast sources. If this feature is enabled, only ENIs that are statically configured or have sent IGMP Join messages can serve as multicast sources. Valid values:</p>
+         * <ul>
+         * <li><code>enable</code>: enables the strict multicast source control feature.</li>
+         * <li><code>disable</code>: disables the strict multicast source control feature.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>The strict multicast source control feature takes effect only for multicast domains with the IGMP feature enabled.</li>
+         * <li>Only one multicast domain with the strict multicast source control feature disabled can be created under a transit router.</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow the Enterprise Edition transit router to automatically publish routes to the IPsec-VPN connection. Valid values:</p>
+     * <p>Specifies whether to allow the forward routing instance to automatically publish route entries to the IPsec connection. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The Enterprise Edition transit router automatically publishes routes to the IPsec-VPN connection.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The Enterprise Edition transit router does not automatically publish routes to the IPsec-VPN connection.</p>
-     * </li>
+     * <li><strong>true</strong>: Allowed.</li>
+     * <li><strong>false</strong>: Not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,10 +18,10 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     public Boolean autoPublishRouteEnabled;
 
     /**
-     * <p>A client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,10 +33,8 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Performs a dry run to check the request without modifying the attributes of the VPN connection. The system checks the required parameters, request format, and service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (Default): Sends a normal request. If the request passes the check, the system modifies the attributes of the VPN connection.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run without modifying the VPN connection configurations. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and then modifies the VPN connection configurations after the request passes the check.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,6 +44,12 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The payer of the network instance. Valid values:</p>
+     * <ul>
+     * <li><strong>PayByCenOwner</strong>: The connection fee and data transfer fee of the VPN connection are paid by the account that owns the transit router instance.</li>
+     * <li><strong>PayByResourceOwner</strong>: The connection fee and data transfer fee of the VPN connection are paid by the account that owns the VPN gateway instance.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PayByCenOwner</p>
      */
@@ -68,7 +70,7 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
 
     /**
      * <p>The new description of the VPN connection.</p>
-     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -77,7 +79,7 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     public String transitRouterAttachmentDescription;
 
     /**
-     * <p>The ID of the VPN connection.</p>
+     * <p>The VPN connection ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +90,7 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
 
     /**
      * <p>The new name of the VPN connection.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>

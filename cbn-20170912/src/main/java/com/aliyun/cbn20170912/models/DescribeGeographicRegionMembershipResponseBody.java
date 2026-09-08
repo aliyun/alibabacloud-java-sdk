@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -26,7 +26,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     public DescribeGeographicRegionMembershipResponseBodyRegionIds regionIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DC9EB0C9-60AF-4A09-A36C-608F70130274</p>
@@ -35,7 +35,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

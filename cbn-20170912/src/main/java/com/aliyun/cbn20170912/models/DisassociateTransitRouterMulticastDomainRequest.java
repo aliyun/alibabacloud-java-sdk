@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DisassociateTransitRouterMulticastDomainRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a token from your client to make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -17,10 +17,8 @@ public class DisassociateTransitRouterMulticastDomainRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): performs a normal request. If the request passes the check, the vSwitch is dissociated from the multicast domain.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run without disassociating the vSwitch from the multicast domain. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the vSwitch is disassociated from the multicast domain.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +41,7 @@ public class DisassociateTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC connection.</p>
-     * <p>The VPC connection is created after the Virtual Private Cloud (VPC) to which the vSwitch belongs is connected to the transit router.</p>
+     * <p>This parameter specifies the ID of the VPC connection that was generated after the Virtual Private Cloud (VPC) to which the vSwitch belongs was connected to the transit router instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

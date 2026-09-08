@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCenInterRegionTrafficQosPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6DF9A765-BCD2-5C7E-8C32-C35C8A361A39</p>

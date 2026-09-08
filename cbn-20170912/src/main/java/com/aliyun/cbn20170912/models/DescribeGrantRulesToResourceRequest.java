@@ -6,10 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeGrantRulesToResourceRequest extends TeaModel {
     /**
      * <ul>
-     * <li><p>If you omit this parameter, all entries are returned in a single response. In this case, the <strong>MaxResults</strong> field in the response indicates the total number of entries.</p>
-     * </li>
-     * <li><p>If you specify the <strong>MaxResults</strong> parameter, the query is paginated. <strong>MaxResults</strong> sets the number of entries per page. The value must be an integer from <strong>1</strong> to <strong>100</strong>. The <strong>MaxResults</strong> value in the response indicates the number of entries on the current page. The recommended value for this parameter is <strong>20</strong>.</p>
-     * </li>
+     * <li>If you do not specify the <strong>MaxResults</strong> parameter, paged query is not required. The value of <strong>MaxResults</strong> in the response indicates the total number of entries.</li>
+     * <li>If you specify the <strong>MaxResults</strong> parameter, paged query is required. The value of <strong>MaxResults</strong> specifies the number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. The value of <strong>MaxResults</strong> in the response indicates the number of entries in the current page. We recommend that you set <strong>MaxResults</strong> to <strong>20</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,12 +17,10 @@ public class DescribeGrantRulesToResourceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li><p>Omit this parameter for the first request.</p>
-     * </li>
-     * <li><p>For subsequent requests, set this parameter to the <strong>NextToken</strong> value from the previous response.</p>
-     * </li>
+     * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+     * <li>If a subsequent query exists, set the value to the <strong>NextToken</strong> value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,14 +38,10 @@ public class DescribeGrantRulesToResourceRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>VPC</strong>: a Virtual Private Cloud (VPC) instance.</p>
-     * </li>
-     * <li><p><strong>ExpressConnect</strong>: a Virtual Border Router (VBR) instance.</p>
-     * </li>
-     * <li><p><strong>VPN</strong>: an IPsec connection.</p>
-     * </li>
-     * <li><p><strong>ECR</strong>: an ExpressConnect Router (ECR) instance.</p>
-     * </li>
+     * <li><strong>VPC</strong>: Virtual Private Cloud (VPC) instance.</li>
+     * <li><strong>ExpressConnect</strong>: Virtual border router (VBR) instance.</li>
+     * <li><strong>VPN</strong>: IPsec connection.</li>
+     * <li><strong>ECR</strong>: Express Connect Router (ECR) instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -70,7 +62,7 @@ public class DescribeGrantRulesToResourceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The network instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

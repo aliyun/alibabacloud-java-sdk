@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePublishedRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The network instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,8 +25,8 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The ID of the region where the network instance is deployed.</p>
-     * <p>For more information, see <a href="t2264556.xdita#"></a>.</p>
+     * <p>The region ID of the network instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
-     * <p>The ID of the route table of the network instance.</p>
+     * <p>The route table ID of the network instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-bp174d1gje79u1g4****</p>
@@ -45,7 +45,7 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceRouteTableId;
 
     /**
-     * <p>The type of the network instance. Valid values:</p>
+     * <p>The type of the network instance. Valid values: </p>
      * <ul>
      * <li><p><strong>VPC</strong>: virtual private cloud.</p>
      * </li>
@@ -63,7 +63,7 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceType;
 
     /**
-     * <p>The destination CIDR block of the route that you want to query.</p>
+     * <p>The destination CIDR block of the route entry to query.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.0.0/16</p>
@@ -81,7 +81,7 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

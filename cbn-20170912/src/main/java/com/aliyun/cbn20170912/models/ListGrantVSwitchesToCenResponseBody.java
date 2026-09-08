@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>A list of vSwitches.</p>
+     * <p>The list of vSwitch information.</p>
      */
     @NameInMap("VSwitches")
     public java.util.List<ListGrantVSwitchesToCenResponseBodyVSwitches> vSwitches;
@@ -93,7 +93,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
 
     public static class ListGrantVSwitchesToCenResponseBodyVSwitches extends TeaModel {
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1194lh263wx1gsk****</p>
@@ -111,7 +111,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         public String vSwitchName;
 
         /**
-         * <p>The ID of the VPC to which the vSwitch belongs.</p>
+         * <p>The VPC-connected instance ID to which the vSwitch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp12ge2tq5gzdc915****</p>
@@ -120,7 +120,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * <p>The zone ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTrafficMarkingPolicyRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class DeleteTrafficMarkingPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without deleting the traffic marking policy. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the traffic marking policy is deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class DeleteTrafficMarkingPolicyRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Whether to force delete the traffic marking policy. Valid values:</p>
+     * <p>Specifies whether to force delete the traffic marking policy. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): checks whether there is a traffic classification rule before deleting the traffic marking policy. If there is, the traffic marking policy cannot be deleted and an error is returned.</li>
-     * <li><strong>true</strong>: When you delete a traffic marking policy, all traffic classification rules are deleted by default.</li>
+     * <li><strong>false</strong> (default): Before the traffic marking policy is deleted, the system checks whether traffic categorization rules exist. If traffic categorization rules exist, the traffic marking policy cannot be deleted and an error message is returned.</li>
+     * <li><strong>true</strong>: When the traffic marking policy is deleted, all traffic categorization rules are also deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>

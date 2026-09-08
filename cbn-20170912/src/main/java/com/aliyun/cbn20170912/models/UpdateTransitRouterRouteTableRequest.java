@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateTransitRouterRouteTableRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to make sure that the value is unique among different requests. The ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,10 @@ public class UpdateTransitRouterRouteTableRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. The dry run checks permissions and the status of the instance. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): Sends a normal request. After the request passes the check, the name and description of the route table are modified.</p>
-     * </li>
-     * <li><p><strong>true</strong>: Sends a check request. The system checks the required parameters and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the name and description of the route table are modified.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the validation is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,14 +43,14 @@ public class UpdateTransitRouterRouteTableRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The features of the route table.</p>
+     * <p>The route table feature options.</p>
      */
     @NameInMap("RouteTableOptions")
     public UpdateTransitRouterRouteTableRequestRouteTableOptions routeTableOptions;
 
     /**
      * <p>The description of the route table.</p>
-     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with http\:// or https\://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -61,7 +59,7 @@ public class UpdateTransitRouterRouteTableRequest extends TeaModel {
     public String transitRouterRouteTableDescription;
 
     /**
-     * <p>The ID of the route table for the Enterprise Edition transit router.</p>
+     * <p>The ID of the Enterprise Edition transit router route table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +70,7 @@ public class UpdateTransitRouterRouteTableRequest extends TeaModel {
 
     /**
      * <p>The name of the route table.</p>
-     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -167,12 +165,10 @@ public class UpdateTransitRouterRouteTableRequest extends TeaModel {
 
     public static class UpdateTransitRouterRouteTableRequestRouteTableOptions extends TeaModel {
         /**
-         * <p>The multi-region ECMP routing feature. Valid values:</p>
+         * <p>Multi-region equal-cost multi-path (ECMP) routing. Valid values:</p>
          * <ul>
-         * <li><p><strong>disable</strong>: Disables multi-region ECMP routing. After you disable this feature, if routes with the same prefix are learned from different regions and have the same attributes, the route that is learned from the region with the alphabetically smallest ID is used as the next hop. This may change traffic latency and inter-region bandwidth consumption. Evaluate the impact before you disable this feature.</p>
-         * </li>
-         * <li><p><strong>enable</strong>: Enables multi-region ECMP routing. After you enable this feature, if routes with the same prefix are learned from different regions and have the same attributes, ECMP routes are formed. This may change traffic latency and inter-region bandwidth consumption. Evaluate the impact before you enable this feature.</p>
-         * </li>
+         * <li><strong>disable</strong>: Disables multi-region ECMP routing. After multi-region ECMP routing is disabled, routes with the same prefix learned from different regions will prefer the transit router (TR) with the smallest Region ID (sorted alphabetically) as the next hop when other route attributes are the same. In this case, the traffic latency and bandwidth consumed between different regions may change. Make sure that you have fully evaluated the impact before disabling this feature.</li>
+         * <li><strong>enable</strong>: Enables multi-region ECMP routing. After multi-region ECMP routing is enabled, routes with the same prefix learned from different regions will form equal-cost routes when other route attributes are the same. In this case, the traffic latency and bandwidth consumed between different regions may change. Make sure that you have fully evaluated the impact before enabling this feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>

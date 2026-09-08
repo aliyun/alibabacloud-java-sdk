@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-6hpdgj7ni6pz1k****</p>
@@ -29,7 +29,7 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +44,7 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VBR.</p>
+     * <p>The VBR instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vbr-bp1kznorjeembsuhl****</p>
@@ -53,7 +53,7 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     public String vbrInstanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the VBR.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the VBR instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1250123456123456</p>
@@ -62,8 +62,8 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     public Long vbrInstanceOwnerId;
 
     /**
-     * <p>The ID of the region where the Virtual Border Router (VBR) is deployed.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a>.</p>
+     * <p>The region ID of the VBR instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

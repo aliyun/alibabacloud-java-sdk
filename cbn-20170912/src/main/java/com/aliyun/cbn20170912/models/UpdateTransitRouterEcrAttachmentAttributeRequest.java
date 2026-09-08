@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateTransitRouterEcrAttachmentAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that ensures the idempotence of the request.</p>
-     * <p>You can generate a token from your client, but you must ensure that it is unique across requests. The <code>ClientToken</code> can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,10 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run to check for potential issues, including permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run for this modification request, including permission and instance status checks. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): Sends a normal request. The system modifies the ECR attachment attributes if the request passes the check.</p>
-     * </li>
-     * <li><p><strong>true</strong>: Sends a check request only. The system validates the request but does not modify the ECR attachment attributes. If the check fails, an error is returned. If the check passes, the system returns the request ID.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the transit router instance information is directly modified.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the validation is performed, and the transit router instance information is not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +31,7 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The payer for the network instance. This operation does not support changing the payer for an ECR attachment.</p>
+     * <p>The payer of the network instance. The payer of the ECR connection cannot be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>PayByCenOwner</p>
@@ -54,8 +52,8 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new description of the ECR attachment.</p>
-     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The new description of the ECR connection.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -64,7 +62,7 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends TeaModel {
     public String transitRouterAttachmentDescription;
 
     /**
-     * <p>The ID of the ECR attachment.</p>
+     * <p>The ID of the ECR connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,8 +72,8 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends TeaModel {
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The new name of the ECR attachment.</p>
-     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The new name of the ECR connection.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>

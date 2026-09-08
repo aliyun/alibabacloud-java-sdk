@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each request is unique.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,10 +20,8 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, the VPN connection is deleted.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run without deleting the VPN connection. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and then deletes the VPN connection after the request passes the dry run.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,12 +31,10 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully delete the VPN connection. Valid values:</p>
+     * <p>Specifies whether to force delete the VPN connection. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): checks for resource dependencies, such as associated forwarding and route learning, before the VPN connection is deleted. If a dependency is found, the deletion fails and an error message is returned.</p>
-     * </li>
-     * <li><p><strong>true</strong>: deletes the VPN connection and all its dependencies.</p>
-     * </li>
+     * <li><strong>false</strong> (default): checks whether related resource dependencies exist before deleting the VPN connection, such as associated forwarding and routing learning. If dependencies exist, the VPN connection is not deleted and the corresponding error is returned.</li>
+     * <li><strong>true</strong>: deletes the VPN connection along with all related dependencies.</li>
      * </ul>
      * 
      * <strong>example:</strong>

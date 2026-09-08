@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a unique value from your client for each request. The ClientToken parameter supports only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -17,10 +17,8 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Sends a check request without deleting the multicast member. The system checks required parameters, the request format, and service limits. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Sends a normal request. After the request passes the check, the multicast member is deleted.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run without removing the multicast member. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. After the check succeeds, the multicast member is removed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +38,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     public String groupIpAddress;
 
     /**
-     * <p>A list of Elastic Network Interface (ENI) IDs.</p>
+     * <p>The list of network interface controller (NIC) IDs.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
@@ -52,7 +50,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     public Long ownerId;
 
     /**
-     * <p>A list of inter-region multicast domain IDs.</p>
+     * <p>The list of cross-region multicast domain IDs.</p>
      */
     @NameInMap("PeerTransitRouterMulticastDomains")
     public java.util.List<String> peerTransitRouterMulticastDomains;

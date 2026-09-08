@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     /**
-     * <p>The IDs of the regions where the cloud service is accessed.</p>
+     * <p>The list of region IDs that access the cloud service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     public java.util.List<String> accessRegionIds;
 
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ResolveAndRouteServiceInCenRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ResolveAndRouteServiceInCenRequest extends TeaModel {
 
     /**
      * <p>The description of the cloud service.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http\:// or https\://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>descname</p>
@@ -48,9 +48,9 @@ public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The IP addresses or CIDR blocks of the cloud service.</p>
+     * <p>The IP address or CIDR block of the cloud service.</p>
      * <blockquote>
-     * <p>In most cases, multiple IP addresses or CIDR blocks are assigned to a cloud service. We recommend that you call this operation multiple times to add all IP addresses and CIDR blocks of the cloud service.</p>
+     * <p>Cloud services typically use multiple IP addresses or CIDR blocks. Call this operation repeatedly to add all IP addresses or CIDR blocks of the cloud service.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -61,7 +61,7 @@ public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>The ID of the region in which the cloud service is deployed.</p>
+     * <p>The region ID of the cloud service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     public String hostRegionId;
 
     /**
-     * <p>The ID of the VPC that is associated with the cloud service.</p>
+     * <p>The VPC-connected instance ID associated with the cloud service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

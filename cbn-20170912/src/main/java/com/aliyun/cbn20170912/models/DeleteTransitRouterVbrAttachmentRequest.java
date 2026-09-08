@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouterVbrAttachmentRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Use the client to generate the token, but you must make sure that the token is unique among requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>When left empty, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> is different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,10 @@ public class DeleteTransitRouterVbrAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run to check permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): sends a request and deletes the VBR connection.</p>
-     * </li>
-     * <li><p><strong>true</strong>: sends a check request without deleting the VBR connection. The system checks the required parameters and request syntax. If the request fails the dry run, an error code is returned. If the request passes the dry run, a request ID is returned.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the VBR connection is deleted.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the verification is performed, and the VBR connection is not deleted. The system checks whether the required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,12 +31,10 @@ public class DeleteTransitRouterVbrAttachmentRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcibly delete the VBR connection. Valid values:</p>
+     * <p>Specifies whether to force delete the VBR connection. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): The system checks resources, such as forwarding associations or route learning. If there are such resources, the VBR connection is not deleted and an error code is returned.</p>
-     * </li>
-     * <li><p><strong>true</strong>: When the VBR connection is deleted, all associated resources are also deleted.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Before the VBR connection is deleted, the system checks whether related resource dependencies exist, such as associated forwarding and routing learning. If dependencies exist, the deletion is not allowed and the corresponding error is returned.</li>
+     * <li><strong>true</strong>: When the VBR connection is deleted, all related dependencies are also deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>

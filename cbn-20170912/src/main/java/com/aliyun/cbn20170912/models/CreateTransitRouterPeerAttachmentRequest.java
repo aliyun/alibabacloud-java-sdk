@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:</p>
+     * <p>Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes of the inter-region connection to the peer region.</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): no.</p>
-     * </li>
-     * <li><p><strong>true</strong>: yes.</p>
-     * </li>
+     * <li><strong>false</strong> (default): no.</li>
+     * <li><strong>true</strong>: yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,11 +18,11 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public Boolean autoPublishRouteEnabled;
 
     /**
-     * <p>The bandwidth value of the inter-region connection. Unit: Mbps.</p>
+     * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
      * <ul>
-     * <li><p>When <strong>BandwidthType</strong> is set to <strong>BandwidthPackage</strong>, this parameter specifies the bandwidth value that the inter-region connection can use.</p>
+     * <li><p>If <strong>BandwidthType</strong> is set to <strong>BandwidthPackage</strong>, this parameter specifies the bandwidth that can be used by the inter-region connection.</p>
      * </li>
-     * <li><p>When <strong>BandwidthType</strong> is set to <strong>DataTransfer</strong>, this parameter specifies the maximum bandwidth value of the inter-region connection.</p>
+     * <li><p>If <strong>BandwidthType</strong> is set to <strong>DataTransfer</strong>, this parameter specifies the bandwidth limit of the inter-region connection.</p>
      * </li>
      * </ul>
      * 
@@ -35,11 +33,11 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The method that is used to allocate bandwidth to the inter-region connection. Valid values:</p>
+     * <p>The bandwidth allocation method of the inter-region connection. Valid values:</p>
      * <ul>
-     * <li><p><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</p>
+     * <li><p><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth package.</p>
      * </li>
-     * <li><p><strong>DataTransfer</strong>: does not allocate bandwidth to the inter-region connection and charges based on pay-by-traffic.</p>
+     * <li><p><strong>DataTransfer</strong>: does not allocate bandwidth to the inter-region connection. The system charges you based on the actual traffic.</p>
      * </li>
      * </ul>
      * 
@@ -50,9 +48,9 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public String bandwidthType;
 
     /**
-     * <p>The ID of the bandwidth plan that you want to associate with the inter-region connection.</p>
+     * <p>The ID of the bandwidth package to be associated with the inter-region connection.</p>
      * <blockquote>
-     * <p>You do not need to configure this parameter when <strong>BandwidthType</strong> is set to <strong>DataTransfer</strong>.</p>
+     * <p>If <strong>BandwidthType</strong> is set to <strong>DataTransfer</strong>, you do not need to configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,7 +60,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public String cenBandwidthPackageId;
 
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-j3jzhw1zpau2km****</p>
@@ -71,10 +69,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The client token used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> is different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,9 +82,9 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The default line type.</p>
+     * <p>The default link type.</p>
      * <p>Valid values: Platinum and Gold. Default value: Gold.</p>
-     * <p>You can set this parameter to Platinum only when the bandwidth allocation method is pay-by-traffic.</p>
+     * <p>The link type can be set to Platinum only when the bandwidth allocation method is pay-by-data-transfer.</p>
      * 
      * <strong>example:</strong>
      * <p>Gold</p>
@@ -95,12 +93,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public String defaultLinkType;
 
     /**
-     * <p>Specifies whether to perform a dry run to check information such as the permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, the system creates an inter-region connection.</p>
-     * </li>
-     * <li><p><strong>true</strong>: sends a check request. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, a request ID is returned.</p>
-     * </li>
+     * <li><strong>false</strong> (default): sends a normal request. If the request passes the verification, the inter-region connection is created.</li>
+     * <li><strong>true</strong>: sends a check request. Only the verification is performed. No inter-region connection is created. The system checks whether the required parameters are specified, and validates the request format. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,7 +122,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public String peerTransitRouterId;
 
     /**
-     * <p>The ID of the region where the peer transit router instance is deployed.</p>
+     * <p>The region ID of the peer transit router instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>
@@ -135,8 +131,8 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public String peerTransitRouterRegionId;
 
     /**
-     * <p>The ID of the region where the local Enterprise Edition transit router instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the local Enterprise Edition transit router instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -152,14 +148,14 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
 
     /**
      * <p>The tag information.</p>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterPeerAttachmentRequestTag> tag;
 
     /**
      * <p>The description of the inter-region connection.</p>
-     * <p>The description is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -169,7 +165,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
 
     /**
      * <p>The name of the inter-region connection.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -345,9 +341,9 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
 
     public static class CreateTransitRouterPeerAttachmentRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that you want to attach.</p>
-         * <p>You cannot specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https:// </code>.</p>
-         * <p>You can specify at most 20 tag keys in each call.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tag_A1</p>
@@ -356,9 +352,9 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that you want to attach to the specified resource.</p>
-         * <p>The tag value can be an empty string or a string of up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https:// </code>.</p>
-         * <p>Each key-value pair must be unique. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value of the resource.</p>
+         * <p>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>value_A1</p>

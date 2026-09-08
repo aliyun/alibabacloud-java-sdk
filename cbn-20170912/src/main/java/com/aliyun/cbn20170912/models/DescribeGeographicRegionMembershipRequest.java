@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeGeographicRegionMembershipRequest extends TeaModel {
     /**
-     * <p>The ID of the area that you want to query. Valid values:</p>
+     * <p>The ID of the area to query. Valid values: </p>
      * <ul>
-     * <li><strong>china</strong>: the Chinese mainland</li>
-     * <li><strong>asia-pacific</strong>: Asia Pacific</li>
-     * <li><strong>europe</strong>: Europe</li>
-     * <li><strong>north-america</strong>: North America</li>
+     * <li><p><strong>china</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>asia-pacific</strong>: Asia-Pacific.</p>
+     * </li>
+     * <li><p><strong>europe</strong>: Europe.</p>
+     * </li>
+     * <li><p><strong>north-america</strong>: North America.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +31,7 @@ public class DescribeGeographicRegionMembershipRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +40,7 @@ public class DescribeGeographicRegionMembershipRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

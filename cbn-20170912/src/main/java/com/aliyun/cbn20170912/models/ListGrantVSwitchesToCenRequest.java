@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGrantVSwitchesToCenRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>Specifies whether IPv6 is enabled. Valid values: true and false. If you do not specify this parameter, the query is not filtered by this property.</p>
+     * <p>Specifies whether IPv6 is enabled. A value of true indicates that IPv6 is enabled. A value of false indicates that IPv6 is not enabled. If you leave this parameter empty, the system does not filter by this property.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -30,7 +30,7 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,7 +39,7 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,8 +48,8 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the VPC is deployed.</p>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the VPC-connected instance.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC-connected instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,12 +77,10 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     /**
      * <p>The zone ID.</p>
      * <ul>
-     * <li><p>If you specify a zone ID, only the vSwitches in that zone are queried.</p>
-     * </li>
-     * <li><p>If you do not specify a zone ID, the vSwitches in all zones of the VPC are queried by default.</p>
-     * </li>
+     * <li>If you specify a zone ID, the system queries only the vSwitches that are in the specified zone of the VPC-connected instance.</li>
+     * <li>If you do not specify a zone ID, the system queries the vSwitches in all active zones of the VPC-connected instance by default.</li>
      * </ul>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>

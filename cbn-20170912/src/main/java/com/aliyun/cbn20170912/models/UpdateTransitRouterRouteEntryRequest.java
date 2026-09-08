@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateTransitRouterRouteEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class UpdateTransitRouterRouteEntryRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default values:</p>
+     * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the name and description of the route entry are modified.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the validation is performed, and the name and description of the route entry are not modified. The system checks whether the required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,8 @@ public class UpdateTransitRouterRouteEntryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new description of the route.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with http\:// or https\://. You can also leave this parameter empty.</p>
+     * <p>The new description of the route entry.</p>
+     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -53,7 +53,7 @@ public class UpdateTransitRouterRouteEntryRequest extends TeaModel {
     public String transitRouterRouteEntryDescription;
 
     /**
-     * <p>The ID of the route.</p>
+     * <p>The route entry ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,8 +63,8 @@ public class UpdateTransitRouterRouteEntryRequest extends TeaModel {
     public String transitRouterRouteEntryId;
 
     /**
-     * <p>The new name of the route.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with http\:// or https\://. You can also leave this parameter empty.</p>
+     * <p>The new name of the route entry.</p>
+     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>

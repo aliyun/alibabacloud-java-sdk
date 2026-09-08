@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token for the next paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
@@ -32,7 +32,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -41,7 +41,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The information about the ECR connections.</p>
+     * <p>The list of ECR connection information.</p>
      */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterEcrAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
@@ -135,8 +135,8 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterEcrAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         /**
-         * <p>Indicates whether the Enterprise Edition transit router can automatically advertise routes to ECRs.</p>
-         * <p>The value is <strong>true</strong>, which indicates that the Enterprise Edition transit router can automatically advertise routes to ECRs.</p>
+         * <p>Indicates whether the Enterprise Edition transit router automatically publishes route entries to the ECR instance.</p>
+         * <p>The value is <strong>true</strong> only, which indicates that route entries are automatically published.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -145,7 +145,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         public Boolean autoPublishRouteEnabled;
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-j3jzhw1zpau2km****</p>
@@ -155,7 +155,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the ECR connection was created.</p>
-         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time is displayed in the ISO 8601 standard in UTC. Format: YYYY-MM-DDThh:mmZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-15T02:14Z</p>
@@ -164,7 +164,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The ID of the ECR with which the ECR connection is associated.</p>
+         * <p>The instance ID of the associated Express Connect Router (ECR).</p>
          * 
          * <strong>example:</strong>
          * <p>ecr-n78omt2qsko06y****</p>
@@ -173,19 +173,19 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         public String ecrId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the ECR connection belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the ECR instance belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>1688111111111111</p>
+         * <p>1210123456123456</p>
          */
         @NameInMap("EcrOwnerId")
         public Long ecrOwnerId;
 
         /**
-         * <p>The entity that pays the fees of the network instance. Valid values: Valid values:</p>
+         * <p>The payer of the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>PayByCenOwner</strong>: The Alibaba Cloud account to which the transit router belongs pays the connection and data forwarding fees of the ECR.</li>
-         * <li><strong>PayByResourceOwner</strong>: The Alibaba Cloud account to which the ECR belongs pays the connection and data forwarding fees of the ECR.</li>
+         * <li><strong>PayByCenOwner</strong>: The connection fee and data processing fee of the ECR instance are paid by the account that owns the transit router instance.</li>
+         * <li><strong>PayByResourceOwner</strong>: The connection fee and data processing fee of the ECR instance are paid by the account that owns the ECR instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,8 +195,8 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         public String orderType;
 
         /**
-         * <p>The type of resource to which the transit router is connected. Valid values:</p>
-         * <p>The value is <strong>ECR</strong>, which indicates ECR connections.</p>
+         * <p>The resource type of the connection.</p>
+         * <p>The value is <strong>ECR</strong> only, which indicates an Express Connect Router (ECR) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ECR</p>
@@ -205,11 +205,11 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The status of the ECR connection. Valid values:</p>
+         * <p>The status of the ECR connection.</p>
          * <ul>
-         * <li><strong>Attached</strong></li>
-         * <li><strong>Attaching</strong></li>
-         * <li><strong>Detaching</strong></li>
+         * <li><strong>Attached</strong>: attached.</li>
+         * <li><strong>Attaching</strong>: being attached.</li>
+         * <li><strong>Detaching</strong>: being detached.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,7 +219,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterEcrAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
@@ -234,7 +234,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         public String transitRouterAttachmentDescription;
 
         /**
-         * <p>The ID of the ECR connection.</p>
+         * <p>The ECR connection ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-nls9fzkfat8934****</p>
@@ -252,7 +252,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         public String transitRouterAttachmentName;
 
         /**
-         * <p>The ID of the Enterprise Edition transit router.</p>
+         * <p>The Enterprise Edition transit router instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-bp1su1ytdxtataupl****</p>
@@ -262,7 +262,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The region ID of the transit router.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region information corresponding to the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGrantVSwitchEnisRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance to which the VPC is connected.</p>
+     * <p>The ID of the CEN instance to which the VPC-connected instance is connected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,11 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The maximum number of entries to return on each page. Valid values: 10 to 500.</p>
+     * <p>The maximum number of entries per page for a paged query. Valid values: 10 to 500.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li><p>If you do not specify this parameter, the default value is 20.</p>
-     * </li>
-     * <li><p>If you specify a value greater than 500, the default value is 500.</p>
-     * </li>
+     * <li>If you do not set this parameter, the default value is 20.</li>
+     * <li>If the value you set is greater than 500, the default value is 500.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,13 +29,13 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The IDs of network interface controllers (NICs).</p>
      */
     @NameInMap("NetworkInterfaceId")
     public java.util.List<String> networkInterfaceId;
 
     /**
-     * <p>The name of the ENI.</p>
+     * <p>The name of the elastic network interfaces (ENIs). You can use this parameter to filter network interface controllers (NICs) by name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-eni-name</p>
@@ -46,12 +44,10 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li><p>If this is your first query, you do not need to specify this parameter.</p>
-     * </li>
-     * <li><p>If a next query is to be sent, set the value to the NextToken value that was returned from the last call.</p>
-     * </li>
+     * <li>If this is the first query or no next query exists, leave this parameter empty.</li>
+     * <li>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +63,7 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The primary private IPv4 address of the ENI.</p>
+     * <p>The primary private IP IPv4 address of the elastic network interfaces (ENIs). You can use this parameter to filter network interface controllers (NICs) by primary private IP address.</p>
      * 
      * <strong>example:</strong>
      * <p><code>192.168.**.**</code></p>
@@ -82,8 +78,8 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of a vSwitch in the VPC.</p>
-     * <p>You can query information about the ENIs in only one vSwitch at a time.</p>
+     * <p>The ID of a vSwitch in the VPC-connected instance.</p>
+     * <p>You can query network interface controller (NIC) information for only one vSwitch at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +89,7 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The ID of the VPC-connected instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

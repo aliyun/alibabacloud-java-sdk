@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to obtain the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The default value is <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The default value is <strong>10</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
+     * <p>The number of entries per page during paging. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,9 +64,9 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
      * </li>
      * <li><p><strong>Rejected</strong>: rejected.</p>
      * </li>
-     * <li><p><strong>Prohibited</strong>: disabled.</p>
+     * <li><p><strong>Prohibited</strong>: prohibited.</p>
      * </li>
-     * <li><p><strong>All</strong>: all route entries in the current region, regardless of their status.</p>
+     * <li><p><strong>All</strong>: queries route entries in all states in the current region.</p>
      * </li>
      * </ul>
      * 

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeCensRequest extends TeaModel {
     /**
      * <p>The filter conditions.</p>
-     * <p>You can specify up to five filter conditions.</p>
+     * <p>You can specify up to 5 filter conditions at a time.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeCensRequestFilter> filter;
@@ -18,7 +18,7 @@ public class DescribeCensRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number to query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeCensRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,8 +51,8 @@ public class DescribeCensRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
-     * <p>You can specify up to 20 tags.</p>
+     * <p>The tag information.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeCensRequestTag> tag;
@@ -136,15 +136,13 @@ public class DescribeCensRequest extends TeaModel {
 
     public static class DescribeCensRequestFilter extends TeaModel {
         /**
-         * <p>The filter key. Valid values:</p>
+         * <p>The filter condition. Valid values:</p>
          * <ul>
-         * <li><p><strong>CenId</strong>: The ID of the CEN instance.</p>
-         * </li>
-         * <li><p><strong>Name</strong>: The name of the CEN instance.</p>
-         * </li>
+         * <li><strong>CenId</strong>: the CEN instance ID.</li>
+         * <li><strong>Name</strong>: the CEN instance name.</li>
          * </ul>
-         * <p>The logical relationship among multiple filter conditions is <strong>AND</strong>. All filter conditions must be met.</p>
-         * <p>You can specify up to five filter conditions.</p>
+         * <p>The relationship between multiple filter conditions is <strong>AND</strong>, which means that a record must match all filter conditions to be returned.</p>
+         * <p>You can specify up to 5 filter conditions at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>CenId</p>
@@ -153,9 +151,9 @@ public class DescribeCensRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter value.</p>
-         * <p>Specify the filter value based on the <strong>Key</strong>. You can specify multiple values for a key. The logical relationship among the values is <strong>OR</strong>. A resource is a match if it meets any of the specified values.</p>
-         * <p>You can specify up to five filter values for a filter condition.</p>
+         * <p>The value of the filter condition.</p>
+         * <p>Specify filter values based on the <strong>Key</strong> parameter. You can specify multiple filter values for a single <strong>Key</strong>. The relationship between multiple filter values is <strong>OR</strong>, which means that a record is returned if it matches any of the filter values.</p>
+         * <p>You can specify up to 5 filter values for each filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-0xyeagctz5sfg9****</p>
@@ -190,7 +188,7 @@ public class DescribeCensRequest extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
          * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>
@@ -200,8 +198,8 @@ public class DescribeCensRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a corresponding tag value. You can specify up to 20 tag values.</p>
+         * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>

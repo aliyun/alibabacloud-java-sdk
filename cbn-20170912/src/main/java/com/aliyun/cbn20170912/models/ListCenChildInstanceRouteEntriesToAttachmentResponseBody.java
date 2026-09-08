@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query.</p>
+     * <p>Indicates whether a next query token (Token) exists. Valid values:</p>
      * <ul>
-     * <li><p>If <strong>NextToken</strong> is empty, no subsequent query is sent.</p>
-     * </li>
-     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that is used for the next query.</p>
-     * </li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
     public String requestId;
 
     /**
-     * <p>The details of the route.</p>
+     * <p>The details of the route entries.</p>
      */
     @NameInMap("RouteEntry")
     public java.util.List<ListCenChildInstanceRouteEntriesToAttachmentResponseBodyRouteEntry> routeEntry;
@@ -65,7 +63,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
 
     public static class ListCenChildInstanceRouteEntriesToAttachmentResponseBodyRouteEntry extends TeaModel {
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-9adwg6ghpq8oq4dp7q</p>
@@ -74,7 +72,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         public String cenId;
 
         /**
-         * <p>The ID of the route table of the network instance.</p>
+         * <p>The route table ID of the network instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp1tlaj1c4nxr2t3e****</p>
@@ -83,7 +81,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         public String childInstanceRouteTableId;
 
         /**
-         * <p>The destination CIDR block of the route.</p>
+         * <p>The destination CIDR block of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -92,7 +90,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         public String destinationCidrBlock;
 
         /**
-         * <p>The type of the managed routing service. If this parameter is empty, the route is not managed. The value TR indicates that the route is managed by a transit router.</p>
+         * <p>The type of route hosting. If this field is empty, the route is not hosted. Valid values: TR, which indicates that the hosting type is transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>TR</p>
@@ -101,14 +99,11 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         public String serviceType;
 
         /**
-         * <p>The status of the route. Valid values:</p>
+         * <p>The status of the route entry. Valid values:</p>
          * <ul>
-         * <li><p><strong>Available</strong>: The route is active.</p>
-         * </li>
-         * <li><p><strong>Pending</strong>: The route is being configured.</p>
-         * </li>
-         * <li><p><strong>Modifying</strong>: The route is being modified.</p>
-         * </li>
+         * <li><strong>Available</strong>: available.</li>
+         * <li><strong>Pending</strong>: being configured.</li>
+         * <li><strong>Modifying</strong>: being modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>

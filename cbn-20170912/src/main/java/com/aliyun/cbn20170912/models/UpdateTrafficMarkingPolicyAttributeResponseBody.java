@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTrafficMarkingPolicyAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>60BB11B2-7BF4-54DC-BCC9-F706E1EB02AC</p>

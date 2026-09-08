@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-j3jzhw1zpau2km****</p>
@@ -14,7 +14,7 @@ public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>. Maximum value: <strong>100</strong>.</p>
+     * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>. Maximum value: <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,12 +23,10 @@ public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
      * <ul>
-     * <li><p>If this is your first query or no next query is to be sent, do not specify this parameter.</p>
-     * </li>
-     * <li><p>If a next query is to be sent, set the value to the <strong>NextToken</strong> value returned from the last API call.</p>
-     * </li>
+     * <li>If this is the first query or no subsequent query is to be sent, you do not need to specify this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the value to the <strong>NextToken</strong> value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,8 +42,8 @@ public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Enterprise Edition transit router is deployed.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a>.</p>
+     * <p>The region ID of the Enterprise Edition transit router instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -60,14 +58,14 @@ public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
-     * <p>You can specify up to 20 tags.</p>
+     * <p>The tag information.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterPeerAttachmentsRequestTag> tag;
 
     /**
-     * <p>The ID of the inter-region connection.</p>
+     * <p>The inter-region connection ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-attach-5u4qbayfv2io5v****</p>
@@ -76,7 +74,7 @@ public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The ID of the Enterprise Edition transit router.</p>
+     * <p>The Enterprise Edition transit router instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-bp1su1ytdxtataupl****</p>
@@ -179,9 +177,9 @@ public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
 
     public static class ListTransitRouterPeerAttachmentsRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>
@@ -190,9 +188,9 @@ public class ListTransitRouterPeerAttachmentsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify up to 20 tag values.</p>
+         * <p>The tag value of the resource.</p>
+         * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>

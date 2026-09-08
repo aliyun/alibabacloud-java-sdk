@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, traffic classification rules are added to the traffic marking policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,8 +53,8 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
     public String trafficMarkingPolicyId;
 
     /**
-     * <p>The traffic classification rules.</p>
-     * <p>You can add at most 50 traffic classification rules in each call.</p>
+     * <p>The list of traffic classification rules.</p>
+     * <p>You can add up to 50 traffic classification rules at a time.</p>
      */
     @NameInMap("TrafficMatchRules")
     public java.util.List<AddTrafficMatchRuleToTrafficMarkingPolicyRequestTrafficMatchRules> trafficMatchRules;
@@ -130,7 +130,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
 
     public static class AddTrafficMatchRuleToTrafficMarkingPolicyRequestTrafficMatchRules extends TeaModel {
         /**
-         * <p>The address family. You can set the value to IPv4 or IPv6, or leave the value empty.</p>
+         * <p>The address type. Valid values: IPv4, IPv6, or empty.</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -139,8 +139,8 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
         public String addressFamily;
 
         /**
-         * <p>The destination CIDR block that is used to match packets.</p>
-         * <p>Packets whose destination IP addresses fall into the specified destination CIDR block are considered a match. If you do not specify a destination CIDR block, packets are considered a match regardless of the destination IP address.</p>
+         * <p>The destination CIDR block of the traffic packet.</p>
+         * <p>The traffic classification rule matches traffic whose destination IP address falls within the destination CIDR block. If you do not specify this parameter, the traffic classification rule matches traffic with any destination IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.10.10.0/24</p>
@@ -149,23 +149,23 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
         public String dstCidr;
 
         /**
-         * <p>The destination port range that is used to match packets. Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
-         * <p>Packets whose destination ports fall into the specified destination port range are considered a match. If you do not specify destination port range, packets are considered a match regardless of the destination port.</p>
-         * <p>You can specify at most two port numbers for this parameter. Take note of the following rules:</p>
+         * <p>The destination port of the traffic packet. Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The traffic classification rule matches traffic whose destination port falls within the destination port range. If you do not specify this parameter, the traffic classification rule matches traffic with any destination port.</p>
+         * <p>You can specify up to 2 port numbers for this parameter. The input format is described as follows:</p>
          * <ul>
-         * <li>If you enter only one port number, such as 1, packets whose destination port is 1 are considered a match. A value of -1 specifies all destination ports.</li>
-         * <li>If you enter two port numbers, such as 1 and 200, packets whose destination ports fall into 1 and 200 are considered a match.</li>
-         * <li>If you enter two port numbers and one of them is -1, the other port must also be -1. In this case, packets are considered a match regardless of the destination port.</li>
+         * <li>If you specify only one port number, for example, 1, the system matches traffic whose destination port is 1. If the value is -1, the system matches traffic with any destination port.</li>
+         * <li>If you specify two port numbers, for example, 1 and 200, the system matches traffic whose destination port is in the range of 1 to 200.</li>
+         * <li>If you specify two port numbers and one of them is -1, the other port number must also be -1, which indicates that traffic with any destination port is matched.</li>
          * </ul>
          */
         @NameInMap("DstPortRange")
         public java.util.List<Integer> dstPortRange;
 
         /**
-         * <p>The Differentiated Services Code Point (DSCP) value that is used to match packets. Valid values: <strong>0</strong> to <strong>63</strong>.</p>
-         * <p>Packets that carry the specified DSCP value are considered a match. If you do not specify a DSCP value, packets are considered a match regardless of the DSCP value.</p>
+         * <p>The Differentiated Services Code Point (DSCP) value of the traffic packet. Valid values: <strong>0</strong> to <strong>63</strong>.</p>
+         * <p>The traffic classification rule matches traffic that contains the specified DSCP value. If you do not specify this parameter, the traffic classification rule matches traffic with any DSCP value.</p>
          * <blockquote>
-         * <p>The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
+         * <p>The DSCP value refers to the DSCP value that the traffic packet already carries before it enters the inter-region connection.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -175,23 +175,26 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
         public Integer matchDscp;
 
         /**
-         * <p>The protocol that is used to match packets.</p>
-         * <p>Traffic classification rules support the following protocols: <strong>HTTP</strong>, <strong>HTTPS</strong>, <strong>TCP</strong>, <strong>UDP</strong>, <strong>SSH</strong>, and <strong>Telnet</strong>. For more information, log on to the <a href="https://cen.console.aliyun.com/cen/list">Cloud Enterprise Network (CEN) console</a>.</p>
-         * <p><strong>Some protocols use a specific port. Click to view protocols and ports.</strong></p>
+         * <p>The protocol type of the traffic packet.</p>
+         * <p>The traffic classification rule supports matching traffic of multiple protocol types, such as <strong>HTTP</strong>, <strong>HTTPS</strong>, <strong>TCP</strong>, <strong>UDP</strong>, <strong>SSH</strong>, and <strong>Telnet</strong>. For more protocol types, log on to the <a href="https://cen.console.aliyun.com/cen/list">Cloud Enterprise Network (CEN) console</a>.</p>
+         * <details>
+         * <summary>Some protocols have fixed ports. Click to view port details.</summary>
+         * 
          * <ul>
-         * <li>If the protocol is <strong>ICMP</strong>, set the destination port to <strong>-1</strong>.</li>
-         * <li>If the protocol is <strong>GRE</strong>, set the destination port to <strong>-1</strong>.</li>
-         * <li>If the protocol is <strong>SSH</strong>, set the destination port to <strong>22</strong>.</li>
-         * <li>If the protocol is <strong>Telnet</strong>, set the destination port to <strong>23</strong>.</li>
-         * <li>If the protocol is <strong>HTTP</strong>, set the destination port to <strong>80</strong>.</li>
-         * <li>If the protocol is <strong>HTTPS</strong>, set the destination port to <strong>443</strong>.</li>
-         * <li>If the protocol is <strong>MS SQL</strong>, set the destination port to <strong>1443</strong>.</li>
-         * <li>If the protocol is <strong>Oracle</strong>, set the destination port to <strong>1521</strong>.</li>
-         * <li>If the protocol is <strong>Mysql</strong>, set the destination port to <strong>3306</strong>.</li>
-         * <li>If the protocol is <strong>RDP</strong>, set the destination port to <strong>3389</strong>.</li>
-         * <li>If the protocol is <strong>Postgre SQL</strong>, set the destination port to <strong>5432</strong>.</li>
-         * <li>If the protocol is <strong>Redis</strong>, set the destination port to <strong>6379</strong>.</li>
+         * <li>If the protocol type is <strong>ICMP</strong>, the destination port must be set to <strong>-1</strong>.</li>
+         * <li>If the protocol type is <strong>GRE</strong>, the destination port must be set to <strong>-1</strong>.</li>
+         * <li>If the protocol type is <strong>SSH</strong>, the destination port must be set to <strong>22</strong>.</li>
+         * <li>If the protocol type is <strong>Telnet</strong>, the destination port must be set to <strong>23</strong>.</li>
+         * <li>If the protocol type is <strong>HTTP</strong>, the destination port must be set to <strong>80</strong>.</li>
+         * <li>If the protocol type is <strong>HTTPS</strong>, the destination port must be set to <strong>443</strong>.</li>
+         * <li>If the protocol type is <strong>MS SQL</strong>, the destination port must be set to <strong>1443</strong>.</li>
+         * <li>If the protocol type is <strong>Oracle</strong>, the destination port must be set to <strong>1521</strong>.</li>
+         * <li>If the protocol type is <strong>Mysql</strong>, the destination port must be set to <strong>3306</strong>.</li>
+         * <li>If the protocol type is <strong>RDP</strong>, the destination port must be set to <strong>3389</strong>.</li>
+         * <li>If the protocol type is <strong>Postgre SQL</strong>, the destination port must be set to <strong>5432</strong>.</li>
+         * <li>If the protocol type is <strong>Redis</strong>, the destination port must be set to <strong>6379</strong>.</li>
          * </ul>
+         * </details>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -200,8 +203,8 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The source CIDR block that is used to match packets.</p>
-         * <p>Packets whose source IP addresses fall into the specified source CIDR block are considered a match. If you do not specify a source CIDR block, packets are considered a match regardless of the source IP address.</p>
+         * <p>The source CIDR block of the traffic packet.</p>
+         * <p>The traffic classification rule matches traffic whose source IP address falls within the source CIDR block. If you do not specify this parameter, the traffic classification rule matches traffic with any source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.0/24</p>
@@ -210,13 +213,13 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
         public String srcCidr;
 
         /**
-         * <p>The source port range that is used to match packets. Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
-         * <p>Packets whose source ports fall into the specified source port range are considered a match. If you do not specify a source port range, packets are considered a match regardless of the source port.</p>
-         * <p>You can enter at most two port numbers. Take note of the following rules:</p>
+         * <p>The source port of the traffic packet. Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The traffic classification rule matches traffic whose source port falls within the source port range. If you do not specify this parameter, the traffic classification rule matches traffic with any source port.</p>
+         * <p>You can specify up to two port numbers for this parameter. The input format is described as follows:</p>
          * <ul>
-         * <li>If you enter only one port number, such as 1, packets whose source port is 1 are considered a match. A value of -1 specifies all source ports.</li>
-         * <li>If you enter two port numbers, such as 1 and 200, packets whose source ports fall into 1 and 200 are considered a match.</li>
-         * <li>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the source port.</li>
+         * <li>If you specify only one port number, for example, 1, the system matches traffic whose source port is 1. If the value is -1, the system matches traffic with any source port.</li>
+         * <li>If you specify two port numbers, for example, 1 and 200, the system matches traffic whose source port is in the range of 1 to 200.</li>
+         * <li>If you specify two port numbers and one of them is -1, the other port number must also be -1, which indicates that traffic with any source port is matched.</li>
          * </ul>
          */
         @NameInMap("SrcPortRange")
@@ -224,7 +227,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
 
         /**
          * <p>The description of the traffic classification rule.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
+         * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -234,7 +237,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
 
         /**
          * <p>The name of the traffic classification rule.</p>
-         * <p>The name is optional. If you enter a name, it must be 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
+         * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>

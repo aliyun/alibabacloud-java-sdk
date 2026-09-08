@@ -37,10 +37,10 @@ public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: VPC</li>
-     * <li><strong>ExpressConnect</strong>: VBR</li>
-     * <li><strong>VPN</strong>: IPsec-VPN connection</li>
-     * <li><strong>ECR</strong>: ECR</li>
+     * <li><strong>VPC</strong>: VPC instance.</li>
+     * <li><strong>ExpressConnect</strong>: VBR instance.</li>
+     * <li><strong>VPN</strong>: IPsec connection.</li>
+     * <li><strong>ECR</strong>: ECR instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -58,7 +58,7 @@ public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
 
     /**
      * <p>The region ID of the network instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

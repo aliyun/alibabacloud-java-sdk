@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableCenVbrHealthCheckRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The description.</p>
-     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http:// </code>or <code>https://</code>.</p>
+     * <p>The description.  </p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -25,7 +25,7 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: 2. Valid values: <strong>2</strong> to <strong>3</strong>.</p>
+     * <p>The interval at which health check probe packets are sent. Unit: seconds. Default value: <strong>2</strong>. Valid values: <strong>2</strong> to <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -34,16 +34,16 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     public Integer healthCheckInterval;
 
     /**
-     * <p>Specifies whether to enable only the detection feature. Valid values:</p>
+     * <p>Specifies whether to enable only the health check detection feature. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Yes.</p>
-     * <pre><code>  If you enable only the detection feature, the system performs a health check but does not switch routes when the Express Connect circuit is down.
+     * <li><p><strong>true</strong>: Only the detection feature is enabled.</p>
+     * <pre><code>  If only the health check detection feature is enabled, route switchover is not triggered when the health check detects that the link is down.
      * 
-     *   &gt; Make sure that you have another way to ensure link redundancy. Otherwise, network interruptions may occur.
+     *   &gt; Make sure that you have other methods to ensure link redundancy. Otherwise, enabling this feature may cause link interruptions.
      * </code></pre>
      * </li>
-     * <li><p><strong>false</strong> (default): No.</p>
-     * <pre><code>  This feature is disabled by default. If the health check detects a link failure and a redundant route is available in the CEN instance, the system immediately switches to the available route.
+     * <li><p><strong>false</strong> (default): The detection-only feature is not enabled.</p>
+     * <pre><code>  This feature is disabled by default. When the health check detects that the link is down, if redundant routes exist in the CEN instance, the health check immediately triggers a route switchover to use an available link.
      * </code></pre>
      * </li>
      * </ul>
@@ -55,11 +55,11 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     public Boolean healthCheckOnly;
 
     /**
-     * <p>The source IP address for the health check. You can configure the source IP address in one of the following ways:</p>
+     * <p>The source IP address for health checks. The following configuration methods are supported:</p>
      * <ul>
-     * <li><p><strong>Automatic IP address</strong> (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.</p>
+     * <li><p><strong>Automatically generated source IP</strong> (recommended): The system automatically allocates an IP address from the 100.96.0.0/16 CIDR block.</p>
      * </li>
-     * <li><p><strong>Custom IP address</strong>: You can specify an unused IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot conflict with an IP address that is used for communication in the CEN instance. The specified IP address also cannot conflict with the Alibaba Cloud-side or client-side IP address of the VBR instance.</p>
+     * <li><p><strong>Custom source IP</strong>: The source IP address can be any unused IP address within the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The IP address cannot cause an IP address conflict with addresses that need to communicate with each other in the CEN instance, or with the Alibaba Cloud-side or customer-side IP address of the VBR instance.</p>
      * </li>
      * </ul>
      * 
@@ -70,8 +70,8 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     public String healthCheckSourceIp;
 
     /**
-     * <p>The destination IP address for the health check.</p>
-     * <p>The destination IP address is the client-side IP address of the VBR instance.</p>
+     * <p>The destination IP address for health checks.</p>
+     * <p>The destination IP address is the customer-side IP address of the VBR instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     public String healthCheckTargetIp;
 
     /**
-     * <p>The number of probe packets that are sent during a health check. Unit: packets. Valid values: 3 to <strong>8</strong>. Default value: <strong>8</strong>.</p>
+     * <p>The number of probe packets sent during a health check. Unit: packets. Valid values: <strong>3</strong> to <strong>8</strong>. Default value: <strong>8</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -102,7 +102,7 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VBR instance.</p>
+     * <p>The VBR instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,9 +112,9 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     public String vbrInstanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the VBR instance belongs.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the VBR instance.</p>
      * <blockquote>
-     * <p>This parameter is required if the VBR instance and the CEN instance belong to different Alibaba Cloud accounts.</p>
+     * <p>This parameter is required if the VBR instance and the CEN instance belong to different accounts.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     public Long vbrInstanceOwnerId;
 
     /**
-     * <p>The ID of the region where the VBR instance is deployed.</p>
+     * <p>The region ID of the VBR instance.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 

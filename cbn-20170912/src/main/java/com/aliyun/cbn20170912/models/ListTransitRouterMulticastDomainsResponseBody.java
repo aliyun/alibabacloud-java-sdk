@@ -14,12 +14,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token that determines the start point of the next query. Valid values:</p>
      * <ul>
-     * <li><p>If the value of <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</p>
-     * </li>
-     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that is used for the next query.</p>
-     * </li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -99,7 +97,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions extends TeaModel {
         /**
-         * <p>Indicates whether IGMPv2 is enabled for the multicast domain.</p>
+         * <p>Indicates whether IGMP is enabled for the multicast domain.</p>
          * 
          * <strong>example:</strong>
          * <p>enable</p>
@@ -108,6 +106,8 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         public String igmpv2Support;
 
         /**
+         * <p>Indicates whether strict multicast source control is enabled for the multicast domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */
@@ -181,7 +181,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains extends TeaModel {
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-h19xdb0qy2b3ir****</p>
@@ -190,14 +190,14 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The options of the multicast domain.</p>
+         * <p>The feature options of the multicast domain.</p>
          */
         @NameInMap("Options")
         public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions options;
 
         /**
-         * <p>The ID of the region where the transit router is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
+         * <p>The region ID of the transit router.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -207,7 +207,11 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the multicast domain.</p>
-         * <p>The value is <strong>Active</strong>, which indicates that the multicast domain is available.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>Active</code>: The multicast domain is available.</li>
+         * <li><code>Modifying</code>: The multicast domain is being modified.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -222,7 +226,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags> tags;
 
         /**
-         * <p>The ID of the transit router.</p>
+         * <p>The transit router instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-bp1c23ijrl6d6c226h***</p>

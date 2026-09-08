@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTransitRouterRouteTableRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a token from your client to ensure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,10 @@ public class DeleteTransitRouterRouteTableRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. A dry run checks for issues such as permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run for this delete request, including permission and instance status checks. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): Sends a normal request. The custom route table is deleted after the request passes the check.</p>
-     * </li>
-     * <li><p><strong>true</strong>: Sends a check request. The system checks the required parameters, request format, and permissions. If the check fails, an error message is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned. The custom route table is not deleted.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Sends a normal request. After the request passes the check, the custom route table is directly deleted.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the check is performed, and the custom route table is not deleted. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>

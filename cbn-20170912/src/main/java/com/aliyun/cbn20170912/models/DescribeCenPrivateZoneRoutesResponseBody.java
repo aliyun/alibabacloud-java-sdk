@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-7qthudw0ll6jmc****</p>
@@ -23,7 +23,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IP addresses of the DNS servers for the PrivateZone service.</p>
+     * <p>The IP address of the DNS server for the PrivateZone service.</p>
      * 
      * <strong>example:</strong>
      * <p>100.100.XX.XX/32,100.100.XX.XX/32</p>
@@ -53,7 +53,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

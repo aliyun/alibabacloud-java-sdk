@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class AssociateTransitRouterAttachmentWithRouteTableRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,10 @@ public class AssociateTransitRouterAttachmentWithRouteTableRequest extends TeaMo
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run to check for potential issues, such as permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to execute a dry run. The dry run checks parameter validity, instance status, and whether the network instance connection can be associated with the forward route table. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): sends a normal request. An association is created after the request passes the check.</p>
-     * </li>
-     * <li><p><strong>true</strong>: sends a check request to perform a dry run. The system checks the required parameters, request format, and other items. No association is created. If the check fails, an error message is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
+     * <li><strong>false</strong> (default): sends a Normal request. If the request passes the check, the route table association is created.</li>
+     * <li><strong>true</strong>: sends a check request. No route table association is created after the request passes the check. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error message is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +53,7 @@ public class AssociateTransitRouterAttachmentWithRouteTableRequest extends TeaMo
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * <p>The ID of the Enterprise Edition transit router route table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

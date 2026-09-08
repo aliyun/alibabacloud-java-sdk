@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTransitRouterCidrRequest extends TeaModel {
     /**
-     * <p>The new CIDR block.</p>
+     * <p>The new transit router CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.10.0/24</p>
@@ -15,9 +15,9 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a client token to make sure that the token is unique for each request. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,8 +27,8 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new description of the CIDR block.</p>
-     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with http\:// or https\://.</p>
+     * <p>The new description of the transit router CIDR block.</p>
+     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -37,12 +37,10 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run. The valid values are:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Sends a check request but does not modify the CIDR block. The system checks the required parameters, request format, and service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Sends a normal request. The CIDR block is modified after the request passes the check.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run without modifying the transit router CIDR block. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the transit router CIDR block is modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,8 +50,8 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The new name of the CIDR block.</p>
-     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</p>
+     * <p>The new name of the transit router CIDR block.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -68,12 +66,13 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to automatically add a route that points to the CIDR block to the route table of the transit router.</p>
+     * <p>Specifies whether to allow the system to automatically add a route for the transit router CIDR block to the transit router route table.</p>
      * <ul>
-     * <li><p><strong>true</strong>: Yes.</p>
-     * <p>This blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are attached to the transit router.</p>
+     * <li><p><strong>true</strong>: allowed.</p>
+     * <p>   If you select allowed, after you create a VPN connection of the private gateway type and create a route learning relationship for the VPN connection, the system automatically adds a route entry to the transit router route table that has a route learning relationship with the VPN connection. The route entry is a blackhole route whose destination CIDR block is the transit router CIDR block from which gateway IP addresses have been allocated for the IPsec connection.
+     *   The blackhole route is propagated only to the route tables of Virtual Border Router (VBR) instances associated with the transit router.</p>
      * </li>
-     * <li><p><strong>false</strong>: No.</p>
+     * <li><p><strong>false</strong>: not allowed.</p>
      * </li>
      * </ul>
      * 
@@ -84,8 +83,8 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
     public Boolean publishCidrRoute;
 
     /**
-     * <p>The ID of the region where the Transit Router instance is deployed.</p>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
+     * <p>The ID of the region where the transit router instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,8 +100,8 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the CIDR block.</p>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the ID of the CIDR block.</p>
+     * <p>The ID of the transit router CIDR block.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the transit router CIDR block ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +111,7 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
     public String transitRouterCidrId;
 
     /**
-     * <p>The ID of the Transit Router instance.</p>
+     * <p>The transit router instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

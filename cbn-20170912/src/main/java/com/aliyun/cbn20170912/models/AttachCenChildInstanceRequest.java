@@ -15,7 +15,7 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the network instance that you want to attach to the CEN instance.</p>
+     * <p>The ID of the network instance to attach.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+     * <p>The Alibaba Cloud account ID to which the network instance belongs.</p>
      * <blockquote>
-     * <p>If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
+     * <p>This parameter is required if you want to attach a cross-account network instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,8 +37,8 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     public Long childInstanceOwnerId;
 
     /**
-     * <p>The ID of the region where the network instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region of the network instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,9 +50,12 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: VPC</li>
-     * <li><strong>VBR</strong>: VBR</li>
-     * <li><strong>CCN</strong>: CCN instance</li>
+     * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: border router.</p>
+     * </li>
+     * <li><p><strong>CCN</strong>: Cloud Connect Network.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

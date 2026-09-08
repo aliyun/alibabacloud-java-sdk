@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToCenRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The instance ID of the CEN instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the network instance to query.</p>
+     * <p>The instance ID of the network instance to query.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-rj9gt5nll27onu7****</p>
@@ -24,7 +24,7 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the network instance.</p>
+     * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>1250123456123456</p>
@@ -33,12 +33,10 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public Long childInstanceOwnerId;
 
     /**
-     * <p>Specifies whether IPv6 is enabled.</p>
+     * <p>Specifies whether IPv6 is enabled:</p>
      * <ol>
-     * <li><p>This parameter applies only when <strong>ProductType</strong> is set to <strong>VPC</strong>.</p>
-     * </li>
-     * <li><p>Set to <strong>true</strong> to return only VPCs with IPv6 enabled, or <strong>false</strong> to return only those with IPv6 disabled. If you omit this parameter, the response is not filtered by the IPv6 status.</p>
-     * </li>
+     * <li>This parameter takes effect only when ProductType is set to &quot;VPC&quot;.</li>
+     * <li>A value of true indicates that IPv6 is enabled. A value of false indicates that IPv6 is not enabled. If this parameter is left empty, results are not filtered by this parameter.</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -49,10 +47,8 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>If you omit this parameter, all entries are returned. The <strong>MaxResults</strong> value in the response then indicates the total number of entries.</p>
-     * </li>
-     * <li><p>If you set this parameter, the response is paginated. The <strong>MaxResults</strong> value specifies the number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. The <strong>MaxResults</strong> value in the response indicates the number of entries on the current page. Setting <strong>MaxResults</strong> to <strong>20</strong> is recommended.</p>
-     * </li>
+     * <li>If you do not specify the <strong>MaxResults</strong> parameter, pagination is not required. The <strong>MaxResults</strong> value in the response indicates the total number of entries.</li>
+     * <li>If you specify the <strong>MaxResults</strong> parameter, pagination is required. The <strong>MaxResults</strong> value specifies the number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. The <strong>MaxResults</strong> value in the response indicates the number of entries in the current page. We recommend that you set <strong>MaxResults</strong> to <strong>20</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,12 +58,10 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results.</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li><p>Omit this parameter for the first request.</p>
-     * </li>
-     * <li><p>Set this parameter to the <strong>NextToken</strong> value from the previous response to retrieve the next page of results.</p>
-     * </li>
+     * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+     * <li>If a subsequent query exists, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,15 +79,15 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>VPC</strong>: a virtual private cloud (VPC).</p>
+     * <li><p><strong>VPC</strong>: virtual private cloud (VPC).</p>
      * </li>
-     * <li><p><strong>VBR</strong>: a virtual border router (VBR).</p>
+     * <li><p><strong>VBR</strong>: virtual border router (VBR).</p>
      * </li>
-     * <li><p><strong>CCN</strong>: a Cloud Connect Network (CCN) instance.</p>
+     * <li><p><strong>CCN</strong>: Cloud Connect Network (CCN).</p>
      * </li>
-     * <li><p><strong>VPN</strong>: an IPsec-VPN connection.</p>
+     * <li><p><strong>VPN</strong>: IPsec connection.</p>
      * </li>
-     * <li><p><strong>ECR</strong>: an Express Connect router.</p>
+     * <li><p><strong>ECR</strong>: Express Connect Router (ECR).</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -105,8 +99,8 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The ID of the region where the network instance is located.</p>
-     * <p>You can call the <a href="t2264556.xdita#"></a>operation to query region IDs.</p>
+     * <p>The region ID of the network instance.                   </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

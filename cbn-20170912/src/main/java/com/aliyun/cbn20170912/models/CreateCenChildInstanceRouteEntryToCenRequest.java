@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+     * <p>The Alibaba Cloud account ID to which the network instance belongs.</p>
      * <blockquote>
-     * <p>If the network instance belongs to another Alibaba Cloud account, this parameter is required.</p>
+     * <p>This parameter is required if the network instance belongs to a different Alibaba Cloud account.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public Long childInstanceAliUid;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The network instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,8 +37,8 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The ID of the region where the network instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the network instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,8 +50,8 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
-     * <li><strong>VBR</strong>: a virtual border router (VBR)</li>
+     * <li><strong>VPC</strong>: a virtual private cloud (VPC) instance.</li>
+     * <li><strong>VBR</strong>: a virtual border router (VBR) instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -62,8 +62,8 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public String childInstanceType;
 
     /**
-     * <p>The destination CIDR block of the route.</p>
-     * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+     * <p>The destination CIDR block of the route entry.</p>
+     * <p>The destination CIDR block must be in CIDR format. Example: 192.168.10.0/24.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route table configured on the network instance.</p>
+     * <p>The ID of the route table of the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

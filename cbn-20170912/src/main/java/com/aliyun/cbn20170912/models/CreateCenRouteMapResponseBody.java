@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCenRouteMapResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>62172DD5-6BAC-45DF-8D44-56SDF467BAC</p>

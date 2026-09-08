@@ -23,7 +23,7 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     public String attachmentName;
 
     /**
-     * <p>The CIDR block of the transit router.</p>
+     * <p>The transit router CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.10.0/24</p>
@@ -32,7 +32,7 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     public String cidr;
 
     /**
-     * <p>The allocated CIDR block.</p>
+     * <p>The allocated CIDR block under the transit router CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.10.0/28</p>
@@ -41,10 +41,10 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>A client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a token from your client to make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
 
     /**
      * <p>The dedicated CIDR block.</p>
-     * <p>The only valid value is <strong>VPN</strong>. This value specifies that you want to query the CIDR block that is reserved by the system for creating VPN connections.</p>
+     * <p>Set the value to <strong>VPN</strong>, which specifies that you want to query the CIDR block reserved by the system for creating VPN connections in the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>VPN</p>
@@ -66,10 +66,8 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, the system queries the allocation details of the CIDR block.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the transit router CIDR block allocation details are queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,10 +79,10 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <ul>
-     * <li><p>If you do not specify this parameter, the query is not paginated.</p>
+     * <li><p>If you do not specify a value for <strong>MaxResults</strong>, it indicates that you do not need to query results by page. The value of <strong>MaxResults</strong> in the response indicates the total number of entries.</p>
      * </li>
-     * <li><p>If you specify this parameter, the query is paginated. Valid values: <strong>1</strong> to <strong>100</strong>. The recommended value is <strong>20</strong>.</p>
-     * <p>The value of the returned <strong>MaxResults</strong> parameter indicates the number of list entries in the current query batch.</p>
+     * <li><p>If you specify a value for <strong>MaxResults</strong>, it indicates that you need to query results by page. Valid values: <strong>1</strong> to <strong>100</strong>. We recommend that you set <strong>MaxResults</strong> to <strong>20</strong>.      </p>
+     * <p>The value of <strong>MaxResults</strong> in the response indicates the number of entries on the current page.</p>
      * </li>
      * </ul>
      * 
@@ -97,10 +95,8 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li><p>You do not need to specify this parameter for the first request.</p>
-     * </li>
-     * <li><p>If a next page exists, set the value to the <strong>NextToken</strong> value returned from the previous request.</p>
-     * </li>
+     * <li>You do not need to specify this parameter for the first request or if no subsequent request exists.</li>
+     * <li>If a subsequent request exists, set the value to the <strong>NextToken</strong> value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +112,7 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Transit Router instance is deployed.</p>
+     * <p>The region ID of the transit router instance.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
@@ -133,8 +129,8 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the CIDR block of the transit router.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the IDs of the CIDR blocks of the transit router.</p>
+     * <p>The ID of the transit router CIDR block.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the transit router CIDR block ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cidr-0zv0q9crqpntzz****</p>
@@ -143,7 +139,7 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     public String transitRouterCidrId;
 
     /**
-     * <p>The ID of the Transit Router instance.</p>
+     * <p>The forward router instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

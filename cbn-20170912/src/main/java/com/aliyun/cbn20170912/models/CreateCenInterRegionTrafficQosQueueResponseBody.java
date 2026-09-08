@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCenInterRegionTrafficQosQueueResponseBody extends TeaModel {
     /**
-     * <p>The ID of the queue.</p>
+     * <p>The queue ID.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-queue-irqhi8k5fdyuu5****</p>
@@ -14,7 +14,7 @@ public class CreateCenInterRegionTrafficQosQueueResponseBody extends TeaModel {
     public String qosQueueId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>845F66F6-5C27-53A1-9428-B859086237B2</p>

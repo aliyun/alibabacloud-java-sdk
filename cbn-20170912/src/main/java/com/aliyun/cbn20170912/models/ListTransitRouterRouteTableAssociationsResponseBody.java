@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,12 +14,10 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li><p>If this parameter is not returned, it indicates that no more results are to be returned.</p>
-     * </li>
-     * <li><p>If a value is returned for this parameter, the value is the token that is used for the next query.</p>
-     * </li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +45,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     public Integer totalCount;
 
     /**
-     * <p>A list of forwarding associations.</p>
+     * <p>The list of route association relationships.</p>
      */
     @NameInMap("TransitRouterAssociations")
     public java.util.List<ListTransitRouterRouteTableAssociationsResponseBodyTransitRouterAssociations> transitRouterAssociations;
@@ -108,16 +106,12 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         public String resourceId;
 
         /**
-         * <p>The type of the next hop resource.</p>
+         * <p>The type of the next hop resource. Valid values:</p>
          * <ul>
-         * <li><p><strong>VPC</strong>: virtual private cloud (VPC).</p>
-         * </li>
-         * <li><p><strong>VBR</strong>: virtual border router (VBR).</p>
-         * </li>
-         * <li><p><strong>TR</strong>: transit router.</p>
-         * </li>
-         * <li><p><strong>VPN</strong>: VPN connection.</p>
-         * </li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
+         * <li><strong>VBR</strong>: virtual border router (VBR) instance.</li>
+         * <li><strong>TR</strong>: transit router instance.</li>
+         * <li><strong>VPN</strong>: VPN connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,16 +121,12 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         public String resourceType;
 
         /**
-         * <p>The status of the association.</p>
+         * <p>The status of the route association. Valid values:</p>
          * <ul>
-         * <li><p><strong>Active</strong>: The association is active.</p>
-         * </li>
-         * <li><p><strong>Associating</strong>: The association is being created.</p>
-         * </li>
-         * <li><p><strong>Dissociating</strong>: The association is being deleted.</p>
-         * </li>
-         * <li><p><strong>Deleted</strong>: The association is deleted.</p>
-         * </li>
+         * <li><strong>Active</strong>: active.</li>
+         * <li><strong>Associating</strong>: being associated.</li>
+         * <li><strong>Dissociating</strong>: being dissociated.</li>
+         * <li><strong>Deleted</strong>: deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +145,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         public String transitRouterAttachmentId;
 
         /**
-         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * <p>The ID of the Enterprise Edition transit router route table.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp1dudbh2d5na6b50****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainVSwitchesRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network instance.</p>
+     * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The number of entries to return on each page. Minimum value: <strong>0</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Minimum value: <strong>0</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -24,10 +24,10 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first query or if there is no next query.</li>
-     * <li>If there is a next query, set the value to the <strong>NextToken</strong> value that is returned from the previous API call.</li>
+     * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+     * <li>If a subsequent query exists, set the value to the <strong>NextToken</strong> value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends TeaModel {
     public java.util.List<String> vSwitchIds;
 
     /**
-     * <p>The ID of the VPC instance.</p>
+     * <p>The ID of the VPC-connected instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

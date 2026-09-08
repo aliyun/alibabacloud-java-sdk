@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,12 +14,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query.</p>
+     * <p>The pagination token.</p>
      * <ul>
-     * <li><p>If <strong>NextToken</strong> is empty, no next query is to be sent.</p>
-     * </li>
-     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that is used for the next query.</p>
-     * </li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -99,7 +97,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
     public static class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules extends TeaModel {
         /**
-         * <p>The address type. Valid values are IPv4, IPv6, or empty.</p>
+         * <p>The address type. Valid values: IPv4, IPv6, or empty.</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -108,7 +106,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         public String addressFamily;
 
         /**
-         * <p>The destination CIDR block of the traffic message. IPv4 and IPv6 addresses are supported.</p>
+         * <p>The destination CIDR block of the traffic packet. IPv4 and IPv6 addresses are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.120.0/24</p>
@@ -123,9 +121,9 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         public java.util.List<Integer> dstPortRange;
 
         /**
-         * <p>The DSCP value of the traffic message.</p>
+         * <p>The DSCP value of the traffic packet.</p>
          * <blockquote>
-         * <p>If <strong>MatchDscp</strong> returns -1, it indicates that all DSCP values are matched.</p>
+         * <p>If the <strong>MatchDscp</strong> value is -1, any DSCP value is matched.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -135,9 +133,9 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         public Integer matchDscp;
 
         /**
-         * <p>The protocol type of the traffic message.</p>
+         * <p>The protocol type of the traffic packet.</p>
          * <blockquote>
-         * <p>A traffic marking policy supports matching multiple protocol types. For more information about the protocol types, see the relevant documentation.</p>
+         * <p>The traffic marking policy supports matching multiple protocol types. For details about each protocol type, refer to the relevant documentation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -147,7 +145,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The source CIDR block of the traffic message. IPv6 and IPv4 addresses are supported.</p>
+         * <p>The source CIDR block of the traffic packet. IPv4 and IPv6 addresses are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.0/24</p>
@@ -191,12 +189,9 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         /**
          * <p>The status of the traffic classification rule.</p>
          * <ul>
-         * <li><p><strong>Creating</strong>: The rule is being created.</p>
-         * </li>
-         * <li><p><strong>Active</strong>: The rule is available.</p>
-         * </li>
-         * <li><p><strong>Deleting</strong>: The rule is being deleted.</p>
-         * </li>
+         * <li><strong>Creating</strong>: The rule is being created.</li>
+         * <li><strong>Active</strong>: The rule is active.</li>
+         * <li><strong>Deleting</strong>: The rule is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -302,7 +297,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
     public static class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies extends TeaModel {
         /**
-         * <p>The Differentiated Services Code Point (DSCP) value of the traffic marking policy.</p>
+         * <p>The DSCP value of the traffic marking policy.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -350,14 +345,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         /**
          * <p>The status of the traffic marking policy.</p>
          * <ul>
-         * <li><p><strong>Creating</strong>: The policy is being created.</p>
-         * </li>
-         * <li><p><strong>Active</strong>: The policy is available.</p>
-         * </li>
-         * <li><p><strong>Modifying</strong>: The policy is being modified.</p>
-         * </li>
-         * <li><p><strong>Deleting</strong>: The policy is being deleted.</p>
-         * </li>
+         * <li><strong>Creating</strong>: The policy is being created.</li>
+         * <li><strong>Active</strong>: The policy is active.</li>
+         * <li><strong>Modifying</strong>: The policy is being modified.</li>
+         * <li><strong>Deleting</strong>: The policy is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,7 +364,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         public java.util.List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules> trafficMatchRules;
 
         /**
-         * <p>The ID of the TransitRouter instance.</p>
+         * <p>The ID of the transit router instance.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-ccni***</p>
