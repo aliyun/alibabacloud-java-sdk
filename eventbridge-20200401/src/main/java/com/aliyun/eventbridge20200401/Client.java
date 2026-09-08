@@ -3257,6 +3257,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Sends one or more events to an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends events to an event bus.</p>
+     * 
+     * @param tmpReq PutEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PutEventsResponse
+     */
+    public PutEventsResponse putEventsWithOptions(PutEventsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PutEventsShrinkRequest request = new PutEventsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eventList)) {
+            request.eventListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eventList, "EventList", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventBusName)) {
+            body.put("EventBusName", request.eventBusName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventListShrink)) {
+            body.put("EventList", request.eventListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutEvents"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutEventsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Sends one or more events to an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends events to an event bus.</p>
+     * 
+     * @param request PutEventsRequest
+     * @return PutEventsResponse
+     */
+    public PutEventsResponse putEvents(PutEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.putEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Creates or updates event targets for a specified rule.</p>
      * 
      * <b>summary</b> : 
