@@ -18,7 +18,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
      * <ul>
      * <li>If automatic payment is enabled, make sure that the balance of your payment method is sufficient. Otherwise, an abnormal order is generated and can only be voided.</li>
      * <li>If the balance of your payment method is insufficient, set <code>AutoPay</code> to <code>false</code>. An unpaid order is generated. You can log on to the ECS console to complete the payment.</li>
-     * <li>If <code>OperatorType</code> is set to <code>downgrade</code>, the <code>AutoPay</code> parameter is ignored.</li>
+     * <li>When <code>OperatorType</code> is set to <code>downgrade</code>, the <code>AutoPay</code> parameter is ignored.</li>
      * </ul>
      * </blockquote>
      * 
@@ -65,7 +65,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The target instance type to which you want to perform the Upgrade/Downgrade. For valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a>.</p>
+     * <p>The target instance type for the Upgrade/Downgrade. For valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
      * <li>false: Cross-cluster instance type changes are not supported.</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <p>If you set the <code>MigrateAcrossZone</code> parameter to <code>true</code> and upgrade the Elastic Compute Service instance based on the response, note the following:</p>
+     * <p>When the <code>MigrateAcrossZone</code> parameter is set to <code>true</code>, take note of the following items after you upgrade the Elastic Compute Service instance based on the response:</p>
      * <p>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server change. For Linux instances, basic disks (cloud) are identified as xvda or xvdb. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</p>
      * 
      * <strong>example:</strong>
@@ -313,11 +313,11 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     public static class ModifyPrepayInstanceSpecRequestSystemDisk extends TeaModel {
         /**
-         * <p>The new category of the system disk. Valid values:</p>
+         * <p>The new system disk category. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.<blockquote>
-         * <p>This parameter is valid only when you Increase Quota from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to a <a href="https://help.aliyun.com/document_detail/25378.html">normal instance family</a> and upgrade a non-I/O optimized instance to an I/O optimized instance.</p>
+         * <p>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an <a href="https://help.aliyun.com/document_detail/25378.html">instance family that is available for purchase</a> and change a non-I/O optimized instance to an I/O optimized instance.</p>
          * </blockquote>
          * </li>
          * </ul>

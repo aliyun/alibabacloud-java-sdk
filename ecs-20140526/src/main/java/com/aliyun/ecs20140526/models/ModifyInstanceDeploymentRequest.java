@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceDeploymentRequest extends TeaModel {
     /**
-     * <p>Specifies whether to associate the instance with a dedicated host. Valid values:</p>
+     * <p>Specifies whether the instance is associated with the dedicated host. Valid values:</p>
      * <ul>
-     * <li><p>host: associates the instance with a dedicated host. When you start a stopped instance in economical mode, the instance remains on its original dedicated host.</p>
+     * <li><p>host: The instance is associated with the dedicated host. When an instance that has economical mode enabled is restarted after being stopped, the instance is still deployed on the original dedicated host.</p>
      * </li>
-     * <li><p>default: does not associate the instance with a dedicated host. When you start a stopped instance in economical mode, the instance can be automatically deployed to another dedicated host in the automatic deployment resource pool if the resources of the original dedicated host are insufficient.</p>
+     * <li><p>default: The instance is not associated with the dedicated host. When an instance that has economical mode enabled is restarted after being stopped, if the resources of the original dedicated host are insufficient, the instance can be migrated to another dedicated host in the automatic deployment resource pool.</p>
      * </li>
      * </ul>
-     * <p>If you want to migrate the instance from a shared host to a dedicated host, use the default value. Default value: default.</p>
+     * <p>Default value when migrating an instance from a shared host to a dedicated host: default.</p>
      * 
      * <strong>example:</strong>
      * <p>host</p>
@@ -30,15 +30,13 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public String dedicatedHostClusterId;
 
     /**
-     * <p>The ID of the destination dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the most recent list of dedicated hosts.</p>
-     * <p>When you migrate an instance from a shared host to a dedicated host or between dedicated hosts, take note of the following items:</p>
+     * <p>The ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query available dedicated hosts.</p>
+     * <p>When you modify the host of an ECS instance (migrate the instance from a shared host to a dedicated host or between dedicated hosts):</p>
      * <ul>
-     * <li><p>To migrate the instance to a specific dedicated host, specify this parameter.</p>
-     * </li>
-     * <li><p>To migrate the instance to a system-selected dedicated host, leave this parameter empty and set <code>Tenancy</code> to host.</p>
-     * </li>
+     * <li>To migrate the instance to a specified dedicated host, you must specify this parameter.</li>
+     * <li>To migrate the instance to a dedicated host that is automatically selected by the system, you must set this parameter to empty and set the <code>Tenancy</code> parameter to host.</li>
      * </ul>
-     * <p>For information about the automatic deployment feature, see <a href="https://help.aliyun.com/document_detail/118938.html">Functions and features</a>.</p>
+     * <p>For more information about the automatic deployment feature, see <a href="https://help.aliyun.com/document_detail/118938.html">Features of dedicated hosts</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>dh-bp67acfmxazb4ph****</p>
@@ -47,9 +45,9 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public String dedicatedHostId;
 
     /**
-     * <p>The number of the deployment set group in which to deploy the instance in the destination deployment set. This parameter is valid only when the destination deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.</p>
+     * <p>The group number of the instance in the deployment set when the deployment set uses the availability group strategy (AvailabilityGroup). Valid values: 1 to 7.</p>
      * <blockquote>
-     * <p>If you call this operation to deploy an instance to a deployment set that uses the high availability group strategy (<code>AvailablilityGroup</code>) and leave this parameter empty, the system evenly distributes instances among the deployment set groups in the deployment set. If you call this operation to change the deployment set of an instance and specify the current deployment set of the instance as the destination deployment set, the system evenly distributes instances again among the deployment set groups in the deployment set.</p>
+     * <p>If you change the deployment set of an ECS instance and the deployment set uses the availability group strategy (<code>AvailablilityGroup</code>), the system automatically distributes ECS instances evenly across groups when this parameter is not specified. If you specify the same deployment set that the instance currently belongs to, the system also redistributes ECS instances evenly across groups.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,10 +57,10 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public Integer deploymentSetGroupNo;
 
     /**
-     * <p>The ID of the destination deployment set.</p>
-     * <p>This parameter is required when you add an instance to a deployment set or change the deployment set of an instance.</p>
+     * <p>The ID of the deployment set.</p>
+     * <p>This parameter is required when you add an ECS instance to a deployment set or change the deployment set of an ECS instance.</p>
      * <blockquote>
-     * <p>You cannot change the deployment set when you modify dedicated host configurations, including the <code>Tenancy</code>, <code>Affinity</code>, and <code>DedicatedHostId</code> parameters.</p>
+     * <p>When you modify dedicated host-related parameters (<code>Tenancy</code>, <code>Affinity</code>, and <code>DedicatedHostId</code>), you cannot modify the deployment set at the same time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,13 +70,14 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public String deploymentSetId;
 
     /**
-     * <p>Specifies whether to forcefully change the host of the instance when the deployment set of the instance is changed. Valid values:</p>
+     * <p>Specifies whether to forcefully change the host when the instance is added to a deployment set. Valid values:</p>
      * <ul>
-     * <li><p>true: forcefully changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcefully changed only for instances in the Running (Running) or Stopped (Stopped) state. The instances that are in the Stopped (Stopped) state do not include pay-as-you-go instances that are stopped in economical mode.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Note</strong> If the specified instance has local disks attached, the local disks are forcefully changed when the host of the instance is forcefully changed. This may cause data loss in the local disks. Proceed with caution.</p>
+     * <li><p>true: Allows the operation. Allows restarting ECS instances in the Running or Stopped state. Stopped instances do not include pay-as-you-go ECS instances that have economical mode enabled.</p>
+     * <blockquote>
+     * <p>If the specified ECS instance has local disks attached, the local disks are also forcefully replaced. This may cause data loss on the local disks during host replacement. Proceed with caution.</p>
+     * </blockquote>
      * </li>
-     * <li><p>false: does not forcefully change the host of the instance when the deployment set of the instance is changed. You can add the instance to a deployment set only when the instance remains on the current host. When the Force parameter is set to false, the deployment set may fail to be changed.</p>
+     * <li><p>false: Does not allow the operation. The instance is added to the deployment set only on the current host. This may cause the deployment set change to fail.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -90,7 +89,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,13 +99,11 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance type to which the instance is changed. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent list of instance types.</p>
-     * <p>You can change the instance type of an instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see <a href="https://help.aliyun.com/document_detail/68564.html">Dedicated host types</a>.</p>
+     * <p>The target instance type of the ECS instance. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</p>
+     * <p>When you modify the host of an ECS instance, you can also change ECS instance type. The target instance type must match the specifications of the specified dedicated host. For more information, see <a href="https://help.aliyun.com/document_detail/68564.html">Dedicated host types</a>.</p>
      * <ul>
-     * <li><p>If you specify this parameter, you must also specify <code>DedicatedHostId</code>.</p>
-     * </li>
-     * <li><p>You cannot change the instance type of an instance if you use the automatic deployment feature to migrate the instance.</p>
-     * </li>
+     * <li>To change ECS instance type, you must specify the dedicated host ID by setting the <code>DedicatedHostId</code> parameter.</li>
+     * <li>You cannot change ECS instance type when using the automatic deployment feature to migrate an ECS instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,11 +113,11 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Specifies whether to stop the instance before it is migrated to the destination dedicated host. Valid values:</p>
+     * <p>Specifies whether to stop ECS instance before migrating it to the destination dedicated host. Valid values:</p>
      * <ul>
-     * <li><p>reboot: stops the instance before it is migrated.</p>
+     * <li><p>reboot: Stops ECS instance before migration.</p>
      * </li>
-     * <li><p>live: migrates the instance without stopping it. If you set MigrationType to live, you must specify DedicatedHostId. In this case, you cannot change the instance type of the instance when the instance is migrated.</p>
+     * <li><p>live: Migrates ECS instance without stopping it. In this case, you must specify the DedicatedHostId parameter. This value does not support changing ECS instance type while migrating ECS instance.</p>
      * </li>
      * </ul>
      * <p>Default value: reboot.</p>
@@ -138,7 +135,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,16 +145,16 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to remove the specified instance from the specified deployment set. Valid values:</p>
+     * <p>Specifies whether to remove the selected instance from the selected deployment set. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Yes.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: No.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>If you set this parameter to true, you must specify InstanceId and DeploymentSetId and make sure that the specified instance belongs to the specified deployment set.</p>
+     * <p>When this parameter is set to true, you must specify the InstanceId and DeploymentSetId that have an ownership relationship.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -173,7 +170,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to deploy the instance on a dedicated host. Set the value to host, which indicates that the instance is deployed on a dedicated host.</p>
+     * <p>Specifies whether the instance is deployed on a dedicated host. Valid values: host. The instance is deployed only on a dedicated host.</p>
      * 
      * <strong>example:</strong>
      * <p>host</p>

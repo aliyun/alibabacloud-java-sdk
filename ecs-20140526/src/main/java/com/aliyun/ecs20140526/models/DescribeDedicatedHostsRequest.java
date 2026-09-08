@@ -43,7 +43,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The reason why the dedicated host is locked. Valid values:</p>
      * <ul>
-     * <li>financial: The dedicated host is locked due to an overdue payment.</li>
+     * <li>financial: The dedicated host is locked due to overdue payments.</li>
      * <li>security: The dedicated host is locked for security reasons.</li>
      * </ul>
      * 
@@ -54,7 +54,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String lockReason;
 
     /**
-     * <p>The maximum number of entries per page for a paged query. If you set this parameter, the MaxResults and NextToken parameters are used together for paging.</p>
+     * <p>The maximum number of entries per page for a paged query. If you set this parameter, it indicates that the paging method using the MaxResults and NextToken parameters is used.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -63,6 +63,15 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    /**
+     * <p>The detailed information of the dedicated host.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("NeedHostDetail")
+    public String needHostDetail;
 
     /**
      * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
@@ -135,8 +144,8 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
      * <p>Specifies whether to display socket-level capacity information. You can use socket-level capacity information to view remaining resources (vCPUs, memory usage, remaining capacity, and total capacity) to determine whether an ECS instance of a specific instance type can be created. Valid values:</p>
      * <ul>
-     * <li>true: Displays socket-level capacity information. Only specific dedicated host types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export DDH information</a>.</li>
-     * <li>false: Does not display socket-level capacity information.</li>
+     * <li>true: Display socket-level capacity information. Only specific dedicated host types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export DDH information</a>.</li>
+     * <li>false: Do not display socket-level capacity information.</li>
      * </ul>
      * <blockquote>
      * <p>Notice: </p>
@@ -176,7 +185,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags. You can specify up to 20 tags.</p>
+     * <p>The tags. Valid values of N: 0 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostsRequestTag> tag;
@@ -241,6 +250,14 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeDedicatedHostsRequest setNeedHostDetail(String needHostDetail) {
+        this.needHostDetail = needHostDetail;
+        return this;
+    }
+    public String getNeedHostDetail() {
+        return this.needHostDetail;
     }
 
     public DescribeDedicatedHostsRequest setNextToken(String nextToken) {

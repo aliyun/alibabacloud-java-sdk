@@ -23,7 +23,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page as specified in the request.</p>
+     * <p>The number of entries per page that you specified in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -46,7 +46,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     /**
      * <p>The total number of snapshot chains.</p>
      * <blockquote>
-     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for a paged query, the returned <code>TotalCount</code> value is invalid. For paging, use <code>NextToken</code> and <code>MaxResults</code> instead.</p>
+     * <p>When you use the MaxResults and NextToken parameters for paged query, the returned TotalCount value is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -7,7 +7,7 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>When you call this operation, the ECS instance must be in the <strong>Stopped</strong> state. For other restrictions on the instance, carefully read the <strong>operation description</strong> section.</p>
+     * <p>When you call this operation, the ECS instance must be in the <strong>Stopped</strong> (<code>Stopped</code>) state. For other restrictions on the instance, read the <strong>Operation description</strong> section carefully.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -26,9 +26,9 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     /**
      * <p>The new private IP address.</p>
      * <blockquote>
-     * <p>The <code>PrivateIpAddress</code> parameter depends on <code>VSwitchId</code>. The specified IP address must be within the CIDR block of the vSwitch.</p>
+     * <p>The PrivateIpAddress parameter depends on VSwitchId. The specified IP address must be within the CIDR block of the vSwitch.</p>
      * </blockquote>
-     * <p>Default value: If this parameter is not specified, a private IP address is randomly assigned from the CIDR block of the vSwitch.</p>
+     * <p>Default value: If this parameter is not specified, an IP address is randomly assigned from the CIDR block of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p><code>172.17.**.**</code></p>
@@ -43,12 +43,13 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the security groups to which the instance is added after the VPC is changed. This parameter is required only when the <code>VpcId</code> parameter is specified.</p>
+     * <p>The list of security group IDs that the instance joins after the VPC is modified. This parameter is required only when the VpcId parameter is specified.</p>
      * <ul>
-     * <li>The security groups must belong to the destination VPC.</li>
-     * <li>You can specify one or more security groups. The number of security groups is subject to the limits on the number of security groups to which an instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Limits</a>.</li>
+     * <li>The VPC of the security group must match the target VPC.</li>
+     * <li>Specifies the list of security groups that the instance joins after the modification. You can specify one or more security groups. The number of security groups is subject to the limit on the number of security groups that an instance can join. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Limits</a>.</li>
      * <li>All security groups in the list must be of the same type.</li>
-     * <li>Switching between security group types is supported. When you switch an ECS instance between security group types, make sure that you understand the differences in security group rule configurations between the two types to avoid impacts on instance networking. For more information, see <a href="https://help.aliyun.com/document_detail/25387.html">Security group overview</a>.</li>
+     * <li>Switching between security group types is supported.
+     *     When an ECS instance switches between security group types, make sure that you understand the differences in the security group rule configurations of the two security group types to avoid affecting the instance network. For more information, see <a href="https://help.aliyun.com/document_detail/25387.html">Security group overview</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,9 +61,9 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     /**
      * <p>The vSwitch ID.</p>
      * <ul>
-     * <li>If the specified ID is the current vSwitch of the instance, the vSwitch remains unchanged.</li>
-     * <li>If the specified ID is a new vSwitch and the <code>VpcId</code> parameter is empty, the new and old vSwitches must belong to the same zone and the same VPC.</li>
-     * <li>If the <code>VpcId</code> parameter is not empty, the vSwitch specified by this parameter must belong to the specified VPC and must be in the same zone as the original vSwitch.</li>
+     * <li>If the specified ID is the current vSwitch of the instance, the vSwitch of the instance remains unchanged.</li>
+     * <li>If the specified ID is a new vSwitch and the VpcId parameter is not specified, the new and original vSwitches must belong to the same zone and the same VPC.</li>
+     * <li>If the VpcId parameter is specified, the vSwitch ID specified in this parameter must belong to the VpcId and must be in the same zone as the original vSwitch.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -73,7 +74,7 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the destination VPC.</p>
+     * <p>The target VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1vwnn14rqpyiczj****</p>
