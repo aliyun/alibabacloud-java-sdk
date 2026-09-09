@@ -1,3 +1,7 @@
+2026-09-09 Version: 1.3.0
+- Support API UpdateUserSubscription.
+
+
 2026-09-08 Version: 1.2.0
 - Support API ReadMetaConfig.
 

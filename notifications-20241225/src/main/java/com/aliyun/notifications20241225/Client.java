@@ -1459,6 +1459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves page metadata.</p>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves the metadata service.</p>
      * 
@@ -1523,6 +1526,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves page metadata.</p>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves the metadata service.</p>
      * 
@@ -2384,6 +2390,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateMessageLanguageResponse updateMessageLanguage(UpdateMessageLanguageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateMessageLanguageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a user subscription.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a user subscription.</p>
+     * 
+     * @param tmpReq UpdateUserSubscriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateUserSubscriptionResponse
+     */
+    public UpdateUserSubscriptionResponse updateUserSubscriptionWithOptions(UpdateUserSubscriptionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateUserSubscriptionShrinkRequest request = new UpdateUserSubscriptionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.categoryCodes)) {
+            request.categoryCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.categoryCodes, "CategoryCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.channelConfigs)) {
+            request.channelConfigsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.channelConfigs, "ChannelConfigs", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.commonContacts)) {
+            request.commonContactsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.commonContacts, "CommonContacts", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.receiveTimeList)) {
+            request.receiveTimeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.receiveTimeList, "ReceiveTimeList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.webhookContacts)) {
+            request.webhookContactsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.webhookContacts, "WebhookContacts", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            body.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizName)) {
+            body.put("BizName", request.bizName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callerProtocol)) {
+            body.put("CallerProtocol", request.callerProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryCodesShrink)) {
+            body.put("CategoryCodes", request.categoryCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelConfigsShrink)) {
+            body.put("ChannelConfigs", request.channelConfigsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelGroupCode)) {
+            body.put("ChannelGroupCode", request.channelGroupCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientSource)) {
+            body.put("ClientSource", request.clientSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commonContactsShrink)) {
+            body.put("CommonContacts", request.commonContactsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cookies)) {
+            body.put("Cookies", request.cookies);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationItemCode)) {
+            body.put("OperationItemCode", request.operationItemCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiveTimeListShrink)) {
+            body.put("ReceiveTimeList", request.receiveTimeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarks)) {
+            body.put("Remarks", request.remarks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcUrl)) {
+            body.put("SrcUrl", request.srcUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantCode)) {
+            body.put("TenantCode", request.tenantCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uidType)) {
+            body.put("UidType", request.uidType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.webhookContactsShrink)) {
+            body.put("WebhookContacts", request.webhookContactsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUserSubscription"),
+            new TeaPair("version", "2024-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserSubscriptionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a user subscription.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a user subscription.</p>
+     * 
+     * @param request UpdateUserSubscriptionRequest
+     * @return UpdateUserSubscriptionResponse
+     */
+    public UpdateUserSubscriptionResponse updateUserSubscription(UpdateUserSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateUserSubscriptionWithOptions(request, runtime);
     }
 
     /**

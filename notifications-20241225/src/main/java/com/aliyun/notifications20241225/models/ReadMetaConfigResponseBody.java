@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReadMetaConfigResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call fails. For more information, see error codes.</p>
+     * <p>The error code returned when the call fails. For more information, see error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -33,10 +33,10 @@ public class ReadMetaConfigResponseBody extends TeaModel {
     public Object data;
 
     /**
-     * <p>The message returned if the call fails.</p>
+     * <p>The message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>Succeeded</p>
      */
     @NameInMap("Message")
     public String message;
@@ -51,7 +51,7 @@ public class ReadMetaConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call fails.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
