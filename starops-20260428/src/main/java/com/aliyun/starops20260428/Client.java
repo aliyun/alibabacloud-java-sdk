@@ -9,10 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "starops.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "starops.ap-southeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("starops", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -603,6 +599,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a public schema reference from a digital employee UModel.</p>
+     * 
+     * @param request DeleteDigitalEmployeeUmodelCommonSchemaRefRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDigitalEmployeeUmodelCommonSchemaRefResponse
+     */
+    public DeleteDigitalEmployeeUmodelCommonSchemaRefResponse deleteDigitalEmployeeUmodelCommonSchemaRefWithOptions(String name, String group, DeleteDigitalEmployeeUmodelCommonSchemaRefRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDigitalEmployeeUmodelCommonSchemaRef"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digital-employee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel/common-schema-refs/" + com.aliyun.openapiutil.Client.getEncodeParam(group) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDigitalEmployeeUmodelCommonSchemaRefResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a public schema reference from a digital employee UModel.</p>
+     * 
+     * @param request DeleteDigitalEmployeeUmodelCommonSchemaRefRequest
+     * @return DeleteDigitalEmployeeUmodelCommonSchemaRefResponse
+     */
+    public DeleteDigitalEmployeeUmodelCommonSchemaRefResponse deleteDigitalEmployeeUmodelCommonSchemaRef(String name, String group, DeleteDigitalEmployeeUmodelCommonSchemaRefRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteDigitalEmployeeUmodelCommonSchemaRefWithOptions(name, group, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an MCP service.</p>
      * 
      * @param request DeleteMcpServiceRequest
@@ -911,6 +948,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the entity data of a digital employee.</p>
+     * 
+     * @param request GetDigitalEmployeeEntityDataRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDigitalEmployeeEntityDataResponse
+     */
+    public GetDigitalEmployeeEntityDataResponse getDigitalEmployeeEntityDataWithOptions(String name, GetDigitalEmployeeEntityDataRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            body.put("from", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.to)) {
+            body.put("to", request.to);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDigitalEmployeeEntityData"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digital-employee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/entities/query"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDigitalEmployeeEntityDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the entity data of a digital employee.</p>
+     * 
+     * @param request GetDigitalEmployeeEntityDataRequest
+     * @return GetDigitalEmployeeEntityDataResponse
+     */
+    public GetDigitalEmployeeEntityDataResponse getDigitalEmployeeEntityData(String name, GetDigitalEmployeeEntityDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDigitalEmployeeEntityDataWithOptions(name, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Retrieves the details of a specified skill for a digital employee.</p>
      * 
@@ -961,6 +1053,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getDigitalEmployeeSkillWithOptions(name, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the UModel of a digital employee.</p>
+     * 
+     * @param request GetDigitalEmployeeUmodelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDigitalEmployeeUmodelResponse
+     */
+    public GetDigitalEmployeeUmodelResponse getDigitalEmployeeUmodelWithOptions(String name, GetDigitalEmployeeUmodelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDigitalEmployeeUmodel"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digital-employee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDigitalEmployeeUmodelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the UModel of a digital employee.</p>
+     * 
+     * @param request GetDigitalEmployeeUmodelRequest
+     * @return GetDigitalEmployeeUmodelResponse
+     */
+    public GetDigitalEmployeeUmodelResponse getDigitalEmployeeUmodel(String name, GetDigitalEmployeeUmodelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDigitalEmployeeUmodelWithOptions(name, request, headers, runtime);
     }
 
     /**
@@ -1642,6 +1775,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Updates the UModel of a digital human.</p>
+     * 
+     * @param request UpdateDigitalEmployeeUmodelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDigitalEmployeeUmodelResponse
+     */
+    public UpdateDigitalEmployeeUmodelResponse updateDigitalEmployeeUmodelWithOptions(String name, UpdateDigitalEmployeeUmodelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDigitalEmployeeUmodel"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digital-employee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDigitalEmployeeUmodelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the UModel of a digital human.</p>
+     * 
+     * @param request UpdateDigitalEmployeeUmodelRequest
+     * @return UpdateDigitalEmployeeUmodelResponse
+     */
+    public UpdateDigitalEmployeeUmodelResponse updateDigitalEmployeeUmodel(String name, UpdateDigitalEmployeeUmodelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateDigitalEmployeeUmodelWithOptions(name, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates an MCP service.</p>
      * 
      * @param request UpdateMcpServiceRequest
@@ -1766,5 +1946,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateThreadWithOptions(name, threadId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates or updates a public schema reference for a digital employee UModel.</p>
+     * 
+     * @param request UpsertDigitalEmployeeUmodelCommonSchemaRefRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpsertDigitalEmployeeUmodelCommonSchemaRefResponse
+     */
+    public UpsertDigitalEmployeeUmodelCommonSchemaRefResponse upsertDigitalEmployeeUmodelCommonSchemaRefWithOptions(String name, String group, UpsertDigitalEmployeeUmodelCommonSchemaRefRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpsertDigitalEmployeeUmodelCommonSchemaRef"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digital-employee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/umodel/common-schema-refs/" + com.aliyun.openapiutil.Client.getEncodeParam(group) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpsertDigitalEmployeeUmodelCommonSchemaRefResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates or updates a public schema reference for a digital employee UModel.</p>
+     * 
+     * @param request UpsertDigitalEmployeeUmodelCommonSchemaRefRequest
+     * @return UpsertDigitalEmployeeUmodelCommonSchemaRefResponse
+     */
+    public UpsertDigitalEmployeeUmodelCommonSchemaRefResponse upsertDigitalEmployeeUmodelCommonSchemaRef(String name, String group, UpsertDigitalEmployeeUmodelCommonSchemaRefRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.upsertDigitalEmployeeUmodelCommonSchemaRefWithOptions(name, group, request, headers, runtime);
     }
 }

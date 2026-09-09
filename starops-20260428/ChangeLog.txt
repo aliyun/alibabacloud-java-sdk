@@ -1,3 +1,11 @@
+2026-09-09 Version: 1.4.0
+- Support API DeleteDigitalEmployeeUmodelCommonSchemaRef.
+- Support API GetDigitalEmployeeEntityData.
+- Support API GetDigitalEmployeeUmodel.
+- Support API UpdateDigitalEmployeeUmodel.
+- Support API UpsertDigitalEmployeeUmodelCommonSchemaRef.
+
+
 2026-08-27 Version: 1.3.1
 - Update API CreateDigitalEmployee: add request parameters body.toolPolicy.aliyun.autoPassPolicy.
 - Update API CreateDigitalEmployee: add request parameters body.toolPolicy.aliyun.denyPolicy.
