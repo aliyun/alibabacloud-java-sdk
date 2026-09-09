@@ -15,7 +15,7 @@ public class ListNetworkAccessEndpointsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page for a paged query. Maximum value: 100.</p>
+     * <p>The number of rows per page in a paged query. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -26,12 +26,12 @@ public class ListNetworkAccessEndpointsRequest extends TeaModel {
     /**
      * <p>The status of the network access endpoint. Valid values:</p>
      * <ul>
-     * <li>pending: Pending initialization.</li>
-     * <li>creating: Being created.</li>
-     * <li>running: Running.</li>
-     * <li>deleting: Being deleted.</li>
+     * <li>pending: pending initialization.</li>
+     * <li>creating: being created.</li>
+     * <li>running: running.</li>
+     * <li>deleting: being deleted.</li>
      * </ul>
-     * <p>This parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
+     * <p>This filter parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
      * 
      * <strong>example:</strong>
      * <p>running</p>

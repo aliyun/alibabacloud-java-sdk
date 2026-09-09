@@ -46,7 +46,7 @@ public class ListCloudAccountRolesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that identifies the start position of the next page.</p>
+     * <p>The token that specifies the start position of the next page.</p>
      * <ul>
      * <li>If this parameter is not specified, the query starts from the first page.</li>
      * </ul>
@@ -104,12 +104,12 @@ public class ListCloudAccountRolesRequest extends TeaModel {
 
     public static class ListCloudAccountRolesRequestFilter extends TeaModel {
         /**
-         * <p>The name of the filter field. Valid values:</p>
+         * <p>The filter field name. Valid values:</p>
          * <ul>
          * <li>CloudAccountRoleId: the cloud role ID.</li>
          * <li>CloudAccountRoleName: the cloud role name.</li>
-         * <li>CloudAccountRoleExternalId: the external identifier of the cloud role.</li>
-         * <li>CloudAccountRoleUsageType: the usage type of the cloud role.</li>
+         * <li>CloudAccountRoleExternalId: the cloud role external identifier.</li>
+         * <li>CloudAccountRoleUsageType: the cloud role usage type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class ListCloudAccountRolesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The values of the filter field.</p>
+         * <p>The list of filter field values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

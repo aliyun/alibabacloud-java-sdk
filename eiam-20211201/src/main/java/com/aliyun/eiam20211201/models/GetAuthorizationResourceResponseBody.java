@@ -143,7 +143,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         public GetAuthorizationResourceResponseBodyAuthorizationResourceCondition condition;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787023451494</p>
@@ -161,7 +161,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787023451494</p>

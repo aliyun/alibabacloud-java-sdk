@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckInstanceModuleStatusRequest extends TeaModel {
     /**
-     * <p>The secondary module identifier.</p>
+     * <p>The level-2 module identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>urn:alibaba:idaas:license:module:ud:customField</p>
@@ -24,7 +24,7 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The primary module identifier.</p>
+     * <p>The level-1 module identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,14 +33,26 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     @NameInMap("ModuleKey")
     public String moduleKey;
 
+    /**
+     * <p>The resource label URN key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>urn:alibaba:idaas:license:label:template:app</p>
+     */
     @NameInMap("ResourceLabelKey")
     public String resourceLabelKey;
 
+    /**
+     * <p>The resource label name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apt_ram_user_sso</p>
+     */
     @NameInMap("ResourceLabelValue")
     public String resourceLabelValue;
 
     /**
-     * <p>The tertiary module identifier.</p>
+     * <p>The level-3 module identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>urn:alibaba:idaas:license:module:idp:alibaba:dingtalk:pull:advanced_configuration</p>

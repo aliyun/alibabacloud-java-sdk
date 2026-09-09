@@ -11,7 +11,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public java.util.List<ListCloudAccountsResponseBodyCloudAccounts> cloudAccounts;
 
     /**
-     * <p>The maximum number of entries per page for paging.</p>
+     * <p>The number of rows per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token returned for the current call.</p>
+     * <p>The token returned for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -141,7 +141,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResultErrorReason errorReason;
 
         /**
-         * <p>The last check time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The last check time, in UNIX timestamp format, measured in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -195,13 +195,19 @@ public class ListCloudAccountsResponseBody extends TeaModel {
 
     public static class ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError extends TeaModel {
         /**
-         * <p>The failure error code.</p>
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The failure message.</p>
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test message</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -287,7 +293,14 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountProviderName;
 
         /**
-         * <p>The cloud account site.</p>
+         * <p>The cloud account site. Valid values:</p>
+         * <ul>
+         * <li>china_mainland: The Chinese mainland.</li>
+         * <li>global: Global.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>china_mainland</p>
          */
         @NameInMap("CloudAccountSite")
         public String cloudAccountSite;
@@ -305,7 +318,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountVendorType;
 
         /**
-         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The creation time, in UNIX timestamp format, measured in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -332,7 +345,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The list of associated privileged access application IDs.</p>
+         * <p>The list of associated privilege application IDs.</p>
          */
         @NameInMap("PrivilegeApplicationIds")
         public java.util.List<String> privilegeApplicationIds;
@@ -344,19 +357,37 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError privilegeHostingError;
 
         /**
-         * <p>The privilege hosting state, which indicates whether the account has privileged access capabilities.</p>
+         * <p>The hosting state of the cloud account. The default value is unmanaged. Valid values:</p>
+         * <ul>
+         * <li>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</li>
+         * <li>hosting_pending: Hosting in progress. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before the final state is reached.</li>
+         * <li>hosting_completed: Hosting completed. The cloud account hosting process was executed successfully, and the related permission templates and hosting bindings have taken effect.</li>
+         * <li>hosting_failed: Hosting failed. The hosting process encountered an exception. View the failure reason and re-initiate hosting.</li>
+         * <li>hosting_removing: Removal in progress. The removal task has been submitted and is being executed asynchronously. Wait for the removal process to complete before the final state is reached.</li>
+         * <li>hosting_remove_failed: Removal failed. The removal process encountered an exception. View the failure reason and re-initiate removal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hosting_unmanaged</p>
          */
         @NameInMap("PrivilegeHostingState")
         public String privilegeHostingState;
 
         /**
-         * <p>The privilege switch status, which indicates whether the privileged access capability is available.</p>
+         * <p>The privilege switch status. Valid values:</p>
+         * <ul>
+         * <li>enabled: Enabled. The resource is active and can be used normally.</li>
+         * <li>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore functionality.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("PrivilegeStatus")
         public String privilegeStatus;
 
         /**
-         * <p>The last update time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The last update time, in UNIX timestamp format, measured in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>

@@ -36,7 +36,7 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the starting position of the next page.</p>
+     * <p>The token that identifies the start position of the next page.</p>
      * <ul>
      * <li>If this parameter is not specified, the query starts from the first page.</li>
      * </ul>
@@ -89,7 +89,7 @@ public class ListAuthorizationRulesRequest extends TeaModel {
          * <p>The name of the filter field. Valid values:</p>
          * <ul>
          * <li>AuthorizationRuleId: the authorization rule ID.</li>
-         * <li>AuthorizationRuleNameStartWith: the prefix of the authorization rule name for fuzzy match.</li>
+         * <li>AuthorizationRuleNameStartWith: the left-match value of the authorization rule name.</li>
          * </ul>
          * 
          * <strong>example:</strong>

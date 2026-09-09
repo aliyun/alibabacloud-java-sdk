@@ -21,7 +21,7 @@ public class ListCloudAccountsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of records per page.</p>
      * <ul>
      * <li><p>If this parameter is not specified, the default value is 20.</p>
      * </li>

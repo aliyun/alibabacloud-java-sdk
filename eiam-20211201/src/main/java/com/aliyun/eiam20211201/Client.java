@@ -9,15 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-hongkong", "eiam.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "eiam.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "eiam.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "eiam.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "eiam.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "eiam.cn-beijing.aliyuncs.com"),
-            new TeaPair("eu-central-1", "eiam.eu-central-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eiam", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1055,7 +1046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Determines whether an instance has the capability of a specific module.</p>
+     * <p>Checks whether an instance has the feature of a specific module.</p>
      * 
      * @param request CheckInstanceModuleStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1107,7 +1098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Determines whether an instance has the capability of a specific module.</p>
+     * <p>Checks whether an instance has the feature of a specific module.</p>
      * 
      * @param request CheckInstanceModuleStatusRequest
      * @return CheckInstanceModuleStatusResponse
@@ -1257,7 +1248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application federated identity credential.</p>
+     * <p>Creates an application federated credential.</p>
      * 
      * @param request CreateApplicationFederatedCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1329,7 +1320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application federated identity credential.</p>
+     * <p>Creates an application federated credential.</p>
      * 
      * @param request CreateApplicationFederatedCredentialRequest
      * @return CreateApplicationFederatedCredentialResponse
@@ -1701,10 +1692,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</em>*</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method of IDaaS EIAM.</strong></p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a cloud account resource in a specified EIAM instance.</p>
+     * <p>Creates a cloud account resource under a specified EIAM instance.</p>
      * 
      * @param request CreateCloudAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1764,10 +1756,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</em>*</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method of IDaaS EIAM.</strong></p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a cloud account resource in a specified EIAM instance.</p>
+     * <p>Creates a cloud account resource under a specified EIAM instance.</p>
      * 
      * @param request CreateCloudAccountRequest
      * @return CreateCloudAccountResponse
@@ -2481,7 +2474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an identity provider.</p>
+     * <p>Creates an identity provider.</p>
      * 
      * @param request CreateIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2581,7 +2574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an identity provider.</p>
+     * <p>Creates an identity provider.</p>
      * 
      * @param request CreateIdentityProviderRequest
      * @return CreateIdentityProviderResponse
@@ -6927,7 +6920,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>*Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.**.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
      * 
      * <b>summary</b> : 
      * <p>Enables a field.</p>
@@ -6966,7 +6960,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>*Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.**.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
      * 
      * <b>summary</b> : 
      * <p>Enables a field.</p>
@@ -7991,7 +7986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the federated identity credential of an application.</p>
+     * <p>Retrieves an application federated identity credential.</p>
      * 
      * @param request GetApplicationFederatedCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8031,7 +8026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the federated identity credential of an application.</p>
+     * <p>Retrieves an application federated identity credential.</p>
      * 
      * @param request GetApplicationFederatedCredentialRequest
      * @return GetApplicationFederatedCredentialResponse
@@ -8287,7 +8282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the single sign-on (SSO) configuration for an application in EIAM.</p>
+     * <p>Queries the single sign-on (SSO) configuration properties of an EIAM application.</p>
      * 
      * @param request GetApplicationSsoConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8323,7 +8318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the single sign-on (SSO) configuration for an application in EIAM.</p>
+     * <p>Queries the single sign-on (SSO) configuration properties of an EIAM application.</p>
      * 
      * @param request GetApplicationSsoConfigRequest
      * @return GetApplicationSsoConfigResponse
@@ -8379,7 +8374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of an authorization resource.</p>
+     * <p>Queries the information about an authorization resource.</p>
      * 
      * @param request GetAuthorizationResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8419,7 +8414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of an authorization resource.</p>
+     * <p>Queries the information about an authorization resource.</p>
      * 
      * @param request GetAuthorizationResourceRequest
      * @return GetAuthorizationResourceResponse
@@ -8527,7 +8522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Brand Details</p>
+     * <p>Retrieves the details of a brand.</p>
      * 
      * @param request GetBrandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8563,7 +8558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Brand Details</p>
+     * <p>Retrieves the details of a brand.</p>
      * 
      * @param request GetBrandRequest
      * @return GetBrandResponse
@@ -10649,7 +10644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application federated credentials.</p>
+     * <p>Queries the list of application federated identity credentials.</p>
      * 
      * @param request ListApplicationFederatedCredentialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10701,7 +10696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application federated credentials.</p>
+     * <p>Queries the list of application federated identity credentials.</p>
      * 
      * @param request ListApplicationFederatedCredentialsRequest
      * @return ListApplicationFederatedCredentialsResponse
@@ -11403,10 +11398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When calling this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of authorization resource information.</p>
+     * <p>Lists authorized resource information.</p>
      * 
      * @param request ListAuthorizationResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11454,10 +11449,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When calling this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of authorization resource information.</p>
+     * <p>Lists authorized resource information.</p>
      * 
      * @param request ListAuthorizationResourcesRequest
      * @return ListAuthorizationResourcesResponse
@@ -11857,7 +11852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about one or more cloud roles by using paging.</p>
+     * <p>Queries information about one or more cloud roles by using paging.</p>
      * 
      * @param request ListCloudAccountRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11905,7 +11900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about one or more cloud roles by using paging.</p>
+     * <p>Queries information about one or more cloud roles by using paging.</p>
      * 
      * @param request ListCloudAccountRolesRequest
      * @return ListCloudAccountRolesResponse
@@ -11917,7 +11912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries one or more cloud accounts by using paging.</p>
+     * <p>Queries information about one or more cloud accounts by using paging.</p>
      * 
      * @param request ListCloudAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11961,7 +11956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries one or more cloud accounts by using paging.</p>
+     * <p>Queries information about one or more cloud accounts by using paging.</p>
      * 
      * @param request ListCloudAccountsRequest
      * @return ListCloudAccountsResponse
@@ -15932,10 +15927,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In EIAM, application management supports adding applications that use multiple single sign-on (SSO) protocols (SAML 2.0 and OIDC). However, each application supports only one SSO protocol, which is specified during creation and cannot be changed. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the application.</p>
+     * <p>In EIAM, application management supports adding applications that use multiple single sign-on (SSO) protocols (SAML 2.0 and OIDC). However, each application supports only one SSO protocol, which is specified during creation and cannot be changed afterward. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the current application.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the single sign-on (SSO) configuration properties for an EIAM application.</p>
+     * <p>Sets the single sign-on (SSO) configuration properties of an EIAM application.</p>
      * 
      * @param request SetApplicationSsoConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15991,10 +15986,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In EIAM, application management supports adding applications that use multiple single sign-on (SSO) protocols (SAML 2.0 and OIDC). However, each application supports only one SSO protocol, which is specified during creation and cannot be changed. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the application.</p>
+     * <p>In EIAM, application management supports adding applications that use multiple single sign-on (SSO) protocols (SAML 2.0 and OIDC). However, each application supports only one SSO protocol, which is specified during creation and cannot be changed afterward. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the current application.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the single sign-on (SSO) configuration properties for an EIAM application.</p>
+     * <p>Sets the single sign-on (SSO) configuration properties of an EIAM application.</p>
      * 
      * @param request SetApplicationSsoConfigRequest
      * @return SetApplicationSsoConfigResponse
@@ -17242,7 +17237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a federated credential for an application.</p>
+     * <p>Updates an application federated identity credential.</p>
      * 
      * @param request UpdateApplicationFederatedCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17298,7 +17293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a federated credential for an application.</p>
+     * <p>Updates an application federated identity credential.</p>
      * 
      * @param request UpdateApplicationFederatedCredentialRequest
      * @return UpdateApplicationFederatedCredentialResponse

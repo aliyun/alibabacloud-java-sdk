@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     /**
-     * <p>The name of the application federated identity credential.</p>
+     * <p>The application federated credential name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     public String applicationFederatedCredentialName;
 
     /**
-     * <p>The type of the application federated identity credential.</p>
+     * <p>The application federated credential type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,13 +70,13 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The OIDC structured configuration. This parameter applies when the verification mode is structured and the credential type is oidc.</p>
+     * <p>The OIDC structured configuration.</p>
      */
     @NameInMap("OidcVerificationConfig")
     public CreateApplicationFederatedCredentialRequestOidcVerificationConfig oidcVerificationConfig;
 
     /**
-     * <p>The PKCS#7 structured configuration. This parameter applies when the verification mode is structured and the credential type is pkcs7.</p>
+     * <p>The PKCS#7 structured configuration.</p>
      */
     @NameInMap("Pkcs7VerificationConfig")
     public CreateApplicationFederatedCredentialRequestPkcs7VerificationConfig pkcs7VerificationConfig;
@@ -93,8 +93,8 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     /**
      * <p>The verification mode. Valid values:</p>
      * <ul>
-     * <li>freedom (default)</li>
-     * <li>structured</li>
+     * <li>freedom: free mode</li>
+     * <li>structured: structured mode</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -239,15 +239,36 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     }
 
     public static class CreateApplicationFederatedCredentialRequestOidcVerificationConfigAzureVmConfig extends TeaModel {
+        /**
+         * <p>The principal ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5dee234a-1b4c-4ad7-a19f-fxxxxx</p>
+         */
         @NameInMap("PrincipalId")
         public String principalId;
 
+        /**
+         * <p>The Azure resource group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_default</p>
+         */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
+        /**
+         * <p>The subscription ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4342a1f4-7e5d-4371-97dc-d4f33f4xxxx</p>
+         */
         @NameInMap("SubscriptionId")
         public String subscriptionId;
 
+        /**
+         * <p>The list of virtual machine names.</p>
+         */
         @NameInMap("VmNames")
         public java.util.List<String> vmNames;
 
@@ -291,14 +312,23 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     }
 
     public static class CreateApplicationFederatedCredentialRequestOidcVerificationConfigGcpVmConfig extends TeaModel {
+        /**
+         * <p>The list of GCP virtual machine instance IDs.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
+        /**
+         * <p>The GCP project ID to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>turnkey-axiom-475109-xx</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
         /**
-         * <p>The sub claim that corresponds to the service account.</p>
+         * <p>The sub claim corresponding to the service account.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -338,6 +368,12 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     }
 
     public static class CreateApplicationFederatedCredentialRequestOidcVerificationConfigGenericConfig extends TeaModel {
+        /**
+         * <p>The subject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_subject</p>
+         */
         @NameInMap("Subject")
         public String subject;
 
@@ -358,7 +394,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
 
     public static class CreateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig extends TeaModel {
         /**
-         * <p>The Kubernetes namespace.</p>
+         * <p>The K8s namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -376,7 +412,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
         public String podNamePrefix;
 
         /**
-         * <p>The Kubernetes service account name.</p>
+         * <p>The K8s service account name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-sa</p>
@@ -428,6 +464,9 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
         @NameInMap("GcpVmConfig")
         public CreateApplicationFederatedCredentialRequestOidcVerificationConfigGcpVmConfig gcpVmConfig;
 
+        /**
+         * <p>The generic scenario configuration.</p>
+         */
         @NameInMap("GenericConfig")
         public CreateApplicationFederatedCredentialRequestOidcVerificationConfigGenericConfig genericConfig;
 
@@ -438,7 +477,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
         public CreateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig kubernetesConfig;
 
         /**
-         * <p>The OIDC scenario profile. Valid values:</p>
+         * <p>The OIDC scenario profile. Different profiles correspond to different configurations. Valid values:</p>
          * <ul>
          * <li>generic</li>
          * <li>kubernetes</li>
@@ -500,6 +539,9 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
     }
 
     public static class CreateApplicationFederatedCredentialRequestPkcs7VerificationConfig extends TeaModel {
+        /**
+         * <p>The list of instance IDs.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 

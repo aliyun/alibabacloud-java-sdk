@@ -63,7 +63,7 @@ public class CreateCloudAccountRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alibaba_cloud(Alibaba Cloud)</p>
+     * <p>alibaba_cloud(Alibaba Cloud)</p>
      */
     @NameInMap("CloudAccountVendorType")
     public String cloudAccountVendorType;

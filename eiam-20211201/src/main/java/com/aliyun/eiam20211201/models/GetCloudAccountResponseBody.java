@@ -51,7 +51,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error description.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>There is no permission.</p>
@@ -84,7 +84,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
 
     public static class GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResult extends TeaModel {
         /**
-         * <p>The error reason. This field is returned when the health check status is unhealthy.</p>
+         * <p>The error reason. This field returns a value when the health check status is unhealthy.</p>
          */
         @NameInMap("ErrorReason")
         public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResultErrorReason errorReason;
@@ -221,12 +221,18 @@ public class GetCloudAccountResponseBody extends TeaModel {
     public static class GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError extends TeaModel {
         /**
          * <p>The failure error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The failure message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test message</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -303,7 +309,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountName;
 
         /**
-         * <p>The identity provider configuration.</p>
+         * <p>The identity provider configuration information.</p>
          */
         @NameInMap("CloudAccountProviderConfig")
         public GetCloudAccountResponseBodyCloudAccountCloudAccountProviderConfig cloudAccountProviderConfig;
@@ -317,11 +323,24 @@ public class GetCloudAccountResponseBody extends TeaModel {
         @NameInMap("CloudAccountProviderName")
         public String cloudAccountProviderName;
 
+        /**
+         * <p>The cloud account role creation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("CloudAccountRoleCreationType")
         public String cloudAccountRoleCreationType;
 
         /**
-         * <p>The cloud account site.</p>
+         * <p>The cloud account site. Valid values:</p>
+         * <ul>
+         * <li>china_mainland: The Chinese mainland.</li>
+         * <li>global: Global.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>china_mainland</p>
          */
         @NameInMap("CloudAccountSite")
         public String cloudAccountSite;
@@ -378,13 +397,31 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError privilegeHostingError;
 
         /**
-         * <p>The privilege hosting state, which indicates whether the privilege capability is available.</p>
+         * <p>The hosting state of the cloud account. The default value is hosting_unmanaged. Valid values:</p>
+         * <ul>
+         * <li>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</li>
+         * <li>hosting_pending: Hosting in progress. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before the final state is reached.</li>
+         * <li>hosting_completed: Hosting completed. The cloud account hosting process was executed successfully. The related permission templates and hosting bindings have taken effect.</li>
+         * <li>hosting_failed: Hosting failed. The hosting process encountered an exception. View the failure reason and re-initiate hosting.</li>
+         * <li>hosting_removing: Removal in progress. The removal task has been submitted and is being executed asynchronously. Wait for the removal process to complete before the final state is reached.</li>
+         * <li>hosting_remove_failed: Removal failed. The removal process encountered an exception. View the failure reason and re-initiate removal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hosting_unmanaged</p>
          */
         @NameInMap("PrivilegeHostingState")
         public String privilegeHostingState;
 
         /**
-         * <p>The privilege switch status, which indicates whether the privilege capability is enabled.</p>
+         * <p>The privilege switch status. Valid values:</p>
+         * <ul>
+         * <li>enabled: Enabled. The resource is active and can be used normally.</li>
+         * <li>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore functionality.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("PrivilegeStatus")
         public String privilegeStatus;

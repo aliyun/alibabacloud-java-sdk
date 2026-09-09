@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizationResourcesResponseBody extends TeaModel {
     /**
-     * <p>The list of authorization resources.</p>
+     * <p>The list of authorized resources.</p>
      */
     @NameInMap("AuthorizationResources")
     public java.util.List<ListAuthorizationResourcesResponseBodyAuthorizationResources> authorizationResources;
@@ -20,7 +20,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned by this call, used for the next page query.</p>
+     * <p>The pagination token returned in this call, which is used for the next paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -38,7 +38,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -140,7 +140,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
 
     public static class ListAuthorizationResourcesResponseBodyAuthorizationResources extends TeaModel {
         /**
-         * <p>The resource entity ID associated with the authorization resource.</p>
+         * <p>The ID of the resource entity associated with the authorized resource.</p>
          * 
          * <strong>example:</strong>
          * <p>carole_01kmek49aqxxxx</p>
@@ -149,9 +149,9 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String authorizationResourceEntityId;
 
         /**
-         * <p>The resource entity type associated with the authorization resource. Valid values:</p>
+         * <p>The type of the resource entity associated with the authorized resource. Valid values:</p>
          * <ul>
-         * <li>cloud_account_role: cloud role</li>
+         * <li>cloud_account_role: cloud role.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String authorizationRuleId;
 
         /**
-         * <p>The cloud account ID to which the resource entity associated with the authorization resource belongs.</p>
+         * <p>The ID of the cloud account to which the resource entity associated with the authorized resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -194,7 +194,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition condition;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1768789292000</p>
@@ -212,7 +212,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1768789292000</p>

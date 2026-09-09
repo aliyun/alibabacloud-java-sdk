@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetBrandResponseBody extends TeaModel {
     /**
-     * <p>Brand.</p>
+     * <p>The brand.</p>
      */
     @NameInMap("Brand")
     public GetBrandResponseBodyBrand brand;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -42,7 +42,7 @@ public class GetBrandResponseBody extends TeaModel {
 
     public static class GetBrandResponseBodyBrand extends TeaModel {
         /**
-         * <p>Brand ID.</p>
+         * <p>The brand ID.</p>
          * 
          * <strong>example:</strong>
          * <p>brand_xxxx</p>
@@ -51,7 +51,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String brandId;
 
         /**
-         * <p>Brand name.</p>
+         * <p>The brand name.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom Brand</p>
@@ -60,7 +60,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String brandName;
 
         /**
-         * <p>Brand type.</p>
+         * <p>The brand type.</p>
          * 
          * <strong>example:</strong>
          * <p>user_custom</p>
@@ -69,7 +69,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String brandType;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -78,13 +78,31 @@ public class GetBrandResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Brand status.</p>
+         * <p>The SMS gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smsgw_01l9f0kunrrjhxxx</p>
+         */
+        @NameInMap("SmsGatewayId")
+        public String smsGatewayId;
+
+        /**
+         * <p>The brand status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>The enabling status of system notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        @NameInMap("SystemNotificationStatus")
+        public String systemNotificationStatus;
 
         public static GetBrandResponseBodyBrand build(java.util.Map<String, ?> map) throws Exception {
             GetBrandResponseBodyBrand self = new GetBrandResponseBodyBrand();
@@ -123,12 +141,28 @@ public class GetBrandResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public GetBrandResponseBodyBrand setSmsGatewayId(String smsGatewayId) {
+            this.smsGatewayId = smsGatewayId;
+            return this;
+        }
+        public String getSmsGatewayId() {
+            return this.smsGatewayId;
+        }
+
         public GetBrandResponseBodyBrand setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetBrandResponseBodyBrand setSystemNotificationStatus(String systemNotificationStatus) {
+            this.systemNotificationStatus = systemNotificationStatus;
+            return this;
+        }
+        public String getSystemNotificationStatus() {
+            return this.systemNotificationStatus;
         }
 
     }

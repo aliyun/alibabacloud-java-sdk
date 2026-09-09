@@ -41,13 +41,13 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The OIDC structured configuration (structured mode + oidc type).</p>
+     * <p>The OIDC structured configuration.</p>
      */
     @NameInMap("OidcVerificationConfig")
     public UpdateApplicationFederatedCredentialRequestOidcVerificationConfig oidcVerificationConfig;
 
     /**
-     * <p>The PKCS#7 structured configuration (structured mode + pkcs7 type).</p>
+     * <p>The PKCS#7 structured configuration.</p>
      */
     @NameInMap("Pkcs7VerificationConfig")
     public UpdateApplicationFederatedCredentialRequestPkcs7VerificationConfig pkcs7VerificationConfig;
@@ -165,15 +165,36 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
     }
 
     public static class UpdateApplicationFederatedCredentialRequestOidcVerificationConfigAzureVmConfig extends TeaModel {
+        /**
+         * <p>The principal ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5dee234a-1b4c-4ad7-a19f-fxxxxx</p>
+         */
         @NameInMap("PrincipalId")
         public String principalId;
 
+        /**
+         * <p>The Azure resource group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_default</p>
+         */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
+        /**
+         * <p>The subscription ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4342a1f4-7e5d-4371-97dc-d4f33f4xxxx</p>
+         */
         @NameInMap("SubscriptionId")
         public String subscriptionId;
 
+        /**
+         * <p>The list of virtual machine names.</p>
+         */
         @NameInMap("VmNames")
         public java.util.List<String> vmNames;
 
@@ -217,14 +238,23 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
     }
 
     public static class UpdateApplicationFederatedCredentialRequestOidcVerificationConfigGcpVmConfig extends TeaModel {
+        /**
+         * <p>The list of VM instance IDs.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
+        /**
+         * <p>The GCP project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>turnkey-axiom-475109-xx</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
         /**
-         * <p>The sub value corresponding to the service account.</p>
+         * <p>The sub claim corresponding to the service account.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -264,6 +294,12 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
     }
 
     public static class UpdateApplicationFederatedCredentialRequestOidcVerificationConfigGenericConfig extends TeaModel {
+        /**
+         * <p>The subject identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_subject</p>
+         */
         @NameInMap("Subject")
         public String subject;
 
@@ -284,7 +320,7 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
 
     public static class UpdateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig extends TeaModel {
         /**
-         * <p>The Kubernetes namespace.</p>
+         * <p>The K8s namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -302,7 +338,7 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
         public String podNamePrefix;
 
         /**
-         * <p>The Kubernetes service account name.</p>
+         * <p>The K8s service account name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-sa</p>
@@ -354,6 +390,9 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
         @NameInMap("GcpVmConfig")
         public UpdateApplicationFederatedCredentialRequestOidcVerificationConfigGcpVmConfig gcpVmConfig;
 
+        /**
+         * <p>The generic scenario configuration.</p>
+         */
         @NameInMap("GenericConfig")
         public UpdateApplicationFederatedCredentialRequestOidcVerificationConfigGenericConfig genericConfig;
 
@@ -364,7 +403,13 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
         public UpdateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig kubernetesConfig;
 
         /**
-         * <p>The OIDC scenario profile. Valid values: generic, kubernetes, gcp_vm, and azure_vm.</p>
+         * <p>The OIDC scenario profile. Different profiles correspond to different configurations. Valid values:</p>
+         * <ul>
+         * <li>generic</li>
+         * <li>kubernetes</li>
+         * <li>gcp_vm</li>
+         * <li>azure_vm</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>kubernetes</p>
@@ -420,6 +465,9 @@ public class UpdateApplicationFederatedCredentialRequest extends TeaModel {
     }
 
     public static class UpdateApplicationFederatedCredentialRequestPkcs7VerificationConfig extends TeaModel {
+        /**
+         * <p>The list of VM instance IDs.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 

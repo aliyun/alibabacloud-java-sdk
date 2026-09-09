@@ -11,7 +11,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     public java.util.List<ListAuthorizationRulesResponseBodyAuthorizationRules> authorizationRules;
 
     /**
-     * <p>The number of entries per page in the paging query.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -95,8 +95,8 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         /**
          * <p>The authorization resource scope. Valid values:</p>
          * <ul>
-         * <li>global: all resources under the project</li>
-         * <li>custom: specified resources under the project</li>
+         * <li>global: all resources under the project.</li>
+         * <li>custom: specified resources under the project.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,8 +108,8 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         /**
          * <p>The creation type of the authorization rule. Valid values:</p>
          * <ul>
-         * <li>system_init: created by the system</li>
-         * <li>user_custom: created by the user</li>
+         * <li>system_init: created by the system.</li>
+         * <li>user_custom: created by the user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,14 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String authorizationRuleName;
 
         /**
-         * <p>The scenario label of the authorization rule.</p>
+         * <p>The scenario label of the authorization rule. Valid values:</p>
+         * <ul>
+         * <li>privileged_cloud_account: privileged cloud account scenario.</li>
+         * <li>asset: asset scenario.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asset</p>
          */
         @NameInMap("AuthorizationRuleScenarioLabel")
         public String authorizationRuleScenarioLabel;
@@ -154,8 +161,8 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         /**
          * <p>The subject scope of the authorization rule. Valid values:</p>
          * <ul>
-         * <li>shared: supports all subjects, including accounts and applications</li>
-         * <li>exclusive: exclusive type</li>
+         * <li>shared: supports all subjects, including accounts and applications.</li>
+         * <li>exclusive: exclusive type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,8 +174,8 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         /**
          * <p>The subject type associated with the authorization rule. This parameter takes effect only when the subject scope is exclusive. Valid values:</p>
          * <ul>
-         * <li>application: application</li>
-         * <li>user: account</li>
+         * <li>application: application.</li>
+         * <li>user: account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,8 +223,8 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         /**
          * <p>The authorization rule status. Valid values:</p>
          * <ul>
-         * <li>enabled: enabled</li>
-         * <li>disabled: disabled</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -11,7 +11,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
     public java.util.List<ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentials> applicationFederatedCredentials;
 
     /**
-     * <p>The number of entries per page in a paged query. This parameter is used for paging.</p>
+     * <p>The maximum number of rows per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -109,15 +109,36 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
     }
 
     public static class ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsOidcVerificationConfigAzureVmConfig extends TeaModel {
+        /**
+         * <p>The principal ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5dee234a-1b4c-4ad7-a19f-fxxxxx</p>
+         */
         @NameInMap("PrincipalId")
         public String principalId;
 
+        /**
+         * <p>The Azure resource group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_default</p>
+         */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
+        /**
+         * <p>The subscription ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1770621546825D6J5G</p>
+         */
         @NameInMap("SubscriptionId")
         public String subscriptionId;
 
+        /**
+         * <p>The list of virtual machine names.</p>
+         */
         @NameInMap("VmNames")
         public java.util.List<String> vmNames;
 
@@ -162,16 +183,25 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
 
     public static class ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsOidcVerificationConfigGcpVmConfig extends TeaModel {
         /**
-         * <p>The list of VM instance IDs. A maximum of 10 IDs are supported.</p>
+         * <p>The list of VM instance IDs.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
+        /**
+         * <p>The GCP project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6193072600270353961</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
         /**
-         * <p>The sub claim that corresponds to the service account.</p>
+         * <p>The sub claim corresponding to the service account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         @NameInMap("ServiceAccountId")
         public String serviceAccountId;
@@ -208,6 +238,12 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
     }
 
     public static class ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsOidcVerificationConfigGenericConfig extends TeaModel {
+        /**
+         * <p>The subject identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_subject</p>
+         */
         @NameInMap("Subject")
         public String subject;
 
@@ -228,19 +264,28 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
 
     public static class ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsOidcVerificationConfigKubernetesConfig extends TeaModel {
         /**
-         * <p>The Kubernetes namespace.</p>
+         * <p>The K8s namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The pod name prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-pod</p>
          */
         @NameInMap("PodNamePrefix")
         public String podNamePrefix;
 
         /**
-         * <p>The Kubernetes service account name.</p>
+         * <p>The K8s service account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("ServiceAccountName")
         public String serviceAccountName;
@@ -289,6 +334,9 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         @NameInMap("GcpVmConfig")
         public ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsOidcVerificationConfigGcpVmConfig gcpVmConfig;
 
+        /**
+         * <p>The generic scenario configuration.</p>
+         */
         @NameInMap("GenericConfig")
         public ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsOidcVerificationConfigGenericConfig genericConfig;
 
@@ -299,7 +347,16 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsOidcVerificationConfigKubernetesConfig kubernetesConfig;
 
         /**
-         * <p>The OIDC scenario profile. Valid values: generic, kubernetes, gcp_vm, and azure_vm.</p>
+         * <p>The OIDC scenario profile. Different profiles correspond to different configurations. Valid values:</p>
+         * <ul>
+         * <li>generic</li>
+         * <li>kubernetes</li>
+         * <li>gcp_vm</li>
+         * <li>azure_vm</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>kubernetes</p>
          */
         @NameInMap("Profile")
         public String profile;
@@ -353,7 +410,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
 
     public static class ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsPkcs7VerificationConfig extends TeaModel {
         /**
-         * <p>The list of allowed instance IDs. A maximum of 10 IDs are supported.</p>
+         * <p>The list of allowed instance IDs.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
@@ -384,7 +441,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String applicationFederatedCredentialId;
 
         /**
-         * <p>The name of the application federated credential.</p>
+         * <p>The application federated credential name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -393,7 +450,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String applicationFederatedCredentialName;
 
         /**
-         * <p>The type of the application federated credential.</p>
+         * <p>The application federated credential type.</p>
          * 
          * <strong>example:</strong>
          * <p>oidc</p>
@@ -411,7 +468,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The time when the application federated credential was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -420,7 +477,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the application federated credential.</p>
+         * <p>The application federated credential description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -447,7 +504,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the application federated credential was last used.</p>
+         * <p>The last used time.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -456,19 +513,19 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>The OIDC structured configuration. This parameter applies to the structured mode with the OIDC type.</p>
+         * <p>The OIDC structured configuration.</p>
          */
         @NameInMap("OidcVerificationConfig")
         public ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsOidcVerificationConfig oidcVerificationConfig;
 
         /**
-         * <p>The PKCS#7 structured configuration. This parameter applies to the structured mode with the PKCS#7 type.</p>
+         * <p>The PKCS#7 structured configuration.</p>
          */
         @NameInMap("Pkcs7VerificationConfig")
         public ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsPkcs7VerificationConfig pkcs7VerificationConfig;
 
         /**
-         * <p>The status of the application federated credential.</p>
+         * <p>The application federated credential status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -477,7 +534,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the application federated credential was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -486,13 +543,23 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The verification condition. In freedom mode, this is a manually entered value. In structured mode, this is the final compiled value.</p>
+         * <p>The verification condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Equals(cert.subject.CN, &quot;test&quot;)</p>
          */
         @NameInMap("VerificationCondition")
         public String verificationCondition;
 
         /**
-         * <p>The verification mode. Valid values: freedom and structured.</p>
+         * <p>The verification mode. Valid values:</p>
+         * <ul>
+         * <li>freedom: free mode.</li>
+         * <li>structured: structured mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>structured</p>
          */
         @NameInMap("VerificationMode")
         public String verificationMode;

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class CreateIdentityProviderRequest extends TeaModel {
     /**
-     * <p>Authentication configuration.</p>
+     * <p>The authentication configuration.</p>
      */
     @NameInMap("AuthnConfig")
     public CreateIdentityProviderRequestAuthnConfig authnConfig;
 
     /**
-     * <p>Automatic account creation rule configuration.</p>
+     * <p>The automatic creation rule configuration for accounts.</p>
      */
     @NameInMap("AutoCreateUserConfig")
     public CreateIdentityProviderRequestAutoCreateUserConfig autoCreateUserConfig;
 
     /**
-     * <p>Automatic account update rule configuration.</p>
+     * <p>The automatic account update rule configuration.</p>
      */
     @NameInMap("AutoUpdateUserConfig")
     public CreateIdentityProviderRequestAutoUpdateUserConfig autoUpdateUserConfig;
 
     /**
-     * <p>OIDC identity provider account binding rule configuration.</p>
+     * <p>The account binding rule configuration for the OIDC identity provider.</p>
      */
     @NameInMap("BindingConfig")
     public CreateIdentityProviderRequestBindingConfig bindingConfig;
 
     /**
-     * <p>Client token used to ensure the idempotency of the request. Generate a parameter value from your client to ensure the value is unique across different requests. ClientToken only supports ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. ClientToken supports only ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
      * 
      * <strong>example:</strong>
      * <p>clientToken_20250704_Axxxxx</p>
@@ -38,13 +38,13 @@ public class CreateIdentityProviderRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>DingTalk configuration.</p>
+     * <p>The DingTalk configuration.</p>
      */
     @NameInMap("DingtalkAppConfig")
     public CreateIdentityProviderRequestDingtalkAppConfig dingtalkAppConfig;
 
     /**
-     * <p>Identity provider name.</p>
+     * <p>The name of the identity provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,24 +54,16 @@ public class CreateIdentityProviderRequest extends TeaModel {
     public String identityProviderName;
 
     /**
-     * <p>Identity provider synchronization type.</p>
+     * <p>The synchronization type of the identity provider. Valid values:</p>
      * <ul>
-     * <li><p>Inbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:pull</p>
-     * </li>
-     * <li><p>Outbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:push</p>
-     * </li>
-     * <li><p>Inbound WeCom: urn:alibaba:idaas:idp:tencent:wecom:pull</p>
-     * </li>
-     * <li><p>Inbound Lark: urn:alibaba:idaas:idp:bytedance:lark:pull</p>
-     * </li>
-     * <li><p>Inbound AD: urn:alibaba:idaas:idp:microsoft:ad:pull</p>
-     * </li>
-     * <li><p>Inbound LDAP: urn:alibaba:idaas:idp:unknown:ldap:pull</p>
-     * </li>
-     * <li><p>Standard OIDC: urn:alibaba:idaas:idp:standard:oidc</p>
-     * </li>
-     * <li><p>SASE Custom OIDC: urn:alibaba:idaas:idp:alibaba:sase</p>
-     * </li>
+     * <li>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: inbound DingTalk</li>
+     * <li>urn:alibaba:idaas:idp:alibaba:dingtalk:push: outbound DingTalk</li>
+     * <li>urn:alibaba:idaas:idp:tencent:wecom:pull: inbound WeCom</li>
+     * <li>urn:alibaba:idaas:idp:bytedance:lark:pull: inbound Lark</li>
+     * <li>urn:alibaba:idaas:idp:microsoft:ad:pull: inbound AD</li>
+     * <li>urn:alibaba:idaas:idp:unknown:ldap:pull: inbound LDAP</li>
+     * <li>urn:alibaba:idaas:idp:standard:oidc: standard OIDC</li>
+     * <li>urn:alibaba:idaas:idp:alibaba:sase: SASE custom OIDC</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -82,7 +74,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
     public String identityProviderType;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,19 +84,19 @@ public class CreateIdentityProviderRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Lark configuration.</p>
+     * <p>The Lark configuration information.</p>
      */
     @NameInMap("LarkConfig")
     public CreateIdentityProviderRequestLarkConfig larkConfig;
 
     /**
-     * <p>AD/LDAP configuration.</p>
+     * <p>The AD/LDAP configuration information.</p>
      */
     @NameInMap("LdapConfig")
     public CreateIdentityProviderRequestLdapConfig ldapConfig;
 
     /**
-     * <p>Application logo URL.</p>
+     * <p>The URL of the application logo.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-image://xxxx_23aqr2ye554csg33dqpch5eu3q/tmp/d17d9adc-a943-45e7-ba0c-2838dddea678</p>
@@ -113,7 +105,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
     public String logoUrl;
 
     /**
-     * <p>Network access endpoint ID.</p>
+     * <p>The network access endpoint ID.</p>
      * 
      * <strong>example:</strong>
      * <p>nae_examplexxxx</p>
@@ -122,28 +114,31 @@ public class CreateIdentityProviderRequest extends TeaModel {
     public String networkAccessEndpointId;
 
     /**
-     * <p>OIDC IdP configuration.</p>
+     * <p>The OIDC IdP configuration.</p>
      */
     @NameInMap("OidcConfig")
     public CreateIdentityProviderRequestOidcConfig oidcConfig;
 
+    /**
+     * <p>The SAML IdP configuration.</p>
+     */
     @NameInMap("SamlConfig")
     public CreateIdentityProviderRequestSamlConfig samlConfig;
 
     /**
-     * <p>Inbound synchronization configuration.</p>
+     * <p>The inbound synchronization configuration.</p>
      */
     @NameInMap("UdPullConfig")
     public CreateIdentityProviderRequestUdPullConfig udPullConfig;
 
     /**
-     * <p>Outbound synchronization configuration.</p>
+     * <p>The outbound synchronization configuration.</p>
      */
     @NameInMap("UdPushConfig")
     public CreateIdentityProviderRequestUdPushConfig udPushConfig;
 
     /**
-     * <p>WeCom configuration.</p>
+     * <p>The WeCom configuration information.</p>
      */
     @NameInMap("WeComConfig")
     public CreateIdentityProviderRequestWeComConfig weComConfig;
@@ -299,12 +294,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestAuthnConfig extends TeaModel {
         /**
-         * <p>Whether the corresponding IdP supports authentication. Valid values:</p>
+         * <p>Specifies whether the corresponding IdP supports authentication. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
-         * </li>
-         * <li><p>Enabled: enabled</p>
-         * </li>
+         * <li>disabled: Disabled.</li>
+         * <li>enabled: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -314,12 +307,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String authnStatus;
 
         /**
-         * <p>Whether automatic password update is supported. Valid values:</p>
+         * <p>Specifies whether automatic password update is supported. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
-         * </li>
-         * <li><p>Enabled: enabled</p>
-         * </li>
+         * <li>disabled: Disabled.</li>
+         * <li>enabled: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -353,11 +344,11 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestAutoCreateUserConfig extends TeaModel {
         /**
-         * <p>Whether automatic account creation is enabled. Valid values:</p>
+         * <p>Specifies whether automatic creation of accounts is enabled. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
+         * <li><p>disabled: Disabled.</p>
          * </li>
-         * <li><p>Enabled: enabled</p>
+         * <li><p>enabled: Enabled.</p>
          * </li>
          * </ul>
          * 
@@ -368,7 +359,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String autoCreateUserStatus;
 
         /**
-         * <p>Set of target organizational unit IDs.</p>
+         * <p>The collection of target organizational unit IDs.</p>
          */
         @NameInMap("TargetOrganizationalUnitIds")
         public java.util.List<String> targetOrganizationalUnitIds;
@@ -398,11 +389,11 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestAutoUpdateUserConfig extends TeaModel {
         /**
-         * <p>Whether automatic account update is enabled. Valid values:</p>
+         * <p>Specifies whether automatic account update is enabled. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
+         * <li><p>disabled: Disabled.</p>
          * </li>
-         * <li><p>Enabled: enabled</p>
+         * <li><p>enabled: Enabled.</p>
          * </li>
          * </ul>
          * 
@@ -429,12 +420,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestBindingConfigAutoMatchUserProfileExpressions extends TeaModel {
         /**
-         * <p>Expression type. Valid values:</p>
+         * <p>The type of the expression. Valid values:</p>
          * <ul>
-         * <li><p>Field: field</p>
-         * </li>
-         * <li><p>Expression: expression</p>
-         * </li>
+         * <li>field: field</li>
+         * <li>expression: expression</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -444,7 +433,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String expressionMappingType;
 
         /**
-         * <p>Mapping attribute value expression.</p>
+         * <p>The expression for the mapped attribute value.</p>
          * 
          * <strong>example:</strong>
          * <p>idpUser.phoneNumber</p>
@@ -453,7 +442,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String sourceValueExpression;
 
         /**
-         * <p>Mapping target attribute name.</p>
+         * <p>The name of the target attribute for mapping.</p>
          * 
          * <strong>example:</strong>
          * <p>user.username</p>
@@ -462,7 +451,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String targetField;
 
         /**
-         * <p>Mapping target attribute description.</p>
+         * <p>The name of the target attribute for mapping.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -511,18 +500,16 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestBindingConfig extends TeaModel {
         /**
-         * <p>List of rules for automatic account matching.</p>
+         * <p>The list of rules for automatically matching accounts.</p>
          */
         @NameInMap("AutoMatchUserProfileExpressions")
         public java.util.List<CreateIdentityProviderRequestBindingConfigAutoMatchUserProfileExpressions> autoMatchUserProfileExpressions;
 
         /**
-         * <p>Whether automatic account matching is enabled. Valid values:</p>
+         * <p>Specifies whether automatic account matching is enabled. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
-         * </li>
-         * <li><p>Enabled: enabled</p>
-         * </li>
+         * <li>disabled: Disabled.</li>
+         * <li>enabled: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -532,12 +519,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String autoMatchUserStatus;
 
         /**
-         * <p>Whether the manual account binding feature is enabled. Valid values:</p>
+         * <p>Specifies whether the manual account binding feature is enabled. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
-         * </li>
-         * <li><p>Enabled: enabled</p>
-         * </li>
+         * <li>disabled: Disabled.</li>
+         * <li>enabled: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -579,7 +564,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestDingtalkAppConfig extends TeaModel {
         /**
-         * <p>AppKey of the DingTalk first-party application.</p>
+         * <p>The appKey of the DingTalk first-party application.</p>
          * 
          * <strong>example:</strong>
          * <p>Xczngvfemo4e</p>
@@ -588,7 +573,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String appKey;
 
         /**
-         * <p>AppSecret of the DingTalk first-party application.</p>
+         * <p>The appSecret of the DingTalk first-party application.</p>
          * 
          * <strong>example:</strong>
          * <p>5d405a12a6f84ad4ab05ee09axxxx</p>
@@ -597,7 +582,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String appSecret;
 
         /**
-         * <p>CorpId of the DingTalk first-party application.</p>
+         * <p>The corpId of the DingTalk first-party application.</p>
          * 
          * <strong>example:</strong>
          * <p>307568042478613xxxx</p>
@@ -606,11 +591,11 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String corpId;
 
         /**
-         * <p>DingTalk version. Valid values:</p>
+         * <p>The DingTalk version. Valid values:</p>
          * <ul>
-         * <li><p>Standard DingTalk: public_dingtalk</p>
+         * <li><p>public_dingtalk: Standard DingTalk.</p>
          * </li>
-         * <li><p>Exclusive DingTalk: private_dingtalk</p>
+         * <li><p>private_dingtalk: Exclusive DingTalk.</p>
          * </li>
          * </ul>
          * 
@@ -621,7 +606,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String dingtalkVersion;
 
         /**
-         * <p>DingTalk application EncryptKey.</p>
+         * <p>The EncryptKey of the DingTalk application.</p>
          * 
          * <strong>example:</strong>
          * <p>VkdWw91mdkrjVFr3ObNwefap21dfxxxx</p>
@@ -630,7 +615,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String encryptKey;
 
         /**
-         * <p>DingTalk application VerificationToken.</p>
+         * <p>The VerificationToken of the DingTalk application.</p>
          * 
          * <strong>example:</strong>
          * <p>myDingApp_VerifyTokenxxxxx</p>
@@ -695,7 +680,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestLarkConfig extends TeaModel {
         /**
-         * <p>Lark application AppId.</p>
+         * <p>The Lark application AppId.</p>
          * 
          * <strong>example:</strong>
          * <p>cli_xxxx</p>
@@ -704,7 +689,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String appId;
 
         /**
-         * <p>Lark application Secret.</p>
+         * <p>The Lark application Secret.</p>
          * 
          * <strong>example:</strong>
          * <p>KiiLzh5Dueh4wbLxxxx</p>
@@ -713,7 +698,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String appSecret;
 
         /**
-         * <p>EncryptKey of the Lark self-built application.</p>
+         * <p>The encryptKey of the Lark custom application.</p>
          * 
          * <strong>example:</strong>
          * <p>VkdWw91mdkrjVFr3ObNwefap21dfxxxx</p>
@@ -722,7 +707,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String encryptKey;
 
         /**
-         * <p>Lark enterprise code.</p>
+         * <p>The Lark enterprise number.</p>
          * 
          * <strong>example:</strong>
          * <p>FSX123111xxx</p>
@@ -731,7 +716,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String enterpriseNumber;
 
         /**
-         * <p>VerificationToken of the Lark self-built application.</p>
+         * <p>The verificationToken of the Lark custom application.</p>
          * 
          * <strong>example:</strong>
          * <p>feishuVerifyTokenxxxxx</p>
@@ -788,7 +773,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestLdapConfig extends TeaModel {
         /**
-         * <p>Administrator password.</p>
+         * <p>The administrator password.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -797,7 +782,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String administratorPassword;
 
         /**
-         * <p>Administrator account.</p>
+         * <p>The administrator account.</p>
          * 
          * <strong>example:</strong>
          * <p>DC=example,DC=com</p>
@@ -806,11 +791,11 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String administratorUsername;
 
         /**
-         * <p>Whether to verify certificate fingerprint. Valid values:</p>
+         * <p>Specifies whether to verify the certificate fingerprint. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
+         * <li><p>disabled: Disabled.</p>
          * </li>
-         * <li><p>Enabled: enabled</p>
+         * <li><p>enabled: Enabled.</p>
          * </li>
          * </ul>
          * 
@@ -821,13 +806,13 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String certificateFingerprintStatus;
 
         /**
-         * <p>Certificate fingerprint list.</p>
+         * <p>The list of certificate fingerprints.</p>
          */
         @NameInMap("CertificateFingerprints")
         public java.util.List<String> certificateFingerprints;
 
         /**
-         * <p>Group member attribute.</p>
+         * <p>The group member attribute name.</p>
          * 
          * <strong>example:</strong>
          * <p>member</p>
@@ -836,7 +821,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String groupMemberAttributeName;
 
         /**
-         * <p>Group ObjectClass.</p>
+         * <p>The group ObjectClass.</p>
          * 
          * <strong>example:</strong>
          * <p>group</p>
@@ -845,7 +830,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String groupObjectClass;
 
         /**
-         * <p>Group custom filter.</p>
+         * <p>The custom filter for groups.</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -854,7 +839,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String groupObjectClassCustomFilter;
 
         /**
-         * <p>Communication protocol.</p>
+         * <p>The communication protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>ldap</p>
@@ -863,7 +848,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String ldapProtocol;
 
         /**
-         * <p>AD/LDAP server address.</p>
+         * <p>The AD/LDAP server address.</p>
          * 
          * <strong>example:</strong>
          * <p>123.xx.xx.89</p>
@@ -872,7 +857,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String ldapServerHost;
 
         /**
-         * <p>AD/LDAP port number.</p>
+         * <p>The AD/LDAP port number.</p>
          * 
          * <strong>example:</strong>
          * <p>636</p>
@@ -881,7 +866,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public Integer ldapServerPort;
 
         /**
-         * <p>Organization ObjectClass.</p>
+         * <p>The organization ObjectClass.</p>
          * 
          * <strong>example:</strong>
          * <p>organizationUnit,top</p>
@@ -890,7 +875,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String organizationUnitObjectClass;
 
         /**
-         * <p>Organization RDN.</p>
+         * <p>The organization RDN.</p>
          * 
          * <strong>example:</strong>
          * <p>ou</p>
@@ -899,7 +884,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String organizationalUnitRdn;
 
         /**
-         * <p>Password synchronization switch.</p>
+         * <p>Specifies whether password synchronization is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -908,11 +893,11 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String passwordSyncStatus;
 
         /**
-         * <p>Whether startTLS is enabled. Valid values:</p>
+         * <p>Specifies whether StartTLS is enabled. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
+         * <li><p>disabled: Disabled.</p>
          * </li>
-         * <li><p>Enabled: enabled</p>
+         * <li><p>enabled: Enabled.</p>
          * </li>
          * </ul>
          * 
@@ -923,7 +908,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String startTlsStatus;
 
         /**
-         * <p>User login identifier.</p>
+         * <p>The user logon identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>userPrincipalName, mail</p>
@@ -932,7 +917,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String userLoginIdentifier;
 
         /**
-         * <p>User ObjectClass.</p>
+         * <p>The user ObjectClass.</p>
          * 
          * <strong>example:</strong>
          * <p>person,user</p>
@@ -941,7 +926,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String userObjectClass;
 
         /**
-         * <p>User custom filter.</p>
+         * <p>The custom filter for users.</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -950,7 +935,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String userObjectClassCustomFilter;
 
         /**
-         * <p>User RDN.</p>
+         * <p>The user RDN.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -1111,7 +1096,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestOidcConfigAuthnParam extends TeaModel {
         /**
-         * <p>OIDC authentication method. Valid values:</p>
+         * <p>The OIDC authentication method. Valid values:</p>
          * <ul>
          * <li><p>client_secret_basic</p>
          * </li>
@@ -1126,7 +1111,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String authnMethod;
 
         /**
-         * <p>OIDC client ID.</p>
+         * <p>The OIDC client ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -1135,7 +1120,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String clientId;
 
         /**
-         * <p>OIDC client secret.</p>
+         * <p>The OIDC client secret.</p>
          * 
          * <strong>example:</strong>
          * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -1176,7 +1161,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestOidcConfigEndpointConfig extends TeaModel {
         /**
-         * <p>OIDC authorization endpoint.</p>
+         * <p>The OIDC authorization endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/auth/authorize">https://example.com/auth/authorize</a></p>
@@ -1185,7 +1170,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String authorizationEndpoint;
 
         /**
-         * <p>OIDC issuer.</p>
+         * <p>The OIDC issuer information.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/auth">https://example.com/auth</a></p>
@@ -1194,7 +1179,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String issuer;
 
         /**
-         * <p>OIDC JWKS URI.</p>
+         * <p>The OIDC JWKS URI.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/auth/jwks">https://example.com/auth/jwks</a></p>
@@ -1203,7 +1188,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String jwksUri;
 
         /**
-         * <p>OIDC token endpoint.</p>
+         * <p>The OIDC token endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/auth/token">https://example.com/auth/token</a></p>
@@ -1212,7 +1197,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String tokenEndpoint;
 
         /**
-         * <p>OIDC UserInfo endpoint.</p>
+         * <p>The OIDC UserInfo endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/auth/userinfo">https://example.com/auth/userinfo</a></p>
@@ -1269,19 +1254,19 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestOidcConfig extends TeaModel {
         /**
-         * <p>OIDC client authentication configuration.</p>
+         * <p>The OIDC client authentication configuration.</p>
          */
         @NameInMap("AuthnParam")
         public CreateIdentityProviderRequestOidcConfigAuthnParam authnParam;
 
         /**
-         * <p>OIDC endpoint configuration.</p>
+         * <p>The OIDC endpoint configuration.</p>
          */
         @NameInMap("EndpointConfig")
         public CreateIdentityProviderRequestOidcConfigEndpointConfig endpointConfig;
 
         /**
-         * <p>OIDC grant scopes.</p>
+         * <p>The collection of OIDC grant scopes.</p>
          * 
          * <strong>example:</strong>
          * <p>openid</p>
@@ -1290,7 +1275,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public java.util.List<String> grantScopes;
 
         /**
-         * <p>OIDC grant type.</p>
+         * <p>The OIDC grant type.</p>
          * 
          * <strong>example:</strong>
          * <p>authorization_code</p>
@@ -1299,11 +1284,11 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String grantType;
 
         /**
-         * <p>PKCE algorithm. Valid values:</p>
+         * <p>The PKCE algorithm. Valid values:</p>
          * <ul>
          * <li><p>SHA256: S256</p>
          * </li>
-         * <li><p>Plain text: plain</p>
+         * <li><p>plaintext: plain</p>
          * </li>
          * </ul>
          * 
@@ -1314,7 +1299,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String pkceChallengeMethod;
 
         /**
-         * <p>Whether to use PKCE in Authorization Code grant mode.</p>
+         * <p>Specifies whether to use PKCE in AuthorizationCode grant mode.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1379,6 +1364,8 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestSamlConfigCertificates extends TeaModel {
         /**
+         * <p>The certificate content.</p>
+         * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX-----END CERTIFICATE-----</p>
          */
@@ -1402,16 +1389,23 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestSamlConfig extends TeaModel {
         /**
+         * <p>The binding type.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP-REDIRECT</p>
          */
         @NameInMap("BindingMethod")
         public String bindingMethod;
 
+        /**
+         * <p>The certificate list of the IdP.</p>
+         */
         @NameInMap("Certificates")
         public java.util.List<CreateIdentityProviderRequestSamlConfigCertificates> certificates;
 
         /**
+         * <p>The EntityId of the IdP.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></p>
          */
@@ -1419,6 +1413,8 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String idPEntityId;
 
         /**
+         * <p>The logon URL of the IdP.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>
          */
@@ -1426,6 +1422,8 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String idPSsoUrl;
 
         /**
+         * <p>The maximum clock skew.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -1433,15 +1431,23 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public Long maxClockSkew;
 
         /**
+         * <p>Specifies whether requests must be signed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("RequireRequestSigned")
         public Boolean requireRequestSigned;
 
+        /**
+         * <p>Specifies whether the external IdP must sign the Assertion.</p>
+         */
         @NameInMap("WantAssertionsSigned")
         public Boolean wantAssertionsSigned;
 
+        /**
+         * <p>Specifies whether the external IdP must sign the Response.</p>
+         */
         @NameInMap("WantResponseSigned")
         public Boolean wantResponseSigned;
 
@@ -1518,7 +1524,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig extends TeaModel {
         /**
-         * <p>Cron expression.</p>
+         * <p>The cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 45 1 * * ?</p>
@@ -1527,13 +1533,13 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String periodicSyncCron;
 
         /**
-         * <p>Set of execution time points.</p>
+         * <p>The collection of execution time points.</p>
          */
         @NameInMap("PeriodicSyncTimes")
         public java.util.List<Integer> periodicSyncTimes;
 
         /**
-         * <p>Type.</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>cron</p>
@@ -1574,13 +1580,13 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestUdPullConfigUdSyncScopeConfig extends TeaModel {
         /**
-         * <p>Source synchronization node list.</p>
+         * <p>The list of source nodes for synchronization.</p>
          */
         @NameInMap("SourceScopes")
         public java.util.List<String> sourceScopes;
 
         /**
-         * <p>Target synchronization node. Enter the IDaaS organization ID.</p>
+         * <p>The target node for synchronization. Set this parameter to an IDaaS organization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_lyhyy6p7yf7mdrdiq5xxxx</p>
@@ -1613,12 +1619,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestUdPullConfig extends TeaModel {
         /**
-         * <p>Whether group synchronization is supported. Default: disabled. Valid values:</p>
+         * <p>Specifies whether group synchronization is supported. Default value: disabled. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
-         * </li>
-         * <li><p>Enabled: enabled</p>
-         * </li>
+         * <li>disabled: Disabled.</li>
+         * <li>enabled: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1628,12 +1632,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String groupSyncStatus;
 
         /**
-         * <p>Incremental callback status. Specifies whether to process incremental callback data from the IdP. Valid values:</p>
+         * <p>The incremental callback status. Specifies whether to process incremental callback data from the IdP. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
-         * </li>
-         * <li><p>Enabled: enabled</p>
-         * </li>
+         * <li>disabled</li>
+         * <li>enabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1643,18 +1645,16 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String incrementalCallbackStatus;
 
         /**
-         * <p>Periodic verification configuration.</p>
+         * <p>The periodic verification configuration.</p>
          */
         @NameInMap("PeriodicSyncConfig")
         public CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig periodicSyncConfig;
 
         /**
-         * <p>Periodic verification status. Specifies whether to periodically verify data differences between EIAM and the identity provider. Valid values:</p>
+         * <p>Specifies whether to periodically verify data differences between EIAM and the identity provider. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
-         * </li>
-         * <li><p>Enabled: enabled</p>
-         * </li>
+         * <li>disabled: Disabled.</li>
+         * <li>enabled: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1664,7 +1664,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String periodicSyncStatus;
 
         /**
-         * <p>Synchronization scope configuration.</p>
+         * <p>The synchronization scope configuration.</p>
          */
         @NameInMap("UdSyncScopeConfig")
         public CreateIdentityProviderRequestUdPullConfigUdSyncScopeConfig udSyncScopeConfig;
@@ -1718,7 +1718,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig extends TeaModel {
         /**
-         * <p>Cron expression.</p>
+         * <p>The cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 45 1 * * ?</p>
@@ -1727,13 +1727,13 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String periodicSyncCron;
 
         /**
-         * <p>Set of execution time points.</p>
+         * <p>The collection of execution time points.</p>
          */
         @NameInMap("PeriodicSyncTimes")
         public java.util.List<Integer> periodicSyncTimes;
 
         /**
-         * <p>Type.</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>cron</p>
@@ -1774,13 +1774,13 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestUdPushConfigUdSyncScopeConfigs extends TeaModel {
         /**
-         * <p>Source synchronization node list.</p>
+         * <p>The list of source nodes for synchronization.</p>
          */
         @NameInMap("SourceScopes")
         public java.util.List<String> sourceScopes;
 
         /**
-         * <p>Target synchronization node.</p>
+         * <p>The target node for synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_lyhyy6p7yf7mdrdiq5xxxx</p>
@@ -1813,7 +1813,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestUdPushConfig extends TeaModel {
         /**
-         * <p>Incremental callback status. This field is not yet enabled. Please ignore it.</p>
+         * <p>The incremental callback status. This field is not yet enabled. Ignore this field.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -1822,13 +1822,13 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String incrementalCallbackStatus;
 
         /**
-         * <p>Periodic verification configuration.</p>
+         * <p>The periodic verification configuration.</p>
          */
         @NameInMap("PeriodicSyncConfig")
         public CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig periodicSyncConfig;
 
         /**
-         * <p>Periodic verification status. This field is not yet enabled. Please ignore it.</p>
+         * <p>The periodic verification status. This field is not yet enabled. Ignore this field.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -1837,7 +1837,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String periodicSyncStatus;
 
         /**
-         * <p>Outbound synchronization configuration.</p>
+         * <p>The outbound synchronization configuration.</p>
          */
         @NameInMap("UdSyncScopeConfigs")
         public java.util.List<CreateIdentityProviderRequestUdPushConfigUdSyncScopeConfigs> udSyncScopeConfigs;
@@ -1883,7 +1883,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestWeComConfig extends TeaModel {
         /**
-         * <p>AgentId of the WeCom self-built application.</p>
+         * <p>The agentId of the WeCom self-built application.</p>
          * 
          * <strong>example:</strong>
          * <p>278231941749863339</p>
@@ -1892,7 +1892,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String agentId;
 
         /**
-         * <p>Authorization callback domain.</p>
+         * <p>The authorization callback domain.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.aliyunidaas.com/xxxx">https://xxx.aliyunidaas.com/xxxx</a></p>
@@ -1901,7 +1901,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String authorizeCallbackDomain;
 
         /**
-         * <p>CorpId of the WeCom self-built application.</p>
+         * <p>The corpId of the WeCom self-built application.</p>
          * 
          * <strong>example:</strong>
          * <p>3756043633237690761</p>
@@ -1910,7 +1910,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String corpId;
 
         /**
-         * <p>CorpSecret of the WeCom self-built application.</p>
+         * <p>The corpSecret of the WeCom self-built application.</p>
          * 
          * <strong>example:</strong>
          * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -1919,7 +1919,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String corpSecret;
 
         /**
-         * <p>Trusted domain.</p>
+         * <p>The trusted domain.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.aliyunidaas.com/">https://xxx.aliyunidaas.com/</a></p>

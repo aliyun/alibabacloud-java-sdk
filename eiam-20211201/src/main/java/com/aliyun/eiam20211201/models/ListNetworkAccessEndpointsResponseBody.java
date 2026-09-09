@@ -75,21 +75,48 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint extends TeaModel {
+        /**
+         * <p>The list of private egress IP addresses of the backup network access endpoint.</p>
+         */
         @NameInMap("BackupEgressPrivateIpAddresses")
         public java.util.List<String> backupEgressPrivateIpAddresses;
 
+        /**
+         * <p>The list of public egress IP addresses of the backup network access endpoint.</p>
+         */
         @NameInMap("BackupEgressPublicIpAddresses")
         public java.util.List<String> backupEgressPublicIpAddresses;
 
+        /**
+         * <p>The security group ID of the backup network access endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-examplexxx</p>
+         */
         @NameInMap("BackupSecurityGroupId")
         public String backupSecurityGroupId;
 
+        /**
+         * <p>The list of vSwitches for the backup network access endpoint.</p>
+         */
         @NameInMap("BackupVSwitchIds")
         public java.util.List<String> backupVSwitchIds;
 
+        /**
+         * <p>The VPC ID of the backup network access endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-examplexxx</p>
+         */
         @NameInMap("BackupVpcId")
         public String backupVpcId;
 
+        /**
+         * <p>The region of the backup network access endpoint VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("BackupVpcRegionId")
         public String backupVpcRegionId;
 
@@ -149,6 +176,9 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints extends TeaModel {
+        /**
+         * <p>The backup network access endpoint VPC configuration.</p>
+         */
         @NameInMap("BackupVpcEndpoint")
         public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint backupVpcEndpoint;
 
@@ -180,7 +210,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String networkAccessEndpointId;
 
         /**
-         * <p>The network access endpoint name.</p>
+         * <p>The network access endpoint name. For example, the VPC access endpoint for a specific business.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC access endpoint for xx service</p>
@@ -191,8 +221,8 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         /**
          * <p>The type of the network access endpoint. Valid values:</p>
          * <ul>
-         * <li>shared: Shared network access endpoint.</li>
-         * <li>private: Dedicated network access endpoint.</li>
+         * <li>shared: shared network access endpoint.</li>
+         * <li>private: dedicated network access endpoint.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,10 +243,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         /**
          * <p>The status of the network access endpoint. Valid values:</p>
          * <ul>
-         * <li>pending: Pending initialization.</li>
-         * <li>creating: Being created.</li>
-         * <li>running: Running.</li>
-         * <li>deleting: Being deleted.</li>
+         * <li>pending: pending initialization.</li>
+         * <li>creating: being created.</li>
+         * <li>running: running.</li>
+         * <li>deleting: being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

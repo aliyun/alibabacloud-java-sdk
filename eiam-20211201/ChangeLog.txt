@@ -1,3 +1,17 @@
+2026-09-09 Version: 2.19.1
+- Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.ProtocolEndpointDomain.SamlSloEndpoint.
+- Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.SamlSsoConfig.RequireAuthnRequestSigned.
+- Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.SamlSsoConfig.SpSigningCertificates.
+- Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.SamlSsoConfig.SpSloResponseUrl.
+- Update API GetBrand: add response parameters Body.Brand.SmsGatewayId.
+- Update API GetBrand: add response parameters Body.Brand.SystemNotificationStatus.
+- Update API ListBrands: add response parameters Body.Brands.$.SmsGatewayId.
+- Update API ListBrands: add response parameters Body.Brands.$.SystemNotificationStatus.
+- Update API SetApplicationSsoConfig: add request parameters SamlSsoConfig.RequireAuthnRequestSigned.
+- Update API SetApplicationSsoConfig: add request parameters SamlSsoConfig.SpSigningCertificates.
+- Update API SetApplicationSsoConfig: add request parameters SamlSsoConfig.SpSloResponseUrl.
+
+
 2026-08-26 Version: 2.19.0
 - Support API CreateTrustedOrigin.
 - Support API DeleteTrustedOrigin.

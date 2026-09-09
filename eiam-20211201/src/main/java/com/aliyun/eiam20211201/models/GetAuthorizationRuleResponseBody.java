@@ -86,7 +86,14 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         public String authorizationRuleName;
 
         /**
-         * <p>The scenario label of the authorization rule.</p>
+         * <p>The scenario label of the authorization rule. Valid values:</p>
+         * <ul>
+         * <li>privileged_cloud_account: Privileged cloud account scenario.</li>
+         * <li>asset: Asset scenario.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asset</p>
          */
         @NameInMap("AuthorizationRuleScenarioLabel")
         public String authorizationRuleScenarioLabel;
@@ -127,7 +134,7 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         public String authorizationRuleSubjectType;
 
         /**
-         * <p>The creation time, in UNIX timestamp format, measured in milliseconds.</p>
+         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -176,7 +183,7 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last update time, in UNIX timestamp format, measured in milliseconds.</p>
+         * <p>The last update time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>

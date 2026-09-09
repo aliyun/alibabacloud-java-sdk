@@ -146,6 +146,15 @@ public class ListBrandsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The SMS gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smsgw_01l9f0kunrrjhxxx</p>
+         */
+        @NameInMap("SmsGatewayId")
+        public String smsGatewayId;
+
+        /**
          * <p>The brand status.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +162,15 @@ public class ListBrandsResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>The enabling status of system notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        @NameInMap("SystemNotificationStatus")
+        public String systemNotificationStatus;
 
         public static ListBrandsResponseBodyBrands build(java.util.Map<String, ?> map) throws Exception {
             ListBrandsResponseBodyBrands self = new ListBrandsResponseBodyBrands();
@@ -191,12 +209,28 @@ public class ListBrandsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public ListBrandsResponseBodyBrands setSmsGatewayId(String smsGatewayId) {
+            this.smsGatewayId = smsGatewayId;
+            return this;
+        }
+        public String getSmsGatewayId() {
+            return this.smsGatewayId;
+        }
+
         public ListBrandsResponseBodyBrands setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListBrandsResponseBodyBrands setSystemNotificationStatus(String systemNotificationStatus) {
+            this.systemNotificationStatus = systemNotificationStatus;
+            return this;
+        }
+        public String getSystemNotificationStatus() {
+            return this.systemNotificationStatus;
         }
 
     }

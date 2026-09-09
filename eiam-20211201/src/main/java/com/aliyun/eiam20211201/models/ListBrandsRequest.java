@@ -33,7 +33,7 @@ public class ListBrandsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The pagination token for the previous page.</p>
+     * <p>The token used to query the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

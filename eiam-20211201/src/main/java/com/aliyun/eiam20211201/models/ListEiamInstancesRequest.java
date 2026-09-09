@@ -11,7 +11,7 @@ public class ListEiamInstancesRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The region to which the instances belong.</p>
+     * <p>The region to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
