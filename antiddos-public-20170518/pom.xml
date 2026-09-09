@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>antiddos_public20170518</artifactId>
-  <version>1.0.11</version>
+  <version>1.0.12</version>
   <packaging>jar</packaging>
   <name>antiddos_public20170518</name>
   <description>Alibaba Cloud antiddos-public (20170518) SDK for Java

@@ -72,16 +72,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhengzhou-nebula-1", "antiddos.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "antiddos.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "antiddos.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "antiddos-openapi.us-southeast-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "antiddos-openapi.na-south-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "antiddos-openapi.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "antiddos-openapi.eu-west-2.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "antiddos-openapi.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "antiddos-openapi.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "antiddos-openapi.cn-hangzhou-cloudstone.aliyuncs.com"),
             new TeaPair("cn-fuzhou", "antiddos-openapi.cn-hangzhou-cloudstone.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "antiddos-openapi.cn-hangzhou-cloudstone.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "antiddos-openapi.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "antiddos-openapi.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "antiddos-openapi.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-8", "antiddos-openapi.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "antiddos-openapi.ap-southeast-7.aliyuncs.com")
+            new TeaPair("us-southeast-1", "antiddos-openapi.us-southeast-1.aliyuncs.com"),
+            new TeaPair("sa-east-1", "antiddos-openapi.sa-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "antiddos-openapi.eu-west-2.aliyuncs.com"),
+            new TeaPair("na-south-1", "antiddos-openapi.na-south-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "antiddos-openapi.me-central-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("antiddos-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
