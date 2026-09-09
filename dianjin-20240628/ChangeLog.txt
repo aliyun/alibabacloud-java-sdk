@@ -1,3 +1,7 @@
+2026-09-09 Version: 1.22.0
+- Support API QueryAmount.
+
+
 2026-07-14 Version: 1.21.2
 - Update API CommercializeFetch: add request parameters body.encryptType.
 - Update API CommercializeFetch: add request parameters body.signType.
