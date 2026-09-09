@@ -4,10 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListApiKeysResponseBody extends TeaModel {
+    /**
+     * <p>The list of API keys.</p>
+     */
     @NameInMap("apiKeys")
     public java.util.List<ListApiKeysResponseBodyApiKeys> apiKeys;
 
     /**
+     * <p>The number of API keys on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,8 @@ public class ListApiKeysResponseBody extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The total number of API keys.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -51,10 +58,15 @@ public class ListApiKeysResponseBody extends TeaModel {
     }
 
     public static class ListApiKeysResponseBodyApiKeys extends TeaModel {
+        /**
+         * <p>The list of Logstores that the API key is allowed to write to.</p>
+         */
         @NameInMap("allowedStores")
         public java.util.List<String> allowedStores;
 
         /**
+         * <p>The plaintext of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <apiKey-plaintext>
          */
@@ -62,6 +74,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The name of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo-apikey-001</p>
          */
@@ -69,6 +83,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String apiKeyName;
 
         /**
+         * <p>The time when the API key was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788420000</p>
          */
@@ -76,6 +92,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer createTime;
 
         /**
+         * <p>The description of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -83,6 +101,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The status of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -90,6 +110,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the API key was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788420000</p>
          */

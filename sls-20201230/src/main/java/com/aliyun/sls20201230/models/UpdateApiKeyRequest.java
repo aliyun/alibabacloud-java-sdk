@@ -4,10 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateApiKeyRequest extends TeaModel {
+    /**
+     * <p>The list of Logstores to which data can be written.</p>
+     */
     @NameInMap("allowedStores")
     public java.util.List<String> allowedStores;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

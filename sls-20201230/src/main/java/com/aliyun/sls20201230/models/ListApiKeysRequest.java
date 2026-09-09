@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApiKeysRequest extends TeaModel {
     /**
+     * <p>The Logstore that the API key is allowed to write to.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class ListApiKeysRequest extends TeaModel {
     public String allowedStore;
 
     /**
+     * <p>The number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListApiKeysRequest extends TeaModel {
     public Integer offset;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

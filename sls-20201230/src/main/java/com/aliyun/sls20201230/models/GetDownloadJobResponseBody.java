@@ -151,7 +151,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The file prefix used when downloading logs to the user\&quot;s bucket.</p>
+         * <p>The file prefix used when downloading logs to the user\&quot;s OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>download/</p>
@@ -261,7 +261,7 @@ public class GetDownloadJobResponseBody extends TeaModel {
         public String logstore;
 
         /**
-         * <p>Specifies whether to enable PowerSQL.</p>
+         * <p>Indicates whether PowerSQL is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

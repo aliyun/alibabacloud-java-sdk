@@ -13,6 +13,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._spi = gatewayClient;
         this._endpointRule = "central";
         this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-southeast-8", "ap-southeast-8.log.aliyuncs.com"),
             new TeaPair("cn-qingdao", "cn-qingdao.log.aliyuncs.com"),
             new TeaPair("cn-beijing", "cn-beijing.log.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "cn-zhangjiakou.log.aliyuncs.com"),
@@ -39,6 +40,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1", "eu-west-1.log.aliyuncs.com"),
             new TeaPair("eu-central-1", "eu-central-1.log.aliyuncs.com"),
             new TeaPair("us-southeast-1", "us-southeast-1.log.aliyuncs.com"),
+            new TeaPair("sa-east-1", "sa-east-1.log.aliyuncs.com"),
             new TeaPair("me-east-1", "me-east-1.log.aliyuncs.com"),
             new TeaPair("me-central-1", "me-central-1.log.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "cn-hangzhou-finance.log.aliyuncs.com"),
@@ -641,16 +643,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>每个 Project 最多可以创建 10 个 ApiKey。</li>
-     * <li><code>apiKeyName</code> 在 Project 内必须唯一，且创建后不可修改。</li>
-     * <li><code>allowedStores</code> 字段不能为空，并支持通配符匹配。</li>
-     * <li>创建时系统会自动生成 ApiKey 明文，用户不能自定义。</li>
+     * <li>Each Project can have a maximum of 10 ApiKeys.</li>
+     * <li>The <code>apiKeyName</code> must be unique within the Project and cannot be modified after creation.</li>
+     * <li>The <code>allowedStores</code> field cannot be empty and supports wildcard matching.</li>
+     * <li>The system automatically generates the ApiKey plaintext during creation. You cannot customize it.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>在指定Project下创建一个新的ApiKey资源。</p>
+     * <p>Creates an ApiKey resource in a specified Project.</p>
      * 
      * @param request CreateApiKeyRequest
      * @param headers map
@@ -695,16 +697,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>每个 Project 最多可以创建 10 个 ApiKey。</li>
-     * <li><code>apiKeyName</code> 在 Project 内必须唯一，且创建后不可修改。</li>
-     * <li><code>allowedStores</code> 字段不能为空，并支持通配符匹配。</li>
-     * <li>创建时系统会自动生成 ApiKey 明文，用户不能自定义。</li>
+     * <li>Each Project can have a maximum of 10 ApiKeys.</li>
+     * <li>The <code>apiKeyName</code> must be unique within the Project and cannot be modified after creation.</li>
+     * <li>The <code>allowedStores</code> field cannot be empty and supports wildcard matching.</li>
+     * <li>The system automatically generates the ApiKey plaintext during creation. You cannot customize it.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>在指定Project下创建一个新的ApiKey资源。</p>
+     * <p>Creates an ApiKey resource in a specified Project.</p>
      * 
      * @param request CreateApiKeyRequest
      * @return CreateApiKeyResponse
@@ -1077,7 +1079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a log download task in the specified project.</p>
+     * <p>Creates a log download task in a specified project.</p>
      * 
      * @param request CreateDownloadJobRequest
      * @param headers map
@@ -1126,7 +1128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a log download task in the specified project.</p>
+     * <p>Creates a log download task in a specified project.</p>
      * 
      * @param request CreateDownloadJobRequest
      * @return CreateDownloadJobResponse
@@ -2996,15 +2998,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该API用于从Project中删除指定名称的ApiKey。</li>
-     * <li>删除后，ApiKey立即失效且无法再用于写入数据。</li>
-     * <li>建议接口幂等：即使ApiKey不存在时也返回<code>204 No Content</code>。</li>
+     * <li>This API operation deletes an ApiKey with the specified name from a project.</li>
+     * <li>After deletion, the ApiKey becomes invalid immediately and can no longer be used to write data.</li>
+     * <li>This operation is idempotent. A <code>204 No Content</code> response is returned even if the ApiKey does not exist.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除指定的ApiKey资源</p>
+     * <p>Deletes a specified ApiKey resource.</p>
      * 
      * @param request DeleteApiKeyRequest
      * @param headers map
@@ -3035,15 +3037,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该API用于从Project中删除指定名称的ApiKey。</li>
-     * <li>删除后，ApiKey立即失效且无法再用于写入数据。</li>
-     * <li>建议接口幂等：即使ApiKey不存在时也返回<code>204 No Content</code>。</li>
+     * <li>This API operation deletes an ApiKey with the specified name from a project.</li>
+     * <li>After deletion, the ApiKey becomes invalid immediately and can no longer be used to write data.</li>
+     * <li>This operation is idempotent. A <code>204 No Content</code> response is returned even if the ApiKey does not exist.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除指定的ApiKey资源</p>
+     * <p>Deletes a specified ApiKey resource.</p>
      * 
      * @param request DeleteApiKeyRequest
      * @return DeleteApiKeyResponse
@@ -3447,7 +3449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a log download task.</p>
+     * <p>Deletes a download task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3476,7 +3478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a log download task.</p>
+     * <p>Deletes a download task.</p>
      * @return DeleteDownloadJobResponse
      */
     public DeleteDownloadJobResponse deleteDownloadJob(String project, String downloadJobName) throws Exception {
@@ -4687,7 +4689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用于禁用指定的ApiKey，使其不能继续用于写入数据。</p>
+     * <p>Disables a specified API key so that it can no longer be used to write data.</p>
      * 
      * @param request DisableApiKeyRequest
      * @param headers map
@@ -4718,7 +4720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用于禁用指定的ApiKey，使其不能继续用于写入数据。</p>
+     * <p>Disables a specified API key so that it can no longer be used to write data.</p>
      * 
      * @param request DisableApiKeyRequest
      * @return DisableApiKeyResponse
@@ -4811,14 +4813,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该API用于将指定的ApiKey从禁用状态恢复为启用状态。</li>
-     * <li>启用后，ApiKey可以继续用于写入数据。</li>
+     * <li>This operation starts a specified API key by changing its status from disabled to enabled.</li>
+     * <li>After the API key is started, it can continue to be used for writing data.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于启用指定的ApiKey，使其可以继续用于写入数据。</p>
+     * <p>Starts a specified API key so that it can continue to be used for writing data.</p>
      * 
      * @param request EnableApiKeyRequest
      * @param headers map
@@ -4849,14 +4851,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该API用于将指定的ApiKey从禁用状态恢复为启用状态。</li>
-     * <li>启用后，ApiKey可以继续用于写入数据。</li>
+     * <li>This operation starts a specified API key by changing its status from disabled to enabled.</li>
+     * <li>After the API key is started, it can continue to be used for writing data.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于启用指定的ApiKey，使其可以继续用于写入数据。</p>
+     * <p>Starts a specified API key so that it can continue to be used for writing data.</p>
      * 
      * @param request EnableApiKeyRequest
      * @return EnableApiKeyResponse
@@ -5131,15 +5133,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该API用于通过<code>apiKeyName</code>获取指定ApiKey的详细信息。</li>
-     * <li>返回的信息包括ApiKey的名称、密钥、状态、描述、允许写入的存储列表、创建时间和更新时间。</li>
-     * <li><code>log:GetApiKey</code>被视为敏感权限，调用时需谨慎。</li>
+     * <li>This operation retrieves the details of a specified API key by <code>apiKeyName</code>.</li>
+     * <li>The response includes the name, key, status, description, list of stores that allow writes, creation time, and update time of the API key.</li>
+     * <li><code>log:GetApiKey</code> is considered a sensitive permission. Exercise caution when calling this operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>根据ApiKey名称获取指定ApiKey的详细信息。</p>
+     * <p>Retrieves the details of a specified API key by API key name.</p>
      * 
      * @param request GetApiKeyRequest
      * @param headers map
@@ -5170,15 +5172,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该API用于通过<code>apiKeyName</code>获取指定ApiKey的详细信息。</li>
-     * <li>返回的信息包括ApiKey的名称、密钥、状态、描述、允许写入的存储列表、创建时间和更新时间。</li>
-     * <li><code>log:GetApiKey</code>被视为敏感权限，调用时需谨慎。</li>
+     * <li>This operation retrieves the details of a specified API key by <code>apiKeyName</code>.</li>
+     * <li>The response includes the name, key, status, description, list of stores that allow writes, creation time, and update time of the API key.</li>
+     * <li><code>log:GetApiKey</code> is considered a sensitive permission. Exercise caution when calling this operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>根据ApiKey名称获取指定ApiKey的详细信息。</p>
+     * <p>Retrieves the details of a specified API key by API key name.</p>
      * 
      * @param request GetApiKeyRequest
      * @return GetApiKeyResponse
@@ -7140,8 +7142,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取MC投递任务信息</p>
+     * <p>Queries a MaxCompute data shipping job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7169,8 +7179,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取MC投递任务信息</p>
+     * <p>Queries a MaxCompute data shipping job.</p>
      * @return GetMaxComputeExportResponse
      */
     public GetMaxComputeExportResponse getMaxComputeExport(String project, String mcExportName) throws Exception {
@@ -8364,15 +8382,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>通过<code>allowedStore</code>参数可以过滤返回的ApiKey，只返回允许写入指定LogStore或MetricStore的ApiKey。</li>
-     * <li>如果不提供<code>allowedStore</code>参数，则返回项目下的所有ApiKey。</li>
-     * <li><code>log:ListApiKeys</code>权限被视为敏感权限，应谨慎授予。</li>
+     * <li>Use the <code>allowedStore</code> parameter to filter the returned API keys. Only API keys that are allowed to write to the specified Logstore or Metricstore are returned.</li>
+     * <li>If you do not specify the <code>allowedStore</code> parameter, all API keys in the project are returned.</li>
+     * <li>The <code>log:ListApiKeys</code> permission is considered a sensitive permission and should be granted with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询指定项目下所有ApiKey及其详细信息。</p>
+     * <p>Queries all API keys and their details in a specified project.</p>
      * 
      * @param request ListApiKeysRequest
      * @param headers map
@@ -8417,15 +8435,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>通过<code>allowedStore</code>参数可以过滤返回的ApiKey，只返回允许写入指定LogStore或MetricStore的ApiKey。</li>
-     * <li>如果不提供<code>allowedStore</code>参数，则返回项目下的所有ApiKey。</li>
-     * <li><code>log:ListApiKeys</code>权限被视为敏感权限，应谨慎授予。</li>
+     * <li>Use the <code>allowedStore</code> parameter to filter the returned API keys. Only API keys that are allowed to write to the specified Logstore or Metricstore are returned.</li>
+     * <li>If you do not specify the <code>allowedStore</code> parameter, all API keys in the project are returned.</li>
+     * <li>The <code>log:ListApiKeys</code> permission is considered a sensitive permission and should be granted with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询指定项目下所有ApiKey及其详细信息。</p>
+     * <p>Queries all API keys and their details in a specified project.</p>
      * 
      * @param request ListApiKeysRequest
      * @return ListApiKeysResponse
@@ -13033,17 +13051,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li><code>apiKeyName</code> 不允许修改。</li>
-     * <li><code>allowedStores</code> 不能为空。</li>
-     * <li>更新后立即生效。</li>
-     * <li>即使ApiKey处于Disabled状态，也可以更新其资源列表。</li>
-     * <li>该API不用于轮换ApiKey明文。</li>
+     * <li>The apiKeyName parameter cannot be modified.</li>
+     * <li>The allowedStores parameter cannot be empty.</li>
+     * <li>The update takes effect immediately.</li>
+     * <li>You can update the resources of an API key even if the API key is in the Disabled state.</li>
+     * <li>This operation is not used to rotate the API key plaintext.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新指定ApiKey的资源白名单和描述信息。</p>
+     * <p>Updates the resource whitelist and description of a specified API key.</p>
      * 
      * @param request UpdateApiKeyRequest
      * @param headers map
@@ -13084,17 +13102,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li><code>apiKeyName</code> 不允许修改。</li>
-     * <li><code>allowedStores</code> 不能为空。</li>
-     * <li>更新后立即生效。</li>
-     * <li>即使ApiKey处于Disabled状态，也可以更新其资源列表。</li>
-     * <li>该API不用于轮换ApiKey明文。</li>
+     * <li>The apiKeyName parameter cannot be modified.</li>
+     * <li>The allowedStores parameter cannot be empty.</li>
+     * <li>The update takes effect immediately.</li>
+     * <li>You can update the resources of an API key even if the API key is in the Disabled state.</li>
+     * <li>This operation is not used to rotate the API key plaintext.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新指定ApiKey的资源白名单和描述信息。</p>
+     * <p>Updates the resource whitelist and description of a specified API key.</p>
      * 
      * @param request UpdateApiKeyRequest
      * @return UpdateApiKeyResponse

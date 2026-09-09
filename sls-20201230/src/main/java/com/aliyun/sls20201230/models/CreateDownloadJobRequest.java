@@ -31,7 +31,7 @@ public class CreateDownloadJobRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The job name. The naming rules are as follows:</p>
+     * <p>The job name. The following naming rules apply:</p>
      * <p>Job names must be unique within the same project.</p>
      * <ul>
      * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
@@ -114,7 +114,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The path prefix for downloading data to the user\&quot;s OSS bucket.</p>
+         * <p>The path prefix in the OSS bucket to which data is downloaded.</p>
          * 
          * <strong>example:</strong>
          * <p>download/</p>
@@ -123,7 +123,7 @@ public class CreateDownloadJobRequest extends TeaModel {
         public String prefix;
 
         /**
-         * <p>The ARN of the RAM role used for the download.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role used for the download.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::0123456789:role/aliyunlogdefaultrole</p>
@@ -198,7 +198,7 @@ public class CreateDownloadJobRequest extends TeaModel {
 
     public static class CreateDownloadJobRequestConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to allow downloading imprecise results. Valid values: true, false.</p>
+         * <p>Specifies whether to allow downloading inexact results. Valid values: true, false.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
