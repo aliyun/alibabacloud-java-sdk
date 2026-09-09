@@ -7,8 +7,8 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization was successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li><code>code == Success</code>: The authorization is successful.</li>
+     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error information.</li>
+     * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -387,10 +387,10 @@ public class GetDiagnosisResultResponseBody extends TeaModel {
          * <p>The execution status of the diagnostic task.
          * Valid values:</p>
          * <ul>
-         * <li><strong>Ready</strong>: ready</li>
-         * <li><strong>Running</strong>: running</li>
-         * <li><strong>Success</strong>: succeeded</li>
-         * <li><strong>Fail</strong>: failed.</li>
+         * <li><strong>Ready</strong>: Ready.</li>
+         * <li><strong>Running</strong>: Running.</li>
+         * <li><strong>Success</strong>: Succeeded.</li>
+         * <li><strong>Fail</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

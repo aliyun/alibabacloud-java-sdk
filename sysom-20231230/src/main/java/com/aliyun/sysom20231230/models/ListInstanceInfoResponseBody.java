@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInstanceInfoResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListInstanceInfoResponseBodyData> data;
 
     /**
+     * <p>The maximum number of entries returned per request.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,12 @@ public class ListInstanceInfoResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The error message.</p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +42,8 @@ public class ListInstanceInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token for the next request.</p>
+     * 
      * <strong>example:</strong>
      * <p>U+w1wv2R4ZWR5oZLXD0+Dp4dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -99,6 +114,8 @@ public class ListInstanceInfoResponseBody extends TeaModel {
 
     public static class ListInstanceInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The information key.</p>
+         * 
          * <strong>example:</strong>
          * <p>sysom</p>
          */
@@ -106,6 +123,8 @@ public class ListInstanceInfoResponseBody extends TeaModel {
         public String infoKey;
 
         /**
+         * <p>The information type.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance_tag</p>
          */
@@ -113,6 +132,8 @@ public class ListInstanceInfoResponseBody extends TeaModel {
         public String infoType;
 
         /**
+         * <p>The information value.</p>
+         * 
          * <strong>example:</strong>
          * <p>diagnosis</p>
          */

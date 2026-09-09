@@ -8,6 +8,8 @@ public class ListInstanceInfoRequest extends TeaModel {
     public String xDebugId;
 
     /**
+     * <p>The information type.</p>
+     * 
      * <strong>example:</strong>
      * <p>instance_tag</p>
      */
@@ -15,6 +17,8 @@ public class ListInstanceInfoRequest extends TeaModel {
     public String infoType;
 
     /**
+     * <p>The instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs</p>
      */
@@ -22,6 +26,8 @@ public class ListInstanceInfoRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The managed type.</p>
+     * 
      * <strong>example:</strong>
      * <p>managed</p>
      */
@@ -29,6 +35,8 @@ public class ListInstanceInfoRequest extends TeaModel {
     public String managedType;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +44,8 @@ public class ListInstanceInfoRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>xiF/wDgaeitjjhVJYYzLwJ4dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -43,6 +53,8 @@ public class ListInstanceInfoRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The plugin ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>01fc4a0b-f199-4885-9861-b4054a310fe7</p>
      */
@@ -50,6 +62,8 @@ public class ListInstanceInfoRequest extends TeaModel {
     public String pluginId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

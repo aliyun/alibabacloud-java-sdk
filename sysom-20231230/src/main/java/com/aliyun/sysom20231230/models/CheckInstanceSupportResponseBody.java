@@ -18,7 +18,7 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public java.util.List<CheckInstanceSupportResponseBodyData> data;
@@ -89,7 +89,7 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
         public String instance;
 
         /**
-         * <p>The reason why the instance cannot be managed. This field is not empty when success is false.</p>
+         * <p>The reason why the instance cannot be managed. This value is not empty when success is false.</p>
          * 
          * <strong>example:</strong>
          * <p>instance not found in ecs</p>

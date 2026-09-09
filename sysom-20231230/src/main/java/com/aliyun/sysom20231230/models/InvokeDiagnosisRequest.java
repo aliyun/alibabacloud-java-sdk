@@ -4,11 +4,8 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class InvokeDiagnosisRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
-     * <p>The diagnosis channel (currently fixed to the ECS channel).</p>
+     * <p>The diagnostic channel. Currently fixed to the ECS channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +15,7 @@ public class InvokeDiagnosisRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>The diagnosis parameters. Different diagnosis types require different parameters. Refer to the supplementary request parameter descriptions below for the parameters required by each diagnosis type.</p>
+     * <p>The diagnostic parameters. Different diagnostic types require different parameters. For the parameters required by each diagnostic type, see the supplementary description of request parameters below.</p>
      * <blockquote>
      * <p>Notice: Pass a JSON-formatted string.</p>
      * </blockquote>
@@ -35,7 +32,7 @@ public class InvokeDiagnosisRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The diagnosis type. This parameter distinguishes between different types of diagnostics.</p>
+     * <p>The diagnostic type. Specifies the type of diagnostic to perform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,20 +41,9 @@ public class InvokeDiagnosisRequest extends TeaModel {
     @NameInMap("service_name")
     public String serviceName;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static InvokeDiagnosisRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeDiagnosisRequest self = new InvokeDiagnosisRequest();
         return TeaModel.build(map, self);
-    }
-
-    public InvokeDiagnosisRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public InvokeDiagnosisRequest setChannel(String channel) {
@@ -82,14 +68,6 @@ public class InvokeDiagnosisRequest extends TeaModel {
     }
     public String getServiceName() {
         return this.serviceName;
-    }
-
-    public InvokeDiagnosisRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

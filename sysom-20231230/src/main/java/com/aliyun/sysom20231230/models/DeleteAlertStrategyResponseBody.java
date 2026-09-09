@@ -7,8 +7,8 @@ public class DeleteAlertStrategyResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed error message.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DeleteAlertStrategyResponseBody extends TeaModel {
      *     &quot;name&quot;: &quot;test&quot;,
      *     &quot;strategy&quot;: {
      *       &quot;items&quot;: [
-     *         &quot;节点CPU使用率检测&quot;
+     *         &quot;Node CPU usage detection&quot;
      *       ],
      *       &quot;clusters&quot;: [
      *         &quot;1&quot;
@@ -45,7 +45,7 @@ public class DeleteAlertStrategyResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error information.</li>
+     * <li>Otherwise, this field contains the error information of the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
      * <p>The status code.</p>
      * <ul>
      * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate the authorization is failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error information.</li>
+     * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
 
     public static class InvokeDiagnosisResponseBodyData extends TeaModel {
         /**
-         * <p>The diagnostic task ID. You can use this ID to call the <code>GetDiagnosisResult</code> operation to query the diagnosis result.</p>
+         * <p>The diagnostic task ID. You can use this ID to call the <code>GetDiagnosisResult</code> operation to query the diagnostic result.</p>
          * 
          * <strong>example:</strong>
          * <p>ihqhAcrt</p>

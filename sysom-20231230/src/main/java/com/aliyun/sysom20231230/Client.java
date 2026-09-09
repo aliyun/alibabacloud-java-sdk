@@ -9,9 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-hangzhou", "sysom.cn-hangzhou.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("sysom", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -118,7 +115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * <p>The instance list returned by this operation contains only instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * <b>summary</b> : 
      * <p>Checks whether a target instance is supported by SysOM.</p>
@@ -169,7 +166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * <p>The instance list returned by this operation contains only instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * <b>summary</b> : 
      * <p>Checks whether a target instance is supported by SysOM.</p>
@@ -805,12 +802,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Parameters need to be filled in according to the standard LLM service input parameters, converted to a string, and assigned to llmParamString</li>
-     * <li>The returned data needs to be converted from string to dict before use. Refer to the standard LLM service response format</li>
+     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Get the response result of the copilot service</p>
+     * <p>Retrieves the response from the Copilot service.</p>
      * 
      * @param request GenerateCopilotResponseRequest
      * @param headers map
@@ -855,12 +852,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Parameters need to be filled in according to the standard LLM service input parameters, converted to a string, and assigned to llmParamString</li>
-     * <li>The returned data needs to be converted from string to dict before use. Refer to the standard LLM service response format</li>
+     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Get the response result of the copilot service</p>
+     * <p>Retrieves the response from the Copilot service.</p>
      * 
      * @param request GenerateCopilotResponseRequest
      * @return GenerateCopilotResponseResponse
@@ -880,7 +877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the streaming SSE interface of the OS Copilot service.</p>
+     * <p>Provides a streaming SSE interface for the OS Copilot service.</p>
      * 
      * @param request GenerateCopilotStreamResponseRequest
      * @param headers map
@@ -931,7 +928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the streaming SSE interface of the OS Copilot service.</p>
+     * <p>Provides a streaming SSE interface for the OS Copilot service.</p>
      * 
      * @param request GenerateCopilotStreamResponseRequest
      * @return GenerateCopilotStreamResponseResponse
@@ -1432,7 +1429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the diagnostic result.</p>
@@ -1477,7 +1474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the diagnostic result.</p>
@@ -2976,12 +2973,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The following requirements apply when diagnosing a target ECS instance:</p>
+     * <p>The following requirements must be met to diagnose a target ECS instance:</p>
      * <ul>
      * <li>The target ECS instance status must be Running.</li>
      * <li>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</li>
-     * <li>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly returns failed.</li>
-     * <li>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, invoke AuthDiagnosis first to associate the authorization. That operation creates the service-linked role.</li>
+     * <li>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly fails.</li>
+     * <li>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, first invoke AuthDiagnosis to associate the authorization. That operation creates the aforementioned service-linked role.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2994,15 +2991,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public InvokeDiagnosisResponse invokeDiagnosisWithOptions(InvokeDiagnosisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
             body.put("channel", request.channel);
@@ -3018,7 +3006,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -3037,12 +3024,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The following requirements apply when diagnosing a target ECS instance:</p>
+     * <p>The following requirements must be met to diagnose a target ECS instance:</p>
      * <ul>
      * <li>The target ECS instance status must be Running.</li>
      * <li>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</li>
-     * <li>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly returns failed.</li>
-     * <li>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, invoke AuthDiagnosis first to associate the authorization. That operation creates the service-linked role.</li>
+     * <li>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly fails.</li>
+     * <li>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, first invoke AuthDiagnosis to associate the authorization. That operation creates the aforementioned service-linked role.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3866,7 +3853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>此接口用于获取某类型实例信息的所有值</p>
+     * <p>Retrieves all values of a specified type of instance information.</p>
      * 
      * @param request ListInstanceInfoRequest
      * @param headers map
@@ -3932,7 +3919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>此接口用于获取某类型实例信息的所有值</p>
+     * <p>Retrieves all values of a specified type of instance information.</p>
      * 
      * @param request ListInstanceInfoRequest
      * @return ListInstanceInfoResponse
