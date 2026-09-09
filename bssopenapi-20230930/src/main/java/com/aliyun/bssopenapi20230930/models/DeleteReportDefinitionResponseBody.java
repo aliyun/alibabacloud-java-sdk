@@ -14,7 +14,7 @@ public class DeleteReportDefinitionResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The metadata of the response struct.</p>
+     * <p>The response struct metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

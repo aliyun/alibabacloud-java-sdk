@@ -3389,10 +3389,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the sharing rules of user cost centers.</p>
+     * <p>Queries the cost allocation rules of a user\&quot;s financial units.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query cost center sharing rules</p>
+     * <p>Queries the cost allocation rules of financial units.</p>
      * 
      * @param request QueryCostCenterShareRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3440,10 +3440,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the sharing rules of user cost centers.</p>
+     * <p>Queries the cost allocation rules of a user\&quot;s financial units.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query cost center sharing rules</p>
+     * <p>Queries the cost allocation rules of financial units.</p>
      * 
      * @param request QueryCostCenterShareRuleRequest
      * @return QueryCostCenterShareRuleResponse
@@ -3609,7 +3609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Set the credit control limit for a fund account</p>
+     * <p>Sets the credit limit for a fund account.</p>
      * 
      * @param request SetFundAccountCreditAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3618,6 +3618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetFundAccountCreditAmountResponse setFundAccountCreditAmountWithOptions(SetFundAccountCreditAmountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cancelCredit)) {
+            body.put("CancelCredit", request.cancelCredit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.creditAmount)) {
             body.put("CreditAmount", request.creditAmount);
         }
@@ -3649,7 +3653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Set the credit control limit for a fund account</p>
+     * <p>Sets the credit limit for a fund account.</p>
      * 
      * @param request SetFundAccountCreditAmountRequest
      * @return SetFundAccountCreditAmountResponse

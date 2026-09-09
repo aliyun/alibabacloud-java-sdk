@@ -11,7 +11,7 @@ public class QueryCostCenterShareRuleRequest extends TeaModel {
     public java.util.List<QueryCostCenterShareRuleRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
-     * <p>Reserved field.</p>
+     * <p>A reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class QueryCostCenterShareRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The ID of the primary sales channel. If empty, the sales channel ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -29,7 +29,7 @@ public class QueryCostCenterShareRuleRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>Reserved field.</p>
+     * <p>A reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nYCisJwqt18pP5E9yb47iu</p>
@@ -38,7 +38,7 @@ public class QueryCostCenterShareRuleRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The owner account ID of the cost center.</p>
+     * <p>The ID of the user to whom the financial unit belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>1529600453335198</p>
@@ -99,7 +99,7 @@ public class QueryCostCenterShareRuleRequest extends TeaModel {
         public java.util.List<Long> accountIds;
 
         /**
-         * <p>The enterprise entity ID.</p>
+         * <p>The ID of the enterprise entity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

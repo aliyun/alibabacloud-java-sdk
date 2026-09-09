@@ -11,7 +11,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
     public java.util.List<QueryCostCenterShareRuleResponseBodyData> data;
 
     /**
-     * <p>Reserved field.</p>
+     * <p>A reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response metadata.</p>
+     * <p>The response struct metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -29,7 +29,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
     public Object metadata;
 
     /**
-     * <p>Reserved field.</p>
+     * <p>A reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6NH0=</p>
@@ -110,7 +110,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
 
     public static class QueryCostCenterShareRuleResponseBodyDataFromCostCenterShareRuleDetails extends TeaModel {
         /**
-         * <p>The cost center code.</p>
+         * <p>The code of the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>970354711219#</p>
@@ -119,7 +119,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String costCenterCode;
 
         /**
-         * <p>The cost center ID.</p>
+         * <p>The ID of the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>637127</p>
@@ -128,10 +128,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long costCenterId;
 
         /**
-         * <p>The cost center name.</p>
+         * <p>The name of the financial unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>成本计划</p>
+         * <p>Cost Plan</p>
          */
         @NameInMap("CostCenterName")
         public String costCenterName;
@@ -155,7 +155,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The owner account ID of the cost center.</p>
+         * <p>The ID of the user to whom the financial unit belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1529600453335198</p>
@@ -164,7 +164,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long ownerAccountId;
 
         /**
-         * <p>The parent cost center ID.</p>
+         * <p>The ID of the parent financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>637537</p>
@@ -173,7 +173,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long parentCostCenterId;
 
         /**
-         * <p>The previous cost center ID.</p>
+         * <p>The ID of the preceding financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>583059</p>
@@ -182,7 +182,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long prevCostCenterId;
 
         /**
-         * <p>The root cost center ID.</p>
+         * <p>The ID of the root financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>583050</p>
@@ -271,7 +271,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
 
     public static class QueryCostCenterShareRuleResponseBodyDataToCostCenterShareRuleDetails extends TeaModel {
         /**
-         * <p>The cost center code.</p>
+         * <p>The code of the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>970354711215#</p>
@@ -280,7 +280,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String costCenterCode;
 
         /**
-         * <p>The cost center ID.</p>
+         * <p>The ID of the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>637127</p>
@@ -289,10 +289,10 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long costCenterId;
 
         /**
-         * <p>The cost center name.</p>
+         * <p>The name of the financial unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>成本分摊</p>
+         * <p>Cost Allocation</p>
          */
         @NameInMap("CostCenterName")
         public String costCenterName;
@@ -316,7 +316,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The owner account ID of the cost center.</p>
+         * <p>The ID of the user to whom the financial unit belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1529600453335198</p>
@@ -325,7 +325,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long ownerAccountId;
 
         /**
-         * <p>The parent cost center ID.</p>
+         * <p>The ID of the parent financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>637537</p>
@@ -334,7 +334,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long parentCostCenterId;
 
         /**
-         * <p>The previous cost center ID.</p>
+         * <p>The ID of the preceding financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>583055</p>
@@ -343,7 +343,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long prevCostCenterId;
 
         /**
-         * <p>The root cost center ID.</p>
+         * <p>The ID of the root financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>583050</p>
@@ -352,7 +352,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long rootCostCenterId;
 
         /**
-         * <p>The sharing ratio.</p>
+         * <p>The cost allocation ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -449,12 +449,14 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
 
     public static class QueryCostCenterShareRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The source cost center rule details.</p>
+         * <p>The rule information of the source financial unit.</p>
          */
         @NameInMap("FromCostCenterShareRuleDetails")
         public java.util.List<QueryCostCenterShareRuleResponseBodyDataFromCostCenterShareRuleDetails> fromCostCenterShareRuleDetails;
 
         /**
+         * <p>The last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-01 00:00:00</p>
          */
@@ -462,7 +464,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The owner account ID of the cost center.</p>
+         * <p>The ID of the user to whom the financial unit belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1529600453335198</p>
@@ -471,7 +473,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long ownerAccountId;
 
         /**
-         * <p>The sharing rule ID.</p>
+         * <p>The ID of the cost allocation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1826</p>
@@ -480,7 +482,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long shareRuleId;
 
         /**
-         * <p>The sharing rule name.</p>
+         * <p>The name of the cost allocation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -489,7 +491,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String shareRuleName;
 
         /**
-         * <p>The sharing rule type.</p>
+         * <p>The type of the cost allocation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>AVERAGE</p>
@@ -498,7 +500,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String shareRuleType;
 
         /**
-         * <p>The target cost center rule details.</p>
+         * <p>The rule information of the destination financial unit.</p>
          */
         @NameInMap("ToCostCenterShareRuleDetails")
         public java.util.List<QueryCostCenterShareRuleResponseBodyDataToCostCenterShareRuleDetails> toCostCenterShareRuleDetails;
