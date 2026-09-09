@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteHiveRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud application service group.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>g-xxxx</p>
+     * <p>hive-xxxx</p>
      */
     @NameInMap("HiveId")
     public String hiveId;

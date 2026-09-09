@@ -34,7 +34,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     /**
      * <p>The page size.</p>
      * <blockquote>
-     * <p>Only applicable to recording queries.</p>
+     * <p>Only available for recording queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     public java.util.List<DescribeComfyTasksResponseBodyTasks> tasks;
 
     /**
-     * <p>The number of tasks.</p>
+     * <p>The total number of tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

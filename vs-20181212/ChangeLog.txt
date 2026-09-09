@@ -1,3 +1,8 @@
+2026-09-09 Version: 3.10.0
+- Support API DescribeComfyTaskWaitingQueue.
+- Update API DescribeComfyTasks: add request parameters HiveId.
+
+
 2026-08-31 Version: 3.9.2
 - Update API DescribeComfyTasks: add response parameters Body.Tasks.$.TaskErrorMessage.
 - Update API DescribeComfyTasks: add response parameters Body.Tasks.$.TaskStateMessage.

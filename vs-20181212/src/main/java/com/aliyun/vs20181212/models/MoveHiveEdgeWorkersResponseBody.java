@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveHiveEdgeWorkersResponseBody extends TeaModel {
     /**
-     * <p>The number of failed operations.</p>
+     * <p>The number of workloads that failed to be moved.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -29,7 +29,7 @@ public class MoveHiveEdgeWorkersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of successful operations.</p>
+     * <p>The number of workloads that were successfully moved.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

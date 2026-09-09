@@ -14,7 +14,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The cluster ID list.</p>
+     * <p>The list of cluster IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</p>
@@ -23,7 +23,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public java.util.List<String> hiveIds;
 
     /**
-     * <p>The workload ID list.</p>
+     * <p>The list of load IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>ew-xxxxxx</p>
@@ -32,7 +32,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The page number of the query list. Minimum value: 1. Default value: 1.</p>
+     * <p>The page number of the query list. The value starts from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paginated query. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of entries per page in a paged query. Settings for paging. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The plan ID list.</p>
+     * <p>The list of plan IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;pk-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</p>
@@ -68,7 +68,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>The start time for time range filtering. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The time range filter parameter. The value is in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-25T06:35:26+08:00</p>
@@ -77,7 +77,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status list.</p>
+     * <p>The list of statuses.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;

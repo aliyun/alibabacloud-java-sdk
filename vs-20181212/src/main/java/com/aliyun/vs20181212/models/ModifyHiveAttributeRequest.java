@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyHiveAttributeRequest extends TeaModel {
     /**
-     * <p>The new description of the cluster.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>gb-test</p>
@@ -14,7 +14,7 @@ public class ModifyHiveAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ModifyHiveAttributeRequest extends TeaModel {
     public String hiveId;
 
     /**
-     * <p>The new name of the cluster.</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
      * <p>yy-test2</p>

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyTasksRequest extends TeaModel {
     /**
+     * <p>The HiveId used as a filter condition to query tasks executed under the specified HiveId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hive-26cd567b35c04a0a90f0xxxxx</p>
+     */
+    @NameInMap("HiveId")
+    public String hiveId;
+
+    /**
      * <p>The page number.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +23,7 @@ public class DescribeComfyTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records to display per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -49,6 +58,14 @@ public class DescribeComfyTasksRequest extends TeaModel {
     public static DescribeComfyTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeComfyTasksRequest self = new DescribeComfyTasksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeComfyTasksRequest setHiveId(String hiveId) {
+        this.hiveId = hiveId;
+        return this;
+    }
+    public String getHiveId() {
+        return this.hiveId;
     }
 
     public DescribeComfyTasksRequest setPageNumber(Integer pageNumber) {
