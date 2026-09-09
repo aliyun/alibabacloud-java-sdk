@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The list of job templates.</p>
+     * <p>The list of templates.</p>
      */
     @NameInMap("JobTemplates")
     public java.util.List<ListJobTemplatesResponseBodyJobTemplates> jobTemplates;
@@ -20,7 +20,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results on the current page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -29,7 +29,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D*****</p>
@@ -38,7 +38,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of job templates that match the filter conditions.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -102,7 +102,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public Integer defaultVersion;
 
         /**
-         * <p>The description of the job template.</p>
+         * <p>The template description.</p>
          * 
          * <strong>example:</strong>
          * <p>job description</p>
@@ -111,7 +111,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The creation time of the template, in UTC and ISO 8601 format.</p>
+         * <p>The time when the template was created.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The modification time of the template, in UTC and ISO 8601 format.</p>
+         * <p>The time when the template was last modified.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,17 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String gmtModifyTime;
 
         /**
-         * <p>Custom metadata, represented as a collection of key-value pairs.</p>
+         * <p>The most recent time when a task was successfully created by using this template.</p>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-03T11:30:00Z</p>
+         */
+        @NameInMap("LastUsedTime")
+        public String lastUsedTime;
+
+        /**
+         * <p>The custom metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -140,7 +150,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
-         * <p>The ID of the modifier.</p>
+         * <p>The ID of the user who last modified the template.</p>
          * 
          * <strong>example:</strong>
          * <p>20**************26</p>
@@ -149,7 +159,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String modifiedBy;
 
         /**
-         * <p>The ID of the job template.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tpl1r5g9ait7****</p>
@@ -158,7 +168,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The name of the job template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>job-template-1772516653885</p>
@@ -167,7 +177,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>142388383837****</p>
@@ -176,7 +186,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The ID of the creator.</p>
+         * <p>The ID of the user who created the template.</p>
          * 
          * <strong>example:</strong>
          * <p>20**************26</p>
@@ -185,7 +195,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>88****</p>
@@ -228,6 +238,14 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
         public String getGmtModifyTime() {
             return this.gmtModifyTime;
+        }
+
+        public ListJobTemplatesResponseBodyJobTemplates setLastUsedTime(String lastUsedTime) {
+            this.lastUsedTime = lastUsedTime;
+            return this;
+        }
+        public String getLastUsedTime() {
+            return this.lastUsedTime;
         }
 
         public ListJobTemplatesResponseBodyJobTemplates setMetadata(java.util.Map<String, ?> metadata) {

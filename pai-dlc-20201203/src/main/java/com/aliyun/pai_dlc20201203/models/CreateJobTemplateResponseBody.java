@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobTemplateResponseBody extends TeaModel {
     /**
-     * <p>The default version number of the job template.</p>
+     * <p>The default version number currently in use.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public Integer defaultVersion;
 
     /**
-     * <p>The description of the job template.</p>
+     * <p>The description of the task template.</p>
      * 
      * <strong>example:</strong>
      * <p>Template description</p>
@@ -23,7 +23,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The creation time of the job template.</p>
+     * <p>The time when the template was created.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The last modification time of the job template.</p>
+     * <p>The time when the template was last modified.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,17 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>User-defined key-value metadata.</p>
+     * <p>The most recent time when a node was successfully created by using this template. This parameter is not returned if you create a template that has not been used.</p>
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-09-03T11:30:00Z</p>
+     */
+    @NameInMap("LastUsedTime")
+    public String lastUsedTime;
+
+    /**
+     * <p>The custom key-value pair metadata defined by the user.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -52,7 +62,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
-     * <p>The ID of the request, used for troubleshooting.</p>
+     * <p>The ID of the request, which is used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>8762921A-911C-515F-A3A4-*********</p>
@@ -61,7 +71,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The unique ID of the job template.</p>
+     * <p>The unique identifier of the task template.</p>
      * 
      * <strong>example:</strong>
      * <p>tplmceolmf2****</p>
@@ -70,7 +80,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The name of the job template.</p>
+     * <p>The name of the task template.</p>
      * 
      * <strong>example:</strong>
      * <p>job-template-example-1778047****</p>
@@ -79,7 +89,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The ID of the tenant that contains the job template.</p>
+     * <p>The ID of the tenant to which the template belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>10**************14</p>
@@ -88,7 +98,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The ID of the user who created the job template.</p>
+     * <p>The ID of the user who created the template.</p>
      * 
      * <strong>example:</strong>
      * <p>20**************02</p>
@@ -97,7 +107,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String userId;
 
     /**
-     * <p>The version number of the created job template.</p>
+     * <p>The version number of the currently returned version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -106,7 +116,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public Integer version;
 
     /**
-     * <p>The ID of the workspace that contains the job template.</p>
+     * <p>The ID of the workspace to which the template belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>15****05</p>
@@ -149,6 +159,14 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     }
     public String getGmtModifyTime() {
         return this.gmtModifyTime;
+    }
+
+    public CreateJobTemplateResponseBody setLastUsedTime(String lastUsedTime) {
+        this.lastUsedTime = lastUsedTime;
+        return this;
+    }
+    public String getLastUsedTime() {
+        return this.lastUsedTime;
     }
 
     public CreateJobTemplateResponseBody setMetadata(java.util.Map<String, ?> metadata) {

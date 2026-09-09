@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobTemplateRequest extends TeaModel {
     /**
-     * <p>The version to retrieve. If omitted, the default version is returned. Specify <code>all</code> to retrieve all versions.</p>
+     * <p>If this parameter is not specified, the default version is returned. If a specific number is specified, the corresponding version is returned. If all is specified, all versions are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>all</p>

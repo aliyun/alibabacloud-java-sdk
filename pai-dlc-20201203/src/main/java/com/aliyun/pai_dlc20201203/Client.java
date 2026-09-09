@@ -232,7 +232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a job template.</p>
+     * <p>Creates a task template.</p>
      * 
      * @param request CreateJobTemplateRequest
      * @param headers map
@@ -286,7 +286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a job template.</p>
+     * <p>Creates a task template.</p>
      * 
      * @param request CreateJobTemplateRequest
      * @return CreateJobTemplateResponse
@@ -1021,7 +1021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a job template.</p>
+     * <p>Retrieves the details of a task template.</p>
      * 
      * @param request GetJobTemplateRequest
      * @param headers map
@@ -1055,7 +1055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a job template.</p>
+     * <p>Retrieves the details of a task template.</p>
      * 
      * @param request GetJobTemplateRequest
      * @return GetJobTemplateResponse
@@ -1788,7 +1788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <code>TemplateId</code>, or <code>TemplateName</code>.</p>
+     * <p>Lists task templates by workspace with support for pagination and sorting. You can filter results by creator, TemplateId, or TemplateName.</p>
      * 
      * @param request ListJobTemplatesRequest
      * @param headers map
@@ -1798,6 +1798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListJobTemplatesResponse listJobTemplatesWithOptions(ListJobTemplatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
             query.put("Order", request.order);
         }
@@ -1850,7 +1854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <code>TemplateId</code>, or <code>TemplateName</code>.</p>
+     * <p>Lists task templates by workspace with support for pagination and sorting. You can filter results by creator, TemplateId, or TemplateName.</p>
      * 
      * @param request ListJobTemplatesRequest
      * @return ListJobTemplatesResponse

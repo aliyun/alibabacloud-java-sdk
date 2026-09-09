@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListJobTemplatesRequest extends TeaModel {
     /**
-     * <p>The sort order. Valid values: <code>asc</code> for ascending and <code>desc</code> for descending. Default value: <code>desc</code>.</p>
+     * <p>Filters the list by a fuzzy match of the template description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PyTorch training template</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -14,7 +23,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number to retrieve.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +32,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results to return per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +41,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field to sort the results by. Default value: <code>GmtCreateTime</code>.</p>
+     * <p>The field by which to sort the results.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -41,7 +50,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The job template ID. Use this parameter to filter for an exact match.</p>
+     * <p>Filters the list by an exact match of the template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tpl1****6jcq2q</p>
@@ -50,7 +59,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The job template name. Use this parameter to filter for a partial match.</p>
+     * <p>Filters the list by a fuzzy match of the template name.</p>
      * 
      * <strong>example:</strong>
      * <p>job-template-example-1778047****</p>
@@ -59,7 +68,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The ID of the creator. Use this parameter to filter results by a specific creator.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20**************02</p>
@@ -68,7 +77,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,6 +89,14 @@ public class ListJobTemplatesRequest extends TeaModel {
     public static ListJobTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobTemplatesRequest self = new ListJobTemplatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobTemplatesRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ListJobTemplatesRequest setOrder(String order) {

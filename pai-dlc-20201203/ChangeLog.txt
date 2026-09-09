@@ -1,3 +1,10 @@
+2026-09-09 Version: 1.11.4
+- Update API CreateJobTemplate: add response parameters Body.LastUsedTime.
+- Update API GetJobTemplate: add response parameters Body.LastUsedTime.
+- Update API ListJobTemplates: add request parameters Description.
+- Update API ListJobTemplates: add response parameters Body.JobTemplates.$.LastUsedTime.
+
+
 2026-09-08 Version: 1.11.3
 - Update API GetPodLogs: add request parameters Containers.
 - Update API GetPodLogs: add response parameters Body.ContainerInfo.

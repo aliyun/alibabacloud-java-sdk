@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobTemplateResponseBody extends TeaModel {
     /**
-     * <p>The default version of the job template.</p>
+     * <p>The default version number currently in use.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public Integer defaultVersion;
 
     /**
-     * <p>A description of the job template.</p>
+     * <p>The description of the task template.</p>
      * 
      * <strong>example:</strong>
      * <p>job template description</p>
@@ -23,7 +23,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The time the job template was created.</p>
+     * <p>The time when the template was created.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time the job template was last modified.</p>
+     * <p>The time when the template was last modified.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,17 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>A collection of user-defined key-value pairs.</p>
+     * <p>The most recent time when a task was successfully created by using this template. This parameter is not returned if the template has not been used.</p>
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-09-03T11:30:00Z</p>
+     */
+    @NameInMap("LastUsedTime")
+    public String lastUsedTime;
+
+    /**
+     * <p>The custom key-value pair metadata defined by the user.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -52,7 +62,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
-     * <p>The ID of the user who last modified the job template.</p>
+     * <p>The ID of the user who last modified the template.</p>
      * 
      * <strong>example:</strong>
      * <p>20**************26</p>
@@ -61,7 +71,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String modifiedBy;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the request. This ID is used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -70,7 +80,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the job template.</p>
+     * <p>The unique identifier of the task template.</p>
      * 
      * <strong>example:</strong>
      * <p>tplmceolmf2****</p>
@@ -79,7 +89,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The name of the job template.</p>
+     * <p>The name of the task template.</p>
      * 
      * <strong>example:</strong>
      * <p>job-template-example-1778047****</p>
@@ -88,7 +98,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The ID of the tenant that owns the job template.</p>
+     * <p>The ID of the tenant to which the template belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>142388383837****</p>
@@ -97,7 +107,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The total number of versions returned. This value is 1 if a specific version is queried, or the total count if all versions are queried.</p>
+     * <p>The total number of versions. If a single version is queried, the value 1 is returned. If all versions are queried, the actual total number is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -106,7 +116,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The ID of the user who created the job template.</p>
+     * <p>The ID of the user who created the template.</p>
      * 
      * <strong>example:</strong>
      * <p>20**************26</p>
@@ -115,13 +125,13 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String userId;
 
     /**
-     * <p>An array of template versions. This array contains only one version if a specific version is requested, or all versions if <code>all</code> is specified.</p>
+     * <p>The list of template version details. If a single version is queried, one element is returned. If all versions are queried, all elements are returned.</p>
      */
     @NameInMap("Versions")
     public java.util.List<GetJobTemplateResponseBodyVersions> versions;
 
     /**
-     * <p>The ID of the workspace that contains the job template.</p>
+     * <p>The ID of the workspace to which the template belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>4***9</p>
@@ -164,6 +174,14 @@ public class GetJobTemplateResponseBody extends TeaModel {
     }
     public String getGmtModifyTime() {
         return this.gmtModifyTime;
+    }
+
+    public GetJobTemplateResponseBody setLastUsedTime(String lastUsedTime) {
+        this.lastUsedTime = lastUsedTime;
+        return this;
+    }
+    public String getLastUsedTime() {
+        return this.lastUsedTime;
     }
 
     public GetJobTemplateResponseBody setMetadata(java.util.Map<String, ?> metadata) {
@@ -248,7 +266,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyVersions extends TeaModel {
         /**
-         * <p>The field constraint rules. The key is a JSONPath expression and the value is a constraint type.</p>
+         * <p>The field constraint rules. The key is a JSONPath expression, and the value is the constraint type.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</p>
@@ -257,7 +275,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public java.util.Map<String, ?> constraints;
 
         /**
-         * <p>The configuration of the version, in JSON format.</p>
+         * <p>The template configuration content of this version in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;WorkspaceId\&quot;:\&quot;15****05\&quot;,\&quot;JobType\&quot;:\&quot;PyTorchJob\&quot;,\&quot;UserCommand\&quot;:\&quot;echo hello\&quot;,\&quot;JobSpecs\&quot;:[{\&quot;Type\&quot;:\&quot;Worker\&quot;,\&quot;PodCount\&quot;:1,\&quot;Image\&quot;:\&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782\&quot;,\&quot;EcsSpec\&quot;:\&quot;ecs.gn7i-c8g1.2xlarge\&quot;}],\&quot;ResourceType\&quot;:\&quot;ECS\&quot;,\&quot;_ResourcePaymentType\&quot;:\&quot;PostPaid\&quot;,\&quot;CredentialConfig\&quot;:{\&quot;EnableCredentialInject\&quot;:false},\&quot;Accessibility\&quot;:\&quot;PRIVATE\&quot;,\&quot;Settings\&quot;:{\&quot;JobReservedMinutes\&quot;:0,\&quot;Tags\&quot;:{}}}</p>
@@ -275,7 +293,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The time the version was created.</p>
+         * <p>The time when the version was created.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
