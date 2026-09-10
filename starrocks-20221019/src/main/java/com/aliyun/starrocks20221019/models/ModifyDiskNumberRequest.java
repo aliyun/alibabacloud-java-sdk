@@ -5,12 +5,26 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskNumberRequest extends TeaModel {
     /**
-     * <p>Specifies whether to restart the compute nodes in fast mode. Default value: false.</p>
+     * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</p>
      * <ul>
-     * <li><p>true: Restarts the compute nodes in fast mode. The nodes are restarted in batches. Nodes within a batch are restarted in parallel, and the batches are processed sequentially.</p>
-     * </li>
-     * <li><p>false: Restarts the compute nodes in rolling restart mode.</p>
-     * </li>
+     * <li>true: Automatic payment.</li>
+     * <li>false: No automatic payment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    /**
+     * <p>Specifies whether to use the fast restart mode. Default value: false.</p>
+     * <ul>
+     * <li>true: Restarts compute nodes in fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute sequentially.</li>
+     * <li>false: Restarts compute nodes in rolling restart mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,6 +53,12 @@ public class ModifyDiskNumberRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>The coupon ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
+     */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
@@ -55,6 +75,14 @@ public class ModifyDiskNumberRequest extends TeaModel {
     public static ModifyDiskNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDiskNumberRequest self = new ModifyDiskNumberRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDiskNumberRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public ModifyDiskNumberRequest setFastMode(Boolean fastMode) {

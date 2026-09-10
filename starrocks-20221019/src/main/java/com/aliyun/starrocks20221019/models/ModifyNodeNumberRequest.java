@@ -5,6 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyNodeNumberRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</p>
+     * <ul>
+     * <li>true: Automatic payment.</li>
+     * <li>false: No automatic payment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -25,7 +41,7 @@ public class ModifyNodeNumberRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The decommission concurrency for BE scale-in scenarios in compute-storage decoupled architecture. Default value: 1.</p>
+     * <p>The decommission concurrency for BE scale-in scenarios in compute-storage coupled mode. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,7 +69,7 @@ public class ModifyNodeNumberRequest extends TeaModel {
     public Integer target;
 
     /**
-     * <p>The duration to wait for running tasks to complete before dropping nodes during CN scale-in scenarios in storage-compute disaggregation architecture.</p>
+     * <p>The wait time for running tasks to complete before dropping nodes during CN scale-in scenarios in compute-storage decoupled mode.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -64,6 +80,14 @@ public class ModifyNodeNumberRequest extends TeaModel {
     public static ModifyNodeNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNodeNumberRequest self = new ModifyNodeNumberRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyNodeNumberRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public ModifyNodeNumberRequest setInstanceId(String instanceId) {

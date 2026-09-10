@@ -5,6 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskPerformanceLevelRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</p>
+     * <ul>
+     * <li>true: Automatic payment.</li>
+     * <li>false: No automatic payment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -24,11 +40,17 @@ public class ModifyDiskPerformanceLevelRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>The coupon ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
+     */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
     /**
-     * <p>The target disk performance level.</p>
+     * <p>The target disk performance level (PL).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +62,14 @@ public class ModifyDiskPerformanceLevelRequest extends TeaModel {
     public static ModifyDiskPerformanceLevelRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDiskPerformanceLevelRequest self = new ModifyDiskPerformanceLevelRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDiskPerformanceLevelRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public ModifyDiskPerformanceLevelRequest setInstanceId(String instanceId) {

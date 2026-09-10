@@ -14,9 +14,23 @@ public class CreateInstanceV1Request extends TeaModel {
     @NameInMap("AdminPassword")
     public String adminPassword;
 
+    /**
+     * <p>The agent compute group.</p>
+     */
     @NameInMap("AgentNodeGroup")
     public CreateInstanceV1RequestAgentNodeGroup agentNodeGroup;
 
+    /**
+     * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true: Automatic payment.</li>
+     * <li>false: No automatic payment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
@@ -71,6 +85,9 @@ public class CreateInstanceV1Request extends TeaModel {
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>Specifies whether to enable the AI Center. Default value: false.</p>
+     */
     @NameInMap("EnableAiFunction")
     public Boolean enableAiFunction;
 
@@ -95,6 +112,12 @@ public class CreateInstanceV1Request extends TeaModel {
     @NameInMap("FrontendNodeGroups")
     public java.util.List<CreateInstanceV1RequestFrontendNodeGroups> frontendNodeGroups;
 
+    /**
+     * <p>The gateway type. Valid values: Slb and Privatezone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Traditional\&quot;\&quot;</p>
+     */
     @NameInMap("GatewayType")
     public String gatewayType;
 
@@ -127,13 +150,13 @@ public class CreateInstanceV1Request extends TeaModel {
     public String linkedRamUserName;
 
     /**
-     * <p>The Observer node group information. Specify this parameter only when you need to enable cross-zone disaster recovery. The Observer node group specifications must be the same as those of the FE node group.</p>
+     * <p>The Observer node group information. Specify this parameter only when you need to enable multi-zone disaster recovery. The Observer node group specifications must be the same as those of the FE node group.</p>
      */
     @NameInMap("ObserverNodeGroups")
     public java.util.List<CreateInstanceV1RequestObserverNodeGroups> observerNodeGroups;
 
     /**
-     * <p>The name of the role used for password-free access to Object Storage Service (OSS).</p>
+     * <p>The name of the role used for password-free access to OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunEMRStarRocksAccessingOSSRole</p>
@@ -142,10 +165,10 @@ public class CreateInstanceV1Request extends TeaModel {
     public String ossAccessingRoleName;
 
     /**
-     * <p>The instance edition. Valid values:</p>
+     * <p>The instance edition:</p>
      * <ul>
-     * <li>trial: Trial Edition.</li>
-     * <li>official: Standard Edition.</li>
+     * <li>  Entry edition (trial).</li>
+     * <li> Standard edition (official).</li>
      * </ul>
      * 
      * <p>This parameter is required.</p>
@@ -239,7 +262,7 @@ public class CreateInstanceV1Request extends TeaModel {
      * <p>The running mode of the cluster. Valid values:</p>
      * <ul>
      * <li>shared_nothing: compute-storage coupled.</li>
-     * <li>shared_data: storage-compute disaggregation.</li>
+     * <li>shared_data: compute-storage decoupled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -561,6 +584,12 @@ public class CreateInstanceV1Request extends TeaModel {
     }
 
     public static class CreateInstanceV1RequestAgentNodeGroup extends TeaModel {
+        /**
+         * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("cu")
         public Integer cu;
 
@@ -629,13 +658,7 @@ public class CreateInstanceV1Request extends TeaModel {
         public String specType;
 
         /**
-         * <p>The performance level of the cloud disk. Valid values:</p>
-         * <ul>
-         * <li>pl0: A single disk delivers up to 10,000 random read/write IOPS.</li>
-         * <li>pl1: A single disk delivers up to 50,000 random read/write IOPS.</li>
-         * <li>pl2: A single disk delivers up to 100,000 random read/write IOPS.</li>
-         * <li>pl3: A single disk delivers up to 1,000,000 random read/write IOPS.</li>
-         * </ul>
+         * <p>The performance level (PL) of the cloud disk. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>pl1</p>

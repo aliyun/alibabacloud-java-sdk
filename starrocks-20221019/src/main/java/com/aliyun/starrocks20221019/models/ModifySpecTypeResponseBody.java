@@ -14,7 +14,7 @@ public class ModifySpecTypeResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Order ID.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24151320976****</p>
@@ -23,7 +23,7 @@ public class ModifySpecTypeResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
@@ -32,7 +32,7 @@ public class ModifySpecTypeResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
@@ -41,7 +41,7 @@ public class ModifySpecTypeResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>HTTP request status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,7 +50,7 @@ public class ModifySpecTypeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>

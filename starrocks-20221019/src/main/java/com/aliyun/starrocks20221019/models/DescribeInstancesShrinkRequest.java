@@ -23,52 +23,30 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The instance status to filter by. You can specify multiple statuses, separated by commas. Valid values:</p>
+     * <p>Retrieves instances by instance status. Separate multiple instance statuses with commas. Valid values:</p>
      * <ul>
-     * <li><p>unpaid</p>
-     * </li>
-     * <li><p>paid</p>
-     * </li>
-     * <li><p>creating</p>
-     * </li>
-     * <li><p>running</p>
-     * </li>
-     * <li><p>updating</p>
-     * </li>
-     * <li><p>disable</p>
-     * </li>
-     * <li><p>deleting</p>
-     * </li>
-     * <li><p>scaling_out</p>
-     * </li>
-     * <li><p>scaling_in</p>
-     * </li>
-     * <li><p>scaling_up</p>
-     * </li>
-     * <li><p>scaling_down</p>
-     * </li>
-     * <li><p>upgrading</p>
-     * </li>
-     * <li><p>modifying_config</p>
-     * </li>
-     * <li><p>enable_public_network</p>
-     * </li>
-     * <li><p>disable_public_network</p>
-     * </li>
-     * <li><p>convert_from_trial_to_official</p>
-     * </li>
-     * <li><p>restarting</p>
-     * </li>
-     * <li><p>migration_cluster_to_serverless</p>
-     * </li>
-     * <li><p>actively_disabled</p>
-     * </li>
-     * <li><p>enabling</p>
-     * </li>
-     * <li><p>agent_creating</p>
-     * </li>
-     * <li><p>agent_scaling_up</p>
-     * </li>
+     * <li>unpaid: Pending payment.</li>
+     * <li>paid: Paid.</li>
+     * <li>creating: Being created.</li>
+     * <li>running: Running.</li>
+     * <li>updating: Being upgraded.</li>
+     * <li>disable: Unavailable.</li>
+     * <li>deleting: Being deleted.</li>
+     * <li>scaling_out: Scaling out.</li>
+     * <li>scaling_in: Scaling in.</li>
+     * <li>scaling_up: Specifications are being upgraded.</li>
+     * <li>scaling_down: Specifications are being used to decrease the quota.</li>
+     * <li>upgrading: Version is being upgraded.</li>
+     * <li>modifying_config: Configuration is being updated.</li>
+     * <li>enable_public_network: Public network access is being enabled.</li>
+     * <li>disable_public_network: Public network access is being shutdown.</li>
+     * <li>convert_from_trial_to_official: The instance edition is being upgraded.</li>
+     * <li>restarting: The cluster is restarting.</li>
+     * <li>migration_cluster_to_serverless: The cluster is being migrated.</li>
+     * <li>actively_disabled: The instance is stopped.</li>
+     * <li>enabling: The instance is being recovered.</li>
+     * <li>agent_creating: The agent is being created.</li>
+     * <li>agent_scaling_up: The agent specifications are being upgraded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +65,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -114,7 +92,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;

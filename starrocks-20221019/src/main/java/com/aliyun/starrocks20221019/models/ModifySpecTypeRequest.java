@@ -5,12 +5,26 @@ import com.aliyun.tea.*;
 
 public class ModifySpecTypeRequest extends TeaModel {
     /**
-     * <p>Restart in fast restart mode. Default is false.</p>
+     * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</p>
      * <ul>
-     * <li><p>true: Restarts compute nodes in fast restart mode. Nodes restart in parallel within a batch, and batches execute sequentially.</p>
-     * </li>
-     * <li><p>false: Restarts compute nodes in rolling restart mode.</p>
-     * </li>
+     * <li>true: Automatic payment.</li>
+     * <li>false: No automatic payment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    /**
+     * <p>Specifies whether to use the fast restart mode. Default value: false.</p>
+     * <ul>
+     * <li>true: Restarts compute nodes in fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute sequentially.</li>
+     * <li>false: Restarts compute nodes in rolling restart mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +34,7 @@ public class ModifySpecTypeRequest extends TeaModel {
     public Boolean fastMode;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +44,7 @@ public class ModifySpecTypeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Compute group ID.</p>
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +54,7 @@ public class ModifySpecTypeRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>Coupon ID.</p>
+     * <p>The coupon ID.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -49,7 +63,7 @@ public class ModifySpecTypeRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
-     * <p>Target specifications type.</p>
+     * <p>The target specification type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,6 +75,14 @@ public class ModifySpecTypeRequest extends TeaModel {
     public static ModifySpecTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySpecTypeRequest self = new ModifySpecTypeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySpecTypeRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public ModifySpecTypeRequest setFastMode(Boolean fastMode) {

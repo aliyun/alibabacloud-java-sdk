@@ -168,9 +168,21 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeNodeGroupsResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -214,8 +226,8 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         /**
          * <p>The compute group architecture. Valid values:</p>
          * <ul>
-         * <li>onEci: Deployed on Elastic Container Instance (ECI).</li>
-         * <li>onECS: Deployed on Elastic Compute Service (ECS).</li>
+         * <li>onEci: Deployed on ECI.</li>
+         * <li>onECS: Deployed on ECS.</li>
          * <li>onBareMetal: Deployed on a bare metal resource pool.</li>
          * </ul>
          * 
@@ -235,7 +247,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
-         * <p>The instance ID associated with the bill. For default compute groups (FE compute group and default BE compute group), this value is the instance ID. Otherwise, it is the compute group ID.</p>
+         * <p>The instance ID associated with the bill. For default compute groups (FE compute group and the default BE compute group), this value is the instance ID. Otherwise, it is the compute group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-96f3bc7f04b2****</p>
@@ -441,7 +453,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public Integer residentNodeNumber;
 
         /**
-         * <p>The duration that the compute group has been running. Unit: seconds.</p>
+         * <p>The running time of the compute group. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -480,8 +492,8 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
          * <li>SCALING_OUT: Scale-out in progress.</li>
          * <li>RESTARTING: Restarting.</li>
          * <li>SCALING_IN: Scale-in in progress.</li>
-         * <li>SCALING_UP: Upgrading specifications.</li>
-         * <li>SCALING_DOWN: Downgrading specifications.</li>
+         * <li>SCALING_UP: Scaling up.</li>
+         * <li>SCALING_DOWN: Scaling down.</li>
          * <li>UPGRADING: Upgrading.</li>
          * <li>ENABLE_PUBLIC_NETWORK: Enabling public network access.</li>
          * <li>DISABLE_PUBLIC_NETWORK: Disabling public network access.</li>
@@ -521,6 +533,9 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         @NameInMap("StorageSize")
         public Integer storageSize;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeNodeGroupsResponseBodyDataTags> tags;
 

@@ -1,3 +1,15 @@
+2026-09-10 Version: 1.6.3
+- Update API DescribeInstances: add response parameters Body.Data.$.AiFunctionClusterId.
+- Update API DescribeInstances: add response parameters Body.Data.$.AiFunctionEndpoint.
+- Update API ModifyCu: add request parameters AutoPay.
+- Update API ModifyDiskNumber: add request parameters AutoPay.
+- Update API ModifyDiskPerformanceLevel: add request parameters AutoPay.
+- Update API ModifyDiskSize: add request parameters AutoPay.
+- Update API ModifyDiskType: add request parameters AutoPay.
+- Update API ModifyNodeNumber: add request parameters AutoPay.
+- Update API ModifySpecType: add request parameters AutoPay.
+
+
 2026-08-12 Version: 1.6.2
 - Update API CreateInstanceV1: add request parameters body.EnableAiFunction.
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCuResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details of the permission verification failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>

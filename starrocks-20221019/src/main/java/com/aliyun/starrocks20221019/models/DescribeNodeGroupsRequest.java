@@ -86,8 +86,8 @@ public class DescribeNodeGroupsRequest extends TeaModel {
      * <li>SCALING_OUT: Scale-out in progress.</li>
      * <li>RESTARTING: Restarting.</li>
      * <li>SCALING_IN: Scale-in in progress.</li>
-     * <li>SCALING_UP: Upgrading specifications.</li>
-     * <li>SCALING_DOWN: Downgrading specifications.</li>
+     * <li>SCALING_UP: Scaling up.</li>
+     * <li>SCALING_DOWN: Scaling down.</li>
      * <li>UPGRADING: Upgrading.</li>
      * <li>ENABLE_PUBLIC_NETWORK: Enabling public network access.</li>
      * <li>DISABLE_PUBLIC_NETWORK: Disabling public network access.</li>
@@ -103,6 +103,9 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<DescribeNodeGroupsRequestTags> tags;
 
@@ -184,9 +187,21 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     }
 
     public static class DescribeNodeGroupsRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("value")
         public String value;
 

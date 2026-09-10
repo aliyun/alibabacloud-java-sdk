@@ -5,7 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskTypeRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</p>
+     * <ul>
+     * <li>true: Automatic payment is enabled.</li>
+     * <li>false: Automatic payment is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +31,7 @@ public class ModifyDiskTypeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the compute group.</p>
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +41,7 @@ public class ModifyDiskTypeRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The ID of the coupon.</p>
+     * <p>The coupon ID.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -56,6 +72,14 @@ public class ModifyDiskTypeRequest extends TeaModel {
     public static ModifyDiskTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDiskTypeRequest self = new ModifyDiskTypeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDiskTypeRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public ModifyDiskTypeRequest setInstanceId(String instanceId) {

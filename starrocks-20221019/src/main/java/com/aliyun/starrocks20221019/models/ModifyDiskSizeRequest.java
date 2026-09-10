@@ -4,11 +4,37 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskSizeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</p>
+     * <ul>
+     * <li>true: Automatic payment.</li>
+     * <li>false: No automatic payment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    /**
+     * <p>Specifies whether to use the fast restart mode for restart. Default value: false.</p>
+     * <ul>
+     * <li>true: Restarts compute nodes in fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute sequentially.</li>
+     * <li>false: Restarts compute nodes in rolling restart mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("FastMode")
     public Boolean fastMode;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +44,7 @@ public class ModifyDiskSizeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the compute group.</p>
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +53,12 @@ public class ModifyDiskSizeRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>The coupon ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2345</p>
+     */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
@@ -43,6 +75,14 @@ public class ModifyDiskSizeRequest extends TeaModel {
     public static ModifyDiskSizeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDiskSizeRequest self = new ModifyDiskSizeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDiskSizeRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public ModifyDiskSizeRequest setFastMode(Boolean fastMode) {

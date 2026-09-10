@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryModifyCuPriceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryModifyCuPriceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the compute group.</p>
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class QueryModifyCuPriceRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The ID of the coupon.</p>
+     * <p>The coupon ID.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_12378dfj6</p>
@@ -34,7 +34,7 @@ public class QueryModifyCuPriceRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
-     * <p>The target number of CUs.</p>
+     * <p>The target CU count.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
