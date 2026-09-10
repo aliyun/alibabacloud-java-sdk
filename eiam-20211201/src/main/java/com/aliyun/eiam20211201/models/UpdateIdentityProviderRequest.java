@@ -950,6 +950,13 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String authorizeCallbackDomain;
 
         /**
+         * <strong>example:</strong>
+         * <p>mPLLiWv-_9witxxxEJCpk1xkF5hOgBzpRt4kBkxxx</p>
+         */
+        @NameInMap("ContactSecret")
+        public String contactSecret;
+
+        /**
          * <p>The CorpSecret of the WeCom self-built application.</p>
          * 
          * <strong>example:</strong>
@@ -986,6 +993,14 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         }
         public String getAuthorizeCallbackDomain() {
             return this.authorizeCallbackDomain;
+        }
+
+        public UpdateIdentityProviderRequestWeComConfig setContactSecret(String contactSecret) {
+            this.contactSecret = contactSecret;
+            return this;
+        }
+        public String getContactSecret() {
+            return this.contactSecret;
         }
 
         public UpdateIdentityProviderRequestWeComConfig setCorpSecret(String corpSecret) {

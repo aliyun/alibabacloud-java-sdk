@@ -1,3 +1,9 @@
+2026-09-10 Version: 2.19.2
+- Update API CreateIdentityProvider: add request parameters WeComConfig.ContactSecret.
+- Update API GetIdentityProvider: add response parameters Body.IdentityProviderDetail.WeComConfig.ContactSecret.
+- Update API UpdateIdentityProvider: add request parameters WeComConfig.ContactSecret.
+
+
 2026-09-09 Version: 2.19.1
 - Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.ProtocolEndpointDomain.SamlSloEndpoint.
 - Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.SamlSsoConfig.RequireAuthnRequestSigned.

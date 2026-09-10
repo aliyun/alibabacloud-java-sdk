@@ -433,7 +433,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String expressionMappingType;
 
         /**
-         * <p>The expression for the mapped attribute value.</p>
+         * <p>The expression for the mapping attribute value.</p>
          * 
          * <strong>example:</strong>
          * <p>idpUser.phoneNumber</p>
@@ -442,7 +442,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String sourceValueExpression;
 
         /**
-         * <p>The name of the target attribute for mapping.</p>
+         * <p>The name of the mapping target attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>user.username</p>
@@ -451,7 +451,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String targetField;
 
         /**
-         * <p>The name of the target attribute for mapping.</p>
+         * <p>The name of the mapping target attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -593,9 +593,9 @@ public class CreateIdentityProviderRequest extends TeaModel {
         /**
          * <p>The DingTalk version. Valid values:</p>
          * <ul>
-         * <li><p>public_dingtalk: Standard DingTalk.</p>
+         * <li><p>public_dingtalk: standard DingTalk</p>
          * </li>
-         * <li><p>private_dingtalk: Exclusive DingTalk.</p>
+         * <li><p>private_dingtalk: exclusive DingTalk</p>
          * </li>
          * </ul>
          * 
@@ -884,7 +884,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String organizationalUnitRdn;
 
         /**
-         * <p>Specifies whether password synchronization is enabled.</p>
+         * <p>The password synchronization switch.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -1398,7 +1398,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String bindingMethod;
 
         /**
-         * <p>The certificate list of the IdP.</p>
+         * <p>The list of IdP certificates.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<CreateIdentityProviderRequestSamlConfigCertificates> certificates;
@@ -1440,13 +1440,13 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public Boolean requireRequestSigned;
 
         /**
-         * <p>Specifies whether the external IdP must sign the Assertion.</p>
+         * <p>Specifies whether the external IdP must sign assertions.</p>
          */
         @NameInMap("WantAssertionsSigned")
         public Boolean wantAssertionsSigned;
 
         /**
-         * <p>Specifies whether the external IdP must sign the Response.</p>
+         * <p>Specifies whether the external IdP must sign responses.</p>
          */
         @NameInMap("WantResponseSigned")
         public Boolean wantResponseSigned;
@@ -1632,10 +1632,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String groupSyncStatus;
 
         /**
-         * <p>The incremental callback status. Specifies whether to process incremental callback data from the IdP. Valid values:</p>
+         * <p>Specifies whether to process incremental callback data from the IdP. Valid values:</p>
          * <ul>
-         * <li>disabled</li>
-         * <li>enabled</li>
+         * <li>disabled: Disabled.</li>
+         * <li>enabled: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1813,7 +1813,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestUdPushConfig extends TeaModel {
         /**
-         * <p>The incremental callback status. This field is not yet enabled. Ignore this field.</p>
+         * <p>The incremental callback status. This field is not yet available. Ignore this field.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -1828,7 +1828,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig periodicSyncConfig;
 
         /**
-         * <p>The periodic verification status. This field is not yet enabled. Ignore this field.</p>
+         * <p>The periodic verification status. This field is not yet available. Ignore this field.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -1901,6 +1901,15 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String authorizeCallbackDomain;
 
         /**
+         * <p>The WeCom address book secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mPLLiWv-_9wittxxxEJCpk1xkF5hOgBzpRt4kBkxxx</p>
+         */
+        @NameInMap("ContactSecret")
+        public String contactSecret;
+
+        /**
          * <p>The corpId of the WeCom self-built application.</p>
          * 
          * <strong>example:</strong>
@@ -1946,6 +1955,14 @@ public class CreateIdentityProviderRequest extends TeaModel {
         }
         public String getAuthorizeCallbackDomain() {
             return this.authorizeCallbackDomain;
+        }
+
+        public CreateIdentityProviderRequestWeComConfig setContactSecret(String contactSecret) {
+            this.contactSecret = contactSecret;
+            return this;
+        }
+        public String getContactSecret() {
+            return this.contactSecret;
         }
 
         public CreateIdentityProviderRequestWeComConfig setCorpId(String corpId) {
