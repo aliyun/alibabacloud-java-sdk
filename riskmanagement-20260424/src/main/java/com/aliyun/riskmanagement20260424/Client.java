@@ -461,6 +461,180 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Downloads cloud resource control events.</p>
+     * 
+     * @param tmpReq DownloadResourceControlEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DownloadResourceControlEventsResponse
+     */
+    public DownloadResourceControlEventsResponse downloadResourceControlEventsWithOptions(DownloadResourceControlEventsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DownloadResourceControlEventsShrinkRequest request = new DownloadResourceControlEventsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.actionCodes)) {
+            request.actionCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.actionCodes, "ActionCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.caseCodesPrefix)) {
+            request.caseCodesPrefixShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.caseCodesPrefix, "CaseCodesPrefix", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eventCodes)) {
+            request.eventCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eventCodes, "EventCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.excludeActionCodes)) {
+            request.excludeActionCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.excludeActionCodes, "ExcludeActionCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.excludeEventCodes)) {
+            request.excludeEventCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.excludeEventCodes, "ExcludeEventCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.excludeReasons)) {
+            request.excludeReasonsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.excludeReasons, "ExcludeReasons", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.includeReasons)) {
+            request.includeReasonsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.includeReasons, "IncludeReasons", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceCodes)) {
+            request.sourceCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceCodes, "SourceCodes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statusList)) {
+            request.statusListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statusList, "StatusList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actionCode)) {
+            query.put("ActionCode", request.actionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.actionCodesShrink)) {
+            query.put("ActionCodes", request.actionCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            query.put("AliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessCode)) {
+            query.put("BusinessCode", request.businessCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.caseCodesPrefixShrink)) {
+            query.put("CaseCodesPrefix", request.caseCodesPrefixShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.current)) {
+            query.put("Current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventCode)) {
+            query.put("EventCode", request.eventCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventCodesShrink)) {
+            query.put("EventCodes", request.eventCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeActionCodesShrink)) {
+            query.put("ExcludeActionCodes", request.excludeActionCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeEventCodesShrink)) {
+            query.put("ExcludeEventCodes", request.excludeEventCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeReasonsShrink)) {
+            query.put("ExcludeReasons", request.excludeReasonsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeReasonsShrink)) {
+            query.put("IncludeReasons", request.includeReasonsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
+            query.put("Ip", request.ip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.punishEndTime)) {
+            query.put("PunishEndTime", request.punishEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.punishStartTime)) {
+            query.put("PunishStartTime", request.punishStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            query.put("Reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCodesShrink)) {
+            query.put("SourceCodes", request.sourceCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusListShrink)) {
+            query.put("StatusList", request.statusListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DownloadResourceControlEvents"),
+            new TeaPair("version", "2026-04-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DownloadResourceControlEventsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Downloads cloud resource control events.</p>
+     * 
+     * @param request DownloadResourceControlEventsRequest
+     * @return DownloadResourceControlEventsResponse
+     */
+    public DownloadResourceControlEventsResponse downloadResourceControlEvents(DownloadResourceControlEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.downloadResourceControlEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the analysis results of alert records.</p>
      * 
      * @param tmpReq GetAlertRecordAnalysisResultRequest

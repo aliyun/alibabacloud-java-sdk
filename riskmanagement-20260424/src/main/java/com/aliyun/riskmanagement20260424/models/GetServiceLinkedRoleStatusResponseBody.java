@@ -8,7 +8,7 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
      * <p>The status code. Valid values:</p>
      * <ul>
      * <li><strong>200</strong>: Succeeded.</li>
-     * <li><strong>Other (400, 500)</strong>: Failed.</li>
+     * <li><strong>Other values (400, 500)</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,8 +103,8 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
         /**
          * <p>The authorization status. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: authorized</li>
-         * <li><strong>false</strong>: not authorized</li>
+         * <li><strong>true</strong>: Authorized.</li>
+         * <li><strong>false</strong>: Not authorized.</li>
          * </ul>
          * 
          * <strong>example:</strong>

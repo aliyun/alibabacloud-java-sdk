@@ -25,6 +25,9 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
 
     /**
      * <p>The event name code.</p>
+     * <blockquote>
+     * <p>This parameter does not take effect when the CaseCodes parameter is not empty.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>RISKCONTROL_IMS_IMS_BAN_SUBUSER</p>
@@ -49,6 +52,9 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
 
     /**
      * <p>The event ID.</p>
+     * <blockquote>
+     * <p>This parameter does not take effect when the EventIds parameter is not empty.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2PTOHhN3YUeaPWzq9FLmpdZ9EOW</p>
@@ -56,6 +62,9 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <p>The list of event IDs.</p>
+     */
     @NameInMap("EventIds")
     public java.util.List<String> eventIds;
 
@@ -69,7 +78,7 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The control end time.</p>
+     * <p>The end time of the control action.</p>
      * <blockquote>
      * <p>Format: yyyy-MM-dd HH:mm:ss</p>
      * </blockquote>
@@ -81,7 +90,7 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     public String punishEndTime;
 
     /**
-     * <p>The control start time.</p>
+     * <p>The start time of the control action.</p>
      * <blockquote>
      * <p>Format: yyyy-MM-dd HH:mm:ss</p>
      * </blockquote>
@@ -109,6 +118,9 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
      * <li><strong>Alerting</strong>: Alerting.</li>
      * <li><strong>Ended</strong>: Ended.</li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter does not take effect when the Statuses parameter is not empty.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Executing</p>
@@ -116,6 +128,9 @@ public class QueryAccountSafetyIncidentRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The list of event statuses.</p>
+     */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 

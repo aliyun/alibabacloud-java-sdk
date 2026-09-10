@@ -3,9 +3,12 @@ package com.aliyun.riskmanagement20260424.models;
 
 import com.aliyun.tea.*;
 
-public class QueryGuideSubStatusResponseBody extends TeaModel {
+public class DownloadResourceControlEventsResponseBody extends TeaModel {
     /**
-     * <p>The status of the API call.</p>
+     * <p>The status code.</p>
+     * <blockquote>
+     * <p>200 indicates success. Other values (such as 500 or 400) indicate error codes.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,14 +17,10 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The subscription status. Valid values:</p>
-     * <ul>
-     * <li><strong>SUBSCRIBED</strong>: Subscribed.</li>
-     * <li><strong>UNSUBSCRIBED</strong>: Not subscribed.</li>
-     * </ul>
+     * <p>The metadata response information.</p>
      * 
      * <strong>example:</strong>
-     * <p>SUBSCRIBED</p>
+     * <p>5</p>
      */
     @NameInMap("Data")
     public String data;
@@ -36,18 +35,18 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>3C107939-59BD-5EB9-B250-39559C830A85</p>
+     * <p>855FCC89-0B13-5FC0-AAD2-120878081C1C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.              </li>
+     * <li><strong>true</strong>: The call was successful.                                </li>
      * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
@@ -57,12 +56,12 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static QueryGuideSubStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        QueryGuideSubStatusResponseBody self = new QueryGuideSubStatusResponseBody();
+    public static DownloadResourceControlEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DownloadResourceControlEventsResponseBody self = new DownloadResourceControlEventsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryGuideSubStatusResponseBody setCode(String code) {
+    public DownloadResourceControlEventsResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -70,7 +69,7 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryGuideSubStatusResponseBody setData(String data) {
+    public DownloadResourceControlEventsResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -78,7 +77,7 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryGuideSubStatusResponseBody setMessage(String message) {
+    public DownloadResourceControlEventsResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -86,7 +85,7 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryGuideSubStatusResponseBody setRequestId(String requestId) {
+    public DownloadResourceControlEventsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -94,7 +93,7 @@ public class QueryGuideSubStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryGuideSubStatusResponseBody setSuccess(Boolean success) {
+    public DownloadResourceControlEventsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
