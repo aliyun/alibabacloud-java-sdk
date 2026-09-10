@@ -74,7 +74,112 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         return this.results;
     }
 
+    public static class RetrievalKnowledgeBaseResponseBodyResultsImageResources extends TeaModel {
+        /**
+         * <p>The index of the source document that the image belongs to, starting from 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("DocumentIndex")
+        public Integer documentIndex;
+
+        /**
+         * <p>The unique ID of the image resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document-0/pictures/1</p>
+         */
+        @NameInMap("Id")
+        public String id;
+
+        /**
+         * <p>The element reference of the image in the Docling source document structure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#/pictures/1</p>
+         */
+        @NameInMap("ItemRef")
+        public String itemRef;
+
+        /**
+         * <p>The media type of the image resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/png</p>
+         */
+        @NameInMap("MimeType")
+        public String mimeType;
+
+        /**
+         * <p>The OSS URI of the image resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://my-bucket/results/my-space/doc-001/artifacts/image-1.png</p>
+         */
+        @NameInMap("Uri")
+        public String uri;
+
+        public static RetrievalKnowledgeBaseResponseBodyResultsImageResources build(java.util.Map<String, ?> map) throws Exception {
+            RetrievalKnowledgeBaseResponseBodyResultsImageResources self = new RetrievalKnowledgeBaseResponseBodyResultsImageResources();
+            return TeaModel.build(map, self);
+        }
+
+        public RetrievalKnowledgeBaseResponseBodyResultsImageResources setDocumentIndex(Integer documentIndex) {
+            this.documentIndex = documentIndex;
+            return this;
+        }
+        public Integer getDocumentIndex() {
+            return this.documentIndex;
+        }
+
+        public RetrievalKnowledgeBaseResponseBodyResultsImageResources setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public RetrievalKnowledgeBaseResponseBodyResultsImageResources setItemRef(String itemRef) {
+            this.itemRef = itemRef;
+            return this;
+        }
+        public String getItemRef() {
+            return this.itemRef;
+        }
+
+        public RetrievalKnowledgeBaseResponseBodyResultsImageResources setMimeType(String mimeType) {
+            this.mimeType = mimeType;
+            return this;
+        }
+        public String getMimeType() {
+            return this.mimeType;
+        }
+
+        public RetrievalKnowledgeBaseResponseBodyResultsImageResources setUri(String uri) {
+            this.uri = uri;
+            return this;
+        }
+        public String getUri() {
+            return this.uri;
+        }
+
+    }
+
     public static class RetrievalKnowledgeBaseResponseBodyResults extends TeaModel {
+        /**
+         * <p>The list of figure or table captions associated with the chunk.</p>
+         */
+        @NameInMap("Captions")
+        public java.util.List<String> captions;
+
+        /**
+         * <p>The list of Docling source document structured element references associated with the chunk. You can use these references to precisely locate original elements.</p>
+         */
+        @NameInMap("DocItems")
+        public java.util.List<String> docItems;
+
         /**
          * <p>The unique ID of the file.</p>
          * 
@@ -85,7 +190,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>2024FinancialReport.pdf</p>
@@ -94,10 +199,16 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The chain of section headings to which the shard belongs.</p>
+         * <p>The chain of section headings that the chunk belongs to.</p>
          */
         @NameInMap("Headings")
         public java.util.List<String> headings;
+
+        /**
+         * <p>The list of image resources referenced by the chunk.</p>
+         */
+        @NameInMap("ImageResources")
+        public java.util.List<RetrievalKnowledgeBaseResponseBodyResultsImageResources> imageResources;
 
         /**
          * <p>The metadata.</p>
@@ -109,13 +220,13 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public String metadata;
 
         /**
-         * <p>The list of page numbers to which the shard belongs.</p>
+         * <p>The list of page numbers that the chunk belongs to.</p>
          */
         @NameInMap("PageNumbers")
         public java.util.List<Integer> pageNumbers;
 
         /**
-         * <p>The text content of the shard.</p>
+         * <p>The text content of the chunk.</p>
          * 
          * <strong>example:</strong>
          * <p>Financial report</p>
@@ -124,7 +235,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public String shardContent;
 
         /**
-         * <p>The shard index.</p>
+         * <p>The index of the chunk.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -144,6 +255,22 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public static RetrievalKnowledgeBaseResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             RetrievalKnowledgeBaseResponseBodyResults self = new RetrievalKnowledgeBaseResponseBodyResults();
             return TeaModel.build(map, self);
+        }
+
+        public RetrievalKnowledgeBaseResponseBodyResults setCaptions(java.util.List<String> captions) {
+            this.captions = captions;
+            return this;
+        }
+        public java.util.List<String> getCaptions() {
+            return this.captions;
+        }
+
+        public RetrievalKnowledgeBaseResponseBodyResults setDocItems(java.util.List<String> docItems) {
+            this.docItems = docItems;
+            return this;
+        }
+        public java.util.List<String> getDocItems() {
+            return this.docItems;
         }
 
         public RetrievalKnowledgeBaseResponseBodyResults setFileId(String fileId) {
@@ -168,6 +295,14 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         }
         public java.util.List<String> getHeadings() {
             return this.headings;
+        }
+
+        public RetrievalKnowledgeBaseResponseBodyResults setImageResources(java.util.List<RetrievalKnowledgeBaseResponseBodyResultsImageResources> imageResources) {
+            this.imageResources = imageResources;
+            return this;
+        }
+        public java.util.List<RetrievalKnowledgeBaseResponseBodyResultsImageResources> getImageResources() {
+            return this.imageResources;
         }
 
         public RetrievalKnowledgeBaseResponseBodyResults setMetadata(String metadata) {

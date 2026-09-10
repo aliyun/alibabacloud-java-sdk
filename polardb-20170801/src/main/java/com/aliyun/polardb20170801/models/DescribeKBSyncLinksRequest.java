@@ -24,6 +24,24 @@ public class DescribeKBSyncLinksRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
+     * <p>The page number of the query results. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The number of synchronization links returned per page. Valid values: 10, 20, 30, 50, 100, 200, and 500. Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -52,6 +70,22 @@ public class DescribeKBSyncLinksRequest extends TeaModel {
     }
     public String getKnowledgeBaseId() {
         return this.knowledgeBaseId;
+    }
+
+    public DescribeKBSyncLinksRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeKBSyncLinksRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeKBSyncLinksRequest setRegionId(String regionId) {

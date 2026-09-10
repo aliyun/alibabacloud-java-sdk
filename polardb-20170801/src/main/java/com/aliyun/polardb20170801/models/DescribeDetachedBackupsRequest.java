@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDetachedBackupsRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set.</p>
+     * <p>The backup ID.</p>
      * 
      * <strong>example:</strong>
      * <p>111111111</p>
@@ -14,10 +14,10 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The backup mode. Valid values:</p>
+     * <p>The backup mode. Valid values: </p>
      * <ul>
-     * <li><strong>Automated</strong></li>
-     * <li><strong>Manual</strong></li>
+     * <li><strong>Automated</strong>: automatic backup.</li>
+     * <li><strong>Manual</strong>: manual backup.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +27,9 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     public String backupMode;
 
     /**
-     * <p>The region where the cross-region data backup file of the instance is stored.</p>
+     * <p>The destination region for cross-region backups.</p>
      * <blockquote>
-     * <p>This parameter is valid only for PolarDB for MySQL clusters.</p>
+     * <p>Only PolarDB for MySQL supports this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,10 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     public String backupRegion;
 
     /**
-     * <p>The status of the backup set. Valid values:</p>
+     * <p>The backup status. Valid values:</p>
      * <ul>
-     * <li><strong>Success</strong></li>
-     * <li><strong>Failed</strong></li>
+     * <li><strong>Success</strong>: The backup is complete.</li>
+     * <li><strong>Failed</strong>: The backup failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     public String backupStatus;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -87,7 +87,7 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The number of entries per page. Valid values: </p>
      * <ul>
      * <li><strong>30</strong></li>
      * <li><strong>50</strong></li>
@@ -108,7 +108,7 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

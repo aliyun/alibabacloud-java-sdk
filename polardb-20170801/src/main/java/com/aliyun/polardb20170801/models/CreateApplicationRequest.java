@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of an existing template operator instance to associate. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The ID of an existing model operator instance to associate. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>pm-xxxxxx</p>
      */
     @NameInMap("AIDBClusterId")
     public String AIDBClusterId;
+
+    /**
+     * <p>The AgenticDB branch specification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;DBClusterId&quot;:&quot;pagc-2zea920mcvd5o87&quot;,&quot;TenantId&quot;:&quot;t-cfc2d7df0e59439681f0087f51&quot;,&quot;ProjectId&quot;:&quot;proj-d7849d0050664c758af795d468&quot;,&quot;BranchId&quot;:&quot;br-9054b3b7649e4c0d977bd0df37&quot;,&quot;ForkFromBranch&quot;:true,&quot;ForkFromApplicationId&quot;:&quot;pa-source&quot;}</p>
+     */
+    @NameInMap("AgenticDBBranchSpec")
+    public CreateApplicationRequestAgenticDBBranchSpec agenticDBBranchSpec;
 
     /**
      * <p>The application type. Valid values:</p>
@@ -51,7 +60,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String authProvider;
 
     /**
-     * <p>The configuration of the authentication provider.</p>
+     * <p>The authentication provider configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -60,7 +69,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String authProviderConfig;
 
     /**
-     * <p>Specifies whether to automatically create and associate with an elastic IP address (EIP).</p>
+     * <p>Specifies whether to enable automatic creation of an elastic IP address (EIP) and attach it to the instance. This is equivalent to associate with an EIP.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
@@ -134,7 +143,7 @@ public class CreateApplicationRequest extends TeaModel {
     public java.util.List<CreateApplicationRequestDnatEntries> dnatEntries;
 
     /**
-     * <p>The dedicated DNAT NAT IP address that is allocated by the customer (separate from the SNAT IP address) for NAT mapping. The IP address must belong to the specified gateway and be in the available state. The vSwitch of the gateway must belong to the primary CIDR block that is reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: An SNAT entry is bound to the vSwitch where the application resides.</p>
+     * <p>The DNAT-dedicated NAT IP address that has been allocated (separate from the SNAT IP address) for NAT mapping. The IP address must belong to the specified gateway and be in an available state. The vSwitch of the gateway must belong to a primary CIDR block that is reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: An SNAT entry has been bound to the vSwitch where the application resides.</p>
      * 
      * <strong>example:</strong>
      * <p>10.64.0.10</p>
@@ -143,7 +152,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String dnatIpAddress;
 
     /**
-     * <p>Default value: <code>false</code>. If you set this parameter to <code>true</code>, only parameter and resource validation is performed without actually creating resources.</p>
+     * <p>Default value: <code>false</code>. If you set this parameter to <code>true</code>, only parameter and resource validation is performed without actually creating the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -170,7 +179,7 @@ public class CreateApplicationRequest extends TeaModel {
     public CreateApplicationRequestMemApplicationSpec memApplicationSpec;
 
     /**
-     * <p>The API of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The model API. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>openai-completions</p>
@@ -179,7 +188,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String modelApi;
 
     /**
-     * <p>The API key of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The model API key. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>sk-xxxxxx</p>
@@ -188,7 +197,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String modelApiKey;
 
     /**
-     * <p>The URL of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The model base URL. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
@@ -199,7 +208,7 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>The model source. Valid values:</p>
      * <ul>
-     * <li>bailian: Bailian model.</li>
+     * <li>bailian: Alibaba Cloud Model Studio model.</li>
      * <li>custom: Custom model.</li>
      * <li>maas: PolarDB model operator.</li>
      * </ul>
@@ -211,7 +220,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String modelFrom;
 
     /**
-     * <p>The name of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The model name. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
@@ -235,7 +244,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The subscription type, such as yearly or monthly.</p>
+     * <p>The subscription type (yearly or monthly).</p>
      * 
      * <strong>example:</strong>
      * <p>Year</p>
@@ -244,7 +253,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The instance ID of the Polarlakebase cold storage or high-performance instance. Default value: empty. If specified, the corresponding storage is mounted to the application.</p>
+     * <p>The instance ID of the Polarlakebase cold storage or high-performance edition. Default value: empty. If specified, the corresponding storage is mounted to the application.</p>
      * <p>Currently, only the following applications support this parameter:</p>
      * <ul>
      * <li>supabase</li>
@@ -303,7 +312,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String securityIPArrayName;
 
     /**
-     * <p>The IP whitelist. If you do not specify this parameter, the default value <code>127.0.0.1</code> is used.</p>
+     * <p>The IP whitelist. If you do not specify this parameter, the default value is <code>127.0.0.1</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1,172.17.0.0/24</p>
@@ -330,6 +339,15 @@ public class CreateApplicationRequest extends TeaModel {
     public String skillTemplateId;
 
     /**
+     * <p>The list of application storages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;StorageType&quot;:&quot;oss&quot;,&quot;StorageInstanceId&quot;:&quot;pfs-xxxx&quot;,&quot;EndpointId&quot;:&quot;pe-xxxx&quot;}]</p>
+     */
+    @NameInMap("Storages")
+    public java.util.List<CreateApplicationRequestStorages> storages;
+
+    /**
      * <p>The tags.</p>
      */
     @NameInMap("Tag")
@@ -354,7 +372,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The vSwitch. Default value: the current vSwitch in the primary zone of the instance.</p>
+     * <p>The vSwitch. Default value: the vSwitch in the primary zone of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-*********************</p>
@@ -372,7 +390,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in the active state.</p>
+     * <p>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in an active state.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-xxx</p>
@@ -400,6 +418,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getAIDBClusterId() {
         return this.AIDBClusterId;
+    }
+
+    public CreateApplicationRequest setAgenticDBBranchSpec(CreateApplicationRequestAgenticDBBranchSpec agenticDBBranchSpec) {
+        this.agenticDBBranchSpec = agenticDBBranchSpec;
+        return this;
+    }
+    public CreateApplicationRequestAgenticDBBranchSpec getAgenticDBBranchSpec() {
+        return this.agenticDBBranchSpec;
     }
 
     public CreateApplicationRequest setApplicationType(String applicationType) {
@@ -674,6 +700,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.skillTemplateId;
     }
 
+    public CreateApplicationRequest setStorages(java.util.List<CreateApplicationRequestStorages> storages) {
+        this.storages = storages;
+        return this;
+    }
+    public java.util.List<CreateApplicationRequestStorages> getStorages() {
+        return this.storages;
+    }
+
     public CreateApplicationRequest setTag(java.util.List<CreateApplicationRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -730,9 +764,119 @@ public class CreateApplicationRequest extends TeaModel {
         return this.zoneId;
     }
 
+    public static class CreateApplicationRequestAgenticDBBranchSpec extends TeaModel {
+        /**
+         * <p>The AgenticDB branch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-9054b3b7649e4c0d977bd0df37</p>
+         */
+        @NameInMap("BranchId")
+        public String branchId;
+
+        /**
+         * <p>The AgenticDB cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pagc-2zea920mcvd5o87</p>
+         */
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
+        /**
+         * <p>The ID of the source application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-source</p>
+         */
+        @NameInMap("ForkFromApplicationId")
+        public String forkFromApplicationId;
+
+        /**
+         * <p>Specifies whether to create the application based on a specified AgenticDB branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ForkFromBranch")
+        public Boolean forkFromBranch;
+
+        /**
+         * <p>The AgenticDB project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-d7849d0050664c758af795d468</p>
+         */
+        @NameInMap("ProjectId")
+        public String projectId;
+
+        /**
+         * <p>The AgenticDB tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-cfc2d7df0e59439681f0087f51</p>
+         */
+        @NameInMap("TenantId")
+        public String tenantId;
+
+        public static CreateApplicationRequestAgenticDBBranchSpec build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationRequestAgenticDBBranchSpec self = new CreateApplicationRequestAgenticDBBranchSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationRequestAgenticDBBranchSpec setBranchId(String branchId) {
+            this.branchId = branchId;
+            return this;
+        }
+        public String getBranchId() {
+            return this.branchId;
+        }
+
+        public CreateApplicationRequestAgenticDBBranchSpec setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
+        }
+
+        public CreateApplicationRequestAgenticDBBranchSpec setForkFromApplicationId(String forkFromApplicationId) {
+            this.forkFromApplicationId = forkFromApplicationId;
+            return this;
+        }
+        public String getForkFromApplicationId() {
+            return this.forkFromApplicationId;
+        }
+
+        public CreateApplicationRequestAgenticDBBranchSpec setForkFromBranch(Boolean forkFromBranch) {
+            this.forkFromBranch = forkFromBranch;
+            return this;
+        }
+        public Boolean getForkFromBranch() {
+            return this.forkFromBranch;
+        }
+
+        public CreateApplicationRequestAgenticDBBranchSpec setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public CreateApplicationRequestAgenticDBBranchSpec setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+    }
+
     public static class CreateApplicationRequestComponents extends TeaModel {
         /**
-         * <p>The specifications of the application subcomponent.</p>
+         * <p>The specification of the application subcomponent.</p>
          * 
          * <strong>example:</strong>
          * <p>polar.app.g2.medium</p>
@@ -741,7 +885,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String componentClass;
 
         /**
-         * <p>The maximum number of application subcomponents with the same specifications. Default value: the value of ComponentReplica.</p>
+         * <p>The maximum number of replicas for the application subcomponent with the same specification. Default value: the value of ComponentReplica.</p>
          * <ul>
          * <li>Only raycluster supports this parameter.</li>
          * </ul>
@@ -800,7 +944,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String scaleMin;
 
         /**
-         * <p>The list of security groups for the application subcomponent. Separate multiple security groups with commas (,).</p>
+         * <p>The list of security groups for the application subcomponent, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>sg-********************</p>
@@ -818,7 +962,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String securityIPArrayName;
 
         /**
-         * <p>The whitelist IP addresses of the application subcomponent. Separate multiple IP addresses with commas (,).</p>
+         * <p>The whitelist IP addresses of the application subcomponent, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -924,7 +1068,7 @@ public class CreateApplicationRequest extends TeaModel {
 
     public static class CreateApplicationRequestDnatEntries extends TeaModel {
         /**
-         * <p>The frontend port. This parameter is optional. If not specified, the port is automatically assigned by the control plane to avoid conflicts with ports already in use on the gateway. You can query the assignment result by calling the DescribeApplicationAttribute operation.</p>
+         * <p>The frontend port. This parameter is optional. If not specified, the system automatically assigns a port that does not conflict with ports already in use on the gateway. You can query the assignment result by calling the DescribeApplicationAttribute operation.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -1020,7 +1164,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String dbPassword;
 
         /**
-         * <p>Required for knowledge applications. The name of the LLM model, such as qwen3-max.</p>
+         * <p>Required for knowledge applications. The LLM model name, such as qwen3-max.</p>
          */
         @NameInMap("LlmModel")
         public String llmModel;
@@ -1085,7 +1229,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String dbUser;
 
         /**
-         * <p>Required for mem0 applications. The name of the embedder model, such as text-embedding-v4.</p>
+         * <p>Required for mem0 applications. The embedder model name, such as text-embedding-v4.</p>
          * 
          * <strong>example:</strong>
          * <p>text-embedding-v4</p>
@@ -1112,7 +1256,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String graphLlmModel;
 
         /**
-         * <p>Required for mem0 applications. The name of the LLM model, such as qwen3-max.</p>
+         * <p>Required for mem0 applications. The LLM model name, such as qwen3-max.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-max</p>
@@ -1130,7 +1274,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String projectName;
 
         /**
-         * <p>Required for mem0 applications. The name of the reranker model, such as qwen3-rerank.</p>
+         * <p>Required for mem0 applications. The reranker model name, such as qwen3-rerank.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
@@ -1272,6 +1416,150 @@ public class CreateApplicationRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+    }
+
+    public static class CreateApplicationRequestStorages extends TeaModel {
+        /**
+         * <p>The mount path inside the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data/container</p>
+         */
+        @NameInMap("ContainerMountPath")
+        public String containerMountPath;
+
+        /**
+         * <p>The storage endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pe-xxxx</p>
+         */
+        @NameInMap("EndpointId")
+        public String endpointId;
+
+        /**
+         * <p>The storage mount path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data/source</p>
+         */
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        /**
+         * <p>The storage capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("StorageCapacity")
+        public String storageCapacity;
+
+        /**
+         * <p>The storage access endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarfs.example.com</p>
+         */
+        @NameInMap("StorageEndpoint")
+        public String storageEndpoint;
+
+        /**
+         * <p>The storage instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-xxxx</p>
+         */
+        @NameInMap("StorageInstanceId")
+        public String storageInstanceId;
+
+        /**
+         * <p>The storage performance level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
+        @NameInMap("StoragePerformanceLevel")
+        public String storagePerformanceLevel;
+
+        /**
+         * <p>The storage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
+        @NameInMap("StorageType")
+        public String storageType;
+
+        public static CreateApplicationRequestStorages build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationRequestStorages self = new CreateApplicationRequestStorages();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationRequestStorages setContainerMountPath(String containerMountPath) {
+            this.containerMountPath = containerMountPath;
+            return this;
+        }
+        public String getContainerMountPath() {
+            return this.containerMountPath;
+        }
+
+        public CreateApplicationRequestStorages setEndpointId(String endpointId) {
+            this.endpointId = endpointId;
+            return this;
+        }
+        public String getEndpointId() {
+            return this.endpointId;
+        }
+
+        public CreateApplicationRequestStorages setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public CreateApplicationRequestStorages setStorageCapacity(String storageCapacity) {
+            this.storageCapacity = storageCapacity;
+            return this;
+        }
+        public String getStorageCapacity() {
+            return this.storageCapacity;
+        }
+
+        public CreateApplicationRequestStorages setStorageEndpoint(String storageEndpoint) {
+            this.storageEndpoint = storageEndpoint;
+            return this;
+        }
+        public String getStorageEndpoint() {
+            return this.storageEndpoint;
+        }
+
+        public CreateApplicationRequestStorages setStorageInstanceId(String storageInstanceId) {
+            this.storageInstanceId = storageInstanceId;
+            return this;
+        }
+        public String getStorageInstanceId() {
+            return this.storageInstanceId;
+        }
+
+        public CreateApplicationRequestStorages setStoragePerformanceLevel(String storagePerformanceLevel) {
+            this.storagePerformanceLevel = storagePerformanceLevel;
+            return this;
+        }
+        public String getStoragePerformanceLevel() {
+            return this.storagePerformanceLevel;
+        }
+
+        public CreateApplicationRequestStorages setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
     }

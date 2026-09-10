@@ -11,6 +11,24 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
     public java.util.List<DescribeKBSyncLinksResponseBodyItems> items;
 
     /**
+     * <p>The page number of the current results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The number of records per page in the current results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
      * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
@@ -18,6 +36,15 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    /**
+     * <p>The total number of synchronization links that match the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeKBSyncLinksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeKBSyncLinksResponseBody self = new DescribeKBSyncLinksResponseBody();
@@ -32,6 +59,22 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeKBSyncLinksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeKBSyncLinksResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeKBSyncLinksResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -40,9 +83,17 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeKBSyncLinksResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
     public static class DescribeKBSyncLinksResponseBodyItems extends TeaModel {
         /**
-         * <p>The client identifier.</p>
+         * <p>The client ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cli_xxxxxxbe8</p>

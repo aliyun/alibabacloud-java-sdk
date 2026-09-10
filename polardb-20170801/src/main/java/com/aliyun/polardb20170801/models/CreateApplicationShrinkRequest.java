@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of an existing template operator instance to associate. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The ID of an existing model operator instance to associate. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>pm-xxxxxx</p>
      */
     @NameInMap("AIDBClusterId")
     public String AIDBClusterId;
+
+    /**
+     * <p>The AgenticDB branch specification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;DBClusterId&quot;:&quot;pagc-2zea920mcvd5o87&quot;,&quot;TenantId&quot;:&quot;t-cfc2d7df0e59439681f0087f51&quot;,&quot;ProjectId&quot;:&quot;proj-d7849d0050664c758af795d468&quot;,&quot;BranchId&quot;:&quot;br-9054b3b7649e4c0d977bd0df37&quot;,&quot;ForkFromBranch&quot;:true,&quot;ForkFromApplicationId&quot;:&quot;pa-source&quot;}</p>
+     */
+    @NameInMap("AgenticDBBranchSpec")
+    public String agenticDBBranchSpecShrink;
 
     /**
      * <p>The application type. Valid values:</p>
@@ -51,7 +60,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String authProvider;
 
     /**
-     * <p>The configuration of the authentication provider.</p>
+     * <p>The authentication provider configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -60,7 +69,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String authProviderConfig;
 
     /**
-     * <p>Specifies whether to automatically create and associate with an elastic IP address (EIP).</p>
+     * <p>Specifies whether to enable automatic creation of an elastic IP address (EIP) and attach it to the instance. This is equivalent to associate with an EIP.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
@@ -134,7 +143,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String dnatEntriesShrink;
 
     /**
-     * <p>The dedicated DNAT NAT IP address that is allocated by the customer (separate from the SNAT IP address) for NAT mapping. The IP address must belong to the specified gateway and be in the available state. The vSwitch of the gateway must belong to the primary CIDR block that is reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: An SNAT entry is bound to the vSwitch where the application resides.</p>
+     * <p>The DNAT-dedicated NAT IP address that has been allocated (separate from the SNAT IP address) for NAT mapping. The IP address must belong to the specified gateway and be in an available state. The vSwitch of the gateway must belong to a primary CIDR block that is reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: An SNAT entry has been bound to the vSwitch where the application resides.</p>
      * 
      * <strong>example:</strong>
      * <p>10.64.0.10</p>
@@ -143,7 +152,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String dnatIpAddress;
 
     /**
-     * <p>Default value: <code>false</code>. If you set this parameter to <code>true</code>, only parameter and resource validation is performed without actually creating resources.</p>
+     * <p>Default value: <code>false</code>. If you set this parameter to <code>true</code>, only parameter and resource validation is performed without actually creating the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -170,7 +179,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String memApplicationSpecShrink;
 
     /**
-     * <p>The API of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The model API. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>openai-completions</p>
@@ -179,7 +188,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String modelApi;
 
     /**
-     * <p>The API key of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The model API key. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>sk-xxxxxx</p>
@@ -188,7 +197,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String modelApiKey;
 
     /**
-     * <p>The URL of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The model base URL. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
@@ -199,7 +208,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     /**
      * <p>The model source. Valid values:</p>
      * <ul>
-     * <li>bailian: Bailian model.</li>
+     * <li>bailian: Alibaba Cloud Model Studio model.</li>
      * <li>custom: Custom model.</li>
      * <li>maas: PolarDB model operator.</li>
      * </ul>
@@ -211,7 +220,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String modelFrom;
 
     /**
-     * <p>The name of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The model name. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
@@ -235,7 +244,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The subscription type, such as yearly or monthly.</p>
+     * <p>The subscription type (yearly or monthly).</p>
      * 
      * <strong>example:</strong>
      * <p>Year</p>
@@ -244,7 +253,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The instance ID of the Polarlakebase cold storage or high-performance instance. Default value: empty. If specified, the corresponding storage is mounted to the application.</p>
+     * <p>The instance ID of the Polarlakebase cold storage or high-performance edition. Default value: empty. If specified, the corresponding storage is mounted to the application.</p>
      * <p>Currently, only the following applications support this parameter:</p>
      * <ul>
      * <li>supabase</li>
@@ -303,7 +312,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String securityIPArrayName;
 
     /**
-     * <p>The IP whitelist. If you do not specify this parameter, the default value <code>127.0.0.1</code> is used.</p>
+     * <p>The IP whitelist. If you do not specify this parameter, the default value is <code>127.0.0.1</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1,172.17.0.0/24</p>
@@ -330,6 +339,15 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String skillTemplateId;
 
     /**
+     * <p>The list of application storages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;StorageType&quot;:&quot;oss&quot;,&quot;StorageInstanceId&quot;:&quot;pfs-xxxx&quot;,&quot;EndpointId&quot;:&quot;pe-xxxx&quot;}]</p>
+     */
+    @NameInMap("Storages")
+    public String storagesShrink;
+
+    /**
      * <p>The tags.</p>
      */
     @NameInMap("Tag")
@@ -354,7 +372,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The vSwitch. Default value: the current vSwitch in the primary zone of the instance.</p>
+     * <p>The vSwitch. Default value: the vSwitch in the primary zone of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-*********************</p>
@@ -372,7 +390,7 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in the active state.</p>
+     * <p>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in an active state.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-xxx</p>
@@ -400,6 +418,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getAIDBClusterId() {
         return this.AIDBClusterId;
+    }
+
+    public CreateApplicationShrinkRequest setAgenticDBBranchSpecShrink(String agenticDBBranchSpecShrink) {
+        this.agenticDBBranchSpecShrink = agenticDBBranchSpecShrink;
+        return this;
+    }
+    public String getAgenticDBBranchSpecShrink() {
+        return this.agenticDBBranchSpecShrink;
     }
 
     public CreateApplicationShrinkRequest setApplicationType(String applicationType) {
@@ -672,6 +698,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getSkillTemplateId() {
         return this.skillTemplateId;
+    }
+
+    public CreateApplicationShrinkRequest setStoragesShrink(String storagesShrink) {
+        this.storagesShrink = storagesShrink;
+        return this;
+    }
+    public String getStoragesShrink() {
+        return this.storagesShrink;
     }
 
     public CreateApplicationShrinkRequest setTag(java.util.List<CreateApplicationShrinkRequestTag> tag) {

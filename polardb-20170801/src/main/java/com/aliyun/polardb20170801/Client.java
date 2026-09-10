@@ -3061,7 +3061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application that is attached to a PolarDB instance.</p>
+     * <p>Creates an application associated with a PolarDB instance.</p>
      * 
      * @param tmpReq CreateApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3071,6 +3071,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.agenticDBBranchSpec)) {
+            request.agenticDBBranchSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agenticDBBranchSpec, "AgenticDBBranchSpec", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.components)) {
             request.componentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.components, "Components", "json");
         }
@@ -3095,9 +3099,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.storages)) {
+            request.storagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.storages, "Storages", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.AIDBClusterId)) {
             query.put("AIDBClusterId", request.AIDBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticDBBranchSpecShrink)) {
+            query.put("AgenticDBBranchSpec", request.agenticDBBranchSpecShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
@@ -3236,6 +3248,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SkillTemplateId", request.skillTemplateId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storagesShrink)) {
+            query.put("Storages", request.storagesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
@@ -3283,7 +3299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application that is attached to a PolarDB instance.</p>
+     * <p>Creates an application associated with a PolarDB instance.</p>
      * 
      * @param request CreateApplicationRequest
      * @return CreateApplicationResponse
@@ -17155,13 +17171,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the PolarDB cluster is in the <strong>Released</strong> state. You must also confirm that the <strong>Retain All Backups Permanently</strong> or <strong>Retain Last Automatic Backup Permanently</strong> backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.</p>
+     * <p>When you invoke this operation, the PolarDB cluster must be in the <strong>Released</strong> state, and one of the following backup retention options must have been selected when the cluster was released: <strong>Long-term Retention (LTR) of All Backups</strong> or <strong>Long-term Retention (LTR) of the Last Backup (Automatic Backup Before Deletion)</strong>. If all retained backup sets of a released cluster have been manually deleted, this operation can no longer query the cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the backup sets in a released PolarDB cluster.</p>
+     * <p>Queries the details of backup sets in a released PolarDB cluster.</p>
      * 
      * @param request DescribeDetachedBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17241,13 +17257,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the PolarDB cluster is in the <strong>Released</strong> state. You must also confirm that the <strong>Retain All Backups Permanently</strong> or <strong>Retain Last Automatic Backup Permanently</strong> backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.</p>
+     * <p>When you invoke this operation, the PolarDB cluster must be in the <strong>Released</strong> state, and one of the following backup retention options must have been selected when the cluster was released: <strong>Long-term Retention (LTR) of All Backups</strong> or <strong>Long-term Retention (LTR) of the Last Backup (Automatic Backup Before Deletion)</strong>. If all retained backup sets of a released cluster have been manually deleted, this operation can no longer query the cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the backup sets in a released PolarDB cluster.</p>
+     * <p>Queries the details of backup sets in a released PolarDB cluster.</p>
      * 
      * @param request DescribeDetachedBackupsRequest
      * @return DescribeDetachedBackupsResponse
@@ -18393,7 +18409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the synchronization list of a knowledge base.</p>
+     * <p>Queries the list of knowledge base synchronization links.</p>
      * 
      * @param request DescribeKBSyncLinksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18408,6 +18424,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
             query.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -18433,7 +18457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the synchronization list of a knowledge base.</p>
+     * <p>Queries the list of knowledge base synchronization links.</p>
      * 
      * @param request DescribeKBSyncLinksRequest
      * @return DescribeKBSyncLinksResponse
@@ -25581,11 +25605,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can also modify the automatic backup policy for a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">backup settings</a>.</p>
+     * <p>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the automatic backup policy for a PolarDB cluster.</p>
+     * <p>Modifies the automatic backup policy of a PolarDB cluster.</p>
      * 
      * @param tmpReq ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25696,11 +25720,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can also modify the automatic backup policy for a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">backup settings</a>.</p>
+     * <p>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the automatic backup policy for a PolarDB cluster.</p>
+     * <p>Modifies the automatic backup policy of a PolarDB cluster.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
@@ -30514,6 +30538,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Registers an OSS file in a knowledge base.</p>
+     * 
+     * @param request RegisterKnowledgeBaseFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RegisterKnowledgeBaseFileResponse
+     */
+    public RegisterKnowledgeBaseFileResponse registerKnowledgeBaseFileWithOptions(RegisterKnowledgeBaseFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            query.put("FilePath", request.filePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            query.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RegisterKnowledgeBaseFile"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterKnowledgeBaseFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Registers an OSS file in a knowledge base.</p>
+     * 
+     * @param request RegisterKnowledgeBaseFileRequest
+     * @return RegisterKnowledgeBaseFileResponse
+     */
+    public RegisterKnowledgeBaseFileResponse registerKnowledgeBaseFile(RegisterKnowledgeBaseFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.registerKnowledgeBaseFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Rejects a PolarClaw device pairing request.</p>
      * 
      * @param request RejectPolarClawDevicePairRequest
@@ -31586,7 +31662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information from a knowledge base.</p>
+     * <p>Retrieves knowledge base search results.</p>
      * 
      * @param request RetrievalKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31638,7 +31714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information from a knowledge base.</p>
+     * <p>Retrieves knowledge base search results.</p>
      * 
      * @param request RetrievalKnowledgeBaseRequest
      * @return RetrievalKnowledgeBaseResponse
