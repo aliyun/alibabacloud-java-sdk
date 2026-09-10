@@ -17,7 +17,7 @@ public class IcebergTable extends TeaModel {
      * <p>The table creator.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::[accountId]:root</p>
+     * <p>acs:ram::1045689747920334:root</p>
      */
     @NameInMap("createdBy")
     public String createdBy;
@@ -32,7 +32,7 @@ public class IcebergTable extends TeaModel {
      * <p>The table UUID.</p>
      * 
      * <strong>example:</strong>
-     * <p>tbl-xxxx</p>
+     * <p>tbl-424fc31c-4876-4df5-97a5-c78f3046e739</p>
      */
     @NameInMap("id")
     public String id;
@@ -50,7 +50,7 @@ public class IcebergTable extends TeaModel {
      * <p>The owner of the table.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::[accountId]:root</p>
+     * <p>acs:ram::1045689747920334:root</p>
      */
     @NameInMap("owner")
     public String owner;
@@ -59,7 +59,7 @@ public class IcebergTable extends TeaModel {
      * <p>The table URI.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://clg-iceberg-xxxx/ns-xxxx/table-xxxx</p>
+     * <p>oss://clg-iceberg-bcc387be9d24490da5f194bbaf990906/ns-b314a3c3-dff5-4e30-8ba2-0493a60566c7.db/iceberg-tbl-56539259-1879-4d6d-bd6e-d1ddb3364cc9</p>
      */
     @NameInMap("path")
     public String path;
@@ -77,7 +77,7 @@ public class IcebergTable extends TeaModel {
      * <p>The user who last updated the table.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::[accountId]:root</p>
+     * <p>acs:ram::1045689747920334:root</p>
      */
     @NameInMap("updatedBy")
     public String updatedBy;

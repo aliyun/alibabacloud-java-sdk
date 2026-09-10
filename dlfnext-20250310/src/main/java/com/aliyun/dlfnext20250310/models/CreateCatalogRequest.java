@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCatalogRequest extends TeaModel {
     /**
-     * <p>Specifies whether to share the catalog.</p>
+     * <p>Specifies whether the catalog is a shared data catalog.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class CreateCatalogRequest extends TeaModel {
     public Boolean isShared;
 
     /**
-     * <p>The catalog name.</p>
+     * <p>The name of the data catalog.</p>
      * 
      * <strong>example:</strong>
      * <p>catalog_demo</p>
@@ -23,7 +23,7 @@ public class CreateCatalogRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The configuration options for the catalog.</p>
+     * <p>The configuration parameter struct.</p>
      */
     @NameInMap("options")
     public java.util.Map<String, String> options;
@@ -38,7 +38,7 @@ public class CreateCatalogRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The catalog type.</p>
+     * <p>The type of the data catalog.</p>
      * 
      * <strong>example:</strong>
      * <p>PAIMON</p>

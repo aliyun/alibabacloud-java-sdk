@@ -1,3 +1,7 @@
+2026-09-10 Version: 3.9.1
+- Update API CreateCatalog: add response parameters Body.
+
+
 2026-08-06 Version: 3.9.0
 - Support API UpdateVpcConfig.
 

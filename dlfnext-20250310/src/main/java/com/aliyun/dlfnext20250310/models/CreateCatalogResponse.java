@@ -10,6 +10,9 @@ public class CreateCatalogResponse extends TeaModel {
     @NameInMap("statusCode")
     public Integer statusCode;
 
+    @NameInMap("body")
+    public CreateCatalogResponseBody body;
+
     public static CreateCatalogResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateCatalogResponse self = new CreateCatalogResponse();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateCatalogResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public CreateCatalogResponse setBody(CreateCatalogResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateCatalogResponseBody getBody() {
+        return this.body;
     }
 
 }
