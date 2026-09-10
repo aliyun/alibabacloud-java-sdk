@@ -8,9 +8,9 @@ public class GetResourceTypeHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The language selected for the returned product.</p>
+     * <p>The language in which the product information is returned. Valid values:</p>
      * <p>zh_CH: Chinese (default)</p>
-     * <p>en_US: English</p>
+     * <p>en_US: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh_CH</p>

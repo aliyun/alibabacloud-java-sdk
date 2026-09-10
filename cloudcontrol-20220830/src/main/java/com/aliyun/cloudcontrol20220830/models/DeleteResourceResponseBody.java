@@ -14,7 +14,7 @@ public class DeleteResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the asynchronous task. If the operation is asynchronous, this field is returned. In this case, the HTTP status code 202 is returned.</p>
+     * <p>The ID of the asynchronous task. The system returns this parameter for asynchronous operations. For these operations, the HTTP status code is 202.</p>
      * 
      * <strong>example:</strong>
      * <p>task-433aead756057fff8189a7ce5****</p>

@@ -8,7 +8,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-northeast-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("us-west-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "cloudcontrol.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloudcontrol", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -133,10 +163,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</p>
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view resource documentation and try Cloud Control API.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls this operation to delete resources.</p>
+     * <p>Deletes a resource.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param tmpReq DeleteResourceRequest
@@ -185,10 +215,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</p>
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view resource documentation and try Cloud Control API.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls this operation to delete resources.</p>
+     * <p>Deletes a resource.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request DeleteResourceRequest
@@ -198,6 +228,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteResourceWithOptions(requestPath, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries pricing based on an OpenAPI triplet and input parameters.</p>
+     * 
+     * @param request GetApiPriceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetApiPriceResponse
+     */
+    public GetApiPriceResponse getApiPriceWithOptions(GetApiPriceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetApiPrice"),
+            new TeaPair("version", "2022-08-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/price/quote"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetApiPriceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries pricing based on an OpenAPI triplet and input parameters.</p>
+     * 
+     * @param request GetApiPriceRequest
+     * @return GetApiPriceResponse
+     */
+    public GetApiPriceResponse getApiPrice(GetApiPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getApiPriceWithOptions(request, headers, runtime);
     }
 
     /**
@@ -261,7 +333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the operation to obtain resource metadata.</p>
+     * <p>Retrieves resource metadata.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param headers GetResourceTypeHeaders
@@ -297,7 +369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the operation to obtain resource metadata.</p>
+     * <p>Retrieves resource metadata.</p>
      * 
      * @param requestPath the whole path of resource string
      * @return GetResourceTypeResponse
@@ -310,11 +382,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
-     * You can call this operation to query resources List and Get based on different request paths.</p>
+     * <p>You can go to the <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the resource documentation and test the Cloud Control API.
+     * This API provides Get and List operations for resources that you can invoke using different request URIs.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call the operation to query resources.</p>
+     * <p>Query resources.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param tmpReq GetResourcesRequest
@@ -367,11 +439,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
-     * You can call this operation to query resources List and Get based on different request paths.</p>
+     * <p>You can go to the <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the resource documentation and test the Cloud Control API.
+     * This API provides Get and List operations for resources that you can invoke using different request URIs.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call the operation to query resources.</p>
+     * <p>Query resources.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request GetResourcesRequest
@@ -427,8 +499,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the mappings between schema properties in the Terraform alicloud provider and OpenAPI parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</p>
+     * <p>Retrieves pricing mapping catalogs in batches by Terraform resource type for cost estimation during the RunIaC plan phase.</p>
+     * 
+     * @param request GetTerraformPricingMappingsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTerraformPricingMappingsResponse
+     */
+    public GetTerraformPricingMappingsResponse getTerraformPricingMappingsWithOptions(GetTerraformPricingMappingsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTerraformPricingMappings"),
+            new TeaPair("version", "2022-08-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/price/terraform-mappings"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTerraformPricingMappingsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the mappings between schema properties in the Terraform alicloud provider and OpenAPI parameters.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves pricing mapping catalogs in batches by Terraform resource type for cost estimation during the RunIaC plan phase.</p>
+     * 
+     * @param request GetTerraformPricingMappingsRequest
+     * @return GetTerraformPricingMappingsResponse
+     */
+    public GetTerraformPricingMappingsResponse getTerraformPricingMappings(GetTerraformPricingMappingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getTerraformPricingMappingsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the valid values of resource attributes, such as RegionID and ZoneId.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param tmpReq ListDataSourcesRequest
@@ -473,7 +593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</p>
+     * <p>Queries the valid values of resource attributes, such as RegionID and ZoneId.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request ListDataSourcesRequest
@@ -625,6 +745,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ListResourceTypesHeaders headers = new ListResourceTypesHeaders();
         return this.listResourceTypesWithOptions(provider, product, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the OpenAPI triplets that currently support price inquiry.</p>
+     * 
+     * @param request ListSupportedPricingApisRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSupportedPricingApisResponse
+     */
+    public ListSupportedPricingApisResponse listSupportedPricingApisWithOptions(ListSupportedPricingApisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSupportedPricingApis"),
+            new TeaPair("version", "2022-08-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/price/supported-apis"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSupportedPricingApisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the OpenAPI triplets that currently support price inquiry.</p>
+     * 
+     * @param request ListSupportedPricingApisRequest
+     * @return ListSupportedPricingApisResponse
+     */
+    public ListSupportedPricingApisResponse listSupportedPricingApis(ListSupportedPricingApisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSupportedPricingApisWithOptions(request, headers, runtime);
     }
 
     /**

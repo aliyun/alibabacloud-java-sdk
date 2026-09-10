@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. If a cloud service supports idempotence, the parameter takes effect.</p>
+     * <p>A client token to ensure idempotence. This parameter works only if the cloud product supports idempotence.</p>
      * 
      * <strong>example:</strong>
      * <p>1e810dfe1468721d0664a49b9d9f74f4</p>
@@ -17,7 +17,7 @@ public class DeleteResourceShrinkRequest extends TeaModel {
     public String filterShrink;
 
     /**
-     * <p>The region. This parameter is required if a cloud service is a regionalized.</p>
+     * <p>The region ID. This parameter is required if the cloud product is region-specific.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

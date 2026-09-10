@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataSourcesRequest extends TeaModel {
     /**
-     * <p>The name of the property. RegionId is supported.</p>
+     * <p>The name of the attribute. Only <code>RegionId</code> is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListDataSourcesRequest extends TeaModel {
     public String attributeName;
 
     /**
-     * <p>The filter conditions. JSON format:{&quot;key1&quot;:&quot;value1&quot;}.</p>
+     * <p>The filter condition. The value must be a JSON string in the {&quot;key1&quot;:&quot;value1&quot;} format.</p>
      */
     @NameInMap("filter")
     public java.util.Map<String, ?> filter;

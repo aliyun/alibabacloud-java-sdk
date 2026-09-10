@@ -162,12 +162,18 @@ public class GetPriceResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the promotion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据盘享8.5折</p>
          */
         @NameInMap("promotionId")
         public Long promotionId;
 
         /**
          * <p>The name of the promotion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据盘享8.5折</p>
          */
         @NameInMap("promotionName")
         public String promotionName;
