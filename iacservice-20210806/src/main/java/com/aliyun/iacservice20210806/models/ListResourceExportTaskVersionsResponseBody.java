@@ -121,7 +121,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String sourcePath;
 
         /**
-         * <p>The path of the State file corresponding to the module.</p>
+         * <p>The path of the State file that corresponds to the module.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -170,7 +170,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
          * <li>ResourceGroupId: the resource group ID. Example: rg-1234.</li>
          * <li>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</li>
          * </ul>
-         * <p>Multiple filter conditions have an AND relationship by default. A resource must meet all filter conditions to be considered a match.</p>
+         * <p>By default, multiple filter conditions are evaluated with an AND operator. A resource must match all filter conditions to be considered a match.</p>
          * 
          * <strong>example:</strong>
          * <p>RegionId</p>
@@ -218,11 +218,11 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The download address of the exported template within the module.</p>
+         * <p>The download address of the exported template in the module.</p>
          * <ul>
-         * <li><p>If Source is CloudRegistry, the format is: &quot;cloudregistry::iacservice//&quot;</p>
+         * <li><p>If Source is set to CloudRegistry, the format is: &quot;cloudregistry::iacservice//&quot;</p>
          * </li>
-         * <li><p>If Source is OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</p>
+         * <li><p>If Source is set to OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</p>
          * </li>
          * </ul>
          * 
@@ -274,7 +274,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
 
     public static class ListResourceExportTaskVersionsResponseBodyExportTasksVariables extends TeaModel {
         /**
-         * <p>The list of Terraform resource properties corresponding to the resource type.</p>
+         * <p>The list of Terraform resource properties that correspond to the resource type.</p>
          */
         @NameInMap("properties")
         public java.util.List<String> properties;
@@ -313,7 +313,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
 
     public static class ListResourceExportTaskVersionsResponseBodyExportTasks extends TeaModel {
         /**
-         * <p>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
+         * <p>The creation time in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-11T02:18:50Z</p>
@@ -349,7 +349,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String exportTaskId;
 
         /**
-         * <p>The module to which the exported template is saved. If this parameter is not set, the template is automatically saved in the Registry.</p>
+         * <p>The module to which the exported template is saved. If this parameter is not specified, the template is automatically saved in the Registry.</p>
          */
         @NameInMap("exportToModule")
         public ListResourceExportTaskVersionsResponseBodyExportTasksExportToModule exportToModule;
@@ -382,7 +382,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String managedTaskId;
 
         /**
-         * <p>The module configuration of the exported resources.</p>
+         * <p>The module configurations of the exported resources.</p>
          */
         @NameInMap("modules")
         public java.util.List<ListResourceExportTaskVersionsResponseBodyExportTasksModules> modules;
@@ -411,6 +411,15 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public String status;
+
+        /**
+         * <p>The Terraform Provider version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.206.0</p>
+         */
+        @NameInMap("terraformProviderVersion")
+        public String terraformProviderVersion;
 
         /**
          * <p>The list of variables. Parameters of exported resources are set as variables.</p>
@@ -517,6 +526,14 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListResourceExportTaskVersionsResponseBodyExportTasks setTerraformProviderVersion(String terraformProviderVersion) {
+            this.terraformProviderVersion = terraformProviderVersion;
+            return this;
+        }
+        public String getTerraformProviderVersion() {
+            return this.terraformProviderVersion;
         }
 
         public ListResourceExportTaskVersionsResponseBodyExportTasks setVariables(java.util.List<ListResourceExportTaskVersionsResponseBodyExportTasksVariables> variables) {

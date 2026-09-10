@@ -1,3 +1,8 @@
+2026-09-10 Version: 2.11.1
+- Update API GetResourceExportTask: add response parameters Body.task.modifyTime.
+- Update API ListResourceExportTaskVersions: add response parameters Body.exportTasks.$.terraformProviderVersion.
+
+
 2026-08-25 Version: 2.11.0
 - Support API CreateTaskFromResourceImport.
 - Update API DeleteTask: add request parameters resourceRetentionPolicy.

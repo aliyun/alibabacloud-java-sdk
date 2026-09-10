@@ -4734,7 +4734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Single-user call frequency: 100 calls per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of versions for a resource export task.</p>
+     * <p>Retrieves the list of resource export task versions.</p>
      * 
      * @param request ListResourceExportTaskVersionsRequest
      * @param headers map
@@ -4787,7 +4787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Single-user call frequency: 100 calls per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of versions for a resource export task.</p>
+     * <p>Retrieves the list of resource export task versions.</p>
      * 
      * @param request ListResourceExportTaskVersionsRequest
      * @return ListResourceExportTaskVersionsResponse
