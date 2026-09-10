@@ -40,8 +40,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -171,15 +171,32 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesClusterStateClusterStage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>f0957e82de6e47</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
         @NameInMap("CurrentStage")
         public Integer currentStage;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The status of the project space. Valid values:</p>
+         * <ul>
+         * <li>CREATING: Being created.</li>
+         * <li>DELETING: Being deleted.</li>
+         * <li>MODIFYING: Resource specifications are being modified.</li>
+         * <li>SUCCESS: The previous operation was successful.</li>
+         * <li>FAILED: The previous operation failed.</li>
+         * </ul>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -327,6 +344,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesClusterState extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>a6f35c0ff73448</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
@@ -336,9 +357,42 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTimeout")
         public Boolean createTimeout;
 
+        /**
+         * <p>The cluster status. Valid values:</p>
+         * <ul>
+         * <li><p>CREATING: Being created.</p>
+         * </li>
+         * <li><p>RUNNING: Running.</p>
+         * </li>
+         * <li><p>DISABLE: Invalid.</p>
+         * </li>
+         * <li><p>DELETING: Being deleted.</p>
+         * </li>
+         * <li><p>DELETED: Deleted.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The cluster status. Valid values:</p>
+         * <ul>
+         * <li><p>CREATING: Being created.</p>
+         * </li>
+         * <li><p>RUNNING: Running.</p>
+         * </li>
+         * <li><p>DISABLE: Invalid.</p>
+         * </li>
+         * <li><p>DELETING: Being deleted.</p>
+         * </li>
+         * <li><p>DELETED: Deleted.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("SubStatus")
         public String subStatus;
 
@@ -423,6 +477,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesClusterUsedResources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ea2e9545fdc942</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
@@ -444,6 +502,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("GuaranteedUsedResource")
         public Float guaranteedUsedResource;
 
+        /**
+         * <p>Indicates whether zone-disaster recovery resources are selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Ha")
         public Boolean ha;
 
@@ -585,6 +649,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesClusterUsedStorage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>f0957e82de6e47</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
@@ -615,9 +683,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesElasticResourceSpec extends TeaModel {
+        /**
+         * <p>The number of CPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The amount of memory used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -645,9 +725,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesHaResourceSpec extends TeaModel {
+        /**
+         * <p>The number of CPUs for zone-disaster recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The memory size of zone-disaster recovery resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -675,27 +767,75 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesHaVSwitchInfo extends TeaModel {
+        /**
+         * <p>The number of available IP addresses in the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("AvailableIpAddressCount")
         public Long availableIpAddressCount;
 
+        /**
+         * <p>The description of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The vSwitch CIDR block information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.16.0/24</p>
+         */
         @NameInMap("VSwitchCidr")
         public String vSwitchCidr;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-wz9e9zt38b9f3l6*****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The vSwitch name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test vSwitch</p>
+         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6d0akr6lzd75v****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The zone ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -813,6 +953,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("AccessKey")
         public String accessKey;
 
+        /**
+         * <p>The name of the bound OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flink-log-john</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
@@ -913,7 +1059,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesStorageOss extends TeaModel {
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The name of the bound OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>oss_flink</p>
@@ -937,9 +1083,35 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesStorage extends TeaModel {
+        /**
+         * <p>Indicates whether fully managed storage is selected. Valid values:</p>
+         * <ul>
+         * <li>true: Used.</li>
+         * <li>false: Not used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("FullyManaged")
         public Boolean fullyManaged;
 
+        /**
+         * <p>The order status of fully managed storage. Valid values:</p>
+         * <ul>
+         * <li><p>NOT_INIT: The order is placed but components are not yet deployed.</p>
+         * </li>
+         * <li><p>NORMAL: Normal.</p>
+         * </li>
+         * <li><p>CEASE: Expired.</p>
+         * </li>
+         * <li><p>RELEASE: Overdue.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("OrderState")
         public String orderState;
 
@@ -1045,27 +1217,75 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesVSwitchInfo extends TeaModel {
+        /**
+         * <p>The number of available IP addresses in the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256</p>
+         */
         @NameInMap("AvailableIpAddressCount")
         public String availableIpAddressCount;
 
+        /**
+         * <p>The description of the vSwitch group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The vSwitch CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.16.0/24</p>
+         */
         @NameInMap("VSwitchCidr")
         public String vSwitchCidr;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-8vb6jk75wfcwnuq****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
+        /**
+         * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16h9ru9gvz2tygo*****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The zone ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -1141,21 +1361,63 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesVpcInfo extends TeaModel {
+        /**
+         * <p>The VPC CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.5.0/24</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>The VPC description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The VPC status. Valid values:</p>
+         * <ul>
+         * <li><p>Pending: Being configured.</p>
+         * </li>
+         * <li><p>Available: Available.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-gw8c6nhjta3eq12y****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The VPC name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flink集群vpc</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 
@@ -1218,9 +1480,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Ansm")
         public Boolean ansm;
 
+        /**
+         * <p>The processor architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X86</p>
+         */
         @NameInMap("ArchitectureType")
         public String architectureType;
 
+        /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c20c******404</p>
+         */
         @NameInMap("AskClusterId")
         public String askClusterId;
 
@@ -1237,6 +1511,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The cluster state.</p>
+         */
         @NameInMap("ClusterState")
         public DescribeInstancesResponseBodyInstancesClusterState clusterState;
 
@@ -1256,11 +1533,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterStatus")
         public String clusterStatus;
 
+        /**
+         * <p>The overall resource usage of the Flink service.</p>
+         */
         @NameInMap("ClusterUsedResources")
         public DescribeInstancesResponseBodyInstancesClusterUsedResources clusterUsedResources;
 
         @NameInMap("ClusterUsedStorage")
         public DescribeInstancesResponseBodyInstancesClusterUsedStorage clusterUsedStorage;
+
+        /**
+         * <p>Indicates whether deletion protection is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
 
         @NameInMap("Elastic")
         public Boolean elastic;
@@ -1280,22 +1569,44 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ElasticResourceSpec")
         public DescribeInstancesResponseBodyInstancesElasticResourceSpec elasticResourceSpec;
 
+        /**
+         * <p>Indicates whether zone-disaster recovery resources are selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Ha")
         public Boolean ha;
 
+        /**
+         * <p>The zone-disaster recovery resource description.</p>
+         */
         @NameInMap("HaResourceSpec")
         public DescribeInstancesResponseBodyInstancesHaResourceSpec haResourceSpec;
 
+        /**
+         * <p>The vSwitch group in the secondary zone for zone-disaster recovery.</p>
+         */
         @NameInMap("HaVSwitchIds")
         public java.util.List<String> haVSwitchIds;
 
+        /**
+         * <p>The vSwitch group information for the secondary zone of zone-disaster recovery.</p>
+         */
         @NameInMap("HaVSwitchInfo")
         public java.util.List<DescribeInstancesResponseBodyInstancesHaVSwitchInfo> haVSwitchInfo;
 
+        /**
+         * <p>The secondary zone ID for zone-disaster recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hongkong-b</p>
+         */
         @NameInMap("HaZoneId")
         public String haZoneId;
 
         /**
+         * <p>The domain name information added by the user.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("HostAliases")
@@ -1319,13 +1630,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The type of the monitoring and alerting service. You can select ARMS or CloudMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TAIHAO</p>
+         */
         @NameInMap("MonitorType")
         public String monitorType;
 
         /**
-         * <p>The order status. Valid values:</p>
+         * <p>The order status of the Flink compute service. Valid values:</p>
          * <ul>
-         * <li>NOT_INIT: The order is placed but components are not deployed.</li>
+         * <li>NOT_INIT: The order is placed but components are not yet deployed.</li>
          * <li>NORMAL: Normal.</li>
          * <li>CEASE: Expired.</li>
          * <li>RELEASE: Overdue.</li>
@@ -1341,7 +1658,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesOssInfo ossInfo;
 
         /**
-         * <p>The region of the instance.</p>
+         * <p>The region to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -1359,7 +1676,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long resourceCreateTime;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The overdue time.</p>
          * 
          * <strong>example:</strong>
          * <p>1637337600000</p>
@@ -1367,6 +1684,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceExpiredTime")
         public Long resourceExpiredTime;
 
+        /**
+         * <p>The resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-***</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -1395,7 +1718,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean supportDisasterRecoveryDrill;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeInstancesResponseBodyInstancesTags> tags;
@@ -1410,11 +1733,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String uid;
 
         /**
-         * <p>The vSwitch IDs.</p>
+         * <p>The vSwitch ID group.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <p>The information about the primary vSwitch group.</p>
+         */
         @NameInMap("VSwitchInfo")
         public java.util.List<DescribeInstancesResponseBodyInstancesVSwitchInfo> vSwitchInfo;
 
@@ -1427,6 +1753,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The VPC information.</p>
+         */
         @NameInMap("VpcInfo")
         public DescribeInstancesResponseBodyInstancesVpcInfo vpcInfo;
 
@@ -1506,6 +1835,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesClusterUsedStorage getClusterUsedStorage() {
             return this.clusterUsedStorage;
+        }
+
+        public DescribeInstancesResponseBodyInstances setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         public DescribeInstancesResponseBodyInstances setElastic(Boolean elastic) {

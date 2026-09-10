@@ -44,6 +44,18 @@ public class CreateInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The default high-availability namespace resource configuration.</p>
+     */
+    @NameInMap("DefaultHaNamespaceResourceSpec")
+    public CreateInstanceRequestDefaultHaNamespaceResourceSpec defaultHaNamespaceResourceSpec;
+
+    /**
+     * <p>The default namespace resource configuration.</p>
+     */
+    @NameInMap("DefaultNamespaceResourceSpec")
+    public CreateInstanceRequestDefaultNamespaceResourceSpec defaultNamespaceResourceSpec;
+
+    /**
      * <p>The subscription duration.</p>
      * <blockquote>
      * <p>This parameter is required when ChargeType is set to PRE.</p>
@@ -65,7 +77,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String extra;
 
     /**
-     * <p>Specifies whether to use zone-disaster recovery resources.</p>
+     * <p>Specifies whether to enable zone-disaster recovery resources.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -105,7 +117,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The type of monitoring and alerting service. You can select ARMS or CloudMonitor.</p>
+     * <p>The type of monitoring and alerting service. You can select Application Real-Time Monitoring Service (ARMS) or CloudMonitor.</p>
      * 
      * <strong>example:</strong>
      * <p>TAIHAO</p>
@@ -114,10 +126,10 @@ public class CreateInstanceRequest extends TeaModel {
     public String monitorType;
 
     /**
-     * <p>The unit of the subscription duration. Valid values:</p>
+     * <p>The billing cycle of the subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>year</strong>: year.</li>
-     * <li><strong>month</strong>: month.</li>
+     * <li><strong>year</strong>: yearly.</li>
+     * <li><strong>month</strong>: monthly.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter is required when ChargeType is set to PRE.</p>
@@ -139,7 +151,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -236,6 +248,22 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateInstanceRequest setDefaultHaNamespaceResourceSpec(CreateInstanceRequestDefaultHaNamespaceResourceSpec defaultHaNamespaceResourceSpec) {
+        this.defaultHaNamespaceResourceSpec = defaultHaNamespaceResourceSpec;
+        return this;
+    }
+    public CreateInstanceRequestDefaultHaNamespaceResourceSpec getDefaultHaNamespaceResourceSpec() {
+        return this.defaultHaNamespaceResourceSpec;
+    }
+
+    public CreateInstanceRequest setDefaultNamespaceResourceSpec(CreateInstanceRequestDefaultNamespaceResourceSpec defaultNamespaceResourceSpec) {
+        this.defaultNamespaceResourceSpec = defaultNamespaceResourceSpec;
+        return this;
+    }
+    public CreateInstanceRequestDefaultNamespaceResourceSpec getDefaultNamespaceResourceSpec() {
+        return this.defaultNamespaceResourceSpec;
     }
 
     public CreateInstanceRequest setDuration(Integer duration) {
@@ -374,6 +402,96 @@ public class CreateInstanceRequest extends TeaModel {
         return this.vpcId;
     }
 
+    public static class CreateInstanceRequestDefaultHaNamespaceResourceSpec extends TeaModel {
+        /**
+         * <p>The number of CPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        /**
+         * <p>The memory size. Unit: GB.</p>
+         * <blockquote>
+         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static CreateInstanceRequestDefaultHaNamespaceResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestDefaultHaNamespaceResourceSpec self = new CreateInstanceRequestDefaultHaNamespaceResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestDefaultHaNamespaceResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public CreateInstanceRequestDefaultHaNamespaceResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+    }
+
+    public static class CreateInstanceRequestDefaultNamespaceResourceSpec extends TeaModel {
+        /**
+         * <p>The number of CPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        /**
+         * <p>The memory size. Unit: GB.</p>
+         * <blockquote>
+         * <p>The memory size must be 4 times the number of CPUs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static CreateInstanceRequestDefaultNamespaceResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestDefaultNamespaceResourceSpec self = new CreateInstanceRequestDefaultNamespaceResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestDefaultNamespaceResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public CreateInstanceRequestDefaultNamespaceResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+    }
+
     public static class CreateInstanceRequestHaResourceSpec extends TeaModel {
         /**
          * <p>The number of CPUs for zone-disaster recovery.</p>
@@ -385,7 +503,7 @@ public class CreateInstanceRequest extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The memory size for zone-disaster recovery.</p>
+         * <p>The memory size for zone-disaster recovery. The value is active memory allocated for high availability (HA).</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>

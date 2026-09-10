@@ -59,7 +59,7 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     public static class CreateInstanceResponseBodyOrderInfo extends TeaModel {
         /**
-         * <p>The instance ID of the order.</p>
+         * <p>The order instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f-cn-zvp2q0zik06</p>

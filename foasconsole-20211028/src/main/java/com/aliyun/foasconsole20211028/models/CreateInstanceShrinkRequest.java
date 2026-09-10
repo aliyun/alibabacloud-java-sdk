@@ -44,6 +44,18 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The default high-availability namespace resource configuration.</p>
+     */
+    @NameInMap("DefaultHaNamespaceResourceSpec")
+    public String defaultHaNamespaceResourceSpecShrink;
+
+    /**
+     * <p>The default namespace resource configuration.</p>
+     */
+    @NameInMap("DefaultNamespaceResourceSpec")
+    public String defaultNamespaceResourceSpecShrink;
+
+    /**
      * <p>The subscription duration.</p>
      * <blockquote>
      * <p>This parameter is required when ChargeType is set to PRE.</p>
@@ -65,7 +77,7 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public String extra;
 
     /**
-     * <p>Specifies whether to use zone-disaster recovery resources.</p>
+     * <p>Specifies whether to enable zone-disaster recovery resources.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -105,7 +117,7 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The type of monitoring and alerting service. You can select ARMS or CloudMonitor.</p>
+     * <p>The type of monitoring and alerting service. You can select Application Real-Time Monitoring Service (ARMS) or CloudMonitor.</p>
      * 
      * <strong>example:</strong>
      * <p>TAIHAO</p>
@@ -114,10 +126,10 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public String monitorType;
 
     /**
-     * <p>The unit of the subscription duration. Valid values:</p>
+     * <p>The billing cycle of the subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>year</strong>: year.</li>
-     * <li><strong>month</strong>: month.</li>
+     * <li><strong>year</strong>: yearly.</li>
+     * <li><strong>month</strong>: monthly.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter is required when ChargeType is set to PRE.</p>
@@ -139,7 +151,7 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -236,6 +248,22 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateInstanceShrinkRequest setDefaultHaNamespaceResourceSpecShrink(String defaultHaNamespaceResourceSpecShrink) {
+        this.defaultHaNamespaceResourceSpecShrink = defaultHaNamespaceResourceSpecShrink;
+        return this;
+    }
+    public String getDefaultHaNamespaceResourceSpecShrink() {
+        return this.defaultHaNamespaceResourceSpecShrink;
+    }
+
+    public CreateInstanceShrinkRequest setDefaultNamespaceResourceSpecShrink(String defaultNamespaceResourceSpecShrink) {
+        this.defaultNamespaceResourceSpecShrink = defaultNamespaceResourceSpecShrink;
+        return this;
+    }
+    public String getDefaultNamespaceResourceSpecShrink() {
+        return this.defaultNamespaceResourceSpecShrink;
     }
 
     public CreateInstanceShrinkRequest setDuration(Integer duration) {

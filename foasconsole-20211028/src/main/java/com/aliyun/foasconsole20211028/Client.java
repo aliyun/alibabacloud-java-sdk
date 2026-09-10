@@ -8,11 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "regional";
+        this._endpointRule = "central";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-qingdao", "foasconsole.cn-qingdao.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "foasconsole.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-beijing", "foasconsole.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "foasconsole.cn-qingdao.aliyuncs.com"),
             new TeaPair("cn-shanghai", "foasconsole.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "foasconsole.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "foasconsole.cn-zhangjiakou.aliyuncs.com"),
@@ -27,8 +27,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("us-west-1", "foasconsole.us-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "foasconsole.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "foasconsole.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "foasconsole.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "foasconsole.aliyuncs.com")
+            new TeaPair("cn-shanghai-finance-1", "foasconsole.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("foasconsole", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -295,7 +294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink before you call this operation.</em>*</p>
+     * <p><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink.</em>*</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a subscription or pay-as-you-go fully managed Flink workspace.</p>
@@ -308,6 +307,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateInstanceShrinkRequest request = new CreateInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.defaultHaNamespaceResourceSpec)) {
+            request.defaultHaNamespaceResourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.defaultHaNamespaceResourceSpec, "DefaultHaNamespaceResourceSpec", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.defaultNamespaceResourceSpec)) {
+            request.defaultNamespaceResourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.defaultNamespaceResourceSpec, "DefaultNamespaceResourceSpec", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.haResourceSpec)) {
             request.haResourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haResourceSpec, "HaResourceSpec", "json");
         }
@@ -343,6 +350,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             body.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultHaNamespaceResourceSpecShrink)) {
+            body.put("DefaultHaNamespaceResourceSpec", request.defaultHaNamespaceResourceSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultNamespaceResourceSpecShrink)) {
+            body.put("DefaultNamespaceResourceSpec", request.defaultNamespaceResourceSpecShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
@@ -432,7 +447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink before you call this operation.</em>*</p>
+     * <p><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink.</em>*</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a subscription or pay-as-you-go fully managed Flink workspace.</p>
@@ -618,6 +633,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>In the following cases, you cannot release a workspace:- In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state.- If the billing method is subscription, unsubscribe from the resource on the Unsubscription Management page in User Center.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Queries the details of one or more fully managed Flink workspaces.</p>
      * 
@@ -652,6 +672,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>In the following cases, you cannot release a workspace:- In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state.- If the billing method is subscription, unsubscribe from the resource on the Unsubscription Management page in User Center.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Queries the details of one or more fully managed Flink workspaces.</p>
      * 

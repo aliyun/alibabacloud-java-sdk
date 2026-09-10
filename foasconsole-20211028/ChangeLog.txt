@@ -1,3 +1,9 @@
+2026-09-10 Version: 2.3.1
+- Update API CreateInstance: add request parameters DefaultHaNamespaceResourceSpec.
+- Update API CreateInstance: add request parameters DefaultNamespaceResourceSpec.
+- Update API DescribeInstances: add response parameters Body.Instances.$.DeletionProtection.
+
+
 2026-08-17 Version: 2.3.0
 - Support API CloseFlinkAiService.
 - Support API GetFlinkAiService.

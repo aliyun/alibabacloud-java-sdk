@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The architecture type.</p>
+     * <p>The processor architecture. Valid values: X86 and ARM.</p>
      * 
      * <strong>example:</strong>
      * <p>X86</p>
@@ -23,7 +23,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>Specifies whether mixed billing is used.</p>
+     * <p>Specifies whether hybrid billing is used.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -86,6 +86,12 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2e55emewbqgy</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
